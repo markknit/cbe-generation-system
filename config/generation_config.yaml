@@ -1,0 +1,57 @@
+# CBE Lesson Generation Configuration
+
+paths:
+  curriculum_pdfs: "data/raw/curriculum_pdfs"
+  template_examples: "data/raw/template_examples"
+  output_docx: "data/outputs/docx"
+  output_markdown: "data/outputs/markdown"
+  templates: "templates"
+
+# Curriculum sources mapping
+curriculum_sources:
+  physics:
+    grade_10: "KICD_Grade_10_CBC_Physics_Curriculum_March_2025.pdf"
+  biology:
+    grade_10: "KICD_Grade_10_CBC_Biology_Curriculum_March_2025.pdf"
+  chemistry:
+    grade_10: "KICD_Grade_10_CBC_Chemistry_Curriculum_March_2025.pdf"
+
+# Template examples
+template_examples:
+  primary: "Biology_CellStructure_CBE_LessonSequence_v1.docx"
+  
+# Generation settings
+generation:
+  model: "claude-sonnet-4-5-20250929"
+  max_tokens: 12000
+  temperature: 1.0
+  
+# Formatting settings
+formatting:
+  orientation: "landscape"
+  margins: "narrow"  # 0.5 inch all around
+  equal_columns: true
+  column_count: 5
+  font: "Calibri"
+  font_size: 11
+
+# Lesson structure
+lesson_structure:
+  sections:
+    - "A. Specific Learning Outcomes"
+    - "B. Overview"
+    - "C. Lesson Implementation Framework"
+    - "D. Teacher Reflection"
+    - "E. Summary Table Prompt"
+  
+  framework_rows:
+    - "PREDICT Phase"
+    - "OBSERVE Phase"
+    - "EXPLAIN Phase"
+    - "Driving Questions Board"
+    - "Initial Model Building"
+    - "Kenya Context Connection"
+    - "Model Revision"
+
+# Include sub-strand overview before lessons
+include_substrand_overview: true

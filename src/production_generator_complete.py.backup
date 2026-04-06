@@ -1,0 +1,589 @@
+"""
+Production CBE Lesson Generator - Complete Integration
+Includes: Resource manager, templates, curriculum, proper formatting, DQB, models
+"""
+import os
+import sys
+from pathlib import Path
+from typing import Dict, List, Optional
+from dotenv import load_dotenv
+from docx import Document
+from docx.shared import Pt, Inches, RGBColor
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+import json
+import time
+from datetime import datetime
+
+# Add src to path
+sys.path.insert(0, str(Path(__file__).parent))
+
+# Import resource manager
+try:
+    from resource_manager import ResourceManager
+except ImportError:
+    print("⚠ Resource manager not found - run update_resources.sh first!")
+    sys.exit(1)
+
+load_dotenv()
+
+
+class ProductionLessonGenerator:
+    """Complete production-ready lesson generator"""
+    
+    def __init__(self):
+        print("\n" + "="*70)
+        print("PRODUCTION CBE LESSON GENERATOR")
+        print("="*70 + "\n")
+        
+        # Initialize resource manager
+        print("→ Loading resources...")
+        self.resources = ResourceManager()
+        
+        # Validate resources
+        validation = self.resources.validate_resources()
+        if not all(validation.values()):
+            print("\n⚠ Warning: Some resources missing!")
+            for check, passed in validation.items():
+                if not passed:
+                    print(f"  ✗ {check.replace('_', ' ').title()}")
+            print("\nContinuing anyway...\n")
+        else:
+            print("✓ All resources validated\n")
+        
+        # Load configuration
+        self.config = self.resources.get_config()
+        
+        # Initialize Claude API
+        print("→ Initializing Claude API...")
+        import anthropic
+        self.anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+        if not self.anthropic_key:
+            raise ValueError("Missing ANTHROPIC_API_KEY in .env file")
+        self.claude = anthropic.Anthropic(api_key=self.anthropic_key)
+        print("✓ Claude API initialized\n")
+        
+        # Load template content
+        print("→ Loading template examples...")
+        self.template_content = self._load_template_content()
+        print(f"✓ Template loaded: {len(self.template_content)} characters\n")
+    
+    def _load_template_content(self) -> str:
+        """Load the primary template content"""
+        primary_template = self.resources.get_primary_template()
+        
+        if not primary_template:
+            print("⚠ No template examples found - using basic structure")
+            return "Follow CBE lesson structure with POE cycles."
+        
+        # For now, just note that template exists
+        # In production, you might extract text from DOCX/PDF
+        return f"Reference template: {primary_template.name}"
+    
+    def generate_substrand_overview(self, subject: str, grade: str, 
+                                    strand: str, substrand: str) -> str:
+        """Generate sub-strand overview section"""
+        
+        # Get curriculum PDF
+        curriculum_pdf = self.resources.get_curriculum_pdf(subject, grade)
+        
+        prompt = f"""Generate a Sub-Strand Overview for Kenya CBC curriculum.
+
+Subject: {subject}
+Grade: {grade}
+Strand: {strand}
+Sub-Strand: {substrand}
+{f'Curriculum Reference: {curriculum_pdf.name}' if curriculum_pdf else ''}
+
+Create a table with these rows:
+1. Specific Learning Outcomes (for the entire sub-strand)
+2. Key Inquiry Questions
+3. Core Competencies
+4. Values
+5. Pertinent and Contemporary Issues (PCIs)
+
+Return as structured text in this format:
+
+===SUB-STRAND OVERVIEW===
+SubStrand: {substrand}
+TotalLessons: [number]
+
+Component: Specific Learning Outcomes
+Content: [List a-f of learning outcomes for entire sub-strand]
+
+Component: Key Inquiry Questions  
+Content: [2-3 key questions]
+
+Component: Core Competencies
+Content: [List of competencies]
+
+Component: Values
+Content: [List of values]
+
+Component: PCIs
+Content: [List of PCIs]"""
+
+        response = self.claude.messages.create(
+            model=self.config['generation']['model'],
+            max_tokens=4000,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        
+        return response.content[0].text
+    
+    def generate_lesson_content(self, subject: str, grade: str, strand: str,
+                                substrand: str, topic: str, number: int,
+                                phenomenon: str = None, total_lessons: int = 22) -> str:
+        """Generate lesson content using Claude"""
+        
+        curriculum_pdf = self.resources.get_curriculum_pdf(subject, grade)
+        
+        prompt = f"""Generate a complete CBE lesson plan for Kenya following the exact structure shown in the template.
+
+**LESSON DETAILS:**
+- Subject: {subject}
+- Grade: {grade}
+- Strand: {strand}
+- Sub-Strand: {substrand}
+- Topic: {topic}
+- Lesson Number: {number} of {total_lessons}
+- Phenomenon: {phenomenon or 'N/A'}
+{f'- Curriculum Reference: {curriculum_pdf.name}' if curriculum_pdf else ''}
+
+**CRITICAL: Return structured text in this EXACT format:**
+
+===SECTION A: LEARNING OUTCOMES===
+Knowledge:
+- Point 1
+- Point 2
+- Point 3
+
+Skills:
+- Point 1
+- Point 2
+
+Attitudes:
+- Point 1
+- Point 2
+
+Practices:
+- Point 1
+- Point 2
+
+===SECTION B: OVERVIEW===
+KeyQuestion: [Question here]
+Purpose: [Purpose here]
+Safety: [Notes or n/a]
+
+===SECTION C: FRAMEWORK===
+
+ROW 1 - PREDICT:
+Experience: [30+ words describing what students DO in PREDICT phase]
+Resources: [List with ARES placeholders]
+Teacher: [Facilitation with PROBING questions, WAIT TIME: X seconds]
+Sensemaking: [Think-Pair-Share format]
+Assessment: [Checkboxes ☐ and quick checks]
+
+ROW 2 - OBSERVE:
+Experience: [30+ words]
+Resources: [List]
+Teacher: [Facilitation, PROBING, WAIT TIME]
+Sensemaking: [Method]
+Assessment: [Checkboxes ☐]
+
+ROW 3 - EXPLAIN:
+Experience: [30+ words]
+Resources: [List]
+Teacher: [NO LECTURING! Facilitation only, PROBING, WAIT TIME: 15 seconds]
+Sensemaking: [Think-Pair-Share, consensus building]
+Assessment: [Checkboxes ☐, Exit Ticket]
+
+ROW 4 - DQB:
+Experience: [Class generates questions about {topic}. Teacher creates visible DQB]
+Resources: [Chart paper, markers, DQB template, ARES resources]
+Teacher: [Establishing DQB, PROBING, WAIT TIME, recording ALL questions]
+Sensemaking: [Question generation - list example questions]
+Assessment: [☐ DQB Started, note for Summary Table]
+
+ROW 5 - INITIAL MODEL:
+Experience: [Students draw current model of {topic}]
+Resources: [Drawing materials, model template, ARES simulation]
+Teacher: [Facilitating modeling, PROBING, WAIT TIME, "no wrong models"]
+Sensemaking: [Initial model creation, Think-Pair-Share]
+Assessment: [☐ Model quality, note for Summary Table, collect for later]
+
+ROW 6 - KENYA CONTEXT:
+Experience: [How does understanding {topic} help Kenya? KPLC, costs in KSh, careers]
+Resources: [KPLC posters, bills showing KSh, photos, ARES resources]
+Teacher: [Facilitating connection, PROBING, WAIT TIME]
+Sensemaking: [Think-Pair-Share on Kenya applications]
+Assessment: [☐ Kenya connections, ☐ Career awareness]
+
+ROW 7 - MODEL REVISION:
+Experience: [Students revise initial models based on evidence from lesson]
+Resources: [Initial models, revision materials, colored pencils]
+Teacher: [Facilitating revision, PROBING, WAIT TIME, "scientists revise models"]
+Sensemaking: [Model revision showing evidence-based changes]
+Assessment: [☐ Shows transformation, ☐ Labels, ☐ Explains changes, note for Summary Table]
+
+===SECTION D: REFLECTION===
+1. [Teacher reflection question 1]
+2. [Teacher reflection question 2]
+3. [Teacher reflection question 3]
+4. [Teacher reflection question 4]
+5. [Teacher reflection question 5]
+6. [Teacher reflection question 6]
+7. [Student Feedback question]
+
+===SECTION E: SUMMARY PROMPT===
+[Full prompt text for students' Summary Table]
+
+**REQUIREMENTS:**
+- Use Kenyan context (KSh, KPLC, local examples) throughout
+- Include [ARES VIDEO: ...], [ARES SIMULATION: ...] placeholders
+- Teacher facilitation NOT lecturing - show PROBING questions and WAIT TIME
+- Think-Pair-Share in every row
+- Checkboxes (☐) in assessments
+- 30+ words in each Experience cell
+
+Generate the complete lesson now."""
+
+        response = self.claude.messages.create(
+            model=self.config['generation']['model'],
+            max_tokens=self.config['generation']['max_tokens'],
+            messages=[{"role": "user", "content": prompt}]
+        )
+        
+        return response.content[0].text
+    
+    def create_word_document(self, content: str, overview_content: str,
+                            subject: str, grade: str, substrand: str,
+                            topic: str, number: int, total_lessons: int) -> str:
+        """Create formatted Word document with landscape, narrow margins, equal columns"""
+        
+        doc = Document()
+        
+        # LANDSCAPE orientation with NARROW margins
+        section = doc.sections[0]
+        section.orientation = 1  # Landscape
+        section.page_width = Inches(11)
+        section.page_height = Inches(8.5)
+        section.top_margin = Inches(0.5)
+        section.bottom_margin = Inches(0.5)
+        section.left_margin = Inches(0.5)
+        section.right_margin = Inches(0.5)
+        
+        # Default font
+        style = doc.styles['Normal']
+        style.font.name = 'Calibri'
+        style.font.size = Pt(11)
+        
+        # Add sub-strand overview
+        self._add_substrand_overview(doc, overview_content, substrand)
+        
+        doc.add_page_break()
+        
+        # Add lesson
+        self._add_lesson(doc, content, subject, grade, substrand, topic, number, total_lessons)
+        
+        # Save
+        output_dir = Path(self.config['paths']['output_docx'])
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        filename = f"Lesson_{number:03d}_{topic.replace(' ', '_')}.docx"
+        filepath = output_dir / filename
+        
+        doc.save(str(filepath))
+        return str(filepath)
+    
+    def _add_substrand_overview(self, doc, content: str, substrand: str):
+        """Add sub-strand overview page"""
+        title = doc.add_heading(f'SUB-STRAND: {substrand.upper()}', 0)
+        title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        title.runs[0].font.color.rgb = RGBColor(0, 70, 135)
+        
+        subtitle = doc.add_paragraph('Sub-Strand Overview')
+        subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        subtitle.runs[0].font.italic = True
+        
+        doc.add_paragraph()
+        
+        # Parse overview content and create table
+        table = doc.add_table(rows=1, cols=2)
+        table.style = 'Light Grid Accent 1'
+        
+        hdr = table.rows[0].cells
+        hdr[0].text = 'Component'
+        hdr[1].text = 'Description'
+        for cell in hdr:
+            cell.paragraphs[0].runs[0].font.bold = True
+        
+        # Parse components from content
+        components = [
+            'Specific Learning Outcomes',
+            'Key Inquiry Questions',
+            'Core Competencies',
+            'Values',
+            'PCIs'
+        ]
+        
+        for component in components:
+            if f'Component: {component}' in content:
+                row = table.add_row()
+                row.cells[0].text = component
+                
+                # Extract content
+                start = content.find(f'Component: {component}') + len(f'Component: {component}')
+                end = content.find('Component:', start)
+                if end == -1:
+                    end = content.find('===', start)
+                if end == -1:
+                    end = len(content)
+                
+                text = content[start:end].strip()
+                text = text.replace('Content:', '').strip()
+                row.cells[1].text = text
+    
+    def _add_lesson(self, doc, content: str, subject: str, grade: str,
+                   substrand: str, topic: str, number: int, total_lessons: int):
+        """Add complete lesson with all sections"""
+        
+        # Title
+        title = doc.add_heading(f'LESSON {number}: {topic.upper()}', 0)
+        title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        title.runs[0].font.color.rgb = RGBColor(0, 70, 135)
+        
+        subtitle = doc.add_paragraph(f'{grade} {subject} - {substrand} - Lesson {number} of {total_lessons}')
+        subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        subtitle.runs[0].font.italic = True
+        
+        doc.add_paragraph()
+        
+        # Parse sections
+        sections = content.split('===SECTION')
+        
+        for section in sections[1:]:
+            if 'A:' in section:
+                self._add_section_a(doc, section)
+            elif 'B:' in section:
+                self._add_section_b(doc, section)
+            elif 'C:' in section:
+                self._add_section_c(doc, section)
+            elif 'D:' in section:
+                self._add_section_d(doc, section)
+            elif 'E:' in section:
+                self._add_section_e(doc, section)
+    
+    def _add_section_a(self, doc, section_text):
+        """Add Learning Outcomes table"""
+        doc.add_heading('A. Specific Learning Outcomes', 2)
+        
+        table = doc.add_table(rows=5, cols=2)
+        table.style = 'Light Grid Accent 1'
+        
+        hdr = table.rows[0].cells
+        hdr[0].text = 'Category'
+        hdr[1].text = 'Outcomes'
+        for c in hdr:
+            c.paragraphs[0].runs[0].font.bold = True
+        
+        categories = ['Knowledge:', 'Skills:', 'Attitudes:', 'Practices:']
+        for i, cat in enumerate(categories, 1):
+            if cat in section_text:
+                table.rows[i].cells[0].text = cat.replace(':', '')
+                
+                # Extract bullet points
+                start = section_text.find(cat)
+                next_cat = [c for c in categories if c != cat]
+                end = len(section_text)
+                for nc in next_cat:
+                    pos = section_text.find(nc, start)
+                    if pos > start:
+                        end = min(end, pos)
+                
+                text = section_text[start:end]
+                lines = [l.strip('- ').strip() for l in text.split('\n') if l.strip().startswith('-')]
+                table.rows[i].cells[1].text = '\n'.join(f'• {l}' for l in lines if l)
+        
+        doc.add_paragraph()
+    
+    def _add_section_b(self, doc, section_text):
+        """Add Overview table"""
+        doc.add_heading('B. Overview', 2)
+        
+        table = doc.add_table(rows=4, cols=2)
+        table.style = 'Light Grid Accent 1'
+        
+        hdr = table.rows[0].cells
+        hdr[0].text = 'Element'
+        hdr[1].text = 'Details'
+        for c in hdr:
+            c.paragraphs[0].runs[0].font.bold = True
+        
+        items = [
+            ('Key Inquiry Question', 'KeyQuestion:'),
+            ('Purpose in Storyline', 'Purpose:'),
+            ('Safety Notes', 'Safety:')
+        ]
+        
+        for i, (label, marker) in enumerate(items, 1):
+            if marker in section_text:
+                table.rows[i].cells[0].text = label
+                
+                start = section_text.find(marker) + len(marker)
+                end = section_text.find('\n\n', start)
+                if end == -1:
+                    end = section_text.find('===', start)
+                if end == -1:
+                    end = len(section_text)
+                
+                text = section_text[start:end].strip()
+                table.rows[i].cells[1].text = text
+        
+        doc.add_paragraph()
+    
+    def _add_section_c(self, doc, section_text):
+        """Add 5-column Implementation Framework with EQUAL widths"""
+        doc.add_heading('C. Lesson Implementation Framework', 2)
+        
+        # Count rows
+        row_count = section_text.count('ROW ')
+        
+        table = doc.add_table(rows=row_count + 1, cols=5)
+        table.style = 'Light Grid Accent 1'
+        
+        # EQUAL column widths - 2.0 inches each (10 inches / 5 columns)
+        for row in table.rows:
+            for i in range(5):
+                row.cells[i].width = Inches(2.0)
+        
+        # Headers
+        headers = ['Learner Experience', 'Resource Link', 'Teacher Moves',
+                   'Sensemaking Strategy', 'Formative Assessment']
+        for i, h in enumerate(headers):
+            table.rows[0].cells[i].text = h
+            table.rows[0].cells[i].paragraphs[0].runs[0].font.bold = True
+        
+        # Parse rows
+        rows = section_text.split('ROW ')[1:]
+        
+        for row_idx, row_text in enumerate(rows, 1):
+            if row_idx >= len(table.rows):
+                break
+            
+            columns = [
+                ('Experience:', 'Resources:'),
+                ('Resources:', 'Teacher:'),
+                ('Teacher:', 'Sensemaking:'),
+                ('Sensemaking:', 'Assessment:'),
+                ('Assessment:', 'ROW ')
+            ]
+            
+            for col_idx, (start_marker, end_marker) in enumerate(columns):
+                if start_marker in row_text:
+                    start = row_text.find(start_marker) + len(start_marker)
+                    end = row_text.find(end_marker, start) if end_marker in row_text[start:] else len(row_text)
+                    text = row_text[start:end].strip()
+                    table.rows[row_idx].cells[col_idx].text = text
+        
+        doc.add_paragraph()
+    
+    def _add_section_d(self, doc, section_text):
+        """Add Teacher Reflection"""
+        doc.add_heading('D. Teacher Reflection', 2)
+        
+        lines = section_text.split('\n')
+        for line in lines:
+            if line.strip() and line.strip()[0].isdigit():
+                doc.add_paragraph(line.strip(), style='List Number')
+        
+        doc.add_paragraph()
+    
+    def _add_section_e(self, doc, section_text):
+        """Add Summary Table Prompt"""
+        doc.add_heading('E. Summary Table Prompt', 2)
+        
+        lines = [l.strip() for l in section_text.split('\n') if l.strip()]
+        for line in lines[1:]:
+            if line.startswith('- ') or line.startswith('•'):
+                doc.add_paragraph(line, style='List Bullet')
+            else:
+                doc.add_paragraph(line)
+    
+    def generate_complete_lesson(self, subject: str, grade: str, strand: str,
+                                 substrand: str, topic: str, number: int = 1,
+                                 phenomenon: str = None, total_lessons: int = 22,
+                                 include_overview: bool = True) -> Dict:
+        """Generate complete lesson with overview"""
+        
+        print(f"\n{'='*70}")
+        print(f"LESSON {number}: {topic}")
+        print(f"{'='*70}\n")
+        
+        # Generate overview if needed
+        overview_content = ""
+        if include_overview and number == 1:
+            print("  → Generating sub-strand overview...")
+            overview_content = self.generate_substrand_overview(
+                subject, grade, strand, substrand
+            )
+            print("  ✓ Overview generated")
+        
+        # Generate lesson
+        print("  → Generating lesson content...")
+        content = self.generate_lesson_content(
+            subject, grade, strand, substrand, topic, number, phenomenon, total_lessons
+        )
+        print("  ✓ Content generated")
+        
+        # Create Word doc
+        print("  → Creating Word document...")
+        filepath = self.create_word_document(
+            content, overview_content, subject, grade, substrand,
+            topic, number, total_lessons
+        )
+        print(f"  ✓ Saved: {filepath}")
+        
+        return {
+            'lesson_number': number,
+            'topic': topic,
+            'filepath': filepath,
+            'status': 'success'
+        }
+
+
+def main():
+    """Main execution"""
+    print("\n" + "="*70)
+    print("CBE LESSON PLAN GENERATOR - PRODUCTION VERSION")
+    print("="*70 + "\n")
+    
+    generator = ProductionLessonGenerator()
+    
+    # Example: Generate first lesson
+    result = generator.generate_complete_lesson(
+        subject="Physics",
+        grade="Grade 10",
+        strand="Electricity and Magnetism",
+        substrand="Current Electricity",
+        topic="Introduction to Current Electricity",
+        number=1,
+        phenomenon="Why do electrical devices get hot when plugged in?",
+        total_lessons=22,
+        include_overview=True
+    )
+    
+    print(f"\n{'='*70}")
+    print("SUCCESS!")
+    print(f"{'='*70}")
+    print(f"\nLesson saved to: {result['filepath']}")
+    print("\nDocument includes:")
+    print("  ✓ Sub-strand overview (on first lesson)")
+    print("  ✓ Landscape orientation")
+    print("  ✓ Narrow margins (0.5\")")
+    print("  ✓ Equal-width columns in Section C")
+    print("  ✓ 7 rows: PREDICT, OBSERVE, EXPLAIN, DQB, Initial Model, Kenya Context, Model Revision")
+    print("  ✓ Proper formatting and structure")
+
+
+if __name__ == "__main__":
+    main()
