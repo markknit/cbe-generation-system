@@ -1269,6 +1269,74 @@ def _cell_para_lines(cell, content: list, size_pt: int = 9):
         p.paragraph_format.space_after  = Pt(2)
 
 
+def _text_to_rich(text: str) -> list:
+    """Convert a plain-text string to [(kind, str), ...] for _cell_para_lines().
+
+    Detects and marks:
+    • Lettered lists   a) b) c) or A) B) C)                              → 'bullet'
+    • Numbered lists   1. 2. 3. or 1) 2) 3)                             → 'bullet'
+    • Dash prefix      - text (possibly concatenated list "- a - b - c") → 'bullet' each
+    • Label: - items   "Physical Setup: - item1 - item2"                 → h3 + bullets
+    • Short label ending with colon  (≤ 70 chars)                        → 'h3'
+    • Numbered section heading  8.1 Title                                → 'h3'
+    • Everything else                                                     → 'text'
+    """
+    import re
+
+    def _split_dash_list(content: str) -> list:
+        """Split a string that may be a concatenated dash list into individual items."""
+        if content.count(" - ") >= 2:
+            return [x.strip() for x in re.split(r"\s+-\s+", content) if x.strip()]
+        return [content]
+
+    lines = [ln.strip() for ln in text.replace("\r\n", "\n").split("\n")]
+    result = []
+    for ln in lines:
+        if not ln:
+            continue
+        # Lettered list: a) b) or A) B)
+        if re.match(r"^[a-zA-Z]\)\s", ln):
+            result.append(("bullet", ln))
+        # Numbered list: 1. 2. or 1) 2)
+        elif re.match(r"^\d+[.)]\s", ln):
+            result.append(("bullet", ln))
+        # Dash/bullet prefix — may be a concatenated list "- item1 - item2 - item3"
+        elif ln.startswith(("- ", "• ", "* ", "– ", "— ")):
+            content = re.sub(r"^[-•*–—]\s+", "", ln)
+            for item in _split_dash_list(content):
+                result.append(("bullet", item))
+        # "Label: - item1 - item2" → h3 label + bullets
+        elif ": - " in ln:
+            label, rest = ln.split(": - ", 1)
+            if len(label) <= 60:
+                result.append(("h3", label + ":"))
+                for item in _split_dash_list(rest):
+                    result.append(("bullet", item))
+            else:
+                result.append(("text", ln))
+        # Short label ending with colon
+        elif (ln.endswith(":") and len(ln) <= 70
+              and not any(ln.lower().startswith(x) for x in
+                          ("e.g.", "note:", "(", "for example", "i.e."))):
+            result.append(("h3", ln))
+        # Numbered section headings like "8.1 Knowledge"
+        elif re.match(r"^\d+\.\d*\s+\w", ln) and len(ln) <= 80:
+            result.append(("h3", ln))
+        else:
+            result.append(("text", ln))
+    return result if result else [("text", text.strip())]
+
+
+def _cell_para_auto(cell, text: str, size_pt: int = 9):
+    """Write text into a cell with automatic bullet/heading detection via _text_to_rich()."""
+    if not text or not text.strip():
+        p = cell.paragraphs[0]
+        p.paragraph_format.space_before = Pt(2)
+        p.paragraph_format.space_after  = Pt(2)
+        return
+    _cell_para_lines(cell, _text_to_rich(text), size_pt=size_pt)
+
+
 def _build_section_table(doc, header_text: str, content: list,
                           header_fill: str = None, content_fill: str = None,
                           size_pt: int = 9):
@@ -1579,23 +1647,10 @@ def _build_table0_overview(doc, meta, section_a_rows=None):
         _shade(t.rows[row_idx].cells[0], C_LT_BLUE)
         _shade(t.rows[row_idx].cells[1], C_WHITE)
         _cell_para(t.rows[row_idx].cells[0], label, bold=True, size_pt=9)
-        # Convert multi-line content to bullet-aware format
         if isinstance(value, list):
             _cell_para_lines(t.rows[row_idx].cells[1], value, size_pt=9)
         else:
-            lines = value.split("\n") if "\n" in value else [value]
-            content = []
-            for ln in lines:
-                ln = ln.strip()
-                if not ln:
-                    continue
-                if ln.startswith("- ") or ln.startswith("• "):
-                    content.append(("bullet", ln.lstrip("-• ").strip()))
-                elif ln.endswith(":") or (ln.isupper() and len(ln) > 3):
-                    content.append(("h3", ln))
-                else:
-                    content.append(("text", ln))
-            _cell_para_lines(t.rows[row_idx].cells[1], content if content else [("text", value)], size_pt=9)
+            _cell_para_auto(t.rows[row_idx].cells[1], value, size_pt=9)
 
 
 def _build_table_A(doc, lesson):
@@ -1630,43 +1685,43 @@ def _build_table_A(doc, lesson):
     _shade(t.rows[2].cells[0], C_LT_BLUE)
     _shade(t.rows[2].cells[1], C_WHITE)
     _cell_para(t.rows[2].cells[0], "Purpose", bold=True, size_pt=9)
-    _cell_para(t.rows[2].cells[1], lesson.get("overview_purpose", "").strip() or "—", size_pt=9)
+    _cell_para_auto(t.rows[2].cells[1], lesson.get("overview_purpose", "").strip() or "—")
 
     # R3: Knowledge
     _shade(t.rows[3].cells[0], C_LT_BLUE)
     _shade(t.rows[3].cells[1], C_WHITE)
     _cell_para(t.rows[3].cells[0], "Knowledge", bold=True, size_pt=9)
-    _cell_para(t.rows[3].cells[1], lesson["slo_knowledge"].strip() or "—", size_pt=9)
+    _cell_para_auto(t.rows[3].cells[1], lesson["slo_knowledge"].strip() or "—")
 
     # R4: Skills
     _shade(t.rows[4].cells[0], C_LT_BLUE)
     _shade(t.rows[4].cells[1], C_WHITE)
     _cell_para(t.rows[4].cells[0], "Skills", bold=True, size_pt=9)
-    _cell_para(t.rows[4].cells[1], lesson["slo_skills"].strip() or "—", size_pt=9)
+    _cell_para_auto(t.rows[4].cells[1], lesson["slo_skills"].strip() or "—")
 
     # R5: Attitudes
     _shade(t.rows[5].cells[0], C_LT_BLUE)
     _shade(t.rows[5].cells[1], C_WHITE)
     _cell_para(t.rows[5].cells[0], "Attitudes", bold=True, size_pt=9)
-    _cell_para(t.rows[5].cells[1], lesson["slo_attitudes"].strip() or "—", size_pt=9)
+    _cell_para_auto(t.rows[5].cells[1], lesson["slo_attitudes"].strip() or "—")
 
     # R6: Key Inquiry Question
     _shade(t.rows[6].cells[0], C_PURPLE_LT)
     _shade(t.rows[6].cells[1], C_WHITE)
     _cell_para(t.rows[6].cells[0], "Key Inquiry Question", bold=True, size_pt=9)
-    _cell_para(t.rows[6].cells[1], lesson["inquiry_question"] or "—", size_pt=9)
+    _cell_para_auto(t.rows[6].cells[1], lesson["inquiry_question"] or "—")
 
     # R7: Purpose in Storyline
     _shade(t.rows[7].cells[0], C_TEAL_LT)
     _shade(t.rows[7].cells[1], C_WHITE)
     _cell_para(t.rows[7].cells[0], "Purpose in Storyline", bold=True, size_pt=9)
-    _cell_para(t.rows[7].cells[1], lesson.get("overview_purpose", "").strip() or "—", size_pt=9)
+    _cell_para_auto(t.rows[7].cells[1], lesson.get("overview_purpose", "").strip() or "—")
 
     # R8: Safety Notes
     _shade(t.rows[8].cells[0], C_ORANGE_LT)
     _shade(t.rows[8].cells[1], C_WHITE)
     _cell_para(t.rows[8].cells[0], "Safety Notes", bold=True, size_pt=9)
-    _cell_para(t.rows[8].cells[1], lesson["safety"] or "None noted.", size_pt=9)
+    _cell_para_auto(t.rows[8].cells[1], lesson["safety"] or "None noted.")
 
 
 def _build_table_B(doc, lesson):
@@ -1686,7 +1741,7 @@ def _build_table_B(doc, lesson):
     if lesson.get("materials"):
         parts.append(f"Materials: {lesson['materials']}")
     overview_text = "\n\n".join(parts) if parts else "See lesson plan for details."
-    _cell_para(t.rows[1].cells[0], overview_text, size_pt=9)
+    _cell_para_auto(t.rows[1].cells[0], overview_text)
 
 
 def _build_table_C_period(doc, lesson, period_num: int):
@@ -1742,7 +1797,7 @@ def _build_table_C_period(doc, lesson, period_num: int):
             _shade(cell, content_fills[ci])
             cell.vertical_alignment = WD_ALIGN_VERTICAL.TOP
             val = src_row[ci] if src_row and ci < len(src_row) else ""
-            _cell_para(cell, val, size_pt=9)
+            _cell_para_auto(cell, val)
 
 
 def _build_table_D(doc, lesson):
@@ -1766,7 +1821,7 @@ def _build_table_D(doc, lesson):
             "3. Was the inquiry question answered by the end of the lesson?\n"
             "4. What would you change if teaching this lesson again?"
         )
-    _cell_para(t.rows[1].cells[0], refl_text, size_pt=9)
+    _cell_para_auto(t.rows[1].cells[0], refl_text)
 
 
 def _build_table_E(doc, summary_row=None):
@@ -1796,7 +1851,7 @@ def _build_table_E(doc, summary_row=None):
         _shade(t.rows[ri].cells[0], C_PURPLE_LT)
         _shade(t.rows[ri].cells[1], C_WHITE)
         _cell_para(t.rows[ri].cells[0], prompt, bold=True, size_pt=9)
-        _cell_para(t.rows[ri].cells[1], content or "", size_pt=9)
+        _cell_para_auto(t.rows[ri].cells[1], content or "")
 
 
 def build_lesson_sequence_docx(subject_key: str, lessons: list[dict]) -> Document:
@@ -1917,7 +1972,7 @@ def build_final_explanation_docx(subject_key: str) -> Document:
         "anchoring phenomenon throughout."
     )
     _shade(t1.rows[1].cells[0], C_WHITE)
-    _cell_para(t1.rows[1].cells[0], instructions, size_pt=9)
+    _cell_para_auto(t1.rows[1].cells[0], instructions)
 
     _tbl_no_spacing(doc)
 
@@ -1952,10 +2007,10 @@ def build_final_explanation_docx(subject_key: str) -> Document:
         _cell_para(t.rows[0].cells[0], section_title, bold=True, size_pt=11, color_hex=C_WHITE)
 
         _shade(t.rows[1].cells[0], C_LT_BLUE)
-        _cell_para(t.rows[1].cells[0], prompts, size_pt=9)
+        _cell_para_auto(t.rows[1].cells[0], prompts)
 
         _shade(t.rows[2].cells[0], C_WHITE)
-        _cell_para(t.rows[2].cells[0], model_answer, size_pt=9)
+        _cell_para_auto(t.rows[2].cells[0], model_answer)
 
         _tbl_no_spacing(doc)
 
@@ -1990,7 +2045,7 @@ def build_final_explanation_docx(subject_key: str) -> Document:
         _cell_para(row.cells[0], row_data[0], bold=True, size_pt=9)
         for ci, (cell, val, fill) in enumerate(zip(row.cells[1:], row_data[1:], alt)):
             _shade(cell, fill)
-            _cell_para(cell, val, size_pt=9)
+            _cell_para_auto(cell, val)
 
     # ── Post-rubric sections: Example, Tips, Reminders ───────────────────────
     fe_tail = parse_doc_sections(
@@ -2101,7 +2156,7 @@ def build_summary_table_docx(subject_key: str) -> Document:
     _cell_para(t1.rows[0].cells[0], "HOW TO USE THIS TABLE", bold=True, size_pt=11, color_hex=C_WHITE)
 
     _shade(t1.rows[1].cells[0], C_WHITE)
-    _cell_para(t1.rows[1].cells[0], meta["summary_instructions"], size_pt=9)
+    _cell_para_auto(t1.rows[1].cells[0], meta["summary_instructions"])
 
     _tbl_no_spacing(doc)
 
@@ -2130,11 +2185,11 @@ def build_summary_table_docx(subject_key: str) -> Document:
 
         for ci in range(1, 4):
             _shade(row.cells[ci], alt_fill)
-            _cell_para(row.cells[ci], row_data[ci] if len(row_data) > ci else "", size_pt=9)
+            _cell_para_auto(row.cells[ci], row_data[ci] if len(row_data) > ci else "")
             row.cells[ci].vertical_alignment = WD_ALIGN_VERTICAL.TOP
 
         _shade(row.cells[4], C_PURPLE_LT)
-        _cell_para(row.cells[4], row_data[4] if len(row_data) > 4 else "", size_pt=9)
+        _cell_para_auto(row.cells[4], row_data[4] if len(row_data) > 4 else "")
         row.cells[4].vertical_alignment = WD_ALIGN_VERTICAL.TOP
 
     # ── End-of-Unit Reflection Questions + Teacher Notes (parsed from source) ─
