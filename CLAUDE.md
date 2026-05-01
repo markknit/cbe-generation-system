@@ -12,25 +12,66 @@ After every session: commit and push all changes so nothing is lost.
 
 ---
 
-## CURRENT TASK (In Progress — Pick Up Here)
-
-### Task: Reformat Seavuria Lesson Plans — REWRITE NEEDED
+## CURRENT TASK STATUS: Seavuria Reformatting — COMPLETED (Needs User Review)
 
 **Script**: `src/reformat_seavuria.py`
-**Status**: Parser works correctly. Builder produces **WRONG FORMAT**. Must be rewritten.
+**Status**: Script runs successfully. All 9 output files generated in `data/outputs/Seavuria_Reformatted/`.
 
-**What's wrong**: The current builder invents its own color scheme and table structure.
-It must exactly replicate the **locked Biology Plant Nutrition format**.
+### What was done this session
+A complete rewrite of the builder section of `src/reformat_seavuria.py` was performed.
 
-**Reference format files** (READ-ONLY, do not modify):
+**All fixes applied:**
+1. **Font**: Changed from Calibri → **Arial** (matching Bio reference)
+2. **Phase names**: Now use full Bio-reference names: "Predict Phase", "Observe Phase", "Explain Phase", "Driving Question Board (DQB) Creation", "Model Building Phase"
+3. **Table A structure** (per lesson): Corrected to match Bio reference exactly:
+   - R0: navy "LESSON N: Title" (merged)
+   - R1: teal "A. SPECIFIC LEARNING OUTCOMES" (merged, 11pt)
+   - R2: lt-blue "Purpose" (added — was missing)
+   - R3: lt-blue "Knowledge" (no colon)
+   - R4: lt-blue "Skills" (no colon)
+   - R5: lt-blue "Attitudes" (was "Attitudes & Values:")
+   - R6: purple-lt "Key Inquiry Question" (no colon)
+   - R7: teal-lt "Purpose in Storyline" (no colon)
+   - R8: orange-lt "Safety Notes" (was "Safety:")
+   - Removed the incorrect "B. Lesson Overview" merged row that was previously inside Table A
+   - Col widths: [2.083, 7.417] (matching Bio)
+4. **Table B**: Changed label to "B. LESSON OVERVIEW" (11pt) — content now includes inquiry question + overview + materials
+5. **Table C**: 
+   - Single table per lesson (was TWO — now P1 and P2 combined in one table)
+   - Col widths: [0.625, 1.775, 1.775, 1.775, 1.775, 1.775] (matching Bio)
+   - Header: "C. LESSON IMPLEMENTATION FRAMEWORK" (uppercase, 11pt)
+6. **Table D**: Header now "D. TEACHER REFLECTION" (uppercase, 11pt)
+7. **Table E**: 
+   - Col widths: [2.083, 7.417] (was [2.5, 7.0])
+   - Header: "E. SUMMARY TABLE PROMPT  (pre-filled example for this lesson)" (uppercase, 11pt)
+   - Content cells now PRE-FILLED from summary_table_rows data
+8. **Overview Table 0**: Now has navy "SUB-STRAND OVERVIEW" banner as first row
+9. **Para spacing**: 1 empty para between tables, 2 between lessons (matching Bio)
+10. **Final Explanation**: 
+    - Section headers now UPPERCASE
+    - Model answers added to all response cells (no more "[Write your response here]" placeholder)
+    - Instructions header: "INSTRUCTIONS FOR STUDENTS" (uppercase, 11pt)
+    - Student name/class/date fields have underscores (matching Bio)
+11. **Summary Table**:
+    - All header labels now uppercase with 11pt
+    - Chemistry: ALL 13 lesson rows now populated with substantive content (lessons 2-12 were previously empty)
+    - Physics: ALL 6 lesson rows now populated (lessons 2, 4, 5, 6 were previously empty)
+    - Math: was already complete, verified correct
+
+### Output files (9 total in `data/outputs/Seavuria_Reformatted/`)
 ```
-data/outputs/docx/Grade 10 Bio/Bio 2.1 Plant Nutrition/docx/
-  Biology_PlantNutrition_CBE_LessonSequence_L1-12.docx   ← locked lesson sequence format
-  Biology_PlantNutrition_FinalExplanation.docx            ← locked final explanation format
-  Biology_PlantNutrition_SummaryTable.docx                ← locked summary table format
+Chemistry_10_SubStrand1.4_ChemicalBonding_CBE_LessonSequence.docx
+Chemistry_10_SubStrand1.4_ChemicalBonding_FinalExplanation.docx
+Chemistry_10_SubStrand1.4_ChemicalBonding_SummaryTable.docx
+Mathematics_10_SubStrand1.3_QuadraticEquations_CBE_LessonSequence.docx
+Mathematics_10_SubStrand1.3_QuadraticEquations_FinalExplanation.docx
+Mathematics_10_SubStrand1.3_QuadraticEquations_SummaryTable.docx
+Physics_10_SubStrand1.4_ThermalExpansion_CBE_LessonSequence.docx
+Physics_10_SubStrand1.4_ThermalExpansion_FinalExplanation.docx
+Physics_10_SubStrand1.4_ThermalExpansion_SummaryTable.docx
 ```
 
-**Source content files** (read to extract content):
+### Source content files (READ-ONLY, do not modify)
 ```
 data/raw/Seavuria Lesson Plans/
   Chemistry_Chemical_Bonding_CBE_LessonSequence_COMPLETE.docx
@@ -44,164 +85,70 @@ data/raw/Seavuria Lesson Plans/
   SUMMARY_TABLE_Temperature_Thermal_Expansion.docx
 ```
 
-**Required output** — 9 files in `data/outputs/Seavuria_Reformatted/`:
+### Reference format files (READ-ONLY, do not modify)
 ```
-Chemistry_10_SubStrand1.4_ChemicalBonding_CBE_LessonSequence.docx
-Chemistry_10_SubStrand1.4_ChemicalBonding_FinalExplanation.docx
-Chemistry_10_SubStrand1.4_ChemicalBonding_SummaryTable.docx
-Mathematics_10_SubStrand1.3_QuadraticEquations_CBE_LessonSequence.docx
-Mathematics_10_SubStrand1.3_QuadraticEquations_FinalExplanation.docx
-Mathematics_10_SubStrand1.3_QuadraticEquations_SummaryTable.docx
-Physics_10_SubStrand1.4_ThermalExpansion_CBE_LessonSequence.docx
-Physics_10_SubStrand1.4_ThermalExpansion_FinalExplanation.docx
-Physics_10_SubStrand1.4_ThermalExpansion_SummaryTable.docx
+data/outputs/docx/Grade 10 Bio/Bio 2.1 Plant Nutrition/docx/
+  Biology_PlantNutrition_CBE_LessonSequence_L1-12.docx
+  Biology_PlantNutrition_FinalExplanation.docx
+  Biology_PlantNutrition_SummaryTable.docx
 ```
 
 ---
 
-## LOCKED FORMAT SPECIFICATION
+## VERIFIED LOCKED FORMAT (from actual Bio reference diagnostics)
 
 ### All Documents
 - **Page size**: 11.000" × 8.500" (US Letter Landscape)
-- **Margins**: 0.750" all sides (uniform)
-- **Title para**: 14pt bold, color `1F3864` (dark navy)
-- **Subtitle para**: 11pt not-bold, color `1F6B75` (teal)
-- **Font**: Calibri throughout
+- **Margins**: 0.750" all sides
+- **Title para**: 14pt bold, color `1F3864`
+- **Subtitle para**: 11pt not-bold, color `1F6B75`
+- **Font**: **Arial** (NOT Calibri)
 
-### Color Palette
-| Name | Hex | Used For |
-|------|-----|---------|
-| Navy | `1F3864` | Titles, Phase col header, Table A banner |
-| Teal | `1F6B75` | Subtitles, Table B/Resource/Sensemaking headers |
-| Med Blue | `2E75B6` | Learner Exp/Teacher Actions/Assessment headers |
-| Purple | `7030A0` | Table E header, Summary Table DQB col header |
-| Orange | `C55A11` | Table D header |
-| Lt Blue | `D5E8F0` | SLO labels, Key Inquiry bg, summary lesson# col |
-| Teal Lt | `D9EEF1` | Observe phase row |
-| Green Lt | `E2EFDA` | Explain phase row |
-| Purple Lt | `EAD1F5` | Predict phase row, Table E row labels, DQB col |
-| Orange Lt | `FCE4D6` | DQB phase row, Table D content |
-| Model Blue | `D5E8F0` | Model Building phase row (same as Lt Blue) |
-| Lt Gray | `F2F2F2` | Alternating content rows |
-| White | `FFFFFF` | Main content rows |
+### Lesson Sequence — per-lesson structure (confirmed from Bio reference)
+```
+TABLE 9r×2c (cols 2.083+7.417)  — Table A: LESSON BANNER + SPECIFIC SLOs
+  PARA: [empty]
+TABLE 2r×1c (col 9.5")          — Table B: B. LESSON OVERVIEW
+  PARA: [empty]
+TABLE 7r×6c (0.625+1.775×5)     — Table C: C. LESSON IMPLEMENTATION FRAMEWORK
+  PARA: [empty]
+TABLE 2r×1c (col 9.5")          — Table D: D. TEACHER REFLECTION
+  PARA: [empty]
+TABLE 4r×2c (cols 2.083+7.417)  — Table E: E. SUMMARY TABLE PROMPT (pre-filled...)
+  PARA: [empty]
+  PARA: [empty]   ← two empty paras between lessons
+```
 
-### Document 1: Lesson Sequence (LessonSequence.docx)
+### Table A Row Layout (confirmed)
+- R0: fill=1F3864 "LESSON N: Title" (merged, 11pt bold white)
+- R1: fill=1F6B75 "A. SPECIFIC LEARNING OUTCOMES" (merged, 11pt bold white)
+- R2: fill=D5E8F0 "Purpose" | fill=FFFFFF content (9pt)
+- R3: fill=D5E8F0 "Knowledge" | fill=FFFFFF content (9pt)
+- R4: fill=D5E8F0 "Skills" | fill=FFFFFF content (9pt)
+- R5: fill=D5E8F0 "Attitudes" | fill=FFFFFF content (9pt)
+- R6: fill=EAD1F5 "Key Inquiry Question" | fill=FFFFFF content (9pt)
+- R7: fill=D9EEF1 "Purpose in Storyline" | fill=FFFFFF content (9pt)
+- R8: fill=FCE4D6 "Safety Notes" | fill=FFFFFF content (9pt)
 
-**Structure per document**:
-1. Title paragraph
-2. Subtitle paragraph  
-3. Sub-strand overview Table 0 (15r × 2c)
-4. For each lesson: 5 tables (A through E) — NO extra paragraphs between tables within a lesson
-
-**Table A — SLOs (9r × 2c)**, total width 9.5":
-- R0: merged, fill `1F3864` (navy) — "LESSON N: Title"
-- R1: merged, fill `1F6B75` (teal) — "A. Specific Learning Outcomes"
-- R2: fill `D5E8F0` label col, white content — "Knowledge:"
-- R3: fill `D5E8F0` label col, white content — "Skills:"
-- R4: fill `D5E8F0` label col, white content — "Attitudes & Values:"
-- R5: merged, fill `1F6B75` (teal) — "B. Lesson Overview"
-- R6: R0=`EAD1F5` "Key Inquiry Question:", R1=white (question text)
-- R7: R0=`D9EEF1` "Purpose in Storyline:", R1=white (purpose text)
-- R8: R0=`FCE4D6` "Safety:", R1=white (safety text)
-
-**Table B — Materials/Overview (2r × 1c)**:
-- R0: fill `1F6B75` — "Materials"
-- R1: fill `FFFFFF` — materials list text
-
-**Table C — Implementation (7r × 6c)**, total width 9.5":
-- R0: merged all 6 cols, fill `1F6B75` — "C. Lesson Implementation Framework — Period N (40 min)"
-- R1: col headers: Phase=`1F3864`, Learner Exp=`2E75B6`, Resource=`1F6B75`, Teacher Actions=`2E75B6`, Sensemaking=`1F6B75`, Assessment=`2E75B6`
-- R2: Phase="Predict", fill `EAD1F5` for Phase col; content cols alternate `FFFFFF`/`F2F2F2`
-- R3: Phase="Observe", fill `D9EEF1` for Phase col
-- R4: Phase="Explain", fill `E2EFDA` for Phase col
-- R5: Phase="DQB", fill `FCE4D6` for Phase col
-- R6: Phase="Model Building", fill `D5E8F0` for Phase col
-- **Col widths**: Phase=1.0", Learner Exp=2.5", Resource=1.0", Teacher Actions=2.0", Sensemaking=1.5", Assessment=1.5" (total 9.5")
-
-**Table D — Reflection (2r × 1c)**:
-- R0: fill `C55A11` (orange) — "D. Teacher Reflection"
-- R1: fill `FCE4D6` (light orange) — reflection questions text
-
-**Table E — Summary Prompt (4r × 2c)**:
-- R0: merged 2 cols, fill `7030A0` (purple) — "E. Summary Table Prompt"
-- R1: R0=`EAD1F5` bold "What did I observe?", R1=white (student writes)
-- R2: R0=`EAD1F5` bold "What did I learn?", R1=white (student writes)
-- R3: R0=`EAD1F5` bold "How does this explain the phenomenon?", R1=white
-
-### Document 2: Final Explanation (FinalExplanation.docx)
-
-**8 tables total**:
-
-**Table 0 (5r × 2c)** — Header block:
-- R0: merged, fill `1F3864` — subject/grade/substrand title
-- R1: merged, fill `1F6B75` — "Final Explanation Document"
-- R2: R0=`D5E8F0` "Student Name:", R1=white
-- R3: R0=`D5E8F0` "Class:", R1=white
-- R4: R0=`D5E8F0` "Date:", R1=white
-
-**Table 1 (2r × 1c)** — Instructions:
-- R0: fill `1F6B75` — "Instructions"
-- R1: fill `FFFFFF` — instructions text
-
-**Tables 2–6 (3r × 1c each)** — One per section (5 sections):
-- R0: fill `2E75B6` (medium blue) — section title (e.g., "Section 1: The Phenomenon")
-- R1: fill `D5E8F0` (light blue) — prompt/question text
-- R2: fill `FFFFFF` — example answer / student response area
-
-**Table 7 (7r × 4c)** — Rubric:
-- R0: merged, fill `1F3864` — "Assessment Rubric"
-- R1: col headers — `2E75B6` / `1F6B75` / `2E75B6` / `1F6B75`
-- R2–R6: R0=`D5E8F0` criterion label; R1-R3 alternating `FFFFFF`/`F2F2F2`
-
-### Document 3: Summary Table (SummaryTable.docx)
-
-**3 tables total**:
-
-**Table 0 (4r × 2c)** — Header block:
-- R0: merged, fill `1F3864` — subject/grade/substrand title
-- R1: merged, fill `1F6B75` — "Summary Table"
-- R2: R0=`D5E8F0` "Sub-Strand:", R1=white
-- R3: R0=`D5E8F0` "Driving Question:", R1=white
-
-**Table 1 (2r × 1c)** — Instructions:
-- R0: fill `1F6B75` — "Instructions"
-- R1: fill `FFFFFF` — instructions text
-
-**Table 2 (N+1 rows × 5c)** — Main summary table:
-- **Col widths**: Lesson#=0.833", Col2=2.167", Col3=2.167", Col4=2.167", DQB=2.167" (total 9.501")
-- R0: headers — Lesson#=`1F3864`, Col2=`2E75B6`, Col3=`1F6B75`, Col4=`2E75B6`, DQB col=`7030A0`
-- Data rows: Lesson# col=`D5E8F0`; DQB col=`EAD1F5`; other cols alternate `FFFFFF`/`F2F2F2`
-
----
-
-## What the parser already does correctly (DO NOT change)
-- `parse_source()` correctly extracts 13/7/6 lessons from chemistry/math/physics
-- `iter_block_items()` — correct
-- `is_impl_table()` — correct
-- `META` dict — correct
-- Only the **builder functions** need to be replaced
-
-## Source table column mapping
-Source 5-col tables have these headers:
-`Learner Experience | Resource Link | Teacher Moves | Sensemaking Strategy | Formative Assessment`
-
-These map to the 6-col locked format as:
-- Phase → **extract from Learner Experience text** (first word/phrase before the activity) or leave blank for student to fill
-- Learner Experience → Learner Experience
-- Resource Link → Resource  
-- Teacher Moves → Teacher Actions
-- Sensemaking Strategy → Sensemaking Strategy
-- Formative Assessment → Assessment Strategy
-
-The source tables do NOT have a "Phase" column. Each row represents one phase. The phase names (Predict, Observe, Explain, DQB, Model Building) must be assigned based on row order or text cues in the Learner Experience column.
+### Table C Phase Names (confirmed)
+- "Predict Phase" (fill EAD1F5)
+- "Observe Phase" (fill D9EEF1)
+- "Explain Phase" (fill E2EFDA)
+- "Driving Question Board (DQB) Creation" (fill FCE4D6)
+- "Model Building Phase" (fill D5E8F0)
 
 ---
 
 ## How to Start Next Session
 1. `git pull origin claude/setup-cbe-generation-ZKiIi`
-2. Read `CLAUDE.md` (this file) and `PROJECT_CONTEXT.md` if it exists
-3. Read the reference Bio docs to verify format details before writing
-4. Rewrite the builder portion of `src/reformat_seavuria.py`
-5. Test: `cd /home/user/cbe-generation-system && python src/reformat_seavuria.py`
-6. Check output in `data/outputs/Seavuria_Reformatted/`
-7. Commit and push when done
+2. Read `CLAUDE.md` (this file)
+3. User may request further adjustments after reviewing the output files on Windows
+4. To regenerate: `cd /home/user/cbe-generation-system && python src/reformat_seavuria.py`
+5. Commit and push when done
+
+## If Further Fixes Are Needed
+- All format changes are in `src/reformat_seavuria.py`
+- Parser functions (lines ~788–953): DO NOT CHANGE — they work correctly
+- Builder functions start at the `# LESSON SEQUENCE BUILDER` section
+- META dict contains all content: summary_table_rows, final_explanation_sections, substrand_overview_rows
+- Run `python src/reformat_seavuria.py` to regenerate all 9 files

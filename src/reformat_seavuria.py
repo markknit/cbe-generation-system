@@ -43,9 +43,15 @@ C_LT_GRAY   = "F2F2F2"   # alternating content rows
 C_WHITE     = "FFFFFF"
 
 PHASE_FILLS = [C_PURPLE_LT, C_TEAL_LT, C_GREEN_LT, C_ORANGE_LT, C_LT_BLUE]
-PHASE_NAMES = ["Predict", "Observe", "Explain", "DQB", "Model Building"]
+PHASE_NAMES = [
+    "Predict Phase",
+    "Observe Phase",
+    "Explain Phase",
+    "Driving Question Board (DQB) Creation",
+    "Model Building Phase",
+]
 
-FONT = "Calibri"
+FONT = "Arial"
 
 # ── META — subject metadata ───────────────────────────────────────────────────
 META = {
@@ -88,42 +94,100 @@ META = {
         ],
         "final_explanation_sections": [
             (
-                "Section 1: Why Do Atoms Form Bonds?",
+                "SECTION 1: WHY DO ATOMS FORM BONDS?",
                 "What makes an atom stable or unstable?\n"
                 "What are valence electrons and why are they important?\n"
                 "What is the octet rule? When does the duplet rule apply?\n"
                 "How does bonding help atoms achieve stability?",
+                "Atoms are stable when their outermost shell (valence shell) is full. "
+                "Valence electrons are the electrons in the outermost shell — they determine how an atom bonds. "
+                "Most atoms follow the octet rule: they become stable with 8 valence electrons (like noble gases). "
+                "Hydrogen and helium follow the duplet rule: stable with 2 electrons.\n\n"
+                "Carbon has 4 valence electrons (outer shell: 2,4) and needs 4 more to complete its octet. "
+                "It achieves stability by forming 4 bonds with other atoms — either ionic or covalent depending on what it bonds with. "
+                "Bonding allows atoms to reach the electron configuration of the nearest noble gas, which is the lowest-energy, most stable arrangement.",
             ),
             (
-                "Section 2: How Do Ionic Bonds Form and What Properties Do They Give Substances?",
+                "SECTION 2: HOW DO IONIC BONDS FORM AND WHAT PROPERTIES DO THEY GIVE SUBSTANCES?",
                 "How do ionic bonds form through electron transfer?\n"
                 "What types of atoms form ionic bonds?\n"
                 "How can we represent ionic bonding using Lewis diagrams?\n"
                 "What properties do ionic compounds have (melting point, conductivity, solubility, brittleness)?\n"
                 "Why do ionic compounds have these properties?",
+                "Ionic bonds form when a metal atom transfers one or more electrons to a non-metal atom. "
+                "The metal loses electrons to form a positive ion (cation); the non-metal gains electrons to form a negative ion (anion). "
+                "The strong electrostatic attraction between oppositely charged ions is the ionic bond.\n\n"
+                "Example (Lewis diagram): Na· + ·Cl: → Na⁺ [:Cl:]⁻ — sodium transfers its 1 valence electron to chlorine, "
+                "giving both the configuration of the nearest noble gas.\n\n"
+                "Ionic compounds form giant ionic lattices — a regular 3D arrangement of millions of ions. "
+                "This explains their properties:\n"
+                "• High melting/boiling points: strong electrostatic forces require a lot of energy to break.\n"
+                "• Conduct electricity when molten or dissolved (ions are free to move), but NOT as solids (ions locked in lattice).\n"
+                "• Soluble in water: polar water molecules surround and separate the ions.\n"
+                "• Brittle: shifting layers brings like charges together, creating repulsion that shatters the crystal.",
             ),
             (
-                "Section 3: How Do Covalent Bonds Form and What Structures Do They Create?",
+                "SECTION 3: HOW DO COVALENT BONDS FORM AND WHAT STRUCTURES DO THEY CREATE?",
                 "How do covalent bonds form through electron sharing?\n"
                 "What is the difference between simple molecular and giant covalent structures?\n"
                 "How do diamond and graphite differ in structure despite both being carbon?\n"
                 "What properties do simple molecular substances have vs. giant covalent structures?\n"
                 "Draw Lewis diagrams for simple molecules (H₂, H₂O, CO₂, CH₄).",
+                "Covalent bonds form when two non-metal atoms share electrons to achieve full outer shells. "
+                "Each shared pair of electrons counts toward the octet of both atoms.\n\n"
+                "Lewis diagrams: H–H (H₂: 1 shared pair), H–O–H with 2 lone pairs on O (H₂O), "
+                "O=C=O (CO₂: 2 double bonds), H–C–H with 4 single bonds (CH₄).\n\n"
+                "Simple molecular structures (H₂O, CO₂, CH₄): small molecules held together by strong covalent bonds, "
+                "but the forces BETWEEN molecules (Van der Waals / hydrogen bonds) are weak. "
+                "Result: low melting/boiling points, do not conduct electricity.\n\n"
+                "Giant covalent structures: millions of atoms bonded in a continuous 3D network.\n"
+                "• Diamond: each carbon forms 4 strong covalent bonds to 4 other carbons in a tetrahedral structure. "
+                "No free electrons → does not conduct. All bonds must break to melt → very high melting point → extremely hard.\n"
+                "• Graphite: each carbon forms 3 covalent bonds in flat hexagonal layers; the 4th valence electron is delocalised "
+                "and free to move between layers → conducts electricity. Layers are held by weak Van der Waals forces → "
+                "layers slide over each other → soft and slippery.",
             ),
             (
-                "Section 4: What Are Dative Covalent, Metallic, Hydrogen, and Van der Waals Bonds?",
+                "SECTION 4: WHAT ARE DATIVE COVALENT, METALLIC, HYDROGEN, AND VAN DER WAALS BONDS?",
                 "What is a dative covalent bond and how does it differ from a regular covalent bond?\n"
                 "How do metallic bonds form and what properties do they give?\n"
                 "What are hydrogen bonds and when do they form?\n"
                 "What are Van der Waals forces and how do they affect properties?",
+                "Dative covalent (coordinate) bond: both electrons in the shared pair come from the SAME atom "
+                "(the donor). Example: the ammonium ion NH₄⁺ forms when NH₃ donates its lone pair to H⁺. "
+                "Once formed, a dative bond is indistinguishable from a normal covalent bond.\n\n"
+                "Metallic bonds: metal atoms release their valence electrons into a 'sea' of delocalised electrons. "
+                "The positive metal ions are held together by electrostatic attraction to the electron sea. "
+                "This explains: high melting points (strong metallic bonds), electrical conductivity (delocalised electrons carry charge), "
+                "malleability/ductility (layers of ions slide without breaking bonds), and metallic lustre.\n\n"
+                "Hydrogen bonds: a relatively strong intermolecular force forming between a δ+ hydrogen (bonded to N, O, or F) "
+                "and a lone pair on N, O, or F of another molecule. They are NOT covalent bonds — they are between molecules. "
+                "Hydrogen bonds give water its unusually high boiling point, surface tension, and solvent properties.\n\n"
+                "Van der Waals forces: temporary dipoles caused by uneven electron distribution create weak attractions between all molecules. "
+                "Stronger for larger molecules (more electrons). Explains why simple molecular substances have low but non-zero melting/boiling points.",
             ),
             (
-                "Section 5: How Does Bond Type Explain Physical Properties and Real-Life Uses?",
+                "SECTION 5: HOW DOES BOND TYPE EXPLAIN PHYSICAL PROPERTIES AND REAL-LIFE USES?",
                 "Create a comparison table of ionic, simple molecular, giant covalent, and metallic substances "
                 "(covering melting point, conductivity, hardness, solubility).\n"
                 "Choose at least 4 substances and explain how their bonding and structure make them suitable for their uses "
                 "(e.g. NaCl, diamond, graphite, copper, water).\n"
                 "Answer the driving question: How do the bonds between atoms determine the properties and uses of substances?",
+                "Comparison Table:\n"
+                "| Type | Example | M.Pt | Electricity | Hardness | Water Solubility |\n"
+                "| Ionic | NaCl | High | Yes (aq/l) | Hard, brittle | Soluble |\n"
+                "| Simple Molecular | H₂O | Low | No | Soft | Variable |\n"
+                "| Giant Covalent | Diamond | Very high | No (except graphite) | Very hard | Insoluble |\n"
+                "| Metallic | Copper | High | Yes | Hard, malleable | Insoluble |\n\n"
+                "Applications:\n"
+                "• NaCl: used as food preservative and in medicine (saline drips) — dissolves in water, safe for consumption.\n"
+                "• Diamond: used in cutting tools and drill bits — hardest natural substance due to strong 3D covalent network.\n"
+                "• Graphite: used in pencils and as electrodes — soft (layers slide) and conducts electricity (delocalised electrons).\n"
+                "• Copper: used in electrical wiring — excellent conductor, malleable, does not corrode easily.\n\n"
+                "Driving Question Answer: The bonds between atoms determine atomic/molecular structure, which directly controls macroscopic properties. "
+                "Diamond and graphite are both pure carbon — but in diamond, each carbon forms 4 bonds in a 3D tetrahedral network "
+                "(making it the hardest substance), while in graphite, each carbon forms 3 bonds in flat layers with delocalised electrons "
+                "(making it soft and conductive). The bond type IS the structure IS the property.",
             ),
         ],
         "final_explanation_rubric": {
@@ -174,15 +238,142 @@ META = {
                 "DQB Started: Why are diamond and graphite so different? How do atoms stick together?\n"
                 "Initial Model: Carbon atoms connecting — unclear how or why differently.",
             ),
-        ] + [
-            (f"Lesson {n}:", "", "", "", "DQB Updated:\nModel Revised:")
-            for n in range(2, 13)
-        ] + [
+            (
+                "Lesson 2: Ionic Bonding — Electron Transfer",
+                "Investigated how metals transfer electrons to non-metals. Used Lewis diagrams to show sodium donating "
+                "its electron to chlorine. Identified conditions that favour ionic bond formation.",
+                "Ionic bonds form when a metal transfers electrons to a non-metal, creating oppositely charged ions. "
+                "The electrostatic attraction between ions is the ionic bond. Metals lose electrons; non-metals gain them.",
+                "Carbon bonds with itself (non-metal to non-metal), so it cannot form ionic bonds — ionic bonding is not "
+                "responsible for the diamond/graphite difference. The difference must involve covalent bonding.",
+                "DQB Updated: Answered 'What is an ionic bond?' Added question: Can carbon form ionic bonds?\n"
+                "Model Revised: Ionic bonding ruled out for carbon. Carbon must share electrons (covalent).",
+            ),
+            (
+                "Lesson 3: Ionic Compounds — Properties and Structure",
+                "Investigated properties of ionic compounds: melting point, solubility, electrical conductivity. "
+                "Built a model of a crystal lattice using balls and sticks.",
+                "Ionic compounds form giant ionic lattices — millions of ions in a regular 3D arrangement. "
+                "This gives them high melting points, brittleness, and ability to conduct electricity when dissolved or molten.",
+                "Ionic compounds like NaCl have fixed, ordered structures. Carbon-based structures must work differently — "
+                "carbon forms networks, not ionic lattices. The structure of carbon must explain its unique properties.",
+                "DQB Updated: Added 'How does structure explain properties?' \n"
+                "Model Revised: Ionic lattice structure shown. Carbon model still unclear — needs covalent investigation.",
+            ),
+            (
+                "Lesson 4: Covalent Bonding — Electron Sharing",
+                "Investigated how non-metals share electrons to form covalent bonds. Drew Lewis diagrams for H₂, H₂O, CO₂, CH₄. "
+                "Explored single, double, and triple bonds.",
+                "Covalent bonds form when non-metal atoms share electron pairs. Each shared pair is one bond. "
+                "Both atoms count the shared electrons toward their octet. Carbon can form 4 covalent bonds.",
+                "Carbon forms 4 covalent bonds because it has 4 valence electrons and needs 4 more. "
+                "This means carbon can bond to 4 other carbons — building a giant 3D network. This is the key to understanding diamond!",
+                "DQB Updated: Added 'How does carbon bond to itself?' \n"
+                "Model Revised: Carbon atom with 4 bond sites shown. Starting to see how diamond network forms.",
+            ),
+            (
+                "Lesson 5: Simple Molecular vs Giant Covalent Structures",
+                "Compared properties of simple molecular substances (e.g. water, iodine) with giant covalent structures (diamond, silica). "
+                "Investigated why some covalent substances have low melting points and others extremely high.",
+                "Simple molecular: small molecules with strong intramolecular bonds but weak intermolecular forces → low melting points. "
+                "Giant covalent: atoms bonded in a continuous network → all bonds must break to melt → very high melting points.",
+                "Diamond must be a giant covalent structure — it melts at ~3500°C, far too high for a simple molecular substance. "
+                "Graphite is also giant covalent but has a different structure that makes it soft. The arrangement of bonds matters!",
+                "DQB Updated: Answered 'Why does diamond have such a high melting point?' \n"
+                "Model Revised: Diamond shown as giant covalent 3D network. Graphite structure still to investigate.",
+            ),
+            (
+                "Lesson 6: Diamond and Graphite — Structure Explains Properties",
+                "Built 3D models of diamond and graphite structures. Compared bonding arrangements. "
+                "Investigated why graphite conducts electricity but diamond does not.",
+                "Diamond: each carbon forms 4 bonds to 4 others in a tetrahedral 3D network — no free electrons, very hard, "
+                "does not conduct. Graphite: each carbon forms 3 bonds in flat hexagonal layers — the 4th electron is delocalised "
+                "between layers, conducts electricity, layers slide easily (soft and lubricating).",
+                "The mystery is SOLVED: same element (carbon) but different bonding arrangements → completely different properties. "
+                "Diamond's 3D bonding makes it the hardest substance. Graphite's layered structure with free electrons makes it soft and conductive.",
+                "DQB Updated: Answered central driving question for carbon! Diamond = 3D covalent, Graphite = layered covalent.\n"
+                "Model Revised: Both structures drawn accurately showing bond arrangements and explaining properties.",
+            ),
+            (
+                "Lesson 7: Dative Covalent Bonding",
+                "Investigated dative covalent bonds where both electrons come from one donor atom. "
+                "Formed ammonium ion (NH₄⁺) by NH₃ donating its lone pair to H⁺. Drew coordinate bond diagrams.",
+                "A dative (coordinate) covalent bond is the same as a normal covalent bond once formed — the only difference "
+                "is the origin of the electrons (both from one atom). It creates no special properties distinct from normal covalent bonds.",
+                "Dative bonds further expand our understanding of how carbon compounds can form complex structures "
+                "(e.g. in organic chemistry, coordinate bonds appear in many compounds). Same principle: bond type → structure → property.",
+                "DQB Updated: Added 'Are there other types of covalent bonds?' Answered with dative bonding.\n"
+                "Model Revised: Added dative bond notation to model toolkit.",
+            ),
+            (
+                "Lesson 8: Metallic Bonding",
+                "Investigated metallic bonding using the electron sea model. Tested properties of metals: conductivity, "
+                "malleability, ductility, high melting points.",
+                "Metallic bonds: metal atoms release valence electrons into a 'sea' of delocalised electrons. "
+                "Positive ions are held by electrostatic attraction to the electron sea. "
+                "This explains conductivity (free electrons), malleability (ions slide without breaking bonds), and high melting points.",
+                "Metals have a completely different bonding model from carbon — electron sea vs covalent network. "
+                "Bond type determines structure determines property: this principle applies to ALL substances, not just carbon.",
+                "DQB Updated: Added 'How do metals conduct electricity?' Answered via electron sea model.\n"
+                "Model Revised: Metallic bonding diagram added alongside ionic and covalent models.",
+            ),
+            (
+                "Lesson 9: Hydrogen Bonds and Van der Waals Forces",
+                "Investigated intermolecular forces — forces BETWEEN molecules (not within). "
+                "Tested water's surface tension, high boiling point, and ice floating as evidence of hydrogen bonding.",
+                "Hydrogen bonds are stronger intermolecular forces (not covalent bonds!) between δ+H and lone pairs on N, O, F. "
+                "Van der Waals forces are weak temporary dipole attractions between all molecules — increase with molecular size. "
+                "These explain boiling points of simple molecular substances.",
+                "Even for simple molecular carbon compounds (like CH₄), Van der Waals forces between molecules determine "
+                "physical properties. The stronger the intermolecular forces, the higher the boiling point — even in simple molecules.",
+                "DQB Updated: Added 'What forces exist between molecules?' Answered with hydrogen bonds + Van der Waals.\n"
+                "Model Revised: Added intermolecular forces layer to model — both intramolecular and intermolecular bonds matter.",
+            ),
+            (
+                "Lesson 10: Comparing Bond Types and Properties",
+                "Constructed a comprehensive comparison table of all bond types. Matched substances to their bond types "
+                "by reasoning from their properties (melting point, conductivity, hardness, solubility).",
+                "Each bond type produces a predictable set of properties: ionic → high M.Pt, conducts when dissolved; "
+                "metallic → conducts, malleable; giant covalent → very high M.Pt, very hard, non-conducting (except graphite); "
+                "simple molecular → low M.Pt, non-conducting.",
+                "This lesson consolidates the answer to the driving question: bond type → structure → properties. "
+                "Diamond (giant covalent) and graphite (giant covalent but different arrangement) perfectly fit predicted properties.",
+                "DQB Updated: Created comprehensive bond-type → property map.\n"
+                "Model Revised: Final comparison model with all four bond types shown side by side.",
+            ),
+            (
+                "Lesson 11: Real-Life Applications of Chemical Bonding",
+                "Researched applications of different bond types in everyday Kenyan life and technology. "
+                "Presented case studies: NaCl in food, diamond in industry, copper in wiring, water in biology.",
+                "Bond type determines suitability for specific uses: NaCl (ionic) dissolves in water — good for food and medicine; "
+                "diamond (giant covalent) — hardest substance, used for cutting; copper (metallic) — malleable and conducts; "
+                "graphite (giant covalent, layered) — used as lubricant and electrodes.",
+                "The driving question is answered in real-world context: understanding bonding allows us to choose the right "
+                "material for the right job. Diamond and graphite are perfect examples: same atoms, different bonds, different uses.",
+                "DQB Updated: Answered 'How does this help in real life?' with specific Kenya examples.\n"
+                "Model Revised: Real-world applications connected to bond type in final model.",
+            ),
+            (
+                "Lesson 12: Review and Consolidation",
+                "Reviewed all bond types and their properties through a class quiz and collaborative model building. "
+                "Identified and corrected misconceptions. Prepared for Final Explanation.",
+                "All five bond types (ionic, covalent, dative covalent, metallic, hydrogen/Van der Waals) explain specific "
+                "properties through specific structures. The linking principle: atoms arrange themselves in the lowest-energy "
+                "configuration, which is determined by how they bond.",
+                "Full answer to driving question: Carbon's 4 valence electrons allow it to bond 4 ways — in diamond, "
+                "these form a 3D tetrahedral network (hardest substance); in graphite, they form flat hexagonal layers "
+                "(soft, lubricating, conductive). Bond type → structure → property.",
+                "DQB Updated: All questions answered. DQB Complete.\n"
+                "Model Revised: Complete and accurate model showing all bond types with property explanations.",
+            ),
             (
                 "Lesson 13: Final Explanation and Model",
-                "",
-                "",
-                "",
+                "Completed individual Final Explanation document synthesising all learning across 13 lessons. "
+                "Presented and explained final model of chemical bonding.",
+                "A complete understanding of chemical bonding — from atomic stability through all five bond types to "
+                "real-world applications — explains why substances have the properties they do.",
+                "Diamond and graphite are both pure carbon, but their completely different properties arise entirely from "
+                "different bonding arrangements: 4-bond 3D network (diamond) vs 3-bond layered structure with delocalised electrons (graphite).",
                 "DQB Completed: Answered driving question with evidence from all lessons.\n"
                 "Final Model: Comprehensive model showing how atomic bonding determines substance properties.",
             ),
@@ -234,43 +425,124 @@ META = {
         ],
         "final_explanation_sections": [
             (
-                "Section 1: What is a Quadratic Expression and How Do We Form One?",
+                "SECTION 1: WHAT IS A QUADRATIC EXPRESSION AND HOW DO WE FORM ONE?",
                 "What is the standard form ax² + bx + c and what do a, b, c represent?\n"
                 "Give three examples of quadratic expressions from real-life Kenyan contexts "
                 "(e.g. shamba area, harambee contributions, matatu revenue).\n"
                 "Explain how the harambee problem leads to a quadratic relationship.",
+                "A quadratic expression has the standard form ax² + bx + c where:\n"
+                "• a = coefficient of the squared term (a ≠ 0)\n"
+                "• b = coefficient of the linear term\n"
+                "• c = constant term\n\n"
+                "Three Kenyan real-life examples:\n"
+                "1. Shamba area: if a rectangular plot has length (x + 5) m and width (x + 3) m, "
+                "area = (x+5)(x+3) = x² + 8x + 15 m². (a=1, b=8, c=15)\n"
+                "2. Harambee contributions: if x people share Ksh 12,000 but 3 fail to show, "
+                "cost per person increases by Ksh 200 → equation involves 12,000/x and 12,000/(x-3) → leads to x² - 3x - 180 = 0.\n"
+                "3. Matatu revenue: if a matatu charges Ksh (100-2x) per passenger and carries (50+x) passengers, "
+                "revenue = (100-2x)(50+x) = 5000 + 100x - 100x - 2x² = 5000 - 2x²; to maximise revenue involves a quadratic.\n\n"
+                "Harambee problem as quadratic: Let x = original number of members. "
+                "Each originally pays 12,000/x. After 3 leave, each pays 12,000/(x-3). "
+                "Difference = 200: 12,000/(x-3) - 12,000/x = 200. "
+                "Multiply through by x(x-3): 12,000x - 12,000(x-3) = 200x(x-3). "
+                "Simplify: 36,000 = 200x² - 600x → x² - 3x - 180 = 0. This IS a quadratic equation!",
             ),
             (
-                "Section 2: What Are the Three Quadratic Identities and How Are They Derived from Area?",
+                "SECTION 2: WHAT ARE THE THREE QUADRATIC IDENTITIES AND HOW ARE THEY DERIVED FROM AREA?",
                 "State and prove all three identities using area diagrams:\n"
                 "  (a + b)² = a² + 2ab + b²\n"
                 "  (a - b)² = a² - 2ab + b²\n"
                 "  (a + b)(a - b) = a² - b²\n"
                 "Use a numerical example for each identity (e.g. calculate 103², 97², and 103 × 97).",
+                "Identity 1: (a + b)² = a² + 2ab + b²\n"
+                "Proof (area method): Draw a square with side (a+b). "
+                "Divide into 4 regions: a²  (top-left), ab (top-right), ab (bottom-left), b² (bottom-right). "
+                "Total area = a² + ab + ab + b² = a² + 2ab + b².\n"
+                "Numerical example: 103² = (100+3)² = 10,000 + 600 + 9 = 10,609 ✓\n\n"
+                "Identity 2: (a - b)² = a² - 2ab + b²\n"
+                "Proof: (a-b)² = (a-b)(a-b) = a²-ab-ab+b² = a²-2ab+b².\n"
+                "Numerical example: 97² = (100-3)² = 10,000 - 600 + 9 = 9,409 ✓\n\n"
+                "Identity 3: (a + b)(a - b) = a² - b²\n"
+                "Proof: expand (a+b)(a-b) = a²-ab+ab-b² = a²-b².\n"
+                "Numerical example: 103 × 97 = (100+3)(100-3) = 100²-3² = 10,000-9 = 9,991 ✓\n\n"
+                "These identities allow us to expand brackets quickly without full multiplication, "
+                "and they reverse into factorisation patterns (e.g. x²-9 = (x+3)(x-3)).",
             ),
             (
-                "Section 3: How Do We Factorise Quadratic Expressions?",
+                "SECTION 3: HOW DO WE FACTORISE QUADRATIC EXPRESSIONS?",
                 "Explain the method for factorising when a = 1 (find two numbers that multiply to c and add to b).\n"
                 "Explain the splitting method for factorising when a ≠ 1.\n"
                 "Apply both methods with worked examples.\n"
                 "Identify and factorise perfect square trinomials and differences of two squares.",
+                "Method 1 (a = 1): Find two numbers p and q such that p × q = c AND p + q = b. "
+                "Then x² + bx + c = (x + p)(x + q).\n"
+                "Example: x² + 7x + 12. Need p × q = 12, p + q = 7 → p = 3, q = 4. "
+                "So x² + 7x + 12 = (x + 3)(x + 4). Check: (x+3)(x+4) = x² + 4x + 3x + 12 = x² + 7x + 12 ✓\n\n"
+                "Method 2 — Splitting (a ≠ 1): For ax² + bx + c, find p and q with p × q = a×c and p + q = b. "
+                "Rewrite bx as px + qx, then factor by grouping.\n"
+                "Example: 2x² + 7x + 3. a×c = 6. Need p+q=7, p×q=6 → p=1, q=6. "
+                "Rewrite: 2x² + x + 6x + 3 = x(2x+1) + 3(2x+1) = (2x+1)(x+3). "
+                "Check: (2x+1)(x+3) = 2x² + 6x + x + 3 = 2x² + 7x + 3 ✓\n\n"
+                "Special cases:\n"
+                "• Perfect square trinomial: x² + 6x + 9 = (x+3)² (because 3²=9 and 2×3=6).\n"
+                "• Difference of two squares: x² - 16 = (x+4)(x-4) (because 4²=16).\n"
+                "For the harambee equation x² - 3x - 180 = 0: need p×q=-180, p+q=-3 → p=12, q=-15. "
+                "So x² - 3x - 180 = (x+12)(x-15).",
             ),
             (
-                "Section 4: How Do We Form and Solve a Quadratic Equation?",
+                "SECTION 4: HOW DO WE FORM AND SOLVE A QUADRATIC EQUATION?",
                 "State the four steps to solve a quadratic equation by factorisation.\n"
                 "Solve the harambee textbook fund problem completely, showing all steps:\n"
                 "  — define variable, form equation, simplify to standard form, factorise, "
                 "apply zero product property, interpret, verify.\n"
                 "Explain why one solution is rejected and what the answer means in context.",
+                "Four steps to solve by factorisation:\n"
+                "1. Rearrange to standard form: ax² + bx + c = 0\n"
+                "2. Factorise the left side completely\n"
+                "3. Apply zero product property: if AB = 0, then A = 0 OR B = 0\n"
+                "4. Solve each factor equation, then interpret and verify in context\n\n"
+                "Harambee Problem (full solution):\n"
+                "Step 1 — Define variable: Let x = original number of members.\n"
+                "Step 2 — Form equation: Each originally pays 12,000/x. After 3 leave, remaining x-3 members each pay "
+                "12,000/(x-3). The increase is Ksh 200: 12,000/(x-3) - 12,000/x = 200\n"
+                "Step 3 — Simplify: Multiply both sides by x(x-3):\n"
+                "  12,000x - 12,000(x-3) = 200x(x-3)\n"
+                "  12,000x - 12,000x + 36,000 = 200x² - 600x\n"
+                "  36,000 = 200x² - 600x\n"
+                "  Divide by 200: 180 = x² - 3x → x² - 3x - 180 = 0\n"
+                "Step 4 — Factorise: (x + 12)(x - 15) = 0\n"
+                "Step 5 — Solve: x = -12 or x = 15\n"
+                "Step 6 — Reject x = -12 (impossible: number of people cannot be negative)\n"
+                "Step 7 — Interpret: Original group = 15 members. Each paid 12,000/15 = Ksh 800.\n"
+                "After 3 left, 12 members each paid 12,000/12 = Ksh 1,000. Increase = 200. ✓",
             ),
             (
-                "Section 5: How Do Quadratic Equations Help Us Solve Real-Life Problems?",
+                "SECTION 5: HOW DO QUADRATIC EQUATIONS HELP US SOLVE REAL-LIFE PROBLEMS?",
                 "Solve at least two of the following problems, showing all working:\n"
                 "  — Shamba area problem (farmer with 100m fencing)\n"
                 "  — Classroom foundation dimensions\n"
                 "  — Matatu fare optimization\n"
                 "  — Pythagorean theorem application\n"
                 "For each: define variable, form equation, solve, interpret solution, verify answer.",
+                "Problem 1 — Shamba area:\n"
+                "A farmer has 100 m of fencing for a rectangular plot against a wall (only 3 sides needed). "
+                "The area must be 1,200 m². Find the dimensions.\n"
+                "Let width = x, then length = 100 - 2x.\n"
+                "Area: x(100-2x) = 1,200 → 100x - 2x² = 1,200 → 2x² - 100x + 1,200 = 0 → x² - 50x + 600 = 0\n"
+                "Factorise: (x-20)(x-30) = 0 → x = 20 or x = 30.\n"
+                "If x = 20: width = 20 m, length = 60 m. Area = 1,200 ✓\n"
+                "If x = 30: width = 30 m, length = 40 m. Area = 1,200 ✓\n"
+                "Both solutions are valid — two possible rectangles fit the constraints.\n\n"
+                "Problem 2 — Pythagorean theorem:\n"
+                "A ladder 10 m long leans against a wall. The foot is 2 m further from the wall than the height it reaches. "
+                "Find the height.\n"
+                "Let height = h. Foot distance = h + 2. By Pythagoras: h² + (h+2)² = 10²\n"
+                "h² + h² + 4h + 4 = 100 → 2h² + 4h - 96 = 0 → h² + 2h - 48 = 0\n"
+                "Factorise: (h+8)(h-6) = 0 → h = -8 (reject, negative) or h = 6 m.\n"
+                "The ladder reaches 6 m up the wall. Foot is 8 m from wall. Check: 6² + 8² = 36+64 = 100 = 10² ✓\n\n"
+                "Quadratic equations are powerful tools for modelling real-world situations involving area, distance, "
+                "rates, and revenue. The process — define variable, form equation, solve, interpret, verify — "
+                "applies across all contexts.",
             ),
         ],
         "final_explanation_rubric": {
@@ -424,43 +696,129 @@ META = {
         ],
         "final_explanation_sections": [
             (
-                "Section 1: What is Temperature and How is it Measured?",
+                "SECTION 1: WHAT IS TEMPERATURE AND HOW IS IT MEASURED?",
                 "What is temperature at the particle level (how does it relate to kinetic energy)?\n"
                 "What are the Celsius and Kelvin scales and how do we convert between them (K = °C + 273)?\n"
                 "What types of thermometers exist and how does each one work?\n"
                 "Which thermometer would be best for measuring the hot water used on the sufuria lid? Why?",
+                "Temperature is a measure of the average kinetic energy of particles in a substance. "
+                "When we say something is 'hot', we mean its particles are moving faster on average. "
+                "Temperature does NOT measure total heat energy — a large cold object can contain more heat energy than a small hot one.\n\n"
+                "Temperature scales:\n"
+                "• Celsius (°C): water freezes at 0°C, boils at 100°C. Used in everyday life.\n"
+                "• Kelvin (K): absolute scale; 0 K = absolute zero (particles have minimum kinetic energy). K = °C + 273.\n"
+                "Example: 25°C = 25 + 273 = 298 K. Human body temperature 37°C = 310 K.\n\n"
+                "Types of thermometers:\n"
+                "• Liquid-in-glass (mercury or alcohol): liquid expands with temperature along a calibrated scale — simple, accurate for 0-100°C.\n"
+                "• Digital/thermocouple: measures voltage change due to temperature — fast, wide range, used in laboratories.\n"
+                "• Clinical thermometer: mercury, range 35-42°C, has a constriction to hold reading.\n"
+                "• Infrared thermometer: measures heat radiation emitted by objects — non-contact, fast.\n\n"
+                "Best for sufuria lid experiment: liquid-in-glass or digital thermometer — both can measure 70-100°C water temperature accurately. "
+                "Infrared would also work for measuring lid surface temperature without contact.",
             ),
             (
-                "Section 2: What Happens to Particles When Temperature Changes?",
+                "SECTION 2: WHAT HAPPENS TO PARTICLES WHEN TEMPERATURE CHANGES?",
                 "How do particles behave differently in solids, liquids, and gases?\n"
                 "What happens to particle motion when temperature increases?\n"
                 "How does increased particle motion lead to expansion?\n"
                 "Do all states of matter expand equally? Why or why not?\n"
                 "Connect to phenomenon: What is happening to the particles in the metal lid and glass bottle?",
+                "Particle behaviour by state:\n"
+                "• Solids: particles closely packed, vibrate in fixed positions, strong intermolecular forces.\n"
+                "• Liquids: particles close but free to move past each other, moderate forces.\n"
+                "• Gases: particles far apart, move rapidly and randomly, negligible forces.\n\n"
+                "When temperature increases, particles absorb energy → kinetic energy increases → particles move faster "
+                "and vibrate more vigorously. In solids, faster vibrations mean particles need MORE SPACE between them, "
+                "so the material expands. Each bond between atoms is like a spring — at higher temperatures the average "
+                "separation increases even though the spring oscillates.\n\n"
+                "Expansion rates:\n"
+                "• Gases expand most (particles far apart, free to move, large space between them).\n"
+                "• Liquids expand moderately (particles closer, moderate forces).\n"
+                "• Solids expand least (particles tightly held — but they DO expand).\n"
+                "Gases expand ~1000× more than solids for the same temperature rise.\n\n"
+                "Connection to phenomena:\n"
+                "Sufuria lid: Metal is a solid. When hot water runs over the metal lid, particles gain energy, "
+                "vibrate more, lid expands slightly — breaking the airtight seal and making it easier to twist off.\n"
+                "Glass bottle: Water is a liquid that becomes solid (ice) when frozen. BUT water is anomalous — "
+                "it expands rather than contracts when freezing (investigated in Section 4).",
             ),
             (
-                "Section 3: How Do We Calculate Thermal Expansion?",
+                "SECTION 3: HOW DO WE CALCULATE THERMAL EXPANSION?",
                 "What is linear expansivity (α) and what are its units?\n"
                 "Apply the formula ΔL = α × L₀ × ΔT with a fully worked example (show all 5 steps: "
                 "identify given values, identify unknown, write formula, substitute with units, calculate).\n"
                 "Choose ONE: (A) A 50 m steel railway rail at 20°C rises to 45°C (α = 12 × 10⁻⁶ °C⁻¹). "
                 "OR (B) An aluminum sufuria lid, diameter 20 cm, heats from 25°C to 95°C (α = 24 × 10⁻⁶ °C⁻¹).\n"
                 "Connect your calculation to the sufuria lid phenomenon.",
+                "Linear expansivity (α) is a material constant that measures how much a 1-metre length of a material "
+                "expands per degree Celsius of temperature rise. Units: °C⁻¹ (or K⁻¹).\n"
+                "Formula: ΔL = α × L₀ × ΔT\n"
+                "where ΔL = change in length, L₀ = original length, ΔT = temperature change.\n\n"
+                "Worked example — Option B (Sufuria Lid):\n"
+                "Step 1 — Given values: L₀ = 20 cm = 0.20 m; T₁ = 25°C; T₂ = 95°C; α = 24 × 10⁻⁶ °C⁻¹\n"
+                "Step 2 — Unknown: ΔL = change in diameter\n"
+                "Step 3 — Formula: ΔL = α × L₀ × ΔT\n"
+                "Step 4 — Substitute: ΔL = (24 × 10⁻⁶ °C⁻¹) × (0.20 m) × (95 - 25)°C\n"
+                "Step 5 — Calculate: ΔL = 24 × 10⁻⁶ × 0.20 × 70 = 24 × 10⁻⁶ × 14 = 336 × 10⁻⁶ m = 0.336 mm\n\n"
+                "The lid diameter increases by 0.336 mm when heated with hot water. "
+                "This small but significant expansion breaks the partial vacuum seal created when the pot cooled, "
+                "allowing the lid to be twisted off easily. Without heating, the lid fits too tightly to turn.",
             ),
             (
-                "Section 4: Why Does Water Behave Unusually When It Freezes?",
+                "SECTION 4: WHY DOES WATER BEHAVE UNUSUALLY WHEN IT FREEZES?",
                 "How does water behave differently from most substances when it freezes (anomalous expansion)?\n"
                 "At what temperature is water most dense? What happens between 4°C and 0°C?\n"
                 "Explain using hydrogen bonding and the hexagonal ice crystal structure why water expands by ~9% on freezing.\n"
                 "Explain step-by-step why the glass bottle cracked: what happened from room temperature to fully frozen?",
+                "Most substances contract when cooling and freeze into a denser solid. "
+                "WATER IS ANOMALOUS: it is densest at 4°C and EXPANDS when cooling from 4°C to 0°C and further when freezing.\n\n"
+                "Density-temperature relationship for water:\n"
+                "• Above 4°C: density decreases as temperature rises (normal for liquids).\n"
+                "• From 4°C to 0°C: density DECREASES even as temperature drops (anomalous).\n"
+                "• At 0°C: water freezes and expands by approximately 9%, giving ice a density of ~917 kg/m³ vs water's 1000 kg/m³. "
+                "This is why ice floats on water!\n\n"
+                "Molecular explanation: In liquid water, hydrogen bonds between H₂O molecules are constantly forming and breaking. "
+                "As water cools below 4°C, molecules slow down and hydrogen bonds become permanent, arranging molecules into "
+                "a hexagonal lattice (like a honeycomb). This open hexagonal structure has MORE space between molecules than liquid water — "
+                "hence ice is LESS dense and takes up MORE volume (about 9% more) than liquid water.\n\n"
+                "Why the glass bottle cracked (step-by-step):\n"
+                "1. Room temperature (~25°C): bottle completely full of liquid water.\n"
+                "2. Temperature drops: water cools, contracts slightly down to 4°C.\n"
+                "3. Temperature drops further (4°C → 0°C): water EXPANDS anomalously, increasing pressure inside bottle.\n"
+                "4. At 0°C: water begins freezing, expanding ~9% — volume increase pushes outward with enormous force.\n"
+                "5. Glass cannot withstand the pressure: bottle cracks along weakest line.\n"
+                "Prevention: never fill glass bottles completely before freezing — leave expansion space.",
             ),
             (
-                "Section 5: How Do Engineers Use Thermal Expansion to Keep Us Safe?",
+                "SECTION 5: HOW DO ENGINEERS USE THERMAL EXPANSION TO KEEP US SAFE?",
                 "What problems does thermal expansion cause in structures (railway tracks, bridges, roads, pipelines, power lines)?\n"
                 "Explain with diagrams how expansion joints work and where they are used.\n"
                 "Explain how bimetallic strips work and name three applications (thermostat, fire alarm, circuit breaker).\n"
                 "Give at least three specific Kenya examples (e.g. Thika Superhighway, SGR railway, mabati roofing, JKIA runway).\n"
                 "Connect to phenomenon: How does this knowledge prevent problems like the cracked bottle?",
+                "Problems caused by thermal expansion:\n"
+                "• Railway tracks: rails expand on hot days → buckle and derail trains if no gaps allowed.\n"
+                "• Bridges: bridge decks expand in heat and contract in cold → would crack and break supports without joints.\n"
+                "• Roads: tarmac cracks and buckles in extreme heat without expansion slots.\n"
+                "• Pipelines: hot oil/water pipelines must accommodate expansion or they burst.\n"
+                "• Power lines: sag in heat, tighten and snap in cold if no slack provided.\n\n"
+                "Expansion joints: deliberately designed gaps between sections of track, bridge, road, or building that allow "
+                "the material to expand into the gap without buckling or cracking. They look like interlocking 'teeth' on bridges "
+                "and roads — the teeth mesh at normal temperatures and separate slightly in heat.\n\n"
+                "Bimetallic strips: two metals (e.g., brass and steel) bonded together. When heated, "
+                "brass expands more than steel → the strip bends towards the steel side. "
+                "Three applications:\n"
+                "1. Thermostat: bimetallic strip bends at set temperature → breaks electrical circuit → turns off heater.\n"
+                "2. Fire alarm: strip bends in heat → closes electrical circuit → triggers alarm.\n"
+                "3. Circuit breaker: strip bends due to overheating current → cuts the circuit to prevent fire.\n\n"
+                "Kenya examples:\n"
+                "• SGR railway (Mombasa-Nairobi): expansion gaps designed into rails to prevent buckling in coastal/inland heat variation.\n"
+                "• Thika Superhighway bridges: large expansion joints visible on all bridge decks.\n"
+                "• Mabati (iron sheet) roofing: sheets contract at night (popping sound) and expand in daytime — gaps between sheets prevent buckling.\n"
+                "• JKIA runway: concrete slabs have expansion joints to prevent cracking under aircraft loading and temperature change.\n\n"
+                "Connection to cracked bottle: knowing that water expands on freezing allows engineers and consumers to design packaging "
+                "that accommodates this expansion — e.g., PET plastic water bottles (flexible), or headspace left in glass bottles. "
+                "The same principle used to prevent bridge cracking prevents bottle cracking: allow for the dimensional change!",
             ),
         ],
         "final_explanation_rubric": {
@@ -514,10 +872,16 @@ META = {
             ),
             (
                 "Lesson 2: Particle Model of Matter and Temperature",
-                "",
-                "",
-                "",
-                "DQB Updated:\nModel Revised:",
+                "Built particle diagrams for solids, liquids, and gases. Investigated how particle motion "
+                "changes with temperature using demonstrations. Explored kinetic theory of matter.",
+                "Temperature measures the average kinetic energy of particles. When temperature rises, particles "
+                "move faster and need more space — this causes expansion. Solids vibrate in fixed positions; "
+                "liquids flow; gases move freely. Higher temperature = faster particle motion.",
+                "When hot water runs over the sufuria lid, energy transfers to the metal particles. "
+                "They vibrate more vigorously and the metal expands — this is why heating helps open the lid. "
+                "The particle model explains thermal expansion at the microscopic level.",
+                "DQB Updated: Answered 'What happens to particles when something heats up?'\n"
+                "Model Revised: Particle diagrams added showing vibrating solids and moving liquids/gases with temperature arrows.",
             ),
             (
                 "Lesson 3: Thermal Expansion in Solids",
@@ -534,24 +898,42 @@ META = {
             ),
             (
                 "Lesson 4: Thermal Expansion in Liquids",
-                "",
-                "",
-                "",
-                "DQB Updated:\nModel Revised:",
+                "Observed coloured water and alcohol rising in thin glass tubes when heated. Compared expansion "
+                "rates of different liquids. Investigated how liquid thermometers work using expansion principles.",
+                "Liquids expand more than solids for the same temperature rise because their particles are "
+                "free to move further apart. This is why liquid-in-glass thermometers work — the liquid expands "
+                "up the calibrated tube. Different liquids have different expansion rates.",
+                "Liquids also expand when heated. The water in the glass bottle was a liquid when placed in the "
+                "freezer. As it cooled, it first contracted slightly (normal liquid behaviour) before eventually "
+                "freezing. The expansion happened when it froze — this is the anomaly we need to investigate.",
+                "DQB Updated: Added 'Do liquids expand the same as solids?' Answered — liquids expand more.\n"
+                "Model Revised: Added liquid expansion diagram showing particles spreading out more freely than solids.",
             ),
             (
                 "Lesson 5: Anomalous Expansion of Water",
-                "",
-                "",
-                "",
-                "DQB Updated:\nModel Revised:",
+                "Investigated the density of water at different temperatures. Observed ice floating on water. "
+                "Studied hydrogen bonding and hexagonal ice crystal structure models.",
+                "Water is anomalous: it is densest at 4°C and EXPANDS when cooling from 4°C to 0°C. "
+                "When water freezes, hydrogen bonds form a hexagonal lattice with MORE space than liquid water — "
+                "so ice is less dense than water and expands by ~9%.",
+                "MYSTERY SOLVED for the frozen bottle: water expands ~9% when it freezes due to hydrogen bond "
+                "hexagonal lattice formation. A bottle completely full of water had no room for this expansion — "
+                "the outward force cracked the glass. This is anomalous — most substances contract when freezing!",
+                "DQB Updated: Answered 'Why did the glass bottle crack?' Water expands (anomalously) on freezing.\n"
+                "Model Revised: Hydrogen bond hexagonal ice structure drawn. Water anomaly explained at molecular level.",
             ),
             (
                 "Lesson 6: Engineering Applications and Design Challenge",
-                "",
-                "",
-                "",
-                "DQB Completed: Answered driving question with evidence-based explanation.\n"
+                "Investigated expansion joints on bridges and railway tracks. Studied bimetallic strip bending. "
+                "Designed a solution to a thermal expansion engineering problem (e.g. railway track joint).",
+                "Engineers must account for thermal expansion in all structures. Expansion joints allow materials "
+                "to expand and contract safely. Bimetallic strips (two metals with different expansion rates) "
+                "bend when heated — used in thermostats, fire alarms, and circuit breakers.",
+                "The cracked bottle represents a failure to account for thermal expansion (water expanding on freezing). "
+                "Engineers prevent similar failures: expansion joints in SGR railway tracks, flexible PET water bottles, "
+                "gap-fitted mabati roofing, bridge deck joints on the Thika Superhighway.",
+                "DQB Completed: Answered driving question — materials change size because particles move more at higher temperatures; "
+                "engineers use expansion joints, bimetallic strips, and flexible materials to keep structures safe.\n"
                 "Final Model: Complete model explaining thermal expansion in solids and liquids, "
                 "including water's anomalous behavior, with engineering applications.",
             ),
@@ -957,88 +1339,122 @@ def parse_source(doc_path: Path) -> list[dict]:
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def _build_table0_overview(doc, meta):
-    """Sub-strand overview table (15r × 2c)."""
+    """Sub-strand overview table: navy SUB-STRAND OVERVIEW banner + data rows (2c)."""
     rows_data = meta["substrand_overview_rows"]
-    t = _new_table(doc, len(rows_data), 2)
-    _col_widths(t, [2.0, 7.5])
+    t = _new_table(doc, 1 + len(rows_data), 2)
+    _col_widths(t, [2.083, 7.417])
+
+    # R0: navy merged banner
+    c = _merge_row(t, 0)
+    _shade(c, C_NAVY)
+    _cell_para(c, "SUB-STRAND OVERVIEW", bold=True, size_pt=11, color_hex=C_WHITE)
+
     for ri, (label, value) in enumerate(rows_data):
-        _shade(t.rows[ri].cells[0], C_LT_BLUE)
-        _shade(t.rows[ri].cells[1], C_WHITE)
-        _cell_para(t.rows[ri].cells[0], label, bold=True, size_pt=9)
-        _cell_para(t.rows[ri].cells[1], value, size_pt=9)
+        row_idx = ri + 1
+        _shade(t.rows[row_idx].cells[0], C_LT_BLUE)
+        _shade(t.rows[row_idx].cells[1], C_WHITE)
+        _cell_para(t.rows[row_idx].cells[0], label, bold=True, size_pt=9)
+        _cell_para(t.rows[row_idx].cells[1], value, size_pt=9)
 
 
 def _build_table_A(doc, lesson):
-    """Table A — SLOs + Overview (9r × 2c), total 9.5\"."""
-    t = _new_table(doc, 9, 2)
-    _col_widths(t, [2.0, 7.5])
+    """Table A — SLOs (9r × 2c), total 9.5\".
 
-    # R0: merged navy banner — LESSON N: Title
+    Row layout matching Bio reference:
+    R0: navy merged LESSON banner
+    R1: teal merged A. SPECIFIC LEARNING OUTCOMES
+    R2: lt-blue Purpose
+    R3: lt-blue Knowledge
+    R4: lt-blue Skills
+    R5: lt-blue Attitudes
+    R6: purple-lt Key Inquiry Question
+    R7: teal-lt Purpose in Storyline
+    R8: orange-lt Safety Notes
+    """
+    t = _new_table(doc, 9, 2)
+    _col_widths(t, [2.083, 7.417])
+
+    # R0: merged navy — LESSON N: Title
     c = _merge_row(t, 0)
     _shade(c, C_NAVY)
     _cell_para(c, f"LESSON {lesson['number']}: {lesson['title']}",
-               bold=True, size_pt=11, color_hex=C_WHITE,
-               align=WD_ALIGN_PARAGRAPH.LEFT)
+               bold=True, size_pt=11, color_hex=C_WHITE)
 
-    # R1: merged teal — A. Specific Learning Outcomes
+    # R1: merged teal — A. SPECIFIC LEARNING OUTCOMES
     c = _merge_row(t, 1)
     _shade(c, C_TEAL)
-    _cell_para(c, "A. Specific Learning Outcomes",
-               bold=True, size_pt=10, color_hex=C_WHITE)
+    _cell_para(c, "A. SPECIFIC LEARNING OUTCOMES", bold=True, size_pt=11, color_hex=C_WHITE)
 
-    # R2–R4: SLO rows
-    slo_rows = [
-        ("Knowledge:",        lesson["slo_knowledge"].strip()),
-        ("Skills:",           lesson["slo_skills"].strip()),
-        ("Attitudes & Values:", lesson["slo_attitudes"].strip()),
-    ]
-    for ri, (label, value) in enumerate(slo_rows, start=2):
-        _shade(t.rows[ri].cells[0], C_LT_BLUE)
-        _shade(t.rows[ri].cells[1], C_WHITE)
-        _cell_para(t.rows[ri].cells[0], label, bold=True, size_pt=9)
-        _cell_para(t.rows[ri].cells[1], value or "—", size_pt=9)
+    # R2: Purpose
+    _shade(t.rows[2].cells[0], C_LT_BLUE)
+    _shade(t.rows[2].cells[1], C_WHITE)
+    _cell_para(t.rows[2].cells[0], "Purpose", bold=True, size_pt=9)
+    _cell_para(t.rows[2].cells[1], lesson.get("overview_purpose", "").strip() or "—", size_pt=9)
 
-    # R5: merged teal — B. Lesson Overview
-    c = _merge_row(t, 5)
-    _shade(c, C_TEAL)
-    _cell_para(c, "B. Lesson Overview", bold=True, size_pt=10, color_hex=C_WHITE)
+    # R3: Knowledge
+    _shade(t.rows[3].cells[0], C_LT_BLUE)
+    _shade(t.rows[3].cells[1], C_WHITE)
+    _cell_para(t.rows[3].cells[0], "Knowledge", bold=True, size_pt=9)
+    _cell_para(t.rows[3].cells[1], lesson["slo_knowledge"].strip() or "—", size_pt=9)
 
-    # R6: Key Inquiry Question (purple-lt label)
+    # R4: Skills
+    _shade(t.rows[4].cells[0], C_LT_BLUE)
+    _shade(t.rows[4].cells[1], C_WHITE)
+    _cell_para(t.rows[4].cells[0], "Skills", bold=True, size_pt=9)
+    _cell_para(t.rows[4].cells[1], lesson["slo_skills"].strip() or "—", size_pt=9)
+
+    # R5: Attitudes
+    _shade(t.rows[5].cells[0], C_LT_BLUE)
+    _shade(t.rows[5].cells[1], C_WHITE)
+    _cell_para(t.rows[5].cells[0], "Attitudes", bold=True, size_pt=9)
+    _cell_para(t.rows[5].cells[1], lesson["slo_attitudes"].strip() or "—", size_pt=9)
+
+    # R6: Key Inquiry Question
     _shade(t.rows[6].cells[0], C_PURPLE_LT)
     _shade(t.rows[6].cells[1], C_WHITE)
-    _cell_para(t.rows[6].cells[0], "Key Inquiry Question:", bold=True, size_pt=9)
+    _cell_para(t.rows[6].cells[0], "Key Inquiry Question", bold=True, size_pt=9)
     _cell_para(t.rows[6].cells[1], lesson["inquiry_question"] or "—", size_pt=9)
 
-    # R7: Purpose in Storyline (teal-lt label)
+    # R7: Purpose in Storyline
     _shade(t.rows[7].cells[0], C_TEAL_LT)
     _shade(t.rows[7].cells[1], C_WHITE)
-    _cell_para(t.rows[7].cells[0], "Purpose in Storyline:", bold=True, size_pt=9)
-    _cell_para(t.rows[7].cells[1], lesson["overview_purpose"] or "—", size_pt=9)
+    _cell_para(t.rows[7].cells[0], "Purpose in Storyline", bold=True, size_pt=9)
+    _cell_para(t.rows[7].cells[1], lesson.get("overview_purpose", "").strip() or "—", size_pt=9)
 
-    # R8: Safety (orange-lt label)
+    # R8: Safety Notes
     _shade(t.rows[8].cells[0], C_ORANGE_LT)
     _shade(t.rows[8].cells[1], C_WHITE)
-    _cell_para(t.rows[8].cells[0], "Safety:", bold=True, size_pt=9)
+    _cell_para(t.rows[8].cells[0], "Safety Notes", bold=True, size_pt=9)
     _cell_para(t.rows[8].cells[1], lesson["safety"] or "None noted.", size_pt=9)
 
 
 def _build_table_B(doc, lesson):
-    """Table B — Materials (2r × 1c)."""
+    """Table B — Lesson Overview (2r × 1c)."""
     t = _new_table(doc, 2, 1)
     _col_widths(t, [9.5])
 
     _shade(t.rows[0].cells[0], C_TEAL)
-    _cell_para(t.rows[0].cells[0], "Materials", bold=True, size_pt=10, color_hex=C_WHITE)
+    _cell_para(t.rows[0].cells[0], "B. LESSON OVERVIEW", bold=True, size_pt=11, color_hex=C_WHITE)
 
     _shade(t.rows[1].cells[0], C_WHITE)
-    _cell_para(t.rows[1].cells[0], lesson["materials"] or "As directed by teacher.", size_pt=9)
+    parts = []
+    if lesson.get("inquiry_question"):
+        parts.append(f"Key Inquiry Question: {lesson['inquiry_question']}")
+    if lesson.get("overview_purpose"):
+        parts.append(f"Lesson Overview: {lesson['overview_purpose']}")
+    if lesson.get("materials"):
+        parts.append(f"Materials: {lesson['materials']}")
+    overview_text = "\n\n".join(parts) if parts else "See lesson plan for details."
+    _cell_para(t.rows[1].cells[0], overview_text, size_pt=9)
 
 
-def _build_table_C(doc, lesson, period_num: int, source_rows: list):
-    """Table C — 6-col Implementation Framework (7r × 6c), total 9.5\"."""
-    # Col widths: Phase=1.0, Learner Exp=2.5, Resource=1.0,
-    #             Teacher Actions=2.0, Sensemaking=1.5, Assessment=1.5
-    COL_W = [1.0, 2.5, 1.0, 2.0, 1.5, 1.5]
+def _build_table_C(doc, lesson):
+    """Table C — 6-col Implementation Framework (7r × 6c), total 9.5\".
+
+    Combines Period 1 and Period 2 content into a single table per lesson.
+    Col widths match Bio reference: [0.625, 1.775, 1.775, 1.775, 1.775, 1.775].
+    """
+    COL_W = [0.625, 1.775, 1.775, 1.775, 1.775, 1.775]
     COL_HEADER_FILLS = [C_NAVY, C_MED_BLUE, C_TEAL, C_MED_BLUE, C_TEAL, C_MED_BLUE]
     COL_HEADERS = ["Phase", "Learner Experience", "Resource",
                    "Teacher Actions", "Sensemaking Strategy", "Assessment Strategy"]
@@ -1046,20 +1462,21 @@ def _build_table_C(doc, lesson, period_num: int, source_rows: list):
     t = _new_table(doc, 7, 6)
     _col_widths(t, COL_W)
 
-    # R0: merged title — C. Lesson Implementation Framework — Period N (40 min)
-    period_label = lesson.get(f"period{period_num}_heading", f"Period {period_num} (40 minutes)")
+    # R0: merged title
     c = _merge_row(t, 0)
     _shade(c, C_TEAL)
-    _cell_para(c,
-               f"C. Lesson Implementation Framework — {period_label}",
-               bold=True, size_pt=10, color_hex=C_WHITE)
+    _cell_para(c, "C. LESSON IMPLEMENTATION FRAMEWORK",
+               bold=True, size_pt=11, color_hex=C_WHITE)
 
     # R1: col headers
-    for ci, (cell, hdr, fill) in enumerate(zip(t.rows[1].cells, COL_HEADERS, COL_HEADER_FILLS)):
+    for cell, hdr, fill in zip(t.rows[1].cells, COL_HEADERS, COL_HEADER_FILLS):
         _shade(cell, fill)
         _cell_para(cell, hdr, bold=True, size_pt=9, color_hex=C_WHITE,
                    align=WD_ALIGN_PARAGRAPH.CENTER)
         cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+
+    p1 = lesson["period1_table"]
+    p2 = lesson["period2_table"]
 
     # R2–R6: 5 phase rows
     for ri in range(5):
@@ -1067,33 +1484,33 @@ def _build_table_C(doc, lesson, period_num: int, source_rows: list):
         phase_fill = PHASE_FILLS[ri]
         phase_name = PHASE_NAMES[ri]
 
-        # Phase cell (col 0)
         _shade(row.cells[0], phase_fill)
         _cell_para(row.cells[0], phase_name, bold=True, size_pt=9,
                    align=WD_ALIGN_PARAGRAPH.CENTER)
         row.cells[0].vertical_alignment = WD_ALIGN_VERTICAL.CENTER
 
-        # Source data: (Learner Exp, Resource, Teacher Moves, Sensemaking, Assessment)
-        if ri < len(source_rows):
-            src = source_rows[ri]
-            # src cols: [0]=Learner Exp, [1]=Resource, [2]=Teacher Moves,
-            #           [3]=Sensemaking, [4]=Assessment
-            content_vals = [
-                src[0] if len(src) > 0 else "",
-                src[1] if len(src) > 1 else "",
-                src[2] if len(src) > 2 else "",
-                src[3] if len(src) > 3 else "",
-                src[4] if len(src) > 4 else "",
-            ]
-        else:
-            content_vals = [""] * 5
+        src1 = p1[ri] if ri < len(p1) else None
+        src2 = p2[ri] if ri < len(p2) else None
 
-        # Content cells col 1–5, alternating white/lt-gray
         content_fills = [C_WHITE, C_LT_GRAY, C_WHITE, C_LT_GRAY, C_WHITE]
-        for ci, (cell, val, fill) in enumerate(zip(row.cells[1:], content_vals, content_fills)):
-            _shade(cell, fill)
+        for ci in range(5):
+            cell = row.cells[ci + 1]
+            _shade(cell, content_fills[ci])
             cell.vertical_alignment = WD_ALIGN_VERTICAL.TOP
-            _cell_para(cell, val, size_pt=9)
+
+            v1 = src1[ci] if src1 and ci < len(src1) else ""
+            v2 = src2[ci] if src2 and ci < len(src2) else ""
+
+            if v1 and v2 and v1.strip() != v2.strip():
+                combined = f"Period 1:\n{v1}\n\nPeriod 2:\n{v2}"
+            elif v1:
+                combined = v1
+            elif v2:
+                combined = f"Period 2:\n{v2}"
+            else:
+                combined = ""
+
+            _cell_para(cell, combined, size_pt=9)
 
 
 def _build_table_D(doc, lesson):
@@ -1102,35 +1519,48 @@ def _build_table_D(doc, lesson):
     _col_widths(t, [9.5])
 
     _shade(t.rows[0].cells[0], C_ORANGE)
-    _cell_para(t.rows[0].cells[0], "D. Teacher Reflection",
-               bold=True, size_pt=10, color_hex=C_WHITE)
+    _cell_para(t.rows[0].cells[0], "D. TEACHER REFLECTION",
+               bold=True, size_pt=11, color_hex=C_WHITE)
 
     _shade(t.rows[1].cells[0], C_ORANGE_LT)
-    refl_text = "\n".join(lesson["reflections"]) if lesson["reflections"] else \
-        "Reflect on student engagement with the phase-based framework.\nWhich phase generated most discussion?"
+    refl_text = "\n".join(lesson["reflections"]) if lesson["reflections"] else (
+        "After teaching this lesson, reflect on:\n"
+        "1. Which phase generated the most discussion or engagement?\n"
+        "2. Where did students struggle or show misconceptions?\n"
+        "3. Was the inquiry question answered by the end of the lesson?\n"
+        "4. What would you change if teaching this lesson again?"
+    )
     _cell_para(t.rows[1].cells[0], refl_text, size_pt=9)
 
 
-def _build_table_E(doc):
-    """Table E — Summary Table Prompt (4r × 2c)."""
+def _build_table_E(doc, summary_row=None):
+    """Table E — Summary Table Prompt (4r × 2c) with pre-filled example content."""
     t = _new_table(doc, 4, 2)
-    _col_widths(t, [2.5, 7.0])
+    _col_widths(t, [2.083, 7.417])
 
     # R0: merged purple header
     c = _merge_row(t, 0)
     _shade(c, C_PURPLE)
-    _cell_para(c, "E. Summary Table Prompt", bold=True, size_pt=10, color_hex=C_WHITE)
+    _cell_para(c, "E. SUMMARY TABLE PROMPT  (pre-filled example for this lesson)",
+               bold=True, size_pt=11, color_hex=C_WHITE)
 
     prompts = [
         "What did I observe?",
         "What did I learn?",
         "How does this explain the phenomenon?",
     ]
-    for ri, prompt in enumerate(prompts, start=1):
+
+    pre_filled = ["", "", ""]
+    if summary_row and len(summary_row) >= 4:
+        pre_filled[0] = summary_row[1] if len(summary_row) > 1 else ""
+        pre_filled[1] = summary_row[2] if len(summary_row) > 2 else ""
+        pre_filled[2] = summary_row[3] if len(summary_row) > 3 else ""
+
+    for ri, (prompt, content) in enumerate(zip(prompts, pre_filled), start=1):
         _shade(t.rows[ri].cells[0], C_PURPLE_LT)
         _shade(t.rows[ri].cells[1], C_WHITE)
         _cell_para(t.rows[ri].cells[0], prompt, bold=True, size_pt=9)
-        _cell_para(t.rows[ri].cells[1], "", size_pt=9)
+        _cell_para(t.rows[ri].cells[1], content or "", size_pt=9)
 
 
 def build_lesson_sequence_docx(subject_key: str, lessons: list[dict]) -> Document:
@@ -1138,31 +1568,32 @@ def build_lesson_sequence_docx(subject_key: str, lessons: list[dict]) -> Documen
     doc  = Document()
     _set_page_landscape(doc)
 
-    # Title + subtitle
-    _doc_title(doc,
-               f"{meta['subject']} | {meta['grade']} | {meta['substrand']}")
+    _doc_title(doc, f"{meta['subject']} | {meta['grade']} | {meta['substrand']}")
     _doc_subtitle(doc,
                   f"CBE Lesson Sequence  ·  {meta['lessons']} Lessons  ·  "
                   f"{meta['lessons'] * 2} Periods")
 
-    # Sub-strand overview table
     _build_table0_overview(doc, meta)
+    _tbl_no_spacing(doc)
+    _tbl_no_spacing(doc)  # two empty paras after overview (matching Bio reference)
+
+    summary_rows = meta["summary_table_rows"]
 
     for lesson in lessons:
-        # Spacer paragraph between sub-strand table and first lesson,
-        # or between lessons
-        _tbl_no_spacing(doc)
+        lesson_num = lesson["number"]
+        summary_row = summary_rows[lesson_num - 1] if lesson_num - 1 < len(summary_rows) else None
 
         _build_table_A(doc, lesson)
+        _tbl_no_spacing(doc)
         _build_table_B(doc, lesson)
-
-        # Period 1
-        _build_table_C(doc, lesson, 1, lesson["period1_table"])
-        # Period 2
-        _build_table_C(doc, lesson, 2, lesson["period2_table"])
-
+        _tbl_no_spacing(doc)
+        _build_table_C(doc, lesson)
+        _tbl_no_spacing(doc)
         _build_table_D(doc, lesson)
-        _build_table_E(doc)
+        _tbl_no_spacing(doc)
+        _build_table_E(doc, summary_row)
+        _tbl_no_spacing(doc)
+        _tbl_no_spacing(doc)  # two empty paras between lessons
 
     return doc
 
@@ -1176,27 +1607,32 @@ def build_final_explanation_docx(subject_key: str) -> Document:
     doc  = Document()
     _set_page_landscape(doc)
 
-    title_text = f"{meta['subject']} | {meta['grade']} | {meta['substrand']}"
-    _doc_title(doc, title_text)
+    subj_upper = meta["subject"].upper()
+    substrand_topic = meta["substrand"].split(":")[-1].strip().upper()
+    fe_title = f"FINAL EXPLANATION: {substrand_topic}"
+
+    _doc_title(doc, f"{meta['subject']} | {meta['grade']} | {meta['substrand']}")
     _doc_subtitle(doc, "Final Explanation Document")
 
     # ── Table 0: Header block (5r × 2c) ──────────────────────────────────────
     t0 = _new_table(doc, 5, 2)
-    _col_widths(t0, [2.5, 7.0])
+    _col_widths(t0, [2.083, 7.417])
 
     c = _merge_row(t0, 0)
     _shade(c, C_NAVY)
-    _cell_para(c, title_text, bold=True, size_pt=11, color_hex=C_WHITE)
+    _cell_para(c, fe_title, bold=True, size_pt=11, color_hex=C_WHITE)
 
     c = _merge_row(t0, 1)
     _shade(c, C_TEAL)
-    _cell_para(c, "Final Explanation Document", bold=True, size_pt=10, color_hex=C_WHITE)
+    _cell_para(c, f"{meta['subject']} {meta['grade']} — Student Assessment Document",
+               bold=True, size_pt=11, color_hex=C_WHITE)
 
-    for ri, label in enumerate(["Student Name:", "Class:", "Date:"], start=2):
+    for ri, label in enumerate(["Student Name", "Class", "Date"], start=2):
         _shade(t0.rows[ri].cells[0], C_LT_BLUE)
         _shade(t0.rows[ri].cells[1], C_WHITE)
         _cell_para(t0.rows[ri].cells[0], label, bold=True, size_pt=9)
-        _cell_para(t0.rows[ri].cells[1], "", size_pt=9)
+        _cell_para(t0.rows[ri].cells[1],
+                   "_______________________________________________", size_pt=9)
 
     _tbl_no_spacing(doc)
 
@@ -1205,15 +1641,16 @@ def build_final_explanation_docx(subject_key: str) -> Document:
     _col_widths(t1, [9.5])
 
     _shade(t1.rows[0].cells[0], C_TEAL)
-    _cell_para(t1.rows[0].cells[0], "Instructions", bold=True, size_pt=10, color_hex=C_WHITE)
+    _cell_para(t1.rows[0].cells[0], "INSTRUCTIONS FOR STUDENTS",
+               bold=True, size_pt=11, color_hex=C_WHITE)
 
     instructions = (
-        f"This Final Explanation is your opportunity to demonstrate deep understanding of "
-        f"{meta['substrand']}. "
+        f"You have completed all {meta['lessons']} lessons of {meta['substrand']}. "
+        f"Write your COMPLETE EXPLANATION by answering all sections below. "
         f"Driving Question: {meta['driving_question']}\n\n"
-        "Address all sections below using evidence from investigations, discussions, and models "
-        "from across this unit. Use scientific vocabulary accurately. Include labeled diagrams "
-        "where appropriate. Show all calculations. Connect your explanations back to the "
+        "Use evidence from investigations, discussions, and models from across this unit. "
+        "Use scientific vocabulary accurately. Include labeled diagrams where appropriate. "
+        "Show all calculations with steps. Connect your explanations back to the "
         "anchoring phenomenon throughout."
     )
     _shade(t1.rows[1].cells[0], C_WHITE)
@@ -1221,69 +1658,56 @@ def build_final_explanation_docx(subject_key: str) -> Document:
 
     _tbl_no_spacing(doc)
 
-    # ── Tables 2–6: One per section (3r × 1c each) ──────────────────────────
+    # ── Tables 2–N: One per section (3r × 1c each) ───────────────────────────
     sections = meta["final_explanation_sections"]
-    for i, (section_title, prompts) in enumerate(sections):
+    for i, section_data in enumerate(sections):
+        section_title = section_data[0]
+        prompts = section_data[1]
+        model_answer = section_data[2] if len(section_data) > 2 else ""
+
         t = _new_table(doc, 3, 1)
         _col_widths(t, [9.5])
 
         _shade(t.rows[0].cells[0], C_MED_BLUE)
-        _cell_para(t.rows[0].cells[0], section_title, bold=True, size_pt=10, color_hex=C_WHITE)
+        _cell_para(t.rows[0].cells[0], section_title, bold=True, size_pt=11, color_hex=C_WHITE)
 
         _shade(t.rows[1].cells[0], C_LT_BLUE)
         _cell_para(t.rows[1].cells[0], prompts, size_pt=9)
 
         _shade(t.rows[2].cells[0], C_WHITE)
-        cell = t.rows[2].cells[0]
-        cell.paragraphs[0].paragraph_format.space_before = Pt(2)
-        cell.paragraphs[0].paragraph_format.space_after  = Pt(60)
-        _apply_run(cell.paragraphs[0], "[Write your response here]",
-                   italic=True, size_pt=9, color_hex="999999")
+        _cell_para(t.rows[2].cells[0], model_answer, size_pt=9)
 
-        if i < len(sections) - 1:
-            _tbl_no_spacing(doc)
+        _tbl_no_spacing(doc)
 
-    _tbl_no_spacing(doc)
-
-    # ── Table 7: Rubric (rows = 1 header + len(rubric_rows), 5c) ────────────
+    # ── Table N+1: Rubric ────────────────────────────────────────────────────
     rubric = meta["final_explanation_rubric"]
     rub_rows = rubric["rows"]
-    total_rows = 1 + len(rub_rows)
-    t7 = _new_table(doc, total_rows, len(rubric["headers"]))
-    _col_widths(t7, [2.0, 1.875, 1.875, 1.875, 1.875])
+    num_cols = len(rubric["headers"])
 
-    # R0: merged navy header
-    c = _merge_row(t7, 0)
-    _shade(c, C_NAVY)
-    _cell_para(c, "Assessment Rubric", bold=True, size_pt=11, color_hex=C_WHITE,
-               align=WD_ALIGN_PARAGRAPH.CENTER)
+    # Col widths: criterion 2.0" + remaining split evenly
+    remaining = 9.5 - 2.0
+    other_w = round(remaining / (num_cols - 1), 3) if num_cols > 1 else remaining
+    col_widths = [2.0] + [other_w] * (num_cols - 1)
 
-    # R1 would be col headers — but we merged R0. Insert a proper header row.
-    # Actually we need header row at R0 merged, then col headers at R1.
-    # Let's rebuild: 2 + len(rub_rows) rows.
-    t7 = _new_table(doc, 2 + len(rub_rows), len(rubric["headers"]))
-    _col_widths(t7, [2.0, 1.875, 1.875, 1.875, 1.875])
+    t7 = _new_table(doc, 2 + len(rub_rows), num_cols)
+    _col_widths(t7, col_widths)
 
     c = _merge_row(t7, 0)
     _shade(c, C_NAVY)
-    _cell_para(c, "Assessment Rubric", bold=True, size_pt=11, color_hex=C_WHITE,
+    _cell_para(c, "ASSESSMENT RUBRIC", bold=True, size_pt=11, color_hex=C_WHITE,
                align=WD_ALIGN_PARAGRAPH.CENTER)
 
-    # Col header row
-    hdr_fills = [C_MED_BLUE, C_TEAL, C_MED_BLUE, C_TEAL, C_MED_BLUE]
-    # Trim to actual number of cols
-    hdr_fills = hdr_fills[:len(rubric["headers"])]
-    for ci, (cell, hdr, fill) in enumerate(zip(t7.rows[1].cells, rubric["headers"], hdr_fills)):
+    hdr_fills = [C_MED_BLUE, C_TEAL, C_MED_BLUE, C_TEAL, C_MED_BLUE][:num_cols]
+    for cell, hdr, fill in zip(t7.rows[1].cells, rubric["headers"], hdr_fills):
         _shade(cell, fill)
         _cell_para(cell, hdr, bold=True, size_pt=9, color_hex=C_WHITE,
                    align=WD_ALIGN_PARAGRAPH.CENTER)
 
-    # Data rows
+    alt = [C_WHITE, C_LT_GRAY, C_WHITE, C_LT_GRAY]
     for ri, row_data in enumerate(rub_rows):
         row = t7.rows[ri + 2]
         _shade(row.cells[0], C_LT_BLUE)
         _cell_para(row.cells[0], row_data[0], bold=True, size_pt=9)
-        alt = [C_WHITE, C_LT_GRAY, C_WHITE, C_LT_GRAY]
         for ci, (cell, val, fill) in enumerate(zip(row.cells[1:], row_data[1:], alt)):
             _shade(cell, fill)
             _cell_para(cell, val, size_pt=9)
@@ -1300,30 +1724,32 @@ def build_summary_table_docx(subject_key: str) -> Document:
     doc  = Document()
     _set_page_landscape(doc)
 
-    title_text = f"{meta['subject']} | {meta['grade']} | {meta['substrand']}"
-    _doc_title(doc, title_text)
+    substrand_topic = meta["substrand"].split(":")[-1].strip().upper()
+    st_title = f"SUMMARY TABLE: {meta['subject'].upper()} {meta['grade'].upper()} -- {substrand_topic}"
+
+    _doc_title(doc, f"{meta['subject']} | {meta['grade']} | {meta['substrand']}")
     _doc_subtitle(doc, "Summary Table")
 
     # ── Table 0: Header block (4r × 2c) ──────────────────────────────────────
     t0 = _new_table(doc, 4, 2)
-    _col_widths(t0, [2.5, 7.0])
+    _col_widths(t0, [2.083, 7.417])
 
     c = _merge_row(t0, 0)
     _shade(c, C_NAVY)
-    _cell_para(c, title_text, bold=True, size_pt=11, color_hex=C_WHITE)
+    _cell_para(c, st_title, bold=True, size_pt=11, color_hex=C_WHITE)
 
     c = _merge_row(t0, 1)
     _shade(c, C_TEAL)
-    _cell_para(c, "Summary Table", bold=True, size_pt=10, color_hex=C_WHITE)
+    _cell_para(c, "SUMMARY TABLE", bold=True, size_pt=11, color_hex=C_WHITE)
 
     _shade(t0.rows[2].cells[0], C_LT_BLUE)
     _shade(t0.rows[2].cells[1], C_WHITE)
-    _cell_para(t0.rows[2].cells[0], "Sub-Strand:", bold=True, size_pt=9)
+    _cell_para(t0.rows[2].cells[0], "Sub-Strand", bold=True, size_pt=9)
     _cell_para(t0.rows[2].cells[1], meta["substrand"], size_pt=9)
 
     _shade(t0.rows[3].cells[0], C_LT_BLUE)
     _shade(t0.rows[3].cells[1], C_WHITE)
-    _cell_para(t0.rows[3].cells[0], "Driving Question:", bold=True, size_pt=9)
+    _cell_para(t0.rows[3].cells[0], "Driving Question", bold=True, size_pt=9)
     _cell_para(t0.rows[3].cells[1], meta["driving_question"], size_pt=9)
 
     _tbl_no_spacing(doc)
@@ -1333,7 +1759,7 @@ def build_summary_table_docx(subject_key: str) -> Document:
     _col_widths(t1, [9.5])
 
     _shade(t1.rows[0].cells[0], C_TEAL)
-    _cell_para(t1.rows[0].cells[0], "Instructions", bold=True, size_pt=10, color_hex=C_WHITE)
+    _cell_para(t1.rows[0].cells[0], "INSTRUCTIONS", bold=True, size_pt=11, color_hex=C_WHITE)
 
     _shade(t1.rows[1].cells[0], C_WHITE)
     _cell_para(t1.rows[1].cells[0], meta["summary_instructions"], size_pt=9)
@@ -1341,7 +1767,6 @@ def build_summary_table_docx(subject_key: str) -> Document:
     _tbl_no_spacing(doc)
 
     # ── Table 2: Main summary table (N+1 rows × 5c) ──────────────────────────
-    # Col widths: 0.833 | 2.167 | 2.167 | 2.167 | 2.167 (total 9.501")
     COL_W = [0.833, 2.167, 2.167, 2.167, 2.167]
     HDR_FILLS = [C_NAVY, C_MED_BLUE, C_TEAL, C_MED_BLUE, C_PURPLE]
 
@@ -1349,31 +1774,26 @@ def build_summary_table_docx(subject_key: str) -> Document:
     t2 = _new_table(doc, 1 + len(data_rows), 5)
     _col_widths(t2, COL_W)
 
-    # Header row
     headers = meta["summary_table_headers"]
-    for ci, (cell, hdr, fill) in enumerate(zip(t2.rows[0].cells, headers, HDR_FILLS)):
+    for cell, hdr, fill in zip(t2.rows[0].cells, headers, HDR_FILLS):
         _shade(cell, fill)
         _cell_para(cell, hdr, bold=True, size_pt=9, color_hex=C_WHITE,
                    align=WD_ALIGN_PARAGRAPH.CENTER)
         cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
 
-    # Data rows
     for ri, row_data in enumerate(data_rows):
         row = t2.rows[ri + 1]
         alt_fill = C_WHITE if ri % 2 == 0 else C_LT_GRAY
 
-        # Lesson # col — always lt blue
         _shade(row.cells[0], C_LT_BLUE)
         _cell_para(row.cells[0], row_data[0] if row_data else "", bold=True, size_pt=9)
         row.cells[0].vertical_alignment = WD_ALIGN_VERTICAL.TOP
 
-        # Middle cols
         for ci in range(1, 4):
             _shade(row.cells[ci], alt_fill)
             _cell_para(row.cells[ci], row_data[ci] if len(row_data) > ci else "", size_pt=9)
             row.cells[ci].vertical_alignment = WD_ALIGN_VERTICAL.TOP
 
-        # DQB col — always purple lt
         _shade(row.cells[4], C_PURPLE_LT)
         _cell_para(row.cells[4], row_data[4] if len(row_data) > 4 else "", size_pt=9)
         row.cells[4].vertical_alignment = WD_ALIGN_VERTICAL.TOP
