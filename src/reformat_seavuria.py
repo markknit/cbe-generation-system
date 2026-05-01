@@ -189,35 +189,83 @@ META = {
                 "(making it the hardest substance), while in graphite, each carbon forms 3 bonds in flat layers with delocalised electrons "
                 "(making it soft and conductive). The bond type IS the structure IS the property.",
             ),
+            (
+                "SECTION 6: HOW DOES BOND TYPE AND STRUCTURE EXPLAIN THE USES OF SUBSTANCES IN EVERYDAY LIFE?",
+                "How do the properties of substances determine their uses?\n"
+                "Can you explain specific real-world applications using bonding concepts?\n"
+                "Choose at least 4 substances and explain how their bonding and structure make them suitable for their uses.\n"
+                "For each substance explain: what type of bonding it has; what structure this creates; what properties result; "
+                "how these properties make it useful.",
+                "Substance Applications:\n\n"
+                "Sodium chloride (NaCl) — Table salt and de-icing roads:\n"
+                "Ionic bonding → giant ionic lattice → soluble in water (ions dissociate), safe to consume, lowers freezing point of water. "
+                "Used as food preservative, in oral rehydration salts (saline drips), and to melt ice on roads in cold climates.\n\n"
+                "Diamond — Cutting tools, drill bits, jewelry:\n"
+                "Giant covalent structure — each carbon bonded to 4 others in a 3D tetrahedral network → "
+                "all bonds must break to scratch or melt it → extremely hard (hardest natural substance, Mohs 10) and very high melting point. "
+                "Used in industrial cutting tools, drill bits for oil exploration, and gemstones.\n\n"
+                "Graphite — Pencil leads, lubricants, electrodes:\n"
+                "Layered giant covalent structure — each carbon forms 3 bonds in flat hexagonal layers; "
+                "one delocalised electron per carbon moves freely between layers → conducts electricity; "
+                "layers held by weak Van der Waals forces → slide easily (soft and lubricating). "
+                "Used in pencil leads (leaves a mark when layers slide onto paper), industrial lubricants, and as electrodes in electrolysis.\n\n"
+                "Metals (copper, aluminium, iron) — Electrical wiring, construction, cookware:\n"
+                "Metallic bonding — sea of delocalised electrons around positive metal ions → "
+                "electrons carry charge freely (excellent conductor); ions can slide past each other (malleable and ductile); "
+                "strong metallic bonds → high melting points and structural strength.\n\n"
+                "Water (H₂O) — Universal solvent, biological processes:\n"
+                "Polar covalent bonds + hydrogen bonding between molecules → "
+                "unusually high boiling point for such a small molecule (100°C), remains liquid at room temperature, "
+                "excellent solvent for ionic and polar substances. Essential for life and all biochemical reactions.\n\n"
+                "Silicon dioxide (SiO₂) — Glass, electronics, construction:\n"
+                "Giant covalent structure (like diamond but with O atoms between Si atoms) → "
+                "very hard, very high melting point (~1700°C), transparent when pure, chemically inert. "
+                "Used in glass making, optical fibres, microchip substrates, and as a construction material (sand, concrete).",
+            ),
         ],
         "final_explanation_rubric": {
             "headers": ["Criterion", "Beginning (1)", "Developing (2)", "Proficient (3)", "Advanced (4)"],
             "rows": [
                 ("1. Completeness",
-                 "Fewer than 3 sections addressed; major gaps",
-                 "4 sections with some key concepts missing",
-                 "All 5 sections addressed with all key concepts",
-                 "All 5 sections comprehensively with depth and connections"),
+                 "Addresses fewer than 4 sections; major gaps in content",
+                 "Addresses 4–5 sections; some important concepts missing",
+                 "Addresses all 6 sections with all key concepts included",
+                 "Addresses all 6 sections comprehensively with depth and additional connections"),
                 ("2. Scientific Accuracy",
-                 "Multiple significant errors in bonding concepts",
-                 "Some minor errors; 2–3 misconceptions",
-                 "Scientifically accurate; no significant errors",
-                 "Accurate with nuanced understanding; addresses exceptions"),
+                 "Multiple significant errors or misconceptions in bonding concepts",
+                 "Some minor errors; generally accurate but may have 2–3 misconceptions",
+                 "Scientifically accurate throughout; no significant errors",
+                 "Scientifically accurate with sophisticated understanding; addresses exceptions and nuance"),
                 ("3. Explanation Quality",
-                 "Mostly describes without explaining why; limited cause-effect",
-                 "Some explanations but reasoning incomplete or unclear",
-                 "Clearly explains using cause-and-effect throughout",
-                 "Deep, sophisticated explanations with multiple lines of reasoning"),
-                ("4. Structure-Property Connections",
-                 "Does not connect atomic structure to macroscopic properties",
-                 "Some connections but superficial or incomplete",
-                 "Consistently connects structure to properties across bond types",
-                 "Sophisticated connections; compares and contrasts multiple substances"),
-                ("5. Diagrams & Communication",
-                 "Missing diagrams; vague language; poor organization",
-                 "Some diagrams; inconsistent vocabulary; some errors",
-                 "Appropriate labeled diagrams; scientific vocabulary used correctly",
-                 "Excellent diagrams; precise vocabulary; polished, engaging communication"),
+                 "Mostly describes what happens without explaining why; limited cause-effect",
+                 "Provides some explanations but reasoning is incomplete or unclear",
+                 "Clearly explains how bonding determines properties using cause-and-effect throughout",
+                 "Deep, sophisticated explanations with multiple lines of reasoning and original synthesis"),
+                ("4. Use of Evidence & Examples",
+                 "Few or no specific examples; claims lack support",
+                 "Some examples provided but not well-explained or connected to bonding theory",
+                 "Appropriate examples throughout; evidence clearly supports claims",
+                 "Rich, well-chosen examples; evidence is thoroughly analysed and connected to theory"),
+                ("5. Structure-Property Connections",
+                 "Does not clearly connect atomic/molecular structure to macroscopic properties",
+                 "Makes some connections but they are superficial or incomplete",
+                 "Consistently and clearly connects structure to properties across all bond types",
+                 "Makes sophisticated connections; explains subtle differences between similar structures"),
+                ("6. Scientific Vocabulary",
+                 "Limited use of scientific terms; frequent use of everyday language instead",
+                 "Uses some scientific vocabulary but inconsistently or occasionally incorrectly",
+                 "Uses scientific vocabulary accurately and appropriately throughout",
+                 "Uses sophisticated scientific vocabulary precisely; demonstrates mastery of terminology"),
+                ("7. Visual Representations",
+                 "Missing diagrams or diagrams are inaccurate/unlabeled",
+                 "Some diagrams included but may lack labels, clarity, or accuracy",
+                 "Appropriate diagrams included (Lewis structures, structural models); clearly labeled",
+                 "Excellent diagrams that enhance understanding; creative and scientifically sophisticated"),
+                ("8. Communication & Organisation",
+                 "Difficult to follow; lacks clear organisation; many writing errors",
+                 "Somewhat organised; writing is understandable but may be unclear in places",
+                 "Well-organised and clear; easy to follow; few writing errors",
+                 "Exceptionally clear and engaging; sophisticated organisation; polished, error-free writing"),
             ],
         },
         "summary_table_headers": [
@@ -939,12 +987,15 @@ META = {
             ),
         ],
         "summary_instructions": (
-            "Complete one row after each lesson. "
-            "Column 2: describe what you observed, measured, or investigated. "
-            "Column 3: summarize key scientific concepts using precise vocabulary "
-            "(e.g. thermal expansion, kinetic energy, linear expansivity). "
-            "Column 4: connect your learning to the anchoring phenomena (sufuria lid or frozen bottle). "
-            "Column 5: update your Driving Question Board and scientific model sketch."
+            "1. Complete one row after each lesson (or as directed by your teacher).\n"
+            "2. Column 1: Record the lesson number and title.\n"
+            "3. Column 2: Describe what you observed, measured, or investigated (activities, demonstrations, simulations, or data).\n"
+            "4. Column 3: Summarize the key scientific concepts you learned. Use precise vocabulary "
+            "(e.g. thermal expansion, kinetic energy, linear expansivity, coefficient of expansion).\n"
+            "5. Column 4: Connect your learning to the anchoring phenomena — explain how this lesson helps you understand "
+            "the sufuria lid or frozen bottle (or both).\n"
+            "6. Column 5: Update your Driving Question Board (note new questions raised or questions answered) "
+            "and update your scientific model sketch."
         ),
     },
 }
@@ -1112,6 +1163,17 @@ def _tbl_no_spacing(doc):
     spacing.set(qn("w:line"),   "240")
     spacing.set(qn("w:lineRule"), "auto")
     pPr.append(spacing)
+
+
+def _add_page_break(doc):
+    """Insert a page break before the next lesson."""
+    p = doc.add_paragraph()
+    run = p.add_run()
+    br = OxmlElement("w:br")
+    br.set(qn("w:type"), "page")
+    run._r.append(br)
+    p.paragraph_format.space_before = Pt(0)
+    p.paragraph_format.space_after = Pt(0)
 
 
 def _set_tbl_border(table):
@@ -1334,13 +1396,67 @@ def parse_source(doc_path: Path) -> list[dict]:
     return lessons
 
 
+def parse_section_a(doc_path: Path) -> list[tuple[str, str]]:
+    """Parse Section A (Sub-Strand Overview) from source document.
+
+    Iterates all paragraphs, collects content grouped by Heading 3 subsections,
+    between 'SECTION A' heading and the first 'SECTION B' or 'LESSON' heading.
+    Returns list of (subsection_title, content_text) tuples.
+    """
+    doc = Document(doc_path)
+    in_section_a = False
+    current_h3 = None
+    section_data: list[tuple[str, str]] = []
+    buffer: list[str] = []
+
+    SEPARATOR = set("─━ \t")
+
+    for p in doc.paragraphs:
+        text = p.text.strip()
+        if not text:
+            continue
+        style = p.style.name if p.style else ""
+        style_l = style.lower()
+
+        if ("SECTION A" in text.upper() or "SECTION  A" in text.upper()) and "heading" in style_l:
+            in_section_a = True
+            continue
+
+        if not in_section_a:
+            continue
+
+        if "heading 2" in style_l and ("SECTION B" in text.upper() or "LESSON" in text.upper()):
+            break
+        if "heading 1" in style_l and "LESSON" in text.upper():
+            break
+
+        if "heading 3" in style_l:
+            if current_h3 is not None:
+                section_data.append((current_h3, "\n".join(buffer).strip()))
+            current_h3 = text
+            buffer = []
+        else:
+            if current_h3 is not None:
+                if not set(text).issubset(SEPARATOR):
+                    buffer.append(text)
+
+    if current_h3 is not None:
+        section_data.append((current_h3, "\n".join(buffer).strip()))
+
+    return section_data
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # LESSON SEQUENCE BUILDER
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def _build_table0_overview(doc, meta):
-    """Sub-strand overview table: navy SUB-STRAND OVERVIEW banner + data rows (2c)."""
-    rows_data = meta["substrand_overview_rows"]
+def _build_table0_overview(doc, meta, section_a_rows=None):
+    """Sub-strand overview table: navy SUB-STRAND OVERVIEW banner + data rows (2c).
+
+    If section_a_rows is provided (parsed from source), uses those instead of
+    the hardcoded META substrand_overview_rows so all 13-14 H3 subsections appear.
+    """
+    rows_data = section_a_rows if section_a_rows else meta["substrand_overview_rows"]
     t = _new_table(doc, 1 + len(rows_data), 2)
     _col_widths(t, [2.083, 7.417])
 
@@ -1448,10 +1564,10 @@ def _build_table_B(doc, lesson):
     _cell_para(t.rows[1].cells[0], overview_text, size_pt=9)
 
 
-def _build_table_C(doc, lesson):
-    """Table C — 6-col Implementation Framework (7r × 6c), total 9.5\".
+def _build_table_C_period(doc, lesson, period_num: int):
+    """Table C — 6-col Implementation Framework for one period (7r × 6c), total 9.5\".
 
-    Combines Period 1 and Period 2 content into a single table per lesson.
+    Called once per period so Period 1 and Period 2 are separate tables.
     Col widths match Bio reference: [0.625, 1.775, 1.775, 1.775, 1.775, 1.775].
     """
     COL_W = [0.625, 1.775, 1.775, 1.775, 1.775, 1.775]
@@ -1459,13 +1575,20 @@ def _build_table_C(doc, lesson):
     COL_HEADERS = ["Phase", "Learner Experience", "Resource",
                    "Teacher Actions", "Sensemaking Strategy", "Assessment Strategy"]
 
+    if period_num == 1:
+        period_heading = lesson.get("period1_heading", "Period 1 (40 minutes)")
+        period_data = lesson["period1_table"]
+    else:
+        period_heading = lesson.get("period2_heading", "Period 2 (40 minutes)")
+        period_data = lesson["period2_table"]
+
     t = _new_table(doc, 7, 6)
     _col_widths(t, COL_W)
 
-    # R0: merged title
+    # R0: merged title with period heading
     c = _merge_row(t, 0)
     _shade(c, C_TEAL)
-    _cell_para(c, "C. LESSON IMPLEMENTATION FRAMEWORK",
+    _cell_para(c, f"C. LESSON IMPLEMENTATION FRAMEWORK — {period_heading}",
                bold=True, size_pt=11, color_hex=C_WHITE)
 
     # R1: col headers
@@ -1475,10 +1598,8 @@ def _build_table_C(doc, lesson):
                    align=WD_ALIGN_PARAGRAPH.CENTER)
         cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
 
-    p1 = lesson["period1_table"]
-    p2 = lesson["period2_table"]
-
     # R2–R6: 5 phase rows
+    content_fills = [C_WHITE, C_LT_GRAY, C_WHITE, C_LT_GRAY, C_WHITE]
     for ri in range(5):
         row = t.rows[ri + 2]
         phase_fill = PHASE_FILLS[ri]
@@ -1489,28 +1610,14 @@ def _build_table_C(doc, lesson):
                    align=WD_ALIGN_PARAGRAPH.CENTER)
         row.cells[0].vertical_alignment = WD_ALIGN_VERTICAL.CENTER
 
-        src1 = p1[ri] if ri < len(p1) else None
-        src2 = p2[ri] if ri < len(p2) else None
+        src_row = period_data[ri] if ri < len(period_data) else None
 
-        content_fills = [C_WHITE, C_LT_GRAY, C_WHITE, C_LT_GRAY, C_WHITE]
         for ci in range(5):
             cell = row.cells[ci + 1]
             _shade(cell, content_fills[ci])
             cell.vertical_alignment = WD_ALIGN_VERTICAL.TOP
-
-            v1 = src1[ci] if src1 and ci < len(src1) else ""
-            v2 = src2[ci] if src2 and ci < len(src2) else ""
-
-            if v1 and v2 and v1.strip() != v2.strip():
-                combined = f"Period 1:\n{v1}\n\nPeriod 2:\n{v2}"
-            elif v1:
-                combined = v1
-            elif v2:
-                combined = f"Period 2:\n{v2}"
-            else:
-                combined = ""
-
-            _cell_para(cell, combined, size_pt=9)
+            val = src_row[ci] if src_row and ci < len(src_row) else ""
+            _cell_para(cell, val, size_pt=9)
 
 
 def _build_table_D(doc, lesson):
@@ -1523,13 +1630,17 @@ def _build_table_D(doc, lesson):
                bold=True, size_pt=11, color_hex=C_WHITE)
 
     _shade(t.rows[1].cells[0], C_ORANGE_LT)
-    refl_text = "\n".join(lesson["reflections"]) if lesson["reflections"] else (
-        "After teaching this lesson, reflect on:\n"
-        "1. Which phase generated the most discussion or engagement?\n"
-        "2. Where did students struggle or show misconceptions?\n"
-        "3. Was the inquiry question answered by the end of the lesson?\n"
-        "4. What would you change if teaching this lesson again?"
-    )
+    reflections = lesson["reflections"]
+    if reflections:
+        refl_text = "\n".join(f"{i + 1}. {item}" for i, item in enumerate(reflections))
+    else:
+        refl_text = (
+            "After teaching this lesson, reflect on:\n"
+            "1. Which phase generated the most discussion or engagement?\n"
+            "2. Where did students struggle or show misconceptions?\n"
+            "3. Was the inquiry question answered by the end of the lesson?\n"
+            "4. What would you change if teaching this lesson again?"
+        )
     _cell_para(t.rows[1].cells[0], refl_text, size_pt=9)
 
 
@@ -1573,22 +1684,35 @@ def build_lesson_sequence_docx(subject_key: str, lessons: list[dict]) -> Documen
                   f"CBE Lesson Sequence  ·  {meta['lessons']} Lessons  ·  "
                   f"{meta['lessons'] * 2} Periods")
 
-    _build_table0_overview(doc, meta)
+    # Parse full Section A from source for rich sub-strand overview
+    src_path = SOURCE_COMPLETE[subject_key]
+    section_a_rows = parse_section_a(src_path)
+
+    _build_table0_overview(doc, meta, section_a_rows)
     _tbl_no_spacing(doc)
     _tbl_no_spacing(doc)  # two empty paras after overview (matching Bio reference)
 
     summary_rows = meta["summary_table_rows"]
 
-    for lesson in lessons:
+    for i, lesson in enumerate(lessons):
         lesson_num = lesson["number"]
         summary_row = summary_rows[lesson_num - 1] if lesson_num - 1 < len(summary_rows) else None
+
+        # Page break before every lesson except the first
+        if i > 0:
+            _add_page_break(doc)
 
         _build_table_A(doc, lesson)
         _tbl_no_spacing(doc)
         _build_table_B(doc, lesson)
         _tbl_no_spacing(doc)
-        _build_table_C(doc, lesson)
+        # Period 1 — always present
+        _build_table_C_period(doc, lesson, 1)
         _tbl_no_spacing(doc)
+        # Period 2 — only if the parser found content for it
+        if lesson.get("period2_table"):
+            _build_table_C_period(doc, lesson, 2)
+            _tbl_no_spacing(doc)
         _build_table_D(doc, lesson)
         _tbl_no_spacing(doc)
         _build_table_E(doc, summary_row)
@@ -1730,8 +1854,8 @@ def build_summary_table_docx(subject_key: str) -> Document:
     _doc_title(doc, f"{meta['subject']} | {meta['grade']} | {meta['substrand']}")
     _doc_subtitle(doc, "Summary Table")
 
-    # ── Table 0: Header block (4r × 2c) ──────────────────────────────────────
-    t0 = _new_table(doc, 4, 2)
+    # ── Table 0: Header block (5r × 2c) ──────────────────────────────────────
+    t0 = _new_table(doc, 5, 2)
     _col_widths(t0, [2.083, 7.417])
 
     c = _merge_row(t0, 0)
@@ -1751,6 +1875,11 @@ def build_summary_table_docx(subject_key: str) -> Document:
     _shade(t0.rows[3].cells[1], C_WHITE)
     _cell_para(t0.rows[3].cells[0], "Driving Question", bold=True, size_pt=9)
     _cell_para(t0.rows[3].cells[1], meta["driving_question"], size_pt=9)
+
+    _shade(t0.rows[4].cells[0], C_ORANGE_LT)
+    _shade(t0.rows[4].cells[1], C_WHITE)
+    _cell_para(t0.rows[4].cells[0], "Anchoring Phenomenon", bold=True, size_pt=9)
+    _cell_para(t0.rows[4].cells[1], meta["phenomenon"], size_pt=9)
 
     _tbl_no_spacing(doc)
 
