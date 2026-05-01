@@ -2098,7 +2098,7 @@ def build_summary_table_docx(subject_key: str) -> Document:
     _col_widths(t1, [9.5])
 
     _shade(t1.rows[0].cells[0], C_TEAL)
-    _cell_para(t1.rows[0].cells[0], "INSTRUCTIONS", bold=True, size_pt=11, color_hex=C_WHITE)
+    _cell_para(t1.rows[0].cells[0], "HOW TO USE THIS TABLE", bold=True, size_pt=11, color_hex=C_WHITE)
 
     _shade(t1.rows[1].cells[0], C_WHITE)
     _cell_para(t1.rows[1].cells[0], meta["summary_instructions"], size_pt=9)
@@ -2136,6 +2136,30 @@ def build_summary_table_docx(subject_key: str) -> Document:
         _shade(row.cells[4], C_PURPLE_LT)
         _cell_para(row.cells[4], row_data[4] if len(row_data) > 4 else "", size_pt=9)
         row.cells[4].vertical_alignment = WD_ALIGN_VERTICAL.TOP
+
+    # ── End-of-Unit Reflection Questions + Teacher Notes (parsed from source) ─
+    st_tail = parse_doc_sections(
+        SOURCE_SUMMARY_TABLE[subject_key],
+        ["End-of-Unit Reflection", "Reflection Questions",
+         "Teacher Notes", "DQB and Model Tracking"],
+    )
+    tail_configs = [
+        ("DQB and Model Tracking",    "DQB AND MODEL TRACKING GUIDE",             C_PURPLE,    C_WHITE),
+        ("End-of-Unit Reflection",    "END-OF-UNIT REFLECTION QUESTIONS",          C_MED_BLUE,  C_WHITE),
+        ("Reflection Questions",      "END-OF-UNIT REFLECTION QUESTIONS",          C_MED_BLUE,  C_WHITE),
+        ("Teacher Notes",             "TEACHER NOTES: FORMATIVE USE OF THIS TABLE",C_NAVY,      C_WHITE),
+    ]
+    seen_reflection = False
+    for key, display, hdr_fill, body_fill in tail_configs:
+        content = st_tail.get(key)
+        if not content:
+            continue
+        if key in ("End-of-Unit Reflection", "Reflection Questions"):
+            if seen_reflection:
+                continue
+            seen_reflection = True
+        _tbl_no_spacing(doc)
+        _build_section_table(doc, display, content, header_fill=hdr_fill, content_fill=body_fill)
 
     return doc
 
