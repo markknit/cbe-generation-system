@@ -1006,6 +1006,18 @@ SOURCE_COMPLETE = {
     "physics":    SRC_DIR / "Physics_Temperature_Thermal_Expansion_CBE_LessonSequence_COMPLETE.docx",
 }
 
+SOURCE_FINAL_EXP = {
+    "chemistry":  SRC_DIR / "FINAL_EXPLANATION_Chemical_Bonding.docx",
+    "mathematics": SRC_DIR / "FINAL_EXPLANATION_Quadratic_Equations.docx",
+    "physics":    SRC_DIR / "FINAL_EXPLANATION_Temperature_Thermal_Expansion.docx",
+}
+
+SOURCE_SUMMARY_TABLE = {
+    "chemistry":  SRC_DIR / "SUMMARY_TABLE_Chemical_Bonding.docx",
+    "mathematics": SRC_DIR / "SUMMARY_TABLE_Quadratic_Equations.docx",
+    "physics":    SRC_DIR / "SUMMARY_TABLE_Temperature_Thermal_Expansion.docx",
+}
+
 OUTPUT_FILES = {
     "chemistry": {
         "lesson_seq":    OUT_DIR / "Chemistry_10_SubStrand1.4_ChemicalBonding_CBE_LessonSequence.docx",
@@ -1174,6 +1186,103 @@ def _add_page_break(doc):
     run._r.append(br)
     p.paragraph_format.space_before = Pt(0)
     p.paragraph_format.space_after = Pt(0)
+
+
+def parse_doc_sections(doc_path: Path, section_prefixes: list) -> dict:
+    """Parse content under H2 headings that match any of section_prefixes (prefix match).
+
+    Returns {prefix: [(kind, text), ...]} where kind is 'h3', 'bullet', 'quote', or 'text'.
+    'quote' is for block-quote style paragraphs (example student responses).
+    """
+    doc = Document(doc_path)
+    results = {}
+    current_key = None
+    buffer = []
+
+    def flush():
+        if current_key is not None and buffer:
+            results[current_key] = buffer[:]
+
+    for p in doc.paragraphs:
+        text = p.text.strip()
+        style = p.style.name if p.style else ""
+        style_l = style.lower()
+        if not text:
+            continue
+
+        if "heading 2" in style_l:
+            flush()
+            buffer = []
+            current_key = None
+            for prefix in section_prefixes:
+                if text.upper().startswith(prefix.upper()):
+                    current_key = prefix
+                    break
+        elif current_key is not None:
+            if "heading 3" in style_l:
+                buffer.append(("h3", text))
+            elif any(s in style_l for s in ("compact", "list bullet", "list paragraph")):
+                buffer.append(("bullet", text))
+            elif "block" in style_l:
+                buffer.append(("quote", text))
+            else:
+                buffer.append(("text", text))
+
+    flush()
+    return results
+
+
+def _cell_para_lines(cell, content: list, size_pt: int = 9):
+    """Write rich content into a cell.
+
+    content is a list of (kind, text) tuples where kind is one of:
+    'h3'    -> bold subheading
+    'bullet' -> bulleted line with left indent
+    'quote'  -> italic, indented (used for example student responses)
+    'text'   -> normal paragraph
+    """
+    first_para = True
+    for kind, text in content:
+        if first_para:
+            p = cell.paragraphs[0]
+            first_para = False
+        else:
+            p = cell.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        p.paragraph_format.space_before = Pt(1)
+        p.paragraph_format.space_after  = Pt(1)
+
+        if kind == "h3":
+            _apply_run(p, text, bold=True, size_pt=size_pt)
+        elif kind == "bullet":
+            p.paragraph_format.left_indent = Pt(12)
+            _apply_run(p, f"• {text}", size_pt=size_pt)
+        elif kind == "quote":
+            p.paragraph_format.left_indent = Pt(18)
+            _apply_run(p, text, size_pt=size_pt, italic=True)
+        else:
+            _apply_run(p, text, size_pt=size_pt)
+
+    if not content:
+        p = cell.paragraphs[0]
+        p.paragraph_format.space_before = Pt(2)
+        p.paragraph_format.space_after  = Pt(2)
+
+
+def _build_section_table(doc, header_text: str, content: list,
+                          header_fill: str = None, content_fill: str = None,
+                          size_pt: int = 9):
+    """Build a 2-row x 1-col section table with a coloured header and rich content."""
+    if header_fill is None:
+        header_fill = C_TEAL
+    if content_fill is None:
+        content_fill = C_WHITE
+    t = _new_table(doc, 2, 1)
+    _col_widths(t, [9.5])
+    _shade(t.rows[0].cells[0], header_fill)
+    _cell_para(t.rows[0].cells[0], header_text, bold=True, size_pt=11, color_hex=C_WHITE)
+    _shade(t.rows[1].cells[0], content_fill)
+    _cell_para_lines(t.rows[1].cells[0], content, size_pt=size_pt)
 
 
 def _set_tbl_border(table):
@@ -1470,7 +1579,23 @@ def _build_table0_overview(doc, meta, section_a_rows=None):
         _shade(t.rows[row_idx].cells[0], C_LT_BLUE)
         _shade(t.rows[row_idx].cells[1], C_WHITE)
         _cell_para(t.rows[row_idx].cells[0], label, bold=True, size_pt=9)
-        _cell_para(t.rows[row_idx].cells[1], value, size_pt=9)
+        # Convert multi-line content to bullet-aware format
+        if isinstance(value, list):
+            _cell_para_lines(t.rows[row_idx].cells[1], value, size_pt=9)
+        else:
+            lines = value.split("\n") if "\n" in value else [value]
+            content = []
+            for ln in lines:
+                ln = ln.strip()
+                if not ln:
+                    continue
+                if ln.startswith("- ") or ln.startswith("• "):
+                    content.append(("bullet", ln.lstrip("-• ").strip()))
+                elif ln.endswith(":") or (ln.isupper() and len(ln) > 3):
+                    content.append(("h3", ln))
+                else:
+                    content.append(("text", ln))
+            _cell_para_lines(t.rows[row_idx].cells[1], content if content else [("text", value)], size_pt=9)
 
 
 def _build_table_A(doc, lesson):
@@ -1698,9 +1823,7 @@ def build_lesson_sequence_docx(subject_key: str, lessons: list[dict]) -> Documen
         lesson_num = lesson["number"]
         summary_row = summary_rows[lesson_num - 1] if lesson_num - 1 < len(summary_rows) else None
 
-        # Page break before every lesson except the first
-        if i > 0:
-            _add_page_break(doc)
+        _add_page_break(doc)
 
         _build_table_A(doc, lesson)
         _tbl_no_spacing(doc)
@@ -1718,6 +1841,22 @@ def build_lesson_sequence_docx(subject_key: str, lessons: list[dict]) -> Documen
         _build_table_E(doc, summary_row)
         _tbl_no_spacing(doc)
         _tbl_no_spacing(doc)  # two empty paras between lessons
+
+    # ── Sections C, D, E — parsed from source document ──────────────────────
+    cde = parse_doc_sections(
+        SOURCE_COMPLETE[subject_key],
+        ["SECTION C", "SECTION D", "SECTION E"],
+    )
+    cde_display = [
+        ("SECTION C", "SECTION C: SUMMARY TABLE TEMPLATE & INSTRUCTIONS", C_MED_BLUE),
+        ("SECTION D", "SECTION D: DIFFERENTIATION STRATEGIES",             C_TEAL),
+        ("SECTION E", "SECTION E: FINAL SYNTHESIS & ASSESSMENT",           C_NAVY),
+    ]
+    _add_page_break(doc)
+    for key, display_header, fill in cde_display:
+        content = cde.get(key, [("text", "See source document.")])
+        _build_section_table(doc, display_header, content, header_fill=fill)
+        _tbl_no_spacing(doc)
 
     return doc
 
@@ -1782,6 +1921,23 @@ def build_final_explanation_docx(subject_key: str) -> Document:
 
     _tbl_no_spacing(doc)
 
+    # ── Introductory block: Driving Question, Phenomenon, What is Final Explanation ──
+    fe_intro = parse_doc_sections(
+        SOURCE_FINAL_EXP[subject_key],
+        ["Driving Question", "Anchoring Phenom", "What is a Final Explanation", "Instructions"],
+    )
+    intro_sections = [
+        ("Driving Question",          "DRIVING QUESTION",           C_NAVY,    C_LT_BLUE),
+        ("Anchoring Phenom",          "ANCHORING PHENOMENON",       C_TEAL,    C_WHITE),
+        ("What is a Final Explanation", "WHAT IS A FINAL EXPLANATION?", C_MED_BLUE, C_WHITE),
+        ("Instructions",              "INSTRUCTIONS",               C_MED_BLUE, C_WHITE),
+    ]
+    for key, display, hdr_fill, body_fill in intro_sections:
+        content = fe_intro.get(key)
+        if content:
+            _build_section_table(doc, display, content, header_fill=hdr_fill, content_fill=body_fill)
+            _tbl_no_spacing(doc)
+
     # ── Tables 2–N: One per section (3r × 1c each) ───────────────────────────
     sections = meta["final_explanation_sections"]
     for i, section_data in enumerate(sections):
@@ -1836,6 +1992,49 @@ def build_final_explanation_docx(subject_key: str) -> Document:
             _shade(cell, fill)
             _cell_para(cell, val, size_pt=9)
 
+    # ── Post-rubric sections: Example, Tips, Reminders ───────────────────────
+    fe_tail = parse_doc_sections(
+        SOURCE_FINAL_EXP[subject_key],
+        ["Example", "Partial Example", "Tips for Students", "Tips for Success",
+         "Tips for Teachers", "Final Reminders", "Final Checklist"],
+    )
+    tail_sections = [
+        ("Example",          "EXAMPLE OF A STRONG STUDENT RESPONSE", C_GREEN_LT, C_WHITE),
+        ("Partial Example",  "EXAMPLE OF A STRONG STUDENT RESPONSE", C_GREEN_LT, C_WHITE),
+        ("Tips for Students","TIPS FOR STUDENTS",                     C_LT_BLUE,  C_WHITE),
+        ("Tips for Success", "TIPS FOR SUCCESS",                      C_LT_BLUE,  C_WHITE),
+        ("Tips for Teachers","TIPS FOR TEACHERS",                     C_PURPLE_LT, C_WHITE),
+        ("Final Reminders",  "FINAL REMINDERS",                       C_ORANGE_LT, C_WHITE),
+        ("Final Checklist",  "FINAL CHECKLIST FOR STUDENTS",          C_ORANGE_LT, C_WHITE),
+    ]
+    seen_example = False
+    seen_tips_students = False
+    seen_tips_teachers = False
+    seen_final = False
+    for key, display, hdr_fill, body_fill in tail_sections:
+        content = fe_tail.get(key)
+        if not content:
+            continue
+        # Only show first matching variant for each logical group
+        if key in ("Example", "Partial Example"):
+            if seen_example:
+                continue
+            seen_example = True
+        elif key in ("Tips for Students", "Tips for Success"):
+            if seen_tips_students:
+                continue
+            seen_tips_students = True
+        elif key == "Tips for Teachers":
+            if seen_tips_teachers:
+                continue
+            seen_tips_teachers = True
+        elif key in ("Final Reminders", "Final Checklist"):
+            if seen_final:
+                continue
+            seen_final = True
+        _build_section_table(doc, display, content, header_fill=hdr_fill, content_fill=body_fill)
+        _tbl_no_spacing(doc)
+
     return doc
 
 
@@ -1853,6 +2052,17 @@ def build_summary_table_docx(subject_key: str) -> Document:
 
     _doc_title(doc, f"{meta['subject']} | {meta['grade']} | {meta['substrand']}")
     _doc_subtitle(doc, "Summary Table")
+
+    # ── Purpose Statement (parsed from source) ──────────────────────────────
+    st_intro = parse_doc_sections(
+        SOURCE_SUMMARY_TABLE[subject_key],
+        ["Purpose Statement"],
+    )
+    purpose_content = st_intro.get("Purpose Statement", [])
+    if purpose_content:
+        _build_section_table(doc, "PURPOSE STATEMENT", purpose_content,
+                             header_fill=C_NAVY, content_fill=C_WHITE)
+        _tbl_no_spacing(doc)
 
     # ── Table 0: Header block (5r × 2c) ──────────────────────────────────────
     t0 = _new_table(doc, 5, 2)
