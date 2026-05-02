@@ -1355,6 +1355,25 @@ def _cell_para_auto(cell, text: str, size_pt: int = 9):
     _cell_para_lines(cell, _text_to_rich(text), size_pt=size_pt)
 
 
+def _enrich_content(content: list) -> list:
+    """Post-process parsed content to improve bullet/heading detection.
+
+    - 'text' items are re-evaluated through _text_to_rich() to catch embedded
+      dash-lists, label:description patterns, question marks, etc.
+    - 'bullet' items ending with ':' (≤ 60 chars) are promoted to 'h3' headings.
+    """
+    result = []
+    for kind, text in content:
+        if kind == "text":
+            for new_kind, new_text in _text_to_rich(text):
+                result.append((new_kind, new_text))
+        elif kind == "bullet" and text.strip().endswith(":") and len(text.strip()) <= 60:
+            result.append(("h3", text.strip()))
+        else:
+            result.append((kind, text))
+    return result
+
+
 def _build_section_table(doc, header_text: str, content: list,
                           header_fill: str = None, content_fill: str = None,
                           size_pt: int = 9):
@@ -1368,7 +1387,7 @@ def _build_section_table(doc, header_text: str, content: list,
     _shade(t.rows[0].cells[0], header_fill)
     _cell_para(t.rows[0].cells[0], header_text, bold=True, size_pt=11, color_hex=C_WHITE)
     _shade(t.rows[1].cells[0], content_fill)
-    _cell_para_lines(t.rows[1].cells[0], content, size_pt=size_pt)
+    _cell_para_lines(t.rows[1].cells[0], _enrich_content(content), size_pt=size_pt)
 
 
 def _set_tbl_border(table):
@@ -1658,6 +1677,7 @@ def _build_table0_overview(doc, meta, section_a_rows=None):
 
     If section_a_rows is provided (parsed from source), uses those instead of
     the hardcoded META substrand_overview_rows so all 13-14 H3 subsections appear.
+    Label cells cycle through theme colors matching the other tables.
     """
     rows_data = section_a_rows if section_a_rows else meta["substrand_overview_rows"]
     t = _new_table(doc, 1 + len(rows_data), 2)
@@ -1668,9 +1688,13 @@ def _build_table0_overview(doc, meta, section_a_rows=None):
     _shade(c, C_NAVY)
     _cell_para(c, "SUB-STRAND OVERVIEW", bold=True, size_pt=11, color_hex=C_WHITE)
 
+    # Cycle through theme colors for label cells (matching Table A/B/C palette)
+    _OVERVIEW_LABEL_FILLS = [C_LT_BLUE, C_PURPLE_LT, C_TEAL_LT, C_GREEN_LT, C_ORANGE_LT]
+
     for ri, (label, value) in enumerate(rows_data):
         row_idx = ri + 1
-        _shade(t.rows[row_idx].cells[0], C_LT_BLUE)
+        label_fill = _OVERVIEW_LABEL_FILLS[ri % len(_OVERVIEW_LABEL_FILLS)]
+        _shade(t.rows[row_idx].cells[0], label_fill)
         _shade(t.rows[row_idx].cells[1], C_WHITE)
         _cell_para(t.rows[row_idx].cells[0], label, bold=True, size_pt=9)
         if isinstance(value, list):
@@ -1680,20 +1704,15 @@ def _build_table0_overview(doc, meta, section_a_rows=None):
 
 
 def _build_table_A(doc, lesson):
-    """Table A — SLOs (9r × 2c), total 9.5\".
+    """Table A — Specific Learning Outcomes (5r × 2c), total 9.5\".
 
-    Row layout matching Bio reference:
     R0: navy merged LESSON banner
     R1: teal merged A. SPECIFIC LEARNING OUTCOMES
-    R2: lt-blue Purpose
-    R3: lt-blue Knowledge
-    R4: lt-blue Skills
-    R5: lt-blue Attitudes
-    R6: purple-lt Key Inquiry Question
-    R7: teal-lt Purpose in Storyline
-    R8: orange-lt Safety Notes
+    R2: lt-blue Knowledge | content
+    R3: lt-blue Skills    | content
+    R4: lt-blue Attitudes | content
     """
-    t = _new_table(doc, 9, 2)
+    t = _new_table(doc, 5, 2)
     _col_widths(t, [2.083, 7.417])
 
     # R0: merged navy — LESSON N: Title
@@ -1707,68 +1726,53 @@ def _build_table_A(doc, lesson):
     _shade(c, C_TEAL)
     _cell_para(c, "A. SPECIFIC LEARNING OUTCOMES", bold=True, size_pt=11, color_hex=C_WHITE)
 
-    # R2: Purpose — brief lesson purpose (first sentence of overview, not duplicate of R7)
+    # R2: Knowledge
     _shade(t.rows[2].cells[0], C_LT_BLUE)
     _shade(t.rows[2].cells[1], C_WHITE)
-    _cell_para(t.rows[2].cells[0], "Purpose", bold=True, size_pt=9)
-    overview = lesson.get("overview_purpose", "").strip()
-    brief = overview.split(". ")[0] + "." if ". " in overview else overview
-    _cell_para_auto(t.rows[2].cells[1], brief or lesson.get("slo_purpose", "—").strip() or "—")
+    _cell_para(t.rows[2].cells[0], "Knowledge", bold=True, size_pt=9)
+    _cell_para_auto(t.rows[2].cells[1], lesson["slo_knowledge"].strip() or "—")
 
-    # R3: Knowledge
+    # R3: Skills
     _shade(t.rows[3].cells[0], C_LT_BLUE)
     _shade(t.rows[3].cells[1], C_WHITE)
-    _cell_para(t.rows[3].cells[0], "Knowledge", bold=True, size_pt=9)
-    _cell_para_auto(t.rows[3].cells[1], lesson["slo_knowledge"].strip() or "—")
+    _cell_para(t.rows[3].cells[0], "Skills", bold=True, size_pt=9)
+    _cell_para_auto(t.rows[3].cells[1], lesson["slo_skills"].strip() or "—")
 
-    # R4: Skills
+    # R4: Attitudes
     _shade(t.rows[4].cells[0], C_LT_BLUE)
     _shade(t.rows[4].cells[1], C_WHITE)
-    _cell_para(t.rows[4].cells[0], "Skills", bold=True, size_pt=9)
-    _cell_para_auto(t.rows[4].cells[1], lesson["slo_skills"].strip() or "—")
-
-    # R5: Attitudes
-    _shade(t.rows[5].cells[0], C_LT_BLUE)
-    _shade(t.rows[5].cells[1], C_WHITE)
-    _cell_para(t.rows[5].cells[0], "Attitudes", bold=True, size_pt=9)
-    _cell_para_auto(t.rows[5].cells[1], lesson["slo_attitudes"].strip() or "—")
-
-    # R6: Key Inquiry Question
-    _shade(t.rows[6].cells[0], C_PURPLE_LT)
-    _shade(t.rows[6].cells[1], C_WHITE)
-    _cell_para(t.rows[6].cells[0], "Key Inquiry Question", bold=True, size_pt=9)
-    _cell_para_auto(t.rows[6].cells[1], lesson["inquiry_question"] or "—")
-
-    # R7: Purpose in Storyline
-    _shade(t.rows[7].cells[0], C_TEAL_LT)
-    _shade(t.rows[7].cells[1], C_WHITE)
-    _cell_para(t.rows[7].cells[0], "Purpose in Storyline", bold=True, size_pt=9)
-    _cell_para_auto(t.rows[7].cells[1], lesson.get("overview_purpose", "").strip() or "—")
-
-    # R8: Safety Notes
-    _shade(t.rows[8].cells[0], C_ORANGE_LT)
-    _shade(t.rows[8].cells[1], C_WHITE)
-    _cell_para(t.rows[8].cells[0], "Safety Notes", bold=True, size_pt=9)
-    _cell_para_auto(t.rows[8].cells[1], lesson["safety"] or "None noted.")
+    _cell_para(t.rows[4].cells[0], "Attitudes", bold=True, size_pt=9)
+    _cell_para_auto(t.rows[4].cells[1], lesson["slo_attitudes"].strip() or "—")
 
 
 def _build_table_B(doc, lesson):
-    """Table B — Lesson Overview (2r × 1c)."""
-    t = _new_table(doc, 2, 1)
-    _col_widths(t, [9.5])
+    """Table B — Lesson Overview (5r × 2c), each field in its own row.
 
-    _shade(t.rows[0].cells[0], C_TEAL)
-    _cell_para(t.rows[0].cells[0], "B. LESSON OVERVIEW", bold=True, size_pt=11, color_hex=C_WHITE)
+    R0: teal merged  B. LESSON OVERVIEW
+    R1: purple-lt    Key Inquiry Question | content
+    R2: teal-lt      Purpose in Storyline | content
+    R3: orange-lt    Safety Considerations | content
+    R4: lt-blue      Materials Needed      | content
+    """
+    t = _new_table(doc, 5, 2)
+    _col_widths(t, [2.083, 7.417])
 
-    _shade(t.rows[1].cells[0], C_WHITE)
-    parts = []
-    if lesson.get("inquiry_question"):
-        parts.append(f"Key Inquiry Question: {lesson['inquiry_question']}")
-    if lesson.get("materials"):
-        parts.append(f"Materials: {lesson['materials']}")
-    # overview_purpose is already shown in Table A R7 (Purpose in Storyline) — not repeated here
-    overview_text = "\n\n".join(parts) if parts else "See lesson plan for details."
-    _cell_para_auto(t.rows[1].cells[0], overview_text)
+    # R0: merged teal header
+    c = _merge_row(t, 0)
+    _shade(c, C_TEAL)
+    _cell_para(c, "B. LESSON OVERVIEW", bold=True, size_pt=11, color_hex=C_WHITE)
+
+    rows_spec = [
+        (1, C_PURPLE_LT, "Key Inquiry Question",  lesson.get("inquiry_question", "") or "—"),
+        (2, C_TEAL_LT,   "Purpose in Storyline",  lesson.get("overview_purpose", "").strip() or "—"),
+        (3, C_ORANGE_LT, "Safety Considerations",  lesson.get("safety", "") or "None noted."),
+        (4, C_LT_BLUE,   "Materials Needed",       lesson.get("materials", "") or "See lesson plan."),
+    ]
+    for ri, fill, label, value in rows_spec:
+        _shade(t.rows[ri].cells[0], fill)
+        _shade(t.rows[ri].cells[1], C_WHITE)
+        _cell_para(t.rows[ri].cells[0], label, bold=True, size_pt=9)
+        _cell_para_auto(t.rows[ri].cells[1], value)
 
 
 def _build_table_C_period(doc, lesson, period_num: int):
