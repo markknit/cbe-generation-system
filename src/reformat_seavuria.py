@@ -1279,9 +1279,14 @@ def _text_to_rich(text: str) -> list:
     • Label: - items   "Physical Setup: - item1 - item2"                 → h3 + bullets
     • Short label ending with colon  (≤ 70 chars)                        → 'h3'
     • Numbered section heading  8.1 Title                                → 'h3'
+    • "Short Label: description" (label ≤ 40 chars, title-case start)    → h3 + text
+    • Question lines ending with ?  (≤ 180 chars)                        → 'bullet'
     • Everything else                                                     → 'text'
     """
     import re
+
+    _LABEL_EXCLUSIONS = ("e.g.", "note:", "for example", "i.e.", "e.g.:", "for instance",
+                         "note that", "please note", "nb:", "ps:")
 
     def _split_dash_list(content: str) -> list:
         """Split a string that may be a concatenated dash list into individual items."""
@@ -1294,6 +1299,7 @@ def _text_to_rich(text: str) -> list:
     for ln in lines:
         if not ln:
             continue
+        ln_lower = ln.lower()
         # Lettered list: a) b) or A) B)
         if re.match(r"^[a-zA-Z]\)\s", ln):
             result.append(("bullet", ln))
@@ -1314,14 +1320,26 @@ def _text_to_rich(text: str) -> list:
                     result.append(("bullet", item))
             else:
                 result.append(("text", ln))
-        # Short label ending with colon
+        # Short label ending with colon (standalone heading, ≤ 70 chars)
         elif (ln.endswith(":") and len(ln) <= 70
-              and not any(ln.lower().startswith(x) for x in
+              and not any(ln_lower.startswith(x) for x in
                           ("e.g.", "note:", "(", "for example", "i.e."))):
             result.append(("h3", ln))
         # Numbered section headings like "8.1 Knowledge"
         elif re.match(r"^\d+\.\d*\s+\w", ln) and len(ln) <= 80:
             result.append(("h3", ln))
+        # "Short Label: description text" — bold the label, normal text for rest
+        # Matches lines starting with capital letter, label ≤ 40 chars before ": "
+        elif (re.match(r"^[A-Z][^:\n]{2,38}: \S", ln)
+              and not any(ln_lower.startswith(x) for x in _LABEL_EXCLUSIONS)):
+            colon_pos = ln.index(": ")
+            label = ln[:colon_pos]
+            rest  = ln[colon_pos + 2:]
+            result.append(("h3", label + ":"))
+            result.append(("text", rest))
+        # Stand-alone question lines → bullet
+        elif ln.endswith("?") and 10 <= len(ln) <= 180:
+            result.append(("bullet", ln))
         else:
             result.append(("text", ln))
     return result if result else [("text", text.strip())]
@@ -1436,7 +1454,10 @@ def parse_source(doc_path: Path) -> list[dict]:
                     current["slo_skills"] += "\n" + part[7:].strip()
                 elif re.match(r"Attitudes?:", part, re.I):
                     current["slo_attitudes"] += "\n" + re.split(r"Attitudes?:", part, flags=re.I, maxsplit=1)[-1].strip()
-                elif part and not re.match(r"By the end", part, re.I):
+                elif re.match(r"By the end", part, re.I):
+                    if not current["slo_purpose"]:
+                        current["slo_purpose"] = part
+                elif part:
                     current["slo_knowledge"] += "\n" + part
         elif section == "B":
             lines = text.split("\n")
@@ -1458,7 +1479,9 @@ def parse_source(doc_path: Path) -> list[dict]:
                             purpose_lines.append(lines[j].strip())
                     current["overview_purpose"] = " ".join(purpose_lines)
                 elif re.match(r"Safety", ln, re.I):
-                    safety_lines = []
+                    # Capture inline content (e.g. "Safety: - item1 - item2") + any continuation lines
+                    inline = ln.split(":", 1)[1].strip() if ":" in ln else ""
+                    safety_lines = [inline] if inline else []
                     for j in range(i+1, len(lines)):
                         if re.match(r"(Materials|Purpose|Key Inquiry)", lines[j], re.I):
                             break
@@ -1466,7 +1489,9 @@ def parse_source(doc_path: Path) -> list[dict]:
                             safety_lines.append(lines[j].strip())
                     current["safety"] = " ".join(safety_lines)
                 elif re.match(r"Materials?", ln, re.I) and ":" in ln:
-                    mat_lines = []
+                    # Capture inline content (e.g. "Materials: - item1 - item2") + continuation lines
+                    inline = ln.split(":", 1)[1].strip() if ":" in ln else ""
+                    mat_lines = [inline] if inline else []
                     for j in range(i+1, len(lines)):
                         if re.match(r"(Safety|Purpose|Duration|Key Inquiry)", lines[j], re.I):
                             break
@@ -1504,6 +1529,7 @@ def parse_source(doc_path: Path) -> list[dict]:
             "number": int(number),
             "title":  title.strip(),
             "inquiry_question": "",
+            "slo_purpose":      "",
             "slo_knowledge":    "",
             "slo_skills":       "",
             "slo_attitudes":    "",
@@ -1681,11 +1707,13 @@ def _build_table_A(doc, lesson):
     _shade(c, C_TEAL)
     _cell_para(c, "A. SPECIFIC LEARNING OUTCOMES", bold=True, size_pt=11, color_hex=C_WHITE)
 
-    # R2: Purpose
+    # R2: Purpose — brief lesson purpose (first sentence of overview, not duplicate of R7)
     _shade(t.rows[2].cells[0], C_LT_BLUE)
     _shade(t.rows[2].cells[1], C_WHITE)
     _cell_para(t.rows[2].cells[0], "Purpose", bold=True, size_pt=9)
-    _cell_para_auto(t.rows[2].cells[1], lesson.get("overview_purpose", "").strip() or "—")
+    overview = lesson.get("overview_purpose", "").strip()
+    brief = overview.split(". ")[0] + "." if ". " in overview else overview
+    _cell_para_auto(t.rows[2].cells[1], brief or lesson.get("slo_purpose", "—").strip() or "—")
 
     # R3: Knowledge
     _shade(t.rows[3].cells[0], C_LT_BLUE)
@@ -1736,10 +1764,9 @@ def _build_table_B(doc, lesson):
     parts = []
     if lesson.get("inquiry_question"):
         parts.append(f"Key Inquiry Question: {lesson['inquiry_question']}")
-    if lesson.get("overview_purpose"):
-        parts.append(f"Lesson Overview: {lesson['overview_purpose']}")
     if lesson.get("materials"):
         parts.append(f"Materials: {lesson['materials']}")
+    # overview_purpose is already shown in Table A R7 (Purpose in Storyline) — not repeated here
     overview_text = "\n\n".join(parts) if parts else "See lesson plan for details."
     _cell_para_auto(t.rows[1].cells[0], overview_text)
 
