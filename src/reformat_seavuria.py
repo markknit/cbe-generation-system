@@ -1193,6 +1193,7 @@ def parse_doc_sections(doc_path: Path, section_prefixes: list) -> dict:
 
     Returns {prefix: [(kind, text), ...]} where kind is 'h3', 'bullet', 'quote', or 'text'.
     'quote' is for block-quote style paragraphs (example student responses).
+    Table rows are captured as bullet items (first + second column merged).
     """
     doc = Document(doc_path)
     results = {}
@@ -1203,33 +1204,111 @@ def parse_doc_sections(doc_path: Path, section_prefixes: list) -> dict:
         if current_key is not None and buffer:
             results[current_key] = buffer[:]
 
-    for p in doc.paragraphs:
-        text = p.text.strip()
-        style = p.style.name if p.style else ""
-        style_l = style.lower()
-        if not text:
-            continue
+    def _tbl_row_text(row) -> str:
+        """Merge first two non-empty cell texts for a table row."""
+        cells = [c.text.strip() for c in row.cells if c.text.strip()]
+        return "  |  ".join(cells[:2]) if cells else ""
 
-        if "heading 2" in style_l:
-            flush()
-            buffer = []
-            current_key = None
-            for prefix in section_prefixes:
-                if text.upper().startswith(prefix.upper()):
-                    current_key = prefix
-                    break
-        elif current_key is not None:
-            if "heading 3" in style_l:
-                buffer.append(("h3", text))
-            elif any(s in style_l for s in ("compact", "list bullet", "list paragraph")):
-                buffer.append(("bullet", text))
-            elif "block" in style_l:
-                buffer.append(("quote", text))
-            else:
-                buffer.append(("text", text))
+    for kind, obj in iter_block_items(doc):
+        if kind == "paragraph":
+            p = obj
+            text = p.text.strip()
+            style = p.style.name if p.style else ""
+            style_l = style.lower()
+            if not text:
+                continue
+
+            if "heading 2" in style_l:
+                flush()
+                buffer = []
+                current_key = None
+                for prefix in section_prefixes:
+                    if text.upper().startswith(prefix.upper()):
+                        current_key = prefix
+                        break
+            elif current_key is not None:
+                if "heading 3" in style_l:
+                    buffer.append(("h3", text))
+                elif any(s in style_l for s in ("compact", "list bullet", "list paragraph")):
+                    buffer.append(("bullet", text))
+                elif "block" in style_l:
+                    buffer.append(("quote", text))
+                else:
+                    buffer.append(("text", text))
+
+        elif kind == "table" and current_key is not None:
+            # Capture table as bullet list: skip header row, merge first 2 cols
+            for ri, row in enumerate(obj.rows):
+                if ri == 0:
+                    # Header row → bold sub-heading showing column names
+                    hdr = _tbl_row_text(row)
+                    if hdr:
+                        buffer.append(("h3", hdr))
+                else:
+                    row_text = _tbl_row_text(row)
+                    if row_text:
+                        buffer.append(("bullet", row_text))
 
     flush()
     return results
+
+
+def parse_framework_sections(doc_path: Path) -> list:
+    """Parse the 'Framework' H2 section from a Final Explanation docx.
+
+    Splits the section by H3 headings, returning a list of
+    (section_title, content_list) tuples where content_list contains
+    (kind, text) items suitable for _cell_para_lines().
+
+    Body text items are passed through _text_to_rich() so that bold
+    label lines like 'Guiding Questions:' become h3 entries and
+    question lines ending with '?' become bullets.
+    """
+    doc = Document(doc_path)
+    in_framework = False
+    current_title = None
+    current_content = []
+    sections = []
+
+    def flush():
+        if current_title is not None and current_content:
+            sections.append((current_title, list(current_content)))
+
+    for kind, obj in iter_block_items(doc):
+        if kind == "paragraph":
+            p = obj
+            text = p.text.strip()
+            if not text:
+                continue
+            style_l = (p.style.name if p.style else "").lower()
+
+            if "heading 2" in style_l:
+                if in_framework:
+                    # Next H2 ends the framework section
+                    flush()
+                    in_framework = False
+                    current_title = None
+                    current_content = []
+                if text.upper().startswith("FRAMEWORK"):
+                    in_framework = True
+            elif in_framework:
+                if "heading 3" in style_l:
+                    flush()
+                    current_title = text
+                    current_content = []
+                elif current_title is not None:
+                    # Body text — enrich it (catches "Guiding Questions:", questions, bullets)
+                    for entry in _text_to_rich(text):
+                        current_content.append(entry)
+        elif kind == "table" and in_framework and current_title is not None:
+            for ri, row in enumerate(obj.rows):
+                cells = [c.text.strip() for c in row.cells if c.text.strip()]
+                row_text = "  |  ".join(cells[:2]) if cells else ""
+                if row_text:
+                    current_content.append(("bullet", row_text))
+
+    flush()
+    return sections
 
 
 def _cell_para_lines(cell, content: list, size_pt: int = 9):
@@ -1388,6 +1467,66 @@ def _build_section_table(doc, header_text: str, content: list,
     _cell_para(t.rows[0].cells[0], header_text, bold=True, size_pt=11, color_hex=C_WHITE)
     _shade(t.rows[1].cells[0], content_fill)
     _cell_para_lines(t.rows[1].cells[0], _enrich_content(content), size_pt=size_pt)
+
+
+def _to_slo_list(text: str) -> str:
+    """Ensure SLO content (Knowledge/Skills/Attitudes) has one bullet per item.
+
+    Chemistry stores items as a single concatenated dash-list on one line:
+    '- Define... - Explain... - Identify...' → _text_to_rich() handles splitting.
+
+    Physics stores items as separate lines without bullet prefixes:
+    'Explain the meaning of temperature.\nDistinguish between temperature and heat.'
+    → each line gets a '- ' prefix so _cell_para_auto() renders them as bullets.
+    """
+    if not text.strip():
+        return text
+    lines = [ln.strip() for ln in text.replace("\r\n", "\n").split("\n") if ln.strip()]
+    if not lines:
+        return text
+    # Single line (possibly concatenated) — leave for _text_to_rich() to split
+    if len(lines) == 1:
+        return text
+    # Multiple lines: prefix un-bulleted lines with '- '
+    result = []
+    for ln in lines:
+        if ln.startswith(("- ", "• ", "* ", "– ", "— ")):
+            result.append(ln)
+        else:
+            result.append("- " + ln)
+    return "\n".join(result)
+
+
+def _prose_to_bullets(text: str) -> list:
+    """Convert prose paragraph(s) to bullet-item rich content.
+
+    - Lines that already contain bullet/h3 markers pass through _text_to_rich().
+    - Multi-sentence prose (detected by '. [A-Z]') is split into sentences, each
+      rendered as a bullet.
+    - Column 4 DQB/Model content (has \\n separating 'Label: text' items) passes
+      through _text_to_rich() which already handles 'Short Label:' → h3 + text.
+    """
+    import re
+    if not text or not text.strip():
+        return [("text", "")]
+    rich = _text_to_rich(text)
+    if any(k in ("bullet", "h3") for k, _ in rich):
+        return rich
+    # Split prose on ". " followed by capital letter (sentence boundary)
+    _ABBR = re.compile(r'\b(?:e\.g|i\.e|vs|Mr|Mrs|Dr|Prof|etc|approx|approx)\.$', re.I)
+    sentences = []
+    buf = ""
+    for part in re.split(r'(?<=\.)\s+(?=[A-Z])', text.strip()):
+        buf = (buf + " " + part).strip() if buf else part
+        # Don't split after common abbreviations
+        if buf and not _ABBR.search(buf):
+            sentences.append(buf)
+            buf = ""
+    if buf:
+        sentences.append(buf)
+    if len(sentences) <= 1:
+        return rich  # single sentence — keep as text
+    return [("bullet", s.strip()) for s in sentences if s.strip()]
 
 
 def _set_tbl_border(table):
@@ -1592,6 +1731,10 @@ def parse_source(doc_path: Path) -> list[dict]:
                     current["period1_heading"] = text
                 elif "PERIOD 2" in text.upper():
                     current["period2_heading"] = text
+                elif section == "A":
+                    # Heading 4 sub-labels in Section A (Knowledge:, Skills:, Attitudes:)
+                    # must enter the buffer so the split logic can find them
+                    buffer.append(text)
                 continue
 
             if current is not None and section is None and "Supporting Driving Question" in text:
@@ -1624,43 +1767,64 @@ def parse_section_a(doc_path: Path) -> list[tuple[str, str]]:
     Iterates all paragraphs, collects content grouped by Heading 3 subsections,
     between 'SECTION A' heading and the first 'SECTION B' or 'LESSON' heading.
     Returns list of (subsection_title, content_text) tuples.
+
+    Uses iter_block_items so table content (e.g. Core Competencies, Values tables)
+    is captured.  Normal paragraphs following a Heading 4 sub-section are prefixed
+    with '- ' so they render as bullets.
     """
     doc = Document(doc_path)
     in_section_a = False
     current_h3 = None
     section_data: list[tuple[str, str]] = []
     buffer: list[str] = []
+    after_h4 = False            # True once we've seen a H4 in this H3 section
 
     SEPARATOR = set("─━ \t")
 
-    for p in doc.paragraphs:
-        text = p.text.strip()
-        if not text:
-            continue
-        style = p.style.name if p.style else ""
-        style_l = style.lower()
+    for kind, obj in iter_block_items(doc):
+        if kind == "paragraph":
+            text = obj.text.strip()
+            if not text:
+                continue
+            style = obj.style.name if obj.style else ""
+            style_l = style.lower()
 
-        if ("SECTION A" in text.upper() or "SECTION  A" in text.upper()) and "heading" in style_l:
-            in_section_a = True
-            continue
+            if ("SECTION A" in text.upper() or "SECTION  A" in text.upper()) and "heading" in style_l:
+                in_section_a = True
+                continue
 
-        if not in_section_a:
-            continue
+            if not in_section_a:
+                continue
 
-        if "heading 2" in style_l and ("SECTION B" in text.upper() or "LESSON" in text.upper()):
-            break
-        if "heading 1" in style_l and "LESSON" in text.upper():
-            break
+            if "heading 2" in style_l and ("SECTION B" in text.upper() or "LESSON" in text.upper()):
+                break
+            if "heading 1" in style_l and "LESSON" in text.upper():
+                break
 
-        if "heading 3" in style_l:
-            if current_h3 is not None:
-                section_data.append((current_h3, "\n".join(buffer).strip()))
-            current_h3 = text
-            buffer = []
-        else:
-            if current_h3 is not None:
-                if not set(text).issubset(SEPARATOR):
-                    buffer.append(text)
+            if "heading 3" in style_l:
+                if current_h3 is not None:
+                    section_data.append((current_h3, "\n".join(buffer).strip()))
+                current_h3 = text
+                buffer = []
+                after_h4 = False
+            elif "heading 4" in style_l:
+                if current_h3 is not None and not set(text).issubset(SEPARATOR):
+                    buffer.append(text)   # H4 heading itself (e.g. "8.1 Knowledge") goes in as-is
+                    after_h4 = True
+            else:
+                if current_h3 is not None and not set(text).issubset(SEPARATOR):
+                    # Items under a H4 sub-section become bullets unless they end with ':'
+                    if after_h4 and not text.endswith(":"):
+                        buffer.append("- " + text)
+                    else:
+                        buffer.append(text)
+
+        elif kind == "table" and in_section_a and current_h3 is not None:
+            # Capture table first column as bullet items (skip header row)
+            for row in obj.rows[1:]:
+                item = row.cells[0].text.strip()
+                if item:
+                    buffer.append("- " + item)
 
     if current_h3 is not None:
         section_data.append((current_h3, "\n".join(buffer).strip()))
@@ -1730,19 +1894,19 @@ def _build_table_A(doc, lesson):
     _shade(t.rows[2].cells[0], C_LT_BLUE)
     _shade(t.rows[2].cells[1], C_WHITE)
     _cell_para(t.rows[2].cells[0], "Knowledge", bold=True, size_pt=9)
-    _cell_para_auto(t.rows[2].cells[1], lesson["slo_knowledge"].strip() or "—")
+    _cell_para_auto(t.rows[2].cells[1], _to_slo_list(lesson["slo_knowledge"].strip()) or "—")
 
     # R3: Skills
     _shade(t.rows[3].cells[0], C_LT_BLUE)
     _shade(t.rows[3].cells[1], C_WHITE)
     _cell_para(t.rows[3].cells[0], "Skills", bold=True, size_pt=9)
-    _cell_para_auto(t.rows[3].cells[1], lesson["slo_skills"].strip() or "—")
+    _cell_para_auto(t.rows[3].cells[1], _to_slo_list(lesson["slo_skills"].strip()) or "—")
 
     # R4: Attitudes
     _shade(t.rows[4].cells[0], C_LT_BLUE)
     _shade(t.rows[4].cells[1], C_WHITE)
     _cell_para(t.rows[4].cells[0], "Attitudes", bold=True, size_pt=9)
-    _cell_para_auto(t.rows[4].cells[1], lesson["slo_attitudes"].strip() or "—")
+    _cell_para_auto(t.rows[4].cells[1], _to_slo_list(lesson["slo_attitudes"].strip()) or "—")
 
 
 def _build_table_B(doc, lesson):
@@ -2025,25 +2189,55 @@ def build_final_explanation_docx(subject_key: str) -> Document:
             _tbl_no_spacing(doc)
 
     # ── Tables 2–N: One per section (3r × 1c each) ───────────────────────────
-    sections = meta["final_explanation_sections"]
-    for i, section_data in enumerate(sections):
-        section_title = section_data[0]
-        prompts = section_data[1]
-        model_answer = section_data[2] if len(section_data) > 2 else ""
+    # Try parsing the Framework sections from source (preserves sub-headers like
+    # "Guiding Questions:" and "What to Include:"). Fall back to hardcoded META.
+    parsed_framework = parse_framework_sections(SOURCE_FINAL_EXP[subject_key])
+    meta_sections = meta["final_explanation_sections"]
 
-        t = _new_table(doc, 3, 1)
-        _col_widths(t, [9.5])
+    if parsed_framework:
+        # Build one table per parsed H3 section.
+        # Match model answers from META by position if section counts align,
+        # otherwise use empty model answer cell (student writes here).
+        for i, (section_title, section_content) in enumerate(parsed_framework):
+            model_answer = ""
+            if i < len(meta_sections) and len(meta_sections[i]) > 2:
+                model_answer = meta_sections[i][2]
 
-        _shade(t.rows[0].cells[0], C_MED_BLUE)
-        _cell_para(t.rows[0].cells[0], section_title, bold=True, size_pt=11, color_hex=C_WHITE)
+            t = _new_table(doc, 3, 1)
+            _col_widths(t, [9.5])
 
-        _shade(t.rows[1].cells[0], C_LT_BLUE)
-        _cell_para_auto(t.rows[1].cells[0], prompts)
+            _shade(t.rows[0].cells[0], C_MED_BLUE)
+            _cell_para(t.rows[0].cells[0], section_title.upper(), bold=True, size_pt=11,
+                       color_hex=C_WHITE)
 
-        _shade(t.rows[2].cells[0], C_WHITE)
-        _cell_para_auto(t.rows[2].cells[0], model_answer)
+            _shade(t.rows[1].cells[0], C_LT_BLUE)
+            _cell_para_lines(t.rows[1].cells[0], section_content)
 
-        _tbl_no_spacing(doc)
+            _shade(t.rows[2].cells[0], C_WHITE)
+            _cell_para_auto(t.rows[2].cells[0], model_answer)
+
+            _tbl_no_spacing(doc)
+    else:
+        # Fallback: use hardcoded META sections
+        for section_data in meta_sections:
+            section_title = section_data[0]
+            prompts = section_data[1]
+            model_answer = section_data[2] if len(section_data) > 2 else ""
+
+            t = _new_table(doc, 3, 1)
+            _col_widths(t, [9.5])
+
+            _shade(t.rows[0].cells[0], C_MED_BLUE)
+            _cell_para(t.rows[0].cells[0], section_title, bold=True, size_pt=11,
+                       color_hex=C_WHITE)
+
+            _shade(t.rows[1].cells[0], C_LT_BLUE)
+            _cell_para_auto(t.rows[1].cells[0], prompts)
+
+            _shade(t.rows[2].cells[0], C_WHITE)
+            _cell_para_auto(t.rows[2].cells[0], model_answer)
+
+            _tbl_no_spacing(doc)
 
     # ── Table N+1: Rubric ────────────────────────────────────────────────────
     rubric = meta["final_explanation_rubric"]
@@ -2077,6 +2271,8 @@ def build_final_explanation_docx(subject_key: str) -> Document:
         for ci, (cell, val, fill) in enumerate(zip(row.cells[1:], row_data[1:], alt)):
             _shade(cell, fill)
             _cell_para_auto(cell, val)
+
+    _tbl_no_spacing(doc)  # space between rubric and example
 
     # ── Post-rubric sections: Example, Tips, Reminders ───────────────────────
     fe_tail = parse_doc_sections(
@@ -2216,11 +2412,13 @@ def build_summary_table_docx(subject_key: str) -> Document:
 
         for ci in range(1, 4):
             _shade(row.cells[ci], alt_fill)
-            _cell_para_auto(row.cells[ci], row_data[ci] if len(row_data) > ci else "")
+            cell_text = row_data[ci] if len(row_data) > ci else ""
+            _cell_para_lines(row.cells[ci], _prose_to_bullets(cell_text))
             row.cells[ci].vertical_alignment = WD_ALIGN_VERTICAL.TOP
 
         _shade(row.cells[4], C_PURPLE_LT)
-        _cell_para_auto(row.cells[4], row_data[4] if len(row_data) > 4 else "")
+        cell_text4 = row_data[4] if len(row_data) > 4 else ""
+        _cell_para_lines(row.cells[4], _prose_to_bullets(cell_text4))
         row.cells[4].vertical_alignment = WD_ALIGN_VERTICAL.TOP
 
     # ── End-of-Unit Reflection Questions + Teacher Notes (parsed from source) ─
