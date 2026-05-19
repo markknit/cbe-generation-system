@@ -1668,3 +1668,1365 @@ _PHY_META = {
     },
     "lessons_data": _PHY_LESSONS,
 }
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# META — Chemistry: The Periodicity (7 lessons)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+_CHEM_SLO_K = (
+    "a) Describe the trend in physical properties of elements of the periodic table\n"
+    "b) Investigate the chemical properties of elements in groups of the periodic table\n"
+    "c) Describe the trend in properties across a period\n"
+    "d) Outline applications of elements of the periodic table\n"
+    "e) Appreciate the application of various elements of the periodic table"
+)
+_CHEM_SLO_S = (
+    "- Draw and interpret models of atomic structure for elements in Groups I, II, VII, and VIII\n"
+    "- Investigate chemical properties of Group I and Group II elements through demonstration and video\n"
+    "- Construct summary tables showing trends in physical and chemical properties\n"
+    "- Apply knowledge of periodicity to predict behaviour of unfamiliar elements"
+)
+_CHEM_SLO_A = (
+    "- Appreciate the elegance of patterns in the periodic table\n"
+    "- Show curiosity when observing chemical reactions and comparing element behaviour\n"
+    "- Value safe, careful handling of reactive substances\n"
+    "- Recognise real-world applications of periodic table knowledge (medicine, environment, industry)"
+)
+
+def _chem_lesson(num, title, inquiry, know, skills, attit, purpose, materials, safety, p1):
+    return {
+        "number": num, "title": title,
+        "inquiry_question": inquiry,
+        "slo_knowledge": know, "slo_skills": skills, "slo_attitudes": attit,
+        "overview_purpose": purpose,
+        "materials": materials, "safety": safety,
+        "period1_heading": "Period 1 (40 minutes)",
+        "period1_table": p1,
+        "period2_heading": "Period 2 (40 minutes)",
+        "period2_table": [],
+        "reflections": [],
+    }
+
+_CHEM_LESSONS = [
+    _chem_lesson(
+        1, "Introduction to Periodicity",
+        "Why do elements show patterns in their properties across groups and periods, and how can we use these patterns to predict the behaviour of unfamiliar elements?",
+        "- Recall the structure of the periodic table: groups, periods, metals, non-metals\n- Identify that elements in the same group have the same number of outer electrons\n- State the driving question for the unit",
+        "- Locate elements on the periodic table and identify their group and period\n- Draw a discussion diamond recording initial ideas about why elements show patterns",
+        "- Show curiosity about the order underlying the periodic table\n- Appreciate that patterns in science allow us to make predictions",
+        "Launches the unit phenomenon. Students observe reactions of sodium in water and burning magnesium, generate questions, and record initial ideas about why elements behave differently.",
+        "Periodic table poster or printed copies; video clip of sodium reacting with water; video clip of potassium in water; magnesium ribbon; Bunsen burner; Driving Question Board; discussion diamond worksheets",
+        "Teacher demonstration only for sodium/potassium in water and burning magnesium. Students observe from a safe distance. Safety goggles required.",
+        [
+            _pr("Watch video: sodium reacting with water — record observations; predict what potassium will do",
+                "Video of sodium in water (Khan Academy or downloaded); potassium in water video",
+                "Play sodium video without introduction; ask 'What do you observe?' before revealing what the substance is",
+                "Discussion diamond: students write individual observations, then share and reach a group consensus",
+                "Exit ticket: 'What do you predict will happen when potassium reacts with water? Why?'"),
+            _pr("Watch teacher demonstrate burning magnesium ribbon; observe flame colour and product",
+                "Magnesium ribbon; Bunsen burner; tongs; dark card for observing flame",
+                "Safety briefing first; demonstrate; students record observations of flame colour, brightness, and ash produced",
+                "Class discussion: 'What product formed? Write the word equation.' Introduce the idea of metals forming oxides",
+                "Oral check: can students write the word equation for magnesium burning in air?"),
+            _pr("Place sodium, potassium, and magnesium on the periodic table; identify their groups and electron configurations",
+                "Periodic table; atomic structure diagrams for Na, K, Mg",
+                "Guide students to draw electron shells for Na (2,8,1) and K (2,8,8,1); ask 'What do they have in common?'",
+                "Class discussion: same number of outer electrons → same group → similar chemical behaviour",
+                "Quick quiz: given atomic number, draw electron configuration and identify group"),
+            _pr("Create the Driving Question Board: post initial questions about element patterns and uses",
+                "DQB poster; sticky notes; markers",
+                "Model 'I wonder why…' and 'I notice that…' sentence starters; groups post questions by theme",
+                "Read all questions aloud; categorise (physical properties, chemical reactions, applications)",
+                "Count questions per category to inform lesson sequence; photograph DQB for record"),
+            _pr("Draw 'My Initial Model': how do you think the properties of elements change across the periodic table?",
+                "Blank A4 paper; periodic table reference",
+                "Prompt: 'Draw or write your current thinking about what changes and what stays the same across a period or group'",
+                "Pair-share models; note common ideas and disagreements",
+                "Collect initial models; note misconceptions to address in future lessons"),
+        ],
+    ),
+    _chem_lesson(
+        2, "Gradation in Physical Properties",
+        "How do physical properties such as atomic size, melting point, and ionisation energy change as you move down a group or across a period?",
+        "- Define atomic radius, ionisation energy, and electron affinity\n- State the trend in atomic radius down a group and across a period\n- Explain why atomic radius increases down a group (more electron shells) and decreases across a period (increasing nuclear charge)",
+        "- Draw atomic models for elements in Group I (Li, Na, K) showing increasing shell number\n- Construct a comparison table of physical properties for Group I and Period 3 elements\n- Interpret graphs of melting point and ionisation energy across Period 3",
+        "- Show appreciation for how microscopic atomic structure determines macroscopic properties\n- Value careful observation when comparing trends in data",
+        "Students investigate how physical properties change systematically across the periodic table by drawing atomic models and analysing data.",
+        "Periodic table; atomic radius data table; melting point and ionisation energy graph for Period 3; coloured pencils; graph paper or projected graphs",
+        "No hazardous materials in this lesson.",
+        [
+            _pr("Draw atomic models for Li, Na, K — count electron shells; observe increasing size",
+                "Atomic model diagrams (Bohr model); coloured pencils; periodic table",
+                "Guide students to draw Li (2,1), Na (2,8,1), K (2,8,8,1); ask 'What changes as you go down the group?'",
+                "Class discussion: more shells → larger atom → lower ionisation energy (outer electron further from nucleus)",
+                "Quick sketch check: can students draw the model for Rb (2,8,18,8,1) without being told?"),
+            _pr("Compare atomic radii across Period 3 (Na to Ar) using data table; plot graph",
+                "Atomic radius data for Period 3; graph paper",
+                "Students plot atomic radius vs. atomic number across Period 3; identify the trend",
+                "Discussion: nuclear charge increases across period → pulls electrons closer → radius decreases",
+                "Exit ticket: explain in one sentence why atomic radius decreases across a period"),
+            _pr("Examine ionisation energy graph for Period 3 — identify the trend and explain peaks for Mg and P",
+                "Projected or printed graph of first ionisation energy vs. atomic number for Period 3",
+                "Guided questions: 'Where are the peaks? Why does Al have lower IE than Mg?' (sub-shell explanation for context)",
+                "Students annotate the graph with explanations for key points",
+                "Discussion: connect ionisation energy trend to reactivity — low IE = more reactive metal"),
+            _pr("Construct a summary comparison table: Group I properties (Li, Na, K, Rb) vs. Group II (Be, Mg, Ca)",
+                "Data cards with melting point, density, ionisation energy for each element",
+                "Students complete the table; identify trends down each group",
+                "Pair discussion: 'What pattern do you notice? Can you predict the properties of caesium?'",
+                "Formative assessment: predict two properties of strontium (between Ca and Ba) using trends"),
+            _pr("Modify initial model: update atomic diagrams to show trends in size and ionisation energy",
+                "Initial model from Lesson 1",
+                "Prompt: 'What can you add or change in your model now that you know about atomic radius trends?'",
+                "Share updated models; check that students show increasing size down a group",
+                "Collect updated models; assess quality of trend representation"),
+        ],
+    ),
+    _chem_lesson(
+        3, "Chemical Properties of Group I Elements",
+        "How do the chemical properties of alkali metals change as you move down Group I, and what explains this pattern?",
+        "- Describe the reactions of Group I metals with oxygen, cold water, and dilute acids\n- Explain that reactivity increases down Group I due to decreasing ionisation energy\n- Write word and balanced symbol equations for Group I reactions",
+        "- Write word equations for reactions of Li, Na, and K with water\n- Balance symbol equations for Group I reactions\n- Predict the behaviour of rubidium based on Group I trends",
+        "- Show safe curiosity when observing reactive metal demonstrations\n- Appreciate that reactivity trends allow chemists to handle substances safely",
+        "Students investigate Group I reactivity trends through teacher demonstrations, videos, and equation writing.",
+        "Video clips of Li, Na, K reacting with water; phenolphthalein indicator; trough of water; sodium (teacher demonstration only); safety screen; periodic table",
+        "All Group I metal reactions must be teacher demonstration only. Safety screen required. Students must not handle sodium or potassium. Goggles must be worn.",
+        [
+            _pr("Watch videos of Li, Na, and K reacting with water in sequence; record observations for each",
+                "Videos of Li, Na, K in water (Khan Academy or downloaded); observation table",
+                "Pause after each video; prompt: 'What did you observe? How was this different from the previous reaction?'",
+                "Discussion: violence of reaction increases Li → Na → K; link to decreasing ionisation energy",
+                "Exit ticket: rank Li, Na, K in order of reactivity and give one piece of evidence"),
+            _pr("Write word equations for each Group I metal reacting with water; identify the products",
+                "Whiteboard; equation writing guide",
+                "Model: sodium + water → sodium hydroxide + hydrogen; students write Li and K equations",
+                "Introduce phenolphthalein: demonstrate that the product is alkaline (pink colour change)",
+                "Oral probe: 'What two products always form when a Group I metal reacts with water?'"),
+            _pr("Balance symbol equations for Group I reactions with water and with oxygen",
+                "Symbol equation worksheets; periodic table; PhET balancing equations simulation",
+                "Work through balancing 2Na + 2H₂O → 2NaOH + H₂ step by step; students balance remaining equations",
+                "Peer-check balanced equations; discuss common errors (forgetting to balance H₂)",
+                "Formative quiz: balance 3 Group I equations independently"),
+            _pr("Predict the behaviour of rubidium and caesium using Group I trends",
+                "Periodic table; Group I data table from Lesson 2",
+                "Ask: 'Based on what you know about Li, Na, K — what will Rb do with water? Why?'",
+                "Watch short video of Rb in water; compare prediction with observation",
+                "Written prediction: 'I predict caesium will… because…' — assess reasoning quality"),
+            _pr("Update DQB and model: add evidence about Group I reactivity trend",
+                "DQB poster; student models",
+                "Prompt: 'Which DQB questions can we now answer? Add your evidence.'",
+                "Students annotate models with Group I reactivity arrows and equations",
+                "Review DQB with class; mark answered questions"),
+        ],
+    ),
+    _chem_lesson(
+        4, "Chemical Properties of Group II Elements",
+        "How do Group II metals compare with Group I in reactivity, and what explains the differences?",
+        "- Describe the reactions of Group II metals with oxygen, water, and dilute acids\n- Compare reactivity of Group I and Group II metals\n- Explain why Group II metals are less reactive than Group I (higher ionisation energy, two electrons to lose)",
+        "- Write and balance equations for Group II reactions with water and acids\n- Construct a comparison table of Group I vs. Group II reactivity\n- Apply trends to predict behaviour of barium",
+        "- Appreciate that small differences in electron configuration produce significant differences in chemical behaviour\n- Show precision when writing and balancing chemical equations",
+        "Students investigate Group II reactivity by comparing it with Group I data and through demonstrations of magnesium reactions.",
+        "Magnesium ribbon; dilute hydrochloric acid; test tube; trough of water; Bunsen burner; periodic table; Group I and II comparison table",
+        "Dilute acid use: teacher demonstration for magnesium in acid. Students may observe burning magnesium from a safe distance. Goggles required.",
+        [
+            _pr("Teacher demonstration: magnesium ribbon reacting with steam (hot water) — observe and compare to sodium in cold water",
+                "Magnesium ribbon; hot water or steam generator; retort stand; Bunsen burner",
+                "Ask: 'Why do you think Mg reacts with steam but not cold water, while Na reacts vigorously with cold water?'",
+                "Discussion: Group II has two outer electrons; higher ionisation energy → less reactive",
+                "Oral check: students explain the difference between Group I and Group II reactivity in their own words"),
+            _pr("Teacher demonstration: magnesium with dilute HCl — observe hydrogen gas production",
+                "Magnesium ribbon; dilute hydrochloric acid; test tube; wooden splint",
+                "Demonstrate the squeaky-pop test for hydrogen; students record word equation",
+                "Students write: magnesium + hydrochloric acid → magnesium chloride + hydrogen",
+                "Quick calculation: if 0.24 g Mg reacts, how many moles of H₂ are produced? (extension)"),
+            _pr("Construct comparison table: Group I vs. Group II — reaction with oxygen, water, acids",
+                "Data cards; comparison table template; textbook or reference sheet",
+                "Students complete the table; identify similarities (both form basic oxides) and differences (reactivity level)",
+                "Pair discussion: 'If Ca is in Group II, predict how it reacts with water compared to Mg and Na'",
+                "Exit ticket: give two differences and one similarity between Group I and Group II chemical properties"),
+            _pr("Balance symbol equations for Group II reactions: Mg + O₂, Ca + H₂O, Mg + 2HCl",
+                "Equation balancing worksheet",
+                "Guided practice: work through Mg + O₂ → MgO; students complete Ca and Mg equations",
+                "Peer-check; discuss why coefficients must be whole numbers",
+                "Formative quiz: balance 3 Group II equations independently"),
+            _pr("Update summary table and model: add Group II reactivity data alongside Group I",
+                "Summary comparison table; student models",
+                "Prompt: 'How has your understanding of 'why elements in the same group behave similarly' grown?'",
+                "Students revise their models to show Group I and II side by side",
+                "Class discussion: which DQB questions are now answered?"),
+        ],
+    ),
+    _chem_lesson(
+        5, "Properties of Halogens (Group VII)",
+        "Why do the physical and chemical properties of halogens change down the group, and how does this explain their reactivity and uses?",
+        "- Describe the physical states and colours of fluorine, chlorine, bromine, and iodine at room temperature\n- Explain that halogen reactivity decreases down Group VII due to increasing atomic size\n- Describe displacement reactions of halogens",
+        "- Observe and record the colours and states of halogens from video/images\n- Write equations for halogen displacement reactions\n- Apply reactivity trend to predict displacement outcomes",
+        "- Appreciate the importance of halogens in water purification, medicine, and the food industry\n- Show awareness of the hazardous nature of halogens and the need for safety precautions",
+        "Students investigate the Group VII trend in physical and chemical properties, focusing on displacement reactions as evidence of reactivity order.",
+        "Video clips of fluorine, chlorine, bromine, iodine reactions; halogen colour chart; displacement reaction diagrams; periodic table; safety data for halogens",
+        "Halogens are toxic — all demonstrations are teacher-led or video-based. No student handling of halogen solutions without close supervision. Goggles and ventilation required for any live demonstration.",
+        [
+            _pr("Observe images/video of F₂, Cl₂, Br₂, I₂ — record colour, state, and smell (described, not experienced)",
+                "Projected images of halogen colours; video showing chlorine as yellow-green gas, bromine as red-brown liquid, iodine as dark solid",
+                "Present each halogen one at a time; ask students to record observations in a table",
+                "Discussion: physical properties change systematically — state: gas → gas → liquid → solid down the group",
+                "Exit ticket: complete a table of halogen states and colours from memory"),
+            _pr("Compare halogen reactivity: watch video of Cl₂ displacing Br⁻ from solution; predict I₂ displacement",
+                "Video of chlorine water displacing bromide ions (solution turns orange); displacement reaction diagrams",
+                "Ask: 'If Cl₂ displaces Br⁻, can Br₂ displace Cl⁻? Why or why not?' — elicit prior reasoning",
+                "Discussion: more reactive halogen displaces less reactive one; reactivity decreases down the group",
+                "Oral probe: 'Will iodine displace chloride from sodium chloride solution? Explain your answer.'"),
+            _pr("Write displacement reaction equations: Cl₂ + 2KBr → 2KCl + Br₂; and others",
+                "Displacement reaction worksheet",
+                "Model the first equation; students write Cl₂ + KI and Br₂ + KI equations",
+                "Peer-check equations; discuss which halogens can and cannot displace which halides",
+                "Formative quiz: predict and write equation for Br₂ + NaI"),
+            _pr("Research and present: one real-life application of each halogen (chlorine in water, iodine in medicine, fluorine in toothpaste)",
+                "Brief reading cards on halogen applications; textbook section on uses",
+                "Groups each take one halogen; prepare a 2-minute explanation of its application and why its properties make it suitable",
+                "Groups present; class gives one piece of feedback per presentation",
+                "Written record: each student notes all four applications in their notebooks"),
+            _pr("Update model and DQB: how does electron configuration explain decreasing halogen reactivity?",
+                "Atomic model diagrams for F, Cl, Br, I; DQB poster",
+                "Guide students to connect: larger atom → outer shell further from nucleus → less attraction for electrons → less reactive",
+                "Students add halogen reactivity arrows to their models",
+                "Review DQB; add new questions raised by the halogen lesson"),
+        ],
+    ),
+    _chem_lesson(
+        6, "Noble Gases and Period 3 Elements — Part 1",
+        "What makes noble gases unreactive, and how do the properties of Period 3 elements change from left to right?",
+        "- Explain why noble gases are unreactive (full outer shell of electrons)\n- Describe the trend in metallic character across Period 3 (Na to Cl)\n- State the physical properties of Na, Mg, Al, Si, P, S, Cl across Period 3",
+        "- Locate Period 3 elements on the periodic table and identify their electron configurations\n- Construct a table comparing physical properties across Period 3\n- Distinguish between metals, metalloids, and non-metals in Period 3",
+        "- Appreciate that stability of full electron shells is a key principle in chemistry\n- Show systematic thinking when comparing a sequence of elements",
+        "Students explore why noble gases are unique and begin investigating the systematic changes in properties across Period 3.",
+        "Periodic table; atomic model diagrams for Period 3 elements; physical properties data table; coloured pencils",
+        "No hazardous materials in this lesson.",
+        [
+            _pr("Draw electron configurations for He (2), Ne (2,8), Ar (2,8,8) — identify the full outer shell pattern",
+                "Bohr model diagrams; periodic table",
+                "Ask: 'What do all noble gases have in common in their electron configurations? Why does this make them stable?'",
+                "Discussion: full outer shell = maximum stability = no tendency to gain, lose, or share electrons",
+                "Quick quiz: draw electron configurations for Kr and Xe and explain why they are also unreactive"),
+            _pr("Survey Period 3 elements: Na to Ar — record state at room temperature, conductivity, appearance",
+                "Projected images of Period 3 elements; data table",
+                "Students complete the data table from images and reference cards; identify the transition from metal to non-metal",
+                "Discussion: Period 3 goes from highly reactive metal (Na) to reactive non-metal (Cl) to inert gas (Ar)",
+                "Exit ticket: where in Period 3 is the transition from metal to non-metal? What element is the metalloid?"),
+            _pr("Plot melting points of Period 3 elements vs. atomic number; explain the pattern",
+                "Melting point data; graph paper or projected graph",
+                "Students plot and identify: high melting points for metals (Na, Mg, Al), peak at Si (giant covalent), low for non-metals",
+                "Guided discussion: type of bonding determines melting point; metallic bonding → moderate; giant covalent → very high; simple molecular → low",
+                "Peer discussion: 'Why does sulphur have a higher melting point than phosphorus?'"),
+            _pr("Compare Period 3 oxides: Na₂O and MgO are basic; Al₂O₃ is amphoteric; P₄O₁₀, SO₃, Cl₂O₇ are acidic",
+                "Summary table of Period 3 oxides and their acid/base character",
+                "Teacher-led introduction; students complete the table from reference information",
+                "Discussion: trend from basic → amphoteric → acidic oxides reflects increasing non-metallic character across the period",
+                "Written record: students write a sentence summarising the trend in Period 3 oxide character"),
+            _pr("Update model: show the transition from metal to non-metal across Period 3 with electron configuration evidence",
+                "Student model diagrams; periodic table",
+                "Students draw Period 3 electron configs side by side and annotate with metallic/non-metallic character",
+                "Pair discussion: 'How does this connect to the trends we saw in Group I and Group II?'",
+                "Collect models; assess quality of cross-period comparison"),
+        ],
+    ),
+    _chem_lesson(
+        7, "Period 3 Elements and Compounds — Part 2 / Unit Consolidation",
+        "How does knowledge of periodic trends allow us to predict the behaviour of unfamiliar elements and explain the phenomenon?",
+        "- Summarise the trends in physical and chemical properties across Period 3 and down Groups I, II, and VII\n- Apply periodic trends to predict properties of unfamiliar elements\n- Construct a complete explanation of the unit driving question",
+        "- Solve prediction problems using periodic trend knowledge\n- Complete the Summary Table for all 7 lessons\n- Draft the Final Explanation connecting all unit concepts to the driving question",
+        "- Appreciate the predictive power of the periodic table\n- Show confidence in applying learned patterns to unfamiliar situations",
+        "Consolidation lesson connecting all periodicity trends; students apply their understanding to new elements and construct their complete Final Explanation.",
+        "Summary Table (student copies); DQB poster; periodic table; Final Explanation task description; rubric",
+        "No hazardous materials.",
+        [
+            _pr("Prediction challenge: given element X (atomic number 19), predict its group, period, reactivity, reaction with water",
+                "Periodic table; prediction worksheet",
+                "Students work independently; then compare with partners",
+                "Reveal element X is potassium; students check their predictions against known properties",
+                "Oral debrief: which students used electron configuration? Which used period/group position?"),
+            _pr("Revisit the driving question: 'Why do elements show patterns in their properties?' — construct class answer",
+                "DQB poster; all evidence gathered across 7 lessons",
+                "Facilitate class construction of a complete answer citing evidence from each lesson",
+                "Students individually write a one-paragraph answer to the driving question",
+                "Peer review paragraphs; give written feedback using the unit rubric criteria"),
+            _pr("Complete the Summary Table: check all 7 lessons are recorded with evidence and connections",
+                "Individual Summary Tables",
+                "Students complete any missing rows; teacher circulates and checks accuracy",
+                "Peer review for completeness and scientific accuracy",
+                "Teacher reviews sample Summary Tables; provide written feedback"),
+            _pr("Discuss real-world applications: link periodic trends to careers (medicine, water treatment, materials science)",
+                "Brief reading cards on careers in chemistry using periodic table knowledge",
+                "Students discuss: 'Which application is most important to Kenya? Why?'",
+                "Groups each present one application to the class",
+                "Written reflection: 'How has understanding periodicity changed how you see everyday materials?'"),
+            _pr("Self-assess readiness for Final Explanation; review rubric criteria; identify target areas",
+                "Final Explanation task description; rubric; student models and Summary Tables",
+                "Students rate themselves on each rubric criterion; identify one area to strengthen",
+                "Partner discussion: share target areas and suggest how to address them",
+                "Exit ticket: 'The most important pattern I learned in this unit is… because…'"),
+        ],
+    ),
+]
+
+_CHEM_SUMMARY_ROWS = [
+    (1, "Observed Na in water and burning Mg; drew initial model; posted DQB questions",
+        "Elements in the same group have the same number of outer electrons, explaining similar behaviour",
+        "Introduces the phenomenon: why do elements show patterns in properties?",
+        "DQB created; initial model drawn showing atomic structure ideas"),
+    (2, "Drew atomic models for Group I; plotted atomic radius and ionisation energy graphs for Period 3",
+        "Atomic radius increases down a group; decreases across a period due to nuclear charge",
+        "Physical property trends reflect underlying atomic structure changes",
+        "Model updated: atomic size trends added"),
+    (3, "Observed Group I reactions with water; wrote and balanced equations; predicted Rb/Cs behaviour",
+        "Group I reactivity increases down the group as ionisation energy decreases",
+        "Reactivity trends explain why K reacts more violently with water than Li",
+        "Model updated: Group I reactivity arrow added; DQB questions answered"),
+    (4, "Demonstrated Mg reactions; compared Group I and Group II reactivity",
+        "Group II metals are less reactive than Group I due to higher ionisation energy",
+        "Electron configuration differences between groups explain reactivity differences",
+        "Comparison table completed; model updated with Group II data"),
+    (5, "Observed halogen colours/states; investigated displacement reactions; researched applications",
+        "Halogen reactivity decreases down Group VII as atomic size increases",
+        "Displacement reactions are evidence of halogen reactivity order",
+        "Model updated: halogen reactivity trend added; applications noted on DQB"),
+    (6, "Drew noble gas configurations; surveyed Period 3 properties; plotted melting point graph",
+        "Full outer shells make noble gases unreactive; Period 3 transitions from metal to non-metal",
+        "Period 3 trend shows the full range from reactive metal to non-metal to inert gas",
+        "Model updated: Period 3 electron configs drawn; metal/non-metal transition marked"),
+    (7, "Solved prediction problems; constructed class answer to driving question; completed Summary Table",
+        "Periodic trends allow prediction of unfamiliar element properties",
+        "Complete understanding: electron configuration drives all observed trends",
+        "Final model complete; DQB fully answered; Summary Table reviewed"),
+]
+
+_CHEM_FE_SECTIONS = [
+    ("1. Trends in Physical Properties",
+     "Describe how atomic radius, ionisation energy, and melting point change across Period 3 and down Group I. Include diagrams.\n\n"
+     "Guiding Questions:\n- Why does atomic radius increase down a group?\n"
+     "- Why does atomic radius decrease across a period?\n"
+     "- What happens to melting point across Period 3 and why?",
+     "Atomic radius increases down a group because each successive element has an additional electron shell, "
+     "placing the outer electrons further from the nucleus. Across a period, the nuclear charge increases "
+     "while the number of shells stays the same, so the nucleus pulls electrons closer, decreasing atomic radius. "
+     "Ionisation energy follows the reverse trend: decreasing down a group (easier to remove an outer electron "
+     "that is further away) and generally increasing across a period. Melting point across Period 3 peaks at "
+     "silicon (giant covalent structure) and drops sharply for non-metals (simple molecular structures)."),
+    ("2. Chemical Properties of Group I and Group II",
+     "Compare the chemical properties of Group I and Group II metals. Include equations.\n\n"
+     "Guiding Questions:\n- How does Group I reactivity change down the group? Why?\n"
+     "- How do Group I and Group II metals differ in reactivity?\n"
+     "- Write balanced equations for Na reacting with water and Mg reacting with steam.",
+     "Group I metals become more reactive down the group as ionisation energy decreases — the outer electron "
+     "is easier to remove from K than Na because it is in a higher energy shell further from the nucleus. "
+     "Group II metals are less reactive than Group I because they must lose two electrons (higher ionisation energy). "
+     "2Na + 2H₂O → 2NaOH + H₂ (vigorous, room temperature). "
+     "Mg + H₂O (steam) → MgO + H₂ (requires steam; does not react with cold water)."),
+    ("3. Properties of Halogens (Group VII)",
+     "Describe the trend in halogen properties down Group VII. Include displacement reactions.\n\n"
+     "Guiding Questions:\n- How do the state, colour, and reactivity of halogens change down Group VII?\n"
+     "- Explain using atomic structure why reactivity decreases down the group.\n"
+     "- Write the equation for chlorine displacing bromide ions from solution.",
+     "Down Group VII: state changes from gas (F₂, Cl₂) to liquid (Br₂) to solid (I₂); colour darkens. "
+     "Reactivity decreases because larger atoms have their outer shells further from the nucleus, "
+     "reducing the attraction for electrons being gained. Fluorine is the most reactive non-metal. "
+     "Cl₂ + 2KBr → 2KCl + Br₂ — chlorine displaces bromide because Cl is more reactive than Br. "
+     "Br₂ cannot displace Cl⁻ from solution. This provides experimental evidence for the halogen reactivity order."),
+    ("4. Period 3 Trends and Noble Gases",
+     "Describe the trend in properties across Period 3 and explain why noble gases are unreactive.\n\n"
+     "Guiding Questions:\n- What is the trend in metallic character across Period 3?\n"
+     "- Why are noble gases unreactive?\n"
+     "- How do the oxides of Period 3 elements change from basic to acidic?",
+     "Across Period 3 (Na → Ar), elements change from highly reactive metals to non-metals to an inert gas. "
+     "Metallic character decreases as nuclear charge increases and elements are more likely to gain electrons "
+     "rather than lose them. Noble gases have a full outer electron shell, giving them maximum stability and "
+     "no tendency to react. Period 3 oxides change from basic (Na₂O, MgO) through amphoteric (Al₂O₃) "
+     "to acidic (SO₃, Cl₂O₇), reflecting the change from metallic to non-metallic character across the period."),
+    ("5. Phenomenon Explanation",
+     "Answer the driving question using all evidence gathered in this unit.\n\n"
+     "Driving Question: Why do elements show patterns in their properties across groups and periods, "
+     "and how can we use these patterns to predict the behaviour of unfamiliar elements?\n\n"
+     "Use concepts: electron configuration, atomic radius, ionisation energy, reactivity trends, group and period trends.",
+     "Elements show patterns in their properties because their chemical and physical behaviour is determined "
+     "by their electron configuration — specifically the number and arrangement of electrons in the outermost shell. "
+     "Elements in the same group have the same number of outer electrons, giving them similar chemical properties. "
+     "Moving down a group, each element has more electron shells: outer electrons are further from the nucleus, "
+     "easier to remove (lower ionisation energy), and in the case of metals this means greater reactivity. "
+     "For non-metals like halogens, larger atoms attract electrons less effectively, so reactivity decreases. "
+     "Across a period, nuclear charge increases while the number of shells is constant: atoms shrink, "
+     "ionisation energy rises, and character shifts from metallic to non-metallic. These regular, predictable "
+     "trends mean that once we know the position of an element in the periodic table, we can confidently "
+     "predict its properties — a powerful tool for scientists in medicine, environmental chemistry, and materials science."),
+]
+
+_CHEM_META = {
+    "subject": "Chemistry",
+    "grade": "Grade 10",
+    "substrand": "Sub-Strand 1.5: The Periodicity",
+    "lessons": 7,
+    "driving_question": "Why do elements show patterns in their properties across groups and periods, and how can we use these patterns to predict the behaviour of unfamiliar elements?",
+    "substrand_overview_rows": [
+        ("Phenomenon", "Sodium reacting vigorously with water; magnesium burning with a bright white flame; potassium exploding in water — why do these elements behave so differently, yet follow a predictable pattern?"),
+        ("Driving Question", "Why do elements show patterns in their properties across groups and periods, and how can we use these patterns to predict the behaviour of unfamiliar elements?"),
+        ("Sub-Strand SLOs — Knowledge", _CHEM_SLO_K),
+        ("Sub-Strand SLOs — Skills", _CHEM_SLO_S),
+        ("Sub-Strand SLOs — Attitudes/Values", _CHEM_SLO_A),
+        ("Number of Lessons", "7 lessons (14 periods of 40 minutes each)"),
+        ("Core Competencies", "Critical Thinking and Problem Solving · Communication and Collaboration · Digital Literacy · Self-efficacy · Learning to Learn"),
+        ("Core Values", "Curiosity · Responsibility · Integrity · Care and Compassion · Excellence"),
+        ("Assessment", "Formative: observation, equation writing, prediction tasks, summary table\nSummative: Final Explanation document"),
+        ("Resources", "Periodic table; videos of Group I reactions; PhET balancing chemical equations; Khan Academy — periodic trends; magnesium ribbon; dilute HCl (teacher demo)"),
+    ],
+    "summary_table_headers": [
+        "Lesson", "What I Did", "Key Understanding Built",
+        "Connection to Driving Question", "Model / DQB Evolution"
+    ],
+    "summary_table_rows": _CHEM_SUMMARY_ROWS,
+    "summary_instructions": (
+        "Use this table to track your learning across all 7 lessons. "
+        "For each lesson record: what you did, what you understood, how it connects to the driving question, "
+        "and how your model and DQB evolved. Your completed Summary Table is evidence of your chemical thinking."
+    ),
+    "final_explanation_sections": _CHEM_FE_SECTIONS,
+    "final_explanation_rubric": {
+        "headers": ["Criterion", "Beginning (1)", "Developing (2)", "Proficient (3)", "Advanced (4)"],
+        "rows": [
+            ("1. Physical Property Trends",
+             "Cannot describe any trend",
+             "States one trend but cannot explain it using atomic structure",
+             "Correctly describes atomic radius and ionisation energy trends for groups and periods with atomic structure explanation",
+             "Includes quantitative data; draws labelled diagrams; connects trends to melting point and bonding type"),
+            ("2. Group I and II Reactivity",
+             "Cannot explain why Group I metals react with water",
+             "Describes reactions but cannot explain the reactivity trend",
+             "Explains Group I and II reactivity using ionisation energy; writes and balances correct equations",
+             "Compares Group I and II in depth; explains trend with electron configuration evidence; predicts behaviour of Rb/Cs"),
+            ("3. Halogen Properties",
+             "Cannot describe halogen states or reactivity",
+             "Lists halogen states and colours but cannot explain the reactivity trend",
+             "Explains decreasing reactivity down Group VII using atomic size; writes displacement equations correctly",
+             "Analyses halogen displacement reactions as evidence; connects to real-world applications with quantitative reasoning"),
+            ("4. Period 3 and Noble Gases",
+             "Cannot describe Period 3 trends or noble gas stability",
+             "Identifies metals and non-metals in Period 3 but cannot explain the trend",
+             "Describes metallic/non-metallic transition across Period 3; explains noble gas stability using electron configuration",
+             "Explains oxide character changes across Period 3; links noble gas stability to electron configuration with depth"),
+            ("5. Phenomenon Explanation",
+             "Cannot connect periodic trends to the driving question",
+             "Makes partial connection but misses key factors",
+             "Explains the phenomenon using electron configuration, group and period trends correctly",
+             "Complete evidence-based explanation covering all 5 SLOs; applies trends to predict unfamiliar element properties"),
+        ],
+    },
+    "lessons_data": _CHEM_LESSONS,
+}
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# META — Mathematics: Similarity and Enlargement (12 lessons)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+_MATH_SLO_K = (
+    "- Determine the centre of enlargement and the linear scale factor for similar figures\n"
+    "- Construct the image of an object under an enlargement given the centre and linear scale factor\n"
+    "- Determine the area and volume scale factors of similar figures and solids\n"
+    "- Relate linear scale factor, area scale factor, and volume scale factor in enlargements\n"
+    "- Apply similarity and enlargement to real-life situations"
+)
+_MATH_SLO_S = (
+    "- Identify corresponding sides and angles of similar figures\n"
+    "- Calculate linear, area, and volume scale factors from given measurements\n"
+    "- Construct enlarged or reduced images using compass and ruler\n"
+    "- Solve problems involving scale drawings, maps, and real-life applications"
+)
+_MATH_SLO_A = (
+    "- Appreciate the use of similarity and enlargement in art, architecture, photography, and mapping\n"
+    "- Show precision and care when constructing geometric figures\n"
+    "- Value the power of mathematical ratios to describe the real world"
+)
+
+def _math_lesson(num, title, inquiry, know, skills, attit, purpose, materials, safety, p1):
+    return {
+        "number": num, "title": title,
+        "inquiry_question": inquiry,
+        "slo_knowledge": know, "slo_skills": skills, "slo_attitudes": attit,
+        "overview_purpose": purpose,
+        "materials": materials, "safety": safety,
+        "period1_heading": "Period 1 (40 minutes)",
+        "period1_table": p1,
+        "period2_heading": "Period 2 (40 minutes)",
+        "period2_table": [],
+        "reflections": [],
+    }
+
+_MATH_LESSONS = [
+    _math_lesson(
+        1, "Introduction to the Phenomenon",
+        "How can a full-size photograph of a person be resized to fit a small passport photo box without distortion?",
+        "- Recall that shapes can be resized while keeping the same proportions\n- Identify the driving question for the unit",
+        "- Observe and describe how a photograph is resized; draw an initial model of how dimensions change",
+        "- Show curiosity about how mathematics is used in photography, maps, and design",
+        "Launches the unit phenomenon. Students watch a video of fitting a passport photo into a document, generate questions, and record initial thinking about how resizing works.",
+        "Video clip of resizing a passport photograph (teacher-prepared or downloaded); printed photographs in different sizes; Driving Question Board; blank paper; ruler",
+        "No specific hazards.",
+        [
+            _pr("Watch video of resizing a passport photograph; record: what changed and what stayed the same",
+                "Video of passport photo fitting; two printed photographs — one large, one small — of the same image",
+                "Pose phenomenon without introduction; ask 'What do you notice? What is the same and what is different?'",
+                "Think–Pair–Share: individual → partner → whole class; focus on dimensions and shape",
+                "Exit ticket: 'What stayed the same when the photograph was made smaller?'"),
+            _pr("Measure dimensions of large and small photographs; calculate the ratio of corresponding sides",
+                "Printed photographs; ruler; calculator",
+                "Students measure length and width of each photograph; calculate length ratio and width ratio",
+                "Discussion: 'Are the two ratios the same? What does this tell us?'",
+                "Oral check: if a 20 cm × 15 cm photo is reduced so the length becomes 4 cm, what is the new width?"),
+            _pr("Draw initial model: how do you think dimensions change when a shape is enlarged or reduced?",
+                "Blank squared paper; ruler; pencil",
+                "Prompt: 'Draw two rectangles that you think are the same shape but different sizes. What did you have to do to keep the shape the same?'",
+                "Pair-share models; identify key ideas: multiply by a number, keep angle the same",
+                "Collect initial models for comparison at unit end"),
+            _pr("Create the Driving Question Board: what do we need to know to answer the passport photo question?",
+                "DQB poster; sticky notes; markers",
+                "Facilitate student question generation; group by theme (scale factor, area change, construction)",
+                "Read all questions; prioritise which will be answered in this unit",
+                "Photograph DQB for record"),
+            _pr("Discuss: where else in real life are shapes enlarged or reduced? (maps, blueprints, models, projectors)",
+                "Photographs of maps, architectural plans, scale models, projected images",
+                "Brainstorm applications; connect to students' own experience (school plans, football field maps)",
+                "KWL chart: what do we know, want to know, and will learn about similarity and enlargement?",
+                "Individual reflection: 'Which application of similarity do you find most interesting? Why?'"),
+        ],
+    ),
+    _math_lesson(
+        2, "Properties of Similar Figures",
+        "What makes two figures 'similar', and how can we recognise similar figures from their measurements?",
+        "- Define similar figures as shapes with equal corresponding angles and proportional corresponding sides\n- State the two conditions required for similarity",
+        "- Identify corresponding angles and sides in pairs of triangles and rectangles\n- Test whether two figures are similar by checking angle equality and side ratios\n- Distinguish between congruent and similar figures",
+        "- Appreciate that similarity is a precise mathematical relationship, not just a vague impression of 'looking the same'",
+        "Students investigate the two conditions for similarity through hands-on comparison of shape pairs.",
+        "Pairs of similar and non-similar triangles (printed); protractor; ruler; calculator; geometry sets",
+        "Take care with compass points.",
+        [
+            _pr("Examine 4 pairs of triangles; measure all angles and sides; record in a table",
+                "Printed triangle pairs (similar and non-similar); protractor; ruler; measurement table",
+                "Students measure independently; teacher circulates to check accuracy",
+                "Discussion: 'Which pairs have equal angles? Which have proportional sides? Are these always both true?'",
+                "Exit ticket: state the two conditions for similarity"),
+            _pr("Test: are equal angles sufficient for similarity? Test pairs of rectangles with equal angles (90°) but different ratios",
+                "Pairs of rectangles with same angles but different side ratios; ruler; calculator",
+                "Students measure and calculate side ratios; determine whether rectangles are similar",
+                "Discussion: for triangles, equal angles guarantee similarity; for other shapes, both conditions must be checked",
+                "Oral probe: 'Can two squares of different sizes be similar? Explain.'"),
+            _pr("Sort 8 shape pairs into similar / not similar; justify each decision",
+                "Sorting cards with 8 shape pairs; answer record sheet",
+                "Students work in pairs; must give a reason for each decision using angle or ratio evidence",
+                "Class debrief: share decisions; discuss disagreements",
+                "Formative check: peer-mark sorting decisions using criteria from the lesson"),
+            _pr("Connect to phenomenon: 'Are the two passport photographs similar figures? How do you know?'",
+                "Two printed photographs of different sizes of the same image",
+                "Students measure corresponding dimensions and calculate ratios; confirm similarity",
+                "Discussion: 'If the photographs are similar, what mathematical relationship links their dimensions?'",
+                "Written summary: 'Two figures are similar if and only if…' — students complete in own words"),
+            _pr("Update DQB: mark which questions about similar figures have been answered",
+                "DQB poster; sticky notes",
+                "Facilitate: 'Which DQB questions can we now partially or fully answer?'",
+                "Students update their models to include similarity conditions",
+                "Review DQB with class"),
+        ],
+    ),
+    _math_lesson(
+        3, "Centre of Enlargement",
+        "What is the centre of enlargement and how is it used to construct an enlarged image?",
+        "- Define centre of enlargement as the fixed point from which an enlargement is measured\n- Construct the image of a shape under enlargement given the centre and scale factor\n- Locate the centre of enlargement given an object and its image",
+        "- Use rays from the centre of enlargement to locate image vertices\n- Construct enlarged and reduced images using ruler and rays\n- Verify constructions by measuring corresponding sides",
+        "- Show precision when drawing construction lines\n- Appreciate that the centre of enlargement is the key that links object and image",
+        "Students learn to construct enlargements and locate the centre of enlargement through guided construction activities.",
+        "Squared paper or dot paper; ruler; pencil; compass; geometry sets; printed construction examples",
+        "Take care with compass points.",
+        [
+            _pr("Examine a given enlargement: draw rays through corresponding vertices; identify where they meet",
+                "Printed example of a triangle and its enlargement on squared paper; ruler",
+                "Demonstrate: draw a ray from each pair of corresponding vertices; all rays meet at the centre of enlargement",
+                "Students repeat with a second example; identify the centre of enlargement independently",
+                "Oral check: 'What is the centre of enlargement and where is it in relation to the object and image?'"),
+            _pr("Construct an enlarged image: given triangle ABC and centre O, scale factor 2 — construct A'B'C'",
+                "Squared paper; ruler; pencil; triangle ABC and centre O marked",
+                "Guided steps: draw ray OA, measure OA, mark A' at distance 2×OA; repeat for B and C; join A'B'C'",
+                "Students check by measuring: is each side of A'B'C' exactly double the corresponding side of ABC?",
+                "Formative task: construct a scale factor 3 enlargement of a given quadrilateral from a given centre"),
+            _pr("Construct a reduction (fractional scale factor): scale factor ½ applied to a large triangle",
+                "Squared paper; ruler; large triangle with centre marked",
+                "Discuss: 'What does scale factor ½ mean? Where will the image be relative to the object?'",
+                "Students construct the reduction; measure to verify",
+                "Discussion: image is between the centre and the object when 0 < k < 1"),
+            _pr("Locate the centre of enlargement given an object and image (reverse problem)",
+                "Printed object-image pairs; ruler",
+                "Students draw rays through pairs of corresponding vertices; find intersection",
+                "Peer-check: compare located centres with partners",
+                "Exit ticket: sketch an object and image; mark the centre of enlargement and explain how you found it"),
+            _pr("Apply to phenomenon: the passport photo centre of enlargement is the camera/scanner focal point — discuss",
+                "Diagram of camera and film/sensor; photograph scaling diagram",
+                "Connect mathematical construction to real photography: the lens acts as the centre of enlargement",
+                "Discussion: 'When you zoom in on a photo on your phone, what is the centre of enlargement?'",
+                "Written reflection: describe in your own words what the centre of enlargement represents"),
+        ],
+    ),
+    _math_lesson(
+        4, "Linear Scale Factor",
+        "How do we calculate the linear scale factor and use it to find missing side lengths of similar figures?",
+        "- Define linear scale factor (LSF) as the ratio of corresponding side lengths\n- Calculate LSF given two corresponding sides\n- Use LSF to find missing side lengths in similar figures",
+        "- Calculate LSF from given measurements\n- Find missing side lengths using the ratio LSF = image length ÷ object length\n- Solve problems involving maps, models, and scale drawings using LSF",
+        "- Show accuracy in ratio calculations\n- Appreciate that LSF is the fundamental multiplier linking all corresponding measurements",
+        "Students practise calculating and applying the linear scale factor to find missing measurements in similar figures.",
+        "Squared paper; ruler; calculator; LSF problem worksheets; map or scale drawing example",
+        "No specific hazards.",
+        [
+            _pr("Given pairs of similar triangles, calculate the ratio of each pair of corresponding sides; confirm all ratios are equal",
+                "Printed similar triangle pairs with labelled side lengths; calculator",
+                "Students calculate 3 ratios per pair; confirm they are equal (the LSF)",
+                "Discussion: 'What does LSF = 2.5 mean in words? What does LSF = 0.4 mean?'",
+                "Quick oral check: 'If LSF = 3 and a side of the object is 4 cm, what is the corresponding image side?'"),
+            _pr("Use LSF to find missing side lengths in similar figures",
+                "LSF problem worksheet with 4 problems",
+                "Model one example: identify corresponding sides, calculate LSF, use it to find unknowns",
+                "Students complete remaining problems; peer-check with worked solutions",
+                "Formative quiz: 3 problems finding missing lengths in similar figures"),
+            _pr("Apply LSF to a map problem: a map has scale 1:50,000; find real distances from map measurements",
+                "Printed map excerpt or diagram; ruler; calculator",
+                "Students measure map distances with ruler; multiply by scale factor to get real distances",
+                "Discussion: 'A map scale of 1:50,000 means what? Is 1:50,000 an enlargement or a reduction?'",
+                "Written task: measure 3 distances on the map and convert to real-world distances"),
+            _pr("Apply LSF to a model problem: a model car has LSF 1/20 compared to the real car",
+                "Model car dimensions diagram; real car dimensions; calculator",
+                "Students calculate real car dimensions from model measurements",
+                "Extension: 'If the real car is 4.8 m long, what is the model's length in cm?'",
+                "Peer-check calculations"),
+            _pr("Update DQB and model: how does LSF link to the passport photo phenomenon?",
+                "DQB poster; model diagrams",
+                "Students calculate the LSF between their two passport photographs from Lesson 1",
+                "Discussion: 'What LSF would reduce a 15 cm × 12 cm photo to 3.5 cm × 2.8 cm?'",
+                "DQB update: mark which questions about scale factor are now answered"),
+        ],
+    ),
+    _math_lesson(
+        5, "Area Scale Factor",
+        "If the linear scale factor is k, what is the relationship between the areas of similar figures?",
+        "- State that area scale factor (ASF) = k² where k is the linear scale factor\n- Calculate the area of an image given the area of the object and the LSF\n- Explain why ASF = k²",
+        "- Calculate ASF from given LSF or from measured areas\n- Find unknown areas using the formula ASF = k²\n- Verify the relationship by direct measurement on constructed figures",
+        "- Appreciate that area grows as the square of linear dimensions — a powerful and non-obvious mathematical result\n- Show systematic verification skills",
+        "Students discover that area scales as the square of the linear scale factor through direct measurement and calculation.",
+        "Squared paper; ruler; calculator; area calculation worksheet; video clip on area scale factor",
+        "No specific hazards.",
+        [
+            _pr("Draw a 2 × 3 rectangle; enlarge by LSF = 2; draw the 4 × 6 image; count squares in both",
+                "Squared paper; pencil; ruler",
+                "Students draw both rectangles; count squares (area of object = 6 sq units; image = 24 sq units)",
+                "Discussion: 'The lengths doubled — but the area did not double. What happened to the area?'",
+                "Oral check: 'If LSF = 3, how many times bigger is the area?'"),
+            _pr("Tabulate: for LSF = 1, 2, 3, 4 — calculate expected area ratio; verify by construction",
+                "Results table; squared paper; ruler; calculator",
+                "Students complete table: LSF | LSF² | measured area ratio; confirm ASF = k²",
+                "Discussion: explain WHY area scales as k² (both length and width are multiplied by k)",
+                "Exit ticket: 'If LSF = 5, the area scale factor is ___. If the object area is 8 cm², the image area is ___."),
+            _pr("Solve ASF problems: given object area and LSF, find image area; given areas, find LSF",
+                "ASF problem worksheet",
+                "Model one of each type; students complete remaining problems independently",
+                "Peer-check with worked solutions; discuss common errors (confusing LSF and ASF)",
+                "Formative quiz: 4 ASF problems of mixed types"),
+            _pr("Watch short video on area scale factor applications; identify passport photo area change",
+                "Video on area scale factor in photography/printing (Khan Academy or teacher-prepared)",
+                "Students calculate: if passport photo LSF = 0.25 (relative to original), what fraction of the original area does it occupy?",
+                "Discussion: 'Is the passport photo area ¼ or 1/16 of the original? Why?'",
+                "Written explanation: 'The area scale factor equals k² because…'"),
+            _pr("Update DQB and model: add ASF = k² to the model with a worked example",
+                "DQB poster; student models; squared paper",
+                "Students annotate their models with the ASF formula and a worked example",
+                "Partner check: is the formula and example correct?",
+                "Review DQB: are the area-related questions now answered?"),
+        ],
+    ),
+    _math_lesson(
+        6, "Volume Scale Factor",
+        "If the linear scale factor is k, what is the relationship between the volumes of similar solids?",
+        "- State that volume scale factor (VSF) = k³ where k is the linear scale factor\n- Calculate the volume of an image solid given the volume of the object and the LSF\n- Explain why VSF = k³",
+        "- Calculate VSF from given LSF or measured volumes\n- Find unknown volumes using the formula VSF = k³\n- Verify the relationship using simple 3D shapes (cuboids)",
+        "- Show curiosity about how a small change in linear scale produces a large change in volume\n- Appreciate real-world implications (scale models, packaging, medical imaging)",
+        "Students discover that volume scales as the cube of the linear scale factor through systematic investigation with cuboids.",
+        "Connecting cubes or cuboid models; ruler; calculator; VSF problem worksheet; volume scale factor video",
+        "No specific hazards.",
+        [
+            _pr("Build a 1×1×1 cube; then a 2×2×2 cube; count unit cubes in each; calculate the ratio",
+                "Connecting cubes or sugar cube models",
+                "Students build both; count cubes (1 vs. 8); calculate ratio",
+                "Discussion: 'The lengths doubled — the volume multiplied by 8. How does 2 relate to 8?'",
+                "Oral check: 'If LSF = 3, how many times bigger is the volume?'"),
+            _pr("Tabulate: for LSF = 1, 2, 3, 4 — calculate expected volume ratio; verify by construction",
+                "Results table; connecting cubes",
+                "Students complete table: LSF | LSF³ | measured volume ratio; confirm VSF = k³",
+                "Discussion: explain WHY volume scales as k³ (length × width × height all multiplied by k)",
+                "Exit ticket: 'If LSF = 4, VSF = ___. If object volume is 5 cm³, image volume = ___.'"),
+            _pr("Solve VSF problems: given object volume and LSF, find image volume; given volumes, find LSF",
+                "VSF problem worksheet",
+                "Model one of each type; students complete remaining problems independently",
+                "Peer-check with worked solutions",
+                "Formative quiz: 4 VSF problems of mixed types"),
+            _pr("Apply VSF to a model problem: a model ship has LSF 1/50 — what fraction of the real ship's volume does it have?",
+                "Model ship dimensions; real ship volume calculation",
+                "Students calculate VSF = (1/50)³ = 1/125,000; discuss the huge difference",
+                "Extension: if the real ship holds 50,000 m³ of cargo, what volume does the model represent?",
+                "Written explanation of why small models are so much less than real objects in volume"),
+            _pr("Update model: add VSF = k³ alongside ASF = k² and LSF = k; create a summary of all three",
+                "Student models; summary table template",
+                "Students create a side-by-side comparison: LSF | ASF | VSF and their relationships",
+                "Pair-check summaries for accuracy",
+                "Review with class; prepare for next lesson on the full relationship"),
+        ],
+    ),
+    _math_lesson(
+        7, "Relationships: LSF, ASF, and VSF",
+        "How are the linear, area, and volume scale factors mathematically related, and how do we move between them?",
+        "- State the relationships: ASF = LSF², VSF = LSF³\n- Calculate any one scale factor given another\n- Solve problems that require moving between linear, area, and volume scale factors",
+        "- Calculate LSF from ASF (LSF = √ASF) and from VSF (LSF = ∛VSF)\n- Solve multi-step problems involving all three scale factors\n- Apply relationships to real-world contexts (maps, models, photographs)",
+        "- Show algebraic reasoning skills in relating the three scale factors\n- Appreciate the elegance of the mathematical connection between dimensions",
+        "Students consolidate and apply the three-way relationship between LSF, ASF, and VSF through problem-solving.",
+        "Calculator; LSF/ASF/VSF relationship worksheet; summary table from Lesson 6",
+        "No specific hazards.",
+        [
+            _pr("Review the three formulae: ASF = k², VSF = k³ — confirm with 2–3 numerical examples",
+                "Student summary tables from Lesson 6; calculator",
+                "Quick oral review: teacher calls out k, students call back ASF and VSF",
+                "Students verify 3 examples independently; check with partner",
+                "Oral check: if k = 1.5, what are ASF and VSF?"),
+            _pr("Reverse calculation: given ASF = 16, find LSF; given VSF = 27, find LSF",
+                "Relationship worksheet",
+                "Guided steps: LSF = √16 = 4; LSF = ∛27 = 3; then verify by computing ASF and VSF back",
+                "Students complete 4 reverse calculations independently",
+                "Formative quiz: 3 problems — some forward, some reverse"),
+            _pr("Mixed problems: given area of object and image, find LSF; then find VSF",
+                "Mixed problem worksheet",
+                "Model: 'Object area = 9 cm², image area = 36 cm² → ASF = 4 → LSF = 2 → VSF = 8'",
+                "Students complete remaining problems; peer-check",
+                "Discussion: 'In what order do you need to calculate when the problem gives you areas or volumes?'"),
+            _pr("Apply all three to a real scenario: a room plan has LSF 1:100 — find the real room area and volume from plan measurements",
+                "Floor plan with measurements; calculator",
+                "Students measure plan room dimensions; calculate real dimensions, area, and volume",
+                "Extension: 'The room needs to be carpeted. What area of carpet is needed in m²?'",
+                "Written task: explain all steps of the calculation for someone who hasn't studied scale factors"),
+            _pr("Update DQB and model: final summary of all three relationships on one diagram",
+                "DQB poster; student models",
+                "Students create a one-page summary diagram: k → k² (ASF) → k³ (VSF)",
+                "Review DQB: mark all questions about scale factor relationships as answered",
+                "Self-assessment: which relationship do I find most challenging? Why?"),
+        ],
+    ),
+    _math_lesson(
+        8, "Constructing Similar Figures",
+        "How do we accurately construct the image of a complex shape under an enlargement?",
+        "- Construct the image of a polygon under enlargement using a given centre and scale factor\n- Verify constructions by measuring corresponding sides and angles",
+        "- Accurately construct enlarged and reduced polygons using ruler and rays\n- Verify similarity by measuring and calculating ratios\n- Construct scale drawings of real objects",
+        "- Show precision and patience in geometric construction\n- Appreciate that accurate construction is a foundational skill in engineering and design",
+        "Students practise constructing enlargements and reductions of polygons, applying all the skills from previous lessons.",
+        "Squared paper; ruler; compass; geometry set; protractor; construction exercise sheets",
+        "Take care with compass points.",
+        [
+            _pr("Construct the image of triangle PQR under enlargement, centre O, scale factor 3",
+                "Squared paper; ruler; triangle PQR and centre O marked",
+                "Students draw rays OP, OQ, OR; mark P', Q', R' at 3× the distances; join the image",
+                "Measure sides of P'Q'R' and divide by corresponding sides of PQR; confirm = 3",
+                "Oral check: 'Is the image similar to the object? How do you know?'"),
+            _pr("Construct the image of a quadrilateral ABCD under reduction, scale factor ⅓, centre O outside the shape",
+                "Squared paper; ruler; quadrilateral and centre marked",
+                "Guided steps; students note that when centre is outside the shape, rays must be extended",
+                "Verify by measuring; discuss: 'Where does the image appear relative to the object?'",
+                "Exit ticket: sketch the object, image, and centre; label rays and measurements"),
+            _pr("Construct a scale drawing of the classroom on squared paper using LSF 1:50",
+                "Measuring tape; squared paper (1 cm = 50 cm); ruler",
+                "Students measure classroom dimensions in groups; calculate scaled dimensions; draw the plan",
+                "Compare plans from different groups; discuss measurement accuracy",
+                "Written task: calculate the real floor area and the plan area; verify ASF = k²"),
+            _pr("Solve a construction problem: given the image and the centre, reconstruct the original object (scale factor ½ — so reverse by applying factor 2)",
+                "Printed image with centre marked; ruler",
+                "Students draw reverse rays from centre through image vertices; mark object vertices at half distance",
+                "Peer-check constructions; discuss: 'How do you know which direction to draw the rays?'",
+                "Formative assessment: independently construct the original object for a new example"),
+            _pr("Review construction accuracy: measure all corresponding sides and angles; calculate actual vs. theoretical ratios",
+                "Completed construction sheets; ruler; protractor; calculator",
+                "Students calculate % error for their constructions: (actual ratio − theoretical ratio) / theoretical ratio × 100",
+                "Discussion: sources of error; how to minimise them",
+                "Self-assessment: identify one construction skill to improve"),
+        ],
+    ),
+    _math_lesson(
+        9, "Applications: Maps and Scale Drawings",
+        "How is similarity and enlargement used in maps, architectural plans, and other real-world scale drawings?",
+        "- Interpret map scales as linear scale factors\n- Calculate real distances from map distances and vice versa\n- Apply LSF to reading and creating scale drawings",
+        "- Measure map distances and convert to real distances using LSF\n- Calculate required map measurements from real dimensions\n- Create a simple scale drawing of a real object",
+        "- Appreciate the importance of maps and scale drawings in navigation, construction, and planning\n- Show accuracy in measurement and conversion",
+        "Students apply their scale factor knowledge to interpret maps and create their own scale drawings.",
+        "Printed map extract with stated scale; ruler; calculator; graph paper for scale drawing; measuring tape",
+        "No specific hazards.",
+        [
+            _pr("Read a map scale: convert 1:25,000 to a sentence; calculate real distances for 5 map measurements",
+                "Printed map with scale 1:25,000; ruler; calculator",
+                "Students measure map segments with ruler; multiply by 25,000; convert to km",
+                "Discussion: 'Is this an enlargement or a reduction? What is the LSF as a decimal?'",
+                "Exit ticket: 'A 3 cm measurement on this map represents ___ km in reality'"),
+            _pr("Calculate map distances from real distances: if two towns are 12 km apart, how far apart are they on a 1:50,000 map?",
+                "Calculator; map problem worksheet",
+                "Students solve 4 problems converting real distances to map distances",
+                "Peer-check with worked solutions",
+                "Discussion: when would you need to calculate map distance from real distance? (making a map)"),
+            _pr("Examine an architectural floor plan; interpret scale; calculate real room dimensions and floor areas",
+                "Printed floor plan with stated scale (e.g., 1:100); ruler; calculator",
+                "Students measure each room on the plan; calculate real dimensions; calculate floor area",
+                "Discuss: 'Which room is largest? How much carpet would the whole flat need?'",
+                "Written task: present room dimensions and areas in a table"),
+            _pr("Create your own scale drawing: measure a school classroom and draw a floor plan at 1:50",
+                "Measuring tape; graph paper; ruler; pencil",
+                "Groups measure the classroom; calculate scaled dimensions; draw the plan",
+                "Compare plans from different groups; identify and discuss any discrepancies",
+                "Reflection: 'What was the hardest part of making an accurate scale drawing?'"),
+            _pr("Update DQB: how does map reading use similarity and enlargement?",
+                "DQB poster; student models",
+                "Students connect map scale to LSF and ASF; add map application to their models",
+                "Review DQB: mark map-related questions as answered",
+                "Peer discussion: 'Can you think of a situation where you would need to use a map scale in everyday life?'"),
+        ],
+    ),
+    _math_lesson(
+        10, "Applications: Area and Volume in Real Life",
+        "How do area and volume scale factors apply to real problems such as painting surfaces, filling containers, and comparing models with originals?",
+        "- Apply ASF to calculate the amount of material needed to cover similar surfaces\n- Apply VSF to calculate capacities of similar containers\n- Interpret the meaning of ASF and VSF in real-world contexts",
+        "- Calculate paint or fabric required using ASF\n- Calculate capacity ratios using VSF\n- Solve multi-step real-life problems using LSF, ASF, and VSF together",
+        "- Appreciate that understanding area and volume scale has direct practical implications for cost, materials, and efficiency\n- Show perseverance when solving multi-step problems",
+        "Students apply area and volume scale factors to real-world problems involving materials, containers, and costs.",
+        "Calculator; real-life application worksheet; container diagrams; paint coverage data",
+        "No specific hazards.",
+        [
+            _pr("Problem: a tin of paint covers 10 m². If the wall dimensions are scaled by factor 3, how many tins are needed for the larger wall?",
+                "Paint coverage problem card; calculator",
+                "Students identify: larger wall area = 3² × original area = 9 × original area → 9 tins needed",
+                "Discussion: 'Why do we square the scale factor? Draw a diagram to show why.'",
+                "Exit ticket: solve a similar problem with LSF = 4 and different original area"),
+            _pr("Problem: two similar water tanks have LSF = 2. If the small tank holds 500 litres, how much does the large tank hold?",
+                "Tank diagram; calculator",
+                "Students calculate VSF = 2³ = 8; large tank = 8 × 500 = 4,000 litres",
+                "Discussion: 'Why does a small change in linear dimensions produce a large change in volume?'",
+                "Peer problem: create and swap your own tank problem"),
+            _pr("Problem: a statue and a model have LSF = 1:20. The model uses 0.5 kg of bronze. How much does the statue use?",
+                "Statue/model problem card; calculator",
+                "Students identify this as a VSF problem (mass ∝ volume): VSF = 20³ = 8,000; statue mass = 4,000 kg",
+                "Discussion: 'Does this seem reasonable for a bronze statue? What real statues could be this heavy?'",
+                "Written explanation: why do we use VSF for mass calculations?"),
+            _pr("Costing problem: if painting a model costs KES 200 (using ASF), what does painting the full-size version cost at same rate?",
+                "Costing problem worksheet; calculator",
+                "Students identify ASF needed; calculate proportional cost",
+                "Peer-check and discuss: 'Why does cost scale with area rather than volume for painting?'",
+                "Formative quiz: 3 real-life ASF and VSF problems"),
+            _pr("Connect to phenomenon: calculate the exact LSF, ASF for the passport photo scenario from Lesson 1 measurements",
+                "Measurements from Lesson 1; calculator",
+                "Students revisit their Lesson 1 photograph measurements; calculate LSF and ASF",
+                "Discussion: 'Now you can fully explain the passport photo phenomenon using mathematics'",
+                "DQB update: mark all area/volume application questions as answered"),
+        ],
+    ),
+    _math_lesson(
+        11, "Problem Solving with Similarity",
+        "How do we identify and solve similarity problems when they are embedded in unfamiliar real-world contexts?",
+        "- Identify similarity in unfamiliar geometric and real-world contexts\n- Select the appropriate scale factor (LSF, ASF, or VSF) for a given problem\n- Solve multi-step similarity problems",
+        "- Analyse word problems to identify whether LSF, ASF, or VSF is needed\n- Apply geometric reasoning to identify similar triangles within larger figures\n- Present solutions with clear working and justification",
+        "- Show persistence and systematic thinking when tackling multi-step problems\n- Appreciate that recognising mathematical structure is a transferable skill",
+        "Students consolidate all similarity and enlargement knowledge by solving a range of multi-step and contextualised problems.",
+        "Problem set worksheet; calculator; geometry set; squared paper",
+        "No specific hazards.",
+        [
+            _pr("Identify similar triangles in a diagram: triangle within a triangle (AA condition); state the LSF",
+                "Diagram with overlapping similar triangles; ruler",
+                "Students identify corresponding angles (using parallel lines or given angle data); state AA similarity",
+                "Calculate LSF from given side lengths",
+                "Exit ticket: given a diagram, identify similar triangles and state why they are similar"),
+            _pr("Solve a shadow problem: a 2 m pole casts a 3 m shadow; a nearby tree casts a 12 m shadow — find the tree height",
+                "Shadow diagram; problem card",
+                "Guide students to identify the two similar triangles formed by the pole/shadow and tree/shadow",
+                "Students set up ratio: 2/3 = h/12 → h = 8 m",
+                "Peer-check; discuss: 'What assumption must you make for this method to work?'"),
+            _pr("Solve a photography problem: a camera lens produces an image that is 1/50 of the object height — find the image dimensions for a person 1.7 m tall",
+                "Photography diagram; calculator",
+                "Students calculate image height; discuss whether this is LSF or a different type of ratio",
+                "Extension: find the area scale factor and the area of the image on the film/sensor",
+                "Written explanation: which type of scale factor is relevant here and why?"),
+            _pr("Mixed problem set: 4 problems requiring students to select the correct scale factor type",
+                "Mixed problem worksheet covering maps, models, areas, and volumes",
+                "Students work independently; teacher circulates and asks probing questions",
+                "Peer-mark with worked solutions; discuss common errors",
+                "Class debrief: which type of problem is most commonly confused? Why?"),
+            _pr("Review Summary Table: ensure all 11 lessons are recorded accurately",
+                "Individual Summary Tables",
+                "Students complete any missing rows; peer-review for accuracy",
+                "Teacher reviews sample tables; provide written feedback",
+                "Reflection: 'What is the most powerful idea I have learned in this unit?'"),
+        ],
+    ),
+    _math_lesson(
+        12, "Unit Consolidation and Final Explanation Preparation",
+        "How can I use all the mathematical ideas from this unit to fully explain the passport photo phenomenon?",
+        "- Summarise all key concepts: similar figures, centre of enlargement, LSF, ASF, VSF, and applications\n- Construct a complete mathematical explanation of the driving question\n- Self-assess readiness for the Final Explanation task",
+        "- Solve review problems covering all unit concepts\n- Complete the Summary Table\n- Draft the Final Explanation with evidence from all lessons",
+        "- Show confidence in applying all unit concepts to unfamiliar situations\n- Appreciate the power of mathematical reasoning to explain real phenomena",
+        "Students complete all summary work, solve a review problem set, and prepare their Final Explanation document.",
+        "Summary Table (student copies); DQB poster; Final Explanation task description; rubric; calculator; geometry set",
+        "No specific hazards.",
+        [
+            _pr("Review quiz: 5 problems covering similar figures, LSF, ASF, VSF, and construction",
+                "Review problem set; calculator; geometry set",
+                "Students complete quiz independently; teacher circulates",
+                "Peer-mark with worked solutions; identify any remaining gaps",
+                "Teacher notes common errors for class debrief"),
+            _pr("Answer the driving question as a class: 'How can a full-size photo be resized to fit a passport box without distortion?'",
+                "DQB poster; all evidence from 12 lessons",
+                "Facilitate class construction of a complete mathematical explanation",
+                "Students write the class explanation in their own words in notebooks",
+                "Discuss: 'What other real-world applications use the same mathematical ideas?'"),
+            _pr("Complete the Summary Table: verify all 12 lessons are recorded; peer-review",
+                "Individual Summary Tables",
+                "Students complete missing rows; swap with partner for review",
+                "Peer feedback: is each entry accurate and does it connect to the driving question?",
+                "Teacher spot-checks and provides written feedback on 5–6 tables"),
+            _pr("Introduce the Final Explanation document and rubric; self-assess on each criterion",
+                "Final Explanation task description; rubric",
+                "Students read the rubric; rate themselves 1–4 on each criterion",
+                "Partner discussion: 'Which criterion is your strongest? Which needs most work?'",
+                "Students write a 5-minute plan for their Final Explanation"),
+            _pr("Reflection: how has your mathematical model of the passport photo phenomenon evolved over 12 lessons?",
+                "Initial model from Lesson 1; current model; DQB",
+                "Students compare initial and final models side by side; annotate what changed and why",
+                "Class share: 3–4 students describe their model evolution",
+                "Exit ticket: 'In three sentences, explain how the passport photo fits into a small box without distortion'"),
+        ],
+    ),
+]
+
+_MATH_SUMMARY_ROWS = [
+    (1, "Observed passport photo resizing; measured photo dimensions; drew initial model; created DQB",
+        "A photograph can be resized while keeping the same proportions — dimensions change by a constant ratio",
+        "Introduces the phenomenon: how does resizing work without distortion?",
+        "DQB created; initial model drawn"),
+    (2, "Compared shape pairs; tested two conditions for similarity (equal angles, proportional sides)",
+        "Similar figures have equal corresponding angles AND proportional corresponding sides",
+        "The passport photos are similar figures — both conditions confirmed",
+        "Model updated: similarity conditions added"),
+    (3, "Drew rays to locate centre of enlargement; constructed enlarged and reduced images",
+        "Centre of enlargement is the fixed point from which all enlargement rays originate",
+        "The camera lens acts as the centre of enlargement when taking a photograph",
+        "Model updated: centre of enlargement and rays shown"),
+    (4, "Calculated LSF from side ratios; solved missing length problems; applied to maps and models",
+        "LSF = image length ÷ object length; links all corresponding lengths of similar figures",
+        "Passport photo LSF calculated from actual measurements",
+        "Model updated: LSF formula and value added"),
+    (5, "Discovered ASF = k² by counting squares; applied to photography and area problems",
+        "Area scale factor equals the square of the linear scale factor",
+        "Passport photo area is k² × original area — explains why the photo is much smaller",
+        "Model updated: ASF = k² shown with worked example"),
+    (6, "Built cuboid models; discovered VSF = k³; applied to model and container problems",
+        "Volume scale factor equals the cube of the linear scale factor",
+        "A small linear reduction produces a very large volume reduction (k³ effect)",
+        "Model updated: VSF = k³ added; all three scale factors now on one diagram"),
+    (7, "Practised converting between LSF, ASF, and VSF; solved multi-step problems",
+        "ASF = LSF²; VSF = LSF³; can calculate any one from another",
+        "The three scale factors are mathematically linked — understanding one gives the others",
+        "Summary table created: LSF | ASF | VSF relationships"),
+    (8, "Constructed enlargements and reductions; created a classroom scale drawing",
+        "Accurate constructions require careful measurement of rays from the centre",
+        "Scale drawings are enlarged/reduced versions — the same relationship as the passport photo",
+        "Classroom floor plan created at 1:50"),
+    (9, "Read map scales; converted map distances to real distances; interpreted a floor plan",
+        "Map scale is a linear scale factor; area on the map relates to real area by ASF = k²",
+        "Maps are mathematical reductions of reality — the same principle as passport photos",
+        "Model updated: map application added"),
+    (10, "Solved paint, tank, and statue problems using ASF and VSF",
+        "Material needed scales with area (ASF); capacity scales with volume (VSF)",
+        "Practical applications confirm the mathematical relationships discovered in lessons 5–6",
+        "DQB: area/volume application questions answered"),
+    (11, "Identified similar triangles; solved shadow, photography, and mixed context problems",
+        "Similar triangles arise naturally in real-world contexts; selecting the right scale factor is key",
+        "Problem-solving with similarity applies to photography — directly relevant to the phenomenon",
+        "Summary Table completed; problem-solving skills consolidated"),
+    (12, "Completed review quiz; answered driving question; reviewed Summary Table; planned Final Explanation",
+        "All unit concepts connect: similarity → scale factors → applications → phenomenon explanation",
+        "Complete understanding: passport photo resizing is a mathematical enlargement using a specific LSF",
+        "Final model complete; DQB fully answered; ready for Final Explanation"),
+]
+
+_MATH_FE_SECTIONS = [
+    ("1. Similar Figures",
+     "Define similar figures and state the two conditions for similarity. Give an example with measurements.\n\n"
+     "Guiding Questions:\n- What are the two conditions for two figures to be similar?\n"
+     "- How do you test whether two triangles are similar?\n"
+     "- Are all squares similar? Are all rectangles similar? Explain.",
+     "Two figures are similar if and only if their corresponding angles are equal AND their corresponding "
+     "sides are in the same ratio. For triangles, equal angles alone (AA condition) is sufficient because "
+     "the side ratios are then automatically equal. All squares are similar to each other (all angles 90° "
+     "and all sides in ratio k). Rectangles are not all similar — they also need the ratio of length to "
+     "width to be equal. Example: a 6 × 4 rectangle and a 9 × 6 rectangle are similar (ratio = 1.5); "
+     "a 6 × 4 and a 10 × 4 rectangle are not similar (ratios 10/6 ≠ 4/4)."),
+    ("2. Centre of Enlargement and Linear Scale Factor",
+     "Explain the centre of enlargement and linear scale factor. Show how to construct an enlargement.\n\n"
+     "Guiding Questions:\n- What is the centre of enlargement and how do you locate it?\n"
+     "- How do you construct the image of a shape given the centre and LSF?\n"
+     "- What does LSF = 0.5 mean? What does LSF = 3 mean?",
+     "The centre of enlargement is the fixed point from which all enlargement rays are drawn. "
+     "To find it, draw rays through corresponding pairs of vertices — they all meet at the centre. "
+     "To construct an enlargement with centre O and LSF k: draw a ray from O through each vertex, "
+     "measure the distance OA, mark A' at distance k × OA along the ray. LSF = 3 means the image "
+     "is 3 times the linear dimensions of the object. LSF = 0.5 means the image is half the linear "
+     "dimensions of the object (a reduction). The image appears between the centre and the object when 0 < k < 1."),
+    ("3. Area and Volume Scale Factors",
+     "State and explain the formulae ASF = k² and VSF = k³. Show why each is true with a diagram.\n\n"
+     "Guiding Questions:\n- Why does area scale as k² and not k?\n"
+     "- Why does volume scale as k³?\n"
+     "- If LSF = 3, an object has area 4 cm², and volume 2 cm³, find the image area and volume.",
+     "When linear dimensions are multiplied by k, area is multiplied by k² because area = length × width "
+     "and both dimensions are multiplied by k: (kl) × (kw) = k²(lw). Volume is multiplied by k³ because "
+     "volume = length × width × height and all three are multiplied by k: (kl)(kw)(kh) = k³(lwh). "
+     "If LSF = 3: ASF = 9, so image area = 9 × 4 = 36 cm². VSF = 27, so image volume = 27 × 2 = 54 cm³."),
+    ("4. Real-Life Applications",
+     "Describe three real-life applications of similarity and enlargement. Include calculations.\n\n"
+     "Guiding Questions:\n- How is similarity used in maps and scale drawings?\n"
+     "- Give an example where VSF is needed to solve a real problem.\n"
+     "- How does the passport photo phenomenon relate to similarity and enlargement?",
+     "Maps: a map scale of 1:50,000 means the LSF is 1/50,000. A 4 cm map distance represents "
+     "4 × 50,000 = 200,000 cm = 2 km. The ASF = (1/50,000)² = 1/2,500,000,000 — real areas are "
+     "2.5 billion times larger than map areas. "
+     "Similar containers: two similar tanks with LSF = 2; VSF = 8; if small tank holds 500 L, large holds 4,000 L. "
+     "Passport photo: the photograph is a mathematical reduction of the original image. The camera applies "
+     "a linear scale factor to project the 3D scene onto a 2D sensor; printing further reduces by another LSF. "
+     "The image remains undistorted because all dimensions are multiplied by the same constant k."),
+    ("5. Phenomenon Explanation",
+     "Answer the driving question fully, using all unit evidence.\n\n"
+     "Driving Question: How can a full-size photograph of a person be resized to fit a small passport photo box without distortion?\n\n"
+     "Use all key concepts: similar figures, centre of enlargement, LSF, ASF, VSF.",
+     "A passport photograph is a mathematically similar figure to the original image of the person. "
+     "When a photograph is taken, the camera lens acts as the centre of enlargement, projecting the "
+     "real scene onto the camera sensor at a linear scale factor determined by the focal length and "
+     "distance. The resulting image has the same shape as the original (corresponding angles are equal "
+     "and corresponding distances are in constant ratio) but is much smaller in linear, area, and volume terms. "
+     "When the digital image is then resized to fit a 3.5 cm × 4.5 cm passport box, a second linear scale "
+     "factor is applied. As long as the same LSF is applied to both dimensions, the shape is preserved — "
+     "the person looks recognisable, just smaller. The area of the passport photo is LSF² times the area "
+     "of the original digital image, making it a tiny fraction of the original. This demonstrates that "
+     "similarity and enlargement are not just abstract geometry — they are the mathematical foundation of "
+     "photography, mapping, architectural design, and any situation where shapes must be scaled without distortion."),
+]
+
+_MATH_META = {
+    "subject": "Mathematics",
+    "grade": "Grade 10",
+    "substrand": "Sub-Strand 2.1: Similarity and Enlargement",
+    "lessons": 12,
+    "driving_question": "How can a full-size photograph of a person be resized to fit a small passport photo box without distortion?",
+    "substrand_overview_rows": [
+        ("Phenomenon", "A passport photograph — a full-size person reduced to a tiny 3.5 cm × 4.5 cm box without distortion. How is this mathematically possible?"),
+        ("Driving Question", "How can a full-size photograph of a person be resized to fit a small passport photo box without distortion?"),
+        ("Sub-Strand SLOs — Knowledge", _MATH_SLO_K),
+        ("Sub-Strand SLOs — Skills", _MATH_SLO_S),
+        ("Sub-Strand SLOs — Attitudes/Values", _MATH_SLO_A),
+        ("Number of Lessons", "12 lessons (24 periods of 40 minutes each)"),
+        ("Core Competencies", "Critical Thinking and Problem Solving · Communication and Collaboration · Digital Literacy · Self-efficacy · Creativity and Innovation"),
+        ("Core Values", "Curiosity · Responsibility · Precision · Excellence · Integrity"),
+        ("Assessment", "Formative: similarity tests, construction accuracy checks, scale factor calculations, problem sets, summary table\nSummative: Final Explanation document"),
+        ("Resources", "Printed photographs; maps and floor plans; connecting cubes; geometry sets; squared paper; calculator; Khan Academy — Similarity and Scale Factor; GeoGebra constructions"),
+    ],
+    "summary_table_headers": [
+        "Lesson", "What I Did", "Key Understanding Built",
+        "Connection to Driving Question", "Model / DQB Evolution"
+    ],
+    "summary_table_rows": _MATH_SUMMARY_ROWS,
+    "summary_instructions": (
+        "Use this table to track your learning across all 12 lessons. "
+        "For each lesson record: what you did, what you understood, how it connects to the driving question, "
+        "and how your model and DQB evolved. Your completed Summary Table is evidence of your mathematical thinking."
+    ),
+    "final_explanation_sections": _MATH_FE_SECTIONS,
+    "final_explanation_rubric": {
+        "headers": ["Criterion", "Beginning (1)", "Developing (2)", "Proficient (3)", "Advanced (4)"],
+        "rows": [
+            ("1. Similar Figures",
+             "Cannot state conditions for similarity",
+             "States one condition but not both",
+             "Correctly states and applies both conditions; gives example with measurements",
+             "Distinguishes AA for triangles from two-condition requirement for other shapes; applies to novel examples"),
+            ("2. Centre of Enlargement and LSF",
+             "Cannot define centre of enlargement or LSF",
+             "Defines one but cannot construct an enlargement",
+             "Correctly constructs an enlargement; calculates LSF from measurements",
+             "Constructs both enlargements and reductions; locates centre from object/image pair; explains negative scale factors"),
+            ("3. ASF and VSF",
+             "Cannot state the formulae",
+             "States formulae but makes errors in calculation",
+             "Correctly calculates ASF and VSF; applies to find image area and volume",
+             "Explains WHY ASF = k² and VSF = k³ with diagrams; solves multi-step problems using all three"),
+            ("4. Real-Life Applications",
+             "Cannot connect theory to any real-life application",
+             "Identifies one application but calculation is incomplete",
+             "Correctly solves two application problems (e.g., map scale and container volume)",
+             "Solves three or more applications; selects correct scale factor type; explains reasoning clearly"),
+            ("5. Phenomenon Explanation",
+             "Cannot explain how a photo is resized",
+             "Mentions scale factor but explanation is incomplete or inaccurate",
+             "Fully explains the photograph resizing using LSF, ASF, similarity, and centre of enlargement",
+             "Complete, mathematically precise explanation with calculations; connects to additional real-world applications"),
+        ],
+    },
+    "lessons_data": _MATH_LESSONS,
+}
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SUBJECT REGISTRY
+# ═══════════════════════════════════════════════════════════════════════════════
+
+ALL_META = {
+    "biology":   _BIO_META,
+    "physics":   _PHY_META,
+    "chemistry": _CHEM_META,
+    "maths":     _MATH_META,
+}
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# BUILDERS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+def build_lesson_sequence(subject_key: str) -> "Document":
+    """Build the CBE Lesson Sequence document for a May18 subject."""
+    meta = ALL_META[subject_key]
+    lessons = meta["lessons_data"]
+
+    doc = Document()
+    _set_page_landscape(doc)
+
+    _doc_title(doc, f"{meta['subject']} | {meta['grade']} | {meta['substrand']}")
+    _doc_subtitle(doc,
+                  f"CBE Lesson Sequence  ·  {meta['lessons']} Lessons  ·  "
+                  f"{meta['lessons'] * 2} Periods")
+
+    # Sub-strand overview using meta rows (source docs have no Section A to parse)
+    _build_table0_overview(doc, meta)
+    _tbl_no_spacing(doc)
+    _tbl_no_spacing(doc)
+
+    summary_rows = meta["summary_table_rows"]
+
+    for lesson in lessons:
+        lesson_num = lesson["number"]
+        summary_row = (summary_rows[lesson_num - 1]
+                       if lesson_num - 1 < len(summary_rows) else None)
+
+        _add_page_break(doc)
+        _build_table_A(doc, lesson)
+        _tbl_no_spacing(doc)
+        _build_table_B(doc, lesson)
+        _tbl_no_spacing(doc)
+        _build_table_C_period(doc, lesson, 1)
+        _tbl_no_spacing(doc)
+        if lesson.get("period2_table"):
+            _build_table_C_period(doc, lesson, 2)
+            _tbl_no_spacing(doc)
+        _build_table_D(doc, lesson)
+        _tbl_no_spacing(doc)
+        _build_table_E(doc, summary_row)
+        _tbl_no_spacing(doc)
+        _tbl_no_spacing(doc)
+
+    return doc
+
+
+def build_final_explanation(subject_key: str) -> "Document":
+    """Build the Final Explanation document for a May18 subject."""
+    meta = ALL_META[subject_key]
+
+    doc = Document()
+    _set_page_landscape(doc)
+
+    substrand_topic = meta["substrand"].split(":")[-1].strip().upper()
+    fe_title = f"FINAL EXPLANATION: {substrand_topic}"
+
+    _doc_title(doc, f"{meta['subject']} | {meta['grade']} | {meta['substrand']}")
+    _doc_subtitle(doc, "Final Explanation Document")
+
+    # Header block
+    t0 = _new_table(doc, 5, 2)
+    _col_widths(t0, [2.083, 7.417])
+
+    c = _merge_row(t0, 0)
+    _shade(c, C_NAVY)
+    _cell_para(c, fe_title, bold=True, size_pt=11, color_hex=C_WHITE)
+
+    c = _merge_row(t0, 1)
+    _shade(c, C_TEAL)
+    _cell_para(c, f"{meta['subject']} {meta['grade']} — Student Assessment Document",
+               bold=True, size_pt=11, color_hex=C_WHITE)
+
+    for ri, label in enumerate(["Student Name", "Class", "Date"], start=2):
+        _shade(t0.rows[ri].cells[0], C_LT_BLUE)
+        _shade(t0.rows[ri].cells[1], C_WHITE)
+        _cell_para(t0.rows[ri].cells[0], label, bold=True, size_pt=9)
+        _cell_para(t0.rows[ri].cells[1],
+                   "_______________________________________________", size_pt=9)
+
+    _tbl_no_spacing(doc)
+
+    # Instructions block
+    t1 = _new_table(doc, 2, 1)
+    _col_widths(t1, [9.5])
+    _shade(t1.rows[0].cells[0], C_TEAL)
+    _cell_para(t1.rows[0].cells[0], "INSTRUCTIONS FOR STUDENTS",
+               bold=True, size_pt=11, color_hex=C_WHITE)
+    instructions = (
+        f"You have completed all {meta['lessons']} lessons of {meta['substrand']}. "
+        f"Write your COMPLETE EXPLANATION by answering all sections below.\n"
+        f"Driving Question: {meta['driving_question']}\n\n"
+        "Use evidence from investigations, discussions, and models from across this unit. "
+        "Use scientific/mathematical vocabulary accurately. Include labeled diagrams where appropriate. "
+        "Connect your explanations back to the anchoring phenomenon throughout."
+    )
+    _shade(t1.rows[1].cells[0], C_WHITE)
+    _cell_para_auto(t1.rows[1].cells[0], instructions)
+    _tbl_no_spacing(doc)
+
+    # One table per FE section (3r × 1c)
+    for section_data in meta["final_explanation_sections"]:
+        section_title = section_data[0]
+        prompts = section_data[1]
+        model_answer = section_data[2] if len(section_data) > 2 else ""
+
+        t = _new_table(doc, 3, 1)
+        _col_widths(t, [9.5])
+
+        _shade(t.rows[0].cells[0], C_MED_BLUE)
+        _cell_para(t.rows[0].cells[0], section_title.upper(), bold=True, size_pt=11,
+                   color_hex=C_WHITE)
+
+        _shade(t.rows[1].cells[0], C_LT_BLUE)
+        _cell_para_auto(t.rows[1].cells[0], prompts)
+
+        _shade(t.rows[2].cells[0], C_WHITE)
+        _cell_para_auto(t.rows[2].cells[0], model_answer)
+
+        _tbl_no_spacing(doc)
+
+    # Assessment rubric
+    rubric = meta["final_explanation_rubric"]
+    rub_rows = rubric["rows"]
+    num_cols = len(rubric["headers"])
+    remaining = 9.5 - 2.0
+    other_w = round(remaining / (num_cols - 1), 3) if num_cols > 1 else remaining
+    col_widths = [2.0] + [other_w] * (num_cols - 1)
+
+    trub = _new_table(doc, 2 + len(rub_rows), num_cols)
+    _col_widths(trub, col_widths)
+
+    c = _merge_row(trub, 0)
+    _shade(c, C_NAVY)
+    _cell_para(c, "ASSESSMENT RUBRIC", bold=True, size_pt=11, color_hex=C_WHITE,
+               align=WD_ALIGN_PARAGRAPH.CENTER)
+
+    hdr_fills = [C_MED_BLUE, C_TEAL, C_MED_BLUE, C_TEAL, C_MED_BLUE][:num_cols]
+    for cell, hdr, fill in zip(trub.rows[1].cells, rubric["headers"], hdr_fills):
+        _shade(cell, fill)
+        _cell_para(cell, hdr, bold=True, size_pt=9, color_hex=C_WHITE,
+                   align=WD_ALIGN_PARAGRAPH.CENTER)
+
+    alt = [C_WHITE, C_LT_GRAY, C_WHITE, C_LT_GRAY]
+    for ri, row_data in enumerate(rub_rows):
+        row = trub.rows[ri + 2]
+        _shade(row.cells[0], C_LT_BLUE)
+        _cell_para(row.cells[0], row_data[0], bold=True, size_pt=9)
+        for cell, val, fill in zip(row.cells[1:], row_data[1:], alt):
+            _shade(cell, fill)
+            _cell_para_auto(cell, val)
+
+    _tbl_no_spacing(doc)
+    return doc
+
+
+def build_summary_table(subject_key: str) -> "Document":
+    """Build the Summary Table document for a May18 subject."""
+    meta = ALL_META[subject_key]
+
+    doc = Document()
+    _set_page_landscape(doc)
+
+    _doc_title(doc, f"{meta['subject']} | {meta['grade']} | {meta['substrand']}")
+    _doc_subtitle(doc, "Summary Table")
+
+    # Instructions table
+    t_instr = _new_table(doc, 2, 1)
+    _col_widths(t_instr, [9.5])
+    _shade(t_instr.rows[0].cells[0], C_TEAL)
+    _cell_para(t_instr.rows[0].cells[0], "SUMMARY TABLE — INSTRUCTIONS",
+               bold=True, size_pt=11, color_hex=C_WHITE)
+    _shade(t_instr.rows[1].cells[0], C_WHITE)
+    _cell_para_auto(t_instr.rows[1].cells[0], meta.get("summary_instructions", ""))
+    _tbl_no_spacing(doc)
+
+    headers = meta["summary_table_headers"]
+    rows = meta["summary_table_rows"]
+    num_cols = len(headers)
+
+    # Column widths: lesson number narrow, rest equal
+    lesson_w = 0.7
+    rest_w = round((9.5 - lesson_w) / (num_cols - 1), 3)
+    col_ws = [lesson_w] + [rest_w] * (num_cols - 1)
+
+    tsummary = _new_table(doc, 1 + len(rows), num_cols)
+    _col_widths(tsummary, col_ws)
+
+    # Header row
+    hdr_fills = [C_NAVY, C_MED_BLUE, C_TEAL, C_MED_BLUE, C_TEAL][:num_cols]
+    for cell, hdr, fill in zip(tsummary.rows[0].cells, headers, hdr_fills):
+        _shade(cell, fill)
+        _cell_para(cell, hdr, bold=True, size_pt=9, color_hex=C_WHITE,
+                   align=WD_ALIGN_PARAGRAPH.CENTER)
+        cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+
+    alt_fills = [C_WHITE, C_LT_GRAY]
+    for ri, row_data in enumerate(rows):
+        row = tsummary.rows[ri + 1]
+        fill = alt_fills[ri % 2]
+        for ci, (cell, val) in enumerate(zip(row.cells, row_data)):
+            _shade(cell, fill if ci > 0 else C_LT_BLUE)
+            cell.vertical_alignment = WD_ALIGN_VERTICAL.TOP
+            if ci == 0:
+                _cell_para(cell, str(val), bold=True, size_pt=9,
+                            align=WD_ALIGN_PARAGRAPH.CENTER)
+            else:
+                txt = str(val)
+                if len(txt) > 80:
+                    _cell_para_lines(cell, _prose_to_bullets(txt))
+                else:
+                    _cell_para_auto(cell, txt)
+
+    _tbl_no_spacing(doc)
+    return doc
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MAIN
+# ═══════════════════════════════════════════════════════════════════════════════
+
+if __name__ == "__main__":
+    for subj in ("biology", "physics", "chemistry", "maths"):
+        paths = OUTPUTS[subj]
+        print(f"\n=== {subj.upper()} ===")
+
+        doc = build_lesson_sequence(subj)
+        doc.save(paths["lesson_seq"])
+        print(f"  Saved: {paths['lesson_seq'].name}")
+
+        doc = build_final_explanation(subj)
+        doc.save(paths["final_exp"])
+        print(f"  Saved: {paths['final_exp'].name}")
+
+        doc = build_summary_table(subj)
+        doc.save(paths["summary_tbl"])
+        print(f"  Saved: {paths['summary_tbl'].name}")
+
+    print("\nDone. All 12 files written to", OUT_DIR)
