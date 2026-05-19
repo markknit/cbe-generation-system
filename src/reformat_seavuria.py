@@ -1339,6 +1339,14 @@ def _cell_para_lines(cell, content: list, size_pt: int = 9):
         elif kind == "quote":
             p.paragraph_format.left_indent = Pt(18)
             _apply_run(p, text, size_pt=size_pt, italic=True)
+        # gen_* kinds: same layout as base kind but rendered in italic
+        elif kind == "gen_h3":
+            _apply_run(p, text, bold=True, size_pt=size_pt, italic=True)
+        elif kind == "gen_bullet":
+            p.paragraph_format.left_indent = Pt(12)
+            _apply_run(p, f"• {text}", size_pt=size_pt, italic=True)
+        elif kind == "gen_text":
+            _apply_run(p, text, size_pt=size_pt, italic=True)
         else:
             _apply_run(p, text, size_pt=size_pt)
 
