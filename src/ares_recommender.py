@@ -51,13 +51,12 @@ def _ares_search_url(terms: str) -> str:
 
 def _kolibri_content_url(kolibri_id: str, is_storage: bool = False) -> str:
     """
-    Direct Kolibri content link.
-    kolibri_storage rows use port 8069 (IDs match live server).
-    channel_db rows use name-search fallback (IDs unreliable).
+    Direct Kolibri content link via port 8069.
+    kolibri_storage IDs are confirmed correct.
+    channel_db IDs may differ on live server — link provided as best-effort;
+    name-search fallback always shown alongside.
     """
-    if is_storage:
-        return f"http://{ARES_HOST}:8069/en/learn/#/topics/c/{kolibri_id}"
-    return ""  # channel_db IDs don't match live server — use name search instead
+    return f"http://{ARES_HOST}:8069/en/learn/#/topics/c/{kolibri_id}"
 
 def _kiwix_url(db_path: str) -> str:
     """

@@ -13,7 +13,7 @@
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
   WidthType, AlignmentType, ShadingType, VerticalAlign, BorderStyle,
-  PageOrientation, HeadingLevel,
+  PageOrientation, HeadingLevel, TableLayoutType,
 } = require('docx');
 const fs   = require('fs');
 const path = require('path');
@@ -177,6 +177,7 @@ function makeTable(rows, columnWidths = [W]) {
   const tableW = columnWidths.reduce((a, b) => a + b, 0);
   return new Table({
     width: { size: tableW, type: WidthType.DXA },
+    layout: TableLayoutType.FIXED,
     columnWidths,
     borders: {
       top:          { style: BorderStyle.SINGLE, size: 4, color: 'AAAAAA' },
@@ -276,9 +277,10 @@ function sectionC(lesson) {
     cell('Formative Assessment Strategy', { fill: C.medBlue, bold: true, color: 'FFFFFF', w: cw[5], size: SZ }),
   ]});
 
+  const aresTopic = lesson.aresKeywords || lesson.title || '';
   const aresRes = getAllPhaseResources({
     substrand: lesson.substrand || 'Cell Structure and Specialisation',
-    topic:     lesson.title     || '',
+    topic:     aresTopic,
     subject:   'Biology',
   });
 
@@ -502,6 +504,7 @@ const LESSONS = [
   {
     number: 1,
     title: 'The Salamander Phenomenon — Why Do We Study Cells?',
+      aresKeywords: 'cell structure organelles eukaryotic biology',
     duration: '2 periods / 80 minutes',
     slo: {
       purpose: 'Launch the unit with a compelling, puzzling phenomenon. Activate prior knowledge. Create initial models. Start the Driving Question Board.',
@@ -692,6 +695,7 @@ const LESSONS = [
   {
     number: 2,
     title: 'Tools of the Trade — Light Microscope vs Electron Microscope',
+      aresKeywords: 'light microscope electron microscope magnification biology',
     duration: '2 periods / 80 minutes',
     slo: {
       purpose: 'Equip students with understanding of microscopy tools so they can access cell structure evidence in subsequent lessons.',
@@ -877,6 +881,7 @@ const LESSONS = [
   {
     number: 3,
     title: 'Preparing Temporary Slides — Observing Real Plant Cells',
+      aresKeywords: 'temporary slides plant cells onion microscope staining',
     duration: '3 periods / 120 minutes',
     slo: {
       purpose: 'Students gather first-hand evidence of cell structure by preparing and observing their own temporary slides.',
@@ -1064,6 +1069,7 @@ const LESSONS = [
   {
     number: 4,
     title: 'Inside the Cell — Organelles Under the Electron Microscope',
+      aresKeywords: 'organelles electron microscope cell structure eukaryotic',
     duration: '2 periods / 80 minutes',
     slo: {
       purpose: 'Students study EM images to identify the major organelles of plant and animal cells and relate each structure to its function.',
@@ -1240,6 +1246,7 @@ const LESSONS = [
   {
     number: 5,
     title: 'Plant vs Animal Cells — Key Differences',
+      aresKeywords: 'plant animal cell differences chloroplast cell wall vacuole',
     duration: '2 periods / 80 minutes',
     slo: {
       purpose: 'Students systematically distinguish plant and animal cells, connecting differences to the functions of whole plants and animals.',
@@ -1408,6 +1415,7 @@ const LESSONS = [
   {
     number: 6,
     title: 'Specialised Cells in Plants — Structure Serves Function',
+      aresKeywords: 'specialised cells plants xylem phloem guard cells',
     duration: '2 periods / 80 minutes',
     slo: {
       purpose: 'Students investigate plant cell specialisation — connecting the unique structure of each cell type to its specific function in the plant.',
@@ -1579,6 +1587,7 @@ const LESSONS = [
   {
     number: 7,
     title: 'Specialised Cells in Animals — Connecting Back to the Salamander',
+      aresKeywords: 'specialised cells animals nerve muscle red blood cell',
     duration: '2 periods / 80 minutes',
     slo: {
       purpose: 'Students investigate animal cell specialisation, directly connecting to the anchoring phenomenon (salamander) and completing the explanation of how one cell produces many different types.',
@@ -1761,6 +1770,7 @@ const LESSONS = [
   {
     number: 8,
     title: 'Levels of Organisation — From Cell to Organism',
+      aresKeywords: 'levels organisation cell tissue organ organism biology',
     duration: '3 periods / 120 minutes',
     slo: {
       purpose: 'Students complete the unit by understanding how specialised cells form tissues, organs, and organ systems — giving the whole organism its capabilities.',
