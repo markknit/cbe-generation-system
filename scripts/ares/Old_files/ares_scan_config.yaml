@@ -1,0 +1,196 @@
+# ares_scan_config.yaml
+# Kenya CBE Lesson Plan Generation System — ARES Content Index
+# Configured for jhm-spark (paths via symlinks matching original ARES paths)
+
+# ─── Content Sources ──────────────────────────────────────────────────────────
+
+content_sources:
+
+  - name: "ARES Web"
+    path: "/mnt/sda3/var/www/modules"
+    type: "web"
+
+  - name: "Kiwix"
+    path: "/mnt/sda3/var/Downloads2/Data/Currentcontent"
+    type: "kiwix"
+    scan_articles: true
+    skip_zim_above_gb: 20
+    max_articles_per_zim: 2000
+    scan_zim_patterns:
+      - "wikipedia_en_chemistry_*.zim"
+      - "wikipedia_en_physics_*.zim"
+      - "wikipedia_en_mathematics_*.zim"
+      - "wikipedia_en_for_schools_*.zim"
+      - "wikipedia_en_astronomy_*.zim"
+      - "khan-academy-videos_en_*.zim"
+      - "boundless-*.zim"
+      - "ted_en_playlist-*.zim"
+      - "ubongo_*.zim"
+
+  - name: "Kolibri"
+    path: "/mnt/sda3/Kolibri_Data-current/Content"
+    type: "kolibri"
+
+
+# ─── Output ───────────────────────────────────────────────────────────────────
+
+output_db: "/home/markk/ares/cbe-generation-system/data/ares_index/ares_content.db"
+output_json_dir: "/home/markk/ares/cbe-generation-system/data/ares_index/"
+log_file: "/home/markk/ares/cbe-generation-system/data/ares_index/scan.log"
+
+
+# ─── Whisper Transcript Integration ──────────────────────────────────────────
+
+whisper_transcript_root: "/mnt/sda3/var/www/modules"
+whisper_output_format: "json"
+whisper_mirror_tree: false
+store_transcript_text: true
+transcript_text_limit: 20000
+
+
+# ─── File Extensions (Web source only) ────────────────────────────────────────
+
+file_extensions:
+  video:   [".mp4", ".webm", ".ogv", ".m4v"]
+  audio:   [".mp3", ".ogg", ".wav", ".m4a"]
+  pdf:     [".pdf"]
+  html:    [".html", ".htm"]
+  image:   [".jpg", ".jpeg", ".png", ".gif", ".svg", ".webp"]
+  transcript: [".srt", ".vtt"]
+  transcript_json: [".json"]
+
+skip_directories:
+  - ".git"
+  - "__pycache__"
+  - "node_modules"
+  - "thumbs"
+  - "thumbnails"
+  - "cache"
+  - "tmp"
+  - ".DS_Store"
+
+max_extract_size_mb: 10
+
+
+# ─── Subject Classification ───────────────────────────────────────────────────
+
+subject_keywords:
+  Biology:
+    - biology
+    - cell
+    - organism
+    - photosynthesis
+    - respiration
+    - genetics
+    - DNA
+    - evolution
+    - ecology
+    - anatomy
+    - nutrition
+    - enzyme
+    - microbe
+    - bacteria
+    - virus
+    - fungi
+    - plant
+    - animal
+    - mitosis
+    - meiosis
+    - osmosis
+    - diffusion
+    - biodiversity
+    - specimen
+    - chlorophyll
+    - chromosome
+    - nucleus
+  Chemistry:
+    - chemistry
+    - chemical
+    - atom
+    - molecule
+    - element
+    - compound
+    - reaction
+    - periodic
+    - acid
+    - base
+    - alkali
+    - oxidation
+    - reduction
+    - titration
+    - electrolysis
+    - mole
+    - stoichiometry
+    - organic
+    - polymer
+    - salt
+    - bond
+    - electron
+    - ionic
+    - covalent
+  Physics:
+    - physics
+    - force
+    - motion
+    - velocity
+    - acceleration
+    - energy
+    - work
+    - power
+    - electricity
+    - magnetism
+    - wave
+    - light
+    - optics
+    - gravity
+    - momentum
+    - pressure
+    - thermodynamics
+    - nuclear
+    - radioactivity
+    - circuit
+    - current
+    - voltage
+    - frequency
+    - amplitude
+  Mathematics:
+    - mathematics
+    - maths
+    - algebra
+    - geometry
+    - trigonometry
+    - calculus
+    - statistics
+    - probability
+    - equation
+    - function
+    - graph
+    - coordinate
+    - vector
+    - matrix
+    - fraction
+    - ratio
+    - proportion
+    - quadratic
+    - logarithm
+
+
+# ─── Kolibri Content Kind Mapping ─────────────────────────────────────────────
+
+kolibri_kind_map:
+  video:     "video"
+  audio:     "audio"
+  document:  "pdf"
+  exercise:  "exercise"
+  html5:     "html"
+  h5p:       "h5p"
+  topic:     "topic"
+  slideshow: "html"
+
+
+# ─── Output Options ───────────────────────────────────────────────────────────
+
+extract_html_text: true
+extract_pdf_text: true
+extract_keywords: true
+keyword_count: 20
