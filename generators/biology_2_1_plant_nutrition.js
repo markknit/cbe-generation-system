@@ -1,0 +1,896 @@
+'use strict';
+
+const {
+  Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
+  WidthType, AlignmentType, ShadingType, VerticalAlign, BorderStyle,
+  PageOrientation, TableLayoutType,
+} = require('docx');
+const fs   = require('fs');
+const path = require('path');
+const { getAllPhaseResources, buildResourceParagraphs } = require('./aresResources');
+
+const BASE = path.join(__dirname, '..', 'data', 'outputs', 'docx', 'Grade 10 Bio', 'Bio 2.1 Plant Nutrition');
+const OUT_DOCX = path.join(BASE, 'docx');
+for (const d of [OUT_DOCX]) {
+  if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
+}
+
+const C = {
+  darkBlue:    '1F3864',
+  medBlue:     '2E75B6',
+  lightBlue:   'D5E8F0',
+  teal:        '1F6B75',
+  lightTeal:   'D9EEF1',
+  green:       '375623',
+  lightGreen:  'E2EFDA',
+  orange:      'C55A11',
+  lightOrange: 'FCE4D6',
+  purple:      '7030A0',
+  lightPurple: 'EAD1F5',
+  grey:        'F2F2F2',
+  white:       'FFFFFF',
+};
+
+const PHASE_COLOUR = {
+  'Predict Phase':                         C.lightPurple,
+  'Observe Phase':                         C.lightTeal,
+  'Explain Phase':                         C.lightGreen,
+  'Driving Question Board (DQB) Creation': C.lightOrange,
+  'Model Building Phase':                  C.lightBlue,
+};
+
+const W    = 13680;
+const FONT = 'Arial';
+const SZ   = 18;
+const SZ_H = 22;
+const SZ_T = 28;
+
+function para(text, opts = {}) {
+  return new Paragraph({
+    alignment: opts.align || AlignmentType.LEFT,
+    spacing:   { after: opts.after ?? 60, before: opts.before ?? 0 },
+    children:  [new TextRun({
+      text, font: FONT, size: opts.size || SZ,
+      bold: opts.bold || false, color: opts.color || '000000', italics: opts.italic || false,
+    })],
+  });
+}
+
+function bullet(text, opts = {}) {
+  return new Paragraph({
+    alignment: AlignmentType.LEFT,
+    spacing: { after: 30, before: 0 },
+    indent:  { left: 360, hanging: 180 },
+    children: [new TextRun({
+      text: '\u2013  ' + text, font: FONT,
+      size: opts.size || SZ, bold: opts.bold || false, color: opts.color || '000000',
+    })],
+  });
+}
+
+function cell(content, opts = {}) {
+  const { fill = C.white, w = null, span = 1, vAlign = VerticalAlign.TOP,
+          bold = false, color = '000000', size = SZ, align = AlignmentType.LEFT, italic = false } = opts;
+  let children;
+  if (typeof content === 'string') {
+    children = content === ''
+      ? [para('', { size })]
+      : content.split('\n').map(line =>
+          (line.startsWith('• ') || line.startsWith('- '))
+            ? bullet(line.slice(2), { size, bold, color })
+            : para(line, { size, bold, color, align, italic, after: 40 })
+        );
+  } else if (Array.isArray(content)) {
+    children = content;
+  } else {
+    children = [content];
+  }
+  const def = {
+    verticalAlign: vAlign,
+    shading: { type: ShadingType.CLEAR, color: 'auto', fill },
+    margins: { top: 60, bottom: 60, left: 120, right: 120 },
+    children,
+  };
+  if (w !== null) def.width = { size: w, type: WidthType.DXA };
+  if (span > 1)   def.columnSpan = span;
+  return new TableCell(def);
+}
+
+function fullHeader(text, fill, textColor = 'FFFFFF', size = SZ_H, numCols = 2) {
+  return new TableRow({
+    children: [cell(text, { fill, color: textColor, bold: true, size, align: AlignmentType.CENTER, span: numCols, w: W })],
+  });
+}
+
+function labelRow(label, content, labelW = 3000, opts = {}) {
+  const cw = W - labelW;
+  return new TableRow({ children: [
+    cell(label,   { fill: opts.labelFill   || C.lightBlue, bold: true, w: labelW, size: SZ }),
+    cell(content, { fill: opts.contentFill || C.white,     w: cw,      size: SZ }),
+  ]});
+}
+
+function makeTable(rows, columnWidths = [W]) {
+  const tableW = columnWidths.reduce((a, b) => a + b, 0);
+  return new Table({
+    width: { size: tableW, type: WidthType.DXA },
+    layout: TableLayoutType.FIXED,
+    columnWidths,
+    borders: {
+      top:     { style: BorderStyle.SINGLE, size: 4, color: 'AAAAAA' },
+      bottom:  { style: BorderStyle.SINGLE, size: 4, color: 'AAAAAA' },
+      left:    { style: BorderStyle.SINGLE, size: 4, color: 'AAAAAA' },
+      right:   { style: BorderStyle.SINGLE, size: 4, color: 'AAAAAA' },
+      insideH: { style: BorderStyle.SINGLE, size: 2, color: 'CCCCCC' },
+      insideV: { style: BorderStyle.SINGLE, size: 2, color: 'CCCCCC' },
+    },
+    rows,
+  });
+}
+
+const SPACE = () => para('', { after: 120 });
+const PAGE_BREAK = () => new Paragraph({ pageBreakBefore: true, children: [] });
+
+function titleBlock(title, subtitle) {
+  return [
+    para(title,    { bold: true, size: SZ_T, color: C.darkBlue, align: AlignmentType.CENTER, after: 80 }),
+    para(subtitle, { size: SZ_H, color: C.teal, align: AlignmentType.CENTER, after: 160 }),
+  ];
+}
+
+const UNIT = {
+  gradeLevel:  'Grade 10',
+  subject:     'Biology',
+  strand:      'Strand 2.0: Anatomy and Physiology of Plants',
+  substrand:   'Sub-Strand 2.1: Nutrition',
+  duration:    '12 lessons x 40 minutes = 480 minutes total',
+  content:
+    '• Types of nutrition: autotrophic and heterotrophic (carnivorous, saprophytic, parasitic, symbiotic)\n' +
+    '• Structure of the chloroplast and its role in photosynthesis\n' +
+    '• Light-dependent reactions (light stage): photolysis, ATP synthesis, NADPH production\n' +
+    '• Light-independent reactions (dark stage/Calvin cycle): CO2 fixation, glucose synthesis\n' +
+    '• Factors affecting the rate of photosynthesis: light intensity, CO2 concentration, temperature, water\n' +
+    '• Significance of photosynthesis: food chains, oxygen production, carbon cycle, food security',
+  learningOutcomes:
+    'By the end of the sub-strand, the learner should be able to:\n' +
+    'a) identify types of nutrition in plants\n' +
+    'b) describe the structure of the chloroplast in relation to photosynthesis\n' +
+    'c) explain light-dependent and light-independent reactions of photosynthesis\n' +
+    'd) investigate factors affecting the rate of photosynthesis\n' +
+    'e) explain the significance of photosynthesis to living things and the environment',
+  coreCompetencies:
+    '• Critical Thinking and Problem Solving: analysing photosynthesis data and designing investigations\n' +
+    '• Communication and Collaboration: presenting research findings and engaging in peer feedback\n' +
+    '• Digital Literacy: using simulations (PhET, LabXchange) to model photosynthesis processes\n' +
+    '• Learning to Learn: connecting new concepts to prior knowledge of cell biology\n' +
+    '• Self-Efficacy: building confidence through hands-on experiments (Elodea, chromatography)\n' +
+    '• Creativity and Innovation: designing plant survival scenarios and storyline threads\n' +
+    '• Citizenship: understanding photosynthesis in the context of Kenyan food security and climate',
+  values:
+    '• Responsibility: careful laboratory practice and environmental stewardship\n' +
+    '• Respect: valuing diverse observations and group contributions\n' +
+    '• Integrity: recording experimental data honestly\n' +
+    '• Unity: collaborative group investigations\n' +
+    '• Excellence: striving for accurate scientific explanations\n' +
+    '• Care and Compassion: appreciating the role of plants in sustaining all life\n' +
+    '• Peace and Social Justice: linking food security and photosynthesis to equitable access to nutrition',
+  pcis:
+    '• Environmental Conservation: photosynthesis and the global carbon cycle; deforestation impacts\n' +
+    '• Food Security: photosynthesis as the foundation of all food chains; agricultural productivity in Kenya\n' +
+    '• Climate Change: plants as carbon sinks; role of forests in regulating temperature\n' +
+    '• Safety and Security: safe handling of chemicals (iodine, ethanol) in leaf experiments',
+  keyInquiry:
+    'How do plants get the materials and energy they need to grow, and why does this process matter for all life on Earth?',
+  phenomenon:
+    'A time-lapse video shows a pumpkin seed (0.5 g) germinating and growing into a massive pumpkin (>= 300 kg) over several months. ' +
+    'Students observe: the seed never visibly "eats" anything from the soil. Where did those 300 kg of matter come from?\n' +
+    'Secondary: students hold a fresh maize leaf from a Kenyan shamba up to the light -- it glows green. ' +
+    'Ask: "What is the leaf actually doing with that light?"',
+  drivingQuestion:
+    'How does a tiny seed become a massive plant -- where do all the materials and energy come from, ' +
+    'and how does the process that powers plant growth sustain all life on Earth?',
+  storylineThread:
+    'L1: Mystery -- where did 300 kg come from? Initial models. DQB opened.\n' +
+    'L2: Types of nutrition -- not all plants make their own food. Autotrophic vs heterotrophic.\n' +
+    'L3: Chloroplast structure -- the "solar powerhouse" inside every green cell.\n' +
+    'L4: Light stage -- sunlight splits water; oxygen is released; ATP and NADPH made.\n' +
+    'L5: Dark stage -- CO2 fixed into glucose using ATP and NADPH. KEY INSIGHT: mass comes from CO2, not soil.\n' +
+    'L6: Factors -- light intensity, CO2, temperature, water all limit the rate of mass gain.\n' +
+    'L7: Adaptations -- how Kakamega Forest, Turkana, and Lake Victoria plants solve different challenges.\n' +
+    'L8: Heterotrophic plants -- Striga, sundew, saprophytes -- what happens when chlorophyll is missing?\n' +
+    'L9: Significance -- photosynthesis powers all food chains; produces all atmospheric oxygen; drives carbon cycle.\n' +
+    'L10: Research -- groups investigate a real Kenyan photosynthesis application (tea, sugarcane, reforestation).\n' +
+    'L11: Synthesis -- presentations; final model revision; DQB near-complete.\n' +
+    'L12: Final Explanation -- answer the driving question with full scientific evidence.',
+};
+
+
+const LESSONS = [
+  {
+    number: 1,
+    aresKeywords: 'photosynthesis plant growth phenomenon pumpkin',
+    title: 'The Pumpkin Mystery -- Phenomenon Launch',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students observe the pumpkin time-lapse, articulate their prior knowledge about plant growth, and open the DQB with their initial wonderings.',
+      knowledge: '• Recall that plants need sunlight, water, and carbon dioxide to grow\n• Identify that plants have a different nutrition strategy from animals\n• Define phenomenon and driving question in the context of NGSS storyline learning',
+      skills: '• Observe and record detailed observations from a video phenomenon\n• Generate scientific questions from observations\n• Create an initial model explaining where plant mass comes from',
+      attitudes: '• Curiosity about unexplained natural phenomena\n• Openness to revising ideas as new evidence emerges\n• Appreciation that science begins with careful observation',
+      keyInquiry: 'How does a tiny seed become a massive plant -- where do all the materials and energy come from?',
+      purposeInStoryline: 'This lesson launches the mystery. Students commit to an initial explanation they will revise across Lessons 2-12.',
+      safetyNotes: 'No hazards. If using a real pumpkin for tactile engagement, handle with care.',
+    },
+    overview: 'The lesson opens with a 2-minute time-lapse video of a pumpkin growing from seed to 300 kg. Students watch silently the first time, then write observations. The teacher asks: Where did all that mass come from? Students discuss in pairs, then share initial ideas (soil? water? air? sunlight?). Most will say soil -- this creates the productive tension the storyline will resolve.\n\nStudents create their Lesson 1 model: a diagram showing where they think plant mass originates. The DQB is opened; each student adds one What I wonder card. The class votes on the most important questions for the unit.',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'Before we watch: if a seed weighs 0.5 g and the plant grows to 300 kg, where did those extra 299.5 kg come from? Write your best prediction. Groups share; teacher records on board without evaluating.', resource: 'MATERIAL: Science notebooks, pens\nDIGITAL: Pumpkin time-lapse video', teacherMoves: 'Do not evaluate yet -- just record all predictions.\nSoil? Water? Air? Sunlight? Record everything the class suggests.', sensemakingStrategy: 'Surfacing prior knowledge reveals the soil misconception that the storyline will resolve.', formativeAssessment: 'How many students say soil? This is the key misconception to track across the unit.' },
+      { phase: 'Observe Phase', learnerExperience: 'Watch the pumpkin time-lapse twice. First watch: What do you see? Second watch: What is NOT visible -- what must be happening but cannot be seen? Students note: no visible eating, roots absorbing water but water is mostly liquid, green colour appearing. Thought experiment: if 300 kg came from soil, would the soil get 300 kg lighter?', resource: 'MATERIAL: Pumpkin time-lapse video\nOPTIONAL: A real pumpkin seed and large pumpkin for comparison', teacherMoves: 'Watch silently first. Write every observation.\nIf the pumpkin grew 300 kg from the soil, would the soil get 300 kg lighter?', sensemakingStrategy: 'Double viewing separates surface observation from deeper inference.', formativeAssessment: 'Do students note that no visible eating occurs? This gap drives the unit.' },
+      { phase: 'Explain Phase', learnerExperience: 'Class shares observations. Key idea surfaced: plants do not visibly eat anything. Students learn: photosynthesis is the process plants use to make food. BUT which ingredient provides the most mass? Students write their initial explanation in their Science Notebook.', resource: 'MATERIAL: Whiteboard for class observation list, Science Notebooks', teacherMoves: 'We have a name for what plants do: photosynthesis. But WHICH ingredient provides the 300 kg? That is our question for 12 lessons.\nWrite your best current explanation -- even if you are not sure.', sensemakingStrategy: 'Naming photosynthesis without resolving the mystery maintains productive tension.', formativeAssessment: 'Initial explanations reveal prior knowledge and misconceptions for Lessons 2-5.' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'Open the Driving Question Board. Driving question written at top: How does a tiny seed become a massive plant? Students write individual question cards: Does CO2 have mass?, What happens inside the green leaf?, What is photosynthesis really doing? Sort into categories.', resource: 'MATERIAL: DQB board (large paper or whiteboard), sticky notes, markers', teacherMoves: 'Post any question -- even if you think it is too hard. All of these will be answered by Lesson 12.', sensemakingStrategy: 'DQB opens the intellectual agenda for the unit.', formativeAssessment: 'Review DQB after class -- identifies prior knowledge students are building on.' },
+      { phase: 'Model Building Phase', learnerExperience: 'Students draw Lesson 1 Model: inputs -> plant -> outputs. Most will draw: soil + water + sunlight -> plant. This initial incomplete model will be revised throughout the unit. Teacher photographs all models for comparison at Lesson 12.', resource: 'MATERIAL: Model Journal page (Lesson 1), pencils, coloured pens', teacherMoves: 'Your model is a snapshot of your thinking RIGHT NOW. There are no wrong answers yet.\nBy Lesson 12, this model should show exactly where every kilogram of the pumpkin came from.', sensemakingStrategy: 'Initial model as baseline for growth tracking across 12 lessons.', formativeAssessment: 'Do students annotate inputs and outputs? Do they identify sunlight as energy not matter?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. What initial explanations did students give for where plant mass comes from? How many said soil? How many said air or CO2?\n\n2. Did the pumpkin time-lapse create genuine curiosity? What was the most surprising student reaction?\n\n3. Quality of DQB questions: are they scientific and investigable? Or vague? How did you guide improvement?\n\n4. Initial models: what misconceptions are already visible (e.g. sunlight as a material rather than energy source)?\n\n5. Did students understand what a model is in science -- a simplified explanation, not just a drawing?\n\n6. How will you use the initial models at Lesson 12 for comparison?',
+    summaryTablePrompt: { observed: 'Watched time-lapse of pumpkin growing from 0.5 g seed to over 300 kg. No visible eating -- plant seems to make mass from invisible sources.', learned: 'Plants use photosynthesis to make their own food. Unlike animals, they do not eat other organisms. But WHERE the mass actually comes from remains a mystery to investigate.', explained: 'The pumpkin\'s massive growth is a mystery our initial model cannot explain. Most of the mass cannot come from soil alone -- something invisible (CO2 from air?) must be the main ingredient.' },
+  },
+  {
+    number: 2,
+    aresKeywords: 'autotrophic heterotrophic nutrition plants',
+    title: 'Types of Nutrition -- Not All Plants Make Their Own Food',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students investigate autotrophic and heterotrophic nutrition in plants, recognising that photosynthesis is the norm but exceptions exist.',
+      knowledge: '• Define autotrophic nutrition: using light energy to synthesise food from inorganic materials\n• Define heterotrophic nutrition: obtaining food by consuming/absorbing organic matter from other organisms\n• Classify heterotrophic plants: carnivorous (sundew, Venus flytrap), parasitic (Striga, dodder), saprophytic, symbiotic (Rhizobium)\n• State the overall word equation for photosynthesis: carbon dioxide + water -> glucose + oxygen (in the presence of light and chlorophyll)',
+      skills: '• Construct and use a comparison table for autotrophic vs heterotrophic nutrition\n• Classify plant specimens or images by nutrition type\n• Interpret images of Striga infestations in Kenyan maize fields',
+      attitudes: '• Appreciation of biodiversity -- not all plants follow the same strategy\n• Concern for Kenyan farmers affected by Striga (witchweed) infestation\n• Curiosity about extreme solutions: carnivorous plants catching insects',
+      keyInquiry: 'How do plants get the materials and energy they need to grow, and why does this process matter for all life on Earth?',
+      purposeInStoryline: 'Establishes that photosynthesis (autotrophic) is the dominant strategy before the unit dives into its mechanism. Kenyan Striga context makes the content relevant.',
+      safetyNotes: 'Handle iodine stain with care; avoid skin and eye contact.',
+    },
+    overview: 'The lesson begins with a POE (Predict-Observe-Explain) cycle using a photograph of Striga (witchweed) attacking a maize plant in western Kenya. Students predict: Is Striga a plant? Does it photosynthesise? The bright orange/yellow Striga flower has little chlorophyll -- students observe it cannot be making all its own food.\n\nA comparison table is built: Autotrophic (sunlight -> chlorophyll -> glucose) vs Heterotrophic (carnivorous / parasitic / saprophytic / symbiotic). The word equation for photosynthesis is introduced as a summary: CO2 + H2O -> Glucose + O2. Model is revised to show two nutrition pathways.',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'Show image of Striga (witchweed) flowering on a maize stalk. Is this a plant? Does it photosynthesise? Could a Kenyan farmer\'s maize be harmed by this? Record predictions.', resource: 'MATERIAL: Printed photograph of Striga on maize (western Kenya)', teacherMoves: 'Do not explain Striga yet. Let students predict from visual evidence alone.\nIs the yellow/orange colour significant? What does it suggest about chlorophyll?', sensemakingStrategy: 'Visual anomaly (low-chlorophyll parasite) creates cognitive dissonance that drives inquiry.', formativeAssessment: 'Do students identify the unusual colour as evidence of reduced photosynthesis?' },
+      { phase: 'Observe Phase', learnerExperience: 'Gallery walk of 4 stations (images + brief text): Station 1 -- Sundew leaf catching insect: carnivorous; Station 2 -- Striga on maize: parasitic; Station 3 -- Mushroom on dead log: saprophytic; Station 4 -- Rhizobium root nodules on a bean plant: symbiotic. Students record: What does it eat? Where does its carbon come from? Does it have chlorophyll?', resource: 'MATERIAL: 4 station cards with images and brief descriptions', teacherMoves: 'At each station: What is the carbon source for this organism? Where does its energy come from?', sensemakingStrategy: 'Gallery walk exposes students to diversity of heterotrophic strategies before formal classification.', formativeAssessment: 'Do students correctly identify the carbon source for each strategy?' },
+      { phase: 'Explain Phase', learnerExperience: 'Build class comparison table. Autotrophic: uses sunlight + CO2 + H2O -> makes glucose. Heterotrophic: obtains organic carbon from another organism. Introduce photosynthesis word equation: Carbon dioxide + Water -> Glucose + Oxygen (requires: light energy + chlorophyll). Why would Striga harm the maize? It is stealing water and minerals -- reducing what the maize can use for photosynthesis.', resource: 'MATERIAL: Whiteboard, comparison table template', teacherMoves: 'Why does Striga reduce the maize yield? It is not just competition -- it actively steals resources the maize needs for photosynthesis.', sensemakingStrategy: 'Comparison table formalises the autotrophic/heterotrophic distinction. Word equation introduced as shorthand.', formativeAssessment: 'Can students explain why Striga reduces maize photosynthesis rate?' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'Add new cards: What exactly is chlorophyll? How does light energy get converted to glucose? Why does the sundew digest insects? Mark L2 questions on DQB.', resource: 'MATERIAL: DQB board, sticky notes', teacherMoves: 'These are the questions we will answer in Lessons 3-5.', sensemakingStrategy: 'DQB connects this lesson to the mechanism lessons ahead.', formativeAssessment: 'Are new questions more focused on mechanism than Lesson 1 questions?' },
+      { phase: 'Model Building Phase', learnerExperience: 'Revise Lesson 1 model: add TWO pathways -- Autotrophic (light + CO2 + H2O -> glucose) and Heterotrophic (organic food from other organism). Show that photosynthesis is the KEY to most plant nutrition. Add word equation to model.', resource: 'MATERIAL: Model Journal page (Lesson 2 revision)', teacherMoves: 'Your revised model should show that photosynthesis is how most plants get their food -- but not all.', sensemakingStrategy: 'Model revision tracks conceptual development from Lesson 1.', formativeAssessment: 'Does the revised model correctly show both pathways?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. Did students already know about Striga? Was the Kenyan context engaging? How does it connect to food security?\n\n2. Autotrophic vs heterotrophic: common confusion with animals (all animals are heterotrophic). Did students make this connection?\n\n3. Word equation: did students understand the difference between word equation and chemical equation? Were they ready for the chemical version?\n\n4. Gallery walk: which station generated the most discussion? Which was most confusing?\n\n5. Striga impact on food security: did this create authentic concern? Is there a local connection in your school community?\n\n6. Model revision: did students add the photosynthesis equation to their model correctly?',
+    summaryTablePrompt: { observed: 'Saw Striga (witchweed) parasitising a maize plant in Kenya. Observed 4 types of heterotrophic plants: carnivorous sundew, parasitic Striga, saprophytic mushroom, symbiotic Rhizobium.', learned: 'Most plants are autotrophic -- using photosynthesis to make glucose from CO2 + H2O using light energy. Some are heterotrophic -- getting organic carbon from other organisms. Photosynthesis word equation: CO2 + H2O -> Glucose + O2.', explained: 'The pumpkin in our phenomenon is autotrophic -- it makes its own glucose using photosynthesis. The inputs are CO2 (from air) and H2O (from soil). But HOW? We need to understand the chloroplast.' },
+  },
+  {
+    number: 3,
+    aresKeywords: 'chloroplast structure thylakoid grana stroma',
+    title: 'The Solar Powerhouse -- Chloroplast Structure',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students describe the structure of the chloroplast and explain how each component contributes to photosynthesis.',
+      knowledge: '• Identify the double membrane (outer and inner), thylakoids, grana, stroma, and chlorophyll in a chloroplast\n• State the function of each component: thylakoids house chlorophyll for light capture; grana = stacks of thylakoids; stroma = site of dark reactions\n• State that chlorophyll absorbs red and blue light and reflects green (hence leaves appear green)\n• Distinguish between chlorophyll a, chlorophyll b, and accessory pigments',
+      skills: '• Label a diagram of a chloroplast accurately\n• Use chromatography to separate leaf pigments\n• Explain structure-function relationships for each chloroplast component',
+      attitudes: '• Appreciation for the elegance of chloroplast structure\n• Attention to detail in biological diagrams\n• Interest in the connection between structure and function',
+      keyInquiry: 'How does the structure of the chloroplast make photosynthesis possible?',
+      purposeInStoryline: 'Establishes the physical site of photosynthesis before the mechanism is explored in Lessons 4-5. Chromatography gives students hands-on evidence for multiple pigments.',
+      safetyNotes: 'Ethanol (for chromatography) is flammable -- no open flames near ethanol. Eye protection required. Dispose of ethanol waste correctly.',
+    },
+    overview: 'The lesson uses a zoom sequence: students begin at the whole pumpkin (macro), zoom to the green leaf, then to a single cell, then to the chloroplast -- a solar powerhouse inside every green cell. Students label a blank chloroplast diagram using a reference image, then verify with the LabXchange simulation.\n\nThe chromatography activity separates leaf pigments: students discover that green leaves actually contain multiple pigments (chlorophyll a, chlorophyll b, xanthophylls, carotene). This surprises most students and deepens the structure-function story. Model revised to include the chloroplast.',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'Zoom in on a maize leaf. Deeper. Deeper. What structure inside the green cell captures light energy? Students draw their prediction of what a light-capturing structure might look like. Compare predictions with neighbours.', resource: 'MATERIAL: Science notebooks\nDIGITAL: Cell zoom image series (macro to chloroplast)', teacherMoves: 'Think smaller and smaller. What would a structure that captures light look like? Draw it -- any shape.', sensemakingStrategy: 'Scale zoom activates curiosity about cellular structure before formal introduction.', formativeAssessment: 'What do student predictions look like? Are any structurally informed from prior cell biology?' },
+      { phase: 'Observe Phase', learnerExperience: 'Paper chromatography of a crushed spinach (or maize) leaf in ethanol. Students observe pigment bands separating on the chromatography strip. Questions: How many colours can you see? Which travels furthest? What does this tell you about the leaf? Second activity: label a blank chloroplast diagram using the reference image.', resource: 'MATERIAL: Spinach or maize leaves, ethanol, chromatography paper, pencil, ruler\nSAFETY: No flames near ethanol; eye protection', teacherMoves: 'How many pigments can you identify? The one that travels furthest is the least polar -- which one is that?\nLabel each band with its pigment name.', sensemakingStrategy: 'Chromatography provides direct evidence that green leaves contain multiple pigments -- surprises most students.', formativeAssessment: 'Can students identify at least 3 distinct pigment bands? Do they connect colour to light absorption?' },
+      { phase: 'Explain Phase', learnerExperience: 'Formal teaching of chloroplast structure: outer membrane, inner membrane, thylakoid membranes, grana (stacks of thylakoids), stroma (fluid interior). Function: thylakoids contain chlorophyll -> absorb light (red + blue) -> reflect green. Stroma: site of dark reactions (Lesson 5). Chromatography results interpreted: at least 4 pigments visible; chlorophyll a is the primary photosynthesis pigment; accessory pigments extend the range of light absorbed.', resource: 'MATERIAL: Chloroplast diagram (labelled reference), whiteboard', teacherMoves: 'The leaf reflects green because chlorophyll ABSORBS red and blue -- it does NOT absorb green. That is why it appears green.\nWhy are thylakoids arranged in stacks (grana)?', sensemakingStrategy: 'Structure-function mapping: each chloroplast component linked explicitly to its photosynthesis role.', formativeAssessment: 'Common misconception: chlorophyll is green because it absorbs green. In fact it reflects green. Did students understand this distinction?' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'Update DQB. Answer: What is chlorophyll? New cards: What does chlorophyll DO with the light it absorbs? Why are thylakoids membrane-based? What happens in the stroma?', resource: 'MATERIAL: DQB board, sticky notes', teacherMoves: 'Move the What is chlorophyll? card to ANSWERED. Add the new mechanism questions.', sensemakingStrategy: 'DQB progression tracks movement from structural to mechanistic questions.', formativeAssessment: 'Are students now asking about mechanism rather than identification?' },
+      { phase: 'Model Building Phase', learnerExperience: 'Add chloroplast to the model. Show: leaf -> cell -> chloroplast (thylakoids + stroma). Label: light hits thylakoid membrane -> chlorophyll absorbs it. Next lesson we find out what the chloroplast does with that light energy.', resource: 'MATERIAL: Model Journal page (Lesson 3 revision)', teacherMoves: 'Your model should now show the chloroplast inside the leaf cell. Annotate thylakoids and stroma.', sensemakingStrategy: 'Model zooms in from whole plant to organelle level -- parallels the lesson zoom sequence.', formativeAssessment: 'Does the model correctly locate thylakoids (light reactions) and stroma (dark reactions)?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. Chromatography: did it work? What pigments were visible? If ethanol was unavailable, what alternative did you use (e.g. propanone, nail polish remover)?\n\n2. Common misconception: chlorophyll is green because it absorbs green light. In fact, it REFLECTS green. Did students understand this distinction?\n\n3. Structure-function: did students connect thylakoid membranes to light capture, and stroma to dark reactions (previewed)?\n\n4. Diagram labelling: which part was most confusing -- grana vs thylakoids?\n\n5. Zoom sequence: did starting at the pumpkin level and zooming in help students locate the chloroplast in context?\n\n6. How did this lesson change students\'s initial models?',
+    summaryTablePrompt: { observed: 'Did chromatography on a leaf and saw at least 4 pigment bands (chlorophyll a, chlorophyll b, xanthophylls, carotene) -- the leaf is NOT just one colour. Labelled chloroplast diagram showing thylakoids, grana, stroma.', learned: 'Chloroplast structure: outer/inner membrane -> thylakoids (stacked into grana) -> stroma. Chlorophyll in thylakoid membranes absorbs red and blue light; reflects green. Stroma is the site of dark reactions.', explained: 'The pumpkin\'s green cells contain millions of chloroplasts. Each chloroplast\'s thylakoid membranes are packed with chlorophyll molecules that absorb sunlight. This captured light energy is what powers the pumpkin\'s massive growth -- but HOW does the chloroplast convert light to chemical energy?' },
+  },
+  {
+    number: 4,
+    aresKeywords: 'light stage photolysis ATP NADPH oxygen',
+    title: 'Catching Light -- The Light-Dependent Reactions',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students understand the light-dependent reactions: how light energy is used to split water (photolysis), produce ATP and NADPH, and release oxygen.',
+      knowledge: '• State that light-dependent reactions occur in the thylakoid membranes\n• Explain photolysis: water is split using light energy -> produces H+ ions, electrons, and oxygen (released)\n• State that ATP and NADPH are produced as energy carriers in the light stage\n• Write the summary equation: Light energy + 2H2O -> 4H+ + 4e- + O2 (photolysis) and Light energy + ADP + Pi + NADP+ -> ATP + NADPH\n• Identify oxygen as a by-product of photolysis',
+      skills: '• Conduct/interpret the Elodea (aquatic plant) experiment: count oxygen bubbles at different light intensities\n• Plot a graph of light intensity vs bubble rate\n• Use the glowing splint test to confirm oxygen production\n• Explain the light stage using a flow diagram',
+      attitudes: '• Appreciation that the oxygen we breathe is a by-product of photolysis\n• Precision in counting and recording experimental data\n• Connection between light stage and global oxygen supply',
+      keyInquiry: 'How does the light stage of photosynthesis convert light energy into chemical energy?',
+      purposeInStoryline: 'First half of the photosynthesis mechanism. Students discover oxygen is a by-product, not the purpose, of the light stage -- a key conceptual shift. Directly answers DQB question: What does chlorophyll DO with the light?',
+      safetyNotes: 'Glowing splint test: handle hot splint carefully. Ensure adequate ventilation. Beakers of water present -- keep away from electrical sources.',
+    },
+    overview: 'The Elodea experiment is the centrepiece: students observe an aquatic plant releasing oxygen bubbles when illuminated. They count bubbles at three light distances (10 cm, 30 cm, 60 cm) and plot light intensity vs bubble rate. The glowing splint test confirms the gas is oxygen.\n\nThe question then becomes: WHERE does the oxygen come from? Students are surprised to learn it comes from WATER (photolysis), not from CO2. This is a critical conceptual shift. Flow diagram: light -> chlorophyll -> excite electrons -> split water -> O2 released + ATP + NADPH made -> ready for dark stage.',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'Elodea is an aquatic plant. When we shine a light on it, it releases a gas. Predict: what gas? And predict: does more light mean more gas or less? Record predictions before the experiment.', resource: 'MATERIAL: Science notebooks', teacherMoves: 'Do not tell students the answer. Let them predict from what they know about photosynthesis so far.', sensemakingStrategy: 'Prediction creates investment in the experimental outcome.', formativeAssessment: 'Do students predict oxygen? Do they know O2 is produced in photosynthesis?' },
+      { phase: 'Observe Phase', learnerExperience: 'Elodea experiment: place stem in sodium bicarbonate solution (CO2 source), shine lamp at 10 cm, 30 cm, 60 cm. Count bubbles per minute at each distance. Record in table. Perform glowing splint test on collected gas to confirm O2. Key observation: more light -> more bubbles. At very low light -> almost no bubbles.', resource: 'MATERIAL: Elodea stem, sodium bicarbonate solution, beaker, lamp, ruler, test tube for gas collection, glowing splint\nSAFETY: Handle glowing splint carefully; keep water away from electrical sources', teacherMoves: 'Count carefully -- bubbles per minute, not total bubbles.\nHow does the glowing splint test confirm the gas is oxygen and not CO2?', sensemakingStrategy: 'Quantitative data (bubble counts at 3 distances) prepares students for graph plotting.', formativeAssessment: 'Are bubble counts showing a clear trend? What sources of error are students identifying?' },
+      { phase: 'Explain Phase', learnerExperience: 'The oxygen comes from WATER, not CO2 (photolysis: 2H2O -> 4H+ + 4e- + O2). The light stage in thylakoid membranes: (1) chlorophyll absorbs light -> electrons excited; (2) water is split to replace electrons -> O2 released; (3) excited electrons drive ATP synthesis and NADPH formation; (4) ATP and NADPH are passed to the stroma for the dark stage. The light stage generates the energy currency (ATP + NADPH) that the dark stage needs to fix CO2 into glucose.', resource: 'MATERIAL: Whiteboard flow diagram, student notes', teacherMoves: 'Most people think the oxygen comes from CO2. But every oxygen atom in the O2 we release came from a WATER molecule. How does this change your model?\nATP and NADPH are like charged batteries -- the dark stage uses them to do chemical work.', sensemakingStrategy: 'Counter-intuitive fact (O2 from H2O not CO2) creates memorable conceptual anchor.', formativeAssessment: 'Can students explain why O2 comes from H2O? This is the key conceptual test for this lesson.' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'Update DQB: Answer: What does chlorophyll do with light? New cards: What happens in the stroma? How does CO2 become glucose? Where exactly does the glucose mass come from?', resource: 'MATERIAL: DQB board, sticky notes', teacherMoves: 'Mark the chlorophyll question as answered. The new cards lead directly to Lesson 5.', sensemakingStrategy: 'DQB progression from light stage to dark stage questions.', formativeAssessment: 'Are students now asking the right questions for the dark stage?' },
+      { phase: 'Model Building Phase', learnerExperience: 'Add light stage to the model: thylakoid -> light absorbed by chlorophyll -> photolysis of H2O -> O2 released + ATP + NADPH produced -> arrow to stroma (dark stage). Label: ATP and NADPH are energy carriers passing energy to the next stage.', resource: 'MATERIAL: Model Journal page (Lesson 4 revision)', teacherMoves: 'Your model should now show the thylakoid as the site of the light stage. Add ATP and NADPH as products.', sensemakingStrategy: 'Model now has two zones: thylakoid (light stage) and stroma (dark stage -- coming in Lesson 5).', formativeAssessment: 'Does the model correctly show O2 as a by-product and ATP/NADPH as energy carriers?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. Elodea experiment: did the oxygen bubble counts show a clear trend? What factors interfered (e.g. lamp heat, bubble size variation)?\n\n2. Key misconception: students often think O2 comes from CO2 (splitting CO2 -> C + O2). Was this addressed? What evidence convinced them it comes from H2O?\n\n3. Glowing splint test: did it work clearly? If not, what alternative evidence confirmed O2 production?\n\n4. ATP and NADPH as energy carriers: did students understand these as intermediate molecules passing energy to the dark stage, not as final products?\n\n5. Graph plotting: did students plot light intensity (x-axis) vs bubble rate (y-axis) correctly? Were axes labelled with units?\n\n6. Connection to the phenomenon: the pumpkin releases O2 as a by-product of growing. Did this click?',
+    summaryTablePrompt: { observed: 'Elodea experiment: more light -> more oxygen bubbles per minute. Glowing splint test confirmed the gas was O2. Bubble count at 10 cm was approximately 3x the count at 60 cm.', learned: 'Light-dependent reactions in thylakoid membranes: (1) Chlorophyll absorbs light; (2) Photolysis: H2O split -> O2 released + H+ and e-; (3) ATP and NADPH produced as energy carriers. Oxygen is a by-product of photolysis -- it comes from WATER, not CO2.', explained: 'The pumpkin plant releases O2 as a by-product while capturing light energy. Every oxygen molecule we breathe was once part of a water molecule that a plant split with sunlight. The ATP and NADPH made in the light stage will now power the dark stage -- where CO2 is converted into the glucose that becomes the pumpkin\'s mass.' },
+  },
+  {
+    number: 5,
+    aresKeywords: 'Calvin cycle carbon dioxide fixation glucose',
+    title: 'Building with Air -- The Dark Stage (Calvin Cycle)',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students understand how the dark stage (Calvin cycle) uses ATP and NADPH from the light stage to fix CO2 into glucose -- explaining why most of the plant\'s mass comes from carbon dioxide, not soil.',
+      knowledge: '• State that light-independent (dark) reactions occur in the stroma of the chloroplast\n• Explain CO2 fixation: CO2 from the atmosphere is attached to a 5-carbon acceptor molecule (RuBP) to begin the Calvin cycle\n• State that ATP and NADPH from the light stage are used to convert 3-carbon intermediates into glucose (C6H12O6)\n• Write the summary equation: 6CO2 + 6H2O + light energy -> C6H12O6 + 6O2\n• Explain the KEY INSIGHT: the carbon atoms in glucose come from CO2 in the air, not from soil',
+      skills: '• Sequence the steps of the Calvin cycle using a card-sorting activity\n• Construct a complete flow diagram of photosynthesis (light stage + dark stage)\n• Explain, using the pumpkin phenomenon, how 300 kg of plant mass is built from CO2',
+      attitudes: '• Awe at the elegance of CO2 fixation -- plants literally build themselves out of air\n• Appreciation for the conceptual challenge this lesson resolves (the pumpkin mystery)\n• Persistence in understanding complex multi-step biochemistry',
+      keyInquiry: 'How does the dark stage convert CO2 into glucose -- and why does this mean most plant mass comes from air?',
+      purposeInStoryline: 'The KEY INSIGHT lesson. Students finally solve the pumpkin mystery: the 300 kg came mainly from CO2 (carbon dioxide gas), not soil. This is the central intellectual payoff of the entire storyline.',
+      safetyNotes: 'No specific hazards. Card-sorting activity -- no chemicals.',
+    },
+    overview: 'The lesson opens by returning to the question: If plants get very little mass from soil, where does the 300 kg come from? Students are told: CO2. Most are disbelieving -- how can a gas provide mass? The card-sorting activity sequences the Calvin cycle: CO2 + RuBP -> 3PG -> G3P -> glucose (+ RuBP regenerated). Khan Academy animation is used to visualise the cycle.\n\nThe KEY INSIGHT is celebrated: each glucose molecule contains 6 carbon atoms, all fixed from atmospheric CO2. A pumpkin\'s dry mass is approximately 45% carbon -- and that carbon was once CO2 floating in the air. The complete photosynthesis equation is assembled. Model is fully updated.',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'We said oxygen comes from water. So CO2 must provide the carbon. But CO2 is a gas. Can a gas provide the bulk of a pumpkin\'s 300 kg? Predict: YES or NO, and explain your reasoning.', resource: 'MATERIAL: Science notebooks', teacherMoves: 'Record all YES/NO predictions. Do not resolve yet. The card-sorting activity will provide the evidence.', sensemakingStrategy: 'Counter-intuitive prediction (gas -> solid mass) creates cognitive tension that the lesson resolves.', formativeAssessment: 'How many students say NO (a gas cannot provide mass)? This disbelief makes the key insight more powerful.' },
+      { phase: 'Observe Phase', learnerExperience: 'Card-sorting activity: sequence the Calvin cycle steps in order. Cards: CO2 enters stroma -> CO2 + RuBP -> 3PG (6C) -> ATP + NADPH reduce 3PG -> G3P -> Some G3P -> Glucose -> Remaining G3P regenerates RuBP using ATP. Students also watch a 3-minute Khan Academy animation of the Calvin cycle.', resource: 'MATERIAL: Calvin cycle card sets (one per group)\nDIGITAL: Khan Academy Calvin Cycle animation (3 min)', teacherMoves: 'Which step do you think uses the ATP from the light stage? Which step fixes the CO2?\nWatch the animation: where does the RuBP come back?', sensemakingStrategy: 'Card-sorting makes the cyclic nature of the reactions physical and sequenceable.', formativeAssessment: 'Can students correctly sequence the 5 cards? Which step is most confusing (RuBP regeneration is usually hardest)?' },
+      { phase: 'Explain Phase', learnerExperience: 'The Calvin cycle: CO2 fixation -> reduction -> regeneration. Each turn of the cycle fixes one CO2. 6 turns -> enough G3P to make one glucose molecule (C6H12O6). Complete equation: 6CO2 + 6H2O + light energy -> C6H12O6 + 6O2. KEY INSIGHT: all 6 carbon atoms in glucose came from CO2. The pumpkin\'s 300 kg of dry matter is mostly carbon -- all of it was once atmospheric CO2. The pumpkin is literally built from air.', resource: 'MATERIAL: Whiteboard, complete photosynthesis equation', teacherMoves: 'The pumpkin is 45% carbon by dry weight. Every single carbon atom was once a CO2 molecule floating in the air above the shamba. The plant breathed it in and built it into starch, cellulose, and all the solid matter.\nTHAT is where the 300 kg came from.', sensemakingStrategy: 'KEY INSIGHT moment: celebrate with the class. The mystery that opened Lesson 1 is now solved.', formativeAssessment: 'Can students state in their own words: the pumpkin\'s carbon came from atmospheric CO2, not soil?' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'CELEBRATE: the driving question is answered in principle! Post card: The pumpkin\'s 300 kg came mainly from CO2 fixed in the Calvin cycle. Remaining questions: What limits how fast photosynthesis works? Why do not all plants grow equally fast?', resource: 'MATERIAL: DQB board, sticky notes', teacherMoves: 'We have answered the core mystery! But we still need to understand the factors and significance -- Lessons 6-12.', sensemakingStrategy: 'DQB celebration marks intellectual milestone. Shifts focus from mechanism to rate and significance.', formativeAssessment: 'Do students accept the CO2 explanation? Are any still sceptical? Address remaining doubts.' },
+      { phase: 'Model Building Phase', learnerExperience: 'Complete photosynthesis model: Light stage (thylakoid): light + H2O -> ATP + NADPH + O2. Dark stage (stroma): CO2 + ATP + NADPH -> Glucose + H2O (regenerated). Overall: 6CO2 + 6H2O + light -> Glucose + 6O2. Add annotation: Glucose carbon came from CO2 in the air -- that is where the pumpkin\'s 300 kg came from.', resource: 'MATERIAL: Model Journal page (Lesson 5 revision)', teacherMoves: 'Compare your Lesson 1 model with your Lesson 5 model. What changed? What was wrong in Lesson 1?', sensemakingStrategy: 'Model now contains the complete photosynthesis mechanism. Lesson 1 comparison shows learning growth.', formativeAssessment: 'Does the Lesson 5 model correctly show both stages and identify CO2 as the source of glucose carbon?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. The KEY INSIGHT moment: plants build mass from air. Was there visible surprise? Disbelief? How did you help students accept this counter-intuitive fact?\n\n2. Card-sorting: did students sequence the Calvin cycle correctly? Which step was most confusing (RuBP regeneration is often hardest)?\n\n3. Complete equation (6CO2 + 6H2O -> C6H12O6 + 6O2): did students understand that water appears on BOTH sides (some consumed in light stage, some regenerated in dark stage)?\n\n4. Connection to the phenomenon: the pumpkin is built from air. Did this resolve the mystery for students? What remaining questions do they have?\n\n5. Khan Academy animation: was it accessible? Did it clarify or overwhelm the cycle steps?\n\n6. How did students\' models change after this lesson? Are the models now more scientifically accurate?',
+    summaryTablePrompt: { observed: 'Card-sorted the Calvin cycle: CO2 + RuBP -> 3PG -> G3P -> Glucose (and RuBP regenerated). Watched Khan Academy animation. Assembled the complete photosynthesis equation: 6CO2 + 6H2O + light -> C6H12O6 + 6O2.', learned: 'Dark stage (stroma): ATP + NADPH from light stage drive CO2 fixation into glucose. The 6 carbon atoms in each glucose molecule ALL came from CO2 in the air. KEY INSIGHT: most plant mass (carbon) comes from atmospheric CO2, not from soil.', explained: 'MYSTERY SOLVED: the pumpkin\'s 300 kg came mainly from CO2 in the air. Each glucose molecule is built from 6 carbon dioxide molecules. The pumpkin breathed in carbon dioxide and used the Calvin cycle to build it into sugars, which became starch, cellulose, and all the pumpkin\'s solid mass.' },
+  },
+  {
+    number: 6,
+    aresKeywords: 'limiting factors light carbon dioxide temperature',
+    title: 'Speeding Up or Slowing Down -- Factors Affecting Photosynthesis',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students investigate how light intensity, CO2 concentration, temperature, and water availability limit the rate of photosynthesis, and apply limiting factor theory.',
+      knowledge: '• State the four main factors: light intensity, CO2 concentration, temperature, water availability\n• Explain the concept of a limiting factor: the factor in shortest supply that controls the rate\n• Describe how each factor affects the rate: increasing light/CO2/temperature (up to optimum) increases rate; water stress reduces rate\n• Explain why rate plateaus even when one factor is increased (another becomes limiting)',
+      skills: '• Use PhET photosynthesis simulation to investigate factors systematically\n• Plot and interpret graphs: rate of photosynthesis vs light intensity / vs CO2 concentration / vs temperature\n• Identify the limiting factor at different points on each graph\n• Design a controlled experiment to investigate one factor',
+      attitudes: '• Application to Kenyan agriculture: why drought (water stress) reduces crop yield\n• Scientific method: changing one variable at a time\n• Data literacy: interpreting graphs with plateau regions',
+      keyInquiry: 'What environmental conditions control how fast a plant can grow, and how do Kenyan farmers use this knowledge?',
+      purposeInStoryline: 'Explains why the pumpkin would not grow at the same rate in all environments. Links photosynthesis rate to actual plant growth and crop yield in Kenya.',
+      safetyNotes: 'No specific hazards for simulation work. If conducting Elodea experiments, see Lesson 4 safety notes.',
+    },
+    overview: 'Students use the PhET Plant Growth simulation (or Elodea apparatus) to systematically vary one factor at a time and record the effect on the rate of photosynthesis. They produce three graphs: rate vs light intensity (plateau = CO2 limiting), rate vs CO2 (plateau = light limiting), rate vs temperature (peak = enzyme denaturation above optimum).\n\nLimiting factor theory is formalised: the factor in shortest supply determines the rate, regardless of how plentiful others are. Application to Kenya: drought reduces water availability -> photosynthesis rate drops -> crop yield falls. The model is updated to show the four input factors and their limiting effects.',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'If we give a plant more and more light, will the rate of photosynthesis keep increasing indefinitely? Predict the shape of the graph: straight line, curve, plateau, or peak?', resource: 'MATERIAL: Science notebooks, graph paper', teacherMoves: 'Sketch your predicted graph BEFORE the simulation. After: compare prediction to actual result.', sensemakingStrategy: 'Graph prediction before data collection makes the plateau result meaningful and surprising.', formativeAssessment: 'Do students predict indefinite increase? This is the misconception the limiting factor concept corrects.' },
+      { phase: 'Observe Phase', learnerExperience: 'PhET simulation (or Elodea experiment): three investigations. Investigation 1 -- Vary light intensity (keep CO2, temperature constant) -> record O2 production. Investigation 2 -- Vary CO2 concentration -> record rate. Investigation 3 -- Vary temperature (10C, 20C, 30C, 40C, 50C) -> record rate. Plot each graph. Note where the rate stops increasing despite increases in the test variable.', resource: 'DIGITAL: PhET Photosynthesis Simulation\nMATERIAL: Elodea apparatus (alternative)', teacherMoves: 'For each graph: What shape is it? Where does it plateau? What does the plateau tell you?\nFor the temperature graph: why does the rate fall sharply above 40C?', sensemakingStrategy: 'Three systematic investigations, each producing a different graph shape, build the full picture of limiting factors.', formativeAssessment: 'Can students identify the plateau on each graph and explain WHY it occurs?' },
+      { phase: 'Explain Phase', learnerExperience: 'Limiting factor theory: at low light -> light is limiting. Increase light -> rate increases. But at high light, CO2 becomes limiting -> rate plateaus. Increase CO2 -> light now becomes limiting. Temperature: increasing from 10C to optimum (~30C) -> enzymes work faster -> rate increases. Above optimum -> enzyme denaturation -> rate falls sharply. Application: Kenyan tea farmers in Kericho get high yields because cool temperatures and frequent cloud cover (CO2 available) are near optimal conditions for tea photosynthesis.', resource: 'MATERIAL: Whiteboard graphs, Kenya tea farming context', teacherMoves: 'Why do Kericho tea farmers get such high yields? Their conditions are near-optimal for photosynthesis.\nWhy do Turkana crops struggle? Water is the limiting factor.', sensemakingStrategy: 'Kenya-specific examples make limiting factor theory practically relevant.', formativeAssessment: 'Can students correctly identify the limiting factor at different points on each graph?' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'Update DQB: answer limiting factors questions. New: Why do plants in the Turkana semi-arid region grow slowly? How do greenhouse growers increase crop yield? Add to board.', resource: 'MATERIAL: DQB board, sticky notes', teacherMoves: 'These new questions connect to adaptations (Lesson 7) and food security (Lesson 9).', sensemakingStrategy: 'DQB evolves from mechanism to environmental application questions.', formativeAssessment: 'Are students now thinking about rate and environment rather than just mechanism?' },
+      { phase: 'Model Building Phase', learnerExperience: 'Add limiting factors to model: 4 inputs shown with rate control arrows. Annotate: Each factor has an optimum value. Below optimum -> it limits rate. Above optimum (for temperature) -> enzymes denature.', resource: 'MATERIAL: Model Journal page (Lesson 6 revision)', teacherMoves: 'Show all four limiting factors on your model with arrows indicating their effect on rate.', sensemakingStrategy: 'Model integrates mechanism (Lessons 3-5) with rate control (Lesson 6).', formativeAssessment: 'Does the model correctly show all 4 limiting factors and the temperature optimum concept?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. PhET simulation vs real Elodea: which was more effective for showing limiting factors? Were students able to systematically change one variable at a time?\n\n2. Graphs: were students able to identify the plateau and explain WHY it occurs? Is this concept clear?\n\n3. Temperature graph (peak + decline): did students understand enzyme denaturation causes the decline above optimum?\n\n4. Kenyan context (Kericho tea, Turkana drought): did these examples make limiting factors tangible and relevant?\n\n5. Limiting factor -- did students grasp that it is not the factor being changed but the factor in shortest supply that controls the rate?\n\n6. Design a controlled experiment: did students correctly identify the independent variable, dependent variable, and controlled variables?',
+    summaryTablePrompt: { observed: 'PhET simulation: rate of photosynthesis plateaued when light was high but CO2 was low. Temperature graph showed a peak at ~30C then sharp decline above 40C.', learned: 'Four factors: light intensity, CO2 concentration, temperature, water availability. Limiting factor = the factor in shortest supply controls the rate. Graphs show plateau or peak depending on factor. Above optimum temperature, enzymes denature.', explained: 'The pumpkin would grow fastest in bright light with high CO2, at ~30C with adequate water. Kenyan farmers in drought conditions see reduced pumpkin/maize yields because water stress limits the rate of photosynthesis, reducing the amount of glucose (and therefore mass) the plant can produce.' },
+  },
+  {
+    number: 7,
+    aresKeywords: 'leaf adaptations photosynthesis Kenya ecosystems',
+    title: 'Adapting to Kenya -- Photosynthesis in Extreme Environments',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students apply photosynthesis knowledge to explain how plants in Kenyan ecosystems (Kakamega Forest, Turkana semi-arid region, Lake Victoria shoreline) are adapted to their specific light, CO2, water, and temperature conditions.',
+      knowledge: '• Explain leaf adaptations for photosynthesis efficiency: large surface area, thin leaf (short CO2 diffusion path), stomata, waxy cuticle (water conservation), palisade mesophyll cell arrangement\n• Compare C3 and C4 photosynthetic pathways (introductory level): C4 plants (maize, sugarcane) are more efficient in hot, dry conditions\n• Describe adaptations of plants in Kakamega rainforest (maximise light), Turkana desert (minimise water loss), and aquatic plants (CO2 and light access)',
+      skills: '• Analyse case study data (leaf cross-section images, environmental data) to explain adaptive features\n• Create a comparative table of adaptations across three Kenyan ecosystems\n• Connect adaptations back to the limiting factors identified in Lesson 6',
+      attitudes: '• Appreciation of Kenya\'s extraordinary biodiversity\n• Curiosity about how organisms respond to environmental challenges\n• Awareness of how climate change threatens adapted ecosystems',
+      keyInquiry: 'How are Kenyan plants adapted to maximise photosynthesis in their specific environment?',
+      purposeInStoryline: 'Applies Lessons 3-6 content to real Kenyan ecosystems. Shows the breadth of photosynthesis adaptations. Previews Lesson 8 (what happens when conditions are too harsh for photosynthesis?).',
+      safetyNotes: 'No specific hazards.',
+    },
+    overview: 'Three case studies are presented as a Kenyan Photosynthesis Field Guide: (1) Kakamega Rainforest -- dense canopy; shade-adapted understorey plants with large, dark-green leaves to capture every photon; (2) Turkana Desert -- succulent and xerophyte plants with thick cuticles, sunken stomata, CAM photosynthesis to avoid daytime water loss; (3) Lake Victoria shoreline -- aquatic plants with stomata on top surfaces, aerenchyma for gas exchange, floating leaves for maximum light capture.\n\nStudents build a comparative adaptation table and revise their models. The class discusses: how does climate change affect the adaptations? (e.g. if Kakamega becomes hotter and drier, do the current adaptations still work?)',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'Compare: a plant in Kakamega Forest (dense shade, high humidity) vs a plant in Turkana (full sun, very low rainfall). Predict THREE differences in their leaf structure. Which do you think is adapted for maximum photosynthesis rate?', resource: 'MATERIAL: Kenya ecosystem maps, brief climate data for Kakamega and Turkana', teacherMoves: 'Think about limiting factors from Lesson 6. Which factor is most limiting in each environment? That predicts the adaptation.', sensemakingStrategy: 'Predictions connect directly to limiting factor knowledge from Lesson 6.', formativeAssessment: 'Do students predict using limiting factor vocabulary? (Light limiting in Kakamega -> large leaves; water limiting in Turkana -> waxy cuticle)' },
+      { phase: 'Observe Phase', learnerExperience: 'Case study cards for 3 ecosystems (teacher-prepared or textbook images): Kakamega leaf cross-section (large palisade cells, few hairs), Turkana succulent (thick waxy cuticle, sunken stomata), Lake Victoria aquatic plant (stomata on upper surface, aerenchyma visible). Students record adaptations in a table: Feature | Kakamega | Turkana | Aquatic | Function', resource: 'MATERIAL: Case study cards with images and environmental data for each ecosystem', teacherMoves: 'For each adaptation: what limiting factor does it address?\nNote the aquatic plant has stomata on the TOP surface. Why?', sensemakingStrategy: 'Comparative table structure forces direct comparison and functional explanation.', formativeAssessment: 'Can students explain each adaptation in terms of the limiting factor it addresses?' },
+      { phase: 'Explain Phase', learnerExperience: 'Connect each adaptation to a limiting factor from Lesson 6. Kakamega: light is limiting (dense canopy) -> large leaves maximise capture. Turkana: water is limiting -> waxy cuticle, sunken stomata minimise water loss; CAM photosynthesis (stomata open at night). Aquatic: CO2 and light access are challenges -> submerged leaves have thin cuticles for CO2 diffusion; floating leaves orient for light. Introduce C4 photosynthesis (maize, sugarcane) as an efficient pathway in hot, bright, CO2-limited environments.', resource: 'MATERIAL: Whiteboard adaptation-to-limiting-factor mapping', teacherMoves: 'C4 photosynthesis in maize and sugarcane: these crops are more efficient in hot, CO2-limited conditions -- that is why they are so productive in equatorial Kenya.\nDoes every adaptation address the dominant limiting factor in that environment?', sensemakingStrategy: 'Explicit connection: adaptation -> limiting factor -> photosynthesis rate. Unifies Lessons 6 and 7.', formativeAssessment: 'Can students use limiting factor vocabulary to explain adaptations independently?' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'Add: How does Striga (L2) cope without its own photosynthesis? What happens if Kakamega Forest is cleared? How does a C4 pathway differ from C3? Mark for follow-up or further research.', resource: 'MATERIAL: DQB board, sticky notes', teacherMoves: 'The Kakamega deforestation question connects to Lesson 9 (significance). Hold it for then.', sensemakingStrategy: 'DQB questions now span mechanism, adaptation, and ecological significance -- showing unit integration.', formativeAssessment: 'Are students drawing connections between lessons in their DQB questions?' },
+      { phase: 'Model Building Phase', learnerExperience: 'Add an adaptation layer to the model: show that the same photosynthesis mechanism operates in all three ecosystems, but each plant modifies its leaf structure to optimise the limiting factor in its specific environment.', resource: 'MATERIAL: Model Journal page (Lesson 7 revision)', teacherMoves: 'Your model should now show that the same Calvin cycle and light stage operate everywhere -- but the packaging (leaf structure) is adapted to the local limiting factor.', sensemakingStrategy: 'Model integration: universal mechanism + local adaptation.', formativeAssessment: 'Does the model show both universal mechanism and ecosystem-specific adaptations?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. Did students connect leaf adaptations back to the specific limiting factors from Lesson 6? Were they able to use limiting factor vocabulary correctly?\n\n2. C4 photosynthesis: was this too advanced, or did the maize/sugarcane Kenya context make it accessible?\n\n3. Case study method: did all three ecosystems get equal depth, or did one dominate? Which was most engaging?\n\n4. Climate change discussion: did students show concern about threats to adapted ecosystems? Was the Kakamega Forest deforestation context known to students?\n\n5. Adaptation table: could students distinguish between a structural adaptation (thick cuticle) and a biochemical adaptation (C4 pathway)?\n\n6. How did models evolve? Are students now showing environmental context in their models?',
+    summaryTablePrompt: { observed: 'Compared leaf cross-sections from Kakamega (large palisade cells), Turkana (thick cuticle, sunken stomata), and Lake Victoria (stomata on upper surface, aerenchyma). All have the same chloroplasts but very different structural packaging.', learned: 'Leaf adaptations are responses to limiting factors. Shade plants: large leaves (maximise light). Desert plants: waxy cuticle + sunken stomata (minimise water loss). Aquatic plants: stomata on upper surface, aerenchyma. C4 plants (maize, sugarcane) more efficient in hot, dry conditions.', explained: 'A pumpkin in Kakamega\'s humidity could photosynthesise rapidly -- ideal conditions. The same pumpkin in Turkana would struggle with water limitation. Our phenomenon pumpkin growing 300+ kg required optimal conditions. Environmental adaptation determines how much CO2 a plant can fix per day, and therefore how fast it can grow.' },
+  },
+  {
+    number: 8,
+    aresKeywords: 'parasitic carnivorous saprophytic Striga',
+    title: 'When Chlorophyll is Missing -- Heterotrophic Plants in Depth',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students investigate four types of heterotrophic plants in depth -- carnivorous, parasitic, saprophytic, symbiotic -- understanding the structural and physiological basis for each strategy.',
+      knowledge: '• Explain how carnivorous plants (sundew, Venus flytrap) digest insects to obtain nitrogen and minerals unavailable in their habitats\n• Explain how parasitic plants (Striga, dodder) extract water, minerals, and/or photosynthates from host plants via haustoria\n• Explain how saprophytic plants (some orchids, monotrope) absorb organic compounds from decaying matter via mycorrhizal fungi\n• Explain how symbiotic plants (those with Rhizobium nodules) exchange photosynthates for fixed nitrogen',
+      skills: '• Research and present on one heterotrophic plant in a Kenyan context\n• Create a role-play scenario demonstrating nutrient flow in a heterotrophic relationship\n• Compare and contrast the four heterotrophic strategies using a comparison matrix',
+      attitudes: '• Appreciation of diverse biological strategies for obtaining nutrients\n• Concern for Kenyan food security in relation to Striga infestation\n• Interest in potential uses of carnivorous plants (e.g. natural insect control)',
+      keyInquiry: 'What happens when a plant cannot photosynthesise -- how do heterotrophic plants survive?',
+      purposeInStoryline: 'Deepens the nutrition theme from Lesson 2. Contrasting heterotrophic strategies reinforces WHY photosynthesis (autotrophy) is so successful -- and why the loss of it forces extreme adaptations.',
+      safetyNotes: 'No specific hazards.',
+    },
+    overview: 'Students conduct a mini-research activity (using textbooks, teacher handouts, or supervised internet access) to build a detailed comparison matrix of four heterotrophic strategies. Groups role-play the nutrient flow: one student is the host plant (autotrophic), another is the parasite (Striga) extracting resources via haustoria.\n\nThe Striga infestation context is deepened: estimates suggest Striga affects 50%+ of maize fields in some parts of western Kenya, causing losses of up to 80% of the crop. Students discuss: what can farmers do? (resistant maize varieties, hand-weeding, Striga-trap crops). The lesson closes by reconnecting to photosynthesis: If Striga deprives the maize of water and minerals, how does this reduce the maize\'s rate of photosynthesis?',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'If you lived in a nutrient-poor bog (lots of water, almost no nitrogen in the soil), how might you evolve to get nitrogen? Predict what body part a carnivorous plant uses to trap prey, and how it gets the nutrients out.', resource: 'MATERIAL: Science notebooks', teacherMoves: 'Think about what nutrient is missing in a bog. Nitrogen. What organisms have nitrogen? Insects. So how would a plant get nitrogen from insects?', sensemakingStrategy: 'Ecological problem-solving activates reasoning about extreme nutritional strategies.', formativeAssessment: 'Do students reason from nutrient deficiency to predatory structure?' },
+      { phase: 'Observe Phase', learnerExperience: 'Mini-research stations (4 groups, one strategy each): Group A -- Carnivorous (sundew, Venus flytrap): images + text describing trigger mechanism, digestive glands, nitrogen source. Group B -- Parasitic (Striga, dodder): haustoria structure, host-parasite relationship, impact on Kenyan maize. Group C -- Saprophytic (mycoheterotrophic orchids): relationship with mycorrhizal fungi, no chlorophyll. Group D -- Symbiotic (legumes + Rhizobium): nitrogen fixation, nodule structure, benefit to both organisms. Groups prepare a 2-minute presentation.', resource: 'MATERIAL: Research station handouts for each group\nOPTIONAL: Supervised internet access', teacherMoves: 'Each group answers: What nutrient does this plant lack access to? How does its strategy solve that problem? What is the Kenyan example?', sensemakingStrategy: 'Research station approach distributes learning and creates peer teaching opportunity.', formativeAssessment: 'Can each group accurately identify the nutrient gap their strategy addresses?' },
+      { phase: 'Explain Phase', learnerExperience: 'Each group presents. Class completes comparison matrix: Strategy | Nutrient obtained | How obtained | Kenyan example | Ecological role. Striga focus: haustoria pierce maize roots -> extract water, minerals, photosynthates -> maize cannot photosynthesise adequately -> yield drops. Striga steals the maize\'s ability to grow -- by robbing it of the inputs photosynthesis needs.', resource: 'MATERIAL: Comparison matrix template, whiteboard', teacherMoves: 'Why is Striga so destructive? It does not just compete for light or water -- it actively extracts the maize\'s own photosynthate.\nAll heterotrophic strategies ultimately consume carbon that was originally fixed by photosynthesis.', sensemakingStrategy: 'Cross-strategy comparison reveals the common thread: all heterotrophs depend on photosynthetically-fixed carbon.', formativeAssessment: 'Can students complete the comparison matrix accurately for all four strategies?' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'Update DQB: add Why is Striga so hard to control?, Can heterotrophic plants ALSO photosynthesise?, What is mycorrhizal network? These become potential research project topics (Lesson 10).', resource: 'MATERIAL: DQB board, sticky notes', teacherMoves: 'Some of these questions connect to real Kenyan agricultural research. They could be Lesson 10 topics.', sensemakingStrategy: 'DQB questions bridge to Lesson 10 research activity.', formativeAssessment: 'Are students making connections between Lesson 8 content and broader agricultural/ecological issues?' },
+      { phase: 'Model Building Phase', learnerExperience: 'Add heterotrophic branch to the Nutrition model. Show that all heterotrophic strategies are alternatives to photosynthesis -- but all ultimately depend on organic carbon that was ORIGINALLY fixed by photosynthesis. Even a carnivorous plant eating an insect is consuming carbon that was once fixed by a photosynthesising plant.', resource: 'MATERIAL: Model Journal page (Lesson 8 revision)', teacherMoves: 'Your model should show both autotrophic and heterotrophic pathways, connected by the carbon cycle arrow.', sensemakingStrategy: 'Model shows that heterotrophic carbon ultimately traces back to photosynthesis.', formativeAssessment: 'Does the model show the ultimate photosynthetic origin of all heterotrophic carbon?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. Role-play of Striga parasitism: did it make the nutrient-theft mechanism clear? Did students understand haustoria without needing detailed anatomy?\n\n2. Research activity: was the level of detail appropriate for Grade 10? Which group produced the most accurate presentation?\n\n3. Striga and food security: did students engage with the real-world impact? Are there students whose families farm in affected areas?\n\n4. Comparison matrix completion: were students able to fill in all four columns for all four strategies by the end?\n\n5. All heterotrophic carbon was originally photosynthetically fixed -- was this higher-order insight achieved by any students?\n\n6. Did this lesson strengthen or weaken students\'s understanding of why photosynthesis is so important?',
+    summaryTablePrompt: { observed: 'Research and role-play: Striga haustoria pierce maize roots and steal water, minerals, and sugars. Sundew traps insects with sticky glands to get nitrogen. Saprophytic orchids get carbon from fungi. Legumes give sugar to Rhizobium in exchange for fixed nitrogen.', learned: 'Four heterotrophic strategies: carnivorous (digest prey), parasitic (steal from host via haustoria), saprophytic (absorb from decay via fungi), symbiotic (exchange with microorganism). All obtain organic carbon that was ORIGINALLY fixed by photosynthesis elsewhere.', explained: 'Striga deprives maize of water and minerals needed for photosynthesis, reducing the maize\'s glucose production. The pumpkin phenomenon would be impossible if a Striga-like parasite attached to it. Understanding photosynthesis explains why Striga is so damaging to Kenyan food security.' },
+  },
+  {
+    number: 9,
+    aresKeywords: 'photosynthesis significance food chains oxygen',
+    title: 'Powering All Life -- The Significance of Photosynthesis',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students explain the global significance of photosynthesis: as the base of all food chains, as the source of atmospheric oxygen, as a driver of the carbon cycle, and as the foundation of Kenyan food security.',
+      knowledge: '• State that photosynthesis is the primary source of chemical energy for almost all ecosystems (primary production)\n• Explain the oxygen contribution: virtually all atmospheric O2 came from photosynthesis over 2.7 billion years\n• Describe the carbon cycle: CO2 -> photosynthesis -> organic compounds -> respiration/decomposition -> CO2\n• Explain the connection between photosynthesis, fossil fuels (ancient photosynthesis), and climate change\n• Discuss food security in Kenya: agriculture depends on photosynthesis; factors that reduce photosynthesis reduce food production',
+      skills: '• Construct a concept map linking photosynthesis to food chains, oxygen production, carbon cycle, and food security\n• Interpret data on Kenya\'s crop yields and connect to photosynthesis-limiting factors\n• Formulate an argument for the importance of conserving photosynthetic organisms (forests, phytoplankton)',
+      attitudes: '• Sense of wonder at the global scale of photosynthesis\n• Personal responsibility for protecting photosynthetic ecosystems\n• Connection between individual food choices and global photosynthesis\n• Concern for Kenyan food security',
+      keyInquiry: 'Why does photosynthesis matter to every living thing on Earth, including people in Kenya?',
+      purposeInStoryline: 'Zooms out from the pumpkin to the global scale. Connects the unit to PCIs (climate change, food security, environmental conservation). Prepares students for the final explanation and presentations.',
+      safetyNotes: 'No specific hazards.',
+    },
+    overview: 'The lesson uses a What If Photosynthesis Stopped? scenario: what would happen to Earth if all photosynthesis ceased tomorrow? Students work through cascading effects: O2 falls -> all aerobic life dies; food chains collapse from the base; carbon cycle disrupted -> CO2 accumulates. This dramatic framing makes the significance visceral.\n\nStudents then build a concept map linking: photosynthesis -> food chains (primary producers, consumers, decomposers) -> O2 production -> carbon cycle -> fossil fuels -> climate change -> Kenya food security. The class discusses: what practical steps follow from understanding photosynthesis? (reforestation, reducing deforestation, improving agricultural photosynthesis efficiency, tackling Striga).',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'Imagine: a mysterious virus kills every photosynthesising organism on Earth. Predict what happens in: 1 hour / 1 day / 1 month / 1 year. Work in groups.', resource: 'MATERIAL: Science notebooks', teacherMoves: 'Think in cascades: what dies first? What does that affect? What does THAT affect?', sensemakingStrategy: 'Hypothetical scenario forces students to reason about ecological interdependence.', formativeAssessment: 'Do students reason in cascades (food chains, O2 depletion) or only about direct plant death?' },
+      { phase: 'Observe Phase', learnerExperience: 'Groups share predictions. Teacher guides a cascade diagram: All photosynthesis stops -> O2 supply begins to fall -> All aerobic life (including humans) begins to die -> Food chains collapse from base -> CO2 accumulates -> Temperature rises -> No decomposition of photosynthetic organisms (no O2) -> Earth becomes uninhabitable. Students observe: photosynthesis is not just nice to have -- it is the foundation of all life as we know it.', resource: 'MATERIAL: Whiteboard cascade diagram', teacherMoves: 'How long before O2 levels drop dangerously? (Years, not days -- but the trend is irreversible.)\nAnd if CO2 accumulates -- what happens to temperature?', sensemakingStrategy: 'Cascade diagram makes systemic consequences visible and emotionally impactful.', formativeAssessment: 'Do students trace cascading effects beyond the immediate (plant death -> animals die -> temperature changes)?' },
+      { phase: 'Explain Phase', learnerExperience: 'Formal teaching: (1) Primary production: photosynthesis captures ~120 billion tonnes of CO2/year globally. (2) O2 production: all atmospheric O2 is of photosynthetic origin. (3) Carbon cycle: photosynthesis pulls CO2 out of atmosphere; respiration + decomposition + burning puts it back. (4) Fossil fuels: coal, oil, gas are ancient photosynthate -- burning releases CO2 fixed millions of years ago. (5) Kenya food security: 80% of Kenyans depend on agriculture; all crops depend on photosynthesis. Improving photosynthesis efficiency = feeding more people.', resource: 'MATERIAL: Global photosynthesis statistics, Kenya food security data', teacherMoves: 'Every breath of oxygen you take was produced by photosynthesis -- probably by a plant or phytoplankton.\nFossil fuels are ancient photosynthesis -- we are burning millions of years of stored solar energy in decades.', sensemakingStrategy: 'Scale makes the significance concrete: 120 billion tonnes/year, 2.7 billion years of O2 production.', formativeAssessment: 'Can students explain the carbon cycle using photosynthesis and respiration correctly?' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'Near-complete DQB: almost all original questions answered. Add the final cross-cutting question: How can humans increase photosynthesis efficiency to address food security and climate change? This becomes a research topic option.', resource: 'MATERIAL: DQB board, sticky notes', teacherMoves: 'Count how many original DQB questions are now answered. How has our understanding grown?', sensemakingStrategy: 'Near-complete DQB creates sense of accomplishment and anticipation for Lesson 11 synthesis.', formativeAssessment: 'Are all mechanism and significance questions answered? What remains for Lessons 10-12?' },
+      { phase: 'Model Building Phase', learnerExperience: 'Final model before L12: complete model should now show: chloroplast structure -> light stage -> dark stage -> limiting factors -> adaptations -> significance (food chains, O2, carbon cycle, food security). Compare with Lesson 1 model.', resource: 'MATERIAL: Model Journal page (Lesson 9 revision)', teacherMoves: 'Your Lesson 9 model should be a complete picture of plant nutrition and its significance. Compare it to your Lesson 1 model -- what changed?', sensemakingStrategy: 'Model comparison at Lesson 9 prepares for the final model comparison at Lesson 12.', formativeAssessment: 'Does the model now include significance (food chains, O2, carbon cycle) in addition to mechanism?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. What if photosynthesis stopped? -- how engaged were students? Did they generate cascading effects independently, or did they need significant prompting?\n\n2. Carbon cycle diagram: did students understand the difference between biological carbon cycling (fast: photosynthesis/respiration) and geological cycling (slow: fossil fuels)?\n\n3. Kenyan food security statistics: were these impactful? Did students connect classroom concepts to national-scale challenges?\n\n4. Fossil fuels as ancient photosynthate: was this insight reached? Did students connect this to climate change?\n\n5. Concept map: were students able to construct links independently, or did they copy from the board?\n\n6. Model comparison (L1 vs L9): how dramatically have models changed? What is still incomplete for L12?',
+    summaryTablePrompt: { observed: 'Cascade diagram: if photosynthesis stopped -> O2 falls -> food chains collapse -> CO2 accumulates -> Earth becomes uninhabitable within weeks. 80% of Kenyans depend on agriculture (all dependent on photosynthesis).', learned: 'Photosynthesis is the basis of all food chains (primary production), the source of all atmospheric O2, and a key controller of the carbon cycle. Fossil fuels are ancient photosynthate. Kenya\'s food security is entirely dependent on efficient photosynthesis in crops.', explained: 'The 300 kg pumpkin is not just a curiosity -- it represents the fundamental process that makes all life possible. Every kilogram of food a Kenyan farmer harvests, every breath of O2 in the Nairobi air, traces back to photosynthesis. Understanding and protecting photosynthesis is one of the most important things biology can teach us.' },
+  },
+  {
+    number: 10,
+    aresKeywords: 'photosynthesis Kenya tea sugarcane agriculture',
+    title: 'Research and Investigation -- Kenyan Photosynthesis in Action',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students research a real Kenyan photosynthesis application, apply all sub-strand content, and present findings to the class.',
+      knowledge: '• Apply photosynthesis concepts (mechanism, factors, adaptations, significance) to a real Kenyan context\n• Understand that photosynthesis efficiency is the basis of agricultural productivity\n• Describe current Kenyan research or practice in at least one of: tea farming (Kericho), sugarcane (Western Kenya), reforestation, Striga control, aquaculture (algae)',
+      skills: '• Plan and conduct a brief structured research investigation\n• Synthesise information from multiple sources into a coherent presentation\n• Give and receive constructive peer feedback (2 Stars and a Wish format)',
+      attitudes: '• Pride in Kenyan agricultural and environmental achievements\n• Responsibility to apply scientific knowledge to real community challenges\n• Respect for peers\' research and presentation efforts',
+      keyInquiry: 'How is photosynthesis applied to solve real challenges in Kenya?',
+      purposeInStoryline: 'Students bring the unit content to bear on real-world Kenyan applications. Presentations develop communication skills and consolidate learning.',
+      safetyNotes: 'No specific hazards.',
+    },
+    overview: 'Groups (of 3-4) each select a Kenyan photosynthesis topic: (A) Tea farming in Kericho -- how do optimal photosynthesis conditions drive Kenya\'s tea export industry? (B) Sugarcane in Western Kenya -- how does C4 photosynthesis make sugarcane so productive? (C) Reforestation -- how does restoring forests use photosynthesis to sequester carbon and combat climate change? (D) Striga control -- how can understanding Striga\'s heterotrophic strategy help farmers protect maize photosynthesis? (E) Aquatic photosynthesis -- how do Lake Victoria and Lake Naivasha algae and water plants contribute to ecosystem productivity?\n\nGroups prepare a 5-minute presentation. Peer feedback given using 2 Stars and a Wish. Teachers use presentations as formative assessment of photosynthesis understanding.',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'What Kenyan industry or environmental challenge is most closely linked to photosynthesis? Which of the five topics would you choose to research, and why? Groups form based on interest.', resource: 'MATERIAL: Topic cards with brief descriptions of each research topic', teacherMoves: 'Ensure groups are roughly equal in size. If one topic is too popular, help students see connections to their second choice.', sensemakingStrategy: 'Student choice increases motivation and ownership of research.', formativeAssessment: 'Are group selections evenly distributed? Do students articulate WHY their topic connects to photosynthesis?' },
+      { phase: 'Observe Phase', learnerExperience: 'Research time (25 minutes): groups use textbooks, teacher-prepared reference sheets, and supervised internet access. They must answer: What is the photosynthesis connection? What limiting factors apply? What adaptations are involved? What is the significance for Kenya?', resource: 'MATERIAL: Teacher-prepared reference sheets for each topic\nOPTIONAL: Supervised internet access', teacherMoves: 'Circulate and prompt: You need to explain the PHOTOSYNTHESIS MECHANISM here -- not just describe the industry.\nWhat limiting factor is most relevant for this topic?', sensemakingStrategy: 'Structured research questions ensure students apply unit content rather than just describing the topic.', formativeAssessment: 'Are students making photosynthesis-specific connections or giving only general descriptions?' },
+      { phase: 'Explain Phase', learnerExperience: 'Group presentations (5 minutes each, with 1-minute Q&A). Peer feedback: 2 Stars (two things done well) and a Wish (one improvement). Teacher notes common errors for the final explanation briefing.', resource: 'MATERIAL: Completed research notes, presentation space', teacherMoves: 'After each presentation: Does the group correctly explain the photosynthesis mechanism, not just the agricultural context?\nPeer feedback: make sure the Wish is constructive and specific.', sensemakingStrategy: 'Peer teaching consolidates understanding. Feedback gives all students input on all five topics.', formativeAssessment: 'Quality of photosynthesis explanation in presentations. Common errors noted for Lesson 12 clarification.' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'Each group adds one new question to the DQB based on their research. These may not have clear answers -- they represent the frontier of knowledge.', resource: 'MATERIAL: DQB board, sticky notes', teacherMoves: 'Some of these frontier questions may never be fully answered -- that is real science. Science is not about having all the answers.', sensemakingStrategy: 'Frontier questions acknowledge that science is ongoing and incomplete.', formativeAssessment: 'Are new questions genuinely at the frontier of knowledge or just revisiting covered content?' },
+      { phase: 'Model Building Phase', learnerExperience: 'Each group adds a real-world application annotation to their model -- connecting their research topic to the photosynthesis mechanism. Your final model should have at least one Kenyan example in it.', resource: 'MATERIAL: Model Journal page (Lesson 10 revision)', teacherMoves: 'Your model should now connect the Calvin cycle (or light stage) to a real Kenyan example. Show the specific connection.', sensemakingStrategy: 'Model annotation grounds abstract mechanism in concrete Kenyan context.', formativeAssessment: 'Does the model now include a Kenyan application connected to the photosynthesis mechanism?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. Topic selection: which topic was most popular? Which produced the most sophisticated presentation?\n\n2. Research quality: could students distinguish reliable sources? Did they show photosynthesis mechanisms specifically, or only general statements?\n\n3. Peer feedback: was the 2 Stars and a Wish format constructive? Did students give substantive scientific feedback or only superficial comments?\n\n4. Common errors in presentations (for Lesson 12 clarification): e.g. confused light/dark stage, unclear limiting factor explanations, vague significance statements.\n\n5. Kenyan pride: did the topics generate genuine engagement with Kenyan science and agriculture?\n\n6. Time management: was 25 minutes sufficient for research + presentation preparation? What adjustments would you make?',
+    summaryTablePrompt: { observed: 'Group research and presentations on Kenyan photosynthesis topics: tea (Kericho), sugarcane (C4), reforestation, Striga control, Lake Victoria algae. Peer feedback given and received.', learned: 'Photosynthesis understanding has real applications: Kenyan tea exports depend on optimal leaf photosynthesis; C4 sugarcane is adapted for Kenya\'s hot conditions; reforestation sequesters carbon; Striga control protects maize photosynthesis; aquatic photosynthesis sustains lake ecosystems.', explained: 'The pumpkin phenomenon connects to real Kenyan agriculture -- every crop is a pumpkin. Optimising photosynthesis conditions (water, light, CO2, temperature, controlling parasites) is how Kenyan farmers and scientists maximise food production and address climate change.' },
+  },
+  {
+    number: 11,
+    aresKeywords: 'photosynthesis synthesis model review',
+    title: 'Synthesis -- Building the Complete Picture',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students synthesise all lessons into a complete, coherent understanding of plant nutrition, revise their models to final form, and complete the DQB.',
+      knowledge: '• Integrate all sub-strand content: types of nutrition, chloroplast structure, light stage, dark stage, factors, adaptations, significance\n• Evaluate their own learning journey by comparing Lesson 1 and Lesson 11 models\n• Identify remaining gaps or questions before the Final Explanation',
+      skills: '• Present and defend the complete Plant Nutrition model\n• Respond to peer questions about photosynthesis mechanism\n• Complete the DQB by answering all remaining questions\n• Write a draft Final Explanation paragraph',
+      attitudes: '• Pride in accumulated learning\n• Intellectual honesty about remaining gaps\n• Readiness to write the complete scientific explanation',
+      keyInquiry: 'How do all the pieces of plant nutrition fit together to answer the driving question?',
+      purposeInStoryline: 'Unit closure before Final Explanation. Students see the complete arc from mystery (L1) to explanation (L11). Model comparison makes learning growth tangible.',
+      safetyNotes: 'No specific hazards.',
+    },
+    overview: 'The lesson is a synthesis gallery walk: students display their models and Summary Tables around the room. They rotate in groups, leaving sticky note feedback (strengths + questions) on each other\'s work. After the gallery walk, students spend 15 minutes individually revising their models based on feedback.\n\nThe DQB is completed: every original question is now answered. Students write one sentence answers to the driving question on cards and vote on the best. The teacher delivers a 5-minute connecting thread review: starting with the pumpkin mystery, tracing through each lesson to the complete answer. Students draft the opening paragraph of their Final Explanation.',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'Look at your Lesson 1 model. How complete was it? Score it out of 10. Now look at your current model. Score it. What is the biggest change in your thinking?', resource: 'MATERIAL: Lesson 1 model (teacher returns/students locate), current model', teacherMoves: 'Be honest -- the Lesson 1 model was incomplete. That is expected. Growth is the goal.', sensemakingStrategy: 'Self-assessment of model quality activates metacognition about learning growth.', formativeAssessment: 'Do students identify specific scientific improvements (not just more detail) in their models?' },
+      { phase: 'Observe Phase', learnerExperience: 'Gallery walk (15 minutes): models displayed with sticky note template (What I notice / Question I have). Students rotate, add notes. Class reconvenes: what were the most common strengths? Most common gaps?', resource: 'MATERIAL: Models displayed around room, sticky notes (two colours: strengths and questions)', teacherMoves: 'Look for: Is the light stage in the thylakoids? Is CO2 identified as the source of glucose carbon? Are limiting factors shown?\nGive one strength AND one question for each model you visit.', sensemakingStrategy: 'Gallery walk creates peer assessment and exposes students to diverse model representations.', formativeAssessment: 'Most common gaps identified in gallery walk become the focus of teacher connecting thread review.' },
+      { phase: 'Explain Phase', learnerExperience: 'Teacher connecting thread review: the pumpkin grows because: (1) It is autotrophic -- uses photosynthesis. (2) In the thylakoids: light + H2O -> ATP + NADPH + O2. (3) In the stroma: CO2 + ATP + NADPH -> Glucose. (4) CO2 from air provides the carbon for all 300 kg of dry mass. (5) Rate depends on light, CO2, temperature, water. (6) Significance: base of all food chains, source of O2, carbon cycle, Kenya food security.', resource: 'MATERIAL: Whiteboard connecting thread diagram', teacherMoves: 'This is the complete answer to the driving question. You have learned all six parts across 11 lessons. Now you will write it as one coherent explanation in Lesson 12.', sensemakingStrategy: 'Teacher narrative connects all lesson content into one coherent explanation.', formativeAssessment: 'Can students follow the connecting thread? Are there any parts that generate confusion?' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'COMPLETE the DQB. Every question answered. The driving question answered: A pumpkin becomes massive because it fixes carbon dioxide from the air into glucose via photosynthesis. Sunlight powers this process through the light stage, and the Calvin cycle builds the glucose in the dark stage.', resource: 'MATERIAL: DQB board, green sticky notes for ANSWERED', teacherMoves: 'Go through every original question card. Can we now answer it? Yes -> green. Not fully -> keep for Final Explanation.', sensemakingStrategy: 'DQB completion creates intellectual closure and celebrates unit achievement.', formativeAssessment: 'Are ALL questions genuinely answered? Which (if any) remain partially unresolved?' },
+      { phase: 'Model Building Phase', learnerExperience: 'Final model revision: students update based on gallery walk feedback. Final model should show: two nutrition types -> chloroplast -> light stage (thylakoid) -> dark stage (stroma) -> complete equation -> limiting factors -> adaptations -> global significance. Photograph of Lesson 1 model displayed alongside.', resource: 'MATERIAL: Model Journal page (Lesson 11 revision), Lesson 1 model for comparison', teacherMoves: 'This is your penultimate model revision. Lesson 12 is the final version after writing the explanation.', sensemakingStrategy: 'Final model revision with gallery walk feedback ensures maximum accuracy before Final Explanation.', formativeAssessment: 'Does the final model include all six elements listed in the connecting thread review?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. Gallery walk: what were the most common model strengths? Most common gaps (e.g. missing Calvin cycle, incorrect O2 source)?\n\n2. Connecting thread review: were students able to follow the complete narrative? Were there moments of aha recognition?\n\n3. DQB completion: were ALL questions genuinely answered, or were some left incomplete? Is that acceptable?\n\n4. Model comparison L1 vs L11: what was the most dramatic change in student understanding? Most emotionally significant for students?\n\n5. Draft Final Explanation paragraphs: what is the quality like? Are students ready for the timed Final Explanation in Lesson 12?\n\n6. Reflecting on the whole unit: what worked best? What would you change for next time?',
+    summaryTablePrompt: { observed: 'Gallery walk of models and Summary Tables. Sticky note feedback on peers\' work. DQB completed -- every question answered. Teacher connecting thread from pumpkin mystery to complete photosynthesis story.', learned: 'Complete picture: Autotrophic photosynthesis -> chloroplast (thylakoids + stroma) -> light stage (light + H2O -> ATP + NADPH + O2) -> dark stage (CO2 + ATP + NADPH -> glucose) -> rate controlled by limiting factors -> adapted to ecosystems -> significance to all life.', explained: 'The pumpkin\'s 300 kg came from CO2 fixed in the Calvin cycle, powered by ATP and NADPH from the light stage, using chlorophyll in the thylakoid membranes. This is the complete answer to the driving question -- ready to write as the Final Explanation in Lesson 12.' },
+  },
+  {
+    number: 12,
+    aresKeywords: 'photosynthesis final explanation assessment',
+    title: 'Final Explanation, Assessment, and Reflection',
+    duration: '1 lesson x 40 minutes',
+    slo: {
+      purpose: 'Students write their complete Final Explanation answering the driving question, compare Lesson 1 and Lesson 12 models, and reflect on their learning journey.',
+      knowledge: '• Demonstrate mastery of all sub-strand content by constructing a complete, evidence-based written explanation\n• Articulate learning growth by comparing initial and final models\n• Identify the most significant conceptual shift across the unit',
+      skills: '• Write a structured, evidence-based scientific explanation (5 sections, 300-500 words)\n• Self-assess using the Final Explanation rubric\n• Articulate metacognitive awareness of own learning',
+      attitudes: '• Pride in completing a rigorous unit of inquiry\n• Honesty in self-assessment\n• Commitment to communicating science clearly and accurately',
+      keyInquiry: 'Can I construct a complete, evidence-based answer to: How does a tiny seed become a massive plant?',
+      purposeInStoryline: 'Unit culmination. The driving question is fully answered in writing. The learning journey from L1 mystery to L12 explanation is completed and celebrated.',
+      safetyNotes: 'No specific hazards.',
+    },
+    overview: 'The lesson begins with 5 minutes of quiet preparation: students review their Summary Table, model, and notes. They then write the Final Explanation (25 minutes): a 5-section essay answering the driving question with reference to evidence from class activities (Elodea experiment, chromatography, Calvin cycle card-sort, Kenyan application research).\n\nAfter writing, students complete the Self-Assessment Checklist against the rubric. The final 10 minutes are a reflection: students hold their Lesson 1 model and Lesson 12 model side by side and write: The biggest change in my thinking was... The class shares reflections. The teacher closes the unit with the Kenyan relevance statement: Understanding how a pumpkin grows is understanding how Kenya feeds itself.',
+    framework: [
+      { phase: 'Predict Phase', learnerExperience: 'Before you write: re-read the driving question. Write a one-sentence complete answer from memory. This becomes your thesis statement for the Final Explanation. No notes yet.', resource: 'MATERIAL: Science notebooks', teacherMoves: 'One sentence. No notes. This is your thesis. Write it before you look at anything.', sensemakingStrategy: 'Thesis-first approach forces synthesis before review. Creates investment in the writing process.', formativeAssessment: 'Quality of one-sentence thesis reveals depth of conceptual integration.' },
+      { phase: 'Observe Phase', learnerExperience: 'Review phase (5 minutes with notes): check Summary Table for evidence to include. Identify: Which activity gave evidence for light stage? Which for dark stage? Which for significance? Use these as reference points in the writing.', resource: 'MATERIAL: Summary Table, Model Journal, class notes', teacherMoves: 'Identify three specific activities to cite: Elodea experiment (light stage), card sort (dark stage), research presentation (significance).', sensemakingStrategy: 'Evidence identification before writing ensures the explanation is grounded in class activities.', formativeAssessment: 'Can students identify specific evidence from class activities for each section?' },
+      { phase: 'Explain Phase', learnerExperience: 'Write Final Explanation (25 minutes): 5 sections -- (1) How plants obtain materials; (2) Chloroplast structure; (3) Light stage; (4) Dark stage; (5) Significance. Minimum 300 words. Must include: the pumpkin phenomenon, at least 2 Kenyan examples, the complete chemical equation, evidence from class experiments.', resource: 'MATERIAL: Final Explanation template, pens', teacherMoves: 'Circulate silently. Do not assist with content -- this is assessment. You may clarify the task instructions only.', sensemakingStrategy: 'Independent writing as culminating performance demonstrates unit mastery.', formativeAssessment: 'Written Final Explanation is the primary summative assessment for Sub-Strand 2.1.' },
+      { phase: 'Driving Question Board (DQB) Creation', learnerExperience: 'Final DQB: complete. Post one reflective card: One question I still have about photosynthesis that this unit did not fully answer. These cards represent genuine scientific frontiers or areas for future learning.', resource: 'MATERIAL: DQB board, sticky notes', teacherMoves: 'These remaining questions are real science -- they represent topics for future Biology units, university, or career research.', sensemakingStrategy: 'Frontier questions close the DQB with intellectual humility and ongoing curiosity.', formativeAssessment: 'Do frontier questions show genuine scientific sophistication or just gaps in basic understanding?' },
+      { phase: 'Model Building Phase', learnerExperience: 'Side-by-side comparison: Lesson 1 model vs Lesson 12 model. Write Biggest change in my thinking: on the back of the Lesson 1 model. Gallery of growth -- teacher photographs all model pairs for the class portfolio.', resource: 'MATERIAL: Lesson 1 model (teacher returns), Lesson 12 model', teacherMoves: 'Hold both models up. 12 lessons ago this was everything you knew. Now look at what you understand.\nUnderstanding how a pumpkin grows is understanding how Kenya feeds itself.', sensemakingStrategy: 'Model comparison makes 12 lessons of learning growth visible and personally meaningful.', formativeAssessment: 'Does the Lesson 12 model correctly contain all six elements from the connecting thread?' },
+    ],
+    teacherReflection: 'After teaching this lesson, reflect on:\n\n1. Final Explanation quality: did students use the 5-section structure? Did they include experimental evidence? Were Kenyan examples present?\n\n2. Most common weakness in the Final Explanation: missing dark stage detail, incorrect O2 source, vague significance statements?\n\n3. Self-assessment: were students honest in their rubric scores? Did they over- or under-estimate their own work?\n\n4. Model comparison: what was the most moving biggest change statement? What misconception did the most students correct?\n\n5. Unit reflection overall: what was the biggest success of this storyline approach to plant nutrition? What would you change?\n\n6. Closing statement -- Understanding how a pumpkin grows is understanding how Kenya feeds itself: did this land with students?',
+    summaryTablePrompt: { observed: 'Wrote complete Final Explanation (5 sections, 300+ words) with evidence from Elodea experiment, chromatography, Calvin cycle card-sort, and Kenyan research. Compared Lesson 1 model (soil/water/sunlight -> plant, incomplete) with Lesson 12 model (full photosynthesis mechanism).', learned: 'COMPLETE ANSWER: Plants grow large because they fix CO2 from the air via the Calvin cycle (dark stage), powered by ATP and NADPH from the light stage (photolysis of water, chlorophyll in thylakoids). Rate is limited by light, CO2, temperature, water. This process is the foundation of all food chains and Kenyan food security.', explained: 'DRIVING QUESTION ANSWERED: The pumpkin seed becomes a 300 kg plant because it captures CO2 from the air and light energy from the sun, and uses the two-stage photosynthesis process (light stage in thylakoids + Calvin cycle in stroma) to convert these into glucose -- which builds all the plant\'s mass. Every kilogram came from air, not soil.' },
+  },
+]; // end LESSONS
+
+// ─── Docx section builders ───────────────────────────────────────────────────
+
+function subStrandOverview(unit) {
+  const LW = 3000, CW = W - LW;
+  return makeTable([
+    fullHeader('SUB-STRAND OVERVIEW', C.darkBlue, 'FFFFFF', SZ_H, 2),
+    labelRow('Grade Level',        unit.gradeLevel,        LW),
+    labelRow('Subject',            unit.subject,           LW),
+    labelRow('Strand',             unit.strand,            LW),
+    labelRow('Sub-Strand',         unit.substrand,         LW),
+    labelRow('Total Duration',     unit.duration,          LW),
+    labelRow('Sub-Strand Content', unit.content,           LW, { labelFill: C.lightBlue }),
+    labelRow('Learning Outcomes',  unit.learningOutcomes,  LW, { labelFill: C.lightBlue }),
+    labelRow('Core Competencies',  unit.coreCompetencies,  LW, { labelFill: C.lightBlue }),
+    labelRow('Core Values',        unit.values,            LW, { labelFill: C.lightGreen }),
+    labelRow('Pertinent & Contemporary Issues (PCIs)', unit.pcis, LW, { labelFill: C.lightOrange }),
+    labelRow('Key Inquiry Question', unit.keyInquiry,      LW, { labelFill: C.lightPurple }),
+    labelRow('Anchoring Phenomenon', unit.phenomenon,      LW, { labelFill: C.lightPurple }),
+    labelRow('Driving Question',   unit.drivingQuestion,   LW, { labelFill: C.lightPurple }),
+    labelRow('Storyline Thread',   unit.storylineThread,   LW, { labelFill: C.lightTeal }),
+  ]);
+}
+
+function sectionA(lesson) {
+  return makeTable([
+    fullHeader('LESSON ' + lesson.number + ': ' + lesson.title, C.darkBlue, 'FFFFFF', SZ_H, 2),
+    fullHeader('A. SPECIFIC LEARNING OUTCOMES', C.teal, 'FFFFFF', SZ_H, 2),
+    labelRow('Purpose',              lesson.slo.purpose,            3000, { labelFill: C.lightBlue }),
+    labelRow('Knowledge',            lesson.slo.knowledge,          3000, { labelFill: C.lightBlue }),
+    labelRow('Skills',               lesson.slo.skills,             3000, { labelFill: C.lightBlue }),
+    labelRow('Attitudes',            lesson.slo.attitudes,          3000, { labelFill: C.lightBlue }),
+    labelRow('Key Inquiry Question', lesson.slo.keyInquiry,         3000, { labelFill: C.lightPurple }),
+    labelRow('Purpose in Storyline', lesson.slo.purposeInStoryline, 3000, { labelFill: C.lightTeal }),
+    labelRow('Safety Notes',         lesson.slo.safetyNotes,        3000, { labelFill: C.lightOrange }),
+  ]);
+}
+
+function sectionB(lesson) {
+  return makeTable([
+    fullHeader('B. LESSON OVERVIEW', C.teal, 'FFFFFF', SZ_H, 1),
+    new TableRow({ children: [cell(lesson.overview, { fill: C.white, w: W, size: SZ })] }),
+  ], [W]);
+}
+
+function sectionC(lesson) {
+  const CW = [900, 2556, 2556, 2556, 2556, 2556];
+  const aresTopic = lesson.aresKeywords || lesson.title || '';
+  const aresRes = getAllPhaseResources({
+    substrand: lesson.substrand || 'Nutrition in Plants',
+    topic:     aresTopic,
+    subject:   'Biology',
+  });
+  const PHASE_KEY = {
+    'Predict Phase':                         'predict',
+    'Observe Phase':                         'observe',
+    'Explain Phase':                         'explain',
+    'Driving Question Board (DQB) Creation': 'dqb',
+    'Model Building Phase':                  'model',
+  };
+  return makeTable([
+    fullHeader('C. LESSON IMPLEMENTATION FRAMEWORK', C.teal, 'FFFFFF', SZ_H, 6),
+    new TableRow({ children: [
+      cell('Phase',                { fill: C.darkBlue, bold: true, color: 'FFFFFF', w: CW[0], size: SZ }),
+      cell('Learner Experience',   { fill: C.medBlue,  bold: true, color: 'FFFFFF', w: CW[1], size: SZ }),
+      cell('Resource',             { fill: C.teal,     bold: true, color: 'FFFFFF', w: CW[2], size: SZ }),
+      cell('Teacher Actions',      { fill: C.medBlue,  bold: true, color: 'FFFFFF', w: CW[3], size: SZ }),
+      cell('Sensemaking Strategy', { fill: C.teal,     bold: true, color: 'FFFFFF', w: CW[4], size: SZ }),
+      cell('Assessment Strategy',  { fill: C.medBlue,  bold: true, color: 'FFFFFF', w: CW[5], size: SZ }),
+    ]}),
+
+  ...lesson.framework.map(f => new TableRow({ children: [
+      cell(f.phase,               { fill: PHASE_COLOUR[f.phase] || C.lightBlue, bold: true, w: CW[0], size: SZ }),
+      cell(f.learnerExperience,   { fill: C.white, w: CW[1], size: SZ }),
+      cell(buildResourceParagraphs(aresRes[PHASE_KEY[f.phase] || 'observe'], f.phase),  { fill: C.grey,  w: CW[2] }),
+      cell(f.teacherMoves,        { fill: C.white, w: CW[3], size: SZ }),
+      cell(f.sensemakingStrategy, { fill: C.grey,  w: CW[4], size: SZ }),
+      cell(f.formativeAssessment, { fill: C.white, w: CW[5], size: SZ }),
+    ]})),
+  ], CW);
+}
+
+function sectionD(lesson) {
+  return makeTable([
+    fullHeader('D. TEACHER REFLECTION', C.orange, 'FFFFFF', SZ_H, 1),
+    new TableRow({ children: [cell(lesson.teacherReflection, { fill: C.lightOrange, w: W, size: SZ })] }),
+  ], [W]);
+}
+
+function sectionE(lesson) {
+  const LW = 3000, CW = W - LW;
+  return makeTable([
+    fullHeader('E. SUMMARY TABLE PROMPT  (pre-filled example for this lesson)', C.purple, 'FFFFFF', SZ_H, 2),
+    new TableRow({ children: [
+      cell('What did I observe?',                   { fill: C.lightPurple, bold: true, w: LW, size: SZ }),
+      cell(lesson.summaryTablePrompt.observed,      { fill: C.white,       w: CW,     size: SZ }),
+    ]}),
+    new TableRow({ children: [
+      cell('What did I learn?',                     { fill: C.lightPurple, bold: true, w: LW, size: SZ }),
+      cell(lesson.summaryTablePrompt.learned,       { fill: C.white,       w: CW,     size: SZ }),
+    ]}),
+    new TableRow({ children: [
+      cell('How does this explain the phenomenon?', { fill: C.lightPurple, bold: true, w: LW, size: SZ }),
+      cell(lesson.summaryTablePrompt.explained,     { fill: C.white,       w: CW,     size: SZ }),
+    ]}),
+  ], [LW, CW]);
+}
+
+// ─── Document builders ───────────────────────────────────────────────────────
+
+async function buildSoW() {
+  const body = [
+    ...titleBlock(
+      'BIOLOGY GRADE 10: PLANT NUTRITION',
+      'CBE Phenomenon-Driven Lesson Sequence -- Sub-Strand 2.1 (12 Lessons)'
+    ),
+    SPACE(),
+    subStrandOverview(UNIT),
+    SPACE(),
+  ];
+  for (const lesson of LESSONS) {
+    body.push(PAGE_BREAK());
+    body.push(sectionA(lesson), SPACE());
+    body.push(sectionB(lesson), SPACE());
+    body.push(sectionC(lesson), SPACE());
+    body.push(sectionD(lesson), SPACE());
+    body.push(sectionE(lesson), SPACE());
+  }
+  return new Document({
+    sections: [{
+      properties: {
+        page: {
+          size: { width: 12240, height: 15840, orientation: PageOrientation.LANDSCAPE },
+          margin: { top: 1080, right: 1080, bottom: 1080, left: 1080 },
+        },
+      },
+      children: body,
+    }],
+  });
+}
+
+async function buildFinalExplanation() {
+  const FLW = 3000, FCW = W - FLW;
+  const RW = Math.floor((W - FLW) / 3);
+  const RWr = W - FLW - RW * 2;
+
+  const headerRows = [
+    fullHeader('FINAL EXPLANATION: PLANT NUTRITION', C.darkBlue, 'FFFFFF', SZ_H, 2),
+    fullHeader('Biology Grade 10 -- Student Assessment Document', C.teal, 'FFFFFF', SZ_H, 2),
+    labelRow('Student Name', '_______________________________________________', FLW),
+    labelRow('Class',        '_______________________________________________', FLW),
+    labelRow('Date',         '_______________________________________________', FLW),
+  ];
+
+  const instrRows = [
+    fullHeader('INSTRUCTIONS FOR STUDENTS', C.teal, 'FFFFFF', SZ_H, 1),
+    new TableRow({ children: [cell(
+      'You have completed all 12 lessons of Plant Nutrition. Write your COMPLETE EXPLANATION for the driving question:\n' +
+      '"How does a tiny seed become a massive plant -- where do all the materials and energy come from, and how does the process that powers plant growth sustain all life on Earth?"\n\n' +
+      'USE: Your Summary Table, Plant Nutrition Model, class experiments (Elodea, chromatography, Calvin cycle card-sort), and research presentations.\n\n' +
+      'YOUR EXPLANATION MUST INCLUDE:\n' +
+      '• The difference between autotrophic and heterotrophic nutrition\n' +
+      '• Chloroplast structure and the function of each component\n' +
+      '• Light-dependent reactions (photolysis, ATP, NADPH, O2)\n' +
+      '• Light-independent reactions (Calvin cycle, CO2 fixation, glucose synthesis)\n' +
+      '• Why most plant mass comes from CO2, not soil\n' +
+      '• At least TWO Kenyan examples\n\n' +
+      'GRADING: 20 points total (see rubric below). Minimum 300 words.',
+      { fill: C.white, w: W, size: SZ }
+    )]}),
+  ];
+
+  const parts = [
+    {
+      title: 'SECTION 1: HOW DO PLANTS OBTAIN MATERIALS TO GROW?',
+      prompt: 'Explain the difference between autotrophic and heterotrophic nutrition. State how the pumpkin (from the phenomenon) obtains its materials. Write the overall word equation for photosynthesis and identify the raw materials and products.',
+      answer:
+        'Autotrophic nutrition: the organism synthesises its own organic food from inorganic raw materials using an external energy source (sunlight). Heterotrophic nutrition: the organism obtains organic food by consuming or absorbing it from other organisms.\n\n' +
+        'The pumpkin is autotrophic -- it uses photosynthesis to make glucose from carbon dioxide and water using light energy and chlorophyll.\n\n' +
+        'Word equation: Carbon dioxide + Water -> Glucose + Oxygen (requires: light energy and chlorophyll)\n' +
+        'Chemical equation: 6CO2 + 6H2O + light energy -> C6H12O6 + 6O2\n\n' +
+        'Raw materials: carbon dioxide (from the air, absorbed through stomata), water (from the soil, absorbed by roots), light energy (from the sun, absorbed by chlorophyll).\n' +
+        'Products: glucose (stored as starch, used for respiration and growth), oxygen (released as a by-product through stomata).\n\n' +
+        'KEY INSIGHT: most of the pumpkin\'s 300 kg dry mass consists of carbon atoms that were originally present in atmospheric CO2. The pumpkin literally built itself from air.',
+    },
+    {
+      title: 'SECTION 2: HOW DOES THE CHLOROPLAST MAKE PHOTOSYNTHESIS POSSIBLE?',
+      prompt: 'Describe the structure of the chloroplast. Explain how each component (outer/inner membrane, thylakoids, grana, stroma) contributes to photosynthesis. What is chlorophyll and why does it appear green?',
+      answer:
+        'Chloroplast structure and function:\n\n' +
+        'Outer membrane: smooth outer boundary; controls entry and exit of molecules into the chloroplast.\n' +
+        'Inner membrane: controls exchange between cytoplasm and chloroplast interior.\n' +
+        'Thylakoid membranes: flattened membrane sacs containing chlorophyll molecules; site of light-dependent reactions. The large surface area of the thylakoid membranes maximises light capture.\n' +
+        'Grana (singular: granum): stacks of thylakoids. Stacking increases the surface area for light absorption without increasing the chloroplast\'s overall size.\n' +
+        'Stroma: the fluid-filled space surrounding the thylakoids; site of light-independent reactions (Calvin cycle); contains the enzymes (including RuBisCO) needed for CO2 fixation.\n\n' +
+        'Chlorophyll: a green pigment embedded in the thylakoid membranes. It absorbs red light (~680 nm) and blue light (~450 nm) and reflects green light -- which is why leaves appear green. Multiple pigments (chlorophyll a, chlorophyll b, xanthophylls, carotene) work together to absorb a broader range of wavelengths, as shown by paper chromatography in Lesson 3.',
+    },
+    {
+      title: 'SECTION 3: WHAT HAPPENS DURING THE LIGHT STAGE?',
+      prompt: 'Describe the light-dependent reactions of photosynthesis. Where do they occur? What are the inputs and outputs? Explain photolysis. Reference the Elodea experiment as evidence.',
+      answer:
+        'The light-dependent reactions occur in the thylakoid membranes of the chloroplast.\n\n' +
+        'Inputs: light energy, water (H2O), ADP, Pi (inorganic phosphate), NADP+.\n' +
+        'Outputs: ATP, NADPH, oxygen (O2).\n\n' +
+        'Process:\n' +
+        '1. Chlorophyll molecules in the thylakoid membranes absorb light energy. This excites electrons to a higher energy level.\n' +
+        '2. Photolysis of water: light energy is used to split water molecules: 2H2O -> 4H+ + 4e- + O2. The electrons replace those lost from chlorophyll. Oxygen is released as a by-product.\n' +
+        '3. The excited electrons pass through an electron transport chain in the thylakoid membrane. Their energy is used to synthesise ATP (from ADP + Pi) -- photophosphorylation.\n' +
+        '4. NADP+ accepts hydrogen ions and electrons, becoming NADPH -- a high-energy electron carrier.\n\n' +
+        'Summary: Light energy + 2H2O + ADP + Pi + NADP+ -> ATP + NADPH + O2\n\n' +
+        'Evidence from the Elodea experiment (Lesson 4): the aquatic plant Elodea produced more oxygen bubbles at higher light intensities, confirming that the light stage produces O2 at a rate proportional to light intensity. The glowing splint test confirmed the gas was oxygen. At very low light intensities, almost no bubbles were produced -- showing that light is essential for the light stage reactions.',
+    },
+    {
+      title: 'SECTION 4: WHAT HAPPENS DURING THE DARK STAGE (CALVIN CYCLE)?',
+      prompt: 'Describe the light-independent reactions of photosynthesis (Calvin cycle). Where do they occur? What are the inputs and outputs? Explain CO2 fixation. Explain why most plant mass comes from CO2, not soil.',
+      answer:
+        'The light-independent reactions (Calvin cycle) occur in the stroma of the chloroplast. They are called light-independent because they do not directly require light -- but they DO require the ATP and NADPH produced in the light stage.\n\n' +
+        'Inputs: carbon dioxide (CO2), ATP (from light stage), NADPH (from light stage).\n' +
+        'Outputs: glucose (C6H12O6), ADP, Pi, NADP+ (recycled to light stage), water.\n\n' +
+        'Process (simplified Calvin cycle):\n' +
+        '1. CO2 fixation: each CO2 molecule is attached to a 5-carbon acceptor molecule (RuBP), forming an unstable 6-carbon compound that immediately splits into two 3-carbon molecules (3PG). The enzyme RuBisCO catalyses this step.\n' +
+        '2. Reduction: ATP and NADPH from the light stage convert 3PG into glyceraldehyde-3-phosphate (G3P), a 3-carbon sugar.\n' +
+        '3. Regeneration: most G3P is used to regenerate RuBP (using ATP), keeping the cycle running. A fraction of G3P is used to synthesise glucose.\n' +
+        '4. Six turns of the cycle fix 6 CO2 molecules and produce enough G3P to synthesise one glucose molecule (C6H12O6).\n\n' +
+        'Complete equation: 6CO2 + 6H2O + light energy -> C6H12O6 + 6O2\n\n' +
+        'WHY MASS COMES FROM CO2: the 6 carbon atoms in each glucose molecule all came from CO2 gas absorbed from the air. When millions of glucose molecules are linked into starch and cellulose, they form the solid bulk of the plant. A pumpkin\'s dry mass is approximately 45% carbon -- and every carbon atom was once CO2 floating in the atmosphere. The soil provides water and minerals, but these account for very little of the plant\'s actual mass.',
+    },
+    {
+      title: 'SECTION 5: WHY DOES PHOTOSYNTHESIS MATTER BEYOND THE PLANT?',
+      prompt: 'Explain the significance of photosynthesis to (a) food chains, (b) atmospheric oxygen, (c) the carbon cycle, and (d) food security in Kenya. Use at least TWO Kenyan examples.',
+      answer:
+        '(a) Food chains: photosynthesis is the process of primary production -- it converts solar energy into chemical energy stored in organic compounds. Almost all ecosystems depend on this energy. Without photosynthesising organisms (plants, algae, phytoplankton), the base of every food chain would collapse. In Kenya, every food chain from the Maasai Mara to Lake Victoria begins with photosynthesis.\n\n' +
+        '(b) Atmospheric oxygen: virtually all atmospheric oxygen on Earth is a product of photosynthesis. Photolysis of water has been releasing O2 for approximately 2.7 billion years -- creating the oxygen-rich atmosphere that makes aerobic life possible. Every breath contains oxygen produced by photosynthesis.\n\n' +
+        '(c) Carbon cycle: photosynthesis removes CO2 from the atmosphere and fixes it into organic compounds. Respiration, decomposition, and combustion return CO2 to the atmosphere. Fossil fuels represent ancient photosynthate -- burning them releases CO2 that was fixed millions of years ago, disrupting the balance and contributing to climate change.\n\n' +
+        '(d) Food security in Kenya -- two examples:\n' +
+        '• Kenyan tea (Kericho/Kisii): Kenya is one of the world\'s largest tea exporters. Tea plants in Kericho\'s cool, moist highlands operate near optimal photosynthesis conditions -- abundant water, moderate temperatures, and cloud cover providing diffuse light. The entire tea export economy depends on efficient photosynthesis.\n' +
+        '• Striga (witchweed) and maize: Striga infests over 50% of maize fields in parts of western Kenya, reducing yields by up to 80% by parasitising maize roots and stealing the water and minerals needed for photosynthesis. Controlling Striga -- through resistant varieties, hand-weeding, and trap crops -- directly improves maize photosynthesis efficiency and food production for millions of Kenyans.',
+    },
+  ];
+
+  const rubricRows = [
+    fullHeader('FINAL EXPLANATION RUBRIC (20 points)', C.darkBlue, 'FFFFFF', SZ_H, 4),
+    new TableRow({ children: [
+      cell('Criterion',        { fill: C.medBlue, bold: true, color: 'FFFFFF', w: FLW, size: SZ }),
+      cell('Excellent (4)',    { fill: C.medBlue, bold: true, color: 'FFFFFF', w: RW,  size: SZ }),
+      cell('Proficient (3)',   { fill: C.teal,    bold: true, color: 'FFFFFF', w: RW,  size: SZ }),
+      cell('Developing (1-2)',{ fill: C.medBlue, bold: true, color: 'FFFFFF', w: RWr, size: SZ }),
+    ]}),
+    ...[
+      ['Autotrophic vs Heterotrophic', 'Clear definitions; pumpkin correctly identified as autotrophic; word and chemical equations accurate.', 'Definitions present; equation partially correct.', 'Missing definitions or incorrect equations.'],
+      ['Chloroplast Structure', 'All 5 components named and linked to function; chlorophyll absorption/reflection explained accurately.', '3-4 components; function links partial.', 'Fewer than 3 components or no function links.'],
+      ['Light Stage', 'Thylakoid location stated; photolysis explained; ATP and NADPH as outputs; O2 source correctly identified as H2O; Elodea evidence cited.', 'Correct location and outputs; O2 source or Elodea evidence missing.', 'Incorrect location or missing key outputs.'],
+      ['Dark Stage (Calvin Cycle)', 'Stroma location stated; CO2 fixation explained; glucose synthesis described; KEY INSIGHT (mass from CO2) clearly stated.', 'Correct location and process; key insight partial.', 'Incorrect location or missing CO2 fixation.'],
+      ['Significance + Kenyan Examples', 'Two specific Kenyan examples with photosynthesis mechanism connection; all 4 significance points (food chains, O2, carbon cycle, food security) addressed.', 'Two Kenyan examples present; 3-4 significance points addressed.', 'Only one example or fewer than 3 significance points.'],
+    ].map(([crit, exc, prof, dev]) => new TableRow({ children: [
+      cell(crit, { fill: C.lightBlue, w: FLW, size: SZ }),
+      cell(exc,  { fill: C.white,     w: RW,  size: SZ }),
+      cell(prof, { fill: C.grey,      w: RW,  size: SZ }),
+      cell(dev,  { fill: C.white,     w: RWr, size: SZ }),
+    ]})),
+  ];
+
+  const body = [
+    ...titleBlock('FINAL EXPLANATION: PLANT NUTRITION', 'Biology Grade 10 -- Student Assessment Document'),
+    SPACE(),
+    makeTable(headerRows, [FLW, FCW]),
+    SPACE(),
+    makeTable(instrRows,  [W]),
+    SPACE(),
+    ...parts.flatMap(p => [
+      makeTable([
+        fullHeader(p.title, C.medBlue, 'FFFFFF', SZ_H, 1),
+        new TableRow({ children: [cell(p.prompt, { fill: C.lightBlue, w: W, size: SZ, italic: true })] }),
+        new TableRow({ children: [cell(p.answer, { fill: C.white, w: W, size: SZ })] }),
+      ], [W]),
+      SPACE(),
+    ]),
+    makeTable(rubricRows, [FLW, RW, RW, RWr]),
+  ];
+
+  return new Document({
+    sections: [{
+      properties: {
+        page: {
+          size: { width: 12240, height: 15840, orientation: PageOrientation.LANDSCAPE },
+          margin: { top: 1080, right: 1080, bottom: 1080, left: 1080 },
+        },
+      },
+      children: body,
+    }],
+  });
+}
+
+async function buildSummaryTable() {
+  const SLW = 1200, SC1 = 3120, SC2 = 3120, SC3 = 3120, SC4 = 3120;
+  // columns: [1200, 3120, 3120, 3120, 3120] sum = 13680
+
+  const lessonTitles = [
+    { col1: 'Lesson 1\nThe Pumpkin Mystery',     dqb: 'DQB Opened -- initial questions posted' },
+    { col1: 'Lesson 2\nTypes of Nutrition',      dqb: 'DQB: photosynthesis equation added' },
+    { col1: 'Lesson 3\nChloroplast Structure',   dqb: 'DQB: chlorophyll questions answered' },
+    { col1: 'Lesson 4\nLight Stage',             dqb: 'DQB: O2 source answered' },
+    { col1: 'Lesson 5\nDark Stage (Calvin Cycle)',dqb: 'DQB: mass from CO2 -- KEY INSIGHT' },
+    { col1: 'Lesson 6\nFactors',                 dqb: 'DQB: limiting factors answered' },
+    { col1: 'Lesson 7\nAdaptations',             dqb: 'DQB: ecosystem questions added' },
+    { col1: 'Lesson 8\nHeterotrophic Plants',    dqb: 'DQB: Striga questions answered' },
+    { col1: 'Lesson 9\nSignificance',            dqb: 'DQB: near-complete' },
+    { col1: 'Lesson 10\nResearch',               dqb: 'DQB: Kenyan application questions added' },
+    { col1: 'Lesson 11\nSynthesis',              dqb: 'DQB: Complete -- all answered' },
+    { col1: 'Lesson 12\nFinal Explanation',      dqb: 'DQB: Final reflection card added' },
+  ];
+
+  const headerTable = makeTable([
+    fullHeader('SUMMARY TABLE: BIOLOGY GRADE 10 -- PLANT NUTRITION', C.darkBlue, 'FFFFFF', SZ_H, 2),
+    fullHeader('Sub-Strand 2.1: Nutrition -- Teacher Reference (Pre-filled)', C.teal, 'FFFFFF', SZ_H, 2),
+    labelRow('Sub-Strand', '2.1: Nutrition', SLW + SC1),
+    labelRow('Driving Question', UNIT.drivingQuestion, SLW + SC1),
+  ], [SLW + SC1, SC2 + SC3]);
+
+  const instrTable = makeTable([
+    fullHeader('INSTRUCTIONS', C.teal, 'FFFFFF', SZ_H, 1),
+    new TableRow({ children: [cell(
+      'FOR TEACHERS:\n' +
+      'This is the teacher reference version -- each row is pre-filled with expected student responses. ' +
+      'Use it to assess student Summary Tables, identify gaps, and prepare discussion questions. ' +
+      'The student version has blank cells for students to complete after each lesson.',
+      { fill: C.white, w: W, size: SZ }
+    )]}),
+  ], [W]);
+
+  const mainTable = makeTable([
+    new TableRow({ children: [
+      cell('Lesson # and Title',                    { fill: C.darkBlue, bold: true, color: 'FFFFFF', w: SLW, size: SZ }),
+      cell('What did I observe?',                   { fill: C.medBlue,  bold: true, color: 'FFFFFF', w: SC1, size: SZ }),
+      cell('What did I learn?',                     { fill: C.teal,     bold: true, color: 'FFFFFF', w: SC2, size: SZ }),
+      cell('How does this explain the phenomenon?', { fill: C.medBlue,  bold: true, color: 'FFFFFF', w: SC3, size: SZ }),
+      cell('DQB Tracking',                          { fill: C.purple,   bold: true, color: 'FFFFFF', w: SC4, size: SZ }),
+    ]}),
+    ...LESSONS.map((l, i) => {
+      const isOdd = i % 2 === 0;
+      const rowFill = isOdd ? C.white : C.grey;
+      const lt = lessonTitles[i];
+      return new TableRow({ children: [
+        cell(lt.col1,                        { fill: C.lightBlue,   bold: true, w: SLW, size: SZ }),
+        cell(l.summaryTablePrompt.observed,  { fill: rowFill,                   w: SC1, size: SZ }),
+        cell(l.summaryTablePrompt.learned,   { fill: rowFill,                   w: SC2, size: SZ }),
+        cell(l.summaryTablePrompt.explained, { fill: rowFill,                   w: SC3, size: SZ }),
+        cell(lt.dqb,                         { fill: C.lightPurple,             w: SC4, size: SZ }),
+      ]});
+    }),
+  ], [SLW, SC1, SC2, SC3, SC4]);
+
+  const body = [
+    ...titleBlock('SUMMARY TABLE: BIOLOGY GRADE 10 -- PLANT NUTRITION', 'Sub-Strand 2.1: Nutrition -- Teacher Reference'),
+    SPACE(),
+    headerTable,
+    SPACE(),
+    instrTable,
+    SPACE(),
+    mainTable,
+  ];
+
+  return new Document({
+    sections: [{
+      properties: {
+        page: {
+          size: { width: 12240, height: 15840, orientation: PageOrientation.LANDSCAPE },
+          margin: { top: 1080, right: 1080, bottom: 1080, left: 1080 },
+        },
+      },
+      children: body,
+    }],
+  });
+}
+
+// ─── Main ─────────────────────────────────────────────────────────────────────
+
+async function main() {
+  const [sow, fe, st] = await Promise.all([buildSoW(), buildFinalExplanation(), buildSummaryTable()]);
+  await Promise.all([
+    Packer.toBuffer(sow).then(b => fs.writeFileSync(path.join(OUT_DOCX, 'Biology_PlantNutrition_CBE_LessonSequence_L1-12.docx'), b)),
+    Packer.toBuffer(fe).then(b => fs.writeFileSync(path.join(OUT_DOCX, 'Biology_PlantNutrition_FinalExplanation.docx'), b)),
+    Packer.toBuffer(st).then(b => fs.writeFileSync(path.join(OUT_DOCX, 'Biology_PlantNutrition_SummaryTable.docx'), b)),
+  ]);
+  console.log('Done: Biology 2.1 Plant Nutrition -- all 3 docx files written.');
+}
+main().catch(console.error);
