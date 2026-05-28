@@ -96,20 +96,13 @@ function buildResourceParagraphs(resources, phase = '') {
   // ── VIDEO block ──────────────────────────────────────────────────────────
   const v = resources && resources.video;
   paras.push(_labelPara('📹 VIDEO:'));
-  if (v && v.direct_url) {
-    paras.push(_linkPara(v.title, v.direct_url));
+  if (v) {
+    const vUrl = v.direct_url || v.exact_search_url || fallback;
+    paras.push(_linkPara(v.title, vUrl));
     if (v.source) paras.push(_metaPara(`Source: ${v.source}`));
-    paras.push(_metaPara(`Search: ${v.search_url}`));
-    paras.push(_metaPara(`Search terms: "${v.search_terms}"`));
-  } else if (v) {
-    // Has a recommendation but no direct URL (e.g. kiwix)
-    paras.push(_plainPara(v.title));
-    if (v.source) paras.push(_metaPara(`Source: ${v.source}`));
-    paras.push(_metaPara(`Search: ${v.search_url}`));
-    paras.push(_metaPara(`Search terms: "${v.search_terms}"`));
+    paras.push(_searchLinkPara('🔍 Search ARES for similar videos', v.search_url));
   } else {
-    paras.push(_metaPara('No video found for this phase.'));
-    if (fallback) paras.push(_metaPara(`Search: ${fallback}`));
+    paras.push(_searchLinkPara('🔍 Search ARES for videos', fallback));
   }
 
   // Spacer
@@ -119,19 +112,13 @@ function buildResourceParagraphs(resources, phase = '') {
   const r = resources && resources.reading;
   const readingLabel = r ? `📖 ${(r.content_type || 'READING').toUpperCase()}:` : '📖 READING:';
   paras.push(_labelPara(readingLabel));
-  if (r && r.direct_url) {
-    paras.push(_linkPara(r.title, r.direct_url));
+  if (r) {
+    const rUrl = r.direct_url || r.exact_search_url || fallback;
+    paras.push(_linkPara(r.title, rUrl));
     if (r.source) paras.push(_metaPara(`Source: ${r.source}`));
-    paras.push(_metaPara(`Search: ${r.search_url}`));
-    paras.push(_metaPara(`Search terms: "${r.search_terms}"`));
-  } else if (r) {
-    paras.push(_plainPara(r.title));
-    if (r.source) paras.push(_metaPara(`Source: ${r.source}`));
-    paras.push(_metaPara(`Search: ${r.search_url}`));
-    paras.push(_metaPara(`Search terms: "${r.search_terms}"`));
+    paras.push(_searchLinkPara('🔍 Search ARES for similar readings', r.search_url));
   } else {
-    paras.push(_metaPara('No reading found for this phase.'));
-    if (fallback) paras.push(_metaPara(`Search: ${fallback}`));
+    paras.push(_searchLinkPara('🔍 Search ARES for readings', fallback));
   }
 
   return paras;
@@ -160,10 +147,10 @@ function _linkPara(title, url) {
         link: url,
         children: [new TextRun({
           text: title,
-          style: 'Hyperlink',   // picks up Word's built-in blue+underline style
           size: 16,
           font: 'Arial',
           color: LINK_COLOUR,
+          underline: { type: 'single', color: LINK_COLOUR },
         })],
       }),
     ],
@@ -194,6 +181,26 @@ function _spacerPara() {
   return new Paragraph({
     spacing: { before: 0, after: 40 },
     children: [new TextRun({ text: '', size: 14 })],
+  });
+}
+
+/** Short labelled hyperlink for search URLs */
+function _searchLinkPara(label, url) {
+  return new Paragraph({
+    spacing: { before: 0, after: 10 },
+    indent: { left: 120 },
+    children: [
+      new ExternalHyperlink({
+        link: url,
+        children: [new TextRun({
+          text: label,
+          size: 14,
+          font: 'Arial',
+          color: META_COLOUR,
+          underline: { type: 'single', color: META_COLOUR },
+        })],
+      }),
+    ],
   });
 }
 

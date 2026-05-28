@@ -266,7 +266,7 @@ function sectionB(lesson) {
 /** Lesson section C: Implementation Framework */
 function sectionC(lesson) {
   // Column widths: Phase 900 | 5 content cols × 2556
-  const cw = [900, 2556,  870, 3242, 2556, 2556];
+  const cw = [900, 2556, 2556, 2556, 2556, 2556];
 
   const headerRow = new TableRow({ children: [
     cell('Phase',                      { fill: C.darkBlue, bold: true, color: 'FFFFFF', w: cw[0], size: SZ }),
