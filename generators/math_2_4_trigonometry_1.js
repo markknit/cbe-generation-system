@@ -1058,7 +1058,7 @@ function secB(lesson) {
   ], [W]);
 }
 function secC(lesson) {
-  const CW = [900, 2556, 2556, 2556, 2556, 2556];
+  const CW = [900, 2300, 2556, 3324, 2300, 2300];
   const aresTopic = lesson.aresKeywords || lesson.title || '';
   const aresRes = getAllPhaseResources({
     substrand: lesson.substrand || 'Trigonometry 1',

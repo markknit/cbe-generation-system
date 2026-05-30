@@ -140,7 +140,7 @@ function sectionC(lesson, config = {}) {
   const col3Label = config.col3Label || 'Teacher Moves';
   const col5Label = config.col5Label || 'Formative Assessment Strategy';
 
-  const cw = [900, 2556, 2556, 2556, 2556, 2556];
+  const cw = [900, 2300, 2556, 3324, 2300, 2300];
 
   const aresTopic = lesson.aresKeywords || lesson.title || '';
   const aresRes   = getAllPhaseResources({
