@@ -50,18 +50,34 @@ async function main() {
 }
 
 async function generateOne(dataDir, name) {
-  const dataPath = path.join(dataDir, `${name}_data.js`);
-  if (!fs.existsSync(dataPath)) {
-    console.error(`Data file not found: ${dataPath}`);
-    process.exit(1);
-  }
-
+  // Accept either a name (loads *_data.js) or a direct path to a .json file
+  let dataPath;
   let dataModule;
-  try {
-    dataModule = require(dataPath);
-  } catch (e) {
-    console.error(`Failed to load ${dataPath}: ${e.message}`);
-    process.exit(1);
+
+  if (name.endsWith('.json') && fs.existsSync(name)) {
+    // Direct JSON file path supplied (e.g. from teacher editing workflow)
+    dataPath = name;
+    try {
+      dataModule = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+      // Derive output name from filePrefix for logging
+      name = (dataModule.META && dataModule.META.filePrefix) || path.basename(dataPath, '_data.json');
+    } catch (e) {
+      console.error(`Failed to parse JSON ${dataPath}: ${e.message}`);
+      process.exit(1);
+    }
+  } else {
+    // Standard: load *_data.js module
+    dataPath = path.join(dataDir, `${name}_data.js`);
+    if (!fs.existsSync(dataPath)) {
+      console.error(`Data file not found: ${dataPath}`);
+      process.exit(1);
+    }
+    try {
+      dataModule = require(dataPath);
+    } catch (e) {
+      console.error(`Failed to load ${dataPath}: ${e.message}`);
+      process.exit(1);
+    }
   }
 
   const { META } = dataModule;

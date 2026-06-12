@@ -255,6 +255,15 @@ async function run(dataModule) {
     console.log(`    Saved: ${stPath}  (${Math.round(fs.statSync(stPath).size / 1024)} KB)`);
   }
 
+  // 4. JSON export — canonical structured data for downstream tools
+  const jsonPath = path.join(outBase, `${META.filePrefix}_data.json`);
+  fs.writeFileSync(jsonPath, JSON.stringify(
+    { META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE },
+    null, 2
+  ));
+  files.push(jsonPath);
+  console.log(`    Saved: ${jsonPath}  (${Math.round(fs.statSync(jsonPath).size / 1024)} KB)`);
+
   return files;
 }
 
