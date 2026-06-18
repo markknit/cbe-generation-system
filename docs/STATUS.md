@@ -141,3 +141,17 @@ The `--collect` command requires `--subject`, `--substrand`, `--output` to be om
 | **Biology total** | **9** | **~72** | Mixed | **~$5–8** |
 | **Projected remaining** | **24** | **~192** | Batch | **~$14** |
 | **Full 2,000-lesson target** | **~110** | **~2,000** | Batch | **~$114** |
+
+---
+## Updates — 2026-06-18
+
+### Data file fixes (all committed to main)
+- `bio_1_4_data.js`: UNIT block was empty (`{}`); fully populated with phenomenon, driving question, storyline thread, learning outcomes, competencies, values, SEP, PCIs, careers, focus, totalDuration
+- All 9 Biology + 3 Math data files: UNIT-level `duration` → `totalDuration` (bio_2_1, math_2_2, math_2_3, math_2_4 patched)
+- All 9 Biology data files: `storyline` / `"storyline"` → `storylineThread` (8 files patched; bio_2_1 and math files were already correct)
+
+### New documentation
+- `docs/SCHEMA.md` created — canonical field name reference and contract for colleague's JSON editing tool
+
+### Remaining known inconsistency (cosmetic, non-functional)
+- JSON-quoted keys (`"totalDuration":`) in bio_1_2, bio_2_2, bio_2_3, bio_3_1, bio_3_2, bio_3_3 — these work correctly but don't match the bare JS key style convention. Deferred to future cleanup.
