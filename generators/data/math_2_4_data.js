@@ -19,7 +19,7 @@ const UNIT = {
   subject:    'Mathematics',
   strand:     'Strand 2.0: Measurements and Geometry',
   substrand:  'Sub-Strand 2.4: Trigonometry 1',
-  duration:   '15 lessons × 40 minutes = 600 minutes total',
+  totalDuration:   '15 lessons × 40 minutes = 600 minutes total',
   content:
     '• Trigonometric ratios of acute angles\n' +
     '• Sines and cosines of complementary angles\n' +

@@ -19,7 +19,7 @@ const UNIT = {
   subject:     'Biology',
   strand:      'Strand 2.0: Anatomy and Physiology of Plants',
   substrand:   'Sub-Strand 2.1: Nutrition',
-  duration:    '12 lessons x 40 minutes = 480 minutes total',
+  totalDuration:    '12 lessons x 40 minutes = 480 minutes total',
   content:
     '• Types of nutrition: autotrophic and heterotrophic (carnivorous, saprophytic, parasitic, symbiotic)\n' +
     '• Structure of the chloroplast and its role in photosynthesis\n' +

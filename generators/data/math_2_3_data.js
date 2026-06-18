@@ -19,7 +19,7 @@ const UNIT = {
   subject:     'Mathematics',
   strand:      'Strand 2.0: Measurement and Geometry',
   substrand:   'Sub-Strand 2.3: Rotation',
-  duration:    '6 lessons × 4 periods × 40 minutes = 960 minutes total',
+  totalDuration:    '6 lessons × 4 periods × 40 minutes = 960 minutes total',
   content:
     '• Centre, angle, and direction of rotation\n' +
     '• Rotation about the origin (90°, 180°, 270°, 360°)\n' +

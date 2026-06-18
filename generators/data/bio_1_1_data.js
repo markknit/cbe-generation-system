@@ -82,7 +82,7 @@ const UNIT = {
     '• Why does spraying Bt bacteria on the crop kill the armyworm but NOT the birds that eat the dead caterpillars? (Specificity — microbiology)\n' +
     '• Why does the armyworm travel 500 km overnight? (Wind currents — ecology/meteorology)\n' +
     '• How does eating armyworm-damaged maize affect human nutrition? (Mycotoxins — biochemistry/public health)',
-  storyline:
+  storylineThread:
     'Lesson 1: Students observe images and video of armyworm damage. They cannot explain it yet. DQB launched. Initial model drawn: "What do I think biology is?"\n\n' +
     'Lesson 2: Students discover the 12 major fields of biology and map them to the armyworm problem — which field does which job?\n\n' +
     'Lesson 3: Students explore how biology appears in their own everyday lives — from the food they eat to the medicines they take.\n\n' +

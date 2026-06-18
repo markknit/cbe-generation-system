@@ -82,7 +82,7 @@ const UNIT = {
     '• Why can we see bacteria in a blood smear with an electron microscope but not with a light microscope?\n' +
     '• Why does a red blood cell look like a squashed disc — what does its shape tell us about its job?\n' +
     '• Why does a root hair cell have such a long thin extension — and how does that help the plant survive?',
-  storyline:
+  storylineThread:
     'Lesson 1: Students observe the salamander time-lapse and generate questions. They draw initial models of what they think a "cell" looks like and post questions on the DQB.\n\n' +
     'Lesson 2: Students discover that the type of microscope matters — light vs electron — and why each reveals different levels of detail about cell structure.\n\n' +
     'Lesson 3: Students make their own temporary slides and observe real plant cells through a light microscope, estimating cell size. Model updated.\n\n' +

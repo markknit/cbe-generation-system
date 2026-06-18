@@ -19,7 +19,7 @@ const UNIT = {
   subject:     'Mathematics',
   strand:      'Strand 2.0: Measurement and Geometry',
   substrand:   'Sub-Strand 2.2: Reflection and Congruence',
-  duration:    '6 lessons × 4 periods × 40 minutes = 960 minutes total',
+  totalDuration:    '6 lessons × 4 periods × 40 minutes = 960 minutes total',
   content:
     '• Lines of symmetry in plane figures\n' +
     '• Properties of reflection using objects and images\n' +
