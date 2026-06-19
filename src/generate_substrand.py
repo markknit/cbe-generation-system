@@ -489,6 +489,10 @@ def generate_summary_table(unit: dict, lessons: list, args) -> dict | None:
 
 # ── Data file writer ──────────────────────────────────────────────────────────
 
+# Version of ares-contract.schema.json that generated files declare conformance to.
+SCHEMA_VERSION = '1.0.0'
+
+
 def write_data_file(output_name: str, meta: dict, unit: dict,
                     lessons: list, fe: dict | None, st: dict | None):
     """Write the assembled data file to generators/data/."""
@@ -527,7 +531,8 @@ def write_data_file(output_name: str, meta: dict, unit: dict,
         else:
             f.write(f"const SUMMARY_TABLE = null;\n\n")
 
-        f.write(f"module.exports = {{ META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE }};\n")
+        f.write(f"const schemaVersion = '{SCHEMA_VERSION}';\n\n")
+        f.write(f"module.exports = {{ schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE }};\n")
 
     print(f"  Written: {output_path}")
     return output_path

@@ -23,6 +23,12 @@ const UNIT = {
   subject:    'Biology',
   strand:     'Strand 1.0: Cell Biology and Biodiversity',
   substrand:  'Sub-Strand 1.4: Chemicals of Life',
+  content:
+    '• Biomolecules: carbohydrates, proteins, and lipids — composition, properties, and functions\n' +
+    '• Food tests for detecting biomolecules in Kenyan foods (reducing sugars, starch, proteins, lipids)\n' +
+    '• Enzymes: nature, properties, and factors affecting enzyme activity\n' +
+    '• Water and mineral salts: their roles in living organisms\n' +
+    '• Energy requirements and the energy value of food',
   totalDuration: '6 lessons × 40 minutes = 240 minutes total',
   learningOutcomes:
     'By the end of this sub-strand, the learner should be able to:\n' +
@@ -573,4 +579,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-module.exports = { META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
+const schemaVersion = '1.0.0';
+
+module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

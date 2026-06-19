@@ -635,4 +635,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-module.exports = { META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
+const schemaVersion = '1.0.0';
+
+module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

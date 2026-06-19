@@ -881,4 +881,6 @@ const FINAL_EXPLANATION = null;  // fill in or extract manually
 // TODO: extract from buildSummaryTable() in the original generator
 const SUMMARY_TABLE = null;  // fill in or extract manually
 
-module.exports = { META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
+const schemaVersion = '1.0.0';
+
+module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

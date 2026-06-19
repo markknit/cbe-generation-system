@@ -14,6 +14,8 @@ const META = {
   col5Label: 'Formative Assessment Strategy',
   titleDoc: 'BIOLOGY GRADE 10: CELL STRUCTURE AND SPECIALISATION',
   subtitleDoc: 'CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 1.3 (8 Lessons)',
+  substrand_id: '1.3',
+  substrand_name: 'Cell Structure and Specialisation',
 };
 
 const UNIT = {
@@ -21,6 +23,13 @@ const UNIT = {
   subject: 'Biology',
   strand: 'Strand 1.0: Cell Biology and Biodiversity',
   substrand: 'Sub-Strand 1.3: Cell Structure and Specialisation',
+  content:
+    '• Microscopy: comparison of the light microscope and the electron microscope (magnification and resolution)\n' +
+    '• Preparation and observation of temporary slides of plant cells\n' +
+    '• Cell structure: organelles and their functions as seen under the electron microscope\n' +
+    '• Comparison of plant and animal cells\n' +
+    '• Cell specialisation: how the structure of specialised plant and animal cells serves their function\n' +
+    '• Levels of organisation: cell, tissue, organ, organ system, organism',
   learningOutcomes:
     'By the end of this sub-strand, the learner should be able to:\n' +
     '• a) Differentiate between light and electron microscopes as used in the study of cell structure\n' +
@@ -1553,4 +1562,6 @@ const FINAL_EXPLANATION = null;  // fill in or extract manually
 // TODO: extract from buildSummaryTable() in the original generator
 const SUMMARY_TABLE = null;  // fill in or extract manually
 
-module.exports = { META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
+const schemaVersion = '1.0.0';
+
+module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

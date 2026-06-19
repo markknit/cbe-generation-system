@@ -23,6 +23,12 @@ const UNIT = {
   subject:    'Biology',
   strand:     'Strand 1.0: Cell Biology and Biodiversity',
   substrand:  'Sub-Strand 1.1: Introduction to Biology',
+  content:
+    '• Meaning and importance of Biology as a science\n' +
+    '• Branches and fields of study in Biology (e.g. botany, zoology, microbiology, genetics, ecology)\n' +
+    '• Application of Biology in everyday life: agriculture, medicine, industry, and the environment\n' +
+    '• Career opportunities related to Biology and the work of Kenyan scientists\n' +
+    '• Biology and technology: modern tools used to solve real-world problems',
   learningOutcomes:
     'By the end of this sub-strand, the learner should be able to:\n' +
     '• a) Explain the application of Biology in everyday life\n' +
@@ -1114,4 +1120,6 @@ const FINAL_EXPLANATION = null;  // fill in or extract manually
 // TODO: extract from buildSummaryTable() in the original generator
 const SUMMARY_TABLE = null;  // fill in or extract manually
 
-module.exports = { META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
+const schemaVersion = '1.0.0';
+
+module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
