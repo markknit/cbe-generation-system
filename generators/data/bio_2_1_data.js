@@ -55,8 +55,6 @@ const UNIT = {
     '• Food Security: photosynthesis as the foundation of all food chains; agricultural productivity in Kenya\n' +
     '• Climate Change: plants as carbon sinks; role of forests in regulating temperature\n' +
     '• Safety and Security: safe handling of chemicals (iodine, ethanol) in leaf experiments',
-  keyInquiry:
-    'How do plants get the materials and energy they need to grow, and why does this process matter for all life on Earth?',
   phenomenon:
     'A time-lapse video shows a pumpkin seed (0.5 g) germinating and growing into a massive pumpkin (>= 300 kg) over several months. ' +
     'Students observe: the seed never visibly "eats" anything from the soil. Where did those 300 kg of matter come from?\n' +

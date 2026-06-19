@@ -18,7 +18,7 @@
 
 ## Top-level exports
 
-Every `_data.js` exports exactly three constants:
+Every `_data.js` exports exactly five constants:
 
 
 ---
@@ -57,6 +57,8 @@ Every `_data.js` exports exactly three constants:
 | Careers | string | `careers` | |
 | Focus summary | string | `focus` | 2–3 sentence overview |
 | Phenomenon | string | `phenomenon` | Anchoring phenomenon description |
+| Supporting phenomena | string | `supportingPhenomena` | Optional; additional phenomena used across lessons |
+| Sub-strand content | string | `content` | Optional; KICD content summary for the sub-strand |
 | Driving question | string | `drivingQuestion` | Includes KICD key inquiry questions |
 | Storyline thread | string | `storylineThread` | ⚠ NOT `storyline` |
 
@@ -77,7 +79,7 @@ Each element of the `LESSONS` array:
 | Overview | string | `overview` | 2–3 paragraph prose |
 | Framework | array | `framework` | See Framework fields below |
 | Teacher reflection | string | `teacherReflection` | |
-| Summary table | object | `summaryTable` | Optional; pre-filled student prompts |
+| Summary table | object | `summaryTablePrompt` | Optional; pre-filled student prompts |
 
 ### SLO fields (inside `slo`)
 

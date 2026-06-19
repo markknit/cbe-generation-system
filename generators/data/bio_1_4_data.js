@@ -37,7 +37,7 @@ const UNIT = {
     '• Self-Efficacy — building confidence through practical food-testing investigations\n' +
     '• Digital Literacy — researching nutritional information from reliable online sources',
   values:
-    '• Responsibility — handling chemicals (iodine, Benedict's solution, DCPIP) safely and disposing of waste correctly\n' +
+    '• Responsibility — handling chemicals (iodine, Benedict\'s solution, DCPIP) safely and disposing of waste correctly\n' +
     '• Respect — valuing diverse dietary practices across Kenyan communities\n' +
     '• Integrity — recording food-test results accurately even when results are unexpected\n' +
     '• Unity — collaborating in groups during practical investigations\n' +
@@ -63,7 +63,7 @@ const UNIT = {
   focus:
     'This unit anchors learning in a vivid Kenyan phenomenon: two Nairobi children who both eat ' +
     'until they feel full yet show dramatically different health outcomes. The brother subsisting ' +
-    'on plain ugali is noticeably smaller, weaker, and sicker than a neighbour's child eating ' +
+    'on plain ugali is noticeably smaller, weaker, and sicker than a neighbour\'s child eating ' +
     'githeri, sukuma wiki, milk, and occasional nyama choma. The paradox — same satiety, very ' +
     'different bodies — drives six lessons of investigation into the four biomolecule families ' +
     '(carbohydrates, proteins, lipids, nucleic acids), food-testing techniques, and the specific ' +
@@ -71,7 +71,7 @@ const UNIT = {
   phenomenon:
     'Two Nairobi children both eat until they feel full, yet show dramatically different health ' +
     'outcomes. The child eating mainly plain ugali is noticeably smaller, weaker, and more ' +
-    'frequently ill than a neighbour's child eating a varied diet of githeri, sukuma wiki, milk, ' +
+    'frequently ill than a neighbour\'s child eating a varied diet of githeri, sukuma wiki, milk, ' +
     'and occasional nyama choma. Same satiety — very different bodies. What is in food beyond ' +
     'the feeling of fullness that determines growth, strength, and health?',
   drivingQuestion:
@@ -85,9 +85,9 @@ const UNIT = {
     'Students predict causes, examine Kenyan food labels, and are introduced to the four ' +
     'biomolecule categories. DQB opened. Initial model drawn.\n' +
     'Lesson 2: CARBOHYDRATES — Structure, types, and roles. Iodine test for starch; ' +
-    'Benedict's test for reducing sugars. Kenyan foods tested: ugali, banana, sugar cane juice, potato.\n' +
+    'Benedict\'s test for reducing sugars. Kenyan foods tested: ugali, banana, sugar cane juice, potato.\n' +
     'Lesson 3: PROTEINS — Structure, types, and roles. Biuret test. Kenyan foods tested: ' +
-    'eggs, beans, milk, nyama choma. Model revised to show protein's role in growth and repair.\n' +
+    'eggs, beans, milk, nyama choma. Model revised to show protein\'s role in growth and repair.\n' +
     'Lesson 4: LIPIDS AND NUCLEIC ACIDS — Roles of fats and oils; introduction to DNA/RNA. ' +
     'Ethanol emulsion test. Kenyan foods tested: avocado, cooking oil, groundnut paste.\n' +
     'Lesson 5: VITAMINS, MINERAL SALTS, AND WATER — Roles and sources. DCPIP test for ' +
