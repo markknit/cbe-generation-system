@@ -155,3 +155,12 @@ The `--collect` command requires `--subject`, `--substrand`, `--output` to be om
 
 ### Remaining known inconsistency (cosmetic, non-functional)
 - JSON-quoted keys (`"totalDuration":`) in bio_1_2, bio_2_2, bio_2_3, bio_3_1, bio_3_2, bio_3_3 — these work correctly but don't match the bare JS key style convention. Deferred to future cleanup.
+
+### Additional fixes — 2026-06-18 (second pass, colleague drift report)
+- `bio_1_4_data.js`: unescaped apostrophes in UNIT block fixed (5 occurrences)
+- `bio_1_2, bio_2_2, bio_2_3, bio_3_1, bio_3_3`: `safetyNotes` corruption fixed (safety{N}otes → safetyNotes)
+- `bio_2_1, math_2_2, math_2_3, math_2_4`: stray `UNIT.keyInquiry` removed
+- `bio_1_1, bio_2_1, math_2_2, math_2_3, math_2_4`: missing META fields added (titleDoc, subtitleDoc, substrand_id, substrand_name)
+- `bio_3_1` lesson 4: missing `summaryTablePrompt.explained` added
+- `docs/SCHEMA.md`: corrected to 5 exports, `summaryTablePrompt`, added `supportingPhenomena` and `content` fields
+- Still open: `UNIT.content` false-positive in colleague validator (not present in bio_1_1/1_3 — awaiting clarification); quote-style cosmetic cleanup deferred
