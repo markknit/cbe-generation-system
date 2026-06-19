@@ -295,7 +295,7 @@ Return ONLY this JSON structure (no other text):
   "phenomenon": "Full description of the anchoring phenomenon including what students observe and why it is puzzling",
   "supportingPhenomena": "• 2-4 additional supporting phenomena\\n• ...",
   "drivingQuestion": "DRIVING QUESTION: [the main driving question]\\n\\nKICD KEY INQUIRY QUESTIONS:\\n1. [verbatim from KICD]\\n2. [verbatim from KICD]",
-  "storyline": "Lesson 1: [brief description]\\nLesson 2: ...\\n[continue for all {args.lessons} lessons]"
+  "storylineThread": "Lesson 1: [brief description]\\nLesson 2: ...\\n[continue for all {args.lessons} lessons]"
 }}"""
 
     return call_claude(prompt, max_tokens=4000)
@@ -397,7 +397,7 @@ Set "substrand" to "Sub-Strand {args.substrand}: {args.substrand_name}".
 
 def _get_lesson_storyline(unit: dict, num: int) -> str:
     """Extract this lesson's storyline description from unit data."""
-    storyline = unit.get('storyline', '')
+    storyline = unit.get('storylineThread') or unit.get('storyline', '')
     if not storyline:
         return ''
     lines = [l for l in storyline.split('\n') if l.strip()]
@@ -497,6 +497,24 @@ def write_data_file(output_name: str, meta: dict, unit: dict,
                     lessons: list, fe: dict | None, st: dict | None):
     """Write the assembled data file to generators/data/."""
     output_path = PROJECT_ROOT / 'generators' / 'data' / f'{output_name}_data.js'
+
+    # ── Normalise to ares-contract canonical shape (defensive: covers model
+    #    wobble and applies to both sync and batch-collect callers) ──────────
+    if 'storyline' in unit and not unit.get('storylineThread'):
+        unit['storylineThread'] = unit.pop('storyline')
+    else:
+        unit.pop('storyline', None)
+    if not meta.get('substrand_id') or not meta.get('substrand_name'):
+        _sm = re.match(r'\s*Sub-Strand\s+([\d.]+):\s*(.+)', unit.get('substrand', ''))
+        if _sm:
+            meta.setdefault('substrand_id', _sm.group(1))
+            meta.setdefault('substrand_name', _sm.group(2).strip())
+    for _lesson in lessons:
+        if isinstance(_lesson, dict) and 'safetyNotes' in _lesson:
+            _sn = _lesson.pop('safetyNotes')
+            _slo = _lesson.get('slo')
+            if isinstance(_slo, dict) and not _slo.get('safetyNotes'):
+                _slo['safetyNotes'] = _sn
 
     def js_val(obj):
         """Convert Python object to JS-compatible string."""
@@ -946,9 +964,12 @@ def main():
         template_dir = PROJECT_ROOT / 'data' / 'raw' / 'CBE LESSON TEMPLATES'
         subject_cap  = args.subject.capitalize()
         ss           = args.substrand
-        candidates   = list(template_dir.glob(f'*{ss}*'))
-        if not candidates:
-            candidates = list(template_dir.glob(f'*{subject_cap}*{ss.replace(".", "")}*'))
+        ss_nodot     = ss.replace(".", "")
+        # Subject-aware match first — a bare *1.4* glob matches both
+        # "Biology 10.1.4 ..." and "Chemistry 10.1.4 ..." (Biology sorts first).
+        candidates   = (list(template_dir.glob(f'*{subject_cap}*{ss}*'))
+                        or list(template_dir.glob(f'*{subject_cap}*{ss_nodot}*'))
+                        or list(template_dir.glob(f'*{ss}*')))
         if candidates:
             args.template = str(candidates[0])
             print(f"Auto-detected template: {candidates[0].name}")
@@ -1103,6 +1124,8 @@ def main():
     meta = {
         "subject":     subject_cap,
         "grade":       10,
+        "substrand_id":   args.substrand,
+        "substrand_name": args.substrand_name,
         "outputDir":   f"Grade 10 {subject_cap}/{'Bio' if args.subject == 'biology' else subject_cap} {ss_dir_num}",
         "filePrefix":  f"{subject_cap}_{args.substrand_name.replace(' ', '_')}",
         "titleDoc":    f"{subject_cap.upper()} GRADE 10: {args.substrand_name.upper()}",
