@@ -18,8 +18,39 @@
 
 ## Top-level exports
 
-Every `_data.js` exports exactly five constants:
+Every `_data.js` declares a top-level `schemaVersion` and exports six members:
 
+```js
+module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
+```
+
+| Member | Type | Notes |
+|---|---|---|
+| `schemaVersion` | string | Semver (`^\d+\.\d+\.\d+$`) of the contract this file conforms to. Currently `'1.0.0'`. |
+| `META` | object | Output config + document titles. |
+| `UNIT` | object | Sub-strand overview. |
+| `LESSONS` | array | One object per lesson. |
+| `FINAL_EXPLANATION` | object \| null | Student assessment doc; `null` if not yet authored. |
+| `SUMMARY_TABLE` | object \| null | Teacher reference table; `null` if not yet authored. |
+
+
+---
+
+## Contract conformance
+
+Field *names* and *style* are governed by this document. Machine-validated
+*presence* of required fields is governed by the colleague's JSON Schema,
+`ares-contract.schema.json`
+(raw: `https://raw.githubusercontent.com/james-beep-boop/Lesson3/main/app/src/ingest/ares-contract.schema.json`).
+Validate with `npx tsx scripts/contract-drift.ts -- generators/data` (run from the colleague's `app/`).
+
+Current contract version: **1.0.0**, declared per file via the top-level `schemaVersion`.
+
+Required fields (everything else is optional):
+
+- **Top-level:** `schemaVersion`, `META`, `UNIT`, `LESSONS`, `FINAL_EXPLANATION`, `SUMMARY_TABLE` — the last two may be `null`.
+- **META:** `subject`, `grade`, `substrand_id`, `substrand_name`, `titleDoc`.
+- **UNIT:** `gradeLevel`, `subject`, `strand`, `substrand`, `totalDuration`, `content`, `learningOutcomes`, `coreCompetencies`.
 
 ---
 
@@ -58,7 +89,7 @@ Every `_data.js` exports exactly five constants:
 | Focus summary | string | `focus` | 2–3 sentence overview |
 | Phenomenon | string | `phenomenon` | Anchoring phenomenon description |
 | Supporting phenomena | string | `supportingPhenomena` | Optional; additional phenomena used across lessons |
-| Sub-strand content | string | `content` | Optional; KICD content summary for the sub-strand |
+| Sub-strand content | string | `content` | **Required** (contract). KICD content summary; renders as the "Sub-Strand Content" overview row. |
 | Driving question | string | `drivingQuestion` | Includes KICD key inquiry questions |
 | Storyline thread | string | `storylineThread` | ⚠ NOT `storyline` |
 
@@ -103,6 +134,64 @@ Each element of the `LESSONS` array:
 | Teacher moves | `teacherMoves` |
 | Sensemaking strategy | `sensemakingStrategy` |
 | Formative assessment | `formativeAssessment` |
+
+---
+
+## FINAL_EXPLANATION fields
+
+`object | null` — the student assessment document; `null` until authored.
+
+| Field | Type | Canonical name | Notes |
+|---|---|---|---|
+| Subject label | string | `subjectLabel` | All-caps sub-strand label, e.g. `'CHEMICALS OF LIFE'` |
+| Instructions | string | `instructions` | Student-facing task instructions |
+| Sections | array | `sections` | One per question section; see below |
+| Rubric | array | `rubric` | Optional; scoring criteria; see below |
+
+### Section fields (each element of `sections`)
+
+| Field | Canonical name | Notes |
+|---|---|---|
+| Title | `title` | e.g. `'SECTION 1: ...'` |
+| Prompt | `prompt` | Question prompt |
+| Exemplar | `exemplar` | Optional; model answer / teacher reference |
+
+### Rubric row fields (each element of `rubric`)
+
+| Field | Canonical name |
+|---|---|
+| Criterion | `criterion` |
+| Excellent | `excellent` |
+| Proficient | `proficient` |
+| Developing | `developing` |
+
+> The v1.0.0 contract enumerates the Biology 3-level set above. Subject-specific
+> frameworks (KICD 4-Level for Mathematics; Beginning/Developing/Proficient/Advanced
+> for Chemistry and Physics) carry more or differently-named levels — confirm the
+> rubric shape with the contract owner before generating Chemistry/Physics FE, or
+> omit `rubric` (it is optional) until the contract defines those variants.
+
+---
+
+## SUMMARY_TABLE fields
+
+`object | null` — the teacher reference table; `null` until authored.
+
+| Field | Type | Canonical name | Notes |
+|---|---|---|---|
+| Sub-strand label | string | `subStrand` | e.g. `'Sub-Strand 1.4: Chemicals of Life'` |
+| Driving question | string | `drivingQuestion` | |
+| Lessons | array | `lessons` | One row per lesson; see below |
+
+### Lesson row fields (each element of `lessons`)
+
+| Field | Canonical name |
+|---|---|
+| Lesson number | `number` |
+| Title | `title` |
+| What did I observe? | `observed` |
+| What did I learn? | `learned` |
+| How does this explain the phenomenon? | `explained` |
 
 ---
 
