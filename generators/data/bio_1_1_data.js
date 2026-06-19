@@ -12,6 +12,10 @@ const META = {
   filePrefix: 'Biology_Introduction',
   col3Label: 'Teacher Moves',
   col5Label: 'Formative Assessment Strategy',
+  titleDoc: 'BIOLOGY GRADE 10: INTRODUCTION TO BIOLOGY',
+  subtitleDoc: 'CBE Phenomenon-Driven Lesson Sequence - Sub-Strand 1.1 (6 Lessons)',
+  substrand_id: '1.1',
+  substrand_name: 'Introduction to Biology',
 };
 
 const UNIT = {

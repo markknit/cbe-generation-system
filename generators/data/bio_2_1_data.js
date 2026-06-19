@@ -12,6 +12,10 @@ const META = {
   filePrefix: 'Biology_PlantNutrition',
   col3Label: 'Teacher Actions',
   col5Label: 'Assessment Strategy',
+  titleDoc: 'BIOLOGY GRADE 10: NUTRITION IN PLANTS',
+  subtitleDoc: 'CBE Phenomenon-Driven Lesson Sequence - Sub-Strand 2.1 (12 Lessons)',
+  substrand_id: '2.1',
+  substrand_name: 'Nutrition in Plants',
 };
 
 const UNIT = {

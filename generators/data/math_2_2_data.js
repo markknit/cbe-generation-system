@@ -12,6 +12,10 @@ const META = {
   filePrefix: 'Math_Reflection_Congruence',
   col3Label: 'Teacher Actions',
   col5Label: 'Assessment Strategy',
+  titleDoc: 'MATHEMATICS GRADE 10: REFLECTION AND CONGRUENCE',
+  subtitleDoc: 'CBE Phenomenon-Driven Lesson Sequence - Sub-Strand 2.2 (6 Lessons)',
+  substrand_id: '2.2',
+  substrand_name: 'Reflection and Congruence',
 };
 
 const UNIT = {

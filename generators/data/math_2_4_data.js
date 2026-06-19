@@ -12,6 +12,10 @@ const META = {
   filePrefix: 'Math_Trigonometry1',
   col3Label: 'Teacher Actions',
   col5Label: 'Assessment Strategy',
+  titleDoc: 'MATHEMATICS GRADE 10: TRIGONOMETRY 1',
+  subtitleDoc: 'CBE Phenomenon-Driven Lesson Sequence - Sub-Strand 2.4 (15 Lessons)',
+  substrand_id: '2.4',
+  substrand_name: 'Trigonometry 1',
 };
 
 const UNIT = {

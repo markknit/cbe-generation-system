@@ -275,7 +275,8 @@ const LESSONS = [
     "summaryTablePrompt": {
       "observed": "Learners observed that both children in the phenomenon physically digest food in the same way through mechanical processes. This means the health difference must lie in what happens chemically to different nutrients — and in what nutrients are actually present in the food — setting up Lesson 5 on enzymes and Lesson 6 on absorption as the next layers of explanation.",
       "learned": "Mechanical digestion involves physical breakdown of food — chewing in the mouth produces a bolus, peristalsis moves food along the oesophagus, and churning in the stomach produces chyme. These processes increase surface area and prepare food for chemical digestion. The liver and pancreas are accessory organs that deliver secretions into the small intestine. Mechanical digestion alone does not explain the health difference between the two Kericho children — the nutrient composition of their food is different, and we must now investigate chemical digestion and absorption."
-    }
+    ,
+      "explained": "Mechanical digestion explains the physical journey of a ugali and sukuma wiki meal from chewing in the mouth, through peristalsis in the oesophagus, to churning into chyme in the stomach, but it does not yet explain why the two children in Kericho have different health outcomes. Both children physically digest food in the same way. The difference lies in the nutrient composition of what they eat. To fully explain the phenomenon, we must investigate how chemical digestion (Lesson 5) and absorption (Lesson 6) extract specific nutrients from food and deliver them to body cells."}
   },
   {
     "number": 5,

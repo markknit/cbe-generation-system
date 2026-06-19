@@ -12,6 +12,10 @@ const META = {
   filePrefix: 'Math_Rotation',
   col3Label: 'Teacher Actions',
   col5Label: 'Assessment Strategy',
+  titleDoc: 'MATHEMATICS GRADE 10: ROTATION',
+  subtitleDoc: 'CBE Phenomenon-Driven Lesson Sequence - Sub-Strand 2.3 (6 Lessons)',
+  substrand_id: '2.3',
+  substrand_name: 'Rotation',
 };
 
 const UNIT = {
