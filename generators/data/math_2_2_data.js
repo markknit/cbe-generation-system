@@ -51,9 +51,6 @@ const UNIT = {
   pcis:
     '• Environmental Education: symmetry patterns in Kenyan flora and fauna\n' +
     '• Citizenship: Kenyan architecture and cultural textile design',
-  keyInquiry:
-    'How does reflection create the balance, beauty, and precision we see in structures, ' +
-    'patterns, and nature around us?',
   phenomenon:
     'Students observe photographs of the Kenyatta International Convention Centre (KICC) dome, ' +
     'flamingo flocks at Lake Nakuru forming mirror-image patterns on the water, and Kanga textile ' +

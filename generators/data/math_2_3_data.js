@@ -51,9 +51,6 @@ const UNIT = {
   pcis:
     '• Environmental Education: wind energy and sustainable power in Kenya\n' +
     '• Technology: engineering applications of rotation (turbines, gears, clocks)',
-  keyInquiry:
-    'How does rotation — turning around a fixed point — create the motion and patterns that power machines, ' +
-    'keep time, and generate energy in Kenya and beyond?',
   phenomenon:
     'The Ngong Hills Wind Farm (Lake Turkana Wind Power) has 365 wind turbines, each with 3 blades ' +
     'rotating about a central hub. A short time-lapse video shows one turbine blade tracing a full circle ' +

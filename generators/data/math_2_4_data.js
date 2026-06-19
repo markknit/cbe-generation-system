@@ -43,9 +43,6 @@ const UNIT = {
   pcis:
     '• Environmental Education and Protection: the learner identifies shapes in the immediate environment that have right-angled triangles, and makes a simple clinometer using materials from the immediate environment\n' +
     '• Parental Engagement and Empowerment: the learner gets support from parents/guardians to get resources to make a clinometer',
-  keyInquiry:
-    '1. What is trigonometry?\n' +
-    '2. How do we use trigonometry in real-life situations?',
   phenomenon:
     'A Kenya National Highways Authority (KeNHA) survey crew needs to measure the height of a new ' +
     'bridge support column before erecting scaffolding. They cannot climb the column. They stand 30 m ' +
