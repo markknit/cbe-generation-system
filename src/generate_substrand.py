@@ -306,6 +306,43 @@ ST_TOOL_SCHEMA = {
 }
 
 
+def _schema_violations(obj, schema, path: str = "") -> list:
+    """Dependency-free structural check against the (simple) tool schemas above.
+    Catches what crashes the docx layer or breaks the contract: a field declared
+    array/object arriving as a string, or a missing/empty required field."""
+    t = schema.get("type")
+    types = t if isinstance(t, list) else ([t] if t else [])
+
+    def kind(v):
+        if isinstance(v, bool):  return "boolean"
+        if isinstance(v, str):   return "string"
+        if isinstance(v, int):   return "integer"
+        if isinstance(v, float): return "number"
+        if isinstance(v, list):  return "array"
+        if isinstance(v, dict):  return "object"
+        if v is None:            return "null"
+        return "unknown"
+
+    k = kind(obj)
+    if types and k not in types and not (k == "integer" and "number" in types):
+        return [f"{path or 'root'}: expected {types}, got {k}"]
+
+    errs = []
+    if "object" in types and isinstance(obj, dict):
+        for r in schema.get("required", []):
+            if r not in obj or obj[r] in (None, ""):
+                errs.append(f"{path}{r}: missing/empty required field")
+        for key, sub in schema.get("properties", {}).items():
+            if key in obj and obj[key] is not None:
+                errs += _schema_violations(obj[key], sub, f"{path}{key}.")
+    if "array" in types and isinstance(obj, list):
+        item = schema.get("items")
+        if item:
+            for i, el in enumerate(obj):
+                errs += _schema_violations(el, item, f"{path}[{i}].")
+    return errs
+
+
 def call_claude(user_prompt: str, max_tokens: int = 8000, retries: int = 3,
                 schema: dict | None = None, tool_name: str = "emit_data") -> dict | None:
     """Call Claude and return a dict.
@@ -342,14 +379,26 @@ def call_claude(user_prompt: str, max_tokens: int = 8000, retries: int = 3,
                 return None
 
             if schema is not None:
+                data = None
                 for block in response.content:
                     if getattr(block, "type", None) == "tool_use" and block.name == tool_name:
-                        return block.input
-                print(f"    No tool_use block returned (attempt {attempt+1})")
-                if attempt < retries - 1:
-                    time.sleep(2)
-                    continue
-                return None
+                        data = block.input
+                        break
+                if data is None:
+                    print(f"    No tool_use block returned (attempt {attempt+1})")
+                    if attempt < retries - 1:
+                        time.sleep(2)
+                        continue
+                    return None
+                violations = _schema_violations(data, schema)
+                if violations:
+                    # e.g. model stuffed an array field into a string — re-roll
+                    print(f"    Tool output off-schema (attempt {attempt+1}): {violations[:3]}")
+                    if attempt < retries - 1:
+                        time.sleep(2)
+                        continue
+                    return None
+                return data
 
             raw = response.content[0].text.strip()
             raw = re.sub(r'^```(?:json)?\s*', '', raw)
@@ -502,10 +551,13 @@ RULES:
 - Lesson {num} should {"introduce the phenomenon and open the DQB" if num == 1 else "build on previous evidence and advance the driving question"}
 {"- Final lesson: focus on Final Explanation, model comparison L1 vs final, DQB completion" if num == args.lessons else ""}
 
-Return ONLY this JSON (no other text):
-{json.dumps({"lesson": LESSON_SCHEMA}, indent=2)}
+Use the emit_data tool to return the lesson with rich, real content in every field.
+Field structure for reference (do NOT return any field as a stringified blob):
+{json.dumps(LESSON_SCHEMA, indent=2)}
 
-Replace all placeholder values with real content for Lesson {num}.
+"framework" MUST be an array of 5 separate phase objects (Predict, Observe, Explain,
+DQB/Driving Question Board, Model Building) — each an object with phase, learnerExperience,
+teacherMoves, sensemakingStrategy, formativeAssessment. Never return framework as a string.
 Set "number" to {num}.
 Set "substrand" to "Sub-Strand {args.substrand}: {args.substrand_name}".
 """
