@@ -214,30 +214,151 @@ KENYA CONTEXT RULES:
 
 # ── Claude API call ───────────────────────────────────────────────────────────
 
-def call_claude(user_prompt: str, max_tokens: int = 8000, retries: int = 3) -> dict | None:
-    """Call Claude API and parse JSON response."""
+# ── Tool schemas for structured generation ────────────────────────────────────
+# Generating via tool use (rather than free-text JSON) guarantees well-formed
+# output and biases the model to the ares-contract shape. additionalProperties
+# is False so stray keys (e.g. legacy 'storyline', top-level 'safetyNotes')
+# cannot appear; required sets mirror docs/SCHEMA.md / ares-contract.schema.json.
+
+def _s(desc: str = "") -> dict:
+    return {"type": "string", "description": desc} if desc else {"type": "string"}
+
+UNIT_TOOL_SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "properties": {
+        "gradeLevel": _s(), "subject": _s(), "strand": _s(), "substrand": _s(),
+        "totalDuration": _s(),
+        "content": _s("KICD sub-strand content; bullet list, one topic per line prefixed with •"),
+        "learningOutcomes": _s(), "coreCompetencies": _s(), "values": _s(),
+        "sep": _s(), "pcis": _s(), "careers": _s(), "focus": _s(),
+        "phenomenon": _s(), "supportingPhenomena": _s(),
+        "drivingQuestion": _s(), "storylineThread": _s(),
+    },
+    "required": ["gradeLevel", "subject", "strand", "substrand", "totalDuration",
+                 "content", "learningOutcomes", "coreCompetencies",
+                 "phenomenon", "drivingQuestion", "storylineThread"],
+}
+
+LESSON_TOOL_SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "properties": {
+        "number": {"type": ["integer", "string"]},
+        "title": _s(), "duration": _s(), "substrand": _s(), "aresKeywords": _s(),
+        "slo": {
+            "type": "object", "additionalProperties": False,
+            "properties": {"purpose": _s(), "knowledge": _s(), "skills": _s(),
+                           "attitudes": _s(), "keyInquiry": _s(),
+                           "purposeInStoryline": _s(), "safetyNotes": _s()},
+            "required": ["purpose", "knowledge", "skills", "attitudes",
+                         "keyInquiry", "purposeInStoryline", "safetyNotes"],
+        },
+        "overview": _s(),
+        "framework": {
+            "type": "array",
+            "items": {
+                "type": "object", "additionalProperties": False,
+                "properties": {"phase": _s(), "learnerExperience": _s(),
+                               "teacherMoves": _s(), "sensemakingStrategy": _s(),
+                               "formativeAssessment": _s()},
+                "required": ["phase", "learnerExperience", "teacherMoves",
+                             "sensemakingStrategy", "formativeAssessment"],
+            },
+        },
+        "teacherReflection": _s(),
+        "summaryTablePrompt": {
+            "type": "object", "additionalProperties": False,
+            "properties": {"observed": _s(), "learned": _s(), "explained": _s()},
+            "required": ["observed", "learned", "explained"],
+        },
+    },
+    "required": ["number", "title", "duration", "substrand", "slo", "overview",
+                 "framework", "teacherReflection", "summaryTablePrompt"],
+}
+
+FE_TOOL_SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "properties": {
+        "subjectLabel": _s(), "instructions": _s(),
+        "sections": {"type": "array", "items": {
+            "type": "object", "additionalProperties": False,
+            "properties": {"title": _s(), "prompt": _s(), "exemplar": _s()},
+            "required": ["title", "prompt", "exemplar"]}},
+        "rubric": {"type": "array", "items": {
+            "type": "object", "additionalProperties": False,
+            "properties": {"criterion": _s(), "excellent": _s(),
+                           "proficient": _s(), "developing": _s()},
+            "required": ["criterion", "excellent", "proficient", "developing"]}},
+    },
+    "required": ["subjectLabel", "instructions", "sections"],
+}
+
+ST_TOOL_SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "properties": {
+        "subStrand": _s(), "drivingQuestion": _s(),
+        "lessons": {"type": "array", "items": {
+            "type": "object", "additionalProperties": False,
+            "properties": {"number": {"type": ["integer", "string"]}, "title": _s(),
+                           "observed": _s(), "learned": _s(), "explained": _s()},
+            "required": ["number", "title", "observed", "learned", "explained"]}},
+    },
+    "required": ["subStrand", "drivingQuestion", "lessons"],
+}
+
+
+def call_claude(user_prompt: str, max_tokens: int = 8000, retries: int = 3,
+                schema: dict | None = None, tool_name: str = "emit_data") -> dict | None:
+    """Call Claude and return a dict.
+
+    If `schema` (a JSON Schema) is given, the model returns the data through a
+    forced tool call and the SDK hands back an already-parsed dict — so
+    malformed-JSON failures (unescaped quotes, missing delimiters, fence noise)
+    cannot occur. Without a schema, falls back to free-text JSON parsing.
+    """
     for attempt in range(retries):
         try:
-            response = CLIENT.messages.create(
+            kwargs = dict(
                 model=MODEL,
                 max_tokens=max_tokens,
                 system=SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": user_prompt}],
             )
-            raw = response.content[0].text.strip()
+            if schema is not None:
+                kwargs["tools"] = [{
+                    "name": tool_name,
+                    "description": "Return the requested lesson-plan data as structured fields.",
+                    "input_schema": schema,
+                }]
+                kwargs["tool_choice"] = {"type": "tool", "name": tool_name}
 
-            # Strip any accidental markdown fences
+            response = CLIENT.messages.create(**kwargs)
+
+            # Explicit truncation detection (previously surfaced only as a parse error)
+            if getattr(response, "stop_reason", None) == "max_tokens":
+                print(f"    Truncated (stop_reason=max_tokens, max_tokens={max_tokens}, attempt {attempt+1})")
+                if attempt < retries - 1:
+                    time.sleep(2)
+                    continue
+                return None
+
+            if schema is not None:
+                for block in response.content:
+                    if getattr(block, "type", None) == "tool_use" and block.name == tool_name:
+                        return block.input
+                print(f"    No tool_use block returned (attempt {attempt+1})")
+                if attempt < retries - 1:
+                    time.sleep(2)
+                    continue
+                return None
+
+            raw = response.content[0].text.strip()
             raw = re.sub(r'^```(?:json)?\s*', '', raw)
             raw = re.sub(r'\s*```$', '', raw)
-
-            # Remove control characters that break JSON parsing
             raw = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', raw)
-
             return json.loads(raw)
 
         except json.JSONDecodeError as e:
             print(f"    JSON parse error (attempt {attempt+1}): {e}")
-            print(f"    Raw response starts with: {raw[:200]}")
             if attempt < retries - 1:
                 time.sleep(2)
         except anthropic.APIError as e:
@@ -298,7 +419,7 @@ Return ONLY this JSON structure (no other text):
   "storylineThread": "Lesson 1: [brief description]\\nLesson 2: ...\\n[continue for all {args.lessons} lessons]"
 }}"""
 
-    return call_claude(prompt, max_tokens=4000)
+    return call_claude(prompt, max_tokens=6000, schema=UNIT_TOOL_SCHEMA)
 
 
 # ── Lesson generation ─────────────────────────────────────────────────────────
@@ -389,7 +510,7 @@ Set "number" to {num}.
 Set "substrand" to "Sub-Strand {args.substrand}: {args.substrand_name}".
 """
 
-    result = call_claude(prompt, max_tokens=8192)
+    result = call_claude(prompt, max_tokens=8192, schema=LESSON_TOOL_SCHEMA)
     if result and 'lesson' in result:
         return result['lesson']
     return result   # in case Claude returns the lesson directly
@@ -450,7 +571,7 @@ Include 4-5 sections covering the main content areas.
 Include 4-5 rubric criteria covering key scientific concepts.
 """
 
-    return call_claude(prompt, max_tokens=5000)
+    return call_claude(prompt, max_tokens=8192, schema=FE_TOOL_SCHEMA)
 
 
 def generate_summary_table(unit: dict, lessons: list, args) -> dict | None:
@@ -484,7 +605,7 @@ def generate_summary_table(unit: dict, lessons: list, args) -> dict | None:
         f"{lesson_refs}\n"
     )
 
-    return call_claude(prompt, max_tokens=4000)
+    return call_claude(prompt, max_tokens=6000, schema=ST_TOOL_SCHEMA)
 
 
 # ── Data file writer ──────────────────────────────────────────────────────────
