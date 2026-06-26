@@ -33,7 +33,7 @@ A system to generate ~2,000 Kenya Competency-Based Education (CBE) lesson plans 
 | Python | 3.12.3 (venv at `venv/`) |
 | Node.js | v22.x |
 | API model | `claude-sonnet-4-6` |
-| Git branch | `claude/setup-cbe-generation-ZKiIi` |
+| Git branch | `main` |
 | GitHub | `markknit/cbe-generation-system` |
 
 ```bash
@@ -189,7 +189,7 @@ Full 2,000-lesson target at batch pricing: **~$114**
 ```
 I am working on the Kenya CBE Lesson Plan Generation System.
 Server: jhm-spark | User: markk | Path: /home/markk/ares/cbe-generation-system
-Branch: claude/setup-cbe-generation-ZKiIi
+Branch: main
 
 Current state: Biology complete (all 9 sub-strands, 8 lessons each).
 Chemistry, Physics, Mathematics pending after teacher review of Biology.

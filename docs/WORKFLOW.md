@@ -99,7 +99,7 @@ node generators/generate.js --all
 # jhm-spark
 git add -A
 git commit -m "Chemistry sub-strands 1.2–2.2 generated (8 lessons each)"
-git push origin claude/setup-cbe-generation-ZKiIi
+git push origin main
 
 # Windows
 git pull
@@ -181,9 +181,9 @@ After generating, spot-check the docx:
 
 | Action | Command |
 |---|---|
-| Push from jhm-spark | `git add -A && git commit -m "..." && git push origin claude/setup-cbe-generation-ZKiIi` |
+| Push from jhm-spark | `git add -A && git commit -m "..." && git push origin main` |
 | Pull to Windows | `git pull` |
-| First-time pull after force push | `git fetch origin && git reset --hard origin/claude/setup-cbe-generation-ZKiIi` |
+| First-time pull after force push | `git fetch origin && git reset --hard origin/main` |
 | Check for large files before push | `find . -size +50M -not -path './.git/*' -not -path './venv/*'` |
 
 ---
@@ -211,7 +211,7 @@ After generating, spot-check the docx:
 | Python venv | `source venv/bin/activate` |
 | Node version | v22.x |
 | API model | `claude-sonnet-4-6` |
-| Git branch | `claude/setup-cbe-generation-ZKiIi` |
+| Git branch | `main` |
 | GitHub remote | `https://github.com/markknit/cbe-generation-system.git` |
 | ARES content DB | `data/ares_index/ares_content.db` (630MB, jhm-spark only, gitignored) |
 | Curriculum PDFs | `data/raw/curriculum_pdfs/` |

@@ -10,7 +10,7 @@
 
 **Goal:** Generate ~2,000 Kenya CBE lesson plans as `.docx` files (Grade 10 Biology, Chemistry, Physics, Mathematics).
 **Server:** `jhm-spark` | **User:** `markk` | **Root:** `/home/markk/ares/cbe-generation-system`
-**Branch:** `claude/setup-cbe-generation-ZKiIi` | **Remote:** `markknit/cbe-generation-system`
+**Branch:** `main` | **Remote:** `markknit/cbe-generation-system`
 **Model:** `claude-sonnet-4-6`
 
 ---
@@ -156,13 +156,13 @@ Resources auto-injected into Section C Resource column at generation time.
 
 ```bash
 # jhm-spark → GitHub
-git add -A && git commit -m "..." && git push origin claude/setup-cbe-generation-ZKiIi
+git add -A && git commit -m "..." && git push origin main
 
 # GitHub → Windows
 git pull
 
 # After force push (diverged history)
-git fetch origin && git reset --hard origin/claude/setup-cbe-generation-ZKiIi
+git fetch origin && git reset --hard origin/main
 ```
 
 **Never commit:** `data/ares_index/ares_content.db`, `venv/`, `.env`

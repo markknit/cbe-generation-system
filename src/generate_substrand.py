@@ -242,7 +242,7 @@ UNIT_TOOL_SCHEMA = {
 LESSON_TOOL_SCHEMA = {
     "type": "object", "additionalProperties": False,
     "properties": {
-        "number": {"type": ["integer", "string"]},
+        "number": {"type": "integer"},
         "title": _s(), "duration": _s(), "substrand": _s(), "aresKeywords": _s(),
         "slo": {
             "type": "object", "additionalProperties": False,
@@ -298,7 +298,7 @@ ST_TOOL_SCHEMA = {
         "subStrand": _s(), "drivingQuestion": _s(),
         "lessons": {"type": "array", "items": {
             "type": "object", "additionalProperties": False,
-            "properties": {"number": {"type": ["integer", "string"]}, "title": _s(),
+            "properties": {"number": {"type": "integer"}, "title": _s(),
                            "observed": _s(), "learned": _s(), "explained": _s()},
             "required": ["number", "title", "observed", "learned", "explained"]}},
     },
@@ -682,12 +682,25 @@ def write_data_file(output_name: str, meta: dict, unit: dict,
         if _sm:
             meta.setdefault('substrand_id', _sm.group(1))
             meta.setdefault('substrand_name', _sm.group(2).strip())
+    def _coerce_int(v):
+        """Contract types lesson 'number' as integer; coerce stringified ints."""
+        if isinstance(v, bool):
+            return v
+        if isinstance(v, str) and v.strip().lstrip('-').isdigit():
+            return int(v.strip())
+        return v
     for _lesson in lessons:
         if isinstance(_lesson, dict) and 'safetyNotes' in _lesson:
             _sn = _lesson.pop('safetyNotes')
             _slo = _lesson.get('slo')
             if isinstance(_slo, dict) and not _slo.get('safetyNotes'):
                 _slo['safetyNotes'] = _sn
+        if isinstance(_lesson, dict) and 'number' in _lesson:
+            _lesson['number'] = _coerce_int(_lesson['number'])
+    if isinstance(st, dict) and isinstance(st.get('lessons'), list):
+        for _stl in st['lessons']:
+            if isinstance(_stl, dict) and 'number' in _stl:
+                _stl['number'] = _coerce_int(_stl['number'])
 
     def js_val(obj):
         """Convert Python object to JS-compatible string."""

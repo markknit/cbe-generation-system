@@ -30,7 +30,7 @@ def check_section_c(filepath):
         # Count tables
         table_count = len(doc.tables)
         
-        # Look for 5-column table with 7+ rows
+        # Look for 5-column table with 7+ rows (Section C: Phase | Learner Experience | Teacher Moves | Sensemaking | Formative Assessment)
         section_c_table = None
         for table in doc.tables:
             if len(table.columns) == 5 and len(table.rows) >= 7:
