@@ -1,0 +1,124 @@
+diff --git a/generators/lib/sections.js b/generators/lib/sections.js
+index 214c5a1..8f15c8c 100644
+--- a/generators/lib/sections.js
++++ b/generators/lib/sections.js
+@@ -140,7 +140,13 @@ function sectionC(lesson, config = {}) {
+   const col3Label = config.col3Label || 'Teacher Moves';
+   const col5Label = config.col5Label || 'Formative Assessment Strategy';
+ 
+-  const cw = [900, 2300, 2556, 3324, 2300, 2300];
++  // 5-column layout (DXA, sums to W = 13680):
++  //   [0] Phase + ARES resources stacked beneath the phase label  — 1.056" (~half a content col)
++  //   [1] Learner Experience                                      — 2.111"
++  //   [2] Teacher Moves (col3Label)                               — 2.111"
++  //   [3] Sensemaking Strategy                                    — 2.111"
++  //   [4] Formative Assessment Strategy (col5Label)               — 2.111"
++  const cw = [1520, 3040, 3040, 3040, 3040];
+ 
+   const aresTopic = lesson.aresKeywords || lesson.title || '';
+   const aresRes   = getAllPhaseResources({
+@@ -157,25 +163,29 @@ function sectionC(lesson, config = {}) {
+     'Model Building Phase':                   'model',
+   };
+ 
++  // Build the Phase cell: phase label on top, then resource links stacked below.
++  const phaseCell = (ph) => {
++    const out = [para(ph.phase, { bold: true, size: SZ, after: 40 })];
++    const resPara = buildResourceParagraphs(aresRes[PHASE_KEY[ph.phase] || 'observe'], ph.phase);
++    return out.concat(resPara);
++  };
++
+   return makeTable([
+-    fullHeader('C. LESSON IMPLEMENTATION FRAMEWORK', C.teal, 'FFFFFF', SZ_H, 6),
++    fullHeader('C. LESSON IMPLEMENTATION FRAMEWORK', C.teal, 'FFFFFF', SZ_H, 5),
+     new TableRow({ children: [
+-      cell('Phase',         { fill: C.darkBlue, bold: true, color: 'FFFFFF', w: cw[0], size: SZ }),
+-      cell('Learner Experience', { fill: C.medBlue, bold: true, color: 'FFFFFF', w: cw[1], size: SZ }),
+-      cell('Resource',      { fill: C.teal,    bold: true, color: 'FFFFFF', w: cw[2], size: SZ }),
+-      cell(col3Label,       { fill: C.medBlue, bold: true, color: 'FFFFFF', w: cw[3], size: SZ }),
+-      cell('Sensemaking Strategy', { fill: C.teal, bold: true, color: 'FFFFFF', w: cw[4], size: SZ }),
+-      cell(col5Label,       { fill: C.medBlue, bold: true, color: 'FFFFFF', w: cw[5], size: SZ }),
++      cell('Phase',                { fill: C.darkBlue, bold: true, color: 'FFFFFF', w: cw[0], size: SZ }),
++      cell('Learner Experience',   { fill: C.medBlue,  bold: true, color: 'FFFFFF', w: cw[1], size: SZ }),
++      cell(col3Label,              { fill: C.medBlue,  bold: true, color: 'FFFFFF', w: cw[2], size: SZ }),
++      cell('Sensemaking Strategy', { fill: C.teal,     bold: true, color: 'FFFFFF', w: cw[3], size: SZ }),
++      cell(col5Label,              { fill: C.medBlue,  bold: true, color: 'FFFFFF', w: cw[4], size: SZ }),
+     ]}),
+     ...lesson.framework.map(ph => new TableRow({ children: [
+-      cell(ph.phase,
+-           { fill: PHASE_COLOUR[ph.phase] || C.grey, bold: true, w: cw[0], size: SZ }),
++      cell(phaseCell(ph),
++           { fill: PHASE_COLOUR[ph.phase] || C.grey, w: cw[0] }),
+       cell(ph.learnerExperience,    { fill: C.white, w: cw[1], size: SZ }),
+-      cell(buildResourceParagraphs(aresRes[PHASE_KEY[ph.phase] || 'observe'], ph.phase),
+-           { fill: C.grey, w: cw[2] }),
+-      cell(ph.teacherMoves,         { fill: C.white, w: cw[3], size: SZ }),
+-      cell(ph.sensemakingStrategy,  { fill: C.grey,  w: cw[4], size: SZ }),
+-      cell(ph.formativeAssessment,  { fill: C.white, w: cw[5], size: SZ }),
++      cell(ph.teacherMoves,         { fill: C.grey,  w: cw[2], size: SZ }),
++      cell(ph.sensemakingStrategy,  { fill: C.white, w: cw[3], size: SZ }),
++      cell(ph.formativeAssessment,  { fill: C.grey,  w: cw[4], size: SZ }),
+     ]})),
+   ], cw);
+ }
+diff --git a/src/generate_substrand.py b/src/generate_substrand.py
+index 7b04a69..15f1eb6 100644
+--- a/src/generate_substrand.py
++++ b/src/generate_substrand.py
+@@ -242,7 +242,7 @@ UNIT_TOOL_SCHEMA = {
+ LESSON_TOOL_SCHEMA = {
+     "type": "object", "additionalProperties": False,
+     "properties": {
+-        "number": {"type": ["integer", "string"]},
++        "number": {"type": "integer"},
+         "title": _s(), "duration": _s(), "substrand": _s(), "aresKeywords": _s(),
+         "slo": {
+             "type": "object", "additionalProperties": False,
+@@ -298,7 +298,7 @@ ST_TOOL_SCHEMA = {
+         "subStrand": _s(), "drivingQuestion": _s(),
+         "lessons": {"type": "array", "items": {
+             "type": "object", "additionalProperties": False,
+-            "properties": {"number": {"type": ["integer", "string"]}, "title": _s(),
++            "properties": {"number": {"type": "integer"}, "title": _s(),
+                            "observed": _s(), "learned": _s(), "explained": _s()},
+             "required": ["number", "title", "observed", "learned", "explained"]}},
+     },
+@@ -682,12 +682,25 @@ def write_data_file(output_name: str, meta: dict, unit: dict,
+         if _sm:
+             meta.setdefault('substrand_id', _sm.group(1))
+             meta.setdefault('substrand_name', _sm.group(2).strip())
++    def _coerce_int(v):
++        """Contract types lesson 'number' as integer; coerce stringified ints."""
++        if isinstance(v, bool):
++            return v
++        if isinstance(v, str) and v.strip().lstrip('-').isdigit():
++            return int(v.strip())
++        return v
+     for _lesson in lessons:
+         if isinstance(_lesson, dict) and 'safetyNotes' in _lesson:
+             _sn = _lesson.pop('safetyNotes')
+             _slo = _lesson.get('slo')
+             if isinstance(_slo, dict) and not _slo.get('safetyNotes'):
+                 _slo['safetyNotes'] = _sn
++        if isinstance(_lesson, dict) and 'number' in _lesson:
++            _lesson['number'] = _coerce_int(_lesson['number'])
++    if isinstance(st, dict) and isinstance(st.get('lessons'), list):
++        for _stl in st['lessons']:
++            if isinstance(_stl, dict) and 'number' in _stl:
++                _stl['number'] = _coerce_int(_stl['number'])
+ 
+     def js_val(obj):
+         """Convert Python object to JS-compatible string."""
+diff --git a/verify_section_c.py b/verify_section_c.py
+index d267df0..d896abe 100644
+--- a/verify_section_c.py
++++ b/verify_section_c.py
+@@ -30,7 +30,7 @@ def check_section_c(filepath):
+         # Count tables
+         table_count = len(doc.tables)
+         
+-        # Look for 5-column table with 7+ rows
++        # Look for 5-column table with 7+ rows (Section C: Phase | Learner Experience | Teacher Moves | Sensemaking | Formative Assessment)
+         section_c_table = None
+         for table in doc.tables:
+             if len(table.columns) == 5 and len(table.rows) >= 7:
