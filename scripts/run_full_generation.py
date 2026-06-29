@@ -327,12 +327,18 @@ def collect_one(key, state):
             stubs = out[6:].split(',')
             _log(f"  WARNING: stub lessons in {key}: {', '.join(stubs)}")
 
-    # Collect generated docx files
-    subj_cap = ss['subject'].capitalize()
-    subj_dir = 'Maths' if ss['subject'] == 'mathematics' else subj_cap
-    out_dir  = (PROJECT_ROOT / 'data' / 'outputs' / 'docx'
-                / f'Grade 10 {subj_cap}' / f'{subj_dir} {ss["substrand"]}')
-    files = [f.name for f in sorted(out_dir.glob('*.docx'))] if out_dir.exists() else []
+    # Collect generated docx files (v2 output path mirrors v2_owner_inventory)
+    subj_folder = 'Maths' if ss['subject'] == 'mathematics' else ss['subject'].capitalize()
+    data_file_path = DATA_DIR / f'{oname}_data.js'
+    out_dir = None
+    if data_file_path.exists():
+        meta_out = subprocess.run(
+            ['node', '-e', f'var d=require({json.dumps(str(data_file_path))});console.log(d.META.outputDir);'],
+            cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=15,
+        )
+        if meta_out.returncode == 0 and meta_out.stdout.strip():
+            out_dir = PROJECT_ROOT / 'data' / 'outputs' / meta_out.stdout.strip()
+    files = [f.name for f in sorted(out_dir.glob('*.docx'))] if (out_dir and out_dir.exists()) else []
 
     lc = ss.get('lesson_count') or 8
     ss['status'] = 'complete'

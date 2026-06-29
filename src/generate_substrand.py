@@ -683,7 +683,7 @@ def generate_summary_table(unit: dict, lessons: list, args,
         f"{lesson_refs}\n"
     )
 
-    return call_claude(prompt, max_tokens=6000, schema=ST_TOOL_SCHEMA)
+    return call_claude(prompt, max_tokens=8192, schema=ST_TOOL_SCHEMA)
 
 
 # ── Data file writer ──────────────────────────────────────────────────────────
@@ -847,6 +847,13 @@ _SUBJECT_FOLDER = {
 }
 
 
+def _v2_output_dir(subject: str, substrand_id: str, substrand_name: str) -> str:
+    """Return the outputDir path segment for v2 output, e.g. 'v2/Biology/SS1.1_Cell_Structure'."""
+    subj_folder = _SUBJECT_FOLDER.get(subject, subject.capitalize())
+    ss_folder = f"SS{substrand_id}_{substrand_name.replace(' ', '_')}"
+    return f"v2/{subj_folder}/{ss_folder}"
+
+
 def find_v2_templates(subject: str, substrand_id: str) -> dict:
     """Find up to three template docx files for this sub-strand from v2_owner_inventory.
     Returns {'lesson': Path|None, 'fe': Path|None, 'st': Path|None}.
@@ -888,7 +895,6 @@ def determine_lesson_count(curriculum_text: str, lesson_template: dict,
         'type': 'object', 'additionalProperties': False,
         'properties': {
             'lesson_count': {'type': 'integer', 'minimum': 6, 'maximum': 14},
-            'reasoning': {'type': 'string'},
         },
         'required': ['lesson_count'],
     }
@@ -902,7 +908,7 @@ def determine_lesson_count(curriculum_text: str, lesson_template: dict,
         f"Consider topic complexity, number of learning outcomes, and any KICD guidance. "
         f"Target range 6–14, average 8–10."
     )
-    result = call_claude(prompt, max_tokens=256, retries=2,
+    result = call_claude(prompt, max_tokens=512, retries=2,
                          schema=COUNT_SCHEMA, tool_name='propose_lesson_count')
     if result and isinstance(result.get('lesson_count'), int):
         return (max(6, min(14, result['lesson_count'])), 'pre_pass')
@@ -1338,7 +1344,6 @@ def main():
         id_path.write_text(batch_id)
         meta_path = id_path.with_suffix('.json')
         _subj_cap = args.subject.capitalize()
-        _subj_dir = 'Maths' if args.subject == 'mathematics' else _subj_cap
         meta_path.write_text(json.dumps({
             "unit": unit,
             "meta": {
@@ -1346,7 +1351,7 @@ def main():
                 "grade":          10,
                 "substrand_id":   args.substrand,
                 "substrand_name": args.substrand_name,
-                "outputDir":      f"Grade 10 {_subj_cap}/{_subj_dir} {args.substrand}",
+                "outputDir":      _v2_output_dir(args.subject, args.substrand, args.substrand_name),
                 "filePrefix":     f"{_subj_cap}_{args.substrand_name.replace(' ', '_')}",
                 "titleDoc":       f"{_subj_cap.upper()} GRADE 10: {args.substrand_name.upper()}",
                 "subtitleDoc":    f"CBE Phenomenon-Driven Lesson Sequence — Sub-Strand {args.substrand} ({args.lessons} Lessons)",
@@ -1436,14 +1441,13 @@ def main():
     # ── Build META ─────────────────────────────────────────────────────────────
 
     subject_cap = args.subject.capitalize()
-    subj_dir    = 'Maths' if args.subject == 'mathematics' else subject_cap
 
     meta = {
         "subject":     subject_cap,
         "grade":       10,
         "substrand_id":   args.substrand,
         "substrand_name": args.substrand_name,
-        "outputDir":   f"Grade 10 {subject_cap}/{subj_dir} {args.substrand}",
+        "outputDir":   _v2_output_dir(args.subject, args.substrand, args.substrand_name),
         "filePrefix":  f"{subject_cap}_{args.substrand_name.replace(' ', '_')}",
         "titleDoc":    f"{subject_cap.upper()} GRADE 10: {args.substrand_name.upper()}",
         "subtitleDoc": f"CBE Phenomenon-Driven Lesson Sequence — Sub-Strand {args.substrand} ({args.lessons} Lessons)",

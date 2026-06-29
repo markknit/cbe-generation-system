@@ -28,12 +28,41 @@ SYSTEM = ("You are an expert CBE curriculum designer for Kenya Grade 10. "
 # ── What needs fixing ─────────────────────────────────────────────────────────
 
 REPAIRS = {
-    'bio_1_2': {'stubs': [3],      'fe': False, 'substrand': '1.2', 'name': 'Specimen Collection and Preservation'},
-    'bio_2_2': {'stubs': [1],      'fe': False, 'substrand': '2.2', 'name': 'Transport in Plants'},
-    'bio_2_3': {'stubs': [2, 3],   'fe': False, 'substrand': '2.3', 'name': 'Gaseous Exchange and Respiration in Plants'},
-    'bio_3_1': {'stubs': [4, 8],   'fe': False, 'substrand': '3.1', 'name': 'Nutrition in Animals'},
-    'bio_3_2': {'stubs': [],       'fe': True,  'substrand': '3.2', 'name': 'Transport in Animals'},
-    'bio_3_3': {'stubs': [1],      'fe': True,  'substrand': '3.3', 'name': 'Gaseous Exchange and Respiration in Animals'},
+    'bio_1_1': {'stubs': [1, 3, 11], 'fe': False, 'subject': 'Biology', 'substrand': '1.1', 'name': 'Cell Structure'},
+    'bio_1_2': {'stubs': [5, 6], 'fe': False, 'subject': 'Biology', 'substrand': '1.2', 'name': 'Chemicals of Life'},
+    'bio_1_3': {'stubs': [2, 8], 'fe': False, 'subject': 'Biology', 'substrand': '1.3', 'name': 'Cell Biology'},
+    'bio_2_1': {'stubs': [1, 3, 4, 10], 'fe': False, 'subject': 'Biology', 'substrand': '2.1', 'name': 'Plant Nutrition'},
+    'bio_2_3': {'stubs': [3, 6, 11], 'fe': False, 'subject': 'Biology', 'substrand': '2.3', 'name': 'Plant Gaseous Exchange and Respiration'},
+    'bio_3_1': {'stubs': [2, 4, 8, 9], 'fe': False, 'subject': 'Biology', 'substrand': '3.1', 'name': 'Animal Nutrition'},
+    'bio_3_2': {'stubs': [1, 6, 11], 'fe': False, 'subject': 'Biology', 'substrand': '3.2', 'name': 'Animal Transport'},
+    'bio_3_3': {'stubs': [11], 'fe': False, 'subject': 'Biology', 'substrand': '3.3', 'name': 'Animal Gaseous Exchange and Respiration'},
+    'chem_1_2': {'stubs': [1], 'fe': False, 'subject': 'Chemistry', 'substrand': '1.2', 'name': 'The Atom'},
+    'chem_1_3': {'stubs': [5, 7, 8, 9], 'fe': False, 'subject': 'Chemistry', 'substrand': '1.3', 'name': 'The Periodic Table'},
+    'chem_1_4': {'stubs': [6, 9, 13], 'fe': False, 'subject': 'Chemistry', 'substrand': '1.4', 'name': 'Chemical Bonding'},
+    'chem_1_5': {'stubs': [2, 6], 'fe': False, 'subject': 'Chemistry', 'substrand': '1.5', 'name': 'Periodicity'},
+    'chem_3_1': {'stubs': [3, 8, 9], 'fe': False, 'subject': 'Chemistry', 'substrand': '3.1', 'name': 'Acids and Bases'},
+    'phys_1_1': {'stubs': [3, 9], 'fe': False, 'subject': 'Physics', 'substrand': '1.1', 'name': 'Pressure'},
+    'phys_1_2': {'stubs': [1, 3], 'fe': False, 'subject': 'Physics', 'substrand': '1.2', 'name': 'Mechanical Properties of Materials'},
+    'phys_1_3': {'stubs': [5], 'fe': False, 'subject': 'Physics', 'substrand': '1.3', 'name': 'Temperature and Thermal Expansion'},
+    'phys_1_5': {'stubs': [5, 6], 'fe': False, 'subject': 'Physics', 'substrand': '1.5', 'name': 'Moments of Equilibrium'},
+    'phys_2_1': {'stubs': [3, 6, 7, 8], 'fe': False, 'subject': 'Physics', 'substrand': '2.1', 'name': 'Properties of Waves'},
+    'phys_3_1': {'stubs': [4], 'fe': False, 'subject': 'Physics', 'substrand': '3.1', 'name': 'Radioactivity and Stability of Isotopes'},
+    'phys_3_2': {'stubs': [1, 2, 7, 8, 10], 'fe': False, 'subject': 'Physics', 'substrand': '3.2', 'name': 'Current Electricity'},
+    'phys_3_3': {'stubs': [2, 5], 'fe': False, 'subject': 'Physics', 'substrand': '3.3', 'name': 'Introduction to Electronics'},
+    'phys_3_4': {'stubs': [3, 6, 8, 9], 'fe': False, 'subject': 'Physics', 'substrand': '3.4', 'name': 'Electrostatics'},
+    'phys_4_1': {'stubs': [2, 4, 7], 'fe': False, 'subject': 'Physics', 'substrand': '4.1', 'name': 'Greenhouse Effect and Climate Change'},
+    'phys_4_2': {'stubs': [4, 6, 7, 9], 'fe': False, 'subject': 'Physics', 'substrand': '4.2', 'name': 'Introduction to Space Physics'},
+    'math_1_1': {'stubs': [6], 'fe': False, 'subject': 'Mathematics', 'substrand': '1.1', 'name': 'Real Numbers'},
+    'math_1_2': {'stubs': [1, 5, 6], 'fe': False, 'subject': 'Mathematics', 'substrand': '1.2', 'name': 'Indices'},
+    'math_1_3': {'stubs': [2, 4, 7], 'fe': False, 'subject': 'Mathematics', 'substrand': '1.3', 'name': 'Quadratic Equations'},
+    'math_2_1': {'stubs': [1, 9, 10], 'fe': False, 'subject': 'Mathematics', 'substrand': '2.1', 'name': 'Similarity and Enlargement'},
+    'math_2_3': {'stubs': [3, 5, 10], 'fe': False, 'subject': 'Mathematics', 'substrand': '2.3', 'name': 'Area of Part of a Circle'},
+    'math_3_1': {'stubs': [1, 3, 9], 'fe': False, 'subject': 'Mathematics', 'substrand': '3.1', 'name': 'Trigonometry I'},
+    'math_3_2': {'stubs': [7], 'fe': False, 'subject': 'Mathematics', 'substrand': '3.2', 'name': 'Rotation'},
+    'math_3_3': {'stubs': [1, 4], 'fe': False, 'subject': 'Mathematics', 'substrand': '3.3', 'name': 'Vectors I'},
+    'math_3_4': {'stubs': [1, 2], 'fe': False, 'subject': 'Mathematics', 'substrand': '3.4', 'name': 'Linear Motion'},
+    'math_4_1': {'stubs': [4, 6], 'fe': False, 'subject': 'Mathematics', 'substrand': '4.1', 'name': 'Statistics I'},
+    'math_4_2': {'stubs': [3], 'fe': False, 'subject': 'Mathematics', 'substrand': '4.2', 'name': 'Probability I'},
 }
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -101,36 +130,18 @@ def call_claude(prompt, max_tokens=8192):
 
 
 def patch_lesson(output_name, lesson_num, lesson_data):
-    """Replace stub lesson in data file with real content."""
-    path = f'generators/data/{output_name}_data.js'
-    with open(path) as f:
-        js = f.read()
-
-    lesson_json = json.dumps(lesson_data, indent=2, ensure_ascii=False)
-
-    # Pattern matches the stub lesson (empty overview)
-    stub_pattern = (
-        r'\{[^{}]*"number":\s*' + str(lesson_num) +
-        r'\s*,[^{}]*"overview":\s*""[^{}]*"summaryTablePrompt":\s*\{[^}]*\}\s*\}'
+    """Replace stub lesson in data file with real content via patch_lesson.js."""
+    tmp_path = f'/tmp/{output_name}_lesson{lesson_num}.json'
+    with open(tmp_path, 'w') as f:
+        json.dump(lesson_data, f, ensure_ascii=False, indent=2)
+    result = subprocess.run(
+        ['node', 'scripts/patch_lesson.js', output_name, str(lesson_num), tmp_path],
+        capture_output=True, text=True
     )
-    new_js = re.sub(stub_pattern, lesson_json, js, flags=re.DOTALL)
-
-    if new_js != js:
-        with open(path, 'w') as f:
-            f.write(new_js)
+    if result.returncode == 0:
+        print(f"    {result.stdout.strip()}")
         return True
-
-    # Fallback: try matching by title "Lesson N"
-    stub_pattern2 = (
-        r'\{[^{}]*"number":\s*' + str(lesson_num) +
-        r'[^{}]*"title":\s*"Lesson ' + str(lesson_num) + r'"[^{}]*\}'
-    )
-    new_js2 = re.sub(stub_pattern2, lesson_json, js, flags=re.DOTALL)
-    if new_js2 != js:
-        with open(path, 'w') as f:
-            f.write(new_js2)
-        return True
-
+    print(f"    patch_lesson.js error: {result.stderr[:200]}")
     return False
 
 
@@ -182,7 +193,7 @@ def generate_lesson(output_name, lesson_num, repair):
 
     prompt = (
         f"Generate Lesson {lesson_num} ({pos}) for:\n"
-        f"Subject: Biology Grade 10\n"
+        f"Subject: {repair['subject']} Grade 10\n"
         f"Sub-strand: {repair['substrand']} {repair['name']}\n"
         f"Driving question: {unit['drivingQuestion']}\n"
         f"Phenomenon: {unit['phenomenon']}\n"
