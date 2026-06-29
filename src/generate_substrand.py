@@ -583,13 +583,24 @@ def _get_lesson_storyline(unit: dict, num: int) -> str:
 # ── Final Explanation & Summary Table generation ──────────────────────────────
 
 def generate_final_explanation(curriculum_text: str, unit: dict,
-                                lessons: list, args) -> dict | None:
+                                lessons: list, args,
+                                fe_template: dict | None = None) -> dict | None:
     """Generate Final Explanation document data."""
     print("  Generating Final Explanation...")
 
     lesson_titles = "\n".join(f"  Lesson {l['number']}: {l['title']}" for l in lessons)
 
-    prompt = f"""Generate a Final Explanation assessment document for:
+    fe_template_section = ""
+    if fe_template and fe_template.get('paragraphs'):
+        fe_template_section = (
+            "\nTEACHER TEMPLATE — FINAL EXPLANATION REFERENCE "
+            "(use as structural and content guidance; improve quality where possible):\n"
+            + "\n".join(fe_template['paragraphs'][:40])
+        )
+
+    prompt = f"""AUDIENCE: This Final Explanation document is for STUDENTS to use as a model for answering the driving question. Use clear, student-accessible language. Write in second person when appropriate.
+
+Generate a Final Explanation assessment document for:
 Subject: {args.subject.capitalize()} Grade 10
 Sub-strand: {args.substrand} {args.substrand_name}
 Driving question: {unit.get('drivingQuestion', '')}
@@ -597,6 +608,7 @@ Phenomenon: {unit.get('phenomenon', '')}
 
 Lesson sequence completed:
 {lesson_titles}
+{fe_template_section}
 
 Return ONLY this JSON:
 {{
@@ -626,7 +638,8 @@ Include 4-5 rubric criteria covering key scientific concepts.
     return call_claude(prompt, max_tokens=8192, schema=FE_TOOL_SCHEMA)
 
 
-def generate_summary_table(unit: dict, lessons: list, args) -> dict | None:
+def generate_summary_table(unit: dict, lessons: list, args,
+                            st_template: dict | None = None) -> dict | None:
     """Generate teacher reference Summary Table data."""
     print("  Generating Summary Table...")
 
@@ -643,11 +656,24 @@ def generate_summary_table(unit: dict, lessons: list, args) -> dict | None:
     dq = unit.get("drivingQuestion", "").split("\n")[0]
     ss = f"Sub-Strand {args.substrand}: {args.substrand_name}"
 
+    st_template_section = ""
+    if st_template and st_template.get('paragraphs'):
+        st_template_section = (
+            "\nTEACHER TEMPLATE — SUMMARY TABLE REFERENCE "
+            "(use as structural and content guidance; improve quality where possible):\n"
+            + "\n".join(st_template['paragraphs'][:30])
+            + "\n"
+        )
+
     prompt = (
+        f"AUDIENCE: This Summary Table is a TEACHER REFERENCE — a pre-filled answer key "
+        f"for use while teaching. Write in third-person teacher voice; include pedagogical "
+        f"notes a teacher would find helpful.\n\n"
         f"Generate a teacher reference Summary Table for:\n"
         f"Subject: {args.subject.capitalize()} Grade 10\n"
         f"Sub-strand: {ss}\n"
-        f"Driving question: {dq}\n\n"
+        f"Driving question: {dq}\n"
+        f"{st_template_section}\n"
         f"Return ONLY this JSON (no other text):\n"
         f'{{ "subStrand": "{ss}", "drivingQuestion": "{dq}", "lessons": ['
         f' {{ "number": 1, "title": "title", "observed": "...", "learned": "...", "explained": "..." }}'
@@ -746,16 +772,15 @@ def write_data_file(output_name: str, meta: dict, unit: dict,
 
 SUBSTRAND_NAMES = {
     'biology': {
-        '1.1': 'Introduction to Biology',
-        '1.2': 'Specimen Collection and Preservation',
-        '1.3': 'Cell Structure and Specialisation',
-        '1.4': 'Chemicals of Life',
-        '2.1': 'Nutrition in Plants',
-        '2.2': 'Transport in Plants',
-        '2.3': 'Gaseous Exchange and Respiration in Plants',
-        '3.1': 'Nutrition in Animals',
-        '3.2': 'Transport in Animals',
-        '3.3': 'Gaseous Exchange and Respiration in Animals',
+        '1.1': 'Cell Structure',
+        '1.2': 'Chemicals of Life',
+        '1.3': 'Cell Biology',
+        '2.1': 'Plant Nutrition',
+        '2.2': 'Plant Transport',
+        '2.3': 'Plant Gaseous Exchange and Respiration',
+        '3.1': 'Animal Nutrition',
+        '3.2': 'Animal Transport',
+        '3.3': 'Animal Gaseous Exchange and Respiration',
     },
     'chemistry': {
         '1.1': 'Introduction to Chemistry',
@@ -763,30 +788,38 @@ SUBSTRAND_NAMES = {
         '1.3': 'The Periodic Table',
         '1.4': 'Chemical Bonding',
         '1.5': 'Periodicity',
-        '2.1': 'Acids, Bases and Salts',
-        '2.2': 'Salts',
+        '2.1': 'Introduction to Salts',
+        '3.1': 'Acids and Bases',
     },
     'physics': {
-        '1.2': 'Pressure',
-        '1.3': 'Mechanical Properties of Materials',
-        '1.6': 'Energy, Work, Power and Machines',
+        '1.1': 'Pressure',
+        '1.2': 'Mechanical Properties of Materials',
+        '1.3': 'Temperature and Thermal Expansion',
+        '1.4': 'Energy, Work, Power and Machines',
+        '1.5': 'Moments of Equilibrium',
         '2.1': 'Properties of Waves',
-        '2.2': 'Radioactivity and Stability of Isotopes',
-        '3.1': 'Electrostatics',
+        '3.1': 'Radioactivity and Stability of Isotopes',
+        '3.2': 'Current Electricity',
         '3.3': 'Introduction to Electronics',
+        '3.4': 'Electrostatics',
         '4.1': 'Greenhouse Effect and Climate Change',
         '4.2': 'Introduction to Space Physics',
     },
     'mathematics': {
         '1.1': 'Real Numbers',
-        '1.2': 'Indices and Logarithms',
+        '1.2': 'Indices',
         '1.3': 'Quadratic Equations',
+        '1.4': 'Congruence',
         '2.1': 'Similarity and Enlargement',
-        '2.2': 'Reflection and Congruence',
-        '2.5': 'Area of Polygons',
-        '2.6': 'Area of a Part of a Circle',
-        '2.7': 'Surface Area and Volume of Solids',
-        '3.2': 'Probability',
+        '2.2': 'Area of Polygons',
+        '2.3': 'Area of Part of a Circle',
+        '2.4': 'Surface Area and Volume of Solids',
+        '3.1': 'Trigonometry I',
+        '3.2': 'Rotation',
+        '3.3': 'Vectors I',
+        '3.4': 'Linear Motion',
+        '4.1': 'Statistics I',
+        '4.2': 'Probability I',
     },
 }
 
@@ -802,6 +835,79 @@ LESSON_COUNTS = {
                 '2.1': 12, '2.2': 22, '2.3': 22,
                 '3.1': 12, '3.2': 24, '3.3': 24},
 }
+
+
+# ── v2 template lookup ────────────────────────────────────────────────────────
+
+V2_TEMPLATE_DIR = PROJECT_ROOT / 'data' / 'raw' / 'CBE LESSON TEMPLATES' / 'v2_owner_inventory'
+
+_SUBJECT_FOLDER = {
+    'biology': 'Biology', 'chemistry': 'Chemistry',
+    'physics': 'Physics', 'mathematics': 'Maths',
+}
+
+
+def find_v2_templates(subject: str, substrand_id: str) -> dict:
+    """Find up to three template docx files for this sub-strand from v2_owner_inventory.
+    Returns {'lesson': Path|None, 'fe': Path|None, 'st': Path|None}.
+    """
+    subject_dir = V2_TEMPLATE_DIR / _SUBJECT_FOLDER.get(subject, subject.capitalize())
+    matches = list(subject_dir.glob(f'SS{substrand_id}_*'))
+    if not matches:
+        return {'lesson': None, 'fe': None, 'st': None}
+
+    found = {'lesson': None, 'fe': None, 'st': None}
+    for f in matches[0].glob('*.docx'):
+        fname = f.name.lower().replace('_', '').replace('-', '').replace(' ', '')
+        if 'resourceguide' in fname:
+            continue
+        if 'finalexplanation' in fname:
+            found['fe'] = f
+        elif 'summarytable' in fname or 'answerkey' in fname:
+            found['st'] = f
+        else:
+            found['lesson'] = f
+    return found
+
+
+def determine_lesson_count(curriculum_text: str, lesson_template: dict,
+                            substrand_id: str, subject: str) -> tuple:
+    """Return (count, source) where source is 'template_regex'|'pre_pass'|'default'.
+    Clamps result to [6, 14].
+    """
+    # 1. Regex on template paragraph text
+    if lesson_template:
+        all_text = ' '.join(lesson_template.get('paragraphs', []))
+        m = (re.search(r'\b(1[0-4]|[6-9])\s+lessons?\b', all_text, re.IGNORECASE) or
+             re.search(r'\b(1[0-4]|[6-9])\s+periods?\b', all_text, re.IGNORECASE))
+        if m:
+            return (int(m.group(1)), 'template_regex')
+
+    # 2. Pre-pass API call — small, cached in batch checkpoint
+    COUNT_SCHEMA = {
+        'type': 'object', 'additionalProperties': False,
+        'properties': {
+            'lesson_count': {'type': 'integer', 'minimum': 6, 'maximum': 14},
+            'reasoning': {'type': 'string'},
+        },
+        'required': ['lesson_count'],
+    }
+    excerpt = curriculum_text[:2000] if curriculum_text else ''
+    template_excerpt = ' '.join(lesson_template.get('paragraphs', [])[:10]) if lesson_template else ''
+    prompt = (
+        f"How many lessons (6–14) should Sub-Strand {substrand_id} of Grade 10 "
+        f"{subject.capitalize()} have?\n\n"
+        f"CURRICULUM EXCERPT:\n{excerpt}\n\n"
+        f"TEMPLATE EXCERPT:\n{template_excerpt}\n\n"
+        f"Consider topic complexity, number of learning outcomes, and any KICD guidance. "
+        f"Target range 6–14, average 8–10."
+    )
+    result = call_claude(prompt, max_tokens=256, retries=2,
+                         schema=COUNT_SCHEMA, tool_name='propose_lesson_count')
+    if result and isinstance(result.get('lesson_count'), int):
+        return (max(6, min(14, result['lesson_count'])), 'pre_pass')
+
+    return (8, 'default')
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -868,13 +974,37 @@ def poll_batch(batch_id: str, poll_interval: int = 60) -> object:
 
 def collect_batch_results(batch_id: str) -> dict:
     """Retrieve all results from a completed batch.
-    Returns dict mapping custom_id → parsed JSON (or None on error).
+    Returns dict mapping custom_id → parsed dict (or None on error).
+    Handles both tool_use (schema-enforced) and free-text JSON responses.
     """
     results = {}
     for result in CLIENT.beta.messages.batches.results(batch_id):
         cid = result.custom_id
-        if result.result.type == 'succeeded':
-            raw = result.result.message.content[0].text.strip()
+        if result.result.type != 'succeeded':
+            print(f"  WARNING: {cid} failed: {result.result.type}")
+            results[cid] = None
+            continue
+
+        content = result.result.message.content
+
+        # Prefer tool_use block (schema-enforced path)
+        tool_data = None
+        for block in content:
+            if getattr(block, 'type', None) == 'tool_use':
+                tool_data = block.input
+                break
+
+        if tool_data is not None:
+            schema = LESSON_TOOL_SCHEMA if cid.startswith('lesson_') else FE_TOOL_SCHEMA
+            violations = _schema_violations(tool_data, schema)
+            if violations:
+                print(f"  WARNING: Schema violations for {cid}: {violations[:3]}")
+                results[cid] = None
+            else:
+                results[cid] = tool_data
+        else:
+            # Fallback: free-text JSON (legacy batches submitted without tool_use)
+            raw = content[0].text.strip() if content else ''
             raw = re.sub(r'^```(?:json)?\s*', '', raw)
             raw = re.sub(r'\s*```$', '', raw)
             raw = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', raw)
@@ -883,14 +1013,12 @@ def collect_batch_results(batch_id: str) -> dict:
             except json.JSONDecodeError as e:
                 print(f"  WARNING: JSON parse failed for {cid}: {e}")
                 results[cid] = None
-        else:
-            print(f"  WARNING: {cid} failed: {result.result.type}")
-            results[cid] = None
     return results
 
 
-def build_batch_requests(curriculum_text: str, template: dict,
-                          unit: dict, args) -> list:
+def build_batch_requests(curriculum_text: str, lesson_template: dict,
+                          unit: dict, args,
+                          fe_template: dict | None = None) -> list:
     """Build all lesson + FE requests for batch submission.
     Note: prev_summaries context is omitted in batch mode since all
     requests are submitted simultaneously. The unit storyline thread
@@ -912,7 +1040,7 @@ def build_batch_requests(curriculum_text: str, template: dict,
             f"Storyline thread for this lesson: {_get_lesson_storyline(unit, lesson_num)}\n\n"
             f"KICD CURRICULUM CONTENT:\n{curriculum_text}\n\n"
             f"TEACHER TEMPLATE — EVIDENCE ACTIVITIES:\n"
-            f"{template.get('evidence_activities', '')}\n\n"
+            f"{lesson_template.get('evidence_activities', '')}\n\n"
             f"RULES:\n"
             f"- All learner experiences must connect back to the phenomenon\n"
             f"- Teacher moves must include specific quoted phrases, WAIT TIME (10-15 seconds), cold-call counts\n"
@@ -922,11 +1050,8 @@ def build_batch_requests(curriculum_text: str, template: dict,
             f"- Lesson {lesson_num} should "
             f"{'introduce the phenomenon and open the DQB' if lesson_num == 1 else 'build on previous evidence and advance the driving question'}\n"
             f"{'- Final lesson: focus on Final Explanation, model comparison L1 vs final, DQB completion' if lesson_num == args.lessons else ''}\n\n"
-            f"Return ONLY this JSON (no other text):\n"
-            f"{json.dumps({'lesson': LESSON_SCHEMA}, indent=2)}\n\n"
-            f"Replace all placeholder values with real content for Lesson {lesson_num}.\n"
-            f"Set number to {lesson_num}. Set substrand to "
-            f"'Sub-Strand {args.substrand}: {args.substrand_name}'."
+            f"Use the emit_data tool to return the lesson. Set number to {lesson_num}. "
+            f"Set substrand to 'Sub-Strand {args.substrand}: {args.substrand_name}'."
         )
 
         requests.append({
@@ -936,51 +1061,52 @@ def build_batch_requests(curriculum_text: str, template: dict,
                 "max_tokens": 8192,
                 "system": SYSTEM_PROMPT,
                 "messages": [{"role": "user", "content": prompt}],
+                "tools": [{
+                    "name": "emit_data",
+                    "description": "Return the requested lesson-plan data as structured fields.",
+                    "input_schema": LESSON_TOOL_SCHEMA,
+                }],
+                "tool_choice": {"type": "tool", "name": "emit_data"},
             },
         })
 
     # Final Explanation request
-    lesson_titles = "\n".join(
-        f"  Lesson {i+1}: [will be filled from lesson content]"
-        for i in range(args.lessons)
-    )
+    fe_template_section = ""
+    if fe_template and fe_template.get('paragraphs'):
+        fe_template_section = (
+            "\nTEACHER TEMPLATE — FINAL EXPLANATION REFERENCE "
+            "(use as structural and content guidance; improve quality where possible):\n"
+            + "\n".join(fe_template['paragraphs'][:40])
+            + "\n"
+        )
+
     fe_prompt = (
+        f"AUDIENCE: This Final Explanation document is for STUDENTS to use as a model "
+        f"for answering the driving question. Use clear, student-accessible language. "
+        f"Write in second person when appropriate.\n\n"
         f"Generate a Final Explanation assessment document for:\n"
         f"Subject: {args.subject.capitalize()} Grade 10\n"
         f"Sub-strand: {args.substrand} {args.substrand_name}\n"
         f"Driving question: {unit.get('drivingQuestion', '')}\n"
         f"Phenomenon: {unit.get('phenomenon', '')}\n"
-        f"Number of lessons in sequence: {args.lessons}\n\n"
-        f"Return ONLY this JSON:\n"
-        '{\n'
-        '  "subjectLabel": "SUBJECT LABEL IN CAPS",\n'
-        '  "instructions": "Multi-sentence instructions for students...",\n'
-        '  "sections": [\n'
-        '    {\n'
-        '      "title": "SECTION 1: TITLE IN CAPS",\n'
-        '      "prompt": "Specific prompt for this section",\n'
-        '      "exemplar": "2-3 paragraph model answer with Kenyan contexts"\n'
-        '    }\n'
-        '  ],\n'
-        '  "rubric": [\n'
-        '    {\n'
-        '      "criterion": "Criterion name",\n'
-        '      "excellent": "Excellent (4) descriptor",\n'
-        '      "proficient": "Proficient (3) descriptor",\n'
-        '      "developing": "Developing (1-2) descriptor"\n'
-        '    }\n'
-        '  ]\n'
-        '}\n\n'
-        f"Include 4-5 sections and 4-5 rubric criteria."
+        f"Number of lessons in sequence: {args.lessons}\n"
+        f"{fe_template_section}\n"
+        f"Use the emit_data tool to return the Final Explanation with 4-5 sections and 4-5 rubric criteria."
     )
 
     requests.append({
         "custom_id": "final_explanation",
         "params": {
             "model": MODEL,
-            "max_tokens": 5000,
+            "max_tokens": 8192,
             "system": SYSTEM_PROMPT,
             "messages": [{"role": "user", "content": fe_prompt}],
+            "tools": [{
+                "name": "emit_data",
+                "description": "Return the requested lesson-plan data as structured fields.",
+                "input_schema": FE_TOOL_SCHEMA,
+            }],
+            "tool_choice": {"type": "tool", "name": "emit_data"},
         },
     })
 
@@ -1070,7 +1196,11 @@ def run_collect(output_name: str, args):
     st_args.substrand_name = meta.get('substrand_name', '')
     st_args.lessons     = n_lessons
 
-    st = generate_summary_table(unit, lessons, st_args)
+    # Re-load ST template (needed for audience-aware generation)
+    _st_path = find_v2_templates(st_args.subject, st_args.substrand).get('st')
+    st_template = extract_template_docx(str(_st_path)) if _st_path else None
+
+    st = generate_summary_table(unit, lessons, st_args, st_template=st_template)
     if st:
         print("  Summary Table generated ✓")
 
@@ -1140,52 +1270,49 @@ def main():
         args.substrand, f'Sub-Strand {args.substrand}'
     )
 
-    # Resolve lesson count
-    if args.lessons is None:
-        args.lessons = LESSON_COUNTS.get(args.subject, {}).get(args.substrand, 8)
-        print(f"Using {args.lessons} lessons from KICD curriculum")
-
-    # Auto-detect template
-    if args.template is None:
-        template_dir = PROJECT_ROOT / 'data' / 'raw' / 'CBE LESSON TEMPLATES'
-        subject_cap  = args.subject.capitalize()
-        ss           = args.substrand
-        ss_nodot     = ss.replace(".", "")
-        # Subject-aware match first — a bare *1.4* glob matches both
-        # "Biology 10.1.4 ..." and "Chemistry 10.1.4 ..." (Biology sorts first).
-        candidates   = (list(template_dir.glob(f'*{subject_cap}*{ss}*'))
-                        or list(template_dir.glob(f'*{subject_cap}*{ss_nodot}*'))
-                        or list(template_dir.glob(f'*{ss}*')))
-        if candidates:
-            args.template = str(candidates[0])
-            print(f"Auto-detected template: {candidates[0].name}")
-        else:
-            print(f"No template found for {args.subject} {args.substrand} — proceeding without")
-
-    print(f"\nGenerating: {args.subject.capitalize()} Grade 10 Sub-Strand {args.substrand}: {args.substrand_name}")
-    print(f"  Lessons: {args.lessons}")
-    print(f"  Output:  generators/data/{args.output}_data.js")
-    print(f"  Model:   {MODEL}")
-
-    # ── Extract source content ────────────────────────────────────────────────
+    # ── Extract source content + templates ───────────────────────────────────
 
     print("\n1. Extracting source content...")
     curriculum_pdf  = str(PROJECT_ROOT / CURRICULUM_PDF_MAP.get(args.subject, ''))
     curriculum_text = extract_curriculum_pdf(curriculum_pdf, args.substrand)
     print(f"  Curriculum text: {len(curriculum_text)} chars")
 
-    template = {}
-    if args.template:
-        template = extract_template_docx(args.template)
-        print(f"  Template: {len(template.get('paragraphs', []))} paragraphs, "
-              f"{len(template.get('table_content', []))} table rows")
+    # Find v2 templates (lesson + FE + ST); --template CLI arg overrides lesson only
+    _v2 = find_v2_templates(args.subject, args.substrand)
+    lesson_template_path = Path(args.template) if args.template else _v2['lesson']
+    fe_template_path     = _v2['fe']
+    st_template_path     = _v2['st']
+
+    lesson_template = extract_template_docx(str(lesson_template_path)) if lesson_template_path else {}
+    fe_template     = extract_template_docx(str(fe_template_path)) if fe_template_path else None
+    st_template     = extract_template_docx(str(st_template_path)) if st_template_path else None
+
+    if lesson_template_path:
+        print(f"  Lesson template: {lesson_template_path.name} "
+              f"({len(lesson_template.get('paragraphs', []))} paragraphs)")
+    if fe_template_path:
+        print(f"  FE template:     {fe_template_path.name}")
+    if st_template_path:
+        print(f"  ST template:     {st_template_path.name}")
+
+    # Resolve lesson count (CLI --lessons wins; otherwise probe template/curriculum)
+    lesson_count_source = 'cli'
+    if args.lessons is None:
+        args.lessons, lesson_count_source = determine_lesson_count(
+            curriculum_text, lesson_template, args.substrand, args.subject)
+        print(f"  Lesson count: {args.lessons} (source: {lesson_count_source})")
+
+    print(f"\nGenerating: {args.subject.capitalize()} Grade 10 Sub-Strand {args.substrand}: {args.substrand_name}")
+    print(f"  Lessons: {args.lessons}")
+    print(f"  Output:  generators/data/{args.output}_data.js")
+    print(f"  Model:   {MODEL}")
 
     # ── Generate content via Claude API ──────────────────────────────────────
 
     print("\n2. Generating content via Claude API...")
 
     # UNIT
-    unit = generate_unit(curriculum_text, template, args)
+    unit = generate_unit(curriculum_text, lesson_template, args)
     if not unit:
         print("ERROR: Failed to generate UNIT data")
         sys.exit(1)
@@ -1199,7 +1326,8 @@ def main():
     # ── Batch submit mode ─────────────────────────────────────────────────────
     if args.batch:
         print("\n2b. Building batch requests...")
-        requests = build_batch_requests(curriculum_text, template, unit, args)
+        requests = build_batch_requests(curriculum_text, lesson_template, unit, args,
+                                         fe_template=fe_template)
         print(f"  Built {len(requests)} requests "
               f"({args.lessons} lessons + 1 Final Explanation)")
 
@@ -1209,21 +1337,24 @@ def main():
         id_path = _batch_id_path(args.output)
         id_path.write_text(batch_id)
         meta_path = id_path.with_suffix('.json')
+        _subj_cap = args.subject.capitalize()
+        _subj_dir = 'Maths' if args.subject == 'mathematics' else _subj_cap
         meta_path.write_text(json.dumps({
             "unit": unit,
             "meta": {
-                "subject":        args.subject.capitalize(),
+                "subject":        _subj_cap,
                 "grade":          10,
                 "substrand_id":   args.substrand,
                 "substrand_name": args.substrand_name,
-                "outputDir":      f"Grade 10 {args.subject.capitalize()}/Bio {args.substrand}",
-                "filePrefix":     f"{args.subject.capitalize()}_{args.substrand_name.replace(' ', '_')}",
-                "titleDoc":       f"{args.subject.upper()} GRADE 10: {args.substrand_name.upper()}",
+                "outputDir":      f"Grade 10 {_subj_cap}/{_subj_dir} {args.substrand}",
+                "filePrefix":     f"{_subj_cap}_{args.substrand_name.replace(' ', '_')}",
+                "titleDoc":       f"{_subj_cap.upper()} GRADE 10: {args.substrand_name.upper()}",
                 "subtitleDoc":    f"CBE Phenomenon-Driven Lesson Sequence — Sub-Strand {args.substrand} ({args.lessons} Lessons)",
                 "col3Label":      "Teacher Moves",
                 "col5Label":      "Formative Assessment Strategy",
             },
             "lessons": args.lessons,
+            "lesson_count_source": lesson_count_source,
         }, ensure_ascii=False, indent=2))
 
         print(f"\n✓ Batch submitted!")
@@ -1250,7 +1381,7 @@ def main():
             print(f"  Resuming from lesson {start_lesson} ({len(lessons)} already done)")
 
     for lesson_num in range(start_lesson, args.lessons + 1):
-        lesson = generate_lesson(lesson_num, curriculum_text, template,
+        lesson = generate_lesson(lesson_num, curriculum_text, lesson_template,
                                   unit, prev_summaries, args)
         if not lesson:
             print(f"  WARNING: Failed to generate Lesson {lesson_num} — using stub")
@@ -1288,14 +1419,15 @@ def main():
         time.sleep(1)
 
     # FINAL EXPLANATION
-    fe = generate_final_explanation(curriculum_text, unit, lessons, args)
+    fe = generate_final_explanation(curriculum_text, unit, lessons, args,
+                                     fe_template=fe_template)
     if fe:
         print("  Final Explanation generated ✓")
     else:
         print("  WARNING: Final Explanation generation failed — using null")
 
     # SUMMARY TABLE
-    st = generate_summary_table(unit, lessons, args)
+    st = generate_summary_table(unit, lessons, args, st_template=st_template)
     if st:
         print("  Summary Table generated ✓")
     else:
@@ -1304,15 +1436,14 @@ def main():
     # ── Build META ─────────────────────────────────────────────────────────────
 
     subject_cap = args.subject.capitalize()
-    ss_label    = args.substrand.replace('.', '_')
-    ss_dir_num  = args.substrand
+    subj_dir    = 'Maths' if args.subject == 'mathematics' else subject_cap
 
     meta = {
         "subject":     subject_cap,
         "grade":       10,
         "substrand_id":   args.substrand,
         "substrand_name": args.substrand_name,
-        "outputDir":   f"Grade 10 {subject_cap}/{'Bio' if args.subject == 'biology' else subject_cap} {ss_dir_num}",
+        "outputDir":   f"Grade 10 {subject_cap}/{subj_dir} {args.substrand}",
         "filePrefix":  f"{subject_cap}_{args.substrand_name.replace(' ', '_')}",
         "titleDoc":    f"{subject_cap.upper()} GRADE 10: {args.substrand_name.upper()}",
         "subtitleDoc": f"CBE Phenomenon-Driven Lesson Sequence — Sub-Strand {args.substrand} ({args.lessons} Lessons)",
