@@ -1,0 +1,61 @@
+# Canonical sub-strand inventory for Grade 10 CBE generation
+# Source: owner's v2_owner_inventory templates (June 2026)
+# 42 sub-strands across 4 subjects
+# Read by the run orchestrator; do not hand-edit numbering without updating templates too
+
+biology:
+  "1.1": Cell Structure
+  "1.2": Chemicals of Life
+  "1.3": Cell Biology
+  "2.1": Plant Nutrition
+  "2.2": Plant Transport
+  "2.3": Plant Gaseous Exchange and Respiration
+  "3.1": Animal Nutrition
+  "3.2": Animal Transport
+  "3.3": Animal Gaseous Exchange and Respiration
+
+chemistry:
+  "1.1": Introduction to Chemistry
+  "1.2": The Atom
+  "1.3": The Periodic Table
+  "1.4": Chemical Bonding
+  "1.5": Periodicity
+  "2.1": Introduction to Salts
+  "3.1": Acids and Bases
+
+physics:
+  "1.1": Pressure
+  "1.2": Mechanical Properties of Materials
+  "1.3": Temperature and Thermal Expansion
+  "1.4": Energy, Work, Power and Machines
+  "1.5": Moments of Equilibrium
+  "2.1": Properties of Waves
+  "3.1": Radioactivity and Stability of Isotopes
+  "3.2": Current Electricity
+  "3.3": Introduction to Electronics
+  "3.4": Electrostatics
+  "4.1": Greenhouse Effect and Climate Change
+  "4.2": Introduction to Space Physics
+
+maths:
+  "1.1": Real Numbers
+  "1.2": Indices
+  "1.3": Quadratic Equations
+  "1.4": Congruence
+  "2.1": Similarity and Enlargement
+  "2.2": Area of Polygons
+  "2.3": Area of Part of a Circle
+  "2.4": Surface Area and Volume of Solids
+  "3.1": Trigonometry I
+  "3.2": Rotation
+  "3.3": Vectors I
+  "3.4": Linear Motion
+  "4.1": Statistics I
+  "4.2": Probability I
+
+# Smoke test sub-strands (one per subject, template-only so they exercise FE+ST generation)
+smoke_test:
+  - {subject: biology, substrand: "2.2"}
+  - {subject: chemistry, substrand: "2.1"}
+  - {subject: physics, substrand: "1.4"}
+  - {subject: maths, substrand: "1.4"}
