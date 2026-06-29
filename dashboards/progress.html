@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBE Generation Progress</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+         background: #f4f6f9; color: #1a1a2e; font-size: 14px; }
+
+  header { background: #1f3864; color: #fff; padding: 16px 24px;
+           display: flex; justify-content: space-between; align-items: center; }
+  header h1 { font-size: 18px; font-weight: 600; }
+  header .meta { font-size: 12px; color: #9db4d0; text-align: right; }
+  header .meta .phase { font-size: 14px; color: #7ec8e3; font-weight: 600; }
+
+  .summary { background: #fff; padding: 14px 24px;
+             border-bottom: 1px solid #dde3ea;
+             display: flex; gap: 32px; align-items: center; }
+  .summary .stat { text-align: center; }
+  .summary .stat .val { font-size: 28px; font-weight: 700; color: #1f3864; }
+  .summary .stat .lbl { font-size: 11px; color: #666; text-transform: uppercase;
+                        letter-spacing: .5px; }
+
+  main { padding: 20px 24px; max-width: 1400px; }
+
+  .phase-section { background: #fff; border-radius: 8px; margin-bottom: 16px;
+                   box-shadow: 0 1px 4px rgba(0,0,0,.08); overflow: hidden; }
+  .phase-header { padding: 12px 16px; display: flex; align-items: center; gap: 12px;
+                  border-bottom: 1px solid #eef0f4; }
+  .phase-title { font-weight: 700; font-size: 15px; flex: 1; }
+  .phase-bar-wrap { flex: 2; height: 10px; background: #eef0f4; border-radius: 5px; overflow: hidden; }
+  .phase-bar-fill { height: 100%; border-radius: 5px; transition: width .4s; }
+  .phase-count { font-size: 13px; color: #555; min-width: 60px; text-align: right; }
+  .phase-status { font-size: 11px; padding: 2px 8px; border-radius: 10px;
+                  font-weight: 600; text-transform: uppercase; letter-spacing: .4px; }
+
+  .ss-grid { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 16px; }
+
+  .ss-cell { border-radius: 6px; padding: 8px 10px; min-width: 130px; max-width: 180px;
+             flex: 1 0 130px; cursor: default; position: relative;
+             transition: transform .1s; border: 1px solid transparent; }
+  .ss-cell:hover { transform: translateY(-1px); border-color: rgba(0,0,0,.12); }
+
+  .ss-cell .ss-id   { font-size: 11px; font-weight: 700; color: #444; }
+  .ss-cell .ss-name { font-size: 12px; font-weight: 500; margin-top: 2px;
+                      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ss-cell .ss-meta { font-size: 11px; color: #666; margin-top: 4px; }
+  .ss-cell .ss-badge { position: absolute; top: 6px; right: 6px;
+                       font-size: 10px; font-weight: 700; padding: 1px 5px;
+                       border-radius: 8px; text-transform: uppercase; }
+
+  /* Status colours */
+  .s-queued     { background: #f0f0f0; }
+  .s-submitting { background: #e3f2fd; }
+  .s-submitted  { background: #bbdefb; }
+  .s-batch_done { background: #90caf9; }
+  .s-collecting { background: #64b5f6; }
+  .s-complete   { background: #c8e6c9; }
+  .s-failed     { background: #ffcdd2; border: 1px solid #ef9a9a !important; }
+
+  .b-queued     { background: #bdbdbd; color: #fff; }
+  .b-submitting { background: #1e88e5; color: #fff; }
+  .b-submitted  { background: #1976d2; color: #fff; }
+  .b-batch_done { background: #1565c0; color: #fff; }
+  .b-collecting { background: #0d47a1; color: #fff; }
+  .b-complete   { background: #388e3c; color: #fff; }
+  .b-failed     { background: #c62828; color: #fff; }
+
+  /* Phase bar colours */
+  .pb-complete   { background: #4caf50; }
+  .pb-partial    { background: #ff9800; }
+  .pb-polling    { background: #2196f3; }
+  .pb-collecting { background: #1565c0; }
+  .pb-submitting { background: #42a5f5; }
+  .pb-pending    { background: #bdbdbd; }
+
+  /* Phase status badge */
+  .ps-complete   { background: #e8f5e9; color: #2e7d32; }
+  .ps-partial    { background: #fff3e0; color: #e65100; }
+  .ps-polling    { background: #e3f2fd; color: #1565c0; }
+  .ps-collecting { background: #e3f2fd; color: #0d47a1; }
+  .ps-submitting { background: #e3f2fd; color: #1976d2; }
+  .ps-pending    { background: #f5f5f5; color: #757575; }
+
+  .ss-stubs { color: #c62828; font-weight: 700; }
+
+  .log-section { background: #1a1a2e; border-radius: 8px; margin-bottom: 16px;
+                 box-shadow: 0 1px 4px rgba(0,0,0,.08); overflow: hidden; }
+  .log-header { background: #2d2d4e; padding: 10px 16px; color: #9db4d0;
+                font-size: 13px; font-weight: 600; display: flex;
+                justify-content: space-between; align-items: center; }
+  .log-body { padding: 12px 16px; font-family: 'Courier New', monospace;
+              font-size: 12px; color: #c8d8e8; max-height: 260px;
+              overflow-y: auto; line-height: 1.6; }
+  .log-body .log-err  { color: #ff8a80; }
+  .log-body .log-done { color: #69f0ae; }
+  .log-body .log-warn { color: #ffd740; }
+
+  .refresh-bar { text-align: center; padding: 8px; color: #999; font-size: 12px; }
+  #countdown { font-weight: 600; color: #555; }
+
+  .no-data { text-align: center; padding: 60px; color: #888; }
+  .no-data h2 { font-size: 20px; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Kenya CBE Grade 10 — Generation Dashboard</h1>
+  <div class="meta">
+    <div class="phase" id="hdr-phase">Loading…</div>
+    <div id="hdr-updated">—</div>
+  </div>
+</header>
+
+<div class="summary" id="summary">
+  <div class="stat"><div class="val" id="s-complete">—</div><div class="lbl">Complete</div></div>
+  <div class="stat"><div class="val" id="s-total">—</div><div class="lbl">Total</div></div>
+  <div class="stat"><div class="val" id="s-lessons">—</div><div class="lbl">Lessons</div></div>
+  <div class="stat"><div class="val" id="s-cost">—</div><div class="lbl">Est. Cost</div></div>
+  <div class="stat"><div class="val" id="s-failed">—</div><div class="lbl">Failed</div></div>
+</div>
+
+<main id="main"></main>
+
+<div class="refresh-bar">Auto-refresh in <span id="countdown">30</span>s
+  &nbsp;·&nbsp; <a href="#" onclick="doRefresh();return false;">Refresh now</a>
+</div>
+
+<script>
+const PHASE_ORDER  = ['smoke','biology','chemistry','physics','maths'];
+const PHASE_LABELS = {smoke:'Smoke Test',biology:'Biology',chemistry:'Chemistry',
+                      physics:'Physics',maths:'Mathematics'};
+const SUBJ_SHORT   = {biology:'Bio',chemistry:'Chem',physics:'Phys',mathematics:'Math'};
+const STATUS_LABEL = {
+  queued:'Queued', submitting:'Submitting', submitted:'Waiting',
+  batch_done:'Ready', collecting:'Collecting', complete:'Done', failed:'Failed',
+};
+
+let countdownVal = 30;
+let countdownTimer;
+
+function fmt(iso) {
+  if (!iso) return '—';
+  return iso.slice(0,19).replace('T',' ') + ' UTC';
+}
+
+function renderPhase(phase, batchInfo, substrands) {
+  const keys   = batchInfo.substrands;
+  const nTotal = keys.length;
+  const nDone  = keys.filter(k => substrands[k]?.status === 'complete').length;
+  const nFail  = keys.filter(k => substrands[k]?.status === 'failed').length;
+  const pct    = nTotal ? Math.round(nDone / nTotal * 100) : 0;
+  const bst    = batchInfo.status;
+
+  const sec = document.createElement('div');
+  sec.className = 'phase-section';
+
+  sec.innerHTML = `
+    <div class="phase-header">
+      <div class="phase-title">${PHASE_LABELS[phase] || phase}</div>
+      <div class="phase-bar-wrap">
+        <div class="phase-bar-fill pb-${bst}" style="width:${pct}%"></div>
+      </div>
+      <div class="phase-count">${nDone}/${nTotal}</div>
+      <div class="phase-status ps-${bst}">${bst}</div>
+    </div>
+    <div class="ss-grid"></div>`;
+
+  const grid = sec.querySelector('.ss-grid');
+
+  for (const key of keys) {
+    const ss  = substrands[k = key];
+    const st  = ss?.status || 'queued';
+    const sid = ss?.substrand || key.split('/')[1];
+    const subj = ss?.subject || key.split('/')[0];
+    const short = SUBJ_SHORT[subj] || subj.slice(0,4);
+    const name = ss?.output_name
+      ? ss.output_name.replace(/_/g,' ')
+      : `${short} ${sid}`;
+
+    const lc    = ss?.lesson_count ? `${ss.lesson_count} lessons` : '';
+    const cost  = ss?.cost_estimate_usd ? `~$${ss.cost_estimate_usd.toFixed(2)}` : '';
+    const stubs = ss?.stubs?.length ? `<span class="ss-stubs">${ss.stubs.length} stubs</span>` : '';
+    const meta  = [lc, cost, stubs].filter(Boolean).join(' · ');
+
+    const cell = document.createElement('div');
+    cell.className = `ss-cell s-${st}`;
+    cell.title = `${key}\nStatus: ${st}\nBatch: ${ss?.batch_id || '—'}`;
+    cell.innerHTML = `
+      <div class="ss-id">${short} ${sid}</div>
+      <div class="ss-name">${name}</div>
+      ${meta ? `<div class="ss-meta">${meta}</div>` : ''}
+      <div class="ss-badge b-${st}">${STATUS_LABEL[st] || st}</div>`;
+    grid.appendChild(cell);
+  }
+
+  return sec;
+}
+
+async function doRefresh() {
+  clearInterval(countdownTimer);
+  countdownVal = 30;
+
+  let state = null;
+  let logLines = [];
+
+  try {
+    const r = await fetch('run_state.json?_=' + Date.now());
+    if (r.ok) state = await r.json();
+  } catch(e) {}
+
+  try {
+    const r = await fetch('run.log?_=' + Date.now());
+    if (r.ok) {
+      const text = await r.text();
+      logLines = text.trim().split('\n').slice(-20);
+    }
+  } catch(e) {}
+
+  const main = document.getElementById('main');
+  main.innerHTML = '';
+
+  if (!state) {
+    main.innerHTML = `<div class="no-data"><h2>No run started yet</h2>
+      <p>Start with: <code>python3 scripts/run_full_generation.py</code></p></div>`;
+    document.getElementById('hdr-phase').textContent = 'Not started';
+    document.getElementById('hdr-updated').textContent = '—';
+    startCountdown();
+    return;
+  }
+
+  // Header
+  document.getElementById('hdr-phase').textContent = 'Phase: ' + state.phase;
+  document.getElementById('hdr-updated').textContent = 'Updated: ' + new Date().toLocaleTimeString();
+
+  // Summary
+  const allKeys   = Object.keys(state.substrands);
+  const nComplete = allKeys.filter(k => state.substrands[k].status === 'complete').length;
+  const nFailed   = allKeys.filter(k => state.substrands[k].status === 'failed').length;
+  document.getElementById('s-complete').textContent = nComplete;
+  document.getElementById('s-total').textContent    = allKeys.length;
+  document.getElementById('s-lessons').textContent  = state.totals?.lessons_generated ?? 0;
+  document.getElementById('s-cost').textContent     = '$' + (state.totals?.cost_estimate_usd ?? 0).toFixed(2);
+  document.getElementById('s-failed').textContent   = nFailed || '0';
+  document.getElementById('s-failed').style.color   = nFailed > 0 ? '#c62828' : '';
+
+  // Phase sections
+  for (const phase of PHASE_ORDER) {
+    const batch = state.batches?.[phase];
+    if (!batch) continue;
+    main.appendChild(renderPhase(phase, batch, state.substrands));
+  }
+
+  // Log section
+  if (logLines.length > 0) {
+    const logSec = document.createElement('div');
+    logSec.className = 'log-section';
+    logSec.innerHTML = `
+      <div class="log-header">
+        <span>Run Log (last ${logLines.length} lines)</span>
+        <span style="font-weight:normal;font-size:11px">dashboards/run.log</span>
+      </div>
+      <div class="log-body" id="log-body"></div>`;
+    const logBody = logSec.querySelector('#log-body');
+    for (const line of logLines) {
+      const div = document.createElement('div');
+      div.textContent = line;
+      if (line.includes('ERROR'))  div.className = 'log-err';
+      if (line.includes('COMPLETE') || line.includes('done')) div.className = 'log-done';
+      if (line.includes('WARNING') || line.includes('STUB'))  div.className = 'log-warn';
+      logBody.appendChild(div);
+    }
+    main.appendChild(logSec);
+    logBody.scrollTop = logBody.scrollHeight;
+  }
+
+  startCountdown();
+}
+
+function startCountdown() {
+  countdownVal = 30;
+  document.getElementById('countdown').textContent = countdownVal;
+  countdownTimer = setInterval(() => {
+    countdownVal--;
+    document.getElementById('countdown').textContent = countdownVal;
+    if (countdownVal <= 0) {
+      clearInterval(countdownTimer);
+      doRefresh();
+    }
+  }, 1000);
+}
+
+doRefresh();
+</script>
+</body>
+</html>
