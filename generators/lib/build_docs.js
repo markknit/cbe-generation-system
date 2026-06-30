@@ -222,7 +222,7 @@ async function buildSummaryTable(META, ST) {
 // ── Runner — generates and saves all three files ──────────────────────────────
 
 async function run(dataModule) {
-  const { META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE } = dataModule;
+  const { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE } = dataModule;
 
   const outBase = path.join(__dirname, '..', '..', 'data', 'outputs', META.outputDir);
   if (!fs.existsSync(outBase)) fs.mkdirSync(outBase, { recursive: true });
@@ -257,7 +257,7 @@ async function run(dataModule) {
   // 4. JSON export — canonical structured data for downstream tools
   const jsonPath = path.join(outBase, `${META.filePrefix}_data.json`);
   fs.writeFileSync(jsonPath, JSON.stringify(
-    { META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE },
+    { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE },
     null, 2
   ));
   files.push(jsonPath);
