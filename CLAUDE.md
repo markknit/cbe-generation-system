@@ -21,6 +21,7 @@ Active Threads and append a dated session-log entry as part of finishing
 the work — not a separate step to remember afterward. The `/update`
 skill (`.claude/skills/update/`) forces this on demand at any point,
 e.g. end of day, before a risky operation, or before switching tools.
+
 **Before continuing a session, or at the start of a work day:** run
 `/restart` (`.claude/skills/restart/`) to re-read these control
 documents plus run WORKFLOW.md's Step 0 live checks, and report any
