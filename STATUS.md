@@ -23,6 +23,14 @@ conversation's summary.
   an update right now, e.g. at the end of a day, before a server reset,
   or before switching tools, so nothing is lost between sessions.
 
+**Before trusting this file, re-verify it — don't just read it:** the
+`/restart` skill (Claude Code: `.claude/skills/restart/`) or typing
+`/restart` in a Claude.ai session re-reads this file plus `CLAUDE.md`
+(and, in Claude Code, runs `WORKFLOW.md`'s Step 0 live checks) and
+reports any drift before continuing. `/update` is the write side of
+continuity; `/restart` is the read/verify side — use it at the start of
+a work day or any time something feels stale.
+
 **Why this exists:** this project has had multiple documented incidents
 (see "Known Issues / Lessons Learned" below) where a fact was true when
 written and silently went stale because nothing forced a re-check.
