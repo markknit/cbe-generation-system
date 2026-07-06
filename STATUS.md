@@ -52,7 +52,7 @@ right now" checkable in one place, not reconstructed from memory.
 | Avahi/internet-dependency for `install.sh` | **Resolved — no reinstall needed** | `dpkg.log` history on `tsavo3` confirms `avahi-daemon`/`avahi-utils` present since Dec 2024, routinely updated since — baked into the Clonezilla golden image, not a live-internet install. Script has zero internet dependency as written. |
 | Partner heads-up on `resourceLinks` schema impact | Message drafted, sent to partner by Mark | Awaiting partner's schema check — not blocking distribution |
 | Tracking/attribution for the Grade 10 module link + PDF resource links | Not started | Deliberately scoped as a separate task, not bundled into today's work |
-| Continuity protocol (`STATUS.md` + `/update` skill) | **Skill committed** (`2c7c938`); `CLAUDE.md` updated to point here | See "Known Issues" — `CLAUDE.md`/`STATUS.md` content-corrected and transferred via direct file download after repeated terminal-paste corruption. **Final `git commit`/`push` of these corrected files not yet confirmed as of this `/update`** — confirm `git log` shows a new commit before treating this as fully closed. |
+| Continuity protocol (`STATUS.md` + `/update` skill + `/restart` skill) | **Done — confirmed** | `CLAUDE.md`/`STATUS.md` continuity fixes confirmed pushed (`git log`/`git status` on jhm-spark, 2026-07-06: `HEAD`/`main`/`origin/main` all at `b477ef1`, clean tree). `/restart` skill added (`33ceab5`) and documented in `CLAUDE.md` (`222d681`, spacing fix `aa54484`) and this file (`68e7b47`). Tested live — see 2026-07-06 session-log entry below. |
 | `.gitignore` scoped to allow `.claude/skills/` | Done, committed `2c7c938` | Was blanket-excluding all of `.claude/`; narrowed to `.claude/settings.local.json` only |
 | Lesson-count table below (Summary + per-subject tables) | Known stale | See "Known Issues" — needs a full refresh, separate task |
 | Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
@@ -449,3 +449,50 @@ not a request for more vigilance:
   `CLAUDE.md` and this `STATUS.md` update have actually been
   `git commit`/`git push`ed on jhm-spark. Verify with `git log --oneline
   -3` before treating this entry as fully closed.
+
+---
+## Updates — 2026-07-06 (second session, triggered by `/update`)
+
+### Verified: continuity protocol commit/push (previously unconfirmed)
+- Ran `git log --oneline -5` and `git status` on jhm-spark. Confirmed
+  `HEAD`, `main`, `origin/main`, `origin/HEAD` all at `b477ef1`
+  ("STATUS.md: continuity update via /update"), on top of
+  `a0f40fe`/`2c7c938`. Working tree clean. Closes the item flagged
+  unconfirmed at the end of the previous `/update` entry.
+
+### New skill: `/restart` — continuity verification checkpoint
+- Added `.claude/skills/restart/SKILL.md` (commit `33ceab5`) — re-reads
+  `STATUS.md`/`CLAUDE.md`/`WORKFLOW.md`'s Environment Reference, runs
+  WORKFLOW.md's Step 0 live checks, and reports drift before continuing,
+  without discarding session context. Complementary to `/update`:
+  `/update` is the write side of continuity, `/restart` is the
+  read/verify side.
+- Also usable by typing `/restart` in a Claude.ai session in this
+  project (paragraph added to project custom instructions).
+- Documented in `CLAUDE.md` (`222d681`, spacing fix `aa54484`) and in
+  this file's "How this file is used" section (`68e7b47`).
+
+### `/restart` tested live — found real drift, plus one operational caveat
+- Triggered `/restart` in a Claude.ai chat. It correctly re-fetched
+  `STATUS.md`/`CLAUDE.md` from GitHub and flagged that the Active
+  Threads continuity-protocol row was still worded as unconfirmed, and
+  that no session-log entry existed yet for today's `/restart` work —
+  both real gaps, both closed by this `/update`.
+- **Caveat surfaced:** `raw.githubusercontent.com` (used for the
+  Claude.ai auto-fetch at conversation start, and for `/restart`) lags
+  behind `git push` by a CDN cache interval — the fetch returned
+  pre-push content (`Last updated: 2026-07-05`, no `/restart` mentions)
+  even after four confirmed commits landed on `origin/main`. Expected
+  CDN behavior, not a bug in `/restart` or the repo — but worth knowing:
+  **if a Claude.ai session's `/restart` shows no drift right after a
+  push, that isn't proof the push isn't reflected yet; cross-check with
+  a live `git log` on jhm-spark if the timing is tight.**
+
+### Still open going into next session
+- `install.sh` live-tested on one real server
+- Partner's `ares-contract.schema.json` checked against `resourceLinks`
+- Tracking/attribution for the lesson-plan module link (scoped as
+  separate task, not started)
+- Full refresh of this file's Summary/per-subject lesson-count tables
+- Kenyan-terminology wording pass (blocked on teacher-provided examples)
+- Grade 11 STEM expansion, then non-STEM subject expansion (both not started)
