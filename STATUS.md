@@ -1,6 +1,53 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: May 2026*
+*Last updated: 2026-07-05*
+
+---
+
+## How this file is used — read this first
+
+This file is the **single source of truth for project continuity** across
+sessions, tools, and resets (Claude.ai, Claude Code, or a fresh person
+picking this up cold). If you're starting a new session, **read the
+Active Threads table below before doing anything else** — do not assume
+you know current state from memory, training data, or a prior
+conversation's summary.
+
+**When this file gets updated — not optional, not "when convenient":**
+- As part of finishing any real unit of work (a fix, a migration, a
+  decision) — updating Active Threads and appending a session-log entry
+  is part of what "done" means for that task, not a separate step to
+  remember afterward.
+- On demand, via the `/update` skill (Claude Code: `.claude/skills/update/`)
+  or by typing `/update` in a Claude.ai session in this project — forces
+  an update right now, e.g. at the end of a day, before a server reset,
+  or before switching tools, so nothing is lost between sessions.
+
+**Why this exists:** this project has had multiple documented incidents
+(see "Known Issues / Lessons Learned" below) where a fact was true when
+written and silently went stale because nothing forced a re-check.
+Continuity information is exactly as vulnerable to this as any other
+fact — arguably more so, since "what's currently in progress" changes
+every session. This file's job is to make "what's actually going on
+right now" checkable in one place, not reconstructed from memory.
+
+---
+
+## Active Threads
+
+| Item | Status | Notes |
+|---|---|---|
+| `ares.local` mDNS alias + nginx `server_name` fix | Done (jhm-spark + tsavo3 test server) | Verified: `ping ares.local` resolves; nginx reload succeeded |
+| `resourceLinks` field in JSON export | Done | Verified across all 126 JSON files, 13,440 `ares.local` URLs, 0 remaining `ares.edu` |
+| Full corpus regeneration (`ARES_HOST=ares.local`) | Done | All 42 sub-strands, 126 docx, 126 PDFs, teacher index — committed `5071ea4` |
+| Provisioning script for ~100 school servers (`install.sh`) | Built, not yet tested live | Mark testing on one ARES server before wide rollout |
+| Partner heads-up on `resourceLinks` schema impact | Message drafted, being sent | Awaiting partner's schema check — not blocking distribution |
+| Tracking/attribution for the Grade 10 module link + PDF resource links | Not started | Deliberately scoped as a separate task, not bundled into today's work |
+| Continuity protocol (this file + `/update` skill) | Implementing now | This entry itself is the first real test of the protocol |
+| Lesson-count table below (Summary + per-subject tables) | Known stale | See "Known Issues" — needs a full refresh, separate task |
+| Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
+| Grade 11 STEM expansion | Not started | Planned after terminology pass + initial distribution |
+| Non-STEM subject expansion | Not started | Planned after Grade 11 |
 
 ---
 
@@ -14,7 +61,10 @@
 | Mathematics | 3 / 9 | 6 | 24 (8 per sub-strand) |
 | **Total** | **12 / 33** | **21** | **~96 initial lessons** |
 
-> Note: All sub-strands currently generated at 8 lessons. KICD suggests higher counts for many (e.g. Bio 1.2 = 14, Bio 2.2 = 22). Extension to full lesson counts is the next phase after teacher review.
+> **Stale as of 2026-07-05 — see "Known Issues" below.** Commit history
+> confirms a full 42-sub-strand, 384-lesson production run completed
+> after this table was last accurate. Do not trust these numbers; they're
+> kept here only until someone does the refresh.
 
 ---
 
@@ -144,6 +194,105 @@ find . -size +50M -not -path './.git/*' -not -path './venv/*'
 ### Sub-strand naming in batch collect
 The `--collect` command requires `--subject`, `--substrand`, `--output` to be omitted (it reads from the checkpoint file). If the checkpoint was not saved (e.g. script crashed after submit), manually create `.{name}_batch_id.txt` and `.{name}_batch_id.json` before collecting.
 
+### Documentation drift — stated facts going stale silently (2026-07-04)
+Two independent incidents, same root cause, same day:
+1. `SYSTEM_OVERVIEW.md`, `WORKFLOW.md`, and `STATUS.md` all stated
+   `data/outputs/docx/` as the output path — true when written, but
+   superseded by `data/outputs/v2/` at some prior restructure. Nothing
+   flagged the mismatch; it was only caught by manually grepping
+   `outputDir` across every `*_data.js` file and cross-checking against
+   the real filesystem.
+2. `WORKFLOW.md` stated the git branch as
+   `claude/setup-cbe-generation-ZKiIi` in four separate places. That
+   branch no longer exists on the remote; `main` has for some time. Same
+   pattern: a value copied forward as fact, never re-verified, repeated
+   in multiple places so partial fixes could leave it inconsistent.
+
+**Neither was caused by carelessness reading the docs** — a careful
+reader would copy the stated value exactly, because nothing in the text
+distinguished "true when written" from "true now." The fix is structural,
+not a request for more vigilance:
+- `WORKFLOW.md` now opens with a **Step 0** verification block
+  (`git branch --show-current`, a live `outputDir` grep, a `soffice`
+  check) to be run before any task touching git, paths, or sync — with
+  an explicit rule that a mismatch against the Environment Reference
+  table gets fixed immediately, not deferred.
+- `WORKFLOW.md`'s **Environment Reference table is now the single source
+  of truth** for branch name, output paths, and Drive sync destinations.
+  Other docs (`SYSTEM_OVERVIEW.md`, `PDF_GENERATION.md`, this file) point
+  back to it instead of restating the values independently.
+- The Windows Drive-sync `.bat` file is now committed as
+  `scripts/sync_to_drive.bat`, so its actual configured destinations are
+  `grep`-able from jhm-spark instead of only checkable by someone
+  physically at the Windows machine.
+
+### `resourceLinks` in JSON export (2026-07-05)
+- New field added to every lesson object in the JSON export, populated
+  from `getAllPhaseResources()` output (`sections.js`, one new line —
+  `lesson.resourceLinks = aresRes;` — placed just after the resource
+  lookup call, exploiting JS object-reference semantics rather than
+  requiring any change to `build_docs.js`'s serialization).
+- Full corpus regenerated and verified: all 126 JSON files contain the
+  field, 0 missing.
+- **Partner impact not yet confirmed** — if `ares-contract.schema.json`
+  uses `additionalProperties: false` near the lesson object, this new
+  field could cause their checker to reject every document. Flagged to
+  partner; check not yet done as of this writing.
+
+### `ares.edu` → `ares.local` hostname migration (2026-07-05)
+- Root cause: `ares.edu` only ever resolved via a local DNS server
+  (`dnsmasq`) that requires this box to control DHCP — works when a box
+  is its own hotspot, silently fails when plugged into an existing
+  school router (which doesn't hand out this box as the DNS server).
+  mDNS (`.local`) resolves via broadcast regardless of who runs DHCP,
+  which is why `ares.local` works in both deployment modes.
+- Fix: `src/ares_recommender.py`'s `ARES_HOST` env var (already existed,
+  previously unused) set to `ares.local`; full corpus regenerated.
+  `nginx`'s `server_name` directive updated to include `ares.local`
+  alongside `ares.edu`/`www.ares.edu` (config lives in whichever file is
+  actually symlinked in `sites-enabled/` — confirmed to vary in name
+  across at least one box, don't assume a filename like `default`).
+- A persistent mDNS alias requires a systemd service
+  (`ares-mdns-alias.service`, publishes `ares.local` via `avahi-publish`
+  and re-publishes on IP change) — a one-off `avahi-publish` command
+  does NOT survive reboot and will silently regress if treated as done.
+- **Discovered mid-fix, unrelated to hostnames:** `ares.edu` was also
+  never actually reachable via mDNS in the first place — mDNS resolvers
+  only ever resolve `.local` names by protocol; no configuration could
+  have made `ares.edu` work over mDNS.
+- Deployment to the ~100 school servers is via a provisioning script
+  (`install.sh`, distributed as a zip with the PDF payload) rather than
+  git — those servers aren't running this repo directly.
+
+### Lesson-count discrepancy — Bio 2.1 Plant Nutrition (clarified 2026-07-05)
+- `STATUS.md` said 12 lessons; actual current content has 10, under a
+  different phenomenon (sukuma wiki, not the uploaded pumpkin reference
+  doc) and a different filename convention (no `_L1-12` suffix).
+- **Confirmed intentional, not corruption:** commit `02da69b`'s message
+  explicitly states dynamic, non-hardcoded lesson counts as a deliberate
+  design change; a current teacher template for the sukuma wiki version
+  exists (`v2_owner_inventory/Biology/SS2.1_Plant_Nutrition`). The
+  uploaded pumpkin reference document is from the superseded
+  `data/outputs/docx/` tree.
+- Lesson counts across all 42 sub-strands now range 6–13 (confirmed via
+  direct inspection of every `*_data.js` file) — this is expected, not a
+  bug, per the same intentional design.
+- This is exactly why the Summary/per-subject tables above are flagged
+  stale rather than corrected in place: the real counts are now known
+  file-by-file, but a full authoritative refresh of this document hasn't
+  been done yet, and shouldn't be improvised from a partial check.
+
+### `generate_teacher_index.js` — two legitimate deployed copies (2026-07-05)
+- One copy lives in this repo (`generators/generate_teacher_index.js`),
+  using a relative `PDF_ROOT` path — correct for jhm-spark's own
+  `data/outputs/v2/PDF/` tree.
+- A second copy is bundled in the school-server provisioning package
+  with `PDF_ROOT = __dirname` instead — correct because that copy always
+  sits directly inside the deployed `PDF/` folder on every server.
+- This is a real, permanent difference (not a mistake to unify) — but it
+  means any future logic change to this script must be applied in both
+  places manually. No automated sync between them exists.
+
 ---
 
 ## Cost Tracking
@@ -186,12 +335,53 @@ The `--collect` command requires `--subject`, `--substrand`, `--output` to be om
   subject/sub-strand with links to its PDFs, for browsing on the offline
   ARES appliance over the school mesh network.
 - Both `.docx` and PDF outputs now sync to Google Drive via separate
-  robocopy jobs (`.docx` → `G:\My Drive\CBE Outputs`, PDF → `G:\My Drive\CBE
-  Outputs\PDF`, the latter including `index.html`). **How content moves
-  from Drive to each school's offline appliance is still unresolved** —
-  flagged as an open item in `docs/PDF_GENERATION.md`.
+  robocopy jobs, tracked in `scripts/sync_to_drive.bat` (see
+  `WORKFLOW.md` Environment Reference for current destinations — not
+  restated here, see the Known Issues entry below for why). **How content
+  moves from Drive to each school's offline appliance is still
+  unresolved** — flagged as an open item in `docs/PDF_GENERATION.md`.
 - Rationale, design decisions, and open items are documented in
   `docs/PDF_GENERATION.md`.
 - Corrected stale `data/outputs/docx/` path references in this file and
   in `SYSTEM_OVERVIEW.md` / `WORKFLOW.md` — the current, authoritative
   output root is `data/outputs/v2/`, per each data file's `outputDir`.
+
+---
+## Updates — 2026-07-05
+
+### Hostname migration + resource-link improvements
+- Migrated all Resource-column links from `ares.edu` to `ares.local`
+  across the entire corpus (42 sub-strands, 384 lessons, 126 docx, 126
+  PDFs) — see "Known Issues" for full rationale. Zero `ares.edu`
+  references remain; verified via full-corpus grep.
+- Added `resourceLinks` field to the JSON export (every lesson, every
+  phase) — see "Known Issues" for shape and partner-schema caveat.
+- `nginx` `server_name` updated (jhm-spark test box) to accept
+  `ares.local`; `ares-mdns-alias.service` created for persistent mDNS
+  advertisement surviving reboots.
+- `generators/generate_teacher_index.js` added to this repo (previously
+  existed only as a standalone deployment on the ARES test server,
+  which was itself a gap — see "Known Issues").
+
+### Provisioning package for school-wide deployment
+- Built `install.sh` + payload structure for deploying the `ares.local`
+  mDNS fix, nginx config change, PDF content, and updated module landing
+  page (`index.htmlf`) to ~100 independently-managed school servers.
+- Not yet tested on real hardware as of this writing — Mark testing on
+  one server before wide rollout.
+
+### Continuity protocol established
+- This file is now the designated single source of truth for project
+  continuity (see "How this file is used" at the top).
+- Added an `Active Threads` table (top of this file) and a `/update`
+  skill (Claude Code: `.claude/skills/update/`) to force a continuity
+  update on demand, independent of task completion.
+
+### Still open going into next session
+- `install.sh` live-tested on one real server
+- Partner's `ares-contract.schema.json` checked against `resourceLinks`
+- Tracking/attribution for the lesson-plan module link (scoped as
+  separate task, not started)
+- Full refresh of this file's Summary/per-subject lesson-count tables
+- Kenyan-terminology wording pass (blocked on teacher-provided examples)
+- Grade 11 STEM expansion, then non-STEM subject expansion (both not started)
