@@ -40,10 +40,12 @@ right now" checkable in one place, not reconstructed from memory.
 | `ares.local` mDNS alias + nginx `server_name` fix | Done (jhm-spark + tsavo3 test server) | Verified: `ping ares.local` resolves; nginx reload succeeded |
 | `resourceLinks` field in JSON export | Done | Verified across all 126 JSON files, 13,440 `ares.local` URLs, 0 remaining `ares.edu` |
 | Full corpus regeneration (`ARES_HOST=ares.local`) | Done | All 42 sub-strands, 126 docx, 126 PDFs, teacher index — committed `5071ea4` |
-| Provisioning script for ~100 school servers (`install.sh`) | Built, not yet tested live | Mark testing on one ARES server before wide rollout |
-| Partner heads-up on `resourceLinks` schema impact | Message drafted, being sent | Awaiting partner's schema check — not blocking distribution |
+| Provisioning script for ~100 school servers (`install.sh`) | Built, not yet tested live | Includes mDNS service, nginx patch, PDF deploy, `generate_teacher_index.js`, `index.htmlf` — Mark to test on one ARES server before wide rollout |
+| Avahi/internet-dependency for `install.sh` | **Resolved — no reinstall needed** | `dpkg.log` history on `tsavo3` confirms `avahi-daemon`/`avahi-utils` present since Dec 2024, routinely updated since — baked into the Clonezilla golden image, not a live-internet install. Script has zero internet dependency as written. |
+| Partner heads-up on `resourceLinks` schema impact | Message drafted, sent to partner by Mark | Awaiting partner's schema check — not blocking distribution |
 | Tracking/attribution for the Grade 10 module link + PDF resource links | Not started | Deliberately scoped as a separate task, not bundled into today's work |
-| Continuity protocol (this file + `/update` skill) | Implementing now | This entry itself is the first real test of the protocol |
+| Continuity protocol (`STATUS.md` + `/update` skill) | **Skill committed** (`2c7c938`); `CLAUDE.md` updated to point here | See "Known Issues" — `CLAUDE.md`/`STATUS.md` content-corrected and transferred via direct file download after repeated terminal-paste corruption. **Final `git commit`/`push` of these corrected files not yet confirmed as of this `/update`** — confirm `git log` shows a new commit before treating this as fully closed. |
+| `.gitignore` scoped to allow `.claude/skills/` | Done, committed `2c7c938` | Was blanket-excluding all of `.claude/`; narrowed to `.claude/settings.local.json` only |
 | Lesson-count table below (Summary + per-subject tables) | Known stale | See "Known Issues" — needs a full refresh, separate task |
 | Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
 | Grade 11 STEM expansion | Not started | Planned after terminology pass + initial distribution |
@@ -293,6 +295,39 @@ not a request for more vigilance:
   means any future logic change to this script must be applied in both
   places manually. No automated sync between them exists.
 
+### `CLAUDE.md` UTF-16 encoding + terminal-paste corruption (2026-07-05/06)
+- `CLAUDE.md` was discovered saved as **UTF-16LE**, not UTF-8 — cause
+  unknown; worth watching whether other project docs are similarly
+  affected if this happens again. Converted and re-saved as plain UTF-8,
+  no BOM, LF line endings.
+- While fixing stale content in the same pass, two independent
+  terminal-paste failure modes surfaced when transferring the corrected
+  file via `python3 -c "...sys.stdin.read()"` + manual paste:
+  1. **Long pastes can be silently truncated** by the terminal's paste
+     buffer — a ~245-line paste landed as 60 lines with no error.
+  2. **Box-drawing Unicode characters (`├ │ └`) are excluded from this
+     chat interface's "Copy" button**, forcing manual reconstruction —
+     which itself is error-prone (in one instance, the reconstruction
+     accidentally included a command line from the surrounding
+     instructions as if it were file content).
+  3. Separately, at least one paste attempt resulted in the target file
+     being fully truncated to 0 bytes — exact cause not diagnosed
+     (suspected: a `'w'`-mode write with no actual stdin content, e.g.
+     Ctrl-D pressed before pasting).
+- **Resolution:** stopped using terminal copy-paste for this file
+  entirely. Replaced the Repository Layout and output-file-listing tree
+  diagrams with plain ASCII (full relative paths, no box-drawing
+  characters), and delivered the corrected file as a direct download for
+  transfer via `scp`/SFTP instead of paste.
+- **Going forward:** for any file long enough to risk truncation, or
+  containing special/Unicode characters, prefer direct file
+  download + `scp`/SFTP transfer over terminal paste, chunked or
+  otherwise. Chunking with placeholder blank-line markers
+  (`%%%BLANK%%%`, converted back with `sed` after paste) is a viable
+  fallback if direct transfer isn't available, but verify line count
+  after every single chunk, not just at checkpoints — this incident
+  involved two different corruption modes in adjacent attempts.
+
 ---
 
 ## Cost Tracking
@@ -385,3 +420,24 @@ not a request for more vigilance:
 - Full refresh of this file's Summary/per-subject lesson-count tables
 - Kenyan-terminology wording pass (blocked on teacher-provided examples)
 - Grade 11 STEM expansion, then non-STEM subject expansion (both not started)
+
+---
+## Updates — 2026-07-06 (triggered by `/update`)
+
+### `CLAUDE.md` corrected and continuity protocol committed
+- `CLAUDE.md` fixed: UTF-16 → UTF-8, stale content updated (branch,
+  paths, `ares.edu` → `ares.local`), new "FIRST: Read STATUS.md's Active
+  Threads" instruction added, box-drawing tree diagrams replaced with
+  plain ASCII after terminal-paste corruption — full incident in "Known
+  Issues" above.
+- `.claude/skills/update/SKILL.md` and a `.gitignore` fix (was
+  blanket-excluding `.claude/`, narrowed to `.claude/settings.local.json`)
+  committed as `2c7c938`.
+- Confirmed avahi-daemon/avahi-utils has been part of the Clonezilla
+  golden image since at least December 2024 (routine version-upgrade
+  history in `dpkg.log`), not something installed live — `install.sh`
+  has no internet dependency for any of its ~100 target servers.
+- **Not yet confirmed by this session:** whether the corrected
+  `CLAUDE.md` and this `STATUS.md` update have actually been
+  `git commit`/`git push`ed on jhm-spark. Verify with `git log --oneline
+  -3` before treating this entry as fully closed.
