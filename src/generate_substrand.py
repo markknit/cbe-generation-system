@@ -821,6 +821,55 @@ SUBSTRAND_NAMES = {
         '4.1': 'Statistics I',
         '4.2': 'Probability I',
     },
+    'general_science': {
+        '1.1': 'Introduction to General Science',
+        '1.2': 'The Cell',
+        '1.3': 'Nutrition in Animals',
+        '1.4': 'Transport in Plants',
+        '1.5': 'Respiration',
+        '1.6': 'Plant Growth and Development',
+        '1.7': 'Microorganisms',
+        '2.1': 'The Periodic Table',
+        '2.2': 'Chemical Families',
+        '2.3': 'Chemical Bonding',
+        '2.4': 'Acids, Bases and Salts',
+        '2.5': 'Rates of Reactions',
+        '3.1': 'Turning Effect of Force',
+        '3.2': 'Linear Motion',
+        '3.3': 'Waves',
+        '3.4': 'Magnetism and Electromagnetic Induction',
+    },
+    'core_mathematics': {
+        '1.1': 'Real Numbers',
+        '1.2': 'Indices and Logarithms',
+        '1.3': 'Quadratic Expressions and Equations',
+        '2.1': 'Similarity and Enlargement',
+        '2.2': 'Reflection and Congruence',
+        '2.3': 'Rotation',
+        '2.4': 'Trigonometry 1',
+        '2.5': 'Area of Polygons',
+        '2.6': 'Area of a Part of a Circle',
+        '2.7': 'Surface Area and Volume of Solids',
+        '2.8': 'Vectors',
+        '2.9': 'Linear Motion',
+        '3.1': 'Statistics I',
+        '3.2': 'Probability I',
+    },
+    'essential_mathematics': {
+        '1.1': 'Real Numbers',
+        '1.2': 'Indices',
+        '1.3': 'Quadratic Equations',
+        '2.1': 'Similarity and Enlargement',
+        '2.2': 'Reflection',
+        '2.3': 'Trigonometry',
+        '2.4': 'Area of Polygons',
+        '2.5': 'Area of Part of a Circle',
+        '2.6': 'Surface Area of Solids',
+        '2.7': 'Volume and Capacity',
+        '2.8': 'Commercial Arithmetic 1',
+        '3.1': 'Statistics 1',
+        '3.2': 'Probability I',
+    },
 }
 
 CURRICULUM_PDF_MAP = {
@@ -828,6 +877,15 @@ CURRICULUM_PDF_MAP = {
     'chemistry':   'data/raw/curriculum_pdfs/Grade10_Chemistry_CBE_Curriculum.pdf',
     'physics':     'data/raw/curriculum_pdfs/Grade10_Physics_CBE_Curriculum.pdf',
     'mathematics': 'data/raw/curriculum_pdfs/Grade10_Mathematics_Curriculum.pdf',
+}
+
+# Subjects whose source PDFs have no text layer (OCR image-only scans) use a
+# pre-extracted, deduped plain-text file instead of extract_curriculum_pdf().
+# See HANDOFF_new_stem_subjects_2026-07-28.md §6.
+CURRICULUM_TEXT_MAP = {
+    'general_science':       'data/raw/curriculum_text/general_science.txt',
+    'core_mathematics':      'data/raw/curriculum_text/core_mathematics.txt',
+    'essential_mathematics': 'data/raw/curriculum_text/essential_mathematics.txt',
 }
 
 LESSON_COUNTS = {
@@ -844,6 +902,9 @@ V2_TEMPLATE_DIR = PROJECT_ROOT / 'data' / 'raw' / 'CBE LESSON TEMPLATES' / 'v2_o
 _SUBJECT_FOLDER = {
     'biology': 'Biology', 'chemistry': 'Chemistry',
     'physics': 'Physics', 'mathematics': 'Maths',
+    'general_science': 'General_Science',
+    'core_mathematics': 'Core_Mathematics',
+    'essential_mathematics': 'Essential_Mathematics',
 }
 
 
@@ -1235,7 +1296,8 @@ def run_collect(output_name: str, args):
 def main():
     parser = argparse.ArgumentParser(description='Generate CBE sub-strand content via Claude API')
     parser.add_argument('--subject',   required=False, default=None,
-                        choices=['biology', 'chemistry', 'physics', 'mathematics'])
+                        choices=['biology', 'chemistry', 'physics', 'mathematics',
+                                 'general_science', 'core_mathematics', 'essential_mathematics'])
     parser.add_argument('--substrand', required=False, default=None,
                         help='Sub-strand number e.g. 1.4')
     parser.add_argument('--output',    required=False, default=None,
@@ -1279,8 +1341,12 @@ def main():
     # ── Extract source content + templates ───────────────────────────────────
 
     print("\n1. Extracting source content...")
-    curriculum_pdf  = str(PROJECT_ROOT / CURRICULUM_PDF_MAP.get(args.subject, ''))
-    curriculum_text = extract_curriculum_pdf(curriculum_pdf, args.substrand)
+    if args.subject in CURRICULUM_TEXT_MAP:
+        curriculum_text = (PROJECT_ROOT / CURRICULUM_TEXT_MAP[args.subject]).read_text(
+            encoding='utf-8', errors='replace')
+    else:
+        curriculum_pdf  = str(PROJECT_ROOT / CURRICULUM_PDF_MAP.get(args.subject, ''))
+        curriculum_text = extract_curriculum_pdf(curriculum_pdf, args.substrand)
     print(f"  Curriculum text: {len(curriculum_text)} chars")
 
     # Find v2 templates (lesson + FE + ST); --template CLI arg overrides lesson only

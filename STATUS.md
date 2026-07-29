@@ -58,6 +58,7 @@ right now" checkable in one place, not reconstructed from memory.
 | Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
 | Grade 11 STEM expansion | Not started | Planned after terminology pass + initial distribution |
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
+| New Grade 10 STEM subjects (General Science, Core Mathematics, Essential Mathematics) | In progress | 43 sub-strands, 344 lessons planned. Handoff: `HANDOFF_new_stem_subjects_2026-07-28.md` (Rev 2). Curriculum text extraction done and committed (`7882da0`). Replacement Core Mathematics source PDF referenced in the handoff is missing from jhm-spark — not yet supplied. Pipeline wiring (Phase 1) next. |
 
 ---
 
