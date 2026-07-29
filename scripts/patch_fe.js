@@ -41,8 +41,8 @@ const LESSONS = ${JSON.stringify(mod.LESSONS, null, 2)};
 const FINAL_EXPLANATION = ${JSON.stringify(newFE, null, 2)};
 
 const SUMMARY_TABLE = ${JSON.stringify(mod.SUMMARY_TABLE, null, 2)};
-
-module.exports = { META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
+${mod.schemaVersion ? `\nconst schemaVersion = '${mod.schemaVersion}';\n` : ''}
+module.exports = { ${mod.schemaVersion ? 'schemaVersion, ' : ''}META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
 `;
 
 fs.writeFileSync(dataPath, output, 'utf8');

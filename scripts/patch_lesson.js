@@ -66,8 +66,8 @@ const LESSONS = ${less};
 const FINAL_EXPLANATION = ${fe};
 
 const SUMMARY_TABLE = ${st};
-
-module.exports = { META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
+${mod.schemaVersion ? `\nconst schemaVersion = '${mod.schemaVersion}';\n` : ''}
+module.exports = { ${mod.schemaVersion ? 'schemaVersion, ' : ''}META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
 `;
 
 fs.writeFileSync(dataPath, output, 'utf8');

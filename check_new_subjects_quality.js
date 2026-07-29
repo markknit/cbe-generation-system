@@ -18,7 +18,7 @@
  *   3. SUMMARY_TABLE.lessons is non-empty
  *   4. Every framework[].phase is one of the five locked labels, verbatim -
  *      catches numbered-prefix contract violations (e.g. "1 - PREDICT (10 min)")
- *   5. META.schemaVersion is present (known past gap - see SCHEMA.md)
+ *   5. Top-level schemaVersion is present (see docs/SCHEMA.md)
  */
 
 const path = require('path');
@@ -33,7 +33,7 @@ const LOCKED_PHASES = [
   'Predict Phase',
   'Observe Phase',
   'Explain Phase',
-  'Driving Question Board Creation',
+  'Driving Question Board (DQB) Creation',
   'Model Building Phase',
 ];
 
@@ -108,12 +108,12 @@ for (const pilot of PILOTS) {
     console.log('  ok    all phase labels match the five locked values exactly');
   }
 
-  // 5. schemaVersion
-  if (!mod.META || !mod.META.schemaVersion) {
-    console.log('  FAIL  META.schemaVersion missing (see SCHEMA.md known gap)');
+  // 5. schemaVersion (top-level export per docs/SCHEMA.md, not nested under META)
+  if (!mod.schemaVersion) {
+    console.log('  FAIL  schemaVersion missing (see docs/SCHEMA.md)');
     ok = false;
   } else {
-    console.log(`  ok    schemaVersion = ${mod.META.schemaVersion}`);
+    console.log(`  ok    schemaVersion = ${mod.schemaVersion}`);
   }
 
   if (!ok) anyFailure = true;
