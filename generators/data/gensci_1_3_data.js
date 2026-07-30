@@ -1,17 +1,17 @@
 'use strict';
 /**
  * gensci_1_3_data.js
- * Patched by patch_lesson.js (lesson 4 updated)
+ * Fixed UNIT.subject label (was "General_science") - patched by fix_unit_subject.js
  */
 
 const META = {
-  "subject": "General_science",
+  "subject": "General Science",
   "grade": 10,
   "substrand_id": "1.3",
   "substrand_name": "Nutrition in Animals",
   "outputDir": "v2/General_Science/SS1.3_Nutrition_in_Animals",
-  "filePrefix": "General_science_Nutrition_in_Animals",
-  "titleDoc": "GENERAL_SCIENCE GRADE 10: NUTRITION IN ANIMALS",
+  "filePrefix": "General_Science_Nutrition_in_Animals",
+  "titleDoc": "GENERAL SCIENCE GRADE 10: NUTRITION IN ANIMALS",
   "subtitleDoc": "CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 1.3 (8 Lessons)",
   "col3Label": "Teacher Moves",
   "col5Label": "Formative Assessment Strategy"
@@ -19,7 +19,7 @@ const META = {
 
 const UNIT = {
   "gradeLevel": "10",
-  "subject": "General_science",
+  "subject": "General Science",
   "strand": "Strand 1.0: Life Science",
   "substrand": "Sub-Strand 1.3: Nutrition in Animals",
   "totalDuration": "8 lessons × 40 minutes = 320 minutes total",

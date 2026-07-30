@@ -429,7 +429,7 @@ def generate_unit(curriculum_text: str, template: dict, args) -> dict | None:
     print("  Generating UNIT data...")
 
     prompt = f"""Generate the sub-strand overview (UNIT) data for:
-Subject: {args.subject.capitalize()}
+Subject: {_subject_display(args.subject)}
 Grade: 10
 Sub-strand: {args.substrand} — {args.substrand_name}
 Number of lessons: {args.lessons}
@@ -449,7 +449,7 @@ TEACHER TEMPLATE — LEARNING OUTCOMES:
 Return ONLY this JSON structure (no other text):
 {{
   "gradeLevel": "10",
-  "subject": "{args.subject.capitalize()}",
+  "subject": "{_subject_display(args.subject)}",
   "strand": "Strand {args.substrand.split('.')[0]}.0: [official KICD strand name]",
   "substrand": "Sub-Strand {args.substrand}: {args.substrand_name}",
   "totalDuration": "{args.lessons} lessons × 40 minutes = {args.lessons * 40} minutes total",
@@ -528,7 +528,7 @@ def generate_lesson(num: int, curriculum_text: str, template: dict,
                  f"lesson {num} of {args.lessons} in the evidence-gathering sequence"
 
     prompt = f"""Generate Lesson {num} ({lesson_pos}) for:
-Subject: {args.subject.capitalize()} Grade 10
+Subject: {_subject_display(args.subject)} Grade 10
 Sub-strand: {args.substrand} {args.substrand_name}
 Driving question: {unit.get('drivingQuestion', '')}
 Phenomenon: {unit.get('phenomenon', '')}
@@ -601,7 +601,7 @@ def generate_final_explanation(curriculum_text: str, unit: dict,
     prompt = f"""AUDIENCE: This Final Explanation document is for STUDENTS to use as a model for answering the driving question. Use clear, student-accessible language. Write in second person when appropriate.
 
 Generate a Final Explanation assessment document for:
-Subject: {args.subject.capitalize()} Grade 10
+Subject: {_subject_display(args.subject)} Grade 10
 Sub-strand: {args.substrand} {args.substrand_name}
 Driving question: {unit.get('drivingQuestion', '')}
 Phenomenon: {unit.get('phenomenon', '')}
@@ -670,7 +670,7 @@ def generate_summary_table(unit: dict, lessons: list, args,
         f"for use while teaching. Write in third-person teacher voice; include pedagogical "
         f"notes a teacher would find helpful.\n\n"
         f"Generate a teacher reference Summary Table for:\n"
-        f"Subject: {args.subject.capitalize()} Grade 10\n"
+        f"Subject: {_subject_display(args.subject)} Grade 10\n"
         f"Sub-strand: {ss}\n"
         f"Driving question: {dq}\n"
         f"{st_template_section}\n"
@@ -907,6 +907,19 @@ _SUBJECT_FOLDER = {
     'essential_mathematics': 'Essential_Mathematics',
 }
 
+# Human-readable subject label for docx headers/labels. Multi-word subjects need
+# an explicit entry — args.subject.capitalize() mangles 'general_science' into
+# 'General_science' (only the first character is capitalized, underscore kept).
+_SUBJECT_DISPLAY = {
+    'general_science': 'General Science',
+    'core_mathematics': 'Core Mathematics',
+    'essential_mathematics': 'Essential Mathematics',
+}
+
+
+def _subject_display(subject: str) -> str:
+    return _SUBJECT_DISPLAY.get(subject, subject.capitalize())
+
 
 def _v2_output_dir(subject: str, substrand_id: str, substrand_name: str) -> str:
     """Return the outputDir path segment for v2 output, e.g. 'v2/Biology/SS1.1_Cell_Structure'."""
@@ -1100,7 +1113,7 @@ def build_batch_requests(curriculum_text: str, lesson_template: dict,
 
         prompt = (
             f"Generate Lesson {lesson_num} ({lesson_pos}) for:\n"
-            f"Subject: {args.subject.capitalize()} Grade 10\n"
+            f"Subject: {_subject_display(args.subject)} Grade 10\n"
             f"Sub-strand: {args.substrand} {args.substrand_name}\n"
             f"Driving question: {unit.get('drivingQuestion', '')}\n"
             f"Phenomenon: {unit.get('phenomenon', '')}\n"
@@ -1152,7 +1165,7 @@ def build_batch_requests(curriculum_text: str, lesson_template: dict,
         f"for answering the driving question. Use clear, student-accessible language. "
         f"Write in second person when appropriate.\n\n"
         f"Generate a Final Explanation assessment document for:\n"
-        f"Subject: {args.subject.capitalize()} Grade 10\n"
+        f"Subject: {_subject_display(args.subject)} Grade 10\n"
         f"Sub-strand: {args.substrand} {args.substrand_name}\n"
         f"Driving question: {unit.get('drivingQuestion', '')}\n"
         f"Phenomenon: {unit.get('phenomenon', '')}\n"
@@ -1374,7 +1387,7 @@ def main():
             curriculum_text, lesson_template, args.substrand, args.subject)
         print(f"  Lesson count: {args.lessons} (source: {lesson_count_source})")
 
-    print(f"\nGenerating: {args.subject.capitalize()} Grade 10 Sub-Strand {args.substrand}: {args.substrand_name}")
+    print(f"\nGenerating: {_subject_display(args.subject)} Grade 10 Sub-Strand {args.substrand}: {args.substrand_name}")
     print(f"  Lessons: {args.lessons}")
     print(f"  Output:  generators/data/{args.output}_data.js")
     print(f"  Model:   {MODEL}")
@@ -1409,7 +1422,8 @@ def main():
         id_path = _batch_id_path(args.output)
         id_path.write_text(batch_id)
         meta_path = id_path.with_suffix('.json')
-        _subj_cap = args.subject.capitalize()
+        _subj_cap = _subject_display(args.subject)
+        _subj_file = _SUBJECT_FOLDER.get(args.subject, _subj_cap)
         meta_path.write_text(json.dumps({
             "unit": unit,
             "meta": {
@@ -1418,7 +1432,7 @@ def main():
                 "substrand_id":   args.substrand,
                 "substrand_name": args.substrand_name,
                 "outputDir":      _v2_output_dir(args.subject, args.substrand, args.substrand_name),
-                "filePrefix":     f"{_subj_cap}_{args.substrand_name.replace(' ', '_')}",
+                "filePrefix":     f"{_subj_file}_{args.substrand_name.replace(' ', '_')}",
                 "titleDoc":       f"{_subj_cap.upper()} GRADE 10: {args.substrand_name.upper()}",
                 "subtitleDoc":    f"CBE Phenomenon-Driven Lesson Sequence — Sub-Strand {args.substrand} ({args.lessons} Lessons)",
                 "col3Label":      "Teacher Moves",
@@ -1506,7 +1520,8 @@ def main():
 
     # ── Build META ─────────────────────────────────────────────────────────────
 
-    subject_cap = args.subject.capitalize()
+    subject_cap = _subject_display(args.subject)
+    subject_file = _SUBJECT_FOLDER.get(args.subject, subject_cap)
 
     meta = {
         "subject":     subject_cap,
@@ -1514,7 +1529,7 @@ def main():
         "substrand_id":   args.substrand,
         "substrand_name": args.substrand_name,
         "outputDir":   _v2_output_dir(args.subject, args.substrand, args.substrand_name),
-        "filePrefix":  f"{subject_cap}_{args.substrand_name.replace(' ', '_')}",
+        "filePrefix":  f"{subject_file}_{args.substrand_name.replace(' ', '_')}",
         "titleDoc":    f"{subject_cap.upper()} GRADE 10: {args.substrand_name.upper()}",
         "subtitleDoc": f"CBE Phenomenon-Driven Lesson Sequence — Sub-Strand {args.substrand} ({args.lessons} Lessons)",
         "col3Label":   "Teacher Moves",
