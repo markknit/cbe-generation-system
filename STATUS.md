@@ -58,7 +58,7 @@ right now" checkable in one place, not reconstructed from memory.
 | Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
 | Grade 11 STEM expansion | Not started | Planned after terminology pass + initial distribution |
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
-| New Grade 10 STEM subjects (General Science, Core Mathematics, Essential Mathematics) | In progress | 43 sub-strands, 344 lessons planned. Handoff: `HANDOFF_new_stem_subjects_2026-07-28.md` (Rev 2). Curriculum text extraction done and committed (`7882da0`). Replacement Core Mathematics source PDF referenced in the handoff is missing from jhm-spark — not yet supplied. Pipeline wiring (Phase 1) next. |
+| New Grade 10 STEM subjects (General Science, Core Mathematics, Essential Mathematics) | **Done — Phase 3 complete, committed `f6d6fab`** | All 43 sub-strands / 344 lessons generated, docx+PDF regenerated, teacher index rebuilt, pushed to `origin/main`. Handoff: `HANDOFF_new_stem_subjects_2026-07-28.md` (Rev 2). See 2026-07-30 session-log entry below for the bugs found/fixed along the way (subject-label bug, 34 stub lessons, 1 missing FE). Replacement Core Mathematics source PDF referenced in the handoff was never supplied but generation proceeded — flag if a full curriculum-text re-check against it is still wanted. Summary/per-subject tables below still need the separate full refresh already flagged as stale. |
 
 ---
 
@@ -497,3 +497,74 @@ not a request for more vigilance:
 - Full refresh of this file's Summary/per-subject lesson-count tables
 - Kenyan-terminology wording pass (blocked on teacher-provided examples)
 - Grade 11 STEM expansion, then non-STEM subject expansion (both not started)
+
+---
+## Updates — 2026-07-30 — New STEM subjects Phase 3 completed (resumed after interruption)
+
+A prior session had gotten partway through `HANDOFF_new_stem_subjects_2026-07-28.md`
+Phase 3 (full-batch generation of General Science / Core Mathematics / Essential
+Mathematics, 43 sub-strands / 344 lessons) and was interrupted mid-flight. This
+session used `/restart` to reconstruct exactly where it had left off from git
+history, file mtimes, and the handoff document, then finished the phase.
+
+### What the interrupted session had already done
+- Phase 2 pilots (`gensci_1_3`, `coremath_2_2`, `essmath_2_8`) generated and
+  passing `check_new_subjects_quality.js`.
+- A real bug found and fixed in `src/generate_substrand.py`: `args.subject
+  .capitalize()` mangled `general_science` → `General_science` instead of
+  `General Science`. Fixed via a new `_subject_display()` helper.
+- A retroactive patch (`/tmp/fix_subject_labels.js`, not committed — ad hoc)
+  had corrected the 3 pilots' `META.subject`/`filePrefix`/`titleDoc`, but
+  **missed the nested `UNIT.subject` field**, which feeds the "Subject:" row
+  in the Lesson Sequence docx (`generators/lib/sections.js`).
+- Because `filePrefix` changed, the pilots' old docx/json were deleted in
+  prep for regeneration but `generate.js` was never re-run — they had zero
+  output files at the point of interruption.
+- Phase 3 had already run live generation for the remaining ~40 sub-strands,
+  all of which inherited the same `UNIT.subject` bug.
+- One sub-strand (`gensci_1_6`) had a leftover, already-`ended`
+  (9/9 succeeded) batch checkpoint from an earlier abandoned batch attempt,
+  superseded by a live run.
+
+### What this session found and fixed on top of that
+- **`UNIT.subject` bug**: extended the fix to all 43 data files (source of
+  truth: each file's already-correct `META.subject`). Quality gate re-ran
+  clean afterward.
+- **`gensci_1_6` missing Final Explanation entirely** (`FINAL_EXPLANATION`
+  absent) — generated via the API and patched with `scripts/patch_fe.js`.
+- **34 stub lessons across 14 General Science sub-strands** (`gensci_1_2`,
+  `1_4`, `1_5`, `1_6` [all 8 lessons], `1_7`, `2_1`–`2_5`, `3_1`–`3_4`) —
+  the documented "Batch API — JSON truncation" failure mode, at larger
+  scale than previously seen. Core Mathematics and Essential Mathematics
+  were completely unaffected. Repaired all 34 via the `patch_lesson.js`
+  workflow (individual API calls per stub, same pattern as
+  `scripts/repair_stubs.py`).
+- Removed the orphaned `.gensci_1_6_batch_id.{json,txt}` checkpoint files
+  (batch already collected).
+
+### Verification before commit
+- Full stub/FE/ST scan across all 43 new sub-strand data files: clean —
+  no stubs, FE and ST present for all.
+- `node check_new_subjects_quality.js`: PASS.
+- `node generators/generate.js --all`: 0 errors, all 43 new sub-strands
+  produced 4 files each (docx ×3 + json).
+- `node generators/generate_pdfs.js`: 255 converted, 0 failed.
+- `node generators/generate_teacher_index.js`: 7 subjects, 85 sub-strands,
+  255 documents indexed.
+
+### Committed and pushed
+- `f6d6fab` on `main` (649 files: all General Science / Core Mathematics /
+  Essential Mathematics docx+json+PDF, the fixed `generators/data/*.js`
+  files, `src/generate_substrand.py`). Confirmed pushed to `origin/main`.
+
+### Still open going into next session
+- Full refresh of this file's Summary/per-subject lesson-count tables
+  (already stale before this session; now further behind since it doesn't
+  reflect the new subjects at all)
+- Whether to formally verify the 43 sub-strand names against the
+  replacement Core Mathematics PDF referenced in the handoff (never
+  supplied to jhm-spark) — generation proceeded on the original curriculum
+  text without it
+- Everything else listed in the previous session's "still open" list above
+  (install.sh live test, partner schema check, terminology pass, Grade 11
+  expansion, etc.) — untouched by this session
