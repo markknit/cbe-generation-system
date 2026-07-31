@@ -568,3 +568,56 @@ history, file mtimes, and the handoff document, then finished the phase.
 - Everything else listed in the previous session's "still open" list above
   (install.sh live test, partner schema check, terminology pass, Grade 11
   expansion, etc.) — untouched by this session
+
+---
+## Updates — 2026-07-30 (continued) — Process retrospective and fixes
+
+Mark asked for a retrospective on three concerns from the session above:
+the resume-and-repair work took much longer than expected, API cost ran
+well over the documented estimate, and the session needed more approval
+round-trips than felt warranted. Root cause in all three cases: the one
+automated gate this project had (`check_new_subjects_quality.js`) only ever
+checked the 3 Phase-2 pilots, so it reported "PASS, safe to proceed" while
+structurally blind to the 40 sub-strands Phase 3 actually generated. Fixes:
+
+- **`check_new_subjects_quality.js` rewritten** (commit `bb0faf9`) to glob
+  every `gensci_`/`coremath_`/`essmath_` data file instead of naming a fixed
+  list, plus a new check (#6: `META.subject` == `UNIT.subject`) added to
+  catch the exact partial-patch bug this session hit earlier. Widening the
+  gate immediately proved the point: it surfaced a real, previously
+  undetected defect — **39/43 files had non-canonical phase-label formats**
+  (e.g. `"Phase 1 — PREDICT (15 minutes)"` instead of the locked
+  `"Predict Phase"`). Not cosmetic: `generators/lib/sections.js` keys ARES
+  resource-category matching and row-color lookups off that exact string,
+  both with silent fallbacks — so 1195 rows across the new corpus were
+  silently getting the wrong ARES resource bucket and default grey shading.
+  Fixed as a zero-cost deterministic remap (verified safe: every lesson's
+  framework array has exactly 5 entries, self-numbered 1-5 matching array
+  position in all 344 lessons) — no regeneration/API cost needed, just
+  docx/PDF re-render. Committed and pushed as part of `bb0faf9`.
+- **`WORKFLOW.md`** (commit `9d0d373`): `--batch` is now a hard default
+  beyond a 1-3 sub-strand pilot (was "preferred") — `--run` is 2x batch
+  pricing and a resumed session can otherwise silently inherit whatever
+  mode the interrupted session was using. Added a 15-20% repair-pass
+  contingency to the cost estimate table, since the documented ~$114
+  figure assumed zero-defect generation and this run's actual defect rate
+  (34 stub lessons + 1 missing FE + 1195 mislabeled rows, all repaired via
+  extra live-mode calls) was well above zero.
+- **`src/generate_substrand.py`** (commit `9d0d373`): now tracks real token
+  usage (sync and batch) per run and logs it with an estimated cost to the
+  new `logs/api_cost_log.md`, so future cost estimates can be checked
+  against this pipeline's actual observed spend instead of a generic table.
+- **`CLAUDE.md`** (commit `9d0d373`): added an "Autonomy checkpoints" policy
+  to the Project Rigor Assessment section — for resume/repair/extend tasks,
+  ask once up front whether to keep fixing-and-regenerating on standing
+  authorization vs. check in per discovery, instead of re-asking separately
+  each time a new problem of the same kind turns up. Level 2/3 phase-
+  boundary checkpoints are unaffected by this.
+
+### Still open going into next session
+- Whether actual spend on the next bulk run tracks the new 15-20%
+  contingency, or whether the estimate itself needs further revision
+  (check `logs/api_cost_log.md` once there's another real run to compare)
+- Everything else already listed above (Summary/per-subject table refresh,
+  Core Mathematics replacement-PDF verification, install.sh live test,
+  partner schema check, terminology pass, Grade 11 expansion)
