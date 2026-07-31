@@ -8,7 +8,16 @@ cd /home/markk/ares/cbe-generation-system
 source venv/bin/activate
 ```
 
-### Step 2 — Submit batch (preferred for 3+ sub-strands)
+### Step 2 — Submit batch (required beyond pilot-scale)
+
+**Rule, not a preference (added 2026-07-30):** `--batch` is the default for
+anything past a 1-3 sub-strand pilot/spot-check. `--run` (live/sync mode) is
+2x the per-token price of batch mode and is reserved for those small pilot
+runs only. A session resuming or extending prior generation work should not
+silently continue in `--run` mode for bulk work just because that's how the
+interrupted session happened to be running — check which mode is appropriate
+for the actual remaining scope before continuing.
+
 ```bash
 # Single sub-strand
 python3 src/generate_substrand.py \
@@ -279,7 +288,27 @@ After generating, spot-check the docx:
 | `claude-opus-4-8` | $5/MTok | $25/MTok | Quality comparison only |
 
 **Typical cost per sub-strand (8 lessons, batch mode):** ~$0.35
-**Full 2,000-lesson target (batch mode):** ~$114
+**Full 2,000-lesson target (batch mode):** ~$114 for clean, zero-defect generation.
+
+**Repair-pass contingency (added 2026-07-30):** the estimate above assumes
+every lesson generates cleanly on the first try. It doesn't. This project's
+own Known Issues section documents JSON-truncation stub lessons as a
+recurring failure mode, and the 2026-07-30 General Science run hit it at
+scale — 34 stub lessons + 1 missing Final Explanation across 344 lessons
+(~10%), each repaired via an individual **live** API call (2x batch pricing,
+since a 1-2 lesson repair isn't worth batch overhead). Budget a **15-20%
+contingency on top of the clean-generation estimate** for any run of
+comparable scale, and treat that contingency as expected cost, not overrun —
+the "$114 for 2,000 lessons" figure should be quoted alongside "+15-20% likely
+repair cost," not alone.
+
+**Track actual spend, don't just estimate it.** `generate_substrand.py` logs
+cumulative token usage and estimated cost for every run to
+`logs/api_cost_log.md` (see the script's `--collect`/`--run`/`--batch` output
+for the per-run summary). Check that log against the estimate above
+periodically — if actual spend is consistently running higher than the
+15-20% contingency accounts for, the estimate itself needs revising, not
+just the contingency margin.
 
 ---
 

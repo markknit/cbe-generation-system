@@ -46,6 +46,86 @@ except ImportError:
 MODEL = os.environ.get('CLAUDE_MODEL', 'claude-sonnet-4-6')
 CLIENT = anthropic.Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
 
+# ── Per-run cost tracking (added 2026-07-30) ─────────────────────────────────
+# WORKFLOW.md's cost estimates turned out to be far off actual spend on the
+# 2026-07-30 General Science run — partly because repair passes (live-mode
+# calls fixing stub lessons found after the fact) aren't in the original
+# estimate at all. This tracks real usage per run so future estimates can be
+# checked against actual spend instead of a generic per-lesson table.
+PRICE_PER_MTOK = {
+    'sync':  {'input': 3.0,  'output': 15.0},   # live/--run calls (call_claude)
+    'batch': {'input': 1.5,  'output': 7.5},    # Message Batches API
+}
+_USAGE = {
+    'sync_input': 0, 'sync_output': 0, 'sync_calls': 0,
+    'batch_input': 0, 'batch_output': 0, 'batch_requests': 0,
+}
+
+
+def _track_sync_usage(response) -> None:
+    """Record token usage from a live (call_claude) API response."""
+    usage = getattr(response, 'usage', None)
+    if usage is None:
+        return
+    _USAGE['sync_input']  += getattr(usage, 'input_tokens', 0) or 0
+    _USAGE['sync_output'] += getattr(usage, 'output_tokens', 0) or 0
+    _USAGE['sync_calls']  += 1
+
+
+def _track_batch_usage(message) -> None:
+    """Record token usage from one successful Message Batches API result."""
+    usage = getattr(message, 'usage', None)
+    if usage is None:
+        return
+    _USAGE['batch_input']    += getattr(usage, 'input_tokens', 0) or 0
+    _USAGE['batch_output']   += getattr(usage, 'output_tokens', 0) or 0
+    _USAGE['batch_requests'] += 1
+
+
+def _estimate_cost() -> float:
+    sync_cost  = (_USAGE['sync_input']  / 1_000_000) * PRICE_PER_MTOK['sync']['input']
+    sync_cost += (_USAGE['sync_output'] / 1_000_000) * PRICE_PER_MTOK['sync']['output']
+    batch_cost  = (_USAGE['batch_input']  / 1_000_000) * PRICE_PER_MTOK['batch']['input']
+    batch_cost += (_USAGE['batch_output'] / 1_000_000) * PRICE_PER_MTOK['batch']['output']
+    return sync_cost + batch_cost
+
+
+def log_run_cost(output_name: str, mode: str) -> None:
+    """Append this run's token usage and estimated cost to logs/api_cost_log.md.
+
+    `mode` is a short label for what kind of run this was (e.g. 'run',
+    'batch-submit', 'collect', 'repair') so the log can be skimmed for
+    which activity actually drove spend.
+    """
+    import datetime
+    log_path = PROJECT_ROOT / 'logs' / 'api_cost_log.md'
+    log_path.parent.mkdir(exist_ok=True)
+
+    cost = _estimate_cost()
+    if _USAGE['sync_calls'] == 0 and _USAGE['batch_requests'] == 0:
+        return  # nothing to log (e.g. batch submitted but not yet collected)
+
+    if not log_path.exists():
+        log_path.write_text(
+            "# API cost log\n\n"
+            "Actual per-run token usage and estimated cost, logged automatically by "
+            "`generate_substrand.py`. Cross-check against WORKFLOW.md's Model and "
+            "Cost Reference table periodically — if actual spend consistently runs "
+            "above the documented contingency, the estimate needs revising.\n\n"
+            "| Timestamp (UTC) | Output | Mode | Sync in/out tokens | Batch in/out tokens | Est. cost |\n"
+            "|---|---|---|---|---|---|\n"
+        )
+
+    timestamp = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+    with open(log_path, 'a') as f:
+        f.write(
+            f"| {timestamp} | {output_name} | {mode} "
+            f"| {_USAGE['sync_input']:,}/{_USAGE['sync_output']:,} "
+            f"| {_USAGE['batch_input']:,}/{_USAGE['batch_output']:,} "
+            f"| ${cost:.4f} |\n"
+        )
+    print(f"  Logged run cost to {log_path} (${cost:.4f} estimated)")
+
 # ── Curriculum extraction ─────────────────────────────────────────────────────
 
 def extract_curriculum_pdf(pdf_path: str, substrand_id: str) -> str:
@@ -369,6 +449,7 @@ def call_claude(user_prompt: str, max_tokens: int = 8000, retries: int = 3,
                 kwargs["tool_choice"] = {"type": "tool", "name": tool_name}
 
             response = CLIENT.messages.create(**kwargs)
+            _track_sync_usage(response)  # count tokens even on truncated/retried attempts - they're billed regardless
 
             # Explicit truncation detection (previously surfaced only as a parse error)
             if getattr(response, "stop_reason", None) == "max_tokens":
@@ -1065,6 +1146,7 @@ def collect_batch_results(batch_id: str) -> dict:
             results[cid] = None
             continue
 
+        _track_batch_usage(result.result.message)
         content = result.result.message.content
 
         # Prefer tool_use block (schema-enforced path)
@@ -1304,6 +1386,7 @@ def run_collect(output_name: str, args):
     id_path.unlink(missing_ok=True)
     batch_meta_path.unlink(missing_ok=True)
 
+    log_run_cost(output_name, 'collect')
     print(f"\n✓ Done! Data file: {output_path}")
 
 def main():
@@ -1406,6 +1489,7 @@ def main():
     if args.unit_only:
         print("\n[unit-only mode — stopping here]")
         print(json.dumps(unit, indent=2))
+        log_run_cost(args.output, 'unit-only')
         return
 
     # ── Batch submit mode ─────────────────────────────────────────────────────
@@ -1555,6 +1639,7 @@ def main():
         if result.returncode != 0:
             print("Generator errors:", result.stderr)
 
+    log_run_cost(args.output, 'run')
     print(f"\n✓ Done!")
     print(f"  Data file: {output_path}")
     print(f"  To generate docx: node generators/generate.js {args.output}")

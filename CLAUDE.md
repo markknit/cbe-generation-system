@@ -275,6 +275,45 @@ produced once and then hard to redo.
   subject, after each batch) with a fixed reporting format, requiring explicit
   user acknowledgment before the next phase starts.
 
+### Autonomy checkpoints — settle once per task, not once per surprise
+
+Added 2026-07-30, after a resumed-session repair task (finishing an
+interrupted Phase 3 generation run) surfaced several distinct problems in
+sequence — a label bug, a missing section, then 34 stub lessons — and each
+one got its own separate approval question as it was discovered. Every one
+of those questions was individually reasonable, but asking them one at a
+time, serially, as each new problem surfaced cost more turnaround time than
+the decisions themselves warranted.
+
+**The fix: ask once, up front, for the autonomy level — not once per
+discovery.** When starting a "resume," "repair," or "extend existing work"
+task (as opposed to greenfield work), ask a single consolidated question
+before diving in: *if more issues of the same general kind turn up as you
+go, should I keep fixing and regenerating on my own judgment and report
+everything at the end, or check in each time a new one surfaces?* Whatever
+the user picks, honor it for the rest of that task instead of re-litigating
+it at each new finding.
+
+**This does not relax the Level 2/3 checkpoints above.** Phase-boundary
+pauses, golden-fixture diffs, and contract-validator gates still apply as
+scoped. What changes is *how many separate conversational round-trips it
+takes to get permission for a class of decision the user already settled*.
+Concretely:
+- A newly-discovered bug of the *same kind* as one already approved for
+  fixing (e.g., "found 3 more stub lessons like the ones you just said to
+  repair") is a mechanical continuation — proceed without re-asking, under
+  a standing autonomy answer.
+- A decision that changes scope, cost, or risk in a *new* way (e.g., the
+  first stub lesson found in a session, or a repair that would require
+  live-mode calls instead of batch) is a genuine judgment call — surface it,
+  but as one consolidated question covering the whole newly-discovered
+  category, not one question per instance.
+- Actions this file's "Executing actions with care" equivalent already
+  treats as needing confirmation regardless (a `git push`, spending real API
+  budget for the first time in a session) still get confirmed — this section
+  is about not re-asking the *same class* of question repeatedly, not about
+  skipping confirmation altogether.
+
 ### Why this exists
 
 Long-running agentic sessions drift from their brief even when the brief is
