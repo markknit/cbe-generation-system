@@ -56,7 +56,7 @@ right now" checkable in one place, not reconstructed from memory.
 | `.gitignore` scoped to allow `.claude/skills/` | Done, committed `2c7c938` | Was blanket-excluding all of `.claude/`; narrowed to `.claude/settings.local.json` only |
 | Lesson-count table below (Summary + per-subject tables) | **Known stale — gap now much wider than previously noted** | Tables claim 12/33 sub-strands across 4 subjects; disk (`grep outputDir generators/data/*.js`, 2026-07-31) shows **85 sub-strands across 7 subjects** — Biology, Chemistry, Physics, Maths, Core_Mathematics, Essential_Mathematics, General_Science. Still a separate refresh task; do not improvise partial corrections. |
 | Session-tooling commits `8d3fe16` / `1f4f6f8` / `9937ed3` | Done, recorded 2026-07-31 | Token-optimizer marketplace, tooling-defect fixes, code-review-graph install. Were pushed to `origin/main` without a STATUS.md entry — caught by `/restart` on 2026-07-31, see session log + Known Issues below. |
-| code-review-graph CLAUDE.md wording — "ALWAYS use graph tools before Grep/Glob/Read" | Open — needs scoping | Third-party text injected verbatim by the installer (`9937ed3`), unreviewed. Overbroad for this project: most reads here are `.md` control docs (`STATUS.md`, `WORKFLOW.md`) and `generators/data/*_data.js` content modules, none of which the graph meaningfully covers. Flagged in the commit message; no owner or deadline yet. |
+| code-review-graph CLAUDE.md wording — "ALWAYS use graph tools before Grep/Glob/Read" | **Done — scoped 2026-07-31** | Rewritten against measured coverage, not assumption: graph indexes exactly the 183 tracked `.js`/`.py`/`.sh` files and **0 of 52 tracked `.md` files**; all 85 `*_data.js` are bare `File` nodes (object-literal exports, no functions to graph). Section now states explicitly that reading `STATUS.md` is a plain `Read` no graph tool substitutes for, and that data-file inspection is `Read`/`grep` work. Two installer claims corrected: `semantic_search_nodes_tool` is FTS-only here (0 nodes embedded), and `tests_for` coverage checks are meaningless (1 Test node repo-wide). |
 | `.claude/settings.json` Read deny rules | Done, `1f4f6f8` — with a known limit | 6 narrow rules (ares_index DB, `venv/`, `.env`, docx/pdf under `data/outputs`, archived `data/outputs/docx`). **Gate the Read tool only, not bash** — a recursive `grep` over `data/outputs/` still lands in context. Deliberately excludes `*_data.json` and `data/raw/curriculum_pdfs`. |
 | Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
 | Grade 11 STEM expansion | Not started | Planned after terminology pass + initial distribution |
@@ -724,3 +724,49 @@ to re-ground a fresh session; it found real drift, and this entry closes it.
 - Kenyan-terminology wording pass (blocked on teacher-provided examples).
 - Tracking/attribution for the Grade 10 module link.
 - Grade 11 STEM expansion, then non-STEM expansion.
+
+---
+## Updates — 2026-07-31 (second entry) — code-review-graph wording scoped
+
+Closed the "needs scoping" item opened earlier today. No code or content
+changed; `CLAUDE.md` + `STATUS.md` only.
+
+### Measured graph coverage — verified, don't re-derive
+- Indexed: **exactly the 183 tracked `.js`/`.py`/`.sh` files** (`git ls-files
+  '*.js' '*.py' '*.sh' | wc -l` == 183 == graph `files_count`).
+- **0 of 52 tracked `.md` files indexed** — languages are python/bash/
+  javascript only. Every control document in this project is invisible to
+  the graph.
+- All 85 `generators/data/*_data.js` are indexed as bare `File` nodes with
+  no contained functions — they export object literals, so there is no call
+  graph to build. The graph knows these files exist and nothing about what
+  is in them.
+- `embeddings_count` == 0, so `semantic_search_nodes_tool` silently falls
+  back to FTS keyword matching (`search_mode: "fts"` in its own response).
+  It is a symbol lookup, not concept search.
+- 1 `Test` node repo-wide. `query_graph_tool` pattern="tests_for" cannot
+  function as a coverage signal here in either direction.
+
+### What changed in `CLAUDE.md`
+- The blanket "ALWAYS use graph tools BEFORE Grep/Glob/Read" replaced with
+  a scoped rule: prefer the graph for executable-code questions, and a
+  "What the graph does not cover" section listing the three blind spots
+  above. Explicitly states that reading `STATUS.md`'s Active Threads — this
+  project's mandatory first action — is a plain `Read` with no graph
+  substitute, which the original wording implicitly discouraged.
+- Notes that past data-integrity bugs (stub lessons, `UNIT.subject`
+  mismatch, phase-label drift) were all found by `Read`/`grep` over data
+  files, precisely the reads the original wording deprioritized.
+- Workflow step 4 (`tests_for` coverage check) struck through with a
+  pointer to the caveat.
+- A short provenance banner marks the section as installer-generated and
+  hand-scoped, so a future reader doesn't mistake it for original policy.
+
+### Still open going into next session
+- **Full refresh of the Summary/per-subject lesson-count tables** — now the
+  longest-standing open item (flagged 2026-07-05); 12/33 across 4 subjects
+  on paper vs. 85 across 7 on disk.
+- Everything else from this morning's entry is unchanged: cost-contingency
+  check against `logs/api_cost_log.md`, Core Mathematics replacement-PDF
+  verification, `install.sh` live test, partner schema check, terminology
+  pass, module-link tracking, Grade 11 expansion.

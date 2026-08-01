@@ -1,8 +1,8 @@
 # CLAUDE.md — Kenya CBE Lesson Plan Generation System
 
 > **Last updated: 2026-07-31** (the "MCP Tools: code-review-graph" section
-> at the bottom was appended by an installer on 2026-07-31, not hand-written
-> — see `STATUS.md` Known Issues before treating its wording as project policy)
+> at the bottom was appended by an installer, then scoped by hand the same
+> day — see `STATUS.md` Known Issues for what the installer got wrong)
 > (an earlier version was corrupted as UTF-16 —
 > re-saved as UTF-8; if this file ever displays garbled again, check
 > encoding before assuming content is wrong)
@@ -347,21 +347,58 @@ and continue with the user's actual request.
 <!-- code-review-graph MCP tools -->
 ## MCP Tools: code-review-graph
 
-**IMPORTANT: This project has a knowledge graph. ALWAYS use the
-code-review-graph MCP tools BEFORE using Grep/Glob/Read to explore
-the codebase.** The graph is faster, cheaper (fewer tokens), and gives
-you structural context (callers, dependents, test coverage) that file
-scanning cannot.
+> Scoped 2026-07-31. The installer's original text said to ALWAYS prefer
+> graph tools over Grep/Glob/Read for everything. That is wrong for this
+> project — see "What the graph does not cover" below, which is measured,
+> not assumed. The tool list and workflow notes are otherwise the
+> installer's and are accurate.
 
-### When to use graph tools FIRST
+This project has a code knowledge graph. **For questions about executable
+code — the pipeline, the generators, the scripts — reach for it before
+Grep/Glob/Read.** It is faster, cheaper, and gives structural context
+(callers, dependents, blast radius) that file scanning cannot.
+
+### What the graph covers
+
+Exactly the 183 tracked `.js` / `.py` / `.sh` files: `generators/`,
+`generators/lib/`, `src/`, `scripts/`. This is where it earns its keep.
 
 - **Exploring code**: `semantic_search_nodes_tool` or `query_graph_tool` instead of Grep
 - **Understanding impact**: `get_impact_radius_tool` instead of manually tracing imports
 - **Code review**: `detect_changes_tool` + `get_review_context_tool` instead of reading entire files
-- **Finding relationships**: `query_graph_tool` with callers_of/callees_of/imports_of/tests_for
+- **Finding relationships**: `query_graph_tool` with callers_of/callees_of/imports_of
 - **Architecture questions**: `get_architecture_overview_tool` + `list_communities_tool`
 
-Fall back to Grep/Glob/Read **only** when the graph doesn't cover what you need.
+### What the graph does not cover — read these files directly
+
+- **All 52 tracked `.md` files — zero are indexed.** Indexed languages are
+  python, bash, javascript only. `STATUS.md`, `CLAUDE.md`, `WORKFLOW.md`,
+  and everything in `docs/` are invisible to the graph. **The mandatory
+  first action in this project — reading `STATUS.md`'s Active Threads —
+  is a plain `Read`, and no graph tool substitutes for it.**
+- **`generators/data/*_data.js` content.** All 85 are indexed, but each is
+  a bare `File` node: they export object literals, so there are no
+  functions, calls, or imports to graph. The graph can tell you a data
+  file exists; it cannot tell you anything about lesson content, phase
+  labels, `outputDir`, or `META`/`UNIT` fields. Use `Read` and `grep` —
+  that is how every past data-integrity bug in this project was found
+  (stub lessons, the `UNIT.subject` mismatch, the phase-label drift).
+- **`data/outputs/`** — generated docx/PDF/JSON, not source; not indexed.
+
+### Two caveats about the tools themselves
+
+- `semantic_search_nodes_tool` is **not semantic here** — 0 nodes are
+  embedded (`sentence-transformers` isn't installed), so it silently
+  falls back to FTS keyword matching. Treat it as a fast symbol lookup,
+  not concept search; it will not find "the thing that builds the summary
+  table" unless those words appear in a symbol name.
+- **Test coverage queries return almost nothing** — the graph holds 1
+  Test node for the whole repo. `query_graph_tool` pattern="tests_for"
+  reporting no tests means this project has no tests there, not that the
+  graph failed. Don't read it as a coverage signal either way.
+
+Fall back to Grep/Glob/Read whenever the graph doesn't cover what you need
+— per the above, that is routine here, not an exception.
 
 ### Key Tools
 
@@ -381,4 +418,5 @@ Fall back to Grep/Glob/Read **only** when the graph doesn't cover what you need.
 1. The graph auto-updates on file changes (via hooks).
 2. Use `detect_changes_tool` for code review.
 3. Use `get_affected_flows_tool` to understand impact.
-4. Use `query_graph_tool` pattern="tests_for" to check coverage.
+4. ~~Use `query_graph_tool` pattern="tests_for" to check coverage.~~ —
+   not useful here; see the test-coverage caveat above.
