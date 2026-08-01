@@ -1,6 +1,9 @@
 # CLAUDE.md — Kenya CBE Lesson Plan Generation System
 
-> **Last updated: 2026-07-05** (previous version was corrupted as UTF-16 —
+> **Last updated: 2026-07-31** (the "MCP Tools: code-review-graph" section
+> at the bottom was appended by an installer on 2026-07-31, not hand-written
+> — see `STATUS.md` Known Issues before treating its wording as project policy)
+> (an earlier version was corrupted as UTF-16 —
 > re-saved as UTF-8; if this file ever displays garbled again, check
 > encoding before assuming content is wrong)
 > Auto-read by Claude Code at session start. Keep concise and actionable.
@@ -78,6 +81,12 @@ generators/lib/build_docs.js            - buildSoW, buildFinalExplanation, build
 generators/data/SCHEMA.md               - Data module field documentation
 generators/data/*_data.js               - One per sub-strand (THE source of truth)
 .claude/skills/update/SKILL.md          - /update: forces a STATUS.md continuity update
+.claude/skills/restart/SKILL.md         - /restart: re-reads control docs + runs Step 0 live checks
+.claude/skills/{debug-issue,explore-codebase,refactor-safely,review-changes}/
+                                        - Installed by code-review-graph, not hand-written
+.claude/commands/commit.md              - /commit: stage, commit, push, then update STATUS.md
+.claude/settings.json                   - Hooks, plugin marketplace, Read deny rules
+.mcp.json                               - code-review-graph MCP server (stdio, venv python)
 src/generate_substrand.py               - Claude API content pipeline (main script)
 src/ares_recommender.py                 - ARES FTS search + resource URL construction (ARES_HOST env var)
 scripts/patch_lesson.js                 - Repair stub lessons

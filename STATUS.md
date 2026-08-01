@@ -1,6 +1,6 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: 2026-07-05*
+*Last updated: 2026-07-31*
 
 ---
 
@@ -54,7 +54,10 @@ right now" checkable in one place, not reconstructed from memory.
 | Tracking/attribution for the Grade 10 module link + PDF resource links | Not started | Deliberately scoped as a separate task, not bundled into today's work |
 | Continuity protocol (`STATUS.md` + `/update` skill + `/restart` skill) | **Done — confirmed** | `CLAUDE.md`/`STATUS.md` continuity fixes confirmed pushed (`git log`/`git status` on jhm-spark, 2026-07-06: `HEAD`/`main`/`origin/main` all at `b477ef1`, clean tree). `/restart` skill added (`33ceab5`) and documented in `CLAUDE.md` (`222d681`, spacing fix `aa54484`) and this file (`68e7b47`). Tested live — see 2026-07-06 session-log entry below. |
 | `.gitignore` scoped to allow `.claude/skills/` | Done, committed `2c7c938` | Was blanket-excluding all of `.claude/`; narrowed to `.claude/settings.local.json` only |
-| Lesson-count table below (Summary + per-subject tables) | Known stale | See "Known Issues" — needs a full refresh, separate task |
+| Lesson-count table below (Summary + per-subject tables) | **Known stale — gap now much wider than previously noted** | Tables claim 12/33 sub-strands across 4 subjects; disk (`grep outputDir generators/data/*.js`, 2026-07-31) shows **85 sub-strands across 7 subjects** — Biology, Chemistry, Physics, Maths, Core_Mathematics, Essential_Mathematics, General_Science. Still a separate refresh task; do not improvise partial corrections. |
+| Session-tooling commits `8d3fe16` / `1f4f6f8` / `9937ed3` | Done, recorded 2026-07-31 | Token-optimizer marketplace, tooling-defect fixes, code-review-graph install. Were pushed to `origin/main` without a STATUS.md entry — caught by `/restart` on 2026-07-31, see session log + Known Issues below. |
+| code-review-graph CLAUDE.md wording — "ALWAYS use graph tools before Grep/Glob/Read" | Open — needs scoping | Third-party text injected verbatim by the installer (`9937ed3`), unreviewed. Overbroad for this project: most reads here are `.md` control docs (`STATUS.md`, `WORKFLOW.md`) and `generators/data/*_data.js` content modules, none of which the graph meaningfully covers. Flagged in the commit message; no owner or deadline yet. |
+| `.claude/settings.json` Read deny rules | Done, `1f4f6f8` — with a known limit | 6 narrow rules (ares_index DB, `venv/`, `.env`, docx/pdf under `data/outputs`, archived `data/outputs/docx`). **Gate the Read tool only, not bash** — a recursive `grep` over `data/outputs/` still lands in context. Deliberately excludes `*_data.json` and `data/raw/curriculum_pdfs`. |
 | Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
 | Grade 11 STEM expansion | Not started | Planned after terminology pass + initial distribution |
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
@@ -336,6 +339,57 @@ not a request for more vigilance:
   fallback if direct transfer isn't available, but verify line count
   after every single chunk, not just at checkpoints — this incident
   involved two different corruption modes in adjacent attempts.
+
+### Continuity rule held for content work, lapsed for tooling work (2026-07-31)
+
+Three commits (`8d3fe16`, `1f4f6f8`, `9937ed3`) landed on `origin/main`
+between 2026-07-30 and 2026-07-31 with **no Active Threads row and no
+session-log entry** — the first time this file has fallen behind `main`
+since the continuity protocol was established. Caught only because
+`/restart` compares `git log` against this file; nothing else would have
+surfaced it.
+
+**The pattern worth noting:** the rule ("update STATUS.md as part of
+finishing the work") has been followed reliably for *generation* work —
+sub-strands, repairs, corpus runs — and silently skipped for *tooling*
+work — settings, skills, MCP servers, plugin installs. Plausibly because
+tooling changes don't feel like they change "project status," and because
+some of them are performed by an installer rather than typed out. But
+`9937ed3` appended a mandatory behavioral instruction to `CLAUDE.md`
+telling every future session to prefer graph tools over `Grep`/`Read` —
+that is a change to how sessions operate, and it went unrecorded.
+
+Two follow-on consequences of the same lapse:
+- `CLAUDE.md`'s header still read *Last updated: 2026-07-05* while
+  carrying a section added 2026-07-31, and its Repository Layout section
+  lists neither `.claude/skills/restart/` nor any of the four
+  graph skills. A reader trusting the header would date the MCP section
+  three weeks earlier than it is.
+- This file's own header said *Last updated: 2026-07-05* despite two
+  2026-07-30 entries. Fixed in the same pass.
+
+**Takeaway:** "files changed" in the continuity rule means *any* tracked
+file, including `.claude/`, `.mcp.json`, and `.gitignore` — not just
+`generators/data/` and `data/outputs/`. Installer-generated changes count,
+and arguably need *more* recording than hand-made ones, since nobody
+composed a rationale for them at the time.
+
+### Third-party installers can append behavioral instructions to `CLAUDE.md` (2026-07-31)
+
+`code-review-graph install --platform claude-code` (`9937ed3`) modified
+six tracked files, including appending an "ALWAYS use graph tools before
+Grep/Glob/Read" section to `CLAUDE.md` and adding `PostToolUse`/
+`SessionStart` hooks to `.claude/settings.json`. The settings merge was
+additive and left the `1f4f6f8` deny rules intact — verified, not assumed.
+
+The `CLAUDE.md` wording is unreviewed third-party text now carrying the
+same authority as hand-written project rules, and it is overbroad here:
+this project's most-read files are Markdown control documents and
+`*_data.js` content modules, which a code-structure graph does not index
+usefully. Left in place for now and tracked in Active Threads rather than
+edited blind. **Lesson for future installs: diff what an installer wrote
+into `CLAUDE.md` and `.claude/settings.json` before committing, and treat
+any instruction text it adds as a proposal, not as project policy.**
 
 ---
 
@@ -621,3 +675,52 @@ structurally blind to the 40 sub-strands Phase 3 actually generated. Fixes:
 - Everything else already listed above (Summary/per-subject table refresh,
   Core Mathematics replacement-PDF verification, install.sh live test,
   partner schema check, terminology pass, Grade 11 expansion)
+
+---
+## Updates — 2026-07-31 (triggered by `/restart`, then `/update`)
+
+No generation, repair, or content work this session. A `/restart` was run
+to re-ground a fresh session; it found real drift, and this entry closes it.
+
+### `/restart` live checks — all clean, don't re-run without cause
+- Branch `main`; working tree clean; `HEAD` == `origin/main` == `9937ed3`.
+- `soffice` present at `/usr/bin/soffice`.
+- `outputDir` across all 85 `generators/data/*.js` files: every value under
+  `v2/<Subject>/<SubStrand>`. No stale `data/outputs/docx/` paths remain in
+  any data file.
+- `WORKFLOW.md` Environment Reference (line 315) matches all of the above.
+
+### Drift found and fixed by this entry
+- Three commits were on `origin/main` with no record in this file:
+  `8d3fe16` (token-optimizer plugin marketplace, project scope),
+  `1f4f6f8` (tooling-defect fixes: stale `.claude/commands/commit.md`
+  rewritten — it was carried over from an unrelated project and told
+  sessions to put status in `CLAUDE.md`, directly contradicting this
+  project's rule; missing YAML frontmatter added to
+  `.claude/skills/restart/SKILL.md`; 6 narrow Read deny rules added),
+  and `9937ed3` (code-review-graph 2.3.7 installed, MCP server + 4 skills
+  + `CLAUDE.md` section + hooks). All three now have Active Threads rows.
+- Both `STATUS.md` and `CLAUDE.md` had `Last updated: 2026-07-05` headers
+  despite carrying much newer content. This file's header corrected to
+  2026-07-31; `CLAUDE.md`'s corrected in the same commit, along with its
+  Repository Layout section, which listed neither `.claude/skills/restart/`
+  nor the four graph skills.
+- Two Known Issues entries added — see "Continuity rule held for content
+  work, lapsed for tooling work" and "Third-party installers can append
+  behavioral instructions to `CLAUDE.md`."
+
+### Still open going into next session
+- **Scope the code-review-graph `CLAUDE.md` wording** (new this session) —
+  "ALWAYS use graph tools before Grep/Glob/Read" is unreviewed third-party
+  text and is wrong for `.md` control docs and `*_data.js` modules.
+- **Full refresh of the Summary/per-subject lesson-count tables** — now
+  quantified: tables say 12/33 across 4 subjects, disk has 85 across 7.
+  Longest-standing open item in this file (flagged since 2026-07-05).
+- Whether actual spend on the next bulk run tracks the new 15–20%
+  contingency (`logs/api_cost_log.md` — no new run since it was added).
+- Core Mathematics replacement-PDF verification (PDF never supplied).
+- `install.sh` live test on one real ARES server.
+- Partner's `ares-contract.schema.json` checked against `resourceLinks`.
+- Kenyan-terminology wording pass (blocked on teacher-provided examples).
+- Tracking/attribution for the Grade 10 module link.
+- Grade 11 STEM expansion, then non-STEM expansion.
