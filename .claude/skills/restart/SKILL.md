@@ -1,3 +1,8 @@
+---
+name: restart
+description: Re-ground a session against actual current state before continuing work. Re-reads STATUS.md's Active Threads, CLAUDE.md, and WORKFLOW.md, then runs WORKFLOW.md's Step 0 live checks and reports any drift. Use when continuing a session, at the start of a work day, after a server reset, or whenever you are about to act on state that was established earlier and may have gone stale. Does not discard conversation history.
+---
+
 # /restart — Continuity Verification Checkpoint
 
 ## Purpose
