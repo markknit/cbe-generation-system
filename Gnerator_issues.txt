@@ -1,0 +1,101 @@
+Here are the generator issues we found in the GitHub JSON export / local ares-json import set.
+
+*1. safetyNotes key corrupted as safetyNotes with lesson number inserted*
+
+Pattern found:
+
+text
+safety1otes
+safety2otes
+safety3otes
+...
+safety8otes
+
+
+Expected key:
+
+text
+safetyNotes
+
+
+This affected General Science files only.
+
+Initial failure:
+
+text
+general_science__grade_10__ss_3_4__magnetism_and_electromagnetic_induction.json
+LESSONS[7].slo.safety8otes
+
+
+Broader scan found the same pattern across these General Science files:
+
+text
+general_science__grade_10__ss_1_2__the_cell.json
+general_science__grade_10__ss_1_3__nutrition_in_animals.json
+general_science__grade_10__ss_1_4__transport_in_plants.json
+general_science__grade_10__ss_1_5__respiration.json
+general_science__grade_10__ss_1_6__plant_growth_and_development.json
+general_science__grade_10__ss_1_7__microorganisms.json
+general_science__grade_10__ss_2_1__the_periodic_table.json
+general_science__grade_10__ss_2_2__chemical_families.json
+general_science__grade_10__ss_2_3__chemical_bonding.json
+general_science__grade_10__ss_2_4__acids_bases_and_salts.json
+general_science__grade_10__ss_2_5__rates_of_reactions.json
+general_science__grade_10__ss_3_1__turning_effect_of_force.json
+general_science__grade_10__ss_3_2__linear_motion.json
+general_science__grade_10__ss_3_3__waves.json
+general_science__grade_10__ss_3_4__magnetism_and_electromagnetic_induction.json
+
+
+Likely cause: the generator is replacing a placeholder like N with the lesson number too broadly, and it is touching the key name safetyNotes, turning the N into 1, 2, etc.
+
+Recommended generator fix:
+- Never use a raw placeholder like N for global string replacement.
+- Use explicit placeholders like {lessonNumber} or {{LESSON_NUMBER}}.
+- Do not run placeholder replacement over object keys.
+- Add schema validation that rejects unexpected slo keys before writing JSON.
+
+*2. Missing summaryTablePrompt.explained*
+
+Two General Science lessons were missing the required explained field:
+
+text
+general_science__grade_10__ss_3_2__linear_motion.json
+LESSONS[6].summaryTablePrompt.explained missing
+
+
+text
+general_science__grade_10__ss_2_2__chemical_families.json
+LESSONS[4].summaryTablePrompt.explained missing
+
+
+Both had:
+
+json
+{
+  "observed": "...",
+  "learned": "..."
+}
+
+
+but lacked:
+
+json
+"explained": "..."
+
+
+Recommended generator fix:
+- Make summaryTablePrompt always emit exactly:
+  - observed
+  - learned
+  - explained
+- Add a pre-export contract check for every lesson.
+- If explained is absent, fail generation or synthesize a fallback from the lesson’s existing final explanation / driving-question synthesis.
+
+*Validation Added Locally*
+
+After patching the export folder:
+- 85 JSON files parsed successfully.
+- Bad safety*otes keys: 0
+- Missing summaryTablePrompt.explained: 0
+- Lesson3 import succeeded.

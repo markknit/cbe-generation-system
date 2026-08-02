@@ -167,7 +167,7 @@ def patch_fe(output_name, fe_data):
 
 # ── Lesson generation prompt ──────────────────────────────────────────────────
 
-LESSON_SCHEMA = ('{"lesson": {"number": N, "title": "FILL", "duration": "40 minutes", '
+LESSON_SCHEMA = ('{"lesson": {"number": {{LESSON_NUMBER}}, "title": "FILL", "duration": "40 minutes", '
                  '"substrand": "FILL", "aresKeywords": "FILL", '
                  '"slo": {"purpose": "FILL", "knowledge": "FILL", "skills": "FILL", '
                  '"attitudes": "FILL", "keyInquiry": "FILL", "purposeInStoryline": "FILL", '
@@ -206,7 +206,7 @@ def generate_lesson(output_name, lesson_num, repair):
         f"- Teacher moves with specific quotes and WAIT TIME instructions\n"
         f"- {'Introduce phenomenon and open DQB' if lesson_num == 1 else 'Advance the driving question with new evidence'}\n\n"
         f"Return ONLY this JSON with all FILL values replaced:\n"
-        f"{LESSON_SCHEMA.replace('N', str(lesson_num))}"
+        f"{LESSON_SCHEMA.replace('{{LESSON_NUMBER}}', str(lesson_num))}"
     )
 
     result = call_claude(prompt)

@@ -1,6 +1,6 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: 2026-07-31*
+*Last updated: 2026-08-02*
 
 ---
 
@@ -61,6 +61,10 @@ right now" checkable in one place, not reconstructed from memory.
 | Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
 | Grade 11 STEM expansion | Not started | Planned after terminology pass + initial distribution |
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
+| Partner-reported General Science defects (`safety<N>otes` key, missing `summaryTablePrompt.explained`) | **Done — repaired 2026-08-02, root cause fixed** | Reported via `Gnerator_issues.txt` (note: filename is misspelt, no `e`) by the partner building the teacher lesson-plan editor, whose import checker caught both. 35 corrupted `slo` keys across 15 `gensci_*` files + 2 lessons missing `explained`. Root cause: `scripts/repair_stubs.py:209` did `LESSON_SCHEMA.replace('N', str(lesson_num))` — a bare `N` placeholder that also hit `safetyNotes`. Fixed to `{{LESSON_NUMBER}}`. **Both defects rendered as silently EMPTY docx cells** — see Known Issues. Full re-render done; corpus now 0/0/0 on the partner's three checks. |
+| Contract validation on the repair path | **Done — added 2026-08-02** | `scripts/patch_lesson.js` now validates every incoming lesson before writing (exact `slo` key set, all 3 `summaryTablePrompt` cells, 5 canonical phases in order, non-empty required fields) and refuses with a diagnostic instead of writing. This is the chokepoint both `repair_stubs.py` and the manual Quick Start repair use. New `scripts/validate_corpus.js` runs the same contract over **all 85** data files / 728 lessons (`check_new_subjects_quality.js` only ever covered the 43 new-subject files, and nothing covered Bio/Chem/Physics/Maths). |
+| Phase-composition defects in `chem_1_2` L2 and `math_2_3` L2 | **Open — found 2026-08-02, deliberately not fixed** | Surfaced by the new corpus validator, outside the General Science repair scope. Both have a duplicated `Observe Phase` where `Explain Phase` belongs (`math_2_3` L2 also shifts `Explain` into the DQB slot). Effect is small but real: 3 rows get the wrong ARES resource bucket via `sections.js`'s silent fallback. **Not a mechanical relabel** — unlike the 2026-07-30 phase-label drift (pure format, positionally unambiguous), here the labels are all canonical and the *content* ordering is genuinely off, so fixing needs a content judgment call or regeneration of those 2 lessons. Left for Mark to scope. |
+| `aresKeywords` missing on `phys_3_1` L6 | Open — found 2026-08-02, minor | Only lesson in the corpus without it; means no ARES resource lookup for that lesson. Reported as a warning (not a failure) by `scripts/validate_corpus.js`. |
 | New Grade 10 STEM subjects (General Science, Core Mathematics, Essential Mathematics) | **Done — Phase 3 complete, committed `f6d6fab`** | All 43 sub-strands / 344 lessons generated, docx+PDF regenerated, teacher index rebuilt, pushed to `origin/main`. Handoff: `HANDOFF_new_stem_subjects_2026-07-28.md` (Rev 2). See 2026-07-30 session-log entry below for the bugs found/fixed along the way (subject-label bug, 34 stub lessons, 1 missing FE). Replacement Core Mathematics source PDF referenced in the handoff was never supplied but generation proceeded — flag if a full curriculum-text re-check against it is still wanted. Summary/per-subject tables below still need the separate full refresh already flagged as stale. |
 
 ---
@@ -373,6 +377,57 @@ file, including `.claude/`, `.mcp.json`, and `.gitignore` — not just
 `generators/data/` and `data/outputs/`. Installer-generated changes count,
 and arguably need *more* recording than hand-made ones, since nobody
 composed a rationale for them at the time.
+
+### The same bug was fixed twice on symptoms, then re-fired (2026-08-02)
+
+A partner's import checker found 35 `slo` keys corrupted to `safety<N>otes` and
+2 lessons missing `summaryTablePrompt.explained`, all in General Science. Root
+cause was one line — `scripts/repair_stubs.py:209`:
+
+```python
+f"{LESSON_SCHEMA.replace('N', str(lesson_num))}"
+```
+
+`LESSON_SCHEMA` contains exactly two capital `N`s: `"number": N` (intended) and
+`safetyNotes` (collateral). So every repaired lesson got its safety guidance
+filed under an unreadable key.
+
+**The part worth remembering: this had already been fixed once.**
+`scripts/fix_safetynotes.py` is committed (`3b75018`, "safetyNotes keys") and
+does precisely this repair — it was written for an earlier repair pass over
+Bio/Chem/Physics/Maths, which is why those subjects are clean. Nobody fixed
+`repair_stubs.py`, so the 2026-07-30 General Science repair pass re-created the
+identical defect. Re-running the cleanup script without fixing line 209 would
+have guaranteed a third occurrence. **A fix that cleans data without fixing the
+code that produced it is a fix with a timer on it.**
+
+**Why nothing caught it for three days:** both defects render as *silently
+empty* cells, not errors.
+- `generators/lib/sections.js:118` reads `lesson.slo.safetyNotes` → `undefined`
+  → `docx_kit.js`'s `cell()` takes its non-string `else` branch → docx-js emits
+  an empty cell. No crash, and no literal "undefined" in the output (verified).
+- `generators/lib/build_docs.js:211` reads `l.explained || ''` → blank column.
+
+So 35 teacher-facing lesson plans shipped with a blank Safety Notes row —
+including lessons involving razor blades, dilute HCl/H₂SO₄, and CuSO₄ disposal —
+and every generation run reported success. The text was never lost, only
+filed under a key nothing reads. **Silent fallbacks (`|| ''`, `undefined` into a
+renderer) turn a data defect into an invisible one; anywhere the pipeline has
+one, a contract check has to sit upstream of it.**
+
+**Also worth noting: the gate that existed was structurally blind here.**
+`check_new_subjects_quality.js` was already widened once (2026-07-30) after
+exactly this class of miss, but only to *all gensci/coremath/essmath files* —
+it still checked nothing about `slo` key names or `summaryTablePrompt`
+completeness, and nothing at all outside the three new subjects. Widening a
+gate's *file coverage* does not widen *what it checks*.
+
+**Fixes applied:** `{{LESSON_NUMBER}}` placeholder in `repair_stubs.py`; a
+refuse-before-write contract validator in `scripts/patch_lesson.js` (the
+chokepoint both repair paths use); and `scripts/validate_corpus.js` running the
+same contract over all 85 files / 728 lessons. The corpus validator immediately
+earned its keep by surfacing two unrelated pre-existing defects (see Active
+Threads).
 
 ### Third-party installers can append behavioral instructions to `CLAUDE.md` (2026-07-31)
 
@@ -770,3 +825,89 @@ changed; `CLAUDE.md` + `STATUS.md` only.
   check against `logs/api_cost_log.md`, Core Mathematics replacement-PDF
   verification, `install.sh` live test, partner schema check, terminology
   pass, module-link tracking, Grade 11 expansion.
+
+---
+## Updates — 2026-08-02 — Partner-reported General Science defects repaired
+
+Mark's partner, who is building a teacher-facing lesson-plan editor with a
+validating importer, ran our JSON export through his checker and found two
+defect classes. Saved to `Gnerator_issues.txt` at the repo root (filename is
+misspelt — no `e` — worth knowing if you go looking for it).
+
+### What was reported, and what was actually true
+- **35 `slo` keys corrupted to `safety<N>otes`** across 15 `gensci_*` files
+  (partner found the pattern; confirmed on disk, digit always == lesson number).
+- **2 lessons missing `summaryTablePrompt.explained`** (`gensci_2_2` L5,
+  `gensci_3_2` L7). Confirmed as exactly 2, corpus-wide.
+- Both General Science only. Bio/Chem/Physics/Maths/Core/Essential clean.
+- **One root cause for both, and it is the repair path, not the generator.**
+  `src/generate_substrand.py` has a strict tool schema (`additionalProperties:
+  False`, all 3 `summaryTablePrompt` fields required) and could not have emitted
+  either defect. `repair_stubs.py` / `patch_lesson.js` send a prompt-string
+  schema with **zero** validation. Confirming evidence: both
+  `explained`-missing lessons are also in the corrupted-key set — i.e. both are
+  repaired-stub lessons from the 2026-07-30 pass.
+
+### Two things worse than reported
+1. **The 35 lessons had a silently blank Safety Notes row in the distributed
+   docx and PDFs.** The partner's checker sees JSON, so it couldn't see this.
+   Details and the general lesson in Known Issues above.
+2. **This bug had already been fixed once, on symptoms only** (`3b75018`), and
+   re-fired. See Known Issues.
+
+### What was done
+- `scripts/repair_stubs.py`: bare `N` placeholder → `{{LESSON_NUMBER}}`.
+- Re-ran the existing `scripts/fix_safetynotes.py` over `generators/data/`:
+  35 keys repaired. Verified the diff is *purely* key renames — 35 lines
+  changed, 0 differing by anything other than the key name, so no safety text
+  was altered.
+- Regenerated `summaryTablePrompt` for the 2 lessons via 2 live API calls
+  (`claude-sonnet-4-6`, the project's documented model, for voice consistency),
+  using a forced tool schema. **Three review iterations were needed** and this
+  is the useful part: pass 1 cited the wrong lesson numbers; pass 2 fabricated a
+  verbatim "Driving Question Board note" quotation that appears nowhere in the
+  lesson. Added grounding rules (authoritative numbered lesson list, no
+  quotation marks at all) plus a programmatic reject for quote marks and
+  unresolvable lesson citations. **Do not accept generated cross-references or
+  quoted material into teacher-facing content without checking them against the
+  source lesson — two of three passes had a fabrication a reader could not have
+  spotted.**
+- Contract validation added at the chokepoint (`scripts/patch_lesson.js`) and
+  corpus-wide (`scripts/validate_corpus.js`, new). Both tested against all
+  three real defect shapes; each is refused with a diagnostic and nothing is
+  written.
+- Re-rendered the 15 affected sub-strands, then all PDFs + teacher index.
+
+### Verification
+- `node scripts/validate_corpus.js gensci_` → PASS (16 files / 128 lessons).
+- `node check_new_subjects_quality.js` → PASS, all 43 files (existing gate
+  unbroken).
+- Corpus-wide JSON re-scan, matching the partner's own three checks:
+  85 files parse, **0** `safety*otes` keys, **0** missing `safetyNotes`,
+  **0** missing `summaryTablePrompt.explained`.
+- `generate_pdfs.js`: 255 converted, 0 failed. Teacher index: 7 subjects,
+  85 sub-strands, 255 documents.
+- Confirmed end-to-end at the *rendered* layer, not just the data layer:
+  `gensci_1_6`'s 8 previously-empty Safety Notes rows now carry their text in
+  both the docx and the extracted PDF text.
+
+### Note on the diff size
+335 files changed, but only 15 `generators/data/*.js` are source. All 255 PDFs
+show as modified because `generate_pdfs.js` has no incremental mode — it
+re-converts the whole tree, so unchanged subjects get byte-different PDFs.
+Harmless, but it makes the commit look far larger than the change.
+
+### Still open going into next session
+- **`chem_1_2` L2 and `math_2_3` L2 phase composition** (new; needs a content
+  judgment call, see Active Threads) and **`phys_3_1` L6 `aresKeywords`** (new,
+  minor).
+- Whether the partner's `ares-contract.schema.json` also needs the
+  `resourceLinks` check closed out — still unconfirmed, and now more relevant
+  since his importer is clearly doing real schema validation.
+- **Full refresh of the Summary/per-subject lesson-count tables** — still the
+  longest-standing open item (flagged 2026-07-05); 12/33 across 4 subjects on
+  paper vs 85 across 7 on disk / 728 lessons.
+- Everything else unchanged: cost-contingency check against
+  `logs/api_cost_log.md`, Core Mathematics replacement-PDF verification,
+  `install.sh` live test, terminology pass, module-link tracking, Grade 11
+  expansion.
