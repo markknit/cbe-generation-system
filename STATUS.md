@@ -48,7 +48,7 @@ right now" checkable in one place, not reconstructed from memory.
 | `ares.local` mDNS alias + nginx `server_name` fix | Done (jhm-spark + tsavo3 test server) | Verified: `ping ares.local` resolves; nginx reload succeeded |
 | `resourceLinks` field in JSON export | Done — but the counts below were superseded twice | The field itself is fine. The old note here ("126 JSON files, 13,440 `ares.local` URLs, 0 remaining `ares.edu`") was true at `5071ea4` and went stale twice over: the corpus is now **85 files / 25,480 `ares.local` URLs**, and in between, every one of those URLs had silently reverted to `ares.edu` — see the row below. |
 | Full corpus regeneration (`ARES_HOST=ares.local`) | **Was reverted 2026-07-30, restored 2026-08-02 (`9b33dce`)** | `5071ea4` did the migration correctly. `f6d6fab`'s `generate.js --all` then silently reverted it corpus-wide, because `src/ares_recommender.py` still **defaulted** `ARES_HOST` to `ares.edu` and `generate.js` shells out to that module. Root cause now fixed: the default is `ares.local`, with WORKFLOW.md Step 6 warning + a new Step 6c verification grep. Current state verified: **0 `ares.edu`**, 25,480 `ares.local` URLs across 85 JSON exports, 14,560 `ares.local` hyperlinks across the 85 Lesson Sequence docx, PDFs spot-checked clean. |
-| Provisioning script for ~100 school servers (`install.sh`) | Built, not yet tested live | Includes mDNS service, nginx patch, PDF deploy, `generate_teacher_index.js`, `index.htmlf` — Mark to test on one ARES server before wide rollout |
+| Provisioning script for ~100 school servers (`install.sh`) | **Written + committed 2026-08-02 (`b913eb5`) — still not tested live** | Was recorded here as "Built" since 2026-07-05 but **did not exist** on jhm-spark, in git, or in any zip on this box — same failure as `sync_to_drive.bat`. Reconstructed from the spec preserved in this file. Now `deploy/install.sh` + `deploy/ares-mdns-alias.{sh,service}`, built into a zip by `scripts/build_school_payload.sh`. The builder **refuses to build if any PDF references `ares.edu`** (the gate whose absence let the dead-link regression ship) and **derives** the deployed `generate_teacher_index.js` from the repo copy, removing the documented manual-sync drift. `index.htmlf` was not recoverable and is deliberately not invented — bundled only if `deploy/index.htmlf` is supplied. **Live test on one server is still the open item.** |
 | Avahi/internet-dependency for `install.sh` | **Resolved — no reinstall needed** | `dpkg.log` history on `tsavo3` confirms `avahi-daemon`/`avahi-utils` present since Dec 2024, routinely updated since — baked into the Clonezilla golden image, not a live-internet install. Script has zero internet dependency as written. |
 | Partner heads-up on `resourceLinks` schema impact | Message drafted, sent to partner by Mark | Awaiting partner's schema check — not blocking distribution |
 | Tracking/attribution for the Grade 10 module link + PDF resource links | Not started | Deliberately scoped as a separate task, not bundled into today's work |
@@ -1096,3 +1096,81 @@ check out CRLF. **Mark should run `scripts\sync_to_drive.bat preview` on the
 Windows box first** and confirm the destinations and the `/MIR` delete list look
 right before running it for real. If the original job used different masks or
 `/MIR` on the docx side, this changes behaviour — the preview will show that.
+
+---
+## Updates — 2026-08-02 (fourth entry) — school-server payload written
+
+Mark asked to proceed with the Windows sync (his to run — jhm-spark has no
+`robocopy` and no `G:` drive) and with rebuilding the school-server payload.
+
+### `install.sh` did not exist either
+Recorded here as "Built, not yet tested live" since 2026-07-05. Searched
+jhm-spark: not in the repo, not in git history, not in `~/Downloads` (which
+holds only older unrelated handoff material), no zip anywhere. **Fifth**
+stale-fact instance of the day, and the second deliverable in a row that the
+docs asserted existed and could not be produced.
+
+The spec survived in this file and `docs/PDF_GENERATION.md`, so it was
+reconstructed rather than guessed:
+`deploy/install.sh`, `deploy/ares-mdns-alias.sh`, `deploy/ares-mdns-alias.service`,
+plus `scripts/build_school_payload.sh` to assemble the zip.
+
+### Two decisions that outlast this session
+- **A builder, not a hand-made zip.** The old payload was assembled by hand and
+  never committed, so its contents were unverifiable after the fact. The builder
+  writes `MANIFEST.txt` into every build recording git commit, PDF count and
+  verified link host.
+- **The `ares.edu` check is a hard gate, not a warning.** `build_school_payload.sh`
+  refuses to build if any PDF references `ares.edu`. That is precisely the check
+  whose absence let a corpus-wide dead-link regression ship undetected for three
+  days: such a payload installs cleanly and fails silently on every school
+  network. Warnings get skimmed; a refusal does not.
+- **The deployed `generate_teacher_index.js` is derived, not duplicated.** It is
+  produced by rewriting `PDF_ROOT` to `__dirname`, with an assertion that the
+  rewrite took. The 2026-07-05 entry below notes the two copies must
+  legitimately differ with "no automated sync between them" — that drift is now
+  structurally impossible.
+
+### What was verified, on jhm-spark
+`bash -n` clean; build produces `dist/ares-cbe-payload-20260802.zip` (42MB,
+255 PDFs + index.html, `0755` preserved on both shell scripts, manifest pinned
+to `6ef2e6e`); `ares.edu` gate passes; `PDF_ROOT` assertion holds; `install.sh`
+refuses cleanly as non-root, rejects unknown args, `--help` works; the nginx
+logic was exercised against a synthetic ares-style config — config detection,
+web-root extraction (`/var/www/ares`), `server_name` patch preserving
+`ares.edu`/`www.ares.edu`, and the already-present idempotency guard all behave
+correctly; `primary_ip` returns this box's LAN address. `dist/` is gitignored
+(42MB would breach the 50MB pre-push check).
+
+One bug found and fixed during testing: `set -o pipefail` plus `grep` returning
+1 on zero matches aborted the builder **on the success path**. Worth remembering
+— a "no matches" grep inside a pipeline is a script-killer under `pipefail`.
+
+### NOT verified — this is the remaining risk
+**`install.sh` has never run against a real ARES server**, as root, with live
+nginx and avahi. It edits nginx config and installs a systemd unit. It is
+idempotent, backs up to `/var/backups/ares-cbe-<stamp>`, and rolls back the
+nginx change if `nginx -t` fails — but that is design, not evidence.
+
+Procedure for Mark, on ONE server first:
+```
+unzip ares-cbe-payload-20260802.zip && cd ares-cbe-payload-20260802
+sudo ./install.sh --dry-run     # read this output before going further
+sudo ./install.sh
+```
+Then test `ping ares.local` **from a different device on the same network** —
+resolving it on the server itself proves almost nothing about mDNS.
+
+### Still open going into next session
+- **`install.sh` live test on one server** (unchanged in substance since
+  2026-07-05, but now there is an actual script to test).
+- **`deploy/index.htmlf`** — the module landing page was never recoverable. If
+  Mark still has it, dropping it at `deploy/index.htmlf` makes the installer
+  deploy it; otherwise the installer leaves each server's existing page alone.
+- **Windows Drive sync** — Mark to run `scripts\sync_to_drive.bat preview` then
+  the real thing.
+- **Partner notification** — the two reported defects are fixed, but he has not
+  been told about the `ares.edu` regression, and the `resourceLinks` schema
+  question is still unanswered.
+- **Summary/per-subject lesson-count table refresh** — authoritative numbers are
+  85 sub-strands / 7 subjects / 728 lessons / 255 documents.
