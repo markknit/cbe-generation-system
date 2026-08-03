@@ -18,6 +18,11 @@ generators/data/.math_*
 generators/data/.chem_*
 generators/data/.phys_*
 
+# Built school-server payload zips (~42MB each) from
+# scripts/build_school_payload.sh. The builder and its inputs are tracked; the
+# build artefact is not — it would blow past the 50MB pre-push size check.
+dist/
+
 # Local tool settings and ephemeral logs
 .claude/settings.local.json
 .claude/settings.local.json.tmp.*

@@ -1,0 +1,18 @@
+[Unit]
+Description=Publish ares.local over mDNS (re-publishes on IP change)
+Documentation=https://github.com/markknit/cbe-generation-system
+# avahi-daemon must be up before we can publish a record through it.
+After=network-online.target avahi-daemon.service
+Wants=network-online.target
+Requires=avahi-daemon.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ares-mdns-alias.sh
+Restart=always
+RestartSec=10
+# The watch loop handles IP changes itself; Restart=always is only a backstop
+# for the process being killed outright.
+
+[Install]
+WantedBy=multi-user.target
