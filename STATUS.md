@@ -46,8 +46,8 @@ right now" checkable in one place, not reconstructed from memory.
 | Item | Status | Notes |
 |---|---|---|
 | `ares.local` mDNS alias + nginx `server_name` fix | Done (jhm-spark + tsavo3 test server) | Verified: `ping ares.local` resolves; nginx reload succeeded |
-| `resourceLinks` field in JSON export | Done | Verified across all 126 JSON files, 13,440 `ares.local` URLs, 0 remaining `ares.edu` |
-| Full corpus regeneration (`ARES_HOST=ares.local`) | Done | All 42 sub-strands, 126 docx, 126 PDFs, teacher index — committed `5071ea4` |
+| `resourceLinks` field in JSON export | Done — but the counts below were superseded twice | The field itself is fine. The old note here ("126 JSON files, 13,440 `ares.local` URLs, 0 remaining `ares.edu`") was true at `5071ea4` and went stale twice over: the corpus is now **85 files / 25,480 `ares.local` URLs**, and in between, every one of those URLs had silently reverted to `ares.edu` — see the row below. |
+| Full corpus regeneration (`ARES_HOST=ares.local`) | **Was reverted 2026-07-30, restored 2026-08-02 (`9b33dce`)** | `5071ea4` did the migration correctly. `f6d6fab`'s `generate.js --all` then silently reverted it corpus-wide, because `src/ares_recommender.py` still **defaulted** `ARES_HOST` to `ares.edu` and `generate.js` shells out to that module. Root cause now fixed: the default is `ares.local`, with WORKFLOW.md Step 6 warning + a new Step 6c verification grep. Current state verified: **0 `ares.edu`**, 25,480 `ares.local` URLs across 85 JSON exports, 14,560 `ares.local` hyperlinks across the 85 Lesson Sequence docx, PDFs spot-checked clean. |
 | Provisioning script for ~100 school servers (`install.sh`) | Built, not yet tested live | Includes mDNS service, nginx patch, PDF deploy, `generate_teacher_index.js`, `index.htmlf` — Mark to test on one ARES server before wide rollout |
 | Avahi/internet-dependency for `install.sh` | **Resolved — no reinstall needed** | `dpkg.log` history on `tsavo3` confirms `avahi-daemon`/`avahi-utils` present since Dec 2024, routinely updated since — baked into the Clonezilla golden image, not a live-internet install. Script has zero internet dependency as written. |
 | Partner heads-up on `resourceLinks` schema impact | Message drafted, sent to partner by Mark | Awaiting partner's schema check — not blocking distribution |
@@ -63,8 +63,9 @@ right now" checkable in one place, not reconstructed from memory.
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
 | Partner-reported General Science defects (`safety<N>otes` key, missing `summaryTablePrompt.explained`) | **Done — repaired 2026-08-02, root cause fixed** | Reported via `Gnerator_issues.txt` (note: filename is misspelt, no `e`) by the partner building the teacher lesson-plan editor, whose import checker caught both. 35 corrupted `slo` keys across 15 `gensci_*` files + 2 lessons missing `explained`. Root cause: `scripts/repair_stubs.py:209` did `LESSON_SCHEMA.replace('N', str(lesson_num))` — a bare `N` placeholder that also hit `safetyNotes`. Fixed to `{{LESSON_NUMBER}}`. **Both defects rendered as silently EMPTY docx cells** — see Known Issues. Full re-render done; corpus now 0/0/0 on the partner's three checks. |
 | Contract validation on the repair path | **Done — added 2026-08-02** | `scripts/patch_lesson.js` now validates every incoming lesson before writing (exact `slo` key set, all 3 `summaryTablePrompt` cells, 5 canonical phases in order, non-empty required fields) and refuses with a diagnostic instead of writing. This is the chokepoint both `repair_stubs.py` and the manual Quick Start repair use. New `scripts/validate_corpus.js` runs the same contract over **all 85** data files / 728 lessons (`check_new_subjects_quality.js` only ever covered the 43 new-subject files, and nothing covered Bio/Chem/Physics/Maths). |
-| Phase-composition defects in `chem_1_2` L2 and `math_2_3` L2 | **Open — found 2026-08-02, deliberately not fixed** | Surfaced by the new corpus validator, outside the General Science repair scope. Both have a duplicated `Observe Phase` where `Explain Phase` belongs (`math_2_3` L2 also shifts `Explain` into the DQB slot). Effect is small but real: 3 rows get the wrong ARES resource bucket via `sections.js`'s silent fallback. **Not a mechanical relabel** — unlike the 2026-07-30 phase-label drift (pure format, positionally unambiguous), here the labels are all canonical and the *content* ordering is genuinely off, so fixing needs a content judgment call or regeneration of those 2 lessons. Left for Mark to scope. |
-| `aresKeywords` missing on `phys_3_1` L6 | Open — found 2026-08-02, minor | Only lesson in the corpus without it; means no ARES resource lookup for that lesson. Reported as a warning (not a failure) by `scripts/validate_corpus.js`. |
+| Phase-composition defects in `chem_1_2` L2 and `math_2_3` L2 | **Done — regenerated 2026-08-02 (`9b33dce`)** | Surfaced by `scripts/validate_corpus.js`. Both had a duplicated `Observe Phase` where `Explain Phase` belongs, so 3 rows got the wrong ARES resource bucket + default grey shading via `sections.js`'s silent fallbacks. **Not a relabel** — the content itself sat under the wrong phase (`chem_1_2` had bottle-tops/maize physical modelling under the DQB label and prediction-revision under Model Building; `math_2_3` had its DQB evidence-card activity under Model Building and no genuine Model Building step at all). Both regenerated with the five phase labels pinned by `const` in the tool schema, so a duplicate/mislabelled phase is now structurally impossible. |
+| `aresKeywords` missing on `phys_3_1` L6 | **Done — added 2026-08-02 (`9b33dce`)** | Only lesson in the corpus without it. **Correction to the earlier note here:** this did *not* mean "no ARES resource lookup" — `sections.js:151` falls back to `lesson.aresKeywords \|\| lesson.title`, so the lookup worked but on weaker terms than its siblings'. Keywords written from that lesson's own content. |
+| `patch_lesson.js --force` | Added 2026-08-02 (`9b33dce`) | For deliberately replacing a lesson whose content is *wrong* rather than *absent* (needed for the two phase repairs above). Skips only the stub-repair guard — **never** the contract validation. |
 | New Grade 10 STEM subjects (General Science, Core Mathematics, Essential Mathematics) | **Done — Phase 3 complete, committed `f6d6fab`** | All 43 sub-strands / 344 lessons generated, docx+PDF regenerated, teacher index rebuilt, pushed to `origin/main`. Handoff: `HANDOFF_new_stem_subjects_2026-07-28.md` (Rev 2). See 2026-07-30 session-log entry below for the bugs found/fixed along the way (subject-label bug, 34 stub lessons, 1 missing FE). Replacement Core Mathematics source PDF referenced in the handoff was never supplied but generation proceeded — flag if a full curriculum-text re-check against it is still wanted. Summary/per-subject tables below still need the separate full refresh already flagged as stale. |
 
 ---
@@ -428,6 +429,51 @@ chokepoint both repair paths use); and `scripts/validate_corpus.js` running the
 same contract over all 85 files / 728 lessons. The corpus validator immediately
 earned its keep by surfacing two unrelated pre-existing defects (see Active
 Threads).
+
+### A default that contradicts a completed migration will silently undo it (2026-08-02)
+
+The `ares.edu` → `ares.local` migration (2026-07-05, `5071ea4`) was completed
+and verified: 0 `ares.edu` remaining. On 2026-08-02 the entire corpus was found
+back on `ares.edu` — all 85 JSON exports, all 85 Lesson Sequence docx (~160 dead
+hyperlinks each), and all 255 PDFs.
+
+Nobody reverted anything. `src/ares_recommender.py` still had:
+
+```python
+ARES_HOST = os.environ.get("ARES_HOST", "ares.edu")
+```
+
+`generate.js` shells out to that module via `generators/aresResources.js`, so
+**any** regeneration without `ARES_HOST` exported rewrites every link back to the
+old host. `f6d6fab`'s `generate.js --all` (the new-STEM-subjects run) did exactly
+that on 2026-07-30, reverting all 42 original sub-strands and generating the 43
+new ones the same way. Bisect: `5071ea4` = 280 `ares.local` / 0 `ares.edu`;
+`f6d6fab` onward = 0 / 280.
+
+**Three things made this invisible for three days:**
+1. Nothing errors. A wrong-but-well-formed hostname generates, renders and
+   converts to PDF perfectly.
+2. The failure is off-box. `ares.edu` resolves fine wherever a dnsmasq instance
+   controls DHCP — it dies silently behind a school router, which is the
+   deployment mode `.local` was adopted for. You cannot see it from jhm-spark.
+3. `STATUS.md` asserted "0 remaining `ares.edu`" the whole time, because that
+   line was written when it was true and nothing re-checked it.
+
+**This is the same shape as the `safetyNotes` bug found the same day** (see the
+entry above): a migration or repair was applied to *data*, the *default that
+produces the data* was left alone, and the next regeneration quietly undid the
+work. Two independent instances in one corpus, both caught only by accident.
+
+**The generalisable rule: after fixing data, find the line that produced the bad
+data and change that too — then re-derive the data and confirm.** A verified-once
+count in a status document is not a guard; it degrades into a stale claim the
+moment a producing default disagrees with it.
+
+**Fixes:** default is now `ares.local` with a comment saying why it must not be
+changed back (`ARES_HOST` override still works for a specific box);
+`WORKFLOW.md` Step 6 carries the warning and a new **Step 6c** gives a two-line
+`grep` to verify the host *before* distributing. Verified after regeneration:
+0 `ares.edu`, 25,480 `ares.local` URLs, 14,560 docx hyperlinks.
 
 ### Third-party installers can append behavioral instructions to `CLAUDE.md` (2026-07-31)
 
@@ -911,3 +957,74 @@ Harmless, but it makes the commit look far larger than the change.
   `logs/api_cost_log.md`, Core Mathematics replacement-PDF verification,
   `install.sh` live test, terminology pass, module-link tracking, Grade 11
   expansion.
+
+---
+## Updates — 2026-08-02 (second entry) — ares.local restored; chem/math/phys fixes
+
+Continuation of the same session. Mark authorised commit+push of the General
+Science repair (`ff1bec4`), then asked for the three remaining open defects to
+be fixed. Doing that surfaced a much larger, unrelated regression.
+
+### The three requested fixes (all done, `9b33dce`)
+- **`phys_3_1` L6 `aresKeywords`** — written from that lesson's own content.
+  Corrected my own earlier claim: the missing field did not disable ARES lookup
+  (`sections.js:151` falls back to `lesson.title`), it just weakened it.
+- **`chem_1_2` L2 and `math_2_3` L2** — regenerated (2 API calls). The tool
+  schema now pins each of the five phase labels with `const`, so the model
+  cannot emit a duplicate or mislabelled phase at all. Activities re-homed to
+  the phase they actually belong to; `math_2_3` gained the genuine Model
+  Building step it never had.
+- **`patch_lesson.js --force`** — needed because the stub guard (correctly)
+  refuses lessons that already have content. Skips that guard only; contract
+  validation still runs.
+
+### The regression found while verifying the above
+Checking `phys_3_1`'s regenerated `resourceLinks` showed `http://ares.edu:...`.
+**The whole `ares.local` migration had been silently reverted on 2026-07-30**
+and every distributed docx/PDF since then carried dead resource links. Full
+root-cause writeup in Known Issues ("A default that contradicts a completed
+migration will silently undo it"). Fixed at the source, corpus regenerated,
+verified 0 `ares.edu`.
+
+Worth recording that I nearly mis-attributed this: my first read was that I had
+introduced it with the day's regenerations. Checking `35bf147` for a Biology
+file I had never touched showed 280 `ares.edu` already present, which is what
+pointed at `f6d6fab` and the default. **When a regression appears right after
+your own change, bisect a file your change did not touch before concluding
+anything.**
+
+### Verification (after the full-corpus regeneration)
+- `node scripts/validate_corpus.js` → **PASS**, 85 files / 728 lessons, 0
+  errors, **0 warnings** (the `aresKeywords` warning is now gone too).
+- `node check_new_subjects_quality.js` → PASS, all 43 files.
+- Partner's three checks, corpus-wide: 0 `safety<N>otes`, 0 missing
+  `safetyNotes`, 0 missing `summaryTablePrompt.explained`.
+- Phase composition: 0 non-canonical across all 728 lessons.
+- Hostnames: 0 `ares.edu`; 25,480 `ares.local` URLs in JSON; 14,560
+  `ares.local` hyperlinks across the 85 Lesson Sequence docx; PDFs spot-checked
+  in Biology / General Science / Maths, 0 `ares.edu`.
+- `generate_pdfs.js`: 255 converted, 0 failed. Index: 7 subjects, 85
+  sub-strands, 255 documents.
+- `HEAD` == `origin/main` == `9b33dce`, working tree clean.
+
+### Two things Mark should decide on
+1. **The distributed PDFs on the ~100 school servers are stale.** Everything
+   deployed between 2026-07-30 and today has `ares.edu` links that fail behind
+   a school router. The corpus is fixed here, but the provisioning payload
+   needs rebuilding and redeploying — `install.sh` has still never been
+   live-tested either.
+2. **Tell the partner.** His importer found the two General Science defects; he
+   has not seen the hostname regression, and if he has imported anything since
+   2026-07-30 his copy has `ares.edu` links. Also still unconfirmed whether his
+   `ares-contract.schema.json` accepts the `resourceLinks` field at all.
+
+### Still open going into next session
+- The two items above (school-server redeploy; partner notification + schema
+  confirmation).
+- **Full refresh of the Summary/per-subject lesson-count tables** — still the
+  longest-standing open item (flagged 2026-07-05). Authoritative numbers as of
+  today: **85 sub-strands, 7 subjects, 728 lessons, 255 documents.**
+- Cost-contingency check against `logs/api_cost_log.md` (today's spend was ~4
+  small live calls, not a bulk run, so still no comparison point).
+- Core Mathematics replacement-PDF verification; `install.sh` live test;
+  Kenyan-terminology pass; module-link tracking; Grade 11 expansion.
