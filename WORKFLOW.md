@@ -95,12 +95,36 @@ node scripts/patch_fe.js chem_1_4 /tmp/chem_1_4_fe.json
 - Then apply with `patch_lesson.js` / `patch_fe.js`
 
 ### Step 6 — Regenerate docx
+
+> **`ARES_HOST` — read before running either command.** `generate.js` shells out
+> to `src/ares_recommender.py` to build every resource link. That module's
+> default is now `ares.local`, so the plain commands below are correct. It used
+> to default to `ares.edu`, and because nothing errors when the wrong host is
+> baked in, a `--all` run on 2026-07-30 silently reverted the entire
+> `ares.local` migration and shipped ~160 dead hyperlinks per Lesson Sequence
+> until it was caught on 2026-08-02. **After any regeneration, verify the host
+> before distributing** (Step 6c). Only set `ARES_HOST` explicitly when you
+> deliberately want a different host, e.g. `ARES_HOST=10.42.0.1` for one box.
+
 ```bash
 # Single sub-strand
 node generators/generate.js chem_1_4
 
 # All sub-strands at once
 node generators/generate.js --all
+```
+
+### Step 6c — Verify resource links before distributing
+
+Cheap, and it catches a whole-corpus regression that is otherwise invisible:
+
+```bash
+# Expect: many hits for ares.local, ZERO for ares.edu
+grep -rlc 'ares\.local' data/outputs/v2 --include=*_data.json | wc -l
+grep -rl  'ares\.edu'   data/outputs/v2 --include=*_data.json | wc -l   # must be 0
+
+# Contract check across all 85 data modules / 728 lessons
+node scripts/validate_corpus.js
 ```
 
 ### Step 6b — Generate PDFs (teacher distribution copies)

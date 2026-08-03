@@ -1,7 +1,8 @@
 """
 ares_recommender.py — ARES Content Recommendation Module
 =========================================================
-Confirmed URL patterns from live ares.edu server:
+Confirmed URL patterns (host is ARES_HOST, default `ares.local` — see below;
+the `ares.edu` spellings in these examples are historical):
 
   Kolibri content (direct, no tracker):
     http://ares.edu/kolibri/en/learn/#/topics/c/<kolibri_id>
@@ -33,7 +34,25 @@ from urllib.parse import quote, quote_plus
 # ARES host
 # ---------------------------------------------------------------------------
 
-ARES_HOST = os.environ.get("ARES_HOST", "ares.edu")
+# DEFAULT IS `ares.local` AND MUST STAY THAT WAY.
+#
+# This default used to be "ares.edu". Because generate.js shells out to this
+# module (via generators/aresResources.js), any regeneration run without
+# ARES_HOST set in the environment silently rewrote every resource link back to
+# ares.edu — which is exactly what happened on 2026-07-30 (`generate.js --all`
+# during the new-STEM-subjects run), reverting the whole 2026-07-05 migration
+# corpus-wide and leaving ~160 dead hyperlinks per Lesson Sequence in every
+# distributed docx/PDF. Nothing errored; the links just stop resolving.
+#
+# Why .local: ares.edu only ever resolved via a dnsmasq instance on a box that
+# controls DHCP. Plugged into an existing school router it fails silently. mDNS
+# resolves `.local` by broadcast regardless of who runs DHCP, so it works in
+# both deployment modes. See STATUS.md "ares.edu -> ares.local hostname
+# migration" and "The same bug was fixed twice on symptoms, then re-fired".
+#
+# Override per-run for a specific box (e.g. export ARES_HOST=10.42.0.1), but do
+# not change this default back.
+ARES_HOST = os.environ.get("ARES_HOST", "ares.local")
 
 # All content sources included in the ARES-wide search
 _SEARCH_SOURCES = (

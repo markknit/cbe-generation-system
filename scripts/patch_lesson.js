@@ -1,20 +1,29 @@
 #!/usr/bin/env node
 /**
  * patch_lesson.js — Replace a stub lesson in a data file
- * Usage: node scripts/patch_lesson.js <output_name> <lesson_num> <json_file>
+ * Usage: node scripts/patch_lesson.js <output_name> <lesson_num> <json_file> [--force]
  * Example: node scripts/patch_lesson.js bio_1_2 3 /tmp/bio_1_2_lesson3.json
+ *
+ * By default this refuses to overwrite a lesson that already has real content
+ * (the stub-repair guard). `--force` skips ONLY that guard — it is for
+ * deliberately regenerating a lesson whose content is wrong rather than absent
+ * (e.g. the 2026-08-02 chem_1_2/math_2_3 phase-composition repairs).
+ * `--force` never skips the contract validation below.
  */
 'use strict';
 const fs   = require('fs');
 const path = require('path');
 
 const ROOT      = '/home/markk/ares/cbe-generation-system';
-const outName   = process.argv[2];
-const lessonNum = parseInt(process.argv[3]);
-const jsonFile  = process.argv[4];
+const args      = process.argv.slice(2);
+const force     = args.includes('--force');
+const positional = args.filter(a => a !== '--force');
+const outName   = positional[0];
+const lessonNum = parseInt(positional[1]);
+const jsonFile  = positional[2];
 
 if (!outName || !lessonNum || !jsonFile) {
-  console.error('Usage: node scripts/patch_lesson.js <output_name> <lesson_num> <json_file>');
+  console.error('Usage: node scripts/patch_lesson.js <output_name> <lesson_num> <json_file> [--force]');
   process.exit(1);
 }
 
@@ -139,8 +148,13 @@ if (idx === -1) {
 
 const old = lessons[idx];
 if (old.overview && old.overview.length > 50) {
-  console.log(`Lesson ${lessonNum} already has content (${old.overview.length} chars) — skipping`);
-  process.exit(0);
+  if (!force) {
+    console.log(`Lesson ${lessonNum} already has content (${old.overview.length} chars) — skipping`);
+    console.log('  (pass --force to replace it deliberately; validation still applies)');
+    process.exit(0);
+  }
+  console.log(`--force: replacing existing lesson ${lessonNum} `
+            + `(${old.overview.length} chars of overview)`);
 }
 
 lessons[idx] = lessonData;
