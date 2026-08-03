@@ -63,8 +63,9 @@ restated copy in this file is exactly the kind of duplication that's
 already caused stale-fact incidents twice in this project. See
 `STATUS.md`'s **Active Threads** table (top of that file) for current
 state, and its Summary/per-subject tables for lesson-generation coverage
-(flagged there as needing a refresh as of 2026-07-05 — check the flag
-before trusting those numbers).
+(refreshed from disk 2026-08-02: 7 subjects, 85 sub-strands, 728 lessons,
+all complete — that section lists the two commands that re-derive the
+numbers, so verify rather than trust if anything has been generated since).
 
 ---
 

@@ -54,7 +54,7 @@ right now" checkable in one place, not reconstructed from memory.
 | Tracking/attribution for the Grade 10 module link + PDF resource links | Not started | Deliberately scoped as a separate task, not bundled into today's work |
 | Continuity protocol (`STATUS.md` + `/update` skill + `/restart` skill) | **Done — confirmed** | `CLAUDE.md`/`STATUS.md` continuity fixes confirmed pushed (`git log`/`git status` on jhm-spark, 2026-07-06: `HEAD`/`main`/`origin/main` all at `b477ef1`, clean tree). `/restart` skill added (`33ceab5`) and documented in `CLAUDE.md` (`222d681`, spacing fix `aa54484`) and this file (`68e7b47`). Tested live — see 2026-07-06 session-log entry below. |
 | `.gitignore` scoped to allow `.claude/skills/` | Done, committed `2c7c938` | Was blanket-excluding all of `.claude/`; narrowed to `.claude/settings.local.json` only |
-| Lesson-count table below (Summary + per-subject tables) | **Known stale — gap now much wider than previously noted** | Tables claim 12/33 sub-strands across 4 subjects; disk (`grep outputDir generators/data/*.js`, 2026-07-31) shows **85 sub-strands across 7 subjects** — Biology, Chemistry, Physics, Maths, Core_Mathematics, Essential_Mathematics, General_Science. Still a separate refresh task; do not improvise partial corrections. |
+| Lesson-count tables below (Summary + per-subject) | **Done — refreshed from disk 2026-08-02** | Longest-standing open item in this file, flagged stale since 2026-07-05. Now derived from `generators/data/*_data.js` cross-checked against files on disk: **7 subjects, 85 sub-strands, 728 lessons, 340 output files + 255 PDFs**, all complete with no partial sets. The old tables were not just undercounting — Chemistry and Physics were marked NOT STARTED while fully generated, three subjects were absent entirely, and Biology's sub-strand numbering had been renumbered, so old and new IDs do not map onto each other. The Summary section now carries the two commands that regenerate the numbers, so the next drift is checkable rather than discovered. |
 | Session-tooling commits `8d3fe16` / `1f4f6f8` / `9937ed3` | Done, recorded 2026-07-31 | Token-optimizer marketplace, tooling-defect fixes, code-review-graph install. Were pushed to `origin/main` without a STATUS.md entry — caught by `/restart` on 2026-07-31, see session log + Known Issues below. |
 | code-review-graph CLAUDE.md wording — "ALWAYS use graph tools before Grep/Glob/Read" | **Done — scoped 2026-07-31** | Rewritten against measured coverage, not assumption: graph indexes exactly the 183 tracked `.js`/`.py`/`.sh` files and **0 of 52 tracked `.md` files**; all 85 `*_data.js` are bare `File` nodes (object-literal exports, no functions to graph). Section now states explicitly that reading `STATUS.md` is a plain `Read` no graph tool substitutes for, and that data-file inspection is `Read`/`grep` work. Two installer claims corrected: `semantic_search_nodes_tool` is FTS-only here (0 nodes embedded), and `tests_for` coverage checks are meaningless (1 Test node repo-wide). |
 | `.claude/settings.json` Read deny rules | Done, `1f4f6f8` — with a known limit | 6 narrow rules (ares_index DB, `venv/`, `.env`, docx/pdf under `data/outputs`, archived `data/outputs/docx`). **Gate the Read tool only, not bash** — a recursive `grep` over `data/outputs/` still lands in context. Deliberately excludes `*_data.json` and `data/raw/curriculum_pdfs`. |
@@ -73,128 +73,189 @@ right now" checkable in one place, not reconstructed from memory.
 
 ## Summary
 
-| Subject | Sub-strands complete | Sub-strands remaining | Lessons generated |
-|---|---|---|---|
-| Biology | 9 / 9 | 0 | 72 (8 per sub-strand) |
-| Chemistry | 0 / 7 | 7 | 0 |
-| Physics | 0 / 8 | 8 | 0 |
-| Mathematics | 3 / 9 | 6 | 24 (8 per sub-strand) |
-| **Total** | **12 / 33** | **21** | **~96 initial lessons** |
+**Refreshed 2026-08-02 from disk**, not from memory. Every number below is
+derived from `generators/data/*_data.js` (the source of truth) cross-checked
+against the files actually present under `data/outputs/v2/`. Regenerate with:
 
-> **Stale as of 2026-07-05 — see "Known Issues" below.** Commit history
-> confirms a full 42-sub-strand, 384-lesson production run completed
-> after this table was last accurate. Do not trust these numbers; they're
-> kept here only until someone does the refresh.
-
----
-
-## Biology Grade 10 — COMPLETE
-
-All 9 sub-strands generated. Teacher review in progress.
-
-| Sub-strand | Name | KICD lessons | Generated | Files | Notes |
-|---|---|---|---|---|---|
-| 1.1 | Introduction to Biology | 6 | 8 | ✅ SoW + FE + ST | Existing (pre-pipeline) |
-| 1.2 | Specimen Collection and Preservation | 14 | 8 | ✅ SoW + FE + ST | No teacher template |
-| 1.3 | Cell Structure and Specialisation | 20 | 8 | ✅ SoW + FE + ST | Teacher template used |
-| 1.4 | Chemicals of Life | 24 | 6 | ✅ SoW + FE + ST | Teacher template used; exemplar sub-strand |
-| 2.1 | Nutrition in Plants | 12 | 12 | ✅ SoW + FE + ST | Teacher template used |
-| 2.2 | Transport in Plants | 22 | 8 | ✅ SoW + FE + ST | No teacher template |
-| 2.3 | Gaseous Exchange and Respiration in Plants | 22 | 8 | ✅ SoW + FE + ST | Teacher template used |
-| 3.1 | Nutrition in Animals | 12 | 8 | ✅ SoW + FE + ST | No teacher template |
-| 3.2 | Transport in Animals | 24 | 8 | ✅ SoW + FE + ST | No teacher template |
-| 3.3 | Gaseous Exchange and Respiration in Animals | 24 | 8 | ✅ SoW + FE + ST | No teacher template |
-
-**Output path:** `data/outputs/v2/Biology/` — corrected 2026-07; this doc
-previously said `data/outputs/docx/Grade 10 Biology/`, which is a stale
-path from an earlier pipeline restructure (see `SYSTEM_OVERVIEW.md`'s
-output-path correction note). PDFs for teacher distribution are generated
-into the parallel `data/outputs/v2/PDF/Biology/` tree — see
-`docs/PDF_GENERATION.md`.
-
-> **This document's completion tables (Summary, per-subject tables above)
-> have not been reconciled against actual repo state as of 2026-07** and
-> are known to undercount — commit history shows a full 42-sub-strand,
-> 384-lesson production run (`Phase 3-5: full production run`, June 2026)
-> across Biology, Chemistry, Physics, and Mathematics, well beyond what's
-> reflected here. Treat the counts/checkmarks above as historical
-> (May 2026) rather than current. A full refresh of this file is a
-> separate open task — flagging here rather than guessing at corrected
-> numbers.
-
----
-
-## Chemistry Grade 10 — NOT STARTED
-
-Teacher templates available for all sub-strands in `data/raw/CBE LESSON TEMPLATES/`.
-
-| Sub-strand | Name | KICD lessons | Template file |
-|---|---|---|---|
-| 1.2 | The Atom | — | Chemistry 10.1.2 ATOM.docx |
-| 1.3 | The Periodic Table | — | Chemistry 10.1.3 The periodic table.docx |
-| 1.4 | Chemical Bonding | — | Chemistry 10.1.4 Chemical bonding.docx |
-| 1.5 | Periodicity | — | Chemistry 10.1.5 The periodicity.docx |
-| 2.1 | Acids, Bases and Salts | — | Chemistry 10.2.1 Acids and Bases.docx |
-| 2.2 | Salts | — | Chemistry 10.2.2 Salts.docx |
-
-**Batch submission command:**
 ```bash
-for ss in 1.2 1.3 1.4 1.5 2.1 2.2; do
-  python3 src/generate_substrand.py \
-    --subject chemistry --substrand $ss \
-    --output chem_${ss//./_} --lessons 8 --batch
-done
+node scripts/validate_corpus.js    # contract check, 85 files / 728 lessons
+grep -h '"outputDir"' generators/data/*.js | sort -u | wc -l    # sub-strand count
 ```
 
+| Subject | Sub-strands | Lessons | Output dir | Files |
+|---|---|---|---|---|
+| Biology | 9 | 90 | `v2/Biology/` | complete |
+| Chemistry | 7 | 67 | `v2/Chemistry/` | complete |
+| Physics | 12 | 101 | `v2/Physics/` | complete |
+| Mathematics | 14 | 126 | `v2/Maths/` | complete |
+| General Science | 16 | 128 | `v2/General_Science/` | complete |
+| Core Mathematics | 14 | 112 | `v2/Core_Mathematics/` | complete |
+| Essential Mathematics | 13 | 104 | `v2/Essential_Mathematics/` | complete |
+| **Total** | **85** | **728** | 7 subjects | **340 files + 255 PDFs** |
+
+**All 85 sub-strands are complete.** Each produces 4 files (Lesson Sequence,
+Final Explanation, Summary Table, `_data.json`) plus 3 PDFs — verified present,
+no gaps, no partial sets. Totals: **340 output files + 255 PDFs + 1 index.html**.
+
+> **What the previous version of this table said, and why it was wrong.** It
+> claimed 12/33 sub-strands across 4 subjects and ~96 lessons, flagged stale
+> since 2026-07-05. It was not merely undercounting: Chemistry and Physics were
+> listed as NOT STARTED when both are fully generated, three subjects did not
+> exist in it at all, and **Biology's sub-strand numbering has since been
+> renumbered** — the old table's 1.1 "Introduction to Biology" and 1.4
+> "Chemicals of Life" do not map onto today's 1.1 Cell Structure / 1.2
+> Chemicals of Life. Treat any pre-2026-08-02 copy of these tables as a
+> different document, not a stale version of this one.
+
 ---
 
-## Physics Grade 10 — NOT STARTED
+## Biology Grade 10 — complete (9 sub-strands, 90 lessons)
 
-Teacher templates available for all sub-strands.
-
-| Sub-strand | Name | KICD lessons | Template file |
+| Sub-strand | Name | Lessons | Data module |
 |---|---|---|---|
-| 1.2 | Pressure | — | Physics 10.1.2 PRESSURE Scheme of Work Template Grade 10.docx |
-| 1.3 | Mechanical Properties of Materials | — | Physics 10.1.3 Mechanical properties of Materials.docx |
-| 1.6 | Energy, Work, Power and Machines | — | Physics 10.1.6 Energy,work,power and machines.docx |
-| 2.1 | Properties of Waves | — | Physics 10.2.1 Properties of Waves.docx |
-| 2.2 | Radioactivity and Stability of Isotopes | — | Physics 10.2.2 Radioactivity and Stability of Isotopes.docx |
-| 3.1 | Electrostatics | — | Physics 10.3.1 Electrostatics.docx |
-| 3.3 | Introduction to Electronics | — | Physics 10.3.3 Introduction to electronics.docx |
-| 4.1 | Greenhouse Effect and Climate Change | — | Physics 10.4.1 Green house effect and Climate change.docx |
-| 4.2 | Introduction to Space Physics | — | Physics 10.4.2 Introduction to space physics.docx |
+| 1.1 | Cell Structure | 12 | `bio_1_1` |
+| 1.2 | Chemicals of Life | 6 | `bio_1_2` |
+| 1.3 | Cell Biology | 8 | `bio_1_3` |
+| 2.1 | Plant Nutrition | 10 | `bio_2_1` |
+| 2.2 | Plant Transport | 8 | `bio_2_2` |
+| 2.3 | Plant Gaseous Exchange and Respiration | 12 | `bio_2_3` |
+| 3.1 | Animal Nutrition | 10 | `bio_3_1` |
+| 3.2 | Animal Transport | 12 | `bio_3_2` |
+| 3.3 | Animal Gaseous Exchange and Respiration | 12 | `bio_3_3` |
 
-**Batch submission command:**
-```bash
-for ss in 1.2 1.3 1.6 2.1 2.2 3.1 3.3 4.1 4.2; do
-  python3 src/generate_substrand.py \
-    --subject physics --substrand $ss \
-    --output phys_${ss//./_} --lessons 8 --batch
-done
-```
+Lesson counts vary 6–12 by design (dynamic, non-hardcoded — commit `02da69b`). **SS2.1 Plant Nutrition is 10, not 12** — confirmed intentional, see the Known Issues entry on it. SS1.3 Cell Biology has no teacher template; it was generated from curriculum text only.
 
 ---
 
-## Mathematics Grade 10 — PARTIAL
+## Chemistry Grade 10 — complete (7 sub-strands, 67 lessons)
 
-| Sub-strand | Name | KICD lessons | Generated | Files | Notes |
-|---|---|---|---|---|---|
-| 1.1 | Real Numbers | — | 0 | ❌ | Template exists |
-| 1.2 | Indices and Logarithms | — | 0 | ❌ | Template exists |
-| 1.3 | Quadratic Equations | — | 0 | ❌ | Template exists |
-| 2.1 | Similarity and Enlargement | — | 0 | ❌ | Template exists |
-| 2.2 | Reflection and Congruence | — | 8 | ✅ SoW + FE + ST | Pre-pipeline (legacy generator) |
-| 2.3 | Rotation | — | 8 | ✅ SoW + FE + ST | Pre-pipeline (legacy generator) |
-| 2.4 | Trigonometry 1 | — | 8 | ✅ SoW + FE + ST | Pre-pipeline (legacy generator) |
-| 2.5 | Area of Polygons | — | 0 | ❌ | Template exists |
-| 2.6 | Area of a Part of a Circle | — | 0 | ❌ | Template exists |
-| 2.7 | Surface Area and Volume of Solids | — | 0 | ❌ | Two templates exist |
-| 3.2 | Probability | — | 0 | ❌ | Template exists |
+| Sub-strand | Name | Lessons | Data module |
+|---|---|---|---|
+| 1.1 | Introduction to Chemistry | 10 | `chem_1_1` |
+| 1.2 | The Atom | 9 | `chem_1_2` |
+| 1.3 | The Periodic Table | 10 | `chem_1_3` |
+| 1.4 | Chemical Bonding | 13 | `chem_1_4` |
+| 1.5 | Periodicity | 7 | `chem_1_5` |
+| 2.1 | Introduction to Salts | 8 | `chem_2_1` |
+| 3.1 | Acids and Bases | 10 | `chem_3_1` |
 
-**Note:** Math 2.2, 2.3, 2.4 were generated by legacy per-subject generators (pre-refactor). They also produce `.html` and `.gfm` outputs in addition to `.docx`.
+Counts vary 7–13. Sub-strand IDs are not contiguous (1.1–1.5, 2.1, 3.1) — that reflects the curriculum, not missing work.
 
 ---
 
+## Physics Grade 10 — complete (12 sub-strands, 101 lessons)
+
+| Sub-strand | Name | Lessons | Data module |
+|---|---|---|---|
+| 1.1 | Pressure | 9 | `phys_1_1` |
+| 1.2 | Mechanical Properties of Materials | 6 | `phys_1_2` |
+| 1.3 | Temperature and Thermal Expansion | 6 | `phys_1_3` |
+| 1.4 | Energy, Work, Power and Machines | 8 | `phys_1_4` |
+| 1.5 | Moments of Equilibrium | 6 | `phys_1_5` |
+| 2.1 | Properties of Waves | 12 | `phys_2_1` |
+| 3.1 | Radioactivity and Stability of Isotopes | 7 | `phys_3_1` |
+| 3.2 | Current Electricity | 12 | `phys_3_2` |
+| 3.3 | Introduction to Electronics | 7 | `phys_3_3` |
+| 3.4 | Electrostatics | 9 | `phys_3_4` |
+| 4.1 | Greenhouse Effect and Climate Change | 7 | `phys_4_1` |
+| 4.2 | Introduction to Space Physics | 12 | `phys_4_2` |
+
+Counts vary 6–12. `phys_3_1` L6 had no `aresKeywords` until 2026-08-02.
+
+---
+
+## Mathematics Grade 10 — complete (14 sub-strands, 126 lessons)
+
+| Sub-strand | Name | Lessons | Data module |
+|---|---|---|---|
+| 1.1 | Real Numbers | 7 | `math_1_1` |
+| 1.2 | Indices | 8 | `math_1_2` |
+| 1.3 | Quadratic Equations | 7 | `math_1_3` |
+| 1.4 | Congruence | 8 | `math_1_4` |
+| 2.1 | Similarity and Enlargement | 12 | `math_2_1` |
+| 2.2 | Area of Polygons | 8 | `math_2_2` |
+| 2.3 | Area of Part of a Circle | 10 | `math_2_3` |
+| 2.4 | Surface Area and Volume of Solids | 10 | `math_2_4` |
+| 3.1 | Trigonometry I | 10 | `math_3_1` |
+| 3.2 | Rotation | 10 | `math_3_2` |
+| 3.3 | Vectors I | 8 | `math_3_3` |
+| 3.4 | Linear Motion | 10 | `math_3_4` |
+| 4.1 | Statistics I | 9 | `math_4_1` |
+| 4.2 | Probability I | 9 | `math_4_2` |
+
+Counts vary 7–12. **Note the directory is `v2/Maths/`, while `META.subject` is `Mathematics`** — both are correct and long-standing; don't 'fix' either. The old table here described `math_2_2`/`2_3`/`2_4` as legacy pre-pipeline output; all 14 are now standard pipeline output.
+
+---
+
+## General Science Grade 10 — complete (16 sub-strands, 128 lessons)
+
+| Sub-strand | Name | Lessons | Data module |
+|---|---|---|---|
+| 1.1 | Introduction to General Science | 8 | `gensci_1_1` |
+| 1.2 | The Cell | 8 | `gensci_1_2` |
+| 1.3 | Nutrition in Animals | 8 | `gensci_1_3` |
+| 1.4 | Transport in Plants | 8 | `gensci_1_4` |
+| 1.5 | Respiration | 8 | `gensci_1_5` |
+| 1.6 | Plant Growth and Development | 8 | `gensci_1_6` |
+| 1.7 | Microorganisms | 8 | `gensci_1_7` |
+| 2.1 | The Periodic Table | 8 | `gensci_2_1` |
+| 2.2 | Chemical Families | 8 | `gensci_2_2` |
+| 2.3 | Chemical Bonding | 8 | `gensci_2_3` |
+| 2.4 | Acids, Bases and Salts | 8 | `gensci_2_4` |
+| 2.5 | Rates of Reactions | 8 | `gensci_2_5` |
+| 3.1 | Turning Effect of Force | 8 | `gensci_3_1` |
+| 3.2 | Linear Motion | 8 | `gensci_3_2` |
+| 3.3 | Waves | 8 | `gensci_3_3` |
+| 3.4 | Magnetism and Electromagnetic Induction | 8 | `gensci_3_4` |
+
+Uniform 8 lessons per sub-strand. This subject carried both defects the partner's importer found on 2026-08-02 (35 `safety<N>otes` keys, 2 missing `summaryTablePrompt.explained`) — all repaired.
+
+---
+
+## Core Mathematics Grade 10 — complete (14 sub-strands, 112 lessons)
+
+| Sub-strand | Name | Lessons | Data module |
+|---|---|---|---|
+| 1.1 | Real Numbers | 8 | `coremath_1_1` |
+| 1.2 | Indices and Logarithms | 8 | `coremath_1_2` |
+| 1.3 | Quadratic Expressions and Equations | 8 | `coremath_1_3` |
+| 2.1 | Similarity and Enlargement | 8 | `coremath_2_1` |
+| 2.2 | Reflection and Congruence | 8 | `coremath_2_2` |
+| 2.3 | Rotation | 8 | `coremath_2_3` |
+| 2.4 | Trigonometry 1 | 8 | `coremath_2_4` |
+| 2.5 | Area of Polygons | 8 | `coremath_2_5` |
+| 2.6 | Area of a Part of a Circle | 8 | `coremath_2_6` |
+| 2.7 | Surface Area and Volume of Solids | 8 | `coremath_2_7` |
+| 2.8 | Vectors | 8 | `coremath_2_8` |
+| 2.9 | Linear Motion | 8 | `coremath_2_9` |
+| 3.1 | Statistics I | 8 | `coremath_3_1` |
+| 3.2 | Probability I | 8 | `coremath_3_2` |
+
+Uniform 8 lessons per sub-strand. Generated against the *original* curriculum text — the replacement Core Mathematics PDF referenced in `HANDOFF_new_stem_subjects_2026-07-28.md` was never supplied, and no re-check against it has been done.
+
+---
+
+## Essential Mathematics Grade 10 — complete (13 sub-strands, 104 lessons)
+
+| Sub-strand | Name | Lessons | Data module |
+|---|---|---|---|
+| 1.1 | Real Numbers | 8 | `essmath_1_1` |
+| 1.2 | Indices | 8 | `essmath_1_2` |
+| 1.3 | Quadratic Equations | 8 | `essmath_1_3` |
+| 2.1 | Similarity and Enlargement | 8 | `essmath_2_1` |
+| 2.2 | Reflection | 8 | `essmath_2_2` |
+| 2.3 | Trigonometry | 8 | `essmath_2_3` |
+| 2.4 | Area of Polygons | 8 | `essmath_2_4` |
+| 2.5 | Area of Part of a Circle | 8 | `essmath_2_5` |
+| 2.6 | Surface Area of Solids | 8 | `essmath_2_6` |
+| 2.7 | Volume and Capacity | 8 | `essmath_2_7` |
+| 2.8 | Commercial Arithmetic 1 | 8 | `essmath_2_8` |
+| 3.1 | Statistics 1 | 8 | `essmath_3_1` |
+| 3.2 | Probability I | 8 | `essmath_3_2` |
+
+Uniform 8 lessons per sub-strand. Unaffected by the 2026-07-30 stub-lesson defects.
+
+---
 ## Known Issues / Lessons Learned
 
 ### Batch API — JSON truncation
@@ -1174,3 +1235,55 @@ resolving it on the server itself proves almost nothing about mDNS.
   question is still unanswered.
 - **Summary/per-subject lesson-count table refresh** — authoritative numbers are
   85 sub-strands / 7 subjects / 728 lessons / 255 documents.
+
+---
+## Updates — 2026-08-02 (fifth entry) — lesson-count tables refreshed
+
+Closed the longest-standing open item in this file, flagged stale since
+2026-07-05. The Summary and all per-subject tables are now derived from disk.
+
+### Authoritative numbers
+**7 subjects, 85 sub-strands, 728 lessons, 340 output files + 255 PDFs + 1
+index.html.** All 85 complete — 4 files each (3 docx + `_data.json`) and 3 PDFs
+each, no partial sets. Per subject: Biology 9/90, Chemistry 7/67, Physics
+12/101, Mathematics 14/126, General Science 16/128, Core Mathematics 14/112,
+Essential Mathematics 13/104.
+
+Derived from `generators/data/*_data.js` (source of truth), then re-derived by a
+second independent method — counting directories and files under
+`data/outputs/v2/` and summing `LESSONS` across the 85 JSON exports. Both
+methods agree exactly.
+
+### The old tables were not a stale version of these
+Worth stating plainly, because "just update the numbers" would have been wrong:
+- Chemistry and Physics were headed **NOT STARTED** while both are fully
+  generated (67 and 101 lessons).
+- General Science, Core Mathematics and Essential Mathematics did not appear at
+  all — 43 sub-strands / 344 lessons missing from the document.
+- **Biology's sub-strand numbering had been renumbered.** The old table's 1.1
+  "Introduction to Biology" and 1.4 "Chemicals of Life" do not map onto today's
+  1.1 Cell Structure / 1.2 Chemicals of Life. Old and new IDs are not
+  comparable, so no row-by-row reconciliation was possible or attempted.
+- The old Mathematics table described `math_2_2`/`2_3`/`2_4` as legacy
+  pre-pipeline output; all 14 are standard pipeline output now.
+
+### Structural change, not just a data refresh
+The Summary section now carries the two commands that re-derive these numbers
+(`scripts/validate_corpus.js` and an `outputDir` count). This file has been
+burned repeatedly by counts that were true when written — the point is that the
+next reader can *check* in five seconds instead of trusting a date. `CLAUDE.md`'s
+pointer to this section was updated in the same pass; it still told readers the
+tables needed a refresh.
+
+Deliberately left alone: the **Cost Tracking** table below still projects from
+~110 sub-strands / ~2,000 lessons and per-run figures from May–June 2026. It is
+a forecast, not a state snapshot, and revising it needs real spend data from
+`logs/api_cost_log.md` — which has had no bulk run since it was added. Flagging
+rather than improvising.
+
+### Still open
+Unchanged from the previous entry: `install.sh` live test on one server;
+`deploy/index.htmlf` if Mark still has it; Windows Drive sync run; partner
+notification + `resourceLinks` schema confirmation; Core Mathematics
+replacement-PDF verification; cost-contingency check once there is another bulk
+run; Kenyan-terminology pass (blocked on teacher examples); Grade 11 expansion.
