@@ -353,3 +353,7 @@ just the contingency margin.
 | Teacher templates | `data/raw/CBE LESSON TEMPLATES/` |
 | Output documents (docx, master) | `data/outputs/v2/<Subject>/<SubStrand>/` |
 | Output documents (PDF, teacher distribution) | `data/outputs/v2/PDF/<Subject>/<SubStrand>/` |
+| Drive sync script (Windows) | `scripts/sync_to_drive.bat` — run after `git pull`; `sync_to_drive.bat preview` for a dry run |
+| Drive destination (docx + json, editable master) | `G:\My Drive\CBE Outputs` — copied with `/E`, **no** purge |
+| Drive destination (PDF + index.html, teachers) | `G:\My Drive\CBE Outputs\PDF` — **true mirror** (`/MIR`); hand-placed files there get deleted |
+| ARES resource hostname | `ares.local` (default in `src/ares_recommender.py`; override per box with `ARES_HOST`) |

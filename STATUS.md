@@ -65,6 +65,7 @@ right now" checkable in one place, not reconstructed from memory.
 | Contract validation on the repair path | **Done — added 2026-08-02** | `scripts/patch_lesson.js` now validates every incoming lesson before writing (exact `slo` key set, all 3 `summaryTablePrompt` cells, 5 canonical phases in order, non-empty required fields) and refuses with a diagnostic instead of writing. This is the chokepoint both `repair_stubs.py` and the manual Quick Start repair use. New `scripts/validate_corpus.js` runs the same contract over **all 85** data files / 728 lessons (`check_new_subjects_quality.js` only ever covered the 43 new-subject files, and nothing covered Bio/Chem/Physics/Maths). |
 | Phase-composition defects in `chem_1_2` L2 and `math_2_3` L2 | **Done — regenerated 2026-08-02 (`9b33dce`)** | Surfaced by `scripts/validate_corpus.js`. Both had a duplicated `Observe Phase` where `Explain Phase` belongs, so 3 rows got the wrong ARES resource bucket + default grey shading via `sections.js`'s silent fallbacks. **Not a relabel** — the content itself sat under the wrong phase (`chem_1_2` had bottle-tops/maize physical modelling under the DQB label and prediction-revision under Model Building; `math_2_3` had its DQB evidence-card activity under Model Building and no genuine Model Building step at all). Both regenerated with the five phase labels pinned by `const` in the tool schema, so a duplicate/mislabelled phase is now structurally impossible. |
 | `aresKeywords` missing on `phys_3_1` L6 | **Done — added 2026-08-02 (`9b33dce`)** | Only lesson in the corpus without it. **Correction to the earlier note here:** this did *not* mean "no ARES resource lookup" — `sections.js:151` falls back to `lesson.aresKeywords \|\| lesson.title`, so the lookup worked but on weaker terms than its siblings'. Keywords written from that lesson's own content. |
+| `scripts/sync_to_drive.bat` | **Now actually exists — written 2026-08-02** | It did not. `CLAUDE.md:95` listed it, and this file claimed twice (in the "Documentation drift" entry below, and in the 2026-07-04 log) that it was committed and its destinations were `grep`-able from jhm-spark. All three were false — no `.bat` was tracked or on disk. Written from the spec in `WORKFLOW.md` Step 8 + `docs/PDF_GENERATION.md`; masks verified against the real trees (255 docx + 85 json; 255 pdf + 1 html). Drive destinations now also in WORKFLOW.md's Environment Reference table, which `CLAUDE.md` already designated the single source of truth for sync destinations but which had no Drive rows. |
 | `patch_lesson.js --force` | Added 2026-08-02 (`9b33dce`) | For deliberately replacing a lesson whose content is *wrong* rather than *absent* (needed for the two phase repairs above). Skips only the stub-repair guard — **never** the contract validation. |
 | New Grade 10 STEM subjects (General Science, Core Mathematics, Essential Mathematics) | **Done — Phase 3 complete, committed `f6d6fab`** | All 43 sub-strands / 344 lessons generated, docx+PDF regenerated, teacher index rebuilt, pushed to `origin/main`. Handoff: `HANDOFF_new_stem_subjects_2026-07-28.md` (Rev 2). See 2026-07-30 session-log entry below for the bugs found/fixed along the way (subject-label bug, 34 stub lessons, 1 missing FE). Replacement Core Mathematics source PDF referenced in the handoff was never supplied but generation proceeded — flag if a full curriculum-text re-check against it is still wanted. Summary/per-subject tables below still need the separate full refresh already flagged as stale. |
 
@@ -1028,3 +1029,70 @@ anything.**
   small live calls, not a bulk run, so still no comparison point).
 - Core Mathematics replacement-PDF verification; `install.sh` live test;
   Kenyan-terminology pass; module-link tracking; Grade 11 expansion.
+
+---
+## Updates — 2026-08-02 (third entry) — sync_to_drive.bat actually written
+
+Mark asked what commands the Windows box needs besides `git pull`. Answering
+that surfaced the **fourth** stale-fact instance of the day, and the most
+pointed one.
+
+### `scripts/sync_to_drive.bat` never existed
+Three places asserted it did — `CLAUDE.md:95` (Repository Layout), this file's
+"Documentation drift" Known Issues entry ("*is now committed as
+`scripts/sync_to_drive.bat`, so its actual configured destinations are
+`grep`-able from jhm-spark*"), and the 2026-07-04 session log ("*tracked in
+`scripts/sync_to_drive.bat`*"). No `.bat` was tracked in git or present on disk.
+
+The sting: committing that file was written up as one of the *structural fixes
+for stale facts* inside the very entry about stale facts. **A remediation
+recorded as done, but never done, is worse than one recorded as open** — it
+actively suppresses the re-check that would have caught it.
+
+### Written now, from the surviving spec
+`WORKFLOW.md` Step 8 and `docs/PDF_GENERATION.md` did preserve the destinations
+and the rationale, so the script was reconstructed rather than guessed. Masks
+verified against the real trees first: docx tree is exactly 255 `.docx` + 85
+`.json`; PDF tree is 255 `.pdf` + 1 `.html`.
+
+Design decisions worth keeping:
+- **docx job uses `/E`, not `/MIR`.** That destination is the editable master
+  ("anyone doing manual content edits"), so `/PURGE` there could delete a
+  human's file. Accepts stale-file accumulation as the cheaper failure.
+- **PDF job uses `/MIR` with no file mask.** Pure generated output where
+  sub-strand renames orphan files, so purging is wanted. **No mask is
+  deliberate:** `/MIR` plus a file mask is a robocopy trap — source files the
+  mask excludes count as absent, so `/PURGE` can delete destination files that
+  do not match it. Dropping the mask removes that failure mode *and*
+  structurally guarantees `index.html` syncs, which the old masked job had to
+  remember separately or silently skip.
+- `preview` argument runs both jobs with `/L` — writes nothing, and lists what
+  `/MIR` would delete. Mark was unsure about `/MIR` vs `/E`; this makes the
+  answer checkable instead of trusted.
+- `/FFT` because Google Drive's virtual filesystem otherwise re-copies every
+  unchanged file each run; `/R:2 /W:5` instead of robocopy's 1,000,000 retries.
+- Pre-flight aborts if the source PDF tree or `G:\My Drive` is missing —
+  without that, a mirror job against an absent source purges the destination.
+- Exit codes: robocopy 0–7 are success, ≥8 is failure; the script reports both
+  jobs and returns 1 only on a real failure.
+
+### Also added
+- **`.gitattributes`** with `*.bat text eol=crlf`. The repo is authored on Linux
+  and the script runs on Windows; `cmd.exe` can mis-parse labels and `goto` in
+  an LF-only `.bat`, failing at runtime rather than parse time. Scoped to
+  `*.bat` only — a blanket `* text=auto` would renormalise every tracked file
+  and show up as hundreds of spurious modifications.
+- `.gitignore`: `logs/sync_to_drive_*.log` (machine-local run logs) and
+  `.claude/settings.local.json.tmp.*`.
+- **WORKFLOW.md Environment Reference** gained rows for the sync script, both
+  Drive destinations, and the ARES hostname. `CLAUDE.md` already declared that
+  table the single source of truth for "sync destinations" — it had none.
+
+### Not verified, and cannot be from here
+**The script has never been run.** It is reconstructed from documentation, and
+`robocopy`/`cmd.exe` do not exist on jhm-spark. Static checks only: balanced
+`if` blocks, `goto :failed` resolves, 2 robocopy calls, git stores LF and will
+check out CRLF. **Mark should run `scripts\sync_to_drive.bat preview` on the
+Windows box first** and confirm the destinations and the `/MIR` delete list look
+right before running it for real. If the original job used different masks or
+`/MIR` on the docx side, this changes behaviour — the preview will show that.

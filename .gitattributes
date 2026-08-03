@@ -1,0 +1,9 @@
+# Windows batch files must check out with CRLF endings. cmd.exe can mis-parse
+# labels and goto targets in an LF-only .bat, and it fails at runtime rather
+# than at parse time. This repo is authored on Linux (jhm-spark) and run on
+# Windows, so the conversion has to be declared rather than assumed.
+#
+# Deliberately scoped to *.bat only. A blanket `* text=auto` would renormalise
+# line endings across every tracked file on the next commit, which would show up
+# as hundreds of spurious modifications in a repo this size.
+*.bat text eol=crlf
