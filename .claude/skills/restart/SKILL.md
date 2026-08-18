@@ -37,7 +37,13 @@ matches.
    - `CLAUDE.md` — in full
    - `WORKFLOW.md` — Environment Reference table specifically
 
-2. **Run WORKFLOW.md's Step 0 verification block:**
+2. **Check for a recent `HANDOFF_*.md`** in the repo root (see
+   `HANDOFF_TEMPLATE.md` for the shape). If one exists and isn't clearly
+   superseded (a session-log entry in `STATUS.md` marking its work done),
+   read it in full and treat its "Locked decisions" section as binding for
+   this session unless the user says otherwise.
+
+3. **Run WORKFLOW.md's Step 0 verification block:**
    ```bash
    git branch --show-current
    git log --oneline -3
@@ -45,8 +51,12 @@ matches.
    grep -h "outputDir" generators/data/*.js | sort -u
    which soffice
    ```
+   **Known gap (2026-08-18):** no numbered "Step 0" section currently
+   exists in `WORKFLOW.md` or `docs/WORKFLOW.md` despite this and other
+   docs citing one — run the commands above directly; don't go looking
+   for a section that isn't there yet. See `STATUS.md` Known Issues.
 
-3. **Compare against this session's operating assumptions.** Check
+4. **Compare against this session's operating assumptions.** Check
    whether anything said or planned so far in this session conflicts
    with:
    - The current git branch / latest commit
@@ -55,8 +65,9 @@ matches.
      accurate
    - Any file path, hostname, or naming convention referenced earlier
      in this session
+   - Anything in a `HANDOFF_*.md` read in step 2
 
-4. **Report, don't silently proceed:**
+5. **Report, don't silently proceed:**
    - Everything matches → state alignment is confirmed, in one or two
      lines, and continue with the task at hand.
    - Something doesn't match → stop, name the specific mismatch (old
@@ -78,7 +89,8 @@ Typed as `/restart` in a Claude.ai conversation in this project:
 
 1. Re-fetch `STATUS.md` and `CLAUDE.md` from GitHub `main` (same URLs
    fetched at conversation start), even if already fetched earlier in
-   this conversation.
+   this conversation. If a `HANDOFF_*.md` is referenced from `STATUS.md`
+   as still open, fetch and read that too.
 2. Compare against anything assumed earlier in this chat.
 3. Report any drift found.
 4. Explicitly note that live verification (git log, branch,

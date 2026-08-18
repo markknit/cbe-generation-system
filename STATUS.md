@@ -1,6 +1,6 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: 2026-08-02*
+*Last updated: 2026-08-18*
 
 ---
 
@@ -56,6 +56,8 @@ right now" checkable in one place, not reconstructed from memory.
 | `.gitignore` scoped to allow `.claude/skills/` | Done, committed `2c7c938` | Was blanket-excluding all of `.claude/`; narrowed to `.claude/settings.local.json` only |
 | Lesson-count tables below (Summary + per-subject) | **Done — refreshed from disk 2026-08-02** | Longest-standing open item in this file, flagged stale since 2026-07-05. Now derived from `generators/data/*_data.js` cross-checked against files on disk: **7 subjects, 85 sub-strands, 728 lessons, 340 output files + 255 PDFs**, all complete with no partial sets. The old tables were not just undercounting — Chemistry and Physics were marked NOT STARTED while fully generated, three subjects were absent entirely, and Biology's sub-strand numbering had been renumbered, so old and new IDs do not map onto each other. The Summary section now carries the two commands that regenerate the numbers, so the next drift is checkable rather than discovered. |
 | Session-tooling commits `8d3fe16` / `1f4f6f8` / `9937ed3` | Done, recorded 2026-07-31 | Token-optimizer marketplace, tooling-defect fixes, code-review-graph install. Were pushed to `origin/main` without a STATUS.md entry — caught by `/restart` on 2026-07-31, see session log + Known Issues below. |
+| Continuity-toolkit merge (`claude-continuity-toolkit` vs. this project's `CLAUDE.md`/`STATUS.md`/`.claude/`) | **Done — additive merge 2026-08-18** | Toolkit is a generic distillation of *this project's own* incidents (confirmed via its README). Ported into this repo: `HANDOFF_TEMPLATE.md` (didn't exist — handoffs were being written ad hoc), a "Working Practices" section in `CLAUDE.md` (Step 0, exact-match guards, file-transfer discipline, etc. — this project had lived every one but never consolidated them as a standing checklist), and a HANDOFF-check step in `.claude/skills/restart/SKILL.md`. This project's own "Autonomy checkpoints" section and the installer-caveat lesson were *not* in the toolkit — porting those back is a separate PR against `markknit/claude-continuity-toolkit`, tracked there, not here. |
+| "WORKFLOW.md's Step 0 verification block" — cited by 3 files, doesn't exist | **Discovered 2026-08-18, not yet fixed** | `CLAUDE.md`, this file, and `.claude/skills/restart/SKILL.md` all reference "WORKFLOW.md's Step 0 verification block" by that name. `grep`/`git log -S"Step 0"` against both `WORKFLOW.md` and `docs/WORKFLOW.md` confirm no numbered Step 0 has ever existed in either — the specific verification commands are real and correct (they live inline in `.claude/skills/restart/SKILL.md`), but the "Step 0" label they're attributed to is not. Separately, `WORKFLOW.md` (root) and `docs/WORKFLOW.md` have diverged (root's Step 2 batch-mode wording is newer/stricter than docs/'s), and `docs/WORKFLOW.md` has two sections both labeled "Step 6c". None of this was fixed as part of the continuity-toolkit merge above — it's a distinct decision (which WORKFLOW.md is canonical; whether to add a real Step 0) that needs its own call, flagged here rather than guessed at. |
 | code-review-graph CLAUDE.md wording — "ALWAYS use graph tools before Grep/Glob/Read" | **Done — scoped 2026-07-31** | Rewritten against measured coverage, not assumption: graph indexes exactly the 183 tracked `.js`/`.py`/`.sh` files and **0 of 52 tracked `.md` files**; all 85 `*_data.js` are bare `File` nodes (object-literal exports, no functions to graph). Section now states explicitly that reading `STATUS.md` is a plain `Read` no graph tool substitutes for, and that data-file inspection is `Read`/`grep` work. Two installer claims corrected: `semantic_search_nodes_tool` is FTS-only here (0 nodes embedded), and `tests_for` coverage checks are meaningless (1 Test node repo-wide). |
 | `.claude/settings.json` Read deny rules | Done, `1f4f6f8` — with a known limit | 6 narrow rules (ares_index DB, `venv/`, `.env`, docx/pdf under `data/outputs`, archived `data/outputs/docx`). **Gate the Read tool only, not bash** — a recursive `grep` over `data/outputs/` still lands in context. Deliberately excludes `*_data.json` and `data/raw/curriculum_pdfs`. |
 | Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
@@ -536,6 +538,51 @@ changed back (`ARES_HOST` override still works for a specific box);
 `WORKFLOW.md` Step 6 carries the warning and a new **Step 6c** gives a two-line
 `grep` to verify the host *before* distributing. Verified after regeneration:
 0 `ares.edu`, 25,480 `ares.local` URLs, 14,560 docx hyperlinks.
+
+### `claude-continuity-toolkit` turned out to be distilled from this project (2026-08-18)
+
+A task arrived asking to bootstrap this repo from `markknit/claude-continuity-toolkit`
+(clone + copy `CLAUDE_TEMPLATE.md`/`STATUS_TEMPLATE.md`/`.claude/` over this repo's
+existing files). Running that literally would have overwritten a fully populated,
+project-specific `CLAUDE.md`/`STATUS.md`/`.claude/` with blank templates — this repo
+is not a fresh project. Paused and asked before touching anything.
+
+Once given the real repo (`markknit/claude-continuity-toolkit`, public), reading its
+README confirmed why the two looked so similar: it says explicitly it was "distilled
+from a real production system (a multi-session, multi-tool content-generation
+project)" — its example incidents (UTF-16 corruption, branch-name drift, terminal-
+paste truncation) are, verbatim, incidents already logged in this file. **This
+project is that production system.** The toolkit is a generalized export of this
+project's own lessons, not an independent standard to reconcile against.
+
+Since being distilled, the two had drifted in both directions:
+- **Toolkit had, this repo didn't:** a consolidated "Working Practices" checklist in
+  `CLAUDE.md` (this repo had lived every one of those lessons but never written them
+  up as a standing section); `HANDOFF_TEMPLATE.md` (this repo was writing ad hoc
+  `HANDOFF_*.md` files with no template); a "check for a recent HANDOFF" step in
+  `/restart`.
+- **This repo had, toolkit didn't:** the "Autonomy checkpoints" section
+  (2026-07-30) and the installer-caveat lesson (2026-07-31, below) — both generic,
+  neither yet ported back.
+
+**Fix applied (this repo, additive only — nothing overwritten):** added
+`HANDOFF_TEMPLATE.md`, a "Working Practices" section in `CLAUDE.md`, and the
+HANDOFF-check step in `.claude/skills/restart/SKILL.md`. Porting this repo's two
+lessons back into the toolkit is a separate PR against `claude-continuity-toolkit`
+itself, not tracked in this file.
+
+**Side finding, not fixed here:** writing the "Working Practices" section required
+citing where "Step 0" lives, which surfaced that "WORKFLOW.md's Step 0 verification
+block" — cited by name in `CLAUDE.md`, this file, and `.claude/skills/restart/
+SKILL.md` — does not actually exist as a numbered section in either `WORKFLOW.md`
+or `docs/WORKFLOW.md` (`git log -S"Step 0"` on both: no hits, ever). The concrete
+commands attributed to it are real and correct — they're inline in
+`.claude/skills/restart/SKILL.md` — only the "Step 0" label and its supposed home
+are fictional. Also noticed in passing: root `WORKFLOW.md` and `docs/WORKFLOW.md`
+have diverged (root's Step 2 batch-mode wording is stricter/newer), and
+`docs/WORKFLOW.md` has two sections both labeled "Step 6c". Flagged in Active
+Threads rather than fixed — this is a "which doc is canonical" decision, not a
+mechanical continuation of the toolkit-merge task that surfaced it.
 
 ### Third-party installers can append behavioral instructions to `CLAUDE.md` (2026-07-31)
 
@@ -1287,3 +1334,39 @@ Unchanged from the previous entry: `install.sh` live test on one server;
 notification + `resourceLinks` schema confirmation; Core Mathematics
 replacement-PDF verification; cost-contingency check once there is another bulk
 run; Kenyan-terminology pass (blocked on teacher examples); Grade 11 expansion.
+
+---
+## Updates — 2026-08-18 — Continuity-toolkit merge (additive)
+
+A task requested bootstrapping this repo from `markknit/claude-continuity-toolkit`
+as if this were a fresh project. Paused before overwriting anything (this repo's
+`CLAUDE.md`/`STATUS.md`/`.claude/` are already fully populated, not templates),
+asked for the real toolkit repo, then compared the two in full. See the Known
+Issues entry above for the detailed finding — short version: the toolkit is a
+generic distillation of *this project's own* incidents, so the two needed an
+additive merge, not a reconciliation.
+
+### Done this session
+- Added `HANDOFF_TEMPLATE.md` (didn't exist before — handoffs were ad hoc).
+- Added a "Working Practices" section to `CLAUDE.md` (Step 0, one-place-per-fact,
+  exact-match guards, file-transfer discipline, confirmation gates, don't
+  re-litigate, sanity-check generated code) — consolidating lessons this project
+  had already lived but never written up as a standing checklist.
+- Added a "check for a recent `HANDOFF_*.md`" step to `.claude/skills/restart/
+  SKILL.md`, both the Claude Code and Claude.ai-chat variants.
+- Nothing existing was overwritten or deleted.
+
+### Discovered, flagged, not fixed (see Known Issues above and Active Threads)
+- "WORKFLOW.md's Step 0 verification block" is cited by name in three files but
+  doesn't exist as a section in either `WORKFLOW.md` or `docs/WORKFLOW.md`.
+- Root `WORKFLOW.md` and `docs/WORKFLOW.md` have diverged; `docs/WORKFLOW.md` has
+  a duplicate "Step 6c" label.
+
+### Still open going into next session
+- Decide which `WORKFLOW.md` is canonical and whether to add a real Step 0
+  section (or retire the "Step 0" name from the three files citing it).
+- Separate PR against `claude-continuity-toolkit` to port back this project's
+  "Autonomy checkpoints" section and the installer-caveat lesson, generalized.
+- Everything already listed above (install.sh live test, Drive sync run,
+  partner notification, Core Mathematics PDF check, terminology pass, Grade 11
+  expansion) — untouched by this session.
