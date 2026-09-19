@@ -1090,11 +1090,26 @@ def _v2_output_dir(grade: int, subject: str, substrand_id: str, substrand_name: 
     return f"v2/Grade{grade}/{subj_folder}/{ss_folder}"
 
 
-def find_v2_templates(subject: str, substrand_id: str) -> dict:
+def find_v2_templates(grade: int, subject: str, substrand_id: str) -> dict:
     """Find up to three template docx files for this sub-strand from v2_owner_inventory.
     Returns {'lesson': Path|None, 'fe': Path|None, 'st': Path|None}.
+
+    Grade-segmented the same way as _v2_output_dir(): Grade 10 templates stay
+    flat at v2_owner_inventory/<Subject>/SS…, every other grade lives under
+    v2_owner_inventory/Grade<N>/<Subject>/SS….
+
+    This MUST be keyed by grade. Grades reuse the same strand/sub-strand
+    numbering with different topics, so a flat lookup of 'biology' + '2.1'
+    would hand a Grade 11 run Grade 10's SS2.1_Plant_Nutrition template while
+    generating Reproduction in Plants — the same silent wrong-content failure
+    that SUBSTRAND_NAMES had. Missing templates are safe (generation falls
+    back to curriculum text); a wrong-grade template is not.
     """
-    subject_dir = V2_TEMPLATE_DIR / _SUBJECT_FOLDER.get(subject, subject.capitalize())
+    subject_folder = _SUBJECT_FOLDER.get(subject, subject.capitalize())
+    if grade == 10:
+        subject_dir = V2_TEMPLATE_DIR / subject_folder
+    else:
+        subject_dir = V2_TEMPLATE_DIR / f'Grade{grade}' / subject_folder
     matches = list(subject_dir.glob(f'SS{substrand_id}_*'))
     if not matches:
         return {'lesson': None, 'fe': None, 'st': None}
@@ -1434,13 +1449,17 @@ def run_collect(output_name: str, args):
     class _Args:
         pass
     st_args = _Args()
+    # From META, not a default: this path runs on collect, long after the
+    # original --grade was parsed, and a wrong grade here silently selects
+    # another grade's template.
+    st_args.grade       = meta['grade']
     st_args.subject     = meta.get('subject', 'Biology').lower()
     st_args.substrand   = meta.get('substrand_id', '')
     st_args.substrand_name = meta.get('substrand_name', '')
     st_args.lessons     = n_lessons
 
     # Re-load ST template (needed for audience-aware generation)
-    _st_path = find_v2_templates(st_args.subject, st_args.substrand).get('st')
+    _st_path = find_v2_templates(st_args.grade, st_args.subject, st_args.substrand).get('st')
     st_template = extract_template_docx(str(_st_path)) if _st_path else None
 
     st = generate_summary_table(unit, lessons, st_args, st_template=st_template)
@@ -1541,12 +1560,27 @@ def main():
         curriculum_text = (PROJECT_ROOT / CURRICULUM_TEXT_MAP[args.grade][args.subject]).read_text(
             encoding='utf-8', errors='replace')
     else:
-        curriculum_pdf  = str(PROJECT_ROOT / CURRICULUM_PDF_MAP.get(args.grade, {}).get(args.subject, ''))
+        _pdf_rel = CURRICULUM_PDF_MAP.get(args.grade, {}).get(args.subject)
+        if not _pdf_rel:
+            # Without this, an unregistered grade/subject falls through as an
+            # empty path, resolves to PROJECT_ROOT, and fails inside the PDF
+            # extractor with an error that looks like a broken parser rather
+            # than missing configuration. Fail here, saying what to add.
+            sys.exit(
+                f"ERROR: no curriculum source registered for grade {args.grade} "
+                f"'{args.subject}'.\n"
+                f"  Add an entry to CURRICULUM_TEXT_MAP[{args.grade}]['{args.subject}'] "
+                f"(OCR-extracted text, preferred) or "
+                f"CURRICULUM_PDF_MAP[{args.grade}]['{args.subject}'] (native-text PDF).\n"
+                f"  Screenshot PDFs with no text layer must be OCR-extracted first — "
+                f"registering one under CURRICULUM_PDF_MAP yields empty text, not an error."
+            )
+        curriculum_pdf  = str(PROJECT_ROOT / _pdf_rel)
         curriculum_text = extract_curriculum_pdf(curriculum_pdf, args.substrand)
     print(f"  Curriculum text: {len(curriculum_text)} chars")
 
     # Find v2 templates (lesson + FE + ST); --template CLI arg overrides lesson only
-    _v2 = find_v2_templates(args.subject, args.substrand)
+    _v2 = find_v2_templates(args.grade, args.subject, args.substrand)
     lesson_template_path = Path(args.template) if args.template else _v2['lesson']
     fe_template_path     = _v2['fe']
     st_template_path     = _v2['st']
