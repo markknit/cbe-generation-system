@@ -970,15 +970,34 @@ SUBSTRAND_NAMES = {
         },
     },
     11: {
-        # TODO Phase 4: populate per subject after OCR extraction AND hand
-        # verification against rendered pages of CBE_Curriculums/Grade 11/
-        # STEM/*.pdf — do not derive these from OCR text alone (it flattens
-        # multi-column tables; see HANDOFF_new_stem_subjects_2026-07-28.md
-        # §6.5). Confirmed so far by direct visual inspection, for reference:
-        #   biology '2.1' = 'Reproduction in Plants' (NOT 'Plant Nutrition')
-        # Core Mathematics also gains a new Strand 4.0 (Calculus) at Grade 11
-        # that has no Grade 10 equivalent — do not assume the sub-strand
-        # *count* per strand carries over even where names do.
+        # Biology: COMPLETE and hand-verified 2026-09-19 against the rendered
+        # "SUMMARY STRANDS AND SUB STRANDS" table on page ix of
+        # 'Biology Grade 11 - October 2025.pdf', read as an image at 200 dpi —
+        # NOT from OCR text (§6.5 of HANDOFF_new_stem_subjects_2026-07-28.md:
+        # OCR flattens these tables and is not authoritative for names).
+        # The document was also checked to its end: it closes after 3.3 and the
+        # appendix, so there is no strand beyond 3.0 to miss.
+        #
+        # Every one of these differs from the Grade 10 sub-strand at the same
+        # number, which is exactly why this dict is keyed by grade. Grade 11
+        # also has 10 sub-strands to Grade 10's 9 — strand 1.0 gained a fourth.
+        'biology': {
+            '1.1': 'Taxonomy I',
+            '1.2': 'Ecology',
+            '1.3': 'Taxonomy II',
+            '1.4': 'Cell Division',
+            '2.1': 'Reproduction in Plants',
+            '2.2': 'Growth and Development in Plants',
+            '2.3': 'Excretion in Plants',
+            '3.1': 'Reproduction in Animals',
+            '3.2': 'Growth and Development in Animals',
+            '3.3': 'Excretion and Homeostasis in Animals',
+        },
+        # TODO: the other five STEM subjects still need the same hand
+        # verification pass against rendered pages before they are added here.
+        # Core Mathematics gains a new Strand 4.0 (Calculus) at Grade 11 with
+        # no Grade 10 equivalent — do not assume the sub-strand *count* per
+        # strand carries over even where the numbering scheme does.
     },
 }
 
