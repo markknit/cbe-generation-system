@@ -1,6 +1,6 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: 2026-08-02*
+*Last updated: 2026-09-19*
 
 ---
 
@@ -59,7 +59,10 @@ right now" checkable in one place, not reconstructed from memory.
 | code-review-graph CLAUDE.md wording — "ALWAYS use graph tools before Grep/Glob/Read" | **Done — scoped 2026-07-31** | Rewritten against measured coverage, not assumption: graph indexes exactly the 183 tracked `.js`/`.py`/`.sh` files and **0 of 52 tracked `.md` files**; all 85 `*_data.js` are bare `File` nodes (object-literal exports, no functions to graph). Section now states explicitly that reading `STATUS.md` is a plain `Read` no graph tool substitutes for, and that data-file inspection is `Read`/`grep` work. Two installer claims corrected: `semantic_search_nodes_tool` is FTS-only here (0 nodes embedded), and `tests_for` coverage checks are meaningless (1 Test node repo-wide). |
 | `.claude/settings.json` Read deny rules | Done, `1f4f6f8` — with a known limit | 6 narrow rules (ares_index DB, `venv/`, `.env`, docx/pdf under `data/outputs`, archived `data/outputs/docx`). **Gate the Read tool only, not bash** — a recursive `grep` over `data/outputs/` still lands in context. Deliberately excludes `*_data.json` and `data/raw/curriculum_pdfs`. |
 | Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
-| Grade 11 STEM expansion | Not started | Planned after terminology pass + initial distribution |
+| Grade-aware pipeline (plumbing) | **Done — 2026-09-19 (`a546ee3`, `77f3591`, `da26382`)** | `build_docs.js` + `generate_substrand.py` + `generate_teacher_index.js` no longer assume Grade 10. `--grade` is now **required** on `generate_substrand.py` with no default. Highest-severity fix: `SUBSTRAND_NAMES` was keyed by subject only, so a Grade 11 run of `biology 2.1` would have silently generated a full lesson sequence about Grade 10's "Plant Nutrition" while labelling it GRADE 11 (Grade 11 reuses the same strand numbering with different topics). Pure plumbing — no curriculum content involved. Origin: partner's Lesson3 editor flagged 3 hardcoded `GRADE 10` strings; tracing them found the larger problem. Handoff: `HANDOFF_grade_aware_pipeline_2026-09-18.md`. |
+| Grade 10 output tree left flat — migration **deferred**, not forgotten | **Deferred 2026-09-19 (Mark's call), with a trigger** | New grades emit `v2/Grade{N}/<Subject>/...`; Grade 10 stays at `v2/<Subject>/...`. The handoff (§6) called for migrating Grade 10 too; that was reconsidered because Grade 10 is stable and moving it churns **teacher-visible Google Drive paths** (job 2 is `/MIR` — a migration deletes and re-uploads all 255 PDFs) for no present benefit. **Revisit at the next full-corpus regeneration** — the pending Kenyan-terminology pass is the likely trigger — so the Drive re-sync is paid once, not twice. The exception lives in exactly two places, both commented: `_v2_output_dir()` in `generate_substrand.py` (path construction) and `collectSubjectRoots()` in `generate_teacher_index.js` (the walker). **If you migrate, both simplify — delete the branches, don't add a third shape.** |
+| Grade 11 STEM expansion — **content** phase | Not started — plumbing done, awaiting go-ahead | Blocked only on a decision, not on work: the pipeline is ready. Next step is handoff §7 Phase 4 — OCR-extract Grade 11 Biology from `CBE_Curriculums/Grade 11/STEM/` (all six STEM PDFs already present; all are screenshot PDFs with no text layer), hand-verify strand names against **rendered page images, not OCR text**, populate `SUBSTRAND_NAMES[11]['biology']` + `CURRICULUM_TEXT_MAP[11]['biology']`, then one pilot sub-strand. **Note the ordering conflict:** this file previously had Grade 11 planned *after* the terminology pass, which is still Blocked. Starting Grade 11 content now means going ahead of that. Mark's call — flagged, not assumed. |
+| Non-STEM Grade 11 sources | Not found — out of scope | `CBE_Curriculums/Grade 11/` has only a `STEM/` subfolder; no `General/` counterpart to Grade 10's (English, History and Citizenship). Needs sourcing before any non-STEM Grade 11 work. |
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
 | Partner-reported General Science defects (`safety<N>otes` key, missing `summaryTablePrompt.explained`) | **Done — repaired 2026-08-02, root cause fixed** | Reported via `Gnerator_issues.txt` (note: filename is misspelt, no `e`) by the partner building the teacher lesson-plan editor, whose import checker caught both. 35 corrupted `slo` keys across 15 `gensci_*` files + 2 lessons missing `explained`. Root cause: `scripts/repair_stubs.py:209` did `LESSON_SCHEMA.replace('N', str(lesson_num))` — a bare `N` placeholder that also hit `safetyNotes`. Fixed to `{{LESSON_NUMBER}}`. **Both defects rendered as silently EMPTY docx cells** — see Known Issues. Full re-render done; corpus now 0/0/0 on the partner's three checks. |
 | Contract validation on the repair path | **Done — added 2026-08-02** | `scripts/patch_lesson.js` now validates every incoming lesson before writing (exact `slo` key set, all 3 `summaryTablePrompt` cells, 5 canonical phases in order, non-empty required fields) and refuses with a diagnostic instead of writing. This is the chokepoint both `repair_stubs.py` and the manual Quick Start repair use. New `scripts/validate_corpus.js` runs the same contract over **all 85** data files / 728 lessons (`check_new_subjects_quality.js` only ever covered the 43 new-subject files, and nothing covered Bio/Chem/Physics/Maths). |
@@ -1287,3 +1290,100 @@ Unchanged from the previous entry: `install.sh` live test on one server;
 notification + `resourceLinks` schema confirmation; Core Mathematics
 replacement-PDF verification; cost-contingency check once there is another bulk
 run; Kenyan-terminology pass (blocked on teacher examples); Grade 11 expansion.
+
+---
+
+## Updates — 2026-09-19 — grade-aware pipeline (handoff Rev 1, Phases 0–3)
+
+Worked from `HANDOFF_grade_aware_pipeline_2026-09-18.md`, which arrived via
+`git pull` (`f5bb508`) along with two patches. Phases 0–3 done; **stopped
+before Phase 4** (curriculum extraction + pilot generation) pending Mark's
+go-ahead, per the handoff's own instruction and because Phase 4 crosses into
+Grade 11 content ahead of the terminology pass.
+
+### What was wrong
+The pipeline assumed Grade 10 everywhere, because only Grade 10 existed when
+it was written. Surfaced by the partner's Lesson3 editor flagging three
+hardcoded `GRADE 10` strings in `build_docs.js`; those turned out to be the
+visible tip.
+
+The one that mattered: **`SUBSTRAND_NAMES` was keyed by subject only, not by
+grade.** Grade 11 reuses Grade 10's strand/sub-strand numbering with different
+topics, so `--grade 11 --subject biology --substrand 2.1` would have looked up
+Grade 10's "Plant Nutrition" instead of Grade 11's "Reproduction in Plants",
+fed that into the generation prompt, and produced a complete, coherent lesson
+sequence **about the wrong topic, labelled GRADE 11**. Not a wrong label — 
+wrong content. Nothing would have failed or warned.
+
+### Applied
+- `a546ee3` — `build_docs.js` reads `META.grade`. No `|| 10` fallback: a
+  missing grade throws rather than printing a plausible-but-wrong grade on a
+  student assessment. All 85 data modules already carry `"grade": 10`
+  (verified), so Grade 10 is unaffected.
+- `77f3591` — `generate_substrand.py` grade-aware throughout; `--grade`
+  required with no default. `SUBSTRAND_NAMES`, `LESSON_COUNTS`,
+  `CURRICULUM_PDF_MAP`, `CURRICULUM_TEXT_MAP` all nested by grade first.
+- `da26382` — `generate_teacher_index.js` walks both tree shapes.
+
+### Phase 3 was changed, deliberately
+The handoff called for migrating existing Grade 10 output under
+`v2/Grade10/`. Mark reconsidered (the original "same convention per grade"
+decision was offhand, not considered): Grade 10 is stable, and migrating
+churns teacher-visible Drive paths — job 2 of `sync_to_drive.bat` is `/MIR`,
+so it would delete and re-upload all 255 PDFs — for no benefit today.
+Deferred to the next full-corpus regeneration so the churn is paid once.
+
+**The migration was never what bought correctness.** The actual defect was
+that `generate_teacher_index.js` did a fixed two-level walk: Grade 11 sitting
+one level deeper would have been read as subject=`Grade11`,
+sub-strand=`Biology`, yielded no PDFs at that depth, and been dropped by the
+existing empty-group guard — **an index.html with all of Grade 11 silently
+missing, no error.** Same failure shape as the `SUBSTRAND_NAMES` bug. That fix
+was needed whether or not Grade 10 moved; migration only decided whether the
+walker is uniform or carries a documented exception.
+
+### Verified, not assumed
+- Both patches applied clean against live `main` (Phase 0 found no drift).
+- Grade 10 end-to-end: regenerated `bio_1_1`, extracted the docx XML, confirmed
+  it still renders `FINAL EXPLANATION: BIOLOGY GRADE 10` / `SUMMARY TABLE:
+  BIOLOGY GRADE 10`. Output churn reverted afterwards.
+- Teacher index: regenerated and **diffed byte-for-byte against the committed
+  `index.html` — identical apart from the generated-at timestamp.** Then built
+  a stub `v2/PDF/Grade11/Biology/SS2.1_.../` tree, confirmed it renders with
+  correct `Grade11/`-prefixed hrefs and that grade appears as a browsing
+  dimension only when >1 grade exists, then removed the stub.
+- `LESSON_COUNTS` confirmed **unread repo-wide** (only its definition site) —
+  resolves the handoff's §8 open question. It is genuinely inert.
+- `--grade` enforced by argparse; grade 10 vs 11 produce distinct system
+  prompts and distinct output dirs; `SUBSTRAND_NAMES[11]` does not leak
+  Grade 10 names.
+
+### Two corrections to the handoff
+- Its §5 test claim `SUBSTRAND_NAMES[11]['biology'].get('2.1') → None` is
+  wrong — `SUBSTRAND_NAMES[11]` is empty, so that expression raises
+  `KeyError`. The **live code** is fine; it uses `.get()` chains and prints a
+  visible WARNING. Only the handoff's stated test was wrong.
+- Its §3/§5/§10 promise full corrected `build_docs.js` and
+  `generate_substrand.py` as a fallback "if the patch doesn't apply cleanly."
+  Those files were **not** in the pull — only the two patches. Moot here
+  (both applied clean), but the stated fallback did not exist.
+
+### Deviation from the supplied patch
+`_v2_output_dir()` keeps Grade 10 flat. The patch emitted `v2/Grade10/...`
+unconditionally, which would have created a **third** tree shape the first
+time an existing Grade 10 sub-strand was regenerated, since all 85 data
+modules hardcode the flat `outputDir`.
+
+### Still open
+- **Phase 4 not started** — needs an explicit go-ahead, and it starts Grade 11
+  content ahead of the still-blocked terminology pass.
+- Phase 4 will hit a rough edge: with `CURRICULUM_PDF_MAP[11]` empty, the
+  fallback at `generate_substrand.py:1544` resolves to an empty path and
+  `extract_curriculum_pdf` fails on the project root — a confusing error
+  rather than a clear "grade 11 curriculum source not registered". Worth a
+  guard before the pilot.
+- Nothing pushed yet — all three commits are local.
+- Unchanged from the previous entry: `install.sh` live test; `deploy/index.htmlf`;
+  Windows Drive sync run; partner `resourceLinks` schema confirmation; Core
+  Mathematics replacement-PDF verification; cost contingency; Kenyan-terminology
+  pass (blocked on teacher examples).
