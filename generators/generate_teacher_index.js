@@ -21,7 +21,12 @@ const DOC_TYPES = [
   { suffix: '_SummaryTable.pdf', label: 'Summary Table', abbr: 'ST', color: '#6B3FA0' },
 ];
 
-// ---- Step 1: walk PDF_ROOT and group files by Subject -> SubStrand ----
+// Grade 10 output predates the Grade{N} path segment and deliberately still
+// lives flat. See _v2_output_dir() in src/generate_substrand.py for why the
+// migration was deferred, and STATUS.md Active Threads for when to revisit.
+const LEGACY_FLAT_GRADE = 10;
+
+// ---- Step 1: walk PDF_ROOT and group files by Grade -> Subject -> SubStrand ----
 function versionCompare(a, b) {
   const pa = a.split('.').map(Number);
   const pb = b.split('.').map(Number);
@@ -41,21 +46,54 @@ if (!fs.existsSync(PDF_ROOT)) {
   process.exit(1);
 }
 
-const subjects = {}; // { Biology: [ { number, name, folder, docs: [{label,abbr,color,href}] } ] }
+// Two tree shapes coexist under PDF_ROOT, by decision rather than accident:
+//
+//   v2/PDF/<Subject>/SS…/            → Grade 10 (flat, predates the segment)
+//   v2/PDF/Grade<N>/<Subject>/SS…/   → Grade 11 and every grade after
+//
+// This function is the only place in the index generator that knows that.
+// Returns one entry per (grade, subject) pair, whichever shape it came from.
+function collectSubjectRoots() {
+  const roots = [];
+  for (const entry of fs.readdirSync(PDF_ROOT, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const gradeMatch = entry.name.match(/^Grade(\d+)$/);
+
+    if (gradeMatch) {
+      const gradeDir = path.join(PDF_ROOT, entry.name);
+      for (const subjectEntry of fs.readdirSync(gradeDir, { withFileTypes: true })) {
+        if (!subjectEntry.isDirectory()) continue;
+        roots.push({
+          grade: Number(gradeMatch[1]),
+          subjectName: subjectEntry.name,
+          dir: path.join(gradeDir, subjectEntry.name),
+          hrefPrefix: `${encodeURIComponent(entry.name)}/`,
+        });
+      }
+    } else {
+      roots.push({
+        grade: LEGACY_FLAT_GRADE,
+        subjectName: entry.name,
+        dir: path.join(PDF_ROOT, entry.name),
+        hrefPrefix: '',
+      });
+    }
+  }
+  return roots;
+}
+
+const byGrade = new Map(); // grade -> { Subject: [ { number, name, docs } ] }
 let totalDocs = 0;
 
-for (const subjectEntry of fs.readdirSync(PDF_ROOT, { withFileTypes: true })) {
-  if (!subjectEntry.isDirectory()) continue;
-  const subjectName = subjectEntry.name;
-  const subjectDir = path.join(PDF_ROOT, subjectName);
+for (const root of collectSubjectRoots()) {
   const substrands = [];
 
-  for (const ssEntry of fs.readdirSync(subjectDir, { withFileTypes: true })) {
+  for (const ssEntry of fs.readdirSync(root.dir, { withFileTypes: true })) {
     if (!ssEntry.isDirectory()) continue;
     const match = ssEntry.name.match(/^SS([\d.]+)_(.+)$/);
     const number = match ? match[1] : null;
     const name = match ? humanize(match[2]) : humanize(ssEntry.name);
-    const ssDir = path.join(subjectDir, ssEntry.name);
+    const ssDir = path.join(root.dir, ssEntry.name);
 
     const docs = [];
     for (const file of fs.readdirSync(ssDir)) {
@@ -65,7 +103,7 @@ for (const subjectEntry of fs.readdirSync(PDF_ROOT, { withFileTypes: true })) {
         label: type.label,
         abbr: type.abbr,
         color: type.color,
-        href: `${encodeURIComponent(subjectName)}/${encodeURIComponent(ssEntry.name)}/${encodeURIComponent(file)}`,
+        href: `${root.hrefPrefix}${encodeURIComponent(root.subjectName)}/${encodeURIComponent(ssEntry.name)}/${encodeURIComponent(file)}`,
         order: DOC_TYPES.indexOf(type),
       });
       totalDocs++;
@@ -74,18 +112,47 @@ for (const subjectEntry of fs.readdirSync(PDF_ROOT, { withFileTypes: true })) {
     if (docs.length > 0) substrands.push({ number: number || '—', name, docs });
   }
 
+  if (substrands.length === 0) continue;
   substrands.sort((a, b) => versionCompare(a.number, b.number));
-  if (substrands.length > 0) subjects[subjectName] = substrands;
+  if (!byGrade.has(root.grade)) byGrade.set(root.grade, {});
+  byGrade.get(root.grade)[root.subjectName] = substrands;
 }
 
-const orderedSubjectNames = [
-  ...SUBJECT_ORDER.filter(s => subjects[s]),
-  ...Object.keys(subjects).filter(s => !SUBJECT_ORDER.includes(s)).sort(),
-];
+const orderedGrades = [...byGrade.keys()].sort((a, b) => a - b);
 
-if (orderedSubjectNames.length === 0) {
+// Grade only becomes a browsing dimension once there is more than one grade.
+// While Grade 10 is the only content, the page renders exactly as before.
+const multiGrade = orderedGrades.length > 1;
+
+// Flat list of sections to render, in display order.
+const sections = [];
+for (const grade of orderedGrades) {
+  const subjects = byGrade.get(grade);
+  const ordered = [
+    ...SUBJECT_ORDER.filter(s => subjects[s]),
+    ...Object.keys(subjects).filter(s => !SUBJECT_ORDER.includes(s)).sort(),
+  ];
+  for (const subjectName of ordered) {
+    sections.push({
+      id: multiGrade ? `Grade${grade}-${subjectName}` : subjectName,
+      heading: multiGrade ? `Grade ${grade} — ${humanize(subjectName)}` : subjectName,
+      navLabel: multiGrade ? `G${grade} ${humanize(subjectName)}` : subjectName,
+      substrands: subjects[subjectName],
+    });
+  }
+}
+
+if (sections.length === 0) {
   console.log('No PDF content found under v2/PDF — nothing to index.');
   process.exit(0);
+}
+
+// Report what was found per grade, so a grade silently going missing from the
+// tree is visible in the run output rather than only in the rendered page.
+for (const grade of orderedGrades) {
+  const subjects = byGrade.get(grade);
+  const n = Object.values(subjects).reduce((acc, ss) => acc + ss.length, 0);
+  console.log(`  Grade ${grade}: ${Object.keys(subjects).length} subject(s), ${n} sub-strand(s)`);
 }
 
 // ---- Step 2: render HTML ----
@@ -94,15 +161,15 @@ function escapeHtml(s) {
 }
 
 const generatedAt = new Date().toISOString().replace('T', ' ').slice(0, 16) + ' UTC';
-const substrandCount = orderedSubjectNames.reduce((n, s) => n + subjects[s].length, 0);
+const substrandCount = sections.reduce((n, s) => n + s.substrands.length, 0);
 
-const navHtml = orderedSubjectNames
-  .map(s => `<a href="#${escapeHtml(s)}" class="navpill">${escapeHtml(s)}</a>`)
+const navHtml = sections
+  .map(s => `<a href="#${escapeHtml(s.id)}" class="navpill">${escapeHtml(s.navLabel)}</a>`)
   .join('\n      ');
 
-const sectionsHtml = orderedSubjectNames
-  .map(subjectName => {
-    const cards = subjects[subjectName]
+const sectionsHtml = sections
+  .map(section => {
+    const cards = section.substrands
       .map(ss => {
         const docLinks = ss.docs
           .map(
@@ -123,8 +190,8 @@ const sectionsHtml = orderedSubjectNames
         </article>`;
       })
       .join('\n        ');
-    return `<section id="${escapeHtml(subjectName)}" class="subject-section">
-        <h2>${escapeHtml(subjectName)}</h2>
+    return `<section id="${escapeHtml(section.id)}" class="subject-section">
+        <h2>${escapeHtml(section.heading)}</h2>
         <div class="card-grid">
         ${cards}
         </div>
@@ -328,4 +395,4 @@ const html = `<!DOCTYPE html>
 
 fs.writeFileSync(OUTPUT_FILE, html, 'utf8');
 console.log(`Wrote ${OUTPUT_FILE}`);
-console.log(`${orderedSubjectNames.length} subject(s), ${substrandCount} sub-strand(s), ${totalDocs} document(s) indexed.`);
+console.log(`${sections.length} section(s) across ${orderedGrades.length} grade(s), ${substrandCount} sub-strand(s), ${totalDocs} document(s) indexed.`);

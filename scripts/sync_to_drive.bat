@@ -32,6 +32,18 @@ REM    - job 1 excludes the PDF subdirectory (/XD), or it walks into the PDF
 REM      tree and syncs it a second time into the wrong destination.
 REM    - job 2 uses NO file mask - see the comment above that robocopy call.
 REM
+REM  Grades and directory depth (checked 2026-09-19, no change needed):
+REM    Grade 10 output is flat  - v2\<Subject>\SS...\
+REM    Grade 11+ output nests   - v2\Grade<N>\<Subject>\SS...\
+REM    Both jobs recurse (/E on job 1, /MIR on job 2), so neither shape needs
+REM    special handling here - new grades are picked up automatically and the
+REM    Drive side ends up mirroring the repo exactly, including the asymmetry.
+REM    That mirroring is deliberate: Drive should look like the repo, so there
+REM    is only one tree shape to reason about. If the Grade 10 tree is ever
+REM    migrated under Grade10\ (see STATUS.md), Drive follows on the next run
+REM    with no edit here - but job 2 is /MIR, so that run will DELETE and
+REM    re-upload all 255 PDFs. Expect a slow sync and warn teachers first.
+REM
 REM  Close Word before running. Robocopy skips locked files and still reports
 REM  success for everything else, so an open lesson plan silently stays stale.
 REM ===========================================================================
