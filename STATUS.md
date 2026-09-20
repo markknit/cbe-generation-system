@@ -58,10 +58,12 @@ right now" checkable in one place, not reconstructed from memory.
 | Session-tooling commits `8d3fe16` / `1f4f6f8` / `9937ed3` | Done, recorded 2026-07-31 | Token-optimizer marketplace, tooling-defect fixes, code-review-graph install. Were pushed to `origin/main` without a STATUS.md entry — caught by `/restart` on 2026-07-31, see session log + Known Issues below. |
 | code-review-graph CLAUDE.md wording — "ALWAYS use graph tools before Grep/Glob/Read" | **Done — scoped 2026-07-31** | Rewritten against measured coverage, not assumption: graph indexes exactly the 183 tracked `.js`/`.py`/`.sh` files and **0 of 52 tracked `.md` files**; all 85 `*_data.js` are bare `File` nodes (object-literal exports, no functions to graph). Section now states explicitly that reading `STATUS.md` is a plain `Read` no graph tool substitutes for, and that data-file inspection is `Read`/`grep` work. Two installer claims corrected: `semantic_search_nodes_tool` is FTS-only here (0 nodes embedded), and `tests_for` coverage checks are meaningless (1 Test node repo-wide). |
 | `.claude/settings.json` Read deny rules | Done, `1f4f6f8` — with a known limit | 6 narrow rules (ares_index DB, `venv/`, `.env`, docx/pdf under `data/outputs`, archived `data/outputs/docx`). **Gate the Read tool only, not bash** — a recursive `grep` over `data/outputs/` still lands in context. Deliberately excludes `*_data.json` and `data/raw/curriculum_pdfs`. |
-| Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers |
+| Kenyan-terminology wording pass | Blocked | Waiting on example lessons from reviewing teachers. **Not the same thing as the SoW templates in `data/raw/CBE LESSON TEMPLATES/`** — conflating the two came up on 2026-09-19 and is easy to do. Templates are *structural input* to generation (`find_v2_templates()`); this thread needs *reviewer feedback* on wording in already-generated lessons. Supplying templates does not unblock it. |
 | Grade-aware pipeline (plumbing) | **Done — 2026-09-19 (`a546ee3`, `77f3591`, `da26382`)** | `build_docs.js` + `generate_substrand.py` + `generate_teacher_index.js` no longer assume Grade 10. `--grade` is now **required** on `generate_substrand.py` with no default. Highest-severity fix: `SUBSTRAND_NAMES` was keyed by subject only, so a Grade 11 run of `biology 2.1` would have silently generated a full lesson sequence about Grade 10's "Plant Nutrition" while labelling it GRADE 11 (Grade 11 reuses the same strand numbering with different topics). Pure plumbing — no curriculum content involved. Origin: partner's Lesson3 editor flagged 3 hardcoded `GRADE 10` strings; tracing them found the larger problem. Handoff: `HANDOFF_grade_aware_pipeline_2026-09-18.md`. |
 | Grade 10 output tree left flat — migration **deferred**, not forgotten | **Deferred 2026-09-19 (Mark's call), with a trigger** | New grades emit `v2/Grade{N}/<Subject>/...`; Grade 10 stays at `v2/<Subject>/...`. The handoff (§6) called for migrating Grade 10 too; that was reconsidered because Grade 10 is stable and moving it churns **teacher-visible Google Drive paths** (job 2 is `/MIR` — a migration deletes and re-uploads all 255 PDFs) for no present benefit. **Revisit at the next full-corpus regeneration** — the pending Kenyan-terminology pass is the likely trigger — so the Drive re-sync is paid once, not twice. The exception lives in exactly two places, both commented: `_v2_output_dir()` in `generate_substrand.py` (path construction) and `collectSubjectRoots()` in `generate_teacher_index.js` (the walker). **If you migrate, both simplify — delete the branches, don't add a third shape.** |
-| Grade 11 STEM expansion — **content** phase | **On hold — Mark's call 2026-09-19.** Plumbing done; do not start without a fresh go-ahead | Blocked only on a decision, not on work: the pipeline is ready. Next step is handoff §7 Phase 4 — OCR-extract Grade 11 Biology from `CBE_Curriculums/Grade 11/STEM/` (all six STEM PDFs already present; all are screenshot PDFs with no text layer), hand-verify strand names against **rendered page images, not OCR text**, populate `SUBSTRAND_NAMES[11]['biology']` + `CURRICULUM_TEXT_MAP[11]['biology']`, then one pilot sub-strand. **Note the ordering conflict:** this file previously had Grade 11 planned *after* the terminology pass, which is still Blocked. Starting Grade 11 content now means going ahead of that. Mark's call — flagged, not assumed. |
+| Grade 11 Biology — curriculum extraction + sub-strand inventory | **Done — 2026-09-19 (`a3bcd6f`, `4539435`)** | OCR'd with the new `scripts/extract_curriculum_ocr.py` (17 slices @ 200 dpi, tesseract 5.3.4 `--psm 4`) → `data/raw/curriculum_text/grade11_biology.txt`, 53,129 chars / 1,281 lines, no dedup needed. Wired into `CURRICULUM_TEXT_MAP[11]['biology']`. **All 10 sub-strands hand-verified from rendered page images** (page ix summary table), not from OCR text — closes the handoff's §8 open item for Biology. Grade 11 has **10** sub-strands to Grade 10's 9, and **every shared number is a different topic** (2.1 = Reproduction in Plants, not Plant Nutrition). Pipeline confirmed end-to-end up to the API boundary. |
+| Grade 11 STEM expansion — **pilot generation run** | **Blocked on two things, neither technical** | Everything upstream is ready. Blocked on (1) **API credits — the account currently has insufficient balance**, confirmed by a live call on 2026-09-19 that failed with `credit balance is too low`; this is exactly the precondition the handoff told us to confirm before the pilot; and (2) Mark's Grade 11 Biology templates, which go in `data/raw/CBE LESSON TEMPLATES/v2_owner_inventory/Grade11/Biology/SS<N.N>_<Grade 11 name>/` — **use the Grade 11 names, not Grade 10's**, or they will not be found. Neither blocks the other. Pilot command: `--grade 11 --subject biology --substrand 2.1`. Inspect the output before generating anything further. |
+| Other five Grade 11 STEM subjects | Not started | Chemistry, Physics, General Science, Core Mathematics, Essential Mathematics. Sources present in `CBE_Curriculums/Grade 11/STEM/`; extraction is now one command each (`scripts/extract_curriculum_ocr.py`), but **each still needs its own hand-verification pass against rendered pages** before entering `SUBSTRAND_NAMES`. Core Mathematics gains a new **Strand 4.0 (Calculus)** with no Grade 10 equivalent. Essential Mathematics is expected to show the same repeated-boilerplate defect as Grade 10 Core Maths — the script's fuzzy dedup handles it, but verify. |
 | Non-STEM Grade 11 sources | Not found — out of scope | `CBE_Curriculums/Grade 11/` has only a `STEM/` subfolder; no `General/` counterpart to Grade 10's (English, History and Citizenship). Needs sourcing before any non-STEM Grade 11 work. |
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
 | Partner-reported General Science defects (`safety<N>otes` key, missing `summaryTablePrompt.explained`) | **Done — repaired 2026-08-02, root cause fixed** | Reported via `Gnerator_issues.txt` (note: filename is misspelt, no `e`) by the partner building the teacher lesson-plan editor, whose import checker caught both. 35 corrupted `slo` keys across 15 `gensci_*` files + 2 lessons missing `explained`. Root cause: `scripts/repair_stubs.py:209` did `LESSON_SCHEMA.replace('N', str(lesson_num))` — a bare `N` placeholder that also hit `safetyNotes`. Fixed to `{{LESSON_NUMBER}}`. **Both defects rendered as silently EMPTY docx cells** — see Known Issues. Full re-render done; corpus now 0/0/0 on the partner's three checks. |
@@ -1390,3 +1392,89 @@ modules hardcode the flat `outputDir`.
   Windows Drive sync run; partner `resourceLinks` schema confirmation; Core
   Mathematics replacement-PDF verification; cost contingency; Kenyan-terminology
   pass (blocked on teacher examples).
+
+---
+
+## Updates — 2026-09-19 (second entry) — Grade 11 Biology extracted; pilot blocked on credits
+
+Continues the entry above. Handoff Phase 4 is done apart from the pilot
+generation run itself.
+
+### Template lookup was a third instance of the same bug
+`find_v2_templates()` was keyed by subject + sub-strand only, with no grade —
+the same defect as `SUBSTRAND_NAMES`, and missed by the handoff patch.
+`v2_owner_inventory/Biology/SS2.1_*` matched for **any** grade, so a Grade 11
+run would have fed Grade 10's `SS2.1_Plant_Nutrition` template into generating
+Reproduction in Plants. Now segmented like `_v2_output_dir()`. Also fixed
+`st_args` on the collect path, which built a namespace with no grade at all.
+
+That makes three sites found so far (`SUBSTRAND_NAMES`, `find_v2_templates`,
+and the `build_docs.js` titles). The pattern is worth stating plainly: **any
+lookup keyed by sub-strand number is suspect until proven grade-aware**,
+because the numbering is stable across grades while the content is not.
+
+### Curriculum-source guard
+An unregistered grade/subject fell through `CURRICULUM_PDF_MAP` as an empty
+path, resolved to `PROJECT_ROOT`, and failed inside the PDF extractor looking
+like a broken parser. Now exits early naming the exact dict entry to add.
+
+### The extraction script now exists
+`scripts/extract_curriculum_ocr.py`. The Grade 10 run was done off-server and
+**only ever written up in prose** — no script was committed, so the method had
+to be rebuilt from `data/raw/curriculum_text/README.md` in order to run it
+again. Same class of loss as `sync_to_drive.bat` and `install.sh`: documented,
+believed to exist, absent. That README now points at the script instead of
+describing commands to reconstruct.
+
+### Grade 11 Biology
+- `tesseract` was **not installed on jhm-spark** — the Grade 10 OCR never ran
+  here. Installed 5.3.4 (needed sudo, so Mark ran it).
+- Extracted: 17 slices @ 200 dpi, `--psm 4`, 53,129 chars / 1,281 lines. No
+  dedup needed (no 400+ char duplicate blocks), matching General Science and
+  Essential Mathematics at Grade 10.
+- Verified: all 10 sub-strands findable by name *and* number; `SUMMARY
+  STRANDS`, `STRAND 1.0/2.0/3.0`, `ESSENCE STATEMENT`, `APPENDIX` all present.
+- **Inventory hand-read from rendered images** (page ix), per §6.5, then the
+  document was read to its end to confirm nothing follows strand 3.0 but the
+  appendix — i.e. no Strand 4.0 hiding past the summary table, which is a real
+  possibility at Grade 11 (Core Maths has one).
+
+**10 sub-strands vs Grade 10's 9, and not one shared number is the same topic:**
+
+| # | Grade 10 | Grade 11 |
+|---|---|---|
+| 1.1 | Cell Structure | Taxonomy I |
+| 1.2 | Chemicals of Life | Ecology |
+| 1.3 | Cell Biology | Taxonomy II |
+| 1.4 | *(none)* | Cell Division |
+| 2.1 | Plant Nutrition | Reproduction in Plants |
+| 2.2 | Plant Transport | Growth and Development in Plants |
+| 2.3 | Plant Gaseous Exchange and Respiration | Excretion in Plants |
+| 3.1 | Animal Nutrition | Reproduction in Animals |
+| 3.2 | Animal Transport | Growth and Development in Animals |
+| 3.3 | Animal Gaseous Exchange and Respiration | Excretion and Homeostasis in Animals |
+
+That table is the concrete measure of what the subject-only lookup would have
+produced: not one wrong sub-strand, but **every** one.
+
+### API credits are exhausted — pilot cannot run
+A verification command went further than intended and invoked a real API call
+(it was meant to test the source-resolution guard only). It spent nothing,
+because it failed immediately: `Your credit balance is too low to access the
+Anthropic API`. No files written, no batch state created.
+
+Worth recording rather than burying: it confirms the handoff's "confirm
+account API access before Phase 4's pilot" precondition, which would otherwise
+have been discovered at the moment of the pilot run itself.
+
+### Still open
+- **Pilot run** — needs API credits, plus Mark's Grade 11 Biology templates in
+  `v2_owner_inventory/Grade11/Biology/` using **Grade 11** sub-strand names.
+- Other five Grade 11 STEM subjects — extraction is one command each now, but
+  each needs its own hand-verification pass.
+- `LESSON_COUNTS[11]` not populated; still inert repo-wide, so this is
+  future-proofing only.
+- Unchanged: `install.sh` live test; `deploy/index.htmlf`; Windows Drive sync
+  run; partner `resourceLinks` schema confirmation; Core Mathematics
+  replacement-PDF verification; Kenyan-terminology pass (blocked on teacher
+  *examples* — not the same thing as templates, see Active Threads).
