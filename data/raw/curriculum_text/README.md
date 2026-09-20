@@ -1,8 +1,20 @@
-# Extracted curriculum text — Grade 10 STEM (KICD July 2025)
+# Extracted curriculum text — KICD STEM curricula
 
-Generated 2026-07-28. Drop this whole folder at
-`data/raw/curriculum_text/` in `cbe-generation-system` and commit it, so the
-three source PDFs never need re-OCRing.
+Grade 10 generated 2026-07-28; Grade 11 Biology added 2026-09-19. Committed so
+the source PDFs never need re-OCRing.
+
+> **The extraction is now a committed script:**
+> `scripts/extract_curriculum_ocr.py`. It did not exist for the Grade 10 run —
+> that was done off-server and only written up in prose, so it had to be
+> rebuilt from this README in September. Use the script rather than
+> reconstructing the commands again; it carries the pixel/point conversion
+> and the dedup thresholds described below.
+>
+> ```bash
+> python3 scripts/extract_curriculum_ocr.py \
+>     --pdf "CBE_Curriculums/Grade 11/STEM/Biology Grade 11 - October 2025.pdf" \
+>     --out grade11_biology
+> ```
 
 ## Files
 
@@ -14,6 +26,35 @@ three source PDFs never need re-OCRing.
 | `core_mathematics.raw.txt` | 1,839 | same, before dedup (audit copy) |
 | `essential_mathematics.txt` | 1,496 | Essential Mathematics Grade 10 — deduped |
 | `essential_mathematics.raw.txt` | 1,496 | same, before dedup (audit copy) |
+| `grade11_biology.txt` | 1,281 | Biology Grade 11 — deduped (nothing removed) |
+| `grade11_biology.raw.txt` | 1,303 | same, before dedup (audit copy) |
+
+Note the Grade 11 naming: `grade11_<subject>`. The Grade 10 files predate
+multi-grade support and keep their bare subject names.
+
+## Grade 11 Biology (added 2026-09-19)
+
+Source: `CBE_Curriculums/Grade 11/STEM/Biology Grade 11 - October 2025.pdf` —
+one page, 595 × 16,234 pt, image-only, DRAFT-watermarked. Sliced into 17
+1,000-pt windows with 30-pt overlap at 200 dpi, OCR'd with `tesseract --psm 4`
+(tesseract 5.3.4).
+
+No deduplication was needed — the 30-pt overlap produced no 400+ character
+duplicate blocks, the same result as General Science and Essential
+Mathematics. The 1,303 → 1,281 line difference is blank-line normalisation
+when blocks are rejoined, not removed content; the script's marker check
+confirms nothing was lost.
+
+Verified after extraction: all 10 sub-strands findable by both name and
+number, and `SUMMARY STRANDS`, `STRAND 1.0/2.0/3.0`, `ESSENCE STATEMENT` and
+`APPENDIX` all present.
+
+**The sub-strand inventory was read by hand from rendered page images** (page
+ix, "SUMMARY STRANDS AND SUB STRANDS"), not from this OCR text, per caveat 3
+below, and is recorded in `SUBSTRAND_NAMES[11]['biology']`. Grade 11 Biology
+has 10 sub-strands to Grade 10's 9, and **every shared number is a different
+topic** — 2.1 is Reproduction in Plants at Grade 11, Plant Nutrition at
+Grade 10.
 
 Keep the `.raw.txt` copies. They are the fallback if dedup ever turns out to
 have removed something it shouldn't have.

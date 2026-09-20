@@ -1034,9 +1034,12 @@ CURRICULUM_TEXT_MAP = {
         'essential_mathematics': 'data/raw/curriculum_text/essential_mathematics.txt',
     },
     11: {
-        # TODO Phase 4: all six CBE_Curriculums/Grade 11/STEM/ sources are
-        # screenshot PDFs (no text layer) and belong here once OCR'd, e.g.:
-        # 'biology': 'data/raw/curriculum_text/grade11_biology.txt',
+        # OCR-extracted 2026-09-19 with scripts/extract_curriculum_ocr.py
+        # (17 slices @ 200 dpi, tesseract --psm 4). All 10 sub-strands verified
+        # findable by both name and number; no dedup was needed.
+        'biology': 'data/raw/curriculum_text/grade11_biology.txt',
+        # TODO: the other five Grade 11 STEM sources are screenshot PDFs too
+        # and belong here once OCR'd and hand-verified.
     },
 }
 
