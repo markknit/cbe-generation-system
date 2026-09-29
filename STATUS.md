@@ -1,6 +1,6 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: 2026-09-19*
+*Last updated: 2026-09-29*
 
 ---
 
@@ -72,6 +72,7 @@ right now" checkable in one place, not reconstructed from memory.
 | `aresKeywords` missing on `phys_3_1` L6 | **Done — added 2026-08-02 (`9b33dce`)** | Only lesson in the corpus without it. **Correction to the earlier note here:** this did *not* mean "no ARES resource lookup" — `sections.js:151` falls back to `lesson.aresKeywords \|\| lesson.title`, so the lookup worked but on weaker terms than its siblings'. Keywords written from that lesson's own content. |
 | `scripts/sync_to_drive.bat` | **Now actually exists — written 2026-08-02** | It did not. `CLAUDE.md:95` listed it, and this file claimed twice (in the "Documentation drift" entry below, and in the 2026-07-04 log) that it was committed and its destinations were `grep`-able from jhm-spark. All three were false — no `.bat` was tracked or on disk. Written from the spec in `WORKFLOW.md` Step 8 + `docs/PDF_GENERATION.md`; masks verified against the real trees (255 docx + 85 json; 255 pdf + 1 html). Drive destinations now also in WORKFLOW.md's Environment Reference table, which `CLAUDE.md` already designated the single source of truth for sync destinations but which had no Drive rows. |
 | `patch_lesson.js --force` | Added 2026-08-02 (`9b33dce`) | For deliberately replacing a lesson whose content is *wrong* rather than *absent* (needed for the two phase repairs above). Skips only the stub-repair guard — **never** the contract validation. |
+| **Bounded project v2** (link-selection fix + Quick Check quizzes + attribution, then Grade 11 readiness) | **Phase 1 design written 2026-09-29 — awaiting Mark's review** | Spec: `handoff_bundle_2026-09-29/HANDOFF_bounded_project_v2_2026-09-29.md` (supersedes earlier presentation/quiz handoffs). Phase 0 done: no prior link-fix work existed. Design: `DESIGN_link_selection_v2.md`. Root cause: the matcher never ranks by relevance (`hit_counts` keyed by row id, looked up by `kolibri_id` → always 0); boilerplate words ("Sub-Strand" → `strand`, "Anchoring Phenomenon") are search terms; no answer-key exclusion; no relevance floor (0 of 7,280 slots ever null). Baseline 34/25/174 reproduced (predict only); **170/125 Tier 1/2 across all 5 phases**. Decisions: quizzes go in a separate `<prefix>_quiz.json` (partner schema is `additionalProperties:false` throughout; all 85 current JSON exports validate against it); quiz model = `claude-sonnet-5` by default, with a Sonnet 5 vs Opus 5.5 comparison on the Phase 3 samples. Autonomy (Mark): repair same-class issues and report at the end. API credits still to be topped up before Phase 3. |
 | New Grade 10 STEM subjects (General Science, Core Mathematics, Essential Mathematics) | **Done — Phase 3 complete, committed `f6d6fab`** | All 43 sub-strands / 344 lessons generated, docx+PDF regenerated, teacher index rebuilt, pushed to `origin/main`. Handoff: `HANDOFF_new_stem_subjects_2026-07-28.md` (Rev 2). See 2026-07-30 session-log entry below for the bugs found/fixed along the way (subject-label bug, 34 stub lessons, 1 missing FE). Replacement Core Mathematics source PDF referenced in the handoff was never supplied but generation proceeded — flag if a full curriculum-text re-check against it is still wanted. Summary/per-subject tables below still need the separate full refresh already flagged as stale. |
 
 ---
@@ -1478,3 +1479,40 @@ have been discovered at the moment of the pilot run itself.
   run; partner `resourceLinks` schema confirmation; Core Mathematics
   replacement-PDF verification; Kenyan-terminology pass (blocked on teacher
   *examples* — not the same thing as templates, see Active Threads).
+
+---
+## Updates — 2026-09-29 — Bounded project v2: Phase 0 + Phase 1 (design only)
+
+Restarted after several weeks on hold. The handoff bundle (`handoff_bundle_2026-09-29.zip`)
+has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner schema
+`ares-contract.schema.json` was supplied to the repo root.
+
+### Phase 0 findings
+- Repo identical to `origin/main` (`6ab9bef`); nothing to pull.
+- No earlier link-fix work: no design doc, no recommender changes since `9b33dce`.
+- Output convention unchanged: Grade 10 flat under `v2/<Subject>/`, new grades under `v2/Grade{N}/`.
+- Partner schema is strict (`additionalProperties: false` at every level). **All 85
+  current `_data.json` exports validate against it** (`jsonschema` installed into the venv
+  for this check). Quiz data will therefore go in a separate `<prefix>_quiz.json`.
+- Sample-naming discrepancy to confirm: the bundle's quiz samples call Pressure
+  "Physics SS1.2"; in this repo Pressure is **SS1.1** (`phys_1_1`).
+
+### Phase 1 — diagnosis (full write-up in `DESIGN_link_selection_v2.md`)
+- Four cases traced against the live DB. Wrong-domain picks enter the pool through
+  boilerplate or single weak words (`strand` from "Sub-Strand", `anchoring` from
+  "Anchoring Phenomenon", a lone `semiconductor`). They win because ranking is by
+  channel tier. The one relevance term, `hit_counts`, is looked up by the wrong key
+  and is always 0.
+- The answer key is a different root cause: it was on-topic, its exam-prep channel is
+  in the top tier, and nothing excludes answer material.
+- The audit script only checks the predict phase. Across all phases the Tier 1/2
+  counts are 170/125, exactly 5× the handoff baseline.
+- The handoff's regex `exam` would also match ~1,830 "example"/"examine" titles.
+  The design uses word boundaries.
+- No live Kolibri is reachable from jhm-spark. 262 of 542 shipped Kolibri IDs exist
+  only in channel metadata and are unverified on a real server.
+
+### Still open
+- **Mark: review `DESIGN_link_selection_v2.md`** (gate before Phase 2).
+- Top up API credits before Phase 3 (quiz generation).
+- A server to live-check Kolibri IDs against (optional, see design §6).
