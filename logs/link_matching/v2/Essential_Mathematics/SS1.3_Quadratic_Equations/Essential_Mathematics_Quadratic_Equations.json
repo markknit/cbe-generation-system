@@ -173,7 +173,7 @@
       }
     },
     "video_pool": {
-      "passed": 35,
+      "passed": 34,
       "runners_up": [
         "Expression value intuition",
         "Writing expressions with variables",
@@ -216,10 +216,11 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 103,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 2,
-        "foreign vocabulary": 1
+        "below relevance gate": 101,
+        "web file not on reference image": 5,
+        "kolibri node not available on reference image": 3,
+        "foreign vocabulary": 1,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
@@ -234,6 +235,10 @@
       "rejected_sample": [
         [
           "Quadratics by taking square roots (intro)",
+          "below relevance gate"
+        ],
+        [
+          "Identify equations, expressions, and inequalities",
           "below relevance gate"
         ],
         [
@@ -259,14 +264,10 @@
         [
           "Quadratics by factoring (intro)",
           "below relevance gate"
-        ],
-        [
-          "Zero product property",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 91,
+        "below relevance gate": 89,
         "kolibri node not available on reference image": 1
       }
     }
@@ -704,9 +705,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 136,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 134,
+        "web file not on reference image": 5,
+        "kolibri node not available on reference image": 1,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
@@ -793,6 +795,17 @@
     },
     "slots": {
       "predict.video": {
+        "picked": "Strategy in solving quadratic equations",
+        "score": 126.53,
+        "core_hits": [
+          "equation quadratic"
+        ],
+        "detail_hits": [
+          "method"
+        ],
+        "detail_weight": 0.3
+      },
+      "observe.video": {
         "picked": "Terms, factors, & coefficients",
         "score": 125.39,
         "core_hits": [],
@@ -803,7 +816,7 @@
         ],
         "detail_weight": 1.48
       },
-      "observe.video": {
+      "explain.video": {
         "picked": "Strategy in factoring quadratics (part 1 of 2)",
         "score": 121.5,
         "core_hits": [],
@@ -815,7 +828,7 @@
         ],
         "detail_weight": 2.73
       },
-      "explain.video": {
+      "dqb.video": {
         "picked": "Strategy in factoring quadratics (part 2 of 2)",
         "score": 121.5,
         "core_hits": [],
@@ -826,17 +839,6 @@
           "method"
         ],
         "detail_weight": 2.73
-      },
-      "dqb.video": {
-        "picked": "Strategy in solving quadratic equations",
-        "score": 96.26,
-        "core_hits": [
-          "equation quadratic"
-        ],
-        "detail_hits": [
-          "method"
-        ],
-        "detail_weight": 0.3
       },
       "model.video": {
         "picked": "Factoring Quadratic Expressions with Negative Coefficients: A Sample Application",
@@ -914,9 +916,9 @@
     "video_pool": {
       "passed": 22,
       "runners_up": [
+        "Terms, factors, & coefficients",
         "Strategy in factoring quadratics (part 1 of 2)",
         "Strategy in factoring quadratics (part 2 of 2)",
-        "Strategy in solving quadratic equations",
         "Factoring Quadratic Expressions with Negative Coefficients: A Sample Application",
         "Solving quadratics by factoring"
       ],
@@ -1061,7 +1063,7 @@
     "slots": {
       "predict.video": {
         "picked": "Solving quadratic equations: complex roots",
-        "score": 191.52,
+        "score": 239.3,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1074,7 +1076,7 @@
       },
       "observe.video": {
         "picked": "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-        "score": 173.21,
+        "score": 221.49,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1085,22 +1087,8 @@
         "detail_weight": 0.98
       },
       "explain.video": {
-        "picked": "Solving quadratics by taking square roots: challenge -dubbed(KY)",
-        "score": 153.07,
-        "core_hits": [
-          "equation quadratic"
-        ],
-        "detail_hits": [
-          "quadratic root",
-          "root",
-          "solving",
-          "both"
-        ],
-        "detail_weight": 1.98
-      },
-      "dqb.video": {
         "picked": "Strategy in solving quadratic equations",
-        "score": 125.94,
+        "score": 165.54,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1109,9 +1097,20 @@
         ],
         "detail_weight": 0.3
       },
-      "model.video": {
+      "dqb.video": {
         "picked": "Quadratic equations word problem: triangle dimensions",
-        "score": 122.59,
+        "score": 158.56,
+        "core_hits": [
+          "equation quadratic"
+        ],
+        "detail_hits": [
+          "problem quadratic"
+        ],
+        "detail_weight": 0.68
+      },
+      "model.video": {
+        "picked": "Quadratic equations word problem: box dimensions",
+        "score": 158.56,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1121,6 +1120,30 @@
         "detail_weight": 0.68
       },
       "predict.reading": {
+        "picked": "Use Square Roots to Solve Quadratic Equations (Flexbook)",
+        "score": 163.02,
+        "core_hits": [
+          "equation quadratic"
+        ],
+        "detail_hits": [
+          "quadratic root",
+          "root"
+        ],
+        "detail_weight": 1.38
+      },
+      "observe.reading": {
+        "picked": "Use Square Roots to Solve Quadratic Equations Practice",
+        "score": 163.02,
+        "core_hits": [
+          "equation quadratic"
+        ],
+        "detail_hits": [
+          "quadratic root",
+          "root"
+        ],
+        "detail_weight": 1.38
+      },
+      "explain.reading": {
         "picked": "Quadratics by taking square roots (intro)",
         "score": 157.17,
         "core_hits": [
@@ -1133,7 +1156,7 @@
         ],
         "detail_weight": 1.68
       },
-      "observe.reading": {
+      "dqb.reading": {
         "picked": "Zero product property",
         "score": 151.57,
         "core_hits": [
@@ -1144,51 +1167,26 @@
         ],
         "detail_weight": 1.25
       },
-      "explain.reading": {
-        "picked": "Use Square Roots to Solve Quadratic Equations (Flexbook)",
-        "score": 129.25,
-        "core_hits": [
-          "equation quadratic"
-        ],
-        "detail_hits": [
-          "quadratic root",
-          "root"
-        ],
-        "detail_weight": 1.38
-      },
-      "dqb.reading": {
-        "picked": "Use Square Roots to Solve Quadratic Equations Practice",
-        "score": 129.25,
-        "core_hits": [
-          "equation quadratic"
-        ],
-        "detail_hits": [
-          "quadratic root",
-          "root"
-        ],
-        "detail_weight": 1.38
-      },
       "model.reading": {
-        "picked": "Quadratics by taking square roots: with steps",
-        "score": 127.96,
+        "picked": "Using Quadratic Equations to Solve Problems Practice",
+        "score": 141.03,
         "core_hits": [
           "equation quadratic"
         ],
         "detail_hits": [
-          "quadratic root",
-          "root"
+          "problem quadratic"
         ],
-        "detail_weight": 1.38
+        "detail_weight": 0.68
       }
     },
     "video_pool": {
       "passed": 26,
       "runners_up": [
         "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-        "Solving quadratics by taking square roots: challenge -dubbed(KY)",
         "Strategy in solving quadratic equations",
         "Quadratic equations word problem: triangle dimensions",
-        "Quadratic equations word problem: box dimensions"
+        "Quadratic equations word problem: box dimensions",
+        "Solving quadratics by taking square roots: challenge -dubbed(KY)"
       ],
       "rejected_sample": [
         [
@@ -1225,19 +1223,20 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 125,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 124,
+        "web file not on reference image": 3,
+        "kolibri node not available on reference image": 1,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
       "passed": 16,
       "runners_up": [
-        "Zero product property",
-        "Use Square Roots to Solve Quadratic Equations (Flexbook)",
         "Use Square Roots to Solve Quadratic Equations Practice",
-        "Quadratics by taking square roots: with steps",
-        "Quadratics by taking square roots: strategy"
+        "Quadratics by taking square roots (intro)",
+        "Zero product property",
+        "Using Quadratic Equations to Solve Problems Practice",
+        "Quadratics by taking square roots: with steps"
       ],
       "rejected_sample": [
         [
@@ -1274,7 +1273,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 135,
+        "below relevance gate": 134,
         "kolibri node not available on reference image": 1
       }
     }
@@ -1312,7 +1311,7 @@
     "slots": {
       "predict.video": {
         "picked": "Solving quadratic equations: complex roots",
-        "score": 79.57,
+        "score": 104.6,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1323,7 +1322,7 @@
       },
       "observe.video": {
         "picked": "Strategy in solving quadratic equations",
-        "score": 78.22,
+        "score": 102.82,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1344,8 +1343,8 @@
         "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Quadratics by taking square roots: strategy",
-        "score": 55.94,
+        "picked": "Solving quadratic equations: complex roots",
+        "score": 104.6,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1356,7 +1355,7 @@
       },
       "model.video": {
         "picked": "Solving quadratic equations: complex roots",
-        "score": 79.57,
+        "score": 104.6,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1377,26 +1376,26 @@
         "detail_weight": 0.83
       },
       "observe.reading": {
-        "picked": "Zero product property",
-        "score": 116.48,
+        "picked": "Solve quadratic equations: complex solutions",
+        "score": 91.18,
         "core_hits": [
           "equation quadratic"
         ],
         "detail_hits": [
-          "product zero"
+          "solution"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 0.3
       },
       "explain.reading": {
-        "picked": "Zero product property",
-        "score": 116.48,
+        "picked": "Number of solutions of quadratic equations",
+        "score": 90.63,
         "core_hits": [
           "equation quadratic"
         ],
         "detail_hits": [
-          "product zero"
+          "solution"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 0.3
       },
       "dqb.reading": {
         "picked": "Zero product property",
@@ -1570,7 +1569,7 @@
     "slots": {
       "predict.video": {
         "picked": "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-        "score": 156.39,
+        "score": 194.73,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1582,7 +1581,7 @@
       },
       "observe.video": {
         "picked": "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-        "score": 156.39,
+        "score": 194.73,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1594,7 +1593,7 @@
       },
       "explain.video": {
         "picked": "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-        "score": 156.39,
+        "score": 194.73,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1606,7 +1605,7 @@
       },
       "dqb.video": {
         "picked": "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-        "score": 156.39,
+        "score": 194.73,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1618,7 +1617,7 @@
       },
       "model.video": {
         "picked": "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-        "score": 156.39,
+        "score": 194.73,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1630,7 +1629,7 @@
       },
       "predict.reading": {
         "picked": "Applications of Quadratic Equations (Flexbook)",
-        "score": 94.58,
+        "score": 117.77,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1642,7 +1641,7 @@
       },
       "observe.reading": {
         "picked": "Applications of Quadratic Equations (Flexbook)",
-        "score": 94.58,
+        "score": 117.77,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1654,7 +1653,7 @@
       },
       "explain.reading": {
         "picked": "Applications of Quadratic Equations (Flexbook)",
-        "score": 94.58,
+        "score": 117.77,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1666,7 +1665,7 @@
       },
       "dqb.reading": {
         "picked": "Applications of Quadratic Equations (Flexbook)",
-        "score": 94.58,
+        "score": 117.77,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1678,7 +1677,7 @@
       },
       "model.reading": {
         "picked": "Applications of Quadratic Equations (Flexbook)",
-        "score": 94.58,
+        "score": 117.77,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1727,9 +1726,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 145,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 2
+        "below relevance gate": 143,
+        "web file not on reference image": 6,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
@@ -1772,8 +1772,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 147,
-        "kolibri node not available on reference image": 2
+        "below relevance gate": 120,
+        "kolibri node not available on reference image": 20
       }
     }
   },
@@ -1830,7 +1830,7 @@
     "slots": {
       "predict.video": {
         "picked": "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-        "score": 205.83,
+        "score": 255.7,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1842,7 +1842,7 @@
       },
       "observe.video": {
         "picked": "Solving quadratic equations: complex roots",
-        "score": 187.81,
+        "score": 237.89,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1853,7 +1853,7 @@
       },
       "explain.video": {
         "picked": "Strategy in solving quadratic equations",
-        "score": 185.68,
+        "score": 235.2,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1864,7 +1864,7 @@
       },
       "dqb.video": {
         "picked": "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-        "score": 205.83,
+        "score": 255.7,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1876,7 +1876,7 @@
       },
       "model.video": {
         "picked": "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-        "score": 205.83,
+        "score": 255.7,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1888,7 +1888,7 @@
       },
       "predict.reading": {
         "picked": "Applications of Quadratic Equations (Flexbook)",
-        "score": 113.65,
+        "score": 147.35,
         "core_hits": [
           "equation quadratic"
         ],
@@ -1909,35 +1909,37 @@
         "detail_weight": 1.25
       },
       "explain.reading": {
-        "picked": "Parts of algebraic expressions",
-        "score": 80.95,
-        "core_hits": [],
-        "detail_hits": [
-          "algebraic expression"
+        "picked": "Applications of Quadratic Equations (Flexbook)",
+        "score": 147.35,
+        "core_hits": [
+          "equation quadratic"
         ],
-        "detail_weight": 1.07
+        "detail_hits": [
+          "application"
+        ],
+        "detail_weight": 0.62
       },
       "dqb.reading": {
-        "picked": "Strategy in solving quadratics",
-        "score": 76.88,
+        "picked": "Applications of Quadratic Equations (Flexbook)",
+        "score": 147.35,
         "core_hits": [
           "equation quadratic"
         ],
         "detail_hits": [
-          "equation quadratic solving"
+          "application"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 0.62
       },
       "model.reading": {
-        "picked": "Quadratics by taking square roots: strategy",
-        "score": 75.43,
+        "picked": "Applications of Quadratic Equations (Flexbook)",
+        "score": 147.35,
         "core_hits": [
           "equation quadratic"
         ],
         "detail_hits": [
-          "equation quadratic solving"
+          "application"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 0.62
       }
     },
     "video_pool": {
@@ -1984,9 +1986,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 124,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 5
+        "below relevance gate": 120,
+        "web file not on reference image": 5,
+        "kolibri node not available on reference image": 7,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
@@ -2020,15 +2023,15 @@
           "below relevance gate"
         ],
         [
+          "Identify equations, expressions, and inequalities",
+          "below relevance gate"
+        ],
+        [
           "Divide quadratics by linear expressions (no remainders)",
           "below relevance gate"
         ],
         [
           "Equations & inequalities word problems",
-          "below relevance gate"
-        ],
-        [
-          "Division in contexts",
           "below relevance gate"
         ]
       ],

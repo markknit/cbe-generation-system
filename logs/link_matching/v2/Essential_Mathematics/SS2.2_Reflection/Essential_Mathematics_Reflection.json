@@ -41,7 +41,7 @@
     "slots": {
       "predict.video": {
         "picked": "Determining reflections (advanced)",
-        "score": 91.5,
+        "score": 118.74,
         "core_hits": [
           "reflection"
         ],
@@ -52,6 +52,40 @@
         "detail_weight": 0.6
       },
       "observe.video": {
+        "picked": "Determining reflections",
+        "score": 99.69,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "line"
+        ],
+        "detail_weight": 0.3
+      },
+      "explain.video": {
+        "picked": "Reflection Symmetry Principles - Basic",
+        "score": 89.85,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "symmetry"
+        ],
+        "detail_weight": 1
+      },
+      "dqb.video": {
+        "picked": "Reflecting shapes: diagonal line of reflection",
+        "score": 87.81,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "line",
+          "plane"
+        ],
+        "detail_weight": 0.6
+      },
+      "model.video": {
         "picked": "Identifying symmetrical figures",
         "score": 82.7,
         "core_hits": [],
@@ -63,42 +97,9 @@
         ],
         "detail_weight": 2.85
       },
-      "explain.video": {
-        "picked": "Determining reflections",
-        "score": 75.84,
-        "core_hits": [
-          "reflection"
-        ],
-        "detail_hits": [
-          "line"
-        ],
-        "detail_weight": 0.3
-      },
-      "dqb.video": {
-        "picked": "Finding features of quadratic functions",
-        "score": 70.58,
-        "core_hits": [],
-        "detail_hits": [
-          "symmetry",
-          "line symmetry",
-          "line"
-        ],
-        "detail_weight": 2.55
-      },
-      "model.video": {
-        "picked": "Reflection Symmetry Principles - Basic",
-        "score": 70.32,
-        "core_hits": [
-          "reflection"
-        ],
-        "detail_hits": [
-          "symmetry"
-        ],
-        "detail_weight": 1
-      },
       "predict.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 162.92,
+        "score": 202.61,
         "core_hits": [
           "reflection"
         ],
@@ -112,7 +113,7 @@
       },
       "observe.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 146.27,
+        "score": 188.01,
         "core_hits": [
           "reflection"
         ],
@@ -123,19 +124,22 @@
         "detail_weight": 0.84
       },
       "explain.reading": {
-        "picked": "Identify line symmetry",
-        "score": 117.74,
-        "core_hits": [],
-        "detail_hits": [
-          "symmetry",
-          "line symmetry",
-          "line"
+        "picked": "Determine reflections (advanced)",
+        "score": 202.61,
+        "core_hits": [
+          "reflection"
         ],
-        "detail_weight": 2.55
+        "detail_hits": [
+          "figure plane",
+          "line",
+          "plane",
+          "figure"
+        ],
+        "detail_weight": 1.84
       },
       "dqb.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 162.92,
+        "score": 202.61,
         "core_hits": [
           "reflection"
         ],
@@ -149,7 +153,7 @@
       },
       "model.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 162.92,
+        "score": 202.61,
         "core_hits": [
           "reflection"
         ],
@@ -163,15 +167,35 @@
       }
     },
     "video_pool": {
-      "passed": 30,
+      "passed": 21,
       "runners_up": [
-        "Identifying symmetrical figures",
         "Determining reflections",
-        "Finding features of quadratic functions",
         "Reflection Symmetry Principles - Basic",
-        "Reflecting shapes: diagonal line of reflection"
+        "Reflecting shapes: diagonal line of reflection",
+        "Identifying symmetrical figures",
+        "Finding features of quadratic functions"
       ],
       "rejected_sample": [
+        [
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
+        ],
+        [
+          "Geometry proof problem: congruent segments",
+          "below relevance gate"
+        ],
+        [
+          "Geometry proof problem: congruent segments -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
+          "Segment congruence equivalent to having same length",
+          "below relevance gate"
+        ],
+        [
+          "Proving triangle congruence",
+          "below relevance gate"
+        ],
         [
           "Geometric constructions: parallel line",
           "below relevance gate"
@@ -183,46 +207,35 @@
         [
           "Missing angles with a transversal",
           "below relevance gate"
-        ],
-        [
-          "Specifying planes in three dimensions",
-          "below relevance gate"
-        ],
-        [
-          "Linear transformation examples: Scaling and reflections",
-          "below relevance gate"
-        ],
-        [
-          "Geometry proof problem: congruent segments -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "CA Geometry: More on congruent and similar triangles -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Mirror equation example problems",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 102,
-        "kolibri node not available on reference image": 2,
-        "web file not on reference image": 1
+        "web file not on reference image": 7,
+        "below relevance gate": 115,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 4
       }
     },
     "reading_pool": {
-      "passed": 37,
+      "passed": 27,
       "runners_up": [
         "Reflections in a Plane Mirror (PLIX)",
         "Identify line symmetry",
-        "Line Symmetry",
         "Determine reflections",
+        "Line Symmetry",
         "Reflection Symmetry (Flexbook)"
       ],
       "rejected_sample": [
         [
           "Images in a Plane Mirror (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Justify constructions",
+          "below relevance gate"
+        ],
+        [
+          "Prove triangle congruence",
           "below relevance gate"
         ],
         [
@@ -234,30 +247,22 @@
           "below relevance gate"
         ],
         [
+          "Line and angle proofs",
+          "below relevance gate"
+        ],
+        [
           "Identify points, lines, line segments, rays, and angles",
           "below relevance gate"
         ],
         [
           "Plane Mirrors Practice",
           "below relevance gate"
-        ],
-        [
-          "Congruent Figures Practice",
-          "below relevance gate"
-        ],
-        [
-          "Congruent Figures (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Justify constructions",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 120,
-        "excluded: answer/exam material": 2,
-        "kolibri node not available on reference image": 3
+        "below relevance gate": 112,
+        "excluded: answer/exam material": 22,
+        "kolibri node not available on reference image": 4
       }
     }
   },
@@ -305,7 +310,7 @@
     "slots": {
       "predict.video": {
         "picked": "Determining reflections (advanced)",
-        "score": 86.6,
+        "score": 113.84,
         "core_hits": [
           "reflection"
         ],
@@ -315,6 +320,29 @@
         "detail_weight": 0.3
       },
       "observe.video": {
+        "picked": "Reflecting shapes: diagonal line of reflection",
+        "score": 108.08,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "plane"
+        ],
+        "detail_weight": 0.3
+      },
+      "explain.video": {
+        "picked": "Specular and diffuse reflection",
+        "score": 107.88,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "mirror",
+          "surface"
+        ],
+        "detail_weight": 0.6
+      },
+      "dqb.video": {
         "picked": "Reflecting points in the coordinate plane",
         "score": 84.23,
         "core_hits": [
@@ -327,42 +355,20 @@
         ],
         "detail_weight": 2.1
       },
-      "explain.video": {
-        "picked": "Specular and diffuse reflection",
-        "score": 83.14,
-        "core_hits": [
-          "reflection"
-        ],
-        "detail_hits": [
-          "mirror",
-          "surface"
-        ],
-        "detail_weight": 0.6
-      },
-      "dqb.video": {
-        "picked": "Reflecting shapes: diagonal line of reflection",
-        "score": 82.22,
-        "core_hits": [
-          "reflection"
-        ],
-        "detail_hits": [
-          "plane"
-        ],
-        "detail_weight": 0.3
-      },
       "model.video": {
-        "picked": "Object image height and distance relationship",
-        "score": 76.27,
-        "core_hits": [],
-        "detail_hits": [
-          "distance object",
-          "distance image"
+        "picked": "Reflection Symmetry Principles - Basic",
+        "score": 82.35,
+        "core_hits": [
+          "reflection"
         ],
-        "detail_weight": 2.01
+        "detail_hits": [
+          "symmetry"
+        ],
+        "detail_weight": 0.36
       },
       "predict.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 177.83,
+        "score": 219.57,
         "core_hits": [
           "reflection"
         ],
@@ -374,9 +380,11 @@
         "detail_weight": 2.1
       },
       "observe.reading": {
-        "picked": "Images in a Plane Mirror (Flexbook)",
-        "score": 128.35,
-        "core_hits": [],
+        "picked": "Reflections in a Plane Mirror (PLIX)",
+        "score": 219.57,
+        "core_hits": [
+          "reflection"
+        ],
         "detail_hits": [
           "mirror plane",
           "mirror",
@@ -386,7 +394,7 @@
       },
       "explain.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 177.83,
+        "score": 219.57,
         "core_hits": [
           "reflection"
         ],
@@ -399,7 +407,7 @@
       },
       "dqb.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 177.83,
+        "score": 219.57,
         "core_hits": [
           "reflection"
         ],
@@ -412,7 +420,7 @@
       },
       "model.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 177.83,
+        "score": 219.57,
         "core_hits": [
           "reflection"
         ],
@@ -425,13 +433,13 @@
       }
     },
     "video_pool": {
-      "passed": 16,
+      "passed": 21,
       "runners_up": [
-        "Reflecting points in the coordinate plane",
-        "Specular and diffuse reflection",
         "Reflecting shapes: diagonal line of reflection",
-        "Object image height and distance relationship",
-        "Object image and focal distance relationship (proof of formula)"
+        "Specular and diffuse reflection",
+        "Reflecting points in the coordinate plane",
+        "Reflection Symmetry Principles - Basic",
+        "Object image height and distance relationship"
       ],
       "rejected_sample": [
         [
@@ -459,16 +467,18 @@
           "below relevance gate"
         ],
         [
-          "Geometric constructions: perpendicular bisector",
-          "below relevance gate"
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
         ],
         [
-          "Chiral vs  achiral",
+          "Geometry proof problem: congruent segments",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 117,
+        "below relevance gate": 111,
+        "web file not on reference image": 5,
+        "excluded: answer/exam material": 1,
         "kolibri node not available on reference image": 2
       }
     },
@@ -478,8 +488,8 @@
         "Images in a Plane Mirror (Flexbook)",
         "Justify constructions",
         "Determine reflections (advanced)",
-        "Plane Mirrors Practice",
-        "Reflection Symmetry (Flexbook)"
+        "Reflection Symmetry (Flexbook)",
+        "Reflection Symmetry Practice"
       ],
       "rejected_sample": [
         [
@@ -516,7 +526,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 147
+        "below relevance gate": 140,
+        "kolibri node not available on reference image": 1,
+        "excluded: answer/exam material": 6
       }
     }
   },
@@ -586,52 +598,53 @@
         "detail_weight": 2
       },
       "observe.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 170.7,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular",
-          "construction geometric",
-          "construction"
+        "picked": "Determining reflections",
+        "score": 127.95,
+        "core_hits": [
+          "reflection"
         ],
-        "detail_weight": 2
+        "detail_hits": [
+          "image"
+        ],
+        "detail_weight": 0.3
       },
       "explain.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 170.7,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular",
-          "construction geometric",
-          "construction"
+        "picked": "Determining reflections (advanced)",
+        "score": 113.84,
+        "core_hits": [
+          "reflection"
         ],
-        "detail_weight": 2
+        "detail_hits": [
+          "plane"
+        ],
+        "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 170.7,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular",
-          "construction geometric",
-          "construction"
+        "picked": "Reflecting shapes: diagonal line of reflection",
+        "score": 112.73,
+        "core_hits": [
+          "reflection"
         ],
-        "detail_weight": 2
+        "detail_hits": [
+          "image",
+          "plane"
+        ],
+        "detail_weight": 0.6
       },
       "model.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 170.7,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular",
-          "construction geometric",
-          "construction"
+        "picked": "Specular and diffuse reflection",
+        "score": 103.43,
+        "core_hits": [
+          "reflection"
         ],
-        "detail_weight": 2
+        "detail_hits": [
+          "surface"
+        ],
+        "detail_weight": 0.3
       },
       "predict.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 170.31,
+        "score": 212.06,
         "core_hits": [
           "reflection"
         ],
@@ -643,7 +656,7 @@
       },
       "observe.reading": {
         "picked": "Justify constructions",
-        "score": 170.02,
+        "score": 192.44,
         "core_hits": [],
         "detail_hits": [
           "bisector perpendicular",
@@ -654,7 +667,7 @@
       },
       "explain.reading": {
         "picked": "Determine reflections",
-        "score": 139.52,
+        "score": 183.39,
         "core_hits": [
           "reflection"
         ],
@@ -665,7 +678,7 @@
       },
       "dqb.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 135.53,
+        "score": 175.22,
         "core_hits": [
           "reflection"
         ],
@@ -691,10 +704,10 @@
       "passed": 13,
       "runners_up": [
         "Determining reflections",
-        "Reflecting shapes: diagonal line of reflection",
         "Determining reflections (advanced)",
-        "Reflecting points in the coordinate plane",
-        "Specular and diffuse reflection"
+        "Reflecting shapes: diagonal line of reflection",
+        "Specular and diffuse reflection",
+        "Reflecting points in the coordinate plane"
       ],
       "rejected_sample": [
         [
@@ -703,6 +716,10 @@
         ],
         [
           "Geometric constructions: parallel line",
+          "below relevance gate"
+        ],
+        [
+          "Proving triangle congruence",
           "below relevance gate"
         ],
         [
@@ -718,21 +735,19 @@
           "below relevance gate"
         ],
         [
-          "Points on the coordinate plane examples",
+          "Using similar & congruent triangles",
           "below relevance gate"
         ],
         [
-          "Identifying and Counting the Number of Rectangles, Squares, Circles, and Triangles from a Set of Figures",
-          "below relevance gate"
-        ],
-        [
-          "Classifying quadrilaterals on the coordinate plane",
+          "Using similar & congruent triangles -dubbed(KY)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 116,
-        "kolibri node not available on reference image": 2
+        "below relevance gate": 117,
+        "web file not on reference image": 4,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 1
       }
     },
     "reading_pool": {
@@ -746,7 +761,15 @@
       ],
       "rejected_sample": [
         [
+          "Prove triangle congruence",
+          "below relevance gate"
+        ],
+        [
           "Distance between point & line",
+          "below relevance gate"
+        ],
+        [
+          "Determine congruent triangles",
           "below relevance gate"
         ],
         [
@@ -758,23 +781,15 @@
           "below relevance gate"
         ],
         [
-          "Prove triangle congruence",
-          "below relevance gate"
-        ],
-        [
           "Distance between points: vertical or horizontal",
           "below relevance gate"
         ],
         [
-          "Identify points, lines, line segments, rays, and angles",
+          "Prove triangle properties",
           "below relevance gate"
         ],
         [
-          "Parallel and Perpendicular Line Constructions (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Quadrilateral problems on the coordinate plane",
+          "Line and angle proofs",
           "below relevance gate"
         ]
       ],
@@ -816,7 +831,7 @@
     "slots": {
       "predict.video": {
         "picked": "Reflecting shapes: diagonal line of reflection",
-        "score": 124.81,
+        "score": 156.62,
         "core_hits": [
           "reflection"
         ],
@@ -829,7 +844,7 @@
       },
       "observe.video": {
         "picked": "Determining reflections (advanced)",
-        "score": 112.79,
+        "score": 146.35,
         "core_hits": [
           "reflection"
         ],
@@ -840,6 +855,17 @@
         "detail_weight": 0.6
       },
       "explain.video": {
+        "picked": "Determining reflections",
+        "score": 127.95,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "line"
+        ],
+        "detail_weight": 0.3
+      },
+      "dqb.video": {
         "picked": "Reflecting points in the coordinate plane",
         "score": 109.82,
         "core_hits": [
@@ -852,20 +878,9 @@
         ],
         "detail_weight": 1.54
       },
-      "dqb.video": {
-        "picked": "Determining reflections",
-        "score": 97.34,
-        "core_hits": [
-          "reflection"
-        ],
-        "detail_hits": [
-          "line"
-        ],
-        "detail_weight": 0.3
-      },
       "model.video": {
         "picked": "Reflecting shapes: diagonal line of reflection",
-        "score": 124.81,
+        "score": 156.62,
         "core_hits": [
           "reflection"
         ],
@@ -878,7 +893,7 @@
       },
       "predict.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 115,
+        "score": 149.23,
         "core_hits": [
           "reflection"
         ],
@@ -890,7 +905,7 @@
       },
       "observe.reading": {
         "picked": "Determine reflections",
-        "score": 94.9,
+        "score": 124.74,
         "core_hits": [
           "reflection"
         ],
@@ -901,7 +916,7 @@
       },
       "explain.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 94.4,
+        "score": 122.49,
         "core_hits": [
           "reflection"
         ],
@@ -913,7 +928,7 @@
       },
       "dqb.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 115,
+        "score": 149.23,
         "core_hits": [
           "reflection"
         ],
@@ -925,7 +940,7 @@
       },
       "model.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 115,
+        "score": 149.23,
         "core_hits": [
           "reflection"
         ],
@@ -940,10 +955,10 @@
       "passed": 13,
       "runners_up": [
         "Determining reflections (advanced)",
-        "Reflecting points in the coordinate plane",
         "Determining reflections",
+        "Reflecting points in the coordinate plane",
         "Translation challenge problem",
-        "Dilating shapes: shrinking"
+        "Specular and diffuse reflection"
       ],
       "rejected_sample": [
         [
@@ -1076,7 +1091,7 @@
     "slots": {
       "predict.video": {
         "picked": "Reflecting shapes: diagonal line of reflection",
-        "score": 121.19,
+        "score": 152.99,
         "core_hits": [
           "reflection"
         ],
@@ -1089,7 +1104,7 @@
       },
       "observe.video": {
         "picked": "Determining reflections (advanced)",
-        "score": 112.79,
+        "score": 146.35,
         "core_hits": [
           "reflection"
         ],
@@ -1100,6 +1115,17 @@
         "detail_weight": 0.6
       },
       "explain.video": {
+        "picked": "Determining reflections",
+        "score": 127.95,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "line"
+        ],
+        "detail_weight": 0.3
+      },
+      "dqb.video": {
         "picked": "Reflecting points in the coordinate plane",
         "score": 105.42,
         "core_hits": [
@@ -1113,7 +1139,7 @@
         ],
         "detail_weight": 2.03
       },
-      "dqb.video": {
+      "model.video": {
         "picked": "Geometric constructions: perpendicular bisector",
         "score": 99.64,
         "core_hits": [],
@@ -1123,20 +1149,9 @@
         ],
         "detail_weight": 1.13
       },
-      "model.video": {
-        "picked": "Determining reflections",
-        "score": 97.34,
-        "core_hits": [
-          "reflection"
-        ],
-        "detail_hits": [
-          "line"
-        ],
-        "detail_weight": 0.3
-      },
       "predict.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 157.29,
+        "score": 199.03,
         "core_hits": [
           "reflection"
         ],
@@ -1149,7 +1164,7 @@
       },
       "observe.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 115,
+        "score": 149.23,
         "core_hits": [
           "reflection"
         ],
@@ -1160,19 +1175,8 @@
         "detail_weight": 0.6
       },
       "explain.reading": {
-        "picked": "Images in a Plane Mirror (Flexbook)",
-        "score": 108.98,
-        "core_hits": [],
-        "detail_hits": [
-          "mirror plane",
-          "plane",
-          "mirror"
-        ],
-        "detail_weight": 1.28
-      },
-      "dqb.reading": {
         "picked": "Determine reflections",
-        "score": 94.9,
+        "score": 124.74,
         "core_hits": [
           "reflection"
         ],
@@ -1181,9 +1185,22 @@
         ],
         "detail_weight": 0.3
       },
+      "dqb.reading": {
+        "picked": "Reflections in a Plane Mirror (PLIX)",
+        "score": 199.03,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "mirror plane",
+          "plane",
+          "mirror"
+        ],
+        "detail_weight": 1.28
+      },
       "model.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 157.29,
+        "score": 199.03,
         "core_hits": [
           "reflection"
         ],
@@ -1199,9 +1216,9 @@
       "passed": 19,
       "runners_up": [
         "Determining reflections (advanced)",
+        "Determining reflections",
         "Reflecting points in the coordinate plane",
         "Geometric constructions: perpendicular bisector",
-        "Determining reflections",
         "Translation challenge problem"
       ],
       "rejected_sample": [
@@ -1212,6 +1229,10 @@
         [
           "Linear transformation examples: Scaling and reflections",
           "below relevance gate"
+        ],
+        [
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
         ],
         [
           "Parallel Lines in the Coordinate Plane Principles - Basic",
@@ -1232,23 +1253,21 @@
         [
           "Defining transformations",
           "below relevance gate"
-        ],
-        [
-          "Circumcenter of a triangle -dubbed(KY)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 120,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 117,
+        "web file not on reference image": 5,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
       "passed": 14,
       "runners_up": [
         "Determine reflections (advanced)",
-        "Images in a Plane Mirror (Flexbook)",
         "Determine reflections",
+        "Images in a Plane Mirror (Flexbook)",
         "Functions on a Cartesian Plane (Flexbook)",
         "Functions on a Cartesian Plane Practice"
       ],
@@ -1287,7 +1306,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138
+        "below relevance gate": 138,
+        "kolibri node not available on reference image": 1
       }
     }
   },
@@ -1354,37 +1374,39 @@
         "detail_weight": 2.23
       },
       "observe.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 205.31,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular",
-          "compass construction",
-          "line"
+        "picked": "Determining reflections (advanced)",
+        "score": 146.35,
+        "core_hits": [
+          "reflection"
         ],
-        "detail_weight": 2.23
+        "detail_hits": [
+          "line",
+          "plane"
+        ],
+        "detail_weight": 0.6
       },
       "explain.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 205.31,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular",
-          "compass construction",
-          "line"
+        "picked": "Reflecting shapes: diagonal line of reflection",
+        "score": 138.68,
+        "core_hits": [
+          "reflection"
         ],
-        "detail_weight": 2.23
+        "detail_hits": [
+          "line",
+          "plane"
+        ],
+        "detail_weight": 0.6
       },
       "dqb.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 205.31,
-        "core_hits": [],
+        "picked": "Determining reflections",
+        "score": 127.95,
+        "core_hits": [
+          "reflection"
+        ],
         "detail_hits": [
-          "bisector perpendicular",
-          "compass construction",
           "line"
         ],
-        "detail_weight": 2.23
+        "detail_weight": 0.3
       },
       "model.video": {
         "picked": "Geometric constructions: perpendicular bisector",
@@ -1398,18 +1420,8 @@
         "detail_weight": 2.23
       },
       "predict.reading": {
-        "picked": "Justify constructions",
-        "score": 117.92,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular",
-          "line"
-        ],
-        "detail_weight": 1.55
-      },
-      "observe.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 115,
+        "score": 149.23,
         "core_hits": [
           "reflection"
         ],
@@ -1419,9 +1431,9 @@
         ],
         "detail_weight": 0.6
       },
-      "explain.reading": {
+      "observe.reading": {
         "picked": "Determine reflections",
-        "score": 94.9,
+        "score": 124.74,
         "core_hits": [
           "reflection"
         ],
@@ -1430,9 +1442,9 @@
         ],
         "detail_weight": 0.3
       },
-      "dqb.reading": {
+      "explain.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 94.4,
+        "score": 122.49,
         "core_hits": [
           "reflection"
         ],
@@ -1442,16 +1454,27 @@
         ],
         "detail_weight": 0.6
       },
-      "model.reading": {
-        "picked": "Functions on a Cartesian Plane (Flexbook)",
-        "score": 86.46,
+      "dqb.reading": {
+        "picked": "Justify constructions",
+        "score": 117.92,
         "core_hits": [],
         "detail_hits": [
-          "cartesian plane",
-          "plane",
-          "cartesian"
+          "bisector perpendicular",
+          "line"
         ],
-        "detail_weight": 1.43
+        "detail_weight": 1.55
+      },
+      "model.reading": {
+        "picked": "Determine reflections (advanced)",
+        "score": 149.23,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "line",
+          "plane"
+        ],
+        "detail_weight": 0.6
       }
     },
     "video_pool": {
@@ -1460,8 +1483,8 @@
         "Determining reflections (advanced)",
         "Reflecting shapes: diagonal line of reflection",
         "Determining reflections",
-        "Circumcenter of a triangle -dubbed(KY)",
-        "Specular and diffuse reflection"
+        "Specular and diffuse reflection",
+        "Circumcenter of a triangle -dubbed(KY)"
       ],
       "rejected_sample": [
         [
@@ -1498,16 +1521,18 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 110,
-        "kolibri node not available on reference image": 2
+        "below relevance gate": 106,
+        "web file not on reference image": 5,
+        "kolibri node not available on reference image": 4,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
       "passed": 12,
       "runners_up": [
-        "Determine reflections (advanced)",
         "Determine reflections",
         "Reflections in a Plane Mirror (PLIX)",
+        "Justify constructions",
         "Functions on a Cartesian Plane (Flexbook)",
         "Functions on a Cartesian Plane Practice"
       ],
@@ -1547,7 +1572,7 @@
       ],
       "rejected_by_reason": {
         "below relevance gate": 140,
-        "kolibri node not available on reference image": 1
+        "kolibri node not available on reference image": 2
       }
     }
   },
@@ -1643,7 +1668,7 @@
       },
       "predict.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 98.27,
+        "score": 126.37,
         "core_hits": [
           "reflection"
         ],
@@ -1654,7 +1679,7 @@
       },
       "observe.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 98.27,
+        "score": 126.37,
         "core_hits": [
           "reflection"
         ],
@@ -1665,7 +1690,7 @@
       },
       "explain.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 98.27,
+        "score": 126.37,
         "core_hits": [
           "reflection"
         ],
@@ -1676,7 +1701,7 @@
       },
       "dqb.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 98.27,
+        "score": 126.37,
         "core_hits": [
           "reflection"
         ],
@@ -1687,7 +1712,7 @@
       },
       "model.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 98.27,
+        "score": 126.37,
         "core_hits": [
           "reflection"
         ],
@@ -1863,7 +1888,7 @@
       },
       "predict.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 89.34,
+        "score": 117.43,
         "core_hits": [
           "reflection"
         ],
@@ -1916,7 +1941,7 @@
         "Determining Whether Various Shapes Have Lines of Symmetry",
         "Identifying and Counting the Lines of Symmetry in Various Shapes",
         "Identifying symmetrical figures",
-        "Reflecting points in the coordinate plane"
+        "Specular and diffuse reflection"
       ],
       "rejected_sample": [
         [

@@ -54,17 +54,8 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Manipulating formulas: area",
-        "score": 100.33,
-        "core_hits": [],
-        "detail_hits": [
-          "area formula triangle"
-        ],
-        "detail_weight": 1.5
-      },
-      "observe.video": {
         "picked": "Area of a triangle",
-        "score": 83.26,
+        "score": 124.89,
         "core_hits": [],
         "detail_hits": [
           "area formula triangle",
@@ -72,9 +63,18 @@
         ],
         "detail_weight": 2.75
       },
+      "observe.video": {
+        "picked": "Manipulating formulas: area",
+        "score": 100.33,
+        "core_hits": [],
+        "detail_hits": [
+          "area formula triangle"
+        ],
+        "detail_weight": 1.5
+      },
       "explain.video": {
         "picked": "Finding area of triangles",
-        "score": 64.04,
+        "score": 96.06,
         "core_hits": [],
         "detail_hits": [
           "area formula triangle"
@@ -82,22 +82,24 @@
         "detail_weight": 1.5
       },
       "dqb.video": {
-        "picked": "Manipulating formulas: area",
-        "score": 100.33,
+        "picked": "Area of a triangle",
+        "score": 124.89,
         "core_hits": [],
         "detail_hits": [
-          "area formula triangle"
+          "area formula triangle",
+          "base half height"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 2.75
       },
       "model.video": {
-        "picked": "Manipulating formulas: area",
-        "score": 100.33,
+        "picked": "Area of a triangle",
+        "score": 124.89,
         "core_hits": [],
         "detail_hits": [
-          "area formula triangle"
+          "area formula triangle",
+          "base half height"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 2.75
       },
       "predict.reading": {
         "picked": "Derivation of the Triangle Area Formula (Flexbook)",
@@ -148,13 +150,17 @@
     "video_pool": {
       "passed": 11,
       "runners_up": [
-        "Area of a triangle",
+        "Manipulating formulas: area",
         "Finding area of triangles",
-        "Area of equilateral triangle -dubbed(KY)",
-        "Area of a circle intuition",
-        "Heron's formula -dubbed(KY)"
+        "Triangle missing side example",
+        "Surface area using a net: triangular prism",
+        "Area of equilateral triangle -dubbed(KY)"
       ],
       "rejected_sample": [
+        [
+          "Math block",
+          "below relevance gate"
+        ],
         [
           "Comparing areas of plots of land",
           "below relevance gate"
@@ -176,22 +182,19 @@
           "below relevance gate"
         ],
         [
-          "Math block",
-          "below relevance gate"
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
         ],
         [
           "Volumes of cones intuition",
           "below relevance gate"
-        ],
-        [
-          "Finding height of a parallelogram",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 135,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 3
+        "below relevance gate": 131,
+        "web file not on reference image": 7,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 5
       }
     },
     "reading_pool": {
@@ -223,21 +226,22 @@
           "below relevance gate"
         ],
         [
+          "Share it Fair!",
+          "below relevance gate"
+        ],
+        [
           "Area of parallelograms",
           "below relevance gate"
         ],
         [
           "Volume by multiplying area of base times height",
           "below relevance gate"
-        ],
-        [
-          "Regular and Irregular Polygons (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 156,
-        "kolibri node not available on reference image": 4
+        "below relevance gate": 151,
+        "kolibri node not available on reference image": 5,
+        "excluded: answer/exam material": 6
       }
     }
   },
@@ -310,39 +314,38 @@
       },
       "observe.video": {
         "picked": "Quadrilateral types",
-        "score": 137.98,
+        "score": 147.11,
         "core_hits": [],
         "detail_hits": [
           "quadrilateral",
           "parallelogram",
           "rhombuse",
+          "trapezium",
           "kite"
+        ],
+        "detail_weight": 1.5
+      },
+      "explain.video": {
+        "picked": "Quadrilateral properties",
+        "score": 122.25,
+        "core_hits": [],
+        "detail_hits": [
+          "quadrilateral",
+          "parallelogram",
+          "rhombuse",
+          "trapezium"
         ],
         "detail_weight": 1.2
       },
-      "explain.video": {
-        "picked": "Area of kites",
-        "score": 168.12,
-        "core_hits": [],
-        "detail_hits": [
-          "area kite",
-          "diagonal",
-          "quadrilateral",
-          "kite"
-        ],
-        "detail_weight": 2.04
-      },
       "dqb.video": {
-        "picked": "Area of kites",
-        "score": 168.12,
+        "picked": "Area of a parallelogram",
+        "score": 102.21,
         "core_hits": [],
         "detail_hits": [
-          "area kite",
-          "diagonal",
-          "quadrilateral",
-          "kite"
+          "area parallelogram",
+          "parallelogram"
         ],
-        "detail_weight": 2.04
+        "detail_weight": 1.8
       },
       "model.video": {
         "picked": "Area of kites",
@@ -413,19 +416,15 @@
       }
     },
     "video_pool": {
-      "passed": 14,
+      "passed": 19,
       "runners_up": [
         "Quadrilateral types",
+        "Quadrilateral properties",
+        "Area of a parallelogram",
         "Classifying quadrilaterals",
-        "Area and Perimeter of Rhombuses and Kites Principles - Basic",
-        "Proof: Rhombus area",
-        "Area of a parallelogram on the coordinate plane"
+        "Area and Perimeter of Rhombuses and Kites Principles - Basic"
       ],
       "rejected_sample": [
-        [
-          "Quadrilateral properties",
-          "below relevance gate"
-        ],
         [
           "Classifying quadrilaterals on the coordinate plane",
           "below relevance gate"
@@ -453,22 +452,27 @@
         [
           "Comparing areas of plots of land",
           "below relevance gate"
+        ],
+        [
+          "Proof: The diagonals of a kite are perpendicular",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 122,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 2
+        "below relevance gate": 115,
+        "web file not on reference image": 7,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 4
       }
     },
     "reading_pool": {
-      "passed": 16,
+      "passed": 17,
       "runners_up": [
         "Area of a Parallelogram (Flexbook)",
         "Area of a Parallelogram Practice",
         "Area and Perimeter of Rhombuses and Kites (Flexbook)",
         "Area and Perimeter of Rhombuses and Kites Practice",
-        "The Perimeter and Area of a Kite (PLIX)"
+        "Find missing length when given area of a parallelogram"
       ],
       "rejected_sample": [
         [
@@ -505,8 +509,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138,
-        "kolibri node not available on reference image": 7
+        "below relevance gate": 136,
+        "kolibri node not available on reference image": 8,
+        "excluded: answer/exam material": 1
       }
     }
   },
@@ -555,18 +560,19 @@
         "detail_weight": 1.54
       },
       "observe.video": {
-        "picked": "Dividing triangles with medians",
-        "score": 63.79,
+        "picked": "Area of a triangle",
+        "score": 84.7,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
-          "triangle"
+          "triangle",
+          "height"
         ],
-        "detail_weight": 1.24
+        "detail_weight": 1.54
       },
       "explain.video": {
-        "picked": "Manipulating formulas: area",
-        "score": 101.16,
+        "picked": "Finding area of triangles",
+        "score": 80.1,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
@@ -576,15 +582,14 @@
         "detail_weight": 1.54
       },
       "dqb.video": {
-        "picked": "Manipulating formulas: area",
-        "score": 101.16,
+        "picked": "Dividing triangles with medians",
+        "score": 63.79,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
-          "triangle",
-          "height"
+          "triangle"
         ],
-        "detail_weight": 1.54
+        "detail_weight": 1.24
       },
       "model.video": {
         "picked": "Manipulating formulas: area",
@@ -653,11 +658,11 @@
     "video_pool": {
       "passed": 23,
       "runners_up": [
+        "Area of a triangle",
+        "Finding area of triangles",
         "Dividing triangles with medians",
         "Dividing triangles with medians -dubbed(KY)",
-        "Area of a triangle",
-        "Using similar & congruent triangles",
-        "Area of equilateral triangle -dubbed(KY)"
+        "Triangle missing side example"
       ],
       "rejected_sample": [
         [
@@ -794,7 +799,7 @@
     "slots": {
       "predict.video": {
         "picked": "Finding area of triangles",
-        "score": 83.87,
+        "score": 125.8,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
@@ -804,18 +809,19 @@
         "detail_weight": 2.23
       },
       "observe.video": {
-        "picked": "Manipulating formulas: area",
-        "score": 57.68,
+        "picked": "Triangle missing side example",
+        "score": 85.4,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
+          "base height",
           "triangle"
         ],
-        "detail_weight": 1.39
+        "detail_weight": 2.23
       },
       "explain.video": {
-        "picked": "Triangle missing side example",
-        "score": 56.93,
+        "picked": "Area of a triangle",
+        "score": 78.45,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
@@ -825,30 +831,50 @@
         "detail_weight": 2.23
       },
       "dqb.video": {
-        "picked": "Using similar & congruent triangles",
-        "score": 56.83,
-        "core_hits": [
-          "area polygon"
-        ],
+        "picked": "Area of quadrilateral with 2 parallel sides",
+        "score": 77.1,
+        "core_hits": [],
         "detail_hits": [
           "area triangle",
-          "triangle"
+          "triangle",
+          "decomposing"
         ],
-        "detail_weight": 1.39
+        "detail_weight": 1.69
       },
       "model.video": {
-        "picked": "Using similar & congruent triangles -dubbed(KY)",
-        "score": 53.31,
-        "core_hits": [
-          "area polygon"
-        ],
+        "picked": "Finding area of triangles",
+        "score": 125.8,
+        "core_hits": [],
         "detail_hits": [
           "area triangle",
+          "base height",
           "triangle"
         ],
-        "detail_weight": 1.39
+        "detail_weight": 2.23
       },
       "predict.reading": {
+        "picked": "Find base and height on a triangle",
+        "score": 111.34,
+        "core_hits": [],
+        "detail_hits": [
+          "base height",
+          "height perpendicular",
+          "triangle"
+        ],
+        "detail_weight": 2.04
+      },
+      "observe.reading": {
+        "picked": "Find missing length when given area of a triangle",
+        "score": 107.77,
+        "core_hits": [],
+        "detail_hits": [
+          "area triangle",
+          "base height",
+          "triangle"
+        ],
+        "detail_weight": 2.23
+      },
+      "explain.reading": {
         "picked": "Decompose area with triangles",
         "score": 82.51,
         "core_hits": [
@@ -860,7 +886,7 @@
         ],
         "detail_weight": 1.39
       },
-      "observe.reading": {
+      "dqb.reading": {
         "picked": "Triangle Area (Flexbook)",
         "score": 81.79,
         "core_hits": [],
@@ -870,29 +896,9 @@
         ],
         "detail_weight": 1.39
       },
-      "explain.reading": {
+      "model.reading": {
         "picked": "Triangle Area Practice",
         "score": 81.79,
-        "core_hits": [],
-        "detail_hits": [
-          "area triangle",
-          "triangle"
-        ],
-        "detail_weight": 1.39
-      },
-      "dqb.reading": {
-        "picked": "Derivation of the Triangle Area Formula (Flexbook)",
-        "score": 79.31,
-        "core_hits": [],
-        "detail_hits": [
-          "area triangle",
-          "triangle"
-        ],
-        "detail_weight": 1.39
-      },
-      "model.reading": {
-        "picked": "Derivation of the Triangle Area Formula Practice",
-        "score": 79.31,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
@@ -904,11 +910,11 @@
     "video_pool": {
       "passed": 28,
       "runners_up": [
-        "Manipulating formulas: area",
         "Triangle missing side example",
-        "Using similar & congruent triangles",
-        "Using similar & congruent triangles -dubbed(KY)",
-        "Area of a triangle"
+        "Area of a triangle",
+        "Area of quadrilateral with 2 parallel sides",
+        "Manipulating formulas: area",
+        "Using similar & congruent triangles"
       ],
       "rejected_sample": [
         [
@@ -922,6 +928,10 @@
         [
           "Proofs concerning isosceles triangles -dubbed(KY)",
           "below relevance gate"
+        ],
+        [
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
         ],
         [
           "Dilating triangles: find the error",
@@ -938,25 +948,23 @@
         [
           "Measurement word problem: running laps",
           "below relevance gate"
-        ],
-        [
-          "Decomposing shapes to find area: grids",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 110,
-        "kolibri node not available on reference image": 3
+        "below relevance gate": 108,
+        "web file not on reference image": 5,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 6
       }
     },
     "reading_pool": {
       "passed": 25,
       "runners_up": [
+        "Find missing length when given area of a triangle",
+        "Decompose area with triangles",
         "Triangle Area (Flexbook)",
         "Triangle Area Practice",
-        "Derivation of the Triangle Area Formula (Flexbook)",
-        "Derivation of the Triangle Area Formula Practice",
-        "Find base and height on a triangle"
+        "Derivation of the Triangle Area Formula (Flexbook)"
       ],
       "rejected_sample": [
         [
@@ -993,8 +1001,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 127,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 114,
+        "kolibri node not available on reference image": 2,
+        "excluded: answer/exam material": 18
       }
     }
   },
@@ -1147,22 +1156,23 @@
           "below relevance gate"
         ],
         [
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
+        ],
+        [
           "Use Pythagorean theorem to find area of an isosceles triangle",
           "below relevance gate"
         ],
         [
           "Decomposing shapes to find area: add",
           "below relevance gate"
-        ],
-        [
-          "Decomposing shapes to find area: subtract",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140,
-        "kolibri node not available on reference image": 4,
-        "web file not on reference image": 2
+        "below relevance gate": 136,
+        "web file not on reference image": 8,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 6
       }
     },
     "reading_pool": {
@@ -1203,8 +1213,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 149,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 137,
+        "kolibri node not available on reference image": 2,
+        "excluded: answer/exam material": 18
       }
     }
   },
@@ -1362,6 +1373,10 @@
           "below relevance gate"
         ],
         [
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
+        ],
+        [
           "Comparing areas of plots of land",
           "below relevance gate"
         ],
@@ -1380,15 +1395,13 @@
         [
           "Area of a triangle",
           "below relevance gate"
-        ],
-        [
-          "Proof: The diagonals of a kite are perpendicular",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 141,
-        "web file not on reference image": 4
+        "below relevance gate": 138,
+        "web file not on reference image": 9,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 2
       }
     },
     "reading_pool": {
@@ -1432,7 +1445,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 148
+        "below relevance gate": 148,
+        "kolibri node not available on reference image": 1
       }
     }
   },
@@ -1653,8 +1667,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 124,
-        "kolibri node not available on reference image": 4
+        "below relevance gate": 121,
+        "web file not on reference image": 5,
+        "kolibri node not available on reference image": 4,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
@@ -1698,7 +1714,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 150
+        "below relevance gate": 152
       }
     }
   },
@@ -1755,13 +1771,14 @@
     "slots": {
       "predict.video": {
         "picked": "Area of composite shapes",
-        "score": 114.34,
+        "score": 150.41,
         "core_hits": [],
         "detail_hits": [
+          "trapezium",
           "area triangle",
           "composite shape"
         ],
-        "detail_weight": 1.2
+        "detail_weight": 1.76
       },
       "observe.video": {
         "picked": "Perimeter & area of composite shapes",
@@ -1775,38 +1792,37 @@
         "detail_weight": 0.58
       },
       "explain.video": {
-        "picked": "Using similar & congruent triangles",
-        "score": 78.75,
-        "core_hits": [
-          "area polygon"
-        ],
-        "detail_hits": [
-          "area triangle",
-          "problem"
-        ],
-        "detail_weight": 0.93
-      },
-      "dqb.video": {
-        "picked": "Using similar & congruent triangles -dubbed(KY)",
-        "score": 73.8,
-        "core_hits": [
-          "area polygon"
-        ],
-        "detail_hits": [
-          "area triangle",
-          "problem"
-        ],
-        "detail_weight": 0.93
-      },
-      "model.video": {
         "picked": "Area of composite shapes",
-        "score": 114.34,
+        "score": 150.41,
         "core_hits": [],
         "detail_hits": [
+          "trapezium",
           "area triangle",
           "composite shape"
         ],
-        "detail_weight": 1.2
+        "detail_weight": 1.76
+      },
+      "dqb.video": {
+        "picked": "Area of composite shapes",
+        "score": 150.41,
+        "core_hits": [],
+        "detail_hits": [
+          "trapezium",
+          "area triangle",
+          "composite shape"
+        ],
+        "detail_weight": 1.76
+      },
+      "model.video": {
+        "picked": "Area of composite shapes",
+        "score": 150.41,
+        "core_hits": [],
+        "detail_hits": [
+          "trapezium",
+          "area triangle",
+          "composite shape"
+        ],
+        "detail_weight": 1.76
       },
       "predict.reading": {
         "picked": "Area of Composite Shapes: Triangle and Parallelogram (PLIX)",
@@ -1864,12 +1880,13 @@
       }
     },
     "video_pool": {
-      "passed": 5,
+      "passed": 7,
       "runners_up": [
         "Perimeter & area of composite shapes",
         "Using similar & congruent triangles",
+        "Classifying quadrilaterals on the coordinate plane",
         "Using similar & congruent triangles -dubbed(KY)",
-        "Area of a triangle"
+        "Area of quadrilateral with 2 parallel sides"
       ],
       "rejected_sample": [
         [
@@ -1897,18 +1914,19 @@
           "below relevance gate"
         ],
         [
-          "Use Pythagorean theorem to find area of an isosceles triangle",
-          "below relevance gate"
+          "Solving For X In X³   11 = 53 #Shorts #Algebra #Math #Maths #Mathematics #Education #Learn #Learning",
+          "web file not on reference image"
         ],
         [
-          "Area of Regular Polygons Principles",
+          "Use Pythagorean theorem to find area of an isosceles triangle",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 114,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 3
+        "below relevance gate": 109,
+        "web file not on reference image": 6,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 1
       }
     },
     "reading_pool": {

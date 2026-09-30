@@ -26,6 +26,17 @@
     },
     "slots": {
       "predict.video": {
+        "picked": "Determining reflections (advanced)",
+        "score": 113.84,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "line"
+        ],
+        "detail_weight": 0.3
+      },
+      "observe.video": {
         "picked": "Identifying symmetrical figures",
         "score": 103.29,
         "core_hits": [],
@@ -36,7 +47,29 @@
         ],
         "detail_weight": 2.1
       },
-      "observe.video": {
+      "explain.video": {
+        "picked": "Determining reflections",
+        "score": 99.69,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "line"
+        ],
+        "detail_weight": 0.3
+      },
+      "dqb.video": {
+        "picked": "Segment congruence equivalent to having same length",
+        "score": 90.89,
+        "core_hits": [
+          "congruence"
+        ],
+        "detail_hits": [
+          "line"
+        ],
+        "detail_weight": 0.3
+      },
+      "model.video": {
         "picked": "Identifying Lines of Symmetry in Letters",
         "score": 88.92,
         "core_hits": [],
@@ -47,42 +80,9 @@
         ],
         "detail_weight": 2.1
       },
-      "explain.video": {
-        "picked": "Identifying Lines of Symmetry in Various Shapes",
-        "score": 87.47,
-        "core_hits": [],
-        "detail_hits": [
-          "line symmetry",
-          "symmetry",
-          "line"
-        ],
-        "detail_weight": 2.1
-      },
-      "dqb.video": {
-        "picked": "Determining Whether Various Shapes Have Lines of Symmetry",
-        "score": 86.76,
-        "core_hits": [],
-        "detail_hits": [
-          "line symmetry",
-          "symmetry",
-          "line"
-        ],
-        "detail_weight": 2.1
-      },
-      "model.video": {
-        "picked": "Determining reflections (advanced)",
-        "score": 86.6,
-        "core_hits": [
-          "reflection"
-        ],
-        "detail_hits": [
-          "line"
-        ],
-        "detail_weight": 0.3
-      },
       "predict.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 156.01,
+        "score": 195.71,
         "core_hits": [
           "reflection"
         ],
@@ -93,20 +93,19 @@
         "detail_weight": 1.55
       },
       "observe.reading": {
-        "picked": "Determine reflections (advanced)",
-        "score": 156.01,
+        "picked": "Reflections in a Plane Mirror (PLIX)",
+        "score": 117.43,
         "core_hits": [
           "reflection"
         ],
         "detail_hits": [
-          "figure plane",
-          "line"
+          "mirror"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 0.3
       },
       "explain.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 156.01,
+        "score": 195.71,
         "core_hits": [
           "reflection"
         ],
@@ -118,7 +117,7 @@
       },
       "dqb.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 156.01,
+        "score": 195.71,
         "core_hits": [
           "reflection"
         ],
@@ -130,7 +129,7 @@
       },
       "model.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 156.01,
+        "score": 195.71,
         "core_hits": [
           "reflection"
         ],
@@ -144,13 +143,17 @@
     "video_pool": {
       "passed": 19,
       "runners_up": [
+        "Identifying symmetrical figures",
+        "Determining reflections",
+        "Segment congruence equivalent to having same length",
         "Identifying Lines of Symmetry in Letters",
-        "Identifying Lines of Symmetry in Various Shapes",
-        "Determining Whether Various Shapes Have Lines of Symmetry",
-        "Determining reflections (advanced)",
-        "Identifying and Counting the Lines of Symmetry in Various Shapes"
+        "Identifying Lines of Symmetry in Various Shapes"
       ],
       "rejected_sample": [
+        [
+          "Proving triangle congruence",
+          "below relevance gate"
+        ],
         [
           "Addition and subtraction with number lines",
           "below relevance gate"
@@ -164,41 +167,41 @@
           "below relevance gate"
         ],
         [
+          "Calculating angle measures to verify congruence",
+          "below relevance gate"
+        ],
+        [
           "Mirror equation example problems",
           "below relevance gate"
         ],
         [
-          "Points on the coordinate plane examples",
+          "Angle congruence equivalent to having same measure",
           "below relevance gate"
         ],
         [
-          "Parallel Lines in the Coordinate Plane Principles - Basic",
-          "below relevance gate"
-        ],
-        [
-          "Perpendicular Lines in the Coordinate Plane Principles - Basic",
-          "below relevance gate"
-        ],
-        [
-          "Lines, line segments, & rays",
+          "Geometry proof problem: congruent segments",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 101,
+        "below relevance gate": 110,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
       "passed": 25,
       "runners_up": [
-        "Lines of Symmetry (Flexbook)",
-        "Lines of Symmetry Practice",
         "Reflections in a Plane Mirror (PLIX)",
-        "Identifying Lines of Symmetry in Letters Practice",
-        "Identifying Lines of Symmetry in Various Shapes Practice"
+        "Congruence & transformations",
+        "Determine reflections",
+        "Lines of Symmetry (Flexbook)",
+        "Lines of Symmetry Practice"
       ],
       "rejected_sample": [
+        [
+          "Prove triangle congruence",
+          "below relevance gate"
+        ],
         [
           "Parallel Lines in the Coordinate Plane: Parallel Line Exploration (PLIX)",
           "below relevance gate"
@@ -220,15 +223,11 @@
           "below relevance gate"
         ],
         [
-          "Images in a Plane Mirror (Flexbook)",
+          "Congruent Figures Practice",
           "below relevance gate"
         ],
         [
-          "Parallel Lines in the Coordinate Plane (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Parallel Lines in the Coordinate Plane Practice",
+          "Congruent Figures (PLIX)",
           "below relevance gate"
         ]
       ],
@@ -270,6 +269,18 @@
     },
     "slots": {
       "predict.video": {
+        "picked": "Determining reflections (advanced)",
+        "score": 118.74,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "line",
+          "plane"
+        ],
+        "detail_weight": 0.6
+      },
+      "observe.video": {
         "picked": "Identifying symmetrical figures",
         "score": 109,
         "core_hits": [],
@@ -281,19 +292,29 @@
         ],
         "detail_weight": 2.4
       },
-      "observe.video": {
-        "picked": "Determining reflections (advanced)",
-        "score": 91.5,
+      "explain.video": {
+        "picked": "Determining reflections",
+        "score": 99.69,
         "core_hits": [
           "reflection"
         ],
         "detail_hits": [
-          "line",
-          "plane"
+          "line"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 0.3
       },
-      "explain.video": {
+      "dqb.video": {
+        "picked": "Segment congruence equivalent to having same length",
+        "score": 90.89,
+        "core_hits": [
+          "congruence"
+        ],
+        "detail_hits": [
+          "line"
+        ],
+        "detail_weight": 0.3
+      },
+      "model.video": {
         "picked": "Identifying Lines of Symmetry in Letters",
         "score": 88.92,
         "core_hits": [],
@@ -304,31 +325,9 @@
         ],
         "detail_weight": 2.1
       },
-      "dqb.video": {
-        "picked": "Identifying Lines of Symmetry in Various Shapes",
-        "score": 87.47,
-        "core_hits": [],
-        "detail_hits": [
-          "line symmetry",
-          "line",
-          "symmetry"
-        ],
-        "detail_weight": 2.1
-      },
-      "model.video": {
-        "picked": "Determining Whether Various Shapes Have Lines of Symmetry",
-        "score": 86.76,
-        "core_hits": [],
-        "detail_hits": [
-          "line symmetry",
-          "line",
-          "symmetry"
-        ],
-        "detail_weight": 2.1
-      },
       "predict.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 170.3,
+        "score": 210,
         "core_hits": [
           "reflection"
         ],
@@ -342,7 +341,7 @@
       },
       "observe.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 159.54,
+        "score": 201.29,
         "core_hits": [
           "reflection"
         ],
@@ -354,7 +353,7 @@
       },
       "explain.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 170.3,
+        "score": 210,
         "core_hits": [
           "reflection"
         ],
@@ -368,7 +367,7 @@
       },
       "dqb.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 170.3,
+        "score": 210,
         "core_hits": [
           "reflection"
         ],
@@ -382,7 +381,7 @@
       },
       "model.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 170.3,
+        "score": 210,
         "core_hits": [
           "reflection"
         ],
@@ -396,13 +395,13 @@
       }
     },
     "video_pool": {
-      "passed": 20,
+      "passed": 24,
       "runners_up": [
-        "Determining reflections (advanced)",
+        "Identifying symmetrical figures",
+        "Determining reflections",
+        "Segment congruence equivalent to having same length",
         "Identifying Lines of Symmetry in Letters",
-        "Identifying Lines of Symmetry in Various Shapes",
-        "Determining Whether Various Shapes Have Lines of Symmetry",
-        "Identifying and Counting the Lines of Symmetry in Various Shapes"
+        "Proving triangle congruence"
       ],
       "rejected_sample": [
         [
@@ -430,27 +429,27 @@
           "below relevance gate"
         ],
         [
-          "Mirror equation example problems",
+          "Calculating angle measures to verify congruence",
           "below relevance gate"
         ],
         [
-          "Points on the coordinate plane examples",
+          "Mirror equation example problems",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 107,
+        "below relevance gate": 111,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 31,
+      "passed": 35,
       "runners_up": [
         "Reflections in a Plane Mirror (PLIX)",
-        "Lines of Symmetry (Flexbook)",
-        "Lines of Symmetry Practice",
-        "Images in a Plane Mirror (Flexbook)",
-        "Identifying Lines of Symmetry in Letters Practice"
+        "Congruence & transformations",
+        "Determine reflections",
+        "Prove triangle congruence",
+        "Lines of Symmetry (Flexbook)"
       ],
       "rejected_sample": [
         [
@@ -470,6 +469,10 @@
           "below relevance gate"
         ],
         [
+          "Determine congruent triangles",
+          "below relevance gate"
+        ],
+        [
           "Patterns with shapes",
           "below relevance gate"
         ],
@@ -480,14 +483,10 @@
         [
           "Parallel Lines in the Coordinate Plane (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Parallel Lines in the Coordinate Plane Practice",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 126,
+        "below relevance gate": 121,
         "kolibri node not available on reference image": 1
       }
     }
@@ -526,7 +525,7 @@
     "slots": {
       "predict.video": {
         "picked": "Determining reflections (advanced)",
-        "score": 112.79,
+        "score": 146.35,
         "core_hits": [
           "reflection"
         ],
@@ -538,7 +537,7 @@
       },
       "observe.video": {
         "picked": "Reflecting shapes: diagonal line of reflection",
-        "score": 112.6,
+        "score": 144.41,
         "core_hits": [
           "reflection"
         ],
@@ -551,7 +550,7 @@
       },
       "explain.video": {
         "picked": "Determining reflections",
-        "score": 97.34,
+        "score": 127.95,
         "core_hits": [
           "reflection"
         ],
@@ -561,21 +560,20 @@
         "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Reflecting points in the coordinate plane",
-        "score": 83.21,
+        "picked": "Determining reflections (advanced)",
+        "score": 146.35,
         "core_hits": [
           "reflection"
         ],
         "detail_hits": [
           "plane",
-          "image",
           "coordinate"
         ],
-        "detail_weight": 0.9
+        "detail_weight": 0.6
       },
       "model.video": {
         "picked": "Determining reflections (advanced)",
-        "score": 112.79,
+        "score": 146.35,
         "core_hits": [
           "reflection"
         ],
@@ -587,7 +585,7 @@
       },
       "predict.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 115,
+        "score": 149.23,
         "core_hits": [
           "reflection"
         ],
@@ -599,7 +597,7 @@
       },
       "observe.reading": {
         "picked": "Determine reflections",
-        "score": 94.9,
+        "score": 124.74,
         "core_hits": [
           "reflection"
         ],
@@ -610,7 +608,7 @@
       },
       "explain.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 89.34,
+        "score": 117.43,
         "core_hits": [
           "reflection"
         ],
@@ -620,10 +618,10 @@
         "detail_weight": 0.3
       },
       "dqb.reading": {
-        "picked": "Determine reflections (advanced)",
-        "score": 115,
+        "picked": "Congruence & transformations",
+        "score": 105.18,
         "core_hits": [
-          "reflection"
+          "congruence"
         ],
         "detail_hits": [
           "plane",
@@ -633,7 +631,7 @@
       },
       "model.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 115,
+        "score": 149.23,
         "core_hits": [
           "reflection"
         ],
@@ -675,15 +673,15 @@
           "below relevance gate"
         ],
         [
+          "Geometry proof problem: congruent segments",
+          "below relevance gate"
+        ],
+        [
+          "Geometry proof problem: congruent segments -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
           "Mirror equation example problems",
-          "below relevance gate"
-        ],
-        [
-          "Points on the coordinate plane examples",
-          "below relevance gate"
-        ],
-        [
-          "Number of solutions to a system of equations",
           "below relevance gate"
         ]
       ],
@@ -696,8 +694,8 @@
       "runners_up": [
         "Determine reflections",
         "Reflections in a Plane Mirror (PLIX)",
-        "Reflect points",
         "Congruence & transformations",
+        "Reflect points",
         "Reflect shapes"
       ],
       "rejected_sample": [
@@ -707,6 +705,10 @@
         ],
         [
           "Images in a Plane Mirror (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Justify constructions",
           "below relevance gate"
         ],
         [
@@ -727,10 +729,6 @@
         ],
         [
           "Parallel and Perpendicular Lines in the Coordinate Plane Practice",
-          "below relevance gate"
-        ],
-        [
-          "Write equations of parallel & perpendicular lines",
           "below relevance gate"
         ]
       ],
@@ -772,18 +770,8 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 114.59,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular",
-          "line"
-        ],
-        "detail_weight": 1.8
-      },
-      "observe.video": {
         "picked": "Determining reflections",
-        "score": 97.34,
+        "score": 127.95,
         "core_hits": [
           "reflection"
         ],
@@ -792,38 +780,63 @@
         ],
         "detail_weight": 0.3
       },
-      "explain.video": {
-        "picked": "Circumcenter of a triangle -dubbed(KY)",
-        "score": 83.63,
+      "observe.video": {
+        "picked": "Geometric constructions: perpendicular bisector",
+        "score": 114.59,
         "core_hits": [],
         "detail_hits": [
-          "bisector perpendicular"
+          "bisector perpendicular",
+          "line"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 1.8
+      },
+      "explain.video": {
+        "picked": "Segment congruence equivalent to having same length",
+        "score": 90.89,
+        "core_hits": [
+          "congruence"
+        ],
+        "detail_hits": [
+          "line"
+        ],
+        "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 114.59,
-        "core_hits": [],
+        "picked": "Determining reflections (advanced)",
+        "score": 89.25,
+        "core_hits": [
+          "reflection"
+        ],
         "detail_hits": [
-          "bisector perpendicular",
           "line"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 0.3
       },
       "model.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 114.59,
-        "core_hits": [],
+        "picked": "Reflecting shapes: diagonal line of reflection",
+        "score": 84.97,
+        "core_hits": [
+          "reflection"
+        ],
         "detail_hits": [
-          "bisector perpendicular",
           "line"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 0.3
       },
       "predict.reading": {
+        "picked": "Determine reflections",
+        "score": 124.74,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "line"
+        ],
+        "detail_weight": 0.3
+      },
+      "observe.reading": {
         "picked": "Justify constructions",
-        "score": 100.84,
+        "score": 122.59,
         "core_hits": [
           "congruence"
         ],
@@ -833,20 +846,9 @@
         ],
         "detail_weight": 1.8
       },
-      "observe.reading": {
-        "picked": "Determine reflections",
-        "score": 94.9,
-        "core_hits": [
-          "reflection"
-        ],
-        "detail_hits": [
-          "line"
-        ],
-        "detail_weight": 0.3
-      },
       "explain.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 69.14,
+        "score": 90.89,
         "core_hits": [
           "reflection"
         ],
@@ -857,7 +859,7 @@
       },
       "dqb.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 64.31,
+        "score": 84.53,
         "core_hits": [
           "reflection"
         ],
@@ -868,7 +870,7 @@
       },
       "model.reading": {
         "picked": "Rules for Reflections (Flexbook)",
-        "score": 61.03,
+        "score": 80.22,
         "core_hits": [
           "reflection"
         ],
@@ -879,13 +881,13 @@
       }
     },
     "video_pool": {
-      "passed": 12,
+      "passed": 13,
       "runners_up": [
-        "Determining reflections",
-        "Circumcenter of a triangle -dubbed(KY)",
+        "Geometric constructions: perpendicular bisector",
+        "Segment congruence equivalent to having same length",
         "Determining reflections (advanced)",
-        "Review of triangle properties -dubbed(KY)",
-        "Reflecting shapes: diagonal line of reflection"
+        "Reflecting shapes: diagonal line of reflection",
+        "Circumcenter of a triangle -dubbed(KY)"
       ],
       "rejected_sample": [
         [
@@ -894,6 +896,10 @@
         ],
         [
           "Writing equations of perpendicular lines",
+          "below relevance gate"
+        ],
+        [
+          "Congruent Angles and Angle Bisectors Principles - Basic",
           "below relevance gate"
         ],
         [
@@ -915,21 +921,17 @@
         [
           "Parallel & perpendicular lines",
           "below relevance gate"
-        ],
-        [
-          "Drawing enantiomers",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 113,
+        "below relevance gate": 122,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
       "passed": 11,
       "runners_up": [
-        "Determine reflections",
+        "Justify constructions",
         "Determine reflections (advanced)",
         "Reflections in a Plane Mirror (PLIX)",
         "Rules for Reflections (Flexbook)",
@@ -945,6 +947,18 @@
           "below relevance gate"
         ],
         [
+          "Congruent Angles and Angle Bisectors (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Congruent Angles and Angle Bisectors Practice",
+          "below relevance gate"
+        ],
+        [
+          "Congruent Angles and Angle Bisectors: Bisecting Pepperoni Pizza (PLIX)",
+          "below relevance gate"
+        ],
+        [
           "Write equations of parallel & perpendicular lines",
           "below relevance gate"
         ],
@@ -955,23 +969,11 @@
         [
           "Images in a Plane Mirror (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Images in a Concave Mirror (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Images in a Convex Mirror (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Bisectors of Line Segments and Angles (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
-        "kolibri node not available on reference image": 19,
+        "below relevance gate": 132,
+        "kolibri node not available on reference image": 18,
         "excluded: answer/exam material": 1
       }
     }
@@ -1008,7 +1010,7 @@
     "slots": {
       "predict.video": {
         "picked": "Determining reflections (advanced)",
-        "score": 138.88,
+        "score": 178.12,
         "core_hits": [
           "reflection"
         ],
@@ -1021,7 +1023,7 @@
       },
       "observe.video": {
         "picked": "Determining reflections",
-        "score": 135.37,
+        "score": 173.61,
         "core_hits": [
           "reflection"
         ],
@@ -1033,19 +1035,8 @@
         "detail_weight": 0.9
       },
       "explain.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 131.81,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular",
-          "line",
-          "given"
-        ],
-        "detail_weight": 1.85
-      },
-      "dqb.video": {
         "picked": "Reflecting shapes: diagonal line of reflection",
-        "score": 107.64,
+        "score": 138.05,
         "core_hits": [
           "reflection"
         ],
@@ -1056,19 +1047,33 @@
         ],
         "detail_weight": 0.9
       },
-      "model.video": {
-        "picked": "Proof: Rhombus diagonals are perpendicular bisectors",
-        "score": 87.46,
+      "dqb.video": {
+        "picked": "Geometric constructions: perpendicular bisector",
+        "score": 131.81,
         "core_hits": [],
         "detail_hits": [
           "bisector perpendicular",
-          "midpoint"
+          "line",
+          "given"
         ],
-        "detail_weight": 1.96
+        "detail_weight": 1.85
+      },
+      "model.video": {
+        "picked": "Determining reflections (advanced)",
+        "score": 178.12,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "line",
+          "determining",
+          "given"
+        ],
+        "detail_weight": 0.9
       },
       "predict.reading": {
         "picked": "Determine reflections",
-        "score": 124.1,
+        "score": 159.16,
         "core_hits": [
           "reflection"
         ],
@@ -1081,7 +1086,7 @@
       },
       "observe.reading": {
         "picked": "Determine reflections (advanced)",
-        "score": 109.88,
+        "score": 142.59,
         "core_hits": [
           "reflection"
         ],
@@ -1092,8 +1097,19 @@
         "detail_weight": 0.6
       },
       "explain.reading": {
+        "picked": "Reflections in a Plane Mirror (PLIX)",
+        "score": 117.43,
+        "core_hits": [
+          "reflection"
+        ],
+        "detail_hits": [
+          "mirror"
+        ],
+        "detail_weight": 0.3
+      },
+      "dqb.reading": {
         "picked": "Justify constructions",
-        "score": 95.93,
+        "score": 116.62,
         "core_hits": [
           "congruence"
         ],
@@ -1103,39 +1119,26 @@
         ],
         "detail_weight": 1.55
       },
-      "dqb.reading": {
-        "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 89.34,
+      "model.reading": {
+        "picked": "Congruence & transformations",
+        "score": 95.5,
         "core_hits": [
-          "reflection"
+          "congruence"
         ],
         "detail_hits": [
-          "mirror"
+          "given"
         ],
         "detail_weight": 0.3
-      },
-      "model.reading": {
-        "picked": "Determine reflections",
-        "score": 124.1,
-        "core_hits": [
-          "reflection"
-        ],
-        "detail_hits": [
-          "line",
-          "given",
-          "image"
-        ],
-        "detail_weight": 0.9
       }
     },
     "video_pool": {
-      "passed": 17,
+      "passed": 19,
       "runners_up": [
         "Determining reflections",
-        "Geometric constructions: perpendicular bisector",
         "Reflecting shapes: diagonal line of reflection",
-        "Proof: Rhombus diagonals are perpendicular bisectors",
-        "Midpoint formula"
+        "Geometric constructions: perpendicular bisector",
+        "Segment congruence equivalent to having same length",
+        "Proof: Rhombus diagonals are perpendicular bisectors"
       ],
       "rejected_sample": [
         [
@@ -1172,17 +1175,17 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 123
+        "below relevance gate": 121
       }
     },
     "reading_pool": {
-      "passed": 17,
+      "passed": 18,
       "runners_up": [
         "Determine reflections (advanced)",
-        "Justify constructions",
         "Reflections in a Plane Mirror (PLIX)",
-        "Perpendicular Bisectors (Flexbook)",
-        "Perpendicular Bisectors Practice"
+        "Justify constructions",
+        "Congruence & transformations",
+        "Prove triangle congruence"
       ],
       "rejected_sample": [
         [
@@ -1219,7 +1222,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 131
+        "below relevance gate": 130
       }
     }
   },
@@ -1270,7 +1273,7 @@
       },
       "observe.video": {
         "picked": "Determining reflections",
-        "score": 97.34,
+        "score": 127.95,
         "core_hits": [
           "reflection"
         ],
@@ -1293,13 +1296,15 @@
         "detail_weight": 1.54
       },
       "dqb.video": {
-        "picked": "Geometric constructions: perpendicular bisector",
-        "score": 128.32,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular"
+        "picked": "Reflecting shapes: diagonal line of reflection",
+        "score": 84.97,
+        "core_hits": [
+          "reflection"
         ],
-        "detail_weight": 1.25
+        "detail_hits": [
+          "image"
+        ],
+        "detail_weight": 0.3
       },
       "model.video": {
         "picked": "Geometric constructions: perpendicular bisector",
@@ -1312,7 +1317,7 @@
       },
       "predict.reading": {
         "picked": "Justify constructions",
-        "score": 115.33,
+        "score": 134.76,
         "core_hits": [
           "congruence"
         ],
@@ -1323,7 +1328,7 @@
       },
       "observe.reading": {
         "picked": "Determine reflections",
-        "score": 94.9,
+        "score": 124.74,
         "core_hits": [
           "reflection"
         ],
@@ -1333,19 +1338,19 @@
         "detail_weight": 0.3
       },
       "explain.reading": {
-        "picked": "Justify constructions",
-        "score": 115.33,
+        "picked": "Reflections in a Plane Mirror (PLIX)",
+        "score": 84.53,
         "core_hits": [
-          "congruence"
+          "reflection"
         ],
         "detail_hits": [
-          "bisector perpendicular"
+          "mirror"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 0.3
       },
       "dqb.reading": {
         "picked": "Justify constructions",
-        "score": 115.33,
+        "score": 134.76,
         "core_hits": [
           "congruence"
         ],
@@ -1356,7 +1361,7 @@
       },
       "model.reading": {
         "picked": "Justify constructions",
-        "score": 115.33,
+        "score": 134.76,
         "core_hits": [
           "congruence"
         ],
@@ -1371,9 +1376,9 @@
       "runners_up": [
         "Determining reflections",
         "Reflecting points in the coordinate plane",
+        "Reflecting shapes: diagonal line of reflection",
         "Rotating points",
-        "Circumcenter of a triangle -dubbed(KY)",
-        "Reflecting shapes: diagonal line of reflection"
+        "Circumcenter of a triangle -dubbed(KY)"
       ],
       "rejected_sample": [
         [
@@ -1382,6 +1387,10 @@
         ],
         [
           "Geometric constructions: perpendicular line through a point on the line",
+          "below relevance gate"
+        ],
+        [
+          "Geometric constructions: parallel line",
           "below relevance gate"
         ],
         [
@@ -1397,20 +1406,16 @@
           "below relevance gate"
         ],
         [
-          "Determining reflections (advanced)",
+          "Using similar & congruent triangles",
           "below relevance gate"
         ],
         [
-          "Geometric constructions: parallel line",
-          "below relevance gate"
-        ],
-        [
-          "Distance between a point & line -dubbed(KY)",
+          "Using similar & congruent triangles -dubbed(KY)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 121
+        "below relevance gate": 122
       }
     },
     "reading_pool": {
@@ -1457,7 +1462,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 142
+        "below relevance gate": 143
       }
     }
   },
@@ -1491,32 +1496,30 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Proving the SAS triangle congruence criterion using transformations",
-        "score": 137.65,
+        "picked": "Triangle congruence postulates/criteria",
+        "score": 207.49,
         "core_hits": [
           "congruence"
         ],
         "detail_hits": [
-          "triangle",
-          "proving"
+          "triangle"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 0.3
       },
       "observe.video": {
-        "picked": "Proving the SSS triangle congruence criterion using transformations",
-        "score": 137.04,
+        "picked": "Triangle congruence postulates/criteria -dubbed(KY)",
+        "score": 195.8,
         "core_hits": [
           "congruence"
         ],
         "detail_hits": [
-          "triangle",
-          "proving"
+          "triangle"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 0.3
       },
       "explain.video": {
-        "picked": "Triangle congruence postulates/criteria",
-        "score": 136.97,
+        "picked": "Determining congruent triangles",
+        "score": 188.69,
         "core_hits": [
           "congruence"
         ],
@@ -1526,8 +1529,8 @@
         "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Proving the ASA and AAS triangle congruence criteria using transformations",
-        "score": 133.78,
+        "picked": "Proving the SAS triangle congruence criterion using transformations",
+        "score": 178.61,
         "core_hits": [
           "congruence"
         ],
@@ -1538,19 +1541,20 @@
         "detail_weight": 0.6
       },
       "model.video": {
-        "picked": "Triangle congruence postulates/criteria -dubbed(KY)",
-        "score": 129.28,
+        "picked": "Proving the SSS triangle congruence criterion using transformations",
+        "score": 177.82,
         "core_hits": [
           "congruence"
         ],
         "detail_hits": [
-          "triangle"
+          "triangle",
+          "proving"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.6
       },
       "predict.reading": {
-        "picked": "Justify triangle congruence",
-        "score": 114.42,
+        "picked": "Determine congruent triangles",
+        "score": 241.32,
         "core_hits": [
           "congruence"
         ],
@@ -1560,8 +1564,8 @@
         "detail_weight": 0.3
       },
       "observe.reading": {
-        "picked": "Determine congruent triangles",
-        "score": 106.13,
+        "picked": "Justify triangle congruence",
+        "score": 150.4,
         "core_hits": [
           "congruence"
         ],
@@ -1571,8 +1575,8 @@
         "detail_weight": 0.3
       },
       "explain.reading": {
-        "picked": "SAS Triangle Congruence (Flexbook)",
-        "score": 94.74,
+        "picked": "Determine congruent triangles",
+        "score": 241.32,
         "core_hits": [
           "congruence"
         ],
@@ -1582,8 +1586,8 @@
         "detail_weight": 0.3
       },
       "dqb.reading": {
-        "picked": "SAS Triangle Congruence Practice",
-        "score": 94.74,
+        "picked": "Determine congruent triangles",
+        "score": 241.32,
         "core_hits": [
           "congruence"
         ],
@@ -1593,8 +1597,8 @@
         "detail_weight": 0.3
       },
       "model.reading": {
-        "picked": "SAS Triangle Congruence (PLIX)",
-        "score": 94.74,
+        "picked": "Determine congruent triangles",
+        "score": 241.32,
         "core_hits": [
           "congruence"
         ],
@@ -1605,29 +1609,21 @@
       }
     },
     "video_pool": {
-      "passed": 28,
+      "passed": 45,
       "runners_up": [
-        "Proving the SSS triangle congruence criterion using transformations",
-        "Triangle congruence postulates/criteria",
-        "Proving the ASA and AAS triangle congruence criteria using transformations",
         "Triangle congruence postulates/criteria -dubbed(KY)",
-        "Proving triangle congruence"
+        "Determining congruent triangles",
+        "Proving the SAS triangle congruence criterion using transformations",
+        "Proving the SSS triangle congruence criterion using transformations",
+        "Determining congruent triangles -dubbed(KY)"
       ],
       "rejected_sample": [
         [
-          "Determining congruent triangles",
+          "Geometry proof problem: congruent segments",
           "below relevance gate"
         ],
         [
-          "Determining congruent triangles -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "02 Proving Triangles Congruent 2",
-          "below relevance gate"
-        ],
-        [
-          "01 Proving Triangles Congruent 1",
+          "Geometry proof problem: congruent segments -dubbed(KY)",
           "below relevance gate"
         ],
         [
@@ -1645,22 +1641,29 @@
         [
           "Drawing enantiomers",
           "below relevance gate"
+        ],
+        [
+          "Vector triangle inequality",
+          "below relevance gate"
+        ],
+        [
+          "Mirror equation example problems",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 105,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 87,
+        "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 22,
+      "passed": 29,
       "runners_up": [
-        "Determine congruent triangles",
+        "Justify triangle congruence",
+        "Prove triangle congruence",
         "SAS Triangle Congruence (Flexbook)",
         "SAS Triangle Congruence Practice",
-        "SAS Triangle Congruence (PLIX)",
-        "SSS Triangle Congruence (Flexbook)"
+        "SAS Triangle Congruence (PLIX)"
       ],
       "rejected_sample": [
         [
@@ -1688,16 +1691,16 @@
           "below relevance gate"
         ],
         [
-          "Test statistic and P-value in chi-square tests with two-way tables",
+          "Congruence & transformations",
           "below relevance gate"
         ],
         [
-          "Solve triangles using the law of cosines",
+          "Test statistic and P-value in chi-square tests with two-way tables",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 127,
+        "below relevance gate": 124,
         "kolibri node not available on reference image": 2
       }
     }
@@ -1730,63 +1733,63 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Reflecting points in the coordinate plane",
-        "score": 45.42,
+        "picked": "Corresponding angles in congruent triangles",
+        "score": 87.25,
         "core_hits": [
-          "reflection"
+          "congruence"
         ],
         "detail_hits": [
-          "mirror"
+          "solve"
         ],
         "detail_weight": 0.3
       },
       "observe.video": {
-        "picked": "Specular and diffuse reflection",
-        "score": 43.93,
+        "picked": "Corresponding angles in congruent triangles -dubbed(KY)",
+        "score": 82.19,
         "core_hits": [
-          "reflection"
+          "congruence"
         ],
         "detail_hits": [
-          "mirror"
+          "solve"
         ],
         "detail_weight": 0.3
       },
       "explain.video": {
-        "picked": "Reflecting points in the coordinate plane",
-        "score": 45.42,
+        "picked": "Corresponding angles in congruent triangles",
+        "score": 87.25,
         "core_hits": [
-          "reflection"
+          "congruence"
         ],
         "detail_hits": [
-          "mirror"
+          "solve"
         ],
         "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Reflecting points in the coordinate plane",
-        "score": 45.42,
+        "picked": "Corresponding angles in congruent triangles",
+        "score": 87.25,
         "core_hits": [
-          "reflection"
+          "congruence"
         ],
         "detail_hits": [
-          "mirror"
+          "solve"
         ],
         "detail_weight": 0.3
       },
       "model.video": {
-        "picked": "Reflecting points in the coordinate plane",
-        "score": 45.42,
+        "picked": "Corresponding angles in congruent triangles",
+        "score": 87.25,
         "core_hits": [
-          "reflection"
+          "congruence"
         ],
         "detail_hits": [
-          "mirror"
+          "solve"
         ],
         "detail_weight": 0.3
       },
       "predict.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 64.31,
+        "score": 84.53,
         "core_hits": [
           "reflection"
         ],
@@ -1797,7 +1800,7 @@
       },
       "observe.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 64.31,
+        "score": 84.53,
         "core_hits": [
           "reflection"
         ],
@@ -1808,7 +1811,7 @@
       },
       "explain.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 64.31,
+        "score": 84.53,
         "core_hits": [
           "reflection"
         ],
@@ -1819,7 +1822,7 @@
       },
       "dqb.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 64.31,
+        "score": 84.53,
         "core_hits": [
           "reflection"
         ],
@@ -1830,7 +1833,7 @@
       },
       "model.reading": {
         "picked": "Reflections in a Plane Mirror (PLIX)",
-        "score": 64.31,
+        "score": 84.53,
         "core_hits": [
           "reflection"
         ],
@@ -1841,9 +1844,10 @@
       }
     },
     "video_pool": {
-      "passed": 2,
+      "passed": 3,
       "runners_up": [
-        "Specular and diffuse reflection"
+        "Corresponding angles in congruent triangles -dubbed(KY)",
+        "Reflecting points in the coordinate plane"
       ],
       "rejected_sample": [
         [
@@ -1863,6 +1867,10 @@
           "below relevance gate"
         ],
         [
+          "Proving triangle congruence",
+          "below relevance gate"
+        ],
+        [
           "Determining reflections (advanced)",
           "below relevance gate"
         ],
@@ -1871,16 +1879,12 @@
           "below relevance gate"
         ],
         [
-          "Quadratic equations word problem: triangle dimensions -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Linear transformation examples: Scaling and reflections",
+          "Triangle congruence postulates/criteria",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 145
+        "below relevance gate": 141
       }
     },
     "reading_pool": {
@@ -1889,6 +1893,22 @@
       "rejected_sample": [
         [
           "Prove triangle properties",
+          "below relevance gate"
+        ],
+        [
+          "Justify constructions",
+          "below relevance gate"
+        ],
+        [
+          "Determine congruent triangles",
+          "below relevance gate"
+        ],
+        [
+          "Prove triangle congruence",
+          "below relevance gate"
+        ],
+        [
+          "Congruence & transformations",
           "below relevance gate"
         ],
         [
@@ -1901,22 +1921,6 @@
         ],
         [
           "Justify triangle congruence",
-          "below relevance gate"
-        ],
-        [
-          "Justify constructions",
-          "below relevance gate"
-        ],
-        [
-          "Identify transformations",
-          "below relevance gate"
-        ],
-        [
-          "Determine reflections",
-          "below relevance gate"
-        ],
-        [
-          "Prove triangle congruence",
           "below relevance gate"
         ]
       ],

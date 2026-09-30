@@ -91,9 +91,15 @@ def _kiwix_url(db_path: str) -> str:
     return f"http://{ARES_HOST}/tracker/kiwix_launch.html?target={quote(target, safe='/')}"
 
 def _web_url(path: str) -> str:
-    """Web module via tracker."""
-    target = f"/modules/{path.lstrip('/')}"
-    return f"http://{ARES_HOST}/tracker/kiwix_launch.html?target={quote(target, safe='/')}"
+    """Web module, linked directly.
+
+    NOT via /tracker/kiwix_launch.html: that page rejects any target not
+    starting with /kiwix/ ("Invalid target") — verified on the ARES disk image
+    and on demo.aresedu.dev, 2026-09-29. /tracker/external_launch.html can log
+    and redirect, but needs a module_id; click tracking is a separate open
+    thread in STATUS.md.
+    """
+    return f"http://{ARES_HOST}/modules/{quote(path.lstrip('/'), safe='/')}"
 
 def _kicd_url(path: str) -> str:
     """KICD Educhannel — direct, no tracker."""
@@ -215,7 +221,43 @@ def load_link_config(path: str = _CONFIG_PATH) -> dict:
     cfg["_exclude_re"] = re.compile("|".join(cfg["exclude_patterns"]), re.I)
     cfg["_stop"] = {w.lower() for w in cfg["query_stopwords"]}
     cfg["_generic"] = {w.lower() for w in cfg.get("gate_generic_terms", [])}
+    # Synonym groups -> one canonical token per group (see config comment).
+    single, phrases, members = {}, [], {}
+    for grp in cfg.get("synonyms") or []:
+        canon = re.sub(r"[^a-z0-9]", "", grp[0].lower())
+        members[canon] = [m.lower() for m in grp]
+        for m in grp:
+            words = m.lower().split()
+            if len(words) > 1:
+                phrases.append((len(m), re.compile(r"\b" + r"\s+".join(map(re.escape, words)) + r"\b"), canon))
+            else:
+                key = _norm(words[0])
+                if key in single and single[key] != canon:
+                    raise ValueError(f"link_matching.yaml: '{m}' is in two synonym groups")
+                single[key] = canon
+    cfg["_syn_single"] = single
+    cfg["_syn_phrases"] = [(rx, c) for _, rx, c in sorted(phrases, key=lambda x: -x[0])]
+    cfg["_syn_members"] = members
     return cfg
+
+
+def canon_text(text: str, cfg: dict) -> str:
+    """Lower-case text with multi-word synonyms collapsed to their canonical token."""
+    t = (text or "").lower()
+    for rx, canon in cfg.get("_syn_phrases", []):
+        t = rx.sub(f" {canon} ", t)
+    return t
+
+
+def _canon(w: str, cfg: dict) -> str:
+    """Singular form, then mapped to its synonym group's canonical token."""
+    n = _norm(w)
+    return cfg.get("_syn_single", {}).get(n, n)
+
+
+def gate_words(text: str, cfg: dict) -> set[str]:
+    """Canonical word set of a candidate's text, as the relevance gate sees it."""
+    return {_canon(t, cfg) for t in _tokens(canon_text(text, cfg))}
 
 
 def _norm(w: str) -> str:
@@ -255,12 +297,18 @@ def strip_substrand_label(substrand: str) -> str:
 def foreign_vocab_hits(title: str, subject: str, cfg: dict) -> list[str]:
     """Foreign-subject vocabulary in a title, for a lesson in `subject`."""
     words = {_norm(t) for t in _tokens(title)}
+    low = (title or "").lower()
     hits = []
     for group, spec in (cfg.get("foreign_vocab") or {}).items():
         if subject in spec.get("home", []):
             continue
-        hits += sorted(words & {_norm(t) for t in spec["terms"]})
-    return hits
+        for term in spec["terms"]:
+            if " " in term:
+                if re.search(r"\b" + re.escape(term) + r"\b", low):
+                    hits.append(term)
+            elif _norm(term) in words:
+                hits.append(term)
+    return sorted(set(hits))
 
 
 class LessonQuery:
@@ -283,23 +331,30 @@ class LessonQuery:
                 self.phrases.append(" ".join(toks))
         self.core = list(dict.fromkeys(core))
         self.detail = [t for t in dict.fromkeys(detail) if _norm(t) not in {_norm(c) for c in core}]
+        # Gate-side vocabulary is canonical: synonyms collapsed (config
+        # `synonyms`), singular forms. Raw tokens above stay for search terms.
+        ct = lambda text: canon_text(text, cfg)          # noqa: E731
+        cn = lambda w: _canon(w, cfg)                     # noqa: E731
+        self._members = cfg.get("_syn_members", {})
+        self._syn_terms = {cn(t) for t in _content_tokens(ct(f"{self.topic_name} {topic} {title}"), stop)} \
+            & set(self._members)
         # Core topics: the sub-strand name split on and/,/&; each topic must
         # match whole (all of its non-generic words).
         self.core_topics: list[frozenset] = []
         for part in re.split(r"\s*(?:,|&|\band\b)\s*", self.topic_name, flags=re.I):
-            words = frozenset(_norm(t) for t in _content_tokens(part, stop)
+            words = frozenset(cn(t) for t in _content_tokens(ct(part), stop)
                               if t not in generic and _norm(t) not in generic)
             if words and words not in self.core_topics:
                 self.core_topics.append(words)
         # Gate phrases: each comma-separated aresKeywords phrase counts only if
         # ALL its (non-generic) words are present; ordered most-important-first.
         # Lesson-title words count singly at a flat, lower weight.
-        core_norm = {_norm(c) for c in core}
+        core_norm = {cn(c) for c in _content_tokens(ct(self.topic_name), stop)}
         self.gate_phrases: list[tuple[str, frozenset, float]] = []
         seen: set[frozenset] = set()
         pos = 0
         for ph in re.split(r"[,;]", topic or ""):
-            words = frozenset(_norm(t) for t in _content_tokens(ph, stop)
+            words = frozenset(cn(t) for t in _content_tokens(ct(ph), stop)
                               if t not in generic and _norm(t) not in generic)
             if not words or words <= core_norm or words in seen:
                 continue
@@ -309,8 +364,8 @@ class LessonQuery:
                 w *= th["multiword_bonus"]
             self.gate_phrases.append((" ".join(sorted(words)), words, w))
             pos += 1
-        for t in title_toks:
-            n = _norm(t)
+        for t in _content_tokens(ct(title), stop):
+            n = cn(t)
             if n not in core_norm and t not in generic and n not in generic \
                     and frozenset([n]) not in seen:
                 seen.add(frozenset([n]))
@@ -322,6 +377,9 @@ class LessonQuery:
             for v in {t, _norm(t), _norm(t) + "s"}:
                 terms.append(f'"{v}"')
         terms += [f'"{p}"' for p in self.phrases]
+        # Synonym expansion: search every written form of a group the lesson uses.
+        for canon in sorted(self._syn_terms):
+            terms += [f'"{m}"' for m in self._members[canon]]
         return " OR ".join(list(dict.fromkeys(terms))[: max_terms * 3])
 
     def search_terms(self, kind: str = "", n: int = 4) -> str:
@@ -401,8 +459,8 @@ class AresRecommender:
             if not title or key in seen:
                 continue
             seen.add(key)
-            meta_words = {_norm(t) for t in _tokens(f"{title} {row['description'] or ''} {row['keywords'] or ''}")}
-            title_words = {_norm(t) for t in _tokens(title)}
+            meta_words = gate_words(f"{title} {row['description'] or ''} {row['keywords'] or ''}", cfg)
+            title_words = gate_words(title, cfg)
             core_hits = [" ".join(sorted(t)) for t in q.core_topics if t <= meta_words]
             matched = [(name, w) for name, words, w in q.gate_phrases if words <= meta_words]
             detail_hits = [name for name, _ in matched]
@@ -428,13 +486,13 @@ class AresRecommender:
                        and c["detail_weight"] >= th["min_detail_with_core"])
                       or c["detail_weight"] >= th["min_detail_weight"]):
                 c["reason"] = "below relevance gate"
-            elif foreign_vocab_hits(title, q.subject, cfg) and not core_hits:
+            elif foreign_vocab_hits(title, q.subject, cfg) and not c["core_in_title"]:
                 c["reason"] = f"foreign vocabulary {foreign_vocab_hits(title, q.subject, cfg)}"
             if c["reason"]:
                 rejected.append(c)
                 continue
             rel = -row["bm"]
-            rel *= 1 + 0.5 * c["core_in_title"] + 0.3 * c["detail_weight"]
+            rel *= 1 + th["core_in_title_bonus"] * c["core_in_title"] + 0.3 * c["detail_weight"]
             if row["subject"] not in family:
                 rel *= th["off_family_factor"]
             channel = _channel_name(row)

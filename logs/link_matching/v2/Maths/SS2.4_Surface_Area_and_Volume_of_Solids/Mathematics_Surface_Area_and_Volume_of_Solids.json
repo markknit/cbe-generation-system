@@ -48,73 +48,74 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Surface area using a net: rectangular prism",
-        "score": 299.89,
+        "picked": "Surface area using a net: triangular prism",
+        "score": 353.34,
         "core_hits": [
           "area surface"
         ],
         "detail_hits": [
           "prism",
           "net",
-          "prism rectangular"
+          "prism triangular",
+          "area face"
         ],
-        "detail_weight": 2.65
+        "detail_weight": 2.99
       },
       "observe.video": {
+        "picked": "Surface area using a net: rectangular prism",
+        "score": 353.07,
+        "core_hits": [
+          "area surface"
+        ],
+        "detail_hits": [
+          "prism",
+          "net",
+          "cuboid"
+        ],
+        "detail_weight": 2.34
+      },
+      "explain.video": {
         "picked": "Recognizing common 3D shapes",
-        "score": 292.64,
+        "score": 279.64,
         "core_hits": [],
         "detail_hits": [
           "prism",
           "pyramid",
-          "prism rectangular",
+          "cuboid",
           "prism triangular",
           "cylinder"
         ],
-        "detail_weight": 3.87
-      },
-      "explain.video": {
-        "picked": "Volume word problem: water tank",
-        "score": 219.28,
-        "core_hits": [],
-        "detail_hits": [
-          "prism",
-          "prism rectangular",
-          "tank water"
-        ],
-        "detail_weight": 2.51
+        "detail_weight": 3.55
       },
       "dqb.video": {
+        "picked": "Surface area of a box (cuboid)",
+        "score": 255.38,
+        "core_hits": [
+          "area surface"
+        ],
+        "detail_hits": [
+          "cuboid",
+          "area face"
+        ],
+        "detail_weight": 1.07
+      },
+      "model.video": {
         "picked": "Surface area using a net: triangular prism",
-        "score": 217.83,
+        "score": 353.34,
         "core_hits": [
           "area surface"
         ],
         "detail_hits": [
           "prism",
           "net",
-          "prism rectangular",
           "prism triangular",
           "area face"
         ],
-        "detail_weight": 3.93
-      },
-      "model.video": {
-        "picked": "Surface area using a net: rectangular prism",
-        "score": 299.89,
-        "core_hits": [
-          "area surface"
-        ],
-        "detail_hits": [
-          "prism",
-          "net",
-          "prism rectangular"
-        ],
-        "detail_weight": 2.65
+        "detail_weight": 2.99
       },
       "predict.reading": {
         "picked": "Apply volume of solids",
-        "score": 202.08,
+        "score": 249.51,
         "core_hits": [
           "solid volume"
         ],
@@ -126,66 +127,69 @@
         "detail_weight": 2.1
       },
       "observe.reading": {
-        "picked": "Surface Area of Rectangular Prisms (Flexbook)",
-        "score": 180.74,
-        "core_hits": [
-          "area surface"
-        ],
-        "detail_hits": [
-          "prism",
-          "prism rectangular"
-        ],
-        "detail_weight": 1.94
-      },
-      "explain.reading": {
-        "picked": "Surface Area of Rectangular Prisms Practice",
-        "score": 180.74,
-        "core_hits": [
-          "area surface"
-        ],
-        "detail_hits": [
-          "prism",
-          "prism rectangular"
-        ],
-        "detail_weight": 1.94
-      },
-      "dqb.reading": {
         "picked": "Surface Area of Triangular Prisms (Flexbook)",
-        "score": 180.57,
+        "score": 224.63,
         "core_hits": [
           "area surface"
         ],
         "detail_hits": [
           "prism",
           "prism triangular"
+        ],
+        "detail_weight": 1.83
+      },
+      "explain.reading": {
+        "picked": "Surface Area of Triangular Prisms Practice",
+        "score": 224.63,
+        "core_hits": [
+          "area surface"
+        ],
+        "detail_hits": [
+          "prism",
+          "prism triangular"
+        ],
+        "detail_weight": 1.83
+      },
+      "dqb.reading": {
+        "picked": "Surface area word problems",
+        "score": 206.87,
+        "core_hits": [
+          "area surface"
+        ],
+        "detail_hits": [
+          "prism",
+          "pyramid"
         ],
         "detail_weight": 1.83
       },
       "model.reading": {
-        "picked": "Surface Area of Triangular Prisms Practice",
-        "score": 180.57,
+        "picked": "Surface Area of Rectangular Prisms (Flexbook)",
+        "score": 199.66,
         "core_hits": [
           "area surface"
         ],
         "detail_hits": [
-          "prism",
-          "prism triangular"
+          "prism"
         ],
-        "detail_weight": 1.83
+        "detail_weight": 1
       }
     },
     "video_pool": {
-      "passed": 19,
+      "passed": 18,
       "runners_up": [
+        "Surface area using a net: rectangular prism",
         "Recognizing common 3D shapes",
+        "Surface area of a box (cuboid)",
         "Volume word problem: water tank",
-        "Surface area using a net: triangular prism",
-        "Volume of pyramids intuition",
-        "Volume of triangular prism & cube"
+        "Surface area word problem example"
       ],
       "rejected_sample": [
         [
           "Cylinder volume & surface area",
+          "below relevance gate"
+        ],
+        [
+          "Volume of a rectangular prism",
           "below relevance gate"
         ],
         [
@@ -211,14 +215,10 @@
         [
           "Volume of a sphere",
           "below relevance gate"
-        ],
-        [
-          "Cell size",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 99,
+        "below relevance gate": 100,
         "web file not on reference image": 3,
         "kolibri node not available on reference image": 3
       }
@@ -226,11 +226,11 @@
     "reading_pool": {
       "passed": 41,
       "runners_up": [
-        "Surface Area of Rectangular Prisms (Flexbook)",
-        "Surface Area of Rectangular Prisms Practice",
         "Surface Area of Triangular Prisms (Flexbook)",
         "Surface Area of Triangular Prisms Practice",
-        "Surface area word problems"
+        "Surface area word problems",
+        "Surface Area of Rectangular Prisms (Flexbook)",
+        "Surface Area of Rectangular Prisms Practice"
       ],
       "rejected_sample": [
         [
@@ -331,7 +331,7 @@
     "slots": {
       "predict.video": {
         "picked": "Surface area of a box (cuboid)",
-        "score": 129.53,
+        "score": 167.53,
         "core_hits": [
           "area surface"
         ],
@@ -341,31 +341,28 @@
         "detail_weight": 0.68
       },
       "observe.video": {
-        "picked": "Volume of a sphere",
-        "score": 97.3,
+        "picked": "Volumes of cones intuition",
+        "score": 110.09,
+        "core_hits": [],
+        "detail_hits": [
+          "cone"
+        ],
+        "detail_weight": 1
+      },
+      "explain.video": {
+        "picked": "Surface area of a box (cuboid)",
+        "score": 167.53,
         "core_hits": [
           "area surface"
         ],
         "detail_hits": [
-          "sphere",
-          "formula sphere"
+          "area surface total"
         ],
-        "detail_weight": 1.41
-      },
-      "explain.video": {
-        "picked": "Volume of triangular prism & cube",
-        "score": 81.7,
-        "core_hits": [
-          "solid volume"
-        ],
-        "detail_hits": [
-          "geometry solid"
-        ],
-        "detail_weight": 0.39
+        "detail_weight": 0.68
       },
       "dqb.video": {
         "picked": "Surface area of a box (cuboid)",
-        "score": 129.53,
+        "score": 167.53,
         "core_hits": [
           "area surface"
         ],
@@ -376,7 +373,7 @@
       },
       "model.video": {
         "picked": "Surface area of a box (cuboid)",
-        "score": 129.53,
+        "score": 167.53,
         "core_hits": [
           "area surface"
         ],
@@ -387,7 +384,7 @@
       },
       "predict.reading": {
         "picked": "Surface Area and Volume of Cones Practice",
-        "score": 188.08,
+        "score": 240.33,
         "core_hits": [
           "area surface"
         ],
@@ -397,6 +394,18 @@
         "detail_weight": 1
       },
       "observe.reading": {
+        "picked": "Apply volume of solids",
+        "score": 199.01,
+        "core_hits": [
+          "solid volume"
+        ],
+        "detail_hits": [
+          "cone",
+          "sphere"
+        ],
+        "detail_weight": 1.83
+      },
+      "explain.reading": {
         "picked": "Solid geometry word problems",
         "score": 169.42,
         "core_hits": [
@@ -409,21 +418,9 @@
         ],
         "detail_weight": 2.23
       },
-      "explain.reading": {
-        "picked": "Apply volume of solids",
-        "score": 159.97,
-        "core_hits": [
-          "solid volume"
-        ],
-        "detail_hits": [
-          "cone",
-          "sphere"
-        ],
-        "detail_weight": 1.83
-      },
       "dqb.reading": {
         "picked": "Surface Area of Spheres (Flexbook)",
-        "score": 119.3,
+        "score": 153.41,
         "core_hits": [
           "area surface"
         ],
@@ -434,7 +431,7 @@
       },
       "model.reading": {
         "picked": "Surface Area of Spheres Practice",
-        "score": 119.3,
+        "score": 153.41,
         "core_hits": [
           "area surface"
         ],
@@ -447,9 +444,9 @@
     "video_pool": {
       "passed": 7,
       "runners_up": [
+        "Volumes of cones intuition",
         "Volume of a sphere",
         "Volume of triangular prism & cube",
-        "Volumes of cones intuition",
         "Volume of a cone",
         "Related rates: water pouring into a cone"
       ],
@@ -483,21 +480,22 @@
           "below relevance gate"
         ],
         [
-          "Electrode (surface area test)",
-          "below relevance gate"
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 126,
-        "web file not on reference image": 3,
-        "kolibri node not available on reference image": 4
+        "below relevance gate": 122,
+        "web file not on reference image": 9,
+        "kolibri node not available on reference image": 6,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
       "passed": 18,
       "runners_up": [
-        "Solid geometry word problems",
         "Apply volume of solids",
+        "Solid geometry word problems",
         "Surface Area of Spheres (Flexbook)",
         "Surface Area of Spheres Practice",
         "Volume of cylinders, spheres, and cones word problems"
@@ -537,8 +535,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 143,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 125,
+        "kolibri node not available on reference image": 1,
+        "excluded: answer/exam material": 20
       }
     }
   },
@@ -636,7 +635,7 @@
       },
       "predict.reading": {
         "picked": "Surface Area and Volume of Cones Practice",
-        "score": 146.56,
+        "score": 188.46,
         "core_hits": [
           "area surface"
         ],
@@ -647,7 +646,7 @@
       },
       "observe.reading": {
         "picked": "Apply volume of solids",
-        "score": 108.87,
+        "score": 139.99,
         "core_hits": [
           "solid volume"
         ],
@@ -658,7 +657,7 @@
       },
       "explain.reading": {
         "picked": "Surface Area and Volume of Cones Practice",
-        "score": 146.56,
+        "score": 188.46,
         "core_hits": [
           "area surface"
         ],
@@ -669,7 +668,7 @@
       },
       "dqb.reading": {
         "picked": "Surface Area and Volume of Cones Practice",
-        "score": 146.56,
+        "score": 188.46,
         "core_hits": [
           "area surface"
         ],
@@ -680,7 +679,7 @@
       },
       "model.reading": {
         "picked": "Surface Area and Volume of Cones Practice",
-        "score": 146.56,
+        "score": 188.46,
         "core_hits": [
           "area surface"
         ],
@@ -730,9 +729,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 124,
-        "kolibri node not available on reference image": 6,
-        "web file not on reference image": 3
+        "below relevance gate": 120,
+        "web file not on reference image": 8,
+        "kolibri node not available on reference image": 8,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
@@ -776,8 +776,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 145,
-        "kolibri node not available on reference image": 18
+        "below relevance gate": 131,
+        "kolibri node not available on reference image": 19,
+        "excluded: answer/exam material": 20
       }
     }
   },
@@ -833,19 +834,8 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Surface area word problem example",
-        "score": 117.51,
-        "core_hits": [
-          "area surface"
-        ],
-        "detail_hits": [
-          "pyramid"
-        ],
-        "detail_weight": 0.3
-      },
-      "observe.video": {
         "picked": "Surface area using a net: triangular prism",
-        "score": 101.26,
+        "score": 195.91,
         "core_hits": [
           "area surface"
         ],
@@ -854,9 +844,9 @@
         ],
         "detail_weight": 0.75
       },
-      "explain.video": {
+      "observe.video": {
         "picked": "Surface area word problem example",
-        "score": 117.51,
+        "score": 154.46,
         "core_hits": [
           "area surface"
         ],
@@ -864,32 +854,43 @@
           "pyramid"
         ],
         "detail_weight": 0.3
+      },
+      "explain.video": {
+        "picked": "Surface area using a net: triangular prism",
+        "score": 195.91,
+        "core_hits": [
+          "area surface"
+        ],
+        "detail_hits": [
+          "base rectangular"
+        ],
+        "detail_weight": 0.75
       },
       "dqb.video": {
-        "picked": "Surface area word problem example",
-        "score": 117.51,
+        "picked": "Surface area using a net: triangular prism",
+        "score": 195.91,
         "core_hits": [
           "area surface"
         ],
         "detail_hits": [
-          "pyramid"
+          "base rectangular"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.75
       },
       "model.video": {
-        "picked": "Surface area word problem example",
-        "score": 117.51,
+        "picked": "Surface area using a net: triangular prism",
+        "score": 195.91,
         "core_hits": [
           "area surface"
         ],
         "detail_hits": [
-          "pyramid"
+          "base rectangular"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.75
       },
       "predict.reading": {
         "picked": "Surface Area and Volume of Pyramids Practice",
-        "score": 133.31,
+        "score": 175.23,
         "core_hits": [
           "area surface"
         ],
@@ -900,7 +901,7 @@
       },
       "observe.reading": {
         "picked": "Surface Area and Volume of Pyramids (PLIX)",
-        "score": 133.31,
+        "score": 175.23,
         "core_hits": [
           "area surface"
         ],
@@ -911,7 +912,7 @@
       },
       "explain.reading": {
         "picked": "Surface area word problems",
-        "score": 101.46,
+        "score": 133.37,
         "core_hits": [
           "area surface"
         ],
@@ -922,7 +923,7 @@
       },
       "dqb.reading": {
         "picked": "Apply volume of solids",
-        "score": 99.03,
+        "score": 130.17,
         "core_hits": [
           "solid volume"
         ],
@@ -933,7 +934,7 @@
       },
       "model.reading": {
         "picked": "Surface Area and Volume of Pyramids Practice",
-        "score": 133.31,
+        "score": 175.23,
         "core_hits": [
           "area surface"
         ],
@@ -946,7 +947,7 @@
     "video_pool": {
       "passed": 3,
       "runners_up": [
-        "Surface area using a net: triangular prism",
+        "Surface area word problem example",
         "Volume with cross sections: intro"
       ],
       "rejected_sample": [
@@ -1085,7 +1086,7 @@
     "slots": {
       "predict.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 154.52,
+        "score": 198.69,
         "core_hits": [
           "area surface"
         ],
@@ -1095,18 +1096,19 @@
         "detail_weight": 0.83
       },
       "observe.video": {
-        "picked": "Composite Solids Principles - Basic",
-        "score": 103.11,
-        "core_hits": [],
-        "detail_hits": [
-          "composite solid",
-          "composite"
+        "picked": "Cylinder volume & surface area",
+        "score": 198.69,
+        "core_hits": [
+          "area surface"
         ],
-        "detail_weight": 1.8
+        "detail_hits": [
+          "cylinder"
+        ],
+        "detail_weight": 0.83
       },
       "explain.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 154.52,
+        "score": 198.69,
         "core_hits": [
           "area surface"
         ],
@@ -1117,7 +1119,7 @@
       },
       "dqb.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 154.52,
+        "score": 198.69,
         "core_hits": [
           "area surface"
         ],
@@ -1128,7 +1130,7 @@
       },
       "model.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 154.52,
+        "score": 198.69,
         "core_hits": [
           "area surface"
         ],
@@ -1139,7 +1141,7 @@
       },
       "predict.reading": {
         "picked": "Volume and surface area of cylinders",
-        "score": 194.56,
+        "score": 250.18,
         "core_hits": [
           "area surface"
         ],
@@ -1150,7 +1152,7 @@
       },
       "observe.reading": {
         "picked": "Surface Area and Volume of Cylinders Practice",
-        "score": 146.44,
+        "score": 188.3,
         "core_hits": [
           "area surface"
         ],
@@ -1161,7 +1163,7 @@
       },
       "explain.reading": {
         "picked": "Surface Area of Cylinders (Flexbook)",
-        "score": 121.47,
+        "score": 156.19,
         "core_hits": [
           "area surface"
         ],
@@ -1172,7 +1174,7 @@
       },
       "dqb.reading": {
         "picked": "Surface Area of Cylinders Practice",
-        "score": 121.47,
+        "score": 156.19,
         "core_hits": [
           "area surface"
         ],
@@ -1183,7 +1185,7 @@
       },
       "model.reading": {
         "picked": "Heights of Cylinders Given Surface Area (Flexbook)",
-        "score": 119.03,
+        "score": 153.06,
         "core_hits": [
           "area surface"
         ],
@@ -1228,14 +1230,15 @@
           "below relevance gate"
         ],
         [
-          "Area and Volume of Similar Solids Principles",
-          "below relevance gate"
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 117,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 4
+        "below relevance gate": 116,
+        "web file not on reference image": 8,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 6
       }
     },
     "reading_pool": {
@@ -1282,8 +1285,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138,
-        "kolibri node not available on reference image": 17
+        "below relevance gate": 143,
+        "kolibri node not available on reference image": 1,
+        "excluded: answer/exam material": 6
       }
     }
   },
@@ -1346,7 +1350,7 @@
     "slots": {
       "predict.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 211.64,
+        "score": 273.74,
         "core_hits": [
           "area surface"
         ],
@@ -1356,33 +1360,30 @@
         "detail_weight": 0.68
       },
       "observe.video": {
-        "picked": "Volume of pyramids intuition",
-        "score": 156.62,
-        "core_hits": [],
-        "detail_hits": [
-          "prism volume",
-          "pyramid volume",
-          "prism",
-          "pyramid"
+        "picked": "Cylinder volume & surface area",
+        "score": 273.74,
+        "core_hits": [
+          "area surface"
         ],
-        "detail_weight": 3.35
+        "detail_hits": [
+          "cylinder volume"
+        ],
+        "detail_weight": 0.68
       },
       "explain.video": {
-        "picked": "Volume of triangular prism & cube",
-        "score": 128.86,
+        "picked": "Cylinder volume & surface area",
+        "score": 273.74,
         "core_hits": [
-          "solid volume"
+          "area surface"
         ],
         "detail_hits": [
-          "prism volume",
-          "geometry solid",
-          "prism"
+          "cylinder volume"
         ],
-        "detail_weight": 2.13
+        "detail_weight": 0.68
       },
       "dqb.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 211.64,
+        "score": 273.74,
         "core_hits": [
           "area surface"
         ],
@@ -1393,7 +1394,7 @@
       },
       "model.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 211.64,
+        "score": 273.74,
         "core_hits": [
           "area surface"
         ],
@@ -1404,7 +1405,7 @@
       },
       "predict.reading": {
         "picked": "Apply volume of solids",
-        "score": 445.32,
+        "score": 509.08,
         "core_hits": [
           "solid volume"
         ],
@@ -1422,7 +1423,7 @@
       },
       "observe.reading": {
         "picked": "Apply volume of solids",
-        "score": 445.32,
+        "score": 509.08,
         "core_hits": [
           "solid volume"
         ],
@@ -1440,7 +1441,7 @@
       },
       "explain.reading": {
         "picked": "Apply volume of solids",
-        "score": 445.32,
+        "score": 509.08,
         "core_hits": [
           "solid volume"
         ],
@@ -1458,7 +1459,7 @@
       },
       "dqb.reading": {
         "picked": "Apply volume of solids",
-        "score": 445.32,
+        "score": 509.08,
         "core_hits": [
           "solid volume"
         ],
@@ -1476,7 +1477,7 @@
       },
       "model.reading": {
         "picked": "Apply volume of solids",
-        "score": 445.32,
+        "score": 509.08,
         "core_hits": [
           "solid volume"
         ],
@@ -1494,13 +1495,13 @@
       }
     },
     "video_pool": {
-      "passed": 21,
+      "passed": 20,
       "runners_up": [
         "Volume of pyramids intuition",
-        "Volume of triangular prism & cube",
-        "Volume word problem: water tank",
         "Volumes of cones intuition",
-        "Surface area using a net: rectangular prism"
+        "Volume of triangular prism & cube",
+        "Surface area using a net: rectangular prism",
+        "Surface area using a net: triangular prism"
       ],
       "rejected_sample": [
         [
@@ -1516,6 +1517,10 @@
           "below relevance gate"
         ],
         [
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
+        ],
+        [
           "Applying volume of solids",
           "below relevance gate"
         ],
@@ -1524,22 +1529,19 @@
           "below relevance gate"
         ],
         [
+          "Geometry - Area and Perimeter - Math Sing-along from Ubongo Kids",
+          "kolibri node not available on reference image"
+        ],
+        [
           "Composite area between curves",
-          "below relevance gate"
-        ],
-        [
-          "Surface area to volume ratio of cells",
-          "below relevance gate"
-        ],
-        [
-          "Volume with cross sections: triangle",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 100,
-        "kolibri node not available on reference image": 4,
-        "web file not on reference image": 1
+        "below relevance gate": 99,
+        "web file not on reference image": 6,
+        "kolibri node not available on reference image": 6,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
@@ -1586,7 +1588,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 108
+        "below relevance gate": 108,
+        "kolibri node not available on reference image": 1
       }
     }
   },
@@ -1684,7 +1687,7 @@
       },
       "predict.reading": {
         "picked": "Surface Area and Volume of Cones Practice",
-        "score": 136.2,
+        "score": 179.03,
         "core_hits": [
           "area surface"
         ],
@@ -1695,7 +1698,7 @@
       },
       "observe.reading": {
         "picked": "Apply volume of solids",
-        "score": 98.97,
+        "score": 130.1,
         "core_hits": [
           "solid volume"
         ],
@@ -1706,7 +1709,7 @@
       },
       "explain.reading": {
         "picked": "Surface Area and Volume of Cones Practice",
-        "score": 136.2,
+        "score": 179.03,
         "core_hits": [
           "area surface"
         ],
@@ -1717,7 +1720,7 @@
       },
       "dqb.reading": {
         "picked": "Surface Area and Volume of Cones Practice",
-        "score": 136.2,
+        "score": 179.03,
         "core_hits": [
           "area surface"
         ],
@@ -1728,7 +1731,7 @@
       },
       "model.reading": {
         "picked": "Surface Area and Volume of Cones Practice",
-        "score": 136.2,
+        "score": 179.03,
         "core_hits": [
           "area surface"
         ],
@@ -1782,13 +1785,14 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 108,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 3
+        "below relevance gate": 105,
+        "web file not on reference image": 6,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 5
       }
     },
     "reading_pool": {
-      "passed": 16,
+      "passed": 15,
       "runners_up": [
         "Apply volume of solids",
         "Inscribed Similar Triangles (Flexbook)",
@@ -1831,7 +1835,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 132
+        "below relevance gate": 132,
+        "kolibri node not available on reference image": 1
       }
     }
   },
@@ -1888,7 +1893,7 @@
     "slots": {
       "predict.video": {
         "picked": "Surface area word problem example",
-        "score": 69.44,
+        "score": 91.27,
         "core_hits": [
           "area surface"
         ],
@@ -1899,7 +1904,7 @@
       },
       "observe.video": {
         "picked": "Surface area word problem example",
-        "score": 69.44,
+        "score": 91.27,
         "core_hits": [
           "area surface"
         ],
@@ -1910,7 +1915,7 @@
       },
       "explain.video": {
         "picked": "Surface area word problem example",
-        "score": 69.44,
+        "score": 91.27,
         "core_hits": [
           "area surface"
         ],
@@ -1921,7 +1926,7 @@
       },
       "dqb.video": {
         "picked": "Surface area word problem example",
-        "score": 69.44,
+        "score": 91.27,
         "core_hits": [
           "area surface"
         ],
@@ -1932,7 +1937,7 @@
       },
       "model.video": {
         "picked": "Surface area word problem example",
-        "score": 69.44,
+        "score": 91.27,
         "core_hits": [
           "area surface"
         ],
@@ -1943,7 +1948,7 @@
       },
       "predict.reading": {
         "picked": "Surface Area and Volume of Pyramids Practice",
-        "score": 136.28,
+        "score": 179.13,
         "core_hits": [
           "area surface"
         ],
@@ -1954,7 +1959,7 @@
       },
       "observe.reading": {
         "picked": "Surface Area and Volume of Pyramids (PLIX)",
-        "score": 136.28,
+        "score": 179.13,
         "core_hits": [
           "area surface"
         ],
@@ -1965,7 +1970,7 @@
       },
       "explain.reading": {
         "picked": "Apply volume of solids",
-        "score": 99.03,
+        "score": 130.17,
         "core_hits": [
           "solid volume"
         ],
@@ -1976,7 +1981,7 @@
       },
       "dqb.reading": {
         "picked": "Surface Area and Volume of Pyramids Practice",
-        "score": 136.28,
+        "score": 179.13,
         "core_hits": [
           "area surface"
         ],
@@ -1987,7 +1992,7 @@
       },
       "model.reading": {
         "picked": "Surface Area and Volume of Pyramids Practice",
-        "score": 136.28,
+        "score": 179.13,
         "core_hits": [
           "area surface"
         ],
@@ -2022,22 +2027,23 @@
           "below relevance gate"
         ],
         [
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
+        ],
+        [
           "Applying volume of solids",
           "below relevance gate"
         ],
         [
           "Area and Volume of Similar Solids Principles",
           "below relevance gate"
-        ],
-        [
-          "Volume of pyramids intuition",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 118,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 3
+        "below relevance gate": 112,
+        "web file not on reference image": 8,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 6
       }
     },
     "reading_pool": {
@@ -2084,7 +2090,8 @@
       ],
       "rejected_by_reason": {
         "below relevance gate": 141,
-        "kolibri node not available on reference image": 22
+        "kolibri node not available on reference image": 5,
+        "excluded: answer/exam material": 13
       }
     }
   },
@@ -2178,6 +2185,17 @@
         "detail_weight": 1.8
       },
       "predict.reading": {
+        "picked": "Volume and surface area word problems",
+        "score": 114.53,
+        "core_hits": [
+          "area surface"
+        ],
+        "detail_hits": [
+          "composite"
+        ],
+        "detail_weight": 0.3
+      },
+      "observe.reading": {
         "picked": "Solid geometry word problems",
         "score": 102.52,
         "core_hits": [
@@ -2188,7 +2206,7 @@
         ],
         "detail_weight": 0.68
       },
-      "observe.reading": {
+      "explain.reading": {
         "picked": "Composite Solids (Flexbook)",
         "score": 99.14,
         "core_hits": [],
@@ -2198,7 +2216,7 @@
         ],
         "detail_weight": 1.8
       },
-      "explain.reading": {
+      "dqb.reading": {
         "picked": "Composite Solids Practice",
         "score": 99.14,
         "core_hits": [],
@@ -2208,9 +2226,9 @@
         ],
         "detail_weight": 1.8
       },
-      "dqb.reading": {
+      "model.reading": {
         "picked": "Volume and surface area word problems",
-        "score": 87.13,
+        "score": 114.53,
         "core_hits": [
           "area surface"
         ],
@@ -2218,17 +2236,6 @@
           "composite"
         ],
         "detail_weight": 0.3
-      },
-      "model.reading": {
-        "picked": "Solid geometry word problems",
-        "score": 102.52,
-        "core_hits": [
-          "solid volume"
-        ],
-        "detail_hits": [
-          "geometry solid"
-        ],
-        "detail_weight": 0.68
       }
     },
     "video_pool": {
@@ -2251,38 +2258,39 @@
           "below relevance gate"
         ],
         [
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
+        ],
+        [
           "Area and Volume of Similar Solids Principles",
           "below relevance gate"
         ],
         [
+          "Solving For X In X³   11 = 53 #Shorts #Algebra #Math #Maths #Mathematics #Education #Learn #Learning",
+          "web file not on reference image"
+        ],
+        [
+          "Geometry - Area and Perimeter - Math Sing-along from Ubongo Kids",
+          "kolibri node not available on reference image"
+        ],
+        [
           "Composite area between curves",
-          "below relevance gate"
-        ],
-        [
-          "Volumes of cones intuition",
-          "below relevance gate"
-        ],
-        [
-          "Volume with cross sections: triangle",
-          "below relevance gate"
-        ],
-        [
-          "Cell size",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 119,
-        "kolibri node not available on reference image": 6,
-        "web file not on reference image": 2
+        "below relevance gate": 116,
+        "web file not on reference image": 8,
+        "kolibri node not available on reference image": 8,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
       "passed": 4,
       "runners_up": [
+        "Solid geometry word problems",
         "Composite Solids (Flexbook)",
-        "Composite Solids Practice",
-        "Volume and surface area word problems"
+        "Composite Solids Practice"
       ],
       "rejected_sample": [
         [
@@ -2319,8 +2327,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 141,
-        "kolibri node not available on reference image": 18
+        "below relevance gate": 130,
+        "kolibri node not available on reference image": 20,
+        "excluded: answer/exam material": 20
       }
     }
   },
@@ -2374,7 +2383,7 @@
     "slots": {
       "predict.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 154.52,
+        "score": 198.69,
         "core_hits": [
           "area surface"
         ],
@@ -2385,7 +2394,7 @@
       },
       "observe.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 154.52,
+        "score": 198.69,
         "core_hits": [
           "area surface"
         ],
@@ -2396,7 +2405,7 @@
       },
       "explain.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 154.52,
+        "score": 198.69,
         "core_hits": [
           "area surface"
         ],
@@ -2407,7 +2416,7 @@
       },
       "dqb.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 154.52,
+        "score": 198.69,
         "core_hits": [
           "area surface"
         ],
@@ -2418,7 +2427,7 @@
       },
       "model.video": {
         "picked": "Cylinder volume & surface area",
-        "score": 154.52,
+        "score": 198.69,
         "core_hits": [
           "area surface"
         ],
@@ -2429,7 +2438,7 @@
       },
       "predict.reading": {
         "picked": "Volume and surface area of cylinders",
-        "score": 194.56,
+        "score": 250.18,
         "core_hits": [
           "area surface"
         ],
@@ -2440,7 +2449,7 @@
       },
       "observe.reading": {
         "picked": "Heights of Cylinders Given Surface Area (Flexbook)",
-        "score": 156.67,
+        "score": 201.46,
         "core_hits": [
           "area surface"
         ],
@@ -2451,7 +2460,7 @@
       },
       "explain.reading": {
         "picked": "Heights of Cylinders Given Surface Area Practice",
-        "score": 156.67,
+        "score": 201.46,
         "core_hits": [
           "area surface"
         ],
@@ -2462,7 +2471,7 @@
       },
       "dqb.reading": {
         "picked": "Surface Area and Volume of Cylinders Practice",
-        "score": 146.44,
+        "score": 188.3,
         "core_hits": [
           "area surface"
         ],
@@ -2473,7 +2482,7 @@
       },
       "model.reading": {
         "picked": "Apply volume of solids",
-        "score": 128.77,
+        "score": 165.58,
         "core_hits": [
           "solid volume"
         ],
@@ -2516,14 +2525,15 @@
           "below relevance gate"
         ],
         [
-          "Electrode (surface area test)",
-          "below relevance gate"
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 124,
-        "kolibri node not available on reference image": 7,
-        "web file not on reference image": 2
+        "below relevance gate": 122,
+        "web file not on reference image": 7,
+        "kolibri node not available on reference image": 10,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
@@ -2570,9 +2580,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 141,
-        "kolibri node not available on reference image": 21,
-        "excluded: answer/exam material": 1
+        "below relevance gate": 134,
+        "kolibri node not available on reference image": 4,
+        "excluded: answer/exam material": 21
       }
     }
   }

@@ -86,13 +86,15 @@ class Reference:
             if not self.kolibri[node]:
                 return f"kolibri node {node} content not downloaded (available=0)"
             return ""
+        if u.path.startswith("/modules/"):
+            if self.web_root is None:
+                return ""
+            p = os.path.join(self.web_root, unquote(u.path)[len("/modules/"):])
+            return "" if os.path.exists(p) else f"web module file missing: {u.path}"
         if "kiwix_launch" in u.path:
             target = unquote(parse_qs(u.query).get("target", [""])[0])
-            if target.startswith("/modules/"):
-                if self.web_root is None:
-                    return ""
-                p = os.path.join(self.web_root, target[len("/modules/"):])
-                return "" if os.path.exists(p) else f"web module file missing: {target}"
+            if not target.startswith("/kiwix/"):
+                return f"tracker rejects non-/kiwix/ targets ('Invalid target'): {target}"
             return "kiwix article link (cannot be verified; not an eligible source)"
         if "/KICD_Educhannel/" in u.path:
             if self.web_root is None:
@@ -194,7 +196,7 @@ def main(argv: list[str]) -> int:
                         fails.append(f"T1 {where}: answer/exam material {title!r}")
                         counts["T1"] += 1
                     foreign = ar.foreign_vocab_hits(title, subject, cfg)
-                    if foreign and not ({ar._norm(t) for t in ar._tokens(title)} & words):
+                    if foreign and not (ar.gate_words(title, cfg) & words):
                         fails.append(f"T2 {where}: foreign vocabulary {foreign} in {title!r}")
                         counts["T2"] += 1
                     dead = ref.dead_reason(r.get("direct_url", ""))

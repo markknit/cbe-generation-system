@@ -318,3 +318,31 @@ reason is given for each.
   - `sections.js` replaced a failed module load with `() => ({})`.
   Both now fail the render. Re-rendering an edited JSON on a machine without
   the ARES DB keeps the existing `resourceLinks` and prints a warning.
+
+### 7.1 Follow-up changes (same day, after Mark's Phase 2 review)
+
+- **Web-module links go direct to `/modules/<path>`, not through the tracker.**
+  `/tracker/kiwix_launch.html` rejects any target not starting with
+  `/kiwix/` ("Invalid target"). Confirmed in the disk image's copy and on
+  demo.aresedu.dev. The first Phase 2 render had 183 such slots; the checker
+  now flags that link form. `/tracker/external_launch.html` would log the
+  click and redirect, but it needs a `module_id`. It belongs to the separate
+  click-tracking thread.
+- **Synonyms** (`config/link_matching.yaml` `synonyms`, Mark's request):
+  - 51 groups of **strict equivalents only**: British/US spelling, KICD vs US
+    terms (enlargement/dilation, turning effect/torque, trapezium/trapezoid,
+    indices/exponents, p.d./voltage), and noun/adjective forms.
+  - Rejected as not equivalent: tonne/ton, bare moment/torque, index/exponent,
+    standard form/scientific notation, centre of gravity/center of mass.
+  - Each group collapses to one token for the gate, and search expands back
+    to every written form. A word listed in two groups is a load error.
+- **Subject tags in the index are unreliable** ("Intro to logarithm
+  properties" is tagged Chemistry). The off-family penalty is softened to
+  ×0.9, and a sub-strand topic in the candidate's title now weighs more.
+- **The foreign-vocabulary rule uses the title:** a title with another
+  subject's vocabulary needs the lesson topic in the title too. It also
+  supports phrases ("reaction rate"). This removed "Factors affecting reaction
+  rates" from a Thermal Expansion lesson.
+- **Live verification:** `scripts/verify_links_live.py` checks every distinct
+  link against a running server (Kolibri content API plus HTTP for web
+  modules). demo.aresedu.dev: **1,707 / 1,707 OK** (1,669 Kolibri, 38 web).

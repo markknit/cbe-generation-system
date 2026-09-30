@@ -201,7 +201,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 126,
+        "below relevance gate": 124,
+        "web file not on reference image": 4,
+        "excluded: answer/exam material": 1,
         "kolibri node not available on reference image": 1
       }
     },
@@ -249,7 +251,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 124,
+        "below relevance gate": 122,
         "kolibri node not available on reference image": 2
       }
     }
@@ -421,7 +423,7 @@
       }
     },
     "video_pool": {
-      "passed": 23,
+      "passed": 24,
       "runners_up": [
         "Classifying numbers",
         "Proof: √2 is irrational",
@@ -464,7 +466,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 119,
+        "below relevance gate": 118,
+        "web file not on reference image": 2,
         "kolibri node not available on reference image": 1
       }
     },
@@ -722,8 +725,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 126,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 124,
+        "kolibri node not available on reference image": 1,
+        "web file not on reference image": 3,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
@@ -931,7 +936,7 @@
       }
     },
     "video_pool": {
-      "passed": 90,
+      "passed": 91,
       "runners_up": [
         "Compare rational numbers using a number line",
         "Proof: square roots of prime numbers are irrational",
@@ -974,13 +979,13 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 48,
+        "below relevance gate": 46,
         "kolibri node not available on reference image": 1,
-        "web file not on reference image": 1
+        "web file not on reference image": 4
       }
     },
     "reading_pool": {
-      "passed": 79,
+      "passed": 78,
       "runners_up": [
         "Decimals on the number line: tenths",
         "Round decimals using a number line",
@@ -1023,7 +1028,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 75,
+        "below relevance gate": 76,
         "kolibri node not available on reference image": 2
       }
     }
@@ -1296,15 +1301,46 @@
     "slots": {
       "predict.video": {
         "picked": "Order of operations example: fractions and exponents",
-        "score": 102.9,
+        "score": 133.99,
         "core_hits": [],
         "detail_hits": [
           "operation order",
-          "fraction"
+          "fraction",
+          "indices"
         ],
-        "detail_weight": 1.7
+        "detail_weight": 1.92
       },
       "observe.video": {
+        "picked": "Evaluating expressions with variables: exponents",
+        "score": 109.5,
+        "core_hits": [],
+        "detail_hits": [
+          "operation order",
+          "indices"
+        ],
+        "detail_weight": 1.47
+      },
+      "explain.video": {
+        "picked": "Order of operations example",
+        "score": 107.72,
+        "core_hits": [],
+        "detail_hits": [
+          "operation order",
+          "indices"
+        ],
+        "detail_weight": 1.47
+      },
+      "dqb.video": {
+        "picked": "Worked example: Order of operations (PEMDAS)",
+        "score": 97.61,
+        "core_hits": [],
+        "detail_hits": [
+          "operation order",
+          "indices"
+        ],
+        "detail_weight": 1.47
+      },
+      "model.video": {
         "picked": "Limits at infinity of quotients with square roots (even power)",
         "score": 96.15,
         "core_hits": [],
@@ -1313,33 +1349,6 @@
           "root square"
         ],
         "detail_weight": 1.01
-      },
-      "explain.video": {
-        "picked": "Selecting the First Operation - Order of Operations",
-        "score": 90.86,
-        "core_hits": [],
-        "detail_hits": [
-          "operation order"
-        ],
-        "detail_weight": 1.25
-      },
-      "dqb.video": {
-        "picked": "Order of operations example",
-        "score": 88.08,
-        "core_hits": [],
-        "detail_hits": [
-          "operation order"
-        ],
-        "detail_weight": 1.25
-      },
-      "model.video": {
-        "picked": "Adding, Subtracting, Multiplying and Dividing - Missing Operation - Order of Operations",
-        "score": 87.07,
-        "core_hits": [],
-        "detail_hits": [
-          "operation order"
-        ],
-        "detail_weight": 1.25
       },
       "predict.reading": {
         "picked": "Equations with square roots: decimals & fractions",
@@ -1353,6 +1362,17 @@
         "detail_weight": 1.17
       },
       "observe.reading": {
+        "picked": "Order of operations with fractions and exponents",
+        "score": 115.1,
+        "core_hits": [],
+        "detail_hits": [
+          "operation order",
+          "fraction",
+          "indices"
+        ],
+        "detail_weight": 1.92
+      },
+      "explain.reading": {
         "picked": "Order rational numbers",
         "score": 114.47,
         "core_hits": [],
@@ -1364,7 +1384,7 @@
         ],
         "detail_weight": 2.09
       },
-      "explain.reading": {
+      "dqb.reading": {
         "picked": "Multiply & divide rational expressions: Error analysis",
         "score": 112.7,
         "core_hits": [],
@@ -1374,7 +1394,7 @@
         ],
         "detail_weight": 1.16
       },
-      "dqb.reading": {
+      "model.reading": {
         "picked": "Reduce rational expressions to lowest terms: Error analysis",
         "score": 110.79,
         "core_hits": [],
@@ -1383,25 +1403,16 @@
           "analysis error"
         ],
         "detail_weight": 1.16
-      },
-      "model.reading": {
-        "picked": "Connect Variable Expressions and the Order of Operations with Real-World Problems (Flexbook)",
-        "score": 101.26,
-        "core_hits": [],
-        "detail_hits": [
-          "operation order"
-        ],
-        "detail_weight": 1.25
       }
     },
     "video_pool": {
       "passed": 44,
       "runners_up": [
-        "Limits at infinity of quotients with square roots (even power)",
-        "Selecting the First Operation - Order of Operations",
+        "Evaluating expressions with variables: exponents",
         "Order of operations example",
-        "Adding, Subtracting, Multiplying and Dividing - Missing Operation - Order of Operations",
-        "Evaluating expressions with variables: exponents"
+        "Worked example: Order of operations (PEMDAS)",
+        "Limits at infinity of quotients with square roots (even power)",
+        "Selecting the First Operation - Order of Operations"
       ],
       "rejected_sample": [
         [
@@ -1421,6 +1432,10 @@
           "below relevance gate"
         ],
         [
+          "Exponents of decimals",
+          "below relevance gate"
+        ],
+        [
           "Approximating square roots to hundredths",
           "below relevance gate"
         ],
@@ -1431,25 +1446,21 @@
         [
           "Understanding square roots",
           "below relevance gate"
-        ],
-        [
-          "Exponential expressions word problems (numerical)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 86,
+        "below relevance gate": 84,
         "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
       "passed": 31,
       "runners_up": [
+        "Order of operations with fractions and exponents",
         "Order rational numbers",
         "Multiply & divide rational expressions: Error analysis",
         "Reduce rational expressions to lowest terms: Error analysis",
-        "Connect Variable Expressions and the Order of Operations with Real-World Problems (Flexbook)",
-        "Roots of decimals & fractions"
+        "Connect Variable Expressions and the Order of Operations with Real-World Problems (Flexbook)"
       ],
       "rejected_sample": [
         [
@@ -1486,7 +1497,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 119,
+        "below relevance gate": 120,
         "kolibri node not available on reference image": 2
       }
     }
@@ -1931,7 +1942,7 @@
       }
     },
     "video_pool": {
-      "passed": 113,
+      "passed": 112,
       "runners_up": [
         "Kutambua na kupanga kwa thamani halisi -dubbed(KY)",
         "Placing absolute values on the number line",
@@ -1941,8 +1952,20 @@
       ],
       "rejected_sample": [
         [
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
+          "web file not on reference image"
+        ],
+        [
+          "Maths Kcse Grading System 2024 #Maths #Solveexponentialequation #Mathematics #Mathstricks #Exponen",
+          "excluded: answer/exam material"
+        ],
+        [
           "Economic profit for firms in perfectly competitive markets",
           "below relevance gate"
+        ],
+        [
+          "Definition Of Number Types In Math  ｜ Learn & Nurture #Shortsvideo #Maths #Mathfacts #Mathstricks",
+          "web file not on reference image"
         ],
         [
           "Squared error of regression line",
@@ -1959,22 +1982,12 @@
         [
           "Worked example: Approximation with local linearity",
           "below relevance gate"
-        ],
-        [
-          "Changes in market equilibrium",
-          "below relevance gate"
-        ],
-        [
-          "Economic profit for a monopoly",
-          "below relevance gate"
-        ],
-        [
-          "Long-run economic profit for perfectly competitive firms",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 29,
+        "web file not on reference image": 4,
+        "excluded: answer/exam material": 1,
+        "below relevance gate": 28,
         "kolibri node not available on reference image": 1
       }
     },
@@ -2023,7 +2036,7 @@
       ],
       "rejected_by_reason": {
         "kolibri node not available on reference image": 3,
-        "below relevance gate": 29
+        "below relevance gate": 30
       }
     }
   }

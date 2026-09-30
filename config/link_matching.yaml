@@ -101,9 +101,11 @@ subject_families:
   Essential Mathematics: [Mathematics, Physics, General]
 
 # Vocabulary that is essentially never legitimate outside its home subject
-# family. A candidate whose title contains foreign vocabulary AND no core
-# lesson term is rejected. Keys are vocabulary groups; `home` lists the lesson
-# subjects for which the group is NOT foreign.
+# family. A candidate whose title contains foreign vocabulary is rejected
+# unless a sub-strand topic also appears in its TITLE (topic evidence only in
+# the description is not enough). Multi-word terms match as phrases. Keys are
+# vocabulary groups; `home` lists the lesson subjects for which the group is
+# NOT foreign.
 foreign_vocab:
   biology:
     home: [Biology, General Science]
@@ -114,7 +116,9 @@ foreign_vocab:
   chemistry:
     home: [Chemistry, General Science]
     terms: [periodic, valence, mole, molarity, stoichiometry, covalent, ionic,
-            oxidation, avogadro, alkali, alkane, alkanes, carboxylic, organic]
+            oxidation, avogadro, alkali, alkane, alkanes, carboxylic, organic,
+            catalyst, catalysts, titration, exothermic, endothermic,
+            reaction rate, reaction rates, rate of reaction, rates of reaction]
   physics:
     home: [Physics, General Science]
     terms: [voltage, resistor, resistors, capacitor, capacitors, semiconductor,
@@ -163,5 +167,75 @@ thresholds:
   diversity_floor: 0.6
   # Top-N by bm25 examined per lesson.
   candidates: 300
-  # Penalty multiplier on relevance for a DB subject outside the family.
-  off_family_factor: 0.6
+  # Penalty multiplier on relevance for a DB subject outside the family. Kept
+  # weak on purpose: the index's subject tags are unreliable ("Intro to
+  # logarithm properties" is tagged Chemistry; "First-order reactions" is
+  # tagged Mathematics), so a strong penalty punished correct matches.
+  off_family_factor: 0.9
+  # Relevance bonus per sub-strand topic matched in the candidate's TITLE —
+  # the most reliable evidence the index has.
+  core_in_title_bonus: 1.0
+
+# Equivalent terms. Each group is ONE meaning written differently: British vs
+# US spelling (Khan/CK-12 content is US), Kenyan/KICD vs US curriculum terms,
+# and noun/adjective forms of the same word. Used for both search expansion and
+# the relevance gate. Accuracy rule: only add a group if every member means the
+# same thing in the curriculum's sense — never merely "related" terms
+# (nutrition/feeding, equilibrium/balance, transport/circulation, bare
+# moment/torque [moment of inertia is not torque], index/exponent [refractive
+# index], centre of gravity/center of mass, standard form/scientific notation
+# [US 'standard form' is ax²+bx+c] and tonne/ton [1000 kg vs 907 kg] were
+# considered and rejected on that ground). Multi-word members are matched as
+# phrases.
+synonyms:
+  # --- British / US spelling ---
+  - [centre, center]
+  - [metre, meter]
+  - [litre, liter]
+  - [colour, color]
+  - [fibre, fiber]
+  - [sulphur, sulfur]
+  - [sulphate, sulfate]
+  - [sulphide, sulfide]
+  - [aluminium, aluminum]
+  - [vapour, vapor]
+  - [haemoglobin, hemoglobin]
+  - [oesophagus, esophagus]
+  - [faeces, feces]
+  - [oestrogen, estrogen]
+  - [anaemia, anemia]
+  - [ionise, ionize]
+  - [ionisation, ionization]
+  - [neutralisation, neutralization]
+  - [crystallisation, crystallization]
+  - [polarisation, polarization]
+  - [behaviour, behavior]
+  - [analyse, analyze]
+  - [modelling, modeling]
+  - [labelling, labeling]
+  - [grey, gray]
+  # --- Kenyan / KICD term vs US-curriculum term (same concept) ---
+  - [moment of a force, moments of a force, turning effect, turning effect of a force, torque]
+  - [enlargement, dilation]
+  - [gradient, slope]
+  - [indices, exponents]
+  - [trapezium, trapezoid]
+  - [cuboid, rectangular prism]
+  - [centre of gravity, center of gravity]
+  - [potential difference, voltage]
+  - [earthing, grounding]
+  - [microorganism, microbe]
+  - [simultaneous equations, systems of equations, system of equations]
+  - [mixed number, mixed numeral]
+  - [maths, math, mathematics]
+  # --- noun / adjective forms of one word ---
+  - [digestion, digestive]
+  - [respiration, respiratory]
+  - [circulation, circulatory]
+  - [excretion, excretory]
+  - [reproduction, reproductive]
+  - [photosynthesis, photosynthetic]
+  - [electrostatics, electrostatic]
+  - [magnetism, magnetic]
+  - [radioactivity, radioactive]
+  - [congruence, congruent]
