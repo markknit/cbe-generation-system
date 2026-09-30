@@ -1,0 +1,620 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Biology",
+  "grade": 10,
+  "substrandId": "1.2",
+  "substrandName": "Chemicals of Life",
+  "filePrefix": "Biology_Chemicals_of_Life"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "Predict: What Is Food Really Made Of?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-09-30T07:54:16+00:00",
+   "quiz": [
+    {
+     "prompt": "Two children live in the same village near Kisumu and eat about the same amount of food each day. Child A has a swollen belly, thin limbs and reddish hair. Child B looks healthy and energetic. Which of these is something you NOTICE (an observation) rather than a guess?",
+     "choices": [
+      "Child B has more money than Child A's family.",
+      "Child A was born with a disease.",
+      "Child A is sick because something is missing from the food.",
+      "Child A has a swollen belly and thin limbs."
+     ],
+     "correctIndex": 3,
+     "rationale": "An observation is something you can see directly, such as a swollen belly and thin limbs. The other statements are guesses about causes that the photographs do not show.",
+     "phase": "predict",
+     "placement": "Notice & Wonder entry after silent observation of Photo A and Photo B"
+    },
+    {
+     "prompt": "Child A eats ugali (maize starch) as the main meal every day. Child B eats githeri (maize and beans) regularly. Which statement matches the information given about the two children?",
+     "choices": [
+      "Both children eat only ugali every day.",
+      "The children live in different parts of Kenya.",
+      "Both children eat about the same amount of food and live in the same village near Kisumu.",
+      "Child B eats much more food each day than Child A."
+     ],
+     "correctIndex": 2,
+     "rationale": "The caption states that both children eat approximately the same amount of food and live in the same village. What differs is the kind of food, not the quantity or the place.",
+     "phase": "predict",
+     "placement": "Teacher reveals the food details (ugali vs githeri) and students write 'I think the difference in the children's bodies is caused by ___ because ___'"
+    },
+    {
+     "prompt": "A group is filling in a two-column table about the two Kisumu children: 'What the evidence shows us' and 'What we still need to find out'. Which entry belongs in the SECOND column?",
+     "choices": [
+      "Which specific chemicals are different between ugali and githeri.",
+      "Child B eats githeri and looks healthy and energetic.",
+      "Both children live in the same village near Kisumu.",
+      "Child A eats ugali every day and has a swollen belly."
+     ],
+     "correctIndex": 0,
+     "rationale": "The first three entries are facts already given on the Phenomenon Card. The chemical difference between the foods has not been investigated yet, so it belongs under what we still need to find out.",
+     "phase": "observe",
+     "placement": "Groups complete the two-column table 'What the evidence shows us' vs 'What we still need to find out' after reading the Phenomenon Card"
+    },
+    {
+     "prompt": "Right now the class has only seen photographs and read a short card about the two children. Which is the best response to the question 'Why do the two children have such different bodies?'",
+     "choices": [
+      "We do not know yet. We need to find out what the two foods are made of before we can explain it.",
+      "The child with the swollen belly is just tired from playing too much.",
+      "Ugali is bad food and githeri is good food, so nothing more needs to be studied.",
+      "Child A is not eating enough food, and that is the only reason."
+     ],
+     "correctIndex": 0,
+     "rationale": "At this stage the class has evidence of a puzzle but has not investigated the foods. Saying honestly that it is not yet explained keeps the question open. The other answers are unsupported or contradict the given information that the food quantity is similar.",
+     "phase": "observe",
+     "placement": "Debrief of the Phenomenon Card: 'What does this evidence show us, and what does it NOT tell us yet?'"
+    },
+    {
+     "prompt": "In the Chemical Families Card Sort, groups match foods such as ugali, githeri, sukuma wiki, nyama choma, fish from Lake Victoria and mandazi to the chemical family each is richest in. Which of these lists names the six chemical families used in the card sort?",
+     "choices": [
+      "Carbohydrates, proteins, lipids, vitamins, mineral salts, oxygen",
+      "Starch, ugali, beans, oil, salt, water",
+      "Carbohydrates, proteins, lipids, vitamins, fibre, air",
+      "Carbohydrates, proteins, lipids, vitamins, mineral salts, water"
+     ],
+     "correctIndex": 3,
+     "rationale": "The six chemicals of life named in this lesson are carbohydrates, proteins, lipids (fats and oils), vitamins, mineral salts and water. The other lists include foods, air, oxygen or fibre, which are not among the six families.",
+     "phase": "explain",
+     "placement": "Chemical Families Card Sort: the 6 'Chemical Family' cards"
+    },
+    {
+     "prompt": "After the card sort and gallery walk, some groups disagree about which chemical family a food is richest in, and nobody corrects them. How will the class find out which matches are correct?",
+     "choices": [
+      "By doing chemical tests on foods in the next lessons.",
+      "By choosing the match that sounds most scientific.",
+      "By asking the group with the neatest handwriting.",
+      "By voting for the match that most groups chose."
+     ],
+     "correctIndex": 0,
+     "rationale": "The lesson says no tests are done today and that later lessons will use chemical tests to check the matches. Voting or sounding scientific does not provide evidence.",
+     "phase": "explain",
+     "placement": "Whole-class debrief after the gallery walk and revision of the card sort"
+    },
+    {
+     "prompt": "You have drawn your first model of what happens inside the body of each child, and written 'My model cannot yet explain ___ because ___'. Which statement about this first model is correct?",
+     "choices": [
+      "It is your best current explanation and will be revised as you learn more.",
+      "It should be erased if it turns out to be wrong.",
+      "It must use all the correct chemical names before it is finished.",
+      "It is your final answer for the whole unit."
+     ],
+     "correctIndex": 0,
+     "rationale": "A first model is a best current explanation that can use everyday words. Students keep it without erasing and revise it lesson by lesson, so being incomplete is expected.",
+     "phase": "model",
+     "placement": "Students draw their first explanatory model and complete the 'Model Limitations Statement'"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "What Is Food Really Made Of? Introducing the Six Chemicals of Life",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-09-30T07:54:15+00:00",
+   "quiz": [
+    {
+     "prompt": "Two children in the same village in Kisumu eat about the same amount of food every day. Child A eats only ugali and develops a swollen belly and thin limbs (kwashiorkor). Child B eats githeri (maize and beans) and stays healthy. Which idea best explains the difference?",
+     "choices": [
+      "Child B simply eats more food than Child A",
+      "The two foods are made of different chemicals, and ugali has very little protein",
+      "Ugali has no nutrients at all",
+      "Child A is ill only because he drinks too little water"
+     ],
+     "correctIndex": 1,
+     "rationale": "Quantity is the same, so the difference must come from what the foods are made of. Ugali is mostly starch with very little protein, while githeri adds protein from beans.",
+     "phase": "predict",
+     "placement": "Predict: written and pair predictions about the two Kisumu children (ugali vs githeri)"
+    },
+    {
+     "prompt": "Which list correctly names the six major chemicals of life?",
+     "choices": [
+      "Carbohydrates, proteins, energy, nucleic acids, vitamins/minerals, water",
+      "Carbohydrates, proteins, lipids, nucleic acids, vitamins/minerals, water",
+      "Starch, sugar, proteins, lipids, vitamins/minerals, water",
+      "Carbohydrates, proteins, lipids, fibre, vitamins/minerals, water"
+     ],
+     "correctIndex": 1,
+     "rationale": "The six major chemicals of life are carbohydrates, proteins, lipids, nucleic acids, vitamins/minerals and water. Fibre and energy are not chemical groups on this list, and starch and sugar are both carbohydrates.",
+     "phase": "observe",
+     "placement": "Observe: Food Card Sort and the Six Chemicals of Life reference chart"
+    },
+    {
+     "prompt": "During the food card sort, a learner places beans under carbohydrates because 'githeri is just a starch food'. Which response best corrects this idea?",
+     "choices": [
+      "Beans are a rich source of protein, so they belong under proteins even though maize in githeri is mostly carbohydrate",
+      "Beans belong under vitamins because they are small and round",
+      "Beans belong under water because they are cooked in water",
+      "Beans belong under carbohydrates because all plant foods are mainly starch"
+     ],
+     "correctIndex": 0,
+     "rationale": "Maize supplies mostly carbohydrate, but beans are a good source of protein. This is why githeri gives the body building chemicals that ugali alone lacks.",
+     "phase": "observe",
+     "placement": "Observe: second sort of food cards into the six chemical categories in the graphic organiser"
+    },
+    {
+     "prompt": "The child who eats only ugali gets plenty of energy from starch but still develops kwashiorkor. What is the best explanation?",
+     "choices": [
+      "The child gets too much protein from ugali",
+      "Starch is harmful and damages the body",
+      "Carbohydrates supply energy, but ugali has almost no protein, so the body cannot build and repair its tissues",
+      "Energy is not needed by the body, so the starch is wasted"
+     ],
+     "correctIndex": 2,
+     "rationale": "Carbohydrates give energy, while proteins build and repair muscles, enzymes and hormones. Without enough protein the body cannot build tissues, which causes the swollen belly and thin muscles of kwashiorkor.",
+     "phase": "explain",
+     "placement": "Explain: Cause and Effect writing task on why the child eating ugali alone developed kwashiorkor"
+    },
+    {
+     "prompt": "A learner writes this on a green sticky note: 'I now understand that ugali has no nutrients at all.' Which statement is the correct improvement?",
+     "choices": [
+      "Ugali is made only of water",
+      "Ugali is rich in carbohydrate for energy, but it has too little protein to build and repair the body",
+      "Ugali is a poor food because it has no carbohydrate",
+      "Ugali contains more protein than githeri"
+     ],
+     "correctIndex": 1,
+     "rationale": "Ugali is about 75% carbohydrate and gives energy, so it does have nutrients. The problem is that it supplies very little protein.",
+     "phase": "dqb",
+     "placement": "DQB: green 'What We Now Understand' sticky notes"
+    },
+    {
+     "prompt": "You draw a model with one circle for ugali and one for githeri, showing the six chemicals of life in each. Which feature would show the biggest chemical difference that explains the health of the two children?",
+     "choices": [
+      "A larger water section in the ugali circle only",
+      "A much larger carbohydrate section in the githeri circle than in the ugali circle",
+      "A larger protein section in the githeri circle than in the ugali circle",
+      "No difference at all between the two circles"
+     ],
+     "correctIndex": 2,
+     "rationale": "Githeri contains beans, so it has much more protein than ugali. This difference explains why one child developed kwashiorkor and the other stayed healthy.",
+     "phase": "model",
+     "placement": "Model: first-draft molecular model of Ugali (Child A) and Githeri (Child B)"
+    },
+    {
+     "prompt": "Which pairing of a Kenyan food with the chemical of life it is especially rich in is correct?",
+     "choices": [
+      "Sukuma wiki: lipids",
+      "Omena: carbohydrates",
+      "Ugali: proteins",
+      "Avocado: lipids (fats and oils)"
+     ],
+     "correctIndex": 3,
+     "rationale": "Avocado is rich in lipids. Ugali is mainly carbohydrate, omena is a good protein source, and sukuma wiki is a source of vitamins and minerals.",
+     "phase": "end",
+     "placement": "End of lesson: review of the graphic organiser (chemical, role, Kenyan food source)"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Observe (Part 2): Lipids and Vitamins — Structure, Function, and Food Tests",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-09-30T07:54:15+00:00",
+   "quiz": [
+    {
+     "prompt": "A learner rubs mashed groundnuts on a piece of brown paper bag and waits 5 minutes for it to dry. Which observation shows that the groundnuts contain lipids?",
+     "choices": [
+      "A translucent (greasy) spot stays on the paper even after it is dry",
+      "A wet spot appears but disappears completely once the paper dries",
+      "The paper stays completely dry and unmarked",
+      "The paper turns a purple colour where the food was rubbed"
+     ],
+     "correctIndex": 0,
+     "rationale": "Lipids leave a permanent translucent spot that does not disappear on drying. Water-based foods leave a spot that dries and disappears.",
+     "phase": "observe",
+     "placement": "Activity 1: Translucent Spot Test"
+    },
+    {
+     "prompt": "In the ethanol emulsion test, a learner dissolves a food sample in ethanol, then pours the clear ethanol layer into a test tube of distilled water. What result shows that lipid is present?",
+     "choices": [
+      "The mixture stays clear and colourless",
+      "A cloudy white emulsion forms",
+      "The mixture bubbles and gives off heat",
+      "The mixture turns purple"
+     ],
+     "correctIndex": 1,
+     "rationale": "Lipids dissolve in ethanol but not in water, so when the ethanol is added to water the lipid comes out as tiny droplets, forming a cloudy white emulsion. A clear solution means no lipid.",
+     "phase": "observe",
+     "placement": "Activity 2: Ethanol Emulsion Test"
+    },
+    {
+     "prompt": "A group tests ugali paste (maize starch) with both the translucent spot test and the ethanol emulsion test. Which set of results would you expect?",
+     "choices": [
+      "A permanent translucent spot and a cloudy white emulsion",
+      "No permanent translucent spot but a cloudy white emulsion",
+      "No permanent translucent spot and a clear solution in water",
+      "A permanent translucent spot but a clear solution in water"
+     ],
+     "correctIndex": 2,
+     "rationale": "Ugali is mostly starch and has very little lipid, so it should give a negative result in both tests. Two tests that agree make the evidence stronger.",
+     "phase": "observe",
+     "placement": "Activity 1 and Activity 2: results table for ugali (A)"
+    },
+    {
+     "prompt": "Which row correctly matches a vitamin with its type and the deficiency disease it causes?",
+     "choices": [
+      "Vitamin C: fat-soluble; deficiency causes scurvy",
+      "Vitamin A: fat-soluble; deficiency causes night blindness",
+      "B-complex vitamins: fat-soluble; deficiency causes beriberi",
+      "Vitamin D: water-soluble; deficiency causes rickets"
+     ],
+     "correctIndex": 1,
+     "rationale": "Vitamins A, D, E and K are fat-soluble, and lack of vitamin A causes night blindness. Vitamin C and the B-complex vitamins are water-soluble, and vitamin D is fat-soluble.",
+     "phase": "observe",
+     "placement": "Activity 3: Guided Reading on Vitamins and the Vitamin Summary Strip"
+    },
+    {
+     "prompt": "A child eats a meal rich in vitamin A but has almost no fat in their diet. Why might the child still develop night blindness?",
+     "choices": [
+      "Vitamin A is fat-soluble and needs dietary fat to be absorbed",
+      "Vitamin A is a protein, so it cannot be used without amino acids",
+      "Fat destroys vitamin A in the stomach",
+      "Vitamin A is water-soluble and is washed out of the body too quickly"
+     ],
+     "correctIndex": 0,
+     "rationale": "Vitamins A, D, E and K are fat-soluble and are absorbed only when fat is present in the diet. Without fat, the body cannot fully absorb vitamin A even from a vitamin-rich meal.",
+     "phase": "explain",
+     "placement": "Whole-class discussion: essential fatty acids and fat-soluble vitamin absorption, and the Temperature Check on night blindness"
+    },
+    {
+     "prompt": "At the chemical level, what is a lipid (fat) made of?",
+     "choices": [
+      "Vitamins joined to a mineral salt",
+      "A glycerol backbone joined to fatty acid chains",
+      "Long chains of amino acids joined together",
+      "Many glucose units joined in a long chain"
+     ],
+     "correctIndex": 1,
+     "rationale": "A lipid such as a fat is made of one glycerol molecule joined to three fatty acids. Amino acid chains are proteins and glucose chains are starch.",
+     "phase": "model",
+     "placement": "Revising the Cumulative Chemical Model of Food: 'Lipids' section showing structure"
+    },
+    {
+     "prompt": "Which statement correctly describes the roles of lipids in living organisms?",
+     "choices": [
+      "Lipids are harmful chemicals that the body does not need",
+      "Lipids only provide vitamins and have no other role",
+      "Lipids store energy and are part of cell membranes",
+      "Lipids are the main chemicals used to build muscles and repair tissues"
+     ],
+     "correctIndex": 2,
+     "rationale": "Lipids store energy, form part of cell membranes and help absorb fat-soluble vitamins. Building and repairing muscles is mainly the role of proteins, and calling fat 'unhealthy' is a common misconception.",
+     "phase": "end",
+     "placement": "End of lesson: after the Cumulative Chemical Model revision and peer feedback"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Building Life's Molecules: Structure of Carbohydrates and Proteins",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-09-30T07:54:16+00:00",
+   "quiz": [
+    {
+     "prompt": "Ugali is mostly starch, which is a long chain made of many small units joined together. Which small unit is repeated in a starch chain?",
+     "choices": [
+      "Amino acid",
+      "Maltose",
+      "Glucose",
+      "Glycogen"
+     ],
+     "correctIndex": 2,
+     "rationale": "Starch is a polysaccharide built from many glucose monomers joined together. Amino acids are the units of proteins, not starch.",
+     "phase": "observe",
+     "placement": "Activity A: Guided Reading & Annotated Diagrams (From Sugar to Starch)"
+    },
+    {
+     "prompt": "Two glucose molecules join to form maltose, a disaccharide. What is the name of the bond that joins them?",
+     "choices": [
+      "Glycosidic bond",
+      "Peptide bond",
+      "Protein bond",
+      "Amino bond"
+     ],
+     "correctIndex": 0,
+     "rationale": "Sugar units are joined by glycosidic bonds. Peptide bonds join amino acids, and learners often confuse the two.",
+     "phase": "observe",
+     "placement": "Activity A: Guided Reading & Annotated Diagrams (annotating the bond type)"
+    },
+    {
+     "prompt": "In a model, each bottle top is an amino acid and each straw is a peptide bond. A group joins 3 bottle tops in a single chain to make a tripeptide. How many straws (peptide bonds) do they need?",
+     "choices": [
+      "1",
+      "3",
+      "2",
+      "4"
+     ],
+     "correctIndex": 2,
+     "rationale": "Each peptide bond joins two neighbouring amino acids, so a chain of 3 needs 3 - 1 = 2 bonds.",
+     "phase": "observe",
+     "placement": "Activity B: Model Building (dipeptide and tripeptide)",
+     "check": "3-1"
+    },
+    {
+     "prompt": "Groups built protein models using bottle tops of different colours for different R-groups. What does this model show about why proteins are so varied?",
+     "choices": [
+      "Different amino acids can be joined in many different orders and combinations",
+      "Proteins are made of only one type of amino acid repeated many times",
+      "Each protein uses a different kind of bond to join its units",
+      "Proteins are varied because they contain more glucose than starch does"
+     ],
+     "correctIndex": 0,
+     "rationale": "Amino acids differ in their R-groups and can be linked in any order and length, so many different proteins are possible. Proteins are joined by peptide bonds, not by different bond types.",
+     "phase": "observe",
+     "placement": "Activity B: Model Building (one sentence: why are proteins so varied?)"
+    },
+    {
+     "prompt": "Glycogen is stored in animal tissue such as the meat in nyama choma. On a chart with the columns Monosaccharide, Disaccharide, Polysaccharide and Protein, where does glycogen belong?",
+     "choices": [
+      "Monosaccharide",
+      "Polysaccharide",
+      "Protein",
+      "Disaccharide"
+     ],
+     "correctIndex": 1,
+     "rationale": "Glycogen is a long branched chain of many glucose units, so it is a polysaccharide. It is found in meat but is not a protein.",
+     "phase": "observe",
+     "placement": "Activity C: Kenyan Food Molecule Mapping"
+    },
+    {
+     "prompt": "Glucose contains carbon, hydrogen and oxygen only. Which extra element is found in amino acids but NOT in glucose?",
+     "choices": [
+      "Oxygen",
+      "Hydrogen",
+      "Nitrogen",
+      "Carbon"
+     ],
+     "correctIndex": 2,
+     "rationale": "Amino acids contain nitrogen as well as C, H and O. This is the key elemental difference between carbohydrates and proteins.",
+     "phase": "explain",
+     "placement": "Whole-class sensemaking discussion (Q2: extra element in amino acids)"
+    },
+    {
+     "prompt": "A child from Kisumu eats only ugali every day and develops a swollen belly and thin limbs. Which explanation is best?",
+     "choices": [
+      "Ugali contains no glucose, so the child has no energy at all",
+      "Githeri contains more starch than ugali, so it prevents kwashiorkor",
+      "Ugali is not enough in quantity, and the child would be healthy if given more ugali",
+      "Ugali gives glucose for energy but no amino acids, so the body cannot build proteins such as muscle and albumin"
+     ],
+     "correctIndex": 3,
+     "rationale": "Ugali is starch (glucose units) and gives energy, but it has no amino acids. Without amino acids the body cannot make muscle protein or albumin, which leads to thin limbs and a swollen belly.",
+     "phase": "explain",
+     "placement": "Whole-class sensemaking discussion (Sensemaking Summary: why ugali alone leads to kwashiorkor)"
+    },
+    {
+     "prompt": "Which pair correctly matches a molecule with its main function in the body?",
+     "choices": [
+      "Haemoglobin: energy storage",
+      "Haemoglobin: a transport protein that carries oxygen",
+      "Glucose: transports oxygen in the blood",
+      "Glycogen: body building and repair"
+     ],
+     "correctIndex": 1,
+     "rationale": "Haemoglobin is a protein that carries oxygen in the blood. Glycogen stores energy, and glucose is a monomer that releases energy.",
+     "phase": "end",
+     "placement": "End of lesson: after the Phenomenon Connection sentence in the cumulative model (Layer 4: Molecular Structure)"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Sensemaking: Connecting the Chemistry of Food to Health Outcomes in Kisumu",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-09-30T07:54:16+00:00",
+   "quiz": [
+    {
+     "prompt": "Two children in a village in Kisumu eat the same amount of food each day. One eats only ugali (maize starch). The other eats githeri (maize and beans). Based on food test results, what is the most important chemical difference between ugali and githeri?",
+     "choices": [
+      "Githeri contains protein as well as carbohydrate, but ugali is mainly carbohydrate",
+      "Ugali contains protein, but githeri does not",
+      "Ugali contains more food than githeri, so it gives less energy",
+      "Githeri contains no carbohydrates, but ugali does"
+     ],
+     "correctIndex": 0,
+     "rationale": "Ugali is mainly starch (a carbohydrate), while githeri combines maize (carbohydrate) with beans (protein). The difference is the type of chemical, not the quantity of food.",
+     "phase": "predict",
+     "placement": "Predict: individual prediction sentence on the most important chemical difference between ugali and githeri"
+    },
+    {
+     "prompt": "In a Biuret test, a bean extract turns purple and a sample of ugali stays blue. What does this result show?",
+     "choices": [
+      "Beans contain starch and ugali does not",
+      "Ugali contains more lipids than beans",
+      "Beans contain vitamin C and ugali does not",
+      "Beans contain protein, while ugali has little or no protein"
+     ],
+     "correctIndex": 3,
+     "rationale": "The Biuret test gives a purple colour when protein is present. Beans give a purple result and ugali does not, so ugali is a poor source of protein.",
+     "phase": "observe",
+     "placement": "Observe: Deficiency Disease Matching Card, citing the Biuret test result for kwashiorkor"
+    },
+    {
+     "prompt": "In a diet audit, Child 1 eats ugali three times a day. Child 2 eats githeri twice and ugali once. Which statement about their diets is correct?",
+     "choices": [
+      "Child 2's diet supplies protein but no carbohydrates",
+      "Child 1's diet supplies carbohydrates but too little protein, and Child 2's diet supplies both",
+      "Child 1's diet has no carbohydrates, but Child 2's diet has carbohydrates",
+      "Both diets supply the same chemicals of life because they contain the same amount of food"
+     ],
+     "correctIndex": 1,
+     "rationale": "Ugali supplies starch (carbohydrate) but little protein. Githeri adds protein from beans, so Child 2 gets both carbohydrate and protein.",
+     "phase": "observe",
+     "placement": "Observe: diet audit of the daily menus for the two Kisumu children"
+    },
+    {
+     "prompt": "A learner tests orange juice with DCPIP in the lab and it changes colour. A disease is caused by a lack of this same chemical in the diet. Which disease is it?",
+     "choices": [
+      "Marasmus",
+      "Kwashiorkor",
+      "Scurvy",
+      "Rickets"
+     ],
+     "correctIndex": 2,
+     "rationale": "DCPIP tests for vitamin C, which orange juice contains. A lack of vitamin C causes scurvy.",
+     "phase": "observe",
+     "placement": "Observe: Deficiency Disease Matching Card, completing the row for scurvy"
+    },
+    {
+     "prompt": "A child with kwashiorkor has a swollen belly, thin limbs and discoloured hair. Which row correctly links a symptom to the protein that is lacking?",
+     "choices": [
+      "Swollen belly: keratin loss",
+      "Thin limbs: keratin loss",
+      "Swollen belly: albumin loss",
+      "Discoloured hair: albumin loss"
+     ],
+     "correctIndex": 2,
+     "rationale": "Albumin helps keep fluid in the blood, so too little albumin causes oedema (swollen belly). Keratin makes hair, and muscle protein makes muscle, so its loss causes thin limbs.",
+     "phase": "explain",
+     "placement": "Explain: written group explanation using the sentence starter on albumin, keratin and muscle fibres"
+    },
+    {
+     "prompt": "Which statement is the best scientific explanation for why the child who eats only ugali develops kwashiorkor, while the child who eats githeri stays healthy?",
+     "choices": [
+      "The ugali child does not get enough energy because ugali has no carbohydrates",
+      "The ugali child gets enough energy from starch but too little protein for building body tissues",
+      "The githeri child gets more vitamins, and vitamins alone build muscle and hair",
+      "The ugali child eats a smaller quantity of food than the githeri child"
+     ],
+     "correctIndex": 1,
+     "rationale": "Ugali gives energy from carbohydrate, but the body needs protein (amino acids) to build tissues such as albumin, keratin and muscle. The problem is a lack of protein, not a lack of food quantity.",
+     "phase": "explain",
+     "placement": "Explain: whole-class discussion evaluating each group's explanation of the anchoring phenomenon"
+    },
+    {
+     "prompt": "A group is filling in the protein box of their 'Our Chemicals of Life Model' template. Which entry is correct?",
+     "choices": [
+      "Food source: orange juice; consequence of deficiency: rickets",
+      "Food source: beans; consequence of deficiency: kwashiorkor",
+      "Food source: ugali; consequence of deficiency: scurvy",
+      "Food source: ugali; consequence of deficiency: anaemia"
+     ],
+     "correctIndex": 1,
+     "rationale": "Beans are a Kenyan source of protein, and a lack of protein causes kwashiorkor. Ugali is mainly carbohydrate, and scurvy, rickets and anaemia are linked to other missing chemicals.",
+     "phase": "model",
+     "placement": "Model: partial A3 'Our Chemicals of Life Model' template, filling in the protein box"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Building Our Chemicals of Life Model: Consolidating the Science Behind Two Children in Kisumu",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-09-30T07:54:15+00:00",
+   "quiz": [
+    {
+     "prompt": "At the start of the unit, a group wrote: \"Food is just energy, so two children eating the same amount should be equally healthy.\" Which updated statement shows the best evidence-based change in thinking?",
+     "choices": [
+      "Only carbohydrates matter, because they give the body glucose.",
+      "Food is made of six chemicals of life with different structures and functions, and missing one can cause a specific disease.",
+      "Food is mainly energy, but children who eat more of it become healthier.",
+      "Food with more water in it is healthier because water is a chemical of life."
+     ],
+     "correctIndex": 1,
+     "rationale": "The Before and After shift moves from 'food is just energy' to specific chemical classes, each with its own function and deficiency consequence. The other options keep the idea that quantity or a single nutrient is what matters.",
+     "phase": "predict",
+     "placement": "Revisiting Lesson 1 prediction cards and writing the Before and After statement"
+    },
+    {
+     "prompt": "On a group poster about two children in Kisumu, one child eats only ugali (maize starch) every day and the other eats githeri (maize and beans). Which arrow label correctly links the ugali child to the chemicals of life?",
+     "choices": [
+      "Excess protein and too little carbohydrate",
+      "Plenty of carbohydrate but too little protein",
+      "No carbohydrate at all, so no energy",
+      "Balanced intake of all six chemicals"
+     ],
+     "correctIndex": 1,
+     "rationale": "Ugali is mostly starch, a carbohydrate, so the child gets energy but very little protein. Balanced intake belongs to the githeri child.",
+     "phase": "observe",
+     "placement": "Completing the A3 poster model with the central anchor image of the two Kisumu children"
+    },
+    {
+     "prompt": "A learner crushes avocado, shakes it with ethanol, then pours the liquid into water. A cloudy white layer forms. What does this ethanol emulsion result show?",
+     "choices": [
+      "Starch is present",
+      "Glucose is present",
+      "Lipids (fats and oils) are present",
+      "Proteins are present"
+     ],
+     "correctIndex": 2,
+     "rationale": "Lipids dissolve in ethanol but not in water, so adding the solution to water forms a cloudy white emulsion. This is the positive test for lipids in avocado.",
+     "phase": "observe",
+     "placement": "Completing the Kenyan Food Sources and lipids part of the poster, recalling the avocado ethanol emulsion result from Lesson 4"
+    },
+    {
+     "prompt": "A child eating only ugali develops a swollen belly (oedema). Which explanation is scientifically correct?",
+     "choices": [
+      "The body has no keratin, so the belly cannot hold its shape.",
+      "The child has no DNA to carry the genetic code.",
+      "The body cannot make enough albumin, a protein, because too few amino acids come from food.",
+      "Too much starch is stored in the belly as fat."
+     ],
+     "correctIndex": 2,
+     "rationale": "Without dietary protein the body lacks amino acids to make albumin. Low albumin leads to fluid build-up (oedema) and a swollen belly. Keratin is linked to hair discolouration, not the swollen belly.",
+     "phase": "explain",
+     "placement": "Group presentations: why the ugali child develops kwashiorkor"
+    },
+    {
+     "prompt": "A child in Kisumu eats githeri (maize and beans) regularly and stays healthy. What is the best chemical explanation?",
+     "choices": [
+      "Beans contain more starch, giving the child more energy than ugali does.",
+      "Maize in githeri contains protein instead of starch.",
+      "Githeri contains more water than ugali, so the child stays hydrated.",
+      "Maize supplies carbohydrate and beans supply protein, providing the amino acids the body needs for protein synthesis."
+     ],
+     "correctIndex": 3,
+     "rationale": "Githeri combines carbohydrate from maize with protein from beans. The amino acids from the protein let the body build albumin, keratin and muscle proteins, which prevents deficiency.",
+     "phase": "explain",
+     "placement": "Whole-class synthesis and writing the master answer to the driving question"
+    },
+    {
+     "prompt": "During the Driving Question Board review, a learner asks: \"How do cells use DNA to know which proteins to build?\" How should the class sort this question?",
+     "choices": [
+      "Not a science question, so it should be removed",
+      "Answered, because githeri contains protein",
+      "New Question Generated, to investigate in a future unit on genetics",
+      "Answered, because amino acids explain kwashiorkor"
+     ],
+     "correctIndex": 2,
+     "rationale": "The unit covered that DNA carries the genetic code and that proteins are built from amino acids. How cells read DNA to build specific proteins is a new question that leads into genetics.",
+     "phase": "dqb",
+     "placement": "Driving Question Board review: sorting questions as Answered, Partially Answered or New Question Generated"
+    },
+    {
+     "prompt": "A typical Kenyan daily menu is: breakfast, uji (thin maize porridge) with sugar; lunch, ugali with sukuma wiki; supper, rice with a small piece of fried fish. Which nutritional gap is most likely?",
+     "choices": [
+      "No carbohydrates, because uji is thin",
+      "No lipids, because fried food contains no fats or oils",
+      "Insufficient protein, because the only protein source is a small piece of fish",
+      "Too much protein, because fish is eaten"
+     ],
+     "correctIndex": 2,
+     "rationale": "Uji, sugar, ugali and rice are mostly carbohydrate, and sukuma wiki adds vitamins and minerals. The small piece of fish is the only protein source, so protein is insufficient. Frying adds lipids, and the menu has plenty of carbohydrate.",
+     "phase": "model",
+     "placement": "Kisumu Menu Evaluation: identifying chemicals that are missing or insufficient"
+    }
+   ]
+  }
+ ]
+}

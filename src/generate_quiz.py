@@ -43,7 +43,11 @@ lesson to check understanding. The quiz is printed or projected on its own, with
 around it.
 
 Rules:
-1. Write {qmin} to {qmax} questions. Use the lower end for short or simple lessons.
+1. Normally write {qmin} to {qtyp} questions. Write more (up to {qmax}) only when the lesson \
+genuinely covers that much distinct content, such as several separate activities, \
+calculations or concepts. Never pad: each question must check something different. \
+Test the subject itself (the science or mathematics the lesson develops). At most one \
+question may be about a classroom routine (hand signals, card colours, board zones).
 2. Ground every question ONLY in the lesson content provided: its learning outcomes and \
 its framework activities. Never test anything the lesson has not yet taught, including \
 ideas from later lessons in the sequence.
@@ -138,7 +142,7 @@ def is_anchor(lesson: dict) -> bool:
 
 
 def request_params(data, lesson, cfg, model):
-    system = SYSTEM.format(qmin=cfg["questions_min"], qmax=cfg["questions_max"],
+    system = SYSTEM.format(qmin=cfg["questions_min"], qmax=cfg["questions_max"], qtyp=cfg["questions_typical_max"],
                            grade=data["META"]["grade"], anchor=ANCHOR_RULE if is_anchor(lesson) else "")
     return {
         "model": model,

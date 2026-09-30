@@ -102,11 +102,12 @@ def numbers_in(text: str) -> list[tuple[float, int]]:
     return out
 
 
-def close(val: float, shown: tuple[float, int]) -> bool:
-    """True if `val` rounds to the number as shown, or is within 1% of it."""
+def close(val: float, shown: tuple[float, int], strict: bool = False) -> bool:
+    """True if `val` rounds to the number as shown, or (unless strict) is within 1% of it."""
     n, decimals = shown
-    return (abs(val - n) <= 0.5 * 10 ** -decimals + 1e-9
-            or math.isclose(val, n, rel_tol=0.01, abs_tol=1e-9))
+    if abs(val - n) <= 0.5 * 10 ** -decimals + 1e-9:
+        return True
+    return not strict and math.isclose(val, n, rel_tol=0.01, abs_tol=1e-9)
 
 
 # ── per-lesson validation ────────────────────────────────────────────────────
@@ -128,6 +129,9 @@ def validate_lesson_quiz(quiz: list, lesson: dict | None, cfg: dict) -> tuple[li
     errs, warns = [], []
     if not (cfg["questions_min"] <= len(quiz) <= cfg["questions_max"]):
         errs.append(f"{len(quiz)} questions (need {cfg['questions_min']}-{cfg['questions_max']})")
+    elif len(quiz) > cfg.get("questions_typical_max", cfg["questions_max"]):
+        warns.append(f"{len(quiz)} questions (normal is {cfg['questions_min']}-{cfg['questions_typical_max']};"
+                     " fine only for a content-heavy lesson)")
     ltext_words = content_words(lesson_text(lesson)) if lesson else None
     for i, q in enumerate(quiz, 1):
         tag = f"Q{i}"
@@ -167,7 +171,7 @@ def validate_lesson_quiz(quiz: list, lesson: dict | None, cfg: dict) -> tuple[li
             else:
                 if not any(close(val, n) for n in numbers_in(ch[ci])):
                     errs.append(f"{tag}: check {chk!r} = {val:.6g}, not found in correct choice {ch[ci]!r}")
-                elif any(close(val, n) for j, c in enumerate(ch) if j != ci for n in numbers_in(c)):
+                elif any(close(val, n, strict=True) for j, c in enumerate(ch) if j != ci for n in numbers_in(c)):
                     warns.append(f"{tag}: check value {val:.6g} also appears in a distractor")
         if ltext_words is not None:
             pw = content_words(q.get("placement", ""))

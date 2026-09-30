@@ -7,8 +7,11 @@ model: claude-sonnet-5-5       # confirmed on the account 2026-09-29; rejects fo
 effort: high                   # output_config.effort
 max_tokens: 16000
 
-questions_min: 5
+questions_min: 5          # hard limits (validator fails outside these)
 questions_max: 10
+# Normal range (Mark, 2026-09-29): 5-7. 8-10 only when a lesson genuinely has
+# that much distinct content. Above this the validator warns, so padding shows.
+questions_typical_max: 7
 choices: 4
 phases: [predict, observe, explain, dqb, model, end]
 
