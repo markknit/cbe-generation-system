@@ -1613,3 +1613,8 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
   `CBE_PROJECT_CONTEXT_040326.md`, `HANDOFF.md`, older session-log lines here,
   and the Sonnet 4.5-era `START_HERE.md` / `PROJECT_STATUS.md` /
   `IMPLEMENTATION_GUIDE.md`.
+- **Pushed to `origin/main` at `af44ece` (Mark's instruction).** This also
+  published the 4 Phase 1–4 commits that had been held for Phase 5, so the
+  "push held until Phase 5" note above no longer applies. `origin` now has
+  re-rendered docx/JSON with PDFs **still stale** (Phase 5 regenerates them).
+  Don't Drive-sync PDFs from this state expecting the new links.
