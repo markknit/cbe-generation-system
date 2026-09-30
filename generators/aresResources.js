@@ -20,7 +20,7 @@
 
 'use strict';
 
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const path         = require('path');
 const {
   Paragraph, TextRun, ExternalHyperlink, AlignmentType,
@@ -53,28 +53,44 @@ const META_COLOUR  = "595959";   // dark grey for source/search lines
 /**
  * Fetch video + reading for ONE phase.
  */
-function getPhaseResources({ substrand, topic, subject = '', phase = 'observe' }) {
-  return _callPython([
+function getPhaseResources({ substrand, topic, subject = '', phase = 'observe', title = '' }) {
+  const out = _callPython([
+    '--title',     title,
     '--db',        DB_PATH,
     '--substrand', substrand,
     '--topic',     topic,
     '--subject',   subject,
     '--phase',     phase,
   ]);
+  delete out._diagnostics;
+  return out;
 }
 
 /**
  * Fetch all 5 phases at once (one subprocess call — more efficient).
  * Returns { predict, observe, explain, dqb, model }
  */
-function getAllPhaseResources({ substrand, topic, subject = '' }) {
-  return _callPython([
+function getAllPhaseResources({ substrand, topic, subject = '', title = '' }) {
+  const out = _callPython([
     '--db',        DB_PATH,
     '--substrand', substrand,
     '--topic',     topic,
+    '--title',     title,
     '--subject',   subject,
     '--all-phases',
-  ], /* allPhases= */ true);
+  ]);
+  // Match diagnostics never enter the contract JSON; they are collected here
+  // and written to logs/link_matching/<filePrefix>.json by build_docs.run().
+  const diag = out._diagnostics;
+  delete out._diagnostics;
+  _DIAGNOSTICS.push({ title, substrand, subject, ...diag });
+  return out;
+}
+
+const _DIAGNOSTICS = [];
+/** Return and clear the diagnostics collected since the last call. */
+function takeDiagnostics() {
+  return _DIAGNOSTICS.splice(0, _DIAGNOSTICS.length);
 }
 
 // ---------------------------------------------------------------------------
@@ -102,7 +118,7 @@ function buildResourceParagraphs(resources, phase = '') {
     if (v.source) paras.push(_metaPara(`Source: ${v.source}`));
     paras.push(_searchLinkPara('🔍 Search ARES for similar videos', v.search_url));
   } else {
-    paras.push(_searchLinkPara('🔍 Search ARES for videos', fallback));
+    paras.push(..._noMatchParas('video', fallback));
   }
 
   // Spacer
@@ -118,10 +134,37 @@ function buildResourceParagraphs(resources, phase = '') {
     if (r.source) paras.push(_metaPara(`Source: ${r.source}`));
     paras.push(_searchLinkPara('🔍 Search ARES for similar readings', r.search_url));
   } else {
-    paras.push(_searchLinkPara('🔍 Search ARES for readings', fallback));
+    paras.push(..._noMatchParas('reading', fallback));
   }
 
   return paras;
+}
+
+/**
+ * "No confident match" block. Says so plainly rather than showing a weak link
+ * as if it were a good one, and prints the search terms visibly (printed
+ * copies lose hyperlinks; the full search URL is ~600 characters, so the terms
+ * are what a teacher can actually type into ARES search).
+ */
+function _noMatchParas(kind, fallback) {
+  const terms = _searchTermsFromUrl(fallback);
+  const paras = [_italicPara(`No closely matching ${kind} in the ARES library for this activity.`)];
+  paras.push(_searchLinkPara(`🔍 Search ARES for ${kind}s`, fallback));
+  if (terms) paras.push(_metaPara(`Search terms: ${terms}`));
+  return paras;
+}
+
+function _searchTermsFromUrl(url) {
+  const m = /[?&]searchstring=([^&]*)/.exec(url || '');
+  return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : '';
+}
+
+/** Italic grey note line */
+function _italicPara(text) {
+  return new Paragraph({
+    spacing: { before: 0, after: 20 },
+    children: [new TextRun({ text, italics: true, size: 16, font: 'Arial', color: META_COLOUR })],
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -208,36 +251,26 @@ function _searchLinkPara(label, url) {
 // Python subprocess bridge
 // ---------------------------------------------------------------------------
 
-function _callPython(argsList, allPhases = false) {
-  const EMPTY_PHASE = { video: null, reading: null, fallback_search_url: '' };
-  const EMPTY_ALL   = {
-    predict: EMPTY_PHASE, observe: EMPTY_PHASE,
-    explain: EMPTY_PHASE, dqb:     EMPTY_PHASE, model: EMPTY_PHASE,
-  };
-
+// Fails loudly. This used to swallow every error and return empty resources
+// with fallback_search_url '' — which rendered as blank Resource cells and
+// violates the partner contract (fallback_search_url must be a URL). A failed
+// lookup must stop the render, not ship silently empty links.
+function _callPython(argsList) {
+  let raw;
   try {
-    // Build arg string — shell-escape each value
-    const args = argsList.map((a, i) =>
-      // Flag args (start with --) passed as-is; values shell-escaped
-      a.startsWith('--') ? a : `'${String(a).replace(/'/g, "'\\''")}'`
-    ).join(' ');
-
-    const cmd = `${PYTHON} '${RECOMMENDER_SCRIPT}' ${args}`;
-    const raw = execSync(cmd, { timeout: TIMEOUT_MS, encoding: 'utf8' });
-    return JSON.parse(raw.trim());
+    raw = execFileSync(PYTHON, [RECOMMENDER_SCRIPT, ...argsList.map(String)],
+                       { timeout: TIMEOUT_MS, encoding: 'utf8' });
   } catch (err) {
-    if (process.env.ARES_DEBUG) {
-      console.error(`[aresResources] ${err.message}`);
-    }
-    return allPhases ? EMPTY_ALL : EMPTY_PHASE;
+    throw new Error(`[aresResources] recommender failed: ${(err.stderr || err.message || '').toString().trim()}`);
   }
+  return JSON.parse(raw.trim());
 }
 
 // ---------------------------------------------------------------------------
 // Exports
 // ---------------------------------------------------------------------------
 
-module.exports = { getPhaseResources, getAllPhaseResources, buildResourceParagraphs };
+module.exports = { getPhaseResources, getAllPhaseResources, buildResourceParagraphs, takeDiagnostics, DB_PATH };
 
 // ---------------------------------------------------------------------------
 // Self-test

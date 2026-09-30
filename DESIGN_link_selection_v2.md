@@ -1,7 +1,7 @@
 # DESIGN — Resource-Link Selection v2
 
 *Drafted 2026-09-29, Phase 1 of `handoff_bundle_2026-09-29/HANDOFF_bounded_project_v2_2026-09-29.md`.*
-*Status: **awaiting Mark's review — nothing below is implemented yet.***
+*Status: approved by Mark 2026-09-29; implemented in Phase 2 — see §7 for where the implementation differs from §4.*
 
 ---
 
@@ -270,3 +270,51 @@ New `scripts/check_resource_links.py`. It replaces the handoff audit script
   both numbers so you can move the dial.
 - **Partner impact:** none expected. Nulls are already legal, and no fields
   are added.
+
+## 7. Implementation notes (Phase 2, 2026-09-29): where the build differs from §4
+
+Each change below came from testing against real lessons. The measured
+reason is given for each.
+
+- **Web-module sources are eligible, not just Kolibri (§4.3).** The best
+  semiconductor material is SeaVuria's own science videos and the PhET
+  simulations, which are indexed as `web`. Neither the old matcher nor the
+  Kolibri-only draft could pick them. Web items are eligible **only if their
+  file exists** under the reference image's `/var/www/modules` (26,927 of
+  27,410 do). Kiwix stays ineligible because its article links can't be
+  verified. SeaVuria was added to channel tier 0.
+- **Link verification uses the ARES disk image (§6 resolved).** jhm-spark has
+  an ARES system disk mounted. Its Kolibri `db.sqlite3` (the instance on port
+  8069, 75,324 nodes) and its web-modules tree are the reference: a Kolibri
+  link must be a node with `available=1`, and a web link must be an existing
+  file. This found **7 dead Kolibri IDs (45 slots)** in the old corpus: nodes
+  whose content was never downloaded. All 542 old IDs were real node IDs; the
+  "262 unverified" worry in §6 was unfounded.
+- **The exclusion list is wider than the handoff regex (§4.3).** It adds
+  `kcse`, `knec`, `pp1–3`, `paper 1–3` and a trailing `Ms`, plus the whole
+  `kcse/` web folder (past papers and marking schemes). The handoff regex
+  missed `biology-question-paper-1-kcse-2012`.
+- **The gate uses whole phrases and position weights (§4.4).** Counting
+  single words let "Service in the United States" through (`state` +
+  `definition`). Instead:
+  - Each `aresKeywords` phrase counts only if all its words are present.
+  - Phrases are weighted by position (the lesson's first keywords are its
+    main topic).
+  - A multi-word sub-strand topic ("linear motion") must match whole.
+  - A topic match also needs at least one lesson-specific term.
+  - A partial-topic credit was tried and **reverted**: it let "Comparing
+    animal and plant cells" into a mouthparts lesson.
+- **Variety across phases has a floor (§4.6).** Forcing a different resource
+  in every phase pushed later phases into weak matches. Variety now only
+  chooses among candidates scoring ≥60% of the best; otherwise the best is
+  reused.
+- **Search terms are printed instead of the search URL (§4.8).** The ARES
+  search URL is ~600 characters, so a no-match cell prints the search terms,
+  which a teacher can type into ARES search, next to the hyperlinked search
+  label.
+- **Two more silent fallbacks were removed** (same class as RC6):
+  - `aresResources.js` swallowed recommender errors and returned empty
+    resources with `fallback_search_url: ''`, which is a contract violation.
+  - `sections.js` replaced a failed module load with `() => ({})`.
+  Both now fail the render. Re-rendering an edited JSON on a machine without
+  the ARES DB keeps the existing `resourceLinks` and prints a warning.

@@ -15,12 +15,25 @@
  *
  * To generate all sub-strands at once:
  *   node generators/generate.js --all
+ *
+ * Every rendered sub-strand is gated by scripts/check_resource_links.py
+ * (answer/exam material, wrong-subject matches, dead links, contract shape).
+ * A hard failure makes the run exit non-zero. LINK_CHECK=warn reports
+ * failures without failing the run (for diagnosis only — never for shipping).
  */
 'use strict';
 
 const path = require('path');
 const fs   = require('fs');
 const { run } = require('./lib/build_docs');
+const { execFileSync } = require('child_process');
+
+const ROOT = path.join(__dirname, '..');
+const LINK_CHECK = path.join(ROOT, 'scripts', 'check_resource_links.py');
+// The venv python carries jsonschema (full partner-contract validation).
+const CHECK_PYTHON = fs.existsSync(path.join(ROOT, 'venv', 'bin', 'python3'))
+  ? path.join(ROOT, 'venv', 'bin', 'python3') : 'python3';
+const linkFailures = [];
 
 async function main() {
   const args = process.argv.slice(2);
@@ -46,6 +59,23 @@ async function main() {
     }
   } else {
     await generateOne(dataDir, args[0]);
+  }
+
+  if (linkFailures.length) {
+    console.error(`\nResource-link check FAILED for ${linkFailures.length} sub-strand(s): ${linkFailures.join(', ')}`);
+    if (process.env.LINK_CHECK !== 'warn') process.exit(1);
+    console.error('LINK_CHECK=warn set: not failing the run.');
+  }
+}
+
+function checkLinks(name, jsonPath) {
+  try {
+    const out = execFileSync(CHECK_PYTHON, [LINK_CHECK, '--quiet', jsonPath], { encoding: 'utf8' });
+    const summary = out.split('\n').find(l => l.includes('hard failures')) || '';
+    console.log(`  Link check: PASS ${summary.trim()}`);
+  } catch (err) {
+    console.error(`  Link check: FAIL\n${(err.stdout || err.message).toString()}`);
+    linkFailures.push(name);
   }
 }
 
@@ -89,6 +119,8 @@ async function generateOne(dataDir, name) {
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
 
   console.log(`Done! ${files.length} file(s) in ${elapsed}s`);
+  const jsonOut = files.find(f => f.endsWith('_data.json'));
+  if (jsonOut) checkLinks(name, jsonOut);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

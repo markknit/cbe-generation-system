@@ -1,0 +1,167 @@
+# Resource-link matching rules — shared by the matcher (src/ares_recommender.py)
+# and the pipeline gate (scripts/check_resource_links.py). One file, so the rule
+# that PRODUCES a link and the rule that CHECKS it cannot drift apart.
+# Design + rationale: DESIGN_link_selection_v2.md.
+#
+# Nothing here is keyed by grade. Subject keys are lesson META.subject values;
+# a subject not listed falls back to {its own name, General} with no foreign
+# vocabulary, so a new grade or a non-STEM subject needs no code change.
+
+# Only these ARES index sources may fill a direct-link slot, and only when the
+# item can be verified on the reference ARES image: Kolibri nodes against
+# kolibri_reference_db, web modules by file existence under
+# web_modules_reference_root. Kiwix is excluded: its article links cannot be
+# verified without reading the .zim archives.
+eligible_sources: [kolibri, web]
+
+content_types:
+  video:   [video]
+  reading: [html, html5, pdf, exercise, h5p]
+
+# Optional read-only Kolibri database used to confirm a node exists AND its
+# content is downloaded (available=1) on a real ARES image. If the file is
+# missing the matcher falls back to the index's own kolibri_available flag, and
+# the checker downgrades the availability check to a warning.
+# Override with env KOLIBRI_REFERENCE_DB.
+# web_modules_reference_root: the image's /var/www/modules (web links resolve
+# as /modules/<path> via the tracker). Override with env WEB_MODULES_REFERENCE_ROOT.
+web_modules_reference_root: /media/markk/bed8a47f-8df3-4582-a312-48a1d6969e7e/var/www/modules
+kolibri_reference_db: /media/markk/2189964e-fdc0-42e1-a630-af67d5400d7a/home/ares/.kolibri/db.sqlite3
+
+# Answer/exam material: never eligible. Matched case-insensitively against the
+# title, filename and path. Word boundaries matter: a bare "exam" also matches
+# ~1,830 "example"/"examine" titles in the index.
+exclude_patterns:
+  - '\banswers?\b'
+  - 'marking[ _-]?schemes?'
+  - 'topical[ _-]?tests?'
+  - '\bkcse[ _-]?\d{4}'
+  - 'past[ _-]?papers?'
+  - '\bexams?\b'
+  - '\bexaminations?\b'
+  - '\bmock\b'
+  - '\bmark[ _-]?scheme'
+  - '\bkcse\b'
+  - '\bknec\b'
+  - '\bpp\s?[123]\b'
+  - '\bpaper\s?[123]\b'
+  - '\bms\s?p?[123]?$'
+
+# Whole folders of exam material in the web modules (past papers + marking
+# schemes), matched against the start of the index path.
+excluded_path_prefixes: [kcse/]
+
+# Words that describe the lesson's STRUCTURE or PEDAGOGY rather than its topic.
+# They were the main source of wrong-domain matches ("Sub-Strand" -> strand ->
+# DNA strands; "Anchoring Phenomenon" -> anchoring -> muscle myosin).
+query_stopwords: [
+  # structure / labels
+  sub, strand, substrand, lesson, lessons, part, unit, grade, form, cbe, cbc,
+  kicd, kenya, kenyan, ngss, introduction, introducing, intro, overview,
+  final, explanation, explanations, resolved, revisited, recap, review,
+  # pedagogy
+  anchoring, anchor, phenomenon, phenomena, driving, question, questions,
+  board, dqb, predict, prediction, predictions, observe, observing,
+  observation, explain, explaining, model, models, modelling, modeling,
+  building, phase, phases, launch, practices, science, practice, cumulative,
+  storyline, sensemaking, inquiry, investigation, investigating, exploring,
+  exploration, activity, activities, puzzle, mystery, challenge, noticing,
+  prior, knowledge, initial, deriving, drawing, making, finding, using,
+  see, think, wonder, notice, happened, happens, happening, whats,
+  # routines / generic classroom words
+  jigsaw, gallery, walk, pair, share, exit, ticket, card, cards, sort,
+  # generic function words (3+ letters) not caught by length
+  and, the, for, with, from, into, that, this, what, when, where, which,
+  who, why, how, does, are, our, its, their, your, you, can, all, not,
+  also, about, between, through, story, tell, gets, same, different,
+  numbers, simulation, lab, phet
+]
+
+# Topic words too generic to prove relevance on their own: they stay in the
+# search (they help ranking) but do not count toward the relevance gate. E.g.
+# "properties" from "Properties of Waves" must not let "Mechanical properties
+# of materials" through.
+gate_generic_terms: [
+  properties, property, effect, effects, type, types, structure, structures,
+  change, changes, simple, basic, common, nature, use, uses, measurement,
+  measuring, everyday, life, world, real, new, first, one, two, three
+]
+
+# Lesson subject -> DB subjects it may draw on without penalty. A DB subject
+# outside the family costs a ranking penalty (not a rejection): 97% of index
+# rows are tagged "General" and the best match is sometimes tagged with a
+# neighbouring science (semiconductor doping is tagged Chemistry).
+subject_families:
+  Biology:               [Biology, General]
+  Chemistry:             [Chemistry, General]
+  Physics:               [Physics, General]
+  General Science:       [Biology, Chemistry, Physics, General]
+  Mathematics:           [Mathematics, Physics, General]
+  Core Mathematics:      [Mathematics, Physics, General]
+  Essential Mathematics: [Mathematics, Physics, General]
+
+# Vocabulary that is essentially never legitimate outside its home subject
+# family. A candidate whose title contains foreign vocabulary AND no core
+# lesson term is rejected. Keys are vocabulary groups; `home` lists the lesson
+# subjects for which the group is NOT foreign.
+foreign_vocab:
+  biology:
+    home: [Biology, General Science]
+    terms: [genetics, genetic, chromosome, chromosomes, allele, alleles, muscle,
+            skeletal, anatomy, digestion, digestive, enzyme, enzymes, hormone,
+            hormones, nervous, kidney, liver, protist, protists, organism,
+            organisms, photosynthesis, chlorophyll, dna, rna, mitosis, meiosis]
+  chemistry:
+    home: [Chemistry, General Science]
+    terms: [periodic, valence, mole, molarity, stoichiometry, covalent, ionic,
+            oxidation, avogadro, alkali, alkane, alkanes, carboxylic, organic]
+  physics:
+    home: [Physics, General Science]
+    terms: [voltage, resistor, resistors, capacitor, capacitors, semiconductor,
+            semiconductors, doppler, wavelength, radioactivity, radioactive,
+            electrostatics, broglie]
+  mathematics:
+    home: [Mathematics, Core Mathematics, Essential Mathematics]
+    terms: [logarithm, logarithms, quadratic, quadratics, trigonometry,
+            trigonometric, polygon, polygons, congruence, congruent, matrix,
+            matrices]
+
+# Phase words: a small tiebreak between candidates that already passed the
+# relevance gate. They are NOT search terms (that was root cause RC2).
+phase_hints:
+  predict: [introduction, what, why, everyday]
+  observe: [experiment, investigation, lab, simulation, practical, demonstration]
+  explain: [explanation, concept, theory, mechanism, how]
+  dqb:     [question, why]
+  model:   [model, diagram, structure]
+
+thresholds:
+  # A candidate must contain at least this many CORE terms (the sub-strand
+  # topic) in its title/description/keywords — not just deep inside a
+  # transcript ...
+  # Multi-word topics must match whole ("linear motion"); the sub-strand name
+  # is split into topics on "and" / "," / "&" ("Similarity and Enlargement").
+  min_core_hits: 1
+  # A core (topic) hit alone is not enough: at least this much weight of
+  # lesson-specific detail (keyword phrase or lesson-title word) must also be
+  # present, so a broad topic word ("electronic", "chemistry") cannot carry an
+  # otherwise unrelated item through the gate.
+  min_detail_with_core: 0.3
+  # ... OR enough weight of DETAIL phrases there instead. Each comma-separated
+  # aresKeywords phrase counts only if ALL its words appear ("silicon lattice"
+  # needs both, so "Lattice energy" does not qualify). Phrases are ordered
+  # most-important-first: phrase i weighs 1 / (1 + i / detail_decay), times
+  # multiword_bonus if it has 2+ words. Lesson-title words count singly at
+  # title_term_weight.
+  min_detail_weight: 1.0
+  detail_decay: 5
+  multiword_bonus: 1.5
+  title_term_weight: 0.3
+  # Phases prefer a different resource from earlier phases of the same lesson,
+  # but only among candidates scoring at least this fraction of the best one;
+  # otherwise the best is reused rather than showing a weak match.
+  diversity_floor: 0.6
+  # Top-N by bm25 examined per lesson.
+  candidates: 300
+  # Penalty multiplier on relevance for a DB subject outside the family.
+  off_family_factor: 0.6

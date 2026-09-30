@@ -28,6 +28,7 @@ const fs       = require('fs');
 const { Document, Packer, PageOrientation } = require('docx');
 const { W, C, SZ, SZ_H, SPACE, PAGE_BREAK, para, cell, fullHeader, labelRow, makeTable } = require('./docx_kit');
 const { TableRow } = require('docx');
+const { takeDiagnostics } = require('../aresResources');
 const {
   titleBlock, subStrandOverview,
   sectionA, sectionB, sectionC, sectionD, sectionE,
@@ -241,6 +242,15 @@ async function run(dataModule) {
   await Packer.toBuffer(sowDoc).then(buf => fs.writeFileSync(sowPath, buf));
   files.push(sowPath);
   console.log(`    Saved: ${sowPath}  (${Math.round(fs.statSync(sowPath).size / 1024)} KB)`);
+
+  // Link-matching diagnostics (scores, gate reasons, runners-up) — kept out of
+  // the contract JSON, mirrored under logs/link_matching/<outputDir>/.
+  const diag = takeDiagnostics();
+  if (diag.length) {
+    const diagDir = path.join(__dirname, '..', '..', 'logs', 'link_matching', META.outputDir);
+    fs.mkdirSync(diagDir, { recursive: true });
+    fs.writeFileSync(path.join(diagDir, `${META.filePrefix}.json`), JSON.stringify(diag, null, 2));
+  }
 
   // 2. Final Explanation
   if (FINAL_EXPLANATION) {

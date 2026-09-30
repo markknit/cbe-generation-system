@@ -72,7 +72,7 @@ right now" checkable in one place, not reconstructed from memory.
 | `aresKeywords` missing on `phys_3_1` L6 | **Done — added 2026-08-02 (`9b33dce`)** | Only lesson in the corpus without it. **Correction to the earlier note here:** this did *not* mean "no ARES resource lookup" — `sections.js:151` falls back to `lesson.aresKeywords \|\| lesson.title`, so the lookup worked but on weaker terms than its siblings'. Keywords written from that lesson's own content. |
 | `scripts/sync_to_drive.bat` | **Now actually exists — written 2026-08-02** | It did not. `CLAUDE.md:95` listed it, and this file claimed twice (in the "Documentation drift" entry below, and in the 2026-07-04 log) that it was committed and its destinations were `grep`-able from jhm-spark. All three were false — no `.bat` was tracked or on disk. Written from the spec in `WORKFLOW.md` Step 8 + `docs/PDF_GENERATION.md`; masks verified against the real trees (255 docx + 85 json; 255 pdf + 1 html). Drive destinations now also in WORKFLOW.md's Environment Reference table, which `CLAUDE.md` already designated the single source of truth for sync destinations but which had no Drive rows. |
 | `patch_lesson.js --force` | Added 2026-08-02 (`9b33dce`) | For deliberately replacing a lesson whose content is *wrong* rather than *absent* (needed for the two phase repairs above). Skips only the stub-repair guard — **never** the contract validation. |
-| **Bounded project v2** (link-selection fix + Quick Check quizzes + attribution, then Grade 11 readiness) | **Phase 1 design written 2026-09-29 — awaiting Mark's review** | Spec: `handoff_bundle_2026-09-29/HANDOFF_bounded_project_v2_2026-09-29.md` (supersedes earlier presentation/quiz handoffs). Phase 0 done: no prior link-fix work existed. Design: `DESIGN_link_selection_v2.md`. Root cause: the matcher never ranks by relevance (`hit_counts` keyed by row id, looked up by `kolibri_id` → always 0); boilerplate words ("Sub-Strand" → `strand`, "Anchoring Phenomenon") are search terms; no answer-key exclusion; no relevance floor (0 of 7,280 slots ever null). Baseline 34/25/174 reproduced (predict only); **170/125 Tier 1/2 across all 5 phases**. Decisions: quizzes go in a separate `<prefix>_quiz.json` (partner schema is `additionalProperties:false` throughout; all 85 current JSON exports validate against it); quiz model = `claude-sonnet-5` by default, with a Sonnet 5 vs Opus 5.5 comparison on the Phase 3 samples. Autonomy (Mark): repair same-class issues and report at the end. API credits still to be topped up before Phase 3. |
+| **Bounded project v2** (link-selection fix + Quick Check quizzes + attribution, then Grade 11 readiness) | **Phase 2 done 2026-09-29 — awaiting Mark's review before Phase 3** | Spec: `handoff_bundle_2026-09-29/HANDOFF_bounded_project_v2_2026-09-29.md`. Design approved: `DESIGN_link_selection_v2.md` (§7 = implementation differences). New matcher in `src/ares_recommender.py`, rules in `config/link_matching.yaml`, gate `scripts/check_resource_links.py` wired into `generate.js` (non-zero exit on answer-key / wrong-subject / dead link / contract failure). All 85 sub-strands re-rendered (docx + JSON; **PDFs NOT yet regenerated — Phase 5**). Gate: T1/T2/DEAD/SHAPE = 0/0/0/0 corpus-wide (was 45/166/45/0 across all phases). Handoff audit (predict): Tier 2 25→0, Tier 3 174→28; its Tier 1 reads 34→32 but **all 32 are "worked example" titles** matched by its bare `exam` regex (0 real answer keys). Lesson content unchanged (diff check: only `resourceLinks` differs, 85/85). Fill rate drops to 72–99% by subject: no-match cells now say so instead of showing a weak link; content-gap list in the 2026-09-29 session log. Link verification uses the ARES system disk mounted on jhm-spark (Kolibri DB + `/var/www/modules`). Attribution config moved to `config/attribution.yaml` with SeaVuria's Kenyan NGO no. 872-850A-BF11 added. Quiz model: **`claude-sonnet-5-5`** (confirmed on the account; it rejects forced `tool_choice`, so the quiz generator uses structured outputs). Autonomy (Mark): repair same-class issues, report at end. API credits added ($50). |
 | New Grade 10 STEM subjects (General Science, Core Mathematics, Essential Mathematics) | **Done — Phase 3 complete, committed `f6d6fab`** | All 43 sub-strands / 344 lessons generated, docx+PDF regenerated, teacher index rebuilt, pushed to `origin/main`. Handoff: `HANDOFF_new_stem_subjects_2026-07-28.md` (Rev 2). See 2026-07-30 session-log entry below for the bugs found/fixed along the way (subject-label bug, 34 stub lessons, 1 missing FE). Replacement Core Mathematics source PDF referenced in the handoff was never supplied but generation proceeded — flag if a full curriculum-text re-check against it is still wanted. Summary/per-subject tables below still need the separate full refresh already flagged as stale. |
 
 ---
@@ -1516,3 +1516,25 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - **Mark: review `DESIGN_link_selection_v2.md`** (gate before Phase 2).
 - Top up API credits before Phase 3 (quiz generation).
 - A server to live-check Kolibri IDs against (optional, see design §6).
+
+### Phase 2 — link fix implemented (same day)
+- Matcher rebuilt per the approved design, plus the changes in design §7:
+  web modules are eligible if verified on the reference image (so SeaVuria
+  videos and PhET sims can win), a wider exam exclusion list, whole-phrase and
+  position-weighted relevance gate, and a floor on per-phase variety.
+- Removed two more silent fallbacks in the render path (`aresResources.js`
+  empty-on-error, `sections.js` stub module), both of which produced contract-
+  invalid empty links. They now fail the render.
+- Results, whole corpus (85 sub-strands, 7,280 slots):
+  - New gate: T1 45→0, T2 166→0, DEAD 45→0, SHAPE 0.
+  - Handoff audit (predict phase): T1 34→32 (all "worked example" titles —
+    its regex's false positives; 0 real answer keys), T2 25→0, T3 174→28.
+  - Hand check of 10 remaining Tier 3 rows: 0 real problems (1 weak but on topic).
+  - Content diff: only `resourceLinks` changed in all 85 JSON files.
+- **Content-library gaps** (share of slots with no confident match): Physics
+  1.5 Moments 75%, Biology 3.1 Animal Nutrition 75%, Gen Sci 1.3 Nutrition in
+  Animals 69%, Biology 3.2 Animal Transport 58%, Gen Sci 1.1 Intro 56%, Ess
+  Maths 2.8 Commercial Arithmetic 50%, then 8 more sub-strands at 29–38%;
+  41 of 85 have none. Some are true gaps; some would come back with synonym
+  support ("torque" for moments). The gate is deliberately precision-first.
+- PDFs and the teacher index are stale relative to the docx until Phase 5.
