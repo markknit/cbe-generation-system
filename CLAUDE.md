@@ -76,6 +76,11 @@ generators/generate.js                 - Universal entry point
 generators/generate_pdfs.js             - docx -> PDF (teacher distribution format)
 generators/generate_teacher_index.js    - Builds v2/PDF/index.html (teacher-facing browse page)
 generators/aresResources.js             - ARES resource injection (docx paragraph building)
+generators/build_quiz.js                - Quick Check .pptx + Answer Key .html/.docx from *_quiz.json
+generators/lib/attribution.js           - Renders config/attribution.yaml (licence/credit text)
+config/attribution.yaml                 - Attribution text — the ONLY place it lives; never hardcode
+config/link_matching.yaml               - Link matcher rules (exclusions, synonyms, relevance gate)
+config/quiz_generation.yaml             - Quiz model, effort, question counts
 generators/lib/docx_kit.js              - Formatting primitives
 generators/lib/sections.js              - Section builders (sectionA-E)
 generators/lib/build_docs.js            - buildSoW, buildFinalExplanation, buildSummaryTable
@@ -89,7 +94,13 @@ generators/data/*_data.js               - One per sub-strand (THE source of trut
 .claude/settings.json                   - Hooks, plugin marketplace, Read deny rules
 .mcp.json                               - code-review-graph MCP server (stdio, venv python)
 src/generate_substrand.py               - Claude API content pipeline (main script)
-src/ares_recommender.py                 - ARES FTS search + resource URL construction (ARES_HOST env var)
+src/ares_recommender.py                 - ARES FTS search + relevance-ranked matcher (ARES_HOST env var)
+src/generate_quiz.py                    - Claude API quiz generator (--live/--batch/--collect)
+scripts/check_resource_links.py         - Link gate, run by generate.js; non-zero exit = don't ship
+scripts/validate_quiz.py                - Quiz validator (gates generation and rendering)
+scripts/validate_corpus.js              - Lesson contract check, all data files
+ares-contract.schema.json               - Partner contract (strict) for *_data.json
+PARTNER_CONTRACT_NOTES.md               - What changed for the partner, and what didn't
 scripts/patch_lesson.js                 - Repair stub lessons
 scripts/patch_fe.js                     - Repair missing Final Explanations
 scripts/repair_stubs.py                 - Batch repair utility
@@ -126,6 +137,9 @@ node generators/generate.js bio_1_4
 
 # Regenerate all sub-strands
 node generators/generate.js --all
+
+# Quiz decks/answer keys from existing *_quiz.json (generation: WORKFLOW.md Step 6q)
+node generators/build_quiz.js
 
 # Generate teacher-distribution PDFs + browse index (after docx regen)
 node generators/generate_pdfs.js
@@ -178,7 +192,12 @@ data/outputs/v2/<Subject>/<SubStrand>/
   <prefix>_FinalExplanation.docx       - Student assessment
   <prefix>_SummaryTable.docx           - Teacher reference
   <prefix>_data.json                   - Structured data (includes resourceLinks per lesson)
+  <prefix>_quiz.json                   - Quick Check quizzes (separate: the contract is strict)
+  quiz/<Subject>_G<g>_SS<id>_<Name>_L<n>_QuickCheck.pptx / _AnswerKey.html / _AnswerKey.docx
 ```
+Every document carries the attribution block (from `config/attribution.yaml`).
+Presentations (`build_pptx.js`) are **deferred** pending teacher review; the examples in
+`handoff_bundle_2026-09-29/presentation_examples_deferred/` are reference only, so don't build it.
 
 PDF distribution copies (generated from the docx above, for teachers —
 not `.docx` or `data/outputs/docx/`, which is an archived, stale tree):
@@ -187,7 +206,8 @@ data/outputs/v2/PDF/<Subject>/<SubStrand>/
   <prefix>_CBE_LessonSequence.pdf
   <prefix>_FinalExplanation.pdf
   <prefix>_SummaryTable.pdf
-data/outputs/v2/PDF/index.html         - Auto-generated browse page, all sub-strands
+  quiz/*_QuickCheck.pdf, *_AnswerKey.pdf, *_AnswerKey.html
+data/outputs/v2/PDF/index.html         - Auto-generated browse page, all sub-strands (quizzes not linked yet)
 ```
 
 ---
@@ -208,8 +228,10 @@ Phenomenon, Driving Question, Storyline, and all lesson content are generated.
 
 Resources auto-injected into Section C Resource column at generation time,
 and also captured as structured data in each lesson's `resourceLinks`
-JSON field (added 2026-07-05 — see `STATUS.md` Known Issues for shape
-and the partner-schema caveat).
+JSON field (added 2026-07-05). Its shape, and the fact that a slot may be
+`null` since the 2026-09-29 matcher, are documented in `docs/SCHEMA.md`.
+Every render goes through the link gate (`scripts/check_resource_links.py`),
+and a failure means do not distribute.
 
 - Kolibri: `http://ares.local:8069/en/learn/#/topics/c/<node_id>`
   (hostname controlled by `ARES_HOST` env var in `ares_recommender.py` —

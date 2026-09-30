@@ -96,6 +96,20 @@ node generators/generate.js --all        # all sub-strands in generators/data/
 - `*_CBE_LessonSequence.docx`
 - `*_FinalExplanation.docx`
 - `*_SummaryTable.docx`
+- `*_data.json` (partner contract export, includes `resourceLinks`)
+
+**Link gate:** every rendered sub-strand is checked by
+`scripts/check_resource_links.py`, and the run exits non-zero on any hard
+failure: an answer key or exam paper (T1), wrong-subject vocabulary (T2), a
+Kolibri ID missing from the content DB (DEAD), or a record that fails the
+contract shape (SHAPE). A failed gate means do not distribute.
+
+**Attribution:** `generators/lib/attribution.js` renders the text from
+`config/attribution.yaml` (never hardcoded). The full block goes under the
+title of all three documents, and a one-line footer goes after every lesson.
+The licence name is a hyperlink and the URL is also printed, because printed
+copies lose links. `{YEAR}` becomes the year of rendering. Attribution is
+render-time only and never enters `_data.json`.
 
 ---
 
@@ -196,14 +210,14 @@ A=Phase label, B=Learner Experience, C=Resource (ARES), D=Teacher Moves (widest)
 
 ### `generators/aresResources.js` — ARES Resource Integration
 
-Queries the ARES content database and injects resource links into the Resource column of every lesson phase.
+Gets matched resources from `src/ares_recommender.py` and injects them into the Resource column of every lesson phase. It also writes them into the lesson's `resourceLinks`. A matcher error fails the render; it no longer falls back to empty links.
 
-**URL patterns:**
-- Kolibri content: `http://ares.edu:8069/en/learn/#/topics/c/<node_id>`
-- Kiwix content: `http://ares.edu/tracker/kiwix_launch.html?target=/kiwix/<zim>/<path>`
-- ARES search: `http://ares.edu/www2/search.php?searchstring=<terms>&sources[]=kha&...`
+**URL patterns** (host from `ARES_HOST`, default `ares.local`):
+- Kolibri content: `http://ares.local:8069/en/learn/#/topics/c/<node_id>`
+- Web modules (SeaVuria videos, PhET sims): direct `http://ares.local/modules/...` links. Not the `/tracker/kiwix_launch.html` wrapper, which only accepts `/kiwix/` targets.
+- ARES search: `http://ares.local/www2/search.php?searchstring=<terms>&sources[]=kha&...`
 
-Each Resource cell contains: matched content links + a generic ARES search link.
+Each Resource cell holds up to one video and one reading, plus an ARES search link. A slot with no confident match says so rather than showing a weak link, and `resourceLinks` stores `null` for it.
 
 ---
 
@@ -225,7 +239,28 @@ See `generators/data/SCHEMA.md` for full field documentation.
 
 ### `src/ares_recommender.py` — ARES Content Search
 
-FTS5 search across 1.55M ARES content items. Returns ranked results by tier, subject match, content type, and hit count. Called by `aresResources.js` via child process.
+FTS5 search across 1.55M ARES content items. Called by `aresResources.js` via child process. The relevance-ranked matcher dates from 2026-09-29. Design and rationale: `DESIGN_link_selection_v2.md` (§7 lists how the implementation differs from the design).
+- Rules live in `config/link_matching.yaml`: exam and answer-key exclusions, strict-equivalent synonyms, the relevance gate, and per-phase variety.
+- Ranking is relevance first, then reliability (Kolibri-storage ID, has a direct URL), then channel tier. Candidates below the relevance gate are dropped, so a slot can be `null` (precision over fill rate).
+- A per-sub-strand decision log is written to `logs/link_matching/v2/...`, recording why each candidate won or lost.
+- `scripts/verify_links_live.py` checks links against a live ARES server. The last run was on demo.aresedu.dev, 2026-09-29: 1,707/1,707 OK.
+
+---
+
+### Quick Check quizzes
+
+| File | Role |
+|---|---|
+| `src/generate_quiz.py` | Claude API (`claude-sonnet-5-5`, structured outputs). Modes: `--live`, `--batch`, `--collect`. Writes `<prefix>_quiz.json` beside `_data.json`. Checkpoints per lesson, so a re-run only redoes lessons without a valid quiz. |
+| `scripts/validate_quiz.py` | Gates both generation and rendering: 4 choices, valid `correctIndex` and `phase`, no banned phrases, arithmetic `check` values, answer letters in rationales. |
+| `generators/build_quiz.js` | Renders `quiz/<Subject>_G<grade>_SS<id>_<Name>_L<n>_QuickCheck.pptx` (student deck, no answers even in notes) plus an `_AnswerKey.html` and `.docx`. Refuses invalid quizzes. |
+| `config/quiz_generation.yaml` | Model, effort, question counts (5–7 normal, 10 max), phase map, banned phrases. |
+
+Quiz data is a separate file because the partner contract is strict. Format:
+`docs/SCHEMA.md`. Every question carries `phase` and `placement`, so a future
+presentation generator can place it inline. Presentations are **deferred**
+pending teacher review; the examples are in
+`handoff_bundle_2026-09-29/presentation_examples_deferred/` (reference only).
 
 ---
 
@@ -250,16 +285,22 @@ FTS5 search across 1.55M ARES content items. Returns ranked results by tier, sub
 6. Lessons                      →  Claude API (ST call)
 7. All JSON                     →  generators/data/<name>_data.js
 8. Data file                    →  node generators/generate.js
+                                     (link matching + attribution; link gate
+                                      must PASS)
 9.                              →  data/outputs/v2/<Subject>/SS<n>_<Name>/
                                        *_CBE_LessonSequence.docx
                                        *_FinalExplanation.docx
                                        *_SummaryTable.docx
                                        *_data.json
-10. All docx above              →  node generators/generate_pdfs.js
+9a. *_data.json                 →  python3 src/generate_quiz.py (Claude API)
+                                    →  *_quiz.json  →  node generators/build_quiz.js
+                                    →  quiz/*_QuickCheck.pptx, *_AnswerKey.html/.docx
+10. All docx + pptx above       →  node generators/generate_pdfs.js
 11.                              →  data/outputs/v2/PDF/<Subject>/SS<n>_<Name>/
                                        *_CBE_LessonSequence.pdf
                                        *_FinalExplanation.pdf
                                        *_SummaryTable.pdf
+                                       quiz/*_QuickCheck.pdf, *_AnswerKey.pdf/.html
 12. All PDFs above (per subject/ →  node generators/generate_teacher_index.js
     sub-strand, whole tree)
 13.                              →  data/outputs/v2/PDF/index.html

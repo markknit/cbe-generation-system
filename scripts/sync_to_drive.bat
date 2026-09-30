@@ -106,11 +106,13 @@ echo Repo:      %REPO%
 echo Log:       %LOG%
 echo.
 
-REM --- Job 1: docx + json (no purge) ----------------------------------------
+REM --- Job 1: docx + json + pptx (no purge) ---------------------------------
+REM *.pptx = quiz/ Quick Check decks (added 2026-09-30); the PDF tree only has
+REM their PDF, and teachers presenting a deck need the .pptx.
 echo ============================================================
-echo  JOB 1/2  docx + json  ^-^>  %DEST_DOCX%   (/E, no delete)
+echo  JOB 1/2  docx + json + pptx  ^-^>  %DEST_DOCX%   (/E, no delete)
 echo ============================================================
-robocopy "%SRC_DOCX%" "%DEST_DOCX%" *.docx *.json /E /XD "%SRC_PDF%" %COMMON% %DRYRUN% /LOG+:"%LOG%"
+robocopy "%SRC_DOCX%" "%DEST_DOCX%" *.docx *.json *.pptx /E /XD "%SRC_PDF%" %COMMON% %DRYRUN% /LOG+:"%LOG%"
 set "RC1=%ERRORLEVEL%"
 
 REM --- Job 2: pdf + html (mirror) -------------------------------------------
@@ -125,8 +127,8 @@ REM     not match it. Mirroring the whole tree removes that failure mode.
 REM  2. It structurally guarantees index.html syncs. The old job used a *.pdf
 REM     mask and had to remember *.html separately or the teacher browse page
 REM     silently never synced (see docs/PDF_GENERATION.md).
-REM The source tree is pure generated output - verified 255 *.pdf + 1 *.html and
-REM nothing else - so there is no stray file here to sweep up.
+REM The source tree is pure generated output - verified 2026-09-30: 309 *.pdf +
+REM 28 *.html (index + 27 quiz answer keys) and nothing else - so there is no stray file here to sweep up.
 robocopy "%SRC_PDF%" "%DEST_PDF%" /MIR %COMMON% %DRYRUN% /LOG+:"%LOG%"
 set "RC2=%ERRORLEVEL%"
 

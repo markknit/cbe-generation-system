@@ -114,7 +114,18 @@ node generators/generate.js chem_1_4
 node generators/generate.js --all
 ```
 
-### Step 6c — Verify resource links before distributing
+Every sub-strand renders the attribution from `config/attribution.yaml` (never
+edit the text in code) and passes through the **link gate**
+(`scripts/check_resource_links.py`). The run exits non-zero on an answer key,
+a wrong-subject resource, a dead Kolibri ID or a contract-shape failure. Each
+sub-strand prints `Link check: PASS ... T1=0 T2=0 DEAD=0 SHAPE=0`. **Anything
+else means do not distribute.** Why each link was chosen is logged in
+`logs/link_matching/v2/`.
+
+### Step 6a — Verify resource links before distributing
+
+(Labelled "Step 6c" before 2026-09-30, the same as the index-page step. Older
+session-log entries that say "Step 6c verification grep" mean this step.)
 
 Cheap, and it catches a whole-corpus regression that is otherwise invisible:
 
@@ -125,7 +136,39 @@ grep -rl  'ares\.edu'   data/outputs/v2 --include=*_data.json | wc -l   # must b
 
 # Contract check across all 85 data modules / 728 lessons
 node scripts/validate_corpus.js
+
+# Partner-schema check (strict; needs jsonschema, installed in the venv)
+python3 -c "import json,glob,jsonschema;s=json.load(open('ares-contract.schema.json'));b=[f for f in glob.glob('data/outputs/v2/**/*_data.json',recursive=True) if '/PDF/' not in f and list(jsonschema.Draft202012Validator(s).iter_errors(json.load(open(f))))];print(len(b),'invalid')"
 ```
+
+Optional, for a fuller picture: `python3 scripts/audit_resource_links.py
+--all-phases` (the handoff's audit). Its Tier 1 count is inflated by a bare
+`exam` pattern that matches "worked example" titles. On 2026-09-30, all 127
+Tier 1 hits were such titles, with 0 real answer keys. The link gate above is
+the authoritative check.
+
+### Step 6q — Quick Check quizzes (optional; needs API budget)
+
+Quizzes are generated from the finished `_data.json`, so run this only after
+the lesson content is final. Settings: `config/quiz_generation.yaml`. Data
+format: `docs/SCHEMA.md`. **Status 2026-09-30:** 27 of 728 Grade 10 lessons
+have quizzes. The remaining 701 (~$21 batch) are on hold until Mark and the
+partner have reviewed those 27.
+
+```bash
+# Generate (batch = half price). Paths, or --all with --grade
+python3 src/generate_quiz.py --batch --all --grade 10
+python3 src/generate_quiz.py --collect --wait   # re-submit to retry failures;
+                                               # lessons with a valid quiz are skipped
+
+# Validate (also runs inside generation and rendering)
+python3 scripts/validate_quiz.py
+
+# Render every *_quiz.json -> quiz/ QuickCheck.pptx + AnswerKey.html/.docx
+node generators/build_quiz.js
+```
+
+Then run Step 6b: its PDFs include the decks and answer keys.
 
 ### Step 6b — Generate PDFs (teacher distribution copies)
 
@@ -140,8 +183,9 @@ serving `.docx` directly. Full rationale in `docs/PDF_GENERATION.md`.
 node generators/generate_pdfs.js
 ```
 
-This scans `data/outputs/v2/` for every `_CBE_LessonSequence.docx`,
-`_FinalExplanation.docx`, and `_SummaryTable.docx` file, converts each via
+This scans `data/outputs/v2/` for every `.docx` and `.pptx`: the three
+sub-strand documents, plus the quiz Answer Key `.docx` and Quick Check `.pptx`
+under `quiz/`. It converts each via
 headless LibreOffice, and writes the PDFs into a parallel `v2/PDF/` tree
 that mirrors the `Subject/SubStrand/` folder structure exactly:
 
@@ -185,7 +229,10 @@ before running a freshly-pasted script for real.
 ```bash
 node generators/generate_teacher_index.js
 ```
-Scans `data/outputs/v2/PDF/` and writes `data/outputs/v2/PDF/index.html` —
+Scans `data/outputs/v2/PDF/` and writes `data/outputs/v2/PDF/index.html`. It
+lists the three sub-strand documents only. **Quiz decks and answer keys are
+not linked from the index yet**, although they are in the PDF tree and sync
+to Drive. That decision is deferred until the quiz review. The page is
 a single self-contained static page (no external fonts/scripts/CDN calls)
 listing every subject and sub-strand with links to its PDFs. Safe to
 re-run any time; it fully regenerates from whatever is currently on disk,
@@ -363,6 +410,6 @@ just the contingency margin.
 | Output documents (docx, master) | `data/outputs/v2/<Subject>/<SubStrand>/` |
 | Output documents (PDF, teacher distribution) | `data/outputs/v2/PDF/<Subject>/<SubStrand>/` |
 | Drive sync script (Windows) | `scripts/sync_to_drive.bat` — run after `git pull`; `sync_to_drive.bat preview` for a dry run |
-| Drive destination (docx + json, editable master) | `G:\My Drive\CBE Outputs` — copied with `/E`, **no** purge |
+| Drive destination (docx + json + quiz pptx, editable master) | `G:\My Drive\CBE Outputs` — copied with `/E`, **no** purge |
 | Drive destination (PDF + index.html, teachers) | `G:\My Drive\CBE Outputs\PDF` — **true mirror** (`/MIR`); hand-placed files there get deleted |
 | ARES resource hostname | `ares.local` (default in `src/ares_recommender.py`; override per box with `ARES_HOST`) |

@@ -214,6 +214,45 @@ The colleague's teacher editing tool should treat `*_data.json` as
 read-only input and submit edits via the agreed patch format (see
 `docs/EDITING_CONTRACT.md` once drafted).
 
+**Attribution is not in the JSON.** The licence and credit text
+(`config/attribution.yaml`) is added at render time to the docx, decks and
+answer keys only. The contract has no field for it, and none is needed.
+
+---
+
+## `resourceLinks` (per lesson, JSON export only)
+
+Written by `generators/aresResources.js` from `src/ares_recommender.py`.
+Shape: `ares-contract.schema.json` `$defs/resourceLinks` (strict). There is
+one entry for each of the five phases, `predict`, `observe`, `explain`,
+`dqb` and `model`:
+
+```js
+resourceLinks: {
+  predict: {
+    video:   { title, source, content_type, direct_url, search_url,
+               search_terms, exact_search_url, has_transcript, tier } | null,
+    reading: { ...same fields... } | null,
+    fallback_search_url: "http://ares.local/www2/search.php?..."   // always present
+  },
+  observe: {...}, explain: {...}, dqb: {...}, model: {...}
+}
+```
+
+- **`null` is normal (since 2026-09-29).** The matcher leaves a slot empty
+  when no candidate passes the relevance gate, where it used to show a weak
+  or wrong link. On 2026-09-30, 830 of 7,280 slots were `null` (315 video,
+  515 reading). Consumers must handle it. `fallback_search_url` is always a
+  usable link.
+- `direct_url` is either a Kolibri link (`http://ares.local:8069/en/learn/#/topics/c/<id>`,
+  6,263 records) or a direct web-module link (`http://ares.local/modules/...`,
+  187 records: SeaVuria videos, PhET sims).
+- `tier` is the source channel's quality tier (0 = best). It is not a
+  relevance score, and relevance now outranks it.
+- The host comes from `ARES_HOST` (default `ares.local`).
+- The docx renders one link per filled slot, plus the search link. The JSON
+  also carries `search_url` / `exact_search_url` alternatives.
+
 ---
 
 ## Quick Check quiz file — `<filePrefix>_quiz.json` (added 2026-09-29)
@@ -251,8 +290,11 @@ Answer Key `.html` + `.docx`; PDFs via `generate_pdfs.js`). Settings:
 }
 ```
 
-- 5–10 questions per lesson. `phase` and `placement` let a future presentation
-  generator insert questions inline without regenerating them.
+- 5–10 questions per lesson (5–7 normal; the validator warns above 7). `phase`
+  and `placement` let a future presentation generator insert questions
+  inline without regenerating them.
+- A quiz file may cover only some lessons. On 2026-09-30, 8 files held
+  quizzes for 27 of 728 Grade 10 lessons, pending review.
 - `check` is present only for calculated answers. The validator evaluates it
   (degrees for trig) and fails the lesson if the value is not in the correct
   choice, allowing for the rounding shown.
