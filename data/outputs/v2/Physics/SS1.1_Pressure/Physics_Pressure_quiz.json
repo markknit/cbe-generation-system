@@ -1,0 +1,154 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Physics",
+  "grade": 10,
+  "substrandId": "1.1",
+  "substrandName": "Pressure",
+  "filePrefix": "Physics_Pressure"
+ },
+ "lessons": [
+  {
+   "number": 2,
+   "title": "What Is Pressure? Measuring the Invisible Push — Shoes, Scales, and Force Per Unit Area",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-09-30T02:52:45+00:00",
+   "quiz": [
+    {
+     "prompt": "A plastic jerrycan had some air removed from inside, sealed, and then left on a bench. It has collapsed inwards. Which statement best describes the forces the outside air exerts on this jerrycan?",
+     "choices": [
+      "No air is pushing on it, because the air outside cannot be seen or felt.",
+      "The air pushes only on the top of the jerrycan, pressing it downwards.",
+      "The air pushes inwards on every face of the jerrycan: top, bottom and all four sides.",
+      "The air inside has pushed in on the walls and made the jerrycan collapse."
+     ],
+     "correctIndex": 2,
+     "rationale": "Air pressure acts on every exposed surface, so the arrows point inwards on all faces. Drawing arrows only on the top is the misconception the teacher looks for in the force diagrams.",
+     "phase": "predict",
+     "placement": "Silent Force-Diagramming of the collapsed jerrycan"
+    },
+    {
+     "prompt": "A teacher presses a flat 300 g textbook on her palm, then presses a sharpened pencil tip on her palm with about the same force. The pencil feels much sharper and more painful. What is the main reason?",
+     "choices": [
+      "The pencil tip touches a much smaller area, so the same force gives a greater pressure.",
+      "The pencil tip touches a much smaller area, so it gives a smaller pressure.",
+      "The pencil is harder than the book, so its force is larger.",
+      "The pencil pushes with a much bigger force than the book."
+     ],
+     "correctIndex": 0,
+     "rationale": "The force is about the same, but the pencil tip has a far smaller contact area. Since P = F/A, a smaller area gives a greater pressure.",
+     "phase": "observe",
+     "placement": "Part A: Pencil vs. Book Demonstration"
+    },
+    {
+     "prompt": "A student has a mass of 50 kg (g = 10 N/kg). She stands on one shoe. The shoe tracing on graph paper has an area of 200 cm². Use half her body weight as the force on one foot. What pressure does her shoe exert on the floor?",
+     "choices": [
+      "12 500 Pa",
+      "25 000 Pa",
+      "1.25 Pa",
+      "5 Pa"
+     ],
+     "correctIndex": 0,
+     "rationale": "Weight = 50 × 10 = 500 N, so the force on one foot = 250 N. Area = 200 ÷ 10 000 = 0.02 m². P = 250 ÷ 0.02 = 12 500 Pa.",
+     "phase": "observe",
+     "placement": "Part B: shoe-pressure investigation (steps i–iv)",
+     "check": "250/0.02"
+    },
+    {
+     "prompt": "In the shoe investigation, a pair counts the squares in a shoe tracing and finds an area of 250 cm². To calculate pressure in pascals, they must convert this to m². What is the area in m²?",
+     "choices": [
+      "0.25 m²",
+      "0.025 m²",
+      "0.0025 m²",
+      "2.5 m²"
+     ],
+     "correctIndex": 1,
+     "rationale": "1 m² = 10 000 cm², so 250 cm² = 250 ÷ 10 000 = 0.025 m². Forgetting this conversion is the most common error in the lab.",
+     "phase": "observe",
+     "placement": "Part B: shoe-pressure investigation (step iv, converting cm² to m²)",
+     "check": "250/10000"
+    },
+    {
+     "prompt": "Which statement correctly gives the definition of pressure and its SI unit?",
+     "choices": [
+      "Pressure = force ÷ area, measured in newtons (N)",
+      "Pressure = area ÷ force, measured in m²/N",
+      "Pressure = force ÷ area, measured in pascals (Pa), where 1 Pa = 1 N/m²",
+      "Pressure = force × area, measured in N·m²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Pressure is force per unit area, P = F/A. Its SI unit is the pascal, and 1 Pa = 1 N/m². Inverting the formula or using newtons as the unit are common errors.",
+     "phase": "explain",
+     "placement": "Formal definition P = F/A and the structured note frame"
+    },
+    {
+     "prompt": "A maize bag of mass 90 kg (g = 10 N/kg) is placed on a wooden pallet with 4 legs. Each leg has a base area of 25 cm². The weight is shared equally by the legs. What pressure does each leg exert on the warehouse floor in Eldoret?",
+     "choices": [
+      "9 Pa",
+      "360 000 Pa",
+      "36 Pa",
+      "90 000 Pa"
+     ],
+     "correctIndex": 3,
+     "rationale": "Weight = 90 × 10 = 900 N. Force per leg = 900 ÷ 4 = 225 N. Area = 25 ÷ 10 000 = 0.0025 m². P = 225 ÷ 0.0025 = 90 000 Pa.",
+     "phase": "explain",
+     "placement": "Extension Problem 1: maize bag on a wooden pallet",
+     "check": "(90*10/4)/(25/10000)"
+    },
+    {
+     "prompt": "A Maasai elder leans on a rungu with a handle tip area of 2 cm², using a force of 150 N. What pressure does the rungu tip exert on the ground?",
+     "choices": [
+      "750 000 Pa",
+      "75 Pa",
+      "7 500 Pa",
+      "30 000 Pa"
+     ],
+     "correctIndex": 0,
+     "rationale": "Area = 2 ÷ 10 000 = 0.0002 m². P = F/A = 150 ÷ 0.0002 = 750 000 Pa.",
+     "phase": "explain",
+     "placement": "Extension Problem 2: rungu and crutch comparison",
+     "check": "150/(2/10000)"
+    },
+    {
+     "prompt": "A rungu tip (area 2 cm²) and a flat crutch base (area 50 cm²) each carry the same force of 150 N. Which is safer on a soft floor, and why?",
+     "choices": [
+      "The crutch, because a larger area gives a smaller pressure on the floor.",
+      "The rungu, because it spreads the force over more area.",
+      "The rungu, because a small area gives a smaller pressure.",
+      "Both are equally safe, because the force is the same."
+     ],
+     "correctIndex": 0,
+     "rationale": "With the same force, the larger area of the crutch base gives a much lower pressure (30 000 Pa compared with 750 000 Pa), so it is less likely to damage a soft floor.",
+     "phase": "explain",
+     "placement": "Extension Problem 2: rungu and crutch comparison (which is safer)"
+    },
+    {
+     "prompt": "A student must write a 'What I now THINK' card explaining why a sealed jerrycan with some air removed collapses. Which card is the best scientific explanation using force per unit area?",
+     "choices": [
+      "The air did it.",
+      "Air outside pushes on every unit of area of the jerrycan. With less air inside, the outside pressure is greater than the inside pressure, so the walls are pushed in.",
+      "Pressure cannot act on plastic, so the plastic became weak by itself.",
+      "The air outside got heavier and squashed the jerrycan."
+     ],
+     "correctIndex": 1,
+     "rationale": "This is the only answer that uses force, area and pressure correctly and identifies the pressure difference between outside and inside as the cause. The other answers are vague or wrong.",
+     "phase": "dqb",
+     "placement": "Two-colour DQB cards: yellow 'What do I now THINK' card"
+    },
+    {
+     "prompt": "A full jerrycan does not collapse, but the same jerrycan collapses when some air is removed. Which sentence correctly completes the model: 'The full jerrycan stayed intact because ___.'?",
+     "choices": [
+      "air pressure pushes only from above, and the plastic is strong enough to resist it",
+      "the air pressure inside pushing outwards balanced the air pressure outside pushing inwards",
+      "there is no air pressure acting on a full jerrycan",
+      "the air outside is lighter than the air inside a full jerrycan"
+     ],
+     "correctIndex": 1,
+     "rationale": "When the pressures inside and outside are balanced, the forces on the walls cancel and the jerrycan keeps its shape. After air is removed, the inside pressure drops and the outside pressure pushes the walls in.",
+     "phase": "model",
+     "placement": "Revising the jerrycan force diagram and completing the sentence frame"
+    }
+   ]
+  }
+ ]
+}

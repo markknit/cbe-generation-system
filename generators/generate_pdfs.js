@@ -9,7 +9,8 @@ const { spawnSync } = require('child_process');
 const DOCX_ROOT = path.join(__dirname, '..', 'data', 'outputs', 'v2');
 const PDF_DIRNAME = 'PDF';
 const PDF_ROOT = path.join(DOCX_ROOT, PDF_DIRNAME);
-const FILE_PATTERN = /\.docx$/i;
+// .docx lesson plans + quiz Answer Keys, .pptx Quick Check decks (quiz/ subfolders).
+const FILE_PATTERN = /\.(docx|pptx)$/i;
 const BATCH_SIZE = 150;
 const LO_PROFILE = path.join(os.tmpdir(), 'lo_profile_pdfgen');
 
@@ -29,7 +30,7 @@ if (!fs.existsSync(DOCX_ROOT)) {
 }
 
 const allFiles = findDocxFiles(DOCX_ROOT);
-console.log(`Found ${allFiles.length} docx file(s) matching ${FILE_PATTERN}`);
+console.log(`Found ${allFiles.length} docx/pptx file(s) matching ${FILE_PATTERN}`);
 if (allFiles.length === 0) {
   console.log('Nothing to convert.');
   process.exit(0);
@@ -38,7 +39,7 @@ if (allFiles.length === 0) {
 const seenBase = new Map();
 const collisions = [];
 for (const f of allFiles) {
-  const base = path.basename(f);
+  const base = path.basename(f).replace(FILE_PATTERN, '');   // the PDF name, which is what collides
   if (seenBase.has(base)) collisions.push(f);
   else seenBase.set(base, f);
 }
@@ -77,7 +78,7 @@ for (const batch of chunk(batchable, BATCH_SIZE)) {
   console.log(`Converting batch of ${batch.length} file(s)...`);
   runSoffice(batch, tmpOut);
   for (const src of batch) {
-    const expected = path.join(tmpOut, path.basename(src, '.docx') + '.pdf');
+    const expected = path.join(tmpOut, path.basename(src).replace(FILE_PATTERN, '') + '.pdf');
     if (fs.existsSync(expected)) converted.push([src, expected]);
     else failed.push(src);
   }
@@ -86,14 +87,14 @@ for (const batch of chunk(batchable, BATCH_SIZE)) {
 for (const src of individual) {
   const tmpOut = fs.mkdtempSync(path.join(os.tmpdir(), 'pdfgen-single-'));
   runSoffice([src], tmpOut);
-  const expected = path.join(tmpOut, path.basename(src, '.docx') + '.pdf');
+  const expected = path.join(tmpOut, path.basename(src).replace(FILE_PATTERN, '') + '.pdf');
   if (fs.existsSync(expected)) converted.push([src, expected]);
   else failed.push(src);
 }
 
 for (const [srcDocx, tmpPdf] of converted) {
   const relative = path.relative(DOCX_ROOT, srcDocx);
-  const destPdf = path.join(PDF_ROOT, relative).replace(/\.docx$/i, '.pdf');
+  const destPdf = path.join(PDF_ROOT, relative).replace(FILE_PATTERN, '.pdf');
   fs.mkdirSync(path.dirname(destPdf), { recursive: true });
   fs.renameSync(tmpPdf, destPdf);
 }

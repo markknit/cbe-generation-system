@@ -29,6 +29,7 @@ const { Document, Packer, PageOrientation } = require('docx');
 const { W, C, SZ, SZ_H, SPACE, PAGE_BREAK, para, cell, fullHeader, labelRow, makeTable } = require('./docx_kit');
 const { TableRow } = require('docx');
 const { takeDiagnostics } = require('../aresResources');
+const { substrandHeaderParas, lessonFooterParas } = require('./attribution');
 const {
   titleBlock, subStrandOverview,
   sectionA, sectionB, sectionC, sectionD, sectionE,
@@ -56,6 +57,7 @@ async function buildSoW(META, UNIT, LESSONS) {
 
   const body = [
     ...titleBlock(META.titleDoc, META.subtitleDoc),
+    ...substrandHeaderParas(),
     SPACE(),
     subStrandOverview(UNIT),
     SPACE(),
@@ -73,6 +75,7 @@ async function buildSoW(META, UNIT, LESSONS) {
       sectionD(lesson),
       SPACE(),
       sectionE(lesson),
+      ...lessonFooterParas(),
     );
   }
 
@@ -99,6 +102,7 @@ async function buildFinalExplanation(META, FE) {
       `FINAL EXPLANATION: ${META.subject.toUpperCase()} GRADE ${META.grade}`,
       `Student Assessment Document`,
     ),
+    ...substrandHeaderParas(),
     SPACE(),
   ];
 
@@ -176,6 +180,7 @@ async function buildSummaryTable(META, ST) {
       `SUMMARY TABLE: ${META.subject.toUpperCase()} GRADE ${META.grade}`,
       `${ST.subStrand || ''} — Teacher Reference (Pre-filled)`,
     ),
+    ...substrandHeaderParas(),
     SPACE(),
   ];
 

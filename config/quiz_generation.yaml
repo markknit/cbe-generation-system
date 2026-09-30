@@ -1,0 +1,58 @@
+# Quick Check quiz generation — settings read by src/generate_quiz.py and
+# scripts/validate_quiz.py. Nothing here is keyed by grade or subject.
+# Handoff: handoff_bundle_2026-09-29/HANDOFF_bounded_project_v2_2026-09-29.md §3.
+
+model: claude-sonnet-5-5       # confirmed on the account 2026-09-29; rejects forced
+                               # tool_choice, so generation uses structured outputs
+effort: high                   # output_config.effort
+max_tokens: 16000
+
+questions_min: 5
+questions_max: 10
+choices: 4
+phases: [predict, observe, explain, dqb, model, end]
+
+# Lesson-plan framework phase label -> quiz phase value.
+phase_map:
+  Predict Phase: predict
+  Observe Phase: observe
+  Explain Phase: explain
+  Driving Question Board (DQB) Creation: dqb
+  Model Building Phase: model
+
+# Hard failures if found in any choice (case-insensitive).
+banned_choice_phrases:
+  - all of the above
+  - none of the above
+  - all of these
+  - none of these
+  - both a and b
+  - both b and c
+  - a and b
+  - b and c
+
+# Rationales must not name answer letters: choices are shuffled after
+# generation (seeded) so answer positions are balanced across the corpus.
+# Patterns are case-sensitive and avoid algebra: "(H/A)" or "(A/H)" must not
+# match, only answer-label uses like "B) is wrong" or "option C".
+banned_rationale_patterns:
+  - '\b(option|choice|answer|Option|Choice|Answer)\s+[ABCD]\b'
+  - '(?:^|(?<=\s))[ABCD]\)\s'
+  - '(?:^|(?<=\s))\([ABCD]\)\s+(?:is|was|would|gives|shows)\b'
+
+# Warnings (not failures): wording that usually means a question depends on
+# something the student cannot see. There is no presentation around a quiz.
+not_self_contained_patterns:
+  - '\b(the|this) (slide|picture|photo|image|figure|diagram above|graph above|video)\b'
+  - '\bshown (above|below|here)\b'
+  - '\bas you saw\b'
+
+# Corpus-level: each answer letter's share of correct answers must fall in
+# this range once at least `letter_check_min_questions` questions exist.
+letter_share_min: 0.18
+letter_share_max: 0.32
+letter_check_min_questions: 100
+
+# A placement must name a real activity from the lesson plan: at least this
+# share of its content words must appear in the lesson's framework text.
+placement_min_overlap: 0.5

@@ -213,3 +213,47 @@ The JSON export uses the same field names as above (camelCase throughout).
 The colleague's teacher editing tool should treat `*_data.json` as
 read-only input and submit edits via the agreed patch format (see
 `docs/EDITING_CONTRACT.md` once drafted).
+
+---
+
+## Quick Check quiz file — `<filePrefix>_quiz.json` (added 2026-09-29)
+
+Sits next to `<filePrefix>_data.json` in the sub-strand's output directory.
+**It is a separate file on purpose:** the partner contract
+(`ares-contract.schema.json`) is `additionalProperties: false` throughout, so a
+`quiz` field inside `_data.json` would be rejected. `_data.json` is unchanged.
+
+Written by `src/generate_quiz.py`, validated by `scripts/validate_quiz.py`,
+rendered by `generators/build_quiz.js` into `quiz/` (Quick Check `.pptx`,
+Answer Key `.html` + `.docx`; PDFs via `generate_pdfs.js`). Settings:
+`config/quiz_generation.yaml`.
+
+```js
+{
+  quizSchemaVersion: "1.0.0",
+  meta: { subject, grade, substrandId, substrandName, filePrefix },
+  lessons: [
+    {
+      number: 2, title: "…", model: "claude-sonnet-5-5", generatedAt: "ISO-8601",
+      quiz: [
+        {
+          prompt: "string",          // self-contained question text
+          choices: ["", "", "", ""], // exactly 4; order is shuffled (seeded) after generation
+          correctIndex: 0,           // 0-3
+          rationale: "string",       // teacher-facing; never names an answer letter
+          phase: "observe",          // predict | observe | explain | dqb | model | end
+          placement: "string",       // the activity in THIS lesson plan the question follows
+          check: "150/10000"         // optional: arithmetic whose value is in the correct choice
+        }
+      ]
+    }
+  ]
+}
+```
+
+- 5–10 questions per lesson. `phase` and `placement` let a future presentation
+  generator insert questions inline without regenerating them.
+- `check` is present only for calculated answers. The validator evaluates it
+  (degrees for trig) and fails the lesson if the value is not in the correct
+  choice, allowing for the rounding shown.
+- Answers never appear in the student deck, including speaker notes.

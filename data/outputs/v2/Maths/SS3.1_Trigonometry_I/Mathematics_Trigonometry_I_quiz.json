@@ -1,0 +1,155 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Mathematics",
+  "grade": 10,
+  "substrandId": "3.1",
+  "substrandName": "Trigonometry I",
+  "filePrefix": "Mathematics_Trigonometry_I"
+ },
+ "lessons": [
+  {
+   "number": 4,
+   "title": "Tangent and the Sine–Cosine–Tangent Relationship: Solving the Mango-Tree Problem",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-09-30T02:53:45+00:00",
+   "quiz": [
+    {
+     "prompt": "In Kisumu, a student measures the sun's angle with the ground as 53°. The mango tree's shadow on the ground is 9.0 m long. She wants the tree's height. The tree is vertical and the ground is horizontal. Which ratio links the two lengths she knows or wants (height and shadow) with the 53° angle?",
+     "choices": [
+      "No ratio works unless she first measures the length of the sun's ray (the hypotenuse)",
+      "sin 53°, because sine is the most useful ratio for every triangle",
+      "cos 53°, because the shadow is on the ground",
+      "tan 53°, because it links the opposite side (height) and the adjacent side (shadow)"
+     ],
+     "correctIndex": 3,
+     "rationale": "The height is opposite the 53° angle and the shadow is adjacent to it. Tangent is Opposite/Adjacent, so it connects these two sides without needing the hypotenuse.",
+     "phase": "predict",
+     "placement": "Predict: silent prediction and think-pair-share on which ratio is most useful for the mango-tree height"
+    },
+    {
+     "prompt": "In a right-angled triangle, sin θ = O/H and cos θ = A/H. What do we get when we simplify (O/H) ÷ (A/H) = (O/H) × (H/A)?",
+     "choices": [
+      "O/A, which is tan θ",
+      "O/H",
+      "A/O",
+      "H/A"
+     ],
+     "correctIndex": 0,
+     "rationale": "The H in the numerator cancels with the H in the denominator, leaving O/A. This is Opposite/Adjacent, the definition of tan θ.",
+     "phase": "observe",
+     "placement": "Part A: Algebraic Derivation of tan θ = sin θ / cos θ"
+    },
+    {
+     "prompt": "A right-angled triangle has sides of 6 cm, 8 cm and 10 cm (the hypotenuse). For the angle θ opposite the 6 cm side, what is tan θ?",
+     "choices": [
+      "1.33",
+      "0.75",
+      "0.6",
+      "0.8"
+     ],
+     "correctIndex": 1,
+     "rationale": "tan θ = Opposite/Adjacent = 6/8 = 0.75. The value 0.6 is sin θ (6/10), 0.8 is cos θ (8/10), and 1.33 is the inverted ratio 8/6.",
+     "phase": "observe",
+     "placement": "Part A: Algebraic Derivation, where tan θ = Opposite / Adjacent (TAO) is written",
+     "check": "6/8"
+    },
+    {
+     "prompt": "From mathematical tables, sin 40° = 0.6428 and cos 40° = 0.7660. Using tan θ = sin θ ÷ cos θ, what is tan 40° to 3 decimal places?",
+     "choices": [
+      "1.409",
+      "0.839",
+      "1.192",
+      "0.492"
+     ],
+     "correctIndex": 1,
+     "rationale": "tan 40° = sin 40° ÷ cos 40° = 0.6428 ÷ 0.7660 ≈ 0.839. The value 0.492 comes from multiplying, 1.192 from dividing cos by sin, and 1.409 from adding.",
+     "phase": "observe",
+     "placement": "Part B: Numerical Verification table (40° row)",
+     "check": "0.6428/0.7660"
+    },
+    {
+     "prompt": "A pair finds that for one angle, sin θ ÷ cos θ is 0.8391 and tan θ read from tables is 0.8390. What is the most sensible explanation of this tiny difference?",
+     "choices": [
+      "They used the wrong triangle, because tan changes with the size of the triangle",
+      "The identity only works for 45°",
+      "Table values are rounded, so tiny differences are expected",
+      "The identity tan θ = sin θ / cos θ does not work for that angle"
+     ],
+     "correctIndex": 2,
+     "rationale": "Table values are rounded to a few decimal places, so tiny differences are normal. The identity itself is exact for every acute angle.",
+     "phase": "observe",
+     "placement": "Part B: Numerical Verification, comparing column 4 and column 5"
+    },
+    {
+     "prompt": "A learner says, \"We can already get tan θ from sin θ and cos θ, so tan is unnecessary.\" What is the best reply?",
+     "choices": [
+      "Tan can only be used when the hypotenuse is known",
+      "Tan is only used for angles bigger than 90°",
+      "They are right: tan is redundant and is never needed",
+      "Tan is a convenient shortcut when we know an angle and one side but not the hypotenuse"
+     ],
+     "correctIndex": 3,
+     "rationale": "Tan is not independent of sin and cos, but it is convenient. It connects the opposite and adjacent sides directly, without needing the hypotenuse.",
+     "phase": "explain",
+     "placement": "Part A: Sensemaking Discussion, Q1 (is tan unnecessary?)"
+    },
+    {
+     "prompt": "The sun makes an angle of 53° with the ground. A vertical mango tree of height h casts a 9.0 m shadow along the ground, and the 53° angle is at the end of the shadow, between the ground and the sun's ray. Which statement is correct?",
+     "choices": [
+      "The 9.0 m shadow is the side opposite the 53° angle, and the tree height h is the side adjacent to it",
+      "Both the shadow and the tree are adjacent to the 53° angle",
+      "The 9.0 m shadow is the side adjacent to the 53° angle, and the tree height h is the side opposite it",
+      "The 9.0 m shadow is the hypotenuse"
+     ],
+     "correctIndex": 2,
+     "rationale": "The shadow lies along the ground next to the 53° angle, so it is adjacent. The tree stands across from the angle, so it is opposite. The hypotenuse is the sun's ray.",
+     "phase": "explain",
+     "placement": "Part A: Sensemaking Discussion, Q2 (which side is 9.0 m: opposite or adjacent?)"
+    },
+    {
+     "prompt": "A mango tree has a shadow 9.0 m long when the sun makes an angle of 53° with the ground. Given tan 53° = 1.3270 and tan 53° = h ÷ 9.0, what is the height h of the tree?",
+     "choices": [
+      "5.42 m",
+      "11.943 m",
+      "7.19 m",
+      "6.78 m"
+     ],
+     "correctIndex": 1,
+     "rationale": "From tan 53° = h/9.0, h = 9.0 × tan 53° = 9.0 × 1.3270 = 11.943 m. The value 6.78 m comes from the inverted ratio 9.0 ÷ 1.3270.",
+     "phase": "explain",
+     "placement": "Part B: Mango-Tree Calculation (h = 9.0 × tan 53°)",
+     "check": "9.0*1.3270"
+    },
+    {
+     "prompt": "A student is 1.6 m tall and her shadow is 1.2 m long. At the same time, a mango tree has a shadow 9.0 m long. Using similar triangles, (tree height) ÷ 9.0 = 1.6 ÷ 1.2. What is the height of the tree?",
+     "choices": [
+      "14.4 m",
+      "12.0 m",
+      "9.4 m",
+      "6.75 m"
+     ],
+     "correctIndex": 1,
+     "rationale": "h = 9.0 × (1.6 ÷ 1.2) = 9.0 × 1.333 = 12.0 m. This agrees with the tangent method (about 11.94 m) to within rounding.",
+     "phase": "explain",
+     "placement": "Part B: Mango-Tree Calculation, shadow-ratio cross-check",
+     "check": "9.0*(1.6/1.2)"
+    },
+    {
+     "prompt": "On the 'Ratio Web' in the Trigonometry Model, tan θ is linked to sin θ and cos θ. For an angle of 53°, sin 53° ≈ 0.799 and cos 53° ≈ 0.602. Using the identity, what is tan 53° to 3 decimal places?",
+     "choices": [
+      "1.327",
+      "0.481",
+      "0.753",
+      "1.401"
+     ],
+     "correctIndex": 0,
+     "rationale": "tan θ = sin θ ÷ cos θ = 0.799 ÷ 0.602 ≈ 1.327. Dividing cos by sin gives 0.753, which reverses the identity, and multiplying gives 0.481.",
+     "phase": "model",
+     "placement": "Trigonometry Model: adding the 'Ratio Web' annotation (tan θ = sin θ / cos θ)",
+     "check": "0.799/0.602"
+    }
+   ]
+  }
+ ]
+}
