@@ -192,14 +192,13 @@ class MultiModelClient:
             response = self.claude.messages.create(
                 model=model,
                 max_tokens=max_tokens or self.config.api.claude_max_tokens,
-                temperature=temperature or self.config.api.claude_temperature,
                 messages=[{"role": "user", "content": prompt}]
             )
             
             latency = time.time() - start_time
             
             # Extract content
-            content = response.content[0].text
+            content = next(b.text for b in response.content if b.type == "text")
             input_tokens = response.usage.input_tokens
             output_tokens = response.usage.output_tokens
             

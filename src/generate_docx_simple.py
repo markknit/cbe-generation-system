@@ -69,13 +69,13 @@ SECTION E: SUMMARY PROMPT
 Use Kenyan context (KSh, KPLC). Include ARES resources. Use Think-Pair-Share."""
         
         response = self.claude.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=6000,
+            model="claude-sonnet-5-5",
+            max_tokens=16000,
             messages=[{"role": "user", "content": prompt}]
         )
         
         print("✓ Content generated")
-        return response.content[0].text
+        return next(b.text for b in response.content if b.type == "text")
     
     def create_docx(self, content, number, topic, output_dir="data/outputs/docx"):
         """Create simple Word document"""

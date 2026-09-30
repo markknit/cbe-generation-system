@@ -113,13 +113,13 @@ Use Kenyan context (KSh, KPLC, local examples). Include ARES resources. Use Thin
         print("  → Claude: Generating lesson...")
         
         response = self.claude.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=8000,
+            model="claude-sonnet-5-5",
+            max_tokens=16000,
             messages=[{"role": "user", "content": system_prompt}]
         )
         
         print("  ✓ Lesson generated")
-        return response.content[0].text
+        return next(b.text for b in response.content if b.type == "text")
     
     def create_docx_lesson(self, content: str, lesson_number: int, 
                            lesson_topic: str, output_dir: str = "data/outputs/docx") -> str:

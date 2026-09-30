@@ -132,12 +132,12 @@ Generate the complete lesson now in proper Markdown format with all tables."""
         print("  → Claude: Generating lesson in Markdown...")
         
         response = self.claude.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=8000,
+            model="claude-sonnet-5-5",
+            max_tokens=16000,
             messages=[{"role": "user", "content": prompt}]
         )
         
-        content = response.content[0].text
+        content = next(b.text for b in response.content if b.type == "text")
         print("  ✓ Lesson generated")
         
         return content

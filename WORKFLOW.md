@@ -307,11 +307,20 @@ After generating, spot-check the docx:
 
 | Model | Input | Output | Use case |
 |---|---|---|---|
-| `claude-sonnet-4-6` (sync) | $3/MTok | $15/MTok | Testing, single lessons |
-| `claude-sonnet-4-6` (batch) | $1.50/MTok | $7.50/MTok | **Bulk generation — use this** |
-| `claude-opus-4-8` | $5/MTok | $25/MTok | Quality comparison only |
+| `claude-sonnet-5-5` (sync) | $2/MTok | $10/MTok | Testing, single lessons, repairs |
+| `claude-sonnet-5-5` (batch) | $1/MTok | $5/MTok | **Bulk generation — use this** |
+| `claude-opus-5-5` | $4/MTok | $20/MTok | Quality comparison only |
 
-**Typical cost per sub-strand (8 lessons, batch mode):** ~$0.35
+**Minimum model (Mark, 2026-09-30): Sonnet 5.5 for every API call** — lessons,
+repairs, quizzes. Nothing in the repo may default to an older model. Sonnet 5.5
+rejects forced `tool_choice` and always thinks (adaptive, counted against
+`max_tokens`), so every schema-bound call uses structured outputs
+(`output_config.format`) with a 16000-token budget.
+
+**Typical cost per sub-strand (8 lessons, batch mode):** ~$0.35 — measured on
+`claude-sonnet-4-6` *without thinking*. Not yet re-measured on Sonnet 5.5
+(cheaper per token, but thinking tokens are billed as output); check
+`logs/api_cost_log.md` after the first lesson run.
 **Full 2,000-lesson target (batch mode):** ~$114 for clean, zero-defect generation.
 
 **Repair-pass contingency (added 2026-07-30):** the estimate above assumes
@@ -345,7 +354,7 @@ just the contingency margin.
 | Project root | `/home/markk/ares/cbe-generation-system` |
 | Python venv | `source venv/bin/activate` |
 | Node version | v22.x |
-| API model | `claude-sonnet-4-6` |
+| API model | `claude-sonnet-5-5` — every call (lessons: `src/generate_substrand.py` `MODEL`; quizzes: `config/quiz_generation.yaml`) |
 | Git branch | `main` |
 | GitHub remote | `https://github.com/markknit/cbe-generation-system.git` |
 | ARES content DB | `data/ares_index/ares_content.db` (630MB, jhm-spark only, gitignored) |

@@ -5,9 +5,9 @@
 ## Context Restoration Document
 
 > Use this to restore context when returning after a break or starting a new session.
-> For operational procedures see `docs/WORKFLOW.md`.
+> For operational procedures see `WORKFLOW.md`.
 > For architecture details see `docs/SYSTEM_OVERVIEW.md`.
-> For generation status see `docs/STATUS.md`.
+> For generation status see `STATUS.md`.
 
 ---
 
@@ -17,7 +17,7 @@ A system to generate ~2,000 Kenya Competency-Based Education (CBE) lesson plans 
 
 - Hosted on ARES Education offline servers (Rachel 4 Plus devices, Ubuntu 24.04, WiFi hotspots) in Kenyan schools
 - Aligned to the KICD (Kenya Institute of Curriculum Development) March 2025 curriculum
-- Generated using the Claude API (`claude-sonnet-4-6`)
+- Generated using the Claude API (`claude-sonnet-5-5`)
 - Structured using a phenomenon-driven, inquiry-based pedagogy (NGSS Storyline model)
 - Distributed as three documents per sub-strand: Lesson Sequence, Final Explanation, Summary Table
 
@@ -32,7 +32,7 @@ A system to generate ~2,000 Kenya Competency-Based Education (CBE) lesson plans 
 | Project path | `/home/markk/ares/cbe-generation-system` |
 | Python | 3.12.3 (venv at `venv/`) |
 | Node.js | v22.x |
-| API model | `claude-sonnet-4-6` |
+| API model | `claude-sonnet-5-5` |
 | Git branch | `main` |
 | GitHub | `markknit/cbe-generation-system` |
 
@@ -102,7 +102,7 @@ All 9 sub-strands generated at 8 lessons each. Pending teacher review.
 ### Chemistry, Physics, Mathematics — Not started
 Teacher templates available for all. Pending Biology teacher review before bulk generation.
 
-See `docs/STATUS.md` for batch submission commands and full cost tracking.
+See `STATUS.md` for batch submission commands and full cost tracking.
 
 ---
 
@@ -140,7 +140,7 @@ Every lesson connects to the anchoring phenomenon. The DQB is a living class art
 ## Batch API Mode
 
 All bulk generation uses the Anthropic Message Batches API:
-- 50% cheaper than synchronous (`claude-sonnet-4-6` batch: $1.50/$7.50 per MTok)
+- 50% cheaper than synchronous (`claude-sonnet-5-5` batch: $1/$5 per MTok)
 - Asynchronous — submit at any time, collect within 24 hours (typically under 1 hour)
 - 300K output tokens per request (vs 64K synchronous)
 
@@ -198,5 +198,5 @@ Architecture: universal generator (node generators/generate.js) reads
 generators/data/*_data.js files produced by src/generate_substrand.py
 (Claude API pipeline with batch mode support).
 
-Read CLAUDE.md, docs/SYSTEM_OVERVIEW.md, and docs/STATUS.md for full context.
+Read CLAUDE.md, docs/SYSTEM_OVERVIEW.md, and STATUS.md for full context.
 ```

@@ -19,7 +19,7 @@ load_dotenv('.env')
 import anthropic
 
 CLIENT = anthropic.Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
-MODEL  = 'claude-sonnet-4-6'
+MODEL  = 'claude-sonnet-5-5'
 
 SYSTEM = ("You are an expert CBE curriculum designer for Kenya Grade 10. "
           "Respond with valid JSON only. No markdown fences, no preamble. "
@@ -108,7 +108,7 @@ console.log(titles.join('\\n'));
     return result.strip()
 
 
-def call_claude(prompt, max_tokens=8192):
+def call_claude(prompt, max_tokens=16000):
     """Call Claude and parse JSON response with retries."""
     for attempt in range(3):
         try:
@@ -117,7 +117,7 @@ def call_claude(prompt, max_tokens=8192):
                 system=SYSTEM,
                 messages=[{"role": "user", "content": prompt}]
             )
-            raw = response.content[0].text.strip()
+            raw = next(b.text for b in response.content if b.type == "text").strip()
             raw = re.sub(r'^```(?:json)?\s*', '', raw)
             raw = re.sub(r'\s*```$', '', raw)
             raw = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', raw)
@@ -245,7 +245,7 @@ def generate_fe(output_name, repair):
         f"{FE_SCHEMA}"
     )
 
-    return call_claude(prompt, max_tokens=5000)
+    return call_claude(prompt)
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────

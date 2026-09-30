@@ -47,7 +47,7 @@ in the whole project.
 **Goal:** Generate ~2,000 Kenya CBE lesson plans as `.docx` files (Grade 10 Biology, Chemistry, Physics, Mathematics).
 **Server:** `jhm-spark` | **User:** `markk` | **Root:** `/home/markk/ares/cbe-generation-system`
 **Branch:** `main` | **Remote:** `markknit/cbe-generation-system`
-**Model:** `claude-sonnet-4-6`
+**Model:** `claude-sonnet-5-5` — minimum for all API calls (Mark, 2026-09-30)
 
 Volatile facts (branch, paths, hostnames, sync destinations) live in
 **one place**: `WORKFLOW.md`'s Environment Reference table. If anything
@@ -98,7 +98,8 @@ data/raw/curriculum_pdfs/               - KICD Grade 10 PDFs (Biology, Chemistry
 data/raw/CBE LESSON TEMPLATES/          - Teacher-authored SoW docx templates
 data/outputs/v2/                        - Current output root - NOT data/outputs/docx/ (archived, stale)
 data/outputs/v2/PDF/                    - Mirrors v2/ structure; PDFs + index.html for teachers
-docs/                                   - Documentation (README, SYSTEM_OVERVIEW, STATUS, WORKFLOW, PDF_GENERATION)
+STATUS.md, WORKFLOW.md                  - Control docs (repo root — the only copies)
+docs/                                   - Documentation (SYSTEM_OVERVIEW, PDF_GENERATION, SCHEMA, ...)
 .env                                    - ANTHROPIC_API_KEY
 package.json                            - Node.js dependencies (docx npm package)
 ```

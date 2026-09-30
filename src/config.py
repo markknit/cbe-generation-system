@@ -18,8 +18,8 @@ class APIConfig:
     
     # Anthropic Claude
     anthropic_api_key: str = field(default_factory=lambda: os.getenv("ANTHROPIC_API_KEY", ""))
-    claude_model: str = "claude-sonnet-4-6"
-    claude_max_tokens: int = 8000
+    claude_model: str = "claude-sonnet-5-5"
+    claude_max_tokens: int = 16000
     claude_temperature: float = 0.7
     
     # OpenAI GPT
@@ -45,9 +45,8 @@ class APIConfig:
     
     # Pricing (per million tokens) - Updated Jan 2026
     pricing: Dict[str, Dict[str, float]] = field(default_factory=lambda: {
-        "claude-sonnet-4-5": {"input": 3.00, "output": 15.00},
-        "claude-opus-4-5": {"input": 5.00, "output": 25.00},
-        "claude-haiku-4-5": {"input": 1.00, "output": 5.00},
+        "claude-sonnet-5-5": {"input": 2.00, "output": 10.00},
+        "claude-opus-5-5": {"input": 4.00, "output": 20.00},
         "gpt-5": {"input": 1.25, "output": 10.00},
         "gpt-5.2": {"input": 1.75, "output": 14.00},
         "gpt-5-mini": {"input": 0.25, "output": 2.00},

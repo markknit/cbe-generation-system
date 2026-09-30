@@ -120,12 +120,12 @@ Generate this complete structure now. Do not skip Section C."""
     print(f"→ Prompt length: {len(prompt)} characters\n")
     
     response = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
+        model="claude-sonnet-5-5",
         max_tokens=12000,
         messages=[{"role": "user", "content": prompt}]
     )
     
-    content = response.content[0].text
+    content = next(b.text for b in response.content if b.type == "text")
     
     print("="*70)
     print("RAW OUTPUT FROM CLAUDE:")
@@ -138,7 +138,7 @@ Generate this complete structure now. Do not skip Section C."""
     with open(output_file, 'w') as f:
         f.write("DIAGNOSTIC OUTPUT\n")
         f.write("="*70 + "\n")
-        f.write(f"Model: claude-sonnet-4-5-20250929\n")
+        f.write(f"Model: claude-sonnet-5-5\n")
         f.write(f"Max tokens: 12000\n")
         f.write(f"Output length: {len(content)} characters\n")
         f.write("="*70 + "\n\n")

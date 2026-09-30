@@ -1,6 +1,6 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: 2026-09-29*
+*Last updated: 2026-09-30*
 
 ---
 
@@ -73,6 +73,7 @@ right now" checkable in one place, not reconstructed from memory.
 | `scripts/sync_to_drive.bat` | **Now actually exists — written 2026-08-02** | It did not. `CLAUDE.md:95` listed it, and this file claimed twice (in the "Documentation drift" entry below, and in the 2026-07-04 log) that it was committed and its destinations were `grep`-able from jhm-spark. All three were false — no `.bat` was tracked or on disk. Written from the spec in `WORKFLOW.md` Step 8 + `docs/PDF_GENERATION.md`; masks verified against the real trees (255 docx + 85 json; 255 pdf + 1 html). Drive destinations now also in WORKFLOW.md's Environment Reference table, which `CLAUDE.md` already designated the single source of truth for sync destinations but which had no Drive rows. |
 | `patch_lesson.js --force` | Added 2026-08-02 (`9b33dce`) | For deliberately replacing a lesson whose content is *wrong* rather than *absent* (needed for the two phase repairs above). Skips only the stub-repair guard — **never** the contract validation. |
 | **Bounded project v2** (link-selection fix + Quick Check quizzes + attribution, then Grade 11 readiness) | **Phase 4 done 2026-09-30 — awaiting Mark's go-ahead for Phase 5 (full Grade 10 run, est. ~$21)** | Phase 3: quiz generator `src/generate_quiz.py` (structured outputs, per-lesson validation, seeded choice shuffle, batch + checkpoint), validator `scripts/validate_quiz.py`, renderer `generators/build_quiz.js` (validator-gated; QuickCheck .pptx, AnswerKey .html/.docx into `quiz/`; PDFs via `generate_pdfs.js`, now also .pptx), attribution `generators/lib/attribution.js` in all 3 docx + every lesson footer + decks + keys. Quiz data in separate `<prefix>_quiz.json` (schema in `docs/SCHEMA.md`). 5 sample lessons generated (Bio 2.1 L2, Phys 1.1 L2, Chem 3.1 L4, Maths 3.1 L4, anchor Phys 2.1 L1): 0 validator failures; 20/20 hand-checked answers correct. Sonnet 5.5 vs Opus 5.5 compared: similar quality, Sonnet kept the anchor lesson spoiler-free more strictly → Sonnet 5.5 stays default. API spend so far $1.68. Spec: `handoff_bundle_2026-09-29/HANDOFF_bounded_project_v2_2026-09-29.md`. Design approved: `DESIGN_link_selection_v2.md` (§7 = implementation differences). New matcher in `src/ares_recommender.py`, rules in `config/link_matching.yaml`, gate `scripts/check_resource_links.py` wired into `generate.js` (non-zero exit on answer-key / wrong-subject / dead link / contract failure). All 85 sub-strands re-rendered (docx + JSON; **PDFs NOT yet regenerated — Phase 5**). Gate: T1/T2/DEAD/SHAPE = 0/0/0/0 corpus-wide (was 45/166/45/0 across all phases). **Live-verified on demo.aresedu.dev: 1,707/1,707 distinct links OK** (`scripts/verify_links_live.py`). Web-module links now direct (the tracker page rejects non-`/kiwix/` targets). Strict-equivalent synonyms added per Mark. Handoff audit (predict): Tier 2 25→0, Tier 3 174→28; its Tier 1 reads 34→32 but **all 32 are "worked example" titles** matched by its bare `exam` regex (0 real answer keys). Lesson content unchanged (diff check: only `resourceLinks` differs, 85/85). Fill rate drops to 72–99% by subject: no-match cells now say so instead of showing a weak link; content-gap list in the 2026-09-29 session log. Link verification uses the ARES system disk mounted on jhm-spark (Kolibri DB + `/var/www/modules`). Attribution config moved to `config/attribution.yaml` with SeaVuria's Kenyan NGO no. 872-850A-BF11 added. Quiz model: **`claude-sonnet-5-5`** (confirmed on the account; it rejects forced `tool_choice`, so the quiz generator uses structured outputs). Autonomy (Mark): repair same-class issues, report at end. API credits added ($50). |
+| **Sonnet 5.5 minimum for all API calls** (Mark, 2026-09-30) | **Code done 2026-09-30 — lesson path not yet run live** | No code path defaults to `claude-sonnet-4-6` (or any 4.x model) any more. `src/generate_substrand.py` moved from forced `tool_choice` (which Sonnet 5.5 rejects with a 400) to structured outputs (`output_config.format`) for the live path and both batch request types; adaptive thinking, effort `high` (env `CLAUDE_EFFORT`), `max_tokens` 16000 because thinking counts against it; JSON read from the text block, since a thinking block can come first; refusals retried; count-schema `minimum`/`maximum` dropped (clamped in code). Batch collect still reads old `tool_use` results. `scripts/repair_stubs.py` and the May-era legacy scripts are also on 5.5, with a `content[0].text` fix and non-default `temperature` removed. Checked against the API with free `count_tokens` calls (all 5 schemas OK), **not** by a real generation. First Grade 11 pilot or repair will be the first live test; per-sub-strand cost (~$0.35 on 4.6 without thinking) needs re-measuring. |
 | New Grade 10 STEM subjects (General Science, Core Mathematics, Essential Mathematics) | **Done — Phase 3 complete, committed `f6d6fab`** | All 43 sub-strands / 344 lessons generated, docx+PDF regenerated, teacher index rebuilt, pushed to `origin/main`. Handoff: `HANDOFF_new_stem_subjects_2026-07-28.md` (Rev 2). See 2026-07-30 session-log entry below for the bugs found/fixed along the way (subject-label bug, 34 stub lessons, 1 missing FE). Replacement Core Mathematics source PDF referenced in the handoff was never supplied but generation proceeded — flag if a full curriculum-text re-check against it is still wanted. Summary/per-subject tables below still need the separate full refresh already flagged as stale. |
 
 ---
@@ -1587,3 +1588,28 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
   colours). Applies to future runs; the pilot quizzes were not regenerated.
 - Estimate for the rest of Grade 10: 701 lessons, **about $21** including
   retries. See Cost Tracking.
+
+## Updates — 2026-09-30 (second entry, triggered by `/restart`) — Sonnet 5.5 minimum; doc drift fixed
+- `/restart` found: `CLAUDE.md` and WORKFLOW.md still named `claude-sonnet-4-6`;
+  this file's header date was a day behind; stale July copies `docs/STATUS.md`
+  and `docs/WORKFLOW.md` still existed; `logs/quiz_generation/` and the handoff
+  zip were untracked. Git state matched (4 commits ahead, push held for Phase 5).
+- **Mark: Sonnet 5.5 is the minimum model for every activity.** A string swap
+  would have broken lesson generation, because `generate_substrand.py` forced
+  `tool_choice` in 3 places and Sonnet 5.5 rejects that. Moved to structured
+  outputs, the same way `generate_quiz.py` already worked. Details are in the
+  new Active Threads row. Price constants are now $2/$10 sync and $1/$5 batch.
+- Server-side refusal fallbacks deliberately **not** enabled: the `"default"`
+  routing can pick a model below Sonnet 5.5, and the Batches API rejects it.
+- Removed `docs/STATUS.md` / `docs/WORKFLOW.md` (git history keeps them).
+  The root copies are now the only ones, and `CLAUDE.md`'s layout says so.
+  `PROJECT_CONTEXT.md` refs repointed, and `check_new_stem_subjects_status.sh`
+  no longer looks in `docs/`.
+- `handoff_bundle_*.zip` gitignored (the extracted folder is tracked).
+  `logs/quiz_generation/` (batch IDs, `usage.jsonl` spend record, 2 Opus
+  failure dumps) goes in with the next commit, like `logs/api_cost_log.md`.
+- Left as-is on purpose, because they are historical records: `docs/snapshots/`,
+  `docs/session-handoff-*`, `cbe-migration-bundle/`,
+  `CBE_PROJECT_CONTEXT_040326.md`, `HANDOFF.md`, older session-log lines here,
+  and the Sonnet 4.5-era `START_HERE.md` / `PROJECT_STATUS.md` /
+  `IMPLEMENTATION_GUIDE.md`.

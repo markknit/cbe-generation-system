@@ -43,7 +43,8 @@ except ImportError:
     print("ERROR: anthropic package not found. Run: pip install anthropic")
     sys.exit(1)
 
-MODEL = os.environ.get('CLAUDE_MODEL', 'claude-sonnet-4-6')
+MODEL = os.environ.get('CLAUDE_MODEL', 'claude-sonnet-5-5')
+EFFORT = os.environ.get('CLAUDE_EFFORT', 'high')   # output_config.effort; same as config/quiz_generation.yaml
 CLIENT = anthropic.Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
 
 # ── Per-run cost tracking (added 2026-07-30) ─────────────────────────────────
@@ -53,8 +54,8 @@ CLIENT = anthropic.Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
 # estimate at all. This tracks real usage per run so future estimates can be
 # checked against actual spend instead of a generic per-lesson table.
 PRICE_PER_MTOK = {
-    'sync':  {'input': 3.0,  'output': 15.0},   # live/--run calls (call_claude)
-    'batch': {'input': 1.5,  'output': 7.5},    # Message Batches API
+    'sync':  {'input': 2.0,  'output': 10.0},   # live/--run calls (call_claude) — claude-sonnet-5-5
+    'batch': {'input': 1.0,  'output': 5.0},    # Message Batches API
 }
 _USAGE = {
     'sync_input': 0, 'sync_output': 0, 'sync_calls': 0,
@@ -301,8 +302,8 @@ SYSTEM_PROMPT = build_system_prompt(10)
 
 # ── Claude API call ───────────────────────────────────────────────────────────
 
-# ── Tool schemas for structured generation ────────────────────────────────────
-# Generating via tool use (rather than free-text JSON) guarantees well-formed
+# ── Output schemas for structured generation ──────────────────────────────────
+# Generating via structured outputs (rather than free-text JSON) guarantees well-formed
 # output and biases the model to the ares-contract shape. additionalProperties
 # is False so stray keys (e.g. legacy 'storyline', top-level 'safetyNotes')
 # cannot appear; required sets mirror docs/SCHEMA.md / ares-contract.schema.json.
@@ -430,14 +431,34 @@ def _schema_violations(obj, schema, path: str = "") -> list:
     return errs
 
 
-def call_claude(user_prompt: str, max_tokens: int = 8000, retries: int = 3,
-                schema: dict | None = None, tool_name: str = "emit_data") -> dict | None:
+def _structured_params(schema: dict) -> dict:
+    """Request fields for schema-constrained JSON output.
+
+    Sonnet 5.5 rejects forced tool_choice (the pre-2026-09-30 mechanism), so the
+    schema goes in output_config.format instead. The API then guarantees the
+    text block is JSON matching the schema. Thinking is adaptive (Sonnet 5.5
+    cannot disable it) and counts against max_tokens, hence the 16000 budgets.
+    """
+    return {
+        "thinking": {"type": "adaptive"},
+        "output_config": {"effort": EFFORT,
+                          "format": {"type": "json_schema", "schema": schema}},
+    }
+
+
+def _text_of(content) -> str:
+    """First text block — content[0] may be a thinking block on Sonnet 5.5."""
+    return next((b.text for b in content if getattr(b, "type", None) == "text"), "")
+
+
+def call_claude(user_prompt: str, max_tokens: int = 16000, retries: int = 3,
+                schema: dict | None = None) -> dict | None:
     """Call Claude and return a dict.
 
-    If `schema` (a JSON Schema) is given, the model returns the data through a
-    forced tool call and the SDK hands back an already-parsed dict — so
-    malformed-JSON failures (unescaped quotes, missing delimiters, fence noise)
-    cannot occur. Without a schema, falls back to free-text JSON parsing.
+    If `schema` (a JSON Schema) is given, output is constrained to it via
+    structured outputs, so malformed-JSON failures (unescaped quotes, missing
+    delimiters, fence noise) cannot occur. Without a schema, falls back to
+    free-text JSON parsing.
     """
     for attempt in range(retries):
         try:
@@ -448,12 +469,7 @@ def call_claude(user_prompt: str, max_tokens: int = 8000, retries: int = 3,
                 messages=[{"role": "user", "content": user_prompt}],
             )
             if schema is not None:
-                kwargs["tools"] = [{
-                    "name": tool_name,
-                    "description": "Return the requested lesson-plan data as structured fields.",
-                    "input_schema": schema,
-                }]
-                kwargs["tool_choice"] = {"type": "tool", "name": tool_name}
+                kwargs.update(_structured_params(schema))
 
             response = CLIENT.messages.create(**kwargs)
             _track_sync_usage(response)  # count tokens even on truncated/retried attempts - they're billed regardless
@@ -466,14 +482,18 @@ def call_claude(user_prompt: str, max_tokens: int = 8000, retries: int = 3,
                     continue
                 return None
 
+            if getattr(response, "stop_reason", None) == "refusal":
+                print(f"    Refused (stop_details={getattr(response, 'stop_details', None)}, attempt {attempt+1})")
+                if attempt < retries - 1:
+                    time.sleep(2)
+                    continue
+                return None
+
             if schema is not None:
-                data = None
-                for block in response.content:
-                    if getattr(block, "type", None) == "tool_use" and block.name == tool_name:
-                        data = block.input
-                        break
+                text = _text_of(response.content)
+                data = json.loads(text) if text else None
                 if data is None:
-                    print(f"    No tool_use block returned (attempt {attempt+1})")
+                    print(f"    No text block returned (attempt {attempt+1})")
                     if attempt < retries - 1:
                         time.sleep(2)
                         continue
@@ -488,7 +508,7 @@ def call_claude(user_prompt: str, max_tokens: int = 8000, retries: int = 3,
                     return None
                 return data
 
-            raw = response.content[0].text.strip()
+            raw = _text_of(response.content).strip()
             raw = re.sub(r'^```(?:json)?\s*', '', raw)
             raw = re.sub(r'\s*```$', '', raw)
             raw = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', raw)
@@ -556,7 +576,7 @@ Return ONLY this JSON structure (no other text):
   "storylineThread": "Lesson 1: [brief description]\\nLesson 2: ...\\n[continue for all {args.lessons} lessons]"
 }}"""
 
-    return call_claude(prompt, max_tokens=6000, schema=UNIT_TOOL_SCHEMA)
+    return call_claude(prompt, schema=UNIT_TOOL_SCHEMA)
 
 
 # ── Lesson generation ─────────────────────────────────────────────────────────
@@ -639,7 +659,7 @@ RULES:
 - Lesson {num} should {"introduce the phenomenon and open the DQB" if num == 1 else "build on previous evidence and advance the driving question"}
 {"- Final lesson: focus on Final Explanation, model comparison L1 vs final, DQB completion" if num == args.lessons else ""}
 
-Use the emit_data tool to return the lesson with rich, real content in every field.
+Return the lesson as JSON matching the provided schema, with rich, real content in every field.
 Field structure for reference (do NOT return any field as a stringified blob):
 {json.dumps(LESSON_SCHEMA, indent=2)}
 
@@ -650,7 +670,7 @@ Set "number" to {num}.
 Set "substrand" to "Sub-Strand {args.substrand}: {args.substrand_name}".
 """
 
-    result = call_claude(prompt, max_tokens=8192, schema=LESSON_TOOL_SCHEMA)
+    result = call_claude(prompt, schema=LESSON_TOOL_SCHEMA)
     if result and 'lesson' in result:
         return result['lesson']
     return result   # in case Claude returns the lesson directly
@@ -723,7 +743,7 @@ Include 4-5 sections covering the main content areas.
 Include 4-5 rubric criteria covering key scientific concepts.
 """
 
-    return call_claude(prompt, max_tokens=8192, schema=FE_TOOL_SCHEMA)
+    return call_claude(prompt, schema=FE_TOOL_SCHEMA)
 
 
 def generate_summary_table(unit: dict, lessons: list, args,
@@ -771,7 +791,7 @@ def generate_summary_table(unit: dict, lessons: list, args,
         f"{lesson_refs}\n"
     )
 
-    return call_claude(prompt, max_tokens=8192, schema=ST_TOOL_SCHEMA)
+    return call_claude(prompt, schema=ST_TOOL_SCHEMA)
 
 
 # ── Data file writer ──────────────────────────────────────────────────────────
@@ -1167,7 +1187,7 @@ def determine_lesson_count(curriculum_text: str, lesson_template: dict,
     COUNT_SCHEMA = {
         'type': 'object', 'additionalProperties': False,
         'properties': {
-            'lesson_count': {'type': 'integer', 'minimum': 6, 'maximum': 14},
+            'lesson_count': {'type': 'integer'},   # 6-14, clamped below (structured outputs rejects minimum/maximum)
         },
         'required': ['lesson_count'],
     }
@@ -1181,8 +1201,7 @@ def determine_lesson_count(curriculum_text: str, lesson_template: dict,
         f"Consider topic complexity, number of learning outcomes, and any KICD guidance. "
         f"Target range 6–14, average 8–10."
     )
-    result = call_claude(prompt, max_tokens=512, retries=2,
-                         schema=COUNT_SCHEMA, tool_name='propose_lesson_count')
+    result = call_claude(prompt, max_tokens=4000, retries=2, schema=COUNT_SCHEMA)
     if result and isinstance(result.get('lesson_count'), int):
         return (max(6, min(14, result['lesson_count'])), 'pre_pass')
 
@@ -1254,7 +1273,8 @@ def poll_batch(batch_id: str, poll_interval: int = 60) -> object:
 def collect_batch_results(batch_id: str) -> dict:
     """Retrieve all results from a completed batch.
     Returns dict mapping custom_id → parsed dict (or None on error).
-    Handles both tool_use (schema-enforced) and free-text JSON responses.
+    Handles structured-output JSON (current), tool_use (batches submitted
+    before 2026-09-30) and free-text JSON responses.
     """
     results = {}
     for result in CLIENT.beta.messages.batches.results(batch_id):
@@ -1267,12 +1287,18 @@ def collect_batch_results(batch_id: str) -> dict:
         _track_batch_usage(result.result.message)
         content = result.result.message.content
 
-        # Prefer tool_use block (schema-enforced path)
+        # Legacy tool_use block (batches submitted with forced tool_choice)
         tool_data = None
         for block in content:
             if getattr(block, 'type', None) == 'tool_use':
                 tool_data = block.input
                 break
+        # Structured outputs: the text block is schema-constrained JSON
+        if tool_data is None and result.result.message.stop_reason == 'end_turn':
+            try:
+                tool_data = json.loads(_text_of(content))
+            except json.JSONDecodeError:
+                tool_data = None
 
         if tool_data is not None:
             schema = LESSON_TOOL_SCHEMA if cid.startswith('lesson_') else FE_TOOL_SCHEMA
@@ -1284,7 +1310,7 @@ def collect_batch_results(batch_id: str) -> dict:
                 results[cid] = tool_data
         else:
             # Fallback: free-text JSON (legacy batches submitted without tool_use)
-            raw = content[0].text.strip() if content else ''
+            raw = _text_of(content).strip()
             raw = re.sub(r'^```(?:json)?\s*', '', raw)
             raw = re.sub(r'\s*```$', '', raw)
             raw = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', raw)
@@ -1330,7 +1356,7 @@ def build_batch_requests(curriculum_text: str, lesson_template: dict,
             f"- Lesson {lesson_num} should "
             f"{'introduce the phenomenon and open the DQB' if lesson_num == 1 else 'build on previous evidence and advance the driving question'}\n"
             f"{'- Final lesson: focus on Final Explanation, model comparison L1 vs final, DQB completion' if lesson_num == args.lessons else ''}\n\n"
-            f"Use the emit_data tool to return the lesson. Set number to {lesson_num}. "
+            f"Return the lesson as JSON matching the provided schema. Set number to {lesson_num}. "
             f"Set substrand to 'Sub-Strand {args.substrand}: {args.substrand_name}'."
         )
 
@@ -1338,15 +1364,10 @@ def build_batch_requests(curriculum_text: str, lesson_template: dict,
             "custom_id": f"lesson_{lesson_num}",
             "params": {
                 "model": MODEL,
-                "max_tokens": 8192,
+                "max_tokens": 16000,
                 "system": SYSTEM_PROMPT,
                 "messages": [{"role": "user", "content": prompt}],
-                "tools": [{
-                    "name": "emit_data",
-                    "description": "Return the requested lesson-plan data as structured fields.",
-                    "input_schema": LESSON_TOOL_SCHEMA,
-                }],
-                "tool_choice": {"type": "tool", "name": "emit_data"},
+                **_structured_params(LESSON_TOOL_SCHEMA),
             },
         })
 
@@ -1371,22 +1392,17 @@ def build_batch_requests(curriculum_text: str, lesson_template: dict,
         f"Phenomenon: {unit.get('phenomenon', '')}\n"
         f"Number of lessons in sequence: {args.lessons}\n"
         f"{fe_template_section}\n"
-        f"Use the emit_data tool to return the Final Explanation with 4-5 sections and 4-5 rubric criteria."
+        f"Return the Final Explanation as JSON matching the provided schema, with 4-5 sections and 4-5 rubric criteria."
     )
 
     requests.append({
         "custom_id": "final_explanation",
         "params": {
             "model": MODEL,
-            "max_tokens": 8192,
+            "max_tokens": 16000,
             "system": SYSTEM_PROMPT,
             "messages": [{"role": "user", "content": fe_prompt}],
-            "tools": [{
-                "name": "emit_data",
-                "description": "Return the requested lesson-plan data as structured fields.",
-                "input_schema": FE_TOOL_SCHEMA,
-            }],
-            "tool_choice": {"type": "tool", "name": "emit_data"},
+            **_structured_params(FE_TOOL_SCHEMA),
         },
     })
 

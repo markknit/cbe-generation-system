@@ -5,10 +5,10 @@ client = Anthropic(api_key="sk-ant-api03-a7aU7tJDERW6lk77UHoLInpZHug448QkTbgwsGA
 print("Testing Anthropic API...")
 
 response = client.messages.create(
-    model="claude-sonnet-4-5-20250929",
+    model="claude-sonnet-5-5",
     max_tokens=100,
     messages=[{"role": "user", "content": "Hello"}]
 )
 
 print("✓ API works!")
-print(f"Response: {response.content[0].text}")
+print(f"Response: {next(b.text for b in response.content if b.type == "text")}")

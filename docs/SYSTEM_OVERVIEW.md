@@ -23,7 +23,7 @@
 │             ▼             │   └──────────────┬───────────────────────┘  │
 │  ┌──────────────────────┐ │                  │                          │
 │  │  ANTHROPIC API       │ │                  ▼                          │
-│  │  claude-sonnet-4-6   │ │   data/outputs/docx/                        │
+│  │  claude-sonnet-5-5   │ │   data/outputs/docx/                        │
 │  │  (remote)            │ │     Grade 10 Biology/                        │
 │  │                     ◄┘ │     Grade 10 Chemistry/                      │
 │  │  Generates:           │     Grade 10 Physics/                        │

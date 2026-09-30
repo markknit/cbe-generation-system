@@ -53,12 +53,12 @@ Generate the complete lesson now in markdown format."""
     print("→ Generating lesson with Claude Sonnet 4.5...")
     
     response = client.messages.create(
-        model="claude-sonnet-4-6",
+        model="claude-sonnet-5-5",
         max_tokens=16000,  # Allow very long output
         messages=[{"role": "user", "content": prompt}]
     )
     
-    content = response.content[0].text
+    content = next(b.text for b in response.content if b.type == "text")
     
     print("✓ Lesson generated!")
     

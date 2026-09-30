@@ -215,9 +215,9 @@ echo
 echo "------------------------------------------------------------------"
 echo "STATUS.md - local copy vs. this thread"
 echo "------------------------------------------------------------------"
-if [ -f "STATUS.md" ] || [ -f "docs/STATUS.md" ]; then
+if [ -f "STATUS.md" ]; then
   STATUS_FILE="STATUS.md"
-  [ -f "docs/STATUS.md" ] && STATUS_FILE="docs/STATUS.md"
+
   if grep -qiE "general science|core mathematics|essential mathematics" "$STATUS_FILE" 2>/dev/null; then
     echo "  $PASS $STATUS_FILE mentions the new subjects - session log may have this thread"
     grep -inE "general science|core mathematics|essential mathematics" "$STATUS_FILE" | sed 's/^/     /'

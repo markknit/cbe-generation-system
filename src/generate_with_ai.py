@@ -100,14 +100,14 @@ class AILessonGenerator:
         
         try:
             response = self.claude.messages.create(
-                model="claude-sonnet-4-6",
-                max_tokens=8000,
+                model="claude-sonnet-5-5",
+                max_tokens=16000,
                 messages=[
                     {"role": "user", "content": f"{system_prompt}\n\nPolish this lesson plan:\n\n{structured}"}
                 ]
             )
             print(f"  ✓ Claude polish complete")
-            return response.content[0].text
+            return next(b.text for b in response.content if b.type == "text")
         except Exception as e:
             print(f"  ✗ Claude error: {e}")
             return structured
