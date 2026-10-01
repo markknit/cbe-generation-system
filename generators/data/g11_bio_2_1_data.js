@@ -9,7 +9,7 @@ const META = {
   "grade": 11,
   "substrand_id": "2.1",
   "substrand_name": "Reproduction in Plants",
-  "outputDir": "v2/Grade11/Biology/SS2.1_Reproduction_in_Plants",
+  "outputDir": "v2/Grade11/Biology/Lesson_Plans/SS2.1_Reproduction_in_Plants",
   "filePrefix": "Biology_Reproduction_in_Plants",
   "titleDoc": "BIOLOGY GRADE 11: REPRODUCTION IN PLANTS",
   "subtitleDoc": "CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 2.1 (8 Lessons)",

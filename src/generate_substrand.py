@@ -1390,7 +1390,13 @@ def _v2_output_dir(grade: int, subject: str, substrand_id: str, substrand_name: 
     ss_folder = f"SS{substrand_id}_{substrand_name.replace(' ', '_')}"
     if grade == 10:
         return f"v2/{subj_folder}/{ss_folder}"
-    return f"v2/Grade{grade}/{subj_folder}/{ss_folder}"
+    # Grade 11+: lesson plans and quizzes in two parallel trees (Mark,
+    # 2026-10-01), so each is easy to find and review on its own:
+    #   v2/Grade11/Biology/Lesson_Plans/SS2.1_.../   (docx + _data.json + _quiz.json)
+    #   v2/Grade11/Biology/Quizzes/SS2.1_.../        (build_quiz.js output)
+    # Consumers that walk the tree: generate_teacher_index.js (reads
+    # Lesson_Plans/), build_quiz.js (maps Lesson_Plans -> Quizzes).
+    return f"v2/Grade{grade}/{subj_folder}/Lesson_Plans/{ss_folder}"
 
 
 def find_v2_templates(grade: int, subject: str, substrand_id: str) -> dict:

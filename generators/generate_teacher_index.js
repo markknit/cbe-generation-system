@@ -63,11 +63,16 @@ function collectSubjectRoots() {
       const gradeDir = path.join(PDF_ROOT, entry.name);
       for (const subjectEntry of fs.readdirSync(gradeDir, { withFileTypes: true })) {
         if (!subjectEntry.isDirectory()) continue;
+        // Grade 11+ subjects hold Lesson_Plans/ and Quizzes/ side by side; the
+        // index lists the lesson-plan documents, so walk Lesson_Plans/.
+        const subjDir = path.join(gradeDir, subjectEntry.name);
+        const lp = fs.existsSync(path.join(subjDir, 'Lesson_Plans')) ? 'Lesson_Plans' : '';
         roots.push({
           grade: Number(gradeMatch[1]),
           subjectName: subjectEntry.name,
-          dir: path.join(gradeDir, subjectEntry.name),
+          dir: lp ? path.join(subjDir, lp) : subjDir,
           hrefPrefix: `${encodeURIComponent(entry.name)}/`,
+          ssPrefix: lp ? `${lp}/` : '',
         });
       }
     } else {
@@ -103,7 +108,7 @@ for (const root of collectSubjectRoots()) {
         label: type.label,
         abbr: type.abbr,
         color: type.color,
-        href: `${root.hrefPrefix}${encodeURIComponent(root.subjectName)}/${encodeURIComponent(ssEntry.name)}/${encodeURIComponent(file)}`,
+        href: `${root.hrefPrefix}${encodeURIComponent(root.subjectName)}/${root.ssPrefix || ''}${encodeURIComponent(ssEntry.name)}/${encodeURIComponent(file)}`,
         order: DOC_TYPES.indexOf(type),
       });
       totalDocs++;

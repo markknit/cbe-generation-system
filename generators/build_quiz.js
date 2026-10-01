@@ -242,7 +242,12 @@ async function main() {
   const made = [];
   for (const qfPath of inputs) {
     const qf = JSON.parse(fs.readFileSync(qfPath, 'utf8'));
-    const outDir = path.join(path.dirname(qfPath), 'quiz');
+    // Grade 11+ keeps quizzes in a parallel tree (.../Lesson_Plans/SS.. ->
+    // .../Quizzes/SS..); Grade 10 keeps its quiz/ subfolder.
+    const ssDir = path.dirname(qfPath);
+    const outDir = path.basename(path.dirname(ssDir)) === 'Lesson_Plans'
+      ? path.join(path.dirname(path.dirname(ssDir)), 'Quizzes', path.basename(ssDir))
+      : path.join(ssDir, 'quiz');
     fs.mkdirSync(outDir, { recursive: true });
     const pdfDir = path.join(PDF_ROOT, path.relative(V2_ROOT, outDir));
     for (const lesson of qf.lessons) {

@@ -57,10 +57,12 @@ async function buildSoW(META, UNIT, LESSONS) {
 
   const body = [
     ...titleBlock(META.titleDoc, META.subtitleDoc),
-    ...substrandHeaderParas(),
     SPACE(),
     subStrandOverview(UNIT),
     SPACE(),
+    // Attribution after the overview, before Lesson 1 (Mark, 2026-10-01: at the
+    // very top it read awkwardly). Every lesson still ends with the footer line.
+    ...substrandHeaderParas(),
   ];
 
   for (const lesson of LESSONS) {
@@ -102,7 +104,6 @@ async function buildFinalExplanation(META, FE) {
       `FINAL EXPLANATION: ${META.subject.toUpperCase()} GRADE ${META.grade}`,
       `Student Assessment Document`,
     ),
-    ...substrandHeaderParas(),
     SPACE(),
   ];
 
@@ -160,6 +161,9 @@ async function buildFinalExplanation(META, FE) {
     body.push(makeTable(rubricRows, [FLW, RW3, RW3, RW3r]));
   }
 
+  // Attribution at the end of the student-facing document (Mark, 2026-10-01).
+  body.push(SPACE(), ...substrandHeaderParas());
+
   return new Document({
     sections: [{ properties: pageProps(), children: body }],
   });
@@ -180,7 +184,6 @@ async function buildSummaryTable(META, ST) {
       `SUMMARY TABLE: ${META.subject.toUpperCase()} GRADE ${META.grade}`,
       `${ST.subStrand || ''} — Teacher Reference (Pre-filled)`,
     ),
-    ...substrandHeaderParas(),
     SPACE(),
   ];
 
@@ -225,6 +228,7 @@ async function buildSummaryTable(META, ST) {
   ];
 
   body.push(makeTable(tableRows, [SLW, SC3, SC3, SC3r]));
+  body.push(SPACE(), ...substrandHeaderParas());   // attribution at the end
 
   return new Document({
     sections: [{ properties: pageProps(), children: body }],
