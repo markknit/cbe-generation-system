@@ -1,0 +1,1039 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Biology",
+  "grade": 11,
+  "substrandId": "1.4",
+  "substrandName": "Cell Division",
+  "filePrefix": "Biology_Cell_Division"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "From Newborn to Teenager: Where Do All the New Cells Come From?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-10-01T20:12:00+00:00",
+   "quiz": [
+    {
+     "prompt": "A newborn baby in Kisumu weighs about 3 kg. By about 14 years the same child weighs 50 kg. How much body mass has the child gained?",
+     "choices": [
+      "17 kg",
+      "47 kg",
+      "3 kg",
+      "53 kg"
+     ],
+     "correctIndex": 1,
+     "rationale": "Mass gained = final mass - starting mass = 50 - 3 = 47 kg. Adding the masses gives 53 kg, and 50 ÷ 3 is about 17, which is how many times heavier the teenager is, not the mass gained.",
+     "phase": "predict",
+     "placement": "Predict: 'Where did the extra 47 kg come from?' board question",
+     "check": "50-3"
+    },
+    {
+     "prompt": "While watching a time-lapse of a child growing up over 14 years, the teacher says: 'Record only what you SEE, not what you think.' Which of these is something a learner SEES?",
+     "choices": [
+      "Cells in the child's bones are multiplying",
+      "The child becomes taller and heavier, and the face and limbs change",
+      "The child's cells are only getting bigger",
+      "Food is turning directly into new body parts"
+     ],
+     "correctIndex": 1,
+     "rationale": "Getting taller and heavier and changes in the face and limbs can be seen in the video. What is happening to cells inside the body cannot be seen, so the other choices are inferences.",
+     "phase": "observe",
+     "placement": "Observe: second viewing of the time-lapse, recording what changes (height, mass, face, limbs)"
+    },
+    {
+     "prompt": "A newborn has a mass of about 3 kg and a teenager has a mass of 50 kg or more. Which statement describes how the cells of the teenager's body compare with those of the newborn?",
+     "choices": [
+      "The teenager has the same number of cells, and each cell is just much bigger",
+      "The teenager's body is made of a very much larger number of cells than the newborn's body",
+      "Each baby is born with all the cells it will ever need, so the number never changes",
+      "The teenager has fewer cells, but they are heavier"
+     ],
+     "correctIndex": 1,
+     "rationale": "The lesson outcome is that growth from infancy to adolescence involves a very large increase in the number of cells. The other choices are the starting misconceptions of 'cells only get bigger' and 'babies are born with all their cells'.",
+     "phase": "explain",
+     "placement": "Explain: Discussion Diamond ranking of the statements (a) to (d)"
+    },
+    {
+     "prompt": "After the Gallery Walk, the teacher says: 'These are our starting models; we will test them.' What does this mean for the drawings the groups made?",
+     "choices": [
+      "The drawings are first ideas that will be tested with evidence and improved in later lessons",
+      "The teacher already knows which drawing is correct and will mark the others wrong",
+      "Only the drawings that look the same as most of the class will be kept",
+      "The drawings are final and will not change for the rest of the unit"
+     ],
+     "correctIndex": 0,
+     "rationale": "Initial models are a Version 1 baseline. They are revisited and revised as the class gathers evidence in later lessons, and none is marked right or wrong now.",
+     "phase": "explain",
+     "placement": "Explain: Gallery Walk of initial models and Discussion Diamonds"
+    },
+    {
+     "prompt": "Learners are writing questions for the Driving Question Board about how a 3 kg baby becomes a 50 kg teenager. Which question is the best one to post, because it can be investigated and goes beyond yes or no?",
+     "choices": [
+      "How does a single cell become billions of cells?",
+      "Did the child in the video grow taller?",
+      "Is growing good for you?",
+      "Do babies drink milk?"
+     ],
+     "correctIndex": 0,
+     "rationale": "A good DQB question starts with How, Why or What, links to the phenomenon, and can be investigated. The other choices are yes/no questions or are already answered by the video.",
+     "phase": "dqb",
+     "placement": "DQB: writing 2 questions on strips and posting under 'How does growth occur?'"
+    },
+    {
+     "prompt": "At the end of Lesson 1, a class has watched a child grow and drawn initial models. Which of these questions can the class NOT yet answer with evidence from the lesson?",
+     "choices": [
+      "About how many kilograms heavier is a 50 kg teenager than a 3 kg newborn?",
+      "Did the child's height and appearance change in the time-lapse?",
+      "Where do all the new cells come from, and how does each new cell get the right instructions?",
+      "Did the child's body mass increase between infancy and adolescence?"
+     ],
+     "correctIndex": 2,
+     "rationale": "The class observed the changes and can work out the mass gained. Where the new cells come from and how each gets the right instructions is the puzzle left open for the unit, so learners should say 'we do not know yet'.",
+     "phase": "end",
+     "placement": "Model: exit ticket and 'What I am not sure about' section of the initial model"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "What Is Cell Division? Meaning of Cell Division and the Structure of the Chromosome",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-10-01T20:12:00+00:00",
+   "quiz": [
+    {
+     "prompt": "A group compares printed pictures of a cell before and after division. Before division they count 1 cell, and after division they count 2 cells. Which conclusion is best supported by this evidence?",
+     "choices": [
+      "Food that we eat turns directly into new cells",
+      "One existing cell divides to make new cells",
+      "A cell only gets bigger and bigger without making new cells",
+      "New cells are brought into the body from outside, one by one"
+     ],
+     "correctIndex": 1,
+     "rationale": "The counts show 1 cell becoming 2, so the evidence supports the idea that an existing cell divides to form new cells. The other ideas are common predictions that the counts do not support.",
+     "phase": "observe",
+     "placement": "Activity 1: observation table of cells before and after division"
+    },
+    {
+     "prompt": "In a growing child, one cell divides into 2 cells. Then each of those 2 cells divides once. How many cells are there after the second round of division?",
+     "choices": [
+      "6",
+      "8",
+      "3",
+      "4"
+     ],
+     "correctIndex": 3,
+     "rationale": "Each division doubles the number of cells: 1 → 2 → 2 × 2 = 4 cells. Choosing 3 comes from adding one cell instead of doubling.",
+     "phase": "observe",
+     "placement": "Activity 1: observation table (1 → 2, and 2 → 4 if shown)",
+     "check": "2*2"
+    },
+    {
+     "prompt": "A group builds a clay model of one cell dividing into two cells. They put a nucleus in the original cell. What must the two new cells receive so that they can work like the original cell?",
+     "choices": [
+      "Only extra food, because the new cells have no need for anything else",
+      "A copy of the genetic information (instructions) found in the nucleus",
+      "Nothing, because each new cell makes its own instructions from scratch",
+      "Only a bigger cell size than the original cell"
+     ],
+     "correctIndex": 1,
+     "rationale": "New cells can only function correctly if they receive the genetic information (instructions) from the parent cell's nucleus. Food and size alone do not tell a cell how to work.",
+     "phase": "observe",
+     "placement": "Activity 2: clay model of 1 cell → division → 2 cells"
+    },
+    {
+     "prompt": "Which statement best gives the meaning of cell division?",
+     "choices": [
+      "A parent cell dividing to form new daughter cells",
+      "A cell becoming bigger without changing in number",
+      "Two chromosomes joining to form one cell",
+      "Food being changed into new cells"
+     ],
+     "correctIndex": 0,
+     "rationale": "Cell division is the process by which one parent cell divides to form new daughter cells. Growing bigger or food turning into cells does not describe division.",
+     "phase": "explain",
+     "placement": "Activity 3: Jigsaw and closing cold-calls on the meaning of cell division"
+    },
+    {
+     "prompt": "A chromosome has two identical arms that are joined together at one point. What is the name and job of the part where the arms are joined?",
+     "choices": [
+      "A small separate cell that makes the chromosome",
+      "The cell membrane, which keeps the chromosome inside the cell",
+      "The gene, which is a second chromosome inside the first",
+      "The centromere, which holds the two chromatids together"
+     ],
+     "correctIndex": 3,
+     "rationale": "The centromere is the region where the two chromatids are joined. It is a part of the chromosome, not a cell or a separate chromosome.",
+     "phase": "explain",
+     "placement": "Activity 3: Jigsaw, Expert B (the centromere) and labelling the chromosome diagram"
+    },
+    {
+     "prompt": "A chromosome is made of two identical arms joined at the centromere. What are these two identical arms called?",
+     "choices": [
+      "Two separate cells",
+      "Two different chromosomes",
+      "Two sister chromatids",
+      "Two centromeres"
+     ],
+     "correctIndex": 2,
+     "rationale": "The two identical arms of one chromosome are sister chromatids. They are not two different chromosomes.",
+     "phase": "explain",
+     "placement": "Activity 3: Jigsaw, Experts A and F (the chromatid, arms and sister chromatids)"
+    },
+    {
+     "prompt": "Humans have 46 chromosomes in their cells and maize has 20. Which statement about chromosomes and DNA is correct?",
+     "choices": [
+      "Chromosomes are made of cells, and DNA is a type of chromosome",
+      "Chromosomes and DNA are two completely unrelated parts of a cell",
+      "Chromosomes contain DNA, and genes on the DNA carry the genetic information a new cell needs",
+      "Only humans have chromosomes, and maize has only DNA"
+     ],
+     "correctIndex": 2,
+     "rationale": "A chromosome contains DNA, and genes are regions of DNA that carry instructions. The different numbers (46 in humans, 20 in maize) show that different organisms have different chromosome numbers, but both have chromosomes.",
+     "phase": "end",
+     "placement": "End of lesson: exit ticket on labelling a chromosome and linking chromosomes to genetic information"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Types of Cell Division: Mitosis and Its Stages",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-10-01T20:12:00+00:00",
+   "quiz": [
+    {
+     "prompt": "A skin cell in a growing child has 4 chromosomes. It divides by mitosis into two new cells. How many chromosomes will each new cell have?",
+     "choices": [
+      "A different number in each cell, because new cells get new instructions",
+      "2 chromosomes, because the chromosomes are split in half between the cells",
+      "4 chromosomes, the same as the original cell",
+      "8 chromosomes, because each new cell makes extra instructions"
+     ],
+     "correctIndex": 2,
+     "rationale": "In mitosis the chromosomes are copied and then shared equally, so each daughter cell has the same number (4) as the parent cell. Halving the chromosomes or making new instructions are common misconceptions.",
+     "phase": "predict",
+     "placement": "Predict: individual sketch/writing on what happens to the chromosomes when one cell becomes two"
+    },
+    {
+     "prompt": "Learners studying a dividing onion root tip cell see the chromosomes lined up along the middle (equator) of the cell. Which stage of mitosis is this?",
+     "choices": [
+      "Prophase",
+      "Telophase",
+      "Anaphase",
+      "Metaphase"
+     ],
+     "correctIndex": 3,
+     "rationale": "Chromosomes lining up at the equator of the cell is metaphase. In prophase they are only becoming visible, in anaphase they separate, and in telophase two nuclei form.",
+     "phase": "observe",
+     "placement": "Part 2 (Research): matching the terms to the observations, 'We observed ___. This is called ___.'"
+    },
+    {
+     "prompt": "In a dividing cell, the chromosomes have reached opposite ends of the cell and two new nuclei are forming. Which stage of mitosis is this?",
+     "choices": [
+      "Metaphase, because the chromosomes are in an ordered position",
+      "Telophase, because two new nuclei form around the chromosomes",
+      "Anaphase, because the chromosomes are moving apart",
+      "Prophase, because the chromosomes are visible"
+     ],
+     "correctIndex": 1,
+     "rationale": "Two nuclei forming at the opposite ends of the cell is telophase. Anaphase is the earlier stage in which chromosomes are still moving apart.",
+     "phase": "observe",
+     "placement": "Part 2 (Research): matching the terms to the observations, 'We observed ___. This is called ___.'"
+    },
+    {
+     "prompt": "A newborn baby weighing 3 kg grows into a teenager of 50 kg. Which statement best explains how mitosis helps this child grow?",
+     "choices": [
+      "Cells only get bigger, so mitosis is not needed for growth",
+      "Mitosis splits the chromosomes in half so each new cell gets only part of the instructions",
+      "Mitosis copies and shares chromosomes accurately to make two daughter cells, so the number of cells increases and the body grows",
+      "Mitosis makes new cells that are different from the parent cell so the body can have many cell types"
+     ],
+     "correctIndex": 2,
+     "rationale": "One cell divides into two daughter cells with the same chromosomes as the parent cell. More cells means growth and repair. Growth is not only cells getting bigger, and the chromosomes are not halved.",
+     "phase": "explain",
+     "placement": "Return to the phenomenon: 'How does mitosis help a child grow?' and the Discussion Diamond"
+    },
+    {
+     "prompt": "A child in Kericho eats ugali, sukuma wiki and beans and grows taller. Which statement correctly links the food to the growth of new cells?",
+     "choices": [
+      "Food gives energy and building materials, but new cells are made when existing cells divide by mitosis",
+      "Food is not needed because mitosis makes new cells from nothing",
+      "Food makes the chromosomes inside cells change into new instructions",
+      "Food turns directly into new cells without any cell division"
+     ],
+     "correctIndex": 0,
+     "rationale": "Food supplies energy and materials, but the process that makes new cells is cell division by mitosis. Food alone cannot produce cells.",
+     "phase": "explain",
+     "placement": "Discussion Diamond: statement 'Eating food makes new cells by itself' and the teacher question 'what process makes the new cell?'"
+    },
+    {
+     "prompt": "Which list shows the stages of mitosis in the correct order, followed by the division of the cytoplasm?",
+     "choices": [
+      "Prophase, metaphase, telophase, anaphase, cytokinesis",
+      "Metaphase, prophase, anaphase, telophase, cytokinesis",
+      "Prophase, metaphase, anaphase, telophase, cytokinesis",
+      "Prophase, anaphase, metaphase, telophase, cytokinesis"
+     ],
+     "correctIndex": 2,
+     "rationale": "The order is prophase, metaphase, anaphase and telophase, then cytokinesis divides the cytoplasm to make two daughter cells.",
+     "phase": "dqb",
+     "placement": "Exit ticket: write the four stages in order, plus cytokinesis"
+    },
+    {
+     "prompt": "A group draws a flow diagram of mitosis. After the two nuclei have formed, the last step shows the cell dividing into two separate daughter cells. What is this step called?",
+     "choices": [
+      "Prophase",
+      "Anaphase",
+      "Cytokinesis",
+      "Telophase"
+     ],
+     "correctIndex": 2,
+     "rationale": "Cytokinesis is the division of the cytoplasm that makes two separate daughter cells after the four stages of mitosis. Telophase is when the two nuclei form.",
+     "phase": "model",
+     "placement": "Cumulative model: labelled flow diagram from parent cell to two identical daughter cells"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Meiosis and Its Stages: Why Do Sperm and Egg Cells Have 23 Chromosomes?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-10-01T20:12:00+00:00",
+   "quiz": [
+    {
+     "prompt": "A human body cell has 46 chromosomes. Suppose a sperm cell and an egg cell each also had 46 chromosomes. How many chromosomes would the cell formed at fertilisation (the zygote) have?",
+     "choices": [
+      "46",
+      "92",
+      "138",
+      "23"
+     ],
+     "correctIndex": 1,
+     "rationale": "The zygote gets all the chromosomes from both gametes, so 46 + 46 = 92. This would keep doubling every generation, which is why gametes must carry fewer chromosomes.",
+     "phase": "predict",
+     "placement": "Predict: chromosome-number problem (46 + 46 after fertilisation)",
+     "check": "46+46"
+    },
+    {
+     "prompt": "During meiosis I, which event happens in Anaphase I?",
+     "choices": [
+      "Chromosomes copy their DNA again",
+      "The cell membrane splits to make four cells at once",
+      "Sister chromatids separate and move to opposite poles",
+      "Homologous chromosomes separate and move to opposite poles"
+     ],
+     "correctIndex": 3,
+     "rationale": "In Anaphase I whole homologous chromosomes of each pair are pulled apart. Sister chromatids separate later, in Anaphase II.",
+     "phase": "observe",
+     "placement": "Observe: jigsaw sequencing and labelling of meiosis I pictures (Prophase I to Telophase I)"
+    },
+    {
+     "prompt": "Which statement correctly describes Anaphase II of meiosis?",
+     "choices": [
+      "Chromosomes line up as pairs at the middle of the cell",
+      "Sister chromatids separate and move to opposite poles",
+      "Homologous chromosomes separate for the first time",
+      "Homologous chromosomes pair up and cross over"
+     ],
+     "correctIndex": 1,
+     "rationale": "Anaphase II is when the sister chromatids of each chromosome separate. Separating homologous chromosomes happens in Anaphase I, so mixing the two up is a common error.",
+     "phase": "observe",
+     "placement": "Observe: Video 2 (meiosis II) and labelling of Prophase II to Telophase II"
+    },
+    {
+     "prompt": "A human body cell with 46 chromosomes starts meiosis. What is found in each cell at the end of meiosis I (after Telophase I)?",
+     "choices": [
+      "46 chromosomes, each with one chromatid",
+      "46 chromosomes, each with two chromatids",
+      "23 chromosomes, each with two chromatids",
+      "23 chromosomes, each with one chromatid"
+     ],
+     "correctIndex": 2,
+     "rationale": "Homologous chromosomes separate in meiosis I, so the number halves from 46 to 23. Each chromosome still has two chromatids until they separate in meiosis II.",
+     "phase": "observe",
+     "placement": "Observe: recording chromosome numbers at the start, after meiosis I and after meiosis II"
+    },
+    {
+     "prompt": "Why do sperm and egg cells each have 23 chromosomes instead of 46?",
+     "choices": [
+      "Meiosis halves the chromosome number, and fertilisation restores 46 in the zygote",
+      "Mitosis makes them, so they have the same number as body cells",
+      "They have 23 because the zygote needs only 23 chromosomes to grow",
+      "They have 46 chromosomes, and the extra 23 are thrown away after fertilisation"
+     ],
+     "correctIndex": 0,
+     "rationale": "Meiosis reduces the chromosomes from 46 to 23 in each gamete. When a sperm (23) and an egg (23) join, the zygote has 46 again, so the number stays constant over generations.",
+     "phase": "explain",
+     "placement": "Explain: discussion diamond ranking the four statements about why gametes have 23 chromosomes"
+    },
+    {
+     "prompt": "Which row correctly compares meiosis in the reproductive organs with mitosis in the muscle cells of a Kenyan runner?",
+     "choices": [
+      "Meiosis: one division, two identical cells with 46. Mitosis: two divisions, four different cells with 23",
+      "Meiosis and mitosis both give two identical cells with 46 chromosomes",
+      "Meiosis: two divisions, four genetically different cells with 23. Mitosis: one division, two identical cells with 46",
+      "Meiosis: two divisions, two identical cells with 46. Mitosis: one division, four cells with 23"
+     ],
+     "correctIndex": 2,
+     "rationale": "Meiosis has two divisions and makes four genetically different cells with half the chromosomes (23), helped by crossing over. Mitosis has one division and makes two identical cells with 46 for growth and repair.",
+     "phase": "explain",
+     "placement": "Explain: comparing meiosis and mitosis in a table (number of divisions, daughter cells, chromosome number)"
+    },
+    {
+     "prompt": "In a model of the human life cycle, a zygote with 46 chromosomes grows into a teenager. Which process produces the billions of new body cells for this growth, and how many chromosomes does each new body cell have?",
+     "choices": [
+      "Mitosis, giving cells with 46 chromosomes",
+      "Fertilisation, giving cells with 92 chromosomes",
+      "Meiosis, giving cells with 23 chromosomes",
+      "Meiosis, giving cells with 46 chromosomes"
+     ],
+     "correctIndex": 0,
+     "rationale": "The zygote divides repeatedly by mitosis, which makes identical cells with 46 chromosomes. Meiosis is used only to make gametes with 23 chromosomes.",
+     "phase": "model",
+     "placement": "Model: revising the class life-cycle model (zygote, repeated mitosis, growth to a teenager)"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Significance of Mitosis and Meiosis: Case Studies from Growth, Healing, Roots and Offspring",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-10-01T20:12:00+00:00",
+   "quiz": [
+    {
+     "prompt": "A boy is cut by a panga while weeding the shamba. After two weeks the skin has healed. Which statement best explains how the wound healed?",
+     "choices": [
+      "The cells beside the cut divided by mitosis, making identical new skin cells to replace the damaged ones",
+      "Meiosis made new skin cells with half the chromosomes to fill the cut",
+      "Meiosis made four different skin cells from each damaged cell",
+      "No cell division happened; the old skin cells just stretched over the cut"
+     ],
+     "correctIndex": 0,
+     "rationale": "Skin repair needs new body cells that are identical to the old ones with the full chromosome number, and this is what mitosis produces. Meiosis makes gametes, not skin cells.",
+     "phase": "observe",
+     "placement": "Jigsaw expert groups: Case B, a cut on the skin healing (boy cut by a panga while weeding shamba)"
+    },
+    {
+     "prompt": "A farmer cuts a piece of sweet potato vine and plants it. After some weeks it has grown new roots and shoots. Which type of cell division produced the new roots and shoots, and what is the evidence?",
+     "choices": [
+      "Mitosis, because the new cells are identical to the parent cells and have the same chromosome number",
+      "Meiosis, because the new parts are made from gametes",
+      "Meiosis, because plants need variation to grow roots",
+      "Mitosis, because it halves the chromosome number in each new cell"
+     ],
+     "correctIndex": 0,
+     "rationale": "Roots and shoots grow from new body cells that are identical copies with the full chromosome number. This is mitosis. No gametes or fertilisation are involved, and mitosis does not halve the chromosome number.",
+     "phase": "observe",
+     "placement": "Jigsaw expert groups: Case C, a plant producing new roots and shoots (sweet potato vine or sukuma wiki cutting)"
+    },
+    {
+     "prompt": "Two brothers in the same family differ in height and skin tone, even though they have the same parents. Which explanation uses the correct cell division and evidence?",
+     "choices": [
+      "Mitosis in the skin cells of each brother changes his height and skin tone",
+      "Meiosis makes gametes that are genetically different from each other, so children differ from each other and from their parents",
+      "Mitosis makes gametes that are identical, so children copy one parent exactly",
+      "Meiosis makes four identical gametes with a full set of chromosomes, so the children differ"
+     ],
+     "correctIndex": 1,
+     "rationale": "Meiosis produces four genetically different haploid gametes, and this creates variation among offspring. Mitosis produces identical cells, so it cannot explain differences between siblings.",
+     "phase": "observe",
+     "placement": "Jigsaw expert groups: Case E, parents producing children with different characteristics (siblings differing in height or skin tone)"
+    },
+    {
+     "prompt": "A human body cell has 46 chromosomes. Suppose gametes were made by mitosis instead of meiosis, so each sperm and each egg had 46 chromosomes. How many chromosomes would the fertilised egg have?",
+     "choices": [
+      "92",
+      "69",
+      "23",
+      "46"
+     ],
+     "correctIndex": 0,
+     "rationale": "Mitosis keeps the chromosome number at 46, so the sperm (46) and egg (46) would give 46 + 46 = 92 in the fertilised egg. The number would double each generation. This is why meiosis halves the number to 23 in each gamete.",
+     "phase": "observe",
+     "placement": "Case E teacher prompt: 'If both parents give a cell, how many chromosomes would a child have if each gave a full set? What must happen first?'",
+     "check": "46+46"
+    },
+    {
+     "prompt": "A baby of 3 kg grows into a teenager of 50 kg. Which explanation is best supported by the evidence from the case studies?",
+     "choices": [
+      "Food turns directly into new cells without any cell division",
+      "The body cells only get bigger, and no new cells are made",
+      "Mitosis makes many new identical cells using materials from food, and each new cell has the full set of chromosomes (instructions)",
+      "Meiosis in body cells makes the extra cells needed for growth"
+     ],
+     "correctIndex": 2,
+     "rationale": "Growth needs a huge number of new body cells. Mitosis makes them from raw materials in food, and each daughter cell has the same full set of chromosomes, so it gets the right instructions. Cells getting bigger alone cannot explain it, and meiosis makes gametes.",
+     "phase": "explain",
+     "placement": "Think-pair-share: 'Using your table, explain how a 3 kg baby becomes a 50 kg teenager, and how each new cell gets the right instructions.'"
+    },
+    {
+     "prompt": "Which statement correctly compares the cells made by mitosis and by meiosis?",
+     "choices": [
+      "Mitosis makes four different haploid cells; meiosis makes two identical diploid cells",
+      "Mitosis makes gametes for reproduction; meiosis makes skin cells for healing",
+      "Both make two identical cells, but meiosis is used only in plants",
+      "Mitosis makes two identical diploid cells for growth and repair; meiosis makes four different haploid gametes"
+     ],
+     "correctIndex": 3,
+     "rationale": "Mitosis gives two genetically identical diploid daughter cells used for growth, repair and asexual reproduction. Meiosis gives four genetically different haploid gametes used in sexual reproduction.",
+     "phase": "explain",
+     "placement": "Discussion diamond: ranking the four claims about mitosis and meiosis"
+    },
+    {
+     "prompt": "On a class model, a parent cell with 46 chromosomes divides to make sperm cells with 23 chromosomes each. Which label and purpose should be written on the arrow?",
+     "choices": [
+      "Mitosis: to make identical cells for growth",
+      "Meiosis: to make gametes with half the chromosomes, so fertilisation restores 46 and the offspring show variation",
+      "Meiosis: to make body cells with 46 chromosomes for growth",
+      "Mitosis: to repair damaged tissue"
+     ],
+     "correctIndex": 1,
+     "rationale": "A change from 46 to 23 chromosomes in gametes is meiosis. Halving the number lets fertilisation restore 46 (23 + 23), and meiosis also creates variation. Mitosis keeps 46 in each new cell.",
+     "phase": "model",
+     "placement": "Revising the class model: a parent producing gametes by meiosis, with a fertilised egg restoring the full chromosome number (23 + 23 = 46)"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Budding and Binary Fission: Making New Cells and Organisms from One Parent",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-10-01T20:12:00+00:00",
+   "quiz": [
+    {
+     "prompt": "A single yeast cell in dough can become millions of cells in a few hours. Which statement best explains how one yeast cell can produce a new organism?",
+     "choices": [
+      "A male and a female yeast cell must be present",
+      "The new organism arises from one parent cell without fusion of sex cells",
+      "Two yeast cells must first fuse their sex cells",
+      "The yeast cell must be fertilised by food such as sugar"
+     ],
+     "correctIndex": 1,
+     "rationale": "Yeast reproduces asexually, so a single parent makes a new organism without sex cells fusing. The other options wrongly assume two parents or fertilisation.",
+     "phase": "predict",
+     "placement": "Predict: think-pair-share on how a single yeast cell or bacterium produces a new organism without sex cells"
+    },
+    {
+     "prompt": "A rod-shaped bacterium reproduces by binary fission. Which sequence correctly shows what happens?",
+     "choices": [
+      "The cell splits in two, and only one daughter cell receives the chromosome",
+      "The chromosome is copied, the cell lengthens, a dividing wall forms, and two equal cells result",
+      "The bacterium fuses with another bacterium to form a new cell",
+      "A small bud grows on the cell, receives a copy of the nucleus and then breaks off"
+     ],
+     "correctIndex": 1,
+     "rationale": "In binary fission the circular chromosome is copied before the cell elongates, forms a dividing wall and splits into two equal daughter cells. The bud option describes budding in yeast.",
+     "phase": "observe",
+     "placement": "Pair B (Bacteria): plasticine and string model of binary fission"
+    },
+    {
+     "prompt": "One bacterium in contaminated water divides into two every 20 minutes. Assuming every cell keeps dividing, how many bacteria will there be after 2 hours?",
+     "choices": [
+      "64",
+      "32",
+      "6",
+      "12"
+     ],
+     "correctIndex": 0,
+     "rationale": "2 hours = 120 minutes, so there are 120 ÷ 20 = 6 divisions. The number doubles each time: 1, 2, 4, 8, 16, 32, 64, which is 2^6 = 64.",
+     "phase": "observe",
+     "placement": "Doubling question: if one bacterium divides every 20 minutes, how many after 2 hours?",
+     "check": "2**(120/20)"
+    },
+    {
+     "prompt": "Which statement is true for BOTH budding in yeast and binary fission in bacteria?",
+     "choices": [
+      "Both copy the genetic material before the cell divides, and the new organism comes from one parent",
+      "Both produce offspring that are genetically different from the parent",
+      "Both always produce two daughter cells of equal size",
+      "Both need the fusion of sex cells from two parents"
+     ],
+     "correctIndex": 0,
+     "rationale": "Both are asexual reproduction: genetic material is copied first, one parent is involved, and the daughter cells are genetically identical to the parent. Only binary fission gives equal cells, and neither process uses sex cells.",
+     "phase": "explain",
+     "placement": "Discussion diamond: ranking the nine statement cards to answer how a single organism can produce a new organism without sex cells"
+    },
+    {
+     "prompt": "A child grows from 3 kg to 50 kg by cell division. How is this similar to, but different from, a bacterium dividing by binary fission?",
+     "choices": [
+      "In both cases the cells divide, but in the child the new cells add to one body, while in a bacterium each new cell becomes a new organism",
+      "Only the child's cells copy their genetic material before dividing",
+      "Only the bacterium's division needs two parents",
+      "Both add cells to one body, so the cells stay joined together"
+     ],
+     "correctIndex": 0,
+     "rationale": "Both involve cells copying their instructions and dividing. In a growing child the new cells join the same body, whereas in a single-celled organism the new cells are separate new organisms.",
+     "phase": "explain",
+     "placement": "Discussion diamond teacher question: How is this like what happens when a baby grows? How is it different?"
+    },
+    {
+     "prompt": "Which is a correct difference between budding in yeast and binary fission in bacteria?",
+     "choices": [
+      "Budding involves sex cells, while binary fission does not",
+      "Budding happens in bacteria, while binary fission happens in yeast",
+      "Budding needs two parents, while binary fission needs one parent",
+      "Budding gives a smaller bud and a larger parent, while binary fission gives two equal cells"
+     ],
+     "correctIndex": 3,
+     "rationale": "In budding a small bud grows on the parent yeast cell and separates, so the cells are unequal. In binary fission the bacterium splits into two equal cells. Both use one parent and no sex cells.",
+     "phase": "dqb",
+     "placement": "Gallery walk and exit ticket: write one difference between budding and binary fission and one similarity"
+    },
+    {
+     "prompt": "Bacteria that cause cholera and typhoid can multiply very quickly in unclean water. Why does boiling drinking water help prevent these diseases?",
+     "choices": [
+      "Boiling turns the bacteria into yeast cells that are harmless",
+      "Boiling allows the bacteria to fuse and become weaker",
+      "Boiling kills the bacteria, so they cannot divide and increase in number",
+      "Boiling makes the bacteria stop copying their DNA but they stay alive"
+     ],
+     "correctIndex": 2,
+     "rationale": "Bacteria increase in number by binary fission, which doubles their numbers quickly. Boiling kills them, so they cannot divide and cause disease.",
+     "phase": "model",
+     "placement": "Revised model panel: health link between fast bacterial multiplication, boiling water and handwashing"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Microscope Practical on Mitosis: Catching Growth in Action in Onion Root Tips",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-10-01T20:12:00+00:00",
+   "quiz": [
+    {
+     "prompt": "A onion (kitunguu) root grown in water for a week lengthened by 3 cm. Which part of the root is making most of the new cells that make it longer?",
+     "choices": [
+      "The tip region, where cells are dividing",
+      "Nowhere, because the existing cells just get bigger",
+      "The middle only, where the root is oldest",
+      "The whole root equally, from the tip to the top"
+     ],
+     "correctIndex": 0,
+     "rationale": "The root lengthens because cells near the tip divide to make new cells. The other options reflect the misconceptions that the whole root grows equally or that cells simply get bigger.",
+     "phase": "predict",
+     "placement": "Predict: onion root grown in a bottle of water, prediction sketch and Think-Pair-Share"
+    },
+    {
+     "prompt": "In preparing an onion root tip squash, the tip is warmed in 1M hydrochloric acid for a few minutes. Why is this done?",
+     "choices": [
+      "To soften the tissue so the cells can be squashed into a thin single layer",
+      "To colour the chromosomes",
+      "To make the cells divide faster",
+      "To make each cell grow bigger"
+     ],
+     "correctIndex": 0,
+     "rationale": "The acid softens the tissue so that when the slide is squashed the cells spread into a single layer that light can pass through. The stain (acetic orcein) is what colours the chromosomes.",
+     "phase": "observe",
+     "placement": "Observe: preparing the onion root tip squash (steps 1 to 6)"
+    },
+    {
+     "prompt": "Under the microscope, a learner sees a cell in an onion root tip where the dark-stained chromosomes are all lined up across the middle (equator) of the cell. Which stage of mitosis is this?",
+     "choices": [
+      "Metaphase",
+      "Telophase",
+      "Prophase",
+      "Anaphase"
+     ],
+     "correctIndex": 0,
+     "rationale": "Chromosomes lining up at the equator of the cell is the key feature of metaphase. In anaphase they have already been pulled apart.",
+     "phase": "observe",
+     "placement": "Observe: drawing cells and identifying stages under the microscope (oral question 'Which cell is in metaphase?')"
+    },
+    {
+     "prompt": "A group counts 80 cells from an onion root tip squash. Of these, 60 are in interphase and 20 are in the stages of mitosis (prophase, metaphase, anaphase or telophase). What percentage of the cells are in interphase?",
+     "choices": [
+      "20%",
+      "75%",
+      "25%",
+      "60%"
+     ],
+     "correctIndex": 1,
+     "rationale": "Proportion in interphase = 60 ÷ 80 × 100 = 75%. Most cells are in interphase, so mitosis is short compared with the whole cell cycle.",
+     "phase": "observe",
+     "placement": "Observe: tallying 50 to 100 cells by stage and calculating the proportion in each stage",
+     "check": "60/80*100"
+    },
+    {
+     "prompt": "A learner is looking at two cells in an onion root tip. What clue tells you that a cell is in anaphase and not metaphase?",
+     "choices": [
+      "Chromosomes are lined up along the middle of the cell",
+      "Sister chromatids are being pulled apart towards opposite ends of the cell",
+      "Two separate new nuclei have formed and the cell is dividing in two",
+      "Chromosomes are thin and thread-like inside an intact nucleus"
+     ],
+     "correctIndex": 1,
+     "rationale": "In anaphase, sister chromatids separate and move to opposite poles. Lined-up chromosomes show metaphase, and two new nuclei show telophase.",
+     "phase": "explain",
+     "placement": "Explain: Jigsaw, expert groups agreeing on a clue to identify each stage"
+    },
+    {
+     "prompt": "Learners see many cells at different stages of mitosis in an onion root tip, while cells further from the tip are not dividing. Which statement is best supported by this evidence?",
+     "choices": [
+      "New cells are made when existing cells in the tip divide, and each new cell receives a copy of the chromosomes",
+      "The root grows only because its cells get bigger",
+      "Most cells in the tip are dividing at exactly the same moment",
+      "Food turns directly into new cells at the tip"
+     ],
+     "correctIndex": 0,
+     "rationale": "Seeing chromosomes behave in distinct stages in the growing tip shows that new cells come from the division of existing cells. The tally also shows most cells are in interphase, so they are not all dividing at once.",
+     "phase": "explain",
+     "placement": "Explain: Discussion Diamond ranking of the four statements using tally results"
+    },
+    {
+     "prompt": "One cell divides by mitosis to make two cells, and every cell divides again every 24 hours. Starting with 1 cell, how many cells will there be after 10 days?",
+     "choices": [
+      "100",
+      "512",
+      "20",
+      "1024"
+     ],
+     "correctIndex": 3,
+     "rationale": "The number doubles each day (1, 2, 4, 8 ...), so after 10 days there are 2^10 = 1024 cells. This shows how repeated division can give billions of cells.",
+     "phase": "model",
+     "placement": "Model: revising the growth model, with the calculation 'If one cell divides every 24 hours, how many cells after 10 days?'",
+     "check": "2**10"
+    },
+    {
+     "prompt": "A Kenyan child who eats well grows more than a child who does not get enough food. Which explanation fits what we learned about mitosis?",
+     "choices": [
+      "Food makes cells divide without needing chromosomes",
+      "Food turns directly into new cells in the body",
+      "Food makes each cell grow bigger so no cell division is needed",
+      "Food gives the materials and energy that cells need to divide and make new cells"
+     ],
+     "correctIndex": 3,
+     "rationale": "New cells are made by division of existing cells, and food supplies the materials and energy for this. Food does not turn directly into cells.",
+     "phase": "end",
+     "placement": "Model: linking to growth, 'why a Kenyan child who eats well grows more than one who does not', and the exit ticket"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Why Cell Division Matters: From Baby to Teenager, and Bananas from a Test Tube",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-10-01T20:12:00+00:00",
+   "quiz": [
+    {
+     "prompt": "A baby has a body mass of about 3 kg. The same person is 50 kg as a teenager. Which statement best explains what happened to the cells in the body?",
+     "choices": [
+      "The cells only grew bigger, and their number stayed the same.",
+      "The number of cells increased because existing cells divided to make new cells.",
+      "The food eaten turned directly into new cells without any cell dividing.",
+      "The cells joined together to form larger cells."
+     ],
+     "correctIndex": 1,
+     "rationale": "Growth needs more cells, and new cells come from existing cells dividing. Cells also enlarge a little, but enlargement alone cannot explain the increase from 3 kg to 50 kg. Food only supplies raw materials and energy.",
+     "phase": "predict",
+     "placement": "Predict: think-pair-share on how a 3 kg baby becomes a 50 kg teenager"
+    },
+    {
+     "prompt": "A human life starts as one fertilised egg cell. Suppose every cell divides into two cells each time, so the numbers go 1, 2, 4, 8, 16 ... How many cells are there after 10 rounds of division?",
+     "choices": [
+      "512",
+      "1024",
+      "100",
+      "20"
+     ],
+     "correctIndex": 1,
+     "rationale": "The number doubles each round, so after 10 rounds there are 2 x 2 x ... (10 times) = 2^10 = 1024 cells. 20 and 100 come from adding or squaring instead of doubling, and 512 is the number after only 9 rounds.",
+     "phase": "observe",
+     "placement": "Jigsaw, Expert group A (Growth): doubling estimate 2, 4, 8, 16...",
+     "check": "2**10"
+    },
+    {
+     "prompt": "A footballer in Kakamega falls and gets a cut on his knee. After a few days the cut has healed. Which statement best explains how the skin repaired itself?",
+     "choices": [
+      "Skin cells next to the cut divided by meiosis to make new skin cells.",
+      "Skin cells next to the cut divided by mitosis to make new, identical skin cells.",
+      "The food he ate changed directly into new skin.",
+      "The skin cells next to the cut only became larger to fill the gap."
+     ],
+     "correctIndex": 1,
+     "rationale": "Repair and replacement of body cells happens by mitosis, which makes genetically identical cells. Meiosis makes gametes, and cells cannot repair a cut by enlarging alone.",
+     "phase": "observe",
+     "placement": "Jigsaw, Expert group B (Repair and replacement): footballer in Kakamega healing a cut"
+    },
+    {
+     "prompt": "Which type of cell division produces gametes (sex cells) for sexual reproduction and also leads to variation among offspring?",
+     "choices": [
+      "Mitosis",
+      "Meiosis",
+      "Binary fission",
+      "Tissue culture"
+     ],
+     "correctIndex": 1,
+     "rationale": "Meiosis produces gametes and gives genetic variation. Mitosis makes identical cells for growth and repair, and binary fission is how bacteria reproduce.",
+     "phase": "observe",
+     "placement": "Jigsaw, Expert group C (Reproduction and development): meiosis making gametes"
+    },
+    {
+     "prompt": "A tissue-cultured banana plantlet looks exactly like the parent banana plant it came from. What is the best reason?",
+     "choices": [
+      "The plantlet was grown in the same soil as the parent plant.",
+      "Its cells were made by repeated mitosis, which produces genetically identical cells.",
+      "The nutrient medium in the jar changes the plantlet to look like the parent.",
+      "Its cells were made by meiosis, which mixes the genes of both parents."
+     ],
+     "correctIndex": 1,
+     "rationale": "Tissue culture multiplies plant cells by repeated mitosis. Mitosis copies the genetic information, so the plantlets are clones of the parent. Meiosis would cause variation.",
+     "phase": "observe",
+     "placement": "Jigsaw, Expert group D (Tissue culture): why a tissue-cultured banana plantlet matches its parent"
+    },
+    {
+     "prompt": "Tissue-cultured banana plants are all identical to the parent plant. A farmer in Meru worries about this. What is the most sensible concern?",
+     "choices": [
+      "The plants will each divide by meiosis and become different from each other.",
+      "The plants will not be able to grow roots.",
+      "The plants cannot get their food from the nutrient medium.",
+      "Because the plants have the same genes, one disease could affect all of them."
+     ],
+     "correctIndex": 3,
+     "rationale": "Clones have the same genetic make-up, so they share the same weaknesses. A disease that attacks one plant can attack all of them. This is a real limitation of cloning.",
+     "phase": "explain",
+     "placement": "Discussion diamond: 'Tissue culture plants are all identical, so one disease could affect them all'"
+    },
+    {
+     "prompt": "Complete the sentence: 'Food supplies ___, and cell division supplies ___.'",
+     "choices": [
+      "energy only; chromosomes",
+      "raw materials and energy; more cells",
+      "raw materials; bigger cells only",
+      "new cells; raw materials and energy"
+     ],
+     "correctIndex": 1,
+     "rationale": "Food (like ugali and sukuma wiki) provides the raw materials, such as amino acids, glucose and minerals, and the energy to build cells. Cell division is what increases the number of cells, because new cells come from existing cells.",
+     "phase": "dqb",
+     "placement": "Driving Question Board update: 'How does the body produce the enormous number of new cells needed for growth?' (food versus cell division caption)"
+    },
+    {
+     "prompt": "A group draws the tissue culture side panel of its model poster for tea plants from Kericho. Which order of steps is correct?",
+     "choices": [
+      "Hardening off, explant, callus, shoots, roots",
+      "Explant, roots, shoots, callus, hardening off",
+      "Callus, explant, roots, shoots, hardening off",
+      "Explant, callus, shoots, roots, hardening off"
+     ],
+     "correctIndex": 3,
+     "rationale": "A piece of plant (explant) is placed in sterile nutrient medium and divides by mitosis to form a callus. The callus forms shoots, then roots, and finally the plantlets are hardened off before planting out.",
+     "phase": "model",
+     "placement": "Model revision: side panel showing tissue culture (explant to callus to plantlets to hardened banana or tea plants)"
+    },
+    {
+     "prompt": "In a cell that divides by mitosis, what happens to the chromosomes so that the two new cells are genetically identical to the parent cell?",
+     "choices": [
+      "The chromosomes are not copied, so one new cell gets all of them.",
+      "The chromosomes are halved, so each new cell gets half of the parent's chromosomes.",
+      "The chromosomes are shared out randomly, so each new cell gets a different set.",
+      "The chromosomes are copied, and each new cell receives a full set identical to the parent's."
+     ],
+     "correctIndex": 3,
+     "rationale": "Before mitosis the genetic material is copied. Each daughter cell then receives a complete set identical to the parent's. Halving the chromosome number happens in meiosis, not mitosis.",
+     "phase": "end",
+     "placement": "Model check and exit ticket: 'What does mitosis do to the chromosomes?' (end of lesson)"
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "Consolidation and Digital Animations: Comparing Mitosis and Meiosis to Explain Growth",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-10-01T20:12:00+00:00",
+   "quiz": [
+    {
+     "prompt": "A cell in a growing child's leg bone has 46 chromosomes. It divides by mitosis to help the child grow. How many chromosomes will each new cell have?",
+     "choices": [
+      "23, because chromosomes are halved in every division",
+      "92, because the new cells add up the chromosomes",
+      "69, because each new cell gets half of the extra chromosomes",
+      "46, because each new cell gets a full copy of the set"
+     ],
+     "correctIndex": 3,
+     "rationale": "In mitosis the chromosomes are copied first and then shared equally, so each daughter cell has the same number as the parent cell (46). Halving happens only in meiosis.",
+     "phase": "predict",
+     "placement": "Think-Pair-Share: 3-box prediction sketch of one cell dividing (before, during, after)"
+    },
+    {
+     "prompt": "During mitosis, at which stage do the sister chromatids pull apart and move to opposite poles of the cell?",
+     "choices": [
+      "Prophase",
+      "Metaphase",
+      "Telophase",
+      "Anaphase"
+     ],
+     "correctIndex": 3,
+     "rationale": "In anaphase the spindle fibres pull the sister chromatids apart to opposite poles. In metaphase they only line up at the equator.",
+     "phase": "observe",
+     "placement": "Watching the mitosis animation and completing the stage-tracking sheet (prophase, metaphase, anaphase, telophase)"
+    },
+    {
+     "prompt": "One diploid (2n) cell in the testes of a bull divides by meiosis. What is produced at the end?",
+     "choices": [
+      "Four genetically different haploid cells",
+      "Two genetically different haploid cells",
+      "Four genetically identical diploid cells",
+      "Two genetically identical diploid cells"
+     ],
+     "correctIndex": 0,
+     "rationale": "Meiosis has two divisions and gives four haploid (n) cells that are genetically different because of crossing over. Two identical diploid cells describes mitosis.",
+     "phase": "observe",
+     "placement": "Jigsaw: home groups complete the mitosis vs meiosis comparison table"
+    },
+    {
+     "prompt": "A fertilised egg divides by mitosis. Every cell divides once in each round, and no cells die. How many cells will there be after 5 rounds of mitosis?",
+     "choices": [
+      "16 cells",
+      "25 cells",
+      "10 cells",
+      "32 cells"
+     ],
+     "correctIndex": 3,
+     "rationale": "The number of cells doubles in each round: 1, 2, 4, 8, 16, 32. After 5 rounds there are 2^5 = 32 cells. Repeated rounds of mitosis can therefore give billions of cells.",
+     "phase": "explain",
+     "placement": "Discussion Diamond and 4-sentence explanation: how one fertilised egg becomes billions of cells",
+     "check": "2**5"
+    },
+    {
+     "prompt": "A learner says, 'A child grows because the ugali, beans and sukuma wiki we eat turn directly into new cells.' Which statement best corrects this idea?",
+     "choices": [
+      "Food supplies the chromosomes that are put into each new cell",
+      "Food supplies energy and raw materials, but new cells come from existing cells dividing by mitosis",
+      "Food makes the existing cells bigger, and that is the only way the body grows",
+      "Food is not needed because cells make everything they need by meiosis"
+     ],
+     "correctIndex": 1,
+     "rationale": "Food gives the energy and raw materials needed to build new cells, but the cells themselves are made when existing cells divide by mitosis. Growth is not only cells getting bigger.",
+     "phase": "explain",
+     "placement": "Discussion Diamond: teacher question 'What role does the food really play?'"
+    },
+    {
+     "prompt": "A girl falls and cuts her knee, and the cut heals after a few days. Which process makes the new skin cells that close the wound, and why?",
+     "choices": [
+      "Mitosis, because it makes identical diploid cells for growth and repair",
+      "Meiosis, because it halves the chromosome number to make skin cells",
+      "Mitosis, because it makes genetically different cells with crossing over",
+      "Meiosis, because it makes four new cells from each cell"
+     ],
+     "correctIndex": 0,
+     "rationale": "Mitosis produces two genetically identical diploid cells, which is how the body grows and repairs damaged tissue. Meiosis only makes gametes.",
+     "phase": "dqb",
+     "placement": "Driving Question Board sorting and exit ticket, Prompt 2: which process helps a child grow, and why?"
+    },
+    {
+     "prompt": "A group makes a model of meiosis in a cow. A cow body cell has 60 chromosomes. How many chromosomes should their model show in each egg cell (gamete) at the end of meiosis?",
+     "choices": [
+      "120 chromosomes",
+      "30 chromosomes",
+      "15 chromosomes",
+      "60 chromosomes"
+     ],
+     "correctIndex": 1,
+     "rationale": "Meiosis halves the chromosome number from diploid (2n = 60) to haploid (n): 60 ÷ 2 = 30. This keeps the number constant when the egg and sperm join at fertilisation.",
+     "phase": "model",
+     "placement": "Gallery Walk: groups present chromosome-behaviour models and give 'Two stars and a wish' feedback",
+     "check": "60/2"
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "title": "Final Model and Return to the Phenomenon: How Does the Body Make the Billions of New Cells Needed for Growth?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-10-01T20:12:00+00:00",
+   "quiz": [
+    {
+     "prompt": "A baby of about 3 kg grows into a teenager of 50 kg. A student says, \"Cells just get bigger as we eat ugali, githeri and sukuma wiki.\" Which statement best explains most of the growth?",
+     "choices": [
+      "The number of cells increases because existing cells divide to make new cells",
+      "Food turns directly into new cells inside the body",
+      "Cells from the food we eat are absorbed and added to the body",
+      "Cells only get bigger, and their number stays the same"
+     ],
+     "correctIndex": 0,
+     "rationale": "Growth is mainly due to an increase in cell number, as existing cells divide. Food supplies raw materials and energy for this, but it does not turn directly into cells, and cell enlargement alone cannot account for the growth.",
+     "phase": "predict",
+     "placement": "Predict: debate on 'Cells just get bigger as we eat ugali, githeri and sukuma wiki'"
+    },
+    {
+     "prompt": "A human muscle cell has 46 chromosomes. It divides by mitosis. What is produced?",
+     "choices": [
+      "Two cells, each with 23 chromosomes",
+      "Four cells, each with 23 chromosomes",
+      "Two cells, each with 46 chromosomes that are identical to the parent cell's",
+      "Two cells, each with 46 chromosomes but with different instructions from each other"
+     ],
+     "correctIndex": 2,
+     "rationale": "Mitosis gives two identical daughter cells with the same chromosome number as the parent cell (46). Halving the chromosome number happens in meiosis, which makes gametes.",
+     "phase": "observe",
+     "placement": "Observe: Expert group 1 - Mitosis and the cell cycle"
+    },
+    {
+     "prompt": "A zygote (1 cell) divides by mitosis. Every cell then divides once in each round, so the pattern is 1, 2, 4, 8, 16... How many cells are there after 5 rounds of division?",
+     "choices": [
+      "25",
+      "10",
+      "32",
+      "16"
+     ],
+     "correctIndex": 2,
+     "rationale": "The number of cells doubles in each round. After 5 rounds there are 2 x 2 x 2 x 2 x 2 = 32 cells. Repeated doubling is how one cell can become trillions.",
+     "phase": "observe",
+     "placement": "Observe: confirming that a zygote divides repeatedly, 1 becomes 2, 4, 8, 16...",
+     "check": "2**5"
+    },
+    {
+     "prompt": "Yeast cells in mandazi dough and bacteria in milk both reproduce by dividing. Which statement correctly distinguishes budding from binary fission?",
+     "choices": [
+      "Budding splits a cell into two equal halves; binary fission forms a small outgrowth on the parent cell",
+      "Budding happens only in bacteria and binary fission happens only in yeast",
+      "Both budding and binary fission make four cells with half the chromosomes",
+      "Budding is an unequal division in which a small bud grows from a yeast cell and breaks off; binary fission splits a bacterium into two equal cells"
+     ],
+     "correctIndex": 3,
+     "rationale": "In budding, a smaller daughter cell (the bud) forms on the parent and separates, so the division is unequal. In binary fission, the cell splits into two equal parts. The other options swap or confuse these processes.",
+     "phase": "observe",
+     "placement": "Observe: Expert group 3 - Budding in yeast and binary fission in bacteria"
+    },
+    {
+     "prompt": "Before a body cell divides by mitosis, its DNA is copied during interphase. Why is this important?",
+     "choices": [
+      "So that food can be changed into new cells",
+      "So that each daughter cell receives only half of the instructions",
+      "So that the cell can become bigger before dividing",
+      "So that each of the two daughter cells receives a full set of identical instructions"
+     ],
+     "correctIndex": 3,
+     "rationale": "Copying DNA means each daughter cell receives a complete, identical set of chromosomes. This is how every new cell gets the right instructions.",
+     "phase": "explain",
+     "placement": "Explain: Discussion diamond - 'DNA is copied before division' and the CER Final Explanation"
+    },
+    {
+     "prompt": "Banana plantlets are grown in a laboratory from one small piece of banana tissue. Which idea from cell division does this show?",
+     "choices": [
+      "Plants can only form from the joining of two gametes",
+      "The piece of tissue grows bigger but its cells never divide",
+      "Cells from one piece of tissue can divide repeatedly by mitosis and form a whole new plant",
+      "Meiosis in the tissue makes many new plantlets"
+     ],
+     "correctIndex": 2,
+     "rationale": "Tissue culture shows that a single cell or piece of tissue can divide again and again by mitosis, and its cells can specialise to form a whole organism.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: sorting the question 'Can plants like bananas be grown from one cell?'"
+    },
+    {
+     "prompt": "A group's final model of how a child grows says, \"Meiosis makes the new muscle and bone cells needed for growth.\" What correction should the group make?",
+     "choices": [
+      "Meiosis is correct, because it makes four identical body cells",
+      "Growth happens only by cells getting bigger, so meiosis and mitosis should be removed",
+      "Growth happens by binary fission, which makes the new muscle and bone cells",
+      "Growth happens by mitosis; meiosis makes gametes with half the chromosome number"
+     ],
+     "correctIndex": 3,
+     "rationale": "Body cells for growth are made by mitosis, which gives identical daughter cells. Meiosis makes gametes (sperm and egg) with half the chromosomes. These join at fertilisation to form the zygote.",
+     "phase": "model",
+     "placement": "Model: gallery walk and Model Checklist (zygote from gametes by meiosis; mitosis for growth)"
+    }
+   ]
+  }
+ ]
+}

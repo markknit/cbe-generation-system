@@ -138,11 +138,18 @@ def validate_lesson_quiz(quiz: list, lesson: dict | None, cfg: dict) -> tuple[li
         ch = q.get("choices") or []
         if len(ch) != cfg["choices"]:
             errs.append(f"{tag}: {len(ch)} choices")
-        # Case/whitespace/trailing-punctuation only: maths choices differ by
+        # Whitespace/trailing-punctuation only: maths choices differ by
         # symbols ("sin θ / cos θ" vs "sin θ × cos θ"), which must survive.
-        norm = [re.sub(r"\s+", " ", str(c)).strip().rstrip(".").lower() for c in ch]
-        if len(set(norm)) != len(norm):
+        # Case is NOT folded for the hard check: binomial-nomenclature questions
+        # test exactly that ("Zea mays" vs "Zea Mays" vs "zea mays"), and folding
+        # it failed every Grade 11 Taxonomy lesson (2026-10-01). Case-only
+        # differences are a warning so other subjects still get a look.
+        exact = [re.sub(r"\s+", " ", str(c)).strip().rstrip(".") for c in ch]
+        norm = [c.lower() for c in exact]
+        if len(set(exact)) != len(exact):
             errs.append(f"{tag}: duplicate choices")
+        elif len(set(norm)) != len(norm):
+            warns.append(f"{tag}: choices differ only in capitalisation (fine if that is what the question tests)")
         if any(not c for c in norm):
             errs.append(f"{tag}: empty choice")
         ci = q.get("correctIndex")

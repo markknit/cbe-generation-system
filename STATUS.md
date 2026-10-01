@@ -62,7 +62,7 @@ right now" checkable in one place, not reconstructed from memory.
 | Grade-aware pipeline (plumbing) | **Done — 2026-09-19 (`a546ee3`, `77f3591`, `da26382`)** | `build_docs.js` + `generate_substrand.py` + `generate_teacher_index.js` no longer assume Grade 10. `--grade` is now **required** on `generate_substrand.py` with no default. Highest-severity fix: `SUBSTRAND_NAMES` was keyed by subject only, so a Grade 11 run of `biology 2.1` would have silently generated a full lesson sequence about Grade 10's "Plant Nutrition" while labelling it GRADE 11 (Grade 11 reuses the same strand numbering with different topics). Pure plumbing — no curriculum content involved. Origin: partner's Lesson3 editor flagged 3 hardcoded `GRADE 10` strings; tracing them found the larger problem. Handoff: `HANDOFF_grade_aware_pipeline_2026-09-18.md`. |
 | Grade 10 output tree left flat — migration **deferred**, not forgotten | **Deferred 2026-09-19 (Mark's call), with a trigger** | New grades emit `v2/Grade{N}/<Subject>/...`; Grade 10 stays at `v2/<Subject>/...`. The handoff (§6) called for migrating Grade 10 too; that was reconsidered because Grade 10 is stable and moving it churns **teacher-visible Google Drive paths** (job 2 is `/MIR` — a migration deletes and re-uploads all 255 PDFs) for no present benefit. **Revisit at the next full-corpus regeneration** — the pending Kenyan-terminology pass is the likely trigger — so the Drive re-sync is paid once, not twice. The exception lives in exactly two places, both commented: `_v2_output_dir()` in `generate_substrand.py` (path construction) and `collectSubjectRoots()` in `generate_teacher_index.js` (the walker). **If you migrate, both simplify — delete the branches, don't add a third shape.** |
 | Grade 11 Biology — curriculum extraction + sub-strand inventory | **Done — 2026-09-19 (`a3bcd6f`, `4539435`)** | OCR'd with the new `scripts/extract_curriculum_ocr.py` (17 slices @ 200 dpi, tesseract 5.3.4 `--psm 4`) → `data/raw/curriculum_text/grade11_biology.txt`, 53,129 chars / 1,281 lines, no dedup needed. Wired into `CURRICULUM_TEXT_MAP[11]['biology']`. **All 10 sub-strands hand-verified from rendered page images** (page ix summary table), not from OCR text — closes the handoff's §8 open item for Biology. Grade 11 has **10** sub-strands to Grade 10's 9, and **every shared number is a different topic** (2.1 = Reproduction in Plants, not Plant Nutrition). Pipeline confirmed end-to-end up to the API boundary. |
-| Grade 11 STEM expansion — **pilot generation run** | **Pilot done 2026-10-01 (Bio 2.1, Sonnet 5.5) — awaiting Mark's review** | Output: `data/outputs/v2/Grade11/Biology/SS2.1_Reproduction_in_Plants/` (docx + JSON + **quizzes for all 8 lessons in `quiz/`**, 59 questions; no PDFs yet, so it is not in the teacher index). 8 lessons, 9/9 batch requests OK, link gate PASS after the phase-label repair below, contract PASS. **~$0.41** including the UNIT call (about $0.05 per lesson). A Sonnet 4.6 comparison of the same sub-strand is in `data/outputs/compare_sonnet46/` (evaluation only; outside `v2/`, so it is not in PDFs, the index or the Drive sync). Next: Mark reviews both, then decides on bulk Grade 11 Biology (about $4 for the other 9 sub-strands). |
+| Grade 11 Biology — **full generation** | **Done 2026-10-01 — all 10 sub-strands, 78 lessons + quizzes; awaiting Mark's review** | Layout (Mark, 2026-10-01): `v2/Grade11/Biology/Lesson_Plans/SS<id>_<name>/` (3 docx + `_data.json` + `_quiz.json`) and `v2/Grade11/Biology/Quizzes/SS<id>_<name>/` (decks + answer keys). All 10 pass the link gate (0/0/0/0); `validate_corpus.js` PASS; 95/95 exports partner-schema valid; quizzes 78/78 lessons, 576 questions, 0 failures. Lessons ~$3.06 for the 9 new sub-strands (+$0.41 pilot), quizzes ~$2.30. **No PDFs and no teacher-index entry yet**: run `generate_pdfs.js` + `generate_teacher_index.js` after Mark approves (and re-run `build_quiz.js` first; it re-creates the `v2/PDF/Grade11` answer-key copies, which were deleted again). Review flags: 1.4 L7–10 and 2.2 L8–10 had no teacher spine row; 2.2 L7 'Plant Hormones' and L9 'Role of Hormones' may overlap. |
 | Other five Grade 11 STEM subjects | **3 of 5 ready 2026-10-01; 2 blocked on replacement source PDFs** | **Ready** (OCR'd, sub-strand lists hand-verified against each PDF's rendered summary-table image, in `SUBSTRAND_NAMES[11]` + `CURRICULUM_TEXT_MAP[11]`, every sub-strand slices): Chemistry 6, Physics 13, Core Mathematics 17 (incl. the new 4.0 Calculus: 4.1 Functions, 4.2 Differentiation I). No templates for these yet, so they would generate from the curriculum alone. **Blocked: General Science and Essential Mathematics.** Their `CBE_Curriculums/Grade 11/STEM/` October 2025 PDFs are broken screen captures that repeat the 'National Goals of Education' front matter and never reach the curriculum tables (images viewed directly). Mark needs replacement copies from KICD. |
 | Non-STEM Grade 11 sources | Not found — out of scope | `CBE_Curriculums/Grade 11/` has only a `STEM/` subfolder; no `General/` counterpart to Grade 10's (English, History and Citizenship). Needs sourcing before any non-STEM Grade 11 work. |
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
@@ -1841,3 +1841,28 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
     must not end a section. A case-insensitive first try cut Biology 2.1 short, and
     comparing it against the pilot's 3,101-char input caught it.
   - All 46 sub-strands across the 4 usable subjects slice to 1.7k–5.4k chars.
+
+## Updates — 2026-10-01 (fourth entry) — Grade 11 Biology complete; layout + attribution changes
+- **Mark's decisions:**
+  - (1) Attribution block moved: after the sub-strand overview, just before Lesson 1, in
+    the Lesson Sequence, and at the end of the Final Explanation and Summary Table.
+    The per-lesson footers stay. The code is shared (`build_docs.js`), so Grade 10 docx
+    change on their next render. **Not re-rendered yet.**
+  - (2) Grade 11+ layout: parallel `Lesson_Plans/` and `Quizzes/` trees per subject
+    (`_v2_output_dir()`, `build_quiz.js`, `generate_teacher_index.js` updated). Grade 10
+    keeps flat folders and `quiz/` subfolders. The 2.1 pilot was `git mv`'d into the new
+    layout and re-rendered.
+- **Generation:** the 9 remaining sub-strands were submitted as batches (`g11_bio_<x>_<y>`,
+  lesson counts from the template forms: 8, 9, 8, 10, 10, 5, 7, 6, 7). 79/79 requests
+  succeeded, with no stubs, refusals or truncations. All pass the gate first time: the
+  phase enum works (no SHAPE failures, compared with 40 in the pilot).
+- **Quizzes:** one 70-lesson batch, 66 valid. Failures:
+  - 3 Taxonomy I lessons failed "duplicate choices". **This was a validator false
+    positive:** binomial-nomenclature questions offer "Zea mays" / "Zea Mays" /
+    "zea mays", and the check ignored case. The duplicate check is now case-sensitive,
+    and case-only differences are a warning. Same class as the Phase 3 validator fixes.
+    The whole corpus re-validated with 0 failures.
+  - 1 lesson (3.1 L6) had 11 questions.
+  - All 4 regenerated live and are now valid.
+- Spot checks: 5/5 quiz answers correct across 1.2, 1.4, 2.3, 3.2 and 3.3.
+- Costs are in `logs/api_cost_log.md` and `logs/quiz_generation/usage.jsonl`.
