@@ -129,6 +129,35 @@ def log_run_cost(output_name: str, mode: str) -> None:
 
 # ── Curriculum extraction ─────────────────────────────────────────────────────
 
+def slice_curriculum_text(text: str, substrand_id: str) -> str:
+    """Cut one sub-strand's section out of a whole-curriculum OCR text file.
+
+    In the KICD design tables each sub-strand's section opens with a line that
+    holds its number and "By the end of the sub strand"; the section runs to the
+    next such line for a different sub-strand. Returns '' if not found, so the
+    caller can fall back to the full text and say so.
+    """
+    lines = text.split('\n')
+    starts = []
+    for i, l in enumerate(lines):
+        if re.search(r'By the end of the sub', l, re.I):
+            # The line also carries the strand number ("2.0 Anatomy 2.1 ..."); the
+            # sub-strand is the first number that isn't a strand (X.0).
+            ids = [n for n in re.findall(r'\b\d{1,2}\.\d{1,2}\b', l) if not n.endswith('.0')]
+            if ids:
+                starts.append((i, ids[0]))
+    # Duplicated OCR page slices repeat a section opener (seen for 3.2); the
+    # first occurrence starts the section, the next *different* id ends it.
+    begin = next((i for i, sid in starts if sid == substrand_id), None)
+    if begin is None:
+        return ''
+    end = next((i for i, sid in starts if i > begin and sid != substrand_id), len(lines))
+    # Keep the table's column-header line, which sits just above the opener.
+    if begin > 0 and 'Specific Learning' in lines[begin - 1]:
+        begin -= 1
+    return '\n'.join(lines[begin:end]).strip()
+
+
 def extract_curriculum_pdf(pdf_path: str, substrand_id: str) -> str:
     """Extract sub-strand section from KICD curriculum PDF."""
     try:
@@ -171,6 +200,160 @@ def extract_curriculum_pdf(pdf_path: str, substrand_id: str) -> str:
     raw = re.sub(r'  +', ' ', raw)        # collapse multiple spaces
     raw = re.sub(r'\n +\n', '\n\n', raw)  # clean blank lines
     return raw.strip()
+
+
+# Label prefixes in the "CBE PHENOMENON-DRIVEN LESSON SEQUENCE — Teacher
+# Planning Template" form (Grade 11 templates, 2026-09-30). Matched against the
+# first line of the label cell, lower-cased; the value is the next cell.
+_FORM_FIELDS = [
+    ('number of lessons', 'lesson_count_text'),
+    ('periods per lesson', 'periods'),
+    ('kicd learning outcomes', 'learning_outcomes'),
+    ('kicd key inquiry', 'key_inquiry'),
+    ('key concepts', 'key_concepts'),
+    ('the anchoring phenomenon', 'phenomenon'),
+    ('the driving question', 'driving_question'),
+    ('why this will grab', 'hook'),
+    ('how students show their first thinking', 'first_thinking'),
+    ('prior knowledge', 'prior_knowledge'),
+    ('sense-making strategies', 'sensemaking'),
+    ('formative assessment', 'formative'),
+    ('final product', 'final_product'),
+    ('practical constraints', 'constraints'),
+    ('core competencies', 'competencies'),
+    ('core values', 'values'),
+    ('pertinent', 'pcis'),
+    ('career', 'careers'),
+]
+
+
+def _parse_planning_form(rows: list) -> dict:
+    """Parse the Teacher Planning Template form (Parts 1-8) from table rows.
+
+    The Grade 10 scheme-of-work templates keep their content in paragraphs;
+    this form keeps almost all of it in tables, including the Part 4 lesson
+    spine ("the part AI cannot invent"). Returns {} for anything that is not
+    this form, so Grade 10 templates are unaffected.
+    """
+    def first_line(c):
+        return c.split('\n', 1)[0].strip().lower()
+    if not any(r and 'LESSON SPINE' in r[0].upper() for r in rows):
+        return {}
+
+    form, spine, part = {}, [], ''
+    spine_cols = []
+    for r in rows:
+        head = r[0].strip()
+        if head.upper().startswith('PART '):
+            part = head.split('·')[0].strip().upper()      # e.g. 'PART 4', 'PART 6B'
+            continue
+        if part == 'PART 4':
+            if first_line(head) == 'lesson' and len(r) > 1:
+                spine_cols = [first_line(c) for c in r[1:]]
+                continue
+            if head.lower().startswith('e.g') or head.lower().startswith('one row per lesson') or len(r) < 2:
+                continue
+            cols = spine_cols or [f'col{i}' for i in range(1, len(r))]
+            # Teachers fill the Lesson cell three ways: "4"; "2. Kingdom
+            # Plantae" (number + title); or blank/garbled (e.g. "1123" from
+            # Word list numbering), where the row's cells shift left because
+            # empty cells are dropped. Number those rows in order.
+            m = re.match(r'(\d{1,2})(?!\d)\.?\s*(.*)', head, re.S)
+            if len(r) == len(cols) + 1 and m:
+                number, title, cells = int(m.group(1)), m.group(2).strip(), r[1:]
+            elif len(r) == len(cols) + 1:
+                number, title, cells = len(spine) + 1, '' if re.fullmatch(r'\d+', head) else head, r[1:]
+            else:
+                number, title, cells = len(spine) + 1, '', r
+            row = {'number': number, 'cells': dict(zip(cols, cells))}
+            if title:
+                row['cells'] = {'lesson title': title, **row['cells']}
+            spine.append(row)
+            continue
+        if part == 'PART 6':
+            if len(r) == 1 and not head.lower().startswith('write out'):
+                form['final_explanation'] = (form.get('final_explanation', '') + '\n' + head).strip()
+            continue
+        if part == 'PART 8':
+            if len(r) == 1:
+                form['anything_else'] = (form.get('anything_else', '') + '\n' + head).strip()
+            continue
+        if len(r) >= 2:
+            label = first_line(head)
+            for prefix, key in _FORM_FIELDS:
+                if label.startswith(prefix) and key not in form:
+                    form[key] = r[1].strip()
+                    break
+    m = re.search(r'\d{1,2}', form.get('lesson_count_text', ''))
+    if m:
+        form['lesson_count'] = int(m.group(0))
+    elif spine:
+        form['lesson_count'] = len(spine)   # "Number of lessons" left blank: the spine is the plan
+    form['spine'] = spine
+    return form
+
+
+def _spine_row_text(row: dict) -> str:
+    return '\n'.join(f'- {k.rstrip("?:")}: {v}' for k, v in row['cells'].items())
+
+
+def template_unit_context(template: dict) -> str:
+    """Extra UNIT-prompt sections from a planning-form template ('' otherwise)."""
+    f = template.get('form') if template else None
+    if not f:
+        return ''
+    parts = []
+    for key, title in [('driving_question', "DRIVING QUESTION (the teacher's; keep its meaning)"),
+                       ('key_inquiry', 'KICD KEY INQUIRY QUESTIONS (as entered by the teacher)'),
+                       ('key_concepts', 'KEY CONCEPTS STUDENTS MUST END UP UNDERSTANDING'),
+                       ('hook', 'WHY THIS PHENOMENON WILL GRAB THESE STUDENTS'),
+                       ('prior_knowledge', 'PRIOR KNOWLEDGE AND MISCONCEPTIONS'),
+                       ('competencies', 'WHERE CORE COMPETENCIES HAPPEN (teacher notes)'),
+                       ('values', 'WHERE CORE VALUES HAPPEN (teacher notes)'),
+                       ('pcis', 'PERTINENT AND CONTEMPORARY ISSUES (teacher notes)'),
+                       ('careers', 'CAREER CONNECTIONS'),
+                       ('constraints', 'PRACTICAL CONSTRAINTS TO RESPECT')]:
+        if f.get(key):
+            parts.append(f'TEACHER TEMPLATE — {title}:\n{f[key]}')
+    if f.get('spine'):
+        parts.append("TEACHER TEMPLATE — LESSON SPINE (storylineThread MUST follow this, "
+                     "one line per lesson, same order):\n" +
+                     '\n'.join(f"Lesson {r['number']}: " + ' | '.join(r['cells'].values()) for r in f['spine']))
+    return '\n\n'.join(parts)
+
+
+def template_lesson_context(template: dict, num: int) -> str:
+    """The lesson prompt's template section. Planning-form templates give this
+    lesson's own spine row; older templates keep the generic evidence text."""
+    f = template.get('form') if template else None
+    if not f:
+        return f"TEACHER TEMPLATE — EVIDENCE ACTIVITIES:\n{template.get('evidence_activities', '') if template else ''}"
+    parts = []
+    row = next((r for r in f.get('spine', []) if r['number'] == num), None)
+    if row:
+        parts.append("TEACHER'S PLAN FOR THIS LESSON (build the lesson around this; "
+                     "keep its evidence activity and resources):\n" + _spine_row_text(row))
+    for key, title in [('sensemaking', 'SENSE-MAKING STRATEGIES THE TEACHER WANTS USED'),
+                       ('formative', 'FORMATIVE ASSESSMENT THE TEACHER WANTS USED'),
+                       ('constraints', 'PRACTICAL CONSTRAINTS TO RESPECT'),
+                       ('anything_else', 'OTHER TEACHER NOTES')]:
+        if f.get(key):
+            parts.append(f'{title}:\n{f[key]}')
+    if num == 1 and f.get('first_thinking'):
+        parts.append(f"HOW STUDENTS SHOW THEIR FIRST THINKING:\n{f['first_thinking']}")
+    return '\n\n'.join(parts)
+
+
+def template_fe_context(template: dict) -> str:
+    """The teacher's own model final explanation, from a planning-form template."""
+    f = template.get('form') if template else None
+    if not f or not f.get('final_explanation'):
+        return ''
+    out = ("\nTEACHER'S MODEL FINAL EXPLANATION (scientifically authoritative; base the "
+           "exemplars on it, in student-accessible language):\n" + f['final_explanation'])
+    if f.get('final_product'):
+        out += f"\n\nFINAL PRODUCT STUDENTS WILL PRODUCE:\n{f['final_product']}"
+    return out + '\n'
 
 
 def extract_template_docx(docx_path: str) -> dict:
@@ -261,6 +444,15 @@ def extract_template_docx(docx_path: str) -> dict:
             if 'FINAL EXPLANATION' in cell.upper() and i + 1 < len(row):
                 result['final_explanation_notes'] = row[i + 1][:400]
                 break
+
+    form = _parse_planning_form(result['table_content'])
+    if form:
+        result['form'] = form
+        result['phenomenon'] = form.get('phenomenon', result['phenomenon'])
+        result['learning_outcomes'] = form.get('learning_outcomes', '')
+        result['lesson_sequence'] = '\n'.join(
+            f"Lesson {r['number']}: {next(iter(r['cells'].values()), '')}" for r in form['spine'])
+        result['final_explanation_notes'] = form.get('final_explanation', '')[:400]
 
     return result
 
@@ -538,7 +730,7 @@ def generate_unit(curriculum_text: str, template: dict, args) -> dict | None:
 
     prompt = f"""Generate the sub-strand overview (UNIT) data for:
 Subject: {_subject_display(args.subject)}
-Grade: 10
+Grade: {args.grade}
 Sub-strand: {args.substrand} — {args.substrand_name}
 Number of lessons: {args.lessons}
 
@@ -553,6 +745,8 @@ TEACHER TEMPLATE — LESSON SEQUENCE OUTLINE:
 
 TEACHER TEMPLATE — LEARNING OUTCOMES:
 {template.get('learning_outcomes', '')}
+
+{template_unit_context(template)}
 
 Return ONLY this JSON structure (no other text):
 {{
@@ -645,8 +839,7 @@ Storyline thread for this lesson: {_get_lesson_storyline(unit, num)}
 KICD CURRICULUM CONTENT:
 {curriculum_text}
 
-TEACHER TEMPLATE — EVIDENCE ACTIVITIES:
-{template.get('evidence_activities', '')}
+{template_lesson_context(template, num)}
 
 {prev_context}
 
@@ -692,7 +885,8 @@ def _get_lesson_storyline(unit: dict, num: int) -> str:
 
 def generate_final_explanation(curriculum_text: str, unit: dict,
                                 lessons: list, args,
-                                fe_template: dict | None = None) -> dict | None:
+                                fe_template: dict | None = None,
+                                lesson_template: dict | None = None) -> dict | None:
     """Generate Final Explanation document data."""
     print("  Generating Final Explanation...")
 
@@ -716,7 +910,7 @@ Phenomenon: {unit.get('phenomenon', '')}
 
 Lesson sequence completed:
 {lesson_titles}
-{fe_template_section}
+{fe_template_section}{template_fe_context(lesson_template)}
 
 Return ONLY this JSON:
 {{
@@ -1172,9 +1366,20 @@ def find_v2_templates(grade: int, subject: str, substrand_id: str) -> dict:
 
 def determine_lesson_count(curriculum_text: str, lesson_template: dict,
                             substrand_id: str, subject: str, grade: int) -> tuple:
-    """Return (count, source) where source is 'template_regex'|'pre_pass'|'default'.
+    """Return (count, source); source is 'template_form'|'template_regex'|'pre_pass'|'default'.
     Clamps result to [6, 14].
     """
+    # 0. Planning-form templates state it explicitly ("Number of lessons").
+    #    Checked first because the form's printed instructions say "Most
+    #    sub-strands run 5 to 8 lessons", which the regex below would read as 8.
+    #    The teacher's figure wins even outside 6-14 (it follows KICD time
+    #    allocation), with a warning.
+    form_count = (lesson_template or {}).get('form', {}).get('lesson_count')
+    if form_count:
+        if not 6 <= form_count <= 14:
+            print(f"  NOTE: template asks for {form_count} lessons, outside the usual 6-14; using it.")
+        return (form_count, 'template_form')
+
     # 1. Regex on template paragraph text
     if lesson_template:
         all_text = ' '.join(lesson_template.get('paragraphs', []))
@@ -1345,8 +1550,7 @@ def build_batch_requests(curriculum_text: str, lesson_template: dict,
             f"Phenomenon: {unit.get('phenomenon', '')}\n"
             f"Storyline thread for this lesson: {_get_lesson_storyline(unit, lesson_num)}\n\n"
             f"KICD CURRICULUM CONTENT:\n{curriculum_text}\n\n"
-            f"TEACHER TEMPLATE — EVIDENCE ACTIVITIES:\n"
-            f"{lesson_template.get('evidence_activities', '')}\n\n"
+            f"{template_lesson_context(lesson_template, lesson_num)}\n\n"
             f"RULES:\n"
             f"- All learner experiences must connect back to the phenomenon\n"
             f"- Teacher moves must include specific quoted phrases, WAIT TIME (10-15 seconds), cold-call counts\n"
@@ -1391,7 +1595,7 @@ def build_batch_requests(curriculum_text: str, lesson_template: dict,
         f"Driving question: {unit.get('drivingQuestion', '')}\n"
         f"Phenomenon: {unit.get('phenomenon', '')}\n"
         f"Number of lessons in sequence: {args.lessons}\n"
-        f"{fe_template_section}\n"
+        f"{fe_template_section}{template_fe_context(lesson_template)}\n"
         f"Return the Final Explanation as JSON matching the provided schema, with 4-5 sections and 4-5 rubric criteria."
     )
 
@@ -1597,6 +1801,17 @@ def main():
     if args.subject in CURRICULUM_TEXT_MAP.get(args.grade, {}):
         curriculum_text = (PROJECT_ROOT / CURRICULUM_TEXT_MAP[args.grade][args.subject]).read_text(
             encoding='utf-8', errors='replace')
+        # Grade 11+: send only this sub-strand's section (the whole Grade 11
+        # Biology file is 53k chars across 10 sub-strands, which invites SLOs
+        # from the wrong one). Grade 10's text-source subjects were generated
+        # from the full text and are left that way.
+        if args.grade != 10:
+            _section = slice_curriculum_text(curriculum_text, args.substrand)
+            if _section:
+                curriculum_text = _section
+            else:
+                print(f"  WARNING: sub-strand {args.substrand} section not found in curriculum "
+                      f"text; sending the full text")
     else:
         _pdf_rel = CURRICULUM_PDF_MAP.get(args.grade, {}).get(args.subject)
         if not _pdf_rel:
@@ -1761,7 +1976,8 @@ def main():
 
     # FINAL EXPLANATION
     fe = generate_final_explanation(curriculum_text, unit, lessons, args,
-                                     fe_template=fe_template)
+                                     fe_template=fe_template,
+                                     lesson_template=lesson_template)
     if fe:
         print("  Final Explanation generated ✓")
     else:

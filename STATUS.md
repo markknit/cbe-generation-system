@@ -62,7 +62,7 @@ right now" checkable in one place, not reconstructed from memory.
 | Grade-aware pipeline (plumbing) | **Done — 2026-09-19 (`a546ee3`, `77f3591`, `da26382`)** | `build_docs.js` + `generate_substrand.py` + `generate_teacher_index.js` no longer assume Grade 10. `--grade` is now **required** on `generate_substrand.py` with no default. Highest-severity fix: `SUBSTRAND_NAMES` was keyed by subject only, so a Grade 11 run of `biology 2.1` would have silently generated a full lesson sequence about Grade 10's "Plant Nutrition" while labelling it GRADE 11 (Grade 11 reuses the same strand numbering with different topics). Pure plumbing — no curriculum content involved. Origin: partner's Lesson3 editor flagged 3 hardcoded `GRADE 10` strings; tracing them found the larger problem. Handoff: `HANDOFF_grade_aware_pipeline_2026-09-18.md`. |
 | Grade 10 output tree left flat — migration **deferred**, not forgotten | **Deferred 2026-09-19 (Mark's call), with a trigger** | New grades emit `v2/Grade{N}/<Subject>/...`; Grade 10 stays at `v2/<Subject>/...`. The handoff (§6) called for migrating Grade 10 too; that was reconsidered because Grade 10 is stable and moving it churns **teacher-visible Google Drive paths** (job 2 is `/MIR` — a migration deletes and re-uploads all 255 PDFs) for no present benefit. **Revisit at the next full-corpus regeneration** — the pending Kenyan-terminology pass is the likely trigger — so the Drive re-sync is paid once, not twice. The exception lives in exactly two places, both commented: `_v2_output_dir()` in `generate_substrand.py` (path construction) and `collectSubjectRoots()` in `generate_teacher_index.js` (the walker). **If you migrate, both simplify — delete the branches, don't add a third shape.** |
 | Grade 11 Biology — curriculum extraction + sub-strand inventory | **Done — 2026-09-19 (`a3bcd6f`, `4539435`)** | OCR'd with the new `scripts/extract_curriculum_ocr.py` (17 slices @ 200 dpi, tesseract 5.3.4 `--psm 4`) → `data/raw/curriculum_text/grade11_biology.txt`, 53,129 chars / 1,281 lines, no dedup needed. Wired into `CURRICULUM_TEXT_MAP[11]['biology']`. **All 10 sub-strands hand-verified from rendered page images** (page ix summary table), not from OCR text — closes the handoff's §8 open item for Biology. Grade 11 has **10** sub-strands to Grade 10's 9, and **every shared number is a different topic** (2.1 = Reproduction in Plants, not Plant Nutrition). Pipeline confirmed end-to-end up to the API boundary. |
-| Grade 11 STEM expansion — **pilot generation run** | **Blocked on two things, neither technical** | Everything upstream is ready. Blocked on (1) **API credits — the account currently has insufficient balance**, confirmed by a live call on 2026-09-19 that failed with `credit balance is too low`; this is exactly the precondition the handoff told us to confirm before the pilot; and (2) Mark's Grade 11 Biology templates, which go in `data/raw/CBE LESSON TEMPLATES/v2_owner_inventory/Grade11/Biology/SS<N.N>_<Grade 11 name>/` — **use the Grade 11 names, not Grade 10's**, or they will not be found. Neither blocks the other. Pilot command: `--grade 11 --subject biology --substrand 2.1`. Inspect the output before generating anything further. |
+| Grade 11 STEM expansion — **pilot generation run** | **Unblocked 2026-09-30 — ready, awaiting Mark's go-ahead to spend** | Credits topped up; Grade 11 Biology templates supplied (9 of 10; no 1.4 Cell Division) and filed under `v2_owner_inventory/Grade11/Biology/SS<id>_<Name>/`. They use the new **Teacher Planning Template** form, which the extractor could not read (it recovered only the phenomenon), so a form parser was added; see the 2026-09-30 fifth entry. Pilot: `--grade 11 --subject biology --substrand 2.1 --batch`, 8 lessons from the template, estimated ~$0.4–0.8 (ceiling ~$1.10). Inspect output before anything further. |
 | Other five Grade 11 STEM subjects | Not started | Chemistry, Physics, General Science, Core Mathematics, Essential Mathematics. Sources present in `CBE_Curriculums/Grade 11/STEM/`; extraction is now one command each (`scripts/extract_curriculum_ocr.py`), but **each still needs its own hand-verification pass against rendered pages** before entering `SUBSTRAND_NAMES`. Core Mathematics gains a new **Strand 4.0 (Calculus)** with no Grade 10 equivalent. Essential Mathematics is expected to show the same repeated-boilerplate defect as Grade 10 Core Maths — the script's fuzzy dedup handles it, but verify. |
 | Non-STEM Grade 11 sources | Not found — out of scope | `CBE_Curriculums/Grade 11/` has only a `STEM/` subfolder; no `General/` counterpart to Grade 10's (English, History and Citizenship). Needs sourcing before any non-STEM Grade 11 work. |
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
@@ -1689,3 +1689,46 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
   Windows-only.** Run `sync_to_drive.bat preview` first and check job 1
   lists `quiz\*.pptx`. Job 2 (no mask) already covers the 309 PDFs + 28
   HTML files.
+
+## Updates — 2026-09-30 (fifth entry) — Grade 11 Biology templates; pipeline fixes before the pilot
+- Mark pushed 9 Grade 11 Biology templates (`96e9f0d`) to `data/raw/Grade 11/Biology/`.
+  `git mv`'d to `data/raw/CBE LESSON TEMPLATES/v2_owner_inventory/Grade11/Biology/SS<id>_<Grade 11 name>/`,
+  which is where `find_v2_templates()` looks. All filenames matched the hand-verified
+  Grade 11 names. There is no template for 1.4 Cell Division, which will be generated
+  from the curriculum alone.
+- **The templates are a new form.** It's the "CBE Phenomenon-Driven Lesson Sequence —
+  Teacher Planning Template", Parts 1–8 in tables. `extract_template_docx()` was written
+  for the Grade 10 scheme-of-work layout and recovered only the phenomenon. It missed the
+  driving question, key concepts, prior knowledge, constraints, the teacher's model
+  final explanation, and the whole Part 4 lesson spine, which the form calls "the part
+  AI cannot invent". **Fixed before the pilot:**
+  - `_parse_planning_form()` reads Parts 1–8. It only activates when it finds a
+    "LESSON SPINE" table: 0 of the 74 Grade 10 templates.
+  - Each lesson prompt (live and batch) now gets **its own spine row**, plus the
+    teacher's sense-making, formative-assessment, constraint and other notes.
+    It used to get the same generic evidence text for every lesson.
+  - The UNIT prompt gets the driving question, KIQs, key concepts, hook, prior
+    knowledge, constraints, the competency/value/PCI/career notes, and the spine,
+    with the instruction "storylineThread MUST follow" it.
+  - The FE prompts get the teacher's Part 6 model explanation and final product.
+  - Lesson count comes from the form's "Number of lessons" entry. The old regex
+    would have read the form's printed hint "Most sub-strands run 5 to 8 lessons"
+    as 8 for every template. The teacher's figure wins even outside 6–14, with a
+    note. If the entry is blank, the spine length is used.
+- **Bug fixed: the UNIT prompt hardcoded `Grade: 10`.** The 2026-09-19 grade-aware
+  pass missed it. It now uses `args.grade`.
+- **Grade 11 curriculum is now sliced to the sub-strand** (`slice_curriculum_text()`,
+  Grade 11+ only). Before, the whole 53k-char OCR file went to every request. Sections
+  are now 2.5k–6.7k chars, found for all 10 sub-strands. Grade 10 text-source subjects
+  are unchanged.
+- Template data quality, for Mark (doesn't affect the 2.1 pilot):
+  - 2.2 says 10 lessons but its spine has 7 rows.
+  - 1.2 says "N/A" lessons, so its 9-row spine sets the count.
+  - 2.3 asks for 5 lessons, below the usual 6.
+  - 7 of 9 still print the blank form's "Grade 10" header. Harmless: the parser
+    ignores it, and the grade comes from `--grade`.
+  - 2.2's spine has blank or garbled lesson numbers, so rows are numbered in order.
+- Pilot requests built offline and priced with free `count_tokens`. Input tokens:
+  UNIT 6.2k, each lesson ~3.8k, FE 2.0k. Output, including thinking, is unknown
+  until the run. **Estimate ~$0.4–0.8; ceiling ~$1.10** if every request hit
+  `max_tokens` 16000.
