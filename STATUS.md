@@ -62,7 +62,7 @@ right now" checkable in one place, not reconstructed from memory.
 | Grade-aware pipeline (plumbing) | **Done — 2026-09-19 (`a546ee3`, `77f3591`, `da26382`)** | `build_docs.js` + `generate_substrand.py` + `generate_teacher_index.js` no longer assume Grade 10. `--grade` is now **required** on `generate_substrand.py` with no default. Highest-severity fix: `SUBSTRAND_NAMES` was keyed by subject only, so a Grade 11 run of `biology 2.1` would have silently generated a full lesson sequence about Grade 10's "Plant Nutrition" while labelling it GRADE 11 (Grade 11 reuses the same strand numbering with different topics). Pure plumbing — no curriculum content involved. Origin: partner's Lesson3 editor flagged 3 hardcoded `GRADE 10` strings; tracing them found the larger problem. Handoff: `HANDOFF_grade_aware_pipeline_2026-09-18.md`. |
 | Grade 10 output tree left flat — migration **deferred**, not forgotten | **Deferred 2026-09-19 (Mark's call), with a trigger** | New grades emit `v2/Grade{N}/<Subject>/...`; Grade 10 stays at `v2/<Subject>/...`. The handoff (§6) called for migrating Grade 10 too; that was reconsidered because Grade 10 is stable and moving it churns **teacher-visible Google Drive paths** (job 2 is `/MIR` — a migration deletes and re-uploads all 255 PDFs) for no present benefit. **Revisit at the next full-corpus regeneration** — the pending Kenyan-terminology pass is the likely trigger — so the Drive re-sync is paid once, not twice. The exception lives in exactly two places, both commented: `_v2_output_dir()` in `generate_substrand.py` (path construction) and `collectSubjectRoots()` in `generate_teacher_index.js` (the walker). **If you migrate, both simplify — delete the branches, don't add a third shape.** |
 | Grade 11 Biology — curriculum extraction + sub-strand inventory | **Done — 2026-09-19 (`a3bcd6f`, `4539435`)** | OCR'd with the new `scripts/extract_curriculum_ocr.py` (17 slices @ 200 dpi, tesseract 5.3.4 `--psm 4`) → `data/raw/curriculum_text/grade11_biology.txt`, 53,129 chars / 1,281 lines, no dedup needed. Wired into `CURRICULUM_TEXT_MAP[11]['biology']`. **All 10 sub-strands hand-verified from rendered page images** (page ix summary table), not from OCR text — closes the handoff's §8 open item for Biology. Grade 11 has **10** sub-strands to Grade 10's 9, and **every shared number is a different topic** (2.1 = Reproduction in Plants, not Plant Nutrition). Pipeline confirmed end-to-end up to the API boundary. |
-| Grade 11 STEM expansion — **pilot generation run** | **Unblocked 2026-09-30 — ready, awaiting Mark's go-ahead to spend** | Credits topped up; Grade 11 Biology templates supplied (9 of 10; no 1.4 Cell Division) and filed under `v2_owner_inventory/Grade11/Biology/SS<id>_<Name>/`. They use the new **Teacher Planning Template** form, which the extractor could not read (it recovered only the phenomenon), so a form parser was added; see the 2026-09-30 fifth entry. Pilot: `--grade 11 --subject biology --substrand 2.1 --batch`, 8 lessons from the template, estimated ~$0.4–0.8 (ceiling ~$1.10). Inspect output before anything further. |
+| Grade 11 STEM expansion — **pilot generation run** | **Pilot done 2026-10-01 (Bio 2.1, Sonnet 5.5) — awaiting Mark's review** | Output: `data/outputs/v2/Grade11/Biology/SS2.1_Reproduction_in_Plants/` (docx + JSON; no PDFs yet, so it is not in the teacher index). 8 lessons, 9/9 batch requests OK, link gate PASS after the phase-label repair below, contract PASS. **~$0.41** including the UNIT call (about $0.05 per lesson). A Sonnet 4.6 comparison of the same sub-strand is in `data/outputs/compare_sonnet46/` (evaluation only; outside `v2/`, so it is not in PDFs, the index or the Drive sync). Next: Mark reviews both, then decides on bulk Grade 11 Biology (about $4 for the other 9 sub-strands). |
 | Other five Grade 11 STEM subjects | Not started | Chemistry, Physics, General Science, Core Mathematics, Essential Mathematics. Sources present in `CBE_Curriculums/Grade 11/STEM/`; extraction is now one command each (`scripts/extract_curriculum_ocr.py`), but **each still needs its own hand-verification pass against rendered pages** before entering `SUBSTRAND_NAMES`. Core Mathematics gains a new **Strand 4.0 (Calculus)** with no Grade 10 equivalent. Essential Mathematics is expected to show the same repeated-boilerplate defect as Grade 10 Core Maths — the script's fuzzy dedup handles it, but verify. |
 | Non-STEM Grade 11 sources | Not found — out of scope | `CBE_Curriculums/Grade 11/` has only a `STEM/` subfolder; no `General/` counterpart to Grade 10's (English, History and Citizenship). Needs sourcing before any non-STEM Grade 11 work. |
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
@@ -1732,3 +1732,37 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
   UNIT 6.2k, each lesson ~3.8k, FE 2.0k. Output, including thinking, is unknown
   until the run. **Estimate ~$0.4–0.8; ceiling ~$1.10** if every request hit
   `max_tokens` 16000.
+
+## Updates — 2026-10-01 — Grade 11 Biology 2.1 pilot (Sonnet 5.5) + Sonnet 4.6 comparison
+- Mark synced the missing 1.4 Cell Division template (`403fe31`, into the old raw folder;
+  rebased onto the local filing commit and `git mv`'d into `SS1.4_Cell_Division/`). It parses:
+  10 lessons, but only **6 spine rows**, the same gap as 2.2 (10 lessons / 7 rows).
+- **Pilot:** `--grade 11 --subject biology --substrand 2.1 --output g11_bio_2_1 --batch`,
+  then `--collect ... --wait --run`. 8 lessons (from the template form), Sonnet 5.5, 9/9 OK.
+- **Comparison:** the same run on `claude-sonnet-4-6` as the project ran it before
+  2026-09-30 (no thinking), via an evaluation-only wrapper. The wrapper is kept beside
+  the output (`compare_sonnet46/.../run_sonnet46.py`), not in `src/`. The 4.6 data
+  module was moved out of `generators/data/` so `generate.js --all` never picks it up.
+- **Both failed the link gate on SHAPE (40 / 35).** Neither model used the canonical
+  phase labels ("Phase 1: Predict (about 15 minutes) - ...", "Predict Phase (15 minutes)").
+  The lesson schema allowed any string. The content order was right in all 16 lessons.
+  **Fixes:**
+  - **Root cause:** `LESSON_TOOL_SCHEMA` `phase` is now an `enum` of `CANONICAL_PHASES`,
+    which structured outputs enforces (schema accepted by `count_tokens`).
+  - **Repair:** relabelled by position after a keyword check at every position, through
+    `patch_lesson.js --force` (contract-validated), then re-rendered. Both now pass the
+    gate (0/0/0/0), and `validate_corpus.js` passes.
+  - The per-phase timings the models put in the labels were dropped; Grade 10 lessons
+    don't carry them either.
+- **Cost (logs/api_cost_log.md, collect step; the UNIT call adds about $0.04–0.06):**
+  Sonnet 5.5 $0.37 (batch 34.6k in / 58.3k out) vs Sonnet 4.6 $0.49 (25.2k / 50.5k).
+  **5.5 is about 25% cheaper despite thinking.** Its lower per-token price outweighs
+  the extra output.
+- **Quality, checked mechanically:** both reproduce all 5 KICD outcomes verbatim, use
+  the teacher's driving question, write safety notes for L2/L5 as the teacher asked,
+  and use Kenyan crops in all 8 lessons. 5.5 builds the teacher's 45–50-student constraint
+  into 8/8 lessons, against 4.6's 4/8. 4.6 is ~25% longer per lesson. In the one lesson
+  read closely (L3), 4.6 had two science errors and 5.5 had none: 4.6 called avocado
+  "Type A" protandrous (both types are protogynous) and gave passion fruit as the
+  heterostyly example (it is self-incompatible). This is not a full review; Mark and
+  the partner should read both.

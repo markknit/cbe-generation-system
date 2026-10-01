@@ -519,6 +519,9 @@ UNIT_TOOL_SCHEMA = {
                  "phenomenon", "drivingQuestion", "storylineThread"],
 }
 
+CANONICAL_PHASES = ["Predict Phase", "Observe Phase", "Explain Phase",
+                    "Driving Question Board (DQB) Creation", "Model Building Phase"]
+
 LESSON_TOOL_SCHEMA = {
     "type": "object", "additionalProperties": False,
     "properties": {
@@ -537,7 +540,11 @@ LESSON_TOOL_SCHEMA = {
             "type": "array",
             "items": {
                 "type": "object", "additionalProperties": False,
-                "properties": {"phase": _s(), "learnerExperience": _s(),
+                # enum, not free text: on 2026-09-30 both Sonnet 5.5 and 4.6 decorated
+                # labels ("Phase 1: Predict (about 15 minutes)"), which fails the
+                # contract and the link gate. Structured outputs enforces the enum.
+                "properties": {"phase": {"type": "string", "enum": CANONICAL_PHASES},
+                               "learnerExperience": _s(),
                                "teacherMoves": _s(), "sensemakingStrategy": _s(),
                                "formativeAssessment": _s()},
                 "required": ["phase", "learnerExperience", "teacherMoves",
