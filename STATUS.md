@@ -1,6 +1,6 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: 2026-09-30*
+*Last updated: 2026-10-01*
 
 ---
 
@@ -72,11 +72,12 @@ right now" checkable in one place, not reconstructed from memory.
 | `aresKeywords` missing on `phys_3_1` L6 | **Done — added 2026-08-02 (`9b33dce`)** | Only lesson in the corpus without it. **Correction to the earlier note here:** this did *not* mean "no ARES resource lookup" — `sections.js:151` falls back to `lesson.aresKeywords \|\| lesson.title`, so the lookup worked but on weaker terms than its siblings'. Keywords written from that lesson's own content. |
 | `scripts/sync_to_drive.bat` | **Now actually exists — written 2026-08-02** | It did not. `CLAUDE.md:95` listed it, and this file claimed twice (in the "Documentation drift" entry below, and in the 2026-07-04 log) that it was committed and its destinations were `grep`-able from jhm-spark. All three were false — no `.bat` was tracked or on disk. Written from the spec in `WORKFLOW.md` Step 8 + `docs/PDF_GENERATION.md`; masks verified against the real trees (255 docx + 85 json; 255 pdf + 1 html). Drive destinations now also in WORKFLOW.md's Environment Reference table, which `CLAUDE.md` already designated the single source of truth for sync destinations but which had no Drive rows. |
 | `patch_lesson.js --force` | Added 2026-08-02 (`9b33dce`) | For deliberately replacing a lesson whose content is *wrong* rather than *absent* (needed for the two phase repairs above). Skips only the stub-repair guard — **never** the contract validation. |
-| **Bounded project v2** (link-selection fix + Quick Check quizzes + attribution, then Grade 11 readiness) | **Phase 5 done 2026-09-30 *without* the remaining quizzes (Mark: review the 27 existing quizzes with the partner first); Phase 6 checks pass. Remaining quizzes (701 lessons, est. ~$21) deferred — generate, then rerun `build_quiz.js` + `generate_pdfs.js` + `generate_teacher_index.js`. Phase 7 docs done 2026-09-30; Drive sync is Mark's step on Windows. Phase 8 (Grade 11 readiness + one Grade 11 Biology pilot) next, and needs the pilot's go-ahead: the first live run of the Sonnet 5.5 lesson generator.** | Phase 3: quiz generator `src/generate_quiz.py` (structured outputs, per-lesson validation, seeded choice shuffle, batch + checkpoint), validator `scripts/validate_quiz.py`, renderer `generators/build_quiz.js` (validator-gated; QuickCheck .pptx, AnswerKey .html/.docx into `quiz/`; PDFs via `generate_pdfs.js`, now also .pptx), attribution `generators/lib/attribution.js` in all 3 docx + every lesson footer + decks + keys. Quiz data in separate `<prefix>_quiz.json` (schema in `docs/SCHEMA.md`). 5 sample lessons generated (Bio 2.1 L2, Phys 1.1 L2, Chem 3.1 L4, Maths 3.1 L4, anchor Phys 2.1 L1): 0 validator failures; 20/20 hand-checked answers correct. Sonnet 5.5 vs Opus 5.5 compared: similar quality, Sonnet kept the anchor lesson spoiler-free more strictly → Sonnet 5.5 stays default. API spend so far $1.68. Spec: `handoff_bundle_2026-09-29/HANDOFF_bounded_project_v2_2026-09-29.md`. Design approved: `DESIGN_link_selection_v2.md` (§7 = implementation differences). New matcher in `src/ares_recommender.py`, rules in `config/link_matching.yaml`, gate `scripts/check_resource_links.py` wired into `generate.js` (non-zero exit on answer-key / wrong-subject / dead link / contract failure). All 85 sub-strands re-rendered (docx + JSON; **PDFs NOT yet regenerated — Phase 5**). Gate: T1/T2/DEAD/SHAPE = 0/0/0/0 corpus-wide (was 45/166/45/0 across all phases). **Live-verified on demo.aresedu.dev: 1,707/1,707 distinct links OK** (`scripts/verify_links_live.py`). Web-module links now direct (the tracker page rejects non-`/kiwix/` targets). Strict-equivalent synonyms added per Mark. Handoff audit (predict): Tier 2 25→0, Tier 3 174→28; its Tier 1 reads 34→32 but **all 32 are "worked example" titles** matched by its bare `exam` regex (0 real answer keys). Lesson content unchanged (diff check: only `resourceLinks` differs, 85/85). Fill rate drops to 72–99% by subject: no-match cells now say so instead of showing a weak link; content-gap list in the 2026-09-29 session log. Link verification uses the ARES system disk mounted on jhm-spark (Kolibri DB + `/var/www/modules`). Attribution config moved to `config/attribution.yaml` with SeaVuria's Kenyan NGO no. 872-850A-BF11 added. Quiz model: **`claude-sonnet-5-5`** (confirmed on the account; it rejects forced `tool_choice`, so the quiz generator uses structured outputs). Autonomy (Mark): repair same-class issues, report at end. API credits added ($50). |
-| **Sonnet 5.5 minimum for all API calls** (Mark, 2026-09-30) | **Code done 2026-09-30 — lesson path not yet run live** | No code path defaults to `claude-sonnet-4-6` (or any 4.x model) any more. `src/generate_substrand.py` moved from forced `tool_choice` (which Sonnet 5.5 rejects with a 400) to structured outputs (`output_config.format`) for the live path and both batch request types; adaptive thinking, effort `high` (env `CLAUDE_EFFORT`), `max_tokens` 16000 because thinking counts against it; JSON read from the text block, since a thinking block can come first; refusals retried; count-schema `minimum`/`maximum` dropped (clamped in code). Batch collect still reads old `tool_use` results. `scripts/repair_stubs.py` and the May-era legacy scripts are also on 5.5, with a `content[0].text` fix and non-default `temperature` removed. Checked against the API with free `count_tokens` calls (all 5 schemas OK), **not** by a real generation. First Grade 11 pilot or repair will be the first live test; per-sub-strand cost (~$0.35 on 4.6 without thinking) needs re-measuring. |
+| **Bounded project v2** (link-selection fix + Quick Check quizzes + attribution, then Grade 11 readiness) | **Phase 5 done 2026-09-30 *without* the remaining quizzes (Mark: review the 27 existing quizzes with the partner first); Phase 6 checks pass. Remaining quizzes (701 lessons, est. ~$21) deferred — generate, then rerun `build_quiz.js` + `generate_pdfs.js` + `generate_teacher_index.js`. Phase 7 docs done 2026-09-30; Drive sync is Mark's step on Windows. Phase 8 in progress: Grade 11 Biology 2.1 pilot done 2026-10-01 (see the Grade 11 pilot row), awaiting Mark's review. Bulk Grade 11 needs a separate go-ahead.** | Phase 3: quiz generator `src/generate_quiz.py` (structured outputs, per-lesson validation, seeded choice shuffle, batch + checkpoint), validator `scripts/validate_quiz.py`, renderer `generators/build_quiz.js` (validator-gated; QuickCheck .pptx, AnswerKey .html/.docx into `quiz/`; PDFs via `generate_pdfs.js`, now also .pptx), attribution `generators/lib/attribution.js` in all 3 docx + every lesson footer + decks + keys. Quiz data in separate `<prefix>_quiz.json` (schema in `docs/SCHEMA.md`). 5 sample lessons generated (Bio 2.1 L2, Phys 1.1 L2, Chem 3.1 L4, Maths 3.1 L4, anchor Phys 2.1 L1): 0 validator failures; 20/20 hand-checked answers correct. Sonnet 5.5 vs Opus 5.5 compared: similar quality, Sonnet kept the anchor lesson spoiler-free more strictly → Sonnet 5.5 stays default. API spend so far $1.68. Spec: `handoff_bundle_2026-09-29/HANDOFF_bounded_project_v2_2026-09-29.md`. Design approved: `DESIGN_link_selection_v2.md` (§7 = implementation differences). New matcher in `src/ares_recommender.py`, rules in `config/link_matching.yaml`, gate `scripts/check_resource_links.py` wired into `generate.js` (non-zero exit on answer-key / wrong-subject / dead link / contract failure). All 85 sub-strands re-rendered (docx + JSON; PDFs regenerated in Phase 5, 2026-09-30: 309 PDFs). Gate: T1/T2/DEAD/SHAPE = 0/0/0/0 corpus-wide (was 45/166/45/0 across all phases). **Live-verified on demo.aresedu.dev: 1,707/1,707 distinct links OK** (`scripts/verify_links_live.py`). Web-module links now direct (the tracker page rejects non-`/kiwix/` targets). Strict-equivalent synonyms added per Mark. Handoff audit (predict): Tier 2 25→0, Tier 3 174→28; its Tier 1 reads 34→32 but **all 32 are "worked example" titles** matched by its bare `exam` regex (0 real answer keys). Lesson content unchanged (diff check: only `resourceLinks` differs, 85/85). Fill rate drops to 72–99% by subject: no-match cells now say so instead of showing a weak link; content-gap list in the 2026-09-29 session log. Link verification uses the ARES system disk mounted on jhm-spark (Kolibri DB + `/var/www/modules`). Attribution config moved to `config/attribution.yaml` with SeaVuria's Kenyan NGO no. 872-850A-BF11 added. Quiz model: **`claude-sonnet-5-5`** (confirmed on the account; it rejects forced `tool_choice`, so the quiz generator uses structured outputs). Autonomy (Mark): repair same-class issues, report at end. API credits added ($50). |
+| **Sonnet 5.5 minimum for all API calls** (Mark, 2026-09-30) | **Done — first live run 2026-10-01 (Grade 11 Bio 2.1 pilot), worked** | No code path defaults to `claude-sonnet-4-6` (or any 4.x model) any more. `src/generate_substrand.py` moved from forced `tool_choice` (which Sonnet 5.5 rejects with a 400) to structured outputs (`output_config.format`) for the live path and both batch request types; adaptive thinking, effort `high` (env `CLAUDE_EFFORT`), `max_tokens` 16000 because thinking counts against it; JSON read from the text block, since a thinking block can come first; refusals retried; count-schema `minimum`/`maximum` dropped (clamped in code). Batch collect still reads old `tool_use` results. `scripts/repair_stubs.py` and the May-era legacy scripts are also on 5.5, with a `content[0].text` fix and non-default `temperature` removed. Checked against the API with free `count_tokens` calls (all 5 schemas OK), **not** by a real generation. Live-tested by the 2026-10-01 pilot: 9/9 batch requests OK. Measured **~$0.05 per lesson**, about 25% cheaper than 4.6 without thinking on the same sub-strand. `LESSON_TOOL_SCHEMA` `phase` is now an enum (both models drifted on free-text labels). |
 | Presentations (`build_pptx.js`) | **Deferred — pending teacher review of the design** | Per the v2 handoff, do not build yet. Reference examples (not to build from): `handoff_bundle_2026-09-29/presentation_examples_deferred/` (4 answer keys, an illustrative Biology L2 deck, `build_*_L*.js` prototypes). Quiz questions already carry `phase` + `placement` so they can be inserted inline later without regeneration. |
 | Quiz review + remaining 701 Grade 10 quizzes | **Waiting on Mark + partner review of the 27 existing quizzes** | 8 sub-strands have quizzes (see the 2026-09-30 answer on which lessons). After review: `generate_quiz.py --batch --all --grade 10` (~$21), then `build_quiz.js`, `generate_pdfs.js`, `generate_teacher_index.js` (WORKFLOW.md Step 6q). **Also decide:** whether `index.html` should link the quiz decks/answer keys. It doesn't today, though they're in the PDF tree and on Drive. |
 | Partner: Lesson3 handling of `null` resource slots | **Open — covered in `PARTNER_CONTRACT_NOTES.md`** | Schema unchanged and all 85 exports validate, but 830/7,280 slots are now `null` (were 0) and 187 `direct_url`s are `/modules/` web links, not Kolibri. Send the partner the notes file. |
+| Grade 11 Biology template gaps (for the teachers) | **Open — needs teacher input before bulk Grade 11 Biology** | All 10 templates are filed and parse. **1.4 Cell Division: 10 lessons but 6 spine rows; 2.2: 10 lessons but 7 spine rows** (the lessons without a row get no teacher plan). 1.2 has 'N/A' lessons (its 9-row spine sets the count). 2.3 asks for 5 lessons (below the usual 6; the teacher's figure is used). 2.2's lesson-number cells are blank or garbled (rows are numbered in order). Harmless: 7 of the forms still print the blank form's 'Grade 10' header. |
 | New Grade 10 STEM subjects (General Science, Core Mathematics, Essential Mathematics) | **Done — Phase 3 complete, committed `f6d6fab`** | All 43 sub-strands / 344 lessons generated, docx+PDF regenerated, teacher index rebuilt, pushed to `origin/main`. Handoff: `HANDOFF_new_stem_subjects_2026-07-28.md` (Rev 2). See 2026-07-30 session-log entry below for the bugs found/fixed along the way (subject-label bug, 34 stub lessons, 1 missing FE). Replacement Core Mathematics source PDF referenced in the handoff was never supplied but generation proceeded — flag if a full curriculum-text re-check against it is still wanted. Summary/per-subject tables below still need the separate full refresh already flagged as stale. |
 
 ---
@@ -566,6 +567,29 @@ any instruction text it adds as a proposal, not as project policy.**
 
 ---
 
+### 2026-09-30 / 10-01 — four silent failures caught before the Grade 11 pilot
+
+- **A model upgrade is not a string swap.** Sonnet 5.5 rejects forced `tool_choice`,
+  and `generate_substrand.py` relied on it in 3 places. Changing `MODEL` alone would
+  have 400'd every lesson request. Check a new model's breaking changes (forced tool
+  use, thinking, sampling params, `content[0]` being a thinking block) before
+  switching, and validate request shapes with free `count_tokens` calls before spending.
+- **The template format changed with no error.** The Grade 11 templates use a new
+  Teacher Planning Template form (content in tables). The Grade 10 extractor
+  "succeeded", returning the phenomenon and empty strings for the rest, so a pilot
+  would have run without the teacher's lesson spine. Whenever new templates arrive,
+  run `extract_template_docx()` on one and look at what came back before generating.
+  The lesson-count regex would also have read the form's printed hint ("5 to 8
+  lessons") as the count.
+- **Free-text schema fields drift.** With `phase` as an unconstrained string, both
+  Sonnet 5.5 and 4.6 decorated the labels in every lesson. Only the link gate's SHAPE
+  check caught it. Any field with a fixed vocabulary should be an `enum` in the
+  generation schema, not just a check after the fact.
+- **The grade-aware pass (2026-09-19) missed a hardcoded `Grade: 10`** in the UNIT
+  prompt. A grep for literal `Grade 10` / `Grade: 10` in prompt strings is now part
+  of checking a new grade. Related: Grade 11 OCR curriculum text went in whole (all
+  10 sub-strands) until `slice_curriculum_text()` was added.
+
 ## Cost Tracking
 
 | Run | Sub-strands | Lessons | Mode | Approx. cost |
@@ -580,6 +604,9 @@ any instruction text it adds as a proposal, not as project policy.**
 | **Quiz pilot, Phase 4** (Sonnet 5.5): gensci 1.3, coremath 2.4, bio 1.2 | 3 | 22 | Batch | **$0.59 (measured; $0.027/lesson, 8.5k in / 3.6k out)** |
 | **Quizzes, rest of Grade 10** (estimate) | 82 | 701 | Batch | **~$19 (+~$2 retries) ≈ $21** |
 | Quizzes per Grade 11 sub-strand (planning) | 1 | ~8–10 | Batch | ~$0.23–0.27 per sub-strand |
+| **Grade 11 Bio 2.1 pilot, Sonnet 5.5** (lessons + FE + ST + UNIT) | 1 | 8 | Batch | **~$0.41 measured (~$0.05/lesson)** |
+| Grade 11 Bio 2.1 comparison, Sonnet 4.6 no thinking (evaluation only) | 1 | 8 | Batch | ~$0.55 measured |
+| Grade 11 Biology, remaining 9 sub-strands (estimate) | 9 | ~70 | Batch | **~$4** |
 
 ---
 ## Updates — 2026-06-18
@@ -1766,3 +1793,21 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
   "Type A" protandrous (both types are protogynous) and gave passion fruit as the
   heterostyly example (it is self-incompatible). This is not a full review; Mark and
   the partner should read both.
+
+## Updates — 2026-10-01 (second entry, triggered by `/update`) — continuity
+- Pushed the pilot (`1ffe869`). `origin/main` = local, clean tree.
+- **Waiting on Mark:**
+  - (1) Review the 2.1 pilot: Sonnet 5.5 in `v2/Grade11/...`, 4.6 in `compare_sonnet46/...`.
+  - (2) Go-ahead for the other 9 Grade 11 Biology sub-strands (~$4); get the 1.4/2.2
+    spines completed first.
+  - (3) Partner review of the 27 Grade 10 quizzes, then the remaining 701 (~$21).
+  - (4) Windows Drive sync with the new `*.pptx` job-1 mask (`preview` first).
+  - (5) Send `PARTNER_CONTRACT_NOTES.md` to the partner.
+- **Not done yet for the pilot:** no PDFs, so it isn't in the teacher index, and no
+  quizzes for it. Run `generate_pdfs.js` + `generate_teacher_index.js` only after
+  Mark approves the pilot, because the index is teacher-facing and Drive job 2 mirrors it.
+- Known Issues gained a 2026-09-30/10-01 entry: model upgrade ≠ string swap, silent
+  template-format change, free-text schema drift, and the missed hardcoded grade.
+- Don't re-check unless something changes: all 10 Grade 11 Biology templates parse;
+  Grade 10 templates (74) are untouched by the form parser; 85/85 Grade 10 exports
+  validate against the partner schema.
