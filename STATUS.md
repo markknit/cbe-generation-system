@@ -62,8 +62,8 @@ right now" checkable in one place, not reconstructed from memory.
 | Grade-aware pipeline (plumbing) | **Done — 2026-09-19 (`a546ee3`, `77f3591`, `da26382`)** | `build_docs.js` + `generate_substrand.py` + `generate_teacher_index.js` no longer assume Grade 10. `--grade` is now **required** on `generate_substrand.py` with no default. Highest-severity fix: `SUBSTRAND_NAMES` was keyed by subject only, so a Grade 11 run of `biology 2.1` would have silently generated a full lesson sequence about Grade 10's "Plant Nutrition" while labelling it GRADE 11 (Grade 11 reuses the same strand numbering with different topics). Pure plumbing — no curriculum content involved. Origin: partner's Lesson3 editor flagged 3 hardcoded `GRADE 10` strings; tracing them found the larger problem. Handoff: `HANDOFF_grade_aware_pipeline_2026-09-18.md`. |
 | Grade 10 output tree left flat — migration **deferred**, not forgotten | **Deferred 2026-09-19 (Mark's call), with a trigger** | New grades emit `v2/Grade{N}/<Subject>/...`; Grade 10 stays at `v2/<Subject>/...`. The handoff (§6) called for migrating Grade 10 too; that was reconsidered because Grade 10 is stable and moving it churns **teacher-visible Google Drive paths** (job 2 is `/MIR` — a migration deletes and re-uploads all 255 PDFs) for no present benefit. **Revisit at the next full-corpus regeneration** — the pending Kenyan-terminology pass is the likely trigger — so the Drive re-sync is paid once, not twice. The exception lives in exactly two places, both commented: `_v2_output_dir()` in `generate_substrand.py` (path construction) and `collectSubjectRoots()` in `generate_teacher_index.js` (the walker). **If you migrate, both simplify — delete the branches, don't add a third shape.** |
 | Grade 11 Biology — curriculum extraction + sub-strand inventory | **Done — 2026-09-19 (`a3bcd6f`, `4539435`)** | OCR'd with the new `scripts/extract_curriculum_ocr.py` (17 slices @ 200 dpi, tesseract 5.3.4 `--psm 4`) → `data/raw/curriculum_text/grade11_biology.txt`, 53,129 chars / 1,281 lines, no dedup needed. Wired into `CURRICULUM_TEXT_MAP[11]['biology']`. **All 10 sub-strands hand-verified from rendered page images** (page ix summary table), not from OCR text — closes the handoff's §8 open item for Biology. Grade 11 has **10** sub-strands to Grade 10's 9, and **every shared number is a different topic** (2.1 = Reproduction in Plants, not Plant Nutrition). Pipeline confirmed end-to-end up to the API boundary. |
-| Grade 11 STEM expansion — **pilot generation run** | **Pilot done 2026-10-01 (Bio 2.1, Sonnet 5.5) — awaiting Mark's review** | Output: `data/outputs/v2/Grade11/Biology/SS2.1_Reproduction_in_Plants/` (docx + JSON; no PDFs yet, so it is not in the teacher index). 8 lessons, 9/9 batch requests OK, link gate PASS after the phase-label repair below, contract PASS. **~$0.41** including the UNIT call (about $0.05 per lesson). A Sonnet 4.6 comparison of the same sub-strand is in `data/outputs/compare_sonnet46/` (evaluation only; outside `v2/`, so it is not in PDFs, the index or the Drive sync). Next: Mark reviews both, then decides on bulk Grade 11 Biology (about $4 for the other 9 sub-strands). |
-| Other five Grade 11 STEM subjects | Not started | Chemistry, Physics, General Science, Core Mathematics, Essential Mathematics. Sources present in `CBE_Curriculums/Grade 11/STEM/`; extraction is now one command each (`scripts/extract_curriculum_ocr.py`), but **each still needs its own hand-verification pass against rendered pages** before entering `SUBSTRAND_NAMES`. Core Mathematics gains a new **Strand 4.0 (Calculus)** with no Grade 10 equivalent. Essential Mathematics is expected to show the same repeated-boilerplate defect as Grade 10 Core Maths — the script's fuzzy dedup handles it, but verify. |
+| Grade 11 STEM expansion — **pilot generation run** | **Pilot done 2026-10-01 (Bio 2.1, Sonnet 5.5) — awaiting Mark's review** | Output: `data/outputs/v2/Grade11/Biology/SS2.1_Reproduction_in_Plants/` (docx + JSON + **quizzes for all 8 lessons in `quiz/`**, 59 questions; no PDFs yet, so it is not in the teacher index). 8 lessons, 9/9 batch requests OK, link gate PASS after the phase-label repair below, contract PASS. **~$0.41** including the UNIT call (about $0.05 per lesson). A Sonnet 4.6 comparison of the same sub-strand is in `data/outputs/compare_sonnet46/` (evaluation only; outside `v2/`, so it is not in PDFs, the index or the Drive sync). Next: Mark reviews both, then decides on bulk Grade 11 Biology (about $4 for the other 9 sub-strands). |
+| Other five Grade 11 STEM subjects | **3 of 5 ready 2026-10-01; 2 blocked on replacement source PDFs** | **Ready** (OCR'd, sub-strand lists hand-verified against each PDF's rendered summary-table image, in `SUBSTRAND_NAMES[11]` + `CURRICULUM_TEXT_MAP[11]`, every sub-strand slices): Chemistry 6, Physics 13, Core Mathematics 17 (incl. the new 4.0 Calculus: 4.1 Functions, 4.2 Differentiation I). No templates for these yet, so they would generate from the curriculum alone. **Blocked: General Science and Essential Mathematics.** Their `CBE_Curriculums/Grade 11/STEM/` October 2025 PDFs are broken screen captures that repeat the 'National Goals of Education' front matter and never reach the curriculum tables (images viewed directly). Mark needs replacement copies from KICD. |
 | Non-STEM Grade 11 sources | Not found — out of scope | `CBE_Curriculums/Grade 11/` has only a `STEM/` subfolder; no `General/` counterpart to Grade 10's (English, History and Citizenship). Needs sourcing before any non-STEM Grade 11 work. |
 | Non-STEM subject expansion | Not started | Planned after Grade 11 |
 | Partner-reported General Science defects (`safety<N>otes` key, missing `summaryTablePrompt.explained`) | **Done — repaired 2026-08-02, root cause fixed** | Reported via `Gnerator_issues.txt` (note: filename is misspelt, no `e`) by the partner building the teacher lesson-plan editor, whose import checker caught both. 35 corrupted `slo` keys across 15 `gensci_*` files + 2 lessons missing `explained`. Root cause: `scripts/repair_stubs.py:209` did `LESSON_SCHEMA.replace('N', str(lesson_num))` — a bare `N` placeholder that also hit `safetyNotes`. Fixed to `{{LESSON_NUMBER}}`. **Both defects rendered as silently EMPTY docx cells** — see Known Issues. Full re-render done; corpus now 0/0/0 on the partner's three checks. |
@@ -1811,3 +1811,33 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - Don't re-check unless something changes: all 10 Grade 11 Biology templates parse;
   Grade 10 templates (74) are untouched by the form parser; 85/85 Grade 10 exports
   validate against the partner schema.
+
+## Updates — 2026-10-01 (third entry) — pilot quizzes; three more Grade 11 subjects
+- **2.1 pilot quizzes:** batch on Sonnet 5.5, 7/8 valid first time. L8 (the final
+  synthesis lesson) had 12 questions, over the 10 maximum, and was regenerated live:
+  7 questions, valid. 59 questions total; answer letters A 15 / B 25 / C 25 / D 34%.
+  Spot check: 5/5 answers correct (one each from L1, L3, L4, L5, L8). ~$0.25.
+  Rendered to `quiz/` (24 files). `build_quiz.js` also copies answer-key HTML into
+  `v2/PDF/`, which Drive job 2 mirrors to teachers, so `v2/PDF/Grade11/` was deleted
+  again until Mark approves the pilot. **Remember to re-run `build_quiz.js` (and
+  `generate_pdfs.js` / `generate_teacher_index.js`) at approval.**
+- **OCR (`extract_curriculum_ocr.py`, default slice mode; all five sources are one tall
+  page):** chemistry, physics, general_science, core_mathematics, essential_mathematics →
+  `data/raw/curriculum_text/grade11_*.txt` (+ `.raw.txt` audit copies).
+- **Hand verification from images:** Chemistry 6, Physics 13, Core Maths 17 sub-strands,
+  all consistent with the OCR sections. Names normalised to Title Case; "(I)"/"(II)"
+  written as "I"/"II".
+- **General Science and Essential Maths sources are unusable.** Viewing the embedded
+  images (Ess Maths image 12, Gen Sci image 20) shows page after page of the same
+  "National Goals of Education" front matter. Ess Maths' dedup removed 154 blocks
+  (93.6k → 11.0k chars); General Science dedup removed 0, because the OCR of each copy
+  differed slightly. Neither file contains a single sub-strand opener. Not registered.
+- `slice_curriculum_text()` fixes:
+  - It now accepts "1.1The Mole" (OCR drops the space).
+  - It now stops at the strand-level "Assessment Rubric" / `STRAND` / `APPENDIX`
+    heading. KICD puts a whole strand's rubrics after its last sub-strand, so Core
+    Maths 1.7 had been 13k chars, mostly other sub-strands' rubrics.
+  - The stop is **case-sensitive**: the per-page "Strand Sub Strand ..." column header
+    must not end a section. A case-insensitive first try cut Biology 2.1 short, and
+    comparing it against the pilot's 3,101-char input caught it.
+  - All 46 sub-strands across the 4 usable subjects slice to 1.7k–5.4k chars.
