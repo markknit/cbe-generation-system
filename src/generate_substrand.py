@@ -143,7 +143,8 @@ def slice_curriculum_text(text: str, substrand_id: str) -> str:
         if re.search(r'By the end of the sub', l, re.I):
             # The line also carries the strand number ("2.0 Anatomy 2.1 ..."); the
             # sub-strand is the first number that isn't a strand (X.0).
-            ids = [n for n in re.findall(r'\b\d{1,2}\.\d{1,2}\b', l) if not n.endswith('.0')]
+            # No \b after the number: OCR often drops the space ("1.1The Mole").
+            ids = [n for n in re.findall(r'(?<![\d.])\d{1,2}\.\d{1,2}(?!\d)', l) if not n.endswith('.0')]
             if ids:
                 starts.append((i, ids[0]))
     # Duplicated OCR page slices repeat a section opener (seen for 3.2); the
@@ -152,6 +153,14 @@ def slice_curriculum_text(text: str, substrand_id: str) -> str:
     if begin is None:
         return ''
     end = next((i for i, sid in starts if i > begin and sid != substrand_id), len(lines))
+    # KICD groups a whole strand's assessment rubrics after its last sub-strand
+    # (all four Grade 11 subjects checked), followed by the next STRAND heading
+    # or the appendices. Stop there, or the last sub-strand of each strand
+    # carries every sibling's rubric (Core Maths 1.7: 13k chars, 80% rubric).
+    # Case-sensitive on purpose: the repeated per-page column header reads
+    # "Strand Sub Strand Specific Learning ...", which must NOT end a section.
+    stop = re.compile(r'[Aa]ssessment [Rr]ubric|^\s*STRAND\b|^\s*APPENDIX\b')
+    end = next((i for i in range(begin + 1, end) if stop.search(lines[i])), end)
     # Keep the table's column-header line, which sits just above the opener.
     if begin > 0 and 'Specific Learning' in lines[begin - 1]:
         begin -= 1
@@ -1214,11 +1223,58 @@ SUBSTRAND_NAMES = {
             '3.2': 'Growth and Development in Animals',
             '3.3': 'Excretion and Homeostasis in Animals',
         },
-        # TODO: the other five STEM subjects still need the same hand
-        # verification pass against rendered pages before they are added here.
-        # Core Mathematics gains a new Strand 4.0 (Calculus) at Grade 11 with
-        # no Grade 10 equivalent — do not assume the sub-strand *count* per
-        # strand carries over even where the numbering scheme does.
+        # Chemistry, Physics, Core Mathematics: hand-verified 2026-10-01 the
+        # same way, against each PDF's rendered "SUMMARY OF STRANDS AND SUB
+        # STRANDS" table (embedded image, viewed directly). Names follow the
+        # table; capitalisation normalised to Title Case.
+        'chemistry': {
+            '1.1': 'The Mole',
+            '1.2': 'Non-metals',
+            '2.1': 'Salts',
+            '2.2': 'Gas Laws',
+            '2.3': 'Reaction Rates',
+            '3.1': 'Hydrocarbons',
+        },
+        'physics': {
+            '1.1': 'Fluid Flow',
+            '1.2': 'Linear Motion',
+            '1.3': 'Projectile Motion',
+            '1.4': 'Dimensional Analysis',
+            '1.5': 'Heat Transmission',
+            '2.1': 'Refraction of Light',
+            '2.2': 'Electromagnetic Waves',
+            '2.3': 'Thermionic Emission and its Applications',
+            '3.1': 'Capacitors',
+            '3.2': 'Magnetic Effect of Electric Current',
+            '3.3': 'Diodes',
+            '4.1': 'Physics of Wind Formation',
+            '4.2': 'Introduction to Rockets',
+        },
+        # Strand 4.0 Calculus is new at Grade 11 (no Grade 10 equivalent).
+        'core_mathematics': {
+            '1.1': 'Quadratic Expressions and Equations',
+            '1.2': 'Irrational Numbers',
+            '1.3': 'Linear Inequalities',
+            '1.4': 'Logarithms II',
+            '1.5': 'Formulae and Variations',
+            '1.6': 'Sequences and Series',
+            '1.7': 'Matrices I',
+            '2.1': 'Approximation and Errors',
+            '2.2': 'Angle Properties of a Circle',
+            '2.3': 'Commercial Arithmetic',
+            '2.4': 'Circles, Chords and Tangents',
+            '2.5': 'Trigonometry II',
+            '2.6': 'Graphical Methods',
+            '3.1': 'Permutations and Combinations',
+            '3.2': 'Probability II',
+            '4.1': 'Functions',
+            '4.2': 'Differentiation I',
+        },
+        # NOT ADDED: general_science and essential_mathematics. Their Grade 11
+        # source PDFs (October 2025) are broken screen captures that repeat the
+        # front-matter "National Goals of Education" pages and never reach the
+        # curriculum tables (checked 2026-10-01 by viewing the images). A
+        # replacement source is needed before either can be added.
     },
 }
 
@@ -1259,8 +1315,12 @@ CURRICULUM_TEXT_MAP = {
         # (17 slices @ 200 dpi, tesseract --psm 4). All 10 sub-strands verified
         # findable by both name and number; no dedup was needed.
         'biology': 'data/raw/curriculum_text/grade11_biology.txt',
-        # TODO: the other five Grade 11 STEM sources are screenshot PDFs too
-        # and belong here once OCR'd and hand-verified.
+        # OCR'd 2026-10-01 (same script and settings); 0 duplicate blocks removed.
+        'chemistry':        'data/raw/curriculum_text/grade11_chemistry.txt',
+        'physics':          'data/raw/curriculum_text/grade11_physics.txt',
+        'core_mathematics': 'data/raw/curriculum_text/grade11_core_mathematics.txt',
+        # general_science / essential_mathematics: OCR output exists but the
+        # source PDFs contain no curriculum (see SUBSTRAND_NAMES[11]); not mapped.
     },
 }
 
