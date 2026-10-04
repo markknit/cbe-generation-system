@@ -1955,3 +1955,5 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - **Teacher list now 103 items in the remaining sub-strands** (was 207): 57 structural, 26 science-needs-rewrite, 19 teaching choices, 1 other. `TEACHER_REVIEW_LIST_2026-10-04.md`.
 - **Open: quizzes are now stale** for the regenerated bio_1_2 (L1-L6) and phys_2_1 (L1): they were generated from the old lessons. Regenerate with `generate_quiz.py` (~$0.30) then `build_quiz.js` — needs Mark's go-ahead.
 - Gates: links 0 failures; contract PASS; 43 Final Explanations flagged needs_review (was 47). PDFs + index rebuilt (590, 0 failed). Lessons with a verified-fit link: 79%.
+
+- Committed and pushed 2026-10-04 as `e15b776`. Stale quizzes (bio_1_2, phys_2_1) deferred by Mark. Drive sync still Mark's step.
