@@ -1934,3 +1934,8 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - Re-ran `review_lesson_consistency.py` on all 95 ($6.39); previous reports kept in `logs/lesson_drift_before_cc_repair_2026-10-04/`. Headline unchanged: 91 of 95 with at least one major.
 - On the 84 repaired in Claude Code: majors 204 -> 182 (-11%); 35 sub-strands improved, 30 same, 19 worse. About 104 of the 182 resemble an earlier finding (mostly the 182 science/structural items deliberately left for teachers); about 78 look new by wording, of which a spot check shows several are old findings reworded (Jik, the Laikipia farm dimensions) and some are genuine leftovers.
 - Conclusion: this reviewer cannot serve as an acceptance test. It re-reports the unedited items by design, re-words findings between runs, and ~33% of its findings were false positives when checked. Per-module reports refreshed in `logs/lesson_drift/`.
+
+## Updates — 2026-10-04 (fourth entry) — committed; verification pass starting
+
+- Committed and pushed `7cb36a1` (84-module repairs, fact sheet + consistency pass, teacher list, re-render, PDFs).
+- **In progress:** Claude Code verification pass (Mark approved option 1): agents check the 215 current major findings in 91 sub-strands against the text, fix real cross-reference/dataset leftovers via `scripts/apply_edits.py`, and classify the rest (science / structural / false positive / already listed) for the teacher list.
