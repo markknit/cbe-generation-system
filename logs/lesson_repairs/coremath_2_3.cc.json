@@ -136,5 +136,46 @@
         "note": "L4 is correct and consistent with L3 (12:45 = 270 CW = 90 ACW; 12:15 = 90 CW = 270 ACW); the finding itself concedes consistency."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:28",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "summaryTablePrompt.explained",
+        "old": "while the circular clock face has infinite rotational symmetry",
+        "new": "while the clock face with its 12 hour-marks has rotational symmetry of order 12 (only a plain, unmarked circle would have infinite order)",
+        "class": "science_fixed",
+        "conflict": "Clock rotational symmetry order 12 vs infinite (L6 vs L8) — Not really contradic"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Rotation: direct vs opposite congruence (L7 vs L8) — Real and serious: L7 teaches rotation gives OPPOSITE congruence (incorrect); L8 correctly says direct. L7 needs an author rewrite.",
+        "class": "needs_rewrite",
+        "note": "Correct fact: rotation produces DIRECT congruence (orientation preserved, image superimposable by sliding/turning in the plane). L7's whole activity, SLOs, chart and summary are built on 'rotation = opposite congruence'; needs author rewrite of L7."
+      },
+      {
+        "conflict": "Clock rotational symmetry order 12 vs infinite (L6 vs L8) — Not really contradictory: marked 12-hour face (order 12) vs plain circle (infinite); could confuse learners.",
+        "class": "science_fixed",
+        "note": "A clock face with 12 hour-marks has rotational symmetry of order 12 (30 deg); L8 summary now says so, matching L6 and the FE (plain circle noted as infinite)."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:41:22",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Clock rotational symmetry order 12 vs infinite (L6 vs L8) — Not really contradic",
+        "class": "confirmed",
+        "note": "Marked 12-hour clock face has order 12 (30 deg); matches L6 and FE; rotation rules in same summary are correct."
+      }
+    ]
   }
 ]

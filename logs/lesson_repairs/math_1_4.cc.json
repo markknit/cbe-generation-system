@@ -44,5 +44,68 @@
         "note": "Same as earlier science item 'Waterline position / mirror line always y = mx + c'."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:37:11",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "slo.knowledge",
+        "old": "(3) the line of reflection is always given in the form y = mx + c;",
+        "new": "(3) a sloping or horizontal line of reflection is given in the form y = mx + c, while a vertical one is written x = k;",
+        "class": "science_fixed",
+        "conflict": "Waterline position / mirror line always y = mx + c — Real error: L5 and L8 say a"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "slo.knowledge",
+        "old": "The line of reflection can always be expressed in the form y = mx + c.",
+        "new": "Any non-vertical line of reflection can be expressed in the form y = mx + c; a vertical line of reflection is written x = k.",
+        "class": "science_fixed",
+        "conflict": "Waterline position / mirror line always y = mx + c — Real error: L5 and L8 say a"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "slo.knowledge",
+        "old": "(2) the line of reflection is expressed in the form y = mx + c;",
+        "new": "(2) a non-vertical line of reflection is expressed in the form y = mx + c, and a vertical one as x = k;",
+        "class": "science_fixed",
+        "conflict": "Waterline position / mirror line always y = mx + c — Real error: L5 and L8 say a"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "summaryTablePrompt.learned",
+        "old": "(2) The line of reflection can always be expressed in the form y = mx + c.",
+        "new": "(2) Any non-vertical line of reflection can be expressed in the form y = mx + c; a vertical one is written x = k.",
+        "class": "science_fixed",
+        "conflict": "Waterline position / mirror line always y = mx + c — Real error: L5 and L8 say a"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Waterline position / mirror line always y = mx + c — Real error: L5 and L8 say a mirror line can always be written y = mx + c, which excludes the vertical lines x = 3 and x = -1 taught in L3. The wate",
+        "class": "science_fixed",
+        "note": "A vertical mirror line has undefined gradient and is written x = k; only non-vertical lines take the form y = mx + c (as the FINAL_EXPLANATION already states). Fixed in L4, L5, L8."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:40:47",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Waterline position / mirror line always y = mx + c — Real error: L5 and L8 say a",
+        "class": "confirmed",
+        "note": "Vertical mirror lines (undefined gradient) are x = k; y = mx + c covers all others incl. horizontal (m = 0); agrees with L3 and FE."
+      }
+    ]
   }
 ]

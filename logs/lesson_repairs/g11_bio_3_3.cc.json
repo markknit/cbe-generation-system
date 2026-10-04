@@ -44,5 +44,50 @@
         "note": "Same as earlier science item 'Nitrogenous waste of marine fish (urea, L1) vs fish as ammonia (L7)'; reviewer itself calls it an oversimplification."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:52",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "final_explanation",
+        "path": "sections[0].exemplar",
+        "old": "Marine fish and mammals make urea.",
+        "new": "Marine cartilaginous fish (such as sharks) and mammals make urea.",
+        "class": "science_fixed",
+        "conflict": "Nitrogenous waste of marine fish (urea, L1) vs fish as ammonia (L7) — Not a real"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Nitrogenous waste of marine fish (urea, L1) vs fish as ammonia (L7) — Not a real contradiction: L1 specifies urea for marine cartilaginous fish; L7's 'fish = ammonia' is a simplification for bony fish",
+        "class": "science_fixed",
+        "note": "L1 and L7 agree (freshwater/bony fish excrete ammonia; marine cartilaginous fish retain urea); FE exemplar tightened from 'marine fish' to 'marine cartilaginous fish' to match L1."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:41:22",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "summaryTablePrompt.learned",
+        "old": "and marine fish and mammals make urea.",
+        "new": "and marine cartilaginous fish (such as sharks) and mammals make urea.",
+        "class": "science_check",
+        "conflict": "check of: Nitrogenous waste of marine fish (urea, L1) vs fish as ammonia (L7) — Not a real"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Nitrogenous waste of marine fish (urea, L1) vs fish as ammonia (L7) — Not a real",
+        "class": "adjusted",
+        "note": "Correct (marine cartilaginous fish retain urea); adjusted L1 summaryTablePrompt.learned which still said 'marine fish ... make urea' so L1 summary matches FE and L1 SLO."
+      }
+    ]
   }
 ]

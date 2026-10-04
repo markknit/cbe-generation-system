@@ -26,5 +26,97 @@
         "note": "Two separate practice problems with different material, location and ΔT; each arithmetic checks (23e-6×200×55=0.253 m; 17e-6×200×25=0.085 m)."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:38:00",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.explained",
+        "old": "As the temperature dropped from 4°C (the point of maximum density) to 0°C, water molecules formed hydrogen bonds that locked them into a rigid hexagonal lattice",
+        "new": "As the temperature dropped from 4°C (the point of maximum density) to 0°C, the liquid water expanded slightly; then, on freezing at 0°C, water molecules formed hydrogen bonds that locked them into a rigid hexagonal lattice",
+        "class": "science_fixed",
+        "conflict": "Temperature at which water starts expanding: 0 °C freezing vs below 4 °C (L1, 2,"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "if water in the pipes cools below 4°C it expands and can burst the pipe",
+        "new": "if water in the pipes freezes it expands by about 9% and can burst the pipe",
+        "class": "science_fixed",
+        "conflict": "Temperature at which water starts expanding: 0 °C freezing vs below 4 °C (L1, 2,"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[3].learnerExperience",
+        "old": "Water cools below 4 °C → expands → pressure builds",
+        "new": "Water cools below 4 °C and freezes at 0 °C → expands → pressure builds",
+        "class": "science_fixed",
+        "conflict": "Temperature at which water starts expanding: 0 °C freezing vs below 4 °C (L1, 2,"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "summaryTablePrompt.explained",
+        "old": "The volumetric expansion can be quantified using ΔV = γV₀ΔT, and",
+        "new": "Ordinary volume changes within one phase can be quantified using ΔV = γV₀ΔT, but the expansion of about 9% on freezing is a phase-change effect that this formula does not describe; ",
+        "class": "science_fixed",
+        "conflict": "Whether the 9% freezing expansion is covered by ΔV = γV₀ΔT (L4, 6) — L4 summaryT"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.explained",
+        "old": "The same principle — quantified by the volumetric expansion formula ΔV = γV₀ΔT — explains",
+        "new": "Ordinary thermal expansion within one phase — quantified by the volumetric expansion formula ΔV = γV₀ΔT — explains",
+        "class": "science_fixed",
+        "conflict": "Whether the 9% freezing expansion is covered by ΔV = γV₀ΔT (L4, 6) — L4 summaryT"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Temperature at which water starts expanding: 0 °C freezing vs below 4 °C (L1, 2, 4, 6) — Anomalous expansion below 4 °C plus the 9% freezing expansion are both true; L6's 'lattice forms from 4 to 0 °C",
+        "class": "science_fixed",
+        "note": "Water expands slightly as it cools from 4 to 0 C (max density at 4 C) but the hexagonal ice lattice and the ~9% expansion that cracks glass/pipes happen on freezing at 0 C - fixed L6 summary and pipe example, L4 causal-chain card."
+      },
+      {
+        "conflict": "Whether the 9% freezing expansion is covered by ΔV = γV₀ΔT (L4, 6) — L4 summaryTablePrompt.explained ends 'The volumetric expansion can be quantified using ΔV = γV₀ΔT', contradicting L4 Q2/L6/FE (phas",
+        "class": "science_fixed",
+        "note": "dV = gamma V0 dT describes expansion within one phase only; the ~9% freezing expansion is a phase change outside it - L4 summary and L6 summary aligned with L4 Q2/L6/FE."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:40:48",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "summaryTablePrompt.explained",
+        "old": "does not describe;  the temperature",
+        "new": "does not describe; the temperature",
+        "class": "science_check",
+        "conflict": "double space left by L4 formula-scope fix"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Temperature at which water starts expanding: 0 °C freezing vs below 4 °C (L1, 2,",
+        "class": "confirmed",
+        "note": "Max density at 4 °C, slight expansion 4->0 °C, lattice and ~9% expansion on freezing at 0 °C; L4/L6 sentences read correctly."
+      },
+      {
+        "conflict": "check of: Whether the 9% freezing expansion is covered by ΔV = γV₀ΔT (L4, 6) — L4 summaryT",
+        "class": "adjusted",
+        "note": "ΔV = γV₀ΔT is single-phase only - correct; removed a double space the L4 splice left before 'the temperature–volume graph'."
+      }
+    ]
   }
 ]

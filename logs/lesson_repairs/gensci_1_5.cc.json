@@ -83,5 +83,51 @@
         "note": "Fresh-uji/substrate part is the earlier science item on L6's explanation; sealed-slower is correct science; L3 loose stopper and L6 stopper-with-delivery-tube are both vented setups; 'oxygen diffusing' is L6 wording, science note."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:37:29",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.explained",
+        "old": "ferments faster than fresh unsweetened uji wa kawaida — the substrate concentration directly fuels enzyme activity.",
+        "new": "ferments faster than fresh unsweetened uji wa kawaida — freshly cooked uji has few or no live fermenting microorganisms (cooking kills them), and where microorganisms are present a higher substrate concentration directly fuels enzyme activity.",
+        "class": "science_fixed",
+        "conflict": "Why fresh uji does not ferment: no organisms (L1, L4) vs lower substrate concent",
+        "lesson": 6
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Which organisms/acid cause the uji's sourness — Real contradiction: L1/L7/L8 attribute sourness to lactic acid bacteria, L4 to carbonic acid from yeast CO2 plus 'other organic acids', L6 to yeast prod",
+        "class": "needs_rewrite",
+        "note": "Correct fact: uji sourness is mainly lactic acid from lactic acid bacteria (yeast make ethanol + CO2, not lactic acid); but L4 claim sentence, pH activity and model are built on yeast as the souring agent, so fixing needs lesson redesign."
+      },
+      {
+        "conflict": "Why fresh uji does not ferment: no organisms (L1, L4) vs lower substrate concentration (L6) — Real inconsistency in L6's summaryTablePrompt.explained; reviewer-worthy but science explanation, not edit",
+        "class": "science_fixed",
+        "note": "Fresh (cooked) uji does not ferment mainly because it lacks live microorganisms; substrate concentration only affects rate once organisms are present."
+      },
+      {
+        "conflict": "Oxygen 'limited' vs absent for yeast anaerobic respiration — Wording difference (limited vs no oxygen); not a real contradiction.",
+        "class": "not_real",
+        "note": "Limited vs absent oxygen is wording only."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:42:06",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Why fresh uji does not ferment: no organisms (L1, L4) vs lower substrate concent",
+        "class": "confirmed",
+        "note": "Correct: cooking kills the microbes, so fresh uji barely ferments; substrate only affects rate once organisms are present; agrees with L1/L4."
+      }
+    ]
   }
 ]

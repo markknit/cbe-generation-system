@@ -193,5 +193,70 @@
         "note": "P(A and B)=0 for mutually exclusive events is stated consistently in L4 and L8; L4 and L5 just emphasise different reasons the advert misleads. Not a factual conflict."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:32",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[4].learnerExperience",
+        "old": "all three are mutually exclusive for one match, so P(Win or Draw)",
+        "new": "all three are mutually exclusive for one match, so if we assume each result has probability 1/3, P(Win or Draw)",
+        "class": "science_fixed",
+        "conflict": "Gor Mahia match probability (1/3 vs 0.5 vs 0.6) — Real conceptual tension: L1 as",
+        "lesson": 4
+      },
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.explained",
+        "old": "The Gor Mahia match analysis showed P(Win or Draw)",
+        "new": "The Gor Mahia match analysis, using an assumed probability of 1/3 for each result, showed P(Win or Draw)",
+        "class": "science_fixed",
+        "conflict": "Gor Mahia match probability (1/3 vs 0.5 vs 0.6) — Real conceptual tension: L1 as",
+        "lesson": 4
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Gor Mahia match probability (1/3 vs 0.5 vs 0.6) — Real conceptual tension: L1 asks whether a match is equally likely, L4 and the FE assume W/D/L = 1/3 each; L7 (0.5) and L8 (0.6) are explicitly stated",
+        "class": "science_fixed",
+        "note": "Win/Draw/Loss are not automatically equally likely; 1/3 each is an assumption. L4 now states it as an assumption, matching the FE (values unchanged: 2/3 and 1/3)."
+      },
+      {
+        "conflict": "Why the 'win AND draw' advert is misleading (L4 vs L5) / P(A and B)=0 — P(A and B)=0 for mutually exclusive events is stated consistently in L4 and L8; L4 and L5 just emphasise different reasons the a",
+        "class": "not_real",
+        "note": "P(A and B)=0 for mutually exclusive events is stated consistently; L4 and L5 stress different reasons the advert misleads."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:41:22",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "summaryTablePrompt.learned",
+        "old": "expects to pay out Ksh 1,800 while collecting Ksh 3,600 — a guaranteed mathematical profit of Ksh 1,800 — proving that gambling is structured to disadvantage the player.",
+        "new": "expects to pay out Ksh 1,800 while collecting Ksh 3,600 — an expected profit of Ksh 1,800 on average over many spins (not a guarantee for any short run) — showing that gambling is structured to disadvantage the player.",
+        "class": "science_check",
+        "conflict": "essmath_3_2 L7 'guaranteed mathematical profit' is an expected value"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Gor Mahia match probability (1/3 vs 0.5 vs 0.6) — Real conceptual tension: L1 as",
+        "class": "confirmed",
+        "note": "1/3 for W/D/L is an assumption; L4 now matches FE wording; values 2/3 and 1/3 unchanged."
+      },
+      {
+        "conflict": "check of: L7 summaryTablePrompt: betting stall Ksh 1,800 'guaranteed mathematical profit'",
+        "class": "extra_fixed",
+        "note": "Ksh 1,800 is an expected value (FE says not a guarantee for a short run); reworded as expected profit on average."
+      }
+    ]
   }
 ]

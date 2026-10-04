@@ -1514,6 +1514,11 @@ _SUBJECT_FOLDER = {
     'essential_mathematics': 'Essential_Mathematics',
 }
 
+# File-name prefix per subject. Same as the folder EXCEPT Mathematics: its folder
+# is Maths/ but every existing file is Mathematics_<name>_* (found 2026-10-04 when a
+# regenerated math_2_1 came out as Maths_* beside the old Mathematics_* files).
+_SUBJECT_FILE_PREFIX = {**_SUBJECT_FOLDER, 'mathematics': 'Mathematics'}
+
 # Human-readable subject label for docx headers/labels. Multi-word subjects need
 # an explicit entry — args.subject.capitalize() mangles 'general_science' into
 # 'General_science' (only the first character is capitalized, underscore kept).
@@ -2137,7 +2142,7 @@ def main():
                 "substrand_id":   args.substrand,
                 "substrand_name": args.substrand_name,
                 "outputDir":      _v2_output_dir(args.grade, args.subject, args.substrand, args.substrand_name),
-                "filePrefix":     f"{_subj_file}_{args.substrand_name.replace(' ', '_')}",
+                "filePrefix":     f"{_SUBJECT_FILE_PREFIX.get(args.subject, _subj_cap)}_{args.substrand_name.replace(' ', '_')}",
                 "titleDoc":       f"{_subj_cap.upper()} GRADE {args.grade}: {args.substrand_name.upper()}",
                 "subtitleDoc":    f"CBE Phenomenon-Driven Lesson Sequence — Sub-Strand {args.substrand} ({args.lessons} Lessons)",
                 "col3Label":      "Teacher Moves",
@@ -2240,7 +2245,7 @@ def main():
         "substrand_id":   args.substrand,
         "substrand_name": args.substrand_name,
         "outputDir":   _v2_output_dir(args.grade, args.subject, args.substrand, args.substrand_name),
-        "filePrefix":  f"{subject_file}_{args.substrand_name.replace(' ', '_')}",
+        "filePrefix":  f"{_SUBJECT_FILE_PREFIX.get(args.subject, subject_cap)}_{args.substrand_name.replace(' ', '_')}",
         "titleDoc":    f"{subject_cap.upper()} GRADE {args.grade}: {args.substrand_name.upper()}",
         "subtitleDoc": f"CBE Phenomenon-Driven Lesson Sequence — Sub-Strand {args.substrand} ({args.lessons} Lessons)",
         "col3Label":   "Teacher Moves",

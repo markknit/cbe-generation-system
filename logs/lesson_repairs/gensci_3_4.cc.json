@@ -156,5 +156,80 @@
         "note": "Same as earlier science item (bell make-and-break = generator mechanism)."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:37:18",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "summaryTablePrompt.learned",
+        "old": "(produces the weakest permanent magnet of the three)",
+        "new": "(produces the weakest magnet of the three; in soft iron this induced magnetism is temporary and is mostly lost once the magnet is removed)",
+        "class": "science_fixed",
+        "conflict": "Induction-method magnet called permanent yet soft iron easily demagnetised (L1,2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "summaryTablePrompt.learned",
+        "old": "because the strong, constant field in that zone maximises the force on the moving conductor",
+        "new": "because the strong, constant field in that zone means the moving conductor cuts more field lines per second, which maximises the induced e.m.f.",
+        "class": "science_fixed",
+        "conflict": "Field strength 'maximises force on conductor' (L3) vs rate of flux cutting (L4,5"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Induction-method magnet called permanent yet soft iron easily demagnetised (L1,2) — Minor real imprecision within L1; L2 does not contradict it.",
+        "class": "science_fixed",
+        "note": "Soft iron magnetised by induction is a temporary magnet (easily demagnetised) - L1 no longer calls it permanent."
+      },
+      {
+        "conflict": "Stopping the generator = demagnetisation (L2) vs no relative motion (L4,5,6,8) — Real and serious: L2's explanation is physically wrong and contradicts L4-L8; needs author rewrite of L2 phenomenon lin",
+        "class": "needs_rewrite",
+        "note": "Correct science: the dynamo stops because there is no relative motion/flux change, not demagnetisation. L2's title, purpose, storyline link, overview, model check and summary are all built on the wrong analogy - needs author rewrite of L2's phenomenon link."
+      },
+      {
+        "conflict": "Bell make-and-break = generator switching mechanism (L7,8) — Real: L7/L8 claim the bell's switching is the generator mechanism, contradicting L4-L6 induction explanation.",
+        "class": "needs_rewrite",
+        "note": "Correct science: a generator's output and polarity reversal come from the rotating coil cutting a steady field (induction), not make-and-break switching or magnetisation/demagnetisation. The claim is built into L7's purpose, model-revision group tasks and comparison table, and L8's summary - needs rewrite."
+      },
+      {
+        "conflict": "Field strength 'maximises force on conductor' (L3) vs rate of flux cutting (L4,5) — Minor framing difference; not a hard contradiction.",
+        "class": "science_fixed",
+        "note": "In a generator a stronger field increases the induced e.m.f. because more field lines are cut per second; 'force on the conductor' is the motor effect - L3 reworded to match L4/L5."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:42:06",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.learned",
+        "old": "maximises the induced e.m.f..",
+        "new": "maximises the induced e.m.f.",
+        "class": "science_check",
+        "conflict": "doubled full stop",
+        "lesson": 3
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Induction-method magnet called permanent yet soft iron easily demagnetised (L1,2",
+        "class": "confirmed",
+        "note": "Correct: induced magnetism in soft iron is temporary."
+      },
+      {
+        "conflict": "check of: Field strength 'maximises force on conductor' (L3) vs rate of flux cutting (L4,5",
+        "class": "adjusted",
+        "note": "Physics correct (stronger field, more flux cut per second, larger e.m.f.); removed a doubled full stop ('e.m.f..') left by the edit."
+      }
+    ]
   }
 ]

@@ -105,5 +105,110 @@
         "note": "Within-L5 science errors (Olkaria is geothermal; fission is nuclear, not chemical change); not a cross-lesson dataset fix."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:51",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[1].learnerExperience",
+        "old": "Identifies chemical changes involved (nuclear reactions as extreme matter change — compare to chapati browning)",
+        "new": "Identifies the matter changes involved (nuclear reactions change the nucleus of the atom itself, so fission is a nuclear change, not a chemical change — compare and contrast with chapati browning, which is a chemical change)",
+        "class": "science_fixed",
+        "conflict": "L5: nuclear energy attributed to Olkaria geothermal; fission called a chemical c",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "framework[3].teacherMoves",
+        "old": "This learner says nuclear fission is a chemical change that releases energy — how does that connect to our chapati?",
+        "new": "This learner says nuclear fission releases energy — how is that nuclear change different from the chemical change in our chapati?",
+        "class": "science_fixed",
+        "conflict": "L5: nuclear energy attributed to Olkaria geothermal; fission called a chemical c",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.observed",
+        "old": "connecting Chemistry to nuclear energy (Olkaria geothermal, KPLC grid)",
+        "new": "connecting Chemistry to energy (a nuclear power station; Olkaria geothermal and the KPLC grid)",
+        "class": "science_fixed",
+        "conflict": "L5: nuclear energy attributed to Olkaria geothermal; fission called a chemical c",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.explained",
+        "old": "all of these are matter undergoing chemical changes that Chemistry can describe and explain. This is the same type of change",
+        "new": "all of these are matter undergoing change that Chemistry can describe and explain (the reactor is a nuclear change inside the atom's nucleus; the others are chemical changes). The chemical changes are the same type of change",
+        "class": "science_fixed",
+        "conflict": "L5: nuclear energy attributed to Olkaria geothermal; fission called a chemical c",
+        "lesson": 5
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "L5: nuclear energy attributed to Olkaria geothermal; fission called a chemical change like chapati — Within-L5 science errors (Olkaria is geothermal; fission is nuclear, not chemical change); not a cr",
+        "class": "science_fixed",
+        "note": "Olkaria is a geothermal (not nuclear) plant; fission changes the nucleus, so it is a nuclear change, not a chemical change like cooking chapati."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:42:28",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[1].learnerExperience",
+        "old": "use metal salt combustion to produce coloured flames (copper = green, sodium = yellow",
+        "new": "heat metal salts in a flame so that their electrons are excited and give out coloured light as they fall back (copper = green, sodium = yellow",
+        "class": "science_check",
+        "conflict": "Flame colours described as metal salt combustion"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].formativeAssessment",
+        "old": "'metal salts undergo combustion releasing energy as coloured light'",
+        "new": "'heat excites electrons in metal salts, which give out coloured light as they fall back to lower energy levels'",
+        "class": "science_check",
+        "conflict": "Flame colours described as metal salt combustion"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "summaryTablePrompt.learned",
+        "old": "(metal salt combustion, synthetic dyes)",
+        "new": "(synthetic dyes) and heated metal salts, whose excited electrons give out coloured light,",
+        "class": "science_check",
+        "conflict": "Flame colours described as metal salt combustion"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "summaryTablePrompt.explained",
+        "old": "a copper compound burns green in a firework",
+        "new": "a copper compound gives a green flame in a firework",
+        "class": "science_check",
+        "conflict": "Flame colour described as burning"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: L5: nuclear energy attributed to Olkaria geothermal; fission called a chemical c",
+        "class": "confirmed",
+        "note": "Fission is a nuclear change (not chemical); Olkaria is geothermal; all four sentences read correctly."
+      },
+      {
+        "conflict": "extra: chem_1_1 L5 calls flame colours 'combustion' of metal salts",
+        "class": "extra_fixed",
+        "note": "Confirmed in L5 (Group 3 reading, model-arrow indicator, summary learned/explained); now: heat excites electrons, which emit light as they fall back."
+      }
+    ]
   }
 ]

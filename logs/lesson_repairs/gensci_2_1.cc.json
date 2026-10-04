@@ -96,5 +96,115 @@
         "note": "Same as earlier science item on (NH4)3PO4 in L7."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:56",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "slo.purposeInStoryline",
+        "old": "radicals like NO₃⁻ and PO₄³⁻ are the very polyatomic ions that appear in CAN and DAP",
+        "new": "radicals like NO₃⁻ and HPO₄²⁻ (hydrogen phosphate, related to phosphate PO₄³⁻) are the very polyatomic ions that appear in CAN and DAP",
+        "class": "science_fixed",
+        "conflict": "Phosphate valency in DAP: PO4 3- vs HPO4 2- (L5, L6, L8) — Real contradiction; L"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].learnerExperience",
+        "old": "from NH₄⁺ and PO₄³⁻ to (NH₄)₂HPO₄",
+        "new": "from NH₄⁺ and HPO₄²⁻ to (NH₄)₂HPO₄",
+        "class": "science_fixed",
+        "conflict": "Phosphate valency in DAP: PO4 3- vs HPO4 2- (L5, L6, L8) — Real contradiction; L"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "summaryTablePrompt.learned",
+        "old": "because phosphate's valency (2) criss-crosses",
+        "new": "because hydrogen phosphate's (HPO₄²⁻) valency (2) criss-crosses",
+        "class": "science_fixed",
+        "conflict": "Phosphate valency in DAP: PO4 3- vs HPO4 2- (L5, L6, L8) — Real contradiction; L"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "slo.knowledge",
+        "old": "and ammonium phosphate (NH₄)₂HPO₄ from",
+        "new": "and diammonium hydrogen phosphate (DAP) (NH₄)₂HPO₄ from",
+        "class": "science_fixed",
+        "conflict": "Phosphate valency in DAP: PO4 3- vs HPO4 2- (L5, L6, L8) — Real contradiction; L"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[2].teacherMoves",
+        "old": "No — because phosphate has valency 3 and ammonium has valency 1, so we always need exactly 3 ammonium ions to balance one phosphate ion — the ratio is fixed by valency.",
+        "new": "No — DAP contains the hydrogen phosphate ion, HPO₄²⁻, which has valency 2, and ammonium has valency 1, so we always need exactly 2 ammonium ions: (NH₄)₂HPO₄. In ammonium phosphate, PO₄³⁻ has valency 3, so it needs exactly 3: (NH₄)₃PO₄. The ratio is fixed by valency.",
+        "class": "science_fixed",
+        "conflict": "Phosphate valency in DAP: PO4 3- vs HPO4 2- (L5, L6, L8) — Real contradiction; L"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[2].learnerExperience",
+        "old": "because PO43- has a valency of 3 while NH4+ has a valency of 1, requiring two ammonium ions to balance one phosphate.",
+        "new": "because the hydrogen phosphate ion HPO42- has a valency of 2 while NH4+ has a valency of 1, requiring two ammonium ions to balance one hydrogen phosphate.",
+        "class": "science_fixed",
+        "conflict": "Phosphate valency in DAP: PO4 3- vs HPO4 2- (L5, L6, L8) — Real contradiction; L"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "summaryTablePrompt.explained",
+        "old": "and nitrate a 1- charge and phosphate a 3- charge;",
+        "new": "and nitrate a 1- charge and hydrogen phosphate (HPO4 2-, in DAP) a 2- charge;",
+        "class": "science_fixed",
+        "conflict": "Phosphate valency in DAP: PO4 3- vs HPO4 2- (L5, L6, L8) — Real contradiction; L"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Group numbering 1-18 (L2) vs 1-8 (L3, L4) — Real inconsistency in notation; needs one convention chosen across the unit",
+        "class": "pedagogical_choice",
+        "note": "Both IUPAC 1-18 and traditional I-VIII group numbering are valid; teacher should pick one convention for the unit."
+      },
+      {
+        "conflict": "Phosphate valency in DAP: PO4 3- vs HPO4 2- (L5, L6, L8) — Real contradiction; L5's DAP explanation should use HPO4 2- (valency 2)",
+        "class": "science_fixed",
+        "note": "DAP is (NH4)2HPO4: hydrogen phosphate HPO4 2- has valency 2, so two NH4+ balance it; PO4 3- (valency 3) needs three, giving (NH4)3PO4. Fixed in L5, L7, L8."
+      },
+      {
+        "conflict": "(NH4)3PO4 'related to DAP' in L7 vs DAP = (NH4)2HPO4 — Real conceptual muddle in L7; equation does not produce DAP",
+        "class": "needs_rewrite",
+        "note": "L7 worksheet balances 3NH4OH + H3PO4 -> (NH4)3PO4 while the lesson/gallery cards target (NH4)2HPO4 and the Predict Card annotates DAP with the (NH4)3PO4 ratio; needs the equation (e.g. 2NH3 + H3PO4 -> (NH4)2HPO4) and annotation redesigned. The false claim that DAP needs 3 ammonium was corrected under the HPO4 item."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:42:06",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[2].learnerExperience",
+        "old": "'The ratio (NH₄)₃PO₄ comes from N valency __, P valency __, therefore __ ammonium ions per phosphate ion.'",
+        "new": "'DAP is (NH₄)₂HPO₄ because NH₄⁺ has valency __ and HPO₄²⁻ has valency __, therefore __ ammonium ions per hydrogen phosphate ion (compare ammonium phosphate (NH₄)₃PO₄, where PO₄³⁻ has valency 3).'",
+        "class": "science_check",
+        "conflict": "DAP Predict Card annotation used (NH4)3PO4",
+        "lesson": 7
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Phosphate valency in DAP: PO4 3- vs HPO4 2- (L5, L6, L8) — Real contradiction; L",
+        "class": "adjusted",
+        "note": "HPO4 2- (valency 2) for DAP is correct in L5/L7/L8; also fixed L7 Predict Card annotation that still called (NH4)3PO4 the DAP formula and gave ammonium an 'N valency'."
+      }
+    ]
   }
 ]

@@ -106,5 +106,60 @@
         "note": "L2 DQB lists 'what happens inside the grasshopper after it swallows' and the teacher parks it for Lessons 7 and 8; L8's reference to L2 is accurate and L8 supplies the enzyme answer."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:14",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[2].learnerExperience",
+        "old": "it bypasses all the digestion steps you just modelled",
+        "new": "it bypasses the chewing and swallowing steps you just modelled, although it must still chemically digest the blood proteins in its gut",
+        "class": "science_fixed",
+        "conflict": "Mosquito bypasses all digestion (L7) vs bypasses mechanical only (L9) — Real but"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[4].teacherMoves",
+        "old": "it injects enzymes into the wound via saliva and sucks pre-liquefied nutrients",
+        "new": "it injects saliva into the wound to stop the blood clotting and sucks up blood that is already liquid; the blood proteins are digested later by enzymes in its gut",
+        "class": "science_fixed",
+        "conflict": "Function of mosquito saliva (anticoagulant vs enzymes) — Mild; L8 implies a dige"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Mosquito bypasses all digestion (L7) vs bypasses mechanical only (L9) — Real but mild contradiction; L9 is the more accurate version",
+        "class": "science_fixed",
+        "note": "A mosquito skips mechanical digestion only; blood proteins are still chemically digested by gut enzymes into amino acids (L7 aligned with L9/FE)."
+      },
+      {
+        "conflict": "Function of mosquito saliva (anticoagulant vs enzymes) — Mild; L8 implies a digestive role for saliva that L3 does not; not a hard contradiction",
+        "class": "science_fixed",
+        "note": "Mosquito saliva carries anticoagulants (plus anti-clotting enzymes) to keep blood flowing; it does not pre-digest blood - fixed L8 'pre-liquefied nutrients'. L8's salivary-enzyme/amylase analogy in guided question 3 left (activity design)."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:42:28",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Mosquito bypasses all digestion (L7) vs bypasses mechanical only (L9) — Real but",
+        "class": "confirmed",
+        "note": "Mosquito skips chewing/swallowing but digests blood proteins in its gut; agrees with L9/FE."
+      },
+      {
+        "conflict": "check of: Function of mosquito saliva (anticoagulant vs enzymes) — Mild; L8 implies a dige",
+        "class": "confirmed",
+        "note": "Saliva carries anticoagulants; proteins digested in gut; L8 closing speech reads correctly."
+      }
+    ]
   }
 ]

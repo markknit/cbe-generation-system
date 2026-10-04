@@ -204,5 +204,50 @@
         "note": "Earlier science item '5 cause of dim lights at power restoration'."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:33",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.explained",
+        "old": "the supply voltage was below the standard 240 V (brownout condition)",
+        "new": "the voltage at the sockets was below the standard 240 V (a brownout, caused by the large surge current producing a large Ir drop inside the supply)",
+        "class": "science_fixed",
+        "conflict": "5 cause of dim lights at power restoration — Real contradiction in the phenomeno",
+        "lesson": 11
+      },
+      {
+        "target": "lesson",
+        "path": "framework[2].teacherMoves",
+        "old": "the supply voltage is initially low (or internal resistance is high under surge current)",
+        "new": "the socket voltage is initially low because the large surge current causes a large Ir drop across the supply's internal resistance",
+        "class": "science_fixed",
+        "conflict": "5 cause of dim lights at power restoration — Real contradiction in the phenomeno",
+        "lesson": 12
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "5 cause of dim lights at power restoration — Real contradiction in the phenomenon's explanation: L2/L8/L12 blame supply internal resistance (surge current, Ir drop) while L11 calls it a brownout (supp",
+        "class": "science_fixed",
+        "note": "Terminal voltage V = E - Ir: the surge current at restoration makes Ir large, so socket voltage falls below 240 V (the brownout); internal resistance itself does not increase. L11/L12 now give the same cause as L2/L8/FE."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:40:48",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: 5 cause of dim lights at power restoration — Real contradiction in the phenomeno",
+        "class": "confirmed",
+        "note": "V = E - Ir: surge current makes Ir drop large so socket voltage < 240 V; L11/L12 now match L2/L8/FE."
+      }
+    ]
   }
 ]

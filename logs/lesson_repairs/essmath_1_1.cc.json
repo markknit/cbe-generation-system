@@ -173,5 +173,69 @@
         "note": "L6 teacher moves explicitly address the 0.999999999 display as a rounding artefact while the product is mathematically exactly 1; not a contradiction."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:37:29",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[1].learnerExperience",
+        "old": "five empty nested ovals labelled from innermost to outermost: Natural Numbers (ℕ), Integers (ℤ), Rational Numbers (ℚ), Irrational Numbers (",
+        "new": "five empty ovals: Natural Numbers (ℕ), Integers (ℤ) and Rational Numbers (ℚ) nested from innermost outward inside Real Numbers (ℝ), and Irrational Numbers (",
+        "class": "science_fixed",
+        "conflict": "Hierarchy of number sets (L8 nested ovals) — Real error: L8 Reference Map templa",
+        "lesson": 8
+      },
+      {
+        "target": "lesson",
+        "path": "framework[1].learnerExperience",
+        "old": "), Real Numbers (ℝ). Each oval has",
+        "new": ") as a separate oval inside ℝ but outside ℚ. Each oval has",
+        "class": "science_fixed",
+        "conflict": "Hierarchy of number sets (L8 nested ovals) — Real error: L8 Reference Map templa",
+        "lesson": 8
+      },
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.explained",
+        "old": "just as Lessons 4 and 5 showed it is preserved under addition, subtraction, multiplication, and division.",
+        "new": "just as Lessons 4 and 5 showed that rational numbers stay rational under addition, subtraction, multiplication, and division (by a non-zero number). Irrational numbers do not always stay irrational under these operations: √2 × √2 = 2.",
+        "class": "science_fixed",
+        "conflict": "Rational/irrational boundary under operations — L6 overstates that the boundary ",
+        "lesson": 6
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Hierarchy of number sets (L8 nested ovals) — Real error: L8 Reference Map template nests the Irrational oval between Q and R, contradicting L6 and L8's own slo/assessment; not edited per rules.",
+        "class": "science_fixed",
+        "note": "ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ; irrationals (ℝ minus ℚ) sit inside ℝ but outside ℚ, not nested between ℚ and ℝ."
+      },
+      {
+        "conflict": "Rational/irrational boundary under operations — L6 overstates that the boundary is preserved under all operations (e.g. sqrt2 x sqrt2 = 2); real but minor overclaim; not edited.",
+        "class": "science_fixed",
+        "note": "Rationals are closed under +, −, ×, ÷ (non-zero); irrationals are not (√2 × √2 = 2)."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:41:22",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Hierarchy of number sets (L8 nested ovals) — Real error: L8 Reference Map templa",
+        "class": "confirmed",
+        "note": "N in Z in Q in R with irrationals inside R outside Q; template now matches L6/L8 assessment."
+      },
+      {
+        "conflict": "check of: Rational/irrational boundary under operations — L6 overstates that the boundary ",
+        "class": "confirmed",
+        "note": "Rationals closed under +,-,x,/ (non-zero); sqrt2 x sqrt2 = 2 counterexample correct."
+      }
+    ]
   }
 ]

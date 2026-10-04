@@ -64,5 +64,50 @@
         "note": "Reviewer itself says 'Not a real conflict': all stated images match (x,y)->(-y,x); earlier pass also confirmed L3 images correct."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:29",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 10,
+        "path": "framework[2].formativeAssessment",
+        "old": "known angle rule to find B'(0,4)",
+        "new": "known angle rule to find B'(-2, 2√3) ≈ (-2, 3.46)",
+        "class": "science_fixed",
+        "conflict": "1 P(4,2) images; -240 rotation in L10 — L3 images are correct. Separate real err"
+      },
+      {
+        "target": "lesson",
+        "lesson": 10,
+        "path": "teacherReflection",
+        "old": "by –240° to find B'(0,4)?",
+        "new": "by –240° to find B'(-2, 2√3) ≈ (-2, 3.46)?",
+        "class": "science_fixed",
+        "conflict": "1 P(4,2) images; -240 rotation in L10 — L3 images are correct. Separate real err"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "1 P(4,2) images; -240 rotation in L10 — L3 images are correct. Separate real error found in L10: B(4,0) rotated by -240 (= +120) is (-2, 2*sqrt3), not B'(0,4) as the L10 teacherReflection states; also",
+        "class": "science_fixed",
+        "note": "-240 deg = +120 deg; B(4,0) -> (4cos120, 4sin120) = (-2, 2√3), not (0,4). Answer key in L10 formativeAssessment and teacherReflection corrected; L3 P(4,2) images were already right. Note Q2 still needs non-90 trig never taught (author should consider redesigning Q2)."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:40:48",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: 1 P(4,2) images; -240 rotation in L10 — L3 images are correct. Separate real err",
+        "class": "confirmed",
+        "note": "Centre O, -240° = +120°: B(4,0) -> (4cos120°, 4sin120°) = (-2, 2√3) ≈ (-2, 3.46); FA and reflection now agree."
+      }
+    ]
   }
 ]

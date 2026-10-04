@@ -64,5 +64,50 @@
         "note": "L7 teacher said 5 days while the same lesson says roots grown for a week; aligned to a week. Chromosome numbers not in conflict."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:37:29",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.observed",
+        "old": "saw cells at different stages of mitosis (interphase, prophase, metaphase, anaphase, telophase)",
+        "new": "saw cells at different stages of the cell cycle (interphase, and the mitosis stages prophase, metaphase, anaphase, telophase)",
+        "class": "science_fixed",
+        "conflict": "Interphase counted as a mitosis stage — L7 lists interphase as stage 1 of five w",
+        "lesson": 7
+      },
+      {
+        "target": "lesson",
+        "path": "framework[2].learnerExperience",
+        "old": "Each number becomes an expert on one stage (1 = interphase, 2",
+        "new": "Each number becomes an expert on one stage of the cell cycle (1 = interphase, which comes before mitosis and is not itself a stage of mitosis; 2",
+        "class": "science_fixed",
+        "conflict": "Interphase counted as a mitosis stage — L7 lists interphase as stage 1 of five w",
+        "lesson": 7
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Interphase counted as a mitosis stage — L7 lists interphase as stage 1 of five while L3 teaches four stages plus cytokinesis; mild real inconsistency in presentation, not edited.",
+        "class": "science_fixed",
+        "note": "Interphase is part of the cell cycle (before mitosis), not a stage of mitosis; mitosis has four stages (prophase, metaphase, anaphase, telophase) followed by cytokinesis."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:41:22",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Interphase counted as a mitosis stage — L7 lists interphase as stage 1 of five w",
+        "class": "confirmed",
+        "note": "Interphase is part of the cell cycle, not a mitosis stage; jigsaw 1-5 numbering and activity intact; matches L3."
+      }
+    ]
   }
 ]

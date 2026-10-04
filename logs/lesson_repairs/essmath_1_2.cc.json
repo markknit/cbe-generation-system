@@ -101,5 +101,97 @@
         "note": "Overview aligned to the factor-tree numbers L1's Explain phase and summary actually use."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:37:18",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Zero-index treatment (L4,6,7) — Different framings of a⁰ = 1, not contradictory in substance.",
+        "class": "not_real",
+        "note": "L4, L6, L7 and FE all state a^0 = 1 for a != 0, derived from a^m / a^m; only the framing differs."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:42:06",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "slo.purposeInStoryline",
+        "old": "1 GB ≈ 2³⁰ bytes, so 1 TB = (2¹⁰)³",
+        "new": "1 GB = (2¹⁰)³ = 2³⁰ bytes, so 1 TB = (2¹⁰)⁴ = 2⁴⁰ bytes",
+        "class": "science_check",
+        "conflict": "1 TB stated as (2^10)^3",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "overview",
+        "old": "1 GB ≈ 2³⁰ bytes, so 1 TB = (2¹⁰)³",
+        "new": "1 GB = (2¹⁰)³ = 2³⁰ bytes, so 1 TB = (2¹⁰)⁴ = 2⁴⁰ bytes",
+        "class": "science_check",
+        "conflict": "1 TB stated as (2^10)^3",
+        "lesson": 5
+      },
+      {
+        "target": "final_explanation",
+        "path": "sections[3].prompt",
+        "old": "A smartphone stores about 1 GB ≈ 2³⁰ bytes, and 1 TB = (2¹⁰)³.",
+        "new": "In computer memory, 1 GB = (2¹⁰)³ bytes and 1 TB = (2¹⁰)⁴ bytes.",
+        "class": "science_check",
+        "conflict": "1 TB stated as (2^10)^3"
+      },
+      {
+        "target": "final_explanation",
+        "path": "sections[3].exemplar",
+        "old": "(b) 1 TB = (2¹⁰)³ = 2¹⁰ˣ³ = 2³⁰ by",
+        "new": "(b) 1 TB = (2¹⁰)⁴ = 2¹⁰ˣ⁴ = 2⁴⁰ by",
+        "class": "science_check",
+        "conflict": "1 TB = 2^30 in exemplar"
+      },
+      {
+        "target": "final_explanation",
+        "path": "sections[4].exemplar",
+        "old": "the storage of 1 TB = 2³⁰ bytes",
+        "new": "the storage of 1 TB = 2⁴⁰ bytes",
+        "class": "science_check",
+        "conflict": "1 TB = 2^30"
+      },
+      {
+        "target": "lesson",
+        "path": "framework[1].teacherMoves",
+        "old": "What did our investigation in Lesson 5 show us",
+        "new": "What did our investigation in Lesson 4 show us",
+        "class": "science_check",
+        "conflict": "zero-index rule attributed to Lesson 5",
+        "lesson": 7
+      },
+      {
+        "target": "lesson",
+        "path": "teacherReflection",
+        "old": "revisit Lesson 5 evidence",
+        "new": "revisit Lesson 4 evidence",
+        "class": "science_check",
+        "conflict": "zero-index rule attributed to Lesson 5",
+        "lesson": 8
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: 1 TB = (2^10)^4 = 2^40 (2^30 is 1 GB): fixed L5 storyline + overview, FE s3 prom",
+        "class": "extra_fixed",
+        "note": "1 TB = (2^10)^4 = 2^40 (2^30 is 1 GB): fixed L5 storyline + overview, FE s3 prompt + exemplar, FE s4 exemplar; (2^10)^3 = 2^30 GB activity left intact."
+      },
+      {
+        "conflict": "check of: Zero-index law came from Lesson 4: fixed L7 teacherMoves and the same slip in L8",
+        "class": "extra_fixed",
+        "note": "Zero-index law came from Lesson 4: fixed L7 teacherMoves and the same slip in L8 teacherReflection."
+      }
+    ]
   }
 ]

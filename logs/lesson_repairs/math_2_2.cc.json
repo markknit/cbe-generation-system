@@ -95,5 +95,86 @@
         "note": "Explicitly included in the earlier structural shamba-dimensions item (L2 AB=120/AC=95/68 deg)."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:52",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Height expression in the sine-formula derivation (c sin A, b sin theta, a sin C) — Labelling differences depending on which sides are named; not a real contradiction.",
+        "class": "not_real",
+        "note": "h = c sin A (perpendicular from B to AC), h = b sin theta and a sin C are the same derivation with different side labels; all correct."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:40:48",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[1].learnerExperience",
+        "old": "obtaining approximately 5 290 m²",
+        "new": "obtaining approximately 5 285 m²",
+        "class": "science_check",
+        "conflict": "L2 sine-area value 5 284.9 m² rounded to 5 290; FA range off-centre"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[1].teacherMoves",
+        "old": "approximately 5 290 square metres",
+        "new": "approximately 5 285 square metres",
+        "class": "science_check",
+        "conflict": "L2 sine-area value 5 284.9 m² rounded to 5 290; FA range off-centre"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[1].formativeAssessment",
+        "old": "5 285–5 295 m²",
+        "new": "5 280–5 290 m²",
+        "class": "science_check",
+        "conflict": "L2 sine-area value 5 284.9 m² rounded to 5 290; FA range off-centre"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[4].learnerExperience",
+        "old": "(≈ 5 290 m²)",
+        "new": "(≈ 5 285 m²)",
+        "class": "science_check",
+        "conflict": "L2 sine-area value 5 284.9 m² rounded to 5 290; FA range off-centre"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[4].formativeAssessment",
+        "old": "area ≈ 5 290 m²",
+        "new": "area ≈ 5 285 m²",
+        "class": "science_check",
+        "conflict": "L2 sine-area value 5 284.9 m² rounded to 5 290; FA range off-centre"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "summaryTablePrompt.explained",
+        "old": "(area ≈ 5 290 m²)",
+        "new": "(area ≈ 5 285 m²)",
+        "class": "science_check",
+        "conflict": "L2 sine-area value 5 284.9 m² rounded to 5 290; FA range off-centre"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "extra: math_2_2 L2 ½ × 120 × 95 × sin 68° = 5 284.9 m² stated as ≈ 5 290 m²; FA range 5 285–5 295",
+        "class": "extra_fixed",
+        "note": "5700 × sin68° = 5 284.95: stated value now ≈ 5 285 m² in all 5 L2 places (matches FE), FA range centred at 5 280–5 290."
+      }
+    ]
   }
 ]

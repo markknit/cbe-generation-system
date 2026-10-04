@@ -1,0 +1,46 @@
+Collecting batch: msgbatch_01WDfRLUsZKUcCCtdcMb7SHc
+  Status: in_progress
+  Polling batch msgbatch_01WDfRLUsZKUcCCtdcMb7SHc (checking every 60s)...
+    in_progress: 0/8 done (0 succeeded, 0 errored)    in_progress: 0/8 done (0 succeeded, 0 errored)    in_progress: 0/8 done (0 succeeded, 0 errored)    in_progress: 0/8 done (0 succeeded, 0 errored)    ended: 8/8 done (8 succeeded, 0 errored)
+  Collecting results...
+  Got 8 results (8 succeeded)
+  Checking lessons agree with each other (and the fact sheet)...
+  Lesson consistency: 0 major contradiction(s) left after repair (see logs/lesson_drift/gensci_2_2.json)
+  Generating Final Explanation (from lesson content)...
+    FE review round 1: 5 Final Explanation issue(s), 3 lesson-sequence conflict(s)
+    FE review round 2: 4 Final Explanation issue(s), 3 lesson-sequence conflict(s)
+    FE review round 3: 3 Final Explanation issue(s), 2 lesson-sequence conflict(s)
+    FE review round 4: 5 Final Explanation issue(s), 2 lesson-sequence conflict(s)
+    WARNING: best attempt has 3 unresolved finding(s): written, but flagged for human review — see /home/markk/ares/cbe-generation-system/logs/final_explanation_issues/gensci_2_2.json
+  Generating Summary Table (synchronous — needs lesson data)...
+  Building Summary Table from lessons...
+  Summary Table generated ✓
+
+  Writing data file...
+  Written: /home/markk/ares/cbe-generation-system/generators/data/gensci_2_2_data.js
+
+  Running generator...
+Generating General Science — GENERAL SCIENCE GRADE 10: CHEMICAL FAMILIES
+  Output: v2/General_Science/SS2.2_Chemical_Families
+    Saved: /home/markk/ares/cbe-generation-system/data/outputs/v2/General_Science/SS2.2_Chemical_Families/General_Science_Chemical_Families_CBE_LessonSequence.docx  (96 KB)
+    Saved: /home/markk/ares/cbe-generation-system/data/outputs/v2/General_Science/SS2.2_Chemical_Families/General_Science_Chemical_Families_FinalExplanation.docx  (13 KB)
+    Saved: /home/markk/ares/cbe-generation-system/data/outputs/v2/General_Science/SS2.2_Chemical_Families/General_Science_Chemical_Families_FinalExplanation_TeacherKey.docx  (15 KB)
+    Saved: /home/markk/ares/cbe-generation-system/data/outputs/v2/General_Science/SS2.2_Chemical_Families/General_Science_Chemical_Families_SummaryTable.docx  (15 KB)
+    Saved: /home/markk/ares/cbe-generation-system/data/outputs/v2/General_Science/SS2.2_Chemical_Families/General_Science_Chemical_Families_data.json  (344 KB)
+Done! 5 file(s) in 2.0s
+  Link check: PASS hard failures: T1=0  T2=0  T3=0  T4=0  DEAD=0  SHAPE=0
+
+Generator errors:   Consistency check: FAIL
+validate_consistency: 1 file(s)
+  hard failures: FE-UNVERIFIED=1
+  warnings: 0
+  FAIL FE-UNVERIFIED data/outputs/v2/General_Science/SS2.2_Chemical_Families/General_Science_Chemical_Families_data.json: reviewer found unresolved contradictions (logs/final_explanation_issues/gensci_2_2.json)
+
+
+Cross-document consistency check FAILED for 1 sub-strand(s): gensci_2_2
+
+/home/markk/ares/cbe-generation-system/src/generate_substrand.py:120: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+  Logged run cost to /home/markk/ares/cbe-generation-system/logs/api_cost_log.md ($1.0839 estimated)
+
+✓ Done! Data file: /home/markk/ares/cbe-generation-system/generators/data/gensci_2_2_data.js

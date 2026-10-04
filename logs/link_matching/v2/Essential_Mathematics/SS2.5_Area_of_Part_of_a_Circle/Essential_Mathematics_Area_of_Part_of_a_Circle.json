@@ -863,42 +863,48 @@
         "formula derivation",
         "ugali cake",
         "door sweep",
-        "evidence gathering"
+        "evidence gathering",
+        "area sector",
+        "sector area formula",
+        "central angle sector",
+        "area circle"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Area of a sector",
         "fit": "fits",
-        "score": 167.54,
+        "score": 209.84,
         "core_hits": [
           "area circle"
         ],
         "detail_hits": [
           "area sector",
           "angle central",
+          "angle central sector",
           "sector"
         ],
-        "detail_weight": 3.05
+        "detail_weight": 3.39
       },
       "observe.video": {
         "picked": "Area of a sector",
         "fit": "fits",
-        "score": 167.54,
+        "score": 209.84,
         "core_hits": [
           "area circle"
         ],
         "detail_hits": [
           "area sector",
           "angle central",
+          "angle central sector",
           "sector"
         ],
-        "detail_weight": 3.05
+        "detail_weight": 3.39
       },
       "explain.video": {
         "picked": "Area of a circle",
         "fit": "partial",
-        "score": 111.88,
+        "score": 145.85,
         "core_hits": [
           "area circle"
         ],
@@ -909,19 +915,9 @@
         "detail_weight": 0.75
       },
       "dqb.video": {
-        "picked": "Arc length as fraction of circumference",
-        "fit": "unjudged",
-        "score": 86.33,
-        "core_hits": [],
-        "detail_hits": [
-          "angle central"
-        ],
-        "detail_weight": 1.25
-      },
-      "model.video": {
         "picked": "Area of a circle intuition",
-        "fit": "unjudged",
-        "score": 85.63,
+        "fit": "partial",
+        "score": 123.76,
         "core_hits": [
           "area circle"
         ],
@@ -930,38 +926,50 @@
         ],
         "detail_weight": 0.3
       },
+      "model.video": {
+        "picked": "Arc length as fraction of circumference",
+        "fit": "partial",
+        "score": 123.5,
+        "core_hits": [],
+        "detail_hits": [
+          "angle central"
+        ],
+        "detail_weight": 1.25
+      },
       "predict.reading": {
         "picked": "Area of a sector",
         "fit": "fits",
-        "score": 172.78,
+        "score": 218.19,
         "core_hits": [
           "area circle"
         ],
         "detail_hits": [
           "area sector",
           "angle central",
+          "angle central sector",
           "sector"
         ],
-        "detail_weight": 3.05
+        "detail_weight": 3.39
       },
       "observe.reading": {
         "picked": "Area of a sector",
         "fit": "fits",
-        "score": 172.78,
+        "score": 218.19,
         "core_hits": [
           "area circle"
         ],
         "detail_hits": [
           "area sector",
           "angle central",
+          "angle central sector",
           "sector"
         ],
-        "detail_weight": 3.05
+        "detail_weight": 3.39
       },
       "explain.reading": {
-        "picked": "Radius or Diameter of a Circle Given Area (Flexbook)",
-        "fit": "unjudged",
-        "score": 98.74,
+        "picked": "Area of a circle",
+        "fit": "partial",
+        "score": 134.07,
         "core_hits": [
           "area circle"
         ],
@@ -971,58 +979,43 @@
         "detail_weight": 0.45
       },
       "dqb.reading": {
-        "picked": "Radius or Diameter of a Circle Given Area Practice",
-        "fit": "unjudged",
-        "score": 98.74,
-        "core_hits": [
-          "area circle"
-        ],
+        "picked": "Radians & arc length",
+        "fit": "partial",
+        "score": 127.99,
+        "core_hits": [],
         "detail_hits": [
+          "angle central",
           "radius"
         ],
-        "detail_weight": 0.45
+        "detail_weight": 1.7
       },
       "model.reading": {
-        "picked": "Domain and Range: Restricted Circle Radius and Area (PLIX)",
-        "fit": "unjudged",
-        "score": 98.25,
-        "core_hits": [
-          "area circle"
-        ],
+        "picked": "Arc length",
+        "fit": "partial",
+        "score": 117.07,
+        "core_hits": [],
         "detail_hits": [
-          "radius"
+          "angle central"
         ],
-        "detail_weight": 0.45
+        "detail_weight": 1.25
       }
     },
     "video_pool": {
-      "passed": 11,
+      "passed": 7,
       "runners_up": [
+        "Area of Sectors and Segments Principles - Basic",
         "Area of a circle",
-        "Arc length as fraction of circumference",
         "Area of a circle intuition",
-        "Inscribed angle theorem proof",
-        "Subtended angle from arc length"
+        "Arc length as fraction of circumference",
+        "Impact of increasing the radius"
       ],
       "rejected_sample": [
         [
+          "Subtended angle from arc length",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Multi-step word problem with Pythagorean theorem",
-          "below relevance gate"
-        ],
-        [
-          "Einstein velocity addition formula derivation",
-          "below relevance gate"
-        ],
-        [
-          "Derivation of beat frequency formula",
-          "below relevance gate"
-        ],
-        [
-          "Measuring angles in degrees",
-          "below relevance gate"
-        ],
-        [
-          "Angles in circles word problem",
           "below relevance gate"
         ],
         [
@@ -1030,30 +1023,59 @@
           "below relevance gate"
         ],
         [
-          "Graphing circles from features",
+          "Einstein velocity addition formula derivation",
           "below relevance gate"
         ],
         [
-          "Writing fraction division story problems",
+          "Radians as ratio of arc length to radius",
+          "below relevance gate"
+        ],
+        [
+          "Partial circle area and arc length",
+          "below relevance gate"
+        ],
+        [
+          "Derivation of beat frequency formula",
+          "below relevance gate"
+        ],
+        [
+          "Arc length from subtended angle",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 128,
+        "judged off-topic (independent reviewer)": 4,
+        "below relevance gate": 120,
         "kolibri node not available on reference image": 3,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 17,
+      "passed": 16,
       "runners_up": [
-        "Radius or Diameter of a Circle Given Area (Flexbook)",
-        "Radius or Diameter of a Circle Given Area Practice",
-        "Domain and Range: Restricted Circle Radius and Area (PLIX)",
+        "Area of a Sector (Flexbook)",
+        "Area of a Sector Practice",
         "Area of a circle",
-        "Radians & arc length"
+        "Radians & arc length",
+        "Arc length"
       ],
       "rejected_sample": [
+        [
+          "Examing Circles: Area of a Circle (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "Area of rectangles with fraction side lengths",
+          "below relevance gate"
+        ],
+        [
+          "Area of a Circle (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Area of a Circle Practice",
+          "below relevance gate"
+        ],
         [
           "Derivation of the Triangle Area Formula (Flexbook)",
           "below relevance gate"
@@ -1063,32 +1085,17 @@
           "below relevance gate"
         ],
         [
-          "Examing Circles: Area of a Circle (PLIX)",
-          "below relevance gate"
-        ],
-        [
           "Angles in circles",
           "below relevance gate"
         ],
         [
           "Interpret fraction division",
           "below relevance gate"
-        ],
-        [
-          "Area of parts of circles",
-          "below relevance gate"
-        ],
-        [
-          "Finding definite integrals using area formulas",
-          "conflicting sub-topic ['integral', 'integrals']"
-        ],
-        [
-          "Area of rectangles with fraction side lengths",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
+        "below relevance gate": 133,
+        "judged off-topic (independent reviewer)": 1,
         "conflicting sub-topic": 1
       }
     }
@@ -1380,61 +1387,42 @@
         "essential mathematics",
         "area circle",
         "fair sharing",
-        "real life application"
+        "real life application",
+        "area sector",
+        "sector area formula",
+        "central angle arc"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Area of a sector",
         "fit": "fits",
-        "score": 141.71,
+        "score": 177.51,
         "core_hits": [
           "area circle"
         ],
         "detail_hits": [
           "angle central",
+          "area sector",
           "sector"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.89
       },
       "observe.video": {
-        "picked": "Partial circle area and arc length",
-        "fit": "fits",
-        "score": 99.66,
-        "core_hits": [
-          "area circle"
-        ],
-        "detail_hits": [
-          "arc"
-        ],
-        "detail_weight": 0.3
-      },
-      "explain.video": {
         "picked": "Area of a sector",
         "fit": "fits",
-        "score": 141.71,
+        "score": 177.51,
         "core_hits": [
           "area circle"
         ],
         "detail_hits": [
           "angle central",
+          "area sector",
           "sector"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.89
       },
-      "dqb.video": {
-        "picked": "Partial circle area and arc length",
-        "fit": "fits",
-        "score": 99.66,
-        "core_hits": [
-          "area circle"
-        ],
-        "detail_hits": [
-          "arc"
-        ],
-        "detail_weight": 0.3
-      },
-      "model.video": {
+      "explain.video": {
         "picked": "Area of a circle",
         "fit": "partial",
         "score": 150.96,
@@ -1447,31 +1435,57 @@
         ],
         "detail_weight": 1.01
       },
+      "dqb.video": {
+        "picked": "Area of a circle intuition",
+        "fit": "partial",
+        "score": 123.76,
+        "core_hits": [
+          "area circle"
+        ],
+        "detail_hits": [
+          "formula"
+        ],
+        "detail_weight": 0.3
+      },
+      "model.video": {
+        "picked": "Radians as ratio of arc length to radius",
+        "fit": "partial",
+        "score": 95.53,
+        "core_hits": [],
+        "detail_hits": [
+          "radius",
+          "proportionality",
+          "arc"
+        ],
+        "detail_weight": 1.64
+      },
       "predict.reading": {
         "picked": "Area of a sector",
         "fit": "fits",
-        "score": 132.18,
+        "score": 169.51,
         "core_hits": [
           "area circle"
         ],
         "detail_hits": [
           "angle central",
+          "area sector",
           "sector"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.89
       },
       "observe.reading": {
         "picked": "Area of a sector",
         "fit": "fits",
-        "score": 132.18,
+        "score": 169.51,
         "core_hits": [
           "area circle"
         ],
         "detail_hits": [
           "angle central",
+          "area sector",
           "sector"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.89
       },
       "explain.reading": {
         "picked": "Area of a circle",
@@ -1488,13 +1502,14 @@
       "dqb.reading": {
         "picked": "Arc length",
         "fit": "partial",
-        "score": 104.04,
+        "score": 111.07,
         "core_hits": [],
         "detail_hits": [
           "angle central",
+          "angle arc central",
           "arc"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.88
       },
       "model.reading": {
         "picked": "Radius or Diameter of a Circle Given Area (Flexbook)",
@@ -1510,13 +1525,13 @@
       }
     },
     "video_pool": {
-      "passed": 14,
+      "passed": 12,
       "runners_up": [
         "Partial circle area and arc length",
         "Area of a circle",
         "Area of a circle intuition",
-        "Arc length as fraction of circumference",
-        "Inscribed angle theorem proof"
+        "Radians as ratio of arc length to radius",
+        "Arc length as fraction of circumference"
       ],
       "rejected_sample": [
         [
@@ -1532,8 +1547,16 @@
           "web file not on reference image"
         ],
         [
+          "Classifying Real-life Objects as Rectangles, Squares, Circles, or Triangles",
+          "below relevance gate"
+        ],
+        [
           "Graphing circles from features",
           "below relevance gate"
+        ],
+        [
+          "Inscribed angle theorem proof",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Tangents of circles problem (example 1)",
@@ -1542,33 +1565,25 @@
         [
           "Tangents of circles problem (example 2)",
           "below relevance gate"
-        ],
-        [
-          "Circles glossary",
-          "below relevance gate"
-        ],
-        [
-          "Examples: Arc Length and Application of Arc Length",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 112,
-        "judged off-topic (independent reviewer)": 1,
-        "web file not on reference image": 6,
-        "conflicting sub-topic": 2,
+        "below relevance gate": 103,
+        "judged off-topic (independent reviewer)": 3,
+        "web file not on reference image": 4,
+        "conflicting sub-topic": 1,
         "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 7
+        "kolibri node not available on reference image": 5
       }
     },
     "reading_pool": {
-      "passed": 9,
+      "passed": 6,
       "runners_up": [
         "Area of a circle",
         "Arc length",
         "Radius or Diameter of a Circle Given Area (Flexbook)",
         "Radius or Diameter of a Circle Given Area Practice",
-        "Domain and Range: Restricted Circle Radius and Area (PLIX)"
+        "Central Angles and Arcs (PLIX)"
       ],
       "rejected_sample": [
         [
@@ -1577,6 +1592,18 @@
         ],
         [
           "Examing Circles: Area of a Circle (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "Classifying Real-life Objects as Rectangles, Squares, Circles, or Triangles Practice",
+          "below relevance gate"
+        ],
+        [
+          "Area of a Sector (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Area of a Sector Practice",
           "below relevance gate"
         ],
         [
@@ -1590,25 +1617,13 @@
         [
           "Angles in circles",
           "below relevance gate"
-        ],
-        [
-          "Classifying Real-life Objects as Rectangles, Squares, Circles, or Triangles Practice",
-          "below relevance gate"
-        ],
-        [
-          "Area of parts of circles",
-          "below relevance gate"
-        ],
-        [
-          "Share it Fair!",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "judged off-topic (independent reviewer)": 1,
-        "below relevance gate": 138,
+        "judged off-topic (independent reviewer)": 4,
+        "below relevance gate": 135,
         "conflicting sub-topic": 1,
-        "kolibri node not available on reference image": 3
+        "kolibri node not available on reference image": 2
       }
     }
   },

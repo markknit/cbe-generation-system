@@ -120,5 +120,97 @@
         "note": "Same as earlier science item 'Ethanol vs lactic acid in anaerobic plant cells (L4,5,9,12)'."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:37:29",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[1].learnerExperience",
+        "old": "(6) Lactic Acid Fermentation in Waterlogged Plant Roots — sukuma wiki roots in flooded soil produce lactic acid.",
+        "new": "(6) Alcoholic Fermentation in Waterlogged Plant Roots — sukuma wiki roots in flooded soil produce ethanol and carbon dioxide.",
+        "class": "science_fixed",
+        "conflict": "Ethanol vs lactic acid in anaerobic plant cells (L4,5,9,12) — Real but minor: L5",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "framework[1].teacherMoves",
+        "old": "At Station 6 (lactic acid in waterlogged roots)",
+        "new": "At Station 6 (ethanol and carbon dioxide in waterlogged roots)",
+        "class": "science_fixed",
+        "conflict": "Ethanol vs lactic acid in anaerobic plant cells (L4,5,9,12) — Real but minor: L5",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "framework[1].formativeAssessment",
+        "old": "across stations 1–5, and lactic acid at station 6?",
+        "new": "across stations 1–5, and ethanol and CO₂ (not lactic acid) from the plant roots at station 6?",
+        "class": "science_fixed",
+        "conflict": "Ethanol vs lactic acid in anaerobic plant cells (L4,5,9,12) — Real but minor: L5",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "framework[4].learnerExperience",
+        "old": "(in yeast) OR lactic acid (in plant roots/bacteria)",
+        "new": "(in yeast and plant roots) OR lactic acid (in bacteria and animal muscle)",
+        "class": "science_fixed",
+        "conflict": "Ethanol vs lactic acid in anaerobic plant cells (L4,5,9,12) — Real but minor: L5",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.learned",
+        "old": "in yeast (fermentation) or lactic acid in plant roots and bacteria",
+        "new": "in yeast and plant roots (alcoholic fermentation) or lactic acid in bacteria and animal muscle",
+        "class": "science_fixed",
+        "conflict": "Ethanol vs lactic acid in anaerobic plant cells (L4,5,9,12) — Real but minor: L5",
+        "lesson": 5
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Identity of gas in sukuma wiki bubbles (L4,8,9,11,12) — Real contradiction: lessons attribute the bubbles variously to O2 (photosynthesis), CO2 (respiration) or both; needs an author decision, not a t",
+        "class": "needs_rewrite",
+        "note": "Bubble gas identity (O2 vs CO2) is a storyline-level decision tied to the anchoring phenomenon and untested bubbles; not a text patch."
+      },
+      {
+        "conflict": "Ethanol vs lactic acid in anaerobic plant cells (L4,5,9,12) — Real but minor: L5 says waterlogged roots make lactic acid; L4/L12 say ethanol+CO2 (ethanol is the textbook answer for plants).",
+        "class": "science_fixed",
+        "note": "Plant cells (waterlogged roots) respire anaerobically to ethanol + CO2, not lactic acid; lactic acid is made by bacteria and animal muscle."
+      },
+      {
+        "conflict": "Warm water: stomatal opening vs enzyme rates (L2,3 vs L4-12) — Partly real: early lessons frame temperature via stomata, later via enzymes; compatible but not reconciled.",
+        "class": "pedagogical_choice",
+        "note": "Stomatal and enzyme framings of temperature are both valid and compatible; teacher can reconcile."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:42:28",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[1].formativeAssessment",
+        "old": "correctly identifying CO₂ and ethanol as products across stations 1–5, and ethanol and CO₂ (not lactic acid) from the plant roots at station 6?",
+        "new": "correctly identifying ethanol and CO₂ as products from yeast (stations 2, 3 and 5) and from the waterlogged plant roots (station 6), lactic acid from the bacteria that sour uji (station 1), and methane from the biogas digester (station 4)?",
+        "class": "science_check",
+        "conflict": "L5 Station 6 fix left check (a) saying stations 1–5 all give ethanol + CO₂ (uji gives lactic acid, biogas gives methane) and repeating ethanol/CO₂"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Ethanol vs lactic acid in anaerobic plant cells (L4,5,9,12) — Real but minor: L5",
+        "class": "adjusted",
+        "note": "Plant roots -> ethanol + CO₂ is correct; reworded L5 Phase 2 check (a), which after the fix read 'ethanol and CO₂ at 1–5 ... and ethanol and CO₂ at 6' and wrongly implied uji/biogas give ethanol."
+      }
+    ]
   }
 ]

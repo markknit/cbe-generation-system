@@ -123,5 +123,81 @@
         "note": "Same as earlier science item 'Beta-minus decay horizontal on N vs Z plot (L2) vs arrows toward belt (L5)'."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:52",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[2].learnerExperience",
+        "old": "+1 on Z, -1 on N — horizontal shift toward the belt",
+        "new": "+1 on Z, -1 on N — a diagonal step down and to the right toward the belt",
+        "class": "science_fixed",
+        "conflict": "Beta-minus decay 'horizontal' on N vs Z plot (L2) vs arrows toward belt (L5) — R",
+        "lesson": 2
+      },
+      {
+        "target": "lesson",
+        "path": "framework[2].formativeAssessment",
+        "old": "beta-minus decay arrows must point horizontally right (+1Z, −1N)",
+        "new": "beta-minus decay arrows must point diagonally down and to the right (+1Z, −1N)",
+        "class": "science_fixed",
+        "conflict": "Beta-minus decay 'horizontal' on N vs Z plot (L2) vs arrows toward belt (L5) — R",
+        "lesson": 2
+      },
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.learned",
+        "old": "shifting the nucleus horizontally toward the belt",
+        "new": "shifting the nucleus diagonally (one step down and to the right) toward the belt",
+        "class": "science_fixed",
+        "conflict": "Beta-minus decay 'horizontal' on N vs Z plot (L2) vs arrows toward belt (L5) — R",
+        "lesson": 2
+      },
+      {
+        "target": "lesson",
+        "path": "framework[2].formativeAssessment",
+        "old": "β-decay arrow goes right (ΔZ=+1, ΔA=0)",
+        "new": "β-decay arrow goes diagonally down-right (ΔZ=+1, ΔN=−1, ΔA=0)",
+        "class": "science_fixed",
+        "conflict": "Beta-minus decay 'horizontal' on N vs Z plot (L2) vs arrows toward belt (L5) — R",
+        "lesson": 5
+      },
+      {
+        "target": "final_explanation",
+        "path": "sections[2].exemplar",
+        "old": "moves one step diagonally up and to the left",
+        "new": "moves one step diagonally down and to the right",
+        "class": "science_fixed",
+        "conflict": "Beta-minus decay 'horizontal' on N vs Z plot (L2) vs arrows toward belt (L5) — R"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Beta-minus decay 'horizontal' on N vs Z plot (L2) vs arrows toward belt (L5) — Real error inside L2: Z+1, N-1 is a diagonal move; L5 not contradictory",
+        "class": "science_fixed",
+        "note": "Beta-minus: Z+1, N-1, so on the N (y) vs Z (x) plot used in L1 the nucleus moves diagonally down and to the right, not horizontally; fixed in L2, L5 FA and FE (FE said up-left)."
+      },
+      {
+        "conflict": "C-14 dating sites (Olorgesailie, Fort Jesus, Koobi Fora Homo habilis) — Different sites are fine; C-14 for a ~1.8 Myr fossil would be wrong if L7 presents it as valid (likely a method-choice compariso",
+        "class": "not_real",
+        "note": "L7 Station 4 explicitly asks learners to explain why C-14 cannot date the ~1.8 Myr Koobi Fora fossil (use U-Pb instead); Olorgesailie charcoal / Fort Jesus C-14 uses are fine."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:40:48",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Beta-minus decay 'horizontal' on N vs Z plot (L2) vs arrows toward belt (L5) — R",
+        "class": "confirmed",
+        "note": "L1 plot has N on y, Z on x: β- (Z+1, N-1) is a step down-right toward the belt; FE 'up-left' was wrong, now fixed consistently."
+      }
+    ]
   }
 ]

@@ -88,5 +88,51 @@
         "note": "Follows from the acceleration structural item; each lesson's arithmetic is internally consistent (earlier structural 'cart speed/distance')."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:27",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.observed",
+        "old": "acceleration means a constant change in velocity",
+        "new": "acceleration means the rate of change of velocity",
+        "class": "science_fixed",
+        "conflict": "**[science]** Definition of acceleration (L1 vs L2) — L2's 'constant change in v",
+        "lesson": 2
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "**[science]** Definition of acceleration (L1 vs L2) — L2's 'constant change in velocity' is loose wording, not a real contradiction with L1.",
+        "class": "science_fixed",
+        "note": "Acceleration is the rate of change of velocity (as L1 teaches); 'constant' describes only uniform acceleration."
+      },
+      {
+        "conflict": "**[science]** Whether the cart on the slope accelerates at g — Real contradiction: L4/L5/L7 use g for the rolling cart, L8 says only a slope component (~3 m/s^2) acts. Same root as the structural acce",
+        "class": "needs_rewrite",
+        "note": "A cart on a slope accelerates at g sin(theta) < g; fixing L4/L5/L7 means changing their worked calculations and the single cart acceleration used across lessons."
+      },
+      {
+        "conflict": "**[science]** Three vs four equations of linear motion — L5/L6 list the three used for free fall; not strictly contradictory but inconsistent count.",
+        "class": "pedagogical_choice",
+        "note": "Four equations (incl. s = (u+v)t/2) or the three used for free fall are both standard; count wording is a teacher choice."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:42:06",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: **[science]** Definition of acceleration (L1 vs L2) — L2's 'constant change in v",
+        "class": "confirmed",
+        "note": "Correct definition (rate of change of velocity), matches L1."
+      }
+    ]
   }
 ]

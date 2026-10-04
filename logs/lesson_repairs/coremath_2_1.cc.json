@@ -110,5 +110,59 @@
         "note": "Presentation inconsistency: L2/L3 distinguish L.S.F 1/200 (real->plan) from 200 (plan->real), L5 writes 'L.S.F = 1:200' and asks for real/plan area ratio without stating the inversion; answer 40 000 is correct. Author should state direction explicitly."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:52",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[0].learnerExperience",
+        "old": "(L.S.F = 1:200 from the anchoring phenomenon)",
+        "new": "(scale 1:200 from the anchoring phenomenon, so the L.S.F from real classroom to plan is 1/200)",
+        "class": "science_fixed",
+        "conflict": "Direction of L.S.F 1:200 (plan as image, L.S.F = 1/200) vs L5 real-to-plan area ",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "framework[0].learnerExperience",
+        "old": "If the L.S.F is 1:200, what do you think",
+        "new": "If the scale is 1:200 (L.S.F = 1/200 from real to plan), what do you think",
+        "class": "science_fixed",
+        "conflict": "Direction of L.S.F 1:200 (plan as image, L.S.F = 1/200) vs L5 real-to-plan area ",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "framework[4].learnerExperience",
+        "old": "in reality, L.S.F = 1:200)",
+        "new": "in reality, scale 1:200, so L.S.F = 1/200 from real to plan)",
+        "class": "science_fixed",
+        "conflict": "Direction of L.S.F 1:200 (plan as image, L.S.F = 1/200) vs L5 real-to-plan area ",
+        "lesson": 5
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Direction of L.S.F 1:200 (plan as image, L.S.F = 1/200) vs L5 real-to-plan area ratio 200^2 — Presentation inconsistency: L2/L3 distinguish L.S.F 1/200 (real->plan) from 200 (plan->real), L5 writes 'L",
+        "class": "science_fixed",
+        "note": "Scale 1:200 means L.S.F = image/object = 1/200 (real to plan), A.S.F = 1/40 000, so real area / plan area = 40 000; L5 now states the direction as L2/L3/FE do."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:41:22",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: Direction of L.S.F 1:200 (plan as image, L.S.F = 1/200) vs L5 real-to-plan area ",
+        "class": "confirmed",
+        "note": "Scale 1:200 -> L.S.F real-to-plan 1/200, area ratio 40 000; matches L2/L3/FE; numbers (2x3 cm vs 4x6 m) unchanged and consistent."
+      }
+    ]
   }
 ]

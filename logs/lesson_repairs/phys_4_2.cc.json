@@ -169,5 +169,72 @@
         "note": "Same as earlier science item 'Geomagnetic storm tidal anomaly in Mombasa (L9) vs Moon-driven tides (L6)'."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:38:31",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[1].learnerExperience",
+        "old": "first galaxies form [~1 billion yrs]",
+        "new": "first galaxies form [~300 million yrs]",
+        "class": "science_fixed",
+        "conflict": "First galaxies ~1 billion years after Big Bang (L2) vs JWST galaxies at ~300 mil",
+        "lesson": 2
+      },
+      {
+        "target": "lesson",
+        "path": "framework[1].teacherMoves",
+        "old": "galaxies took about 1 billion years to form",
+        "new": "the first galaxies formed within about 300 million years",
+        "class": "science_fixed",
+        "conflict": "First galaxies ~1 billion years after Big Bang (L2) vs JWST galaxies at ~300 mil",
+        "lesson": 2
+      },
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.learned",
+        "old": "first galaxies (~1 billion years)",
+        "new": "first galaxies (~300 million years)",
+        "class": "science_fixed",
+        "conflict": "First galaxies ~1 billion years after Big Bang (L2) vs JWST galaxies at ~300 mil",
+        "lesson": 2
+      },
+      {
+        "target": "final_explanation",
+        "path": "sections[1].exemplar",
+        "old": "first galaxies (about 1 billion years after the Big Bang)",
+        "new": "first galaxies (about 300 million years after the Big Bang)",
+        "class": "science_fixed",
+        "conflict": "First galaxies ~1 billion years after Big Bang (L2) vs JWST galaxies at ~300 mil"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "First galaxies ~1 billion years after Big Bang (L2) vs JWST galaxies at ~300 million years (L7/L8) — Real but mild inconsistency; L2's figure is outdated relative to JWST statements.",
+        "class": "science_fixed",
+        "note": "The first galaxies formed within a few hundred million years of the Big Bang (JWST sees galaxies ~300 million years after it) - L2 card/teacher talk/summary and FE changed from ~1 billion to ~300 million years, consistent with L7/L8 and the L2 Milky Way card (~13.6 billion years ago)."
+      },
+      {
+        "conflict": "Geomagnetic storm tidal anomaly in Mombasa (L9) vs Moon-driven tides (L6) — Storm-surge anomaly vs astronomical tide are different effects; questionable science in L9 but not a direct contradiction.",
+        "class": "needs_rewrite",
+        "note": "Geomagnetic storms do not raise tides; a sea-level anomaly would be meteorological storm surge, not astronomical tide. The 12 cm Mombasa anomaly is part of L9's case-study dataset and model choices, so removing it changes the activity."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:40:48",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: First galaxies ~1 billion years after Big Bang (L2) vs JWST galaxies at ~300 mil",
+        "class": "confirmed",
+        "note": "First galaxies within ~300 Myr (JWST observes galaxies ~290 Myr after BB), after first stars ~200 Myr; L2 card, talk, summary, FE and L7/L8 agree."
+      }
+    ]
   }
 ]

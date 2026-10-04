@@ -186,5 +186,59 @@
         "note": "Same as earlier science item: complementary angles do not explain the observers' agreement; left for author."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:37:40",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Complementary angles and the two students' agreement (L5 vs L6) — Real conceptual problem: complementary angles do not explain why two observers agree (L1 data 38°/22° are not complementary); L6's claim about the top angle is correct geometry but different. Left.",
+        "class": "needs_rewrite",
+        "note": "The two observers agree because both triangles share the fixed height (h = d·tanθ); complementary-angle identity does not explain it. L5/L6 storyline framing, L6 attitudes (supplementary angles) and reflection problem would need redesign."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:42:06",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[2].learnerExperience",
+        "old": "measures a tree's angle of elevation as 62° from 15 m away — express the height using cos 28° instead of sin 62° and confirm the same numerical answer.",
+        "new": "measures a tree's angle of elevation as 62° from 15 m away along level ground — find the height using tan 62°, then check it from the complementary angle 28° at the treetop (height = 15 ÷ tan 28°, because the opposite and adjacent sides swap names) and confirm the same numerical answer.",
+        "class": "science_check",
+        "conflict": "sin 62 used with a horizontal distance",
+        "lesson": 6
+      },
+      {
+        "target": "lesson",
+        "path": "framework[2].teacherMoves",
+        "old": "need to know sin 62° AND cos 28°, or just one of them?",
+        "new": "need to know tan 62° AND tan 28°, or just one of them?",
+        "class": "science_check",
+        "conflict": "sin 62 used with a horizontal distance",
+        "lesson": 6
+      },
+      {
+        "target": "lesson",
+        "path": "framework[2].formativeAssessment",
+        "old": "height = 15 × cos 28° = 15 × 0.8829 ≈ 13.24 m (confirming 15 × sin 62° ≈ 13.24 m).",
+        "new": "height = 15 × tan 62° = 15 × 1.8807 ≈ 28.21 m (confirming 15 ÷ tan 28° = 15 ÷ 0.5317 ≈ 28.21 m). A learner who gets 13.24 m has used sin 62°, which needs the hypotenuse, not the horizontal distance — ask which two sides are involved.",
+        "class": "science_check",
+        "conflict": "sin 62 used with a horizontal distance",
+        "lesson": 6
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: L6 Mau Forest problem: horizontal distance needs tan 62°, height = 15 x 1.8807 =",
+        "class": "extra_fixed",
+        "note": "L6 Mau Forest problem: horizontal distance needs tan 62°, height = 15 x 1.8807 = 28.21 m (not 13.24 m); check via 15 / tan 28°; teacher question and answer key updated."
+      }
+    ]
   }
 ]

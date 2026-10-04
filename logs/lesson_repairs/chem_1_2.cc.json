@@ -110,5 +110,55 @@
         "note": "Same as earlier science item 'H in Group 1' (common ns1 simplification)."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:32",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[4].learnerExperience",
+        "old": "so both would glow green in a flame test (copper-like), because",
+        "new": "so both would give the same flame-test result, because",
+        "class": "science_fixed",
+        "conflict": "chlorine isotopes 'glow green (copper-like)' — Real error in L5: chlorine has no",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "overview",
+        "old": "yet seawater burns with only one characteristic chlorine-family colour",
+        "new": "yet all of them behave identically, including in a flame",
+        "class": "science_fixed",
+        "conflict": "chlorine isotopes 'glow green (copper-like)' — Real error in L5: chlorine has no",
+        "lesson": 4
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "chlorine isotopes 'glow green (copper-like)' — Real error in L5: chlorine has no characteristic green flame colour; L4 makes no such claim. Needs a content fix, not edited here.",
+        "class": "science_fixed",
+        "note": "Chlorine has no characteristic green flame colour (green is copper/barium); isotopes have the same electron arrangement so the same flame behaviour. Removed the green claim (L5) and the 'chlorine-family colour' of seawater (L4; seawater's flame colour is sodium yellow)."
+      },
+      {
+        "conflict": "H in Group 1 with similar flame colours — Placing H with ns1 elements is a common simplification; 'similar but distinct colours' is loose wording, not a cross-lesson contradiction.",
+        "class": "not_real",
+        "note": "Grouping H with ns1 elements is a standard simplification; 'similar but distinct' flame colours is loose wording, not a contradiction."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:42:28",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: chlorine isotopes 'glow green (copper-like)' — Real error in L5: chlorine has no",
+        "class": "confirmed",
+        "note": "Isotopes share electron arrangement so same flame behaviour; no green chlorine claim remains; L4 overview reads correctly."
+      }
+    ]
   }
 ]

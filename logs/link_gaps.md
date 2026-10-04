@@ -1,6 +1,6 @@
 # Content gaps: lessons with no verified-fit ARES resource
 
-806 lessons. With at least one verified fit: **635** (78%). Only partial matches: **106**. No links at all: **65**.
+818 lessons. With at least one verified fit: **648** (79%). Only partial matches: **105**. No links at all: **65**.
 
 Each lesson below needs new library content for its topic; keywords show what to look for.
 
@@ -43,13 +43,9 @@ Each lesson below needs new library content for its topic; keywords show what to
 ## Grade 10 Biology: Cell Structure (1 lesson(s))
 - L9 **Specialised Plant Cells: Form Meets Function in the Bean Seedling** — only partial (8). Keywords: specialised plant cells, root hair cell, guard cells, stomata, xylem vessel, phloem sieve tube, palisade mesophyll, cell specialisation, pla
 
-## Grade 10 Biology: Chemicals of Life (1 lesson(s))
-- L1 **Predict: What Is Food Really Made Of?** — only partial (8). Keywords: chemicals of life, carbohydrates, proteins, lipids, vitamins, mineral salts, water, kwashiorkor, ugali, githeri, Kisumu, food composition, n
-
-## Grade 10 Biology: Plant Gaseous Exchange and Respiration (3 lesson(s))
+## Grade 10 Biology: Plant Gaseous Exchange and Respiration (2 lesson(s))
 - L1 **Anchoring Phenomenon & Predict Phase: Where Do the Bubbles Come From?** — only partial (1). Keywords: sukuma wiki gaseous exchange, plant gas exchange Kenya, stomata leaf bubbles, anchoring phenomenon biology Grade 10, driving question board 
 - L7 **Adaptations for Gaseous Exchange in Different Environments** — only partial (1). Keywords: xerophyte, hydrophyte, mesophyte, sunken stomata, aerenchyma, pneumatophores, cuticle, lenticels, guard cells, gaseous exchange, water hyaci
-- L10 **Project Execution: Carrying Out Investigations on Plant Gaseous Exchange and Respiration** — only partial (5). Keywords: plant gaseous exchange, stomata, guard cells, lenticels, cuticle, pneumatophores, cellular respiration, glucose, carbon dioxide, oxygen, suk
 
 ## Grade 10 Biology: Plant Nutrition (2 lesson(s))
 - L8 **Factors Affecting Photosynthesis Rate — Data Analysis & Explain** — only partial (6). Keywords: limiting factors, photosynthesis rate, CO2 concentration, temperature, light intensity, rate plateau, enzyme denaturation, Calvin cycle, dat
@@ -86,11 +82,9 @@ Each lesson below needs new library content for its topic; keywords show what to
 - L5 **Using Mathematical Tables and Calculators for Logarithms and Antilogarithms** — only partial (6). Keywords: common logarithms, four-figure tables, antilogarithms, mantissa, characteristic
 - L8 **Consolidation, Combined Operations, and Model Revision: Answering the Driving Question** — only partial (7). Keywords: indices and logarithms, combined logarithm operations, product law, quotient law, power law, root law, four-figure mathematical tables, anti
 
-## Grade 10 Core Mathematics: Quadratic Expressions and Equations (1 lesson(s))
-- L6 **Expanding Products of Two Linear Brackets: Grid/Box Method and FOIL in Kenyan Contexts** — only partial (10). Keywords: quadratic expressions, expanding brackets, grid box method, FOIL, linear factors, standard quadratic form, collecting like terms, sign error
-
-## Grade 10 Core Mathematics: Statistics I (1 lesson(s))
-- L6 **Grouping the Maize Price Data: Grouped Frequency Tables and the Modal Class** — only partial (1). Keywords: grouped frequency table, class interval, class width, modal class, ungrouped vs grouped data, tally, frequency distribution, Wakulima Market
+## Grade 10 Core Mathematics: Statistics I (2 lesson(s))
+- L4 **Grouping the Gaps into Classes** — only partial (3). Keywords: grouped data, class, class width, class boundaries, grouped frequency table, tally, modal class, range, gap, Thika Road
+- L6 **Histograms and frequency density: seeing where the long gaps are on Thika Road** — only partial (6). Keywords: histogram, frequency density, class width, equal class width, unequal class width, continuous axis, area represents frequency, gap, Thika Ro
 
 ## Grade 10 Essential Mathematics: Commercial Arithmetic 1 (2 lesson(s))
 - L5 **Profit and Loss (Part 1 — Concepts & Calculation) — From Wakulima Market to Amina's Stall** — NO LINKS. Keywords: profit and loss, cost price selling price, percentage profit, percentage loss, commercial arithmetic Kenya
@@ -243,6 +237,9 @@ Each lesson below needs new library content for its topic; keywords show what to
 ## Grade 10 Physics: Moments of Equilibrium (2 lesson(s))
 - L3 **Lesson 3: Centre of Gravity and the Tipping Point — Why Does the Jiko Stool Fall?** — NO LINKS. Keywords: centre of gravity, base of support, stable equilibrium, unstable equilibrium, neutral equilibrium, toppling condition, plumb-line method, mo
 - L4 **The Principle of Moments: Balancing Forces on a Bao Plank** — NO LINKS. Keywords: Principle of Moments, clockwise moment, anti-clockwise moment, moment arm, pivot, equilibrium, turning force, Newton-metre, beam balance, ce
+
+## Grade 10 Physics: Properties of Waves (1 lesson(s))
+- L4 **Echoes, Sonar and Hall Design: Putting Reflection to Work** — only partial (3). Keywords: echo, reflection, sonar, time delay, d = vt/2, minimum echo distance, reverberation, hall acoustics, Lake Victoria, absorber
 
 ## Grade 10 Physics: Temperature and Thermal Expansion (3 lesson(s))
 - L3 **Linear Expansion of Solids — The Stretching Rod** — only partial (1). Keywords: linear expansion, coefficient of linear expansivity, alpha, ΔL = αL₀ΔT, thermal expansion of solids, bar and gauge experiment, SGR railway g

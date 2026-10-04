@@ -160,5 +160,78 @@
         "note": "Earlier structural item 'Lake Victoria lighthouse angles: overview 32/25 vs explain 120 m, 38/22 in L8'."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T12:36:26",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[3].teacherMoves",
+        "old": "so if a surveyor can measure the angle of elevation OR the angle of depression, they get the same answer.",
+        "new": "so whether we work from the 50° angle at the observer or the 40° angle at the top of the mast, we get the same answer.",
+        "class": "science_fixed",
+        "conflict": "**[science]** Angle of depression at mast top 40° (L3) vs equals elevation 50° (",
+        "lesson": 3
+      },
+      {
+        "target": "lesson",
+        "path": "framework[4].learnerExperience",
+        "old": "they label the complementary angle of depression (40°) at the top of the mast — the angle a hawk perched on the mast would see down to the observer;",
+        "new": "they label the complementary angle (40°) at the top of the mast — the angle between the mast and the line of sight of a hawk perched on the mast looking down at the observer (this is not the angle of depression, which is measured from the horizontal and equals 50°);",
+        "class": "science_fixed",
+        "conflict": "**[science]** Angle of depression at mast top 40° (L3) vs equals elevation 50° (",
+        "lesson": 3
+      },
+      {
+        "target": "lesson",
+        "path": "framework[4].learnerExperience",
+        "old": "or the 40° depression angle at the top",
+        "new": "or the 40° angle at the top of the mast",
+        "class": "science_fixed",
+        "conflict": "**[science]** Angle of depression at mast top 40° (L3) vs equals elevation 50° (",
+        "lesson": 3
+      },
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.explained",
+        "old": "the complementary 40° depression angle",
+        "new": "the complementary 40° angle at the top of the mast",
+        "class": "science_fixed",
+        "conflict": "**[science]** Angle of depression at mast top 40° (L3) vs equals elevation 50° (",
+        "lesson": 3
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "**[science]** Angle of depression at mast top 40° (L3) vs equals elevation 50° (L7) — Real error in L3: the depression angle is 50° (alternate angles); 40° is the angle at the mast. Needs content fix",
+        "class": "science_fixed",
+        "note": "Angle of depression from the mast top is measured from the horizontal and equals the 50° elevation (alternate angles); 40° is the angle between mast and line of sight."
+      },
+      {
+        "conflict": "**[science]** Mast geometry labelling / hawk depression at 40° in L3 — Same as the L3 depression-angle error above",
+        "class": "science_fixed",
+        "note": "Same fix as above: L3 now calls 40° the angle at the top of the mast, not the angle of depression (which is 50°)."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-04T12:41:22",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "check of: **[science]** Angle of depression at mast top 40° (L3) vs equals elevation 50° (",
+        "class": "confirmed",
+        "note": "Depression angle from mast top = 50 deg (alternate angles); 40 deg is angle between mast and sight line; sin50=cos40 activity intact."
+      },
+      {
+        "conflict": "check of: **[science]** Mast geometry labelling / hawk depression at 40° in L3 — Same as t",
+        "class": "confirmed",
+        "note": "Same L3 fix; all four L3 edits read correctly and match L7 definition."
+      }
+    ]
   }
 ]
