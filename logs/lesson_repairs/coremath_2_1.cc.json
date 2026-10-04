@@ -1,0 +1,91 @@
+[
+  {
+    "when": "2026-10-04T08:27:42",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "overview",
+        "old": "understanding of LSF (Lesson 4)",
+        "new": "understanding of LSF (Lessons 1–4)",
+        "class": "cross_reference",
+        "conflict": "LSF established / model start lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "'Scale Factor Model' diagram started in Lesson 4",
+        "new": "'Scale Factor Model' diagram started in Lesson 1",
+        "class": "cross_reference",
+        "conflict": "LSF established / model start lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "Lesson 5: painted surface area of a tank",
+        "new": "Lesson 5: Unga Pembe flour-packet base area",
+        "class": "cross_reference",
+        "conflict": "Lesson 5 example misattributed"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].teacherMoves",
+        "old": "Scale Factor Model from Lesson 4.",
+        "new": "Scale Factor Model from Lesson 1.",
+        "class": "cross_reference",
+        "conflict": "LSF established / model start lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].learnerExperience",
+        "old": "representing the administration block (introduced",
+        "new": "representing the classroom block (introduced",
+        "class": "dataset",
+        "conflict": "10 m / 5 cm building is the classroom block"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Where LSF was established and where the cumulative model started; L5 example in L6 model",
+        "class": "cross_reference",
+        "note": "Model began in L1 (L1-L5 agree); LSF built across L1-4; L5 context was Unga Pembe, not painted tank. Fixed L6."
+      },
+      {
+        "conflict": "10 m / 5 cm structure: classroom block vs administration block",
+        "class": "dataset",
+        "note": "L1/L2/FE say classroom block; fixed L5."
+      },
+      {
+        "conflict": "1:200 reduction vs k=2 enlargement on the Cartesian plane in L4",
+        "class": "false_positive",
+        "note": "L4 enlarges a triangle on a grid by k=2 as a separate exercise; it does not redefine the plan scale."
+      },
+      {
+        "conflict": "Classroom 2 cm x 3 cm vs 4 m x 6 m; tank comparisons in L6-L8",
+        "class": "false_positive",
+        "note": "Reviewer itself found the numbers consistent (1:200)."
+      },
+      {
+        "conflict": "Shape of the school water tanks (cuboid in L6, cylinder in L8, square in L7)",
+        "class": "false_positive",
+        "note": "L1 never fixes the tank shape, only that one holds 8x as much; L6-L8 use different illustrative solids. Minor wording only."
+      },
+      {
+        "conflict": "L6 LSF values 2,2,3 and sufuria in Predict",
+        "class": "false_positive",
+        "note": "Data card is internally consistent; Predict uses a separate example."
+      },
+      {
+        "conflict": "Number and size of presentation groups",
+        "class": "false_positive",
+        "note": "Different activities use different groupings."
+      }
+    ]
+  }
+]

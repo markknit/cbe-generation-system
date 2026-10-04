@@ -1,0 +1,91 @@
+[
+  {
+    "when": "2026-10-04T08:27:21",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "for the element they have been tracking all unit (each learner was assigned a different element from H to Ca at Lesson 1)",
+        "new": "for their assigned element (each learner is assigned a different element from H to Ca)",
+        "class": "cross_reference",
+        "conflict": "element assigned at Lesson 1"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "starting with Dalton's solid sphere, adding Rutherford's nucleus in Lesson 2",
+        "new": "starting with a rough sketch in Lesson 1, adding Dalton's sphere and Rutherford's nucleus in Lesson 2",
+        "class": "cross_reference",
+        "conflict": "model layer lesson numbers"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "overview",
+        "old": "sublevels from Lessons 5–6",
+        "new": "sublevels from Lessons 3 and 6",
+        "class": "cross_reference",
+        "conflict": "prior lessons for energy levels"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "teacherReflection",
+        "old": "Lessons 5–6 content may need",
+        "new": "Lessons 3 and 6 content may need",
+        "class": "cross_reference",
+        "conflict": "prior lessons for energy levels"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[3].teacherMoves",
+        "old": "two isotopes: Na-23 (99.0%) and Na-22 (0.97%). If you added Na-22",
+        "new": "a stable isotope, Na-23, and a radioactive isotope, Na-24. If you added Na-24",
+        "class": "dataset",
+        "conflict": "sodium isotope data"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "chlorine isotopes 'glow green (copper-like)'",
+        "class": "science",
+        "note": "Real error in L5: chlorine has no characteristic green flame colour; L4 makes no such claim. Needs a content fix, not edited here."
+      },
+      {
+        "conflict": "violet flame source / copper substances",
+        "class": "false_positive",
+        "note": "Permanganate (lab) and banana-peel ash (story) are both potassium sources; copper wire vs copper sulphate are different demos with similar green/blue-green colour."
+      },
+      {
+        "conflict": "initial model element (sodium vs assigned element at L1)",
+        "class": "cross_reference",
+        "note": "L1 had everyone draw sodium; removed L7's false claim that elements were assigned at Lesson 1."
+      },
+      {
+        "conflict": "model-layer lesson numbering (L6, L7)",
+        "class": "cross_reference",
+        "note": "L6 put Dalton in L1 (it was L2); L7 said energy levels came from L5-6 (shells were L3, sublevels L6). Fixed."
+      },
+      {
+        "conflict": "L8 sodium diagram from Lesson 4",
+        "class": "false_positive",
+        "note": "L4 isotope layer lets learners choose sodium and the model is cumulative; not a clear wrong reference."
+      },
+      {
+        "conflict": "H in Group 1 with similar flame colours",
+        "class": "science",
+        "note": "Placing H with ns1 elements is a common simplification; 'similar but distinct colours' is loose wording, not a cross-lesson contradiction."
+      },
+      {
+        "conflict": "sodium isotope data",
+        "class": "dataset",
+        "note": "L5 gave Na-23 99.0% / Na-22 0.97%, contradicting L4 (Na-24 radioactive) and L9 (Na-23 only stable). Aligned L5 to L4/L9."
+      }
+    ]
+  }
+]

@@ -1,0 +1,179 @@
+[
+  {
+    "when": "2026-10-04T08:30:11",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[0].learnerExperience",
+        "old": "has won their last 5 matches",
+        "new": "has won their last 7 matches",
+        "class": "dataset",
+        "conflict": "Gor Mahia winning streak length"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[2].learnerExperience",
+        "old": "previous 5 wins",
+        "new": "previous 7 wins",
+        "class": "dataset",
+        "conflict": "Gor Mahia winning streak length"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "overview",
+        "old": "Gor Mahia's five consecutive wins do not raise or lower the probability of the sixth match",
+        "new": "Gor Mahia's seven consecutive wins do not raise or lower the probability of the eighth match",
+        "class": "dataset",
+        "conflict": "Gor Mahia winning streak length"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[0].learnerExperience",
+        "old": "won their last five Premier League matches",
+        "new": "won their last seven Premier League matches",
+        "class": "dataset",
+        "conflict": "Gor Mahia winning streak length"
+      },
+      {
+        "target": "final_explanation",
+        "path": "sections[3].prompt",
+        "old": "just won five matches in a row. A fan says the probability of winning the sixth match",
+        "new": "just won seven matches in a row. A fan says the probability of winning the eighth match",
+        "class": "dataset",
+        "conflict": "Gor Mahia winning streak length"
+      },
+      {
+        "target": "final_explanation",
+        "path": "sections[3].exemplar",
+        "old": "the five-match streak carries no information about match six. The probability of winning the sixth match",
+        "new": "the seven-match streak carries no information about match eight. The probability of winning the eighth match",
+        "class": "dataset",
+        "conflict": "Gor Mahia winning streak length"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].learnerExperience",
+        "old": "A flipped 20-shilling",
+        "new": "A flipped 10-shilling",
+        "class": "dataset",
+        "conflict": "coin denomination"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[1].learnerExperience",
+        "old": "In a single draw from a shuffled pack, what is P(Gor Mahia wins",
+        "new": "In a single Gor Mahia vs AFC Leopards match, what is P(Gor Mahia wins",
+        "class": "dataset",
+        "conflict": "L8 mutually exclusive scenario context"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "(begun in Lesson 4 and revised in Lessons 5 and 6)",
+        "new": "(begun in Lesson 1 and revised in every lesson since)",
+        "class": "cross_reference",
+        "conflict": "cumulative model start lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].teacherMoves",
+        "old": "what you drew in Lesson 4 about equally likely events",
+        "new": "what you drew in Lesson 1 about equally likely events",
+        "class": "cross_reference",
+        "conflict": "cumulative model start lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "teacherReflection",
+        "old": "(across multiple trials, introduced in Lesson 3)",
+        "new": "(across multiple trials, first met informally in Lesson 1)",
+        "class": "cross_reference",
+        "conflict": "independence lesson number"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "overview",
+        "old": "coin-toss frequency table accumulated from Lessons 1–2",
+        "new": "coin-toss frequency table accumulated in Lesson 1",
+        "class": "cross_reference",
+        "conflict": "coin-toss data came from Lesson 1 only"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[1].learnerExperience",
+        "old": "frequency table built across Lessons 1 and 2",
+        "new": "frequency table built in Lesson 1",
+        "class": "cross_reference",
+        "conflict": "coin-toss data came from Lesson 1 only"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[1].sensemakingStrategy",
+        "old": "coin-toss data from Lessons 1–2",
+        "new": "coin-toss data from Lesson 1",
+        "class": "cross_reference",
+        "conflict": "coin-toss data came from Lesson 1 only"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "summaryTablePrompt.observed",
+        "old": "coin-toss data from Lessons 1–2",
+        "new": "coin-toss data from Lesson 1",
+        "class": "cross_reference",
+        "conflict": "coin-toss data came from Lesson 1 only"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Gor Mahia match probability (1/3 vs 0.5 vs 0.6)",
+        "class": "science",
+        "note": "Real conceptual tension: L1 asks whether a match is equally likely, L4 and the FE assume W/D/L = 1/3 each; L7 (0.5) and L8 (0.6) are explicitly stated simplifying assumptions. Not edited."
+      },
+      {
+        "conflict": "L8 mutually exclusive scenario 'single draw from a shuffled pack'",
+        "class": "dataset",
+        "note": "Card-pack wording mixed into a football scenario; replaced with 'a single Gor Mahia vs AFC Leopards match'. Definition itself consistent with L4."
+      },
+      {
+        "conflict": "Coin denomination 10 vs 20 shilling",
+        "class": "dataset",
+        "note": "L3 card aligned to L1's 10-shilling coin."
+      },
+      {
+        "conflict": "Cumulative model start",
+        "class": "cross_reference",
+        "note": "L1 starts the model; L7 said begun in Lesson 4 and referred to equally likely events from Lesson 4; fixed. Also fixed L4 reflection saying independence was introduced in Lesson 3. L4 'model from Lesson 3' is correct (latest version)."
+      },
+      {
+        "conflict": "Betting stall payout figures",
+        "class": "false_positive",
+        "note": "Collect 180 x 20 = 3,600, payout 60 x 30 = 1,800, profit 1,800: arithmetic consistent. Spinner 0.5 vs 1/3 covered above."
+      },
+      {
+        "conflict": "Gor Mahia winning streak length",
+        "class": "dataset",
+        "note": "L1 (authoritative) says 7 wins; L2, L6 and FE said 5. Aligned to 7 (next match = 8th, consistent with L3's '8th consecutive win'). Coin '5 heads' examples left unchanged."
+      },
+      {
+        "conflict": "Coin-toss data from Lessons 1-2",
+        "class": "cross_reference",
+        "note": "Coin tosses were in L1 only (L2 used dice); fixed four L3 references. Lesson-count claims are consistent."
+      }
+    ]
+  }
+]

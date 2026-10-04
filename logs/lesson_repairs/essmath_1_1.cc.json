@@ -1,0 +1,131 @@
+[
+  {
+    "when": "2026-10-04T08:28:56",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].learnerExperience",
+        "old": "36.8 °C, 37.2 °C, and 37.6 °C",
+        "new": "36.8 °C, 37.0 °C, and 37.5 °C",
+        "class": "dataset",
+        "conflict": "Mathare North temperatures"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[1].learnerExperience",
+        "old": "36.8 °C, 37.2 °C, and 37.6 °C",
+        "new": "36.8 °C, 37.0 °C, and 37.5 °C",
+        "class": "dataset",
+        "conflict": "Mathare North temperatures"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[1].learnerExperience",
+        "old": "(36.8 + 37.2 + 37.6) ÷ 3",
+        "new": "(36.8 + 37.0 + 37.5) ÷ 3",
+        "class": "dataset",
+        "conflict": "Mathare North temperatures"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[1].formativeAssessment",
+        "old": "111.6 ÷ 3 = 37.2",
+        "new": "111.3 ÷ 3 = 37.1",
+        "class": "dataset",
+        "conflict": "Mathare North temperatures"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[2].teacherMoves",
+        "old": "the average was 37.2 °C",
+        "new": "the average was 37.1 °C",
+        "class": "dataset",
+        "conflict": "Mathare North temperatures"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "summaryTablePrompt.explained",
+        "old": "Because rational numbers are closed under these operations,",
+        "new": "Because rational numbers are closed under addition (and, as Lesson 5 shows, under division),",
+        "class": "cross_reference",
+        "conflict": "closure under division attributed to Lesson 4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "overview",
+        "old": "but we proved in Lesson 3 that it is not",
+        "new": "but we established in Lesson 3 that it is not",
+        "class": "cross_reference",
+        "conflict": "proof of irrationality of root 2 attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[2].learnerExperience",
+        "old": "but we proved in Lesson 3 that",
+        "new": "but we established in Lesson 3 that",
+        "class": "cross_reference",
+        "conflict": "proof of irrationality of root 2 attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[2].teacherMoves",
+        "old": "But what did we prove in Lesson 3 about",
+        "new": "But what did we establish in Lesson 3 about",
+        "class": "cross_reference",
+        "conflict": "proof of irrationality of root 2 attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[2].teacherMoves",
+        "old": "Confirm: 'We proved √2 is irrational",
+        "new": "Confirm: 'We established that √2 is irrational",
+        "class": "cross_reference",
+        "conflict": "proof of irrationality of root 2 attributed to Lesson 3"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Mathare North temperatures in Lesson 7",
+        "class": "dataset",
+        "note": "L7 used 36.8/37.2/37.6 (mean 37.2); aligned to anchoring 36.8/37.0/37.5, sum 111.3, mean 37.1 (checked)."
+      },
+      {
+        "conflict": "Closure under division in Lesson 4",
+        "class": "cross_reference",
+        "note": "L4 Explained justified the average by closure under division, which Lesson 5 establishes; reworded to credit Lesson 5."
+      },
+      {
+        "conflict": "Shoe size 40 vs 41",
+        "class": "false_positive",
+        "note": "Scenario lists shoe sizes 40, 41, 43; L1 and L3 each pick one of them."
+      },
+      {
+        "conflict": "Whether root 2 irrationality was proved",
+        "class": "cross_reference",
+        "note": "L3 only asserts it (citing Euclid); L6 said 'we proved in Lesson 3' - changed to 'established'."
+      },
+      {
+        "conflict": "Hierarchy of number sets (L8 nested ovals)",
+        "class": "science",
+        "note": "Real error: L8 Reference Map template nests the Irrational oval between Q and R, contradicting L6 and L8's own slo/assessment; not edited per rules."
+      },
+      {
+        "conflict": "Rational/irrational boundary under operations",
+        "class": "science",
+        "note": "L6 overstates that the boundary is preserved under all operations (e.g. sqrt2 x sqrt2 = 2); real but minor overclaim; not edited."
+      }
+    ]
+  }
+]

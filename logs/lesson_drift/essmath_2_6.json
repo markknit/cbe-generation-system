@@ -5,10 +5,52 @@
   "lessons": 8,
   "conflicts": [
     {
-      "lessons": "1, 2, 3, 4, 5, 6, 8",
+      "lessons": "1, 6, 8",
       "severity": "major",
-      "fact": "Sequence of lessons and where the cylinder and frustum are covered; Lesson 1 and 3 refer to placeholders and lesson numbers that do not match",
-      "versions": "Lesson 1 Model Journal has placeholders 'Cylinder (Lesson 2)', 'Sphere/Hemisphere (Lesson 3)', 'Frustum (Lesson 5)', but Lesson 2 is pyramids, Lesson 4 is hemisphere, Lesson 5 is frustum introduction, and no lesson teaches cylinder surface area. Lesson 2 refers to comparison across 'cylinder, frustum, and pyramid'. Lesson 3 says it is 'Lesson 8 data' for the bucket dimensions."
+      "fact": "Which buckets are open vs closed, and what the cone bucket's data are (conical bucket's surface area formula and dimensions)",
+      "versions": "Lesson 1 derives the cone TSA as πrl + πr² (closed, with base) and computes only a paper cup. Lesson 6 says the conical bucket's surface area comes from 'Lesson 1 class data' for a 10-litre cone, but Lesson 1 never produces any 10-litre cone data. Lesson 8 uses an open cone with r = 13.4 cm, h = 52.9 cm supplied on a Bucket Data Sheet."
+    },
+    {
+      "lessons": "6, 8",
+      "severity": "major",
+      "fact": "Open-frustum formula versus formula for the closed frustum, and the verdict timing",
+      "versions": "Lesson 6 says the first test of the anchoring question is done in Lesson 6 using the 10-litre cylinder and cone values, with the full verdict in Lesson 8. Lesson 8 uses an open frustum formula π(R+r)l + πr² (consistent), but Lesson 6's model-building has learners write the closed formula TSA = π(R+r)l + πR² + πr² for the bucket and merely cross out the top circle, while Lesson 5 says R is the open top of the bucket and the closed total includes πR²; only Lesson 6 states that the open version is the bucket formula. Lesson 5 states the frustum net is 'larger and more complex than the cone net', implying the frustum uses more material, while Lesson 8 finds the open cone uses the most."
+    },
+    {
+      "lessons": "1, 2, 3, 4, 5",
+      "severity": "major",
+      "fact": "Which lesson covers the cylinder and frustum, and sequence references",
+      "versions": "Lesson 1 placeholders: 'Cylinder (Lesson 2)', 'Sphere/Hemisphere (Lesson 3)', 'Frustum (Lesson 5)'. Actual Lesson 2 covers pyramids, not cylinders; Lesson 3 covers only sphere and Lesson 4 covers hemisphere. Lesson 2 says the frustum comes in 'Lessons 5–6' and compares pyramid to cylinder, frustum, and pyramid shapes. Lesson 3 says 'Last lesson we calculated ... pyramid'. The cylinder is never taught."
+    },
+    {
+      "lessons": "3, 4",
+      "severity": "minor",
+      "fact": "Hemisphere surface area is taught in both Lesson 3 and Lesson 4, with the hemisphere's derivation and formula 3πr² duplicated; Lesson 3 uses a mosque dome (curved only) while Lesson 4 presents hemisphere as new",
+      "versions": "Lesson 3 Learned: total SA of closed hemisphere = 3πr², derived in Explain. Lesson 4 Overview presents it as a new derivation ('re-derive, consolidating Lesson 3') but its Predict phase asks learners to predict surfaces as if never taught."
+    },
+    {
+      "lessons": "3, 8",
+      "severity": "minor",
+      "fact": "Sphere radius for 10 litres and cone base radius",
+      "versions": "Lesson 3 says a sphere holding 10 litres has r ≈ 13.4 cm (via (4/3)πr³ = 10000, which actually gives r ≈ 13.4? it gives ≈13.4 cm? (3×10000/4π)^(1/3)=13.37) and claims it coincidentally equals the cone's base radius; Lesson 8's Bucket Data Sheet lists only cylinder, cone, frustum with no sphere. Also, the cone with r=13.4 and h=52.9 has volume ≈ 9,947 cm³ and slant height ≈54.6, consistent."
+    },
+    {
+      "lessons": "5, 8",
+      "severity": "major",
+      "fact": "Frustum bucket dimensions give inconsistent volume and slant height",
+      "versions": "Lesson 5 gives the Kirinyaga frustum bucket as R = 14, r = 8, h = 25.7 cm (slant height l = √(25.7²+6²) ≈ 26.4 cm). Lesson 8 gives the same dimensions with slant height 26.4 cm (consistent) but claims volume exactly 10 L; with these dimensions volume = (π·25.7/3)(196+112+64) ≈ 10,010 cm³, fine. However Lesson 8 states the cone is greatest, while Lesson 5 and 6 describe the frustum net as larger than the cylinder and the shopkeeper's claim as plausible."
+    },
+    {
+      "lessons": "2",
+      "severity": "minor",
+      "fact": "Rectangular pyramid slant heights are geometrically impossible/inconsistent",
+      "versions": "Lesson 2 gives base 8 × 6 cm with slant height of longer faces = 12 cm and shorter faces = 12.6 cm; the slant height to the longer side (8 cm) must be larger than to the shorter side only if... the face on the 8 cm edge has slant height √(h²+3²) and face on the 6 cm edge has √(h²+4²), so the 8 cm edges should have the shorter slant height (12) and 6 cm edges the longer (12.6) — the lesson's labelling is reversed in some places, and the formula TSA = lb + ls₁ + bs₂ is then mismatched."
+    },
+    {
+      "lessons": "7",
+      "severity": "minor",
+      "fact": "Trophy stand location and calculated area",
+      "versions": "Lesson 7 Overview says a Nairobi secondary school inter-house athletics competition; Explained and Explain phase say Nakuru County athletics championship. The calculated area 2244 cm² with a=18, b=30, l=14 equals 324+900+2(48)(14)=2568 cm², not 2244 cm²."
     }
   ]
 }

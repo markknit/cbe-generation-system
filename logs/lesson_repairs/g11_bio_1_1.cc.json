@@ -1,0 +1,35 @@
+[
+  {
+    "when": "2026-10-04T08:28:36",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[2].teacherMoves",
+        "old": "In the first lesson, one group put the mosquito and the chicken together because both can fly.",
+        "new": "Suppose a group in the first lesson had put the mosquito and the chicken together because both can fly.",
+        "class": "cross_reference",
+        "conflict": "L4 cites an L1 grouping that L1 never records"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "L4 says an L1 group put mosquito and chicken together (flying)",
+        "class": "cross_reference",
+        "note": "Fixed: reworded as a hypothetical, since L1 records no such grouping."
+      },
+      {
+        "conflict": "Kingdom-level split 'already in model' (L3,4)",
+        "class": "false_positive",
+        "note": "L3 taught the Kingdom rank on the hierarchy ladder; only the Five Kingdoms themselves were deferred, which L4 does not claim."
+      },
+      {
+        "conflict": "Next-lesson questions regress (L6 asks about larger categories after L3-4 hierarchy)",
+        "class": "structural",
+        "note": "Real but mild sequencing issue; L6's 'larger categories' lead-in to L7 kingdoms echoes the KICD key inquiry question. Not patched."
+      }
+    ]
+  }
+]

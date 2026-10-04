@@ -1,0 +1,50 @@
+[
+  {
+    "when": "2026-10-04T08:32:47",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "summaryTablePrompt.learned",
+        "old": "that the Kericho farmer's long-handled jembe produces a moment 5× greater than the short-handled jembe for the same applied force",
+        "new": "that moving the jembe grip five times farther from the pivot (0.15 m to 0.75 m) produces a moment 5× greater for the same applied force",
+        "class": "dataset",
+        "conflict": "long vs short handle moment ratio"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "location of the jembe pivot",
+        "class": "science",
+        "note": "All lessons and the FE treat the blade/soil contact as pivot P; L5/FE friction 0.1 m from P is a modelling detail. Not a real contradiction."
+      },
+      {
+        "conflict": "long vs short handle moment ratio (3:1, 4:1, 5:1)",
+        "class": "dataset",
+        "note": "L1/FE anchor is 90 cm vs 30 cm. L2/L7/L8 numbers are separate practice problems; only L3's summary attributed its 5x practice result to the anchoring farmer's jembes, reworded to describe the practice grip distances."
+      },
+      {
+        "conflict": "two-handed grip as couple (L4) vs single force about pivot",
+        "class": "science",
+        "note": "Real conceptual tension: L4 calls the grip a pure couple while other lessons use a pivot model. Needs content review."
+      },
+      {
+        "conflict": "couple definition wording / tau vs M",
+        "class": "science",
+        "note": "Notation/wording inconsistency only; not a factual contradiction."
+      },
+      {
+        "conflict": "L2 200 g at 30 cm balanced by 100 g (needs 60 cm)",
+        "class": "science",
+        "note": "Real internal error in L2 (balance point off the half-metre rule), not a cross-lesson conflict; not edited."
+      },
+      {
+        "conflict": "L8 oar item equilibrium numbers",
+        "class": "false_positive",
+        "note": "Item is self-contained; reviewer noted no conflict with other lessons."
+      }
+    ]
+  }
+]

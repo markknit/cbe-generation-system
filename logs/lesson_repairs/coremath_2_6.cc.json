@@ -1,0 +1,95 @@
+[
+  {
+    "when": "2026-10-04T08:29:15",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[1].teacherMoves",
+        "old": "sector area in Lesson 3?",
+        "new": "sector area in Lesson 2?",
+        "class": "cross_reference",
+        "conflict": "which lesson taught sector area"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[1].teacherMoves",
+        "old": "In Lesson 4 trigonometry, how did we",
+        "new": "In trigonometry, how did we",
+        "class": "cross_reference",
+        "conflict": "triangle formula source lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "overview",
+        "old": "from Lesson 4 trigonometry connections",
+        "new": "from trigonometry",
+        "class": "cross_reference",
+        "conflict": "triangle formula source lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].learnerExperience",
+        "old": "Measure 7 cm (scaled 42 m borehole-to-borehole distance becomes 49/6 ≈ 8.2 cm — teacher directs learners to use 8.2 cm)",
+        "new": "Measure 8.2 cm (the 49 m borehole-to-borehole distance scaled: 49/6 ≈ 8.2 cm)",
+        "class": "dataset",
+        "conflict": "scaled distance between centres"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].learnerExperience",
+        "old": "radius 5.5 cm",
+        "new": "radius 5.8 cm",
+        "class": "dataset",
+        "conflict": "scaled radius 35 m at 1 cm : 6 m"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].formativeAssessment",
+        "old": "BP = BQ = 5.5 cm",
+        "new": "BP = BQ = 5.8 cm",
+        "class": "dataset",
+        "conflict": "scaled radius 35 m at 1 cm : 6 m"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Which lesson taught sector area / trigonometry lesson",
+        "class": "cross_reference",
+        "note": "L5 cited Lesson 3 for sector area (it was L2) and 'Lesson 4 trigonometry' (L4 is annular sector); fixed."
+      },
+      {
+        "conflict": "Radius of the Laikipia running diagram",
+        "class": "structural",
+        "note": "Each lesson uses different pivot dimensions (L1 120/80, L2 40, L3 21, L4 70/40); no single dataset to align to, and dependent arithmetic throughout; not edited."
+      },
+      {
+        "conflict": "Sector area calculation for 120°, r=40",
+        "class": "false_positive",
+        "note": "Reviewer confirms both values correct."
+      },
+      {
+        "conflict": "Segment formula notation and scaled distance in L6",
+        "class": "dataset",
+        "note": "Notation (2θ in L6 vs θ in L5 as full central angle) is consistent once read; scale error fixed: 49 m -> 8.2 cm, and 35 m at 1:6 is 5.8 cm not 5.5 cm."
+      },
+      {
+        "conflict": "Angle to use in common region formula",
+        "class": "false_positive",
+        "note": "Reviewer confirms angles consistent; only notation differs."
+      },
+      {
+        "conflict": "Lesson coverage listed in L8 test",
+        "class": "false_positive",
+        "note": "Omitting arc length from a list is not a contradiction."
+      }
+    ]
+  }
+]

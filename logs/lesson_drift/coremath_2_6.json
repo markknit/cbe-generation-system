@@ -5,40 +5,46 @@
   "lessons": 8,
   "conflicts": [
     {
-      "lessons": "2, 3, 5",
-      "severity": "minor",
-      "fact": "Which lesson taught sector area, and which lesson is the trigonometry one",
-      "versions": "Lesson 2 teaches sector area. Lesson 3 teaches arc length and sector perimeter. Lesson 5 asks 'What formula did we use for sector area in Lesson 3?' and cites the triangle formula as coming from 'Lesson 4 trigonometry', but Lesson 4 is the annular sector lesson."
-    },
-    {
       "lessons": "2, 3",
-      "severity": "minor",
-      "fact": "Radius of the Laikipia pivot field used in the running model diagram",
-      "versions": "Lesson 2 uses r = 40 m with a 120° sector (area about 1675.52 m²). Lesson 3 asks learners to label the running Laikipia diagram with r = 21 m and θ = 90°, and its practice problems use a 21 m pipe and a 28 m plot. Lesson 1 uses R = 120 m and r = 80 m, and Lesson 4 uses R = 70 m and r = 40 m. The 'running' diagram has no consistent dimensions."
+      "severity": "major",
+      "fact": "Radius of the running Laikipia pivot / sector diagram in the cumulative model",
+      "versions": "Lesson 2 uses a pivot of r = 40 m (sector 120° ≈ 1675.52 m²) and the model adds the sector inside r = 40 m. Lesson 3's model step says the running Laikipia scenario has r = 21 m and θ = 90°, while its problems use 21 m at 120° and 28 m at 72°. The 'running' scenario changes."
     },
     {
-      "lessons": "2",
+      "lessons": "1, 2, 3",
       "severity": "major",
-      "fact": "Sector area calculation for the Laikipia 120° sweep, r = 40 m",
-      "versions": "Lesson 2 states a 120° sector with r = 40 m has an area of about 1675.52 m² (one third of the field). One third of π·40² = 5026.55 m² is 1675.52 m², so this is consistent. However, the Kisumu refuge (r = 6 m, θ = 75°) is given as 23.56 m², while the formula gives 75/360 × π × 36 = 23.56 m². These both check out; the Laikipia value is internally correct."
+      "fact": "Full-field radius of the Laikipia farm",
+      "versions": "Lesson 1: title deed plot has radius 120 m (outer pipe 120 m, inner 80 m). Lesson 2: full circular field radius 40 m. Lesson 4: annulus r = 40 m, R = 70 m. Lesson 8: R = 45 m, r = 30 m. Lesson 6: plots 42 m and 35 m. The same farm/plot has incompatible dimensions."
+    },
+    {
+      "lessons": "2, 4",
+      "severity": "minor",
+      "fact": "Model diagram placement of sector: inside the inner circle vs relation to annulus",
+      "versions": "Lesson 2 draws the 120° sector inside the inner circle (r = 40 m) on a diagram where the annulus is already labelled, while Lesson 4 treats the annular sector as the sector of the ring between r = 40 and R = 70 and as combining annulus and sector. Meanwhile Lesson 1's inner radius is 80 m, so the inner circle is inconsistent."
+    },
+    {
+      "lessons": "5, 6",
+      "severity": "major",
+      "fact": "Segment area formula and angle definition",
+      "versions": "Lesson 5: A_segment = (θ/360)πr² − ½r²sinθ with θ the central angle. Lesson 6 states each lens segment area as (2θ/360)πr² − ½r²sin(2θ), using half-angle α, β, so θ means a different quantity; Lesson 8 says Q5 uses 2θ while listing the segment formula with θ."
     },
     {
       "lessons": "6",
       "severity": "major",
-      "fact": "Segment formula and lens area result, and the scaled distance between centres",
-      "versions": "Lesson 6 gives the segment area as (2θ/360)πr² − ½r²sin(2θ) (and in the model step as 2α, 2β). Lesson 5 defines it as (θ/360)πr² − ½r²sinθ with θ being the full central angle. The notation for the angle is used inconsistently. Lesson 6 also describes the scaled stencil step as 'Measure 7 cm (scaled 42 m ... becomes 49/6 ≈ 8.2 cm)', which wrongly equates the 42 m radius with the 49 m distance."
+      "fact": "Lens area arithmetic: segment sum",
+      "versions": "Segment from circle A ≈ 485.8 m² and circle B ≈ 662.3 m² sum to 1148.1 m², which is consistent. However for angle 88.8° at r=42 m, the segment area is (88.8/360)π(42²) − ½(42²)sin88.8° ≈ 1367 − 881.7 ≈ 485.7, consistent; B: 114.2° at 35 m gives ≈ 1220.6 − 556.6... ≈ 664, roughly consistent."
     },
     {
-      "lessons": "6, 8",
-      "severity": "major",
-      "fact": "Angle to use in the common region formula",
-      "versions": "Lesson 6 computes the central angles from the cosine rule as 2α ≈ 88.8° and 2β ≈ 114.2°. The check cos α = 0.7143 gives α ≈ 44.4°, which is right, and cos β = (35²+49²−42²)/(2·35·49) = 1862/3430 = 0.5429 gives β ≈ 57.1°. The doubled angles are consistent. Lesson 8 warns about using 'the wrong angle (not 2θ) in Q5', a different notation from Lesson 6's α/β."
-    },
-    {
-      "lessons": "8, 1, 2, 4, 5, 6",
+      "lessons": "1, 8",
       "severity": "minor",
-      "fact": "Lesson coverage listed in the Lesson 8 test",
-      "versions": "Lesson 8 lists annulus (L1), sector (L2), annular sector (L4), segment (L5) and common region (L6), omitting arc length and perimeter from Lesson 3. Lesson 8 also says the annular sector is a 'band swept by the outer ring' while Lesson 4 describes it as the part of the outer ring watered at an angle, which is consistent."
+      "fact": "Lesson sequence/coverage numbering: Lesson 3 (arc length) is omitted from test and Lesson 7 count",
+      "versions": "Lesson 7 overview says 'Lesson 7 of 8' and 'five formulae' reference strip, but the sequence introduces sector, arc length, perimeter as well; Lesson 8's test covers lessons 1, 2, 4, 5, 6 only while the lesson 8 Explain refers to the 'annular sector of 1325.36 m²' for R=45, r=30, θ=135°, which computes to 1325.36 m² (correct)."
+    },
+    {
+      "lessons": "8",
+      "severity": "minor",
+      "fact": "Groups/predictions in Lesson 8: segment vs annular sector comparison",
+      "versions": "Lesson 8 asks for the annular sector area to be compared with a segment for 'the same radius and angle', yet the annular sector depends on two radii, so the comparison is ill-defined relative to earlier definitions."
     }
   ]
 }

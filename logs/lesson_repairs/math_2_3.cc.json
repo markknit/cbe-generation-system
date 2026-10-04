@@ -1,0 +1,123 @@
+[
+  {
+    "when": "2026-10-04T08:32:40",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 10,
+        "path": "framework[2].learnerExperience",
+        "old": "approximately 307.9 minus 216.5 = 91.4 square metres",
+        "new": "approximately 307.88 minus 217.15 = 90.73 square metres",
+        "class": "dataset",
+        "conflict": "L10 Part D segment arithmetic"
+      },
+      {
+        "target": "lesson",
+        "lesson": 10,
+        "path": "framework[2].learnerExperience",
+        "old": "(Answer: 91.4 divided by 0.4 = 228.5, so yes",
+        "new": "(Answer: 90.73 divided by 0.4 = 226.8, so yes",
+        "class": "dataset",
+        "conflict": "L10 Part D segment arithmetic"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "summaryTablePrompt.explained",
+        "old": "will be formally derived and extended to arc length in Lesson 3 and applied to real Kenyan contexts in Lessons 4 and 5",
+        "new": "will be extended to arc length in Lesson 3, formally derived in Lesson 4, and applied to real Kenyan contexts in later lessons",
+        "class": "cross_reference",
+        "conflict": "sector area formula derivation lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].learnerExperience",
+        "old": "(begun in Lesson 2 and extended each lesson)",
+        "new": "(begun in Lesson 1 and extended each lesson)",
+        "class": "cross_reference",
+        "conflict": "cumulative model start lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 10,
+        "path": "framework[4].learnerExperience",
+        "old": "(started in Lesson 4)",
+        "new": "(built from the cumulative model started in Lesson 1)",
+        "class": "cross_reference",
+        "conflict": "cumulative model start lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[4].learnerExperience",
+        "old": "(from Lesson 7) the segment construction",
+        "new": "(from Lessons 6 and 7) the segment construction",
+        "class": "cross_reference",
+        "conflict": "segment construction lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[0].learnerExperience",
+        "old": "40°, 55°, 70°, 80°, and 115°",
+        "new": "30°, 45°, 60°, 90°, and 135°",
+        "class": "dataset",
+        "conflict": "original chapati slice angles"
+      },
+      {
+        "target": "lesson",
+        "lesson": 9,
+        "path": "framework[4].learnerExperience",
+        "old": "irrigation arc, r = 35 m, θ = 60°",
+        "new": "irrigation arc, r = 35 m, θ = 150°",
+        "class": "dataset",
+        "conflict": "L9 irrigation arc angle"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "When the sector area formula is derived",
+        "class": "cross_reference",
+        "note": "L4 derives it; L2 said 'formally derived... in Lesson 3' and applied in Lessons 4-5; reworded. L1 teaches no formula (consistent); L3's pointer to Lesson 4 is correct."
+      },
+      {
+        "conflict": "Arc length derivation / application lesson numbering",
+        "class": "cross_reference",
+        "note": "Same L2 sentence; fixed with the edit above."
+      },
+      {
+        "conflict": "L9 irrigation arc 150 vs 60 degrees; 'Lessons 6-8' pizza slices",
+        "class": "dataset",
+        "note": "Model-building example aligned to Observe scenario (150 degrees). The 'Lessons 6-8' attribution of the scenarios is loose but unverifiable; left."
+      },
+      {
+        "conflict": "Original chapati slice angles",
+        "class": "dataset",
+        "note": "L8 said the original chapati has 40/55/70/80/115; aligned to L1's 30/45/60/90/135 (both sum to 360; no dependent calculations)."
+      },
+      {
+        "conflict": "When proportionality was first established",
+        "class": "false_positive",
+        "note": "L2 raises the conjecture, L4 derives, L8 confirms numerically: progressive, not contradictory."
+      },
+      {
+        "conflict": "Which lesson started the cumulative model",
+        "class": "cross_reference",
+        "note": "L1/L4 say the model began in Lesson 1; fixed L5 ('Lesson 2') and L10 ('Lesson 4')."
+      },
+      {
+        "conflict": "Segment construction from Lesson 7",
+        "class": "cross_reference",
+        "note": "Minor segment is L6 and major segment L7; L8 now cites Lessons 6 and 7."
+      },
+      {
+        "conflict": "L10 Part D numbers",
+        "class": "dataset",
+        "note": "Real arithmetic error: half x 21^2 x sin80 = 217.15, not 216.5; segment = 307.88 - 217.15 = 90.73 (matches FE); Part E 90.73/0.4 = 226.8, still enough for 200 plants. Part A uses pi = 22/7 (29.33) while B/C use pi (307.9, 1077.6): mixed pi left as is."
+      }
+    ]
+  }
+]

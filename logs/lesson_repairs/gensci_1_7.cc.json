@@ -1,0 +1,59 @@
+[
+  {
+    "when": "2026-10-04T08:29:31",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[3].teacherMoves",
+        "old": "in Lesson 7 — prevention and control — and Lesson 8",
+        "new": "in Lesson 7 — our mould-growth investigation — and Lesson 8",
+        "class": "cross_reference",
+        "conflict": "prevention and control was Lesson 5; Lesson 7 is the mould investigation"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].learnerExperience",
+        "old": "eight sample containers set up across four conditions",
+        "new": "eight sample containers set up across six conditions",
+        "class": "dataset",
+        "conflict": "L7 lists containers A-F (six conditions) plus two pre-incubated"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Number of lessons / Lesson 7 described as prevention and control (L1,4,6,7)",
+        "class": "cross_reference",
+        "note": "Fixed L6 teacher move that said Lesson 7 covers prevention and control (that was L5). L1 'Lessons 2-6' answering the content questions is accurate; 'eight-lesson sequence' is correct."
+      },
+      {
+        "conflict": "Patch organisms: fungal moulds (L1,2,8) vs fungi and bacteria (L5)",
+        "class": "science",
+        "note": "Mild: L5 adds bacteria as co-colonisers; not strictly contradictory but blurs the 'moulds' conclusion."
+      },
+      {
+        "conflict": "Eight containers across four conditions vs A-F six conditions (L7)",
+        "class": "dataset",
+        "note": "Fixed: 'four conditions' -> 'six conditions' (A-F plus two pre-incubated = eight containers)."
+      },
+      {
+        "conflict": "Drying/salting said to reduce temperature (L7)",
+        "class": "science",
+        "note": "Real error within L7 (drying and salting reduce water availability, not temperature); needs author fix."
+      },
+      {
+        "conflict": "Transmission route categories (L3,4,5)",
+        "class": "science",
+        "note": "Different groupings of the same routes; not a real contradiction."
+      },
+      {
+        "conflict": "Patch fungi in 'same broad group' as yoghurt Lactobacillus (L2 vs L6)",
+        "class": "science",
+        "note": "Real but framed loosely: 'microorganisms' as the broad group is defensible; the prompt is posed as a true/false discussion."
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "when": "2026-10-04T08:34:30",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Waterline position / mirror line always y = mx + c",
+        "class": "science",
+        "note": "Real error: L5 and L8 say a mirror line can always be written y = mx + c, which excludes the vertical lines x = 3 and x = -1 taught in L3. The waterline moving (y = 0, y = k, hidden) across lessons is deliberate variation, not a contradiction. Not edited."
+      },
+      {
+        "conflict": "L3 waterline shift vs boat vertices below y = 2",
+        "class": "false_positive",
+        "note": "The L3 boat straddling y = 2 is an odd design choice, but the general rule in the summary is consistent."
+      },
+      {
+        "conflict": "Mirror orientation in L1; L2 vertex D(4,0) on the waterline",
+        "class": "false_positive",
+        "note": "A vertex on the mirror maps to itself; no contradiction."
+      },
+      {
+        "conflict": "SSS alone proves the whole boat congruent (L6 vs L7)",
+        "class": "false_positive",
+        "note": "L6 applies SSS to a triangle and L7 extends it by triangulation, using SAS/RHS for other contexts. Consistent."
+      },
+      {
+        "conflict": "Rule for y = -x and the Maasai task mirror line",
+        "class": "false_positive",
+        "note": "L4 rule is correct; L8 tasks use different mirror lines for different problems."
+      }
+    ]
+  }
+]

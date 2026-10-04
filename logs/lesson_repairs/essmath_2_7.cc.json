@@ -1,0 +1,101 @@
+[
+  {
+    "when": "2026-10-04T08:30:59",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[0].learnerExperience",
+        "old": "established in Lesson 4 as approximately 141 litres",
+        "new": "established in Lesson 4 as approximately 18.5 litres",
+        "class": "dataset",
+        "conflict": "cylindrical drum capacity"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[0].learnerExperience",
+        "old": "top radius r₁ = 15 cm, bottom radius r₂ = 10 cm",
+        "new": "top radius r₁ = 14 cm, bottom radius r₂ = 9 cm",
+        "class": "dataset",
+        "conflict": "Kericho bucket dimensions"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].teacherMoves",
+        "old": "In Lesson 2 we found that if the volume scale factor",
+        "new": "In Sub-Strand 2.1 we found that if the volume scale factor",
+        "class": "cross_reference",
+        "conflict": "k^3 scale factor source"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[4].learnerExperience",
+        "old": "frustum formula is derived in Lesson 5",
+        "new": "frustum formula is derived in Lesson 4",
+        "class": "cross_reference",
+        "conflict": "frustum formula lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[3].learnerExperience",
+        "old": "Lesson 7 (surface area and design optimisation)",
+        "new": "Lesson 7 (model making and measurement)",
+        "class": "cross_reference",
+        "conflict": "Lesson 7 scope"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "container dimensions/capacities (L1 d=20 cm, 9.4/3.1/6.5 L vs L4/L8 d=28 cm, 18.47/6.16 L; L2 r=21,h=42)",
+        "class": "structural",
+        "note": "L1 and L8 (both authoritative) disagree; L1 is internally consistent on d=20, L4/L8 on d=28, L2 on its own r=21/h=42 cone. Needs a module-level choice; not edited. Only L6's stray '141 litres in Lesson 4' was fixed to 18.5 L (L4's 18.47 L)."
+      },
+      {
+        "conflict": "opening diameter 20 vs 42 vs 28 cm",
+        "class": "structural",
+        "note": "Same issue as above."
+      },
+      {
+        "conflict": "frustum about 2/3 of cylinder",
+        "class": "false_positive",
+        "note": "With L8 data the frustum is 12.66 L (L8's own working) = 69% of 18.47 L; L1 6.5/9.4 = 69%. Reviewer miscomputed 10.1 L."
+      },
+      {
+        "conflict": "Kericho bucket dimensions (L5 R=15,r=10)",
+        "class": "dataset",
+        "note": "L4/L8 use R=14, r=9, h=30; L5's anchoring bucket aligned. L5 does not compute its volume, so no dependent arithmetic. L4's R=15/r=10/h=35 exit prompt is explicitly a different farm's bucket."
+      },
+      {
+        "conflict": "frustum orientation (R top vs bottom)",
+        "class": "false_positive",
+        "note": "L4 and L8 both describe a wide bottom; formula is symmetric in R and r."
+      },
+      {
+        "conflict": "k^3 attributed to Lesson 2",
+        "class": "cross_reference",
+        "note": "L5 elsewhere cites Sub-Strand 2.1; Lesson 2 has no scale factor. Fixed."
+      },
+      {
+        "conflict": "frustum formula derived in Lesson 5 (per L2)",
+        "class": "cross_reference",
+        "note": "Derived in L4. Fixed."
+      },
+      {
+        "conflict": "Lesson 7 scope",
+        "class": "cross_reference",
+        "note": "L7 is a model-making/measurement project; L6 parenthetical fixed."
+      },
+      {
+        "conflict": "maize farmer in Kericho vs Rift Valley",
+        "class": "false_positive",
+        "note": "Kericho is in the Rift Valley region; tea bucket and maize bin are separate contexts."
+      }
+    ]
+  }
+]

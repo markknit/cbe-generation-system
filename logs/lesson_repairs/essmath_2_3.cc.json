@@ -1,0 +1,162 @@
+[
+  {
+    "when": "2026-10-04T08:32:06",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].learnerExperience",
+        "old": "Baraka standing 15 m from the same base. Amina's clinometer reads 42° and Baraka's reads 30°.",
+        "new": "Baraka standing 20 m from the same base. Amina's clinometer reads 38° and Baraka's reads 22°.",
+        "class": "dataset",
+        "conflict": "Water-tank data (L1: Amina 10 m 38°, Baraka 20 m 22°)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "'Amina at 10 m (42°)' and 'Baraka at 15 m (30°)' both pointing to 'same h = 9.0 m'",
+        "new": "'Amina at 10 m (38°)' and 'Baraka at 20 m (22°)' both pointing to 'same h ≈ 8 m (7.8 m and 8.1 m)'",
+        "class": "dataset",
+        "conflict": "Water-tank data; L7 9.0 m arithmetic"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "summaryTablePrompt.explained",
+        "old": "Amina at 10 m (42°) and Baraka at 15 m (30°) both arrive at the same height",
+        "new": "Amina at 10 m (38°) and Baraka at 20 m (22°) arrive at nearly the same height",
+        "class": "dataset",
+        "conflict": "Water-tank data"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].learnerExperience",
+        "old": "A second student stands 15 m away and sights the top at 27°.",
+        "new": "A second student stands 20 m away and sights the top at 22°.",
+        "class": "dataset",
+        "conflict": "Water-tank data (second observer)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[2].learnerExperience",
+        "old": "(15 m from base, angle of elevation 27°)",
+        "new": "(20 m from base, angle of elevation 22°)",
+        "class": "dataset",
+        "conflict": "Water-tank data (second observer)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[2].teacherMoves",
+        "old": "Student B: 15 metres away, angle 27°.",
+        "new": "Student B: 20 metres away, angle 22°.",
+        "class": "dataset",
+        "conflict": "Water-tank data (second observer)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[2].teacherMoves",
+        "old": "(h ≈ 15 × tan 27° ≈ 15 × 0.5095 ≈ 7.64 m). Say: 'Both answers are close to 7.8 m. The small difference is rounding.",
+        "new": "(h ≈ 20 × tan 22° ≈ 20 × 0.4040 ≈ 8.08 m). Say: 'Both answers are close to 8 m. The small difference comes from measurement uncertainty.",
+        "class": "dataset",
+        "conflict": "Water-tank data (second observer) arithmetic"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "teacherReflection",
+        "old": "tank height (≈7.64 m)",
+        "new": "tank height (≈8.08 m)",
+        "class": "dataset",
+        "conflict": "Water-tank data (second observer) arithmetic"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "overview",
+        "old": "revisiting their Lesson 2 finding",
+        "new": "revisiting their Lesson 1 finding",
+        "class": "cross_reference",
+        "conflict": "Constant-ratio discovery attributed to Lesson 2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "slo.purposeInStoryline",
+        "old": "In Lesson 2 learners confirmed through paper-folding and measurement",
+        "new": "In Lesson 1 learners confirmed through measurement",
+        "class": "cross_reference",
+        "conflict": "Constant-ratio discovery attributed to Lesson 2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].sensemakingStrategy",
+        "old": "prior knowledge from Lesson 2 (constant ratios",
+        "new": "prior knowledge from Lessons 1–2 (constant ratios",
+        "class": "cross_reference",
+        "conflict": "Constant-ratio discovery attributed to Lesson 2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].learnerExperience",
+        "old": "(a diagram started in Lesson 3 and updated in Lesson 4)",
+        "new": "(a diagram started in Lesson 1 and updated each lesson)",
+        "class": "cross_reference",
+        "conflict": "Where the cumulative model started"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].learnerExperience",
+        "old": "water-tank calculation in Lesson 4?",
+        "new": "water-tank calculation in Lesson 3?",
+        "class": "cross_reference",
+        "conflict": "38° calculation attributed to Lesson 4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.observed",
+        "old": "water-tank calculation in Lesson 4.",
+        "new": "water-tank calculation in Lesson 3.",
+        "class": "cross_reference",
+        "conflict": "38° calculation attributed to Lesson 4"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Water-tank scenario data changes between lessons",
+        "class": "dataset",
+        "note": "Aligned L3 (second observer) and L7 (Amina/Baraka, wrong '9.0 m') to L1/FE data: 10 m at 38° (7.81 m) and 20 m at 22° (8.08 m); arithmetic checked. Left: L5 (8 m at 60°, about 13.9 m) is built around a complementary-angle pair, so it is structural; L8's Observer A/B (8 m 42°, 12 m 35°, giving 7.2 vs 8.4 m) mirrors its field stations and was left as the last lesson; flag for review."
+      },
+      {
+        "conflict": "Which lesson discovered the constant ratio / named tangent",
+        "class": "structural",
+        "note": "Fixed L3's 'Lesson 2' references to Lesson 1 (L1 did the ratio measurement). L4 re-runs the constant-ratio discovery as new after L3 already derived sin/cos/tan: real duplication, left. Also L4 claims 35° at 6 m and 10 m give the same height (they give 4.2 m and 7.0 m): real maths error, not edited."
+      },
+      {
+        "conflict": "Cumulative model start; 38° angle lesson; L6 repeats L5",
+        "class": "cross_reference",
+        "note": "Fixed L5 (model began L1) and L6 (38° used in L3). L5 and L6 teach the same complementary-angle content: structural duplication, left."
+      },
+      {
+        "conflict": "Complementary angles and the two students' agreement (L5 vs L6)",
+        "class": "science",
+        "note": "Real conceptual problem: complementary angles do not explain why two observers agree (L1 data 38°/22° are not complementary); L6's claim about the top angle is correct geometry but different. Left."
+      },
+      {
+        "conflict": "Sine/cosine values and 42° clinometer angle (L4, L7, L8)",
+        "class": "false_positive",
+        "note": "L4 values are consistent; the L7 42° reading is now 38°, and L8's 42° at 8 m is a field reading."
+      }
+    ]
+  }
+]

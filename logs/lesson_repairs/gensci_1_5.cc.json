@@ -1,0 +1,69 @@
+[
+  {
+    "when": "2026-10-04T08:30:15",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[0].learnerExperience",
+        "old": "'Aisha pours uji",
+        "new": "'Achieng pours uji",
+        "class": "dataset",
+        "conflict": "name of the student with the thermos"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.learned",
+        "old": "why the uji in the Kisumu thermos ferments noticeably faster",
+        "new": "why identical uji ferments noticeably faster",
+        "class": "dataset",
+        "conflict": "Kisumu thermos placed in Mombasa"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Which organisms/acid cause the uji's sourness",
+        "class": "science",
+        "note": "Real contradiction: L1/L7/L8 attribute sourness to lactic acid bacteria, L4 to carbonic acid from yeast CO2 plus 'other organic acids', L6 to yeast producing 'lactic/acetic acid' (yeast do not make lactic acid). Needs content review."
+      },
+      {
+        "conflict": "Why fresh uji does not ferment: no organisms (L1, L4) vs lower substrate concentration (L6)",
+        "class": "science",
+        "note": "Real inconsistency in L6's summaryTablePrompt.explained; reviewer-worthy but science explanation, not edited."
+      },
+      {
+        "conflict": "Supporting characters (Amina sprinter, Jepchirchir, Lewa marathon); student named Achieng (L3) vs Aisha (L6)",
+        "class": "dataset",
+        "note": "Athletes are separate supporting scenarios (false positive). Student is unnamed in L1/L4/L8 and first named Achieng in L3; renamed L6's Aisha to Achieng."
+      },
+      {
+        "conflict": "Kisumu thermos ferments faster on a Mombasa afternoon (L6)",
+        "class": "dataset",
+        "note": "Reworded L6 Learned to 'identical uji', matching L6's own cousin-in-Mombasa stimulus."
+      },
+      {
+        "conflict": "L3 loosely stoppered flask vs L4 'sealed' flask for limewater",
+        "class": "false_positive",
+        "note": "Different demonstrations; L4's sealed flask is a separate setup."
+      },
+      {
+        "conflict": "Uji wa kimea vs fresh uji wa kawaida",
+        "class": "false_positive",
+        "note": "Both lessons use kawaida as the fresh comparison; consistent."
+      },
+      {
+        "conflict": "RQ of fats and proteins (L5 vs L8)",
+        "class": "false_positive",
+        "note": "L8 mentioning only fats < 1 does not contradict L5's 0.7 / 0.8."
+      },
+      {
+        "conflict": "Oxygen 'limited' vs absent for yeast anaerobic respiration",
+        "class": "science",
+        "note": "Wording difference (limited vs no oxygen); not a real contradiction."
+      }
+    ]
+  }
+]

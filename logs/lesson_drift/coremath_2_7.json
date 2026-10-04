@@ -5,46 +5,52 @@
   "lessons": 8,
   "conflicts": [
     {
-      "lessons": "1, 6",
+      "lessons": "1, 6, 7",
       "severity": "major",
-      "fact": "Surface area of the rectangular box (l=120, w=80, h=100 cm) and the iron sheet area shared by both containers",
-      "versions": "Lesson 1 states SA = 2(lw+lh+wh) gives 59,200 cm². The correct value is 2(9600+12000+8000)=59,200 cm², so this is consistent. Lesson 7 however gives the drum's surface area as about 4.8 m², while 59,200 cm² is about 5.92 m². Lesson 6 also uses 59,200 cm² for the drum."
-    },
-    {
-      "lessons": "6, 7",
-      "severity": "major",
-      "fact": "Surface area (iron sheet) of the cylindrical drum",
-      "versions": "Lesson 6 says the drum's surface area is 59,200 cm² (5.92 m²). Lesson 7 says the drum's surface area is approximately 4.8 m²."
+      "fact": "Surface area of the rectangular box and what it means for the cylindrical drum's 'same sheet'",
+      "versions": "Lesson 1 computes the box (120×80×100 cm) as 59,200 cm². Check: 2(9600+12000+8000)=59,200, which is correct. Lessons 6 and 7 then state the drum also has 59,200 cm² with height 100 cm. Lesson 6 back-calculates r ≈ 59.2 cm, but 2πr²+2πr(100)=59,200 gives r≈ 59.2 only if the formula is mis-solved. For r=59.2 cm, SA≈ 22,000+37,200=59,200, so it is consistent. Lesson 7 states 59,200 cm² = 5.92 m², but 59,200 cm² is 5.92 m², so that is fine. The conflict is the box volume: 120×80×100 = 960,000 cm³ = 0.96 m³, consistent."
     },
     {
       "lessons": "6",
       "severity": "major",
-      "fact": "Volume difference between drum and box",
-      "versions": "Lesson 6 overview says the drum holds about 1.83 m³ vs 1.44 m³, nearly 27% more. Its Learned section says about 1,483,000 cm³ vs 1,440,000 cm³. Its Explained section says about 43,000 cm³ more. These figures differ: 1.83 m³ vs 1.483 m³, and 27% vs about 3%."
+      "fact": "Drum volume and difference vs box",
+      "versions": "Lesson 6 Learned/Overview say the drum's volume is ≈1,100,000 cm³ (1.10 m³), about 15% more than the box's 960,000 cm³. Lesson 6 Explained says the drum holds about 140,000 cm³ (140 litres) more, but π(59.2)²(100) ≈ 1,101,000 cm³, so the difference is ~141,000 cm³. These are consistent, though the 15% figure is approximate. The real conflict is the radius: with r=59.2 cm the drum is 118 cm wide and 100 cm tall, while the box is only 120×80×100 cm, which is fine."
     },
     {
-      "lessons": "6, 8, 1",
+      "lessons": "1, 2, 3, 5",
       "severity": "minor",
-      "fact": "Names of the posho mill owner and the metalsmith",
-      "versions": "Lesson 1 calls the owner Mama Wanjiru. Lesson 6 refers to Wanjiku's box and Omar's drum, and to metalsmith Omar Khalif. Lesson 8 calls the metalsmith Mwangi."
+      "fact": "Lesson numbering/scope of surface-area and volume coverage",
+      "versions": "Lesson 3 says volumes for cylinders/cuboids come in Lessons 4–5, and that volume calculations in Lessons 4–5 complete the explanation. Lesson 4 is actually surface area of spheres and composites, and Lesson 5 says the cylinder volume formula comes in Lesson 6. Lesson 6 also says Lesson 7 is composite solids and optimisation, while Lesson 4 already covered composite surface area."
     },
     {
-      "lessons": "1, 2, 3, 4",
+      "lessons": "5, 6",
       "severity": "minor",
-      "fact": "Which surface area topics each lesson covered",
-      "versions": "Lesson 4's DQB script says Lessons 2 and 3 covered prisms, cylinders, cones and frustums, but Lesson 2 covered pyramids and Lesson 1 covered prisms. Lesson 5 says the previous lesson computed surface area, which fits Lesson 4."
+      "fact": "Cylinder volume treatment and Lesson 5 volume stated as predicted vs established",
+      "versions": "Lesson 5 predicts the drum holds more because circular cross-section is more efficient. Lesson 6 says cylinder volume formula is not yet known and uses V_cone = ⅓V_cylinder, while computing the drum volume; Lesson 6 never derives V = πr²h, whereas Lesson 5 says it will be derived in Lesson 6."
     },
     {
-      "lessons": "6, 7",
+      "lessons": "1, 6, 8",
       "severity": "minor",
-      "fact": "Lesson numbering of composite solids and sequence length",
-      "versions": "Lesson 6 says composite solids and optimisation come in Lesson 7. Lesson 5 says the cylinder volume will be derived in Lesson 6, but Lesson 6 only back-calculates the cylinder volume with no derivation of V=πr²h. Lesson 3 says volumes come in Lessons 4–5, while Lesson 4 is surface area."
+      "fact": "Name of the posho mill owner/metalsmith",
+      "versions": "Lesson 1 and 6 name the mill owner Mama Wanjiru; Lesson 6 also calls the metalsmith Mwangi; Lesson 8 says Mwangi the metalsmith cut the sheet, and Lesson 7 says her cylindrical drum. Lesson 7 names the water tank owner Mwangi wa Kamau, and Lesson 7's silo farmer is Mwalimu Chebet."
     },
     {
       "lessons": "4, 7",
       "severity": "minor",
-      "fact": "Composite solid covered earlier",
-      "versions": "Lesson 4 already treats the silo (cylinder + cone) and the water tank (cylinder + hemisphere) as composites for surface area. Lesson 7 presents the same composite solids as new, and cites a Makueni water tank and Nakuru/Eldoret silo."
+      "fact": "Composite solid example locations and dimensions",
+      "versions": "Lesson 4 describes a Mombasa water tank (cylinder + hemisphere) and a Nakuru silo with radius 1.4 m, height 3 m, slant height 2 m. Lesson 7 describes the cylinder+hemisphere tank in Makueni (Mwangi wa Kamau) and the silo in Eldoret (Mwalimu Chebet) with radius 1.2 m, height 3.5 m, cone height 0.9 m, while its Observed section calls it the Nakuru grain silo."
+    },
+    {
+      "lessons": "4, 8",
+      "severity": "minor",
+      "fact": "Lesson 4 says the gas cylinder has two hemispheres, and Lesson 8 says the cylinder beats a same-height box",
+      "versions": "Lesson 4 Overview uses a gas cylinder (cylinder + two hemispheres), but Learned/Observed list a Mombasa water tank (cylinder + hemisphere). Lesson 8 states the cylinder consistently wins versus a same-height rectangular prism, while Lesson 4's DQB suggests a sphere would hold more for the same surface area, which is unmentioned in the isoperimetric claim 'among solids' that the cylinder is best."
+    },
+    {
+      "lessons": "1, 8",
+      "severity": "minor",
+      "fact": "Number of lessons the prediction refers to",
+      "versions": "Lesson 8 says 'seven lessons' of study, and the sequence indeed has 8 lessons; Lesson 3 says 'Lesson 3 of 8' while Lesson 6 calls itself the resolution lesson of an eight-lesson sequence, yet Lesson 8 then resolves the driving question again as a final explanation."
     }
   ]
 }

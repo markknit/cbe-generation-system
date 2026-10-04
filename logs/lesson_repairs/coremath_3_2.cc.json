@@ -1,0 +1,97 @@
+[
+  {
+    "when": "2026-10-04T08:28:14",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "overview",
+        "old": "is estimated as 14/20 = 7/10, and",
+        "new": "is estimated as 10/14 ≈ 0.71, rounded to 7/10, and",
+        "class": "dataset",
+        "conflict": "single-seat probability 7/10 vs 10/14"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].learnerExperience",
+        "old": "a seat is filled at any stop is 7/10.",
+        "new": "a seat is filled at any stop is 10/14 — about 7/10.",
+        "class": "dataset",
+        "conflict": "single-seat probability 7/10 vs 10/14"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].teacherMoves",
+        "old": "previously established P(Filled) = 7/10 from Lesson 6.",
+        "new": "previously established P(Filled) = 10/14 from Lesson 4, rounded to 7/10.",
+        "class": "cross_reference",
+        "conflict": "single-seat probability 7/10 vs 10/14"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "overview",
+        "old": "(10/14)^14 ≈ 0.021",
+        "new": "(10/14)^14 ≈ 0.009",
+        "class": "dataset",
+        "conflict": "(10/14)^14 arithmetic"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[1].teacherMoves",
+        "old": "Guide toward (10/14)^14 ≈ 0.021.",
+        "new": "Guide toward (10/14)^14 ≈ 0.009.",
+        "class": "dataset",
+        "conflict": "(10/14)^14 arithmetic"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[1].teacherMoves",
+        "old": "(independent model) = 0.021.",
+        "new": "(independent model) = 0.009.",
+        "class": "dataset",
+        "conflict": "(10/14)^14 arithmetic"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[1].sensemakingStrategy",
+        "old": "theoretical prediction (0.021)",
+        "new": "theoretical prediction (0.009)",
+        "class": "dataset",
+        "conflict": "(10/14)^14 arithmetic"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "teacherReflection",
+        "old": "(≈0.021)",
+        "new": "(≈0.009)",
+        "class": "dataset",
+        "conflict": "(10/14)^14 arithmetic"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "summaryTablePrompt.observed",
+        "old": "(≈0.021)",
+        "new": "(≈0.009)",
+        "class": "dataset",
+        "conflict": "(10/14)^14 arithmetic"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Single-seat probability 7/10 (L7, as 14/20, cited to L6) vs 10/14 (L4, L8); P(full)=0.4",
+        "class": "dataset",
+        "note": "L4/L8 authoritative (10/14); L7 now derives 7/10 as a rounding of 10/14 from Lesson 4, so its tree arithmetic (49/100 etc.) stays valid. Also fixed L8's (10/14)^14 ≈ 0.021 to the correct 0.009 (matches FE). Residual: L4 says 14/20 is the frequency of completely full trips, but full trips are 8/20 (L1, L8) - L4's misconception framing is internally flawed; left (structural)."
+      }
+    ]
+  }
+]

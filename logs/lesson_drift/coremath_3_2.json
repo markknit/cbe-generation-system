@@ -5,10 +5,52 @@
   "lessons": 8,
   "conflicts": [
     {
-      "lessons": "1, 2, 6, 7, 8 vs 4, 8",
+      "lessons": "1, 2, 6, 8 vs 4, 7",
       "severity": "major",
-      "fact": "Single-seat/trip probabilities derived from Kamau's tally: P(full bus)=8/20=0.4 vs. P(seat filled)=7/10 vs. 10/14. The tally data gives a mean of about 10.6 passengers, so 7/10 and 10/14 are not derived from the data and conflict with each other.",
-      "versions": "Lesson 4 and 8: P(randomly chosen seat occupied)=10/14≈0.71. Lesson 7: seat filled is 14/20=7/10, treating the 14 as a count of trips, and says 'we estimated earlier 7/10' with Lesson 6 cited as the source, but Lesson 6 never derives it. Lessons 1, 2, 6: P(full bus)=0.4. Lesson 6 also treats 0.4 as the probability each trip is full."
+      "fact": "P(full seat/occupied) and the source of the 'filled' probability used for tree diagrams: Lessons 1, 2, 6 and 8 use 8/20 = 0.4 as the probability of a full bus; Lessons 4 and 7 use 10/14 ≈ 0.71 (7/10) as the probability a seat is filled, claimed to come from the tally",
+      "versions": "L1/L2/L8: P(full bus)=8/20=0.4; L6 tree: P(Full)=2/5 per trip; L7: P(Filled)=7/10 at each stop, 'estimated from the 20-trip data' as 10/14; L4: theoretical P(seat occupied)=10/14, yet 10/14 does not follow from the tally or a sample space of 14 seats"
+    },
+    {
+      "lessons": "1, 4",
+      "severity": "major",
+      "fact": "Whether Lesson 1 included a dice-rolling experiment",
+      "versions": "L1: only a coin-toss experiment (10-shilling coin) and Kamau's tally; L4: uses 'the Lesson 1 dice-rolling experiment results posted on the board' for P(sum=7)"
+    },
+    {
+      "lessons": "1, 6",
+      "severity": "minor",
+      "fact": "Coin used and number of tosses per pair",
+      "versions": "L1: 10-shilling coin, 30 tosses per pair; L6: 5-shilling coin, 20 trials (40 tosses) per pair; L6 also says '20 trials per pair' vs '40-toss' experiment and ~160 pooled trials for a class of 40 (20 pairs x 20 = 400)"
+    },
+    {
+      "lessons": "5",
+      "severity": "major",
+      "fact": "Addition law example with Kamau's data is arithmetically inconsistent with the dataset",
+      "versions": "L5: P(fully booked OR fewer than 7) = 8/20 + 2/20 = 1/2, but 10/20 = 1/2 is correct only if 2 trips had fewer than 7 passengers (6 and 6 =2, ok), whereas L2 uses 'fewer than 8' = 4/20 = 0.2 — but the tally has only 6,6,7 below 8 (3 trips), so 4/20 is wrong"
+    },
+    {
+      "lessons": "3, 1",
+      "severity": "minor",
+      "fact": "Location of the dice game stall/context and Kamau's route stops",
+      "versions": "L3: game stall at Athi River Secondary School, stops Mlolongo and Athi River; L4: calls the game-stall scenario 'from the Machakos Bus Station'; L1 phenomenon route is Nairobi–Kitengela and L3 adds Kitengela as a third stop after Athi River"
+    },
+    {
+      "lessons": "6, 7",
+      "severity": "minor",
+      "fact": "Dependent-queue preview figures and 'roughly once a working week' interpretation",
+      "versions": "L6: P(second=woman|first=woman)=4/13 ≠ 5/14, with 0.16 interpreted as 'roughly once a working week' (0.16×5≈0.8); L7 uses a different tree with 49/100 for both filled with no tie to 0.16"
+    },
+    {
+      "lessons": "5, 6, 7",
+      "severity": "minor",
+      "fact": "Lesson numbering/references in cross-lesson statements",
+      "versions": "L5 says DQB has entries from Lessons 1–4 and 'collective thinking over 5 lessons'; L7 tells students to review 'Lesson 4 notes on mutually exclusive events' but mutually exclusive events are taught in Lesson 5"
+    },
+    {
+      "lessons": "1, 8",
+      "severity": "minor",
+      "fact": "Explanation of why Kamau cannot predict",
+      "versions": "L1 explains each passenger's decision is independent, like coin tosses; L8 shows seats are NOT independent (clustered) since (10/14)^14≈0.009 vs 0.4"
     }
   ]
 }

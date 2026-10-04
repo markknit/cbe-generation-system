@@ -1,0 +1,69 @@
+[
+  {
+    "when": "2026-10-04T08:30:57",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].learnerExperience",
+        "old": "a = 2.5 m/s² (value from previous lesson's estimate),",
+        "new": "a = 2.5 m/s²,",
+        "class": "cross_reference",
+        "conflict": "L3 cites L2 for a = 2.5 m/s² (L2 used 2 m/s²)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[0].learnerExperience",
+        "old": "Point B (200 m down the slope, ~5 s after release)",
+        "new": "Point B (125 m down the slope, ~5 s after release)",
+        "class": "dataset",
+        "conflict": "L5 Point B distance vs its own 5 s calculation"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Mkokoteni acceleration 2 (L2), 2.5 (L3), 9.8/10 (L4, L5, L7), ~3 slope component (L8)",
+        "class": "structural",
+        "note": "Real: each lesson builds its calculations on a different acceleration and L4/L5/L7 model the cart as in free fall, which L8 rejects. Changing values would cascade through every worked answer; needs a decision on one cart acceleration. Only removed L3's false claim that 2.5 came from the previous lesson."
+      },
+      {
+        "conflict": "Cart speed/distance after 8 s: 16 m/s (L2) vs 20 m/s, 80 m (L3) vs 24 m/s (L8)",
+        "class": "structural",
+        "note": "Follows from the different accelerations above; each lesson's arithmetic is internally correct."
+      },
+      {
+        "conflict": "Escarpment speeds/distances in L4, L5, L8; L5 Point B 200 m at ~5 s",
+        "class": "dataset",
+        "note": "L5 Point B fixed to 125 m (s = 1/2 x 10 x 5^2 = 125 m, matching its own 50 m/s and 125 m answers; Point C 500 m at 10 s already consistent). L4/L5 vs L8 differences are the structural acceleration issue."
+      },
+      {
+        "conflict": "Definition of acceleration (L1 vs L2)",
+        "class": "science",
+        "note": "L2's 'constant change in velocity' is loose wording, not a real contradiction with L1."
+      },
+      {
+        "conflict": "Whether the cart on the slope accelerates at g",
+        "class": "science",
+        "note": "Real contradiction: L4/L5/L7 use g for the rolling cart, L8 says only a slope component (~3 m/s^2) acts. Same root as the structural acceleration issue."
+      },
+      {
+        "conflict": "Three vs four equations of linear motion",
+        "class": "science",
+        "note": "L5/L6 list the three used for free fall; not strictly contradictory but inconsistent count."
+      },
+      {
+        "conflict": "Drop heights: exactly 2 m (L4) vs 0.5-2.0 m class table (L5); g ~9.8 vs ~10",
+        "class": "structural",
+        "note": "L5 relies on a multi-height Lesson 4 table L4 never produced; g 9.8 vs 'roughly 10' is a rounding difference (false positive part)."
+      },
+      {
+        "conflict": "Braking deceleration boda-boda 2.5 vs matatu 8 m/s^2",
+        "class": "false_positive",
+        "note": "Different vehicles and scenarios."
+      }
+    ]
+  }
+]

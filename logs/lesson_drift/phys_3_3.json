@@ -5,52 +5,58 @@
   "lessons": 7,
   "conflicts": [
     {
-      "lessons": "1, 3",
+      "lessons": "3, 5, 6, 7",
       "severity": "major",
-      "fact": "Kajiado panel/pump power data (morning vs afternoon)",
-      "versions": "Lesson 1: morning 18 °C partly cloudy 420 W vs afternoon 35 °C full sun 310 W (pump output). Lesson 3: morning 310 W vs afternoon 210 W (panel output). Same phenomenon, different datasets; Lesson 3 morning value equals Lesson 1 afternoon value."
-    },
-    {
-      "lessons": "3, 4, 5, 6, 7",
-      "severity": "major",
-      "fact": "Physical mechanism explaining why heat reduces output",
-      "versions": "Lesson 3: higher mobility lowers/higher lattice scattering reduces mobility and open-circuit voltage. Lesson 5: thermal electron-hole pairs reduce built-in voltage and open-circuit voltage (not mobility). Lesson 6: lattice vibrations reduce mobility and current. Lesson 7: lattice vibrations increase electron-hole recombination, reducing current. Incompatible mechanisms presented as the explanation."
+      "fact": "The physical mechanism that explains why the panel produces less power when hot",
+      "versions": "Lesson 3: more electron-hole pairs but lower carrier mobility from lattice scattering, giving lower open-circuit voltage. Lesson 5: thermally generated pairs reduce the built-in junction voltage, lowering open-circuit voltage. Lesson 6: lattice vibrations reduce mobility and current. Lesson 7: lattice vibrations raise electron-hole recombination, so fewer electrons complete the circuit."
     },
     {
       "lessons": "2, 3",
       "severity": "major",
-      "fact": "Silicon conduction band occupancy at room temperature",
-      "versions": "Lesson 2: conduction band mostly empty with only a few electrons jumping. Lesson 3: teacher checks that the silicon column shows a partially filled conduction band, not empty; conduction band cards include 'partially filled' for silicon."
+      "fact": "Whether silicon's conduction band is empty or partially filled at room temperature",
+      "versions": "Lesson 2: the conduction band is mostly empty, with only a few electrons jumping across. Lesson 3: the teacher checks that the silicon column shows a partially filled conduction band and treats a completely empty one as an error."
     },
     {
-      "lessons": "2, 7",
+      "lessons": "1, 2, 3",
       "severity": "major",
-      "fact": "Role of band gap and energy source in explanation; darkness conduction",
-      "versions": "Lesson 2: band gap ~1.1 eV matched to visible light so sunlight (light) pushes electrons across; heat/temperature explanation postponed. Lesson 3: thermal promotion of electrons across gap at room temperature. Lesson 7: gap large enough to block flow in darkness. Lesson 1/2 circuit test showed silicon conducting dimly with a 1.5 V battery without light."
+      "fact": "Whether temperature changes the number of carriers in the conduction band and how that affects efficiency, as the sequence builds the explanation",
+      "versions": "Lesson 1 and Lesson 2 say heat or light moves electrons across the gap and leave the temperature effect unexplained. Lesson 3 says more heat means more electrons in the conduction band but lower mobility, and this combination is the explanation. Lesson 2 closes with a puzzle about 'more heat means LESS efficiency', which Lesson 3 treats as already answered through the mobility argument."
+    },
+    {
+      "lessons": "2, 3, 7",
+      "severity": "minor",
+      "fact": "The silicon band gap value and the claim that it matches visible light",
+      "versions": "Lesson 2: about 1.1 eV, matched to visible light photons. Lesson 3: 1.12 eV. Lesson 7: the gap is small enough for light or heat to excite electrons yet large enough to block flow in darkness. These are consistent within rounding, but 1.1 eV is in the infrared, not 'visible light' energy."
     },
     {
       "lessons": "1, 2",
       "severity": "minor",
-      "fact": "Silicon behaviour in conductivity test",
-      "versions": "Lesson 1: silicon glows dimly. Lesson 2: silicon gave only a faint flicker, and only in bright light."
+      "fact": "Observation of silicon in the circuit test",
+      "versions": "Lesson 1: the LED glowed dimly for silicon and graphite. Lesson 2: silicon allowed only a faint flicker of current."
     },
     {
-      "lessons": "2, 3",
+      "lessons": "1, 6, 3",
       "severity": "minor",
-      "fact": "Silicon band gap value and insulator gap; lesson numbering of energy band introduction",
-      "versions": "Lesson 2: ~1.1 eV and introduces energy bands in Lesson 2; Lesson 3 gives 1.12 eV and presents the energy band model as newly introduced, and Lesson 2 says electron-hole pairs come in Lesson 3 while Lesson 4 says band-gap model was built in Lesson 3 (and 'last lesson')."
+      "fact": "Location and dataset for the solar panel case study",
+      "versions": "Lessons 1, 3, 4, 5 and 7: Kajiado farm, 18 °C versus 35 °C, 420 W versus 310 W. Lesson 6: the main data is a Lodwar/Turkana panel with power falling from 15 °C to 45 °C, and the Lesson 6 explanation is applied to Kajiado."
     },
     {
-      "lessons": "6, 1-7",
-      "severity": "minor",
-      "fact": "Location of the solar panel case study and temperature range",
-      "versions": "Lesson 6 uses Turkana/Lodwar panels at 15–45 °C while the anchoring phenomenon is Kajiado at 18–35 °C; Lesson 6 also adds superconductors/MRI as 'same family of semiconductor properties', contradicting semiconductor definition elsewhere."
+      "lessons": "6, 7",
+      "severity": "major",
+      "fact": "Whether superconductors and MRI are part of the semiconductor sequence and the claim that 'the same family of semiconductor properties' underpins them",
+      "versions": "Lesson 6 groups superconducting niobium-titanium MRI magnets (resistance drops to zero near 9 K) with semiconductor properties. Lesson 7 applications list only M-KOPA, Safaricom chips and KPLC meters. Superconductors are metals, not semiconductors."
     },
     {
-      "lessons": "4, 5",
+      "lessons": "1, 3",
       "severity": "minor",
-      "fact": "Lesson where p-n junction explains temperature effect",
-      "versions": "Lesson 4 says Lesson 5 will explain why high temperatures reduce power via junction; Lesson 3 already claims a full mechanism; Lesson 3 also says doping is for later while Lesson 4 says the junction, not temperature, controls direction."
+      "fact": "Temperature dependence of conductivity: Ohm's-law resistor behaviour versus the material",
+      "versions": "Lesson 1 states that silicon's conductivity changes with temperature as if heating lowers efficiency. Lesson 3 states that heating increases carrier density, which would increase conductivity."
+    },
+    {
+      "lessons": "3, 4",
+      "severity": "minor",
+      "fact": "Day and wording of the data",
+      "versions": "Lesson 1: Monday morning and afternoon at 18 °C and 35 °C, the morning being partly cloudy. Lesson 3: afternoon on Tuesday and morning on Wednesday of the next day, with 'blazing afternoon' and an 'overcast morning'."
     }
   ]
 }

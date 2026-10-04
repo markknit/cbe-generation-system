@@ -1,0 +1,119 @@
+[
+  {
+    "when": "2026-10-04T08:33:14",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "slo.purposeInStoryline",
+        "old": "and the sukuma wiki's fats are each handled",
+        "new": "and the fat in the cooking oil are each handled",
+        "class": "dataset",
+        "conflict": "Fat source in the meal (cooking oil/nyama choma, not sukuma wiki)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "summaryTablePrompt.explained",
+        "old": "and the sukuma wiki's fats are each handled",
+        "new": "and the fat in the cooking oil are each handled",
+        "class": "dataset",
+        "conflict": "Fat source in the meal"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "overview",
+        "old": "starch (iodine test) and reducing sugars (Benedict's test) in ugali and sukuma wiki in the preceding lesson",
+        "new": "starch (iodine test) in ugali and reducing sugars (Benedict's test) in ripe banana in the preceding lesson",
+        "class": "cross_reference",
+        "conflict": "L5 misstates L4 food test results"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[0].learnerExperience",
+        "old": "of the five test substances:",
+        "new": "of the six test substances:",
+        "class": "dataset",
+        "conflict": "Number of L5 samples (six listed)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "framework[4].learnerExperience",
+        "old": "will be revised at the end of Lessons 3, 5, and 8.",
+        "new": "will be revised as the unit progresses.",
+        "class": "cross_reference",
+        "conflict": "Which lessons revise the model"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "overview",
+        "old": "which will be revisited in Lesson 5.",
+        "new": "which will be revisited in Lesson 6.",
+        "class": "cross_reference",
+        "conflict": "Lesson answering self-digestion question"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[1].teacherMoves",
+        "old": "the four steps you know from Lessons 4 and 5",
+        "new": "the four steps you know from Lesson 4",
+        "class": "cross_reference",
+        "conflict": "Benedict procedure attributed to Lessons 4 and 5"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Which food provides fat (sukuma wiki in L3)",
+        "class": "dataset",
+        "note": "Fixed L3 to cooking oil, matching L1/L5/L6/FE."
+      },
+      {
+        "conflict": "L5 claims L4 confirmed starch and sugars in ugali and sukuma wiki",
+        "class": "cross_reference",
+        "note": "Fixed: L4 found starch in ugali and reducing sugar in banana; sukuma wiki was weak/negative."
+      },
+      {
+        "conflict": "Number of samples in L4/L5",
+        "class": "dataset",
+        "note": "Fixed L5 'five' to six. L4's five samples are consistent if cooked ugali and raw flour count separately; banana/glucose 'from the meal' is minor."
+      },
+      {
+        "conflict": "Model revision schedule (L1 says Lessons 3, 5, 8)",
+        "class": "cross_reference",
+        "note": "Fixed L1 wording; other lessons revise every lesson."
+      },
+      {
+        "conflict": "Stomach enzymes (rennin in L3 only)",
+        "class": "science",
+        "note": "Minor real inaccuracy: rennin is negligible in human adults; not a contradiction between lessons. Left."
+      },
+      {
+        "conflict": "Benedict steps 'from Lessons 4 and 5'",
+        "class": "cross_reference",
+        "note": "Fixed L8 to Lesson 4 (L5 used Biuret/emulsion)."
+      },
+      {
+        "conflict": "Number of lessons (seven vs eight)",
+        "class": "false_positive",
+        "note": "L8 refers to the seven preceding lessons in an eight-lesson unit."
+      },
+      {
+        "conflict": "Which lesson answers the self-digestion question",
+        "class": "cross_reference",
+        "note": "Fixed L3 overview to Lesson 6."
+      },
+      {
+        "conflict": "How the body 'knows' which chemical to release",
+        "class": "false_positive",
+        "note": "Glands, sphincters, genetic programming and hormonal/neural signals are complementary layers of the same answer."
+      }
+    ]
+  }
+]

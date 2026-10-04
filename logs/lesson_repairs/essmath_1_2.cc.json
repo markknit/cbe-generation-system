@@ -1,0 +1,82 @@
+[
+  {
+    "when": "2026-10-04T08:28:16",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "overview",
+        "old": "established in Lessons 2–4",
+        "new": "established in Lessons 3–4",
+        "class": "cross_reference",
+        "conflict": "laws taught in Lessons 3-4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[3].learnerExperience",
+        "old": "aᵐ⁺ⁿ (Lesson 2)",
+        "new": "aᵐ⁺ⁿ (Lesson 3)",
+        "class": "cross_reference",
+        "conflict": "product law taught in Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[3].learnerExperience",
+        "old": "aᵐ⁻ⁿ (Lesson 3)",
+        "new": "aᵐ⁻ⁿ (Lesson 4)",
+        "class": "cross_reference",
+        "conflict": "quotient law taught in Lesson 4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[1].learnerExperience",
+        "old": "(L3) the Kericho tea-estate yield ratio 3⁵ ÷ 3² = 3³; (L4) Kenya's national debt written as (10³)² = 10⁶; (L5) the zero-index result from equal-base division 5³ ÷ 5³ = 5⁰ = 1; (L6) a cell-biology measurement using a negative or fractional index (extension)",
+        "new": "(L3) the Kericho tea-farm product-law example; (L4) the yield ratio 3⁵ ÷ 3² = 3³ and the zero-index result from equal-base division 5³ ÷ 5³ = 5⁰ = 1; (L5) Kenya's national debt written as (10³)² = 10⁶; (L6) a multi-step computation combining all four laws",
+        "class": "cross_reference",
+        "conflict": "L8 evidence cards assign laws to wrong lessons"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Which lesson introduced which law (L5 DQB, L8 evidence cards)",
+        "class": "cross_reference",
+        "note": "Fixed L5 overview and DQB cards (product L3, quotient L4, zero index L4) and relabelled L8 evidence cards to match the actual sequence (L3 product, L4 quotient+zero, L5 power of a power, L6 consolidation)."
+      },
+      {
+        "conflict": "L8's description of L1/L2/L6 content and 'seven lessons ago'",
+        "class": "cross_reference",
+        "note": "L6 card fixed (above). L1 census card and L2 expansion card are acceptable; 'seven lessons ago' (L1->L8) is correct."
+      },
+      {
+        "conflict": "Numerical fact errors in L1 examples (64 counties, 729 calories)",
+        "class": "false_positive",
+        "note": "Not a cross-lesson contradiction, but the '64 counties originally planned' and '729 calories in ugali' claims look invented; flag for author review."
+      },
+      {
+        "conflict": "'About 47 million' written as 4.8 × 10⁷ (L3)",
+        "class": "false_positive",
+        "note": "47,564,296 rounds to 4.8 × 10⁷ at 2 s.f.; consistent."
+      },
+      {
+        "conflict": "Population projection ×10² and DQB column labels (L1,2,6,7)",
+        "class": "false_positive",
+        "note": "Arithmetic correct; differing DQB column wording is not a contradiction."
+      },
+      {
+        "conflict": "Model names / maize sack and city sizes (L2,4,5)",
+        "class": "false_positive",
+        "note": "Values consistent; model name variation is cosmetic."
+      },
+      {
+        "conflict": "Zero-index treatment (L4,6,7)",
+        "class": "science",
+        "note": "Different framings of a⁰ = 1, not contradictory in substance."
+      }
+    ]
+  }
+]

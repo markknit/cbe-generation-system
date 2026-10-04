@@ -1,0 +1,109 @@
+[
+  {
+    "when": "2026-10-04T08:31:28",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "alpha, beta, and gamma decay pathways with equations (Lessons 2–3), radiation detection symbols (Lesson 4), and a decay curve showing half-life (Lesson 5).",
+        "new": "alpha, beta, and gamma decay pathways (Lesson 2), radiation detection symbols (Lesson 3), a decay curve showing half-life (Lesson 4), and nuclear equations (Lesson 5).",
+        "class": "cross_reference",
+        "conflict": "model layer lesson numbers"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[3].learnerExperience",
+        "old": "Lesson 3's 'alpha decay releases energy' note",
+        "new": "Lesson 2's 'alpha decay releases energy' note",
+        "class": "cross_reference",
+        "conflict": "decay types in L2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[3].learnerExperience",
+        "old": "Lesson 5's 'half-life of U-235",
+        "new": "Lesson 4's 'half-life of U-235",
+        "class": "cross_reference",
+        "conflict": "half-life in L4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[3].teacherMoves",
+        "old": "fuel lasts a long time (Lesson 5)",
+        "new": "fuel lasts a long time (Lesson 4)",
+        "class": "cross_reference",
+        "conflict": "half-life in L4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[3].learnerExperience",
+        "old": "that comes in Lesson 6",
+        "new": "that comes in Lesson 7",
+        "class": "cross_reference",
+        "conflict": "dose/safety in L7"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "teacherReflection",
+        "old": "in Lesson 6 (applications)",
+        "new": "in Lesson 7 (applications)",
+        "class": "cross_reference",
+        "conflict": "applications/safety in L7"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[4].learnerExperience",
+        "old": "(a drawn cross-section of the pitchblende rock showing unstable uranium nuclei emitting α, β, and γ radiation with penetration arrows)",
+        "new": "(the N vs Z plot with the belt of stability, colour-coded α, β and γ decay arrows and shielding icons)",
+        "class": "cross_reference",
+        "conflict": "L2 model is the N vs Z poster"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Beta-minus decay 'horizontal' on N vs Z plot (L2) vs arrows toward belt (L5)",
+        "class": "science",
+        "note": "Real error inside L2: Z+1, N-1 is a diagonal move; L5 not contradictory"
+      },
+      {
+        "conflict": "Origin/content of the cumulative model (L2 N vs Z poster vs L3 'pitchblende cross-section')",
+        "class": "cross_reference",
+        "note": "Fixed L3's description of the L2 model"
+      },
+      {
+        "conflict": "Lesson numbering of model layers in L6",
+        "class": "cross_reference",
+        "note": "Fixed to L2 decay, L3 detection, L4 half-life, L5 equations; also fixed L6 DQB note references"
+      },
+      {
+        "conflict": "L3 says dose/safety comes in Lesson 6",
+        "class": "cross_reference",
+        "note": "Safety/applications are L7; fixed (L3 overview 'Lessons 4 and 5' for half-life/equations is correct)"
+      },
+      {
+        "conflict": "Gamma/beta attenuation wording L2 vs L3; reason U-238 is outside the belt",
+        "class": "false_positive",
+        "note": "Wording differences, no factual clash"
+      },
+      {
+        "conflict": "C-14 dating sites (Olorgesailie, Fort Jesus, Koobi Fora Homo habilis)",
+        "class": "science",
+        "note": "Different sites are fine; C-14 for a ~1.8 Myr fossil would be wrong if L7 presents it as valid (likely a method-choice comparison)"
+      },
+      {
+        "conflict": "Dice half-life; PhET 'Radioactive Dating Game' named as GM counter sim in L3",
+        "class": "false_positive",
+        "note": "Dice maths consistent; simulation naming is a resource-choice quibble, not a cross-lesson contradiction"
+      }
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "when": "2026-10-04T08:32:23",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "overview",
+        "old": "force-extension graphs from Lesson 2 data",
+        "new": "force-extension graphs from Lesson 4 data",
+        "class": "cross_reference",
+        "conflict": "spring force-extension graphs came from Lesson 4, not Lesson 2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].learnerExperience",
+        "old": "force-extension graph from Lesson 2 (spring data)",
+        "new": "force-extension graph from Lesson 4 (spring data)",
+        "class": "cross_reference",
+        "conflict": "spring force-extension graphs came from Lesson 4, not Lesson 2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].learnerExperience",
+        "old": "from their Lesson 2 graph",
+        "new": "from their Lesson 4 graph",
+        "class": "cross_reference",
+        "conflict": "spring force-extension graphs came from Lesson 4, not Lesson 2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].teacherMoves",
+        "old": "you collected this evidence in Lesson 2",
+        "new": "you collected this evidence in Lesson 4",
+        "class": "cross_reference",
+        "conflict": "spring force-extension graphs came from Lesson 4, not Lesson 2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "A particle-level diagram (from Lesson 4)",
+        "new": "A particle-level diagram (from Lesson 2)",
+        "class": "cross_reference",
+        "conflict": "particle diagram introduced in Lesson 2"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Tea sack force 800 N (L3-L5, g=10) vs 784 N (L6, g=9.8); L3 0.18 J",
+        "class": "false_positive",
+        "note": "Same 80 kg load with g rounded to 10 vs 9.8 (both marked approximate); L6 extensions 784/850=0.92 m and 784/210=3.73 m check out. L3's 0.025 J / 0.18 J are lab-graph energies, not the bridge ropes."
+      },
+      {
+        "conflict": "Which rope stores more energy / has higher k and elastic limit",
+        "class": "false_positive",
+        "note": "Consistent: under the same force Ep = F^2/2k, so the lower-k old rope stores more energy; L1 (new rope A survives, old rope B snaps) matches L3-L6."
+      },
+      {
+        "conflict": "Matatu suspension worked example differs (L3 vs L6)",
+        "class": "false_positive",
+        "note": "Two separate worked examples, not one dataset."
+      },
+      {
+        "conflict": "Source of the steel-spring force-extension graphs (cited as Lesson 2; actually Lesson 4)",
+        "class": "cross_reference",
+        "note": "Fixed L6 (now cites Lesson 4 graphs and the Lesson 2 particle diagram). L3 also builds on 'Lesson 2 steel spring graphs', which do not exist until L4 (later) - structural, left."
+      },
+      {
+        "conflict": "Sisal twine elastic behaviour (L1 vs L2); elastic limit 'formally introduced' in L6",
+        "class": "science",
+        "note": "Slightly different thresholds for borderline sisal behaviour across two separate trials; L6 'formally introduces' a term already used - wording, not a real contradiction."
+      },
+      {
+        "conflict": "Mass ranges and increments in the stretching experiments",
+        "class": "false_positive",
+        "note": "Different experiments use different masses; 50 g = 0.5 N with g = 10 is the module's convention."
+      }
+    ]
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "when": "2026-10-04T08:30:32",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[4].learnerExperience",
+        "old": "they began building in Lesson 2",
+        "new": "they began building in Lesson 1",
+        "class": "cross_reference",
+        "conflict": "when the inference model began"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "building since Lesson 3",
+        "new": "building since Lesson 1",
+        "class": "cross_reference",
+        "conflict": "when the inference model began"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[3].teacherMoves",
+        "old": "the DQB protocol established in Lesson 1:",
+        "new": "the DQB protocol for today:",
+        "class": "cross_reference",
+        "conflict": "DQB sticky-note protocol not set up in L1"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "summaryTablePrompt.observed",
+        "old": "being colour-coded for the first time:",
+        "new": "being colour-coded:",
+        "class": "cross_reference",
+        "conflict": "DQB colour coding already done in L7"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "0 wilting plant location / farmer's report",
+        "class": "false_positive",
+        "note": "Both lessons place wilting at the edge with no visible pest; L5 adds detail without contradicting."
+      },
+      {
+        "conflict": "1 when the inference model started",
+        "class": "cross_reference",
+        "note": "L1 draws the first evidence->conclusion model; L3 (said Lesson 2) and L6 (said Lesson 3) corrected to Lesson 1. L2's separate 'General Science' mind-map is a parallel artefact (structural, left)."
+      },
+      {
+        "conflict": "2 DQB structure / protocol",
+        "class": "cross_reference",
+        "note": "L3 claimed a green/orange sticky protocol 'established in Lesson 1'; L1 set up columns only - reference removed."
+      },
+      {
+        "conflict": "3 farmer's name",
+        "class": "false_positive",
+        "note": "Unnamed in L1-4, named Akinyi in L5/L7; no conflicting name."
+      },
+      {
+        "conflict": "4 L1 model task 5 vs 4 minutes",
+        "class": "false_positive",
+        "note": "4 minutes of drawing within the final 5-minute phase; consistent."
+      },
+      {
+        "conflict": "5 DQB colour coding L7 vs L8 'first time'",
+        "class": "cross_reference",
+        "note": "L8 summary 'for the first time' removed since L7 already used green/yellow/red dots."
+      },
+      {
+        "conflict": "6 which sub-strand unresolved questions lead to",
+        "class": "false_positive",
+        "note": "Different questions are mapped to different future sub-strands; not contradictory."
+      },
+      {
+        "conflict": "7 L7 length / lesson count",
+        "class": "false_positive",
+        "note": "No contradiction between lessons."
+      }
+    ]
+  }
+]

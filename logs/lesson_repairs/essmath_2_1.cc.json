@@ -1,0 +1,92 @@
+[
+  {
+    "when": "2026-10-04T08:29:44",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].learnerExperience",
+        "old": "begun in Lesson 2 and revised in Lessons 3 and 4",
+        "new": "begun in Lesson 1 and revised in Lessons 2 to 4",
+        "class": "cross_reference",
+        "conflict": "when the cumulative model began"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[0].learnerExperience",
+        "old": "building since Lesson 5",
+        "new": "building since Lesson 1",
+        "class": "cross_reference",
+        "conflict": "when the cumulative model began"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[4].learnerExperience",
+        "old": "built progressively since Lesson 5",
+        "new": "built progressively since Lesson 1",
+        "class": "cross_reference",
+        "conflict": "when the cumulative model began"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "summaryTablePrompt.explained",
+        "old": "Mama Wanjiru",
+        "new": "Mama Akinyi",
+        "class": "dataset",
+        "conflict": "mandazi recipe owner name"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "0 water fill counts 4/9 vs 8/27",
+        "class": "structural",
+        "note": "Real and serious: the anchoring phenomenon (L1, L8) has 4 and 9 small cups filling the k=2 and k=3 cups, which is physically wrong for volume (should be 8 and 27); L5-L7 and FE teach k^3 correctly; L8 rationalises 9 as cross-section area. Needs author redesign of the phenomenon, not a text patch."
+      },
+      {
+        "conflict": "1 driving question 'eight times' vs observed 4 fills",
+        "class": "structural",
+        "note": "Same root cause as 0: DQ (8x) is correct maths, the L1 observation (4 fills) is not."
+      },
+      {
+        "conflict": "2 what 9x refers to (label vs fills vs cross-section)",
+        "class": "structural",
+        "note": "Same root cause as 0; L4 label/area 9x is correct, the 9 water fills is not."
+      },
+      {
+        "conflict": "3 doubling gives 4x surface vs cross-section area",
+        "class": "science",
+        "note": "Both 4x statements are correct for area; contradiction only arises from the fill-count framing in 0."
+      },
+      {
+        "conflict": "4 when the cumulative model started",
+        "class": "cross_reference",
+        "note": "L1 starts the model; L5 (said Lesson 2) and L8 (said Lesson 5, twice) corrected. L4's references to Lesson 2 (k) and Lesson 3 (construction) match lesson content."
+      },
+      {
+        "conflict": "5 number of lessons ('all 7 lessons' in L7)",
+        "class": "false_positive",
+        "note": "In L7 the DQB has accumulated across 7 lessons so far; correct."
+      },
+      {
+        "conflict": "6 similar-figure size ratios in L4/L5",
+        "class": "false_positive",
+        "note": "2,4,6 cm sets give k = 2 and 3 relative to smallest in both lessons; consistent."
+      },
+      {
+        "conflict": "7 mandazi flour 4 000 g vs 8x",
+        "class": "dataset",
+        "note": "Arithmetic is consistent (8 x 500 g = 4 000 g; 'not 1 000 g' = 2x); the recipe owner was Mama Akinyi in the activity and Mama Wanjiru in the summary - summary aligned."
+      },
+      {
+        "conflict": "8 map scale 1:500 000 and 4x area",
+        "class": "false_positive",
+        "note": "1:500 000 redrawn at 1:250 000 is k=2, area 4x; consistent."
+      }
+    ]
+  }
+]

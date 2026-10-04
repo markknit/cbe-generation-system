@@ -1,0 +1,44 @@
+{
+  "name": "math_3_3",
+  "subject": "Mathematics",
+  "substrand": "Vectors I",
+  "lessons": 8,
+  "conflicts": [
+    {
+      "lessons": "2, 3, 4, 6, 8",
+      "severity": "major",
+      "fact": "Ferry's actual landing point / southward drift distance (and the model of the journey)",
+      "versions": "Lesson 2 puts the landing point B at (6, -2.4) on a 6-square grid, which scales to (60, -24) km. Lesson 4 places it at L(60, -16), 16 km south of Mbita after 2 hours. Lesson 6 says 3 hours, with the ferry travelling ~64.6 km. Lesson 8 uses 3 hours and a resultant after 3 hours of (60, -24). The original phenomenon gives 60 km at 20 km/h, which is 3 hours and 24 km drift. 16 km is inconsistent with a 60 km trip."
+    },
+    {
+      "lessons": "4 vs 1, 3, 6, 8",
+      "severity": "major",
+      "fact": "Duration of travel / engine vector used",
+      "versions": "Lesson 4 says 2 hours and uses engine vector e=(60,0) and current c=(0,-16). Lessons 1, 3, 6 and 8 use velocity vectors (20,0) and (0,-8) km/h with 3 hours to cover 60 km."
+    },
+    {
+      "lessons": "6 vs 8",
+      "severity": "minor",
+      "fact": "True distance travelled by the ferry",
+      "versions": "Lesson 6 says ≈64.6 km (21.54×3). Lesson 8 says ≈64.4 km."
+    },
+    {
+      "lessons": "8 (internal) vs 3",
+      "severity": "major",
+      "fact": "Bearing of the resultant / corrective heading",
+      "versions": "Lesson 3 gives 21.8° south of east. Lesson 8 gives bearing ≈111.8°, which is wrong because 90+21.8 is correct only if measured from north, and says the corrective heading is 066.4° (23.6° north of east). Correct is arcsin(8/20)=23.6° north of east, bearing 066.4°, so that part is consistent; but a heading of 23.6° north of east means 'angled' relative to east, while 111.8° and 21.8° are inconsistent in sense with it only if mislabelled."
+    },
+    {
+      "lessons": "1 vs 3, 6, 8",
+      "severity": "minor",
+      "fact": "Direction/scale of ferry diagram in Lesson 1 model",
+      "versions": "Lesson 1 model uses 10 km per square, with Arrow A 4 squares (40 km) for the engine, Mbita 6 squares away and Arrow B 2 squares (20 km) south. Later lessons use 1 cm=2 km/h (L3), 1 cm=5 km/h (L6) and 20 km east / 8 km south ratios. 4 squares is not 60 km and 2 squares is not 24 km."
+    },
+    {
+      "lessons": "1 vs 4",
+      "severity": "minor",
+      "fact": "Kenyan geography detail: Nairobi–Nakuru direction",
+      "versions": "Lesson 1 says the matatu displacement from Nairobi to Nakuru is due north-west. Lesson 4 locates a farmer in Nakuru, which is a separate matter; no direct conflict. Lesson 3 vs 7: Lesson 7's Mbita at (8,4) with Kendu Bay at (4,2) differs from the earlier Mbita (60,0) due east of Kisumu."
+    }
+  ]
+}

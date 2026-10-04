@@ -1,0 +1,73 @@
+[
+  {
+    "when": "2026-10-04T08:33:38",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "overview",
+        "old": "productive question to anchor Lesson 6",
+        "new": "productive question to anchor Lesson 7",
+        "class": "cross_reference",
+        "conflict": "efficiency lesson number"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[3].teacherMoves",
+        "old": "is exactly what we will investigate next lesson.",
+        "new": "is exactly what we will investigate in Lesson 7.",
+        "class": "cross_reference",
+        "conflict": "efficiency lesson number"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[3].sensemakingStrategy",
+        "old": "that will motivate Lesson 6",
+        "new": "that will motivate Lesson 7",
+        "class": "cross_reference",
+        "conflict": "efficiency lesson number"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Whether the nut moved / work done and source of heat (L3 vs L4)",
+        "class": "science",
+        "note": "Real tension: L3 says d = 0 so W = 0 yet attributes heat to friction work; L4 invokes microscopic slip. Not edited."
+      },
+      {
+        "conflict": "Spanner MA / force figures (L3, L6, L7, L8)",
+        "class": "structural",
+        "note": "Each lesson uses its own lever numbers (L3 handle 0.15 vs 0.45 m, L6 'about 4 times longer' with 50 N -> 200 N, L7 MA 4 vs 2, L8 'e.g. MA = 3.5'). Aligning would cascade through dependent calculations in L6 and L7."
+      },
+      {
+        "conflict": "Spanner energy as gravitational PE (L1-2) vs lever work (L3-8)",
+        "class": "science",
+        "note": "Real conceptual mismatch: L1 bridges the spanner arm to PE from its raised position; later lessons model it as applied-force lever work from chemical energy."
+      },
+      {
+        "conflict": "Original DQB question",
+        "class": "false_positive",
+        "note": "L2 does post 'If energy is conserved, why does the wheel nut get hot?', so L4's 'from Lesson 2' is correct; L1's driving question is separate."
+      },
+      {
+        "conflict": "Power vs strength; Kipchoge 1,000 W",
+        "class": "science",
+        "note": "L8 equates stronger with more powerful; 1,000 W claim is high. Minor science quality issues, not edited."
+      },
+      {
+        "conflict": "W = Fd cos(theta) vs W = Fd",
+        "class": "false_positive",
+        "note": "W = Fd is the theta = 0 case used throughout; consistent."
+      },
+      {
+        "conflict": "Hot nut resolved in L4 yet unresolved in L6; efficiency 'next'",
+        "class": "cross_reference",
+        "note": "L5 pointed efficiency to Lesson 6/'next lesson'; efficiency is Lesson 7, fixed three L5 references. L6 re-opening the heat question after L4 'resolved' it is structural; left."
+      }
+    ]
+  }
+]

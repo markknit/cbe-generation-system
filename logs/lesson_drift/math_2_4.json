@@ -5,46 +5,40 @@
   "lessons": 10,
   "conflicts": [
     {
-      "lessons": "3, 5, 10",
+      "lessons": "3, 5, 7, 10",
       "severity": "major",
-      "fact": "Frustum tank dimensions and surface area for the Kisumu 5,000-litre tank",
-      "versions": "Lesson 3: R=0.8 m, r=0.4 m, l=1.2 m, SA≈7.03 m² (cost Ksh 5,975). Lesson 5 DQB example: frustum SA ≈13.2 m², and the cylinder-hemisphere SA is 16.09 m². Lesson 7: R=0.9 m, r=0.5 m, h=2.1 m. Lesson 10: R=1.2 m, r=0.7 m, h=1.8 m. The frustum's dimensions and surface area change between lessons."
+      "fact": "Dimensions of the Kisumu frustum tank (the anchoring phenomenon's tank) differ across lessons, and the dimensions cannot all hold 5,000 L",
+      "versions": "Lesson 3: R = 0.8 m, r = 0.4 m, l = 1.2 m (SA ≈ 7.03 m²). Lesson 7: R = 0.9 m, r = 0.5 m, h = 2.1 m. Lesson 10: R = 1.2 m, r = 0.7 m, h = 1.8 m. The Lesson 3 dimensions give a volume of only about 2.4 m³, not 5 m³. Lesson 5 and Lesson 9 reuse the 7.03 m² surface area as the 5,000 L tank."
     },
     {
       "lessons": "1, 3, 5, 10",
       "severity": "major",
-      "fact": "Cylinder-hemisphere tank dimensions and surface area",
-      "versions": "Lesson 5 gives SA ≈16.09 m² (5.12π) with a cylinder base of 0.64π m², i.e. r=0.8 m. Lesson 10 Design B uses r=0.85 m, h=1.6 m. Lesson 6 gives volume ≈5,030 L. Lesson 3's SA of 7.03 m² for the frustum is far from the 13.2 m² quoted in Lesson 5. The composite tank dimensions differ across lessons, so the 'same volume-equivalent dimensions' claim fails."
+      "fact": "Dimensions and surface area of the cylinder-hemisphere tank differ between lessons",
+      "versions": "Lesson 5: SA ≈ 16.09 m² (5.12π), with the cylinder base 0.64π m², which implies r = 0.8 m. Lesson 10: Design B has cylinder r = 0.85 m, h = 1.6 m. Lesson 6: volume ≈ 5,030 L, which does not fit with Lesson 10's dimensions. The composite tank is described as 'cylinder base' exposed, but Lesson 1 describes it as a cylinder topped with a hemisphere."
     },
     {
-      "lessons": "5, 10",
+      "lessons": "10, 3, 5",
       "severity": "major",
-      "fact": "Whether the tank base is included in the surface area",
-      "versions": "Lesson 5 includes the cylinder base as an exposed surface (cylinder base 0.64π m²). Lesson 10 says to exclude the base because tanks sit on a platform."
+      "fact": "Whether the frustum tank's surface area includes the base and the top (open or closed) is treated inconsistently",
+      "versions": "Lesson 3 totals both circular faces, π(R²+r²), as the frustum surface area. Lesson 10 says the surface area excludes the base because tanks sit on a platform. Lesson 5 counts the cylinder base as exposed in the composite tank."
     },
     {
-      "lessons": "3, 5",
+      "lessons": "1, 10",
       "severity": "minor",
-      "fact": "Which lessons computed the frustum surface area",
-      "versions": "Lesson 5 says the frustum SA was computed in Lessons 3–4. Lesson 4 covers a pyramid frustum grain store in Kitale, not the tank."
+      "fact": "Lesson 10 says the Lesson 1 model only had a cylinder formula and the frustum was added in Lesson 6, but the frustum was added in Lesson 3 and the cylinder formula was not covered in Lesson 1",
+      "versions": "Lesson 1 covers prisms and pyramids. Lesson 3 adds the frustum. Lesson 10 says 'By Lesson 6 we added the frustum'."
     },
     {
-      "lessons": "3, 7",
+      "lessons": "6, 7",
       "severity": "minor",
-      "fact": "Frustum tank volume consistency",
-      "versions": "Lesson 3 dimensions R=0.8, r=0.4, l=1.2 give a volume of about 1.9 m³ (h≈1.1 m), not 5 m³. Lesson 7 uses R=0.9, r=0.5, h=2.1, giving about 3.2 m³, not 5 m³. Neither matches the 5,000 L claim."
+      "fact": "Lesson 6 claims the Kisumu frustum volume is confirmed, but Lesson 7 says it still needs to be verified",
+      "versions": "Lesson 6 overview says learners compare and verify the volumes of both tank designs and confirm equal capacity. Lesson 7 says the frustum volume has not yet been verified and the composite tank's volume must still be calculated."
     },
     {
-      "lessons": "3, 6, 7",
+      "lessons": "2, 6",
       "severity": "minor",
-      "fact": "What earlier DQB lessons covered",
-      "versions": "Lesson 3's teacher says Lesson 2 posted evidence about volume, but Lesson 2 covers cones and spheres surface area. Lesson 7 says its surface area evidence came from Lesson 6, but Lesson 6 is about volume."
-    },
-    {
-      "lessons": "1, 2",
-      "severity": "minor",
-      "fact": "Cylinder surface area in Lesson 2",
-      "versions": "Lesson 2's Predict Phase shows a cylinder 'as discussed in Lesson 1', but Lesson 1 covers only prisms and pyramids, not cylinders."
+      "fact": "The relation between lesson sequence and coverage of the cylinder SA/volume formula, and the ratio of the prism to cone volume",
+      "versions": "Lesson 6 states the rectangular store holds about 3.8 times more than the cone store. The actual ratio is 36/(π×2.25×4/3)=36/9.42≈3.82, which is consistent. However, Lesson 6 says the cone has the same base width as the 3 m square, which makes the cone's base smaller than the prism's, so it is not 'identical base', and the 1/3 comparison is only valid for same-base solids."
     }
   ]
 }

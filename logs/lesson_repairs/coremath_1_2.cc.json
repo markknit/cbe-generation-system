@@ -1,0 +1,93 @@
+[
+  {
+    "when": "2026-10-04T08:28:38",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "framework[0].learnerExperience",
+        "old": "shown as a six-digit column multiplication",
+        "new": "shown as a column multiplication",
+        "class": "dataset",
+        "conflict": "8 x 1024 described as six-digit multiplication"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "summaryTablePrompt.explained",
+        "old": "reducing a six-digit multiplication to",
+        "new": "reducing a long multiplication to",
+        "class": "dataset",
+        "conflict": "8 x 1024 described as six-digit multiplication"
+      },
+      {
+        "target": "final_explanation",
+        "path": "sections[3].exemplar",
+        "old": "means a six-digit multiplication takes",
+        "new": "means a long multiplication takes",
+        "class": "dataset",
+        "conflict": "8 x 1024 described as six-digit multiplication"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "summaryTablePrompt.learned",
+        "old": "zero index rule from Lessons 1–2",
+        "new": "zero index rule from Lesson 2",
+        "class": "cross_reference",
+        "conflict": "Lesson numbering of earlier concepts"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "repeated multiplication (Lesson 1–2)",
+        "new": "repeated multiplication (Lessons 1–3)",
+        "class": "cross_reference",
+        "conflict": "Lesson numbering of earlier concepts"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "inverse operation (Lesson 3–4)",
+        "new": "inverse operation (Lesson 4)",
+        "class": "cross_reference",
+        "conflict": "Lesson numbering of earlier concepts"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "reading log tables (Lesson 5)",
+        "new": "reading log and antilog tables (Lessons 4–5)",
+        "class": "cross_reference",
+        "conflict": "Lesson numbering of earlier concepts"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Which lesson introduced which concept (lesson numbering in later lessons)",
+        "class": "cross_reference",
+        "note": "Fixed L3 ('Lessons 1–2' for product/quotient/zero rules) and L6 model recap (index notation L1–3, log definition L4, tables L4–5). L4 forward refs to L5 are fine (L5 runs the full log-add-antilog workflow). L7 'Lessons 2 and 3' and 'since Lesson 4' are correct; L8 'Lesson 3 — Power Law' is valid for the index power rule. L1 and L3 both teach negative indices as new: structural duplication, left."
+      },
+      {
+        "conflict": "Total harvest / six-digit multiplication / reinterpretations",
+        "class": "dataset",
+        "note": "Fixed 'six-digit' (8 x 1024 = 8,192) in L1, L8 and FE. L2 growth-cycle framing and the L6 annual-revenue problem are separate practice problems, so those parts are false positives."
+      },
+      {
+        "conflict": "Antilog tables introduced in L5 and again practised in L6",
+        "class": "false_positive",
+        "note": "L5 introduces antilogs; L6 only practises them and proves the product law as L5 promised. Log values in L6 Predict come from L4 tables."
+      },
+      {
+        "conflict": "Meaning of 2^(1/2) (rows/half cycle) vs L8 model",
+        "class": "false_positive",
+        "note": "L8 sets a new combined-operations problem; it does not redefine the L3 example."
+      }
+    ]
+  }
+]

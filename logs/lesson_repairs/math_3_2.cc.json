@@ -1,0 +1,55 @@
+[
+  {
+    "when": "2026-10-04T08:31:58",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[3].teacherMoves",
+        "old": "Point to the driving question on the board and read it aloud:",
+        "new": "Point to the Driving Question Board and read today's sub-question aloud:",
+        "class": "cross_reference",
+        "conflict": "L5 misquotes the driving question"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "0 270 anticlockwise / 90 clockwise rule listed twice",
+        "class": "false_positive",
+        "note": "Rules are mathematically identical; L3 simply lists the equivalence, L4 lists three. No contradiction."
+      },
+      {
+        "conflict": "1 P(4,2) images; -240 rotation in L10",
+        "class": "science",
+        "note": "L3 images are correct. Separate real error found in L10: B(4,0) rotated by -240 (= +120) is (-2, 2*sqrt3), not B'(0,4) as the L10 teacherReflection states; also uses a non-90 multiple never taught. Not edited (single-lesson maths error)."
+      },
+      {
+        "conflict": "2 turbine spin direction convention",
+        "class": "false_positive",
+        "note": "Order-3 symmetry holds in either direction; no lesson contradicts another."
+      },
+      {
+        "conflict": "3 whether 360 counts as a self-mapping",
+        "class": "false_positive",
+        "note": "Minor wording ('between 0 and 360') within L6; count of 3 consistent with L10."
+      },
+      {
+        "conflict": "4 driving question wording in L5",
+        "class": "cross_reference",
+        "note": "L5's DQB shows the real DQ; the teacher script called the day's sub-question 'the driving question' - reworded."
+      },
+      {
+        "conflict": "5 L9 station timing",
+        "class": "false_positive",
+        "note": "Within-lesson timing detail, not a cross-lesson contradiction."
+      },
+      {
+        "conflict": "6 hub base plate ABCD not containing origin",
+        "class": "false_positive",
+        "note": "Modelling simplification; no conflict with L1's hub as fixed centre."
+      }
+    ]
+  }
+]

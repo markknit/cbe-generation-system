@@ -1,0 +1,55 @@
+[
+  {
+    "when": "2026-10-04T08:32:08",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[2].learnerExperience",
+        "old": "force arrows and moment arms (Lesson 1); clockwise and anticlockwise moment labels with the balance condition (Lesson 2); centre of gravity marker on the stool (Lesson 3); stability state annotations (Lesson 4);",
+        "new": "force arrows and moment arms (Lessons 1–2); centre of gravity marker and stability state annotations (Lesson 3); clockwise and anticlockwise moment labels with the balance condition (Lesson 4);",
+        "class": "cross_reference",
+        "conflict": "L6 recap assigns model layers to wrong lessons"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Lesson numbering of cumulative model layers (L6 recap)",
+        "class": "cross_reference",
+        "note": "Fixed L6 recap: moment arrows L1-2, CG and stability states L3, balance condition/Principle of Moments L4, factors L5."
+      },
+      {
+        "conflict": "Jerrycan/sufuria masses; L6 5-litre demo container and 90 kg sack",
+        "class": "false_positive",
+        "note": "20 kg/200 N consistent; the 5-litre container is an explicit scale-model stand-in and the maize sack an explicitly new scenario."
+      },
+      {
+        "conflict": "Sufuria vs jerrycan at centre (L1, L2)",
+        "class": "false_positive",
+        "note": "L2's jerrycan-at-centre contrast is an added demonstration, not a contradiction of L1."
+      },
+      {
+        "conflict": "Toppling: 'no opposing moment' (L1) vs stool weight gives stabilising moment (L4)",
+        "class": "science",
+        "note": "Real: L1's explanation omits the stool's own weight, which L4 correctly treats as the opposing moment; L1 wording needs author attention."
+      },
+      {
+        "conflict": "Stool geometry tall/narrow vs wider four-legged (L1,3,5,6)",
+        "class": "false_positive",
+        "note": "Three-legged stool is the narrower/taller one in all lessons; the jiko profile in L3 is a separate object."
+      },
+      {
+        "conflict": "Stability condition and equilibrium type (L4, L6)",
+        "class": "science",
+        "note": "Compatible framings (moment comparison vs stable equilibrium); the misattributed recap lesson numbers were fixed above."
+      },
+      {
+        "conflict": "Bao plank children's names/masses and units (L2, L4)",
+        "class": "false_positive",
+        "note": "Different named students in cold-calls and separate activities; mixed N·cm/N·m units are local to each task."
+      }
+    ]
+  }
+]

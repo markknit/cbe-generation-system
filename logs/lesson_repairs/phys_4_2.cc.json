@@ -1,0 +1,155 @@
+[
+  {
+    "when": "2026-10-04T08:32:59",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[4].learnerExperience",
+        "old": "begun in Lesson 2 and updated in Lesson 3",
+        "new": "begun in Lesson 1 and updated in Lessons 2 and 3",
+        "class": "cross_reference",
+        "conflict": "lesson the cumulative model was started in"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].teacherMoves",
+        "old": "You built this in Lesson 3.",
+        "new": "You built this in Lesson 4.",
+        "class": "cross_reference",
+        "conflict": "lesson the Solar System panel was built"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "building since Lesson 2.",
+        "new": "building since Lesson 1.",
+        "class": "cross_reference",
+        "conflict": "lesson the cumulative model was started in"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "building and updating since Lesson 2",
+        "new": "building and updating since Lesson 1",
+        "class": "cross_reference",
+        "conflict": "lesson the cumulative model was started in"
+      },
+      {
+        "target": "lesson",
+        "lesson": 9,
+        "path": "framework[4].learnerExperience",
+        "old": "building since Lesson 2.",
+        "new": "building since Lesson 1.",
+        "class": "cross_reference",
+        "conflict": "lesson the cumulative model was started in"
+      },
+      {
+        "target": "lesson",
+        "lesson": 9,
+        "path": "framework[4].teacherMoves",
+        "old": "growing since Lesson 2.",
+        "new": "growing since Lesson 1.",
+        "class": "cross_reference",
+        "conflict": "lesson the cumulative model was started in"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "a second arrow showing Earth's motion would be",
+        "new": "a second arrow showing the Moon's motion would be",
+        "class": "cross_reference",
+        "conflict": "Moon vs Earth straight-line motion arrow"
+      },
+      {
+        "target": "lesson",
+        "lesson": 10,
+        "path": "framework[3].learnerExperience",
+        "old": "connects to Lesson 6 on planetary motion",
+        "new": "connects to Lesson 5 on planetary motion",
+        "class": "cross_reference",
+        "conflict": "planetary motion is Lesson 5"
+      },
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "overview",
+        "old": "anchor the remaining 6 lessons",
+        "new": "anchor the remaining 11 lessons",
+        "class": "cross_reference",
+        "conflict": "number of lessons in unit"
+      },
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "framework[3].teacherMoves",
+        "old": "over the next six lessons",
+        "new": "over the next eleven lessons",
+        "class": "cross_reference",
+        "conflict": "number of lessons in unit"
+      },
+      {
+        "target": "lesson",
+        "lesson": 12,
+        "path": "overview",
+        "old": "delivers a 4-minute Final Explanation",
+        "new": "delivers a 3-minute Final Explanation",
+        "class": "dataset",
+        "conflict": "length of final presentations"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Inner planets within first 3 squares vs 60-square scale; Kepler III planets",
+        "class": "false_positive",
+        "note": "Reviewer could not identify a conflict; 1.52 AU at 0.5 AU/square is ~3 squares, consistent."
+      },
+      {
+        "conflict": "Lesson the cumulative model was started in",
+        "class": "cross_reference",
+        "note": "Model is Version 1 in L1 (L2, L3, L8, L12 agree). Fixed L4, L6, L7, L9 ('since Lesson 2') and L5 (Solar System panel is L4, not L3)."
+      },
+      {
+        "conflict": "L6 model arrow: Earth's vs Moon's straight-line motion",
+        "class": "cross_reference",
+        "note": "Within-lesson slip; L6 model now says Moon's motion, matching its Predict/Explain."
+      },
+      {
+        "conflict": "L10 cites Lesson 6 for planetary motion",
+        "class": "cross_reference",
+        "note": "Planetary motion is L5; fixed."
+      },
+      {
+        "conflict": "Number of lessons in unit (L1 'remaining 6'/'next six')",
+        "class": "cross_reference",
+        "note": "Unit has 12 lessons; fixed L1 to 11. L7 'six lessons later'/'seven lessons', L11 '10 previous', L12 'eleven' are correct."
+      },
+      {
+        "conflict": "L12 presentation length 4 vs 3 minutes",
+        "class": "dataset",
+        "note": "Within-lesson; aligned overview to the 3 minutes used in the phases."
+      },
+      {
+        "conflict": "First galaxies ~1 billion years after Big Bang (L2) vs JWST galaxies at ~300 million years (L7/L8)",
+        "class": "science",
+        "note": "Real but mild inconsistency; L2's figure is outdated relative to JWST statements."
+      },
+      {
+        "conflict": "Kenya satellite details (1KUNS-PF vs a CubeSat team in L10)",
+        "class": "false_positive",
+        "note": "Different satellites/teams in different contexts; no contradiction."
+      },
+      {
+        "conflict": "Geomagnetic storm tidal anomaly in Mombasa (L9) vs Moon-driven tides (L6)",
+        "class": "science",
+        "note": "Storm-surge anomaly vs astronomical tide are different effects; questionable science in L9 but not a direct contradiction."
+      }
+    ]
+  }
+]

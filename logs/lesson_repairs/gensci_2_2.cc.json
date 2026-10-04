@@ -1,0 +1,151 @@
+[
+  {
+    "when": "2026-10-04T08:31:16",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[0].learnerExperience",
+        "old": "flame from Lesson 3",
+        "new": "flame from Lesson 4",
+        "class": "cross_reference",
+        "conflict": "sodium-in-water demo was Lesson 4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[2].teacherMoves",
+        "old": "what you know from Lesson 3",
+        "new": "what you know from Lesson 4",
+        "class": "cross_reference",
+        "conflict": "sodium-in-water demo was Lesson 4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.observed",
+        "old": "demonstration from Lesson 3",
+        "new": "demonstration from Lesson 4",
+        "class": "cross_reference",
+        "conflict": "sodium-in-water demo was Lesson 4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].teacherMoves",
+        "old": "street lamp sodium from Lesson 2",
+        "new": "street lamp sodium from Lesson 4",
+        "class": "cross_reference",
+        "conflict": "sodium-in-water demo was Lesson 4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].formativeAssessment",
+        "old": "What did we observe in Lesson 2",
+        "new": "What did we observe in Lesson 4",
+        "class": "cross_reference",
+        "conflict": "sodium-in-water demo was Lesson 4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].teacherMoves",
+        "old": "the sodium from Lesson 2",
+        "new": "the sodium from Lesson 4",
+        "class": "cross_reference",
+        "conflict": "sodium-in-water demo was Lesson 4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[0].learnerExperience",
+        "old": "a jua kali welder on River Road, Nairobi",
+        "new": "a jua kali welder in Kamukunji, Nairobi",
+        "class": "dataset",
+        "conflict": "jua kali welder location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "summaryTablePrompt.observed",
+        "old": "a jua kali welder on River Road, Nairobi",
+        "new": "a jua kali welder in Kamukunji, Nairobi",
+        "class": "dataset",
+        "conflict": "jua kali welder location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[1].learnerExperience",
+        "old": "fizzing, heat, violet flame.",
+        "new": "fizzing and heat.",
+        "class": "dataset",
+        "conflict": "sodium vs potassium flame observation"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "summaryTablePrompt.observed",
+        "old": "sodium fizzing and burning violet in water",
+        "new": "sodium fizzing in water and potassium burning with a lilac flame",
+        "class": "dataset",
+        "conflict": "sodium vs potassium flame observation"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "0 lesson order Group 1/Group 2 and sodium demo references",
+        "class": "structural",
+        "note": "Group 2 is taught twice (L3, L6) and Group 1 comes after Group 2 although L3 says alkali metals were Lesson 2. Fixed only the sodium-in-water demo references (L6 'Lesson 3', L7 'Lesson 2' -> Lesson 4); the L3 ordering issue needs restructuring."
+      },
+      {
+        "conflict": "1 halogens never taught",
+        "class": "structural",
+        "note": "Real: L3, L5, L7, L8 refer to a halogen lesson (chlorine bleaching hibiscus, iodine) that does not exist in the sequence; needs a design decision."
+      },
+      {
+        "conflict": "2 Group 0 vs Group 18; He outer electrons",
+        "class": "false_positive",
+        "note": "Group 0 and Group 18 are both accepted labels; He with 2 outer electrons is handled consistently."
+      },
+      {
+        "conflict": "3 sodium lamp mechanism and sodium flame colour",
+        "class": "science",
+        "note": "Real science error in L5 ('loses its single outer electron to produce the orange glow') vs L4's correct excitation account - not edited. The sodium 'violet flame' in L8 contradicted L4's observation (potassium lilac, sodium none) and was aligned as a dataset fix."
+      },
+      {
+        "conflict": "4 Group 2 vs Group 1 reactivity explanation; Mg with cold water",
+        "class": "science",
+        "note": "Explanations are complementary; faint film vs 'no noticeable reaction' for Mg in cold water is a minor descriptive difference."
+      },
+      {
+        "conflict": "5 HCl concentration / steam reaction rate",
+        "class": "false_positive",
+        "note": "Different practicals with different reagents; not a contradiction."
+      },
+      {
+        "conflict": "6 calcium in CAN fertiliser",
+        "class": "science",
+        "note": "Minor: L3 says Ca and Mg are in CAN; CAN is calcium ammonium nitrate (Mg only in some blends)."
+      },
+      {
+        "conflict": "7 welder location Kamukunji vs River Road",
+        "class": "dataset",
+        "note": "L5 (two places) aligned to Kamukunji as in L1-4, L8 and FE."
+      },
+      {
+        "conflict": "8 number of lessons / model timing",
+        "class": "false_positive",
+        "note": "No contradiction."
+      },
+      {
+        "conflict": "9 iron rusting equation",
+        "class": "science",
+        "note": "Both are valid representations (anhydrous vs hydrated oxide); not a real contradiction."
+      }
+    ]
+  }
+]

@@ -7,56 +7,38 @@
     {
       "lessons": "4, 5, 8",
       "severity": "major",
-      "fact": "Factorisation of n² + 7n − 120 and the factor pair used: the lessons give different factor pairs and different factorised forms.",
-      "versions": "Lesson 4's Learned section and DQB/Explain give (n + 15)(n − 8) with pair −8 and +15 in the Model phase. However, Lesson 4's Observe phase also says the −9, +12 pair gives n² + 3n − 108. These two are consistent with each other, so the real conflict is Lesson 4's Overview, which says the seedling expression is n² + 3n − 108 with total 108 and columns exceeding rows by 3. Lesson 4's Observed section reads: 'pair (−9, +12) whose product is −108'. The only inconsistency is that Lesson 4 Explain step 6 says (n + 12)(n − 9), while 'Learned' lists Achieng's as (n + 15)(n − 8). These do not conflict with each other. No conflict here beyond a duplicated test case."
+      "fact": "Lesson 4's first mention of Achieng's factorisation is internally inconsistent: the factor pair of -120 (sum +7) is given as -8 and +15, but the sequence's other statements are consistent; the real conflict is the Kericho seedling example, where n²+3n−108 is factorised as (n+12)(n−9) with key pair −9 and +12, whereas Lesson 4's Overview/Observed/Learned text and the Predict phase describe it as 'columns exceed rows by 3' yet Lesson 3 uses a Kericho seedling grid with s and s−3 totalling 180",
+      "versions": "Lesson 3: Kericho tea nursery seedling grid, columns = s − 3 (fewer), total 180. Lesson 4: Kericho maize seedling arrangement, columns exceed rows by 3, total 108."
     },
     {
-      "lessons": "1, 3, 4, 6",
-      "severity": "major",
-      "fact": "The sign/form of Achieng's quadratic equation and its role as an expression versus an equation: Lesson 4 treats n² + 7n − 120 as an 'expression' derived in Lesson 3, while Lesson 5 says the equation was derived in Lesson 4.",
-      "versions": "Lesson 5 Predict says 'Achieng's chair equation derived in Lesson 4', but Lesson 4 only factorises the expression and says the equation must still be set equal to zero and solved in Lesson 5. Lesson 3 is where the equation was formed."
-    },
-    {
-      "lessons": "1, 3, 6",
-      "severity": "major",
-      "fact": "Tomato/seedling dataset for the Kericho scenario. Lesson 3 uses a Kericho tea nursery with seedlings per row s and per column s − 3, total 180. Lesson 4 uses Kericho maize seedlings with total 108 and columns exceeding rows by 3. Lesson 1 uses Rift Valley maize with total 84 and columns 5 more than rows; Lesson 2 uses Eldoret maize plot area 84 m².",
-      "versions": "Lesson 3: Kericho tea nursery, 180 seedlings, one dimension is 3 less than the other. Lesson 4: Kericho maize seedlings, 108 total, columns 3 more than rows. Lesson 1: Rift Valley maize, columns 5 more than rows, 84 total. Lesson 2: Eldoret plot, 84 m²."
-    },
-    {
-      "lessons": "2, 6",
+      "lessons": "1, 2, 6",
       "severity": "minor",
-      "fact": "Location of the mandazi tray example and the market trader area: Lesson 2 Overview places the mandazi-dough tray context without a place while the Observe/Observed places the vendor in Kericho. Lesson 3 places a mandazi seller in Mombasa.",
-      "versions": "Lesson 2 Overview: mandazi-dough tray, Observed: Kericho mandazi tray. Lesson 3: mandazi seller in Mombasa."
+      "fact": "Context and place of the tailor/mandazi/market examples differ: Lesson 1 puts a tomato grid with 60 tomatoes at Kongowea Market in Mombasa; Lesson 6 puts the market trader in Kisumu with area 28 m²; the mandazi tray is placed in Kericho in Lesson 2 but Mombasa in Lesson 3.",
+      "versions": "Lesson 2: mandazi vendor in Kericho. Lesson 3: mandazi seller in Mombasa."
     },
     {
-      "lessons": "1, 2, 3, 5, 6, 8",
+      "lessons": "2, 7",
       "severity": "minor",
-      "fact": "Variable used for Achieng's rows and the matching equation.",
-      "versions": "Lessons 1, 3, 6 use r (r² + 7r − 120 = 0); Lessons 2, 5, 8 use x; Lesson 4 uses n."
-    },
-    {
-      "lessons": "6, 1, 8",
-      "severity": "major",
-      "fact": "Whether the Kisumu market trader problem has a negative root and its dimensions: Lesson 6 states the table area is 28 m² with length exceeding width by 3 m, but the model equation is w² + 3w − 28 = 0, which gives roots w = 4 and w = −7. In Lesson 6's Observed, 'one root was negative' for the trader and 'both roots non-negative' for Iten h² − 5h + 4 = 0 (roots 1 and 4). Lesson 8 assessment states Kericho shamba 180 m², length exceeds width by 3 m.",
-      "versions": "Lesson 6: Kisumu table area 28 m², length exceeds width by 3 m, equation w² + 3w − 28 = 0. Lesson 7 Agriculture card: w(w+3) = 180. Lesson 8: Kericho shamba 180 m² with length 3 m more than width. These are consistent internally, so no conflict there."
+      "fact": "Maize plot area/dimension example for the Rift Valley/Eldoret differs: Lesson 1 maize farmer in Rift Valley has 84 seedlings with columns 5 more than rows; Lesson 2 has an Eldoret maize plot x by x+5 with area 84 m²; Lesson 7 uses w(w+3)=180 for Rift Valley maize shamba.",
+      "versions": "Lesson 1: 84 seedlings, +5. Lesson 2: 84 m², +5. Lesson 7: w(w+3)=180."
     },
     {
       "lessons": "6",
-      "severity": "minor",
-      "fact": "Lesson 6 substitution of r = −15 into the original equation: 225 − 105 − 120 = 0, which is correct. The Lesson 6 overview calls the Iten problem a 'shot-put throw' with a coach at Iten, and the Explain section refers to 'Coach Kiplagat'. No contradiction found.",
-      "versions": "Consistent."
+      "severity": "major",
+      "fact": "Kisumu market-trader problem is described inconsistently within the sequence: Overview says area 28 m² and length exceeds width by 3 m (w²+3w−28=0), but Observed says one root was negative; also Iten shot-put equation h²−5h+4=0 has roots 1 and 4, both positive, consistent, but Lesson 6 Learned says 'possibly neither' root valid while the Overview/Explained claim a quadratic 'always yields two algebraic roots' without noting this; the Lesson 5 Explained also states Achieng's answer rejected -15 rows whereas the matatu equation n²−3n−40=0 is said to be profit equal to zero",
+      "versions": "Lesson 6 overview: matatu equation n²−3n−40=0 as weekly profit; market trader area 28 m², length = width + 3 (w²+3w−28=0)."
     },
     {
-      "lessons": "7, 1",
-      "severity": "minor",
-      "fact": "Lesson 7 says Achieng's rejection of x = −15 was in Lesson 1's phenomenon, but Lesson 1 states that no quadratic equation is solved in that lesson; the rejection occurs in Lesson 5.",
-      "versions": "Lesson 7 Explained: 'connected explicitly to Achieng's rejection of x = −15 in Lesson 1's phenomenon.' Lesson 1: 'No quadratic equation is solved in this lesson.'"
+      "lessons": "3, 6",
+      "severity": "major",
+      "fact": "Lesson 3 states a defining feature of quadratic equations and the Kericho/Rift Valley fencing scenario is given a perimeter of 40 m with length = width + 4, but the task asks for the area; Lesson 5 refers to a Kericho farm-fencing problem whereas Lesson 3 places the fencing on a Rift Valley farm",
+      "versions": "Lesson 3: fencing on a Rift Valley farm. Lesson 5: rectangular farm-fencing problem from Kericho."
     },
     {
-      "lessons": "6, 1",
+      "lessons": "1, 2, 3, 4, 5, 8",
       "severity": "minor",
-      "fact": "Lesson 6 says the DQB sticky-note question 'When you get two answers, which one do you use?' was posted in Lesson 1, but Lesson 1's DQB uses wonder questions and no such question is specified; also Lesson 3 says the DQB question about how to solve is the main wonder.",
-      "versions": "Lesson 6: question from Lesson 1. Lesson 1: generic wonder questions."
+      "fact": "Variable used for the number of rows differs across lessons (r in 1, 3, 6; x in 2, 5, 7, 8; n in 4)",
+      "versions": "Lesson 1/3/6: r. Lesson 2/5/8: x. Lesson 4: n."
     }
   ]
 }

@@ -1,0 +1,87 @@
+[
+  {
+    "when": "2026-10-04T08:30:02",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "framework[2].teacherMoves",
+        "old": "the next 8 lessons",
+        "new": "the next 7 lessons",
+        "class": "cross_reference",
+        "conflict": "sub-strand has 7 lessons"
+      },
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "framework[3].learnerExperience",
+        "old": "for all 8 lessons",
+        "new": "for all 7 lessons",
+        "class": "cross_reference",
+        "conflict": "sub-strand has 7 lessons"
+      },
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "framework[3].teacherMoves",
+        "old": "By Lesson 8,",
+        "new": "By Lesson 7,",
+        "class": "cross_reference",
+        "conflict": "sub-strand has 7 lessons"
+      },
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "framework[4].learnerExperience",
+        "old": "every lesson for 8 lessons. By Lesson 8,",
+        "new": "every lesson for 7 lessons. By Lesson 7,",
+        "class": "cross_reference",
+        "conflict": "sub-strand has 7 lessons"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Reciprocal of an irrational number is irrational (L3, L5, L6, L7)",
+        "class": "false_positive",
+        "note": "Reviewer itself found the statements consistent"
+      },
+      {
+        "conflict": "Source of the √2/2 ≈ 0.7071 slice (arc vs radius fraction vs chord vs fraction of pizza)",
+        "class": "structural",
+        "note": "Pizza B's irrational slice is defined loosely and differently across lessons; needs a single definition, not a word swap"
+      },
+      {
+        "conflict": "Number of lessons (8 in L1 vs 7)",
+        "class": "cross_reference",
+        "note": "Fixed L1 to 7"
+      },
+      {
+        "conflict": "Cumulative model name / DQB column labels; L3 booklet 'begun in Lesson 1'",
+        "class": "structural",
+        "note": "Artefact naming drifts lesson to lesson (map, booklet, model); not a single-word fix"
+      },
+      {
+        "conflict": "L3 cites rational/irrational and number line as already taught (Lesson 2 / last lesson), but L4 teaches them",
+        "class": "structural",
+        "note": "L3 and L4 appear written in swapped order; references are consistent with that other order, so needs a re-sequencing decision"
+      },
+      {
+        "conflict": "Reciprocals taught fully in L3 then 'introduced' as new in L5",
+        "class": "structural",
+        "note": "Real duplication of content between L3 and L5"
+      },
+      {
+        "conflict": "√4 described as having an irrational reciprocal in L6",
+        "class": "science",
+        "note": "Real error in L6 (√4 = 2, reciprocal 1/2 is rational)"
+      },
+      {
+        "conflict": "Whether 1/3 is 'messy' (L1) or a 'neat' rational slice (L7)",
+        "class": "science",
+        "note": "Mild framing tension; both treat 1/3 as rational"
+      }
+    ]
+  }
+]

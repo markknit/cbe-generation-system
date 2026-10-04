@@ -1,0 +1,132 @@
+[
+  {
+    "when": "2026-10-04T08:34:00",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[0].teacherMoves",
+        "old": "In Lesson 3 we changed temperature",
+        "new": "In Lesson 1 we changed temperature",
+        "class": "cross_reference",
+        "conflict": "Temperature attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[2].learnerExperience",
+        "old": "the language used in Lesson 3: In Lesson 3, more temperature",
+        "new": "the language used in Lesson 1: In Lesson 1, more temperature",
+        "class": "cross_reference",
+        "conflict": "Temperature attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[2].teacherMoves",
+        "old": "In Lesson 3 we said higher temperature",
+        "new": "In Lesson 1 we said higher temperature",
+        "class": "cross_reference",
+        "conflict": "Temperature attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[2].sensemakingStrategy",
+        "old": "the Lesson 3 temperature mechanism",
+        "new": "the Lesson 1 temperature mechanism",
+        "class": "cross_reference",
+        "conflict": "Temperature attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "slo.purposeInStoryline",
+        "old": "In Lessons 3 and 4 learners established that temperature and concentration",
+        "new": "In Lessons 1, 3 and 4 learners established that temperature and concentration",
+        "class": "cross_reference",
+        "conflict": "Temperature attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[3].learnerExperience",
+        "old": "temperature (Lesson 3), concentration (Lesson 4)",
+        "new": "temperature (Lesson 1), concentration (Lessons 3–4)",
+        "class": "cross_reference",
+        "conflict": "Temperature attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "summaryTablePrompt.learned",
+        "old": "temperature (Lesson 3) and concentration (Lesson 4)",
+        "new": "temperature (Lesson 1) and concentration (Lessons 3–4)",
+        "class": "cross_reference",
+        "conflict": "Temperature attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "slo.purposeInStoryline",
+        "old": "Lessons 3, 4, and 5 established that temperature",
+        "new": "Lessons 1, 3, 4, and 5 established that temperature",
+        "class": "cross_reference",
+        "conflict": "Temperature attributed to Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].teacherMoves",
+        "old": "the row in your table for temperature (Lesson 3)",
+        "new": "the row in your table for temperature (Lesson 1)",
+        "class": "cross_reference",
+        "conflict": "Temperature attributed to Lesson 3"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Which lesson investigated temperature",
+        "class": "structural",
+        "note": "Real: no lesson runs a temperature investigation (only the L1 phenomenon demo). Repointed L4/L5/L6 'temperature (Lesson 3)' references to Lesson 1; L8 Station 2 'Rate vs Temperature graph (Lesson 3 class data)' cites data no lesson produces, left for review."
+      },
+      {
+        "conflict": "Lessons 3 and 4 duplicate the concentration investigation",
+        "class": "structural",
+        "note": "Real duplication (same four dilutions). Left."
+      },
+      {
+        "conflict": "Catalysts and light covered in both L6 and L7; L8 counts four factors",
+        "class": "structural",
+        "note": "Real duplication; L8's four-factor model omits light. Left."
+      },
+      {
+        "conflict": "Cold beaker location (Kericho vs Nairobi) and L2 rate values",
+        "class": "false_positive",
+        "note": "L1 itself says 'Kericho/Nairobi highland'; L2's 1/240 and 1/35 s⁻¹ fit L1's 2–4 min and 30–40 s."
+      },
+      {
+        "conflict": "Thiosulfate/HCl quantities differ (L2, L3, L4)",
+        "class": "false_positive",
+        "note": "Different practicals with their own recipes; not one dataset."
+      },
+      {
+        "conflict": "L3 hypothesis of higher concentration in Beaker B",
+        "class": "false_positive",
+        "note": "Stated as a hypothetical 'if', not a claim about the phenomenon."
+      },
+      {
+        "conflict": "L8 recap of CO2 curves / group sizes",
+        "class": "false_positive",
+        "note": "L5 allows CO2 collection as the measurement method; group sizes are not a contradiction."
+      },
+      {
+        "conflict": "H2O2 concentration (3% vs 20-vol)",
+        "class": "false_positive",
+        "note": "Different practicals (liver vs MnO2); part of the L6/L7 duplication."
+      }
+    ]
+  }
+]

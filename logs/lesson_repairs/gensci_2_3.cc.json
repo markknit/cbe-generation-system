@@ -1,0 +1,73 @@
+[
+  {
+    "when": "2026-10-04T08:32:07",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[3].teacherMoves",
+        "old": "in Lesson 2 when we studied the ionic lattice",
+        "new": "in Lesson 3 when we studied the ionic lattice",
+        "class": "cross_reference",
+        "conflict": "lesson that taught ionic lattice"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "started in Lesson 2 and revised",
+        "new": "started in Lesson 1 and revised",
+        "class": "cross_reference",
+        "conflict": "when model started"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[1].learnerExperience",
+        "old": "801 °C measured in simulation",
+        "new": "801 °C from Lesson 3",
+        "class": "cross_reference",
+        "conflict": "source of NaCl melting point"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Location of graphite's delocalised electrons (within vs between layers)",
+        "class": "science",
+        "note": "Real contradiction: L5 (pre-practical prediction, results sentence, model sketch, summary) says electrons are/move between layers, while L4, L7, L8 and FE say within/along layers. L5 is wrong and should be reviewed."
+      },
+      {
+        "conflict": "Graphite terminology (giant covalent vs giant atomic; six bond types vs four structural types)",
+        "class": "science",
+        "note": "Terminology varies but is not strictly contradictory (bond types vs structure types); minor."
+      },
+      {
+        "conflict": "When salt conductivity question was answered / lesson introducing ionic lattice",
+        "class": "cross_reference",
+        "note": "L8 cited Lesson 2; lattice taught in L3. Fixed."
+      },
+      {
+        "conflict": "Which lesson the cumulative model started",
+        "class": "cross_reference",
+        "note": "L6 'started in Lesson 2' -> Lesson 1."
+      },
+      {
+        "conflict": "Source of NaCl/Al melting point data",
+        "class": "cross_reference",
+        "note": "No simulation measured NaCl's melting point; L7 now cites L3 where 801 °C is stated. Al 660 °C 'from data table' left."
+      },
+      {
+        "conflict": "Mechanical behaviour of salt",
+        "class": "false_positive",
+        "note": "Hard and brittle are compatible descriptions."
+      },
+      {
+        "conflict": "Lesson placement of metallic and giant covalent structures",
+        "class": "structural",
+        "note": "L4 already teaches metallic bonding and graphite, but L6 defers them to L7 as still unexplained; sequencing issue, not edited."
+      }
+    ]
+  }
+]

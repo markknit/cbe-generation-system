@@ -1,0 +1,87 @@
+[
+  {
+    "when": "2026-10-04T08:34:10",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].learnerExperience",
+        "old": "'Afternoon power output: 210 W' and 'Morning power output: 310 W'",
+        "new": "'Afternoon power output: 310 W' and 'Morning power output: 420 W'",
+        "class": "dataset",
+        "conflict": "Kajiado power data"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].teacherMoves",
+        "old": "made 210 watts. On Wednesday morning — the very next day — it made 310 watts",
+        "new": "made 310 watts. On Wednesday morning — the very next day — it made 420 watts",
+        "class": "dataset",
+        "conflict": "Kajiado power data"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[4].learnerExperience",
+        "old": "'Morning: 310 W output / Afternoon: 210 W output.'",
+        "new": "'Morning: 420 W output / Afternoon: 310 W output.'",
+        "class": "dataset",
+        "conflict": "Kajiado power data"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[0].learnerExperience",
+        "old": "silicon gave a faint flicker only in bright light",
+        "new": "silicon also gave a dim glow",
+        "class": "dataset",
+        "conflict": "silicon result in conductivity test"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Kajiado panel power data (420/310 vs 310/210 W)",
+        "class": "dataset",
+        "note": "L3 aligned to L1's morning 420 W / afternoon 310 W in all three places; no dependent arithmetic in L3."
+      },
+      {
+        "conflict": "Mechanism by which heat reduces output",
+        "class": "science",
+        "note": "Real contradiction: L3 (mobility/lattice scattering lowering voltage), L5 (thermal pairs lowering Voc), L6 (mobility/current), L7 (recombination) give incompatible primary mechanisms; needs content review."
+      },
+      {
+        "conflict": "Silicon conduction band occupancy at room temperature",
+        "class": "science",
+        "note": "'Mostly empty with a few electrons' (L2) and 'partially filled, not empty' (L3) are compatible; not a real contradiction."
+      },
+      {
+        "conflict": "Role of band gap / light vs heat / darkness conduction",
+        "class": "science",
+        "note": "Partly real: L2 ties conduction to light, L3 to thermal promotion, L7 says the gap blocks flow in darkness while L1 shows dim conduction without light emphasis; needs review."
+      },
+      {
+        "conflict": "Silicon behaviour in conductivity test",
+        "class": "dataset",
+        "note": "L2 recap changed to match L1's 'dim glow'."
+      },
+      {
+        "conflict": "Band gap 1.1 vs 1.12 eV / lesson introducing energy bands",
+        "class": "false_positive",
+        "note": "Rounding difference; L2 introduces bands and L3 builds the formal band model, so L4's references to L3 are fine."
+      },
+      {
+        "conflict": "Turkana case study and superconductors in L6",
+        "class": "structural",
+        "note": "L6 uses a separate Turkana case study and groups superconductors with semiconductors; case-study design choice, not edited."
+      },
+      {
+        "conflict": "Lesson where p-n junction explains temperature effect",
+        "class": "structural",
+        "note": "L3 already offers a full temperature mechanism before L4/L5 defer it; sequencing issue, not edited."
+      }
+    ]
+  }
+]

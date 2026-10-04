@@ -1,0 +1,92 @@
+[
+  {
+    "when": "2026-10-04T08:31:39",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "slo.purposeInStoryline",
+        "old": "the need for logarithms in Lesson 4.",
+        "new": "the need for logarithms in Lesson 5.",
+        "class": "cross_reference",
+        "conflict": "logarithms introduced in Lesson 5"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[4].teacherMoves",
+        "old": "In Lesson 4, we will need every one of them when we meet logarithms for the first time.",
+        "new": "In Lesson 4, we will need every one of them, and in Lesson 5 we meet logarithms for the first time.",
+        "class": "cross_reference",
+        "conflict": "logarithms introduced in Lesson 5"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "summaryTablePrompt.explained",
+        "old": "microscopic organisms in a Kisumu laboratory",
+        "new": "microscopic organisms in a Nairobi laboratory",
+        "class": "dataset",
+        "conflict": "E. coli lab location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[4].learnerExperience",
+        "old": "showing a number line of seasons vs. powers of 2",
+        "new": "showing seasons vs. powers of 2",
+        "class": "cross_reference",
+        "conflict": "form of the Lesson 1 model"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "0 which lesson introduces logarithms",
+        "class": "cross_reference",
+        "note": "L3 said Lesson 4 (twice); logarithms start in L5, as L4 says. Fixed."
+      },
+      {
+        "conflict": "1 number of laws / which lessons taught them",
+        "class": "false_positive",
+        "note": "Two laws in L2 + three in L3 = five; consistent."
+      },
+      {
+        "conflict": "2 8 seasons vs 9 terms",
+        "class": "false_positive",
+        "note": "Season 0 to 8 = 8 doublings, 9 values; consistent."
+      },
+      {
+        "conflict": "3 meaning of Season 0",
+        "class": "false_positive",
+        "note": "Wording difference only."
+      },
+      {
+        "conflict": "4 2^20 count",
+        "class": "false_positive",
+        "note": "Consistent."
+      },
+      {
+        "conflict": "5 E. coli lab location",
+        "class": "dataset",
+        "note": "L3 sets Nairobi (Kenyatta University); L8 summary 'Kisumu' aligned to Nairobi."
+      },
+      {
+        "conflict": "6 E. coli arithmetic",
+        "class": "false_positive",
+        "note": "30 x 20 min = 10 h, 2^30 ~ 10^9; correct."
+      },
+      {
+        "conflict": "7 form of the Lesson 1 model",
+        "class": "cross_reference",
+        "note": "L1 model is a Season-Seed table; L2 'number line' wording removed."
+      },
+      {
+        "conflict": "8 L3 poster from Lesson 2",
+        "class": "false_positive",
+        "note": "L2 model phase includes group A3 posters; L3 builds on them."
+      }
+    ]
+  }
+]

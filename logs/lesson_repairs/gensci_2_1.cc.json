@@ -1,0 +1,82 @@
+[
+  {
+    "when": "2026-10-04T08:29:36",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "(begun in Lesson 2 and revised",
+        "new": "(begun in Lesson 1 and revised",
+        "class": "cross_reference",
+        "conflict": "cumulative model begun in L1"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].teacherMoves",
+        "old": "building since Lesson 2",
+        "new": "building since Lesson 1",
+        "class": "cross_reference",
+        "conflict": "cumulative model begun in L1"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[4].learnerExperience",
+        "old": "Bohr models of hydrogen, lithium, sodium, and potassium",
+        "new": "Bohr models of nitrogen and calcium",
+        "class": "cross_reference",
+        "conflict": "L1 models were N and Ca"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "overview",
+        "old": " — six elements that appear directly in the CAN and DAP fertiliser formulae",
+        "new": "",
+        "class": "dataset",
+        "conflict": "Na, Mg, Al, Cl are not in CAN or DAP"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Group numbering 1-18 (L2) vs 1-8 (L3, L4)",
+        "class": "science",
+        "note": "Real inconsistency in notation; needs one convention chosen across the unit"
+      },
+      {
+        "conflict": "Phosphate valency in DAP: PO4 3- vs HPO4 2- (L5, L6, L8)",
+        "class": "science",
+        "note": "Real contradiction; L5's DAP explanation should use HPO4 2- (valency 2)"
+      },
+      {
+        "conflict": "(NH4)3PO4 'related to DAP' in L7 vs DAP = (NH4)2HPO4",
+        "class": "science",
+        "note": "Real conceptual muddle in L7; equation does not produce DAP"
+      },
+      {
+        "conflict": "Lesson in which the cumulative atomic model was begun",
+        "class": "cross_reference",
+        "note": "L6 said Lesson 2; fixed to Lesson 1"
+      },
+      {
+        "conflict": "L2 returns to L1 models of H, Li, Na, K; Strip A says H is 2,1",
+        "class": "cross_reference",
+        "note": "Fixed model elements to L1's N and Ca; garbled 'hydrogen (2,1 electrons — note: H is 1...)' text in L2 strip A left (within-lesson science typo)"
+      },
+      {
+        "conflict": "L4 'Lesson 3 cards' for Na, Mg, Al, Cl, O, Ca said to appear in CAN/DAP",
+        "class": "dataset",
+        "note": "Removed the false claim the six elements are in CAN/DAP; 'Lesson 3 cards' reference left (L3 did a card sort)"
+      },
+      {
+        "conflict": "CAN formula Ca(NO3)2·NH4NO3 vs only NH4NO3 in L6 Tier 3",
+        "class": "false_positive",
+        "note": "L6 works on NH4NO3 as part of CAN; not contradictory"
+      }
+    ]
+  }
+]

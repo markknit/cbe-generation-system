@@ -151,6 +151,24 @@ never saw them; see STATUS.md 2026-10-03):
   (centripetal, projectile, "speed of sound", integral...) that the lesson never
   mentions (`conflict_qualifiers` in `config/link_matching.yaml`).
 
+#### Lesson consistency during generation (added 2026-10-04)
+
+`generate_substrand.py` now (src/lesson_consistency.py):
+1. after the UNIT, generates a **fact sheet**: the phenomenon's exact data, characters,
+   outcome, conventions, and a **lesson map** (what each lesson teaches and builds on).
+   Every lesson prompt carries it (batch and live). Logged to `logs/fact_sheets/<output>.json`;
+   never in the partner JSON.
+2. after the lessons (live run, or `--collect`), **reviews** them for contradictions with each
+   other and with the fact sheet, **repairs** majors with exact find/replace edits (<= 2 rounds,
+   keeps the best version), then writes the Final Explanation with the fact sheet as authority.
+   Logged to `logs/lesson_drift/` and `logs/lesson_repairs/`.
+Cost: about $0.12 for the fact sheet plus ~$0.2-0.6 for the check per sub-strand.
+**Before bulk generation of a new grade/subject, pilot one sub-strand and have a human and the
+partner's validator look at it** (Level 3 checkpoint).
+
+Repairs done by hand / in Claude Code use `scripts/apply_edits.py MODULE edits.json`
+(same exact-once rule; audit trail `logs/lesson_repairs/<module>.cc.json`).
+
 ### Step 6a — Verify resource links before distributing
 
 (Labelled "Step 6c" before 2026-09-30, the same as the index-page step. Older

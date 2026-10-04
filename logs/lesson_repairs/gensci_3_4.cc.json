@@ -1,0 +1,132 @@
+[
+  {
+    "when": "2026-10-04T08:30:14",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].learnerExperience",
+        "old": "model started in Lesson 2",
+        "new": "model started in Lesson 1",
+        "class": "cross_reference",
+        "conflict": "cumulative model started in Lesson 1"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].teacherMoves",
+        "old": "Take out your model from Lesson 2.",
+        "new": "Take out your cumulative model.",
+        "class": "cross_reference",
+        "conflict": "cumulative model started in Lesson 1"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].formativeAssessment",
+        "old": "identical to their Lesson 2 version",
+        "new": "identical to their previous version",
+        "class": "cross_reference",
+        "conflict": "cumulative model started in Lesson 1"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "building since Lesson 4",
+        "new": "building since Lesson 1",
+        "class": "cross_reference",
+        "conflict": "cumulative model started in Lesson 1"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[0].learnerExperience",
+        "old": "Amina in Kericho",
+        "new": "Akoth in Kericho",
+        "class": "dataset",
+        "conflict": "phenomenon student named Akoth (L4) vs Amina (L5)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].learnerExperience",
+        "old": "Amina's Dynamo C",
+        "new": "Akoth's Dynamo C",
+        "class": "dataset",
+        "conflict": "phenomenon student named Akoth (L4) vs Amina (L5)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].learnerExperience",
+        "old": "update Amina scenario",
+        "new": "update Akoth scenario",
+        "class": "dataset",
+        "conflict": "phenomenon student named Akoth (L4) vs Amina (L5)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].teacherMoves",
+        "old": "rewrite Amina's rank order",
+        "new": "rewrite Akoth's rank order",
+        "class": "dataset",
+        "conflict": "phenomenon student named Akoth (L4) vs Amina (L5)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].formativeAssessment",
+        "old": "revised Amina rank order",
+        "new": "revised Akoth rank order",
+        "class": "dataset",
+        "conflict": "phenomenon student named Akoth (L4) vs Amina (L5)"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Lesson in which the cumulative model was started (L1,2,4,5,6,8)",
+        "class": "cross_reference",
+        "note": "Fixed L5 ('started in Lesson 2', 'model from Lesson 2', 'Lesson 2 version') and L6 ('since Lesson 4') to agree with L1/L2/L4 (started in Lesson 1)."
+      },
+      {
+        "conflict": "Induction-method magnet called permanent yet soft iron easily demagnetised (L1,2)",
+        "class": "science",
+        "note": "Minor real imprecision within L1; L2 does not contradict it."
+      },
+      {
+        "conflict": "Stopping the generator = demagnetisation (L2) vs no relative motion (L4,5,6,8)",
+        "class": "science",
+        "note": "Real and serious: L2's explanation is physically wrong and contradicts L4-L8; needs author rewrite of L2 phenomenon link."
+      },
+      {
+        "conflict": "Bell make-and-break = generator switching mechanism (L7,8)",
+        "class": "science",
+        "note": "Real: L7/L8 claim the bell's switching is the generator mechanism, contradicting L4-L6 induction explanation."
+      },
+      {
+        "conflict": "Field strength 'maximises force on conductor' (L3) vs rate of flux cutting (L4,5)",
+        "class": "science",
+        "note": "Minor framing difference; not a hard contradiction."
+      },
+      {
+        "conflict": "Student name and dynamo numbers (L4 Akoth vs L5 Amina; coil turns)",
+        "class": "dataset",
+        "note": "Fixed: L5 scenario student renamed Akoth (L1 and FE leave her unnamed; L4 first names her). Coil turns 20/50/100 (rig) vs 50/200 (scenario card) are separate setups: left."
+      },
+      {
+        "conflict": "Factors affecting induced e.m.f.: four (L5,8) vs three (L6)",
+        "class": "false_positive",
+        "note": "L6 lists a subset in an applications context; no claim that there are only three."
+      },
+      {
+        "conflict": "Step-up transformers / grid as input supply (L1,5,6)",
+        "class": "false_positive",
+        "note": "Details are compatible."
+      }
+    ]
+  }
+]

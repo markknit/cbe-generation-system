@@ -5,46 +5,34 @@
   "lessons": 9,
   "conflicts": [
     {
-      "lessons": "1, 2, 9",
-      "severity": "major",
-      "fact": "Length of Mama Njeri's notebook dataset (days recorded)",
-      "versions": "Lesson 1 and Lesson 9 use a 60-day sales record; Lesson 2 uses 90 days of data (27 good days out of 90). The phenomenon and Lesson 4 say three months."
-    },
-    {
       "lessons": "2, 4, 6, 8, 9",
       "severity": "major",
-      "fact": "Probability of a 'good day' / key Mama Njeri probabilities",
-      "versions": "Lesson 2: P(good day)=27/90=0.3. Lesson 8: P(good day)=0.6 (bad 0.4). Lesson 9: roughly 40% of days are good. Lesson 7 uses 3/5 from 'her notebook data from earlier lessons'. Lesson 4: sold-out 0.55 and half-unsold 0.30, which also conflicts with 0.3 for good days."
+      "fact": "Mama Njeri's probability of a good day / sales-outcome probabilities, which the sequence builds on cumulatively",
+      "versions": "Lessons 2, 6, 8, 9 give P(good day) = 0.4 (24/60). Lesson 4 uses P(sold out) = 0.25 and P(half unsold) = 0.30 from her notebook, and Lesson 7 uses P(good day) = 2/5, which is consistent with 0.4. Lesson 4 defines 'sold out' and 'half unsold' as complementary outcomes with no clear link to the 0.4 good-day figure, so Lesson 4's outcome probabilities cannot be reconciled with the good-day dataset used elsewhere."
     },
     {
-      "lessons": "5, 6",
-      "severity": "minor",
-      "fact": "Which lesson contains the mutually exclusive addition rule",
-      "versions": "Lesson 6 says mutually exclusive events reduce to 'the rule from Lesson 5', but that rule was taught in Lesson 4; Lesson 5 covers independence."
-    },
-    {
-      "lessons": "6",
+      "lessons": "1, 2",
       "severity": "major",
-      "fact": "Nakuru data counts and event definition (internal conflict affecting the sequence)",
-      "versions": "Predict phase uses 40/100 high sales and 35/100 heavy rain; Observe uses 8 H, 7 R, 3 both of 20 days giving 12 unique. Notes say n(H)+n(R)=15 and 'approximately 60%'. The model phase uses P(A)=0.40, P(B)=0.35, P(A∩B)=0.15, P(A∪B)=0.60 for good weather, not heavy rain, a changed event. Also the 40+35 prediction is stated as 'many predicted 75', which is consistent, but the 8/20 and 7/20 proportions do not match 0.40/0.35."
+      "fact": "What data the students collected in Lesson 1 and how much of it there was (bottle-cap results)",
+      "versions": "Lesson 1 has each group of 4 run a 40-flip coin experiment plus a bottle-cap toss, so the quantity of bottle-cap data is unclear. Lesson 2 says the Lesson 1 data are individual bottle-cap tallies of about 30 flips each, giving about 900 total trials. Lesson 2 also says coin-flip data came from Lesson 1 individuals, and its tallies of 8 or 12 out of 30 differ from Lesson 1's 40-trial structure."
     },
     {
-      "lessons": "5, 1",
-      "severity": "minor",
-      "fact": "Number of coin tosses per group",
-      "versions": "Lesson 1: flip a coin 40 times (Overview/Observe). Lesson 5 overview says 20 trials of two coins, while the activity and Observed say 40 tosses."
+      "lessons": "6, 8, 9",
+      "severity": "major",
+      "fact": "P(high sales) for Mama Njeri and the size of the dataset",
+      "versions": "Lesson 6 predict phase uses 40 out of 100 days HIGH sales and 35 of 100 heavy rain, while Lesson 6 observe uses 20 days with 8 H, 7 R, and 3 both. These give P(R) = 0.35 for both, but then P(A∩B) = 0.15 and P(A∪B) = 0.60 in the model phase, whereas the observed data give 3/20 = 0.15 and 12/20 = 0.60 (consistent). However, the Lesson 6 overview says n(H) + n(R) = 15 and the Observed summary describes high sales as 8 of 20 = 0.40, while the model uses P(A) = 0.40 and P(B) = 0.35 = 7/20. Lesson 9 gives P(rain) = 0.3 and P(≥80% AND rain) = 0.15, contradicting Lesson 6's P(rain) = 0.35 for the same Mama Njeri rain/sales pair."
     },
     {
-      "lessons": "1, 2",
+      "lessons": "6, 9",
       "severity": "minor",
-      "fact": "Bottle-cap trials per student/group and the bottle-cap probability",
-      "versions": "Lesson 2 says Lesson 1 individual data are ~30 flips each (e.g. 8 out of 30), pooled ~900, with bottle-cap near 0.3. Lesson 1 had groups doing 40 coin flips and says bottle-cap toss results without specifying 30. Lesson 2 'cap-up' ~0.3 also coincides with the good-day 0.3, suggesting confusion."
+      "fact": "Definition/threshold of 'high sales' versus 'good day'",
+      "versions": "Lessons 1, 2 and 8 define a good day as selling at least 80% of stock. Lesson 6 introduces a separate 'HIGH SALES' event, with weather data from Nakuru instead of Gikomba/Nairobi, and presents it with the same 0.40 probability. Lesson 6 uses a Nakuru dataset while Lessons 1-5 and 9 place the stall and rain at Gikomba Market."
     },
     {
-      "lessons": "1, 2",
+      "lessons": "5, 7",
       "severity": "minor",
-      "fact": "Name of the model/scale artefact created in Lesson 1",
-      "versions": "Lesson 1 creates a number-line 'Probability Model' of the good-day probability; Lesson 2 says the Lesson 1 model explained why Mama Njeri cannot predict her sales, and refers to a 'Probability Scale strip' created in Lesson 1."
+      "fact": "Whether Mama Njeri's consecutive daily sales are modelled as independent, and the coin used",
+      "versions": "Lesson 5 uses a 1-shilling coin in Lesson 1 but a generic coin pair; Lesson 7 uses a 20-cent coin, which does not exist in Kenyan currency (Kenyan coins are 50 cents, 1, 5, 10, 20, 40 shillings), an unrealistic detail. Lesson 5 asks students to treat daily sales as independent, whereas Lesson 7 treats the maize-seed draws as dependent without conflict; the coin denomination is the only discrepancy."
     }
   ]
 }

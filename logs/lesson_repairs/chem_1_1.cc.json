@@ -1,0 +1,91 @@
+[
+  {
+    "when": "2026-10-04T08:27:26",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[4].learnerExperience",
+        "old": "(irreversible physical/chemical change)",
+        "new": "(irreversible chemical change)",
+        "class": "cross_reference",
+        "conflict": "L8 model recap labels chapati as physical/chemical change"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[3].learnerExperience",
+        "old": "(3) Evidence from Lesson 3 on states of matter",
+        "new": "(3) Evidence from Lesson 1 on states of matter",
+        "class": "cross_reference",
+        "conflict": "L4 cites Lesson 3 for states of matter"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[3].learnerExperience",
+        "old": "the three evidence statements posted on the DQB at the start of the unit (from the Teacher Template)",
+        "new": "three evidence statements from the Teacher Template and posts them on the DQB",
+        "class": "cross_reference",
+        "conflict": "L4 says DQB statements posted at start of unit"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].teacherMoves",
+        "old": "In Lesson 1 we saw that too much heat on the jiko",
+        "new": "In Lesson 1 we saw that heat on the jiko",
+        "class": "cross_reference",
+        "conflict": "L7 misdescribes L1 chapati (too much heat)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].learnerExperience",
+        "old": "wheat flour (from maize/wheat farms)",
+        "new": "wheat flour (from wheat farms)",
+        "class": "dataset",
+        "conflict": "Wheat flour said to come from maize farms"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Whether the chapati change is chemical (L8 'physical/chemical')",
+        "class": "cross_reference",
+        "note": "Fixed L8 model recap to match L1/L2/L4/L10 (chemical change)."
+      },
+      {
+        "conflict": "Which lesson covers states of matter / physical vs chemical change / properties",
+        "class": "structural",
+        "note": "Fixed L4's wrong 'Lesson 3' pointer to Lesson 1 (PhET). Remaining: L6/L9/L10 recaps claim physical vs chemical change and properties of matter were taught, but only L1 touches them. Real gap, left for review."
+      },
+      {
+        "conflict": "What happened to the chapati in Lesson 1 (too much heat)",
+        "class": "cross_reference",
+        "note": "Fixed L7 wording."
+      },
+      {
+        "conflict": "Wheat flour from maize farms / Pembe flour",
+        "class": "dataset",
+        "note": "Fixed 'maize/wheat farms'. Pembe makes both maize and wheat flour, so that part is a false positive."
+      },
+      {
+        "conflict": "Concept map vs model format across lessons",
+        "class": "structural",
+        "note": "Real but minor: L1 builds a before/after drawing, later lessons call it a concept map, L5 a class model. Left."
+      },
+      {
+        "conflict": "Drug/prescription/dosage introduced in L4 and again in L7; DQB statements at start of unit",
+        "class": "structural",
+        "note": "L4 exit task and L7 overlap (duplication, left). L8 'from Lesson 7' is accurate. Fixed L4's claim that DQB statements were posted at the start of the unit."
+      },
+      {
+        "conflict": "Number of lessons (L9) and group formation (L10)",
+        "class": "false_positive",
+        "note": "'9 lessons' includes today's lesson and 'eight lessons' counts since L1, both defensible. Poster work not allocated before L10 is minor structural."
+      }
+    ]
+  }
+]

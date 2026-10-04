@@ -1,0 +1,81 @@
+[
+  {
+    "when": "2026-10-04T08:31:44",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "slo.purposeInStoryline",
+        "old": "In Lesson 2 they explored Heron's formula for when all three sides are known. Now in Lesson 3, learners discover the sine formula",
+        "new": "In Lesson 2 they met the sine formula on Triangle ABC. Now in Lesson 3, learners apply the sine formula",
+        "class": "cross_reference",
+        "conflict": "L3 says Heron's formula was taught in L2 (it is L4)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "overview",
+        "old": "Building on Lesson 2 (Heron's formula — all three sides known), learners now explore",
+        "new": "Building on Lesson 2 (first use of the sine formula), learners now apply",
+        "class": "cross_reference",
+        "conflict": "L3 says Heron's formula was taught in L2 (it is L4)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[3].formativeAssessment",
+        "old": "confirms Heron's formula is retained from Lesson 2",
+        "new": "shows readiness for Heron's formula in Lesson 4",
+        "class": "cross_reference",
+        "conflict": "L3 says Heron's formula was taught in L2 (it is L4)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[4].learnerExperience",
+        "old": "In Lesson 2, they added Heron's formula with the condition 'use when: all 3 sides known.'",
+        "new": "In Lesson 2, they shaded Triangle ABC and found its area with the sine formula.",
+        "class": "cross_reference",
+        "conflict": "L3 says Heron's formula was taught in L2 (it is L4)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[4].learnerExperience",
+        "old": "using ½bh (Lesson 2) and the sine formula (Lesson 3)",
+        "new": "using ½bh (Lesson 1) and the sine formula (Lessons 2–3)",
+        "class": "cross_reference",
+        "conflict": "L4 misattributes earlier formulas"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Which lesson introduced Heron's vs the sine formula",
+        "class": "cross_reference",
+        "note": "Sine formula is L2 (re-applied L3), Heron's is L4. Fixed L3's four claims that Heron's was L2 and L4's misattribution. Residual structural: L3 is built as a second introduction of the sine formula and its model/teacher moves still contrast it with Heron's condition before Heron's is taught."
+      },
+      {
+        "conflict": "Shamba dimensions: L1 (48,35,52,40,37), L2 AB=120/AC=95/68 deg, L4 sub-plot 40/55/63, L7 (42,38,45,30,50)",
+        "class": "structural",
+        "note": "Real: L1's sides are given 'e.g.' and later lessons (and FE Part 2) each use their own numbers with full worked calculations; reconciling needs one designed dataset, not spot edits."
+      },
+      {
+        "conflict": "Height expression in the sine-formula derivation (c sin A, b sin theta, a sin C)",
+        "class": "science",
+        "note": "Labelling differences depending on which sides are named; not a real contradiction."
+      },
+      {
+        "conflict": "Decomposition into triangles vs 'triangles and quadrilaterals'",
+        "class": "false_positive",
+        "note": "L8 wording is broader but compatible."
+      },
+      {
+        "conflict": "Which measurements the L8 shamba problem provides",
+        "class": "false_positive",
+        "note": "Different problems give different data; no contradiction."
+      }
+    ]
+  }
+]

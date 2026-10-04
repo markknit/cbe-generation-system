@@ -1,0 +1,113 @@
+[
+  {
+    "when": "2026-10-04T08:29:24",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "overview",
+        "old": "locate the median (58 portions)",
+        "new": "locate the median (59 portions)",
+        "class": "dataset",
+        "conflict": "L3 median of its own data"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "overview",
+        "old": "over 5 days: 55, 60, 58, 60, 57)",
+        "new": "over 5 days: 54, 60, 57, 60, 59)",
+        "class": "dataset",
+        "conflict": "five-day ugali dataset"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[0].learnerExperience",
+        "old": "Monday 55, Tuesday 60, Wednesday 58, Thursday 60, Friday 57",
+        "new": "Monday 54, Tuesday 60, Wednesday 57, Thursday 60, Friday 59",
+        "class": "dataset",
+        "conflict": "five-day ugali dataset"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].learnerExperience",
+        "old": "55+60+58+60+57 = 290",
+        "new": "54+60+57+60+59 = 290",
+        "class": "dataset",
+        "conflict": "five-day ugali dataset"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].teacherMoves",
+        "old": "55 plus 60 is 115, plus 58 is 173, plus 60 is 233, plus 57 is 290",
+        "new": "54 plus 60 is 114, plus 57 is 171, plus 60 is 231, plus 59 is 290",
+        "class": "dataset",
+        "conflict": "five-day ugali dataset"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.observed",
+        "old": "(55, 60, 58, 60, 57 portions)",
+        "new": "(54, 60, 57, 60, 59 portions)",
+        "class": "dataset",
+        "conflict": "five-day ugali dataset"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[1].learnerExperience",
+        "old": "Monday–Friday (54, 60, 55, 62, 59)",
+        "new": "Monday–Friday (54, 60, 57, 60, 59)",
+        "class": "dataset",
+        "conflict": "five-day ugali dataset"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].formativeAssessment",
+        "old": "fluctuates between 54 and 62 with a peak on Wednesday",
+        "new": "fluctuates between 54 and 60 with peaks on Tuesday and Thursday",
+        "class": "dataset",
+        "conflict": "five-day ugali dataset"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Median of the five-day ugali data (57 in phenomenon/L7/L8/FE vs 59 in L3, 58 in L6)",
+        "class": "structural",
+        "note": "Authoritative summary (mean 58, mode 60, median 57 over 5 days) is mathematically impossible: sum 290 with two 60s forces the two lowest values to total 113 while both are below 57. The dataset L3 and FE Part 3 use (54,60,57,60,59) gives median 59. Fixed only L3's internal 58->59; L7/L8/FE 'median 57' needs a human decision on the dataset."
+      },
+      {
+        "conflict": "Daily ugali sales dataset differs between L3, L5, L6, L7",
+        "class": "dataset",
+        "note": "Aligned L5 and L6 to L3's 54,60,57,60,59 (also used in FE Part 3); fixed L6 running sums and L5 line-graph trend. L7's 7-day set (54,60,57,62,55,58,60) left: it is a deliberate odd-n median exercise, but its own median is 58, not the stated 57 (part of the structural median problem)."
+      },
+      {
+        "conflict": "Total orders 150 (L5, ugali 37%) vs 120 (ugali 47%)",
+        "class": "structural",
+        "note": "Real contradiction; L5's whole graphing activity (5 frequencies, pie angles e.g. 134 deg, 37%, '150 portions') is built on the 150 table; fixing needs new invented frequencies for 4 meals, so left for regeneration."
+      },
+      {
+        "conflict": "Mean/mode/median taught in L3 and re-taught as new in L6/L7",
+        "class": "structural",
+        "note": "Real duplication: L3 covers all three, L6 (mean/mode) and L7 (median) present them as new."
+      },
+      {
+        "conflict": "L3 cites a Lesson 2 frequency distribution table; L2 built none (L4 does)",
+        "class": "structural",
+        "note": "Ordering problem: frequency tables are built in L4, after L3; not fixable by renumbering."
+      },
+      {
+        "conflict": "Kericho rainfall mean / mode wording",
+        "class": "false_positive",
+        "note": "885/6 = 147.5 is correct; 'no mode' for six distinct values is correct."
+      }
+    ]
+  }
+]

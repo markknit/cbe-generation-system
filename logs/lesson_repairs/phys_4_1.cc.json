@@ -1,0 +1,123 @@
+[
+  {
+    "when": "2026-10-04T08:37:00",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].learnerExperience",
+        "old": "the Embu farmer testimony from Lesson 1 verbatim: 'The long rains used to come in March, like clockwork. My grandmother planted by the sound of the first thunder. Now I wait until April, sometimes May, and still I am not sure. The maize does not know what to do.'",
+        "new": "James Muriithi's quote from Lesson 1 verbatim: 'My grandfather knew exactly when to plant maize. I no longer do.'",
+        "class": "dataset",
+        "conflict": "Embu farmer testimony wording"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[1].learnerExperience",
+        "old": "Lesson 1 — PhET simulation showing infrared absorption; Lesson 2 — Kenyan charcoal burning and Mau Forest deforestation data; Lesson 3 — ozone layer UV-B shield and CFC data from Nairobi; Lesson 4 — NASA temperature data and Lewis Glacier retreat measurements; Lesson 5 — Olkaria Geothermal and Lake Turkana Wind Farm mitigation data; Lesson 6 — Turkana pastoralist and Mombasa coastal community testimonies.",
+        "new": "Lesson 1 — Lewis Glacier images and James Muriithi's testimony; Lesson 2 — Kenyan charcoal burning and Mau Forest deforestation data; Lesson 3 — PhET simulation showing infrared absorption; Lesson 4 — NASA temperature data and Lake Victoria flooding; Lesson 5 — Keeling Curve and temperature anomaly data; Lesson 6 — ozone layer UV-B shield and CFC data from Nairobi.",
+        "class": "cross_reference",
+        "conflict": "L7 evidence timeline"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].sensemakingStrategy",
+        "old": "infrared absorption by greenhouse gases (Lesson 1), human emission sources (Lesson 2), ozone layer interaction (Lesson 3), observed warming effects (Lesson 4), and mitigation pathways (Lessons 5 and 6)",
+        "new": "infrared absorption by greenhouse gases (Lessons 1 and 3), human emission sources (Lesson 2), observed warming effects (Lesson 4), human amplification (Lesson 5), and ozone layer interaction (Lesson 6)",
+        "class": "cross_reference",
+        "conflict": "L7 evidence timeline"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[1].formativeAssessment",
+        "old": "the nuance from Lesson 3",
+        "new": "the nuance from Lesson 6",
+        "class": "cross_reference",
+        "conflict": "L7 evidence timeline"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "slo.safetyNotes",
+        "old": "the Embu farmer testimony and Turkana pastoralist testimonies from Lesson 6",
+        "new": "the Embu farmer testimony from Lesson 1",
+        "class": "cross_reference",
+        "conflict": "L7 evidence timeline"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[4].learnerExperience",
+        "old": "In Lesson 1 they drew the physical layers of the atmosphere.",
+        "new": "In Lesson 1 they drew where the Sun's energy goes and how the atmosphere is involved.",
+        "class": "cross_reference",
+        "conflict": "content of Lesson 1 model"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].learnerExperience",
+        "old": "greenhouse gases trap IR (Lessons 2 and 4)",
+        "new": "greenhouse gases trap IR (Lessons 1 and 3)",
+        "class": "cross_reference",
+        "conflict": "where IR trapping was taught"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "teacherReflection",
+        "old": "(IR trapping, Lessons 2 and 5)",
+        "new": "(IR trapping, Lessons 1 and 3)",
+        "class": "cross_reference",
+        "conflict": "where IR trapping was taught"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Embu farmer testimony wording",
+        "class": "dataset",
+        "note": "L7 'verbatim' quote (grandmother, April/May) replaced with L1's James Muriithi quote; FE also names Muriithi."
+      },
+      {
+        "conflict": "glacier loss figures (85% area since 1934 vs >90% mass since 1900)",
+        "class": "false_positive",
+        "note": "Different metric and baseline; both plausible, not contradictory."
+      },
+      {
+        "conflict": "L7 evidence timeline misassigns lessons",
+        "class": "cross_reference",
+        "note": "Rewrote the timeline panels and the L7 sensemaking/safety/formative lesson pointers to match actual L1-L6 content; mitigation and Turkana/Mombasa testimonies appear in no lesson and were removed."
+      },
+      {
+        "conflict": "content of Lesson 1 model per L3/L5",
+        "class": "cross_reference",
+        "note": "L3's 'physical layers' claim fixed to L1's energy-balance model. L5's model already containing an ozone layer is part of the ozone sequencing issue below."
+      },
+      {
+        "conflict": "when the ozone layer was taught (L5 vs L6)",
+        "class": "structural",
+        "note": "L3 briefly distinguishes ozone (UV) from GHGs while correcting a misconception, L5 assumes ozone was covered, L6 introduces it as new. Sequencing overlap; not edited. Fixed only L5's IR-trapping lesson pointers."
+      },
+      {
+        "conflict": "greenhouse gas lists differ",
+        "class": "science",
+        "note": "Different subsets listed; not a contradiction."
+      },
+      {
+        "conflict": "moisture source for long rains",
+        "class": "science",
+        "note": "Complementary emphases (Lake Victoria/Indian Ocean vs ITCZ); not contradictory."
+      },
+      {
+        "conflict": "L6 'UV rising' framing vs UV-B data declining after late 1990s",
+        "class": "science",
+        "note": "Possibly a real internal tension in L6's framing; needs content review."
+      }
+    ]
+  }
+]

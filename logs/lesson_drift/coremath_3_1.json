@@ -7,56 +7,56 @@
     {
       "lessons": "1, 2, 3, 4, 6, 7",
       "severity": "major",
-      "fact": "The 40-price maize dataset (the anchoring data the sequence builds on) changes between lessons: its values and range differ.",
-      "versions": "Lessons 1 and 2 list prices from 86 to 115 KSh. Lesson 3 gives a range of roughly 86–115 but its teacher model uses KSh 110 and 125, which falls outside that range. Lesson 4 gives only four values (98, 105, 112, 120), with frequencies 16, 12, 8, 4. Lesson 5 uses classes 90–149 with a tail to 140–149. Lesson 6 uses classes starting at 40 with a modal class of 50–59. Lesson 7 uses classes 55–94 with a modal class of 70–74."
+      "fact": "The 40-price Wakulima maize dataset changes between lessons, so the same data gives different values, ranges and summary statistics",
+      "versions": "Lessons 1 and 2 give a list ranging KSh 86–115 with no repeated pattern of four values. Lesson 3 shows a range of roughly 86–115 but its tally example uses 110 and 125. Lesson 4 gives a list of only four values (98, 105, 112, 120) with frequencies 16, 12, 8, 4 and Σfx=4204. Lesson 5 groups into classes 90–99 to 140–149. Lessons 6 and 7 use prices around Ksh 40–59 and 55–94, with a mean of about 72.7."
     },
     {
-      "lessons": "4, 8, 7",
+      "lessons": "4, 8",
       "severity": "major",
-      "fact": "The mean, median and mode of the maize prices differ between lessons.",
-      "versions": "Lessons 4 and 8 give a mean of KSh 105.10, and Lesson 4 gives a mode of KSh 98. Lesson 8 gives a median of about KSh 103. Lesson 7 gives a mean of about 72.7, a modal class midpoint of 72 and a median of about 73.2."
+      "fact": "Arithmetic of the mean of the ungrouped frequency table",
+      "versions": "Lesson 4 gives frequencies 16, 12, 8, 4 (total 40) and Σfx=4204. The mean is stated as KSh 105.10, but 4204/40 = 105.1 does not match the values: 98×16+105×12+112×8+120×4 = 1568+1260+896+480 = 4204. This works, but Lesson 4's mode of 98 is 40% (16/40), while the Lesson 1/2 list has 86–115 with no 98 mode, and Lesson 8 says the mean is higher than the median because of a Rift Valley spike, while Lesson 4's data has no such spike."
     },
     {
-      "lessons": "4",
+      "lessons": "4, 5, 8",
       "severity": "major",
-      "fact": "The frequency table figures in Lesson 4 are internally inconsistent and do not match the listed raw data.",
-      "versions": "Frequencies 16, 12, 8, 4 at prices 98, 105, 112, 120 give Σfx = 4204 and a mean of 105.10. The calculation gives 4204/40 = 105.1, but 16×98 + 12×105 + 8×112 + 4×120 = 1568+1260+896+480 = 4204, so the sum is fine. However, the raw list shown has far more than 16 values of 98 and different counts from the stated frequencies. The mode share is 40%, and the 16 of 40 matches that. The stated raw list counts do not match these frequencies."
+      "fact": "Shape of the distribution and cause of mean vs median",
+      "versions": "Lesson 5 says the histogram is right-skewed with modal class KSh 100–109 and a tail to 140–149. Lesson 4 has only values up to 120, with mode 98. Lesson 8 attributes the higher mean to a Rift Valley shortage spike."
     },
     {
-      "lessons": "5, 4, 3",
+      "lessons": "6, 7, 3",
       "severity": "major",
-      "fact": "Lesson 5 says the ungrouped table came from Lesson 3 and gives its distribution shape and classes, which conflicts with the Lesson 4 four-value table and the Lesson 3 range.",
-      "versions": "Lesson 5 uses the Lesson 3 table grouped in width-10 classes from 90 to 149, with a right-skewed shape and modal class 100–109. Lesson 4 has only four values, 98 to 120. Lesson 3 gives prices from 86 to 115 with many distinct values."
+      "fact": "Modal class and ungrouped mode of maize prices",
+      "versions": "Lesson 6 gives modal class Ksh 50–59 (Ksh 10 intervals, from 40–49, 50–59). Lesson 7 gives modal class 70–74 (width 5), midpoint 72. Lesson 5 gives modal class 100–109. Lesson 4 gives mode 98."
     },
     {
-      "lessons": "7, 5, 6",
+      "lessons": "7, 8",
       "severity": "major",
-      "fact": "Class width used for the grouped maize data.",
-      "versions": "Lesson 6 uses widths of 5, 10 and 20 starting at 40. Lesson 5 uses width 10 and then width 15 (85–99, 100–114, and so on). Lesson 7 says 8 classes of width 5 starting at 55."
+      "fact": "Mean and median values of the maize prices",
+      "versions": "Lesson 7 gives mean ≈72.7 and median ≈73.2 KSh, with the median above the mean. Lesson 8 gives mean ≈105.10 and median ≈103, with the mean above the median."
     },
     {
       "lessons": "5, 7",
       "severity": "minor",
-      "fact": "Sequence ordering and topic references.",
-      "versions": "Lesson 5 says it covers histograms with unequal class widths and frequency density. Lesson 7 says the next lesson will cover histograms with unequal class widths, although Lesson 5 already covered this. Lesson 7's model also lists a frequency polygon, which was never taught. Lesson 4 says the dot-plot will be built in Lesson 6, but Lesson 6 has no dot-plot, and Lesson 3 already did one."
+      "fact": "Class width and number of classes for the grouped table",
+      "versions": "Lesson 5 uses width 10 (six classes) and a width 15 set. Lesson 7 says 8 classes of width 5."
     },
     {
-      "lessons": "6, 7, 8",
-      "severity": "major",
-      "fact": "The order of mean, median and mode calculation.",
-      "versions": "Lesson 6 says mean, median and mode were already found for these prices before Lesson 6. Lessons 7 and 8 present the mean, median and mode as being computed for the first time (Lesson 8 for ungrouped data, Lesson 7 for grouped data). Lesson 4 also computed the mean."
-    },
-    {
-      "lessons": "8, 1, 2",
+      "lessons": "5, 6, 7",
       "severity": "minor",
-      "fact": "The explanation of why the family and the neighbour disagree.",
-      "versions": "Lesson 8 says the family's experience included a Rift Valley shortage spike. Lessons 1–2 say both shop at the same stall and give no spike. The dataset has no extreme outlier (Lesson 7 has a maximum of 90–94 versus a centre of 72, and Lesson 4 has 120 versus 98)."
+      "fact": "Lesson sequence and order of topics",
+      "versions": "Lesson 5 histograms say they use the Lesson 3 table. Lesson 6 says the mean, median and mode were already found before grouping, though Lesson 7 first computes grouped central tendency. Lesson 4 refers to the dot-plot preview as Lesson 6, while histograms are in Lesson 5. Lesson 7 says the next lesson covers histograms with unequal class widths, which was already covered in Lesson 5."
     },
     {
-      "lessons": "8, 3",
+      "lessons": "6, 7",
       "severity": "minor",
-      "fact": "The modal price.",
-      "versions": "Lesson 8's mean (105.10) exceeds its median (103), and it says the mean is inflated by spikes. Lesson 4's mode is 98. Lesson 7 says the mean (72.7) is below the median (73.2), so the mean is not inflated by outliers."
+      "fact": "Lesson 7's model lists a histogram and frequency polygon already built, while Lesson 6 describes the model as containing a stem-and-leaf plot, and no lesson builds a frequency polygon",
+      "versions": "Lesson 6: raw list, stem-and-leaf or ungrouped table, mean/median/mode. Lesson 7: raw list → tally table → histogram → frequency polygon → ungrouped mean/mode/median."
+    },
+    {
+      "lessons": "1, 2",
+      "severity": "minor",
+      "fact": "Who builds the model and how many predictions on DQB",
+      "versions": "Lesson 1 builds an individual baseline map in exercise books. Lesson 2 says the cumulative model is a group poster begun in Lesson 1. Lesson 4 refers to three Lesson 1 predictions on the DQB, while Lesson 1 posts predictions on a board in two columns."
     }
   ]
 }

@@ -1,0 +1,74 @@
+[
+  {
+    "when": "2026-10-04T08:27:35",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[0].learnerExperience",
+        "old": "In Lesson 3 we used universal indicator",
+        "new": "In Lesson 1 we saw universal indicator",
+        "class": "cross_reference",
+        "conflict": "universal indicator rainbow was Lesson 1 not 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "begun in Lesson 2 and updated each lesson",
+        "new": "begun in Lesson 3 and updated each lesson",
+        "class": "cross_reference",
+        "conflict": "when the particle model began"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "0 chai/milk colour classification",
+        "class": "false_positive",
+        "note": "Chai red/orange (L1) vs orange (L7) and milk yellow-green (slightly acidic, ~pH 6.5) vs 'neutral' are compatible descriptions."
+      },
+      {
+        "conflict": "1 L4 seven-liquid set and 'three commercial indicators'",
+        "class": "structural",
+        "note": "L4 deliberately uses a different seven-liquid set (vinegar in, Stoney/Jik out); 'three indicators' = litmus (red+blue paper), phenolphthalein, methyl orange, so the count is fine."
+      },
+      {
+        "conflict": "2 lesson sequence references",
+        "class": "cross_reference",
+        "note": "Fixed L4 'Lesson 3' universal indicator -> Lesson 1. L6 says acid + metal oxide was done in Lessons 4-5 and L7 cites copper oxide observations, but no lesson teaches acid + metal oxide: structural gap, not edited."
+      },
+      {
+        "conflict": "3 Kericho liming agent CaCO3 (L6) vs Ca(OH)2 (L9, L10)",
+        "class": "structural",
+        "note": "Both are real agricultural limes; L6 is built throughout on the limestone + acid -> CO2 reaction, so aligning it to Ca(OH)2 would break the lesson. Needs author decision."
+      },
+      {
+        "conflict": "4 Jik composition NaOH (L9) vs sodium hypochlorite (L7)",
+        "class": "science",
+        "note": "Real inaccuracy in L9: Jik is sodium hypochlorite (alkaline), not NaOH; not edited per rules."
+      },
+      {
+        "conflict": "5 Stoney/lemon pH values",
+        "class": "false_positive",
+        "note": "pH ~2 vs 2-3 and carbonic acid pH 3-4 / weak are consistent."
+      },
+      {
+        "conflict": "6 when the cumulative model began",
+        "class": "cross_reference",
+        "note": "Particle model started in L3; L6 'begun in Lesson 2' fixed. L8/L9 'since Lesson 3' consistent with that; L4/L5 refer to the L1 anchor model."
+      },
+      {
+        "conflict": "7 L9 'Lesson 8 pH data' for HCl",
+        "class": "false_positive",
+        "note": "L8 itself discusses HCl at pH 1 vs citric acid at pH 3, so L9's reference is supported."
+      },
+      {
+        "conflict": "8 L8 reference liquids list",
+        "class": "false_positive",
+        "note": "Overview and activity lists overlap (blood is in the activity list); minor wording only."
+      }
+    ]
+  }
+]

@@ -1,0 +1,123 @@
+[
+  {
+    "when": "2026-10-04T08:30:55",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "summaryTablePrompt.explained",
+        "old": "a 20-metre tree in Kisumu",
+        "new": "a mango tree in Kisumu",
+        "class": "dataset",
+        "conflict": "tree height ≈12 m, not 20 m"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[0].learnerExperience",
+        "old": "estimated tan 53° using your ruler. Write down: (a) the value you got,",
+        "new": "measured a tangent ratio with your ruler for an angle you chose. Write down: (a) the value and angle you got,",
+        "class": "cross_reference",
+        "conflict": "L1 groups chose their own angle, no tan 53° estimate"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "slo.purposeInStoryline",
+        "old": "derived special-angle ratios, and used them",
+        "new": "evaluated the ratios with tables and calculators, and used them",
+        "class": "cross_reference",
+        "conflict": "special angles derived in L7, after L6"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].learnerExperience",
+        "old": "(from Lesson 4 special-angles table)",
+        "new": "(from tables or calculator)",
+        "class": "cross_reference",
+        "conflict": "no special-angles table in L4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "Check against your special-angles table from Lesson 4.",
+        "new": "Check against your calculator values from Lesson 5.",
+        "class": "cross_reference",
+        "conflict": "no special-angles table in L4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].teacherMoves",
+        "old": "answer it using your Lesson 4 table.",
+        "new": "answer it using your Lesson 5 calculator values.",
+        "class": "cross_reference",
+        "conflict": "no special-angles table in L4"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[2].learnerExperience",
+        "old": "calculator approach from Lesson 6",
+        "new": "calculator approach from Lesson 5",
+        "class": "cross_reference",
+        "conflict": "calculators in L5"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[0].teacherMoves",
+        "old": "Last lesson we used calculators and tables.",
+        "new": "In earlier lessons we used calculators and tables.",
+        "class": "cross_reference",
+        "conflict": "L7 derived exact values, not calculators"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Mango tree height: 20 m (L2) vs ≈12 m elsewhere",
+        "class": "dataset",
+        "note": "Fixed L2 summary"
+      },
+      {
+        "conflict": "L5 retrieves a tan 53° estimate from L1, but L1 groups chose their own angles",
+        "class": "cross_reference",
+        "note": "Fixed L5 predict prompt; L5 explain phase already says 'or the closest angle'; precision note '~1.25 from our ruler' left as illustrative"
+      },
+      {
+        "conflict": "sin 53° values 0.7986 / 0.799 / 0.8",
+        "class": "false_positive",
+        "note": "Rounding only; L7 calculator mention is fine since L5 used calculators"
+      },
+      {
+        "conflict": "Lesson cited for calculators/tables (L6, L7)",
+        "class": "cross_reference",
+        "note": "Fixed L6 'Lesson 4 table' and special-angle claim, L7 'Lesson 6' -> Lesson 5"
+      },
+      {
+        "conflict": "Special angles derived in L7 then re-derived as new in L8",
+        "class": "structural",
+        "note": "Real L7/L8 overlap; fixed only L8's wrong 'last lesson' reference"
+      },
+      {
+        "conflict": "Achieng as student vs 'a land surveyor in Kisumu' in L10",
+        "class": "false_positive",
+        "note": "L10 sentence is a list (Achieng, a land surveyor, an engineer, a pilot); L10 elsewhere treats Achieng as the student"
+      },
+      {
+        "conflict": "Two methods giving ≈12.0 m / 60° hypothetical",
+        "class": "false_positive",
+        "note": "Reviewer itself found no conflict"
+      },
+      {
+        "conflict": "Nakuru ramp numbers in L3",
+        "class": "false_positive",
+        "note": "Two different ramp problems within one lesson, each internally consistent"
+      }
+    ]
+  }
+]

@@ -7,38 +7,44 @@
     {
       "lessons": "2, 3, 4, 6, 8",
       "severity": "major",
-      "fact": "Ferry's actual landing point / southward drift distance (and the model of the journey)",
-      "versions": "Lesson 2 puts the landing point B at (6, -2.4) on a 6-square grid, which scales to (60, -24) km. Lesson 4 places it at L(60, -16), 16 km south of Mbita after 2 hours. Lesson 6 says 3 hours, with the ferry travelling ~64.6 km. Lesson 8 uses 3 hours and a resultant after 3 hours of (60, -24). The original phenomenon gives 60 km at 20 km/h, which is 3 hours and 24 km drift. 16 km is inconsistent with a 60 km trip."
+      "fact": "Ferry's landing point / southward drift distance. Using a consistent 3-hour trip, the ferry drifts 24 km south and the resultant is a displacement of about 64.6 km. The lessons treat the landing point inconsistently.",
+      "versions": "Lesson 2 gives the landing point as (6, −2.4) on a 1 square = 10 km grid, which is 24 km south, but its Model phase later writes Mbita OA = (60, 0) with the same landing point left blank. Lesson 4 uses L = (60, −24), 24 km south. Lesson 1 shows a 60 km trip with 10 km per square and a current of 2 squares south (about 20 km, not 24 km). Lessons 3 and 6 treat the resultant 21.5 km/h as speed, with no displacement or position set. Lesson 8 reaches the corrective-heading result by a different method from Lesson 4's correction vector (0, 24)."
     },
     {
-      "lessons": "4 vs 1, 3, 6, 8",
+      "lessons": "1, 2, 6",
+      "severity": "minor",
+      "fact": "Scale used for the ferry grid diagram",
+      "versions": "Lesson 1: 1 grid square = 10 km, with Mbita 6 squares from Kisumu, and the engine arrow is 4 squares east (inconsistent with 60 km = 6 squares; the 20 km/h engine would be 2 squares). Lesson 3: 1 cm = 2 km/h. Lesson 6: 1 cm = 5 km/h. Lesson 5: 1 cm = 5 km/h."
+    },
+    {
+      "lessons": "3, 6, 8",
       "severity": "major",
-      "fact": "Duration of travel / engine vector used",
-      "versions": "Lesson 4 says 2 hours and uses engine vector e=(60,0) and current c=(0,-16). Lessons 1, 3, 6 and 8 use velocity vectors (20,0) and (0,-8) km/h with 3 hours to cover 60 km."
+      "fact": "Distance travelled / resultant over 3 hours versus the 60 km route: the ferry covers 60 km east at 20 km/h in 3 hours, so it would reach Mbita's longitude in 3 hours and drift 24 km south.",
+      "versions": "Lesson 6 says the ferry travelled about 64.6 km in 3 hours, 'not the 60 km engine distance'. Lesson 3 calls 21.5 km/h the 'true displacement magnitude'. Lesson 8 states 64.6 km as the true distance. Lesson 4 gives 24 km south (the displacement magnitude would be about 64.6 km, consistent), but Lesson 3 speaks of 'displacement' in km/h."
     },
     {
-      "lessons": "6 vs 8",
+      "lessons": "1, 3, 8",
       "severity": "minor",
-      "fact": "True distance travelled by the ferry",
-      "versions": "Lesson 6 says ≈64.6 km (21.54×3). Lesson 8 says ≈64.4 km."
+      "fact": "Direction/bearing of the resultant",
+      "versions": "Lessons 3 and 8 give 21.8° south of east. Lesson 8 gives a bearing of 111.8° (correct bearing from north is 111.8°). Lesson 8 corrective heading is 'bearing 066.4°, angled 23.6° north of east', but the correct angle for cancelling an 8 km/h current with a 20 km/h engine is arcsin(8/20) ≈ 23.6°, giving a bearing of 66.4°, which is consistent, while the Lesson 1 explanation states the path is 'diagonally south-east' without numbers. No other lesson mentions the corrective heading approach, while Lesson 4 teaches a correction vector (0, 24) from L to M instead."
     },
     {
-      "lessons": "8 (internal) vs 3",
-      "severity": "major",
-      "fact": "Bearing of the resultant / corrective heading",
-      "versions": "Lesson 3 gives 21.8° south of east. Lesson 8 gives bearing ≈111.8°, which is wrong because 90+21.8 is correct only if measured from north, and says the corrective heading is 066.4° (23.6° north of east). Correct is arcsin(8/20)=23.6° north of east, bearing 066.4°, so that part is consistent; but a heading of 23.6° north of east means 'angled' relative to east, while 111.8° and 21.8° are inconsistent in sense with it only if mislabelled."
-    },
-    {
-      "lessons": "1 vs 3, 6, 8",
+      "lessons": "1, 4",
       "severity": "minor",
-      "fact": "Direction/scale of ferry diagram in Lesson 1 model",
-      "versions": "Lesson 1 model uses 10 km per square, with Arrow A 4 squares (40 km) for the engine, Mbita 6 squares away and Arrow B 2 squares (20 km) south. Later lessons use 1 cm=2 km/h (L3), 1 cm=5 km/h (L6) and 20 km east / 8 km south ratios. 4 squares is not 60 km and 2 squares is not 24 km."
+      "fact": "Direction of Nairobi–Nakuru and Rift Valley farmer location",
+      "versions": "Lesson 1 gives matatu displacement Nairobi to Nakuru as 160 km due north-west. Lesson 4's farmer is 'Nakuru farmer' in Observed but 'Rift Valley farmer' in the overview."
     },
     {
-      "lessons": "1 vs 4",
+      "lessons": "7, 8",
       "severity": "minor",
-      "fact": "Kenyan geography detail: Nairobi–Nakuru direction",
-      "versions": "Lesson 1 says the matatu displacement from Nairobi to Nakuru is due north-west. Lesson 4 locates a farmer in Nakuru, which is a separate matter; no direct conflict. Lesson 3 vs 7: Lesson 7's Mbita at (8,4) with Kendu Bay at (4,2) differs from the earlier Mbita (60,0) due east of Kisumu."
+      "fact": "Ports and route used in the vector-chain/collinearity lessons versus the Mbita target",
+      "versions": "Lesson 7 uses K(0,0), B(4,2), M(8,4) for Mbita and later K(0,0), B(3,2), H(7,5), M(10,8) for Mbita, while Lessons 2, 4, 5 and 8 have Mbita at (60, 0) or (6, 0), due east of Kisumu."
+    },
+    {
+      "lessons": "1, 8",
+      "severity": "minor",
+      "fact": "Lesson 1 predictions and what Lesson 8 says they were",
+      "versions": "Lesson 1 predictions are written/sketched by students (sticky note or exercise-book answer on where the ferry ended up, no drawing), while Lesson 8 returns 'Lesson 1 individual prediction drawings' showing 'simple, undirected east-pointing arrows'. Lesson 1's model phase is also a tip-to-tail arrow diagram, not just east-pointing arrows."
     }
   ]
 }

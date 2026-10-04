@@ -1,0 +1,141 @@
+[
+  {
+    "when": "2026-10-04T08:28:15",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "summaryTablePrompt.learned",
+        "old": "find the exact height of the Nakuru Kenya Power mast (40 tan 60°",
+        "new": "find the exact height the Nakuru Kenya Power mast would have if the angle of elevation were 60° (40 tan 60°",
+        "class": "dataset",
+        "conflict": "mast angle 50° vs 60°"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "slo.purposeInStoryline",
+        "old": "(50° ≈ 45° first approximation, then exactly at 60°)",
+        "new": "(exactly, if the angle were 45° or 60° instead of 50°)",
+        "class": "dataset",
+        "conflict": "mast angle 50° vs 60°"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].teacherMoves",
+        "old": "Earlier in Lesson 1, we said tan 50° ≈ 1.19 from the tables, giving height ≈ 47.6 m.",
+        "new": "Earlier in Lesson 2, we said tan 50° ≈ 1.192 from the tables, giving height ≈ 47.7 m.",
+        "class": "cross_reference",
+        "conflict": "tan 50 mast answer first found in L2, value 47.7"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].sensemakingStrategy",
+        "old": "50° decimal answer (Lesson 1)",
+        "new": "50° decimal answer (Lesson 2)",
+        "class": "cross_reference",
+        "conflict": "tan 50 mast answer first found in L2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].teacherMoves",
+        "old": "Our rule from Lesson 1: sin",
+        "new": "Our rule from Lesson 2: sin",
+        "class": "cross_reference",
+        "conflict": "ratio definitions in L2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "summaryTablePrompt.explained",
+        "old": "complementary-angle rule from Lesson 4",
+        "new": "complementary-angle rule from Lesson 3",
+        "class": "cross_reference",
+        "conflict": "complementary rule in L3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].teacherMoves",
+        "old": "In Lesson 6, we take this tool outside",
+        "new": "In Lesson 7, we take this tool outside",
+        "class": "cross_reference",
+        "conflict": "elevation/depression in L7"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[4].teacherMoves",
+        "old": "you'll need that estimate in Lesson 6",
+        "new": "you'll need that estimate in Lesson 7",
+        "class": "cross_reference",
+        "conflict": "elevation/depression in L7"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "teacherReflection",
+        "old": "before Lesson 5 (elevation and depression)",
+        "new": "before Lesson 7 (elevation and depression)",
+        "class": "cross_reference",
+        "conflict": "elevation/depression in L7"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "teacherReflection",
+        "old": "Lesson 4 on special angles",
+        "new": "Lesson 5 on special angles",
+        "class": "cross_reference",
+        "conflict": "special angles in L5"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Nakuru mast angle 50° vs 60° in L5",
+        "class": "dataset",
+        "note": "L5's 60° problem is a stated hypothetical; reworded the two places that presented it as the real mast"
+      },
+      {
+        "conflict": "Angle of depression at mast top 40° (L3) vs equals elevation 50° (L7)",
+        "class": "science",
+        "note": "Real error in L3: the depression angle is 50° (alternate angles); 40° is the angle at the mast. Needs content fix"
+      },
+      {
+        "conflict": "Dhow values 28.6 m vs 31.1 m in L7",
+        "class": "false_positive",
+        "note": "Two different problems (teacher demo 20 m/35° and group problem 27 m/41°)"
+      },
+      {
+        "conflict": "Lake Victoria lighthouse angles: overview 32°/25° vs explain 120 m, 38°/22° in L8",
+        "class": "structural",
+        "note": "Overview and task disagree, and the task itself is geometrically impossible (elevation and depression between the same two points must be equal; mark scheme flounders). Needs rewrite, not a value swap"
+      },
+      {
+        "conflict": "Wrong lesson numbers in L5 (and L3 reflection) for complementary rule, definitions, special angles, elevation",
+        "class": "cross_reference",
+        "note": "Fixed; L5 'tables from Lesson 3' left since L3 also uses tables"
+      },
+      {
+        "conflict": "Source of L4 data table (L2 angles 20°-70°)",
+        "class": "false_positive",
+        "note": "L2 learners chose angles between 20° and 70° and L4 supplies a printed table; loose, not contradictory"
+      },
+      {
+        "conflict": "Mast geometry labelling / hawk depression at 40° in L3",
+        "class": "science",
+        "note": "Same as the L3 depression-angle error above"
+      },
+      {
+        "conflict": "Kisumu ramp / Garissa mast problems in L6",
+        "class": "false_positive",
+        "note": "Predict and Explain use different problems; tan 50 rounding consistent"
+      }
+    ]
+  }
+]

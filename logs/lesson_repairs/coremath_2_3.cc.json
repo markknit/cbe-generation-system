@@ -1,0 +1,122 @@
+[
+  {
+    "when": "2026-10-04T08:27:29",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "summaryTablePrompt.explained",
+        "old": "(−5, 0) after 90° anticlockwise (12:15 position), (0, −5) after 180° (12:30), and (5, 0) after 270° anticlockwise (12:45)",
+        "new": "(−5, 0) after 90° anticlockwise (12:45 position), (0, −5) after 180° (12:30), and (5, 0) after 270° anticlockwise (12:15)",
+        "class": "dataset",
+        "conflict": "clock positions mapped to anticlockwise turns"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "summaryTablePrompt.observed",
+        "old": "remained invariant at all four positions",
+        "new": "remained invariant at every position",
+        "class": "dataset",
+        "conflict": "four vs five clock positions"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[1].learnerExperience",
+        "old": "translation image from Lesson 3)",
+        "new": "translation image from earlier sub-strand work)",
+        "class": "cross_reference",
+        "conflict": "no translation taught in Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[1].learnerExperience",
+        "old": "reflection image from Lesson 2 sub-strand revision)",
+        "new": "reflection image from earlier sub-strand revision)",
+        "class": "cross_reference",
+        "conflict": "no reflection taught in Lesson 2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].teacherMoves",
+        "old": "three lessons into one picture: Lesson 2 reflection, Lessons 3–5 rotation, Lesson 3 translation.",
+        "new": "three transformations into one picture: reflection and translation from earlier sub-strands, and rotation from Lessons 2–5.",
+        "class": "cross_reference",
+        "conflict": "Lessons 2-5 are all rotation"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "overview",
+        "old": "the hour hand at 3:00 and at 9:00 are congruent",
+        "new": "the minute hand at 12:15 and at 12:45 is congruent",
+        "class": "dataset",
+        "conflict": "phenomenon uses the minute hand"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[3].learnerExperience",
+        "old": "The hour hand at 12:00 and the hour hand at 3:00",
+        "new": "The minute hand at 12:00 and the minute hand at 12:15",
+        "class": "dataset",
+        "conflict": "phenomenon uses the minute hand"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[3].teacherMoves",
+        "old": "Hour hand at 12 and hour hand at 3",
+        "new": "Minute hand at 12:00 and minute hand at 12:15",
+        "class": "dataset",
+        "conflict": "phenomenon uses the minute hand"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "summaryTablePrompt.learned",
+        "old": "The hour hand of Nairobi",
+        "new": "The minute hand of Nairobi",
+        "class": "dataset",
+        "conflict": "phenomenon uses the minute hand"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Rotation: direct vs opposite congruence (L7 vs L8)",
+        "class": "science",
+        "note": "Real and serious: L7 teaches rotation gives OPPOSITE congruence (incorrect); L8 correctly says direct. L7 needs an author rewrite."
+      },
+      {
+        "conflict": "Direction of minute-hand rotation for 12:15/12:45 (L4 vs L1,3,8)",
+        "class": "dataset",
+        "note": "Fixed L4 summary labels so 90° anticlockwise = 12:45 and 270° anticlockwise = 12:15 (coordinates unchanged and correct). L3 Predict anticlockwise turn is a triangle task, not the clock: false positive."
+      },
+      {
+        "conflict": "Four vs five clock positions (L8 adds 1:00)",
+        "class": "dataset",
+        "note": "L8 extends to 1:00 (= return to start) as an extension; fixed only the 'all four positions' wording in L8 Observed."
+      },
+      {
+        "conflict": "Clock rotational symmetry order 12 vs infinite (L6 vs L8)",
+        "class": "science",
+        "note": "Not really contradictory: marked 12-hour face (order 12) vs plain circle (infinite); could confuse learners."
+      },
+      {
+        "conflict": "L5 predict uses 120° (12 to 4)",
+        "class": "false_positive",
+        "note": "A deliberate non-phenomenon angle for the investigation; nothing contradicts it."
+      },
+      {
+        "conflict": "L7 lesson references for translation/reflection and hour vs minute hand",
+        "class": "cross_reference",
+        "note": "Fixed: translation/reflection pairs now attributed to earlier sub-strands, rotation to Lessons 2-5; hour hand -> minute hand at 12:15/12:45 in L7 (the 'opposite congruence' answer remains a science error, see above)."
+      }
+    ]
+  }
+]

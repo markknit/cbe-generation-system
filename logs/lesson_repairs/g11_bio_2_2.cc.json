@@ -1,0 +1,137 @@
+[
+  {
+    "when": "2026-10-04T08:31:39",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "overview",
+        "old": "a farmer in Kitale plants",
+        "new": "a farmer in Molo plants",
+        "class": "dataset",
+        "conflict": "farmer location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].learnerExperience",
+        "old": "after rain in Trans Nzoia",
+        "new": "after rain in Molo",
+        "class": "dataset",
+        "conflict": "farmer location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[0].learnerExperience",
+        "old": "a farmer in Kitale plants",
+        "new": "a farmer in Molo plants",
+        "class": "dataset",
+        "conflict": "farmer location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[0].teacherMoves",
+        "old": "A farmer in Kitale plants",
+        "new": "A farmer in Molo plants",
+        "class": "dataset",
+        "conflict": "farmer location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[0].teacherMoves",
+        "old": "farmer's field in Kakamega",
+        "new": "farmer's field in Molo",
+        "class": "dataset",
+        "conflict": "farmer location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].learnerExperience",
+        "old": "in a shamba in Kakamega",
+        "new": "in a shamba in Molo",
+        "class": "dataset",
+        "conflict": "farmer location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 10,
+        "path": "framework[0].learnerExperience",
+        "old": "the farmer in Bungoma",
+        "new": "the farmer in Molo",
+        "class": "dataset",
+        "conflict": "farmer location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 10,
+        "path": "framework[3].teacherMoves",
+        "old": "farmer's field in Bungoma",
+        "new": "farmer's field in Molo",
+        "class": "dataset",
+        "conflict": "farmer location"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "overview",
+        "old": "since Lesson 5 (or",
+        "new": "over earlier lessons (or",
+        "class": "cross_reference",
+        "conflict": "seedlings started in Lesson 5"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "maize hypogeal / bean epigeal",
+        "class": "false_positive",
+        "note": "Lessons 2, 4, 10 agree (reviewer itself noted no conflict)."
+      },
+      {
+        "conflict": "hormones question loops L6->L7->L8->L9",
+        "class": "structural",
+        "note": "Real sequencing loop: L7 and L9 both teach hormones; L8 re-raises the hormone question. Not edited."
+      },
+      {
+        "conflict": "measuring growth in L6 and again L8",
+        "class": "structural",
+        "note": "L6 and L8 both measure growth and plot curves; duplicate content."
+      },
+      {
+        "conflict": "maize/bean growth data L6 vs L8",
+        "class": "structural",
+        "note": "L6's figures are an 'e.g.' of student data, L8's a back-up table; follows from the L6/L8 duplication. Not edited."
+      },
+      {
+        "conflict": "farmer location",
+        "class": "dataset",
+        "note": "L1 and FE place the anchoring farmer in Molo, Nakuru County; L3/4 Kitale/Trans Nzoia, L5/7 Kakamega, L10 Bungoma changed to Molo. Separate example farmers (Kitale/Kericho/Nyeri) left."
+      },
+      {
+        "conflict": "DQB first question / Day numbering",
+        "class": "false_positive",
+        "note": "Reviewer noted consistent."
+      },
+      {
+        "conflict": "definition of growth (L2 vs L10)",
+        "class": "science",
+        "note": "L10 is a shorter paraphrase; not a real contradiction."
+      },
+      {
+        "conflict": "seedlings grown since Lesson 5",
+        "class": "cross_reference",
+        "note": "No lesson sows them in L5; reworded L8 to 'over earlier lessons'."
+      },
+      {
+        "conflict": "hormone list with/without ethylene",
+        "class": "science",
+        "note": "L10 lists four hormones, L7/L9 add ethylene; incomplete list, not a contradiction."
+      }
+    ]
+  }
+]

@@ -1,0 +1,105 @@
+[
+  {
+    "when": "2026-10-04T08:26:29",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[1].learnerExperience",
+        "old": "comparison tables from Lesson 3 and food test results from Lesson 4",
+        "new": "food composition cards from Lesson 2 and lipid food test results from Lesson 3",
+        "class": "cross_reference",
+        "conflict": "L6 cites comparison tables (L3) and food tests (L4)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "slo.purposeInStoryline",
+        "old": "molecular structures in Lessons 2 and 3, food test data in Lesson 4",
+        "new": "molecular structures in Lessons 3 and 4, lipid food test data in Lesson 3",
+        "class": "cross_reference",
+        "conflict": "L5 storyline swaps which lessons did structures vs food tests"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[4].learnerExperience",
+        "old": "(a large A3 poster started in Lesson 1 and updated in Lesson 2)",
+        "new": "(a large A3 poster building on their Lesson 1 and Lesson 2 notebook models)",
+        "class": "cross_reference",
+        "conflict": "L3 says group A3 poster was started in L1 and updated in L2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "framework[2].formativeAssessment",
+        "old": "our chemical tests next lesson will help us resolve",
+        "new": "our chemical tests in coming lessons will help us resolve",
+        "class": "cross_reference",
+        "conflict": "L1 promises chemical tests next lesson (L2 has none)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "overview",
+        "old": "ugali, githeri, nyama choma, milk, sukuma wiki",
+        "new": "ugali, githeri, nyama choma, sugarcane juice, chai",
+        "class": "dataset",
+        "conflict": "L4 foods mapped (overview vs activity cards)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "teacherReflection",
+        "old": "map githeri, ugali, nyama choma, and sukuma wiki onto",
+        "new": "map githeri, ugali, nyama choma, and chai onto",
+        "class": "dataset",
+        "conflict": "L4 foods mapped (reflection vs activity cards)"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Number and identity of the six chemicals of life",
+        "class": "science",
+        "note": "Real: L1 lists vitamins and mineral salts separately with no nucleic acids; L2/L6/FE list nucleic acids and combine vitamins/minerals. Classification choice, left for review."
+      },
+      {
+        "conflict": "Which lesson the food tests (iodine, Biuret) were performed in",
+        "class": "structural",
+        "note": "Real and serious: no lesson performs iodine, Biuret or DCPIP tests (L3 does lipid tests only, L4 is structure/modelling), yet L5, L6, L1 reflection and FE Part 2/4 cite their results 'from Lesson 4'. Needs a content decision (add tests or rewrite L5/L6/FE evidence); only the clear-cut L5 storyline and L6 references were repointed."
+      },
+      {
+        "conflict": "Which lesson contains the comparison tables used for the model",
+        "class": "cross_reference",
+        "note": "Fixed: L6 now cites L2 composition cards and L3 lipid test results."
+      },
+      {
+        "conflict": "Composition/lipid content of ugali and the Kisumu menu",
+        "class": "false_positive",
+        "note": "~1% fat is below what the spot/emulsion tests detect, so a negative test is consistent; L6 menu is a different, new menu."
+      },
+      {
+        "conflict": "Cumulative model history (A3 poster started in L1)",
+        "class": "cross_reference",
+        "note": "Fixed L3 wording; L1/L2 models were individual notebook models. L5 still starts a fresh A3 template (structural, minor)."
+      },
+      {
+        "conflict": "Lesson 4 foods mapped",
+        "class": "dataset",
+        "note": "Fixed overview and reflection to match the activity cards and summary (sugarcane juice, chai)."
+      },
+      {
+        "conflict": "Child's description of ugali diet",
+        "class": "false_positive",
+        "note": "Phenomenon child eats ugali as main meal; the L6 menu with sukuma wiki is a separate transfer scenario."
+      },
+      {
+        "conflict": "Marasmus definition vs missing-chemical framing",
+        "class": "science",
+        "note": "Not a real contradiction: marasmus as overall energy/protein deficiency is correct; framing is just loose."
+      }
+    ]
+  }
+]

@@ -830,7 +830,7 @@ LESSON_SCHEMA = {
 
 
 def generate_lesson(num: int, curriculum_text: str, template: dict,
-                    unit: dict, prev_summaries: list, args) -> dict | None:
+                    unit: dict, prev_summaries: list, args, fact_sheet: dict | None = None) -> dict | None:
     """Generate a single lesson."""
     print(f"  Generating Lesson {num}/{args.lessons}...")
 
@@ -857,6 +857,7 @@ KICD CURRICULUM CONTENT:
 
 {template_lesson_context(template, num)}
 
+{_lesson_fs(fact_sheet, num)}
 {prev_context}
 
 RULES:
@@ -885,6 +886,13 @@ Set "substrand" to "Sub-Strand {args.substrand}: {args.substrand_name}".
     return result   # in case Claude returns the lesson directly
 
 
+def _lesson_fs(fact_sheet: dict | None, num: int) -> str:
+    if not fact_sheet:
+        return ""
+    import lesson_consistency as lc
+    return lc.fact_sheet_block(fact_sheet, num)
+
+
 def _get_lesson_storyline(unit: dict, num: int) -> str:
     """Extract this lesson's storyline description from unit data."""
     storyline = unit.get('storylineThread') or unit.get('storyline', '')
@@ -910,6 +918,45 @@ VERIFY_TOOL_SCHEMA = {
     },
     "required": ["issues"],
 }
+
+
+def _log_json(kind: str, name: str, data) -> None:
+    d = PROJECT_ROOT / 'logs' / kind
+    d.mkdir(parents=True, exist_ok=True)
+    (d / f"{name}.json").write_text(json.dumps(data, indent=2, ensure_ascii=False))
+
+
+def make_fact_sheet(curriculum_text: str, unit: dict, template: dict, args) -> dict | None:
+    """Shared facts + lesson map, generated BEFORE any lesson (src/lesson_consistency.py)."""
+    import lesson_consistency as lc
+    print("  Generating fact sheet (shared data + lesson map)...")
+    fs = lc.generate_fact_sheet(call_claude, _subject_display(args.subject), args.grade,
+                                f"{args.substrand} {args.substrand_name}", args.lessons, unit,
+                                curriculum_text, (template or {}).get('lesson_sequence', ''))
+    if fs:
+        _log_json('fact_sheets', args.output, fs)
+    else:
+        print("  WARNING: fact sheet generation failed — lessons will be generated without it")
+    return fs
+
+
+def consistency_pass(unit: dict, lessons: list, args, fact_sheet: dict | None, name: str) -> None:
+    """After the lessons exist: review contradictions between them, repair majors
+    with exact edits, keep the best version. Logged to logs/lesson_drift/ and
+    logs/lesson_repairs/. Mutates `lessons`."""
+    import lesson_consistency as lc
+    print("  Checking lessons agree with each other (and the fact sheet)...")
+    r = lc.check_and_repair(call_claude, _subject_display(args.subject), args.grade,
+                            f"{args.substrand} {args.substrand_name}", unit, lessons, fact_sheet)
+    if r["status"] != "ok":
+        print("  WARNING: consistency review failed — run scripts/review_lesson_consistency.py later")
+        return
+    _log_json('lesson_drift', name, {"name": name, "subject": _subject_display(args.subject),
+                                     "substrand": args.substrand_name, "lessons": len(lessons),
+                                     "conflicts": r["conflicts"]})
+    _log_json('lesson_repairs', name, {"module": name, "history": r["history"]})
+    print(f"  Lesson consistency: {r['majors']} major contradiction(s) left after repair "
+          f"(see logs/lesson_drift/{name}.json)")
 
 
 def lesson_digest(lessons: list, unit: dict) -> str:
@@ -954,6 +1001,15 @@ FE_RULES = """HARD RULES (a validator and a second reviewer will check every one
 """
 
 
+def _fs_block(args) -> str:
+    fs = getattr(args, 'fact_sheet', None)
+    if not fs:
+        return ""
+    import lesson_consistency as lc
+    return ("\nWhere lessons disagree, the FACT SHEET below is authoritative (it overrides "
+            "rule 1's Lesson 1 / last-lesson default):\n" + lc.fact_sheet_block(fs))
+
+
 def _fe_prompt(unit: dict, lessons: list, args, fe_template, lesson_template,
                feedback: list | None, prev_fe: dict | None = None) -> str:
     fe_template_section = ""
@@ -981,6 +1037,7 @@ Driving question: {unit.get('drivingQuestion', '')}
 
 THE LESSON SEQUENCE AS ACTUALLY TAUGHT (the Final Explanation must agree with this):
 {lesson_digest(lessons, unit)}
+{_fs_block(args)}
 {fe_template_section}{template_fe_context(lesson_template)}
 {FE_RULES}{fix}
 Fields: "instructions" are given to the students (they will write in a blank space under each prompt, so do not say the answers are printed). "sections": 4-5 sections, each with a "prompt" (student-facing, no answers) and an "exemplar" (the model answer). "rubric": 4-5 criteria.
@@ -1728,6 +1785,7 @@ def build_batch_requests(curriculum_text: str, lesson_template: dict,
             f"Storyline thread for this lesson: {_get_lesson_storyline(unit, lesson_num)}\n\n"
             f"KICD CURRICULUM CONTENT:\n{curriculum_text}\n\n"
             f"{template_lesson_context(lesson_template, lesson_num)}\n\n"
+            f"{_lesson_fs(getattr(args, 'fact_sheet', None), lesson_num)}\n"
             f"RULES:\n"
             f"- All learner experiences must connect back to the phenomenon\n"
             f"- Teacher moves must include specific quoted phrases, WAIT TIME (10-15 seconds), cold-call counts\n"
@@ -1826,6 +1884,15 @@ def run_collect(output_name: str, args):
                 "summaryTablePrompt": {"observed":"","learned":"","explained":""},
             })
 
+    # Lessons must agree with each other before the Final Explanation is written.
+    class _CArgs:
+        pass
+    c_args = _CArgs()
+    c_args.subject, c_args.grade = meta.get('subject', 'Biology').lower(), meta['grade']
+    c_args.substrand, c_args.substrand_name = meta.get('substrand_id', ''), meta.get('substrand_name', '')
+    fact_sheet = batch_meta.get('fact_sheet')
+    consistency_pass(unit, lessons, c_args, fact_sheet, output_name)
+
     # Final Explanation: generated now, from the collected lessons (not in the
     # batch), then reviewed for contradictions.
     class _FeArgs:
@@ -1837,6 +1904,7 @@ def run_collect(output_name: str, args):
     fe_args.substrand_name = meta.get('substrand_name', '')
     fe_args.lessons        = n_lessons
     fe_args.output         = output_name
+    fe_args.fact_sheet     = fact_sheet
     _v2 = find_v2_templates(fe_args.grade, fe_args.subject, fe_args.substrand)
     _fe_path = _v2.get('fe')
     fe_template = extract_template_docx(str(_fe_path)) if _fe_path else None
@@ -2042,6 +2110,9 @@ def main():
         log_run_cost(args.output, 'unit-only')
         return
 
+    # Shared facts + lesson map, before any lesson (both modes).
+    args.fact_sheet = make_fact_sheet(curriculum_text, unit, lesson_template, args)
+
     # ── Batch submit mode ─────────────────────────────────────────────────────
     if args.batch:
         print("\n2b. Building batch requests...")
@@ -2073,6 +2144,7 @@ def main():
                 "col5Label":      "Formative Assessment Strategy",
             },
             "lessons": args.lessons,
+            "fact_sheet": args.fact_sheet,
             "lesson_count_source": lesson_count_source,
         }, ensure_ascii=False, indent=2))
 
@@ -2101,7 +2173,7 @@ def main():
 
     for lesson_num in range(start_lesson, args.lessons + 1):
         lesson = generate_lesson(lesson_num, curriculum_text, lesson_template,
-                                  unit, prev_summaries, args)
+                                  unit, prev_summaries, args, fact_sheet=args.fact_sheet)
         if not lesson:
             print(f"  WARNING: Failed to generate Lesson {lesson_num} — using stub")
             lesson = {
@@ -2136,6 +2208,9 @@ def main():
 
         # Brief pause to avoid rate limits
         time.sleep(1)
+
+    # Lessons must agree with each other before the Final Explanation is written.
+    consistency_pass(unit, lessons, args, args.fact_sheet, args.output)
 
     # FINAL EXPLANATION
     fe = generate_final_explanation(curriculum_text, unit, lessons, args,

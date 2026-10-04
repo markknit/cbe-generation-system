@@ -1,0 +1,86 @@
+[
+  {
+    "when": "2026-10-04T08:31:05",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[2].learnerExperience",
+        "old": "for two seasons in a dry tin.",
+        "new": "for two seasons in a dry gourd.",
+        "class": "dataset",
+        "conflict": "seed storage container"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[2].learnerExperience",
+        "old": "did not germinate in the tin.",
+        "new": "did not germinate in the gourd.",
+        "class": "dataset",
+        "conflict": "seed storage container"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[2].formativeAssessment",
+        "old": "the dry tin storage",
+        "new": "the dry gourd storage",
+        "class": "dataset",
+        "conflict": "seed storage container"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "summaryTablePrompt.learned",
+        "old": "the dry tin storage from Lesson 2",
+        "new": "the dry gourd storage from Lesson 2",
+        "class": "dataset",
+        "conflict": "seed storage container"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].teacherMoves",
+        "old": "Last week we learned",
+        "new": "In Lesson 2 we learned",
+        "class": "cross_reference",
+        "conflict": "timing of dormancy lesson"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Epigeal/hypogeal labels and coleoptile wording",
+        "class": "false_positive",
+        "note": "Reviewer itself notes L4 and L8 are compatible."
+      },
+      {
+        "conflict": "Container age / stored seed container",
+        "class": "dataset",
+        "note": "Storage container: L2 (first to set it) says dry gourd, L3 said dry tin; aligned L3 to gourd. Container age: L1's day 3-5 display and L3's Day 1 experiment cups are different setups; no conflict found."
+      },
+      {
+        "conflict": "Why the stored seeds failed to germinate",
+        "class": "science",
+        "note": "Real contradiction: L3 attributes failure to lack of water (Cup B), but the phenomenon (L2) says the seeds were planted with water and warmth and L2/L6 attribute it to dormancy/ABA. Needs rewording of L3's question and explanation, not done."
+      },
+      {
+        "conflict": "DQB/model timing references",
+        "class": "cross_reference",
+        "note": "L3 'Last week' changed to 'In Lesson 2'. Multiple lessons starting their own 'initial' model pages (L3, L5, L6 'started in Lesson 5') is structural; left."
+      },
+      {
+        "conflict": "Auxin / apical dominance / etiolation",
+        "class": "science",
+        "note": "L6 attributes maize's unbranched habit to apical dominance vs branching beans; L8 links etiolation to auxin. Loose but not a clear contradiction."
+      },
+      {
+        "conflict": "Sukuma wiki / Kisumu phenomenon content",
+        "class": "false_positive",
+        "note": "Supporting phenomena added in later lessons; not a changed fact."
+      }
+    ]
+  }
+]

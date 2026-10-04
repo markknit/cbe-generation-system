@@ -1,0 +1,110 @@
+[
+  {
+    "when": "2026-10-04T08:28:35",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[2].teacherMoves",
+        "old": "= 28π − 88 in exact form (since 28π > 88)",
+        "new": "= 88 − 28π in exact form (since 88 > 28π)",
+        "class": "dataset",
+        "conflict": "sign of string error"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[2].formativeAssessment",
+        "old": "= 28π − 88 exactly because 28π ≈ 87.965 > 88 is FALSE",
+        "new": "= 88 − 28π exactly because 28π ≈ 87.965 < 88",
+        "class": "dataset",
+        "conflict": "sign of string error"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "= 28π − 88 ≈ 0.035 cm (since 28π > 88 is FALSE",
+        "new": "= 88 − 28π ≈ 0.035 cm (since 28π < 88",
+        "class": "dataset",
+        "conflict": "sign of string error"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[4].learnerExperience",
+        "old": "In Lesson 1 they drew the outer set 'Real Numbers'. In Lesson 2 they added a number line inside it.",
+        "new": "In Lesson 1 they drew a blob of 'All the numbers I know'. In Lesson 2 they redrew it as a nested Venn diagram of the real numbers.",
+        "class": "cross_reference",
+        "conflict": "cumulative model contents"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[1].learnerExperience",
+        "old": "for a 2 kg packet of unga",
+        "new": "for a 1 kg packet of unga",
+        "class": "dataset",
+        "conflict": "unga price"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "overview",
+        "old": "classifying real numbers (Lessons 1–5) to operating on them",
+        "new": "classifying real numbers (Lessons 1–4) to operating on them (begun in Lesson 5)",
+        "class": "cross_reference",
+        "conflict": "lessons 1-5 classifying"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Sign/direction of string error 88 vs 28π",
+        "class": "dataset",
+        "note": "L7 had three internal statements writing the error as 28π − 88; corrected to 88 − 28π (28π ≈ 87.965 < 88). L8's |28π − 88| is mathematically equal, left as is. FE already correct."
+      },
+      {
+        "conflict": "22/7 rational/irrational and approximations",
+        "class": "false_positive",
+        "note": "Reviewer itself finds no factual conflict."
+      },
+      {
+        "conflict": "Number system hierarchy (whole numbers included or not)",
+        "class": "science",
+        "note": "L2 Venn omits Whole numbers while L4/L8 include them; a real inconsistency in presentation, not edited."
+      },
+      {
+        "conflict": "What the cumulative model contained from earlier lessons",
+        "class": "cross_reference",
+        "note": "L3's history of L1/L2 model corrected. L3 still 'adds' a rational/irrational partition already in L2's Venn (structural residue)."
+      },
+      {
+        "conflict": "Kericho temperature dataset L4 vs L8",
+        "class": "structural",
+        "note": "Different Kericho datasets in L4 and L8; not edited."
+      },
+      {
+        "conflict": "-3.5°C listed as integer example in L8",
+        "class": "false_positive",
+        "note": "Intra-lesson oddity in L8 only (labelled 'rounded to -4'), not a cross-lesson contradiction."
+      },
+      {
+        "conflict": "Context for 1/3 and 0.333...",
+        "class": "false_positive",
+        "note": "Different illustrative contexts for a number, not a contradiction."
+      },
+      {
+        "conflict": "Unga price Ksh 60.50 per kg vs 2 kg packet",
+        "class": "dataset",
+        "note": "L5 changed to 1 kg packet; problem arithmetic unaffected."
+      },
+      {
+        "conflict": "L6 says Lessons 1-5 were classifying",
+        "class": "cross_reference",
+        "note": "L5 already operates; L6 overview corrected. L6 3.142 vs L5 88 rounding is just a different example (false positive)."
+      }
+    ]
+  }
+]

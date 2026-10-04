@@ -5,34 +5,46 @@
   "lessons": 8,
   "conflicts": [
     {
-      "lessons": "1, 3, 5, 7, 8",
+      "lessons": "1, 3, 7",
       "severity": "major",
-      "fact": "The data for the water-tank scenario (distances and angles) changes between lessons, and some versions give different heights for the same tank.",
-      "versions": "L1: Amina 10 m at 38°, Baraka 20 m at 22°. L3: 10 m at 38° and 15 m at 27°. L5: Akinyi 8 m at 60°, Baraka at 30°. L7: Amina 10 m at 42°, Baraka 15 m at 30°, both giving h = 9.0 m. L8: stations at 8 m and 12 m. Using h = d·tan θ, L1 gives about 7.8 m from Amina (10×tan38°) and about 8.1 m from Baraka. L7's 10 m at 42° gives about 9.0 m, but 15 m at 30° gives about 8.7 m. L5's 8 m at 60° gives about 13.9 m, which is unrealistic for the 4–8 m tank frame."
+      "fact": "Amina (10 m, 38°) and Baraka (20 m, 22°) are said to calculate the same tank height, but the numbers do not give equal heights, and L7 gives specific heights",
+      "versions": "L1/L3/L7 use 10 m at 38° and 20 m at 22°. tan38°×10 ≈ 7.8 m, while tan22°×20 ≈ 8.1 m. L7 records 'same h ≈ 8 m (7.8 m and 8.1 m)'. L1 says they 'should calculate the same height'. The sequence mixes exact and approximate consistency, though the values are only roughly consistent."
     },
     {
-      "lessons": "1, 3, 4",
+      "lessons": "4, 5, 6",
       "severity": "major",
-      "fact": "Which lesson first discovered the constant ratio, and which lesson first named it as tangent and derived the three ratios.",
-      "versions": "L1 says learners already observed that opposite/adjacent is constant across similar triangles, and L3 says this was a 'Lesson 2' finding, but L2 involved only naming sides and no ratio measurement. L3 names the ratios and derives sin, cos and tan with 30°, 45° and 60° triangles. L4 then claims Lessons 1–3 only 'defined the ratios conceptually' and presents the constant-ratio discovery (35° triangles) as new, so the same discovery is repeated and attributed to different lessons."
+      "fact": "Sequence of content: L4 says Lessons 1–3 already defined the ratios and L4 discovers them, while L5 and L6 are both the complementary-angle lesson, duplicated. L4 says it sets up L5 on complementary angles, yet L6 repeats the same content and says L5 had the model",
+      "versions": "L5 and L6 both derive sin θ = cos(90°−θ) as a new discovery; L5 DQB says 'Lessons 6 and 7 will answer the depression questions; Lesson 8 will test outside' but L6 covers complementary angles again and L7 is clinometer construction"
     },
     {
-      "lessons": "3, 5, 6, 7",
-      "severity": "minor",
-      "fact": "Which lesson the cumulative model was started in, and which lesson the complementary-angle table was assigned to.",
-      "versions": "L5 says the cumulative model was started in Lesson 3 and updated in Lesson 4, while L1 and L4 say it began in Lesson 1. L6 says the 38° elevation angle was used in the water-tank calculation in Lesson 4, but L4 used 35° with 6 m and 10 m, and 38° was used in L3. L6 repeats L5's complementary-angle table and identity as new content."
+      "lessons": "5, 1, 3, 6",
+      "severity": "major",
+      "fact": "Who stands at which position/angle in the water tank scenario",
+      "versions": "L1, L3, L7: Amina at 10 m (38°) and Baraka at 20 m (22°). L5: Akinyi at 8 m (60°) and Baraka further away (30°), which are complementary and would give inconsistent heights (8·tan60°≈13.9 m vs a different value). L5 also says Baraka's angle is 90°−θ"
     },
     {
-      "lessons": "5, 6",
-      "severity": "minor",
-      "fact": "Content of the complementary-angle lesson and the explanation of the phenomenon.",
-      "versions": "L5 says Akinyi and Baraka's angles are complementary (60° and 30°) with different distances, while L6 claims the two students' elevation angles and the angle at the top of the triangle are complementary, which is a different claim. L1's own data (38° and 22°) is not complementary, so complementary angles are not what explains the two students' agreement."
+      "lessons": "6, 3",
+      "severity": "major",
+      "fact": "Whether the 38° angle's complementary relation explains the consistency of the two students' heights",
+      "versions": "L6 claims the two students' elevation angles and the angle at the top are complementary and explain why the heights agree; but 38° and 22° sum to 60°, not 90°, and L3 explains consistency via tan. L6 also says the 38° angle was used in the L3 'water-tank calculation', which is consistent with L3 but the explanation conflicts"
     },
     {
-      "lessons": "4, 8",
+      "lessons": "7, 8",
       "severity": "minor",
-      "fact": "Sine and cosine values and the clinometer angle at the tank.",
-      "versions": "L4 learned values are sin35≈0.574, cos35≈0.819, tan35≈0.700, while the calculator values are given as 0.5736 and 0.8192 (consistent). L8's teacher demonstrates 'roughly 42°' at 8 m, which gives about 7.2 m, while L7 had 42° at 10 m, so the same angle is used for different distances."
+      "fact": "Distances and observed station data for the water tank",
+      "versions": "L7 outdoor: 10 m and 20 m with 38° and 22° (tank ≈ 8 m). L8: stations at 8 m and 12 m; demo reading ~42° at 8 m gives ≈7.2 m, and 12 m station differs. Also L7 clinometer measures 'a school structure (flag pole, tank, or wall gable)' vs L8 using the tank"
+    },
+    {
+      "lessons": "7, 8",
+      "severity": "minor",
+      "fact": "When the clinometer was built and how many lessons",
+      "versions": "L7 says the clinometer is built in Lesson 7; L6 says 'the one our clinometer will measure when we stand outside next week', and L8 says it was built 'in an earlier lesson'. L8 says 'past seven lessons' consistent, but L5's DQB says Lesson 8 tests outside while L7 also goes outdoors"
+    },
+    {
+      "lessons": "2, 3, 4",
+      "severity": "minor",
+      "fact": "Triangle vertex labelling/ratio introduction timing",
+      "versions": "L1 observed the opposite/adjacent ratio constant across triangles and L3 says tangent is named there with sin/cos derived using 30°,45°,60°; L4 says it is 'the empirical heart' and discovers constancy again and names sine, cosine, tangent as if new, with L2 saying ratios named in Lesson 3"
     }
   ]
 }

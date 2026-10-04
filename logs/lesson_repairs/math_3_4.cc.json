@@ -1,0 +1,142 @@
+[
+  {
+    "when": "2026-10-04T08:35:25",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[0].learnerExperience",
+        "old": "Group A walked 80 m in a straight line and Group B walked 80 m along a zigzag path. Both took 40 seconds.",
+        "new": "Group A walked 20 m in a straight line and Group B walked about 30 m along a zigzag path. Both reached the finish at the same time.",
+        "class": "dataset",
+        "conflict": "Timer race distances (L1: 20 m straight, ~30 m zigzag)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[1].learnerExperience",
+        "old": "it records Walker A's displacement",
+        "new": "it records Walker C's displacement",
+        "class": "dataset",
+        "conflict": "Retracing walker is C, not A"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].learnerExperience",
+        "old": "calculate the velocity of Walker A during two different segments",
+        "new": "calculate the velocity of Walker C during two different segments",
+        "class": "dataset",
+        "conflict": "Retracing walker is C, not A"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].teacherMoves",
+        "old": "steepest segment on your Walker A graph",
+        "new": "steepest segment on your Walker C graph",
+        "class": "dataset",
+        "conflict": "Retracing walker is C, not A"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.explained",
+        "old": "why the zigzag walker in the Timer Race Puzzle would show a smaller final displacement",
+        "new": "why the retracing walker (Group C) in the Timer Race Puzzle would show a smaller final displacement",
+        "class": "dataset",
+        "conflict": "Zigzag walker said to have smaller displacement"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[2].teacherMoves",
+        "old": "the gradient of a distance–time graph gives us speed",
+        "new": "the gradient of a displacement–time graph gives us velocity",
+        "class": "cross_reference",
+        "conflict": "L7 misstates what L5/L6 taught"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "overview",
+        "old": "a brief recall of Lesson 7 displacement–time graphs, then shift focus to velocity–time graphs",
+        "new": "a brief recall of the velocity–time graphs drawn in Lesson 7, then shift focus to interpreting velocity–time graphs",
+        "class": "cross_reference",
+        "conflict": "L8 calls L7 displacement-time graphs"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[2].learnerExperience",
+        "old": "decreased from 5.8 m/s to 5.2 m/s over the last 12 minutes",
+        "new": "decreased from 5.6 m/s to 5.2 m/s over the last 12 minutes",
+        "class": "dataset",
+        "conflict": "Kipchoge splits (30 min 5.6, 42 min 5.2)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "overview",
+        "old": "(km/h at key race intervals)",
+        "new": "(m/s at key intervals of a training run)",
+        "class": "dataset",
+        "conflict": "Kipchoge splits units"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Timer race distances (L1 vs L2)",
+        "class": "dataset",
+        "note": "Fixed L2's 80 m/40 s recap to L1's 20 m straight and ~30 m zigzag. Note L1 itself says 'same distance' in places while giving 20 m vs 30 m (internal, left)."
+      },
+      {
+        "conflict": "Which walker retraces (L5 Walker A)",
+        "class": "dataset",
+        "note": "Fixed L5 table and velocity tasks to Walker C."
+      },
+      {
+        "conflict": "Zigzag walker displacement (L6)",
+        "class": "dataset",
+        "note": "Fixed L6: the retracing walker (C) has the smaller displacement; zigzag B reaches the finish."
+      },
+      {
+        "conflict": "Gradient meaning and graph type recap (L7, L8)",
+        "class": "cross_reference",
+        "note": "Fixed L7 recap (displacement-time gives velocity) and L8 recap of L7 (velocity-time graphs)."
+      },
+      {
+        "conflict": "Kipchoge splits (L7)",
+        "class": "dataset",
+        "note": "Fixed extension to 5.6 to 5.2 m/s over the last 12 min (matches table) and overview units to m/s."
+      },
+      {
+        "conflict": "Meaning of negative acceleration (L3 vs L7)",
+        "class": "science",
+        "note": "Minor real imprecision: L7 says negative may mean a change of direction; L3 says slowing while moving forward. Left."
+      },
+      {
+        "conflict": "Boda-boda braking data (L3 vs L8)",
+        "class": "false_positive",
+        "note": "Separate problems with self-consistent numbers."
+      },
+      {
+        "conflict": "Mango fall / Kipchoge 500 m east 200 m west (L4)",
+        "class": "false_positive",
+        "note": "v² = 2gh gives about 11.9 m/s, so the mango is fine; the Kipchoge run is a separate practice problem."
+      },
+      {
+        "conflict": "Where the first prediction was recorded",
+        "class": "false_positive",
+        "note": "Exercise book vs journal is trivial."
+      },
+      {
+        "conflict": "L10 overtaking uses s = ut + ½at², not taught earlier",
+        "class": "structural",
+        "note": "Real gap: the equation is not taught in L1–L9. Left."
+      }
+    ]
+  }
+]

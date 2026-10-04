@@ -1,0 +1,92 @@
+[
+  {
+    "when": "2026-10-04T08:26:06",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].learnerExperience",
+        "old": "Why does a mosquito leave only a tiny dot on your skin while a grasshopper leaves ragged holes in a maize leaf?",
+        "new": "Why can a mosquito drink blood but a grasshopper cannot?",
+        "class": "cross_reference",
+        "conflict": "L1 prediction prompt wording"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[3].teacherMoves",
+        "old": "We said in Lesson 1 we did not understand",
+        "new": "We said in Lesson 2 we did not understand",
+        "class": "cross_reference",
+        "conflict": "grasshopper internal digestion question raised in L2, not L1"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[4].learnerExperience",
+        "old": "drew a basic sketch of the five organisms from",
+        "new": "drew a first annotated sketch of one of the five organisms from",
+        "class": "cross_reference",
+        "conflict": "L1 model was one chosen animal"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.observed",
+        "old": "and a cow chewing cud",
+        "new": "and a wildebeest chewing cud",
+        "class": "dataset",
+        "conflict": "animal chewing cud in L6 clip"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "L1 prediction prompt wording quoted in L3",
+        "class": "cross_reference",
+        "note": "L3 quoted a question L1 never asked; aligned to L1's prompt"
+      },
+      {
+        "conflict": "Where cumulative model/table started and what it is",
+        "class": "cross_reference",
+        "note": "Fixed L2 claim that L1 sketched all five organisms; L4 'table started in Lesson 2' vs L1 three-column table and L3/L5 'model' naming left as structural artefact-naming inconsistency"
+      },
+      {
+        "conflict": "Wildebeest vs cow chewing cud in L6 clip",
+        "class": "dataset",
+        "note": "Observe phase (wildebeest) is authoritative; summary aligned"
+      },
+      {
+        "conflict": "Grasshopper internal digestion question: L2 points to L7-8; L8 says L1 asked it",
+        "class": "cross_reference",
+        "note": "L2 pointer to L7-8 is correct (digestion lessons); L8 attributed the question to L1 but it was raised on the DQB in L2; fixed L8"
+      },
+      {
+        "conflict": "Mosquito bypasses all digestion (L7) vs bypasses mechanical only (L9)",
+        "class": "science",
+        "note": "Real but mild contradiction; L9 is the more accurate version"
+      },
+      {
+        "conflict": "Function of mosquito saliva (anticoagulant vs enzymes)",
+        "class": "science",
+        "note": "Mild; L8 implies a digestive role for saliva that L3 does not; not a hard contradiction"
+      },
+      {
+        "conflict": "Amylase sites / substrates L7 vs L8",
+        "class": "false_positive",
+        "note": "Both say mouth and small intestine; different example foods are not a contradiction"
+      },
+      {
+        "conflict": "Digestive tract model materials in L7",
+        "class": "false_positive",
+        "note": "Within-lesson material description variance, not a cross-lesson contradiction"
+      },
+      {
+        "conflict": "L4 title mentions flamingo, content covers fish eagle/vulture/hornbill",
+        "class": "structural",
+        "note": "Title/content mismatch; flamingo is covered in L5"
+      }
+    ]
+  }
+]

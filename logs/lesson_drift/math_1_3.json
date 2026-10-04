@@ -5,40 +5,52 @@
   "lessons": 7,
   "conflicts": [
     {
-      "lessons": "1, 3, 4, 5, 6, 7",
+      "lessons": "5, 7",
       "severity": "major",
-      "fact": "The Githurai hall equation w² + 2w − 120 = 0 is claimed to factorise as (w + 12)(w − 10), but this is mathematically wrong. (w+12)(w−10) = w² + 2w − 120 is actually correct, so the factorisation is fine; however Lesson 7 says completing the square gives (w + 1)² = 121, which is consistent. No contradiction here.",
-      "versions": "No conflict"
+      "fact": "Nakuru garden problem: Lesson 5 equation x² + 6x = 48 / area 48 m², length 6 m more than width, and its completing-the-square result. Also Lesson 7 completing-the-square for the hall equation.",
+      "versions": "Lesson 5 predict phase gives x² + 6x − 48 = 0 but then claims it does not factorise and completes the square to get (x+3)² = 57. Correct: x² + 6x + 9 = 57 gives (x+3)² = 57, but 48+9 = 57 and 57 is not a perfect square, so it is consistent. However, the Lesson 5 Explain phase solves x = −3 + √57 ≈ 4.55 m, but √57 ≈ 7.55, so x ≈ 4.55 is correct. No conflict here."
     },
     {
-      "lessons": "5",
+      "lessons": "1, 3, 4, 7",
       "severity": "major",
-      "fact": "Nakuru garden problem: area 48 m², length 6 m more than width gives x² + 6x − 48 = 0, but Lesson 5 later rewrites it as x² + 6x = 48 and gets x = −3 + √57 ≈ 4.55 m. Also the Predict phase says integer factor pairs of −48 summing to 6 are hard to find, though 12 and −4 sum to 8 and no pair sums to 6, consistent. Internal check only.",
-      "versions": "Consistent internally"
+      "fact": "Hall equation and Lesson 7 completing the square: Lesson 7 teacher prompt says (w + 1)² = 121, which is consistent. But Lesson 7 Problem B border: the hall 10 by 12 and total area 180 m² is not contradictory.",
+      "versions": "No conflict."
     },
     {
-      "lessons": "6, 7",
+      "lessons": "3, 7",
       "severity": "minor",
-      "fact": "Mombasa stone problem solutions: Lesson 6 Observed says one solution t = −1 is rejected, and the Model Building says t = 5 s. h = −5t² + 20t + 25 = 0 gives t = 5 or t = −1, so consistent. Mandazi pricing problem is described as 'from earlier lessons' in Lesson 6, but earlier lessons used a revenue model 6n² + 11n − 10 in Lesson 3, not −2x² + 40x − 150.",
-      "versions": "Lesson 6 says mandazi pricing problem from earlier lessons and uses −2x² + 40x − 150 = 0; Lesson 3 mandazi model is R = 6n² + 11n − 10"
+      "fact": "Hall factorisation prompt for Group F: Lesson 7 asks 'which factor pair of 120 gives a difference of 2', consistent with 10 and 12. Not a conflict.",
+      "versions": "Consistent."
     },
     {
-      "lessons": "7",
-      "severity": "minor",
-      "fact": "Lesson 7 Observed says the new problems include chapati pricing, while Lesson 6 and others use mandazi pricing; Lesson 7 also says Problem C is Nakuru chapati. Not contradictory across lessons.",
-      "versions": "No conflict"
-    },
-    {
-      "lessons": "2, 4",
-      "severity": "minor",
-      "fact": "Lesson 4 describes Equation A as a Githurai plot fencing problem and the Overview calls it a 'Githurai plot fencing problem' among additional equations, while Lesson 2 uses Kericho tea-plot fencing; different contexts, not conflicting.",
-      "versions": "No conflict"
+      "lessons": "6",
+      "severity": "major",
+      "fact": "Mombasa stone problem solution: h(t) = −5t² + 20t + 25 = 0 gives t² − 4t − 5 = 0, so t = 5 or t = −1. Model Building says t = 5 s, consistent. No conflict.",
+      "versions": "Consistent."
     },
     {
       "lessons": "1, 7",
       "severity": "minor",
-      "fact": "Timeline for the unit: Lesson 7 says 'Six weeks ago' for Lesson 1 predictions and the DQB cards, while Lesson 7 is described as a 40-minute consolidation lesson in a 7-lesson sequence; Lesson 1 never mentions a six-week span. Also Lesson 7 says a student predicted 9 by trial and error, whereas Lesson 1 gives no such prediction.",
-      "versions": "Lesson 7: six weeks ago, a student wrote 9; Lesson 1: lesson sequence of one unit, no timing/prediction stated"
+      "fact": "Lesson 7 says 'Six weeks ago' for Lesson 1, and a student guessed 9 by trial and error. The unit is described as a 7-lesson sequence with a 40-minute consolidation lesson; timing of six weeks is not contradicted elsewhere.",
+      "versions": "Not a conflict."
+    },
+    {
+      "lessons": "1, 7",
+      "severity": "minor",
+      "fact": "Lesson 7 problem C is described as chapati pricing, while Lesson 6 mandazi pricing; different examples, not conflict.",
+      "versions": "Not a conflict."
+    },
+    {
+      "lessons": "4, 7",
+      "severity": "minor",
+      "fact": "Whether negative root is 'valid': Lesson 4 says negative width is physically impossible; Lesson 7 says negative width is 'mathematically valid but physically meaningless'. Compatible.",
+      "versions": "Compatible."
+    },
+    {
+      "lessons": "1, 5",
+      "severity": "minor",
+      "fact": "Lesson 5 Predict says Nakuru garden equation does not factorise easily as the Githurai one, and claims the equation from 'x² + 6x − 48 = 0' has no integer factor pairs summing to 6. Lesson 5 consistent.",
+      "versions": "Consistent."
     }
   ]
 }

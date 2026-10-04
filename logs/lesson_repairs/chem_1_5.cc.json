@@ -1,0 +1,73 @@
+[
+  {
+    "when": "2026-10-04T08:26:40",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].teacherMoves",
+        "old": "What electron configuration did we write for aluminium in Lesson 3?",
+        "new": "What electron configuration would we write for aluminium?",
+        "class": "cross_reference",
+        "conflict": "Al configuration was not written in Lesson 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[3].learnerExperience",
+        "old": "We learned this in Lesson 3 when we measured ionisation energies across Period 3",
+        "new": "We learned this in Lesson 5 when we measured ionisation energies across Period 3",
+        "class": "cross_reference",
+        "conflict": "Period 3 IE plotted in Lesson 5, not 3"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "(started in Lesson 2 and updated each lesson)",
+        "new": "(started in Lesson 1 and updated each lesson)",
+        "class": "cross_reference",
+        "conflict": "cumulative model started in Lesson 1"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Period 3 first IE trend and Al dip (L5,6,7)",
+        "class": "science",
+        "note": "Real: L5/L6 data show Al IE < Mg, but L6/L7 explain reactivity as steadily rising IE across Na-Mg-Al."
+      },
+      {
+        "conflict": "Shielding electron counts for Na/Mg/K (L2,3,7)",
+        "class": "false_positive",
+        "note": "Reviewer itself found the counts consistent."
+      },
+      {
+        "conflict": "Al configuration 'in Lesson 3' and Period 3 IE 'in Lesson 3' (L3,5,7)",
+        "class": "cross_reference",
+        "note": "Fixed: L5 question reworded without lesson number; L7 example now cites Lesson 5."
+      },
+      {
+        "conflict": "Where the cumulative model started (L1,2,6)",
+        "class": "cross_reference",
+        "note": "Fixed L6 'started in Lesson 2' -> Lesson 1 (L3,L4,L5 all say Lesson 1)."
+      },
+      {
+        "conflict": "Chlorine/argon reactivity claims (L4,5,7)",
+        "class": "false_positive",
+        "note": "Statements are compatible, as the reviewer notes."
+      },
+      {
+        "conflict": "Test for hydrogen gas (L2,3,6)",
+        "class": "science",
+        "note": "Real error: L2 (and L6 prompt) say hydrogen relights a glowing splint; correct test is the squeaky pop with a lighted splint (L3,L6 result). Needs author fix."
+      },
+      {
+        "conflict": "Mg(OH)2(s) vs Ca(OH)2(aq), Mg in cold water (L1,3,6)",
+        "class": "false_positive",
+        "note": "Consistent with standard solubility treatment; no contradiction."
+      }
+    ]
+  }
+]

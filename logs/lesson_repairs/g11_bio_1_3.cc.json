@@ -1,0 +1,81 @@
+[
+  {
+    "when": "2026-10-04T08:30:06",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[0].teacherMoves",
+        "old": "Yesterday your groups sorted these organisms",
+        "new": "In Lesson 1 your groups sorted these organisms",
+        "class": "cross_reference",
+        "conflict": "L4 'yesterday' sorting was Lesson 1"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[0].teacherMoves",
+        "old": "Last lesson, groups made different groupings",
+        "new": "In Lesson 1, groups made different groupings",
+        "class": "cross_reference",
+        "conflict": "L7 'last lesson' groupings"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "started in Lesson 1 and revised in Lesson 4",
+        "new": "started in Lesson 1 and revised in later lessons",
+        "class": "cross_reference",
+        "conflict": "lessons in which the model was revised"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "overview",
+        "old": "group the seven animals",
+        "new": "group the eight animals",
+        "class": "dataset",
+        "conflict": "number of animals in L5 set"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[0].teacherMoves",
+        "old": "group these seven animals",
+        "new": "group these eight animals",
+        "class": "dataset",
+        "conflict": "number of animals in L5 set"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "0 moss true stems/leaves",
+        "class": "science",
+        "note": "Lessons agree bryophytes lack true roots, stems and leaves; 'stem-like/leaf-like' wording is standard, not a real contradiction."
+      },
+      {
+        "conflict": "1 lessons in which the Lesson 1 model is revisited",
+        "class": "cross_reference",
+        "note": "L7 'revised in Lesson 4' reworded to 'revised in later lessons'; L1's forward plan (Lessons 4 and 8) left as a plan."
+      },
+      {
+        "conflict": "2 'Yesterday' sorting in L4; seven vs eight animals in L5",
+        "class": "cross_reference",
+        "note": "L4 now points to Lesson 1; L5 count fixed (see 3)."
+      },
+      {
+        "conflict": "3 number of animals in the set",
+        "class": "dataset",
+        "note": "L5 lists eight animals but said seven; L5 corrected to eight. L6 using 7 for its key is a separate exercise."
+      },
+      {
+        "conflict": "4 which lesson introduces animal dichotomous keys",
+        "class": "structural",
+        "note": "L6 already has learners write an animal key before L7 'introduces' it; overlap of content between lessons. Only L7's wrong 'last lesson' grouping reference edited."
+      }
+    ]
+  }
+]
