@@ -164,6 +164,16 @@ const meta  = JSON.stringify(mod.META,              null, 2);
 const unit  = JSON.stringify(mod.UNIT,              null, 2);
 const less  = JSON.stringify(lessons,               null, 2);
 const fe    = JSON.stringify(mod.FINAL_EXPLANATION, null, 2);
+// The Summary Table is derived from the lessons (title + summaryTablePrompt):
+// refresh this lesson's row so the repair cannot leave it describing the old
+// lesson (scripts/validate_consistency.py ST-TITLE / ST-TEXT).
+if (mod.SUMMARY_TABLE && Array.isArray(mod.SUMMARY_TABLE.lessons)) {
+  const stp = lessonData.summaryTablePrompt || {};
+  mod.SUMMARY_TABLE.lessons[idx] = {
+    number: lessonData.number, title: lessonData.title,
+    observed: stp.observed || '', learned: stp.learned || '', explained: stp.explained || '',
+  };
+}
 const st    = JSON.stringify(mod.SUMMARY_TABLE,     null, 2);
 
 const output = `'use strict';

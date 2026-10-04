@@ -28,7 +28,9 @@
         "preview",
         "sine",
         "surveying",
-        "limitation"
+        "limitation",
+        "triangles",
+        "decomposing"
       ],
       "phrases": [
         "area triangle",
@@ -43,99 +45,104 @@
         "heron's formula preview",
         "sine formula preview",
         "land surveying",
-        "formula limitation"
+        "formula limitation",
+        "area triangle",
+        "area triangles formula"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Area of a triangle",
-        "score": 173.82,
+        "fit": "fits",
+        "score": 192.52,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
           "base half height",
           "triangle",
+          "area formula triangle",
+          "base height triangle",
           "base",
           "height"
         ],
-        "detail_weight": 3.73
+        "detail_weight": 4.49
       },
       "observe.video": {
-        "picked": "Heron's formula -dubbed(KY)",
-        "score": 144.9,
+        "picked": "Finding area of triangles",
+        "fit": "fits",
+        "score": 150.58,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
-          "triangle"
+          "triangle",
+          "area formula triangle",
+          "base height triangle",
+          "base",
+          "height"
         ],
-        "detail_weight": 1.88
+        "detail_weight": 3.24
       },
       "explain.video": {
-        "picked": "Proof of Heron's formula (1 of 2) -dubbed(KY)",
-        "score": 142.37,
+        "picked": "Area of a triangle",
+        "fit": "fits",
+        "score": 192.52,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
-          "triangle"
+          "base half height",
+          "triangle",
+          "area formula triangle",
+          "base height triangle",
+          "base",
+          "height"
         ],
-        "detail_weight": 1.88
+        "detail_weight": 4.49
       },
       "dqb.video": {
-        "picked": "Proof of Heron's formula (2 of 2) -dubbed(KY)",
-        "score": 142.37,
+        "picked": "Finding area of triangles",
+        "fit": "fits",
+        "score": 150.58,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
-          "triangle"
+          "triangle",
+          "area formula triangle",
+          "base height triangle",
+          "base",
+          "height"
         ],
-        "detail_weight": 1.88
+        "detail_weight": 3.24
       },
       "model.video": {
-        "picked": "Finding area of triangles",
-        "score": 133.17,
+        "picked": "Heron's formula -dubbed(KY)",
+        "fit": "partial",
+        "score": 156.58,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
           "triangle",
-          "base",
-          "height"
+          "area formula triangle"
         ],
-        "detail_weight": 2.48
+        "detail_weight": 2.3
       },
       "predict.reading": {
-        "picked": "Find missing length when given area of a triangle",
-        "score": 110.85,
+        "picked": "Find base and height on a triangle",
+        "fit": "fits",
+        "score": 98.56,
         "core_hits": [],
         "detail_hits": [
-          "area triangle",
+          "height perpendicular",
           "triangle",
+          "height perpendicular triangle",
+          "base height triangle",
           "base",
           "height"
         ],
-        "detail_weight": 2.48
+        "detail_weight": 2.79
       },
       "observe.reading": {
-        "picked": "Alternate Formula for the Area of a Triangle (Flexbook)",
-        "score": 101.09,
-        "core_hits": [],
-        "detail_hits": [
-          "area triangle",
-          "triangle"
-        ],
-        "detail_weight": 1.88
-      },
-      "explain.reading": {
-        "picked": "Alternate Formula for the Area of a Triangle Practice",
-        "score": 101.09,
-        "core_hits": [],
-        "detail_hits": [
-          "area triangle",
-          "triangle"
-        ],
-        "detail_weight": 1.88
-      },
-      "dqb.reading": {
         "picked": "Decompose area with triangles",
+        "fit": "fits",
         "score": 91.07,
         "core_hits": [
           "area polygon"
@@ -146,29 +153,72 @@
         ],
         "detail_weight": 1.88
       },
+      "explain.reading": {
+        "picked": "Derivation of the Triangle Area Formula (Flexbook)",
+        "fit": "fits",
+        "score": 76.01,
+        "core_hits": [],
+        "detail_hits": [
+          "area triangle",
+          "triangle",
+          "area formula triangle"
+        ],
+        "detail_weight": 2.3
+      },
+      "dqb.reading": {
+        "picked": "Derivation of the Triangle Area Formula Practice",
+        "fit": "fits",
+        "score": 76.01,
+        "core_hits": [],
+        "detail_hits": [
+          "area triangle",
+          "triangle",
+          "area formula triangle"
+        ],
+        "detail_weight": 2.3
+      },
       "model.reading": {
         "picked": "Find base and height on a triangle",
-        "score": 86.81,
+        "fit": "fits",
+        "score": 98.56,
         "core_hits": [],
         "detail_hits": [
           "height perpendicular",
           "triangle",
+          "height perpendicular triangle",
+          "base height triangle",
           "base",
           "height"
         ],
-        "detail_weight": 2.06
+        "detail_weight": 2.79
       }
     },
     "video_pool": {
-      "passed": 27,
+      "passed": 24,
       "runners_up": [
-        "Heron's formula -dubbed(KY)",
-        "Proof of Heron's formula (1 of 2) -dubbed(KY)",
-        "Proof of Heron's formula (2 of 2) -dubbed(KY)",
         "Finding area of triangles",
-        "Manipulating formulas: area"
+        "Triangle missing side example",
+        "Area of a Triangle - Overview",
+        "Area of a triangle on a grid",
+        "Heron's formula -dubbed(KY)"
       ],
       "rejected_sample": [
+        [
+          "Proof of Heron's formula (1 of 2) -dubbed(KY)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Proof of Heron's formula (2 of 2) -dubbed(KY)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Optimization: area of triangle & square (Part 1)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Optimization: area of triangle & square (Part 2)",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Formulas and units: Volume of a pool",
           "below relevance gate"
@@ -184,38 +234,23 @@
         [
           "Proofs concerning isosceles triangles -dubbed(KY)",
           "below relevance gate"
-        ],
-        [
-          "Volumes of cones intuition",
-          "below relevance gate"
-        ],
-        [
-          "Comparing areas of plots of land",
-          "below relevance gate"
-        ],
-        [
-          "Finding height of a parallelogram",
-          "below relevance gate"
-        ],
-        [
-          "Surface area of a box (cuboid)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 119,
+        "judged off-topic (independent reviewer)": 4,
+        "below relevance gate": 118,
         "web file not on reference image": 1,
-        "kolibri node not available on reference image": 4
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
       "passed": 25,
       "runners_up": [
-        "Alternate Formula for the Area of a Triangle (Flexbook)",
-        "Alternate Formula for the Area of a Triangle Practice",
         "Decompose area with triangles",
-        "Find base and height on a triangle",
-        "Alternate Area of a Triangle (PLIX)"
+        "Derivation of the Triangle Area Formula (Flexbook)",
+        "Derivation of the Triangle Area Formula Practice",
+        "Triangle Area (Flexbook)",
+        "Find missing length when given area of a triangle"
       ],
       "rejected_sample": [
         [
@@ -243,11 +278,11 @@
           "below relevance gate"
         ],
         [
-          "Volume as area of base times height",
+          "Decompose figures to find area",
           "below relevance gate"
         ],
         [
-          "General triangle word problems",
+          "Volume as area of base times height",
           "below relevance gate"
         ]
       ],
@@ -287,7 +322,10 @@
         "preview",
         "mathematical",
         "thinking",
-        "mathematics"
+        "mathematics",
+        "sas",
+        "ratio",
+        "oblique"
       ],
       "phrases": [
         "sine area formula",
@@ -299,12 +337,18 @@
         "irregular shamba",
         "farm plot",
         "heron's formula preview",
-        "mathematical thinking"
+        "mathematical thinking",
+        "area triangle sine",
+        "area sine formula",
+        "triangle area sas formula",
+        "sine included angle",
+        "height sine ratio"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Heron's formula -dubbed(KY)",
+        "fit": "partial",
         "score": 144.07,
         "core_hits": [],
         "detail_hits": [
@@ -315,29 +359,8 @@
         "detail_weight": 1.85
       },
       "observe.video": {
-        "picked": "Proof of Heron's formula (1 of 2) -dubbed(KY)",
-        "score": 141.55,
-        "core_hits": [],
-        "detail_hits": [
-          "area triangle",
-          "triangle",
-          "formula"
-        ],
-        "detail_weight": 1.85
-      },
-      "explain.video": {
-        "picked": "Proof of Heron's formula (2 of 2) -dubbed(KY)",
-        "score": 141.55,
-        "core_hits": [],
-        "detail_hits": [
-          "area triangle",
-          "triangle",
-          "formula"
-        ],
-        "detail_weight": 1.85
-      },
-      "dqb.video": {
         "picked": "Area of inscribed equilateral triangle -dubbed(KY)",
+        "fit": "partial",
         "score": 129.19,
         "core_hits": [],
         "detail_hits": [
@@ -348,9 +371,34 @@
         ],
         "detail_weight": 2.48
       },
-      "model.video": {
+      "explain.video": {
         "picked": "Manipulating formulas: area",
+        "fit": "partial",
         "score": 107.59,
+        "core_hits": [],
+        "detail_hits": [
+          "area triangle",
+          "triangle",
+          "formula"
+        ],
+        "detail_weight": 1.85
+      },
+      "dqb.video": {
+        "picked": "Area of a triangle",
+        "fit": "partial",
+        "score": 93.64,
+        "core_hits": [],
+        "detail_hits": [
+          "area triangle",
+          "triangle",
+          "formula"
+        ],
+        "detail_weight": 1.85
+      },
+      "model.video": {
+        "picked": "Heron's formula -dubbed(KY)",
+        "fit": "partial",
+        "score": 144.07,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
@@ -361,6 +409,7 @@
       },
       "predict.reading": {
         "picked": "Alternate Formula for the Area of a Triangle (Flexbook)",
+        "fit": "fits",
         "score": 100.51,
         "core_hits": [],
         "detail_hits": [
@@ -372,6 +421,7 @@
       },
       "observe.reading": {
         "picked": "Alternate Formula for the Area of a Triangle Practice",
+        "fit": "fits",
         "score": 100.51,
         "core_hits": [],
         "detail_hits": [
@@ -382,29 +432,8 @@
         "detail_weight": 1.85
       },
       "explain.reading": {
-        "picked": "Decompose area with triangles",
-        "score": 85.3,
-        "core_hits": [
-          "area polygon"
-        ],
-        "detail_hits": [
-          "area triangle",
-          "triangle"
-        ],
-        "detail_weight": 1.55
-      },
-      "dqb.reading": {
-        "picked": "Find missing length when given area of a triangle",
-        "score": 76.81,
-        "core_hits": [],
-        "detail_hits": [
-          "area triangle",
-          "triangle"
-        ],
-        "detail_weight": 1.55
-      },
-      "model.reading": {
         "picked": "Alternate Area of a Triangle (PLIX)",
+        "fit": "fits",
         "score": 75.42,
         "core_hits": [],
         "detail_hits": [
@@ -412,18 +441,50 @@
           "triangle"
         ],
         "detail_weight": 1.55
+      },
+      "dqb.reading": {
+        "picked": "Derivation of the Triangle Area Formula (Flexbook)",
+        "fit": "fits",
+        "score": 69.94,
+        "core_hits": [],
+        "detail_hits": [
+          "area triangle",
+          "triangle",
+          "formula"
+        ],
+        "detail_weight": 1.85
+      },
+      "model.reading": {
+        "picked": "Derivation of the Triangle Area Formula Practice",
+        "fit": "fits",
+        "score": 69.94,
+        "core_hits": [],
+        "detail_hits": [
+          "area triangle",
+          "triangle",
+          "formula"
+        ],
+        "detail_weight": 1.85
       }
     },
     "video_pool": {
-      "passed": 24,
+      "passed": 18,
       "runners_up": [
-        "Proof of Heron's formula (1 of 2) -dubbed(KY)",
-        "Proof of Heron's formula (2 of 2) -dubbed(KY)",
         "Area of inscribed equilateral triangle -dubbed(KY)",
         "Manipulating formulas: area",
-        "Area of a triangle"
+        "Area of a triangle",
+        "Finding area of triangles",
+        "Area of a Triangle - Overview"
       ],
       "rejected_sample": [
+        [
+          "Proof of Heron's formula (1 of 2) -dubbed(KY)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Proof of Heron's formula (2 of 2) -dubbed(KY)",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Comparing areas of plots of land",
           "below relevance gate"
@@ -433,49 +494,45 @@
           "below relevance gate"
         ],
         [
+          "Finding reciprocal trig ratios",
+          "below relevance gate"
+        ],
+        [
           "Solving for a side in right triangles with trigonometry",
           "below relevance gate"
         ],
         [
-          "Proofs concerning isosceles triangles",
-          "below relevance gate"
+          "Finding trig values using angle addition identities",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Proofs concerning isosceles triangles -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
-          "web file not on reference image"
-        ],
-        [
-          "Proof of the sine angle addition identity",
-          "below relevance gate"
-        ],
-        [
-          "Sine & cosine of complementary angles",
+          "Trigonometric ratios in right triangles",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 106,
+        "judged off-topic (independent reviewer)": 5,
+        "below relevance gate": 109,
         "web file not on reference image": 5,
-        "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 2
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
       "passed": 22,
       "runners_up": [
         "Alternate Formula for the Area of a Triangle Practice",
-        "Decompose area with triangles",
-        "Find missing length when given area of a triangle",
         "Alternate Area of a Triangle (PLIX)",
-        "Area of a Triangle: Ice Cream Cones (PLIX)"
+        "Derivation of the Triangle Area Formula (Flexbook)",
+        "Derivation of the Triangle Area Formula Practice",
+        "Decompose area with triangles"
       ],
       "rejected_sample": [
         [
           "Solve for an angle in right triangles",
+          "below relevance gate"
+        ],
+        [
+          "Trigonometric ratios in right triangles",
           "below relevance gate"
         ],
         [
@@ -495,21 +552,16 @@
           "below relevance gate"
         ],
         [
-          "Trigonometric ratios in right triangles",
+          "Relate ratios in right triangles",
           "below relevance gate"
         ],
         [
           "Solve triangles using the law of sines",
           "below relevance gate"
-        ],
-        [
-          "Justify constructions",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 124,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 124
       }
     }
   },
@@ -544,6 +596,8 @@
         "sail",
         "trigonometry",
         "mathematics",
+        "sas",
+        "composite",
         "applying"
       ],
       "phrases": [
@@ -556,68 +610,87 @@
         "land surveyor",
         "nakuru shamba",
         "eldoret roof",
-        "lake victoria sail"
+        "lake victoria sail",
+        "area triangle sine",
+        "area included angle",
+        "triangle area sas formula",
+        "heron's formula area",
+        "area triangle trigonometry"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Heron's formula -dubbed(KY)",
-        "score": 144.07,
+        "fit": "partial",
+        "score": 154.08,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
+          "area formula heron'",
           "formula",
           "triangle"
         ],
-        "detail_weight": 1.85
+        "detail_weight": 2.21
       },
       "observe.video": {
-        "picked": "Proof of Heron's formula (1 of 2) -dubbed(KY)",
-        "score": 141.55,
-        "core_hits": [],
-        "detail_hits": [
-          "area triangle",
-          "formula",
-          "triangle"
-        ],
-        "detail_weight": 1.85
-      },
-      "explain.video": {
-        "picked": "Proof of Heron's formula (2 of 2) -dubbed(KY)",
-        "score": 141.55,
-        "core_hits": [],
-        "detail_hits": [
-          "area triangle",
-          "formula",
-          "triangle"
-        ],
-        "detail_weight": 1.85
-      },
-      "dqb.video": {
         "picked": "Area of inscribed equilateral triangle -dubbed(KY)",
-        "score": 122.07,
+        "fit": "partial",
+        "score": 137.63,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
           "trigonometry",
+          "area formula heron'",
+          "area triangle trigonometry",
           "formula",
           "triangle"
         ],
-        "detail_weight": 2.16
+        "detail_weight": 2.86
       },
-      "model.video": {
-        "picked": "Finding trig values using angle addition identities",
-        "score": 90.14,
+      "explain.video": {
+        "picked": "Heron's formula -dubbed(KY)",
+        "fit": "partial",
+        "score": 154.08,
         "core_hits": [],
         "detail_hits": [
-          "formula sine",
-          "sine",
-          "formula"
+          "area triangle",
+          "area formula heron'",
+          "formula",
+          "triangle"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 2.21
+      },
+      "dqb.video": {
+        "picked": "Area of inscribed equilateral triangle -dubbed(KY)",
+        "fit": "partial",
+        "score": 137.63,
+        "core_hits": [],
+        "detail_hits": [
+          "area triangle",
+          "trigonometry",
+          "area formula heron'",
+          "area triangle trigonometry",
+          "formula",
+          "triangle"
+        ],
+        "detail_weight": 2.86
+      },
+      "model.video": {
+        "picked": "Heron's formula -dubbed(KY)",
+        "fit": "partial",
+        "score": 154.08,
+        "core_hits": [],
+        "detail_hits": [
+          "area triangle",
+          "area formula heron'",
+          "formula",
+          "triangle"
+        ],
+        "detail_weight": 2.21
       },
       "predict.reading": {
         "picked": "Alternate Formula for the Area of a Triangle (Flexbook)",
+        "fit": "fits",
         "score": 100.51,
         "core_hits": [],
         "detail_hits": [
@@ -629,6 +702,7 @@
       },
       "observe.reading": {
         "picked": "Alternate Formula for the Area of a Triangle Practice",
+        "fit": "fits",
         "score": 100.51,
         "core_hits": [],
         "detail_hits": [
@@ -639,19 +713,8 @@
         "detail_weight": 1.85
       },
       "explain.reading": {
-        "picked": "Decompose area with triangles",
-        "score": 85.3,
-        "core_hits": [
-          "area polygon"
-        ],
-        "detail_hits": [
-          "area triangle",
-          "triangle"
-        ],
-        "detail_weight": 1.55
-      },
-      "dqb.reading": {
         "picked": "Alternate Area of a Triangle (PLIX)",
+        "fit": "fits",
         "score": 75.42,
         "core_hits": [],
         "detail_hits": [
@@ -660,8 +723,9 @@
         ],
         "detail_weight": 1.55
       },
-      "model.reading": {
+      "dqb.reading": {
         "picked": "Area of a Triangle: Ice Cream Cones (PLIX)",
+        "fit": "fits",
         "score": 72.95,
         "core_hits": [],
         "detail_hits": [
@@ -669,18 +733,42 @@
           "triangle"
         ],
         "detail_weight": 1.55
+      },
+      "model.reading": {
+        "picked": "Alternate Formula for the Area of a Triangle (Flexbook)",
+        "fit": "fits",
+        "score": 100.51,
+        "core_hits": [],
+        "detail_hits": [
+          "area triangle",
+          "formula",
+          "triangle"
+        ],
+        "detail_weight": 1.85
       }
     },
     "video_pool": {
-      "passed": 27,
+      "passed": 20,
       "runners_up": [
-        "Proof of Heron's formula (1 of 2) -dubbed(KY)",
-        "Proof of Heron's formula (2 of 2) -dubbed(KY)",
         "Area of inscribed equilateral triangle -dubbed(KY)",
-        "Finding trig values using angle addition identities",
-        "Manipulating formulas: area"
+        "Manipulating formulas: area",
+        "Area of a Triangle - Overview",
+        "Area of a triangle",
+        "Area of composite shapes"
       ],
       "rejected_sample": [
+        [
+          "Proof of Heron's formula (1 of 2) -dubbed(KY)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Proof of Heron's formula (2 of 2) -dubbed(KY)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Finding trig values using angle addition identities",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Solving for a side in right triangles with trigonometry",
           "below relevance gate"
@@ -690,33 +778,22 @@
           "web file not on reference image"
         ],
         [
+          "Proving the SAS triangle congruence criterion using transformations",
+          "below relevance gate"
+        ],
+        [
+          "Area of a triangle on a grid",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Sine & cosine of complementary angles",
-          "below relevance gate"
-        ],
-        [
-          "Solving for an angle with the law of sines",
-          "below relevance gate"
-        ],
-        [
-          "Worked example: Triangle angles (intersecting lines)",
-          "below relevance gate"
-        ],
-        [
-          "Worked example: Triangle angles (diagram)",
-          "below relevance gate"
-        ],
-        [
-          "Triangle exterior angle example",
-          "below relevance gate"
-        ],
-        [
-          "Comparing areas of plots of land",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 101,
-        "web file not on reference image": 7,
+        "judged off-topic (independent reviewer)": 6,
+        "below relevance gate": 98,
+        "web file not on reference image": 5,
         "excluded: answer/exam material": 1,
         "kolibri node not available on reference image": 2
       }
@@ -725,10 +802,10 @@
       "passed": 28,
       "runners_up": [
         "Alternate Formula for the Area of a Triangle Practice",
-        "Decompose area with triangles",
         "Alternate Area of a Triangle (PLIX)",
         "Area of a Triangle: Ice Cream Cones (PLIX)",
-        "Derivation of the Triangle Area Formula (Flexbook)"
+        "Decompose area with triangles",
+        "Area challenge"
       ],
       "rejected_sample": [
         [
@@ -756,17 +833,16 @@
           "below relevance gate"
         ],
         [
-          "Right triangle trigonometry word problems",
+          "Determine congruent triangles",
           "below relevance gate"
         ],
         [
-          "Find angles in isosceles triangles",
+          "Right triangle trigonometry word problems",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 118,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 116
       }
     }
   },
@@ -827,76 +903,87 @@
     "slots": {
       "predict.video": {
         "picked": "Heron's formula -dubbed(KY)",
-        "score": 278.74,
+        "fit": "fits",
+        "score": 293.37,
         "core_hits": [],
         "detail_hits": [
           "formula heron'",
           "area triangle",
           "side",
+          "area side triangle",
           "triangle",
           "heron'",
           "formula"
         ],
-        "detail_weight": 4.1
+        "detail_weight": 4.49
       },
       "observe.video": {
         "picked": "Proof of Heron's formula (1 of 2) -dubbed(KY)",
-        "score": 271.96,
+        "fit": "fits",
+        "score": 286.23,
         "core_hits": [],
         "detail_hits": [
           "formula heron'",
           "area triangle",
           "side",
+          "area side triangle",
           "triangle",
           "heron'",
           "formula"
         ],
-        "detail_weight": 4.1
+        "detail_weight": 4.49
       },
       "explain.video": {
         "picked": "Proof of Heron's formula (2 of 2) -dubbed(KY)",
-        "score": 271.96,
+        "fit": "fits",
+        "score": 286.23,
         "core_hits": [],
         "detail_hits": [
           "formula heron'",
           "area triangle",
           "side",
+          "area side triangle",
           "triangle",
           "heron'",
           "formula"
         ],
-        "detail_weight": 4.1
+        "detail_weight": 4.49
       },
       "dqb.video": {
         "picked": "Heron's formula -dubbed(KY)",
-        "score": 278.74,
+        "fit": "fits",
+        "score": 293.37,
         "core_hits": [],
         "detail_hits": [
           "formula heron'",
           "area triangle",
           "side",
+          "area side triangle",
           "triangle",
           "heron'",
           "formula"
         ],
-        "detail_weight": 4.1
+        "detail_weight": 4.49
       },
       "model.video": {
-        "picked": "Heron's formula -dubbed(KY)",
-        "score": 278.74,
+        "picked": "Proof of Heron's formula (1 of 2) -dubbed(KY)",
+        "fit": "fits",
+        "score": 286.23,
         "core_hits": [],
         "detail_hits": [
           "formula heron'",
           "area triangle",
           "side",
+          "area side triangle",
           "triangle",
           "heron'",
           "formula"
         ],
-        "detail_weight": 4.1
+        "detail_weight": 4.49
       },
       "predict.reading": {
         "picked": "Heron's Formula (Flexbook)",
+        "fit": "fits",
         "score": 148.28,
         "core_hits": [],
         "detail_hits": [
@@ -908,6 +995,7 @@
       },
       "observe.reading": {
         "picked": "Heron's Formula Practice",
+        "fit": "fits",
         "score": 148.28,
         "core_hits": [],
         "detail_hits": [
@@ -918,8 +1006,9 @@
         "detail_weight": 2.1
       },
       "explain.reading": {
-        "picked": "Derivation of the Triangle Area Formula (Flexbook)",
-        "score": 106.52,
+        "picked": "Alternate Formula for the Area of a Triangle Practice",
+        "fit": "fits",
+        "score": 97.02,
         "core_hits": [],
         "detail_hits": [
           "area triangle",
@@ -929,26 +1018,28 @@
         "detail_weight": 1.67
       },
       "dqb.reading": {
-        "picked": "Derivation of the Triangle Area Formula Practice",
-        "score": 106.52,
+        "picked": "Heron's Formula (Flexbook)",
+        "fit": "fits",
+        "score": 148.28,
         "core_hits": [],
         "detail_hits": [
-          "area triangle",
-          "triangle",
+          "formula heron'",
+          "heron'",
           "formula"
         ],
-        "detail_weight": 1.67
+        "detail_weight": 2.1
       },
       "model.reading": {
-        "picked": "Alternate Formula for the Area of a Triangle (Flexbook)",
-        "score": 97.02,
+        "picked": "Heron's Formula Practice",
+        "fit": "fits",
+        "score": 148.28,
         "core_hits": [],
         "detail_hits": [
-          "area triangle",
-          "triangle",
+          "formula heron'",
+          "heron'",
           "formula"
         ],
-        "detail_weight": 1.67
+        "detail_weight": 2.1
       }
     },
     "video_pool": {
@@ -957,10 +1048,34 @@
         "Proof of Heron's formula (1 of 2) -dubbed(KY)",
         "Proof of Heron's formula (2 of 2) -dubbed(KY)",
         "Area of inscribed equilateral triangle -dubbed(KY)",
-        "Finding area of triangles",
-        "Area of equilateral triangle -dubbed(KY)"
+        "Solving for an angle with the law of cosines",
+        "Solving for a side with the law of cosines"
       ],
       "rejected_sample": [
+        [
+          "Solving for a side with the law of sines",
+          "below relevance gate"
+        ],
+        [
+          "Manipulating formulas: area",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Proof of the law of cosines",
+          "below relevance gate"
+        ],
+        [
+          "Solving for an angle with the law of sines",
+          "below relevance gate"
+        ],
+        [
+          "Solving triangles using the Law of Sines - Overview",
+          "below relevance gate"
+        ],
+        [
+          "Proof of the law of cosines -dubbed(KY)",
+          "below relevance gate"
+        ],
         [
           "Area and Perimeter of Similar Polygons Principles - Basic",
           "below relevance gate"
@@ -968,51 +1083,40 @@
         [
           "Euler's formula",
           "below relevance gate"
-        ],
-        [
-          "Perimeter & area of composite shapes",
-          "below relevance gate"
-        ],
-        [
-          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
-          "web file not on reference image"
-        ],
-        [
-          "Solving for a side in right triangles with trigonometry",
-          "below relevance gate"
-        ],
-        [
-          "Finding missing side length when given perimeter",
-          "below relevance gate"
-        ],
-        [
-          "Manipulating formulas: perimeter",
-          "below relevance gate"
-        ],
-        [
-          "Geometry - Area and Perimeter - Math Sing-along from Ubongo Kids",
-          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 93,
-        "web file not on reference image": 5,
-        "kolibri node not available on reference image": 2,
+        "below relevance gate": 91,
+        "judged off-topic (independent reviewer)": 1,
+        "web file not on reference image": 6,
+        "kolibri node not available on reference image": 1,
         "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 25,
+      "passed": 20,
       "runners_up": [
         "Heron's Formula Practice",
+        "Alternate Formula for the Area of a Triangle Practice",
+        "Alternate Area of a Triangle (PLIX)",
         "Derivation of the Triangle Area Formula (Flexbook)",
-        "Derivation of the Triangle Area Formula Practice",
-        "Alternate Formula for the Area of a Triangle (Flexbook)",
-        "Alternate Formula for the Area of a Triangle Practice"
+        "Derivation of the Triangle Area Formula Practice"
       ],
       "rejected_sample": [
         [
+          "Solve triangles using the law of cosines",
+          "below relevance gate"
+        ],
+        [
+          "General triangle word problems",
+          "below relevance gate"
+        ],
+        [
           "Area & perimeter of rectangles word problems",
+          "below relevance gate"
+        ],
+        [
+          "Identify Accurate Drawings of Triangles: Law of Cosines (PLIX)",
           "below relevance gate"
         ],
         [
@@ -1028,24 +1132,12 @@
           "below relevance gate"
         ],
         [
-          "General triangle word problems",
-          "below relevance gate"
-        ],
-        [
-          "Regular and Irregular Polygons: Polygon States (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Triangle side length rules",
-          "below relevance gate"
-        ],
-        [
-          "Sum to Product Formulas for Sine and Cosine (Flexbook)",
+          "Solve triangles using the law of sines",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 122
+        "below relevance gate": 127
       }
     }
   },
@@ -1105,29 +1197,30 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Area of Regular Polygons Principles",
-        "score": 123.27,
-        "core_hits": [
-          "area polygon"
-        ],
+        "picked": "Interior Angles in Convex Polygons Principles - Basic",
+        "fit": "fits",
+        "score": 105.29,
+        "core_hits": [],
         "detail_hits": [
-          "polygon regular"
+          "convex polygon",
+          "angle interior polygon"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.24
       },
       "observe.video": {
-        "picked": "Area of Regular Polygons Principles",
-        "score": 123.27,
-        "core_hits": [
-          "area polygon"
-        ],
+        "picked": "Interior Angles in Convex Polygons Principles - Basic",
+        "fit": "fits",
+        "score": 105.29,
+        "core_hits": [],
         "detail_hits": [
-          "polygon regular"
+          "convex polygon",
+          "angle interior polygon"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.24
       },
       "explain.video": {
         "picked": "Area of Regular Polygons Principles",
+        "fit": "partial",
         "score": 123.27,
         "core_hits": [
           "area polygon"
@@ -1138,29 +1231,32 @@
         "detail_weight": 1.25
       },
       "dqb.video": {
-        "picked": "Area of Regular Polygons Principles",
-        "score": 123.27,
+        "picked": "Using similar & congruent triangles",
+        "fit": "partial",
+        "score": 43.71,
         "core_hits": [
           "area polygon"
         ],
         "detail_hits": [
-          "polygon regular"
+          "triangle"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 0.3
       },
       "model.video": {
-        "picked": "Area of Regular Polygons Principles",
-        "score": 123.27,
+        "picked": "Using similar & congruent triangles -dubbed(KY)",
+        "fit": "partial",
+        "score": 41.01,
         "core_hits": [
           "area polygon"
         ],
         "detail_hits": [
-          "polygon regular"
+          "triangle"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 0.3
       },
       "predict.reading": {
         "picked": "Regular and Irregular Polygons: Polygon States (PLIX)",
+        "fit": "fits",
         "score": 130.91,
         "core_hits": [],
         "detail_hits": [
@@ -1170,28 +1266,41 @@
         "detail_weight": 2.32
       },
       "observe.reading": {
-        "picked": "Area of Regular Polygons (Flexbook)",
-        "score": 123.27,
-        "core_hits": [
-          "area polygon"
-        ],
+        "picked": "Interior Angles in Convex Polygons (Flexbook)",
+        "fit": "fits",
+        "score": 100.95,
+        "core_hits": [],
         "detail_hits": [
-          "polygon regular"
+          "convex polygon",
+          "angle interior polygon"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.24
       },
       "explain.reading": {
-        "picked": "Regular and Irregular Polygons (Flexbook)",
-        "score": 98.43,
+        "picked": "Interior Angles in Convex Polygons Practice",
+        "fit": "fits",
+        "score": 100.95,
         "core_hits": [],
         "detail_hits": [
-          "polygon regular",
-          "irregular polygon"
+          "convex polygon",
+          "angle interior polygon"
         ],
-        "detail_weight": 2.32
+        "detail_weight": 1.24
       },
       "dqb.reading": {
-        "picked": "Regular and Irregular Polygons Practice",
+        "picked": "Interior Angles in Convex Polygons (PLIX)",
+        "fit": "fits",
+        "score": 100.95,
+        "core_hits": [],
+        "detail_hits": [
+          "convex polygon",
+          "angle interior polygon"
+        ],
+        "detail_weight": 1.24
+      },
+      "model.reading": {
+        "picked": "Regular and Irregular Polygons (Flexbook)",
+        "fit": "fits",
         "score": 98.43,
         "core_hits": [],
         "detail_hits": [
@@ -1199,21 +1308,12 @@
           "irregular polygon"
         ],
         "detail_weight": 2.32
-      },
-      "model.reading": {
-        "picked": "Polygon Classification (Flexbook)",
-        "score": 96.24,
-        "core_hits": [],
-        "detail_hits": [
-          "classification polygon",
-          "classification"
-        ],
-        "detail_weight": 1.8
       }
     },
     "video_pool": {
-      "passed": 3,
+      "passed": 4,
       "runners_up": [
+        "Area of Regular Polygons Principles",
         "Using similar & congruent triangles",
         "Using similar & congruent triangles -dubbed(KY)"
       ],
@@ -1239,33 +1339,32 @@
           "below relevance gate"
         ],
         [
-          "Interior Angles in Convex Polygons Principles - Basic",
-          "below relevance gate"
-        ],
-        [
           "Triangle exterior angle example",
           "below relevance gate"
         ],
         [
           "Comparing areas of plots of land",
           "below relevance gate"
+        ],
+        [
+          "Angles in a triangle sum to 180° proof",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 124,
+        "below relevance gate": 120,
         "web file not on reference image": 5,
-        "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 2
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 12,
+      "passed": 15,
       "runners_up": [
-        "Area of Regular Polygons (Flexbook)",
+        "Interior Angles in Convex Polygons (Flexbook)",
+        "Interior Angles in Convex Polygons Practice",
+        "Interior Angles in Convex Polygons (PLIX)",
         "Regular and Irregular Polygons (Flexbook)",
-        "Regular and Irregular Polygons Practice",
-        "Polygon Classification (Flexbook)",
-        "Polygon Classification Practice"
+        "Regular and Irregular Polygons Practice"
       ],
       "rejected_sample": [
         [
@@ -1281,28 +1380,29 @@
           "below relevance gate"
         ],
         [
-          "Interior Angles in Convex Polygons (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Interior Angles in Convex Polygons Practice",
-          "below relevance gate"
-        ],
-        [
-          "Interior Angles in Convex Polygons (PLIX)",
-          "below relevance gate"
-        ],
-        [
           "Exterior Angles in Convex Polygons (Flexbook)",
           "below relevance gate"
         ],
         [
           "Exterior Angles in Convex Polygons Practice",
           "below relevance gate"
+        ],
+        [
+          "Prove triangle properties",
+          "below relevance gate"
+        ],
+        [
+          "Find angles in triangles",
+          "below relevance gate"
+        ],
+        [
+          "Solve for an angle in right triangles",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 137
+        "below relevance gate": 131,
+        "kolibri node not available on reference image": 2
       }
     }
   },
@@ -1363,7 +1463,8 @@
     "slots": {
       "predict.video": {
         "picked": "Area of Regular Polygons Principles",
-        "score": 131.84,
+        "fit": "fits",
+        "score": 194.9,
         "core_hits": [
           "area polygon"
         ],
@@ -1374,7 +1475,21 @@
         "detail_weight": 1.8
       },
       "observe.video": {
+        "picked": "Area of Regular Polygons Principles",
+        "fit": "fits",
+        "score": 194.9,
+        "core_hits": [
+          "area polygon"
+        ],
+        "detail_hits": [
+          "area polygon regular",
+          "regular"
+        ],
+        "detail_weight": 1.8
+      },
+      "explain.video": {
         "picked": "Area of a regular hexagon",
+        "fit": "partial",
         "score": 93.31,
         "core_hits": [],
         "detail_hits": [
@@ -1384,45 +1499,34 @@
         ],
         "detail_weight": 1.43
       },
-      "explain.video": {
-        "picked": "Area of Regular Polygons Principles",
-        "score": 131.84,
-        "core_hits": [
-          "area polygon"
-        ],
-        "detail_hits": [
-          "area polygon regular",
-          "regular"
-        ],
-        "detail_weight": 1.8
-      },
       "dqb.video": {
-        "picked": "Area of Regular Polygons Principles",
-        "score": 131.84,
+        "picked": "Using similar & congruent triangles",
+        "fit": "partial",
+        "score": 43.71,
         "core_hits": [
           "area polygon"
         ],
         "detail_hits": [
-          "area polygon regular",
-          "regular"
+          "triangle"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 0.3
       },
       "model.video": {
-        "picked": "Area of Regular Polygons Principles",
-        "score": 131.84,
+        "picked": "Using similar & congruent triangles -dubbed(KY)",
+        "fit": "partial",
+        "score": 41.01,
         "core_hits": [
           "area polygon"
         ],
         "detail_hits": [
-          "area polygon regular",
-          "regular"
+          "triangle"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 0.3
       },
       "predict.reading": {
         "picked": "Area of Regular Polygons (Flexbook)",
-        "score": 131.84,
+        "fit": "fits",
+        "score": 194.9,
         "core_hits": [
           "area polygon"
         ],
@@ -1434,7 +1538,8 @@
       },
       "observe.reading": {
         "picked": "Area of Regular Polygons (Flexbook)",
-        "score": 131.84,
+        "fit": "fits",
+        "score": 194.9,
         "core_hits": [
           "area polygon"
         ],
@@ -1445,20 +1550,21 @@
         "detail_weight": 1.8
       },
       "explain.reading": {
-        "picked": "Area of Regular Polygons (Flexbook)",
-        "score": 131.84,
+        "picked": "Decompose area with triangles",
+        "fit": "partial",
+        "score": 63.47,
         "core_hits": [
           "area polygon"
         ],
         "detail_hits": [
-          "area polygon regular",
-          "regular"
+          "triangle"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 0.3
       },
       "dqb.reading": {
         "picked": "Area of Regular Polygons (Flexbook)",
-        "score": 131.84,
+        "fit": "fits",
+        "score": 194.9,
         "core_hits": [
           "area polygon"
         ],
@@ -1470,7 +1576,8 @@
       },
       "model.reading": {
         "picked": "Area of Regular Polygons (Flexbook)",
-        "score": 131.84,
+        "fit": "fits",
+        "score": 194.9,
         "core_hits": [
           "area polygon"
         ],
@@ -1484,14 +1591,22 @@
     "video_pool": {
       "passed": 5,
       "runners_up": [
-        "Area of a regular hexagon",
         "Eneo la Pembesita -dubbed(KY)",
+        "Area of a regular hexagon",
         "Using similar & congruent triangles",
         "Using similar & congruent triangles -dubbed(KY)"
       ],
       "rejected_sample": [
         [
+          "Classifying Triangles Within Composite Figures by Identifying the Number of Equal Sides",
+          "below relevance gate"
+        ],
+        [
           "Finding missing side length when given perimeter",
+          "below relevance gate"
+        ],
+        [
+          "Solving for a side in right triangles with trigonometry",
           "below relevance gate"
         ],
         [
@@ -1503,42 +1618,41 @@
           "below relevance gate"
         ],
         [
+          "Area of inscribed equilateral triangle -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
           "Is side length & area proportional?",
           "below relevance gate"
         ],
         [
-          "Given the Perimeter, Find the Side Length and Area - Squares",
-          "below relevance gate"
-        ],
-        [
-          "Given the Area, Find the Side Length and Perimeter - Squares",
-          "below relevance gate"
-        ],
-        [
-          "Heron's formula -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Proof of Heron's formula (1 of 2) -dubbed(KY)",
+          "Using right triangle ratios to approximate angle measure",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 118,
-        "web file not on reference image": 6,
+        "below relevance gate": 119,
+        "web file not on reference image": 5,
         "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 5
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 3,
+      "passed": 2,
       "runners_up": [
-        "Decompose area with triangles",
-        "Area & perimeter on the coordinate plane"
+        "Decompose area with triangles"
       ],
       "rejected_sample": [
         [
+          "Solve for a side in right triangles",
+          "below relevance gate"
+        ],
+        [
           "Triangle side length rules",
+          "below relevance gate"
+        ],
+        [
+          "Use ratios in right triangles",
           "below relevance gate"
         ],
         [
@@ -1550,7 +1664,7 @@
           "below relevance gate"
         ],
         [
-          "Use ratios in right triangles",
+          "Classifying Triangles in Composite Figures by Number of Equal Sides Practice",
           "below relevance gate"
         ],
         [
@@ -1558,21 +1672,13 @@
           "below relevance gate"
         ],
         [
-          "Solve similar triangles (basic)",
-          "below relevance gate"
-        ],
-        [
-          "Solve similar triangles (advanced)",
-          "below relevance gate"
-        ],
-        [
-          "Derivation of the Triangle Area Formula (Flexbook)",
+          "Solve for an angle in right triangles",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 145,
-        "kolibri node not available on reference image": 2
+        "below relevance gate": 142,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -1608,7 +1714,9 @@
         "mathematics",
         "triangles",
         "decomposing",
-        "surveyor's"
+        "composite",
+        "figures",
+        "quadrilaterals"
       ],
       "phrases": [
         "area irregular polygons",
@@ -1624,12 +1732,14 @@
         "triangle decomposition strategy",
         "sum triangle areas",
         "area polygons",
-        "triangles rule"
+        "triangles rule",
+        "area irregular polygons"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Area of quadrilateral with 2 parallel sides",
+        "fit": "partial",
         "score": 72.9,
         "core_hits": [],
         "detail_hits": [
@@ -1640,6 +1750,7 @@
       },
       "observe.video": {
         "picked": "Area of quadrilateral with 2 parallel sides",
+        "fit": "partial",
         "score": 72.9,
         "core_hits": [],
         "detail_hits": [
@@ -1650,6 +1761,7 @@
       },
       "explain.video": {
         "picked": "Area of quadrilateral with 2 parallel sides",
+        "fit": "partial",
         "score": 72.9,
         "core_hits": [],
         "detail_hits": [
@@ -1660,6 +1772,7 @@
       },
       "dqb.video": {
         "picked": "Area of quadrilateral with 2 parallel sides",
+        "fit": "partial",
         "score": 72.9,
         "core_hits": [],
         "detail_hits": [
@@ -1670,6 +1783,7 @@
       },
       "model.video": {
         "picked": "Area of quadrilateral with 2 parallel sides",
+        "fit": "partial",
         "score": 72.9,
         "core_hits": [],
         "detail_hits": [
@@ -1680,6 +1794,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1687,6 +1802,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1694,6 +1810,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1701,6 +1818,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1708,6 +1826,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1752,8 +1871,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 131,
-        "web file not on reference image": 7,
+        "below relevance gate": 125,
+        "web file not on reference image": 6,
         "excluded: answer/exam material": 1,
         "kolibri node not available on reference image": 2
       }
@@ -1771,7 +1890,15 @@
           "below relevance gate"
         ],
         [
+          "Decompose figures to find area",
+          "below relevance gate"
+        ],
+        [
           "Regular and Irregular Polygons: Polygon States (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "Find the Dimensions and Area of Quadrilaterals (Flexbook)",
           "below relevance gate"
         ],
         [
@@ -1785,18 +1912,10 @@
         [
           "Sine Sum and Difference Formulas Practice",
           "below relevance gate"
-        ],
-        [
-          "Sum to Product Formulas for Sine and Cosine (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Sum to Product Formulas for Sine and Cosine Practice",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 151,
+        "below relevance gate": 147,
         "kolibri node not available on reference image": 1
       }
     }
@@ -1829,11 +1948,13 @@
         "revision",
         "selection",
         "mathematics",
-        "consolidation",
-        "real",
-        "world",
-        "applications",
-        "answering"
+        "triangles",
+        "trapezoids",
+        "decomposing",
+        "shapes",
+        "parallelograms",
+        "kites",
+        "consolidation"
       ],
       "phrases": [
         "area polygons",
@@ -1849,22 +1970,15 @@
         "parallelogram area",
         "kite area",
         "hexagon area",
-        "formula selection"
+        "formula selection",
+        "area triangles sine"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Heron's formula -dubbed(KY)",
-        "score": 125.77,
-        "core_hits": [],
-        "detail_hits": [
-          "formula heron'"
-        ],
-        "detail_weight": 1.25
-      },
-      "observe.video": {
         "picked": "Area of Regular Polygons Principles",
-        "score": 118.45,
+        "fit": "fits",
+        "score": 175.1,
         "core_hits": [
           "area polygon"
         ],
@@ -1873,44 +1987,66 @@
         ],
         "detail_weight": 0.94
       },
-      "explain.video": {
-        "picked": "Proof of Heron's formula (1 of 2) -dubbed(KY)",
-        "score": 117.7,
+      "observe.video": {
+        "picked": "Heron's formula -dubbed(KY)",
+        "fit": "fits",
+        "score": 146.24,
         "core_hits": [],
         "detail_hits": [
-          "formula heron'"
+          "formula heron'",
+          "area formula heron'"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.61
+      },
+      "explain.video": {
+        "picked": "Area of composite shapes",
+        "fit": "fits",
+        "score": 114.9,
+        "core_hits": [],
+        "detail_hits": [
+          "area composite",
+          "area trapezium"
+        ],
+        "detail_weight": 1.33
       },
       "dqb.video": {
-        "picked": "Proof of Heron's formula (2 of 2) -dubbed(KY)",
-        "score": 117.7,
-        "core_hits": [],
-        "detail_hits": [
-          "formula heron'"
+        "picked": "Area of Regular Polygons Principles",
+        "fit": "fits",
+        "score": 175.1,
+        "core_hits": [
+          "area polygon"
         ],
-        "detail_weight": 1.25
+        "detail_hits": [
+          "area polygon regular"
+        ],
+        "detail_weight": 0.94
       },
       "model.video": {
-        "picked": "Area of inscribed equilateral triangle -dubbed(KY)",
-        "score": 80.14,
+        "picked": "Heron's formula -dubbed(KY)",
+        "fit": "fits",
+        "score": 146.24,
         "core_hits": [],
         "detail_hits": [
-          "formula heron'"
+          "formula heron'",
+          "area formula heron'"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.61
       },
       "predict.reading": {
-        "picked": "Heron's Formula (Flexbook)",
-        "score": 125.08,
-        "core_hits": [],
-        "detail_hits": [
-          "formula heron'"
+        "picked": "Area of Regular Polygons (Flexbook)",
+        "fit": "fits",
+        "score": 175.1,
+        "core_hits": [
+          "area polygon"
         ],
-        "detail_weight": 1.25
+        "detail_hits": [
+          "area polygon regular"
+        ],
+        "detail_weight": 0.94
       },
       "observe.reading": {
-        "picked": "Heron's Formula Practice",
+        "picked": "Heron's Formula (Flexbook)",
+        "fit": "fits",
         "score": 125.08,
         "core_hits": [],
         "detail_hits": [
@@ -1919,8 +2055,19 @@
         "detail_weight": 1.25
       },
       "explain.reading": {
+        "picked": "Heron's Formula Practice",
+        "fit": "fits",
+        "score": 125.08,
+        "core_hits": [],
+        "detail_hits": [
+          "formula heron'"
+        ],
+        "detail_weight": 1.25
+      },
+      "dqb.reading": {
         "picked": "Area of Regular Polygons (Flexbook)",
-        "score": 118.45,
+        "fit": "fits",
+        "score": 175.1,
         "core_hits": [
           "area polygon"
         ],
@@ -1929,17 +2076,9 @@
         ],
         "detail_weight": 0.94
       },
-      "dqb.reading": {
-        "picked": "Heron's Formula (Flexbook)",
-        "score": 125.08,
-        "core_hits": [],
-        "detail_hits": [
-          "formula heron'"
-        ],
-        "detail_weight": 1.25
-      },
       "model.reading": {
         "picked": "Heron's Formula (Flexbook)",
+        "fit": "fits",
         "score": 125.08,
         "core_hits": [],
         "detail_hits": [
@@ -1951,15 +2090,27 @@
     "video_pool": {
       "passed": 7,
       "runners_up": [
-        "Area of Regular Polygons Principles",
+        "Heron's formula -dubbed(KY)",
+        "Area of composite shapes",
+        "Perimeter & area of composite shapes",
         "Proof of Heron's formula (1 of 2) -dubbed(KY)",
-        "Proof of Heron's formula (2 of 2) -dubbed(KY)",
-        "Area of inscribed equilateral triangle -dubbed(KY)",
-        "Area of composite shapes"
+        "Proof of Heron's formula (2 of 2) -dubbed(KY)"
       ],
       "rejected_sample": [
         [
-          "Composite area between curves",
+          "Area of trapezoids",
+          "below relevance gate"
+        ],
+        [
+          "Decomposing shapes to find area: grids",
+          "below relevance gate"
+        ],
+        [
+          "Decomposing shapes to find area: add",
+          "below relevance gate"
+        ],
+        [
+          "Decomposing shapes to find area: subtract",
           "below relevance gate"
         ],
         [
@@ -1967,42 +2118,30 @@
           "below relevance gate"
         ],
         [
-          "Area of kites",
+          "Composite area between curves",
           "below relevance gate"
         ],
         [
-          "Area of trapezoid on the coordinate plane",
-          "below relevance gate"
-        ],
-        [
-          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
-          "web file not on reference image"
-        ],
-        [
-          "Area of a parallelogram",
+          "Area of quadrilateral with 2 parallel sides",
           "below relevance gate"
         ],
         [
           "Eneo la Pembesita -dubbed(KY)",
           "below relevance gate"
-        ],
-        [
-          "Area of trapezoids",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 119,
+        "below relevance gate": 112,
         "web file not on reference image": 7,
-        "excluded: answer/exam material": 2,
-        "kolibri node not available on reference image": 9
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 6
       }
     },
     "reading_pool": {
       "passed": 6,
       "runners_up": [
+        "Heron's Formula (Flexbook)",
         "Heron's Formula Practice",
-        "Area of Regular Polygons (Flexbook)",
         "Area of Composite Shapes: Triangle and Parallelogram (PLIX)",
         "Area & perimeter on the coordinate plane",
         "Area challenge"
@@ -2010,6 +2149,22 @@
       "rejected_sample": [
         [
           "Regular and Irregular Polygons: Polygon States (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "Name shapes 3",
+          "below relevance gate"
+        ],
+        [
+          "Area of Composite Shapes Involving Triangles (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Area of Composite Shapes Involving Triangles Practice",
+          "below relevance gate"
+        ],
+        [
+          "Decompose figures to find area",
           "below relevance gate"
         ],
         [
@@ -2021,29 +2176,13 @@
           "below relevance gate"
         ],
         [
-          "Regular and Irregular Polygons (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Regular and Irregular Polygons Practice",
-          "below relevance gate"
-        ],
-        [
-          "Find composite functions",
-          "below relevance gate"
-        ],
-        [
           "Area of composite shapes",
-          "below relevance gate"
-        ],
-        [
-          "Decompose area with triangles",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "below relevance gate": 139,
-        "kolibri node not available on reference image": 4
+        "kolibri node not available on reference image": 1
       }
     }
   }

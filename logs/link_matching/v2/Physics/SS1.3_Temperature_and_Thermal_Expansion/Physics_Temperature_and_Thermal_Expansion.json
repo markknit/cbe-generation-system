@@ -27,6 +27,10 @@
         "baseline",
         "eldoret",
         "kericho",
+        "solids",
+        "changes",
+        "expanding",
+        "heat",
         "encounter",
         "cracked",
         "frozen"
@@ -37,12 +41,19 @@
         "states matter",
         "ice crystal lattice",
         "intermolecular spacing",
-        "glass bottle"
+        "glass bottle",
+        "thermal expansion solids",
+        "anomalous expansion water",
+        "particle matter",
+        "states matter changes",
+        "water freezing expanding",
+        "heat temperature"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Video: States of Matter",
+        "fit": "fits",
         "score": 69.57,
         "core_hits": [],
         "detail_hits": [
@@ -52,6 +63,7 @@
       },
       "observe.video": {
         "picked": "Video: States of Matter: Basics",
+        "fit": "fits",
         "score": 68.36,
         "core_hits": [],
         "detail_hits": [
@@ -61,6 +73,7 @@
       },
       "explain.video": {
         "picked": "States of matter",
+        "fit": "fits",
         "score": 65.61,
         "core_hits": [],
         "detail_hits": [
@@ -69,20 +82,19 @@
         "detail_weight": 1.07
       },
       "dqb.video": {
-        "picked": "Real gases: Deviations from ideal behavior",
-        "score": 64.07,
-        "core_hits": [
-          "temperature"
-        ],
+        "picked": "Video: States of Matter",
+        "fit": "fits",
+        "score": 69.57,
+        "core_hits": [],
         "detail_hits": [
-          "particle",
-          "pressure"
+          "matter state"
         ],
-        "detail_weight": 1.29
+        "detail_weight": 1.07
       },
       "model.video": {
-        "picked": "States of matter -dubbed(KY)",
-        "score": 61.23,
+        "picked": "Video: States of Matter: Basics",
+        "fit": "fits",
+        "score": 68.36,
         "core_hits": [],
         "detail_hits": [
           "matter state"
@@ -91,48 +103,60 @@
       },
       "predict.reading": {
         "picked": "States of Matter",
-        "score": 74.33,
+        "fit": "fits",
+        "score": 123.66,
         "core_hits": [
           "temperature"
         ],
         "detail_hits": [
           "matter state",
-          "pressure"
+          "pressure",
+          "heat temperature"
         ],
-        "detail_weight": 1.53
+        "detail_weight": 1.92
       },
       "observe.reading": {
-        "picked": "States of Matter (Flexbook)",
-        "score": 69.57,
-        "core_hits": [],
-        "detail_hits": [
-          "matter state"
-        ],
-        "detail_weight": 1.07
-      },
-      "explain.reading": {
-        "picked": "States of Matter Practice",
-        "score": 69.57,
-        "core_hits": [],
-        "detail_hits": [
-          "matter state"
-        ],
-        "detail_weight": 1.07
-      },
-      "dqb.reading": {
-        "picked": "Pressure versus Temperature (PLIX)",
-        "score": 69.12,
+        "picked": "States of Matter",
+        "fit": "fits",
+        "score": 123.66,
         "core_hits": [
           "temperature"
         ],
         "detail_hits": [
-          "pressure"
+          "matter state",
+          "pressure",
+          "heat temperature"
         ],
-        "detail_weight": 0.45
+        "detail_weight": 1.92
+      },
+      "explain.reading": {
+        "picked": "Heat, Temperature, and Thermal Energy Transfer (Flexbook)",
+        "fit": "partial",
+        "score": 160.25,
+        "core_hits": [
+          "temperature"
+        ],
+        "detail_hits": [
+          "heat temperature"
+        ],
+        "detail_weight": 0.39
+      },
+      "dqb.reading": {
+        "picked": "Heat, Temperature, and Thermal Energy Transfer Practice",
+        "fit": "partial",
+        "score": 160.25,
+        "core_hits": [
+          "temperature"
+        ],
+        "detail_hits": [
+          "heat temperature"
+        ],
+        "detail_weight": 0.39
       },
       "model.reading": {
-        "picked": "States of Matter in Biological Systems Practice",
-        "score": 66.63,
+        "picked": "States of Matter: Basics",
+        "fit": "partial",
+        "score": 88.08,
         "core_hits": [],
         "detail_hits": [
           "matter state"
@@ -141,66 +165,82 @@
       }
     },
     "video_pool": {
-      "passed": 18,
+      "passed": 19,
       "runners_up": [
         "Video: States of Matter: Basics",
         "States of matter",
-        "Real gases: Deviations from ideal behavior",
         "States of matter -dubbed(KY)",
-        "States of matter follow-up"
+        "States of matter follow-up",
+        "States of matter follow-up -dubbed(KY)"
       ],
       "rejected_sample": [
-        [
-          "Rational number word problem: ice",
-          "below relevance gate"
-        ],
         [
           "Liquid water denser than solid water (ice)",
           "below relevance gate"
         ],
         [
-          "Pascal's triangle and binomial expansion",
+          "Heat of formation",
           "below relevance gate"
         ],
         [
-          "Intermolecular forces and vapor pressure",
+          "Real gases: Deviations from ideal behavior",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Heat of formation -dubbed(KY)",
           "below relevance gate"
         ],
         [
-          "The wave-particle duality of matter",
+          "Representing solids, liquids, and gases using particulate models",
           "below relevance gate"
         ],
         [
-          "English: How Cold is Cold: What is Temperature?",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "De Broglie wavelength",
+          "Rational number word problem: ice",
           "below relevance gate"
         ],
         [
-          "Thermal conductivity of metal and wood",
+          "Specific heat, heat of fusion and vaporization example",
+          "below relevance gate"
+        ],
+        [
+          "Specific heat, heat of fusion and vaporization example -dubbed(KY)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 122,
-        "kolibri node not available on reference image": 7,
-        "foreign vocabulary": 1
+        "below relevance gate": 128,
+        "judged off-topic (independent reviewer)": 3,
+        "kolibri node not available on reference image": 8
       }
     },
     "reading_pool": {
       "passed": 11,
       "runners_up": [
         "States of Matter (Flexbook)",
-        "States of Matter Practice",
-        "Pressure versus Temperature (PLIX)",
-        "States of Matter in Biological Systems Practice",
-        "States of Matter in Biological Systems - Advanced (Flexbook)"
+        "Heat, Temperature, and Thermal Energy Transfer (Flexbook)",
+        "Heat, Temperature, and Thermal Energy Transfer Practice",
+        "States of Matter: Basics",
+        "States of Matter Practice"
       ],
       "rejected_sample": [
         [
           "Temperature and state changes in water",
+          "below relevance gate"
+        ],
+        [
+          "States of Matter in Biological Systems Practice",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Under Pressure",
+          "below relevance gate"
+        ],
+        [
+          "States of Matter in Biological Systems - Advanced (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Focus on continuity and change: Byzantine state-building",
           "below relevance gate"
         ],
         [
@@ -214,27 +254,12 @@
         [
           "Structure of Ice and Water (PLIX)",
           "below relevance gate"
-        ],
-        [
-          "Heat, Temperature, and Thermal Energy Transfer (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Heat, Temperature, and Thermal Energy Transfer Practice",
-          "below relevance gate"
-        ],
-        [
-          "Intermolecular forces and properties of liquids",
-          "below relevance gate"
-        ],
-        [
-          "Additional Resources for Temperature, Pressure and American Football: Introduction to Gay-Lussac's Gas Law",
-          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 153,
-        "kolibri node not available on reference image": 10
+        "below relevance gate": 137,
+        "judged off-topic (independent reviewer)": 4,
+        "kolibri node not available on reference image": 11
       }
     }
   },
@@ -296,6 +321,7 @@
     "slots": {
       "predict.video": {
         "picked": "Comparing Celsius and Fahrenheit temperature scales",
+        "fit": "partial",
         "score": 235.24,
         "core_hits": [
           "temperature"
@@ -309,6 +335,7 @@
       },
       "observe.video": {
         "picked": "Comparing Celsius and Fahrenheit temperature scales -dubbed(KY)",
+        "fit": "partial",
         "score": 221.18,
         "core_hits": [
           "temperature"
@@ -322,7 +349,8 @@
       },
       "explain.video": {
         "picked": "Thermodynamics part 3: Kelvin scale and Ideal gas law example",
-        "score": 184.91,
+        "fit": "partial",
+        "score": 193.91,
         "core_hits": [
           "temperature"
         ],
@@ -330,13 +358,15 @@
           "scale temperature",
           "kelvin",
           "absolute zero",
+          "absolute kelvin zero",
           "scale"
         ],
-        "detail_weight": 3.45
+        "detail_weight": 3.78
       },
       "dqb.video": {
         "picked": "Thermodynamics part 3: Kelvin scale and Ideal gas law example -dubbed(KY)",
-        "score": 174.89,
+        "fit": "partial",
+        "score": 183.4,
         "core_hits": [
           "temperature"
         ],
@@ -344,12 +374,14 @@
           "scale temperature",
           "kelvin",
           "absolute zero",
+          "absolute kelvin zero",
           "scale"
         ],
-        "detail_weight": 3.45
+        "detail_weight": 3.78
       },
       "model.video": {
         "picked": "Comparing Celsius and Fahrenheit temperature scales",
+        "fit": "partial",
         "score": 235.24,
         "core_hits": [
           "temperature"
@@ -363,6 +395,7 @@
       },
       "predict.reading": {
         "picked": "Temperature and Temperature Scales (Flexbook)",
+        "fit": "fits",
         "score": 154.69,
         "core_hits": [
           "temperature"
@@ -375,6 +408,7 @@
       },
       "observe.reading": {
         "picked": "Temperature and Temperature Scales Practice",
+        "fit": "fits",
         "score": 154.69,
         "core_hits": [
           "temperature"
@@ -387,6 +421,7 @@
       },
       "explain.reading": {
         "picked": "Temperature and Temperature Scales (PLIX)",
+        "fit": "fits",
         "score": 154.69,
         "core_hits": [
           "temperature"
@@ -398,18 +433,21 @@
         "detail_weight": 1.8
       },
       "dqb.reading": {
-        "picked": "Determining the Equation of a Line: Temperature Conversion Challenge (PLIX)",
-        "score": 118.65,
+        "picked": "Temperature and Temperature Scales (Flexbook)",
+        "fit": "fits",
+        "score": 154.69,
         "core_hits": [
           "temperature"
         ],
         "detail_hits": [
-          "conversion temperature"
+          "scale temperature",
+          "scale"
         ],
-        "detail_weight": 0.58
+        "detail_weight": 1.8
       },
       "model.reading": {
-        "picked": "Temperature and Temperature Scales (Flexbook)",
+        "picked": "Temperature and Temperature Scales Practice",
+        "fit": "fits",
         "score": 154.69,
         "core_hits": [
           "temperature"
@@ -422,7 +460,7 @@
       }
     },
     "video_pool": {
-      "passed": 10,
+      "passed": 7,
       "runners_up": [
         "Comparing Celsius and Fahrenheit temperature scales -dubbed(KY)",
         "Thermodynamics part 3: Kelvin scale and Ideal gas law example",
@@ -432,12 +470,24 @@
       ],
       "rejected_sample": [
         [
+          "Kinetic molecular theory of gases",
+          "below relevance gate"
+        ],
+        [
           "Thermal conduction, convection, and radiation",
           "below relevance gate"
         ],
         [
           "Liquid water denser than solid water (ice)",
           "below relevance gate"
+        ],
+        [
+          "The kinetic molecular theory of gases",
+          "below relevance gate"
+        ],
+        [
+          "Collision theory and the Maxwell–Boltzmann distribution",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Introduction to kinetics",
@@ -450,22 +500,11 @@
         [
           "Introduction to kinetics -dubbed(KY)",
           "below relevance gate"
-        ],
-        [
-          "Kinetic energy",
-          "below relevance gate"
-        ],
-        [
-          "Kinetic molecular theory of gases",
-          "below relevance gate"
-        ],
-        [
-          "Lattice energy",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 130,
+        "below relevance gate": 132,
+        "judged off-topic (independent reviewer)": 3,
         "kolibri node not available on reference image": 10
       }
     },
@@ -573,57 +612,48 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Intro to partial fraction expansion",
-        "score": 36.47,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "expansion linear",
-          "linear"
-        ],
-        "detail_weight": 1.8
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "Intro to partial fraction expansion",
-        "score": 36.47,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "expansion linear",
-          "linear"
-        ],
-        "detail_weight": 1.8
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "Intro to partial fraction expansion",
-        "score": 36.47,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "expansion linear",
-          "linear"
-        ],
-        "detail_weight": 1.8
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "Intro to partial fraction expansion",
-        "score": 36.47,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "expansion linear",
-          "linear"
-        ],
-        "detail_weight": 1.8
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "Intro to partial fraction expansion",
-        "score": 36.47,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "expansion linear",
-          "linear"
-        ],
-        "detail_weight": 1.8
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "predict.reading": {
         "picked": "States of Matter",
+        "fit": "partial",
         "score": 30.52,
         "core_hits": [
           "temperature"
@@ -635,6 +665,7 @@
       },
       "observe.reading": {
         "picked": "States of Matter",
+        "fit": "partial",
         "score": 30.52,
         "core_hits": [
           "temperature"
@@ -646,6 +677,7 @@
       },
       "explain.reading": {
         "picked": "States of Matter",
+        "fit": "partial",
         "score": 30.52,
         "core_hits": [
           "temperature"
@@ -657,6 +689,7 @@
       },
       "dqb.reading": {
         "picked": "States of Matter",
+        "fit": "partial",
         "score": 30.52,
         "core_hits": [
           "temperature"
@@ -668,6 +701,7 @@
       },
       "model.reading": {
         "picked": "States of Matter",
+        "fit": "partial",
         "score": 30.52,
         "core_hits": [
           "temperature"
@@ -679,7 +713,7 @@
       }
     },
     "video_pool": {
-      "passed": 1,
+      "passed": 0,
       "runners_up": [],
       "rejected_sample": [
         [
@@ -687,39 +721,38 @@
           "below relevance gate"
         ],
         [
+          "Representing linear systems with matrix equations",
+          "below relevance gate"
+        ],
+        [
+          "Solve Applications Using Rational Equations: A Sample Application",
+          "below relevance gate"
+        ],
+        [
+          "2nd order linear homogeneous differential equations 1",
+          "below relevance gate"
+        ],
+        [
           "Representing solids, liquids, and gases using particulate models",
           "below relevance gate"
         ],
         [
-          "Factoring Quadratic Expressions with Negative Coefficients: A Sample Application",
+          "2nd order linear homogeneous differential equations 1 -dubbed(KY)",
           "below relevance gate"
         ],
         [
-          "Expansion of presidential power",
+          "Undetermined coefficients 1",
           "below relevance gate"
         ],
         [
-          "Calculating change in spending or taxes to close output gaps",
-          "below relevance gate"
-        ],
-        [
-          "The Maxwell–Boltzmann distribution",
-          "below relevance gate"
-        ],
-        [
-          "Applications Using Radicals: A Sample Application",
-          "below relevance gate"
-        ],
-        [
-          "Proof of power rule for positive integer powers -dubbed(KY)",
+          "Undetermined coefficients 1 -dubbed(KY)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 135,
-        "kolibri node not available on reference image": 5,
-        "foreign vocabulary": 1,
-        "web file not on reference image": 1
+        "below relevance gate": 146,
+        "kolibri node not available on reference image": 2,
+        "judged off-topic (independent reviewer)": 1
       }
     },
     "reading_pool": {
@@ -727,40 +760,40 @@
       "runners_up": [],
       "rejected_sample": [
         [
-          "Pascal's Triangle and the Coefficients in the Expansion of Binomials (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Correlation coefficient intuition",
-          "below relevance gate"
-        ],
-        [
-          "Heat, Temperature, and Thermal Energy Transfer (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Heat, Temperature, and Thermal Energy Transfer Practice",
-          "below relevance gate"
-        ],
-        [
-          "Expansion of presidential power: advanced",
-          "below relevance gate"
-        ],
-        [
-          "Mixed Numbers in Applications: Sharing a Chocolate Bar (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Expansion of presidential power: foundational",
-          "below relevance gate"
-        ],
-        [
           "Linear equations with unknown coefficients",
+          "below relevance gate"
+        ],
+        [
+          "Equations with variables on both sides: decimals & fractions",
+          "below relevance gate"
+        ],
+        [
+          "Forms of Linear Equations: Equation Exploration (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "Equations with parentheses: decimals & fractions",
+          "below relevance gate"
+        ],
+        [
+          "Powers of complex numbers",
+          "below relevance gate"
+        ],
+        [
+          "Intercepts from an equation",
+          "below relevance gate"
+        ],
+        [
+          "Writing linear equations word problems",
+          "below relevance gate"
+        ],
+        [
+          "Pascal's Triangle and the Coefficients in the Expansion of Binomials (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 157,
+        "below relevance gate": 159,
         "kolibri node not available on reference image": 3
       }
     }
@@ -822,63 +855,49 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Evaluating expressions with variables: temperature",
-        "score": 85.84,
-        "core_hits": [
-          "temperature"
-        ],
-        "detail_hits": [
-          "celsius degree"
-        ],
-        "detail_weight": 0.62
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "Evaluating expressions with variables: temperature",
-        "score": 85.84,
-        "core_hits": [
-          "temperature"
-        ],
-        "detail_hits": [
-          "celsius degree"
-        ],
-        "detail_weight": 0.62
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "Evaluating expressions with variables: temperature",
-        "score": 85.84,
-        "core_hits": [
-          "temperature"
-        ],
-        "detail_hits": [
-          "celsius degree"
-        ],
-        "detail_weight": 0.62
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "Evaluating expressions with variables: temperature",
-        "score": 85.84,
-        "core_hits": [
-          "temperature"
-        ],
-        "detail_hits": [
-          "celsius degree"
-        ],
-        "detail_weight": 0.62
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "Evaluating expressions with variables: temperature",
-        "score": 85.84,
-        "core_hits": [
-          "temperature"
-        ],
-        "detail_hits": [
-          "celsius degree"
-        ],
-        "detail_weight": 0.62
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "predict.reading": {
-        "picked": "Calculations using the ideal gas equation",
-        "score": 24.12,
+        "picked": "States of Matter",
+        "fit": "partial",
+        "score": 30.32,
         "core_hits": [
           "temperature"
         ],
@@ -889,7 +908,8 @@
       },
       "observe.reading": {
         "picked": "States of Matter",
-        "score": 20.24,
+        "fit": "partial",
+        "score": 30.32,
         "core_hits": [
           "temperature"
         ],
@@ -899,8 +919,9 @@
         "detail_weight": 0.3
       },
       "explain.reading": {
-        "picked": "Gas Properties",
-        "score": 19.23,
+        "picked": "States of Matter",
+        "fit": "partial",
+        "score": 30.32,
         "core_hits": [
           "temperature"
         ],
@@ -910,8 +931,9 @@
         "detail_weight": 0.3
       },
       "dqb.reading": {
-        "picked": "Gases Intro",
-        "score": 18.99,
+        "picked": "States of Matter",
+        "fit": "partial",
+        "score": 30.32,
         "core_hits": [
           "temperature"
         ],
@@ -921,8 +943,9 @@
         "detail_weight": 0.3
       },
       "model.reading": {
-        "picked": "Calculations using the ideal gas equation",
-        "score": 24.12,
+        "picked": "States of Matter",
+        "fit": "partial",
+        "score": 30.32,
         "core_hits": [
           "temperature"
         ],
@@ -933,12 +956,21 @@
       }
     },
     "video_pool": {
-      "passed": 3,
-      "runners_up": [
-        "Macrostates and microstates",
-        "Real gases: Deviations from ideal behavior"
-      ],
+      "passed": 0,
+      "runners_up": [],
       "rejected_sample": [
+        [
+          "Liquid water denser than solid water (ice)",
+          "below relevance gate"
+        ],
+        [
+          "Area and Volume of Similar Solids Principles",
+          "below relevance gate"
+        ],
+        [
+          "Pascal's triangle and binomial expansion",
+          "below relevance gate"
+        ],
         [
           "Measuring volume as area times length",
           "below relevance gate"
@@ -958,35 +990,40 @@
         [
           "Interpreting a graph example",
           "below relevance gate"
-        ],
-        [
-          "Volumes of cones intuition",
-          "below relevance gate"
-        ],
-        [
-          "Linear graphs word problems",
-          "below relevance gate"
-        ],
-        [
-          "Standing waves in closed tubes",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
-        "kolibri node not available on reference image": 6
+        "below relevance gate": 142,
+        "judged off-topic (independent reviewer)": 2,
+        "kolibri node not available on reference image": 5
       }
     },
     "reading_pool": {
-      "passed": 4,
-      "runners_up": [
-        "States of Matter",
-        "Gas Properties",
-        "Gases Intro"
-      ],
+      "passed": 1,
+      "runners_up": [],
       "rejected_sample": [
         [
           "Volume and surface area of cylinders",
+          "below relevance gate"
+        ],
+        [
+          "Surface Area and Volume of Solids Practice",
+          "below relevance gate"
+        ],
+        [
+          "Area and Volume of Similar Solids (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Area and Volume of Similar Solids Practice",
+          "below relevance gate"
+        ],
+        [
+          "Apply volume of solids",
+          "below relevance gate"
+        ],
+        [
+          "Compare volumes with unit cubes",
           "below relevance gate"
         ],
         [
@@ -996,31 +1033,12 @@
         [
           "Area of rectangles with fraction side lengths",
           "below relevance gate"
-        ],
-        [
-          "Density word problems",
-          "below relevance gate"
-        ],
-        [
-          "Volume of rectangular prisms",
-          "below relevance gate"
-        ],
-        [
-          "Ukubwa 1.",
-          "below relevance gate"
-        ],
-        [
-          "Volume of a Hexagonal Prism (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Area & perimeter of rectangles word problems",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 153,
-        "kolibri node not available on reference image": 3
+        "below relevance gate": 155,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 1
       }
     }
   },
@@ -1046,6 +1064,9 @@
         "calculation",
         "engineering",
         "applications",
+        "coefficient",
+        "bridges",
+        "calculations",
         "solutions"
       ],
       "phrases": [
@@ -1054,12 +1075,19 @@
         "bimetallic strip",
         "thermal expansion design",
         "gap calculation",
-        "engineering applications"
+        "engineering applications",
+        "linear thermal expansion",
+        "thermal expansion coefficient",
+        "bimetallic strip thermostat",
+        "expansion joints bridges",
+        "thermal expansion calculations",
+        "thermal expansion applications"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1067,6 +1095,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1074,6 +1103,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1081,6 +1111,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1088,6 +1119,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1095,6 +1127,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1102,6 +1135,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1109,6 +1143,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1116,6 +1151,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1123,6 +1159,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1134,15 +1171,19 @@
       "runners_up": [],
       "rejected_sample": [
         [
+          "Pascal's triangle and binomial expansion",
+          "below relevance gate"
+        ],
+        [
           "Systems of equations with graphing: exact & approximate solutions",
           "below relevance gate"
         ],
         [
-          "Buffer solution pH calculations",
+          "Factoring Quadratic Expressions with Negative Coefficients: A Sample Application",
           "below relevance gate"
         ],
         [
-          "Pascal's triangle and binomial expansion",
+          "Buffer solution pH calculations",
           "below relevance gate"
         ],
         [
@@ -1154,22 +1195,18 @@
           "below relevance gate"
         ],
         [
+          "Example: Correlation coefficient intuition",
+          "below relevance gate"
+        ],
+        [
           "Applications Using Square Roots: A Sample Application",
-          "below relevance gate"
-        ],
-        [
-          "Solve Applications Using Rational Functions: A Sample Application",
-          "below relevance gate"
-        ],
-        [
-          "Solve Applications Using Rational Equations: A Sample Application",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 127,
-        "kolibri node not available on reference image": 6,
-        "web file not on reference image": 3,
+        "below relevance gate": 133,
+        "kolibri node not available on reference image": 5,
+        "web file not on reference image": 2,
         "foreign vocabulary": 1
       }
     },
@@ -1190,7 +1227,15 @@
           "below relevance gate"
         ],
         [
+          "Pascal's Triangle and the Coefficients in the Expansion of Binomials (Flexbook)",
+          "below relevance gate"
+        ],
+        [
           "Graphs of Linear Functions: Line Designs (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "Correlation coefficient intuition",
           "below relevance gate"
         ],
         [
@@ -1200,18 +1245,10 @@
         [
           "Heat, Temperature, and Thermal Energy Transfer (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Heat, Temperature, and Thermal Energy Transfer Practice",
-          "below relevance gate"
-        ],
-        [
-          "Experiment designs",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 150,
+        "below relevance gate": 151,
         "kolibri node not available on reference image": 7,
         "excluded: answer/exam material": 15
       }
@@ -1267,12 +1304,15 @@
         "cracked bottle",
         "expansion coefficient",
         "engineering design",
-        "sgr railway"
+        "sgr railway",
+        "thermal expansion solids",
+        "anomalous expansion water"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Comparing Celsius and Fahrenheit temperature scales",
+        "fit": "partial",
         "score": 199.56,
         "core_hits": [
           "temperature"
@@ -1285,6 +1325,7 @@
       },
       "observe.video": {
         "picked": "Comparing Celsius and Fahrenheit temperature scales -dubbed(KY)",
+        "fit": "partial",
         "score": 187.63,
         "core_hits": [
           "temperature"
@@ -1297,6 +1338,7 @@
       },
       "explain.video": {
         "picked": "Comparing Celsius and Fahrenheit temperature scales",
+        "fit": "partial",
         "score": 199.56,
         "core_hits": [
           "temperature"
@@ -1308,8 +1350,9 @@
         "detail_weight": 1.22
       },
       "dqb.video": {
-        "picked": "Comparing Celsius and Fahrenheit temperature scales",
-        "score": 199.56,
+        "picked": "Comparing Celsius and Fahrenheit temperature scales -dubbed(KY)",
+        "fit": "partial",
+        "score": 187.63,
         "core_hits": [
           "temperature"
         ],
@@ -1321,6 +1364,7 @@
       },
       "model.video": {
         "picked": "Comparing Celsius and Fahrenheit temperature scales",
+        "fit": "partial",
         "score": 199.56,
         "core_hits": [
           "temperature"
@@ -1333,6 +1377,7 @@
       },
       "predict.reading": {
         "picked": "Temperature and Temperature Scales (Flexbook)",
+        "fit": "partial",
         "score": 138.98,
         "core_hits": [
           "temperature"
@@ -1344,6 +1389,7 @@
       },
       "observe.reading": {
         "picked": "Temperature and Temperature Scales Practice",
+        "fit": "partial",
         "score": 138.98,
         "core_hits": [
           "temperature"
@@ -1355,6 +1401,7 @@
       },
       "explain.reading": {
         "picked": "Temperature and Temperature Scales (PLIX)",
+        "fit": "partial",
         "score": 138.98,
         "core_hits": [
           "temperature"
@@ -1366,6 +1413,7 @@
       },
       "dqb.reading": {
         "picked": "Temperature and Temperature Scales (Flexbook)",
+        "fit": "partial",
         "score": 138.98,
         "core_hits": [
           "temperature"
@@ -1376,7 +1424,8 @@
         "detail_weight": 0.94
       },
       "model.reading": {
-        "picked": "Temperature and Temperature Scales (Flexbook)",
+        "picked": "Temperature and Temperature Scales Practice",
+        "fit": "partial",
         "score": 138.98,
         "core_hits": [
           "temperature"
@@ -1388,13 +1437,12 @@
       }
     },
     "video_pool": {
-      "passed": 9,
+      "passed": 5,
       "runners_up": [
         "Comparing Celsius and Fahrenheit temperature scales -dubbed(KY)",
         "Evaluating expressions with variables: temperature",
         "Thermodynamics part 3: Kelvin scale and Ideal gas law example",
-        "Thermodynamics part 3: Kelvin scale and Ideal gas law example -dubbed(KY)",
-        "The Maxwell–Boltzmann distribution"
+        "Thermodynamics part 3: Kelvin scale and Ideal gas law example -dubbed(KY)"
       ],
       "rejected_sample": [
         [
@@ -1418,22 +1466,23 @@
           "below relevance gate"
         ],
         [
+          "Liquid water denser than solid water (ice)",
+          "below relevance gate"
+        ],
+        [
           "Hydrogen bonding",
           "below relevance gate"
         ],
         [
           "Pascal's triangle and binomial expansion",
           "below relevance gate"
-        ],
-        [
-          "Van der Waals forces -dubbed(KY)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 133,
+        "below relevance gate": 134,
+        "judged off-topic (independent reviewer)": 4,
         "excluded: answer/exam material": 4,
-        "kolibri node not available on reference image": 5,
+        "kolibri node not available on reference image": 4,
         "web file not on reference image": 4
       }
     },
@@ -1461,25 +1510,25 @@
           "below relevance gate"
         ],
         [
-          "Will an Ice Cube Mel..:Developing the Hypothesis Activity 1",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Pascal's Triangle and the Coefficients in the Expansion of Binomials (Flexbook)",
+          "Apply volume of solids",
           "below relevance gate"
         ],
         [
-          "Expressions with One or More Variables: Water Bottle Expression (PLIX)",
+          "Compare volumes with unit cubes",
           "below relevance gate"
         ],
         [
-          "Understand Three-Dimensional Scale Models and Designs (Flexbook)",
+          "Use related volumes",
+          "below relevance gate"
+        ],
+        [
+          "Solids of Revolution: Volumes by Disks (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 141,
-        "kolibri node not available on reference image": 9,
+        "below relevance gate": 142,
+        "kolibri node not available on reference image": 7,
         "excluded: answer/exam material": 5
       }
     }

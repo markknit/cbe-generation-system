@@ -23,21 +23,37 @@
         "fertiliser",
         "compound",
         "formula",
-        "reviewing",
-        "structure"
+        "configuration",
+        "atoms",
+        "protons",
+        "neutrons",
+        "electrons",
+        "levels",
+        "shells",
+        "structure",
+        "chemical",
+        "formulas",
+        "compounds"
       ],
       "phrases": [
         "atomic number",
         "mass number",
         "electron arrangement",
         "energy level",
-        "compound formula"
+        "compound formula",
+        "atomic number mass number",
+        "electron configuration atoms",
+        "neutrons electrons",
+        "energy levels electron shells",
+        "atomic structure nucleus",
+        "chemical formulas compounds"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Atomic number, mass number, and isotopes",
-        "score": 316.95,
+        "picked": "Introduction to the atom",
+        "fit": "fits",
+        "score": 338.1,
         "core_hits": [],
         "detail_hits": [
           "atomic number",
@@ -46,13 +62,15 @@
           "neutron",
           "electron",
           "nucleus",
-          "atomic"
+          "atomic mass number",
+          "electron neutron"
         ],
-        "detail_weight": 5.19
+        "detail_weight": 6.45
       },
       "observe.video": {
-        "picked": "Introduction to the atom",
-        "score": 231.73,
+        "picked": "Introduction to the atom -dubbed(KY)",
+        "fit": "fits",
+        "score": 317.42,
         "core_hits": [],
         "detail_hits": [
           "atomic number",
@@ -61,13 +79,15 @@
           "neutron",
           "electron",
           "nucleus",
-          "atomic"
+          "atomic mass number",
+          "electron neutron"
         ],
-        "detail_weight": 5.19
+        "detail_weight": 6.45
       },
       "explain.video": {
-        "picked": "Introduction to the atom -dubbed(KY)",
-        "score": 217.4,
+        "picked": "Introduction to the atom",
+        "fit": "fits",
+        "score": 338.1,
         "core_hits": [],
         "detail_hits": [
           "atomic number",
@@ -76,13 +96,15 @@
           "neutron",
           "electron",
           "nucleus",
-          "atomic"
+          "atomic mass number",
+          "electron neutron"
         ],
-        "detail_weight": 5.19
+        "detail_weight": 6.45
       },
       "dqb.video": {
-        "picked": "Atomic number, mass number, and isotopes",
-        "score": 316.95,
+        "picked": "Introduction to the atom -dubbed(KY)",
+        "fit": "fits",
+        "score": 317.42,
         "core_hits": [],
         "detail_hits": [
           "atomic number",
@@ -91,13 +113,15 @@
           "neutron",
           "electron",
           "nucleus",
-          "atomic"
+          "atomic mass number",
+          "electron neutron"
         ],
-        "detail_weight": 5.19
+        "detail_weight": 6.45
       },
       "model.video": {
         "picked": "Atomic number, mass number, and isotopes",
-        "score": 316.95,
+        "fit": "partial",
+        "score": 483.51,
         "core_hits": [],
         "detail_hits": [
           "atomic number",
@@ -106,12 +130,27 @@
           "neutron",
           "electron",
           "nucleus",
-          "atomic"
+          "atomic mass number",
+          "electron neutron"
         ],
-        "detail_weight": 5.19
+        "detail_weight": 6.45
       },
       "predict.reading": {
+        "picked": "Build an Atom",
+        "fit": "fits",
+        "score": 127.41,
+        "core_hits": [],
+        "detail_hits": [
+          "proton",
+          "neutron",
+          "electron",
+          "electron neutron"
+        ],
+        "detail_weight": 2.1
+      },
+      "observe.reading": {
         "picked": "Atomic structure and Periodic Table",
+        "fit": "fits",
         "score": 120.66,
         "core_hits": [
           "periodic table"
@@ -121,19 +160,9 @@
         ],
         "detail_weight": 0.3
       },
-      "observe.reading": {
-        "picked": "Isotope composition: Counting protons, electrons, and neutrons",
-        "score": 93.23,
-        "core_hits": [],
-        "detail_hits": [
-          "proton",
-          "neutron",
-          "electron"
-        ],
-        "detail_weight": 1.68
-      },
       "explain.reading": {
         "picked": "Atomic Number Practice",
+        "fit": "fits",
         "score": 77.54,
         "core_hits": [],
         "detail_hits": [
@@ -144,6 +173,7 @@
       },
       "dqb.reading": {
         "picked": "Atomic Number (Flexbook)",
+        "fit": "fits",
         "score": 77.54,
         "core_hits": [],
         "detail_hits": [
@@ -154,6 +184,7 @@
       },
       "model.reading": {
         "picked": "What is Atomic Number? (PLIX)",
+        "fit": "fits",
         "score": 76.74,
         "core_hits": [],
         "detail_hits": [
@@ -164,51 +195,53 @@
       }
     },
     "video_pool": {
-      "passed": 29,
+      "passed": 27,
       "runners_up": [
-        "Introduction to the atom",
         "Introduction to the atom -dubbed(KY)",
-        "Shells, subshells, and orbitals",
-        "Valence Electrons and the Periodic Table - Overview",
-        "Atomic and ionic radii"
+        "Elements and atoms",
+        "Subatomic Particles (Proton, Neutron, Electron) - Example 1",
+        "Atomic number, mass number, and isotopes",
+        "Valence electrons"
       ],
       "rejected_sample": [
+        [
+          "Shells, subshells, and orbitals",
+          "conflicting sub-topic ['orbital']"
+        ],
+        [
+          "Mass defect and binding energy",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Atomic and ionic radii",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "More on orbitals and electron configuration -dubbed(KY)",
+          "conflicting sub-topic ['orbital']"
+        ],
+        [
+          "Empirical, molecular, and structural formulas",
+          "below relevance gate"
+        ],
         [
           "Counting valence electrons for main group elements",
           "below relevance gate"
         ],
         [
-          "Quantum numbers for the first four shells",
+          "Noble gas configuration",
           "below relevance gate"
         ],
         [
-          "Atomic Energy Levels",
-          "below relevance gate"
-        ],
-        [
-          "Form 2 Chemistry. Structure Of The Atom And The Periodic Table(Lesson 1)",
-          "web file not on reference image"
-        ],
-        [
-          "Place value tables within 1,000",
-          "below relevance gate"
-        ],
-        [
-          "Place value tables",
-          "below relevance gate"
-        ],
-        [
-          "IR signals for carbonyl compounds",
-          "below relevance gate"
-        ],
-        [
-          "Integration",
-          "below relevance gate"
+          "The periodic table - transition metals",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 116,
-        "web file not on reference image": 11,
+        "conflicting sub-topic": 3,
+        "judged off-topic (independent reviewer)": 3,
+        "below relevance gate": 109,
+        "web file not on reference image": 12,
         "kolibri node not available on reference image": 2,
         "excluded: answer/exam material": 1
       }
@@ -216,13 +249,17 @@
     "reading_pool": {
       "passed": 12,
       "runners_up": [
-        "Isotope composition: Counting protons, electrons, and neutrons",
+        "Atomic structure and Periodic Table",
         "Atomic Number Practice",
         "Atomic Number (Flexbook)",
         "What is Atomic Number? (PLIX)",
-        "Build an Atom"
+        "Mass Number (Flexbook)"
       ],
       "rejected_sample": [
+        [
+          "Atomic structure and electron configuration",
+          "below relevance gate"
+        ],
         [
           "Energy Level (Flexbook)",
           "below relevance gate"
@@ -236,28 +273,27 @@
           "below relevance gate"
         ],
         [
-          "Atomic structure and electron configuration",
-          "below relevance gate"
+          "Conversions Between Mass and Number of Particles (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Conversions between Mass and Number of Particles Practice",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Find the formula for ionic compounds",
           "below relevance gate"
         ],
         [
-          "Atomic Nucleus (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Atomic Nucleus Practice",
-          "below relevance gate"
-        ],
-        [
-          "Formulas for Binary Ionic Compounds (Flexbook)",
+          "Isotopes and Atomic Mass",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 131
+        "below relevance gate": 129,
+        "judged off-topic (independent reviewer)": 2,
+        "kolibri node not available on reference image": 2,
+        "excluded: answer/exam material": 1
       }
     }
   },
@@ -290,6 +326,11 @@
         "shell",
         "repeating",
         "pattern",
+        "basics",
+        "explained",
+        "energy",
+        "levels",
+        "trends",
         "hidden"
       ],
       "phrases": [
@@ -301,13 +342,20 @@
         "periodic table",
         "atomic number",
         "outer shell",
-        "repeating pattern"
+        "repeating pattern",
+        "electron configuration basics",
+        "valence electrons groups",
+        "periodic law explained",
+        "periods groups",
+        "electron shells energy levels",
+        "periodic table trends"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Groups of the periodic table",
-        "score": 315.05,
+        "fit": "fits",
+        "score": 329.67,
         "core_hits": [
           "periodic table"
         ],
@@ -315,26 +363,30 @@
           "electron valence",
           "group",
           "element",
+          "electron group valence",
           "electron"
         ],
-        "detail_weight": 2.38
+        "detail_weight": 2.8
       },
       "observe.video": {
         "picked": "Counting valence electrons for main group elements",
-        "score": 283.29,
+        "fit": "fits",
+        "score": 299.12,
         "core_hits": [],
         "detail_hits": [
           "configuration electron",
           "electron valence",
           "group",
           "element",
+          "electron group valence",
           "electron",
           "configuration"
         ],
-        "detail_weight": 4.18
+        "detail_weight": 4.6
       },
       "explain.video": {
         "picked": "Valence Electrons and the Periodic Table - Overview",
+        "fit": "fits",
         "score": 256.59,
         "core_hits": [
           "periodic table"
@@ -346,26 +398,68 @@
         "detail_weight": 1.37
       },
       "dqb.video": {
-        "picked": "Electron configurations for the second period",
-        "score": 236.71,
+        "picked": "Valence electrons",
+        "fit": "fits",
+        "score": 204.27,
+        "core_hits": [],
+        "detail_hits": [
+          "configuration electron",
+          "electron valence",
+          "electron shell",
+          "electron energy level shell",
+          "electron",
+          "configuration"
+        ],
+        "detail_weight": 4.28
+      },
+      "model.video": {
+        "picked": "The periodic table - classification of elements",
+        "fit": "fits",
+        "score": 201.65,
         "core_hits": [
           "periodic table"
         ],
         "detail_hits": [
-          "configuration electron",
           "period",
+          "group",
           "element",
-          "electron",
-          "configuration"
+          "group period"
         ],
-        "detail_weight": 3.18
+        "detail_weight": 2.01
       },
-      "model.video": {
-        "picked": "The periodic table - transition metals",
-        "score": 230.73,
+      "predict.reading": {
+        "picked": "Modern Periodic Table: Periods and Groups (Flexbook)",
+        "fit": "fits",
+        "score": 266.3,
         "core_hits": [
           "periodic table"
         ],
+        "detail_hits": [
+          "period",
+          "group",
+          "group period"
+        ],
+        "detail_weight": 1.56
+      },
+      "observe.reading": {
+        "picked": "Modern Periodic Table: Periods and Groups (Flexbook)",
+        "fit": "fits",
+        "score": 266.3,
+        "core_hits": [
+          "periodic table"
+        ],
+        "detail_hits": [
+          "period",
+          "group",
+          "group period"
+        ],
+        "detail_weight": 1.56
+      },
+      "explain.reading": {
+        "picked": "Atomic structure and electron configuration",
+        "fit": "partial",
+        "score": 105.66,
+        "core_hits": [],
         "detail_hits": [
           "configuration electron",
           "electron",
@@ -373,77 +467,60 @@
         ],
         "detail_weight": 2.1
       },
-      "predict.reading": {
-        "picked": "Modern Periodic Table: Periods and Groups (Flexbook)",
-        "score": 194.31,
-        "core_hits": [
-          "periodic table"
-        ],
-        "detail_hits": [
-          "period",
-          "group"
-        ],
-        "detail_weight": 1.18
-      },
-      "observe.reading": {
-        "picked": "Modern Periodic Table: Periods and Groups (Flexbook)",
-        "score": 194.31,
-        "core_hits": [
-          "periodic table"
-        ],
-        "detail_hits": [
-          "period",
-          "group"
-        ],
-        "detail_weight": 1.18
-      },
-      "explain.reading": {
-        "picked": "Modern Periodic Table: Periods and Groups (Flexbook)",
-        "score": 194.31,
-        "core_hits": [
-          "periodic table"
-        ],
-        "detail_hits": [
-          "period",
-          "group"
-        ],
-        "detail_weight": 1.18
-      },
       "dqb.reading": {
-        "picked": "Modern Periodic Table: Periods and Groups (Flexbook)",
-        "score": 194.31,
-        "core_hits": [
-          "periodic table"
-        ],
+        "picked": "Valence electrons and ionic compounds",
+        "fit": "partial",
+        "score": 71.89,
+        "core_hits": [],
         "detail_hits": [
-          "period",
-          "group"
+          "electron valence",
+          "electron"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 1.37
       },
       "model.reading": {
-        "picked": "Modern Periodic Table: Periods and Groups (Flexbook)",
-        "score": 194.31,
-        "core_hits": [
-          "periodic table"
-        ],
+        "picked": "Electron configurations",
+        "fit": "partial",
+        "score": 60.53,
+        "core_hits": [],
         "detail_hits": [
-          "period",
-          "group"
+          "configuration electron",
+          "electron",
+          "configuration"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 2.1
       }
     },
     "video_pool": {
-      "passed": 48,
+      "passed": 44,
       "runners_up": [
         "Counting valence electrons for main group elements",
         "Valence Electrons and the Periodic Table - Overview",
-        "Electron configurations for the second period",
-        "The periodic table - transition metals",
+        "Valence electrons",
+        "The periodic table - classification of elements",
         "Atomic radius trends on periodic table"
       ],
       "rejected_sample": [
+        [
+          "More on orbitals and electron configuration -dubbed(KY)",
+          "conflicting sub-topic ['orbital']"
+        ],
+        [
+          "The periodic table - transition metals",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Orbitals -dubbed(KY)",
+          "conflicting sub-topic ['orbital']"
+        ],
+        [
+          "Atomic and ionic radii",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Shells, subshells, and orbitals",
+          "conflicting sub-topic ['orbital']"
+        ],
         [
           "Easy Mnemonic To Remember The First 10 Elements Of The Periodic Table #Chemsitry #Elements #Trick",
           "web file not on reference image"
@@ -453,48 +530,38 @@
           "below relevance gate"
         ],
         [
-          "Patterns in multiplication tables",
-          "below relevance gate"
-        ],
-        [
-          "Completing the Number Patterns Based on the Multiplication Table",
-          "below relevance gate"
-        ],
-        [
-          "Filling in the Number Patterns Based on the Multiplication Table",
-          "below relevance gate"
-        ],
-        [
-          "Recognizing number patterns",
-          "below relevance gate"
-        ],
-        [
-          "06 Properties And Trends Across Periods Ii",
-          "below relevance gate"
-        ],
-        [
           "First and second ionization energy",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "web file not on reference image": 1,
-        "below relevance gate": 93,
-        "kolibri node not available on reference image": 1
+        "conflicting sub-topic": 3,
+        "judged off-topic (independent reviewer)": 2,
+        "web file not on reference image": 3,
+        "below relevance gate": 92,
+        "kolibri node not available on reference image": 2
       }
     },
     "reading_pool": {
       "passed": 12,
       "runners_up": [
-        "Atomic structure and electron configuration",
         "Periodic Law (Flexbook)",
         "Periodic Law Practice",
         "Valence Electrons (Flexbook)",
-        "Valence Electrons Practice"
+        "Valence Electrons Practice",
+        "Counting valence electrons"
       ],
       "rejected_sample": [
         [
           "Atomic structure and Periodic Table",
+          "below relevance gate"
+        ],
+        [
+          "Periodic Trends: Atomic Radius (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Periodic Trends: Atomic Radius Practice",
           "below relevance gate"
         ],
         [
@@ -515,14 +582,6 @@
         ],
         [
           "Mendeleev's Periodic Table Practice",
-          "below relevance gate"
-        ],
-        [
-          "Blocks of the Periodic Table (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Blocks of the Periodic Table Practice",
           "below relevance gate"
         ]
       ],
@@ -588,19 +647,60 @@
     "slots": {
       "predict.video": {
         "picked": "Noble gas configuration",
-        "score": 191.38,
+        "fit": "fits",
+        "score": 203.29,
         "core_hits": [],
         "detail_hits": [
           "configuration gas noble",
+          "configuration electron gas noble",
           "electron",
           "noble",
           "gas"
         ],
-        "detail_weight": 1.97
+        "detail_weight": 2.3
       },
       "observe.video": {
+        "picked": "Oxidation state trends in periodic table",
+        "fit": "fits",
+        "score": 128.28,
+        "core_hits": [
+          "periodic table"
+        ],
+        "detail_hits": [
+          "group periodic table"
+        ],
+        "detail_weight": 0.44
+      },
+      "explain.video": {
+        "picked": "Noble gas configuration",
+        "fit": "fits",
+        "score": 203.29,
+        "core_hits": [],
+        "detail_hits": [
+          "configuration gas noble",
+          "configuration electron gas noble",
+          "electron",
+          "noble",
+          "gas"
+        ],
+        "detail_weight": 2.3
+      },
+      "dqb.video": {
+        "picked": "Oxidation state trends in periodic table",
+        "fit": "fits",
+        "score": 128.28,
+        "core_hits": [
+          "periodic table"
+        ],
+        "detail_hits": [
+          "group periodic table"
+        ],
+        "detail_weight": 0.44
+      },
+      "model.video": {
         "picked": "Groups of the periodic table",
-        "score": 158.64,
+        "fit": "partial",
+        "score": 185.33,
         "core_hits": [
           "periodic table"
         ],
@@ -610,46 +710,9 @@
         ],
         "detail_weight": 0.74
       },
-      "explain.video": {
-        "picked": "Electron configurations for the third and fourth periods",
-        "score": 129.32,
-        "core_hits": [
-          "periodic table"
-        ],
-        "detail_hits": [
-          "configuration gas noble",
-          "electron",
-          "noble",
-          "gas"
-        ],
-        "detail_weight": 1.97
-      },
-      "dqb.video": {
-        "picked": "Noble gas configuration",
-        "score": 191.38,
-        "core_hits": [],
-        "detail_hits": [
-          "configuration gas noble",
-          "electron",
-          "noble",
-          "gas"
-        ],
-        "detail_weight": 1.97
-      },
-      "model.video": {
-        "picked": "Noble gas configuration",
-        "score": 191.38,
-        "core_hits": [],
-        "detail_hits": [
-          "configuration gas noble",
-          "electron",
-          "noble",
-          "gas"
-        ],
-        "detail_weight": 1.97
-      },
       "predict.reading": {
         "picked": "Noble Gas Configuration (Flexbook)",
+        "fit": "fits",
         "score": 109.98,
         "core_hits": [],
         "detail_hits": [
@@ -661,6 +724,7 @@
       },
       "observe.reading": {
         "picked": "Noble Gas Configuration Practice",
+        "fit": "fits",
         "score": 109.98,
         "core_hits": [],
         "detail_hits": [
@@ -672,6 +736,7 @@
       },
       "explain.reading": {
         "picked": "Electron Affinity (Flexbook)",
+        "fit": "fits",
         "score": 100.7,
         "core_hits": [],
         "detail_hits": [
@@ -683,6 +748,7 @@
       },
       "dqb.reading": {
         "picked": "Electron Affinity Practice",
+        "fit": "fits",
         "score": 100.7,
         "core_hits": [],
         "detail_hits": [
@@ -693,41 +759,30 @@
         "detail_weight": 2.1
       },
       "model.reading": {
-        "picked": "Modern Periodic Table: Periods and Groups (Flexbook)",
-        "score": 98.02,
-        "core_hits": [
-          "periodic table"
-        ],
+        "picked": "Noble Gas Configuration (Flexbook)",
+        "fit": "fits",
+        "score": 109.98,
+        "core_hits": [],
         "detail_hits": [
-          "group periodic table"
+          "configuration gas noble",
+          "noble",
+          "gas"
         ],
-        "detail_weight": 0.44
+        "detail_weight": 1.67
       }
     },
     "video_pool": {
-      "passed": 26,
+      "passed": 23,
       "runners_up": [
+        "Oxidation state trends in periodic table",
         "Groups of the periodic table",
+        "Valence Electrons and the Periodic Table - Overview",
         "Electron configurations for the third and fourth periods",
-        "The periodic table - transition metals",
-        "The periodic table - classification of elements",
-        "Electron Affinity - Overview"
+        "Atomic and ionic radii"
       ],
       "rejected_sample": [
         [
-          "Electron configuration (Rules and Diagrams) - Overview",
-          "below relevance gate"
-        ],
-        [
-          "Solubility and complex ion formation",
-          "below relevance gate"
-        ],
-        [
-          "Shells, subshells, and orbitals",
-          "below relevance gate"
-        ],
-        [
-          "Introduction to electron configurations",
+          "Valence electrons and ionic compounds",
           "below relevance gate"
         ],
         [
@@ -735,23 +790,35 @@
           "below relevance gate"
         ],
         [
-          "Drawing Lewis diagrams",
+          "Electron configuration (Rules and Diagrams) - Overview",
           "below relevance gate"
         ],
         [
-          "Bohr model energy levels",
+          "Drawing Lewis diagrams",
           "below relevance gate"
         ],
         [
           "Dot structures I: Single bonds",
           "below relevance gate"
+        ],
+        [
+          "Dot structures II: Multiple bonds",
+          "below relevance gate"
+        ],
+        [
+          "Solubility and complex ion formation",
+          "below relevance gate"
+        ],
+        [
+          "Atomic radius trends on periodic table",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 112,
-        "web file not on reference image": 4,
-        "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 117,
+        "judged off-topic (independent reviewer)": 2,
+        "conflicting sub-topic": 1,
+        "web file not on reference image": 3
       }
     },
     "reading_pool": {
@@ -784,22 +851,21 @@
           "below relevance gate"
         ],
         [
+          "Valence electrons and ionic compounds",
+          "below relevance gate"
+        ],
+        [
           "Function Rules for Input-Output Tables: Soda Sugar Function Table (PLIX)",
           "below relevance gate"
         ],
         [
           "Two-way tables, Venn diagrams, and probability",
           "below relevance gate"
-        ],
-        [
-          "Create two-way frequency tables",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
-        "kolibri node not available on reference image": 3,
-        "excluded: answer/exam material": 1
+        "below relevance gate": 135,
+        "kolibri node not available on reference image": 1
       }
     }
   },
@@ -852,39 +918,41 @@
         "electron gain",
         "first elements",
         "tea farm",
-        "chemical formula"
+        "chemical formula",
+        "formation ions",
+        "dot cross diagrams"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Groups of the periodic table",
-        "score": 210.8,
-        "core_hits": [
-          "periodic table"
-        ],
+        "picked": "Valence electrons and ionic compounds",
+        "fit": "fits",
+        "score": 178.3,
+        "core_hits": [],
         "detail_hits": [
-          "group number",
-          "element"
-        ],
-        "detail_weight": 1.03
-      },
-      "observe.video": {
-        "picked": "Atomic and ionic radii",
-        "score": 146.04,
-        "core_hits": [
-          "periodic table"
-        ],
-        "detail_hits": [
-          "cation",
-          "group number",
           "charge ionic",
+          "electron gain",
+          "element",
           "ion"
         ],
-        "detail_weight": 2.45
+        "detail_weight": 1.73
+      },
+      "observe.video": {
+        "picked": "Counting valence electrons for main group elements",
+        "fit": "fits",
+        "score": 128.98,
+        "core_hits": [],
+        "detail_hits": [
+          "group number",
+          "element",
+          "electron group number valence"
+        ],
+        "detail_weight": 1.35
       },
       "explain.video": {
         "picked": "Valence electrons and ionic compounds",
-        "score": 135.72,
+        "fit": "fits",
+        "score": 178.3,
         "core_hits": [],
         "detail_hits": [
           "charge ionic",
@@ -895,31 +963,34 @@
         "detail_weight": 1.73
       },
       "dqb.video": {
-        "picked": "Electron configurations for the third and fourth periods",
-        "score": 133.64,
+        "picked": "Counting valence electrons for main group elements",
+        "fit": "fits",
+        "score": 128.98,
+        "core_hits": [],
+        "detail_hits": [
+          "group number",
+          "element",
+          "electron group number valence"
+        ],
+        "detail_weight": 1.35
+      },
+      "model.video": {
+        "picked": "Groups of the periodic table",
+        "fit": "partial",
+        "score": 248.44,
         "core_hits": [
           "periodic table"
         ],
         "detail_hits": [
-          "configuration gas noble",
-          "element"
+          "group number",
+          "element",
+          "electron group number valence"
         ],
-        "detail_weight": 0.9
-      },
-      "model.video": {
-        "picked": "Worked example: Finding the formula of an ionic compound",
-        "score": 128.99,
-        "core_hits": [],
-        "detail_hits": [
-          "cation",
-          "anion",
-          "charge ionic",
-          "ion"
-        ],
-        "detail_weight": 2.32
+        "detail_weight": 1.35
       },
       "predict.reading": {
         "picked": "Predict the charge on monatomic ions",
+        "fit": "fits",
         "score": 111,
         "core_hits": [
           "periodic table"
@@ -931,18 +1002,21 @@
         "detail_weight": 0.58
       },
       "observe.reading": {
-        "picked": "Transition Metal Ion Formation (Flexbook)",
-        "score": 97.55,
-        "core_hits": [],
-        "detail_hits": [
-          "formation ion",
-          "ion",
-          "formation"
+        "picked": "Predict the charge on monatomic ions",
+        "fit": "fits",
+        "score": 111,
+        "core_hits": [
+          "periodic table"
         ],
-        "detail_weight": 2.1
+        "detail_hits": [
+          "element",
+          "ion"
+        ],
+        "detail_weight": 0.58
       },
       "explain.reading": {
         "picked": "Predict the charge on monatomic ions",
+        "fit": "fits",
         "score": 111,
         "core_hits": [
           "periodic table"
@@ -955,6 +1029,7 @@
       },
       "dqb.reading": {
         "picked": "Predict the charge on monatomic ions",
+        "fit": "fits",
         "score": 111,
         "core_hits": [
           "periodic table"
@@ -967,6 +1042,7 @@
       },
       "model.reading": {
         "picked": "Predict the charge on monatomic ions",
+        "fit": "fits",
         "score": 111,
         "core_hits": [
           "periodic table"
@@ -979,12 +1055,12 @@
       }
     },
     "video_pool": {
-      "passed": 16,
+      "passed": 14,
       "runners_up": [
-        "Atomic and ionic radii",
-        "Valence electrons and ionic compounds",
-        "Electron configurations for the third and fourth periods",
+        "Counting valence electrons for main group elements",
+        "Groups of the periodic table",
         "Worked example: Finding the formula of an ionic compound",
+        "Electron configurations for the third and fourth periods",
         "Naming ions and ionic compounds"
       ],
       "rejected_sample": [
@@ -995,6 +1071,14 @@
         [
           "Electron configurations for the second period",
           "below relevance gate"
+        ],
+        [
+          "Valence Electrons and the Periodic Table - Overview",
+          "below relevance gate"
+        ],
+        [
+          "Atomic and ionic radii",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "The periodic table - classification of elements",
@@ -1011,27 +1095,19 @@
         [
           "Oxidation state trends in periodic table",
           "below relevance gate"
-        ],
-        [
-          "Ionization energy: group trend",
-          "below relevance gate"
-        ],
-        [
-          "Valence Electrons and the Periodic Table - Overview",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 126,
+        "below relevance gate": 124,
+        "judged off-topic (independent reviewer)": 2,
         "web file not on reference image": 5,
         "kolibri node not available on reference image": 1,
         "excluded: answer/exam material": 2
       }
     },
     "reading_pool": {
-      "passed": 4,
+      "passed": 3,
       "runners_up": [
-        "Transition Metal Ion Formation (Flexbook)",
         "Cation Formation (Flexbook)",
         "Cation Formation Practice"
       ],
@@ -1049,6 +1125,14 @@
           "below relevance gate"
         ],
         [
+          "Transition Metal Ion Formation (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Tables from rules that relate 2 variables",
+          "below relevance gate"
+        ],
+        [
           "Electron Dot Diagrams (Flexbook)",
           "below relevance gate"
         ],
@@ -1059,18 +1143,11 @@
         [
           "Chemical Formula (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Chemical Formula Practice",
-          "below relevance gate"
-        ],
-        [
-          "Modern Periodic Table (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 144
+        "below relevance gate": 141,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -1131,7 +1208,8 @@
     "slots": {
       "predict.video": {
         "picked": "Groups of the periodic table",
-        "score": 166.92,
+        "fit": "fits",
+        "score": 192.3,
         "core_hits": [
           "periodic table"
         ],
@@ -1142,6 +1220,7 @@
       },
       "observe.video": {
         "picked": "Oxidation state trends in periodic table",
+        "fit": "fits",
         "score": 128.87,
         "core_hits": [
           "periodic table"
@@ -1154,7 +1233,8 @@
       },
       "explain.video": {
         "picked": "Groups of the periodic table",
-        "score": 166.92,
+        "fit": "fits",
+        "score": 192.3,
         "core_hits": [
           "periodic table"
         ],
@@ -1164,29 +1244,59 @@
         "detail_weight": 0.38
       },
       "dqb.video": {
-        "picked": "Groups of the periodic table",
-        "score": 166.92,
+        "picked": "Oxidation state trends in periodic table",
+        "fit": "fits",
+        "score": 128.87,
         "core_hits": [
           "periodic table"
         ],
         "detail_hits": [
-          "group periodic table"
+          "group periodic table",
+          "oxidation"
         ],
-        "detail_weight": 0.38
+        "detail_weight": 0.68
       },
       "model.video": {
-        "picked": "Groups of the periodic table",
-        "score": 166.92,
+        "picked": "Atomic and ionic radii",
+        "fit": "partial",
+        "score": 99.37,
         "core_hits": [
           "periodic table"
         ],
         "detail_hits": [
-          "group periodic table"
+          "charge ion",
+          "group periodic table",
+          "charge group ion number"
         ],
-        "detail_weight": 0.38
+        "detail_weight": 1
       },
       "predict.reading": {
+        "picked": "Predict the charge on monatomic ions",
+        "fit": "fits",
+        "score": 76.68,
+        "core_hits": [
+          "periodic table"
+        ],
+        "detail_hits": [
+          "charge ion"
+        ],
+        "detail_weight": 0.39
+      },
+      "observe.reading": {
+        "picked": "Predict the charge on monatomic ions",
+        "fit": "fits",
+        "score": 76.68,
+        "core_hits": [
+          "periodic table"
+        ],
+        "detail_hits": [
+          "charge ion"
+        ],
+        "detail_weight": 0.39
+      },
+      "explain.reading": {
         "picked": "Modern Periodic Table: Periods and Groups (Flexbook)",
+        "fit": "partial",
         "score": 97.2,
         "core_hits": [
           "periodic table"
@@ -1196,29 +1306,10 @@
         ],
         "detail_weight": 0.38
       },
-      "observe.reading": {
-        "picked": "Changes in Oxidation Number in Redox Reactions (Flexbook)",
-        "score": 78.81,
-        "core_hits": [],
-        "detail_hits": [
-          "number oxidation",
-          "oxidation"
-        ],
-        "detail_weight": 1.55
-      },
-      "explain.reading": {
-        "picked": "Changes in Oxidation Number in Redox Reactions Practice",
-        "score": 78.81,
-        "core_hits": [],
-        "detail_hits": [
-          "number oxidation",
-          "oxidation"
-        ],
-        "detail_weight": 1.55
-      },
       "dqb.reading": {
-        "picked": "Balancing Redox Reactions: Oxidation Number Change Method (Flexbook)",
-        "score": 78.03,
+        "picked": "Changes in Oxidation Number in Redox Reactions (Flexbook)",
+        "fit": "partial",
+        "score": 78.81,
         "core_hits": [],
         "detail_hits": [
           "number oxidation",
@@ -1227,40 +1318,30 @@
         "detail_weight": 1.55
       },
       "model.reading": {
-        "picked": "Balancing Redox Reactions: Oxidation Number Change Method Practice",
-        "score": 78.03,
-        "core_hits": [],
-        "detail_hits": [
-          "number oxidation",
-          "oxidation"
+        "picked": "Predict the charge on monatomic ions",
+        "fit": "fits",
+        "score": 76.68,
+        "core_hits": [
+          "periodic table"
         ],
-        "detail_weight": 1.55
+        "detail_hits": [
+          "charge ion"
+        ],
+        "detail_weight": 0.39
       }
     },
     "video_pool": {
-      "passed": 10,
+      "passed": 9,
       "runners_up": [
         "Oxidation state trends in periodic table",
-        "Atomic radius trends on periodic table",
-        "The periodic table - classification of elements",
         "Practice determining oxidation states",
-        "Atomic and ionic radii"
+        "Atomic and ionic radii",
+        "Atomic radius trends on periodic table",
+        "The periodic table - classification of elements"
       ],
       "rejected_sample": [
         [
-          "2015 AP Chemistry free response 4",
-          "below relevance gate"
-        ],
-        [
-          "Recognizing number patterns",
-          "below relevance gate"
-        ],
-        [
-          "Electron configurations for the second period",
-          "below relevance gate"
-        ],
-        [
-          "Math patterns: table",
+          "Naming ionic compound with polyvalent ion",
           "below relevance gate"
         ],
         [
@@ -1268,7 +1349,7 @@
           "below relevance gate"
         ],
         [
-          "Comparing formal charges to oxidation states",
+          "VSEPR for 2 electron clouds",
           "below relevance gate"
         ],
         [
@@ -1276,27 +1357,51 @@
           "below relevance gate"
         ],
         [
+          "Worked example: Finding the formula of an ionic compound",
+          "below relevance gate"
+        ],
+        [
           "Counting valence electrons for main group elements",
           "below relevance gate"
+        ],
+        [
+          "Naming ions and ionic compounds",
+          "below relevance gate"
+        ],
+        [
+          "Method Of Writing Formula Of An Ionic Compound #Youtuneshorts #Jee #Neet #Shorts #Chemistrynotes",
+          "web file not on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 132,
+        "below relevance gate": 131,
         "web file not on reference image": 4,
         "kolibri node not available on reference image": 1,
+        "judged off-topic (independent reviewer)": 1,
         "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 8,
+      "passed": 5,
       "runners_up": [
-        "Changes in Oxidation Number in Redox Reactions (Flexbook)",
-        "Changes in Oxidation Number in Redox Reactions Practice",
-        "Balancing Redox Reactions: Oxidation Number Change Method (Flexbook)",
-        "Balancing Redox Reactions: Oxidation Number Change Method Practice",
-        "Predict the charge on monatomic ions"
+        "Assigning Oxidation Numbers (Flexbook)",
+        "Assigning Oxidation Numbers Practice",
+        "Modern Periodic Table: Periods and Groups (Flexbook)",
+        "Changes in Oxidation Number in Redox Reactions (Flexbook)"
       ],
       "rejected_sample": [
+        [
+          "Naming ionic compounds",
+          "below relevance gate"
+        ],
+        [
+          "Valence electrons and ionic compounds",
+          "below relevance gate"
+        ],
+        [
+          "Find the formula for ionic compounds",
+          "below relevance gate"
+        ],
         [
           "Tables from rules that relate 2 variables",
           "below relevance gate"
@@ -1306,32 +1411,21 @@
           "below relevance gate"
         ],
         [
-          "Chemical Formula (Flexbook)",
-          "below relevance gate"
+          "Changes in Oxidation Number in Redox Reactions Practice",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Chemical Formula Practice",
-          "below relevance gate"
+          "Balancing Redox Reactions: Oxidation Number Change Method (Flexbook)",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Function Rules for Input-Output Tables: Soda Sugar Function Table (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Graphs of rules that relate 2 variables",
-          "below relevance gate"
-        ],
-        [
-          "Rules that relate 2 variables",
-          "below relevance gate"
-        ],
-        [
-          "Multiplication and Division of Radicals: Totally Radical Dude's Height (PLIX)",
-          "below relevance gate"
+          "Balancing Redox Reactions: Oxidation Number Change Method Practice",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138
+        "below relevance gate": 135,
+        "judged off-topic (independent reviewer)": 3
       }
     }
   },
@@ -1384,77 +1478,70 @@
         "polyatomic ion",
         "bracket rule",
         "class chart",
-        "tea farm"
+        "tea farm",
+        "writing chemical formulas",
+        "ionic compound formulas"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Atomic and ionic radii",
-        "score": 109.95,
-        "core_hits": [
-          "periodic table"
-        ],
+        "picked": "Practice determining oxidation states",
+        "fit": "partial",
+        "score": 62.36,
+        "core_hits": [],
         "detail_hits": [
-          "cation",
-          "chemical",
-          "compound"
+          "number oxidation",
+          "hydroxide"
         ],
-        "detail_weight": 0.79
+        "detail_weight": 1.27
       },
       "observe.video": {
-        "picked": "Atomic and ionic radii",
-        "score": 109.95,
-        "core_hits": [
-          "periodic table"
-        ],
+        "picked": "Practice determining oxidation states",
+        "fit": "partial",
+        "score": 62.36,
+        "core_hits": [],
         "detail_hits": [
-          "cation",
-          "chemical",
-          "compound"
+          "number oxidation",
+          "hydroxide"
         ],
-        "detail_weight": 0.79
+        "detail_weight": 1.27
       },
       "explain.video": {
-        "picked": "Atomic and ionic radii",
-        "score": 109.95,
-        "core_hits": [
-          "periodic table"
-        ],
+        "picked": "Practice determining oxidation states",
+        "fit": "partial",
+        "score": 62.36,
+        "core_hits": [],
         "detail_hits": [
-          "cation",
-          "chemical",
-          "compound"
+          "number oxidation",
+          "hydroxide"
         ],
-        "detail_weight": 0.79
+        "detail_weight": 1.27
       },
       "dqb.video": {
-        "picked": "Atomic and ionic radii",
-        "score": 109.95,
-        "core_hits": [
-          "periodic table"
-        ],
+        "picked": "Practice determining oxidation states",
+        "fit": "partial",
+        "score": 62.36,
+        "core_hits": [],
         "detail_hits": [
-          "cation",
-          "chemical",
-          "compound"
+          "number oxidation",
+          "hydroxide"
         ],
-        "detail_weight": 0.79
+        "detail_weight": 1.27
       },
       "model.video": {
-        "picked": "Atomic and ionic radii",
-        "score": 109.95,
-        "core_hits": [
-          "periodic table"
-        ],
+        "picked": "Practice determining oxidation states",
+        "fit": "partial",
+        "score": 62.36,
+        "core_hits": [],
         "detail_hits": [
-          "cation",
-          "chemical",
-          "compound"
+          "number oxidation",
+          "hydroxide"
         ],
-        "detail_weight": 0.79
+        "detail_weight": 1.27
       },
       "predict.reading": {
         "picked": "Writing the Periodic Table (PLIX)",
+        "fit": "partial",
         "score": 140.09,
         "core_hits": [
           "periodic table"
@@ -1466,6 +1553,7 @@
       },
       "observe.reading": {
         "picked": "Writing the Periodic Table (PLIX)",
+        "fit": "partial",
         "score": 140.09,
         "core_hits": [
           "periodic table"
@@ -1477,6 +1565,7 @@
       },
       "explain.reading": {
         "picked": "Writing the Periodic Table (PLIX)",
+        "fit": "partial",
         "score": 140.09,
         "core_hits": [
           "periodic table"
@@ -1488,6 +1577,7 @@
       },
       "dqb.reading": {
         "picked": "Writing the Periodic Table (PLIX)",
+        "fit": "partial",
         "score": 140.09,
         "core_hits": [
           "periodic table"
@@ -1499,6 +1589,7 @@
       },
       "model.reading": {
         "picked": "Writing the Periodic Table (PLIX)",
+        "fit": "partial",
         "score": 140.09,
         "core_hits": [
           "periodic table"
@@ -1510,15 +1601,19 @@
       }
     },
     "video_pool": {
-      "passed": 4,
-      "runners_up": [
-        "Practice determining oxidation states",
-        "Threshold 3: New Chemical Elements",
-        "Alkene halogenation"
-      ],
+      "passed": 1,
+      "runners_up": [],
       "rejected_sample": [
         [
           "Balancing chemical equation with substitution",
+          "below relevance gate"
+        ],
+        [
+          "Atomic and ionic radii",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Common polyatomic ions",
           "below relevance gate"
         ],
         [
@@ -1530,29 +1625,22 @@
           "below relevance gate"
         ],
         [
-          "Oxidation state trends in periodic table",
-          "below relevance gate"
-        ],
-        [
-          "Naming ionic compound with polyvalent ion",
-          "below relevance gate"
-        ],
-        [
           "Worked example: Finding the formula of an ionic compound",
           "below relevance gate"
         ],
         [
-          "Electron configurations for the second period",
+          "Oxidation state trends in periodic table",
           "below relevance gate"
         ],
         [
-          "Valence Electrons and the Periodic Table - Overview",
-          "below relevance gate"
+          "Method Of Writing Formula Of An Ionic Compound #Youtuneshorts #Jee #Neet #Shorts #Chemistrynotes",
+          "web file not on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
-        "web file not on reference image": 4,
+        "below relevance gate": 136,
+        "judged off-topic (independent reviewer)": 3,
+        "web file not on reference image": 6,
         "kolibri node not available on reference image": 1,
         "excluded: answer/exam material": 1
       }
@@ -1562,10 +1650,6 @@
       "runners_up": [],
       "rejected_sample": [
         [
-          "Predict the charge on monatomic ions",
-          "below relevance gate"
-        ],
-        [
           "Balancing Redox Reactions: Oxidation Number Change Method (Flexbook)",
           "below relevance gate"
         ],
@@ -1574,28 +1658,32 @@
           "below relevance gate"
         ],
         [
-          "Transition Metal Ion Formation (Flexbook)",
+          "Predict the charge on monatomic ions",
           "below relevance gate"
         ],
         [
-          "Tables from rules that relate 2 variables",
+          "Polyatomic Ions (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Changes in Oxidation Number in Redox Reactions (Flexbook)",
+          "Polyatomic Ions Practice",
           "below relevance gate"
         ],
         [
-          "Changes in Oxidation Number in Redox Reactions Practice",
+          "Covalent Bonding in Polyatomic Ions (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Modern Periodic Table (Flexbook)",
+          "Covalent Bonding in Polyatomic Ions Practice",
+          "below relevance gate"
+        ],
+        [
+          "Find the formula for ionic compounds",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 147
+        "below relevance gate": 146
       }
     }
   },
@@ -1656,6 +1744,7 @@
     "slots": {
       "predict.video": {
         "picked": "Balancing chemical equations",
+        "fit": "fits",
         "score": 166.42,
         "core_hits": [],
         "detail_hits": [
@@ -1667,31 +1756,21 @@
         "detail_weight": 2.4
       },
       "observe.video": {
-        "picked": "The periodic table - transition metals",
-        "score": 148.63,
-        "core_hits": [
-          "periodic table"
-        ],
-        "detail_hits": [
-          "configuration electron"
-        ],
-        "detail_weight": 0.3
-      },
-      "explain.video": {
-        "picked": "Balancing chemical equation with substitution",
-        "score": 135.53,
+        "picked": "Visually understanding balancing chemical equations",
+        "fit": "fits",
+        "score": 153.88,
         "core_hits": [],
         "detail_hits": [
           "balancing chemical equation",
-          "ion polyatomic",
           "balancing",
           "chemical",
           "equation"
         ],
-        "detail_weight": 2.79
+        "detail_weight": 2.4
       },
-      "dqb.video": {
+      "explain.video": {
         "picked": "Balancing Chemical equations - Overview",
+        "fit": "fits",
         "score": 132.45,
         "core_hits": [],
         "detail_hits": [
@@ -1702,9 +1781,23 @@
         ],
         "detail_weight": 2.4
       },
+      "dqb.video": {
+        "picked": "Video: Balancing Chemical Equations",
+        "fit": "fits",
+        "score": 126.03,
+        "core_hits": [],
+        "detail_hits": [
+          "balancing chemical equation",
+          "balancing",
+          "chemical",
+          "equation"
+        ],
+        "detail_weight": 2.4
+      },
       "model.video": {
-        "picked": "Visually understanding balancing chemical equations",
-        "score": 129.77,
+        "picked": "Balancing Chemical Equations video",
+        "fit": "fits",
+        "score": 120.41,
         "core_hits": [],
         "detail_hits": [
           "balancing chemical equation",
@@ -1716,6 +1809,7 @@
       },
       "predict.reading": {
         "picked": "Balancing Chemical Equations (Flexbook)",
+        "fit": "fits",
         "score": 126.03,
         "core_hits": [],
         "detail_hits": [
@@ -1728,6 +1822,7 @@
       },
       "observe.reading": {
         "picked": "Balancing Chemical Equations Practice",
+        "fit": "fits",
         "score": 126.03,
         "core_hits": [],
         "detail_hits": [
@@ -1740,6 +1835,7 @@
       },
       "explain.reading": {
         "picked": "Balancing chemical equations 1",
+        "fit": "fits",
         "score": 125.13,
         "core_hits": [],
         "detail_hits": [
@@ -1752,6 +1848,7 @@
       },
       "dqb.reading": {
         "picked": "Balancing Chemical Equations",
+        "fit": "fits",
         "score": 121.35,
         "core_hits": [],
         "detail_hits": [
@@ -1763,25 +1860,25 @@
         "detail_weight": 2.4
       },
       "model.reading": {
-        "picked": "Writing the Periodic Table (PLIX)",
-        "score": 100.74,
-        "core_hits": [
-          "periodic table"
-        ],
+        "picked": "Conservation of Mass in Chemical Reactions (Flexbook)",
+        "fit": "fits",
+        "score": 93.8,
+        "core_hits": [],
         "detail_hits": [
-          "writing"
+          "conservation mass",
+          "chemical"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.24
       }
     },
     "video_pool": {
-      "passed": 22,
+      "passed": 20,
       "runners_up": [
-        "The periodic table - transition metals",
-        "Balancing chemical equation with substitution",
-        "Balancing Chemical equations - Overview",
         "Visually understanding balancing chemical equations",
-        "Oxidation state trends in periodic table"
+        "Balancing Chemical equations - Overview",
+        "Video: Balancing Chemical Equations",
+        "Balancing Chemical Equations video",
+        "Visualizing chemical equations using particulate models"
       ],
       "rejected_sample": [
         [
@@ -1789,7 +1886,19 @@
           "below relevance gate"
         ],
         [
+          "Valence electrons and ionic compounds",
+          "below relevance gate"
+        ],
+        [
           "Practice determining oxidation states",
+          "below relevance gate"
+        ],
+        [
+          "More on orbitals and electron configuration -dubbed(KY)",
+          "conflicting sub-topic ['orbital']"
+        ],
+        [
+          "Common polyatomic ions",
           "below relevance gate"
         ],
         [
@@ -1797,30 +1906,20 @@
           "below relevance gate"
         ],
         [
+          "Naming ionic compound with polyvalent ion",
+          "below relevance gate"
+        ],
+        [
           "Introduction to electron configurations",
-          "below relevance gate"
-        ],
-        [
-          "Atomic number, mass number, and isotopes",
-          "below relevance gate"
-        ],
-        [
-          "VSEPR for 2 electron clouds",
-          "below relevance gate"
-        ],
-        [
-          "Molecules and Polyatomic Ions - Overview",
-          "below relevance gate"
-        ],
-        [
-          "Solubility and complex ion formation",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 121,
-        "kolibri node not available on reference image": 6,
-        "web file not on reference image": 2
+        "below relevance gate": 122,
+        "conflicting sub-topic": 1,
+        "judged off-topic (independent reviewer)": 1,
+        "web file not on reference image": 4,
+        "kolibri node not available on reference image": 6
       }
     },
     "reading_pool": {
@@ -1829,8 +1928,8 @@
         "Balancing Chemical Equations Practice",
         "Balancing chemical equations 1",
         "Balancing Chemical Equations",
-        "Writing the Periodic Table (PLIX)",
-        "Conservation of Mass in Chemical Reactions (Flexbook)"
+        "Conservation of Mass in Chemical Reactions (Flexbook)",
+        "Conservation of Mass in Chemical Reactions Practice"
       ],
       "rejected_sample": [
         [
@@ -1858,16 +1957,16 @@
           "below relevance gate"
         ],
         [
-          "Transition Metal Ion Formation (Flexbook)",
+          "Find the formula for ionic compounds",
           "below relevance gate"
         ],
         [
-          "Conservation of Mass (Flexbook)",
+          "Transition Metal Ion Formation (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 133,
+        "below relevance gate": 134,
         "kolibri node not available on reference image": 2
       }
     }
@@ -1896,9 +1995,17 @@
         "fertiliser",
         "compounds",
         "dap",
-        "project",
-        "showcase",
-        "resolution"
+        "configuration",
+        "basics",
+        "valence",
+        "electrons",
+        "ionic",
+        "compound",
+        "formulas",
+        "polyatomic",
+        "ions",
+        "balancing",
+        "trends"
       ],
       "phrases": [
         "electron arrangement",
@@ -1907,13 +2014,20 @@
         "periodic table",
         "balanced equations",
         "chemical identity",
-        "fertiliser compounds"
+        "fertiliser compounds",
+        "electron configuration basics",
+        "valence electrons valency",
+        "ionic compound formulas",
+        "polyatomic ions",
+        "balancing chemical equations",
+        "periodic table trends"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Valence Electrons and the Periodic Table - Overview",
-        "score": 139.09,
+        "fit": "fits",
+        "score": 179.46,
         "core_hits": [
           "periodic table"
         ],
@@ -1923,8 +2037,9 @@
         "detail_weight": 0.3
       },
       "observe.video": {
-        "picked": "The periodic table - transition metals",
-        "score": 120.05,
+        "picked": "Groups of the periodic table",
+        "fit": "fits",
+        "score": 131.85,
         "core_hits": [
           "periodic table"
         ],
@@ -1934,8 +2049,9 @@
         "detail_weight": 0.3
       },
       "explain.video": {
-        "picked": "Groups of the periodic table",
-        "score": 106.75,
+        "picked": "Valence Electrons and the Periodic Table - Overview",
+        "fit": "fits",
+        "score": 179.46,
         "core_hits": [
           "periodic table"
         ],
@@ -1945,19 +2061,9 @@
         "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Visually understanding balancing chemical equations",
-        "score": 106.26,
-        "core_hits": [],
-        "detail_hits": [
-          "chemical formula",
-          "balanced equation",
-          "formula"
-        ],
-        "detail_weight": 1.99
-      },
-      "model.video": {
-        "picked": "Valence Electrons and the Periodic Table - Overview",
-        "score": 139.09,
+        "picked": "Groups of the periodic table",
+        "fit": "fits",
+        "score": 131.85,
         "core_hits": [
           "periodic table"
         ],
@@ -1966,17 +2072,33 @@
         ],
         "detail_weight": 0.3
       },
-      "predict.reading": {
-        "picked": "Transition Metal Ion Formation (Flexbook)",
-        "score": 79.06,
+      "model.video": {
+        "picked": "Visually understanding balancing chemical equations",
+        "fit": "partial",
+        "score": 180.58,
         "core_hits": [],
         "detail_hits": [
-          "formation ion"
+          "chemical formula",
+          "balanced equation",
+          "balancing chemical equation",
+          "formula"
         ],
-        "detail_weight": 1.07
+        "detail_weight": 2.4
+      },
+      "predict.reading": {
+        "picked": "Balancing Chemical Equations",
+        "fit": "fits",
+        "score": 111.6,
+        "core_hits": [],
+        "detail_hits": [
+          "balanced equation",
+          "balancing chemical equation"
+        ],
+        "detail_weight": 1.17
       },
       "observe.reading": {
         "picked": "Chemical Formula (Flexbook)",
+        "fit": "fits",
         "score": 70.59,
         "core_hits": [],
         "detail_hits": [
@@ -1987,6 +2109,7 @@
       },
       "explain.reading": {
         "picked": "Chemical Formula Practice",
+        "fit": "fits",
         "score": 70.59,
         "core_hits": [],
         "detail_hits": [
@@ -1996,71 +2119,77 @@
         "detail_weight": 1.24
       },
       "dqb.reading": {
-        "picked": "Transition Metal Ion Formation (Flexbook)",
-        "score": 79.06,
+        "picked": "Balancing Chemical Equations",
+        "fit": "fits",
+        "score": 111.6,
         "core_hits": [],
         "detail_hits": [
-          "formation ion"
+          "balanced equation",
+          "balancing chemical equation"
         ],
-        "detail_weight": 1.07
+        "detail_weight": 1.17
       },
       "model.reading": {
-        "picked": "Transition Metal Ion Formation (Flexbook)",
-        "score": 79.06,
+        "picked": "Chemical Formula (Flexbook)",
+        "fit": "fits",
+        "score": 70.59,
         "core_hits": [],
         "detail_hits": [
-          "formation ion"
+          "chemical formula",
+          "formula"
         ],
-        "detail_weight": 1.07
+        "detail_weight": 1.24
       }
     },
     "video_pool": {
-      "passed": 16,
+      "passed": 13,
       "runners_up": [
-        "The periodic table - transition metals",
         "Groups of the periodic table",
         "Visually understanding balancing chemical equations",
-        "Solubility and complex ion formation",
-        "Atomic and ionic radii"
+        "The periodic table - transition metals",
+        "Oxidation state trends in periodic table",
+        "Electron configurations for the second period"
       ],
       "rejected_sample": [
         [
-          "Naming ionic compound with polyvalent ion",
-          "below relevance gate"
-        ],
-        [
-          "Chemical Formulas Or Chemical Compounds Names",
-          "web file not on reference image"
+          "Atomic and ionic radii",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Valence electrons and ionic compounds",
           "below relevance gate"
         ],
         [
-          "Threshold 3: New Chemical Elements",
+          "Common polyatomic ions",
           "below relevance gate"
         ],
         [
-          "Oxidation state trends in periodic table",
+          "VSEPR for 2 electron clouds",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Naming ionic compound with polyvalent ion",
           "below relevance gate"
         ],
         [
-          "Atomic radius trends on periodic table",
+          "Balancing chemical equation with substitution",
           "below relevance gate"
         ],
         [
-          "The periodic table - classification of elements",
+          "Balancing Chemical Equations video",
           "below relevance gate"
         ],
         [
-          "Periodic Table of Elements",
+          "Balancing Chemical equations - Overview",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
+        "judged off-topic (independent reviewer)": 4,
+        "below relevance gate": 126,
+        "conflicting sub-topic": 1,
         "web file not on reference image": 6,
-        "kolibri node not available on reference image": 1,
+        "kolibri node not available on reference image": 2,
         "excluded: answer/exam material": 1
       }
     },
@@ -2074,40 +2203,41 @@
       ],
       "rejected_sample": [
         [
+          "Balancing Chemical Equations (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Balancing Chemical Equations Practice",
+          "below relevance gate"
+        ],
+        [
+          "Balancing chemical equations 1",
+          "below relevance gate"
+        ],
+        [
           "Predict the charge on monatomic ions",
           "below relevance gate"
         ],
         [
-          "Constant of proportionality from tables (with equations)",
+          "Polyatomic Ions (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Modern Periodic Table (Flexbook)",
+          "Polyatomic Ions Practice",
           "below relevance gate"
         ],
         [
-          "Modern Periodic Table Practice",
+          "Covalent Bonding in Polyatomic Ions (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Atomic structure and Periodic Table",
-          "below relevance gate"
-        ],
-        [
-          "Writing the Periodic Table (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Mendeleev's Periodic Table (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Mendeleev's Periodic Table Practice",
+          "Covalent Bonding in Polyatomic Ions Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138
+        "below relevance gate": 137,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   }

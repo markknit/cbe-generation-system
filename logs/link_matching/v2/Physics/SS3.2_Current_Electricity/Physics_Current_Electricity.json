@@ -17,6 +17,9 @@
         "voltage",
         "brightness",
         "resistance",
+        "basics",
+        "measuring",
+        "wires",
         "flickering",
         "lights",
         "huruma",
@@ -25,62 +28,80 @@
       ],
       "phrases": [
         "electric current",
-        "charge flow"
+        "charge flow",
+        "electric current basics",
+        "current charge flow",
+        "ammeter measuring current",
+        "voltage current",
+        "resistance wires",
+        "electric current ampere"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Electric current",
-        "score": 135.01,
+        "fit": "fits",
+        "score": 149,
         "core_hits": [],
         "detail_hits": [
           "current electric",
-          "charge flow"
+          "charge flow",
+          "charge current flow"
         ],
-        "detail_weight": 2.75
+        "detail_weight": 3.38
       },
       "observe.video": {
-        "picked": "Electric current",
-        "score": 135.01,
+        "picked": "Voltmeters and Ammeters",
+        "fit": "fits",
+        "score": 121.69,
         "core_hits": [],
         "detail_hits": [
-          "current electric",
-          "charge flow"
+          "ammeter",
+          "potentialdifference",
+          "ammeter current",
+          "current potentialdifference"
         ],
-        "detail_weight": 2.75
+        "detail_weight": 2.29
       },
       "explain.video": {
         "picked": "Electric current",
-        "score": 135.01,
+        "fit": "fits",
+        "score": 149,
         "core_hits": [],
         "detail_hits": [
           "current electric",
-          "charge flow"
+          "charge flow",
+          "charge current flow"
         ],
-        "detail_weight": 2.75
+        "detail_weight": 3.38
       },
       "dqb.video": {
-        "picked": "Electric current",
-        "score": 135.01,
+        "picked": "Voltmeters and Ammeters",
+        "fit": "fits",
+        "score": 121.69,
         "core_hits": [],
         "detail_hits": [
-          "current electric",
-          "charge flow"
+          "ammeter",
+          "potentialdifference",
+          "ammeter current",
+          "current potentialdifference"
         ],
-        "detail_weight": 2.75
+        "detail_weight": 2.29
       },
       "model.video": {
-        "picked": "Electric current",
-        "score": 135.01,
+        "picked": "Ideal sources",
+        "fit": "partial",
+        "score": 67.62,
         "core_hits": [],
         "detail_hits": [
-          "current electric",
-          "charge flow"
+          "potentialdifference",
+          "current potentialdifference"
         ],
-        "detail_weight": 2.75
+        "detail_weight": 1.09
       },
       "predict.reading": {
         "picked": "Electric Current (Flexbook)",
+        "fit": "fits",
         "score": 80.6,
         "core_hits": [],
         "detail_hits": [
@@ -89,17 +110,20 @@
         "detail_weight": 1.5
       },
       "observe.reading": {
-        "picked": "Electric Current Practice",
-        "score": 80.6,
+        "picked": "Voltage and Current (Flexbook)",
+        "fit": "fits",
+        "score": 76.53,
         "core_hits": [],
         "detail_hits": [
-          "current electric"
+          "potentialdifference",
+          "current potentialdifference"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 1.09
       },
       "explain.reading": {
-        "picked": "Electric Current and Circuits (Flexbook)",
-        "score": 79.36,
+        "picked": "Electric Current (Flexbook)",
+        "fit": "fits",
+        "score": 80.6,
         "core_hits": [],
         "detail_hits": [
           "current electric"
@@ -107,16 +131,19 @@
         "detail_weight": 1.5
       },
       "dqb.reading": {
-        "picked": "Electric Current (Flexbook)",
-        "score": 80.6,
+        "picked": "Voltage and Current (Flexbook)",
+        "fit": "fits",
+        "score": 76.53,
         "core_hits": [],
         "detail_hits": [
-          "current electric"
+          "potentialdifference",
+          "current potentialdifference"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 1.09
       },
       "model.reading": {
-        "picked": "Electric Current (Flexbook)",
+        "picked": "Electric Current Practice",
+        "fit": "partial",
         "score": 80.6,
         "core_hits": [],
         "detail_hits": [
@@ -126,13 +153,13 @@
       }
     },
     "video_pool": {
-      "passed": 10,
+      "passed": 11,
       "runners_up": [
-        "LC natural response intuition 2",
         "Voltmeters and Ammeters",
-        "Conductors and insulators",
         "Introduction to circuits and Ohm's law",
-        "Current direction"
+        "Current direction",
+        "Ideal sources",
+        "Conductors and insulators"
       ],
       "rejected_sample": [
         [
@@ -140,67 +167,66 @@
           "kolibri node not available on reference image"
         ],
         [
-          "A capacitor integrates current",
-          "below relevance gate"
-        ],
-        [
-          "Mesh current method (steps 1 to 3)",
-          "below relevance gate"
+          "LC natural response intuition 2",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "LC natural response example",
-          "below relevance gate"
+          "judged off-topic (independent reviewer)"
         ],
         [
           "RC natural response - intuition",
-          "below relevance gate"
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Electromagnetism",
-          "below relevance gate"
+          "Sign convention for passive components",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Electric potential from multiple charges",
-          "below relevance gate"
+          "Electromagnetic field (loop)",
+          "conflicting sub-topic ['electromagnetic']"
         ],
         [
-          "Labeling voltages",
-          "below relevance gate"
+          "A capacitor integrates current",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Mesh current method (steps 1 to 3)",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 10,
+        "kolibri node not available on reference image": 11,
+        "judged off-topic (independent reviewer)": 8,
+        "conflicting sub-topic": 2,
         "below relevance gate": 123,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 5,
+      "passed": 7,
       "runners_up": [
+        "Voltage and Current (Flexbook)",
+        "Controlling Current in Electric Circuits (Flexbook)",
         "Electric Current Practice",
         "Electric Current and Circuits (Flexbook)",
-        "Controlling Current in Electric Circuits (Flexbook)",
-        "Ohm's Law"
+        "Voltage and Current Practice"
       ],
       "rejected_sample": [
-        [
-          "topical-test-form-3-physics-heating-effect-of-electric-current-answerse",
-          "excluded: answer/exam material"
-        ],
         [
           "Capacitor Lab: Basics",
           "below relevance gate"
         ],
         [
+          "topical-test-form-3-physics-heating-effect-of-electric-current-answerse",
+          "excluded: answer/exam material"
+        ],
+        [
+          "Resistance In A Wire",
+          "below relevance gate"
+        ],
+        [
           "Electric Resistance (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Voltage and Current (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Voltage and Current Practice",
           "below relevance gate"
         ],
         [
@@ -214,12 +240,16 @@
         [
           "Electric Charge and Electric Force Practice",
           "below relevance gate"
+        ],
+        [
+          "Transfer of Electric Charge (Flexbook)",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "below relevance gate": 143,
         "excluded: answer/exam material": 8,
-        "below relevance gate": 115,
-        "kolibri node not available on reference image": 37
+        "kolibri node not available on reference image": 12
       }
     }
   },
@@ -251,11 +281,13 @@
         "joules",
         "coulomb",
         "volt",
+        "explained",
+        "batteries",
+        "measuring",
         "socket",
         "give",
         "less",
-        "than",
-        "source"
+        "than"
       ],
       "phrases": [
         "electromotive force",
@@ -264,32 +296,19 @@
         "dry cell",
         "internal resistance",
         "energy per charge",
-        "joules per coulomb"
+        "joules per coulomb",
+        "electromotive force explained",
+        "potential difference voltage",
+        "terminal voltage emf",
+        "internal resistance batteries",
+        "measuring voltage voltmeter",
+        "voltage energy per charge"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Ideal sources",
-        "score": 82.28,
-        "core_hits": [],
-        "detail_hits": [
-          "potentialdifference",
-          "source"
-        ],
-        "detail_weight": 1.01
-      },
-      "observe.video": {
-        "picked": "Voltmeters and Ammeters",
-        "score": 74.86,
-        "core_hits": [],
-        "detail_hits": [
-          "potentialdifference",
-          "voltmeter"
-        ],
-        "detail_weight": 1.27
-      },
-      "explain.video": {
         "picked": "01 Explaining Emf And Internal Resistance",
+        "fit": "fits",
         "score": 70.56,
         "core_hits": [],
         "detail_hits": [
@@ -298,8 +317,20 @@
         ],
         "detail_weight": 1.52
       },
-      "dqb.video": {
+      "observe.video": {
+        "picked": "01 Explaining Emf And Internal Resistance",
+        "fit": "fits",
+        "score": 70.56,
+        "core_hits": [],
+        "detail_hits": [
+          "emf",
+          "internal resistance"
+        ],
+        "detail_weight": 1.52
+      },
+      "explain.video": {
         "picked": "Ideal sources",
+        "fit": "partial",
         "score": 82.28,
         "core_hits": [],
         "detail_hits": [
@@ -308,18 +339,32 @@
         ],
         "detail_weight": 1.01
       },
-      "model.video": {
-        "picked": "Ideal sources",
-        "score": 82.28,
+      "dqb.video": {
+        "picked": "Voltmeters and Ammeters",
+        "fit": "partial",
+        "score": 81.69,
         "core_hits": [],
         "detail_hits": [
           "potentialdifference",
-          "source"
+          "voltmeter",
+          "potentialdifference voltmeter"
         ],
-        "detail_weight": 1.01
+        "detail_weight": 1.69
+      },
+      "model.video": {
+        "picked": "Digital camera connections",
+        "fit": "partial",
+        "score": 52.44,
+        "core_hits": [],
+        "detail_hits": [
+          "potentialdifference",
+          "volt"
+        ],
+        "detail_weight": 1.07
       },
       "predict.reading": {
         "picked": "Electromotive Force (Flexbook)",
+        "fit": "fits",
         "score": 97.16,
         "core_hits": [],
         "detail_hits": [
@@ -329,6 +374,7 @@
       },
       "observe.reading": {
         "picked": "Electromotive Force (Flexbook)",
+        "fit": "fits",
         "score": 97.16,
         "core_hits": [],
         "detail_hits": [
@@ -338,6 +384,7 @@
       },
       "explain.reading": {
         "picked": "Electromotive Force (Flexbook)",
+        "fit": "fits",
         "score": 97.16,
         "core_hits": [],
         "detail_hits": [
@@ -347,6 +394,7 @@
       },
       "dqb.reading": {
         "picked": "Electromotive Force (Flexbook)",
+        "fit": "fits",
         "score": 97.16,
         "core_hits": [],
         "detail_hits": [
@@ -356,6 +404,7 @@
       },
       "model.reading": {
         "picked": "Electromotive Force (Flexbook)",
+        "fit": "fits",
         "score": 97.16,
         "core_hits": [],
         "detail_hits": [
@@ -367,8 +416,8 @@
     "video_pool": {
       "passed": 4,
       "runners_up": [
+        "Ideal sources",
         "Voltmeters and Ammeters",
-        "01 Explaining Emf And Internal Resistance",
         "Digital camera connections"
       ],
       "rejected_sample": [
@@ -393,20 +442,20 @@
           "below relevance gate"
         ],
         [
+          "Introduction to circuits and Ohm's law",
+          "below relevance gate"
+        ],
+        [
           "Using reduction potentials",
           "below relevance gate"
         ],
         [
           "Free energy and cell potential",
           "below relevance gate"
-        ],
-        [
-          "Concentration cell",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
+        "below relevance gate": 138,
         "kolibri node not available on reference image": 5,
         "web file not on reference image": 1
       }
@@ -440,17 +489,17 @@
           "below relevance gate"
         ],
         [
-          "Ohm's Law",
+          "Battery Voltage",
           "below relevance gate"
         ],
         [
-          "Action Potentials In Pacemaker Cells",
+          "Ohm's Law",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 161,
-        "kolibri node not available on reference image": 4,
+        "below relevance gate": 163,
+        "kolibri node not available on reference image": 6,
         "excluded: answer/exam material": 6
       }
     }
@@ -501,26 +550,35 @@
         "kettle element",
         "bulb filament",
         "controlled experiment",
-        "circuit design"
+        "circuit design",
+        "ohm's law",
+        "resistance ohm's law",
+        "voltage current graphs",
+        "slope graph",
+        "ohmic non ohmic conductors"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Introduction to circuits and Ohm's law",
-        "score": 325.58,
+        "fit": "fits",
+        "score": 375.89,
         "core_hits": [],
         "detail_hits": [
           "law ohm'",
           "resistance",
           "ohm",
           "potentialdifference",
+          "law ohm' resistance",
+          "current potentialdifference",
           "ohm'",
           "law"
         ],
-        "detail_weight": 4
+        "detail_weight": 4.59
       },
       "observe.video": {
         "picked": "Topic - current electricity - Ohm's Law Video Primer",
+        "fit": "fits",
         "score": 343.39,
         "core_hits": [
           "current electricity"
@@ -533,20 +591,25 @@
         "detail_weight": 2.1
       },
       "explain.video": {
-        "picked": "Ideal circuit elements",
-        "score": 231.27,
+        "picked": "Introduction to circuits and Ohm's law",
+        "fit": "fits",
+        "score": 375.89,
         "core_hits": [],
         "detail_hits": [
           "law ohm'",
+          "resistance",
           "ohm",
           "potentialdifference",
+          "law ohm' resistance",
+          "current potentialdifference",
           "ohm'",
           "law"
         ],
-        "detail_weight": 3.17
+        "detail_weight": 4.59
       },
       "dqb.video": {
         "picked": "Topic - current electricity - Ohm's Law Video Primer",
+        "fit": "fits",
         "score": 343.39,
         "core_hits": [
           "current electricity"
@@ -559,34 +622,40 @@
         "detail_weight": 2.1
       },
       "model.video": {
-        "picked": "Topic - current electricity - Ohm's Law Video Primer",
-        "score": 343.39,
-        "core_hits": [
-          "current electricity"
-        ],
+        "picked": "Ideal circuit elements",
+        "fit": "partial",
+        "score": 240.87,
+        "core_hits": [],
         "detail_hits": [
           "law ohm'",
+          "ohm",
+          "potentialdifference",
+          "current potentialdifference",
           "ohm'",
           "law"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 3.44
       },
       "predict.reading": {
         "picked": "Ohm's Law",
-        "score": 302.02,
+        "fit": "fits",
+        "score": 326.32,
         "core_hits": [],
         "detail_hits": [
           "law ohm'",
           "resistance",
           "ohm",
           "potentialdifference",
+          "law ohm' resistance",
+          "current potentialdifference",
           "ohm'",
           "law"
         ],
-        "detail_weight": 4
+        "detail_weight": 4.59
       },
       "observe.reading": {
         "picked": "Ohm's Law: Looking at a Circuit (PLIX)",
+        "fit": "fits",
         "score": 221.35,
         "core_hits": [],
         "detail_hits": [
@@ -598,20 +667,26 @@
         "detail_weight": 2.81
       },
       "explain.reading": {
-        "picked": "Ohm's Law (Flexbook)",
-        "score": 193.52,
+        "picked": "Ohm's Law",
+        "fit": "fits",
+        "score": 326.32,
         "core_hits": [],
         "detail_hits": [
           "law ohm'",
+          "resistance",
           "ohm",
+          "potentialdifference",
+          "law ohm' resistance",
+          "current potentialdifference",
           "ohm'",
           "law"
         ],
-        "detail_weight": 2.81
+        "detail_weight": 4.59
       },
       "dqb.reading": {
-        "picked": "Ohm's Law Practice",
-        "score": 193.52,
+        "picked": "Ohm's Law: Looking at a Circuit (PLIX)",
+        "fit": "fits",
+        "score": 221.35,
         "core_hits": [],
         "detail_hits": [
           "law ohm'",
@@ -622,33 +697,35 @@
         "detail_weight": 2.81
       },
       "model.reading": {
-        "picked": "Ohm's Law",
-        "score": 302.02,
+        "picked": "Graphs Using Slope-Intercept Form (Flexbook)",
+        "fit": "partial",
+        "score": 41.53,
         "core_hits": [],
         "detail_hits": [
-          "law ohm'",
-          "resistance",
-          "ohm",
-          "potentialdifference",
-          "ohm'",
-          "law"
+          "graph",
+          "gradient",
+          "gradient graph"
         ],
-        "detail_weight": 4
+        "detail_weight": 1.47
       }
     },
     "video_pool": {
-      "passed": 23,
+      "passed": 22,
       "runners_up": [
-        "Introduction to circuits and Ohm's law",
-        "Ideal circuit elements",
+        "Topic - current electricity - Ohm's Law Video Primer",
         "Video: Ohm's Law",
-        "Application of the fundamental laws (setup)",
-        "Impedance"
+        "01 What Is Ohm'S Law",
+        "Voltmeters and Ammeters",
+        "03 Verification Of Ohm'S Law"
       ],
       "rejected_sample": [
         [
           "Kirchhoff's voltage law",
           "below relevance gate"
+        ],
+        [
+          "Impedance",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Topic- current electricity - Resistance in a Wire",
@@ -673,25 +750,23 @@
         [
           "What is an operational amplifier?",
           "below relevance gate"
-        ],
-        [
-          "Diode",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 128,
-        "kolibri node not available on reference image": 6
+        "below relevance gate": 127,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 6,
+        "conflicting sub-topic": 1
       }
     },
     "reading_pool": {
-      "passed": 16,
+      "passed": 12,
       "runners_up": [
         "Ohm's Law: Looking at a Circuit (PLIX)",
         "Ohm's Law (Flexbook)",
         "Ohm's Law Practice",
-        "Systems of equations with graphing",
-        "Tangent Graphs: Slope and Angle (PLIX)"
+        "Slope from graph",
+        "Graphs Using Slope-Intercept Form (Flexbook)"
       ],
       "rejected_sample": [
         [
@@ -728,8 +803,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138,
+        "below relevance gate": 139,
+        "judged off-topic (independent reviewer)": 3,
         "excluded: answer/exam material": 8,
+        "conflicting sub-topic": 1,
         "kolibri node not available on reference image": 2
       }
     }
@@ -767,8 +844,8 @@
         "copper",
         "gauge",
         "physics",
-        "thicker",
-        "cables"
+        "basics",
+        "materials"
       ],
       "phrases": [
         "ohm's law",
@@ -778,48 +855,51 @@
         "extension cord",
         "home wiring",
         "electrical safety",
-        "current electricity"
+        "current electricity",
+        "resistance resistivity",
+        "ohm's law basics",
+        "resistivity wire materials",
+        "wire length resistance",
+        "cross sectional area resistance",
+        "resistors series"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Topic - current electricity - Ohm's Law Video Primer",
-        "score": 314.78,
-        "core_hits": [
-          "current electricity"
-        ],
+        "picked": "Video: Ohm's Law",
+        "fit": "fits",
+        "score": 108.96,
+        "core_hits": [],
         "detail_hits": [
           "law ohm'"
         ],
         "detail_weight": 1.07
       },
       "observe.video": {
-        "picked": "Introduction to circuits and Ohm's law",
-        "score": 189.53,
+        "picked": "01 What Is Ohm'S Law",
+        "fit": "fits",
+        "score": 65.64,
         "core_hits": [],
         "detail_hits": [
-          "resistance",
           "law ohm'"
         ],
-        "detail_weight": 2.07
+        "detail_weight": 1.07
       },
       "explain.video": {
-        "picked": "Topic - current electricity - Ohm's Law Video Primer",
-        "score": 314.78,
-        "core_hits": [
-          "current electricity"
-        ],
+        "picked": "Video: Ohm's Law",
+        "fit": "fits",
+        "score": 108.96,
+        "core_hits": [],
         "detail_hits": [
           "law ohm'"
         ],
         "detail_weight": 1.07
       },
       "dqb.video": {
-        "picked": "Topic - current electricity - Ohm's Law Video Primer",
-        "score": 314.78,
-        "core_hits": [
-          "current electricity"
-        ],
+        "picked": "01 What Is Ohm'S Law",
+        "fit": "fits",
+        "score": 65.64,
+        "core_hits": [],
         "detail_hits": [
           "law ohm'"
         ],
@@ -827,6 +907,7 @@
       },
       "model.video": {
         "picked": "Topic - current electricity - Ohm's Law Video Primer",
+        "fit": "partial",
         "score": 314.78,
         "core_hits": [
           "current electricity"
@@ -837,7 +918,36 @@
         "detail_weight": 1.07
       },
       "predict.reading": {
+        "picked": "Resistance in a Wire",
+        "fit": "fits",
+        "score": 129.52,
+        "core_hits": [],
+        "detail_hits": [
+          "resistance",
+          "resistivity",
+          "length wire",
+          "resistance resistivity",
+          "length resistance wire"
+        ],
+        "detail_weight": 3.38
+      },
+      "observe.reading": {
+        "picked": "Resistance in a Wire",
+        "fit": "fits",
+        "score": 129.52,
+        "core_hits": [],
+        "detail_hits": [
+          "resistance",
+          "resistivity",
+          "length wire",
+          "resistance resistivity",
+          "length resistance wire"
+        ],
+        "detail_weight": 3.38
+      },
+      "explain.reading": {
         "picked": "Ohm's Law",
+        "fit": "partial",
         "score": 170.57,
         "core_hits": [],
         "detail_hits": [
@@ -846,8 +956,9 @@
         ],
         "detail_weight": 2.07
       },
-      "observe.reading": {
+      "dqb.reading": {
         "picked": "Ohm's Law: Looking at a Circuit (PLIX)",
+        "fit": "partial",
         "score": 129.8,
         "core_hits": [],
         "detail_hits": [
@@ -855,28 +966,9 @@
         ],
         "detail_weight": 1.07
       },
-      "explain.reading": {
-        "picked": "Resistance in a Wire",
-        "score": 115.82,
-        "core_hits": [],
-        "detail_hits": [
-          "resistance",
-          "resistivity",
-          "length wire"
-        ],
-        "detail_weight": 2.67
-      },
-      "dqb.reading": {
-        "picked": "Ohm's Law (Flexbook)",
-        "score": 108.96,
-        "core_hits": [],
-        "detail_hits": [
-          "law ohm'"
-        ],
-        "detail_weight": 1.07
-      },
       "model.reading": {
-        "picked": "Ohm's Law Practice",
+        "picked": "Ohm's Law (Flexbook)",
+        "fit": "partial",
         "score": 108.96,
         "core_hits": [],
         "detail_hits": [
@@ -886,13 +978,13 @@
       }
     },
     "video_pool": {
-      "passed": 17,
+      "passed": 15,
       "runners_up": [
+        "01 What Is Ohm'S Law",
+        "Topic - current electricity - Ohm's Law Video Primer",
         "Introduction to circuits and Ohm's law",
-        "Video: Ohm's Law",
-        "Application of the fundamental laws (setup)",
         "Ideal circuit elements",
-        "Application of the fundamental laws (solve)"
+        "Example: Analyzing a more complex resistor circuit"
       ],
       "rejected_sample": [
         [
@@ -900,87 +992,89 @@
           "kolibri node not available on reference image"
         ],
         [
-          "Cavalieri's principle in 3D",
+          "Application of the fundamental laws (setup)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Impedance",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Application of the fundamental laws (solve)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Resistivity and conductivity",
           "below relevance gate"
         ],
         [
-          "Mesh current method (steps 1 to 3)",
+          "Resistors in series",
           "below relevance gate"
         ],
         [
-          "Power wires and on/off switch",
+          "Resistors in series -dubbed(KY)",
           "below relevance gate"
         ],
         [
           "Conductors and insulators",
           "below relevance gate"
-        ],
-        [
-          "Kirchhoff's current law",
-          "below relevance gate"
-        ],
-        [
-          "AP Physics 1 Review of Charge and Circuits",
-          "below relevance gate"
-        ],
-        [
-          "Faraday's Law Introduction",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 2,
-        "below relevance gate": 128,
-        "web file not on reference image": 2
+        "kolibri node not available on reference image": 4,
+        "judged off-topic (independent reviewer)": 4,
+        "below relevance gate": 123,
+        "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 16,
+      "passed": 9,
       "runners_up": [
+        "Electric Resistance (Flexbook)",
+        "Resistance",
+        "Ohm's Law",
         "Ohm's Law: Looking at a Circuit (PLIX)",
-        "Resistance in a Wire",
-        "Ohm's Law (Flexbook)",
-        "Ohm's Law Practice",
-        "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)"
+        "Ohm's Law (Flexbook)"
       ],
       "rejected_sample": [
+        [
+          "Resistors in Series (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Resistors in Series Practice",
+          "below relevance gate"
+        ],
         [
           "Circuit Construction Kit: DC",
           "below relevance gate"
         ],
         [
+          "Series and parallel resistors",
+          "below relevance gate"
+        ],
+        [
+          "Circuit Construction Kit: DC - Virtual Lab",
+          "below relevance gate"
+        ],
+        [
+          "Resistor Circuits (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Resistor Circuits Practice",
+          "below relevance gate"
+        ],
+        [
           "Area of rectangles with fraction side lengths",
-          "below relevance gate"
-        ],
-        [
-          "Electricity Magnets And Circuits",
-          "below relevance gate"
-        ],
-        [
-          "Area & perimeter of rectangles word problems",
-          "below relevance gate"
-        ],
-        [
-          "Homes: vocabulary; Have Home, Will Travel 3",
-          "below relevance gate"
-        ],
-        [
-          "Electric Current and Circuits (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Eneo la mraba na mstatili",
-          "below relevance gate"
-        ],
-        [
-          "Controlling Current in Electric Circuits (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
+        "below relevance gate": 141,
         "excluded: answer/exam material": 10,
-        "kolibri node not available on reference image": 3
+        "kolibri node not available on reference image": 1,
+        "judged off-topic (independent reviewer)": 2
       }
     }
   },
@@ -1040,29 +1134,56 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Capacitors in series",
-        "score": 66.88,
-        "core_hits": [],
-        "detail_hits": [
-          "circuit sery",
-          "total",
-          "sery",
-          "circuit"
-        ],
-        "detail_weight": 2.6
-      },
-      "observe.video": {
         "picked": "Series resistors",
-        "score": 55.49,
+        "fit": "fits",
+        "score": 87.85,
         "core_hits": [],
         "detail_hits": [
           "resistance sery",
+          "resistor sery",
           "sery"
         ],
-        "detail_weight": 1.13
+        "detail_weight": 1.42
+      },
+      "observe.video": {
+        "picked": "Series resistors",
+        "fit": "fits",
+        "score": 87.85,
+        "core_hits": [],
+        "detail_hits": [
+          "resistance sery",
+          "resistor sery",
+          "sery"
+        ],
+        "detail_weight": 1.42
       },
       "explain.video": {
+        "picked": "Application of the fundamental laws (setup)",
+        "fit": "partial",
+        "score": 114.01,
+        "core_hits": [],
+        "detail_hits": [
+          "application law ohm'",
+          "circuit law ohm'",
+          "circuit"
+        ],
+        "detail_weight": 1.2
+      },
+      "dqb.video": {
+        "picked": "Listen to variable resistance",
+        "fit": "partial",
+        "score": 58.67,
+        "core_hits": [],
+        "detail_hits": [
+          "resistance sery",
+          "resistor sery",
+          "sery"
+        ],
+        "detail_weight": 1.42
+      },
+      "model.video": {
         "picked": "Series load",
+        "fit": "partial",
         "score": 44.91,
         "core_hits": [],
         "detail_hits": [
@@ -1072,45 +1193,65 @@
         ],
         "detail_weight": 2.1
       },
-      "dqb.video": {
-        "picked": "Capacitors in series",
-        "score": 66.88,
-        "core_hits": [],
-        "detail_hits": [
-          "circuit sery",
-          "total",
-          "sery",
-          "circuit"
-        ],
-        "detail_weight": 2.6
-      },
-      "model.video": {
-        "picked": "Capacitors in series",
-        "score": 66.88,
-        "core_hits": [],
-        "detail_hits": [
-          "circuit sery",
-          "total",
-          "sery",
-          "circuit"
-        ],
-        "detail_weight": 2.6
-      },
       "predict.reading": {
         "picked": "Series Circuits: Voltage Drops (PLIX)",
-        "score": 107.33,
+        "fit": "fits",
+        "score": 112.15,
         "core_hits": [],
         "detail_hits": [
           "circuit sery",
           "potentialdifference sery",
+          "circuit potentialdifference sery",
           "sery",
           "circuit",
           "potentialdifference"
         ],
-        "detail_weight": 3.34
+        "detail_weight": 3.64
       },
       "observe.reading": {
+        "picked": "Series and parallel resistors",
+        "fit": "fits",
+        "score": 89.78,
+        "core_hits": [],
+        "detail_hits": [
+          "circuit sery",
+          "resistor sery",
+          "sery",
+          "circuit"
+        ],
+        "detail_weight": 2.39
+      },
+      "explain.reading": {
+        "picked": "Series Circuits: Voltage Drops (PLIX)",
+        "fit": "fits",
+        "score": 112.15,
+        "core_hits": [],
+        "detail_hits": [
+          "circuit sery",
+          "potentialdifference sery",
+          "circuit potentialdifference sery",
+          "sery",
+          "circuit",
+          "potentialdifference"
+        ],
+        "detail_weight": 3.64
+      },
+      "dqb.reading": {
+        "picked": "Series and parallel resistors",
+        "fit": "fits",
+        "score": 89.78,
+        "core_hits": [],
+        "detail_hits": [
+          "circuit sery",
+          "resistor sery",
+          "sery",
+          "circuit"
+        ],
+        "detail_weight": 2.39
+      },
+      "model.reading": {
         "picked": "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)",
+        "fit": "partial",
         "score": 99.19,
         "core_hits": [],
         "detail_hits": [
@@ -1120,51 +1261,13 @@
           "circuit"
         ],
         "detail_weight": 2.93
-      },
-      "explain.reading": {
-        "picked": "Series Circuits: Voltage Drops (PLIX)",
-        "score": 107.33,
-        "core_hits": [],
-        "detail_hits": [
-          "circuit sery",
-          "potentialdifference sery",
-          "sery",
-          "circuit",
-          "potentialdifference"
-        ],
-        "detail_weight": 3.34
-      },
-      "dqb.reading": {
-        "picked": "Series Circuits: Voltage Drops (PLIX)",
-        "score": 107.33,
-        "core_hits": [],
-        "detail_hits": [
-          "circuit sery",
-          "potentialdifference sery",
-          "sery",
-          "circuit",
-          "potentialdifference"
-        ],
-        "detail_weight": 3.34
-      },
-      "model.reading": {
-        "picked": "Series Circuits: Voltage Drops (PLIX)",
-        "score": 107.33,
-        "core_hits": [],
-        "detail_hits": [
-          "circuit sery",
-          "potentialdifference sery",
-          "sery",
-          "circuit",
-          "potentialdifference"
-        ],
-        "detail_weight": 3.34
       }
     },
     "video_pool": {
-      "passed": 3,
+      "passed": 4,
       "runners_up": [
-        "Series resistors",
+        "Application of the fundamental laws (setup)",
+        "Listen to variable resistance",
         "Series load"
       ],
       "rejected_sample": [
@@ -1177,7 +1280,11 @@
           "below relevance gate"
         ],
         [
-          "Application of the fundamental laws (setup)",
+          "Ideal circuit elements",
+          "below relevance gate"
+        ],
+        [
+          "Voltage divider",
           "below relevance gate"
         ],
         [
@@ -1185,35 +1292,32 @@
           "kolibri node not available on reference image"
         ],
         [
-          "Ideal circuit elements",
-          "below relevance gate"
-        ],
-        [
           "Voltmeters and Ammeters",
           "below relevance gate"
         ],
         [
-          "Application of the fundamental laws (solve)",
+          "Impedance",
           "below relevance gate"
         ],
         [
-          "Voltage divider",
+          "Interpreting expressions with multiple variables: Resistors",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 135,
-        "kolibri node not available on reference image": 6
+        "below relevance gate": 133,
+        "kolibri node not available on reference image": 6,
+        "judged off-topic (independent reviewer)": 1
       }
     },
     "reading_pool": {
-      "passed": 9,
+      "passed": 7,
       "runners_up": [
-        "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)",
+        "Series and parallel resistors",
         "Series Circuits (Flexbook)",
         "Series Circuits Practice",
-        "Series and Parallel Circuits (Flexbook)",
-        "Combined Series-Parallel Circuits (Flexbook)"
+        "Adding Up Resistance In Series And In Parallel",
+        "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)"
       ],
       "rejected_sample": [
         [
@@ -1221,23 +1325,11 @@
           "below relevance gate"
         ],
         [
-          "Ohm's Law: Looking at a Circuit (PLIX)",
-          "below relevance gate"
-        ],
-        [
           "Circuit Construction Kit: DC - Virtual Lab",
           "below relevance gate"
         ],
         [
-          "Differentiate integer powers (mixed positive and negative)",
-          "below relevance gate"
-        ],
-        [
-          "Ohm's Law (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Ohm's Law Practice",
+          "Ohm's Law: Looking at a Circuit (PLIX)",
           "below relevance gate"
         ],
         [
@@ -1245,13 +1337,26 @@
           "below relevance gate"
         ],
         [
-          "Differentiation Rules: Constants and Variable Powers (Flexbook)",
+          "Differentiate integer powers (mixed positive and negative)",
+          "below relevance gate"
+        ],
+        [
+          "Resistors in Series (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Resistors in Series Practice",
+          "below relevance gate"
+        ],
+        [
+          "Ohm's Law (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 141,
-        "excluded: answer/exam material": 10
+        "below relevance gate": 146,
+        "judged off-topic (independent reviewer)": 2,
+        "excluded: answer/exam material": 4
       }
     }
   },
@@ -1311,51 +1416,58 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Topic - current electricity - Ohm's Law Video Primer",
-        "score": 240.02,
-        "core_hits": [
-          "current electricity"
-        ],
-        "detail_hits": [
-          "law ohm'"
-        ],
-        "detail_weight": 0.62
-      },
-      "observe.video": {
-        "picked": "Introduction to circuits and Ohm's law",
-        "score": 177.72,
+        "picked": "Parallel resistors (part 1)",
+        "fit": "fits",
+        "score": 135.65,
         "core_hits": [],
         "detail_hits": [
-          "law ohm'",
-          "circuit",
-          "potentialdifference"
+          "equivalent parallel resistance",
+          "node",
+          "equivalent parallel resistance resistor",
+          "parallel"
         ],
-        "detail_weight": 1.23
+        "detail_weight": 1.64
+      },
+      "observe.video": {
+        "picked": "Parallel resistors (part 3)",
+        "fit": "fits",
+        "score": 86.34,
+        "core_hits": [],
+        "detail_hits": [
+          "equivalent parallel resistance",
+          "equivalent parallel resistance resistor",
+          "parallel"
+        ],
+        "detail_weight": 1.41
       },
       "explain.video": {
-        "picked": "Topic - current electricity - Ohm's Law Video Primer",
-        "score": 240.02,
-        "core_hits": [
-          "current electricity"
-        ],
+        "picked": "Parallel resistors (part 1)",
+        "fit": "fits",
+        "score": 135.65,
+        "core_hits": [],
         "detail_hits": [
-          "law ohm'"
+          "equivalent parallel resistance",
+          "node",
+          "equivalent parallel resistance resistor",
+          "parallel"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 1.64
       },
       "dqb.video": {
-        "picked": "Topic - current electricity - Ohm's Law Video Primer",
-        "score": 240.02,
-        "core_hits": [
-          "current electricity"
-        ],
+        "picked": "Parallel resistors (part 3)",
+        "fit": "fits",
+        "score": 86.34,
+        "core_hits": [],
         "detail_hits": [
-          "law ohm'"
+          "equivalent parallel resistance",
+          "equivalent parallel resistance resistor",
+          "parallel"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 1.41
       },
       "model.video": {
         "picked": "Topic - current electricity - Ohm's Law Video Primer",
+        "fit": "partial",
         "score": 240.02,
         "core_hits": [
           "current electricity"
@@ -1366,75 +1478,90 @@
         "detail_weight": 0.62
       },
       "predict.reading": {
-        "picked": "Ohm's Law",
-        "score": 161.86,
+        "picked": "Series and Parallel Circuits (Flexbook)",
+        "fit": "fits",
+        "score": 183.88,
         "core_hits": [],
         "detail_hits": [
-          "law ohm'",
-          "circuit",
-          "potentialdifference"
+          "circuit parallel",
+          "parallel sery",
+          "circuit parallel sery",
+          "parallel",
+          "circuit"
         ],
-        "detail_weight": 1.23
+        "detail_weight": 2.94
       },
       "observe.reading": {
-        "picked": "Combined Series-Parallel Circuits (Flexbook)",
-        "score": 137.63,
+        "picked": "Series and parallel resistors",
+        "fit": "fits",
+        "score": 166.23,
         "core_hits": [],
         "detail_hits": [
           "circuit parallel",
           "parallel sery",
+          "circuit parallel sery",
           "parallel",
           "circuit"
         ],
-        "detail_weight": 2.68
+        "detail_weight": 2.94
       },
       "explain.reading": {
-        "picked": "Combined Series-Parallel Circuits Practice",
-        "score": 137.63,
+        "picked": "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)",
+        "fit": "fits",
+        "score": 131.18,
         "core_hits": [],
         "detail_hits": [
           "circuit parallel",
           "parallel sery",
+          "circuit parallel sery",
           "parallel",
           "circuit"
         ],
-        "detail_weight": 2.68
+        "detail_weight": 2.94
       },
       "dqb.reading": {
         "picked": "Series and Parallel Circuits (Flexbook)",
-        "score": 133.21,
+        "fit": "fits",
+        "score": 183.88,
         "core_hits": [],
         "detail_hits": [
           "circuit parallel",
           "parallel sery",
+          "circuit parallel sery",
           "parallel",
           "circuit"
         ],
-        "detail_weight": 2.68
+        "detail_weight": 2.94
       },
       "model.reading": {
-        "picked": "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)",
-        "score": 125.75,
+        "picked": "Series and parallel resistors",
+        "fit": "fits",
+        "score": 166.23,
         "core_hits": [],
         "detail_hits": [
           "circuit parallel",
           "parallel sery",
+          "circuit parallel sery",
           "parallel",
           "circuit"
         ],
-        "detail_weight": 2.68
+        "detail_weight": 2.94
       }
     },
     "video_pool": {
       "passed": 6,
       "runners_up": [
+        "Parallel resistors (part 3)",
+        "Topic - current electricity - Ohm's Law Video Primer",
         "Introduction to circuits and Ohm's law",
         "Ideal circuit elements",
-        "Parallel resistors (part 1)",
-        "Circuit terminology",
-        "Parallel resistors (part 3)"
+        "Circuit terminology"
       ],
       "rejected_sample": [
+        [
+          "Impedance",
+          "below relevance gate"
+        ],
         [
           "Video: Ohm's Law",
           "below relevance gate"
@@ -1448,40 +1575,36 @@
           "below relevance gate"
         ],
         [
+          "Interpreting expressions with multiple variables: Resistors",
+          "below relevance gate"
+        ],
+        [
+          "Parallel resistors (part 2)",
+          "below relevance gate"
+        ],
+        [
           "Application of the fundamental laws (solve)",
           "below relevance gate"
         ],
         [
           "Mesh current method (steps 1 to 3)",
           "below relevance gate"
-        ],
-        [
-          "Kirchhoff's voltage law",
-          "below relevance gate"
-        ],
-        [
-          "Impedance",
-          "below relevance gate"
-        ],
-        [
-          "Kirchhoff's current law",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 136,
-        "kolibri node not available on reference image": 7,
+        "below relevance gate": 133,
+        "kolibri node not available on reference image": 6,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
       "passed": 8,
       "runners_up": [
-        "Combined Series-Parallel Circuits (Flexbook)",
-        "Combined Series-Parallel Circuits Practice",
-        "Series and Parallel Circuits (Flexbook)",
+        "Series and parallel resistors",
         "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)",
-        "Series and parallel resistors"
+        "Parallel Circuits (Flexbook)",
+        "Parallel Circuits Practice",
+        "Combined Series-Parallel Circuits (Flexbook)"
       ],
       "rejected_sample": [
         [
@@ -1494,6 +1617,10 @@
         ],
         [
           "Ohm's Law Practice",
+          "below relevance gate"
+        ],
+        [
+          "Circuit Construction Kit: DC - Virtual Lab",
           "below relevance gate"
         ],
         [
@@ -1511,15 +1638,11 @@
         [
           "Ammeters and Voltmeters (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Adding Up Resistance In Series And In Parallel",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 148,
-        "kolibri node not available on reference image": 2,
+        "below relevance gate": 152,
+        "kolibri node not available on reference image": 1,
         "excluded: answer/exam material": 7
       }
     }
@@ -1548,6 +1671,13 @@
         "wiring",
         "reduction",
         "circuits",
+        "analyzing",
+        "rule",
+        "kirchhoff's",
+        "law",
+        "drop",
+        "across",
+        "resistors",
         "solving",
         "real"
       ],
@@ -1559,33 +1689,20 @@
         "branch current",
         "total current",
         "household wiring",
-        "circuit reduction"
+        "circuit reduction",
+        "series parallel circuits",
+        "equivalent resistance combination circuits",
+        "analyzing series parallel circuits",
+        "voltage divider rule",
+        "kirchhoff's current law branch currents",
+        "voltage drop across resistors"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Parallel resistors (part 3)",
-        "score": 80.2,
-        "core_hits": [],
-        "detail_hits": [
-          "equivalent resistance",
-          "parallel"
-        ],
-        "detail_weight": 1.8
-      },
-      "observe.video": {
-        "picked": "Series resistors",
-        "score": 63.31,
-        "core_hits": [],
-        "detail_hits": [
-          "equivalent resistance",
-          "sery"
-        ],
-        "detail_weight": 1.8
-      },
-      "explain.video": {
         "picked": "Simplifying resistor networks",
-        "score": 62.65,
+        "fit": "fits",
+        "score": 93.72,
         "core_hits": [],
         "detail_hits": [
           "parallel sery",
@@ -1594,9 +1711,33 @@
         ],
         "detail_weight": 1.67
       },
-      "dqb.video": {
+      "observe.video": {
+        "picked": "Simplifying resistor networks",
+        "fit": "fits",
+        "score": 93.72,
+        "core_hits": [],
+        "detail_hits": [
+          "parallel sery",
+          "sery",
+          "parallel"
+        ],
+        "detail_weight": 1.67
+      },
+      "explain.video": {
         "picked": "Parallel resistors (part 1)",
-        "score": 62.1,
+        "fit": "partial",
+        "score": 116.26,
+        "core_hits": [],
+        "detail_hits": [
+          "equivalent resistance",
+          "parallel"
+        ],
+        "detail_weight": 1.8
+      },
+      "dqb.video": {
+        "picked": "Parallel resistors (part 3)",
+        "fit": "partial",
+        "score": 110.29,
         "core_hits": [],
         "detail_hits": [
           "equivalent resistance",
@@ -1605,90 +1746,97 @@
         "detail_weight": 1.8
       },
       "model.video": {
-        "picked": "Parallel resistors (part 3)",
-        "score": 80.2,
+        "picked": "Series resistors",
+        "fit": "partial",
+        "score": 94.36,
         "core_hits": [],
         "detail_hits": [
           "equivalent resistance",
-          "parallel"
+          "sery"
         ],
         "detail_weight": 1.8
       },
       "predict.reading": {
         "picked": "Combined Series-Parallel Circuits (Flexbook)",
-        "score": 121.38,
+        "fit": "fits",
+        "score": 182,
         "core_hits": [],
         "detail_hits": [
           "parallel sery",
+          "circuit parallel sery",
           "sery",
           "parallel",
           "circuit"
         ],
-        "detail_weight": 1.97
+        "detail_weight": 2.55
       },
       "observe.reading": {
         "picked": "Combined Series-Parallel Circuits Practice",
-        "score": 121.38,
+        "fit": "fits",
+        "score": 182,
         "core_hits": [],
         "detail_hits": [
           "parallel sery",
+          "circuit parallel sery",
           "sery",
           "parallel",
           "circuit"
         ],
-        "detail_weight": 1.97
+        "detail_weight": 2.55
       },
       "explain.reading": {
-        "picked": "Series and Parallel Circuits (Flexbook)",
-        "score": 117.48,
+        "picked": "Series and parallel resistors",
+        "fit": "fits",
+        "score": 155.89,
         "core_hits": [],
         "detail_hits": [
           "parallel sery",
+          "circuit parallel sery",
           "sery",
           "parallel",
           "circuit"
         ],
-        "detail_weight": 1.97
+        "detail_weight": 2.55
       },
       "dqb.reading": {
-        "picked": "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)",
-        "score": 110.9,
+        "picked": "Combined Series-Parallel Circuits (Flexbook)",
+        "fit": "fits",
+        "score": 182,
         "core_hits": [],
         "detail_hits": [
           "parallel sery",
+          "circuit parallel sery",
           "sery",
           "parallel",
           "circuit"
         ],
-        "detail_weight": 1.97
+        "detail_weight": 2.55
       },
       "model.reading": {
-        "picked": "Series and parallel resistors",
-        "score": 106.59,
+        "picked": "Combined Series-Parallel Circuits Practice",
+        "fit": "fits",
+        "score": 182,
         "core_hits": [],
         "detail_hits": [
           "parallel sery",
+          "circuit parallel sery",
           "sery",
           "parallel",
           "circuit"
         ],
-        "detail_weight": 1.97
+        "detail_weight": 2.55
       }
     },
     "video_pool": {
       "passed": 4,
       "runners_up": [
-        "Series resistors",
-        "Simplifying resistor networks",
-        "Parallel resistors (part 1)"
+        "Parallel resistors (part 1)",
+        "Parallel resistors (part 3)",
+        "Series resistors"
       ],
       "rejected_sample": [
         [
-          "Voltage divider",
-          "below relevance gate"
-        ],
-        [
-          "Introduction to circuits and Ohm's law",
+          "Kirchhoff's voltage law",
           "below relevance gate"
         ],
         [
@@ -1696,15 +1844,11 @@
           "below relevance gate"
         ],
         [
-          "Topic- current electricity - Resistance in a Wire",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Kirchhoff's voltage law",
+          "Kirchhoff's current law",
           "below relevance gate"
         ],
         [
-          "04 Resistors In Combination Activity",
+          "Voltage divider",
           "below relevance gate"
         ],
         [
@@ -1712,23 +1856,31 @@
           "below relevance gate"
         ],
         [
-          "RC step response - intuition",
+          "Introduction to circuits and Ohm's law",
+          "below relevance gate"
+        ],
+        [
+          "Example: Analyzing a more complex resistor circuit",
+          "below relevance gate"
+        ],
+        [
+          "Example: Analyzing a more complex resistor circuit -dubbed(KY)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "below relevance gate": 135,
-        "kolibri node not available on reference image": 3
+        "kolibri node not available on reference image": 5
       }
     },
     "reading_pool": {
-      "passed": 8,
+      "passed": 6,
       "runners_up": [
         "Combined Series-Parallel Circuits Practice",
+        "Series and parallel resistors",
         "Series and Parallel Circuits (Flexbook)",
         "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)",
-        "Series and parallel resistors",
-        "Capacitors in Series and Parallel (Flexbook)"
+        "Adding Up Resistance In Series And In Parallel"
       ],
       "rejected_sample": [
         [
@@ -1740,34 +1892,35 @@
           "below relevance gate"
         ],
         [
-          "Equivalent ratios in the real world",
+          "Capacitors in Series and Parallel (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Capacitors in Series and Parallel Practice",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Circuit Construction Kit: DC",
           "below relevance gate"
         ],
         [
-          "Electricity Magnets And Circuits",
+          "Circuit Construction Kit: DC - Virtual Lab",
           "below relevance gate"
         ],
         [
-          "Parallel Circuits (Flexbook)",
+          "Resistor Circuits (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Parallel Circuits Practice",
-          "below relevance gate"
-        ],
-        [
-          "Electric Current and Circuits (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Voltage and Current (Flexbook)",
+          "Resistor Circuits Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 143,
+        "below relevance gate": 146,
+        "judged off-topic (independent reviewer)": 2,
         "excluded: answer/exam material": 7,
-        "kolibri node not available on reference image": 2
+        "kolibri node not available on reference image": 1
       }
     }
   },
@@ -1793,6 +1946,11 @@
         "load",
         "potential",
         "drop",
+        "graph",
+        "gradient",
+        "lost",
+        "volts",
+        "batteries",
         "weaken",
         "under"
       ],
@@ -1801,12 +1959,19 @@
         "electromotive force",
         "terminal voltage",
         "load current",
-        "potential drop"
+        "potential drop",
+        "internal resistance battery",
+        "emf terminal voltage",
+        "terminal voltage current",
+        "emf graph",
+        "gradient internal resistance",
+        "lost volts batteries"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "01 Explaining Emf And Internal Resistance",
+        "fit": "fits",
         "score": 73.67,
         "core_hits": [],
         "detail_hits": [
@@ -1819,6 +1984,7 @@
       },
       "observe.video": {
         "picked": "01 Explaining Emf And Internal Resistance",
+        "fit": "fits",
         "score": 73.67,
         "core_hits": [],
         "detail_hits": [
@@ -1831,6 +1997,7 @@
       },
       "explain.video": {
         "picked": "01 Explaining Emf And Internal Resistance",
+        "fit": "fits",
         "score": 73.67,
         "core_hits": [],
         "detail_hits": [
@@ -1843,6 +2010,7 @@
       },
       "dqb.video": {
         "picked": "01 Explaining Emf And Internal Resistance",
+        "fit": "fits",
         "score": 73.67,
         "core_hits": [],
         "detail_hits": [
@@ -1855,6 +2023,7 @@
       },
       "model.video": {
         "picked": "01 Explaining Emf And Internal Resistance",
+        "fit": "fits",
         "score": 73.67,
         "core_hits": [],
         "detail_hits": [
@@ -1867,6 +2036,7 @@
       },
       "predict.reading": {
         "picked": "Internal Resistance (Flexbook)",
+        "fit": "fits",
         "score": 104.38,
         "core_hits": [],
         "detail_hits": [
@@ -1878,6 +2048,7 @@
       },
       "observe.reading": {
         "picked": "Internal Resistance Practice",
+        "fit": "fits",
         "score": 104.38,
         "core_hits": [],
         "detail_hits": [
@@ -1889,6 +2060,7 @@
       },
       "explain.reading": {
         "picked": "Electromotive Force (Flexbook)",
+        "fit": "fits",
         "score": 92.13,
         "core_hits": [],
         "detail_hits": [
@@ -1898,6 +2070,7 @@
       },
       "dqb.reading": {
         "picked": "Internal Resistance (Flexbook)",
+        "fit": "fits",
         "score": 104.38,
         "core_hits": [],
         "detail_hits": [
@@ -1908,7 +2081,8 @@
         "detail_weight": 2.1
       },
       "model.reading": {
-        "picked": "Internal Resistance (Flexbook)",
+        "picked": "Internal Resistance Practice",
+        "fit": "fits",
         "score": 104.38,
         "core_hits": [],
         "detail_hits": [
@@ -1932,34 +2106,33 @@
           "below relevance gate"
         ],
         [
+          "Battery meter (galvanometer)",
+          "below relevance gate"
+        ],
+        [
           "Mesh current method (steps 1 to 3)",
           "below relevance gate"
         ],
         [
-          "Labeling voltages",
+          "Digital camera connections",
           "below relevance gate"
         ],
         [
-          "Magnetic force between two currents going in opposite directions -dubbed(KY)",
+          "Force vs. time graphs",
           "below relevance gate"
         ],
         [
-          "Magnetic force between two currents going in the same direction -dubbed(KY)",
+          "Electrochemical gradients and secondary active transport",
           "below relevance gate"
         ],
         [
-          "Kirchhoff's voltage law",
-          "below relevance gate"
-        ],
-        [
-          "Induced current in a wire",
+          "Battery and motor mounts for Spider",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 8,
-        "below relevance gate": 142,
-        "web file not on reference image": 1
+        "kolibri node not available on reference image": 9,
+        "below relevance gate": 144
       }
     },
     "reading_pool": {
@@ -1982,7 +2155,15 @@
           "below relevance gate"
         ],
         [
+          "Finding gradients",
+          "below relevance gate"
+        ],
+        [
           "Ohm's Law",
+          "below relevance gate"
+        ],
+        [
+          "Systems of equations with graphing",
           "below relevance gate"
         ],
         [
@@ -1992,20 +2173,12 @@
         [
           "Voltage and Current Practice",
           "below relevance gate"
-        ],
-        [
-          "Moments and Centers of Mass, Work and Force, Fluid Forces Practice",
-          "below relevance gate"
-        ],
-        [
-          "Forces and Motion: Basics",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 144,
-        "excluded: answer/exam material": 7,
-        "kolibri node not available on reference image": 14
+        "below relevance gate": 159,
+        "kolibri node not available on reference image": 5,
+        "excluded: answer/exam material": 6
       }
     }
   },
@@ -2041,7 +2214,9 @@
         "huruma",
         "estate",
         "physics",
-        "applying"
+        "energy",
+        "formula",
+        "dissipated"
       ],
       "phrases": [
         "electrical power",
@@ -2054,12 +2229,17 @@
         "power budget",
         "ohm's law",
         "huruma estate",
-        "current electricity"
+        "current electricity",
+        "electric power energy",
+        "power formula",
+        "power dissipated resistors",
+        "joule heating wires"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Topic - current electricity - Ohm's Law Video Primer",
+        "fit": "partial",
         "score": 290.36,
         "core_hits": [
           "current electricity"
@@ -2071,6 +2251,7 @@
       },
       "observe.video": {
         "picked": "Topic - current electricity - Ohm's Law Video Primer",
+        "fit": "partial",
         "score": 290.36,
         "core_hits": [
           "current electricity"
@@ -2082,6 +2263,7 @@
       },
       "explain.video": {
         "picked": "Topic - current electricity - Ohm's Law Video Primer",
+        "fit": "partial",
         "score": 290.36,
         "core_hits": [
           "current electricity"
@@ -2093,6 +2275,7 @@
       },
       "dqb.video": {
         "picked": "Topic - current electricity - Ohm's Law Video Primer",
+        "fit": "partial",
         "score": 290.36,
         "core_hits": [
           "current electricity"
@@ -2104,6 +2287,7 @@
       },
       "model.video": {
         "picked": "Topic - current electricity - Ohm's Law Video Primer",
+        "fit": "partial",
         "score": 290.36,
         "core_hits": [
           "current electricity"
@@ -2115,72 +2299,92 @@
       },
       "predict.reading": {
         "picked": "Electric Power and Electrical Energy Use (Flexbook)",
-        "score": 81.03,
+        "fit": "fits",
+        "score": 111.74,
         "core_hits": [],
         "detail_hits": [
           "electrical power",
           "power",
+          "electric energy power",
           "electrical"
         ],
-        "detail_weight": 2.18
+        "detail_weight": 2.58
       },
       "observe.reading": {
         "picked": "Electric Power and Electrical Energy Use (Flexbook)",
-        "score": 81.03,
+        "fit": "fits",
+        "score": 111.74,
         "core_hits": [],
         "detail_hits": [
           "electrical power",
           "power",
+          "electric energy power",
           "electrical"
         ],
-        "detail_weight": 2.18
+        "detail_weight": 2.58
       },
       "explain.reading": {
         "picked": "Electric Power and Electrical Energy Use (Flexbook)",
-        "score": 81.03,
+        "fit": "fits",
+        "score": 111.74,
         "core_hits": [],
         "detail_hits": [
           "electrical power",
           "power",
+          "electric energy power",
           "electrical"
         ],
-        "detail_weight": 2.18
+        "detail_weight": 2.58
       },
       "dqb.reading": {
         "picked": "Electric Power and Electrical Energy Use (Flexbook)",
-        "score": 81.03,
+        "fit": "fits",
+        "score": 111.74,
         "core_hits": [],
         "detail_hits": [
           "electrical power",
           "power",
+          "electric energy power",
           "electrical"
         ],
-        "detail_weight": 2.18
+        "detail_weight": 2.58
       },
       "model.reading": {
         "picked": "Electric Power and Electrical Energy Use (Flexbook)",
-        "score": 81.03,
+        "fit": "fits",
+        "score": 111.74,
         "core_hits": [],
         "detail_hits": [
           "electrical power",
           "power",
+          "electric energy power",
           "electrical"
         ],
-        "detail_weight": 2.18
+        "detail_weight": 2.58
       }
     },
     "video_pool": {
-      "passed": 2,
-      "runners_up": [
-        "Power wires and on/off switch"
-      ],
+      "passed": 1,
+      "runners_up": [],
       "rejected_sample": [
+        [
+          "Ideal circuit elements",
+          "below relevance gate"
+        ],
         [
           "Video: Ohm's Law",
           "below relevance gate"
         ],
         [
+          "Topic- current electricity - Resistance in a Wire",
+          "kolibri node not available on reference image"
+        ],
+        [
           "Introduction to circuits and Ohm's law",
+          "below relevance gate"
+        ],
+        [
+          "Impedance",
           "below relevance gate"
         ],
         [
@@ -2192,26 +2396,15 @@
           "below relevance gate"
         ],
         [
-          "Topic- current electricity - Resistance in a Wire",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Ideal circuit elements",
-          "below relevance gate"
-        ],
-        [
-          "Impedance",
-          "below relevance gate"
-        ],
-        [
-          "Kirchhoff's current law",
+          "Electric power",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "below relevance gate": 149,
-        "kolibri node not available on reference image": 9,
-        "web file not on reference image": 3
+        "kolibri node not available on reference image": 6,
+        "judged off-topic (independent reviewer)": 1,
+        "web file not on reference image": 5
       }
     },
     "reading_pool": {
@@ -2252,9 +2445,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 145,
-        "excluded: answer/exam material": 9,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 149,
+        "excluded: answer/exam material": 13,
+        "kolibri node not available on reference image": 5
       }
     }
   },
@@ -2281,6 +2474,15 @@
         "appliance",
         "cost",
         "tariff",
+        "calculation",
+        "equals",
+        "times",
+        "time",
+        "calculating",
+        "joules",
+        "hours",
+        "electric",
+        "usage",
         "billing"
       ],
       "phrases": [
@@ -2289,12 +2491,19 @@
         "power bill",
         "energy conservation",
         "power rating",
-        "appliance cost"
+        "appliance cost",
+        "electrical energy power",
+        "kilowatt hour calculation",
+        "energy equals power times time",
+        "calculating electricity cost",
+        "joules kilowatt hours",
+        "electric bill appliance usage"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Electrical Energy - Example 1",
+        "fit": "fits",
         "score": 92.47,
         "core_hits": [],
         "detail_hits": [
@@ -2305,37 +2514,44 @@
         "detail_weight": 2.1
       },
       "observe.video": {
-        "picked": "Vertical springs and energy conservation",
-        "score": 64.53,
+        "picked": "Electrical Energy - Example 1",
+        "fit": "fits",
+        "score": 92.47,
         "core_hits": [],
         "detail_hits": [
-          "conservation energy",
+          "electrical energy",
+          "electrical",
           "energy"
         ],
-        "detail_weight": 1.05
+        "detail_weight": 2.1
       },
       "explain.video": {
-        "picked": "Conservation of energy",
-        "score": 63.53,
+        "picked": "Voltage",
+        "fit": "partial",
+        "score": 46.04,
         "core_hits": [],
         "detail_hits": [
-          "conservation energy",
+          "electrical energy",
+          "electrical",
           "energy"
         ],
-        "detail_weight": 1.05
+        "detail_weight": 2.1
       },
       "dqb.video": {
-        "picked": "Conservation of energy -dubbed(KY)",
-        "score": 59.54,
+        "picked": "Voltage -dubbed(KY)",
+        "fit": "partial",
+        "score": 43.03,
         "core_hits": [],
         "detail_hits": [
-          "conservation energy",
+          "electrical energy",
+          "electrical",
           "energy"
         ],
-        "detail_weight": 1.05
+        "detail_weight": 2.1
       },
       "model.video": {
         "picked": "Electrical Energy - Example 1",
+        "fit": "fits",
         "score": 92.47,
         "core_hits": [],
         "detail_hits": [
@@ -2347,28 +2563,35 @@
       },
       "predict.reading": {
         "picked": "Electric Power and Electrical Energy Use (Flexbook)",
-        "score": 119.81,
+        "fit": "fits",
+        "score": 162.95,
         "core_hits": [],
         "detail_hits": [
           "electrical energy",
+          "electrical energy power",
           "electrical",
           "energy",
           "power"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 2.94
       },
       "observe.reading": {
-        "picked": "Energy Conservation (Flexbook)",
-        "score": 76.62,
+        "picked": "Electric Power and Electrical Energy Use (Flexbook)",
+        "fit": "fits",
+        "score": 162.95,
         "core_hits": [],
         "detail_hits": [
-          "conservation energy",
-          "energy"
+          "electrical energy",
+          "electrical energy power",
+          "electrical",
+          "energy",
+          "power"
         ],
-        "detail_weight": 1.05
+        "detail_weight": 2.94
       },
       "explain.reading": {
-        "picked": "Energy Conservation Practice",
+        "picked": "Energy Conservation (Flexbook)",
+        "fit": "partial",
         "score": 76.62,
         "core_hits": [],
         "detail_hits": [
@@ -2378,38 +2601,33 @@
         "detail_weight": 1.05
       },
       "dqb.reading": {
-        "picked": "Electric Power and Electrical Energy Use (Flexbook)",
-        "score": 119.81,
+        "picked": "Conservation of Energy (Flexbook)",
+        "fit": "partial",
+        "score": 43.3,
         "core_hits": [],
         "detail_hits": [
-          "electrical energy",
-          "electrical",
-          "energy",
-          "power"
+          "conservation energy",
+          "energy"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 1.05
       },
       "model.reading": {
-        "picked": "Electric Power and Electrical Energy Use (Flexbook)",
-        "score": 119.81,
+        "picked": "Conservation of Energy Practice",
+        "fit": "partial",
+        "score": 43.3,
         "core_hits": [],
         "detail_hits": [
-          "electrical energy",
-          "electrical",
-          "energy",
-          "power"
+          "conservation energy",
+          "energy"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 1.05
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 3,
       "runners_up": [
-        "Vertical springs and energy conservation",
-        "Conservation of energy",
-        "Conservation of energy -dubbed(KY)",
         "Voltage",
-        "Capacitors in parallel"
+        "Voltage -dubbed(KY)"
       ],
       "rejected_sample": [
         [
@@ -2417,86 +2635,86 @@
           "web file not on reference image"
         ],
         [
-          "Trade and tariffs",
+          "Vertical springs and energy conservation",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Conservation of energy",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Conservation of energy -dubbed(KY)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Powers of zero",
           "below relevance gate"
         ],
         [
-          "Topic- current electricity - Resistance in a Wire",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Visualizing average costs and marginal costs as slope",
+          "Graphical impact of cost changes on marginal and average costs",
           "below relevance gate"
         ],
         [
-          "Topic - current electricity - Ohm's Law Video Primer",
+          "Multiplying a decimal by a power of 10",
           "below relevance gate"
         ],
         [
-          "Marginal cost, average variable cost, and average total cost",
-          "below relevance gate"
-        ],
-        [
-          "Proof of power rule for positive integer powers -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Kirchhoff's current law",
+          "Converting units: minutes to hours",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "web file not on reference image": 4,
-        "below relevance gate": 118,
-        "kolibri node not available on reference image": 4
+        "judged off-topic (independent reviewer)": 10,
+        "below relevance gate": 122,
+        "kolibri node not available on reference image": 9
       }
     },
     "reading_pool": {
-      "passed": 11,
+      "passed": 4,
       "runners_up": [
         "Energy Conservation (Flexbook)",
-        "Energy Conservation Practice",
         "Conservation of Energy (Flexbook)",
-        "Conservation of Energy Practice",
-        "Conservation of Energy and Momentum (PLIX)"
+        "Conservation of Energy Practice"
       ],
       "rejected_sample": [
         [
-          "Additional Resources for Thermodynamics: Energy Conversion in Generating Electricity",
-          "kolibri node not available on reference image"
+          "Energy Conservation Practice",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Short-run production costs: foundational concepts",
+          "Time differences",
           "below relevance gate"
         ],
         [
-          "Cost-benefit analysis",
+          "Calculations with series: Binomial fractional powers, integrals, and differential equations (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Kno 100103 Ten Rules For Energy Efficient Cost Effective Brick Firing",
+          "The Fewest Number of Coins and Bills to Equal a Given Amount Practice",
           "below relevance gate"
         ],
         [
-          "The Ecological Cost ..:Activity 3, How Does Energy Change Form?",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "The Ecological Cost ..:Activity 4, The Inefficiency of Energy Transfer",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Power rule (positive integer powers)",
+          "Electric Current (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Reverse power rule: negative and fractional powers",
+          "Electric Current Practice",
+          "below relevance gate"
+        ],
+        [
+          "Electric Current and Circuits (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Controlling Current in Electric Circuits (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 15,
-        "below relevance gate": 131,
+        "judged off-topic (independent reviewer)": 7,
+        "below relevance gate": 136,
+        "kolibri node not available on reference image": 7,
         "excluded: answer/exam material": 11
       }
     }
@@ -2557,93 +2775,113 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Global winds and currents",
-        "score": 60.08,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "current heating",
-          "heating"
-        ],
-        "detail_weight": 1.55
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "Global winds and currents",
-        "score": 60.08,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "current heating",
-          "heating"
-        ],
-        "detail_weight": 1.55
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "Global winds and currents",
-        "score": 60.08,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "current heating",
-          "heating"
-        ],
-        "detail_weight": 1.55
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "Global winds and currents",
-        "score": 60.08,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "current heating",
-          "heating"
-        ],
-        "detail_weight": 1.55
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "Global winds and currents",
-        "score": 60.08,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "current heating",
-          "heating"
-        ],
-        "detail_weight": 1.55
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "predict.reading": {
-        "picked": null,
-        "score": null,
+        "picked": "Electric Power and Electrical Energy Use (Flexbook)",
+        "fit": "partial",
+        "score": 83.59,
         "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "detail_hits": [
+          "power",
+          "electric energy power",
+          "electric",
+          "electrical"
+        ],
+        "detail_weight": 1.09
       },
       "observe.reading": {
-        "picked": null,
-        "score": null,
+        "picked": "Electric Power and Electrical Energy Use (Flexbook)",
+        "fit": "partial",
+        "score": 83.59,
         "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "detail_hits": [
+          "power",
+          "electric energy power",
+          "electric",
+          "electrical"
+        ],
+        "detail_weight": 1.09
       },
       "explain.reading": {
-        "picked": null,
-        "score": null,
+        "picked": "Electric Power and Electrical Energy Use (Flexbook)",
+        "fit": "partial",
+        "score": 83.59,
         "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "detail_hits": [
+          "power",
+          "electric energy power",
+          "electric",
+          "electrical"
+        ],
+        "detail_weight": 1.09
       },
       "dqb.reading": {
-        "picked": null,
-        "score": null,
+        "picked": "Electric Power and Electrical Energy Use (Flexbook)",
+        "fit": "partial",
+        "score": 83.59,
         "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "detail_hits": [
+          "power",
+          "electric energy power",
+          "electric",
+          "electrical"
+        ],
+        "detail_weight": 1.09
       },
       "model.reading": {
-        "picked": null,
-        "score": null,
+        "picked": "Electric Power and Electrical Energy Use (Flexbook)",
+        "fit": "partial",
+        "score": 83.59,
         "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "detail_hits": [
+          "power",
+          "electric energy power",
+          "electric",
+          "electrical"
+        ],
+        "detail_weight": 1.09
       }
     },
     "video_pool": {
-      "passed": 1,
+      "passed": 0,
       "runners_up": [],
       "rejected_sample": [
         [
@@ -2657,6 +2895,10 @@
         [
           "Electromagnetic field (loop)",
           "below relevance gate"
+        ],
+        [
+          "Global winds and currents",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Mesh current method (steps 1 to 3)",
@@ -2673,20 +2915,17 @@
         [
           "EPISODE 46: Circuits and Electricity!",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Electric motors (part 1) -dubbed(KY)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 7,
-        "below relevance gate": 140,
-        "web file not on reference image": 4
+        "kolibri node not available on reference image": 8,
+        "below relevance gate": 139,
+        "judged off-topic (independent reviewer)": 1,
+        "web file not on reference image": 5
       }
     },
     "reading_pool": {
-      "passed": 0,
+      "passed": 1,
       "runners_up": [],
       "rejected_sample": [
         [
@@ -2702,7 +2941,11 @@
           "below relevance gate"
         ],
         [
-          "Electric Power and Electrical Energy Use (Flexbook)",
+          "Energy Transfer in Electric Circuits (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Energy Transfer in Electric Circuits Practice",
           "below relevance gate"
         ],
         [
@@ -2716,15 +2959,11 @@
         [
           "Electric Circuits (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Electric Circuits Practice",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "excluded: answer/exam material": 8,
-        "below relevance gate": 148,
+        "below relevance gate": 149,
         "kolibri node not available on reference image": 1
       }
     }
@@ -2785,28 +3024,28 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Topic - current electricity - Ohm's Law Video Primer",
-        "score": 332.27,
-        "core_hits": [
-          "current electricity"
-        ],
+        "picked": "Video: Ohm's Law",
+        "fit": "fits",
+        "score": 119.6,
+        "core_hits": [],
         "detail_hits": [
           "law ohm'"
         ],
         "detail_weight": 1.5
       },
       "observe.video": {
-        "picked": "Introduction to circuits and Ohm's law",
-        "score": 199.92,
+        "picked": "Video: Ohm's Law",
+        "fit": "fits",
+        "score": 119.6,
         "core_hits": [],
         "detail_hits": [
-          "law ohm'",
-          "circuit"
+          "law ohm'"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 1.5
       },
       "explain.video": {
         "picked": "Topic - current electricity - Ohm's Law Video Primer",
+        "fit": "partial",
         "score": 332.27,
         "core_hits": [
           "current electricity"
@@ -2817,41 +3056,21 @@
         "detail_weight": 1.5
       },
       "dqb.video": {
-        "picked": "Topic - current electricity - Ohm's Law Video Primer",
-        "score": 332.27,
-        "core_hits": [
-          "current electricity"
-        ],
-        "detail_hits": [
-          "law ohm'"
-        ],
-        "detail_weight": 1.5
-      },
-      "model.video": {
-        "picked": "Topic - current electricity - Ohm's Law Video Primer",
-        "score": 332.27,
-        "core_hits": [
-          "current electricity"
-        ],
-        "detail_hits": [
-          "law ohm'"
-        ],
-        "detail_weight": 1.5
-      },
-      "predict.reading": {
-        "picked": "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)",
-        "score": 186.15,
+        "picked": "Introduction to circuits and Ohm's law",
+        "fit": "partial",
+        "score": 208.49,
         "core_hits": [],
         "detail_hits": [
-          "circuit parallel",
-          "circuit sery",
+          "law ohm'",
+          "law ohm' resistance",
           "circuit"
         ],
-        "detail_weight": 1.88
+        "detail_weight": 2.02
       },
-      "observe.reading": {
-        "picked": "Ohm's Law",
-        "score": 182.07,
+      "model.video": {
+        "picked": "Ideal circuit elements",
+        "fit": "partial",
+        "score": 137.65,
         "core_hits": [],
         "detail_hits": [
           "law ohm'",
@@ -2859,8 +3078,22 @@
         ],
         "detail_weight": 1.8
       },
-      "explain.reading": {
+      "predict.reading": {
+        "picked": "Resistance in Parallel Circuits Vs. Series Circuits (PLIX)",
+        "fit": "fits",
+        "score": 194,
+        "core_hits": [],
+        "detail_hits": [
+          "circuit parallel",
+          "circuit sery",
+          "circuit parallel sery",
+          "circuit"
+        ],
+        "detail_weight": 2.1
+      },
+      "observe.reading": {
         "picked": "Series Circuits: Voltage Drops (PLIX)",
+        "fit": "fits",
         "score": 171.38,
         "core_hits": [],
         "detail_hits": [
@@ -2870,36 +3103,54 @@
         ],
         "detail_weight": 2.3
       },
-      "dqb.reading": {
-        "picked": "Ohm's Law: Looking at a Circuit (PLIX)",
-        "score": 151.32,
+      "explain.reading": {
+        "picked": "Electric Power and Electrical Energy Use (Flexbook)",
+        "fit": "fits",
+        "score": 135.94,
         "core_hits": [],
         "detail_hits": [
-          "law ohm'",
-          "circuit"
+          "electrical power",
+          "electrical energy",
+          "power",
+          "electric energy power"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 1.9
       },
-      "model.reading": {
+      "dqb.reading": {
         "picked": "Series and Parallel Circuits (Flexbook)",
-        "score": 121.34,
+        "fit": "fits",
+        "score": 126.46,
         "core_hits": [],
         "detail_hits": [
           "circuit parallel",
           "circuit sery",
+          "circuit parallel sery",
           "circuit"
         ],
-        "detail_weight": 1.88
+        "detail_weight": 2.1
+      },
+      "model.reading": {
+        "picked": "Combined Series-Parallel Circuits (Flexbook)",
+        "fit": "fits",
+        "score": 125.81,
+        "core_hits": [],
+        "detail_hits": [
+          "circuit parallel",
+          "circuit sery",
+          "circuit parallel sery",
+          "circuit"
+        ],
+        "detail_weight": 2.1
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 11,
       "runners_up": [
+        "01 Explaining Emf And Internal Resistance",
+        "01 What Is Ohm'S Law",
+        "Topic - current electricity - Ohm's Law Video Primer",
         "Introduction to circuits and Ohm's law",
-        "Ideal circuit elements",
-        "Application of the fundamental laws (setup)",
-        "Video: Ohm's Law",
-        "Application of the fundamental laws (solve)"
+        "Ideal circuit elements"
       ],
       "rejected_sample": [
         [
@@ -2915,6 +3166,14 @@
           "below relevance gate"
         ],
         [
+          "Power wires and on/off switch",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Impedance",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Electrical Energy - Example 1",
           "below relevance gate"
         ],
@@ -2923,34 +3182,47 @@
           "web file not on reference image"
         ],
         [
-          "Voltage",
-          "below relevance gate"
-        ],
-        [
-          "Parallel resistors (part 1)",
-          "below relevance gate"
-        ],
-        [
-          "First law of thermodynamics / internal energy",
+          "Induced current in a wire",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "kolibri node not available on reference image": 7,
-        "below relevance gate": 132,
-        "web file not on reference image": 2
+        "below relevance gate": 133,
+        "judged off-topic (independent reviewer)": 2,
+        "web file not on reference image": 1
       }
     },
     "reading_pool": {
       "passed": 17,
       "runners_up": [
-        "Ohm's Law",
         "Series Circuits: Voltage Drops (PLIX)",
-        "Ohm's Law: Looking at a Circuit (PLIX)",
+        "Electric Power and Electrical Energy Use (Flexbook)",
         "Series and Parallel Circuits (Flexbook)",
-        "Combined Series-Parallel Circuits (Flexbook)"
+        "Combined Series-Parallel Circuits (Flexbook)",
+        "Combined Series-Parallel Circuits Practice"
       ],
       "rejected_sample": [
+        [
+          "Electric Current and Circuits (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Controlling Current in Electric Circuits (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Resistance in a Wire",
+          "below relevance gate"
+        ],
+        [
+          "Energy Transfer in Electric Circuits (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Energy Transfer in Electric Circuits Practice",
+          "below relevance gate"
+        ],
         [
           "Adding Up Resistance In Series And In Parallel",
           "below relevance gate"
@@ -2962,32 +3234,12 @@
         [
           "Circuit Construction Kit: DC",
           "below relevance gate"
-        ],
-        [
-          "The Ecological Cost ..:Activity 6, Thanksgiving Then and Now, an Energy Comparison",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "The Ecological Cost ..:Activity 6, Teacher Notes & Answer Key: Thanksgiving Then and Now, an Energy Comparison",
-          "excluded: answer/exam material"
-        ],
-        [
-          "Long-run production costs",
-          "below relevance gate"
-        ],
-        [
-          "Electricity Magnets And Circuits",
-          "below relevance gate"
-        ],
-        [
-          "Abubuwan Aikin Gida",
-          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
+        "below relevance gate": 137,
         "kolibri node not available on reference image": 10,
-        "excluded: answer/exam material": 11
+        "excluded: answer/exam material": 12
       }
     }
   }

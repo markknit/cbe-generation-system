@@ -20,6 +20,12 @@
         "open",
         "closed",
         "haemolymph",
+        "systems",
+        "exercise",
+        "deoxygenated",
+        "across",
+        "membranes",
+        "cardiovascular",
         "kipchoge",
         "recover",
         "fast"
@@ -30,12 +36,19 @@
         "heart rate",
         "oxygenated blood",
         "open circulatory system",
-        "closed circulatory system"
+        "closed circulatory system",
+        "circulatory system",
+        "open closed circulatory systems",
+        "heart rate exercise",
+        "oxygenated deoxygenated blood",
+        "diffusion across membranes",
+        "cardiovascular system recovery"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Circulatory system and the heart -dubbed(KY)",
+        "fit": "fits",
         "score": 103.66,
         "core_hits": [],
         "detail_hits": [
@@ -45,6 +58,7 @@
       },
       "observe.video": {
         "picked": "Circulatory system and the heart",
+        "fit": "fits",
         "score": 102.78,
         "core_hits": [],
         "detail_hits": [
@@ -54,6 +68,7 @@
       },
       "explain.video": {
         "picked": "Circulatory System Structure and Function - Overview",
+        "fit": "fits",
         "score": 82.47,
         "core_hits": [],
         "detail_hits": [
@@ -62,8 +77,9 @@
         "detail_weight": 1.25
       },
       "dqb.video": {
-        "picked": "Hemoglobin",
-        "score": 72.39,
+        "picked": "Circulatory system and the heart -dubbed(KY)",
+        "fit": "fits",
+        "score": 103.66,
         "core_hits": [],
         "detail_hits": [
           "circulation system"
@@ -71,8 +87,9 @@
         "detail_weight": 1.25
       },
       "model.video": {
-        "picked": "Hemoglobin -dubbed(KY)",
-        "score": 67.33,
+        "picked": "Circulatory system and the heart",
+        "fit": "fits",
+        "score": 102.78,
         "core_hits": [],
         "detail_hits": [
           "circulation system"
@@ -81,6 +98,7 @@
       },
       "predict.reading": {
         "picked": "Circulatory System And The Heart",
+        "fit": "fits",
         "score": 95.46,
         "core_hits": [],
         "detail_hits": [
@@ -89,16 +107,8 @@
         "detail_weight": 1.25
       },
       "observe.reading": {
-        "picked": "Graphs of Linear Systems: Heart Rate Tracker (PLIX)",
-        "score": 85.12,
-        "core_hits": [],
-        "detail_hits": [
-          "heart rate"
-        ],
-        "detail_weight": 1.07
-      },
-      "explain.reading": {
         "picked": "Circulatory System (Flexbook)",
+        "fit": "fits",
         "score": 80.52,
         "core_hits": [],
         "detail_hits": [
@@ -106,8 +116,19 @@
         ],
         "detail_weight": 1.25
       },
+      "explain.reading": {
+        "picked": "Circulatory System And The Heart",
+        "fit": "fits",
+        "score": 95.46,
+        "core_hits": [],
+        "detail_hits": [
+          "circulation system"
+        ],
+        "detail_weight": 1.25
+      },
       "dqb.reading": {
-        "picked": "Circulatory System Practice",
+        "picked": "Circulatory System (Flexbook)",
+        "fit": "fits",
         "score": 80.52,
         "core_hits": [],
         "detail_hits": [
@@ -116,25 +137,34 @@
         "detail_weight": 1.25
       },
       "model.reading": {
-        "picked": "Circulatory System Diseases (Flexbook)",
-        "score": 79.69,
+        "picked": "Graphs of Linear Systems: Heart Rate Tracker (PLIX)",
+        "fit": "partial",
+        "score": 85.12,
         "core_hits": [],
         "detail_hits": [
-          "circulation system"
+          "heart rate"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.07
       }
     },
     "video_pool": {
-      "passed": 6,
+      "passed": 8,
       "runners_up": [
         "Circulatory system and the heart",
         "Circulatory System Structure and Function - Overview",
-        "Hemoglobin",
-        "Hemoglobin -dubbed(KY)",
-        "15 Insects, Circulatory System"
+        "15 Insects, Circulatory System",
+        "Facilitated diffusion",
+        "Hemoglobin"
       ],
       "rejected_sample": [
+        [
+          "02 Transport Across The Cell Membrane",
+          "below relevance gate"
+        ],
+        [
+          "Passive transport and selective permeability",
+          "below relevance gate"
+        ],
         [
           "Types of systems (Isolated, Closed, Open) - Overview",
           "below relevance gate"
@@ -148,10 +178,6 @@
           "web file not on reference image"
         ],
         [
-          "Facilitated diffusion",
-          "below relevance gate"
-        ],
-        [
           "TOPIC- RATE,PROPORTIONS,RATIO - Unit Rates",
           "kolibri node not available on reference image"
         ],
@@ -162,28 +188,28 @@
         [
           "Open primaries, closed primaries, and blanket primaries",
           "below relevance gate"
-        ],
-        [
-          "Worked example: Determining a rate law using initial rates data",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 144,
-        "kolibri node not available on reference image": 10,
+        "below relevance gate": 141,
+        "kolibri node not available on reference image": 9,
         "web file not on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 12,
+      "passed": 9,
       "runners_up": [
-        "Graphs of Linear Systems: Heart Rate Tracker (PLIX)",
         "Circulatory System (Flexbook)",
-        "Circulatory System Practice",
-        "Circulatory System Diseases (Flexbook)",
-        "Circulatory System Diseases Practice"
+        "The circulatory and respiratory systems",
+        "Circulation and the Lymphatic System (Flexbook)",
+        "Graphs of Linear Systems: Heart Rate Tracker (PLIX)",
+        "Circulatory System Practice"
       ],
       "rejected_sample": [
+        [
+          "Circulatory System Diseases (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "はやいの だぁーれ？",
           "kolibri node not available on reference image"
@@ -201,26 +227,23 @@
           "below relevance gate"
         ],
         [
-          "Passive transport",
+          "Cardiovascular System (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Electrical System Of The Heart",
+          "Cardiovascular System Practice",
           "below relevance gate"
         ],
         [
-          "Autonomic Nervous System Effects On The Heart",
-          "below relevance gate"
-        ],
-        [
-          "Closed System (PLIX)",
+          "Membrane transport",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 2,
-        "below relevance gate": 143,
-        "excluded: answer/exam material": 2
+        "judged off-topic (independent reviewer)": 3,
+        "kolibri node not available on reference image": 3,
+        "below relevance gate": 140,
+        "excluded: answer/exam material": 1
       }
     }
   },
@@ -281,7 +304,8 @@
     "slots": {
       "predict.video": {
         "picked": "Surface area to volume ratio of cells",
-        "score": 117.26,
+        "fit": "fits",
+        "score": 141.82,
         "core_hits": [],
         "detail_hits": [
           "area ratio surface volume",
@@ -291,7 +315,8 @@
       },
       "observe.video": {
         "picked": "Cell size",
-        "score": 83.97,
+        "fit": "fits",
+        "score": 109.83,
         "core_hits": [],
         "detail_hits": [
           "area ratio surface volume",
@@ -301,7 +326,8 @@
       },
       "explain.video": {
         "picked": "Surface area to volume ratio of cells",
-        "score": 117.26,
+        "fit": "fits",
+        "score": 141.82,
         "core_hits": [],
         "detail_hits": [
           "area ratio surface volume",
@@ -310,8 +336,9 @@
         "detail_weight": 2.33
       },
       "dqb.video": {
-        "picked": "Surface area to volume ratio of cells",
-        "score": 117.26,
+        "picked": "Cell size",
+        "fit": "fits",
+        "score": 109.83,
         "core_hits": [],
         "detail_hits": [
           "area ratio surface volume",
@@ -320,64 +347,55 @@
         "detail_weight": 2.33
       },
       "model.video": {
-        "picked": "Surface area to volume ratio of cells",
-        "score": 117.26,
+        "picked": "Circulatory System Structure and Function - Overview",
+        "fit": "partial",
+        "score": 68.2,
         "core_hits": [],
         "detail_hits": [
-          "area ratio surface volume",
-          "ratio"
+          "circulation function system",
+          "system"
         ],
-        "detail_weight": 2.33
+        "detail_weight": 1.13
       },
       "predict.reading": {
-        "picked": "Mass Ratio Calculation (Flexbook)",
-        "score": 42.55,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "ratio",
-          "calculation"
-        ],
-        "detail_weight": 1.08
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.reading": {
-        "picked": "Mass Ratio Calculation Practice",
-        "score": 42.55,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "ratio",
-          "calculation"
-        ],
-        "detail_weight": 1.08
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.reading": {
-        "picked": "Mass Ratio Calculation (Flexbook)",
-        "score": 42.55,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "ratio",
-          "calculation"
-        ],
-        "detail_weight": 1.08
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.reading": {
-        "picked": "Mass Ratio Calculation (Flexbook)",
-        "score": 42.55,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "ratio",
-          "calculation"
-        ],
-        "detail_weight": 1.08
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.reading": {
-        "picked": "Mass Ratio Calculation (Flexbook)",
-        "score": 42.55,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "ratio",
-          "calculation"
-        ],
-        "detail_weight": 1.08
+        "detail_hits": [],
+        "detail_weight": 0
       }
     },
     "video_pool": {
@@ -396,6 +414,14 @@
           "below relevance gate"
         ],
         [
+          "Comparing animal and plant cells",
+          "below relevance gate"
+        ],
+        [
+          "Cells and organisms",
+          "below relevance gate"
+        ],
+        [
           "TOPIC- RATE,PROPORTIONS,RATIO - Unit Rates",
           "kolibri node not available on reference image"
         ],
@@ -410,27 +436,17 @@
         [
           "Types of systems (Isolated, Closed, Open) - Overview",
           "below relevance gate"
-        ],
-        [
-          "Volumes of cones intuition",
-          "below relevance gate"
-        ],
-        [
-          "Ratios and measurement",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 133,
-        "kolibri node not available on reference image": 5,
+        "below relevance gate": 138,
+        "kolibri node not available on reference image": 7,
         "web file not on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 2,
-      "runners_up": [
-        "Mass Ratio Calculation Practice"
-      ],
+      "passed": 0,
+      "runners_up": [],
       "rejected_sample": [
         [
           "Volume and surface area of cylinders",
@@ -466,9 +482,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 145,
-        "kolibri node not available on reference image": 6,
-        "excluded: answer/exam material": 2
+        "below relevance gate": 144,
+        "kolibri node not available on reference image": 7,
+        "judged off-topic (independent reviewer)": 2,
+        "excluded: answer/exam material": 5
       }
     }
   },
@@ -505,7 +522,8 @@
         "cer",
         "framework",
         "biology",
-        "insects"
+        "circulation",
+        "hemolymph"
       ],
       "phrases": [
         "open circulatory system",
@@ -519,12 +537,16 @@
         "oxygen transport",
         "tracheal system",
         "transport system complexity",
-        "cer framework"
+        "cer framework",
+        "open circulatory system",
+        "open closed circulation",
+        "insect tracheal system"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -532,6 +554,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -539,6 +562,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -546,6 +570,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -553,6 +578,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -560,6 +586,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -567,6 +594,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -574,6 +602,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -581,6 +610,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -588,6 +618,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -599,11 +630,11 @@
       "runners_up": [],
       "rejected_sample": [
         [
-          "Hemoglobin",
+          "15 Insects, Circulatory System",
           "below relevance gate"
         ],
         [
-          "15 Insects, Circulatory System",
+          "Hemoglobin",
           "below relevance gate"
         ],
         [
@@ -619,21 +650,21 @@
           "below relevance gate"
         ],
         [
+          "Circulatory System Structure and Function - Overview",
+          "below relevance gate"
+        ],
+        [
           "Types of systems (Isolated, Closed, Open) - Overview",
           "below relevance gate"
         ],
         [
-          "03 Respiratory System, Insect Ii",
-          "below relevance gate"
-        ],
-        [
-          "Population growth rate based on birth and death rates",
+          "Exchange traded funds (ETFs)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 147,
-        "kolibri node not available on reference image": 10,
+        "below relevance gate": 148,
+        "kolibri node not available on reference image": 1,
         "web file not on reference image": 2
       }
     },
@@ -654,6 +685,14 @@
           "below relevance gate"
         ],
         [
+          "Arthropod Structure and Function - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Differentiate polar functions",
+          "below relevance gate"
+        ],
+        [
           "Circulatory System (Flexbook)",
           "below relevance gate"
         ],
@@ -664,20 +703,12 @@
         [
           "Circulatory System Diseases (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Circulatory System Diseases Practice",
-          "below relevance gate"
-        ],
-        [
-          "The circulatory and respiratory systems",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 150,
+        "below relevance gate": 145,
         "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 10
+        "kolibri node not available on reference image": 6
       }
     }
   },
@@ -738,6 +769,7 @@
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -745,6 +777,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -752,6 +785,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -759,6 +793,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -766,6 +801,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -773,6 +809,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -780,6 +817,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -787,6 +825,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -794,6 +833,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -801,6 +841,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -824,30 +865,30 @@
           "below relevance gate"
         ],
         [
-          "EPISODE 26: Blood Circulation",
-          "kolibri node not available on reference image"
+          "Closed-end mutual funds",
+          "below relevance gate"
+        ],
+        [
+          "Exchange traded funds (ETFs)",
+          "below relevance gate"
         ],
         [
           "15 Insects, Circulatory System",
           "below relevance gate"
         ],
         [
-          "Intro to the comparative and the superlative",
-          "below relevance gate"
+          "EPISODE 26: Blood Circulation",
+          "kolibri node not available on reference image"
         ],
         [
           "07 Respiratory System, Fish I",
           "below relevance gate"
-        ],
-        [
-          "Circulatory System Structure and Function - Overview",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 150,
-        "kolibri node not available on reference image": 5,
-        "web file not on reference image": 4
+        "below relevance gate": 145,
+        "kolibri node not available on reference image": 2,
+        "web file not on reference image": 3
       }
     },
     "reading_pool": {
@@ -888,7 +929,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 165,
+        "below relevance gate": 163,
         "kolibri node not available on reference image": 2
       }
     }
@@ -950,6 +991,7 @@
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -957,6 +999,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -964,6 +1007,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -971,6 +1015,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -978,6 +1023,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -985,6 +1031,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -992,6 +1039,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -999,6 +1047,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1006,6 +1055,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1013,6 +1063,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1025,6 +1076,10 @@
       "rejected_sample": [
         [
           "Ancient Egypt and the Nile River Valley",
+          "below relevance gate"
+        ],
+        [
+          "Population growth rate based on birth and death rates",
           "below relevance gate"
         ],
         [
@@ -1050,16 +1105,12 @@
         [
           "Increasing opportunity cost",
           "below relevance gate"
-        ],
-        [
-          "Double Newman diagram for methylcyclohexane",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
+        "below relevance gate": 146,
         "kolibri node not available on reference image": 11,
-        "web file not on reference image": 7
+        "web file not on reference image": 4
       }
     },
     "reading_pool": {
@@ -1087,20 +1138,20 @@
           "below relevance gate"
         ],
         [
+          "Unit Rates",
+          "below relevance gate"
+        ],
+        [
+          "Changing The Heart Rate   Chronotropic Effect",
+          "below relevance gate"
+        ],
+        [
           "topical-test-form-2-biology-transport-in-plants-answers",
           "excluded: answer/exam material"
-        ],
-        [
-          "Kwaɗo da Akwati",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Circulation form of Green's theorem",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 155,
+        "below relevance gate": 156,
         "kolibri node not available on reference image": 5,
         "excluded: answer/exam material": 2
       }
@@ -1138,9 +1189,9 @@
         "oxygenated",
         "blood",
         "deoxygenated",
+        "structure",
         "mammals",
-        "dissection",
-        "mapping"
+        "circuits"
       ],
       "phrases": [
         "four chambered heart",
@@ -1153,12 +1204,17 @@
         "pulmonary artery",
         "pulmonary vein",
         "oxygenated blood",
-        "deoxygenated blood"
+        "deoxygenated blood",
+        "structure heart",
+        "double circulation mammals",
+        "pulmonary systemic circuits",
+        "heart valves blood flow"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1166,6 +1222,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1173,6 +1230,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1180,6 +1238,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1187,55 +1246,51 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
         "detail_weight": 0
       },
       "predict.reading": {
-        "picked": "Circulation form of Green's theorem",
-        "score": 44.48,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "circulation double"
-        ],
-        "detail_weight": 1.25
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.reading": {
-        "picked": "Circulation form of Green's theorem",
-        "score": 44.48,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "circulation double"
-        ],
-        "detail_weight": 1.25
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.reading": {
-        "picked": "Circulation form of Green's theorem",
-        "score": 44.48,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "circulation double"
-        ],
-        "detail_weight": 1.25
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.reading": {
-        "picked": "Circulation form of Green's theorem",
-        "score": 44.48,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "circulation double"
-        ],
-        "detail_weight": 1.25
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.reading": {
-        "picked": "Circulation form of Green's theorem",
-        "score": 44.48,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "circulation double"
-        ],
-        "detail_weight": 1.25
+        "detail_hits": [],
+        "detail_weight": 0
       }
     },
     "video_pool": {
@@ -1255,34 +1310,34 @@
           "kolibri node not available on reference image"
         ],
         [
+          "Circulatory System Structure and Function - Overview",
+          "below relevance gate"
+        ],
+        [
           "Elimu Live(Biology)Transport In Animals",
           "web file not on reference image"
         ],
         [
-          "AP Physics 1 Review of Charge and Circuits",
+          "Anatomy of a skeletal muscle fiber",
           "below relevance gate"
         ],
         [
-          "Animal behavior and offspring success",
+          "Anatomy of a skeletal muscle cell",
           "below relevance gate"
         ],
         [
-          "Introduction to circuits and Ohm's law",
-          "below relevance gate"
-        ],
-        [
-          "15 Insects, Circulatory System",
+          "Anatomy of a skeletal muscle fiber -dubbed(KY)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140,
-        "kolibri node not available on reference image": 13,
+        "below relevance gate": 139,
+        "kolibri node not available on reference image": 11,
         "web file not on reference image": 4
       }
     },
     "reading_pool": {
-      "passed": 1,
+      "passed": 0,
       "runners_up": [],
       "rejected_sample": [
         [
@@ -1302,25 +1357,26 @@
           "kolibri node not available on reference image"
         ],
         [
+          "Mammal Structure and Function Practice",
+          "below relevance gate"
+        ],
+        [
+          "Flow Through The Heart",
+          "below relevance gate"
+        ],
+        [
+          "Compliance   Increased Blood Flow",
+          "below relevance gate"
+        ],
+        [
           "Classifying Animals ..:Download worksheet, “Classification of Mammals by PhysicaAl Characteristics” (PDF)",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Classifying Animals ..:Download worksheet, “Classification of Mammals by DNA Sequence” (PDF)",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Circuit Construction Kit: DC",
-          "below relevance gate"
-        ],
-        [
-          "Circuit Construction Kit: DC - Virtual Lab",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 148,
+        "below relevance gate": 147,
         "kolibri node not available on reference image": 8,
+        "judged off-topic (independent reviewer)": 1,
         "excluded: answer/exam material": 1
       }
     }
@@ -1382,6 +1438,7 @@
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1389,6 +1446,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1396,6 +1454,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1403,6 +1462,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1410,6 +1470,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1417,6 +1478,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1424,6 +1486,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1431,6 +1494,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1438,6 +1502,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1445,6 +1510,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1511,11 +1577,11 @@
           "below relevance gate"
         ],
         [
-          "Circulatory System And The Heart",
+          "Business cycles",
           "below relevance gate"
         ],
         [
-          "Business cycles",
+          "Circulatory System And The Heart",
           "below relevance gate"
         ],
         [
@@ -1594,6 +1660,7 @@
     "slots": {
       "predict.video": {
         "picked": "Lymphatic System - VHSG",
+        "fit": "partial",
         "score": 103.79,
         "core_hits": [],
         "detail_hits": [
@@ -1605,6 +1672,7 @@
       },
       "observe.video": {
         "picked": "Lymphatic System - VHSG",
+        "fit": "partial",
         "score": 103.79,
         "core_hits": [],
         "detail_hits": [
@@ -1616,6 +1684,7 @@
       },
       "explain.video": {
         "picked": "Lymphatic System - VHSG",
+        "fit": "partial",
         "score": 103.79,
         "core_hits": [],
         "detail_hits": [
@@ -1627,6 +1696,7 @@
       },
       "dqb.video": {
         "picked": "Lymphatic System - VHSG",
+        "fit": "partial",
         "score": 103.79,
         "core_hits": [],
         "detail_hits": [
@@ -1638,6 +1708,7 @@
       },
       "model.video": {
         "picked": "Lymphatic System - VHSG",
+        "fit": "partial",
         "score": 103.79,
         "core_hits": [],
         "detail_hits": [
@@ -1649,6 +1720,7 @@
       },
       "predict.reading": {
         "picked": "Circulation and the Lymphatic System (Flexbook)",
+        "fit": "fits",
         "score": 136.29,
         "core_hits": [],
         "detail_hits": [
@@ -1659,18 +1731,8 @@
         "detail_weight": 2.1
       },
       "observe.reading": {
-        "picked": "Circulation and the Lymphatic System Practice",
-        "score": 136.29,
-        "core_hits": [],
-        "detail_hits": [
-          "lymphatic system",
-          "lymphatic",
-          "system"
-        ],
-        "detail_weight": 2.1
-      },
-      "explain.reading": {
         "picked": "Lymphatic System (Flexbook)",
+        "fit": "fits",
         "score": 103.79,
         "core_hits": [],
         "detail_hits": [
@@ -1680,8 +1742,21 @@
         ],
         "detail_weight": 2.1
       },
+      "explain.reading": {
+        "picked": "Circulation and the Lymphatic System (Flexbook)",
+        "fit": "fits",
+        "score": 136.29,
+        "core_hits": [],
+        "detail_hits": [
+          "lymphatic system",
+          "lymphatic",
+          "system"
+        ],
+        "detail_weight": 2.1
+      },
       "dqb.reading": {
-        "picked": "Lymphatic System Practice",
+        "picked": "Lymphatic System (Flexbook)",
+        "fit": "fits",
         "score": 103.79,
         "core_hits": [],
         "detail_hits": [
@@ -1692,7 +1767,8 @@
         "detail_weight": 2.1
       },
       "model.reading": {
-        "picked": "Circulation and the Lymphatic System (Flexbook)",
+        "picked": "Circulation and the Lymphatic System Practice",
+        "fit": "partial",
         "score": 136.29,
         "core_hits": [],
         "detail_hits": [
@@ -1708,7 +1784,19 @@
       "runners_up": [],
       "rejected_sample": [
         [
+          "Circulatory System Structure and Function - Overview",
+          "below relevance gate"
+        ],
+        [
+          "Property rights in a market system",
+          "below relevance gate"
+        ],
+        [
           "Types of systems (Isolated, Closed, Open) - Overview",
+          "below relevance gate"
+        ],
+        [
+          "Exchange traded funds (ETFs)",
           "below relevance gate"
         ],
         [
@@ -1716,7 +1804,7 @@
           "below relevance gate"
         ],
         [
-          "Property rights in a market system",
+          "Meaningfully composing functions",
           "below relevance gate"
         ],
         [
@@ -1726,36 +1814,28 @@
         [
           "Cars, highways, and isolation in Postwar America",
           "below relevance gate"
-        ],
-        [
-          "Circulatory System Structure and Function - Overview",
-          "below relevance gate"
-        ],
-        [
-          "Circulatory system and the heart -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Present value 4 (and discounted cash flow)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 153,
-        "web file not on reference image": 3,
-        "kolibri node not available on reference image": 5
+        "below relevance gate": 146,
+        "web file not on reference image": 2,
+        "kolibri node not available on reference image": 4
       }
     },
     "reading_pool": {
       "passed": 4,
       "runners_up": [
-        "Circulation and the Lymphatic System Practice",
         "Lymphatic System (Flexbook)",
+        "Circulation and the Lymphatic System Practice",
         "Lymphatic System Practice"
       ],
       "rejected_sample": [
         [
           "Fluid Pressure And Flow",
+          "below relevance gate"
+        ],
+        [
+          "HOW ANIMALS FUNCTION - PART ONE",
           "below relevance gate"
         ],
         [
@@ -1775,22 +1855,18 @@
           "below relevance gate"
         ],
         [
+          "Compare linear functions",
+          "below relevance gate"
+        ],
+        [
           "Circulatory System Diseases (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Circulatory System Diseases Practice",
-          "below relevance gate"
-        ],
-        [
-          "The circulatory and respiratory systems",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140,
+        "below relevance gate": 142,
         "excluded: answer/exam material": 3,
-        "kolibri node not available on reference image": 20
+        "kolibri node not available on reference image": 5
       }
     }
   },
@@ -1840,22 +1916,18 @@
         "wound management",
         "transport system",
         "mammalian blood",
-        "lake victoria"
+        "lake victoria",
+        "blood clotting cascade",
+        "platelets fibrin",
+        "phagocytosis white blood cells",
+        "specific nonspecific immunity",
+        "antibodies lymphocytes"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "B lymphocytes (B cells)",
-        "score": 81.79,
-        "core_hits": [],
-        "detail_hits": [
-          "lymphocyte",
-          "antibody"
-        ],
-        "detail_weight": 1.18
-      },
-      "observe.video": {
         "picked": "Types of immune responses: Innate and adaptive, humoral vs. cell-mediated",
+        "fit": "fits",
         "score": 73.24,
         "core_hits": [],
         "detail_hits": [
@@ -1864,8 +1936,9 @@
         ],
         "detail_weight": 1.13
       },
-      "explain.video": {
+      "observe.video": {
         "picked": "Types of immune responses: Innate and adaptive, humoral vs. cell-mediated -dubbed(KY)",
+        "fit": "fits",
         "score": 68.97,
         "core_hits": [],
         "detail_hits": [
@@ -1874,28 +1947,43 @@
         ],
         "detail_weight": 1.13
       },
-      "dqb.video": {
-        "picked": "B lymphocytes (B cells)",
-        "score": 81.79,
+      "explain.video": {
+        "picked": "Types of immune responses: Innate and adaptive, humoral vs. cell-mediated",
+        "fit": "fits",
+        "score": 73.24,
         "core_hits": [],
         "detail_hits": [
-          "lymphocyte",
-          "antibody"
+          "immunity",
+          "immune"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 1.13
+      },
+      "dqb.video": {
+        "picked": "Types of immune responses: Innate and adaptive, humoral vs. cell-mediated -dubbed(KY)",
+        "fit": "fits",
+        "score": 68.97,
+        "core_hits": [],
+        "detail_hits": [
+          "immunity",
+          "immune"
+        ],
+        "detail_weight": 1.13
       },
       "model.video": {
         "picked": "B lymphocytes (B cells)",
-        "score": 81.79,
+        "fit": "partial",
+        "score": 86.68,
         "core_hits": [],
         "detail_hits": [
           "lymphocyte",
-          "antibody"
+          "antibody",
+          "antibody lymphocyte"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 1.45
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1903,6 +1991,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1910,6 +1999,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1917,6 +2007,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1924,6 +2015,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1933,8 +2025,8 @@
     "video_pool": {
       "passed": 3,
       "runners_up": [
-        "Types of immune responses: Innate and adaptive, humoral vs. cell-mediated",
-        "Types of immune responses: Innate and adaptive, humoral vs. cell-mediated -dubbed(KY)"
+        "Types of immune responses: Innate and adaptive, humoral vs. cell-mediated -dubbed(KY)",
+        "B lymphocytes (B cells)"
       ],
       "rejected_sample": [
         [
@@ -1950,6 +2042,14 @@
           "below relevance gate"
         ],
         [
+          "Role of phagocytes in innate or nonspecific immunity",
+          "below relevance gate"
+        ],
+        [
+          "Role of phagocytes in innate or nonspecific immunity -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
           "Overview of animal and plant cells",
           "below relevance gate"
         ],
@@ -1960,19 +2060,11 @@
         [
           "Self vs. non-self immunity",
           "below relevance gate"
-        ],
-        [
-          "Professional antigen presenting cells (APC) and MHC II complexes",
-          "below relevance gate"
-        ],
-        [
-          "Professional antigen presenting cells (APC) and MHC II complexes -dubbed(KY)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 141,
-        "kolibri node not available on reference image": 16,
+        "below relevance gate": 140,
+        "kolibri node not available on reference image": 13,
         "web file not on reference image": 3,
         "excluded: answer/exam material": 1
       }
@@ -1981,6 +2073,10 @@
       "passed": 0,
       "runners_up": [],
       "rejected_sample": [
+        [
+          "Life Cycles of Non-flowering Plants - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
         [
           "Cell-Mediated Immune Response (Flexbook)",
           "below relevance gate"
@@ -2002,22 +2098,17 @@
           "below relevance gate"
         ],
         [
-          "Immune System and Disease Practice",
+          "Reproductive Life Cycles (Flexbook)",
           "below relevance gate"
         ],
         [
-          "The immune system",
-          "below relevance gate"
-        ],
-        [
-          "Plant vs animal cells",
+          "Reproductive Life Cycles Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 143,
-        "kolibri node not available on reference image": 12,
-        "excluded: answer/exam material": 1
+        "below relevance gate": 149,
+        "kolibri node not available on reference image": 7
       }
     }
   },
@@ -2071,12 +2162,14 @@
         "closed circulatory system",
         "blood composition",
         "nairobi marathon",
-        "blood group distribution"
+        "blood group distribution",
+        "abo blood group system"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2084,6 +2177,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2091,6 +2185,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2098,6 +2193,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2105,6 +2201,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2112,6 +2209,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2119,6 +2217,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2126,6 +2225,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2133,6 +2233,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2140,6 +2241,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2163,6 +2265,14 @@
           "below relevance gate"
         ],
         [
+          "Professional antigen presenting cells (APC) and MHC II complexes",
+          "below relevance gate"
+        ],
+        [
+          "Professional antigen presenting cells (APC) and MHC II complexes -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
           "Factoring quadratics: common factor + grouping",
           "below relevance gate"
         ],
@@ -2173,18 +2283,10 @@
         [
           "Factoring quadratics: negative common factor + grouping",
           "below relevance gate"
-        ],
-        [
-          "Overview of animal and plant cells",
-          "below relevance gate"
-        ],
-        [
-          "Professional antigen presenting cells (APC) and MHC II complexes",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 151,
+        "below relevance gate": 153,
         "kolibri node not available on reference image": 5,
         "web file not on reference image": 2
       }
@@ -2227,7 +2329,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 147,
+        "below relevance gate": 148,
         "kolibri node not available on reference image": 7
       }
     }
@@ -2264,8 +2366,9 @@
         "trends",
         "comparative",
         "anatomy",
-        "diversity",
-        "systems"
+        "systems",
+        "evolution",
+        "vertebrate"
       ],
       "phrases": [
         "open circulatory system",
@@ -2279,12 +2382,16 @@
         "pulmonary circuit",
         "systemic circuit",
         "evolutionary trends",
-        "comparative anatomy"
+        "comparative anatomy",
+        "open closed circulatory systems",
+        "single double circulation",
+        "evolution vertebrate heart"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2292,6 +2399,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2299,6 +2407,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2306,6 +2415,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2313,6 +2423,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2320,6 +2431,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2327,6 +2439,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2334,6 +2447,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2341,6 +2455,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2348,6 +2463,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2358,6 +2474,10 @@
       "passed": 0,
       "runners_up": [],
       "rejected_sample": [
+        [
+          "15 Insects, Circulatory System",
+          "below relevance gate"
+        ],
         [
           "Circulatory system and the heart -dubbed(KY)",
           "below relevance gate"
@@ -2371,7 +2491,11 @@
           "below relevance gate"
         ],
         [
-          "15 Insects, Circulatory System",
+          "Evidence of evolution: anatomy",
+          "below relevance gate"
+        ],
+        [
+          "Tropical rainforest diversity",
           "below relevance gate"
         ],
         [
@@ -2381,20 +2505,12 @@
         [
           "Two-step Problems - Four Operations with Single Units (Metric Capacities) - Word Problems",
           "below relevance gate"
-        ],
-        [
-          "Solving Two-step Single-unit Problems with Four Operations (Metric Units) - Word Problems",
-          "below relevance gate"
-        ],
-        [
-          "Intro to the comparative and the superlative",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 148,
+        "below relevance gate": 154,
         "web file not on reference image": 1,
-        "kolibri node not available on reference image": 4
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
@@ -2403,6 +2519,14 @@
       "rejected_sample": [
         [
           "Circulatory System And The Heart",
+          "below relevance gate"
+        ],
+        [
+          "Vertebrate Evolution (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Vertebrate Evolution Practice",
           "below relevance gate"
         ],
         [
@@ -2424,19 +2548,11 @@
         [
           "Circulatory System Practice",
           "below relevance gate"
-        ],
-        [
-          "Circulatory System Diseases (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Circulatory System Diseases Practice",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 158,
-        "kolibri node not available on reference image": 4,
+        "below relevance gate": 153,
+        "kolibri node not available on reference image": 5,
         "excluded: answer/exam material": 1
       }
     }
@@ -2497,18 +2613,19 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Hemoglobin",
-        "score": 114.19,
+        "picked": "Circulatory system and the heart -dubbed(KY)",
+        "fit": "fits",
+        "score": 109.31,
         "core_hits": [],
         "detail_hits": [
-          "circulation system",
-          "haemoglobin"
+          "circulation system"
         ],
-        "detail_weight": 1.72
+        "detail_weight": 1.5
       },
       "observe.video": {
-        "picked": "Circulatory system and the heart -dubbed(KY)",
-        "score": 109.31,
+        "picked": "Circulatory System Structure and Function - Overview",
+        "fit": "fits",
+        "score": 109.06,
         "core_hits": [],
         "detail_hits": [
           "circulation system"
@@ -2517,6 +2634,7 @@
       },
       "explain.video": {
         "picked": "Circulatory system and the heart",
+        "fit": "fits",
         "score": 108.39,
         "core_hits": [],
         "detail_hits": [
@@ -2525,18 +2643,19 @@
         "detail_weight": 1.5
       },
       "dqb.video": {
-        "picked": "Hemoglobin -dubbed(KY)",
-        "score": 106.63,
+        "picked": "Circulatory system and the heart -dubbed(KY)",
+        "fit": "fits",
+        "score": 109.31,
         "core_hits": [],
         "detail_hits": [
-          "circulation system",
-          "haemoglobin"
+          "circulation system"
         ],
-        "detail_weight": 1.72
+        "detail_weight": 1.5
       },
       "model.video": {
         "picked": "Circulatory System Structure and Function - Overview",
-        "score": 86.97,
+        "fit": "fits",
+        "score": 109.06,
         "core_hits": [],
         "detail_hits": [
           "circulation system"
@@ -2545,6 +2664,7 @@
       },
       "predict.reading": {
         "picked": "Circulatory System And The Heart",
+        "fit": "fits",
         "score": 100.67,
         "core_hits": [],
         "detail_hits": [
@@ -2554,6 +2674,7 @@
       },
       "observe.reading": {
         "picked": "Circulatory System (Flexbook)",
+        "fit": "fits",
         "score": 84.91,
         "core_hits": [],
         "detail_hits": [
@@ -2562,8 +2683,9 @@
         "detail_weight": 1.5
       },
       "explain.reading": {
-        "picked": "Circulatory System Practice",
-        "score": 84.91,
+        "picked": "Circulatory System And The Heart",
+        "fit": "fits",
+        "score": 100.67,
         "core_hits": [],
         "detail_hits": [
           "circulation system"
@@ -2571,8 +2693,9 @@
         "detail_weight": 1.5
       },
       "dqb.reading": {
-        "picked": "Circulatory System Diseases (Flexbook)",
-        "score": 84.04,
+        "picked": "Circulatory System (Flexbook)",
+        "fit": "fits",
+        "score": 84.91,
         "core_hits": [],
         "detail_hits": [
           "circulation system"
@@ -2580,8 +2703,9 @@
         "detail_weight": 1.5
       },
       "model.reading": {
-        "picked": "Circulatory System Diseases Practice",
-        "score": 84.04,
+        "picked": "Circulatory System Practice",
+        "fit": "partial",
+        "score": 84.91,
         "core_hits": [],
         "detail_hits": [
           "circulation system"
@@ -2592,13 +2716,21 @@
     "video_pool": {
       "passed": 6,
       "runners_up": [
-        "Circulatory system and the heart -dubbed(KY)",
-        "Circulatory system and the heart",
-        "Hemoglobin -dubbed(KY)",
         "Circulatory System Structure and Function - Overview",
+        "Circulatory system and the heart",
+        "Hemoglobin",
+        "Hemoglobin -dubbed(KY)",
         "15 Insects, Circulatory System"
       ],
       "rejected_sample": [
+        [
+          "Red blood cells",
+          "below relevance gate"
+        ],
+        [
+          "Red blood cells -dubbed(KY)",
+          "below relevance gate"
+        ],
         [
           "Types of systems (Isolated, Closed, Open) - Overview",
           "below relevance gate"
@@ -2616,15 +2748,7 @@
           "kolibri node not available on reference image"
         ],
         [
-          "Red blood cells",
-          "below relevance gate"
-        ],
-        [
           "Reasoning with systems of equations",
-          "below relevance gate"
-        ],
-        [
-          "Red blood cells -dubbed(KY)",
           "below relevance gate"
         ],
         [
@@ -2634,22 +2758,34 @@
       ],
       "rejected_by_reason": {
         "below relevance gate": 136,
-        "web file not on reference image": 4,
+        "web file not on reference image": 3,
         "kolibri node not available on reference image": 4
       }
     },
     "reading_pool": {
-      "passed": 8,
+      "passed": 6,
       "runners_up": [
         "Circulatory System (Flexbook)",
         "Circulatory System Practice",
-        "Circulatory System Diseases (Flexbook)",
-        "Circulatory System Diseases Practice",
-        "The circulatory and respiratory systems"
+        "The circulatory and respiratory systems",
+        "Circulation and the Lymphatic System (Flexbook)",
+        "Circulation and the Lymphatic System Practice"
       ],
       "rejected_sample": [
         [
+          "Circulatory System Diseases (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Circulatory System Diseases Practice",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Graphs of Linear Systems: Heart Rate Tracker (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "Aggregate Demand",
           "below relevance gate"
         ],
         [
@@ -2661,30 +2797,19 @@
           "below relevance gate"
         ],
         [
+          "Changes in the money market",
+          "below relevance gate"
+        ],
+        [
           "Unit Rates",
           "below relevance gate"
-        ],
-        [
-          "Comparison of Unit Rates (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Comparison of Unit Rates Practice",
-          "below relevance gate"
-        ],
-        [
-          "Changing The Heart Rate   Chronotropic Effect",
-          "below relevance gate"
-        ],
-        [
-          "topical-test-form-2-biology-transport-in-plants-answers",
-          "excluded: answer/exam material"
         ]
       ],
       "rejected_by_reason": {
+        "judged off-topic (independent reviewer)": 2,
         "below relevance gate": 145,
         "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 11
+        "kolibri node not available on reference image": 12
       }
     }
   }

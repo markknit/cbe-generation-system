@@ -27,6 +27,9 @@
         "graaff",
         "generator",
         "kalou",
+        "explained",
+        "electroscopes",
+        "work",
         "before",
         "strikes"
       ],
@@ -37,36 +40,43 @@
         "charging friction",
         "triboelectric effect",
         "static electricity",
-        "van graaff generator"
+        "van graaff generator",
+        "electric charge",
+        "charging friction",
+        "triboelectric effect explained",
+        "conductors insulators",
+        "electroscopes work",
+        "static electricity lightning"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Electrostatic telegraphs (case study)",
-        "score": 177.12,
-        "core_hits": [
-          "electrostatics"
-        ],
+        "picked": "Conductors and insulators",
+        "fit": "fits",
+        "score": 105.94,
+        "core_hits": [],
         "detail_hits": [
-          "electricity static",
-          "before"
+          "conductor",
+          "insulator",
+          "conductor insulator"
         ],
-        "detail_weight": 0.84
+        "detail_weight": 1.27
       },
       "observe.video": {
-        "picked": "Electrostatic telegraphs (case study)",
-        "score": 177.12,
-        "core_hits": [
-          "electrostatics"
-        ],
+        "picked": "Conductors and insulators",
+        "fit": "fits",
+        "score": 105.94,
+        "core_hits": [],
         "detail_hits": [
-          "electricity static",
-          "before"
+          "conductor",
+          "insulator",
+          "conductor insulator"
         ],
-        "detail_weight": 0.84
+        "detail_weight": 1.27
       },
       "explain.video": {
         "picked": "Electrostatic telegraphs (case study)",
+        "fit": "partial",
         "score": 177.12,
         "core_hits": [
           "electrostatics"
@@ -78,55 +88,56 @@
         "detail_weight": 0.84
       },
       "dqb.video": {
-        "picked": "Electrostatic telegraphs (case study)",
-        "score": 177.12,
-        "core_hits": [
-          "electrostatics"
-        ],
+        "picked": "Conventional current direction",
+        "fit": "partial",
+        "score": 93.89,
+        "core_hits": [],
         "detail_hits": [
-          "electricity static",
-          "before"
-        ],
-        "detail_weight": 0.84
-      },
-      "model.video": {
-        "picked": "Electrostatic telegraphs (case study)",
-        "score": 177.12,
-        "core_hits": [
-          "electrostatics"
-        ],
-        "detail_hits": [
-          "electricity static",
-          "before"
-        ],
-        "detail_weight": 0.84
-      },
-      "predict.reading": {
-        "picked": "Charges and Fields",
-        "score": 137.86,
-        "core_hits": [
-          "electrostatics"
-        ],
-        "detail_hits": [
-          "charge electric",
           "charge positive",
           "charge negative",
           "charge"
         ],
-        "detail_weight": 4.12
+        "detail_weight": 2.62
       },
-      "observe.reading": {
-        "picked": "Electric Charge and Electric Force (Flexbook)",
-        "score": 86.68,
+      "model.video": {
+        "picked": "Electric field direction",
+        "fit": "partial",
+        "score": 85.75,
         "core_hits": [],
         "detail_hits": [
           "charge electric",
+          "charge positive",
           "charge"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 3.05
+      },
+      "predict.reading": {
+        "picked": "Electric Conductors and Insulators (Flexbook)",
+        "fit": "fits",
+        "score": 116.79,
+        "core_hits": [],
+        "detail_hits": [
+          "conductor",
+          "insulator",
+          "conductor insulator"
+        ],
+        "detail_weight": 1.27
+      },
+      "observe.reading": {
+        "picked": "Electric Conductors and Insulators Practice",
+        "fit": "fits",
+        "score": 116.79,
+        "core_hits": [],
+        "detail_hits": [
+          "conductor",
+          "insulator",
+          "conductor insulator"
+        ],
+        "detail_weight": 1.27
       },
       "explain.reading": {
-        "picked": "Electric Charge and Electric Force Practice",
+        "picked": "Electric Charge and Electric Force (Flexbook)",
+        "fit": "fits",
         "score": 86.68,
         "core_hits": [],
         "detail_hits": [
@@ -137,6 +148,7 @@
       },
       "dqb.reading": {
         "picked": "Transfer of Electric Charge (Flexbook)",
+        "fit": "fits",
         "score": 86.37,
         "core_hits": [],
         "detail_hits": [
@@ -146,24 +158,26 @@
         "detail_weight": 1.8
       },
       "model.reading": {
-        "picked": "Transfer of Electric Charge Practice",
-        "score": 86.37,
+        "picked": "Electric Conductors and Insulators (Flexbook)",
+        "fit": "fits",
+        "score": 116.79,
         "core_hits": [],
         "detail_hits": [
-          "charge electric",
-          "charge"
+          "conductor",
+          "insulator",
+          "conductor insulator"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 1.27
       }
     },
     "video_pool": {
       "passed": 23,
       "runners_up": [
+        "Electrostatic telegraphs (case study)",
         "Conventional current direction",
         "Electric field direction",
         "Current direction",
-        "06 Lightning Arrestors, Electrostatic  Shielding",
-        "Molecular polarity"
+        "06 Lightning Arrestors, Electrostatic  Shielding"
       ],
       "rejected_sample": [
         [
@@ -183,10 +197,6 @@
           "kolibri node not available on reference image"
         ],
         [
-          "Conductors and insulators",
-          "below relevance gate"
-        ],
-        [
           "07 Lightning Arrestors, Lightning Conductor",
           "below relevance gate"
         ],
@@ -195,25 +205,30 @@
           "kolibri node not available on reference image"
         ],
         [
+          "Molecular polarity",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Static and kinetic friction example",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 130,
+        "below relevance gate": 122,
         "kolibri node not available on reference image": 11,
+        "judged off-topic (independent reviewer)": 4,
         "foreign vocabulary": 1,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 7,
+      "passed": 10,
       "runners_up": [
+        "Electric Conductors and Insulators Practice",
         "Electric Charge and Electric Force (Flexbook)",
-        "Electric Charge and Electric Force Practice",
         "Transfer of Electric Charge (Flexbook)",
-        "Transfer of Electric Charge Practice",
-        "Capacitor Lab: Basics"
+        "Charges and Fields",
+        "Electric Charge and Electric Force Practice"
       ],
       "rejected_sample": [
         [
@@ -221,19 +236,11 @@
           "below relevance gate"
         ],
         [
-          "Static Electricity and Static Discharge (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Electric Conductors and Insulators (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Electric Conductors and Insulators Practice",
-          "below relevance gate"
-        ],
-        [
           "Thermal Conductors and Insulators Practice",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Static Electricity and Static Discharge (Flexbook)",
           "below relevance gate"
         ],
         [
@@ -247,11 +254,20 @@
         [
           "Additional Resources for Static and Kinetic Friction Forces: Similarities and Differences",
           "kolibri node not available on reference image"
+        ],
+        [
+          "topical-test-form-3-physics-heating-effect-of-electric-current-answerse",
+          "excluded: answer/exam material"
+        ],
+        [
+          "One-step equations with negatives (multiply & divide)",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 135,
-        "kolibri node not available on reference image": 10,
+        "below relevance gate": 131,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 11,
         "excluded: answer/exam material": 8
       }
     }
@@ -304,24 +320,40 @@
         "lightning conductor",
         "positive charge",
         "negative charge",
-        "static electricity"
+        "static electricity",
+        "two types charge",
+        "law charges"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Electrostatic telegraphs (case study)",
-        "score": 142.85,
-        "core_hits": [
-          "electrostatics"
-        ],
+        "picked": "Conductors and insulators",
+        "fit": "fits",
+        "score": 134.73,
+        "core_hits": [],
         "detail_hits": [
-          "electricity static"
+          "conductor",
+          "insulator",
+          "conductor insulator"
         ],
-        "detail_weight": 0.34
+        "detail_weight": 1.65
       },
       "observe.video": {
+        "picked": "Conductors and insulators",
+        "fit": "fits",
+        "score": 134.73,
+        "core_hits": [],
+        "detail_hits": [
+          "conductor",
+          "insulator",
+          "conductor insulator"
+        ],
+        "detail_weight": 1.65
+      },
+      "explain.video": {
         "picked": "Conservation of charge",
-        "score": 123.22,
+        "fit": "partial",
+        "score": 121.83,
         "core_hits": [],
         "detail_hits": [
           "charge electric",
@@ -330,89 +362,35 @@
           "charge",
           "law"
         ],
-        "detail_weight": 3.73
+        "detail_weight": 3.65
       },
-      "explain.video": {
-        "picked": "Conductors and insulators",
-        "score": 110.17,
+      "dqb.video": {
+        "picked": "07 Lightning Arrestors, Lightning Conductor",
+        "fit": "partial",
+        "score": 80.02,
         "core_hits": [],
         "detail_hits": [
           "conductor",
-          "insulator"
+          "conductor lightning"
         ],
-        "detail_weight": 1.34
-      },
-      "dqb.video": {
-        "picked": "Electrostatic telegraphs (case study)",
-        "score": 142.85,
-        "core_hits": [
-          "electrostatics"
-        ],
-        "detail_hits": [
-          "electricity static"
-        ],
-        "detail_weight": 0.34
+        "detail_weight": 1.16
       },
       "model.video": {
-        "picked": "Electrostatic telegraphs (case study)",
-        "score": 142.85,
-        "core_hits": [
-          "electrostatics"
-        ],
-        "detail_hits": [
-          "electricity static"
-        ],
-        "detail_weight": 0.34
-      },
-      "predict.reading": {
-        "picked": "Balloons and Static Electricity",
-        "score": 153.6,
+        "picked": "Electric field direction",
+        "fit": "partial",
+        "score": 73.39,
         "core_hits": [],
-        "detail_hits": [
-          "attraction",
-          "repulsion",
-          "electricity static",
-          "charge"
-        ],
-        "detail_weight": 1.13
-      },
-      "observe.reading": {
-        "picked": "Transfer of Electric Charge (Flexbook)",
-        "score": 114.16,
-        "core_hits": [],
-        "detail_hits": [
-          "charge electric",
-          "charge"
-        ],
-        "detail_weight": 1.8
-      },
-      "explain.reading": {
-        "picked": "Transfer of Electric Charge Practice",
-        "score": 114.16,
-        "core_hits": [],
-        "detail_hits": [
-          "charge electric",
-          "charge"
-        ],
-        "detail_weight": 1.8
-      },
-      "dqb.reading": {
-        "picked": "Charges and Fields",
-        "score": 109.93,
-        "core_hits": [
-          "electrostatics"
-        ],
         "detail_hits": [
           "charge electric",
           "charge positive",
-          "charge negative",
           "charge"
         ],
-        "detail_weight": 2.61
+        "detail_weight": 2.13
       },
-      "model.reading": {
+      "predict.reading": {
         "picked": "Balloons and Static Electricity",
-        "score": 153.6,
+        "fit": "fits",
+        "score": 150.85,
         "core_hits": [],
         "detail_hits": [
           "attraction",
@@ -420,17 +398,65 @@
           "electricity static",
           "charge"
         ],
-        "detail_weight": 1.13
+        "detail_weight": 1.05
+      },
+      "observe.reading": {
+        "picked": "Electric Conductors and Insulators (Flexbook)",
+        "fit": "fits",
+        "score": 126.43,
+        "core_hits": [],
+        "detail_hits": [
+          "conductor",
+          "insulator",
+          "conductor insulator"
+        ],
+        "detail_weight": 1.65
+      },
+      "explain.reading": {
+        "picked": "Electric Conductors and Insulators Practice",
+        "fit": "fits",
+        "score": 126.43,
+        "core_hits": [],
+        "detail_hits": [
+          "conductor",
+          "insulator",
+          "conductor insulator"
+        ],
+        "detail_weight": 1.65
+      },
+      "dqb.reading": {
+        "picked": "Transfer of Electric Charge (Flexbook)",
+        "fit": "fits",
+        "score": 112.38,
+        "core_hits": [],
+        "detail_hits": [
+          "charge electric",
+          "charge"
+        ],
+        "detail_weight": 1.72
+      },
+      "model.reading": {
+        "picked": "Balloons and Static Electricity",
+        "fit": "fits",
+        "score": 150.85,
+        "core_hits": [],
+        "detail_hits": [
+          "attraction",
+          "repulsion",
+          "electricity static",
+          "charge"
+        ],
+        "detail_weight": 1.05
       }
     },
     "video_pool": {
-      "passed": 27,
+      "passed": 19,
       "runners_up": [
+        "07 Conductors And Insulators",
         "Conservation of charge",
-        "Conductors and insulators",
-        "Conventional current direction",
         "07 Lightning Arrestors, Lightning Conductor",
-        "Magnitude of electric field created by a charge"
+        "Electric field direction",
+        "02 Conductors Insulators And Semi Conductors"
       ],
       "rejected_sample": [
         [
@@ -446,6 +472,14 @@
           "below relevance gate"
         ],
         [
+          "Conventional current direction",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Electrostatic telegraphs (case study)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Video: Balloons and Static Electricity",
           "below relevance gate"
         ],
@@ -454,35 +488,32 @@
           "kolibri node not available on reference image"
         ],
         [
-          "First and second ionization energy",
-          "below relevance gate"
-        ],
-        [
-          "VSEPR for 2 electron clouds",
-          "below relevance gate"
-        ],
-        [
-          "Pith ball electroscope",
-          "below relevance gate"
+          "Molecular polarity",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 106,
+        "below relevance gate": 108,
+        "judged off-topic (independent reviewer)": 6,
         "kolibri node not available on reference image": 19,
         "foreign vocabulary": 2,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 12,
+      "passed": 11,
       "runners_up": [
+        "Electric Conductors and Insulators (Flexbook)",
+        "Electric Conductors and Insulators Practice",
         "Transfer of Electric Charge (Flexbook)",
-        "Transfer of Electric Charge Practice",
-        "Charges and Fields",
         "Electric Charge and Electric Force (Flexbook)",
         "Electric Charge and Electric Force Practice"
       ],
       "rejected_sample": [
+        [
+          "Thermal Conductors and Insulators Practice",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Static Electricity and Static Discharge (Flexbook)",
           "below relevance gate"
@@ -510,13 +541,10 @@
         [
           "Types of Friction Practice",
           "below relevance gate"
-        ],
-        [
-          "Signs of sums",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "judged off-topic (independent reviewer)": 1,
         "below relevance gate": 135,
         "kolibri node not available on reference image": 9,
         "excluded: answer/exam material": 9
@@ -546,6 +574,11 @@
         "constant",
         "storm",
         "context",
+        "electric",
+        "calculations",
+        "slope",
+        "linear",
+        "graph",
         "strong",
         "push",
         "pull"
@@ -558,28 +591,19 @@
         "charge magnitude",
         "separation distance",
         "force constant",
-        "storm context"
+        "storm context",
+        "coulomb's law",
+        "electric force point charges",
+        "inverse square law",
+        "coulomb's law calculations",
+        "electric force constant",
+        "slope linear graph"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Ion–dipole forces",
-        "score": 166.37,
-        "core_hits": [
-          "electrostatics"
-        ],
-        "detail_hits": [
-          "coulomb' law",
-          "electrostatics force",
-          "charge magnitude",
-          "charge",
-          "coulomb'",
-          "law"
-        ],
-        "detail_weight": 4.48
-      },
-      "observe.video": {
         "picked": "Coulomb's law",
+        "fit": "fits",
         "score": 138.32,
         "core_hits": [],
         "detail_hits": [
@@ -589,56 +613,56 @@
         ],
         "detail_weight": 2.1
       },
-      "explain.video": {
-        "picked": "Ion–dipole forces",
-        "score": 166.37,
-        "core_hits": [
-          "electrostatics"
+      "observe.video": {
+        "picked": "Electric forces",
+        "fit": "fits",
+        "score": 94.1,
+        "core_hits": [],
+        "detail_hits": [
+          "charge magnitude",
+          "charge"
         ],
+        "detail_weight": 1.13
+      },
+      "explain.video": {
+        "picked": "Coulomb's law",
+        "fit": "fits",
+        "score": 138.32,
+        "core_hits": [],
         "detail_hits": [
           "coulomb' law",
-          "electrostatics force",
-          "charge magnitude",
-          "charge",
           "coulomb'",
           "law"
         ],
-        "detail_weight": 4.48
+        "detail_weight": 2.1
       },
       "dqb.video": {
-        "picked": "Ion–dipole forces",
-        "score": 166.37,
-        "core_hits": [
-          "electrostatics"
-        ],
+        "picked": "Electric forces",
+        "fit": "fits",
+        "score": 94.1,
+        "core_hits": [],
         "detail_hits": [
-          "coulomb' law",
-          "electrostatics force",
           "charge magnitude",
-          "charge",
-          "coulomb'",
-          "law"
+          "charge"
         ],
-        "detail_weight": 4.48
+        "detail_weight": 1.13
       },
       "model.video": {
-        "picked": "Ion–dipole forces",
-        "score": 166.37,
-        "core_hits": [
-          "electrostatics"
-        ],
+        "picked": "Magnitude of electric field created by a charge",
+        "fit": "partial",
+        "score": 122.94,
+        "core_hits": [],
         "detail_hits": [
-          "coulomb' law",
-          "electrostatics force",
+          "charge point",
           "charge magnitude",
-          "charge",
-          "coulomb'",
-          "law"
+          "charge electric force point",
+          "charge"
         ],
-        "detail_weight": 4.48
+        "detail_weight": 2.65
       },
       "predict.reading": {
         "picked": "Coulomb's Law",
+        "fit": "fits",
         "score": 332.72,
         "core_hits": [
           "electrostatics"
@@ -655,6 +679,7 @@
       },
       "observe.reading": {
         "picked": "Coulomb's Law",
+        "fit": "fits",
         "score": 332.72,
         "core_hits": [
           "electrostatics"
@@ -670,23 +695,20 @@
         "detail_weight": 4.48
       },
       "explain.reading": {
-        "picked": "Coulomb's Law",
-        "score": 332.72,
+        "picked": "Charges and Fields",
+        "fit": "partial",
+        "score": 46.28,
         "core_hits": [
           "electrostatics"
         ],
         "detail_hits": [
-          "coulomb' law",
-          "electrostatics force",
-          "charge magnitude",
-          "charge",
-          "coulomb'",
-          "law"
+          "charge"
         ],
-        "detail_weight": 4.48
+        "detail_weight": 0.3
       },
       "dqb.reading": {
         "picked": "Coulomb's Law",
+        "fit": "fits",
         "score": 332.72,
         "core_hits": [
           "electrostatics"
@@ -703,6 +725,7 @@
       },
       "model.reading": {
         "picked": "Coulomb's Law",
+        "fit": "fits",
         "score": 332.72,
         "core_hits": [
           "electrostatics"
@@ -719,13 +742,13 @@
       }
     },
     "video_pool": {
-      "passed": 12,
+      "passed": 7,
       "runners_up": [
-        "Coulomb's law",
-        "Magnitude of electric field created by a charge",
-        "Pith ball electroscope",
         "Electric forces",
-        "Lattice energy"
+        "Magnitude of electric field created by a charge",
+        "Electric field direction",
+        "Pith ball electroscope",
+        "Net electric field from multiple charges in 1D"
       ],
       "rejected_sample": [
         [
@@ -733,39 +756,39 @@
           "foreign vocabulary ['ionic']"
         ],
         [
+          "Ion–dipole forces",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Periodic trends and Coulomb's law",
           "foreign vocabulary ['periodic']"
         ],
         [
-          "Inverse cube law (deflection method)",
+          "Introduction to inference about slope in linear regression",
           "below relevance gate"
         ],
         [
-          "Vector components from magnitude & direction: word problem",
+          "Interpreting points in context of graphs of systems",
           "below relevance gate"
         ],
         [
-          "Interpret proportionality constants",
+          "Linear graphs word problem: cats",
           "below relevance gate"
         ],
         [
-          "TOPIC - electrostatics - Charges and Fields",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Conservation of charge",
+          "Showing that inverses are linear",
           "below relevance gate"
         ],
         [
-          "Vector word problem: resultant force",
+          "Slope and intercept meaning from a table",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "foreign vocabulary": 3,
-        "below relevance gate": 127,
-        "kolibri node not available on reference image": 7,
-        "web file not on reference image": 1
+        "judged off-topic (independent reviewer)": 5,
+        "below relevance gate": 124,
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
@@ -777,7 +800,19 @@
       ],
       "rejected_sample": [
         [
-          "1492.Push Pull Comic",
+          "Relating linear contexts to graph features",
+          "below relevance gate"
+        ],
+        [
+          "Connecting exponential graphs with contexts",
+          "below relevance gate"
+        ],
+        [
+          "Electric Charge and Electric Force (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Electric Charge and Electric Force Practice",
           "below relevance gate"
         ],
         [
@@ -785,33 +820,20 @@
           "below relevance gate"
         ],
         [
-          "Effects of influential points",
-          "below relevance gate"
-        ],
-        [
-          "Interpret constants of proportionality",
-          "below relevance gate"
-        ],
-        [
-          "Find inverses of rational functions",
-          "below relevance gate"
-        ],
-        [
           "Compare constants of proportionality",
           "below relevance gate"
         ],
         [
-          "Hooke's Law",
+          "Finding inverses of linear functions",
           "below relevance gate"
         ],
         [
-          "Determine inverse matrices",
+          "Interpret constant of proportionality in graphs",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 146,
-        "excluded: answer/exam material": 1
+        "below relevance gate": 151
       }
     }
   },
@@ -841,13 +863,14 @@
         "kalou",
         "aluminium",
         "foil",
+        "conduction",
+        "detection",
+        "electric",
+        "conductors",
+        "insulators",
+        "triboelectric",
         "did",
-        "iron",
-        "roof",
-        "gain",
-        "without",
-        "touching",
-        "cloud"
+        "iron"
       ],
       "phrases": [
         "charging contact",
@@ -857,12 +880,19 @@
         "charge redistribution",
         "tanker chain",
         "lightning conductor",
-        "aluminium foil electroscope"
+        "aluminium foil electroscope",
+        "charging induction",
+        "charging conduction",
+        "electroscope charge detection",
+        "grounding electric charge",
+        "conductors insulators",
+        "triboelectric charging friction"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Foil leaf electroscope",
+        "fit": "fits",
         "score": 84.22,
         "core_hits": [],
         "detail_hits": [
@@ -873,6 +903,7 @@
       },
       "observe.video": {
         "picked": "Pith ball electroscope",
+        "fit": "fits",
         "score": 51.87,
         "core_hits": [
           "electrostatics"
@@ -884,6 +915,7 @@
       },
       "explain.video": {
         "picked": "Foil leaf electroscope",
+        "fit": "fits",
         "score": 84.22,
         "core_hits": [],
         "detail_hits": [
@@ -893,17 +925,20 @@
         "detail_weight": 1.06
       },
       "dqb.video": {
-        "picked": "Foil leaf electroscope",
-        "score": 84.22,
-        "core_hits": [],
-        "detail_hits": [
-          "electroscope",
-          "aluminium electroscope foil"
+        "picked": "Pith ball electroscope",
+        "fit": "fits",
+        "score": 51.87,
+        "core_hits": [
+          "electrostatics"
         ],
-        "detail_weight": 1.06
+        "detail_hits": [
+          "electroscope"
+        ],
+        "detail_weight": 0.56
       },
       "model.video": {
         "picked": "Foil leaf electroscope",
+        "fit": "fits",
         "score": 84.22,
         "core_hits": [],
         "detail_hits": [
@@ -914,6 +949,7 @@
       },
       "predict.reading": {
         "picked": "Balloons and Static Electricity",
+        "fit": "partial",
         "score": 56.31,
         "core_hits": [],
         "detail_hits": [
@@ -923,17 +959,20 @@
         "detail_weight": 1.05
       },
       "observe.reading": {
-        "picked": "Balloons and Static Electricity",
-        "score": 56.31,
-        "core_hits": [],
+        "picked": "Charges and Fields",
+        "fit": "partial",
+        "score": 46.28,
+        "core_hits": [
+          "electrostatics"
+        ],
         "detail_hits": [
-          "charge induced",
           "charge"
         ],
-        "detail_weight": 1.05
+        "detail_weight": 0.3
       },
       "explain.reading": {
         "picked": "Balloons and Static Electricity",
+        "fit": "partial",
         "score": 56.31,
         "core_hits": [],
         "detail_hits": [
@@ -943,17 +982,20 @@
         "detail_weight": 1.05
       },
       "dqb.reading": {
-        "picked": "Balloons and Static Electricity",
-        "score": 56.31,
-        "core_hits": [],
+        "picked": "Charges and Fields",
+        "fit": "partial",
+        "score": 46.28,
+        "core_hits": [
+          "electrostatics"
+        ],
         "detail_hits": [
-          "charge induced",
           "charge"
         ],
-        "detail_weight": 1.05
+        "detail_weight": 0.3
       },
       "model.reading": {
         "picked": "Balloons and Static Electricity",
+        "fit": "partial",
         "score": 56.31,
         "core_hits": [],
         "detail_hits": [
@@ -964,14 +1006,21 @@
       }
     },
     "video_pool": {
-      "passed": 3,
+      "passed": 2,
       "runners_up": [
-        "Pith ball electroscope",
-        "Ion–dipole forces"
+        "Pith ball electroscope"
       ],
       "rejected_sample": [
         [
+          "Conductors and insulators",
+          "below relevance gate"
+        ],
+        [
           "07 Lightning Arrestors, Lightning Conductor",
+          "below relevance gate"
+        ],
+        [
+          "Triboelectric effect and charge",
           "below relevance gate"
         ],
         [
@@ -983,30 +1032,23 @@
           "below relevance gate"
         ],
         [
-          "05 Charge Distribution On A Pear Shaped Conductor",
+          "01 Conductors Insulators And Semi Conductors",
           "below relevance gate"
         ],
         [
-          "When there aren't gains from trade",
+          "02 Conductors Insulators And Semi Conductors",
           "below relevance gate"
         ],
         [
-          "Conductors and insulators",
-          "below relevance gate"
-        ],
-        [
-          "06 Lightning Arrestors, Electrostatic  Shielding",
-          "below relevance gate"
-        ],
-        [
-          "Monopoly price discrimination",
+          "Electric potential from multiple charges",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 133,
-        "kolibri node not available on reference image": 11,
-        "web file not on reference image": 1
+        "below relevance gate": 141,
+        "kolibri node not available on reference image": 6,
+        "web file not on reference image": 1,
+        "judged off-topic (independent reviewer)": 1
       }
     },
     "reading_pool": {
@@ -1017,27 +1059,11 @@
       ],
       "rejected_sample": [
         [
-          "Electrostatics",
+          "Electric Conductors and Insulators (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Electrostatics (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Electrostatics Practice",
-          "below relevance gate"
-        ],
-        [
-          "topical-test-form-3-physics-electrostatics-2-answers",
-          "excluded: answer/exam material"
-        ],
-        [
-          "Contacts",
-          "below relevance gate"
-        ],
-        [
-          "Conductors",
+          "Electric Conductors and Insulators Practice",
           "below relevance gate"
         ],
         [
@@ -1045,14 +1071,30 @@
           "below relevance gate"
         ],
         [
-          "Electric Conductors and Insulators (Flexbook)",
+          "Circuit Construction Kit: DC",
+          "below relevance gate"
+        ],
+        [
+          "Electric Charge and Electric Force (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Electric Charge and Electric Force Practice",
+          "below relevance gate"
+        ],
+        [
+          "Transfer of Electric Charge (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Transfer of Electric Charge Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 142,
-        "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 10
+        "below relevance gate": 151,
+        "excluded: answer/exam material": 2,
+        "kolibri node not available on reference image": 9
       }
     }
   },
@@ -1112,6 +1154,7 @@
     "slots": {
       "predict.video": {
         "picked": "Coulomb's law",
+        "fit": "fits",
         "score": 138.32,
         "core_hits": [],
         "detail_hits": [
@@ -1122,55 +1165,57 @@
         "detail_weight": 2.1
       },
       "observe.video": {
-        "picked": "Ion–dipole forces",
-        "score": 136.37,
-        "core_hits": [
-          "electrostatics"
-        ],
+        "picked": "Coulomb's law",
+        "fit": "fits",
+        "score": 138.32,
+        "core_hits": [],
         "detail_hits": [
           "coulomb' law",
-          "electrostatics force",
-          "charge",
           "coulomb'",
           "law"
         ],
-        "detail_weight": 3.65
+        "detail_weight": 2.1
       },
       "explain.video": {
         "picked": "Electric forces",
-        "score": 117.78,
+        "fit": "partial",
+        "score": 124.94,
         "core_hits": [],
         "detail_hits": [
           "attractive force",
           "force repulsive",
+          "charge electric force",
           "charge"
         ],
-        "detail_weight": 1.11
+        "detail_weight": 1.38
       },
       "dqb.video": {
-        "picked": "Coulomb's law",
-        "score": 138.32,
+        "picked": "Magnitude of electric field created by a charge",
+        "fit": "partial",
+        "score": 88.07,
         "core_hits": [],
         "detail_hits": [
-          "coulomb' law",
-          "coulomb'",
-          "law"
+          "charge point",
+          "charge electric force point",
+          "charge electric force",
+          "charge"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 1.79
       },
       "model.video": {
-        "picked": "Coulomb's law",
-        "score": 138.32,
+        "picked": "Net electric field from multiple charges in 1D",
+        "fit": "partial",
+        "score": 56.69,
         "core_hits": [],
         "detail_hits": [
-          "coulomb' law",
-          "coulomb'",
-          "law"
+          "charge point",
+          "charge"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 1.24
       },
       "predict.reading": {
         "picked": "Coulomb's Law",
+        "fit": "fits",
         "score": 277,
         "core_hits": [
           "electrostatics"
@@ -1186,6 +1231,7 @@
       },
       "observe.reading": {
         "picked": "Coulomb's Law",
+        "fit": "fits",
         "score": 277,
         "core_hits": [
           "electrostatics"
@@ -1200,22 +1246,20 @@
         "detail_weight": 3.65
       },
       "explain.reading": {
-        "picked": "Coulomb's Law",
-        "score": 277,
+        "picked": "Charges and Fields",
+        "fit": "partial",
+        "score": 46.28,
         "core_hits": [
           "electrostatics"
         ],
         "detail_hits": [
-          "coulomb' law",
-          "electrostatics force",
-          "charge",
-          "coulomb'",
-          "law"
+          "charge"
         ],
-        "detail_weight": 3.65
+        "detail_weight": 0.3
       },
       "dqb.reading": {
         "picked": "Coulomb's Law",
+        "fit": "fits",
         "score": 277,
         "core_hits": [
           "electrostatics"
@@ -1231,6 +1275,7 @@
       },
       "model.reading": {
         "picked": "Coulomb's Law",
+        "fit": "fits",
         "score": 277,
         "core_hits": [
           "electrostatics"
@@ -1246,18 +1291,22 @@
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 7,
       "runners_up": [
-        "Ion–dipole forces",
+        "Pith ball electroscope",
         "Electric forces",
         "Magnitude of electric field created by a charge",
-        "Pith ball electroscope",
-        "Bohr model radii (derivation using physics)"
+        "Net electric field from multiple charges in 1D",
+        "Separation and Transfer of Charge - Overview"
       ],
       "rejected_sample": [
         [
           "Ionic bonds and Coulomb's law",
           "foreign vocabulary ['ionic']"
+        ],
+        [
+          "Ion–dipole forces",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Periodic trends and Coulomb's law",
@@ -1272,25 +1321,22 @@
           "below relevance gate"
         ],
         [
+          "Electric field direction",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Representing ionic solids using particulate models",
           "foreign vocabulary ['ionic']"
         ],
         [
-          "Conservation of charge",
-          "below relevance gate"
-        ],
-        [
           "07 Lightning Arrestors, Lightning Conductor",
-          "below relevance gate"
-        ],
-        [
-          "Inverse cube law (deflection method)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "foreign vocabulary": 4,
-        "below relevance gate": 129,
+        "judged off-topic (independent reviewer)": 6,
+        "below relevance gate": 130,
         "kolibri node not available on reference image": 3
       }
     },
@@ -1303,15 +1349,15 @@
       ],
       "rejected_sample": [
         [
-          "Atomic Interactions",
-          "below relevance gate"
-        ],
-        [
           "Electric Charge and Electric Force (Flexbook)",
           "below relevance gate"
         ],
         [
           "Electric Charge and Electric Force Practice",
+          "below relevance gate"
+        ],
+        [
+          "Atomic Interactions",
           "below relevance gate"
         ],
         [
@@ -1364,6 +1410,11 @@
         "energy",
         "electric",
         "field",
+        "plate",
+        "capacitors",
+        "voltage",
+        "dielectrics",
+        "stored",
         "store"
       ],
       "phrases": [
@@ -1371,24 +1422,30 @@
         "charge storage",
         "potential difference",
         "energy storage",
-        "electric field"
+        "electric field",
+        "parallel plate capacitors",
+        "capacitor charge voltage",
+        "dielectrics capacitors",
+        "energy stored capacitors",
+        "electric field plates"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Capacitors in parallel",
-        "score": 136.67,
+        "picked": "Dielectrics in capacitors",
+        "fit": "fits",
+        "score": 110.6,
         "core_hits": [],
         "detail_hits": [
-          "capacitance",
           "capacitor",
-          "store",
-          "charge"
+          "dielectric",
+          "capacitor dielectric"
         ],
-        "detail_weight": 2.43
+        "detail_weight": 1.9
       },
       "observe.video": {
         "picked": "Capacitance",
+        "fit": "fits",
         "score": 94.08,
         "core_hits": [],
         "detail_hits": [
@@ -1398,8 +1455,9 @@
         "detail_weight": 1.83
       },
       "explain.video": {
-        "picked": "Capacitors in series",
-        "score": 93,
+        "picked": "Capacitors and capacitance",
+        "fit": "fits",
+        "score": 76.93,
         "core_hits": [],
         "detail_hits": [
           "capacitance",
@@ -1408,8 +1466,21 @@
         "detail_weight": 1.83
       },
       "dqb.video": {
-        "picked": "Capacitance -dubbed(KY)",
-        "score": 87.98,
+        "picked": "Dielectrics in capacitors",
+        "fit": "fits",
+        "score": 110.6,
+        "core_hits": [],
+        "detail_hits": [
+          "capacitor",
+          "dielectric",
+          "capacitor dielectric"
+        ],
+        "detail_weight": 1.9
+      },
+      "model.video": {
+        "picked": "Capacitance",
+        "fit": "fits",
+        "score": 94.08,
         "core_hits": [],
         "detail_hits": [
           "capacitance",
@@ -1417,32 +1488,39 @@
         ],
         "detail_weight": 1.83
       },
-      "model.video": {
-        "picked": "Capacitors in parallel",
-        "score": 136.67,
-        "core_hits": [],
-        "detail_hits": [
-          "capacitance",
-          "capacitor",
-          "store",
-          "charge"
-        ],
-        "detail_weight": 2.43
-      },
       "predict.reading": {
         "picked": "Capacitor Lab: Basics",
-        "score": 149.84,
+        "fit": "fits",
+        "score": 173.75,
         "core_hits": [],
         "detail_hits": [
           "capacitor",
           "potentialdifference",
           "electric field",
+          "capacitor charge potentialdifference",
+          "electric field plate",
           "charge"
         ],
-        "detail_weight": 2.12
+        "detail_weight": 2.99
       },
       "observe.reading": {
+        "picked": "Capacitor Lab: Basics",
+        "fit": "fits",
+        "score": 173.75,
+        "core_hits": [],
+        "detail_hits": [
+          "capacitor",
+          "potentialdifference",
+          "electric field",
+          "capacitor charge potentialdifference",
+          "electric field plate",
+          "charge"
+        ],
+        "detail_weight": 2.99
+      },
+      "explain.reading": {
         "picked": "Charges and Fields",
+        "fit": "partial",
         "score": 114.45,
         "core_hits": [
           "electrostatics"
@@ -1453,51 +1531,42 @@
         ],
         "detail_weight": 0.84
       },
-      "explain.reading": {
-        "picked": "Capacitor Lab: Basics",
-        "score": 149.84,
-        "core_hits": [],
-        "detail_hits": [
-          "capacitor",
-          "potentialdifference",
-          "electric field",
-          "charge"
-        ],
-        "detail_weight": 2.12
-      },
       "dqb.reading": {
-        "picked": "Capacitor Lab: Basics",
-        "score": 149.84,
-        "core_hits": [],
+        "picked": "Coulomb's Law",
+        "fit": "partial",
+        "score": 32.4,
+        "core_hits": [
+          "electrostatics"
+        ],
         "detail_hits": [
-          "capacitor",
-          "potentialdifference",
-          "electric field",
           "charge"
         ],
-        "detail_weight": 2.12
+        "detail_weight": 0.3
       },
       "model.reading": {
         "picked": "Capacitor Lab: Basics",
-        "score": 149.84,
+        "fit": "fits",
+        "score": 173.75,
         "core_hits": [],
         "detail_hits": [
           "capacitor",
           "potentialdifference",
           "electric field",
+          "capacitor charge potentialdifference",
+          "electric field plate",
           "charge"
         ],
-        "detail_weight": 2.12
+        "detail_weight": 2.99
       }
     },
     "video_pool": {
-      "passed": 15,
+      "passed": 12,
       "runners_up": [
         "Capacitance",
-        "Capacitors in series",
-        "Capacitance -dubbed(KY)",
         "Capacitors and capacitance",
-        "Dielectrics in capacitors"
+        "Capacitors in parallel",
+        "Capacitors in series",
+        "Capacitance -dubbed(KY)"
       ],
       "rejected_sample": [
         [
@@ -1535,15 +1604,16 @@
       ],
       "rejected_by_reason": {
         "below relevance gate": 124,
-        "kolibri node not available on reference image": 1
+        "kolibri node not available on reference image": 1,
+        "judged off-topic (independent reviewer)": 3
       }
     },
     "reading_pool": {
       "passed": 4,
       "runners_up": [
+        "Capacitance",
         "Charges and Fields",
-        "Coulomb's Law",
-        "Capacitance"
+        "Coulomb's Law"
       ],
       "rejected_sample": [
         [
@@ -1580,7 +1650,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 151,
+        "below relevance gate": 152,
         "excluded: answer/exam material": 1
       }
     }
@@ -1615,9 +1685,10 @@
         "work",
         "done",
         "field",
+        "capacitors",
+        "static",
         "store",
-        "released",
-        "harnessed"
+        "released"
       ],
       "phrases": [
         "electric potential energy",
@@ -1629,24 +1700,18 @@
         "lightning conductor",
         "charge separation",
         "work done",
-        "electric field energy"
+        "electric field energy",
+        "electric potential energy",
+        "electric potential voltage",
+        "capacitors capacitance",
+        "energy stored capacitors",
+        "parallel plate capacitors"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Electric potential energy (part 2-- involves calculus)",
-        "score": 208.39,
-        "core_hits": [],
-        "detail_hits": [
-          "electric energy potential",
-          "electric potential",
-          "electric energy field",
-          "energy"
-        ],
-        "detail_weight": 3.41
-      },
-      "observe.video": {
         "picked": "Electric potential energy of charges",
+        "fit": "fits",
         "score": 190.3,
         "core_hits": [],
         "detail_hits": [
@@ -1657,19 +1722,9 @@
         ],
         "detail_weight": 3.35
       },
-      "explain.video": {
-        "picked": "Electric potential energy -dubbed(KY)",
-        "score": 184.4,
-        "core_hits": [],
-        "detail_hits": [
-          "electric energy potential",
-          "electric potential",
-          "energy"
-        ],
-        "detail_weight": 3.05
-      },
-      "dqb.video": {
+      "observe.video": {
         "picked": "Electric potential energy",
+        "fit": "fits",
         "score": 183.92,
         "core_hits": [],
         "detail_hits": [
@@ -1679,21 +1734,46 @@
         ],
         "detail_weight": 3.05
       },
-      "model.video": {
-        "picked": "Capacitors in parallel",
-        "score": 128.37,
+      "explain.video": {
+        "picked": "Electric potential at a point in space",
+        "fit": "fits",
+        "score": 154.88,
         "core_hits": [],
         "detail_hits": [
-          "capacitance",
-          "capacitor",
+          "electric potential",
+          "potentialdifference",
+          "electric potential potentialdifference"
+        ],
+        "detail_weight": 2.31
+      },
+      "dqb.video": {
+        "picked": "Electric potential energy of charges",
+        "fit": "fits",
+        "score": 190.3,
+        "core_hits": [],
+        "detail_hits": [
+          "electric energy potential",
+          "electric potential",
           "charge",
-          "store",
           "energy"
         ],
-        "detail_weight": 2.08
+        "detail_weight": 3.35
+      },
+      "model.video": {
+        "picked": "Electric potential energy",
+        "fit": "fits",
+        "score": 183.92,
+        "core_hits": [],
+        "detail_hits": [
+          "electric energy potential",
+          "electric potential",
+          "energy"
+        ],
+        "detail_weight": 3.05
       },
       "predict.reading": {
         "picked": "Capacitor Lab: Basics",
+        "fit": "fits",
         "score": 129.25,
         "core_hits": [],
         "detail_hits": [
@@ -1704,7 +1784,20 @@
         "detail_weight": 1.57
       },
       "observe.reading": {
+        "picked": "Capacitor Lab: Basics",
+        "fit": "fits",
+        "score": 129.25,
+        "core_hits": [],
+        "detail_hits": [
+          "potentialdifference",
+          "capacitor",
+          "charge"
+        ],
+        "detail_weight": 1.57
+      },
+      "explain.reading": {
         "picked": "Charges and Fields",
+        "fit": "partial",
         "score": 111.13,
         "core_hits": [
           "electrostatics"
@@ -1715,30 +1808,21 @@
         ],
         "detail_weight": 1.55
       },
-      "explain.reading": {
-        "picked": "Capacitor Lab: Basics",
-        "score": 129.25,
-        "core_hits": [],
-        "detail_hits": [
-          "potentialdifference",
-          "capacitor",
-          "charge"
-        ],
-        "detail_weight": 1.57
-      },
       "dqb.reading": {
-        "picked": "Capacitor Lab: Basics",
-        "score": 129.25,
-        "core_hits": [],
+        "picked": "Coulomb's Law",
+        "fit": "partial",
+        "score": 32.4,
+        "core_hits": [
+          "electrostatics"
+        ],
         "detail_hits": [
-          "potentialdifference",
-          "capacitor",
           "charge"
         ],
-        "detail_weight": 1.57
+        "detail_weight": 0.3
       },
       "model.reading": {
         "picked": "Capacitor Lab: Basics",
+        "fit": "fits",
         "score": 129.25,
         "core_hits": [],
         "detail_hits": [
@@ -1750,15 +1834,19 @@
       }
     },
     "video_pool": {
-      "passed": 27,
+      "passed": 25,
       "runners_up": [
-        "Electric potential energy of charges",
-        "Electric potential energy -dubbed(KY)",
         "Electric potential energy",
-        "Capacitors in parallel",
-        "Electric potential from multiple charges"
+        "Electric potential at a point in space",
+        "Capacitors and capacitance",
+        "Electric potential energy -dubbed(KY)",
+        "Capacitors in parallel"
       ],
       "rejected_sample": [
+        [
+          "Electric potential energy (part 2-- involves calculus)",
+          "conflicting sub-topic ['calculus']"
+        ],
         [
           "Line integrals and vector fields",
           "below relevance gate"
@@ -1766,6 +1854,10 @@
         [
           "TOPIC - electrostatics - Charges and Fields",
           "kolibri node not available on reference image"
+        ],
+        [
+          "LC natural response example",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Potential energy stored in a spring -dubbed(KY)",
@@ -1782,19 +1874,13 @@
         [
           "Work done by isothermic process",
           "below relevance gate"
-        ],
-        [
-          "Net electric field from multiple charges in 1D",
-          "below relevance gate"
-        ],
-        [
-          "Net electric field from multiple charges in 2D",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "conflicting sub-topic": 1,
         "below relevance gate": 120,
-        "kolibri node not available on reference image": 1
+        "kolibri node not available on reference image": 1,
+        "judged off-topic (independent reviewer)": 1
       }
     },
     "reading_pool": {
@@ -1804,6 +1890,10 @@
         "Coulomb's Law"
       ],
       "rejected_sample": [
+        [
+          "Static Electricity and Static Discharge (Flexbook)",
+          "below relevance gate"
+        ],
         [
           "Capacitors in Series and Parallel (Flexbook)",
           "below relevance gate"
@@ -1831,15 +1921,11 @@
         [
           "Capacitor Energy Practice",
           "below relevance gate"
-        ],
-        [
-          "Slope fields & equations",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 160,
-        "kolibri node not available on reference image": 1,
+        "below relevance gate": 159,
+        "kolibri node not available on reference image": 9,
         "excluded: answer/exam material": 1
       }
     }
@@ -1867,31 +1953,37 @@
         "joules",
         "farads",
         "volts",
-        "much",
-        "store"
+        "capacitors",
+        "formula",
+        "area",
+        "under",
+        "voltage",
+        "charge",
+        "graph",
+        "electric",
+        "charging",
+        "discharging",
+        "much"
       ],
       "phrases": [
         "energy stored capacitor",
         "half squared",
         "potential difference",
         "lightning energy",
-        "electrostatic precipitator"
+        "electrostatic precipitator",
+        "energy stored capacitors",
+        "capacitor energy formula",
+        "capacitance potential difference",
+        "area under voltage charge graph",
+        "electric potential energy",
+        "capacitor charging discharging"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Capacitors in series",
-        "score": 78.23,
-        "core_hits": [],
-        "detail_hits": [
-          "capacitance",
-          "capacitor"
-        ],
-        "detail_weight": 1.01
-      },
-      "observe.video": {
         "picked": "Capacitors in parallel",
-        "score": 70.6,
+        "fit": "partial",
+        "score": 85.1,
         "core_hits": [],
         "detail_hits": [
           "capacitance",
@@ -1901,8 +1993,20 @@
         ],
         "detail_weight": 1.61
       },
+      "observe.video": {
+        "picked": "Capacitors in series",
+        "fit": "partial",
+        "score": 78.23,
+        "core_hits": [],
+        "detail_hits": [
+          "capacitance",
+          "capacitor"
+        ],
+        "detail_weight": 1.01
+      },
       "explain.video": {
         "picked": "Capacitors and capacitance",
+        "fit": "partial",
         "score": 64.72,
         "core_hits": [],
         "detail_hits": [
@@ -1913,6 +2017,7 @@
       },
       "dqb.video": {
         "picked": "Capacitance",
+        "fit": "partial",
         "score": 57.21,
         "core_hits": [],
         "detail_hits": [
@@ -1923,6 +2028,7 @@
       },
       "model.video": {
         "picked": "Capacitance -dubbed(KY)",
+        "fit": "partial",
         "score": 53.61,
         "core_hits": [],
         "detail_hits": [
@@ -1933,6 +2039,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1940,6 +2047,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1947,6 +2055,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1954,6 +2063,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1961,6 +2071,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1970,12 +2081,28 @@
     "video_pool": {
       "passed": 5,
       "runners_up": [
-        "Capacitors in parallel",
+        "Capacitors in series",
         "Capacitors and capacitance",
         "Capacitance",
         "Capacitance -dubbed(KY)"
       ],
       "rejected_sample": [
+        [
+          "Electric potential energy of charges",
+          "below relevance gate"
+        ],
+        [
+          "Electric potential energy (part 2-- involves calculus)",
+          "below relevance gate"
+        ],
+        [
+          "Electric potential energy -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
+          "Electric potential energy",
+          "below relevance gate"
+        ],
         [
           "Voltage",
           "below relevance gate"
@@ -1985,33 +2112,17 @@
           "below relevance gate"
         ],
         [
-          "Potential energy stored in a spring -dubbed(KY)",
+          "Potential energy stored in a spring",
           "below relevance gate"
         ],
         [
-          "Energy of a capacitor",
-          "below relevance gate"
-        ],
-        [
-          "Electric potential energy (part 2-- involves calculus)",
-          "below relevance gate"
-        ],
-        [
-          "Voltage as an intensive property",
-          "below relevance gate"
-        ],
-        [
-          "Potential energy",
-          "below relevance gate"
-        ],
-        [
-          "Capacitor i-v equations",
+          "Electric potential from multiple charges",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140,
-        "kolibri node not available on reference image": 2,
+        "below relevance gate": 139,
+        "kolibri node not available on reference image": 1,
         "web file not on reference image": 1
       }
     },
@@ -2020,41 +2131,41 @@
       "runners_up": [],
       "rejected_sample": [
         [
+          "Capacitor Lab: Basics",
+          "below relevance gate"
+        ],
+        [
+          "Charges and Fields",
+          "below relevance gate"
+        ],
+        [
+          "Piecewise functions graphs",
+          "below relevance gate"
+        ],
+        [
+          "Limits of combined functions: sums and differences",
+          "below relevance gate"
+        ],
+        [
+          "Finding definite integrals using area formulas",
+          "below relevance gate"
+        ],
+        [
+          "Graphs of square and cube root functions",
+          "below relevance gate"
+        ],
+        [
           "Capacitor Energy (Flexbook)",
           "below relevance gate"
         ],
         [
           "Capacitor Energy Practice",
           "below relevance gate"
-        ],
-        [
-          "Capacitor Lab: Basics",
-          "below relevance gate"
-        ],
-        [
-          "Stored Elastic Energy In Large And Middle Sized Arteries",
-          "below relevance gate"
-        ],
-        [
-          "Potential Energy Practice",
-          "below relevance gate"
-        ],
-        [
-          "Potential Energy (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Chemical Potential Energy Practice",
-          "below relevance gate"
-        ],
-        [
-          "Potential Energy Diagrams (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 158,
-        "kolibri node not available on reference image": 6,
+        "below relevance gate": 157,
+        "kolibri node not available on reference image": 2,
         "excluded: answer/exam material": 1
       }
     }
@@ -2085,10 +2196,14 @@
         "energy",
         "storage",
         "synthesis",
+        "rods",
+        "protection",
+        "air",
+        "pollution",
+        "photocopiers",
         "use",
-        "solve",
-        "real",
-        "problems"
+        "static",
+        "charging"
       ],
       "phrases": [
         "electrostatic applications",
@@ -2098,128 +2213,147 @@
         "inkjet printer",
         "charge induction",
         "electric field",
-        "energy storage"
+        "energy storage",
+        "lightning rods protection",
+        "electrostatic precipitator air pollution",
+        "photocopiers use static",
+        "charging induction",
+        "electric field lines",
+        "capacitors storing electric energy"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Net electric field from multiple charges in 2D",
-        "score": 118.98,
+        "picked": "07 Lightning Arrestors, Lightning Conductor",
+        "fit": "fits",
+        "score": 65.73,
         "core_hits": [],
         "detail_hits": [
-          "electric field",
-          "solve",
-          "problem"
+          "conductor lightning"
         ],
-        "detail_weight": 1.23
+        "detail_weight": 1.25
       },
       "observe.video": {
-        "picked": "Net electric field from multiple charges in 1D",
-        "score": 116.77,
+        "picked": "07 Lightning Arrestors, Lightning Conductor",
+        "fit": "fits",
+        "score": 65.73,
         "core_hits": [],
         "detail_hits": [
-          "electric field",
-          "solve",
-          "problem"
+          "conductor lightning"
         ],
-        "detail_weight": 1.23
+        "detail_weight": 1.25
       },
       "explain.video": {
-        "picked": "Net electric field from multiple charges in 2D",
-        "score": 118.98,
+        "picked": "01 Electric Field Lines",
+        "fit": "partial",
+        "score": 86.32,
         "core_hits": [],
         "detail_hits": [
           "electric field",
-          "solve",
-          "problem"
+          "electric field line"
         ],
-        "detail_weight": 1.23
+        "detail_weight": 1
       },
       "dqb.video": {
-        "picked": "Net electric field from multiple charges in 2D",
-        "score": 118.98,
+        "picked": "07 Lightning Arrestors, Lightning Conductor",
+        "fit": "fits",
+        "score": 65.73,
         "core_hits": [],
         "detail_hits": [
-          "electric field",
-          "solve",
-          "problem"
+          "conductor lightning"
         ],
-        "detail_weight": 1.23
+        "detail_weight": 1.25
       },
       "model.video": {
-        "picked": "Net electric field from multiple charges in 2D",
-        "score": 118.98,
+        "picked": "07 Lightning Arrestors, Lightning Conductor",
+        "fit": "fits",
+        "score": 65.73,
         "core_hits": [],
         "detail_hits": [
-          "electric field",
-          "solve",
-          "problem"
+          "conductor lightning"
         ],
-        "detail_weight": 1.23
+        "detail_weight": 1.25
       },
       "predict.reading": {
         "picked": "Charges and Fields",
-        "score": 95.73,
+        "fit": "partial",
+        "score": 118.48,
         "core_hits": [
           "electrostatics"
         ],
         "detail_hits": [
-          "electric field"
+          "electric field",
+          "electric field line"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 1
       },
       "observe.reading": {
         "picked": "Charges and Fields",
-        "score": 95.73,
+        "fit": "partial",
+        "score": 118.48,
         "core_hits": [
           "electrostatics"
         ],
         "detail_hits": [
-          "electric field"
+          "electric field",
+          "electric field line"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 1
       },
       "explain.reading": {
         "picked": "Charges and Fields",
-        "score": 95.73,
+        "fit": "partial",
+        "score": 118.48,
         "core_hits": [
           "electrostatics"
         ],
         "detail_hits": [
-          "electric field"
+          "electric field",
+          "electric field line"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 1
       },
       "dqb.reading": {
         "picked": "Charges and Fields",
-        "score": 95.73,
+        "fit": "partial",
+        "score": 118.48,
         "core_hits": [
           "electrostatics"
         ],
         "detail_hits": [
-          "electric field"
+          "electric field",
+          "electric field line"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 1
       },
       "model.reading": {
         "picked": "Charges and Fields",
-        "score": 95.73,
+        "fit": "partial",
+        "score": 118.48,
         "core_hits": [
           "electrostatics"
         ],
         "detail_hits": [
-          "electric field"
+          "electric field",
+          "electric field line"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 1
       }
     },
     "video_pool": {
-      "passed": 3,
+      "passed": 2,
       "runners_up": [
-        "Net electric field from multiple charges in 1D",
-        "07 Lightning Arrestors, Lightning Conductor"
+        "01 Electric Field Lines"
       ],
       "rejected_sample": [
+        [
+          "Net electric field from multiple charges in 2D",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Net electric field from multiple charges in 1D",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Magnitude of electric field created by a charge",
           "below relevance gate"
@@ -2237,25 +2371,18 @@
           "below relevance gate"
         ],
         [
+          "Capacitors in series",
+          "below relevance gate"
+        ],
+        [
           "TOPIC - electrostatics - Charges and Fields",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Electric field definition",
-          "below relevance gate"
-        ],
-        [
-          "Electric field direction",
-          "below relevance gate"
-        ],
-        [
-          "Solving percent problems",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "judged off-topic (independent reviewer)": 2,
         "below relevance gate": 144,
-        "kolibri node not available on reference image": 3
+        "kolibri node not available on reference image": 2
       }
     },
     "reading_pool": {
@@ -2267,11 +2394,23 @@
           "below relevance gate"
         ],
         [
+          "Time word problems with number line",
+          "below relevance gate"
+        ],
+        [
           "Electric Power and Electrical Energy Use (Flexbook)",
           "below relevance gate"
         ],
         [
           "Formulas and units",
+          "below relevance gate"
+        ],
+        [
+          "Solve problems with line plots",
+          "below relevance gate"
+        ],
+        [
+          "Line integrals in vector fields",
           "below relevance gate"
         ],
         [
@@ -2281,22 +2420,11 @@
         [
           "Electric Conductors and Insulators (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Electric Conductors and Insulators Practice",
-          "below relevance gate"
-        ],
-        [
-          "Linear equations word problems",
-          "below relevance gate"
-        ],
-        [
-          "Solve problems with bar graphs",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 149
+        "below relevance gate": 149,
+        "kolibri node not available on reference image": 1
       }
     }
   }

@@ -22,6 +22,11 @@
         "cuttings",
         "seeds",
         "pollination",
+        "methods",
+        "stem",
+        "seed",
+        "formation",
+        "sexual",
         "lonely",
         "trees",
         "reproduce",
@@ -29,33 +34,43 @@
       ],
       "phrases": [
         "asexual reproduction",
-        "vegetative propagation"
+        "vegetative propagation",
+        "asexual reproduction plants",
+        "vegetative propagation methods",
+        "corms rhizomes",
+        "stem cuttings tubers",
+        "pollination seed formation",
+        "sexual asexual reproduction"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Plant reproductive success",
-        "score": 164.05,
-        "core_hits": [
-          "plant reproduction"
-        ],
-        "detail_hits": [
-          "reproduce"
-        ],
-        "detail_weight": 0.3
-      },
-      "observe.video": {
         "picked": "Sexual and asexual reproduction",
-        "score": 122.5,
+        "fit": "fits",
+        "score": 194.93,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
+          "asexual reproduction sexual",
           "reproduce"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 2.14
+      },
+      "observe.video": {
+        "picked": "Sexual and asexual reproduction",
+        "fit": "fits",
+        "score": 194.93,
+        "core_hits": [],
+        "detail_hits": [
+          "asexual reproduction",
+          "asexual reproduction sexual",
+          "reproduce"
+        ],
+        "detail_weight": 2.14
       },
       "explain.video": {
         "picked": "Plant reproductive success",
+        "fit": "partial",
         "score": 164.05,
         "core_hits": [
           "plant reproduction"
@@ -66,29 +81,32 @@
         "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Plant reproductive success",
-        "score": 164.05,
-        "core_hits": [
-          "plant reproduction"
-        ],
+        "picked": "Sexual and asexual reproduction",
+        "fit": "fits",
+        "score": 194.93,
+        "core_hits": [],
         "detail_hits": [
+          "asexual reproduction",
+          "asexual reproduction sexual",
           "reproduce"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 2.14
       },
       "model.video": {
-        "picked": "Plant reproductive success",
-        "score": 164.05,
-        "core_hits": [
-          "plant reproduction"
-        ],
+        "picked": "Sexual and asexual reproduction",
+        "fit": "fits",
+        "score": 194.93,
+        "core_hits": [],
         "detail_hits": [
+          "asexual reproduction",
+          "asexual reproduction sexual",
           "reproduce"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 2.14
       },
       "predict.reading": {
         "picked": "Asexual Reproduction Practice",
+        "fit": "fits",
         "score": 101.28,
         "core_hits": [],
         "detail_hits": [
@@ -97,17 +115,20 @@
         "detail_weight": 1.5
       },
       "observe.reading": {
-        "picked": "Understand: sexual and asexual reproduction",
-        "score": 89.59,
+        "picked": "Asexual vs. Sexual Reproduction Practice",
+        "fit": "fits",
+        "score": 100.89,
         "core_hits": [],
         "detail_hits": [
-          "asexual reproduction"
+          "asexual reproduction",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 1.84
       },
       "explain.reading": {
-        "picked": "Asexual vs. Sexual Reproduction Practice",
-        "score": 62.83,
+        "picked": "Asexual Reproduction Practice",
+        "fit": "fits",
+        "score": 101.28,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction"
@@ -115,33 +136,41 @@
         "detail_weight": 1.5
       },
       "dqb.reading": {
-        "picked": "Asexual Reproduction Practice",
-        "score": 101.28,
+        "picked": "Asexual vs. Sexual Reproduction Practice",
+        "fit": "fits",
+        "score": 100.89,
         "core_hits": [],
         "detail_hits": [
-          "asexual reproduction"
+          "asexual reproduction",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 1.84
       },
       "model.reading": {
-        "picked": "Asexual Reproduction Practice",
-        "score": 101.28,
+        "picked": "Understand: sexual and asexual reproduction",
+        "fit": "partial",
+        "score": 153.74,
         "core_hits": [],
         "detail_hits": [
-          "asexual reproduction"
+          "asexual reproduction",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 1.84
       }
     },
     "video_pool": {
       "passed": 3,
       "runners_up": [
-        "Sexual and asexual reproduction",
-        "Asexual and sexual reproduction"
+        "Asexual and sexual reproduction",
+        "Plant reproductive success"
       ],
       "rejected_sample": [
         [
           "06 Plant Diversity And Evolution, Introduction To Seed Plants",
+          "below relevance gate"
+        ],
+        [
+          "Sexual reproduction and genetic variation",
           "below relevance gate"
         ],
         [
@@ -167,24 +196,19 @@
         [
           "English: Pollination: Saying It with Flowers",
           "kolibri node not available on reference image"
-        ],
-        [
-          "English-Spanish Subtitles: Pollination: Saying It with Flowers",
-          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 117,
-        "kolibri node not available on reference image": 37,
-        "web file not on reference image": 20,
-        "excluded: answer/exam material": 3
+        "below relevance gate": 119,
+        "kolibri node not available on reference image": 17,
+        "web file not on reference image": 2
       }
     },
     "reading_pool": {
       "passed": 3,
       "runners_up": [
-        "Understand: sexual and asexual reproduction",
-        "Asexual vs. Sexual Reproduction Practice"
+        "Asexual vs. Sexual Reproduction Practice",
+        "Understand: sexual and asexual reproduction"
       ],
       "rejected_sample": [
         [
@@ -204,6 +228,10 @@
           "below relevance gate"
         ],
         [
+          "Sexual Reproduction Practice",
+          "below relevance gate"
+        ],
+        [
           "Pollination: Saying ..:Handout Plant Morphology",
           "kolibri node not available on reference image"
         ],
@@ -212,17 +240,13 @@
           "below relevance gate"
         ],
         [
-          "Tra's Red Bean Plant",
-          "below relevance gate"
-        ],
-        [
-          "Plants And Seeds",
+          "Sexual Reproduction - Advanced (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "excluded: answer/exam material": 4,
-        "below relevance gate": 133,
+        "below relevance gate": 138,
         "kolibri node not available on reference image": 14
       }
     }
@@ -253,22 +277,32 @@
         "maize",
         "passion",
         "flower",
-        "detectives",
-        "classifying",
-        "flowers",
-        "position",
+        "functions",
+        "radial",
+        "bilateral",
         "symmetry",
-        "sex"
+        "types",
+        "perfect",
+        "imperfect",
+        "flowers",
+        "detectives"
       ],
       "phrases": [
         "superior ovary",
         "inferior ovary",
-        "passion flower"
+        "passion flower",
+        "flower functions",
+        "superior inferior ovary",
+        "radial bilateral symmetry",
+        "types inflorescence",
+        "monoecious dioecious plants",
+        "perfect imperfect flowers"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -276,6 +310,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -283,6 +318,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -290,6 +326,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -297,6 +334,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -304,6 +342,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -311,6 +350,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -318,6 +358,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -325,6 +366,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -332,6 +374,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -347,6 +390,22 @@
           "below relevance gate"
         ],
         [
+          "Counting outcomes: flower pots",
+          "below relevance gate"
+        ],
+        [
+          "Function symmetry introduction",
+          "below relevance gate"
+        ],
+        [
+          "Perfect and imperfect competition",
+          "below relevance gate"
+        ],
+        [
+          "Vector-valued functions differentiation",
+          "below relevance gate"
+        ],
+        [
           "English: Pollination: Saying It with Flowers",
           "kolibri node not available on reference image"
         ],
@@ -355,30 +414,13 @@
           "kolibri node not available on reference image"
         ],
         [
-          "Plants: Classification, Reproduction, and Evolution - Overview",
-          "below relevance gate"
-        ],
-        [
-          "Counting outcomes: flower pots",
-          "below relevance gate"
-        ],
-        [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
-          "below relevance gate"
-        ],
-        [
-          "06 Plant Diversity And Evolution, Introduction To Seed Plants",
-          "below relevance gate"
-        ],
-        [
-          "Solving two-variable inequalities word problem",
+          "Vector-valued functions intro",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 125,
-        "kolibri node not available on reference image": 9,
-        "web file not on reference image": 1
+        "below relevance gate": 142,
+        "kolibri node not available on reference image": 8
       }
     },
     "reading_pool": {
@@ -419,9 +461,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 18,
-        "below relevance gate": 132,
-        "excluded: answer/exam material": 4
+        "kolibri node not available on reference image": 10,
+        "below relevance gate": 139,
+        "excluded: answer/exam material": 1
       }
     }
   },
@@ -454,23 +496,30 @@
         "passion",
         "fruit",
         "pawpaw",
-        "lone",
-        "tree",
-        "flower",
-        "heavily",
-        "but",
-        "never"
+        "mechanisms",
+        "preventing",
+        "dioecious",
+        "monoecious",
+        "flowering",
+        "flower"
       ],
       "phrases": [
         "self incompatibility",
         "self pollination",
         "cross pollination",
-        "passion fruit"
+        "passion fruit",
+        "self pollination cross pollination",
+        "mechanisms preventing self pollination",
+        "dioecious monoecious plants",
+        "self incompatibility flowering plants",
+        "flower structure stamen pistil",
+        "protandry protogyny dichogamy"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -478,6 +527,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -485,6 +535,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -492,6 +543,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -499,6 +551,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -506,6 +559,7 @@
       },
       "predict.reading": {
         "picked": "Apply: plant reproductive success",
+        "fit": "partial",
         "score": 95.37,
         "core_hits": [
           "plant reproduction"
@@ -517,6 +571,7 @@
       },
       "observe.reading": {
         "picked": "Understand: plant reproductive success",
+        "fit": "partial",
         "score": 94.92,
         "core_hits": [
           "plant reproduction"
@@ -528,6 +583,7 @@
       },
       "explain.reading": {
         "picked": "Apply: plant reproductive success",
+        "fit": "partial",
         "score": 95.37,
         "core_hits": [
           "plant reproduction"
@@ -538,8 +594,9 @@
         "detail_weight": 0.3
       },
       "dqb.reading": {
-        "picked": "Apply: plant reproductive success",
-        "score": 95.37,
+        "picked": "Understand: plant reproductive success",
+        "fit": "partial",
+        "score": 94.92,
         "core_hits": [
           "plant reproduction"
         ],
@@ -550,6 +607,7 @@
       },
       "model.reading": {
         "picked": "Apply: plant reproductive success",
+        "fit": "partial",
         "score": 95.37,
         "core_hits": [
           "plant reproduction"
@@ -581,26 +639,25 @@
           "below relevance gate"
         ],
         [
+          "09 Plant Diversity And Evolution, Angiosperm (Flowering Plant) Life Cycle",
+          "below relevance gate"
+        ],
+        [
+          "Analyzing structure with linear inequalities: fruits",
+          "below relevance gate"
+        ],
+        [
           "Plants: Classification, Reproduction, and Evolution - Overview",
           "below relevance gate"
         ],
         [
           "Counting outcomes: flower pots",
           "below relevance gate"
-        ],
-        [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
-          "below relevance gate"
-        ],
-        [
-          "06 Plant Diversity And Evolution, Introduction To Seed Plants",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 123,
-        "kolibri node not available on reference image": 17,
-        "web file not on reference image": 1
+        "below relevance gate": 142,
+        "kolibri node not available on reference image": 18
       }
     },
     "reading_pool": {
@@ -626,25 +683,25 @@
           "below relevance gate"
         ],
         [
+          "Pollination of Flowering Plants - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Fruits of Flowering Plants - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Structures of Flowering Plants - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
+        [
           "Pollination: Saying ..:Parts of a Flower",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Pollination: Saying ..:Clay Flower (JPG format)",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Additional Resources for Pollination: Saying It with Flowers",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Pollination: Saying ..:Handout Plant Morphology",
           "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 144,
-        "kolibri node not available on reference image": 16,
+        "below relevance gate": 141,
+        "kolibri node not available on reference image": 14,
         "excluded: answer/exam material": 4
       }
     }
@@ -679,11 +736,11 @@
         "maize",
         "passion",
         "fruit",
-        "following",
-        "lone",
-        "pawpaw",
-        "flowers",
-        "but"
+        "fertilization",
+        "growth",
+        "formation",
+        "seed",
+        "development"
       ],
       "phrases": [
         "double fertilisation",
@@ -692,13 +749,20 @@
         "egg cell",
         "polar nuclei",
         "sperm nuclei",
-        "passion fruit"
+        "passion fruit",
+        "double fertilization plants",
+        "pollen tube growth",
+        "pollination fertilization",
+        "embryo sac ovule",
+        "endosperm triploid formation",
+        "seed fruit development"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Fertilization terminology: gametes, zygotes, haploid, diploid",
-        "score": 149.8,
+        "fit": "partial",
+        "score": 178.8,
         "core_hits": [],
         "detail_hits": [
           "cell egg",
@@ -709,7 +773,8 @@
       },
       "observe.video": {
         "picked": "Fertilization terminology: gametes, zygotes, haploid, diploid",
-        "score": 149.8,
+        "fit": "partial",
+        "score": 178.8,
         "core_hits": [],
         "detail_hits": [
           "cell egg",
@@ -720,7 +785,8 @@
       },
       "explain.video": {
         "picked": "Fertilization terminology: gametes, zygotes, haploid, diploid",
-        "score": 149.8,
+        "fit": "partial",
+        "score": 178.8,
         "core_hits": [],
         "detail_hits": [
           "cell egg",
@@ -731,7 +797,8 @@
       },
       "dqb.video": {
         "picked": "Fertilization terminology: gametes, zygotes, haploid, diploid",
-        "score": 149.8,
+        "fit": "partial",
+        "score": 178.8,
         "core_hits": [],
         "detail_hits": [
           "cell egg",
@@ -742,7 +809,8 @@
       },
       "model.video": {
         "picked": "Fertilization terminology: gametes, zygotes, haploid, diploid",
-        "score": 149.8,
+        "fit": "partial",
+        "score": 178.8,
         "core_hits": [],
         "detail_hits": [
           "cell egg",
@@ -753,6 +821,7 @@
       },
       "predict.reading": {
         "picked": "Apply: plant reproductive success",
+        "fit": "partial",
         "score": 95.37,
         "core_hits": [
           "plant reproduction"
@@ -764,6 +833,7 @@
       },
       "observe.reading": {
         "picked": "Understand: plant reproductive success",
+        "fit": "partial",
         "score": 94.92,
         "core_hits": [
           "plant reproduction"
@@ -775,6 +845,7 @@
       },
       "explain.reading": {
         "picked": "Apply: plant reproductive success",
+        "fit": "partial",
         "score": 95.37,
         "core_hits": [
           "plant reproduction"
@@ -785,8 +856,9 @@
         "detail_weight": 0.3
       },
       "dqb.reading": {
-        "picked": "Apply: plant reproductive success",
-        "score": 95.37,
+        "picked": "Understand: plant reproductive success",
+        "fit": "partial",
+        "score": 94.92,
         "core_hits": [
           "plant reproduction"
         ],
@@ -797,6 +869,7 @@
       },
       "model.reading": {
         "picked": "Apply: plant reproductive success",
+        "fit": "partial",
         "score": 95.37,
         "core_hits": [
           "plant reproduction"
@@ -808,21 +881,15 @@
       }
     },
     "video_pool": {
-      "passed": 2,
-      "runners_up": [
-        "Zygote differentiating into somatic and germ cells"
-      ],
+      "passed": 1,
+      "runners_up": [],
       "rejected_sample": [
         [
-          "Plant reproductive success",
-          "below relevance gate"
+          "Zygote differentiating into somatic and germ cells",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Embryonic stem cells -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Comparing animal and plant cells",
+          "Human fertilization and early development",
           "below relevance gate"
         ],
         [
@@ -830,26 +897,31 @@
           "below relevance gate"
         ],
         [
+          "Embryonic stem cells -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
+          "Plant reproductive success",
+          "below relevance gate"
+        ],
+        [
+          "06 Plant Diversity And Evolution, Introduction To Seed Plants",
+          "below relevance gate"
+        ],
+        [
+          "Comparing animal and plant cells",
+          "below relevance gate"
+        ],
+        [
           "Overview of animal and plant cells",
           "below relevance gate"
-        ],
-        [
-          "English: Pollination: Saying It with Flowers",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Plant cell walls",
-          "below relevance gate"
-        ],
-        [
-          "English-Spanish Subtitles: Pollination: Saying It with Flowers",
-          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 132,
-        "kolibri node not available on reference image": 13,
-        "web file not on reference image": 1
+        "judged off-topic (independent reviewer)": 1,
+        "below relevance gate": 136,
+        "kolibri node not available on reference image": 17,
+        "web file not on reference image": 2
       }
     },
     "reading_pool": {
@@ -875,26 +947,26 @@
           "below relevance gate"
         ],
         [
+          "Embryo Growth and Development Practice",
+          "below relevance gate"
+        ],
+        [
           "Pollination: Saying ..:Parts of a Flower",
           "kolibri node not available on reference image"
         ],
         [
+          "An A-maize-ing Story",
+          "below relevance gate"
+        ],
+        [
           "Pollination: Saying ..:Clay Flower (JPG format)",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Additional Resources for Pollination: Saying It with Flowers",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "My Food Garden",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 147,
-        "kolibri node not available on reference image": 14,
-        "excluded: answer/exam material": 4
+        "below relevance gate": 144,
+        "kolibri node not available on reference image": 13,
+        "excluded: answer/exam material": 2
       }
     }
   },
@@ -924,84 +996,91 @@
         "pawpaw",
         "avocado",
         "passion",
+        "development",
+        "becomes",
+        "types",
+        "flowers",
+        "double",
+        "fertilization",
         "inside",
         "evidence",
-        "post",
-        "development"
+        "post"
       ],
       "phrases": [
         "free central",
-        "passion fruit"
+        "passion fruit",
+        "fruit seed development",
+        "ovary fruit",
+        "ovule becomes seed",
+        "placentation types flowers",
+        "fruit pericarp",
+        "double fertilization plants"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Analyzing structure with linear inequalities: fruits",
-        "score": 29.49,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "fruit"
-        ],
-        "detail_weight": 1
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "Bouncing fruit collision example",
-        "score": 28.43,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "fruit"
-        ],
-        "detail_weight": 1
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "Rachel Ruysch, Fruit and Insects",
-        "score": 28.22,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "fruit"
-        ],
-        "detail_weight": 1
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "Add and subtract: pieces of fruit",
-        "score": 28,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "fruit"
-        ],
-        "detail_weight": 1
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "Thomas Hunt Morgan and fruit flies",
-        "score": 28,
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
+      },
+      "predict.reading": {
+        "picked": "Fruits of Flowering Plants - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 50.01,
         "core_hits": [],
         "detail_hits": [
           "fruit"
         ],
         "detail_weight": 1
       },
-      "predict.reading": {
-        "picked": "Kno 100021 Passion Fruit Cultivation",
-        "score": 93.2,
-        "core_hits": [],
-        "detail_hits": [
-          "fruit",
-          "fruit passion"
-        ],
-        "detail_weight": 1.39
-      },
       "observe.reading": {
-        "picked": "Kno 100272 Passion Fruit Jam",
-        "score": 93.2,
+        "picked": "Fruits of Flowering Plants - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 50.01,
         "core_hits": [],
         "detail_hits": [
-          "fruit",
-          "fruit passion"
+          "fruit"
         ],
-        "detail_weight": 1.39
+        "detail_weight": 1
       },
       "explain.reading": {
-        "picked": "Kno 100273 Passion Fruit Juice",
+        "picked": "Kno 100021 Passion Fruit Cultivation",
+        "fit": "partial",
         "score": 93.2,
         "core_hits": [],
         "detail_hits": [
@@ -1012,6 +1091,7 @@
       },
       "dqb.reading": {
         "picked": "Kno 100587 Yolanda Morales Growing Passion Fruit In Peru",
+        "fit": "partial",
         "score": 90.42,
         "core_hits": [],
         "detail_hits": [
@@ -1022,6 +1102,7 @@
       },
       "model.reading": {
         "picked": "Fruit and Seed Dispersal - Advanced (Flexbook)",
+        "fit": "partial",
         "score": 64.23,
         "core_hits": [],
         "detail_hits": [
@@ -1032,14 +1113,8 @@
       }
     },
     "video_pool": {
-      "passed": 8,
-      "runners_up": [
-        "Bouncing fruit collision example",
-        "Rachel Ruysch, Fruit and Insects",
-        "Add and subtract: pieces of fruit",
-        "Thomas Hunt Morgan and fruit flies",
-        "Systems of equations number of solutions: fruit prices (1 of 2)"
-      ],
+      "passed": 0,
+      "runners_up": [],
       "rejected_sample": [
         [
           "Plant reproductive success",
@@ -1047,6 +1122,14 @@
         ],
         [
           "06 Plant Diversity And Evolution, Introduction To Seed Plants",
+          "below relevance gate"
+        ],
+        [
+          "Counting outcomes: flower pots",
+          "below relevance gate"
+        ],
+        [
+          "Human fertilization and early development",
           "below relevance gate"
         ],
         [
@@ -1058,37 +1141,39 @@
           "below relevance gate"
         ],
         [
+          "Types of competition and marginal revenue",
+          "below relevance gate"
+        ],
+        [
           "Marginal benefit AP free response question",
-          "below relevance gate"
-        ],
-        [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
-          "below relevance gate"
-        ],
-        [
-          "Evidence of evolution: embryology",
-          "below relevance gate"
-        ],
-        [
-          "Comparing animal and plant cells",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 120,
-        "kolibri node not available on reference image": 8
+        "below relevance gate": 129,
+        "judged off-topic (independent reviewer)": 8,
+        "kolibri node not available on reference image": 12,
+        "web file not on reference image": 2
       }
     },
     "reading_pool": {
-      "passed": 18,
+      "passed": 7,
       "runners_up": [
-        "Kno 100272 Passion Fruit Jam",
-        "Kno 100273 Passion Fruit Juice",
+        "Kno 100021 Passion Fruit Cultivation",
         "Kno 100587 Yolanda Morales Growing Passion Fruit In Peru",
         "Fruit and Seed Dispersal - Advanced (Flexbook)",
-        "Fruits of Flowering Plants - Advanced (Flexbook)"
+        "Fruits and Vegetables",
+        "Knock, Knock Surprise!"
       ],
       "rejected_sample": [
+        [
+          "Kno 100272 Passion Fruit Jam",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Kno 100273 Passion Fruit Juice",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Apply: plant reproductive success",
           "below relevance gate"
@@ -1112,20 +1197,13 @@
         [
           "Tra's Red Bean Plant",
           "below relevance gate"
-        ],
-        [
-          "Plants And Seeds",
-          "below relevance gate"
-        ],
-        [
-          "Seed Plants (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 127,
+        "judged off-topic (independent reviewer)": 12,
+        "below relevance gate": 124,
         "excluded: answer/exam material": 4,
-        "kolibri node not available on reference image": 4
+        "kolibri node not available on reference image": 7
       }
     }
   },
@@ -1155,6 +1233,12 @@
         "trade",
         "offs",
         "colonisation",
+        "disease",
+        "resistance",
+        "clones",
+        "cloning",
+        "self",
+        "advantages",
         "copies",
         "debating",
         "crops"
@@ -1167,60 +1251,75 @@
         "cross pollination",
         "banana wilt",
         "cassava cuttings",
-        "trade offs"
+        "trade offs",
+        "sexual asexual reproduction",
+        "vegetative propagation plants",
+        "genetic variation disease resistance",
+        "clones cloning plants",
+        "cross pollination self pollination",
+        "advantages asexual reproduction"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Sexual reproduction and genetic variation",
-        "score": 231.37,
+        "picked": "Sexual and asexual reproduction",
+        "fit": "fits",
+        "score": 245.26,
         "core_hits": [],
         "detail_hits": [
+          "asexual reproduction",
           "reproduction sexual",
-          "genetic variation",
-          "variation",
-          "sexual"
+          "asexual reproduction sexual",
+          "sexual",
+          "asexual"
         ],
-        "detail_weight": 2.61
+        "detail_weight": 3.67
       },
       "observe.video": {
-        "picked": "Sexual and asexual reproduction",
-        "score": 189.68,
+        "picked": "Asexual and sexual reproduction",
+        "fit": "fits",
+        "score": 195.74,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
           "reproduction sexual",
+          "asexual reproduction sexual",
           "sexual",
           "asexual"
         ],
-        "detail_weight": 3.17
+        "detail_weight": 3.67
       },
       "explain.video": {
-        "picked": "Asexual and sexual reproduction",
-        "score": 181.77,
+        "picked": "Sexual and asexual reproduction",
+        "fit": "fits",
+        "score": 245.26,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
           "reproduction sexual",
+          "asexual reproduction sexual",
           "sexual",
           "asexual"
         ],
-        "detail_weight": 3.17
+        "detail_weight": 3.67
       },
       "dqb.video": {
-        "picked": "Sexual reproduction and genetic variation",
-        "score": 231.37,
+        "picked": "Asexual and sexual reproduction",
+        "fit": "fits",
+        "score": 195.74,
         "core_hits": [],
         "detail_hits": [
+          "asexual reproduction",
           "reproduction sexual",
-          "genetic variation",
-          "variation",
-          "sexual"
+          "asexual reproduction sexual",
+          "sexual",
+          "asexual"
         ],
-        "detail_weight": 2.61
+        "detail_weight": 3.67
       },
       "model.video": {
         "picked": "Sexual reproduction and genetic variation",
+        "fit": "partial",
         "score": 231.37,
         "core_hits": [],
         "detail_hits": [
@@ -1232,55 +1331,64 @@
         "detail_weight": 2.61
       },
       "predict.reading": {
-        "picked": "Understand: sexual reproduction and genetic variation",
-        "score": 196.04,
+        "picked": "Understand: sexual and asexual reproduction",
+        "fit": "fits",
+        "score": 208.12,
         "core_hits": [],
         "detail_hits": [
+          "asexual reproduction",
           "reproduction sexual",
-          "genetic variation",
-          "variation",
-          "sexual"
+          "asexual reproduction sexual",
+          "sexual",
+          "asexual"
         ],
-        "detail_weight": 2.61
+        "detail_weight": 3.67
       },
       "observe.reading": {
         "picked": "Asexual vs. Sexual Reproduction Practice",
-        "score": 172.07,
+        "fit": "fits",
+        "score": 185.3,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
           "reproduction sexual",
+          "asexual reproduction sexual",
           "sexual",
           "asexual"
         ],
-        "detail_weight": 3.17
+        "detail_weight": 3.67
       },
       "explain.reading": {
         "picked": "Understand: sexual and asexual reproduction",
-        "score": 158.54,
+        "fit": "fits",
+        "score": 208.12,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
           "reproduction sexual",
+          "asexual reproduction sexual",
           "sexual",
           "asexual"
         ],
-        "detail_weight": 3.17
+        "detail_weight": 3.67
       },
       "dqb.reading": {
-        "picked": "Understand: sexual reproduction and genetic variation",
-        "score": 196.04,
+        "picked": "Asexual vs. Sexual Reproduction Practice",
+        "fit": "fits",
+        "score": 185.3,
         "core_hits": [],
         "detail_hits": [
+          "asexual reproduction",
           "reproduction sexual",
-          "genetic variation",
-          "variation",
-          "sexual"
+          "asexual reproduction sexual",
+          "sexual",
+          "asexual"
         ],
-        "detail_weight": 2.61
+        "detail_weight": 3.67
       },
       "model.reading": {
         "picked": "Understand: sexual reproduction and genetic variation",
+        "fit": "partial",
         "score": 196.04,
         "core_hits": [],
         "detail_hits": [
@@ -1293,13 +1401,11 @@
       }
     },
     "video_pool": {
-      "passed": 7,
+      "passed": 4,
       "runners_up": [
-        "Sexual and asexual reproduction",
         "Asexual and sexual reproduction",
-        "Genetic variation, gene flow, and new species",
-        "Danny O'Neill - Differentiation in your market",
-        "Opportunity cost"
+        "Sexual reproduction and genetic variation",
+        "Genetic variation, gene flow, and new species"
       ],
       "rejected_sample": [
         [
@@ -1307,7 +1413,15 @@
           "below relevance gate"
         ],
         [
+          "Danny O'Neill - Differentiation in your market",
+          "conflicting sub-topic ['differentiation']"
+        ],
+        [
           "Plants: Classification, Reproduction, and Evolution - Overview",
+          "below relevance gate"
+        ],
+        [
+          "Comparative advantage, specialization, and gains from trade",
           "below relevance gate"
         ],
         [
@@ -1319,36 +1433,30 @@
           "below relevance gate"
         ],
         [
-          "Comparing animal and plant cells",
+          "CRISPR",
           "below relevance gate"
         ],
         [
-          "Proportional relationships: bananas",
-          "below relevance gate"
-        ],
-        [
-          "Organism growth and the environment",
-          "below relevance gate"
-        ],
-        [
-          "The $150,000 Banana",
+          "Comparative advantage and absolute advantage",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 122,
-        "kolibri node not available on reference image": 13,
-        "web file not on reference image": 2
+        "below relevance gate": 138,
+        "conflicting sub-topic": 1,
+        "kolibri node not available on reference image": 15,
+        "web file not on reference image": 3,
+        "judged off-topic (independent reviewer)": 2
       }
     },
     "reading_pool": {
       "passed": 10,
       "runners_up": [
         "Asexual vs. Sexual Reproduction Practice",
-        "Understand: sexual and asexual reproduction",
         "Asexual Reproduction Practice",
         "Sexual Reproduction Practice",
-        "Sexual Reproduction - Advanced (Flexbook)"
+        "Genetic Variation (Flexbook)",
+        "Genetic Variation Practice"
       ],
       "rejected_sample": [
         [
@@ -1376,18 +1484,18 @@
           "below relevance gate"
         ],
         [
-          "Reproduction in Seedless Plants (Flexbook)",
+          "29 Plant Pests And Diseases",
           "below relevance gate"
         ],
         [
-          "Reproduction in Seedless Plants Practice",
+          "Reproduction in Seedless Plants (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "excluded: answer/exam material": 2,
-        "below relevance gate": 176,
-        "kolibri node not available on reference image": 11
+        "below relevance gate": 131,
+        "kolibri node not available on reference image": 12
       }
     }
   },
@@ -1421,11 +1529,11 @@
         "clone",
         "genetic",
         "variation",
-        "putting",
-        "evidence",
-        "together",
-        "cassava",
-        "need"
+        "fertilization",
+        "flowering",
+        "flower",
+        "structure",
+        "types"
       ],
       "phrases": [
         "asexual reproduction",
@@ -1435,52 +1543,67 @@
         "self incompatibility",
         "double fertilisation",
         "fruit classification",
-        "genetic variation"
+        "genetic variation",
+        "vegetative propagation plants",
+        "asexual sexual reproduction",
+        "pollination self incompatibility",
+        "double fertilization flowering plants",
+        "flower structure",
+        "fruit types placentation"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Sexual reproduction and genetic variation",
-        "score": 172.59,
+        "picked": "Sexual and asexual reproduction",
+        "fit": "fits",
+        "score": 171.89,
         "core_hits": [],
         "detail_hits": [
+          "asexual reproduction",
           "reproduction sexual",
-          "genetic variation"
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 1.1
+        "detail_weight": 2.56
       },
       "observe.video": {
-        "picked": "Sexual and asexual reproduction",
-        "score": 160.8,
+        "picked": "Asexual and sexual reproduction",
+        "fit": "fits",
+        "score": 164.72,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.18
+        "detail_weight": 2.56
       },
       "explain.video": {
-        "picked": "Asexual and sexual reproduction",
-        "score": 154.1,
+        "picked": "Sexual and asexual reproduction",
+        "fit": "fits",
+        "score": 171.89,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.18
+        "detail_weight": 2.56
       },
       "dqb.video": {
-        "picked": "Sexual reproduction and genetic variation",
-        "score": 172.59,
+        "picked": "Asexual and sexual reproduction",
+        "fit": "fits",
+        "score": 164.72,
         "core_hits": [],
         "detail_hits": [
+          "asexual reproduction",
           "reproduction sexual",
-          "genetic variation"
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 1.1
+        "detail_weight": 2.56
       },
       "model.video": {
         "picked": "Sexual reproduction and genetic variation",
+        "fit": "partial",
         "score": 172.59,
         "core_hits": [],
         "detail_hits": [
@@ -1490,46 +1613,56 @@
         "detail_weight": 1.1
       },
       "predict.reading": {
-        "picked": "Understand: sexual reproduction and genetic variation",
-        "score": 146.23,
+        "picked": "Asexual vs. Sexual Reproduction Practice",
+        "fit": "fits",
+        "score": 198.87,
         "core_hits": [],
         "detail_hits": [
+          "asexual reproduction",
           "reproduction sexual",
-          "genetic variation"
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 1.1
+        "detail_weight": 2.56
       },
       "observe.reading": {
-        "picked": "Asexual vs. Sexual Reproduction Practice",
-        "score": 145.88,
+        "picked": "Understand: sexual and asexual reproduction",
+        "fit": "fits",
+        "score": 143.67,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.18
+        "detail_weight": 2.56
       },
       "explain.reading": {
-        "picked": "Understand: sexual and asexual reproduction",
-        "score": 134.41,
+        "picked": "Asexual vs. Sexual Reproduction Practice",
+        "fit": "fits",
+        "score": 198.87,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.18
+        "detail_weight": 2.56
       },
       "dqb.reading": {
-        "picked": "Asexual Reproduction Practice",
-        "score": 101.28,
+        "picked": "Understand: sexual and asexual reproduction",
+        "fit": "fits",
+        "score": 143.67,
         "core_hits": [],
         "detail_hits": [
-          "asexual reproduction"
+          "asexual reproduction",
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 2.56
       },
       "model.reading": {
         "picked": "Understand: sexual reproduction and genetic variation",
+        "fit": "partial",
         "score": 146.23,
         "core_hits": [],
         "detail_hits": [
@@ -1542,8 +1675,8 @@
     "video_pool": {
       "passed": 3,
       "runners_up": [
-        "Sexual and asexual reproduction",
-        "Asexual and sexual reproduction"
+        "Asexual and sexual reproduction",
+        "Sexual reproduction and genetic variation"
       ],
       "rejected_sample": [
         [
@@ -1563,33 +1696,33 @@
           "below relevance gate"
         ],
         [
-          "Friedrich, The Lone Tree",
+          "Counting outcomes: flower pots",
           "below relevance gate"
         ],
         [
-          "Genes and biodiversity",
+          "English: Pollination: Saying It with Flowers",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "Evidence for evolution",
           "below relevance gate"
         ],
         [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
-          "below relevance gate"
-        ],
-        [
-          "Reading bar charts: putting it together with central tendency",
-          "below relevance gate"
+          "English-Spanish Subtitles: Pollination: Saying It with Flowers",
+          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 146,
-        "kolibri node not available on reference image": 16,
+        "below relevance gate": 125,
+        "kolibri node not available on reference image": 21,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
       "passed": 4,
       "runners_up": [
-        "Asexual vs. Sexual Reproduction Practice",
         "Understand: sexual and asexual reproduction",
+        "Understand: sexual reproduction and genetic variation",
         "Asexual Reproduction Practice"
       ],
       "rejected_sample": [
@@ -1610,26 +1743,26 @@
           "below relevance gate"
         ],
         [
+          "Pollination of Flowering Plants - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Fertilization of Flowering Plants - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
+        [
           "Genetic Variation (Flexbook)",
           "below relevance gate"
         ],
         [
           "Genetic Variation Practice",
           "below relevance gate"
-        ],
-        [
-          "Sources of Genetic Variation Practice",
-          "below relevance gate"
-        ],
-        [
-          "Sources of Genetic Variation - Advanced (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "excluded: answer/exam material": 2,
-        "below relevance gate": 142,
-        "kolibri node not available on reference image": 13
+        "below relevance gate": 145,
+        "kolibri node not available on reference image": 14
       }
     }
   },
@@ -1660,14 +1793,14 @@
         "evidence",
         "reasoning",
         "revision",
+        "fertilization",
+        "flowering",
+        "development",
         "cassava",
         "grow",
         "without",
         "seeds",
-        "but",
-        "lone",
-        "pawpaw",
-        "needs"
+        "but"
       ],
       "phrases": [
         "asexual reproduction",
@@ -1675,108 +1808,135 @@
         "sexual reproduction",
         "self incompatibility",
         "double fertilisation",
+        "claim evidence reasoning",
+        "asexual sexual reproduction",
+        "vegetative propagation plants",
+        "pollination self incompatibility",
+        "double fertilization flowering plants",
+        "fruit seed development",
         "claim evidence reasoning"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Sexual and asexual reproduction",
-        "score": 165.49,
+        "fit": "partial",
+        "score": 178.1,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.44
+        "detail_weight": 2.88
       },
       "observe.video": {
         "picked": "Asexual and sexual reproduction",
-        "score": 161.37,
+        "fit": "partial",
+        "score": 173.66,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.44
+        "detail_weight": 2.88
       },
       "explain.video": {
         "picked": "Sexual and asexual reproduction",
-        "score": 165.49,
+        "fit": "partial",
+        "score": 178.1,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.44
+        "detail_weight": 2.88
       },
       "dqb.video": {
-        "picked": "Sexual and asexual reproduction",
-        "score": 165.49,
+        "picked": "Asexual and sexual reproduction",
+        "fit": "partial",
+        "score": 173.66,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.44
+        "detail_weight": 2.88
       },
       "model.video": {
         "picked": "Sexual and asexual reproduction",
-        "score": 165.49,
+        "fit": "partial",
+        "score": 178.1,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.44
+        "detail_weight": 2.88
       },
       "predict.reading": {
         "picked": "Asexual vs. Sexual Reproduction Practice",
-        "score": 152.76,
+        "fit": "partial",
+        "score": 209.67,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.44
+        "detail_weight": 2.88
       },
       "observe.reading": {
         "picked": "Understand: sexual and asexual reproduction",
-        "score": 140.74,
+        "fit": "partial",
+        "score": 151.47,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.44
+        "detail_weight": 2.88
       },
       "explain.reading": {
-        "picked": "Asexual Reproduction Practice",
-        "score": 101.28,
-        "core_hits": [],
-        "detail_hits": [
-          "asexual reproduction"
-        ],
-        "detail_weight": 1.5
-      },
-      "dqb.reading": {
         "picked": "Asexual vs. Sexual Reproduction Practice",
-        "score": 152.76,
+        "fit": "partial",
+        "score": 209.67,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.44
+        "detail_weight": 2.88
+      },
+      "dqb.reading": {
+        "picked": "Understand: sexual and asexual reproduction",
+        "fit": "partial",
+        "score": 151.47,
+        "core_hits": [],
+        "detail_hits": [
+          "asexual reproduction",
+          "reproduction sexual",
+          "asexual reproduction sexual"
+        ],
+        "detail_weight": 2.88
       },
       "model.reading": {
         "picked": "Asexual vs. Sexual Reproduction Practice",
-        "score": 152.76,
+        "fit": "partial",
+        "score": 209.67,
         "core_hits": [],
         "detail_hits": [
           "asexual reproduction",
-          "reproduction sexual"
+          "reproduction sexual",
+          "asexual reproduction sexual"
         ],
-        "detail_weight": 2.44
+        "detail_weight": 2.88
       }
     },
     "video_pool": {
@@ -1806,23 +1966,23 @@
           "below relevance gate"
         ],
         [
+          "09 Plant Diversity And Evolution, Angiosperm (Flowering Plant) Life Cycle",
+          "below relevance gate"
+        ],
+        [
+          "Human fertilization and early development",
+          "below relevance gate"
+        ],
+        [
           "Evaluating a source’s reasoning and evidence",
-          "below relevance gate"
-        ],
-        [
-          "Plants: Classification, Reproduction, and Evolution - Overview",
-          "below relevance gate"
-        ],
-        [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "below relevance gate": 136,
         "kolibri node not available on reference image": 18,
-        "excluded: answer/exam material": 5,
-        "web file not on reference image": 2
+        "web file not on reference image": 2,
+        "excluded: answer/exam material": 4
       }
     },
     "reading_pool": {
@@ -1849,26 +2009,26 @@
           "below relevance gate"
         ],
         [
-          "Understand: sexual reproduction and genetic variation",
+          "Pollination of Flowering Plants - Advanced (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Trees",
+          "Fertilization of Flowering Plants - Advanced (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Tra's Red Bean Plant",
+          "Fruits of Flowering Plants - Advanced (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Seeds and Seed Dispersal (Flexbook)",
+          "Seeds of Flowering Plants - Advanced (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "excluded: answer/exam material": 8,
-        "below relevance gate": 142,
-        "kolibri node not available on reference image": 18
+        "excluded: answer/exam material": 6,
+        "below relevance gate": 141,
+        "kolibri node not available on reference image": 16
       }
     }
   }

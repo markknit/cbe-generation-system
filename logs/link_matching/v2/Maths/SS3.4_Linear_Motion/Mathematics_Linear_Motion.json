@@ -20,6 +20,15 @@
         "starting",
         "point",
         "finishing",
+        "vectors",
+        "scalars",
+        "reference",
+        "along",
+        "length",
+        "traveled",
+        "scalar",
+        "vector",
+        "quantities",
         "timer",
         "race",
         "launching"
@@ -28,23 +37,50 @@
         "straight line",
         "zigzag path",
         "starting point",
-        "finishing point"
+        "finishing point",
+        "distance displacement",
+        "vectors scalars",
+        "position reference point",
+        "displacement along straight line",
+        "path length distance traveled",
+        "scalar vector quantities"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Introduction to one-dimensional motion with calculus",
-        "score": 81.8,
+        "picked": "Intro to vectors and scalars",
+        "fit": "fits",
+        "score": 245.17,
         "core_hits": [],
         "detail_hits": [
-          "line straight",
-          "position"
+          "distance",
+          "displacement",
+          "direction",
+          "displacement distance",
+          "scalar vector",
+          "quantity scalar vector"
         ],
-        "detail_weight": 1.44
+        "detail_weight": 4.08
       },
       "observe.video": {
+        "picked": "Intro to vectors and scalars",
+        "fit": "fits",
+        "score": 245.17,
+        "core_hits": [],
+        "detail_hits": [
+          "distance",
+          "displacement",
+          "direction",
+          "displacement distance",
+          "scalar vector",
+          "quantity scalar vector"
+        ],
+        "detail_weight": 4.08
+      },
+      "explain.video": {
         "picked": "Vector word problem: hiking",
-        "score": 76.46,
+        "fit": "partial",
+        "score": 143.92,
         "core_hits": [],
         "detail_hits": [
           "distance",
@@ -52,51 +88,44 @@
         ],
         "detail_weight": 1.94
       },
-      "explain.video": {
-        "picked": "Planar motion (with integrals)",
-        "score": 72.99,
-        "core_hits": [],
-        "detail_hits": [
-          "displacement",
-          "direction",
-          "position"
-        ],
-        "detail_weight": 2.05
-      },
       "dqb.video": {
         "picked": "Position vs. time graphs",
-        "score": 66.19,
+        "fit": "partial",
+        "score": 72.97,
         "core_hits": [],
         "detail_hits": [
           "distance",
           "displacement",
-          "position"
+          "position",
+          "displacement distance"
         ],
-        "detail_weight": 2.33
+        "detail_weight": 2.91
       },
       "model.video": {
-        "picked": "Interpreting direction of motion from position-time graph",
-        "score": 65.24,
-        "core_hits": [
-          "linear motion"
-        ],
-        "detail_hits": [
-          "direction",
-          "position"
-        ],
-        "detail_weight": 1.21
-      },
-      "predict.reading": {
-        "picked": "Distance between point & line",
-        "score": 64.35,
+        "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
+        "fit": "partial",
+        "score": 65.55,
         "core_hits": [],
         "detail_hits": [
-          "distance"
+          "displacement",
+          "position"
         ],
-        "detail_weight": 1
+        "detail_weight": 1.33
+      },
+      "predict.reading": {
+        "picked": "Position and Displacement (Flexbook)",
+        "fit": "fits",
+        "score": 50.45,
+        "core_hits": [],
+        "detail_hits": [
+          "displacement",
+          "position"
+        ],
+        "detail_weight": 1.33
       },
       "observe.reading": {
-        "picked": "Position and Displacement (Flexbook)",
+        "picked": "Position and Displacement Practice",
+        "fit": "fits",
         "score": 50.45,
         "core_hits": [],
         "detail_hits": [
@@ -106,7 +135,8 @@
         "detail_weight": 1.33
       },
       "explain.reading": {
-        "picked": "Position and Displacement Practice",
+        "picked": "Position and Displacement (Flexbook)",
+        "fit": "fits",
         "score": 50.45,
         "core_hits": [],
         "detail_hits": [
@@ -116,17 +146,20 @@
         "detail_weight": 1.33
       },
       "dqb.reading": {
-        "picked": "Distance between points in first quadrant",
-        "score": 48.84,
+        "picked": "Position and Displacement Practice",
+        "fit": "fits",
+        "score": 50.45,
         "core_hits": [],
         "detail_hits": [
-          "distance"
+          "displacement",
+          "position"
         ],
-        "detail_weight": 1
+        "detail_weight": 1.33
       },
       "model.reading": {
-        "picked": "Distance between point & line",
-        "score": 64.35,
+        "picked": "Distance Between Two Points (Flexbook)",
+        "fit": "partial",
+        "score": 37.68,
         "core_hits": [],
         "detail_hits": [
           "distance"
@@ -135,100 +168,102 @@
       }
     },
     "video_pool": {
-      "passed": 35,
+      "passed": 22,
       "runners_up": [
+        "Calculating average velocity or speed",
+        "Analyzing motion problems: total distance traveled",
         "Vector word problem: hiking",
-        "Planar motion (with integrals)",
         "Position vs. time graphs",
-        "Interpreting direction of motion from position-time graph",
-        "Motion problems with integrals: displacement vs. distance"
+        "Deriving displacement as a function of time, acceleration, and initial velocity"
       ],
       "rejected_sample": [
         [
-          "The Challenge of a Straight Line, the Concrete Art movement",
-          "below relevance gate"
+          "Vector field line integrals dependent on path direction",
+          "conflicting sub-topic ['integral', 'integrals']"
         ],
         [
           "Scalar field line integral independent of path direction",
           "below relevance gate"
         ],
         [
-          "Vector field line integrals dependent on path direction",
+          "Introduction to one-dimensional motion with calculus",
+          "conflicting sub-topic ['calculus']"
+        ],
+        [
+          "Scalar multiplication: magnitude and direction",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Path independence for line integrals",
           "below relevance gate"
         ],
         [
-          "Starting to set up a Newtonian path–time diagram",
-          "below relevance gate"
+          "Planar motion (with integrals)",
+          "conflicting sub-topic ['integral', 'integrals']"
         ],
         [
-          "Points on the coordinate plane examples",
-          "below relevance gate"
+          "Motion problems with integrals: displacement vs. distance",
+          "conflicting sub-topic ['integral', 'integrals']"
         ],
         [
-          "Proportional relationships: graphs",
-          "below relevance gate"
-        ],
-        [
-          "Systematic random sampling",
-          "below relevance gate"
-        ],
-        [
-          "Geometric constructions: perpendicular line through a point not on the line",
+          "Interpreting statements about vectors",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 105,
-        "kolibri node not available on reference image": 1,
+        "conflicting sub-topic": 5,
+        "below relevance gate": 109,
+        "judged off-topic (independent reviewer)": 7,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 26,
+      "passed": 12,
       "runners_up": [
-        "Position and Displacement (Flexbook)",
         "Position and Displacement Practice",
-        "Distance between points in first quadrant",
-        "Distance Between Parallel Lines (Flexbook)",
-        "Distance Between Parallel Lines Practice"
+        "Distance Between Two Points (Flexbook)",
+        "Distance Between Two Points Practice",
+        "Distance Between Two Points: Biking the Blocks (PLIX)",
+        "Solving Length and Distance Problems Involving Time - Word Problems Practice"
       ],
       "rejected_sample": [
-        [
-          "Serpy, the Snake",
-          "below relevance gate"
-        ],
-        [
-          "Identify points, lines, line segments, rays, and angles",
-          "below relevance gate"
-        ],
         [
           "Components of vectors from endpoints",
           "below relevance gate"
         ],
         [
-          "Parallel & perpendicular lines from graph",
+          "Vector Multiplied by a Scalar: Boat Race (PLIX)",
           "below relevance gate"
         ],
         [
-          "The derivative & tangent line equations",
+          "Distance between point & line",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Direction of vectors",
           "below relevance gate"
         ],
         [
-          "Graphing Lines",
+          "Motion along a Plane Curve: Tangent & Normal Vectors (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Integer Translations, Paths Between Points (Flexbook)",
+          "Unit vectors",
           "below relevance gate"
         ],
         [
-          "Integer Translations, Paths Between Points Practice",
+          "Combined vector operations",
+          "below relevance gate"
+        ],
+        [
+          "Motion along a Plane Curve: Arc Length (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 125,
-        "kolibri node not available on reference image": 10
+        "below relevance gate": 131,
+        "judged off-topic (independent reviewer)": 9,
+        "conflicting sub-topic": 1
       }
     }
   },
@@ -251,14 +286,28 @@
         "direction",
         "context",
         "formula",
+        "vectors",
+        "scalars",
+        "average",
+        "number",
+        "line",
+        "calculating",
         "giving"
       ],
-      "phrases": []
+      "phrases": [
+        "distance displacement",
+        "speed velocity",
+        "vectors scalars",
+        "average speed velocity",
+        "displacement number line",
+        "calculating average velocity formula"
+      ]
     },
     "slots": {
       "predict.video": {
         "picked": "Intro to vectors and scalars",
-        "score": 185.02,
+        "fit": "fits",
+        "score": 312.38,
         "core_hits": [],
         "detail_hits": [
           "distance",
@@ -267,13 +316,15 @@
           "velocity",
           "scalar",
           "vector",
-          "direction"
+          "direction",
+          "displacement distance"
         ],
-        "detail_weight": 4.68
+        "detail_weight": 6.19
       },
       "observe.video": {
         "picked": "Calculating average velocity or speed",
-        "score": 125,
+        "fit": "fits",
+        "score": 224.36,
         "core_hits": [],
         "detail_hits": [
           "distance",
@@ -281,25 +332,33 @@
           "speed",
           "velocity",
           "scalar",
-          "vector"
+          "vector",
+          "displacement distance",
+          "speed velocity"
         ],
-        "detail_weight": 4.23
+        "detail_weight": 6.17
       },
       "explain.video": {
-        "picked": "Motion problems with integrals: displacement vs. distance",
-        "score": 122.27,
+        "picked": "Intro to vectors and scalars",
+        "fit": "fits",
+        "score": 312.38,
         "core_hits": [],
         "detail_hits": [
           "distance",
           "displacement",
           "speed",
-          "velocity"
+          "velocity",
+          "scalar",
+          "vector",
+          "direction",
+          "displacement distance"
         ],
-        "detail_weight": 3.17
+        "detail_weight": 6.19
       },
       "dqb.video": {
-        "picked": "Intro to vectors and scalars",
-        "score": 185.02,
+        "picked": "Calculating average velocity or speed",
+        "fit": "fits",
+        "score": 224.36,
         "core_hits": [],
         "detail_hits": [
           "distance",
@@ -308,144 +367,145 @@
           "velocity",
           "scalar",
           "vector",
-          "direction"
+          "displacement distance",
+          "speed velocity"
         ],
-        "detail_weight": 4.68
+        "detail_weight": 6.17
       },
       "model.video": {
-        "picked": "Intro to vectors and scalars",
-        "score": 185.02,
+        "picked": "Average velocity for constant acceleration",
+        "fit": "partial",
+        "score": 105.41,
         "core_hits": [],
         "detail_hits": [
           "distance",
-          "displacement",
-          "speed",
           "velocity",
-          "scalar",
-          "vector",
-          "direction"
+          "context",
+          "formula"
         ],
-        "detail_weight": 4.68
+        "detail_weight": 2.43
       },
       "predict.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 115.8,
+        "picked": "Formulas for Problem Solving: Finding Distance, Rate, and Time (PLIX)",
+        "fit": "fits",
+        "score": 42.99,
         "core_hits": [],
         "detail_hits": [
-          "displacement",
-          "speed",
-          "velocity",
-          "vector"
+          "distance",
+          "formula"
         ],
-        "detail_weight": 2.67
+        "detail_weight": 1.38
       },
       "observe.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 115.8,
+        "picked": "Formulas for Problem Solving: Finding Distance, Rate, and Time (PLIX)",
+        "fit": "fits",
+        "score": 42.99,
         "core_hits": [],
         "detail_hits": [
-          "displacement",
-          "speed",
-          "velocity",
-          "vector"
+          "distance",
+          "formula"
         ],
-        "detail_weight": 2.67
+        "detail_weight": 1.38
       },
       "explain.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 115.8,
+        "picked": "Average velocity and average speed from graphs",
+        "fit": "partial",
+        "score": 79.21,
         "core_hits": [],
         "detail_hits": [
-          "displacement",
           "speed",
           "velocity",
-          "vector"
+          "speed velocity",
+          "average speed velocity"
         ],
-        "detail_weight": 2.67
+        "detail_weight": 2.28
       },
       "dqb.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 115.8,
+        "picked": "Number opposites",
+        "fit": "partial",
+        "score": 55.53,
         "core_hits": [],
         "detail_hits": [
-          "displacement",
-          "speed",
-          "velocity",
-          "vector"
+          "distance"
         ],
-        "detail_weight": 2.67
+        "detail_weight": 1
       },
       "model.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 115.8,
+        "picked": "Number opposites challenge",
+        "fit": "partial",
+        "score": 52.7,
         "core_hits": [],
         "detail_hits": [
-          "displacement",
-          "speed",
-          "velocity",
-          "vector"
+          "distance"
         ],
-        "detail_weight": 2.67
+        "detail_weight": 1
       }
     },
     "video_pool": {
-      "passed": 60,
+      "passed": 32,
       "runners_up": [
         "Calculating average velocity or speed",
-        "Motion problems with integrals: displacement vs. distance",
         "Position vs. time graphs",
-        "Vector intro for linear algebra",
+        "Finding average speed or rate",
+        "Instantaneous speed and velocity",
         "Average velocity for constant acceleration"
       ],
       "rejected_sample": [
         [
-          "Vector components from magnitude & direction",
+          "Motion problems with integrals: displacement vs. distance",
+          "conflicting sub-topic ['integral', 'integrals']"
+        ],
+        [
+          "Scalar multiplication: magnitude and direction",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Vector field line integrals dependent on path direction",
+          "conflicting sub-topic ['integral', 'integrals']"
+        ],
+        [
+          "Introduction to one-dimensional motion with calculus",
+          "conflicting sub-topic ['calculus']"
+        ],
+        [
+          "Compare rational numbers using a number line",
           "below relevance gate"
         ],
         [
-          "Direction of vectors from components: 3rd & 4th quadrants",
+          "Relating angular and regular motion variables",
+          "conflicting sub-topic ['angular']"
+        ],
+        [
+          "Adding negative numbers on the number line",
           "below relevance gate"
         ],
         [
-          "Vectors word problem: tug of war",
-          "below relevance gate"
-        ],
-        [
-          "Direction of vectors from components: 1st & 2nd quadrants",
-          "below relevance gate"
-        ],
-        [
-          "Recognizing vectors",
-          "below relevance gate"
-        ],
-        [
-          "Vector components from magnitude & direction: word problem",
-          "below relevance gate"
-        ],
-        [
-          "Interpreting statements about vectors",
-          "below relevance gate"
-        ],
-        [
-          "Multiplying matrices by scalars",
-          "below relevance gate"
+          "Scalar field line integral independent of path direction",
+          "conflicting sub-topic ['integral', 'integrals']"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 89,
-        "web file not on reference image": 2
+        "conflicting sub-topic": 18,
+        "judged off-topic (independent reviewer)": 1,
+        "below relevance gate": 93,
+        "web file not on reference image": 2,
+        "kolibri node not available on reference image": 2
       }
     },
     "reading_pool": {
-      "passed": 31,
+      "passed": 10,
       "runners_up": [
-        "2D projectile motion: Identifying graphs for projectiles",
-        "Combined vector operations",
-        "Vector Multiplied by a Scalar (Flexbook)",
-        "Vector Multiplied by a Scalar Practice",
-        "Vector Multiplied by a Scalar: Boat Race (PLIX)"
+        "Average velocity and average speed from graphs",
+        "Number opposites",
+        "Number opposites challenge",
+        "Vector Multiplied by a Scalar: Boat Race (PLIX)",
+        "Vinyume vya namba mafumbo"
       ],
       "rejected_sample": [
+        [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
         [
           "Direction of vectors",
           "below relevance gate"
@@ -453,6 +513,10 @@
         [
           "Unit vectors",
           "below relevance gate"
+        ],
+        [
+          "Combined vector operations",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Add vectors: magnitude & direction",
@@ -463,25 +527,18 @@
           "below relevance gate"
         ],
         [
-          "Multiply matrices by scalars",
-          "below relevance gate"
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
-          "Vector Direction (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Vector Direction Practice",
-          "below relevance gate"
-        ],
-        [
-          "Connecting exponential graphs with contexts",
+          "Calculating the equation of the least-squares line",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 119,
-        "kolibri node not available on reference image": 3
+        "conflicting sub-topic": 4,
+        "below relevance gate": 115,
+        "judged off-topic (independent reviewer)": 20
       }
     }
   },
@@ -535,38 +592,38 @@
         "multi step calculation",
         "positive acceleration",
         "negative acceleration",
-        "zero acceleration"
+        "zero acceleration",
+        "acceleration formula"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Calculating average velocity or speed",
-        "score": 196.93,
-        "core_hits": [],
-        "detail_hits": [
-          "velocity",
-          "speed",
-          "quantity vector",
-          "quantity scalar",
-          "rate",
-          "displacement"
-        ],
-        "detail_weight": 3.88
-      },
-      "observe.video": {
-        "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "score": 161.56,
+        "picked": "Acceleration",
+        "fit": "fits",
+        "score": 139.12,
         "core_hits": [],
         "detail_hits": [
           "velocity",
           "acceleration",
-          "quantity vector",
-          "displacement"
+          "quantity vector"
         ],
-        "detail_weight": 2.75
+        "detail_weight": 2.4
+      },
+      "observe.video": {
+        "picked": "Average velocity for constant acceleration",
+        "fit": "fits",
+        "score": 88.4,
+        "core_hits": [],
+        "detail_hits": [
+          "velocity",
+          "acceleration",
+          "acceleration formula"
+        ],
+        "detail_weight": 1.99
       },
       "explain.video": {
         "picked": "Acceleration",
+        "fit": "fits",
         "score": 139.12,
         "core_hits": [],
         "detail_hits": [
@@ -577,21 +634,21 @@
         "detail_weight": 2.4
       },
       "dqb.video": {
-        "picked": "Intro to vectors and scalars",
-        "score": 120.43,
+        "picked": "Average velocity for constant acceleration",
+        "fit": "fits",
+        "score": 88.4,
         "core_hits": [],
         "detail_hits": [
           "velocity",
-          "speed",
-          "quantity vector",
-          "quantity scalar",
-          "displacement"
+          "acceleration",
+          "acceleration formula"
         ],
-        "detail_weight": 3.5
+        "detail_weight": 1.99
       },
       "model.video": {
         "picked": "Calculating average velocity or speed",
-        "score": 196.93,
+        "fit": "partial",
+        "score": 262.25,
         "core_hits": [],
         "detail_hits": [
           "velocity",
@@ -599,35 +656,37 @@
           "quantity vector",
           "quantity scalar",
           "rate",
-          "displacement"
+          "displacement",
+          "speed velocity",
+          "scalar vector"
         ],
-        "detail_weight": 3.88
+        "detail_weight": 4.38
       },
       "predict.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 144.46,
+        "picked": "Uniform Acceleration (Flexbook)",
+        "fit": "fits",
+        "score": 94.39,
         "core_hits": [],
         "detail_hits": [
-          "velocity",
-          "speed",
           "acceleration",
-          "displacement"
+          "acceleration uniform"
         ],
-        "detail_weight": 2.9
+        "detail_weight": 1.55
       },
       "observe.reading": {
-        "picked": "Displacement During Uniform Acceleration Practice",
-        "score": 129.57,
+        "picked": "Uniform Acceleration Practice",
+        "fit": "fits",
+        "score": 94.39,
         "core_hits": [],
         "detail_hits": [
           "acceleration",
-          "acceleration uniform",
-          "displacement"
+          "acceleration uniform"
         ],
-        "detail_weight": 1.9
+        "detail_weight": 1.55
       },
       "explain.reading": {
-        "picked": "Uniform Acceleration (Flexbook)",
+        "picked": "Uniform Acceleration (PLIX)",
+        "fit": "fits",
         "score": 94.39,
         "core_hits": [],
         "detail_hits": [
@@ -637,17 +696,19 @@
         "detail_weight": 1.55
       },
       "dqb.reading": {
-        "picked": "Uniform Acceleration Practice",
-        "score": 94.39,
+        "picked": "Unit Conversion: Conversions of Length, Mass, Speed in Metric Units (PLIX)",
+        "fit": "fits",
+        "score": 69.22,
         "core_hits": [],
         "detail_hits": [
-          "acceleration",
-          "acceleration uniform"
+          "speed",
+          "conversion"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.17
       },
       "model.reading": {
-        "picked": "Uniform Acceleration (PLIX)",
+        "picked": "Uniform Acceleration (Flexbook)",
+        "fit": "fits",
         "score": 94.39,
         "core_hits": [],
         "detail_hits": [
@@ -658,82 +719,69 @@
       }
     },
     "video_pool": {
-      "passed": 34,
+      "passed": 16,
       "runners_up": [
-        "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "Acceleration",
+        "Average velocity for constant acceleration",
+        "Calculating average velocity or speed",
         "Intro to vectors and scalars",
-        "Relating angular and regular motion variables",
+        "Position vs. time graphs",
         "Instantaneous speed and velocity"
       ],
       "rejected_sample": [
         [
-          "Multi-step Calculations to Find Capacity with Illustrations (Metric Units)",
-          "below relevance gate"
+          "Deriving displacement as a function of time, acceleration, and initial velocity",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Related rates: Approaching cars",
-          "below relevance gate"
+          "Relating angular and regular motion variables",
+          "conflicting sub-topic ['angular']"
         ],
         [
-          "topic - linear motion - Projectile Motion Video",
-          "below relevance gate"
-        ],
-        [
-          "Introduction to reaction rates",
-          "below relevance gate"
+          "Visual understanding of centripetal acceleration formula",
+          "conflicting sub-topic ['centripetal']"
         ],
         [
           "Sign of average rate of change of polynomials",
           "below relevance gate"
         ],
         [
-          "Analyzing related rates problems: equations (trig)",
+          "Multi-step Calculations to Find Capacity with Illustrations (Metric Units)",
           "below relevance gate"
         ],
         [
-          "Related rates: water pouring into a cone",
-          "below relevance gate"
+          "Introduction to one-dimensional motion with calculus",
+          "conflicting sub-topic ['calculus']"
         ],
         [
-          "Comparing linear functions: same rate of change",
-          "below relevance gate"
+          "Motion along a curve: finding velocity magnitude",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Race cars with constant speed around curve",
+          "conflicting sub-topic ['around curve']"
         ]
       ],
       "rejected_by_reason": {
+        "judged off-topic (independent reviewer)": 4,
+        "conflicting sub-topic": 15,
         "below relevance gate": 100,
-        "kolibri node not available on reference image": 1
+        "kolibri node not available on reference image": 1,
+        "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 19,
+      "passed": 17,
       "runners_up": [
-        "Displacement During Uniform Acceleration Practice",
-        "Uniform Acceleration (Flexbook)",
         "Uniform Acceleration Practice",
         "Uniform Acceleration (PLIX)",
-        "2D projectile motion: Identifying graphs for projectiles"
+        "Unit Conversion: Conversions of Length, Mass, Speed in Metric Units (PLIX)",
+        "Velocity and Acceleration (Flexbook)",
+        "Velocity and Acceleration Practice"
       ],
       "rejected_sample": [
         [
-          "Multi-step linear inequalities",
-          "below relevance gate"
-        ],
-        [
-          "Vector Multiplied by a Scalar: Boat Race (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Rates of change in other applied contexts (non-motion problems)",
-          "below relevance gate"
-        ],
-        [
-          "Visual divergence",
-          "below relevance gate"
-        ],
-        [
-          "Visual curl",
-          "below relevance gate"
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
           "Average Rate of Change (Flexbook)",
@@ -746,11 +794,29 @@
         [
           "Average and Instantaneous Rate of Change (PLIX)",
           "below relevance gate"
+        ],
+        [
+          "Multi-step linear inequalities",
+          "below relevance gate"
+        ],
+        [
+          "Average rate of change of polynomials",
+          "below relevance gate"
+        ],
+        [
+          "Average rate of change word problems",
+          "below relevance gate"
+        ],
+        [
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 127,
-        "kolibri node not available on reference image": 4
+        "conflicting sub-topic": 3,
+        "below relevance gate": 126,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 3
       }
     }
   },
@@ -803,37 +869,47 @@
         "thika road",
         "lake victoria",
         "problem solving",
-        "peer presentation"
+        "peer presentation",
+        "average velocity speed",
+        "acceleration deceleration"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "score": 158.24,
-        "core_hits": [],
-        "detail_hits": [
-          "velocity",
-          "acceleration",
-          "quantity vector",
-          "displacement"
-        ],
-        "detail_weight": 3.27
-      },
-      "observe.video": {
         "picked": "Calculating average velocity or speed",
-        "score": 126.19,
+        "fit": "fits",
+        "score": 206.45,
         "core_hits": [],
         "detail_hits": [
           "velocity",
           "quantity vector",
           "quantity scalar",
-          "displacement"
+          "displacement",
+          "average speed velocity",
+          "scalar vector",
+          "displacement distance"
         ],
-        "detail_weight": 3.27
+        "detail_weight": 4.12
+      },
+      "observe.video": {
+        "picked": "Intro to vectors and scalars",
+        "fit": "fits",
+        "score": 195.95,
+        "core_hits": [],
+        "detail_hits": [
+          "velocity",
+          "quantity vector",
+          "quantity scalar",
+          "displacement",
+          "scalar vector",
+          "displacement distance"
+        ],
+        "detail_weight": 3.82
       },
       "explain.video": {
         "picked": "Acceleration",
-        "score": 113.11,
+        "fit": "fits",
+        "score": 130.43,
         "core_hits": [],
         "detail_hits": [
           "velocity",
@@ -843,30 +919,85 @@
         "detail_weight": 2.77
       },
       "dqb.video": {
-        "picked": "Intro to vectors and scalars",
-        "score": 104.7,
+        "picked": "Calculating average velocity or speed",
+        "fit": "fits",
+        "score": 206.45,
         "core_hits": [],
         "detail_hits": [
           "velocity",
           "quantity vector",
           "quantity scalar",
-          "displacement"
+          "displacement",
+          "average speed velocity",
+          "scalar vector",
+          "displacement distance"
         ],
-        "detail_weight": 3.27
+        "detail_weight": 4.12
       },
       "model.video": {
-        "picked": "Angular motion variables",
-        "score": 99.76,
+        "picked": "Intro to vectors and scalars",
+        "fit": "fits",
+        "score": 195.95,
         "core_hits": [],
         "detail_hits": [
           "velocity",
-          "acceleration",
-          "displacement"
+          "quantity vector",
+          "quantity scalar",
+          "displacement",
+          "scalar vector",
+          "displacement distance"
         ],
-        "detail_weight": 2.33
+        "detail_weight": 3.82
       },
       "predict.reading": {
+        "picked": "Uniform Acceleration Practice",
+        "fit": "fits",
+        "score": 93.81,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration",
+          "acceleration uniform"
+        ],
+        "detail_weight": 1.52
+      },
+      "observe.reading": {
+        "picked": "Setting up problems with constant acceleration",
+        "fit": "fits",
+        "score": 57.76,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration",
+          "formula",
+          "problem"
+        ],
+        "detail_weight": 1.49
+      },
+      "explain.reading": {
+        "picked": "Uniform Acceleration Practice",
+        "fit": "fits",
+        "score": 93.81,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration",
+          "acceleration uniform"
+        ],
+        "detail_weight": 1.52
+      },
+      "dqb.reading": {
+        "picked": "Setting up problems with constant acceleration",
+        "fit": "fits",
+        "score": 57.76,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration",
+          "formula",
+          "problem"
+        ],
+        "detail_weight": 1.49
+      },
+      "model.reading": {
         "picked": "Displacement During Uniform Acceleration Practice",
+        "fit": "partial",
         "score": 132.55,
         "core_hits": [],
         "detail_hits": [
@@ -875,119 +1006,83 @@
           "acceleration uniform"
         ],
         "detail_weight": 2.02
-      },
-      "observe.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 111.55,
-        "core_hits": [],
-        "detail_hits": [
-          "velocity",
-          "acceleration",
-          "displacement"
-        ],
-        "detail_weight": 2.33
-      },
-      "explain.reading": {
-        "picked": "2D projectile motion: Identifying graphs for projectiles",
-        "score": 96.27,
-        "core_hits": [],
-        "detail_hits": [
-          "velocity",
-          "acceleration",
-          "displacement"
-        ],
-        "detail_weight": 2.33
-      },
-      "dqb.reading": {
-        "picked": "Uniform Acceleration (Flexbook)",
-        "score": 93.81,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration",
-          "acceleration uniform"
-        ],
-        "detail_weight": 1.52
-      },
-      "model.reading": {
-        "picked": "Uniform Acceleration Practice",
-        "score": 93.81,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration",
-          "acceleration uniform"
-        ],
-        "detail_weight": 1.52
       }
     },
     "video_pool": {
-      "passed": 34,
+      "passed": 21,
       "runners_up": [
-        "Calculating average velocity or speed",
-        "Acceleration",
         "Intro to vectors and scalars",
-        "Angular motion variables",
-        "2011 Calculus BC free response #1a"
+        "Acceleration",
+        "Average velocity for constant acceleration",
+        "Instantaneous speed and velocity",
+        "Interpreting direction of motion from velocity-time graph"
       ],
       "rejected_sample": [
+        [
+          "Motion problems with integrals: displacement vs. distance",
+          "conflicting sub-topic ['integral', 'integrals']"
+        ],
+        [
+          "Projectile motion (part 4)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Relating angular and regular motion variables",
+          "conflicting sub-topic ['angular']"
+        ],
+        [
+          "Dot vs. cross product",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Projectile motion (part 3)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
         [
           "Sign convention for passive components",
           "below relevance gate"
         ],
         [
-          "topic - linear motion - Projectile Motion Video",
-          "below relevance gate"
+          "2011 Calculus BC free response #1a",
+          "conflicting sub-topic ['calculus']"
         ],
         [
-          "Creativity break: How can we combine ways of thinking in problem solving?",
-          "below relevance gate"
-        ],
-        [
-          "Centripetal force problem solving",
-          "below relevance gate"
-        ],
-        [
-          "Exponential decay problem solving",
-          "below relevance gate"
-        ],
-        [
-          "Isosceles & equilateral triangles problems",
-          "below relevance gate"
-        ],
-        [
-          "Trig word problem: solving for temperature",
-          "below relevance gate"
-        ],
-        [
-          "Young's double slit problem solving",
-          "below relevance gate"
+          "Angular motion variables",
+          "conflicting sub-topic ['angular']"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 101,
+        "conflicting sub-topic": 15,
+        "judged off-topic (independent reviewer)": 1,
+        "below relevance gate": 103,
         "kolibri node not available on reference image": 8,
-        "web file not on reference image": 2
+        "web file not on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 14,
+      "passed": 16,
       "runners_up": [
-        "2D projectile motion: Vectors and comparing multiple trajectories",
-        "2D projectile motion: Identifying graphs for projectiles",
-        "Uniform Acceleration (Flexbook)",
-        "Uniform Acceleration Practice",
-        "Uniform Acceleration (PLIX)"
+        "Setting up problems with constant acceleration",
+        "Velocity and Acceleration (Flexbook)",
+        "Velocity and Acceleration Practice",
+        "Calculating Acceleration from Velocity and Time (Flexbook)",
+        "Calculating Acceleration from Velocity and Time Practice"
       ],
       "rejected_sample": [
+        [
+          "Formulas for Problem Solving: Finding Distance, Rate, and Time (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
         [
           "Formulas for Problem Solving (Flexbook)",
           "below relevance gate"
         ],
         [
           "Formulas for Problem Solving Practice",
-          "below relevance gate"
-        ],
-        [
-          "Formulas for Problem Solving: Finding Distance, Rate, and Time (PLIX)",
           "below relevance gate"
         ],
         [
@@ -1005,15 +1100,12 @@
         [
           "Problem Solving with Linear Models (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Problem Solving with Linear Models Practice",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 133,
-        "kolibri node not available on reference image": 7
+        "below relevance gate": 129,
+        "conflicting sub-topic": 3,
+        "kolibri node not available on reference image": 8
       }
     }
   },
@@ -1043,7 +1135,10 @@
         "positive",
         "negative",
         "annotation",
+        "position",
         "graphs",
+        "plotting",
+        "distance",
         "reading",
         "line"
       ],
@@ -1055,25 +1150,49 @@
         "timer race",
         "positive gradient",
         "negative gradient",
-        "graph annotation"
+        "graph annotation",
+        "position time graphs",
+        "slope displacement graph",
+        "velocity gradient",
+        "uniform non uniform motion",
+        "negative slope motion",
+        "plotting distance time graphs"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Position vs. time graphs",
-        "score": 124.97,
+        "fit": "fits",
+        "score": 184.68,
         "core_hits": [],
         "detail_hits": [
           "displacement graph time",
           "velocity",
+          "graph position time",
           "displacement",
           "time",
           "graph"
         ],
-        "detail_weight": 3.11
+        "detail_weight": 3.56
       },
       "observe.video": {
+        "picked": "Position vs. time graphs",
+        "fit": "fits",
+        "score": 184.68,
+        "core_hits": [],
+        "detail_hits": [
+          "displacement graph time",
+          "velocity",
+          "graph position time",
+          "displacement",
+          "time",
+          "graph"
+        ],
+        "detail_weight": 3.56
+      },
+      "explain.video": {
         "picked": "Interpreting direction of motion from velocity-time graph",
+        "fit": "partial",
         "score": 96.07,
         "core_hits": [
           "linear motion"
@@ -1085,8 +1204,22 @@
         ],
         "detail_weight": 1.31
       },
-      "explain.video": {
+      "dqb.video": {
+        "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
+        "fit": "partial",
+        "score": 91.15,
+        "core_hits": [],
+        "detail_hits": [
+          "velocity",
+          "vector",
+          "displacement",
+          "time"
+        ],
+        "detail_weight": 1.77
+      },
+      "model.video": {
         "picked": "Slope of a line: negative slope",
+        "fit": "partial",
         "score": 88.35,
         "core_hits": [],
         "detail_hits": [
@@ -1097,178 +1230,164 @@
         ],
         "detail_weight": 1.93
       },
-      "dqb.video": {
-        "picked": "Positive & negative slope",
-        "score": 86.46,
-        "core_hits": [],
-        "detail_hits": [
-          "gradient",
-          "gradient positive",
-          "gradient negative",
-          "line"
-        ],
-        "detail_weight": 2.17
-      },
-      "model.video": {
-        "picked": "Slope of a line: negative slope -dubbed(KY)",
-        "score": 83.15,
-        "core_hits": [],
-        "detail_hits": [
-          "gradient",
-          "gradient negative",
-          "graph",
-          "line"
-        ],
-        "detail_weight": 1.93
-      },
       "predict.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 94.06,
+        "picked": "Average velocity and average speed from graphs",
+        "fit": "fits",
+        "score": 99.47,
         "core_hits": [],
         "detail_hits": [
           "velocity",
-          "vector",
-          "displacement",
-          "time"
-        ],
-        "detail_weight": 1.77
-      },
-      "observe.reading": {
-        "picked": "Graphing Lines",
-        "score": 81.47,
-        "core_hits": [],
-        "detail_hits": [
-          "gradient",
-          "graph",
-          "line"
-        ],
-        "detail_weight": 1.43
-      },
-      "explain.reading": {
-        "picked": "2D projectile motion: Identifying graphs for projectiles",
-        "score": 78.44,
-        "core_hits": [],
-        "detail_hits": [
-          "velocity",
-          "displacement",
+          "graph position time",
+          "time",
           "graph"
         ],
-        "detail_weight": 1.31
+        "detail_weight": 1.76
+      },
+      "observe.reading": {
+        "picked": "Position-Time Graphs (Flexbook)",
+        "fit": "fits",
+        "score": 95.62,
+        "core_hits": [],
+        "detail_hits": [
+          "graph position time",
+          "time",
+          "graph"
+        ],
+        "detail_weight": 1.04
+      },
+      "explain.reading": {
+        "picked": "Position-Time Graphs Practice",
+        "fit": "fits",
+        "score": 95.62,
+        "core_hits": [],
+        "detail_hits": [
+          "graph position time",
+          "time",
+          "graph"
+        ],
+        "detail_weight": 1.04
       },
       "dqb.reading": {
         "picked": "Average velocity and average speed from graphs",
-        "score": 72.64,
+        "fit": "fits",
+        "score": 99.47,
         "core_hits": [],
         "detail_hits": [
           "velocity",
+          "graph position time",
           "time",
           "graph"
         ],
-        "detail_weight": 1.31
+        "detail_weight": 1.76
       },
       "model.reading": {
-        "picked": "Instantaneous velocity and instantaneous speed from graphs",
-        "score": 72.64,
+        "picked": "Position-Time Graphs (Flexbook)",
+        "fit": "fits",
+        "score": 95.62,
         "core_hits": [],
         "detail_hits": [
-          "velocity",
+          "graph position time",
           "time",
           "graph"
         ],
-        "detail_weight": 1.31
+        "detail_weight": 1.04
       }
     },
     "video_pool": {
-      "passed": 59,
+      "passed": 45,
       "runners_up": [
+        "Interpreting direction of motion from position-time graph",
+        "Calculating average velocity or speed",
         "Interpreting direction of motion from velocity-time graph",
-        "Slope of a line: negative slope",
-        "Positive & negative slope",
-        "Slope of a line: negative slope -dubbed(KY)",
-        "Slope & direction of a line"
+        "Deriving displacement as a function of time, acceleration, and initial velocity",
+        "Slope of a line: negative slope"
       ],
       "rejected_sample": [
+        [
+          "Plotting projectile displacement, acceleration, and velocity",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
         [
           "topic - linear motion - Projectile Motion Video",
           "below relevance gate"
         ],
         [
-          "Reading bar graphs: Harry Potter",
+          "Motion problems with integrals: displacement vs. distance",
+          "conflicting sub-topic ['integral', 'integrals']"
+        ],
+        [
+          "Introduction to one-dimensional motion with calculus",
+          "conflicting sub-topic ['calculus']"
+        ],
+        [
+          "Worked example: Motion problems with derivatives",
+          "conflicting sub-topic ['derivative', 'derivatives']"
+        ],
+        [
+          "Vector word problem: hiking",
           "below relevance gate"
         ],
         [
-          "TOPIC - graph of a line - Graphing Lines Video",
-          "below relevance gate"
+          "Projectile motion (part 4)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
-          "Introduction to inference about slope in linear regression",
-          "below relevance gate"
-        ],
-        [
-          "Why a negative times a negative is a positive",
-          "below relevance gate"
-        ],
-        [
-          "Graphs of systems of inequalities word problem",
-          "below relevance gate"
-        ],
-        [
-          "Interpreting a graph example",
-          "below relevance gate"
-        ],
-        [
-          "Worked example: positive & negative intervals",
+          "Planar motion example: acceleration vector",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 80
+        "conflicting sub-topic": 13,
+        "below relevance gate": 80,
+        "judged off-topic (independent reviewer)": 2
       }
     },
     "reading_pool": {
-      "passed": 41,
+      "passed": 33,
       "runners_up": [
+        "Position-Time Graphs (Flexbook)",
+        "Position-Time Graphs Practice",
         "Graphing Lines",
-        "2D projectile motion: Identifying graphs for projectiles",
-        "Average velocity and average speed from graphs",
-        "Instantaneous velocity and instantaneous speed from graphs",
-        "Secant lines & average rate of change"
+        "Velocity-Time Graphs (Flexbook)",
+        "Slope from graph"
       ],
       "rejected_sample": [
+        [
+          "Instantaneous velocity and instantaneous speed from graphs",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
         [
           "Positive and negative linear associations from scatter plots",
           "below relevance gate"
         ],
         [
+          "Secant lines & average rate of change",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Plotting inequalities",
+          "below relevance gate"
+        ],
+        [
+          "The derivative & tangent line equations",
+          "conflicting sub-topic ['derivative', 'derivatives']"
+        ],
+        [
           "Crossing the Line: reading creative fiction; The Race Official",
-          "below relevance gate"
-        ],
-        [
-          "Dividing mixed numbers with negatives",
-          "below relevance gate"
-        ],
-        [
-          "Graphs of Linear Functions: Line Designs (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Graphs of inequalities",
-          "below relevance gate"
-        ],
-        [
-          "Interpret motion graphs",
-          "below relevance gate"
-        ],
-        [
-          "Line Graphs to Display Data Over Time (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Line Graphs to Display Data Over Time Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "judged off-topic (independent reviewer)": 5,
+        "conflicting sub-topic": 3,
         "below relevance gate": 111,
         "kolibri node not available on reference image": 2
       }
@@ -1306,8 +1425,9 @@
         "narrative",
         "description",
         "mathematics",
-        "interpreting",
-        "graphs"
+        "position",
+        "graphs",
+        "vectors"
       ],
       "phrases": [
         "displacement time graph",
@@ -1317,126 +1437,150 @@
         "boda boda",
         "eliud kipchoge",
         "timer race",
-        "narrative description"
+        "narrative description",
+        "position time graphs",
+        "slope displacement graph",
+        "gradient velocity",
+        "velocity graphs",
+        "vectors scalars",
+        "interpreting motion graphs"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Interpreting direction of motion from velocity-time graph",
-        "score": 158.95,
-        "core_hits": [
-          "linear motion"
-        ],
-        "detail_hits": [
-          "velocity",
-          "direction",
-          "interpreting",
-          "time",
-          "graph"
-        ],
-        "detail_weight": 2.17
-      },
-      "observe.video": {
         "picked": "Position vs. time graphs",
-        "score": 124.97,
+        "fit": "fits",
+        "score": 169.58,
         "core_hits": [],
         "detail_hits": [
           "displacement graph time",
           "velocity",
+          "graph position time",
+          "graph velocity",
           "displacement",
           "time",
           "graph"
         ],
-        "detail_weight": 3.11
+        "detail_weight": 3.82
       },
-      "explain.video": {
+      "observe.video": {
         "picked": "Interpreting direction of motion from position-time graph",
-        "score": 118.47,
+        "fit": "fits",
+        "score": 157.15,
         "core_hits": [
           "linear motion"
         ],
         "detail_hits": [
           "direction",
+          "graph position time",
+          "graph interpreting motion",
           "interpreting",
           "time",
           "graph"
         ],
-        "detail_weight": 1.46
+        "detail_weight": 2.13
       },
-      "dqb.video": {
-        "picked": "Gradient and graphs",
-        "score": 98.97,
+      "explain.video": {
+        "picked": "Position vs. time graphs",
+        "fit": "fits",
+        "score": 169.58,
         "core_hits": [],
         "detail_hits": [
-          "gradient",
-          "direction",
-          "graph interpretation",
+          "displacement graph time",
+          "velocity",
+          "graph position time",
+          "graph velocity",
+          "displacement",
+          "time",
           "graph"
         ],
-        "detail_weight": 2.37
+        "detail_weight": 3.82
+      },
+      "dqb.video": {
+        "picked": "Interpreting direction of motion from position-time graph",
+        "fit": "fits",
+        "score": 157.15,
+        "core_hits": [
+          "linear motion"
+        ],
+        "detail_hits": [
+          "direction",
+          "graph position time",
+          "graph interpreting motion",
+          "interpreting",
+          "time",
+          "graph"
+        ],
+        "detail_weight": 2.13
       },
       "model.video": {
         "picked": "Interpreting direction of motion from velocity-time graph",
-        "score": 158.95,
+        "fit": "partial",
+        "score": 177.14,
         "core_hits": [
           "linear motion"
         ],
         "detail_hits": [
           "velocity",
           "direction",
+          "graph velocity",
+          "graph interpreting motion",
           "interpreting",
           "time",
           "graph"
         ],
-        "detail_weight": 2.17
+        "detail_weight": 2.8
       },
       "predict.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 94.8,
+        "picked": "Relating linear contexts to graph features",
+        "fit": "fits",
+        "score": 50.43,
         "core_hits": [],
         "detail_hits": [
-          "velocity",
-          "vector",
-          "displacement",
-          "time"
-        ],
-        "detail_weight": 1.81
-      },
-      "observe.reading": {
-        "picked": "2D projectile motion: Identifying graphs for projectiles",
-        "score": 78.44,
-        "core_hits": [],
-        "detail_hits": [
-          "velocity",
-          "displacement",
+          "gradient",
           "graph"
         ],
-        "detail_weight": 1.31
+        "detail_weight": 1.13
+      },
+      "observe.reading": {
+        "picked": "Relating linear contexts to graph features",
+        "fit": "fits",
+        "score": 50.43,
+        "core_hits": [],
+        "detail_hits": [
+          "gradient",
+          "graph"
+        ],
+        "detail_weight": 1.13
       },
       "explain.reading": {
         "picked": "Average velocity and average speed from graphs",
-        "score": 72.64,
+        "fit": "partial",
+        "score": 104.55,
         "core_hits": [],
         "detail_hits": [
           "velocity",
+          "graph position time",
+          "graph velocity",
           "time",
           "graph"
         ],
-        "detail_weight": 1.31
+        "detail_weight": 2.02
       },
       "dqb.reading": {
-        "picked": "Instantaneous velocity and instantaneous speed from graphs",
-        "score": 72.64,
+        "picked": "Direction of vectors",
+        "fit": "partial",
+        "score": 62.13,
         "core_hits": [],
         "detail_hits": [
-          "velocity",
-          "time",
-          "graph"
+          "direction",
+          "vector"
         ],
-        "detail_weight": 1.31
+        "detail_weight": 1.06
       },
       "model.reading": {
         "picked": "Interpreting slope and y-intercept for linear models",
+        "fit": "partial",
         "score": 58.43,
         "core_hits": [],
         "detail_hits": [
@@ -1447,18 +1591,38 @@
       }
     },
     "video_pool": {
-      "passed": 62,
+      "passed": 43,
       "runners_up": [
-        "Position vs. time graphs",
         "Interpreting direction of motion from position-time graph",
         "Gradient and graphs",
-        "Vector intro for linear algebra",
-        "Intro to vectors and scalars"
+        "Calculating average velocity or speed",
+        "Graph interpretation word problem: temperature",
+        "Interpreting direction of motion from velocity-time graph"
       ],
       "rejected_sample": [
         [
+          "Worked example: Motion problems with derivatives",
+          "conflicting sub-topic ['derivative', 'derivatives']"
+        ],
+        [
+          "Vector intro for linear algebra",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Deriving displacement as a function of time, acceleration, and initial velocity",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Interpreting a graph example",
           "below relevance gate"
+        ],
+        [
+          "Scalar multiplication: magnitude and direction",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Planar motion (with integrals)",
+          "conflicting sub-topic ['integral', 'integrals']"
         ],
         [
           "topic - linear motion - Projectile Motion Video",
@@ -1467,29 +1631,11 @@
         [
           "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
           "web file not on reference image"
-        ],
-        [
-          "Linear graphs word problems",
-          "below relevance gate"
-        ],
-        [
-          "Graph interpretation word problem: basketball",
-          "below relevance gate"
-        ],
-        [
-          "Interpreting picture graphs: paint",
-          "below relevance gate"
-        ],
-        [
-          "Interpreting picture graphs: notebook",
-          "below relevance gate"
-        ],
-        [
-          "Interpreting bar graphs: colors",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "conflicting sub-topic": 14,
+        "judged off-topic (independent reviewer)": 3,
         "below relevance gate": 78,
         "web file not on reference image": 6,
         "excluded: answer/exam material": 1,
@@ -1497,52 +1643,54 @@
       }
     },
     "reading_pool": {
-      "passed": 34,
+      "passed": 21,
       "runners_up": [
-        "2D projectile motion: Identifying graphs for projectiles",
         "Average velocity and average speed from graphs",
-        "Instantaneous velocity and instantaneous speed from graphs",
-        "Velocity-Time Graphs (Flexbook)",
-        "Direction of vectors"
+        "Direction of vectors",
+        "Interpreting slope and y-intercept for linear models",
+        "Add vectors: magnitude & direction",
+        "Add vectors: magnitude & direction to component"
       ],
       "rejected_sample": [
+        [
+          "Position-Time Graphs (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Position-Time Graphs Practice",
+          "below relevance gate"
+        ],
         [
           "Graph interpretation word problems",
           "below relevance gate"
         ],
         [
-          "Interpreting graphs of functions",
-          "below relevance gate"
+          "Instantaneous velocity and instantaneous speed from graphs",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Graphs of inequalities",
-          "below relevance gate"
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
           "Finding gradients",
           "below relevance gate"
         ],
         [
-          "Magnitude of vectors",
-          "below relevance gate"
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
           "Vector Multiplied by a Scalar: Boat Race (PLIX)",
           "below relevance gate"
-        ],
-        [
-          "Interpretations of Circle Graphs: Northwest Region Population Pie (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Interpretation of Circle Graphs (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 107,
+        "below relevance gate": 113,
+        "judged off-topic (independent reviewer)": 10,
+        "conflicting sub-topic": 3,
         "kolibri node not available on reference image": 3,
-        "excluded: answer/exam material": 18
+        "excluded: answer/exam material": 10
       }
     }
   },
@@ -1578,8 +1726,9 @@
         "displacement",
         "slope",
         "graphs",
-        "gradients",
-        "kipchoge's"
+        "constant",
+        "negative",
+        "vectors"
       ],
       "phrases": [
         "velocity time graph",
@@ -1588,12 +1737,19 @@
         "marathon splits",
         "rate change",
         "linear motion",
-        "timer race"
+        "timer race",
+        "velocity time graphs",
+        "acceleration velocity time graphs",
+        "slope velocity graph",
+        "constant velocity acceleration",
+        "negative acceleration deceleration",
+        "vectors scalars"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Interpreting direction of motion from velocity-time graph",
+        "fit": "fits",
         "score": 156.76,
         "core_hits": [
           "linear motion"
@@ -1607,20 +1763,8 @@
         "detail_weight": 2.38
       },
       "observe.video": {
-        "picked": "Acceleration vs. time graphs",
-        "score": 138.43,
-        "core_hits": [],
-        "detail_hits": [
-          "graph time velocity",
-          "acceleration",
-          "graph",
-          "velocity",
-          "time"
-        ],
-        "detail_weight": 3.09
-      },
-      "explain.video": {
         "picked": "Interpreting change in speed from velocity-time graph",
+        "fit": "fits",
         "score": 137.68,
         "core_hits": [],
         "detail_hits": [
@@ -1631,103 +1775,126 @@
         ],
         "detail_weight": 2.38
       },
+      "explain.video": {
+        "picked": "Interpreting direction of motion from velocity-time graph",
+        "fit": "fits",
+        "score": 156.76,
+        "core_hits": [
+          "linear motion"
+        ],
+        "detail_hits": [
+          "graph time velocity",
+          "graph",
+          "velocity",
+          "time"
+        ],
+        "detail_weight": 2.38
+      },
       "dqb.video": {
-        "picked": "Position vs. time graphs",
-        "score": 115.66,
+        "picked": "Interpreting change in speed from velocity-time graph",
+        "fit": "fits",
+        "score": 137.68,
         "core_hits": [],
         "detail_hits": [
           "graph time velocity",
           "graph",
-          "displacement",
           "velocity",
           "time"
         ],
-        "detail_weight": 2.63
+        "detail_weight": 2.38
       },
       "model.video": {
-        "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "score": 114.29,
+        "picked": "Acceleration vs. time graphs",
+        "fit": "partial",
+        "score": 146.18,
         "core_hits": [],
         "detail_hits": [
+          "graph time velocity",
           "acceleration",
-          "vector",
-          "displacement",
+          "graph",
+          "acceleration graph time velocity",
           "velocity",
           "time"
         ],
-        "detail_weight": 1.88
+        "detail_weight": 3.45
       },
       "predict.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 116.34,
+        "picked": "Velocity-Time Graphs (Flexbook)",
+        "fit": "fits",
+        "score": 127.16,
         "core_hits": [],
         "detail_hits": [
-          "acceleration",
-          "vector",
-          "displacement",
+          "graph time velocity",
+          "graph",
           "velocity",
           "time"
         ],
-        "detail_weight": 1.88
+        "detail_weight": 2.38
       },
       "observe.reading": {
-        "picked": "2D projectile motion: Identifying graphs for projectiles",
-        "score": 103.88,
+        "picked": "Velocity-Time Graphs (Flexbook)",
+        "fit": "fits",
+        "score": 127.16,
+        "core_hits": [],
+        "detail_hits": [
+          "graph time velocity",
+          "graph",
+          "velocity",
+          "time"
+        ],
+        "detail_weight": 2.38
+      },
+      "explain.reading": {
+        "picked": "Average velocity and average speed from graphs",
+        "fit": "partial",
+        "score": 89.38,
+        "core_hits": [],
+        "detail_hits": [
+          "graph time velocity",
+          "graph",
+          "velocity",
+          "time"
+        ],
+        "detail_weight": 2.38
+      },
+      "dqb.reading": {
+        "picked": "Acceleration and velocity",
+        "fit": "partial",
+        "score": 60.31,
         "core_hits": [],
         "detail_hits": [
           "acceleration",
-          "graph",
-          "displacement",
-          "velocity"
-        ],
-        "detail_weight": 1.54
-      },
-      "explain.reading": {
-        "picked": "Secant lines & average rate of change",
-        "score": 91.97,
-        "core_hits": [],
-        "detail_hits": [
-          "gradient",
-          "rate",
-          "graph"
-        ],
-        "detail_weight": 1.41
-      },
-      "dqb.reading": {
-        "picked": "Average velocity and average speed from graphs",
-        "score": 89.38,
-        "core_hits": [],
-        "detail_hits": [
-          "graph time velocity",
-          "graph",
           "velocity",
           "time"
         ],
-        "detail_weight": 2.38
+        "detail_weight": 1.31
       },
       "model.reading": {
-        "picked": "Instantaneous velocity and instantaneous speed from graphs",
-        "score": 89.38,
+        "picked": "Vector Components of Acceleration (Flexbook)",
+        "fit": "partial",
+        "score": 45.32,
         "core_hits": [],
         "detail_hits": [
-          "graph time velocity",
-          "graph",
-          "velocity",
-          "time"
+          "acceleration",
+          "vector"
         ],
-        "detail_weight": 2.38
+        "detail_weight": 1.03
       }
     },
     "video_pool": {
-      "passed": 43,
+      "passed": 31,
       "runners_up": [
-        "Acceleration vs. time graphs",
         "Interpreting change in speed from velocity-time graph",
-        "Position vs. time graphs",
-        "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "Force vs. time graphs"
+        "Acceleration",
+        "Intro to vectors and scalars",
+        "Acceleration vs. time graphs",
+        "Position vs. time graphs"
       ],
       "rejected_sample": [
+        [
+          "Deriving displacement as a function of time, acceleration, and initial velocity",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Comparing linear functions: faster rate of change",
           "below relevance gate"
@@ -1741,44 +1908,58 @@
           "below relevance gate"
         ],
         [
+          "Plotting projectile displacement, acceleration, and velocity",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Projectile motion (part 4)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Projectile motion (part 3)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
           "Kipchoge🥵🏃❣️#Kipchoge #Training #Athletics #Trackandfield #Workout #Shorts #Motivation #Army #Sports",
           "web file not on reference image"
-        ],
-        [
-          "Worked example: average rate of change from graph",
-          "below relevance gate"
-        ],
-        [
-          "Average rate of change word problem: graph",
-          "below relevance gate"
-        ],
-        [
-          "topic - linear motion - Projectile Motion Video",
-          "below relevance gate"
-        ],
-        [
-          "Analyzing related rates problems: equations (trig)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 98,
+        "judged off-topic (independent reviewer)": 4,
+        "below relevance gate": 92,
+        "conflicting sub-topic": 14,
         "web file not on reference image": 1,
         "kolibri node not available on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 28,
+      "passed": 17,
       "runners_up": [
-        "2D projectile motion: Identifying graphs for projectiles",
-        "Secant lines & average rate of change",
-        "Average velocity and average speed from graphs",
-        "Instantaneous velocity and instantaneous speed from graphs",
-        "Velocity-Time Graphs (Flexbook)"
+        "Calculating Acceleration from Velocity and Time (Flexbook)",
+        "Calculating Acceleration from Velocity and Time Practice",
+        "Relating linear contexts to graph features",
+        "Velocity and Acceleration (Flexbook)",
+        "Velocity and Acceleration Practice"
       ],
       "rejected_sample": [
         [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Secant lines & average rate of change",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Average rate of change: graphs & tables",
+          "below relevance gate"
+        ],
+        [
+          "Finding gradients",
           "below relevance gate"
         ],
         [
@@ -1786,32 +1967,18 @@
           "below relevance gate"
         ],
         [
+          "Vector Multiplied by a Scalar: Boat Race (PLIX)",
+          "below relevance gate"
+        ],
+        [
           "Rates of change in other applied contexts (non-motion problems)",
-          "below relevance gate"
-        ],
-        [
-          "Average Rate of Change (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Average Rate of Change Practice",
-          "below relevance gate"
-        ],
-        [
-          "Average and Instantaneous Rate of Change (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Graphs of Linear Systems: Heart Rate Tracker (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Average rate of change of polynomials",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 120,
+        "conflicting sub-topic": 3,
+        "judged off-topic (independent reviewer)": 7,
+        "below relevance gate": 121,
         "kolibri node not available on reference image": 3
       }
     }
@@ -1849,8 +2016,8 @@
         "convention",
         "triangle",
         "rectangle",
-        "interpreting",
-        "graphs"
+        "graphs",
+        "slope"
       ],
       "phrases": [
         "velocity time graph",
@@ -1862,12 +2029,18 @@
         "linear motion",
         "sign convention",
         "triangle area",
-        "rectangle area"
+        "rectangle area",
+        "velocity time graphs",
+        "slope velocity graph",
+        "acceleration velocity time graphs",
+        "area under velocity graph",
+        "displacement velocity graphs"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Interpreting direction of motion from velocity-time graph",
+        "fit": "fits",
         "score": 192.22,
         "core_hits": [
           "linear motion"
@@ -1882,23 +2055,8 @@
         "detail_weight": 2.7
       },
       "observe.video": {
-        "picked": "Acceleration vs. time graphs",
-        "score": 190.01,
-        "core_hits": [],
-        "detail_hits": [
-          "graph time velocity",
-          "acceleration",
-          "area graph under",
-          "velocity",
-          "time",
-          "graph",
-          "area",
-          "under"
-        ],
-        "detail_weight": 4.55
-      },
-      "explain.video": {
         "picked": "Interpreting change in speed from velocity-time graph",
+        "fit": "fits",
         "score": 152.44,
         "core_hits": [],
         "detail_hits": [
@@ -1910,21 +2068,9 @@
         ],
         "detail_weight": 2.7
       },
-      "dqb.video": {
-        "picked": "Position vs. time graphs",
-        "score": 140.13,
-        "core_hits": [],
-        "detail_hits": [
-          "graph time velocity",
-          "displacement",
-          "velocity",
-          "time",
-          "graph"
-        ],
-        "detail_weight": 2.9
-      },
-      "model.video": {
+      "explain.video": {
         "picked": "Interpreting direction of motion from velocity-time graph",
+        "fit": "fits",
         "score": 192.22,
         "core_hits": [
           "linear motion"
@@ -1938,8 +2084,92 @@
         ],
         "detail_weight": 2.7
       },
+      "dqb.video": {
+        "picked": "Interpreting change in speed from velocity-time graph",
+        "fit": "fits",
+        "score": 152.44,
+        "core_hits": [],
+        "detail_hits": [
+          "graph time velocity",
+          "interpreting",
+          "velocity",
+          "time",
+          "graph"
+        ],
+        "detail_weight": 2.7
+      },
+      "model.video": {
+        "picked": "Acceleration vs. time graphs",
+        "fit": "partial",
+        "score": 204.71,
+        "core_hits": [],
+        "detail_hits": [
+          "graph time velocity",
+          "acceleration",
+          "area graph under",
+          "acceleration graph time velocity",
+          "area graph under velocity",
+          "velocity",
+          "time",
+          "graph"
+        ],
+        "detail_weight": 5.16
+      },
       "predict.reading": {
+        "picked": "Velocity-Time Graphs (Flexbook)",
+        "fit": "fits",
+        "score": 127.61,
+        "core_hits": [],
+        "detail_hits": [
+          "graph time velocity",
+          "velocity",
+          "time",
+          "graph"
+        ],
+        "detail_weight": 2.4
+      },
+      "observe.reading": {
+        "picked": "Average velocity and average speed from graphs",
+        "fit": "fits",
+        "score": 89.69,
+        "core_hits": [],
+        "detail_hits": [
+          "graph time velocity",
+          "velocity",
+          "time",
+          "graph"
+        ],
+        "detail_weight": 2.4
+      },
+      "explain.reading": {
+        "picked": "Velocity-Time Graphs (Flexbook)",
+        "fit": "fits",
+        "score": 127.61,
+        "core_hits": [],
+        "detail_hits": [
+          "graph time velocity",
+          "velocity",
+          "time",
+          "graph"
+        ],
+        "detail_weight": 2.4
+      },
+      "dqb.reading": {
+        "picked": "Average velocity and average speed from graphs",
+        "fit": "fits",
+        "score": 89.69,
+        "core_hits": [],
+        "detail_hits": [
+          "graph time velocity",
+          "velocity",
+          "time",
+          "graph"
+        ],
+        "detail_weight": 2.4
+      },
+      "model.reading": {
         "picked": "Displacement During Uniform Acceleration Practice",
+        "fit": "partial",
         "score": 129.57,
         "core_hits": [],
         "detail_hits": [
@@ -1948,66 +2178,41 @@
           "acceleration uniform"
         ],
         "detail_weight": 1.9
-      },
-      "observe.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 122.37,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration",
-          "displacement",
-          "vector",
-          "velocity",
-          "time"
-        ],
-        "detail_weight": 2.15
-      },
-      "explain.reading": {
-        "picked": "2D projectile motion: Identifying graphs for projectiles",
-        "score": 109.63,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration",
-          "displacement",
-          "velocity",
-          "graph"
-        ],
-        "detail_weight": 1.81
-      },
-      "dqb.reading": {
-        "picked": "Uniform Acceleration (Flexbook)",
-        "score": 91.49,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration",
-          "acceleration uniform"
-        ],
-        "detail_weight": 1.4
-      },
-      "model.reading": {
-        "picked": "Uniform Acceleration Practice",
-        "score": 91.49,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration",
-          "acceleration uniform"
-        ],
-        "detail_weight": 1.4
       }
     },
     "video_pool": {
-      "passed": 46,
+      "passed": 33,
       "runners_up": [
-        "Acceleration vs. time graphs",
         "Interpreting change in speed from velocity-time graph",
-        "Position vs. time graphs",
-        "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "Plotting projectile displacement, acceleration, and velocity"
+        "Why distance is area under velocity-time line",
+        "Intro to vectors and scalars",
+        "Acceleration vs. time graphs",
+        "Position vs. time graphs"
       ],
       "rejected_sample": [
         [
           "Sign convention for passive components",
           "below relevance gate"
+        ],
+        [
+          "Worked example: Motion problems with derivatives",
+          "conflicting sub-topic ['derivative', 'derivatives']"
+        ],
+        [
+          "Plotting projectile displacement, acceleration, and velocity",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Projectile motion (part 4)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Projectile motion (part 3)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Angular motion variables",
+          "conflicting sub-topic ['angular']"
         ],
         [
           "Interpreting a graph example",
@@ -2016,42 +2221,32 @@
         [
           "topic - linear motion - Projectile Motion Video",
           "below relevance gate"
-        ],
-        [
-          "Motion problems with integrals: displacement vs. distance",
-          "below relevance gate"
-        ],
-        [
-          "Vector intro for linear algebra",
-          "below relevance gate"
-        ],
-        [
-          "Comparing areas and perimeters of rectangles",
-          "below relevance gate"
-        ],
-        [
-          "Creating rectangles with a given area 1",
-          "below relevance gate"
-        ],
-        [
-          "Vector triangle inequality",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 94
+        "below relevance gate": 93,
+        "conflicting sub-topic": 13,
+        "judged off-topic (independent reviewer)": 1
       }
     },
     "reading_pool": {
-      "passed": 35,
+      "passed": 30,
       "runners_up": [
-        "2D projectile motion: Vectors and comparing multiple trajectories",
-        "2D projectile motion: Identifying graphs for projectiles",
+        "Average velocity and average speed from graphs",
+        "Decompose area with triangles",
+        "Displacement During Uniform Acceleration Practice",
         "Uniform Acceleration (Flexbook)",
-        "Uniform Acceleration Practice",
-        "Uniform Acceleration (PLIX)"
+        "Uniform Acceleration Practice"
       ],
       "rejected_sample": [
+        [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
         [
           "Triangle Area (Flexbook)",
           "below relevance gate"
@@ -2059,6 +2254,10 @@
         [
           "Triangle Area Practice",
           "below relevance gate"
+        ],
+        [
+          "Finding gradients",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Derivation of the Triangle Area Formula (Flexbook)",
@@ -2071,22 +2270,12 @@
         [
           "Area & perimeter of rectangles word problems",
           "below relevance gate"
-        ],
-        [
-          "Area Model Introduction",
-          "below relevance gate"
-        ],
-        [
-          "Area Model Decimals",
-          "below relevance gate"
-        ],
-        [
-          "Eneo & mzingo wa pembetatu mafumbo",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "conflicting sub-topic": 3,
         "below relevance gate": 114,
+        "judged off-topic (independent reviewer)": 2,
         "kolibri node not available on reference image": 2
       }
     }
@@ -2121,9 +2310,11 @@
         "kisumu",
         "eldoret",
         "mathematics",
-        "combining",
-        "velocities",
-        "matters"
+        "basics",
+        "directions",
+        "adding",
+        "subtracting",
+        "velocities"
       ],
       "phrases": [
         "relative speed",
@@ -2135,45 +2326,56 @@
         "linear motion",
         "nairobi mombasa highway",
         "eliud kipchoge",
-        "sgr train"
+        "sgr train",
+        "relative velocity basics",
+        "relative speed direction",
+        "relative speed opposite directions",
+        "adding subtracting velocities",
+        "vectors scalars"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Relative speed of sound in solids, liquids, and gases",
-        "score": 115.95,
+        "picked": "Finding Speed when Objects Travel in Opposite Directions",
+        "fit": "fits",
+        "score": 85.47,
         "core_hits": [],
         "detail_hits": [
-          "relative speed",
-          "relative",
+          "direction",
+          "direction opposite",
           "speed"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 1.95
       },
       "observe.video": {
-        "picked": "Mach numbers",
-        "score": 108.97,
+        "picked": "Finding Speed when Objects Travel in Opposite Directions",
+        "fit": "fits",
+        "score": 85.47,
         "core_hits": [],
         "detail_hits": [
-          "relative speed",
-          "relative",
+          "direction",
+          "direction opposite",
           "speed"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 1.95
       },
       "explain.video": {
-        "picked": "Mach numbers -dubbed(KY)",
-        "score": 101.18,
+        "picked": "Intro to vectors and scalars",
+        "fit": "partial",
+        "score": 126.35,
         "core_hits": [],
         "detail_hits": [
-          "relative speed",
-          "relative",
-          "speed"
+          "direction",
+          "maths",
+          "scalar vector",
+          "speed",
+          "velocity"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 1.93
       },
       "dqb.video": {
         "picked": "Finding an in-between frame of reference",
+        "fit": "partial",
         "score": 98.66,
         "core_hits": [],
         "detail_hits": [
@@ -2185,75 +2387,87 @@
         "detail_weight": 2.25
       },
       "model.video": {
-        "picked": "Finding Speed when Objects Travel in Opposite Directions",
-        "score": 85.47,
-        "core_hits": [],
+        "picked": "Interpreting direction of motion from velocity-time graph",
+        "fit": "partial",
+        "score": 76.01,
+        "core_hits": [
+          "linear motion"
+        ],
         "detail_hits": [
           "direction",
-          "direction opposite",
-          "speed"
+          "velocity"
         ],
-        "detail_weight": 1.95
+        "detail_weight": 1.01
       },
       "predict.reading": {
         "picked": "Combined vector operations",
-        "score": 77.34,
+        "fit": "partial",
+        "score": 106.52,
         "core_hits": [],
         "detail_hits": [
           "subtraction vector",
-          "addition vector"
+          "addition vector",
+          "scalar vector"
         ],
-        "detail_weight": 1.43
+        "detail_weight": 1.77
       },
       "observe.reading": {
         "picked": "Combined vector operations",
-        "score": 77.34,
+        "fit": "partial",
+        "score": 106.52,
         "core_hits": [],
         "detail_hits": [
           "subtraction vector",
-          "addition vector"
+          "addition vector",
+          "scalar vector"
         ],
-        "detail_weight": 1.43
+        "detail_weight": 1.77
       },
       "explain.reading": {
         "picked": "Combined vector operations",
-        "score": 77.34,
+        "fit": "partial",
+        "score": 106.52,
         "core_hits": [],
         "detail_hits": [
           "subtraction vector",
-          "addition vector"
+          "addition vector",
+          "scalar vector"
         ],
-        "detail_weight": 1.43
+        "detail_weight": 1.77
       },
       "dqb.reading": {
         "picked": "Combined vector operations",
-        "score": 77.34,
+        "fit": "partial",
+        "score": 106.52,
         "core_hits": [],
         "detail_hits": [
           "subtraction vector",
-          "addition vector"
+          "addition vector",
+          "scalar vector"
         ],
-        "detail_weight": 1.43
+        "detail_weight": 1.77
       },
       "model.reading": {
         "picked": "Combined vector operations",
-        "score": 77.34,
+        "fit": "partial",
+        "score": 106.52,
         "core_hits": [],
         "detail_hits": [
           "subtraction vector",
-          "addition vector"
+          "addition vector",
+          "scalar vector"
         ],
-        "detail_weight": 1.43
+        "detail_weight": 1.77
       }
     },
     "video_pool": {
-      "passed": 23,
+      "passed": 7,
       "runners_up": [
-        "Mach numbers",
-        "Mach numbers -dubbed(KY)",
+        "Intro to vectors and scalars",
         "Finding an in-between frame of reference",
-        "Finding Speed when Objects Travel in Opposite Directions",
-        "Vector intro for linear algebra"
+        "Interpreting direction of motion from velocity-time graph",
+        "Scalar multiplication: magnitude and direction",
+        "Instantaneous speed and velocity"
       ],
       "rejected_sample": [
         [
@@ -2261,45 +2475,57 @@
           "below relevance gate"
         ],
         [
-          "Vector Subtraction",
+          "Adding and subtracting on number line word problems",
           "below relevance gate"
         ],
         [
-          "Parallelogram rule for vector addition",
+          "Relative speed of sound in solids, liquids, and gases",
+          "conflicting sub-topic ['speed of sound']"
+        ],
+        [
+          "Vector word problem: resultant velocity",
           "below relevance gate"
         ],
         [
-          "topic - linear motion - Projectile Motion Video",
+          "Mach numbers",
+          "conflicting sub-topic ['mach']"
+        ],
+        [
+          "Addition and subtraction word problems: superheroes",
           "below relevance gate"
         ],
         [
-          "Vector addition & magnitude",
+          "Vectors word problem: tug of war",
           "below relevance gate"
         ],
         [
-          "Combining Units Using Addition and Subtraction (Metric Units)",
-          "below relevance gate"
-        ],
-        [
-          "Linear combinations and span",
-          "below relevance gate"
-        ],
-        [
-          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
-          "web file not on reference image"
+          "Mach numbers -dubbed(KY)",
+          "conflicting sub-topic ['mach']"
         ]
       ],
       "rejected_by_reason": {
         "below relevance gate": 105,
-        "web file not on reference image": 6,
-        "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 1
+        "conflicting sub-topic": 5,
+        "judged off-topic (independent reviewer)": 3,
+        "web file not on reference image": 1
       }
     },
     "reading_pool": {
       "passed": 1,
       "runners_up": [],
       "rejected_sample": [
+        [
+          "Addition and subtraction word problems 1",
+          "below relevance gate"
+        ],
+        [
+          "Understand subtraction as adding the opposite",
+          "below relevance gate"
+        ],
+        [
+          "Adding & subtracting negative numbers",
+          "below relevance gate"
+        ],
         [
           "Vector Subtraction (Flexbook)",
           "below relevance gate"
@@ -2313,30 +2539,16 @@
           "below relevance gate"
         ],
         [
-          "Vector Addition",
+          "One-step addition & subtraction equations: fractions & decimals",
           "below relevance gate"
         ],
         [
-          "Vector Addition (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Vector Addition Practice",
-          "below relevance gate"
-        ],
-        [
-          "Vector Addition (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Visualizing Vector Addition (PLIX)",
+          "One Step Addition and Subtraction - Word Problems Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 142,
-        "kolibri node not available on reference image": 4,
-        "excluded: answer/exam material": 10
+        "below relevance gate": 145
       }
     }
   },
@@ -2374,7 +2586,7 @@
         "kipchoge",
         "matatu",
         "mathematics",
-        "application"
+        "position"
       ],
       "phrases": [
         "linear motion",
@@ -2386,49 +2598,32 @@
         "equations motion",
         "area under graph",
         "timer race",
-        "eliud kipchoge"
+        "eliud kipchoge",
+        "position time graphs",
+        "velocity time graphs",
+        "slope graph",
+        "area under velocity graph",
+        "kinematic equations constant acceleration"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Position vs. time graphs",
-        "score": 148.45,
+        "fit": "fits",
+        "score": 186.02,
         "core_hits": [],
         "detail_hits": [
           "displacement",
           "velocity",
           "graph time velocity",
-          "distance graph time"
+          "distance graph time",
+          "graph position time"
         ],
-        "detail_weight": 3.27
+        "detail_weight": 3.61
       },
       "observe.video": {
-        "picked": "Acceleration vs. time graphs",
-        "score": 146.38,
-        "core_hits": [],
-        "detail_hits": [
-          "velocity",
-          "acceleration",
-          "graph time velocity",
-          "area graph under"
-        ],
-        "detail_weight": 2.74
-      },
-      "explain.video": {
-        "picked": "Intro to vectors and scalars",
-        "score": 139.61,
-        "core_hits": [],
-        "detail_hits": [
-          "displacement",
-          "velocity",
-          "scalar",
-          "vector",
-          "maths"
-        ],
-        "detail_weight": 3.25
-      },
-      "dqb.video": {
         "picked": "Interpreting direction of motion from velocity-time graph",
+        "fit": "fits",
         "score": 134.81,
         "core_hits": [
           "linear motion"
@@ -2439,32 +2634,48 @@
         ],
         "detail_weight": 1.58
       },
-      "model.video": {
-        "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "score": 124.35,
+      "explain.video": {
+        "picked": "Choosing kinematic equations",
+        "fit": "fits",
+        "score": 116.69,
+        "core_hits": [],
+        "detail_hits": [
+          "velocity",
+          "acceleration",
+          "acceleration constant equation kinematic"
+        ],
+        "detail_weight": 1.85
+      },
+      "dqb.video": {
+        "picked": "Calculating average velocity or speed",
+        "fit": "fits",
+        "score": 112.35,
         "core_hits": [],
         "detail_hits": [
           "displacement",
           "velocity",
-          "acceleration",
+          "scalar",
           "vector"
         ],
-        "detail_weight": 3.1
+        "detail_weight": 3.01
+      },
+      "model.video": {
+        "picked": "Position vs. time graphs",
+        "fit": "fits",
+        "score": 186.02,
+        "core_hits": [],
+        "detail_hits": [
+          "displacement",
+          "velocity",
+          "graph time velocity",
+          "distance graph time",
+          "graph position time"
+        ],
+        "detail_weight": 3.61
       },
       "predict.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 143.57,
-        "core_hits": [],
-        "detail_hits": [
-          "displacement",
-          "velocity",
-          "acceleration",
-          "vector"
-        ],
-        "detail_weight": 3.1
-      },
-      "observe.reading": {
         "picked": "Displacement During Uniform Acceleration Practice",
+        "fit": "fits",
         "score": 140.47,
         "core_hits": [],
         "detail_hits": [
@@ -2474,19 +2685,31 @@
         ],
         "detail_weight": 2.34
       },
-      "explain.reading": {
-        "picked": "2D projectile motion: Identifying graphs for projectiles",
-        "score": 125.41,
+      "observe.reading": {
+        "picked": "Velocity-Time Graphs (Flexbook)",
+        "fit": "fits",
+        "score": 109.36,
         "core_hits": [],
         "detail_hits": [
-          "displacement",
           "velocity",
-          "acceleration"
+          "graph time velocity"
         ],
-        "detail_weight": 2.55
+        "detail_weight": 1.58
+      },
+      "explain.reading": {
+        "picked": "Uniform Acceleration (Flexbook)",
+        "fit": "fits",
+        "score": 90.33,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration",
+          "acceleration uniform"
+        ],
+        "detail_weight": 1.34
       },
       "dqb.reading": {
-        "picked": "Uniform Acceleration (Flexbook)",
+        "picked": "Uniform Acceleration Practice",
+        "fit": "fits",
         "score": 90.33,
         "core_hits": [],
         "detail_hits": [
@@ -2496,7 +2719,8 @@
         "detail_weight": 1.34
       },
       "model.reading": {
-        "picked": "Uniform Acceleration Practice",
+        "picked": "Uniform Acceleration (PLIX)",
+        "fit": "fits",
         "score": 90.33,
         "core_hits": [],
         "detail_hits": [
@@ -2507,99 +2731,102 @@
       }
     },
     "video_pool": {
-      "passed": 37,
+      "passed": 19,
       "runners_up": [
-        "Acceleration vs. time graphs",
-        "Intro to vectors and scalars",
         "Interpreting direction of motion from velocity-time graph",
-        "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "Plotting projectile displacement, acceleration, and velocity"
+        "Choosing kinematic equations",
+        "Calculating average velocity or speed",
+        "Interpreting change in speed from velocity-time graph",
+        "Average velocity for constant acceleration"
       ],
       "rejected_sample": [
+        [
+          "Worked example: Motion problems with derivatives",
+          "conflicting sub-topic ['derivative', 'derivatives']"
+        ],
         [
           "Why distance is area under velocity-time line",
           "below relevance gate"
         ],
         [
-          "Interpreting direction of motion from position-time graph",
-          "below relevance gate"
+          "Worked example: motion problems (with definite integrals)",
+          "conflicting sub-topic ['integral', 'integrals']"
         ],
         [
-          "topic - linear motion - Projectile Motion Video",
-          "below relevance gate"
+          "Motion problems with integrals: displacement vs. distance",
+          "conflicting sub-topic ['integral', 'integrals']"
         ],
         [
-          "Concentration gradients",
-          "below relevance gate"
+          "Plotting projectile displacement, acceleration, and velocity",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
-          "Slope-intercept equation from graph",
-          "below relevance gate"
+          "Projectile motion (part 4)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
-          "Graphs of systems of inequalities word problem",
-          "below relevance gate"
+          "Planar motion example: acceleration vector",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Vector word problem: hiking",
-          "below relevance gate"
-        ],
-        [
-          "Linear graphs word problem: cats",
-          "below relevance gate"
+          "Projectile motion (part 3)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ]
       ],
       "rejected_by_reason": {
+        "conflicting sub-topic": 16,
         "below relevance gate": 113,
-        "web file not on reference image": 5,
+        "judged off-topic (independent reviewer)": 1,
+        "web file not on reference image": 4,
         "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
       "passed": 23,
       "runners_up": [
-        "Displacement During Uniform Acceleration Practice",
-        "2D projectile motion: Identifying graphs for projectiles",
+        "Velocity-Time Graphs (Flexbook)",
         "Uniform Acceleration (Flexbook)",
         "Uniform Acceleration Practice",
-        "Uniform Acceleration (PLIX)"
+        "Uniform Acceleration (PLIX)",
+        "Displacement During Constant Acceleration (Flexbook)"
       ],
       "rejected_sample": [
+        [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Position-Time Graphs (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Position-Time Graphs Practice",
+          "below relevance gate"
+        ],
+        [
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Motion problems (differential calc)",
+          "conflicting sub-topic ['differential']"
+        ],
+        [
+          "Setting up problems with constant acceleration",
+          "below relevance gate"
+        ],
         [
           "Finding gradients",
           "below relevance gate"
         ],
         [
-          "Linear equations word problems: graphs",
-          "below relevance gate"
-        ],
-        [
-          "Systems of equations with graphing",
-          "below relevance gate"
-        ],
-        [
-          "Writing linear equations word problems",
-          "below relevance gate"
-        ],
-        [
-          "Relating linear contexts to graph features",
-          "below relevance gate"
-        ],
-        [
-          "Analyzing related rates problems: equations",
-          "below relevance gate"
-        ],
-        [
-          "Applications of Linear Graphs (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Applications of Linear Graphs Practice",
+          "Slope from equation",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 127,
+        "conflicting sub-topic": 3,
+        "below relevance gate": 123,
         "kolibri node not available on reference image": 2
       }
     }

@@ -1,0 +1,116 @@
+{
+  "module": "coremath_2_9",
+  "conflicts_in": [
+    {
+      "lessons": "1, 2, 7",
+      "severity": "major",
+      "fact": "Runner A's pace and Runner B's mid-race velocity are inconsistent, and the race cannot work out numerically",
+      "versions": "Lesson 1/2: Runner A ~19 km/h; Runner B ~17.6 km/h in 25-35 km. Lesson 5: Runner B drops from ~5.8 m/s (20.9 km/h) to 4.9 m/s (17.6 km/h) then 6.2 m/s (22.3 km/h). Lesson 7 model-building: Runner A 21 km/h, Runner B 17 km/h, relative speed 4 km/h, contradicting its own Explain section (19 vs 17.6, 1.4 km/h relative speed)."
+    },
+    {
+      "lessons": "7",
+      "severity": "major",
+      "fact": "Time to close the 200 m overtaking gap at the relative speed",
+      "versions": "Explained: 1.4 km/h closing speed gives about 8.6 minutes for a 200 m gap (correct: 0.2/1.4 h ≈ 8.6 min). Model Building: 4 km/h relative speed for the same 200 m gap, giving 3 minutes. Same event, different numbers."
+    },
+    {
+      "lessons": "2, 3, 4, 5, 6, 8",
+      "severity": "major",
+      "fact": "Where/when Runner B lost the lead and the slow section's location",
+      "versions": "Lesson 3: Runner A overtakes B during 30-35 km, B's lead exists at 30 km. Lesson 1/2/4/6/8: B ahead at 30 km but slow section 25-35 km. Lesson 7: A overtakes B with about 4 km to go (final stretch). Lesson 5: Runner B's sprint is km 35-42 and the slowdown is km 25-35. Lesson 2: sprint in final 2 km and slow section 25-35 km. Lesson 6 says sprint in last 2 km. The overtake point differs (30-35 km vs about 4 km to go)."
+    }
+  ],
+  "applied": [
+    {
+      "lesson": 7,
+      "path": "slo.purposeInStoryline",
+      "old": "Runner A overtook Runner B in the middle of the race, not because",
+      "new": "Runner A overtook Runner B in the later part of the race (during the 30–35 km stretch), not because",
+      "conflict": "3"
+    },
+    {
+      "lesson": 7,
+      "path": "summaryTablePrompt.explained",
+      "old": "Runner A did not need to run faster than Runner B's top speed",
+      "new": "Runner A did not need to run faster than Runner B's earlier pace",
+      "conflict": "3"
+    },
+    {
+      "lesson": 3,
+      "path": "framework[1].learnerExperience",
+      "old": "(the overtake during the 25–35 km slowdown)",
+      "new": "(the overtake during the 30–35 km stretch of the slowdown)",
+      "conflict": "3"
+    },
+    {
+      "lesson": 5,
+      "path": "framework[2].learnerExperience",
+      "old": "surging back to 6.2 m/s between km 35 and km 42",
+      "new": "surging back to 6.2 m/s in the final 2 km (km 40–42)",
+      "conflict": "3"
+    },
+    {
+      "lesson": 5,
+      "path": "framework[2].learnerExperience",
+      "old": "from approximately 5.8 m/s to 4.9 m/s between km 25 and km 35",
+      "new": "from approximately 5.6 m/s (about 20 km/h) to 4.9 m/s (17.6 km/h) between km 25 and km 35",
+      "conflict": "1"
+    }
+  ],
+  "rejected": [
+    {
+      "lesson": 7,
+      "path": "framework[5].learnerExperience",
+      "old": "showing the overtake with about 4 km to go",
+      "new": "showing the overtake during the 30–35 km stretch",
+      "conflict": "3",
+      "rejected": "path not found"
+    },
+    {
+      "lesson": 7,
+      "path": "framework[5].learnerExperience",
+      "old": "(Runner A: 21 km/h, Runner B: 17 km/h)",
+      "new": "(Runner A: 19 km/h, Runner B: 17.6 km/h)",
+      "conflict": "1",
+      "rejected": "path not found"
+    },
+    {
+      "lesson": 7,
+      "path": "framework[5].learnerExperience",
+      "old": "(21 − 17 = 4 km/h)",
+      "new": "(19 − 17.6 = 1.4 km/h)",
+      "conflict": "1",
+      "rejected": "path not found"
+    },
+    {
+      "lesson": 7,
+      "path": "framework[5].learnerExperience",
+      "old": "only 4 km/h — but that was enough to close the 200 m gap in 3 minutes",
+      "new": "only 1.4 km/h — but that was enough to close the 200 m gap in about 8.6 minutes",
+      "conflict": "2",
+      "rejected": "path not found"
+    },
+    {
+      "lesson": 7,
+      "path": "framework[2].teacherMoves",
+      "old": "Runner B's speed in the final 2 km",
+      "new": "Runner B's speed in the slow middle section",
+      "conflict": "3",
+      "rejected": "old text occurs 0 times (need exactly 1)"
+    },
+    {
+      "lesson": 7,
+      "path": "framework[1].teacherMoves",
+      "old": "what was happening to Runner B's speed in the final 2 km according",
+      "new": "what was happening to Runner B's speed in the slow middle section according",
+      "conflict": "3",
+      "rejected": "old text occurs 0 times (need exactly 1)"
+    }
+  ],
+  "unresolved": [
+    {
+      "conflict": "3",
+      "why": "Lesson 5's gradient figures (+0.027 m/s², 'km 35 to km 42' phrasing in teacherMoves, summary and DQB) and Lesson 6's area comparison ('final 12 km', 'sprint in last 2 km') use a slightly different time window; fully aligning them needs recalculating gradients and rewriting multiple passages, beyond small find-and-replace edits."
+    }
+  ]
+}

@@ -32,8 +32,8 @@
         "protein",
         "maize",
         "beans",
-        "really",
-        "made"
+        "macronutrients",
+        "micronutrients"
       ],
       "phrases": [
         "chemicals life",
@@ -41,54 +41,63 @@
         "food composition",
         "nutritional deficiency",
         "predictive diagram",
-        "protein deficiency"
+        "protein deficiency",
+        "macronutrients micronutrients",
+        "carbohydrates proteins lipids",
+        "protein deficiency kwashiorkor",
+        "malnutrition nutritional deficiency",
+        "vitamins minerals functions",
+        "biological molecules food"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Scale of cells",
-        "score": 41.72,
-        "core_hits": [],
-        "detail_hits": [
-          "protein",
-          "water"
-        ],
-        "detail_weight": 1.33
-      },
-      "observe.video": {
-        "picked": "Photosynthesis",
-        "score": 36.52,
-        "core_hits": [],
-        "detail_hits": [
-          "carbohydrate",
-          "water"
-        ],
-        "detail_weight": 1.5
-      },
-      "explain.video": {
-        "picked": "Physical and chemical changes",
-        "score": 32.66,
+        "picked": "Food and energy in organisms",
+        "fit": "partial",
+        "score": 34.41,
         "core_hits": [
           "chemical"
         ],
         "detail_hits": [
-          "water"
+          "food"
         ],
-        "detail_weight": 0.5
+        "detail_weight": 0.3
       },
-      "dqb.video": {
-        "picked": "Organelles in eukaryotic cells",
-        "score": 30.05,
+      "observe.video": {
+        "picked": "Introduction to carbohydrates",
+        "fit": "partial",
+        "score": 29.94,
         "core_hits": [],
         "detail_hits": [
-          "protein",
-          "water",
-          "made"
+          "carbohydrate"
         ],
-        "detail_weight": 1.63
+        "detail_weight": 1
+      },
+      "explain.video": {
+        "picked": "Dehydration synthesis or a condensation reaction",
+        "fit": "partial",
+        "score": 26.36,
+        "core_hits": [],
+        "detail_hits": [
+          "carbohydrate"
+        ],
+        "detail_weight": 1
+      },
+      "dqb.video": {
+        "picked": "Food and energy in organisms",
+        "fit": "partial",
+        "score": 34.41,
+        "core_hits": [
+          "chemical"
+        ],
+        "detail_hits": [
+          "food"
+        ],
+        "detail_weight": 0.3
       },
       "model.video": {
         "picked": "Introduction to carbohydrates",
+        "fit": "partial",
         "score": 29.94,
         "core_hits": [],
         "detail_hits": [
@@ -98,6 +107,7 @@
       },
       "predict.reading": {
         "picked": "Carbohydrate Classification (Flexbook)",
+        "fit": "partial",
         "score": 30.17,
         "core_hits": [],
         "detail_hits": [
@@ -107,6 +117,7 @@
       },
       "observe.reading": {
         "picked": "Carbohydrate Classification Practice",
+        "fit": "partial",
         "score": 30.17,
         "core_hits": [],
         "detail_hits": [
@@ -116,6 +127,7 @@
       },
       "explain.reading": {
         "picked": "Carbohydrates (Flexbook)",
+        "fit": "partial",
         "score": 28.86,
         "core_hits": [],
         "detail_hits": [
@@ -125,6 +137,7 @@
       },
       "dqb.reading": {
         "picked": "Carbohydrates Practice",
+        "fit": "partial",
         "score": 28.86,
         "core_hits": [],
         "detail_hits": [
@@ -134,6 +147,7 @@
       },
       "model.reading": {
         "picked": "Carbohydrates",
+        "fit": "partial",
         "score": 28.31,
         "core_hits": [],
         "detail_hits": [
@@ -143,15 +157,16 @@
       }
     },
     "video_pool": {
-      "passed": 8,
+      "passed": 3,
       "runners_up": [
-        "Photosynthesis",
-        "Physical and chemical changes",
-        "Organelles in eukaryotic cells",
         "Introduction to carbohydrates",
-        "Food and energy in organisms"
+        "Dehydration synthesis or a condensation reaction"
       ],
       "rejected_sample": [
+        [
+          "Scale of cells",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Introduction to vitamins and minerals",
           "below relevance gate"
@@ -161,45 +176,40 @@
           "below relevance gate"
         ],
         [
+          "PV-diagrams and expansion work",
+          "below relevance gate"
+        ],
+        [
+          "PV-diagrams and expansion work -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
           "Acid–base properties of salts",
           "below relevance gate"
         ],
         [
-          "Translation (mRNA to protein)",
+          "Worked example: Lewis diagram of xenon difluoride (XeF₂)",
           "below relevance gate"
         ],
         [
-          "Worked example: Triangle angles (diagram)",
-          "below relevance gate"
-        ],
-        [
-          "Two-way frequency tables and Venn diagrams",
-          "below relevance gate"
-        ],
-        [
-          "Biology overview",
-          "below relevance gate"
-        ],
-        [
-          "pH of salt solutions",
+          "Drawing Lewis diagrams",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 117,
-        "kolibri node not available on reference image": 13,
-        "web file not on reference image": 11,
-        "excluded: answer/exam material": 1
+        "judged off-topic (independent reviewer)": 5,
+        "below relevance gate": 135,
+        "kolibri node not available on reference image": 11,
+        "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 6,
+      "passed": 5,
       "runners_up": [
         "Carbohydrate Classification Practice",
         "Carbohydrates (Flexbook)",
         "Carbohydrates Practice",
-        "Carbohydrates",
-        "Concentration"
+        "Carbohydrates"
       ],
       "rejected_sample": [
         [
@@ -212,6 +222,10 @@
         ],
         [
           "Vitamins and Minerals - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Composing a Composite Function Graph: Composition of Functions (PLIX)",
           "below relevance gate"
         ],
         [
@@ -229,16 +243,13 @@
         [
           "Phase Diagram for Water Practice",
           "below relevance gate"
-        ],
-        [
-          "Water Supplies For Food Processing Kno 100428",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 136,
-        "excluded: answer/exam material": 9,
-        "kolibri node not available on reference image": 8
+        "below relevance gate": 145,
+        "excluded: answer/exam material": 2,
+        "kolibri node not available on reference image": 5,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -285,22 +296,31 @@
         "food composition",
         "amino acids",
         "maize starch",
-        "sukuma wiki"
+        "sukuma wiki",
+        "macromolecules life",
+        "nucleic acids",
+        "protein deficiency malnutrition",
+        "amino acids proteins",
+        "vitamins minerals functions",
+        "nutrients food macronutrients micronutrients"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Introduction to proteins and amino acids",
-        "score": 89.21,
+        "fit": "fits",
+        "score": 93.98,
         "core_hits": [],
         "detail_hits": [
           "protein",
-          "acid amino"
+          "acid amino",
+          "acid amino protein"
         ],
-        "detail_weight": 1.16
+        "detail_weight": 1.4
       },
       "observe.video": {
         "picked": "Introduction to vitamins and minerals",
+        "fit": "fits",
         "score": 61.9,
         "core_hits": [],
         "detail_hits": [
@@ -311,57 +331,62 @@
       },
       "explain.video": {
         "picked": "Introduction to proteins and amino acids",
-        "score": 89.21,
+        "fit": "fits",
+        "score": 93.98,
         "core_hits": [],
         "detail_hits": [
           "protein",
-          "acid amino"
+          "acid amino",
+          "acid amino protein"
         ],
-        "detail_weight": 1.16
+        "detail_weight": 1.4
       },
       "dqb.video": {
-        "picked": "Introduction to proteins and amino acids",
-        "score": 89.21,
+        "picked": "Introduction to vitamins and minerals",
+        "fit": "fits",
+        "score": 61.9,
         "core_hits": [],
         "detail_hits": [
-          "protein",
-          "acid amino"
+          "vitamin",
+          "mineral"
         ],
-        "detail_weight": 1.16
+        "detail_weight": 1.06
       },
       "model.video": {
-        "picked": "Introduction to proteins and amino acids",
-        "score": 89.21,
+        "picked": "Scale of cells",
+        "fit": "partial",
+        "score": 41.36,
         "core_hits": [],
         "detail_hits": [
           "protein",
-          "acid amino"
+          "water"
         ],
-        "detail_weight": 1.16
+        "detail_weight": 1.29
       },
       "predict.reading": {
-        "picked": "Vitamins and Minerals (Flexbook)",
-        "score": 59.66,
+        "picked": "Carbohydrates (Flexbook)",
+        "fit": "fits",
+        "score": 28.86,
         "core_hits": [],
         "detail_hits": [
-          "vitamin",
-          "mineral"
+          "carbohydrate"
         ],
-        "detail_weight": 1.06
+        "detail_weight": 1
       },
       "observe.reading": {
-        "picked": "Vitamins and Minerals Practice",
-        "score": 59.66,
+        "picked": "Carbohydrates (Flexbook)",
+        "fit": "fits",
+        "score": 28.86,
         "core_hits": [],
         "detail_hits": [
-          "vitamin",
-          "mineral"
+          "carbohydrate"
         ],
-        "detail_weight": 1.06
+        "detail_weight": 1
       },
       "explain.reading": {
-        "picked": "Vitamins and Minerals - Advanced (Flexbook)",
-        "score": 59.05,
+        "picked": "Vitamins and Minerals (Flexbook)",
+        "fit": "partial",
+        "score": 59.66,
         "core_hits": [],
         "detail_hits": [
           "vitamin",
@@ -370,7 +395,8 @@
         "detail_weight": 1.06
       },
       "dqb.reading": {
-        "picked": "Vitamins and Minerals (Flexbook)",
+        "picked": "Vitamins and Minerals Practice",
+        "fit": "partial",
         "score": 59.66,
         "core_hits": [],
         "detail_hits": [
@@ -380,24 +406,23 @@
         "detail_weight": 1.06
       },
       "model.reading": {
-        "picked": "Vitamins and Minerals (Flexbook)",
-        "score": 59.66,
+        "picked": "Carbohydrate Classification (Flexbook)",
+        "fit": "partial",
+        "score": 30.17,
         "core_hits": [],
         "detail_hits": [
-          "vitamin",
-          "mineral"
+          "carbohydrate"
         ],
-        "detail_weight": 1.06
+        "detail_weight": 1
       }
     },
     "video_pool": {
-      "passed": 10,
+      "passed": 5,
       "runners_up": [
         "Introduction to vitamins and minerals",
-        "Physical and chemical changes",
+        "Introduction to carbohydrates",
         "Scale of cells",
-        "Photosynthesis",
-        "Introduction to carbohydrates"
+        "Dehydration synthesis or a condensation reaction"
       ],
       "rejected_sample": [
         [
@@ -434,20 +459,20 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 118,
-        "kolibri node not available on reference image": 15,
-        "web file not on reference image": 13,
-        "excluded: answer/exam material": 1
+        "below relevance gate": 130,
+        "kolibri node not available on reference image": 11,
+        "web file not on reference image": 3,
+        "judged off-topic (independent reviewer)": 5
       }
     },
     "reading_pool": {
-      "passed": 9,
+      "passed": 7,
       "runners_up": [
+        "Vitamins and Minerals (Flexbook)",
         "Vitamins and Minerals Practice",
-        "Vitamins and Minerals - Advanced (Flexbook)",
         "Carbohydrate Classification (Flexbook)",
         "Carbohydrate Classification Practice",
-        "Carbohydrates (Flexbook)"
+        "Carbohydrates Practice"
       ],
       "rejected_sample": [
         [
@@ -484,9 +509,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 127,
-        "kolibri node not available on reference image": 13,
-        "excluded: answer/exam material": 6
+        "below relevance gate": 135,
+        "kolibri node not available on reference image": 10,
+        "judged off-topic (independent reviewer)": 2,
+        "excluded: answer/exam material": 2
       }
     }
   },
@@ -535,23 +561,32 @@
         "dietary deficiency",
         "chemicals life",
         "food tests",
-        "cer framework"
+        "cer framework",
+        "lipids structure function",
+        "fatty acids glycerol",
+        "fat soluble vitamins",
+        "water soluble vitamins",
+        "testing foods lipids",
+        "vitamin deficiency"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Molecular structure of triglycerides (fats)",
-        "score": 117.17,
+        "fit": "fits",
+        "score": 123.47,
         "core_hits": [],
         "detail_hits": [
           "acid fatty",
           "glycerol",
-          "coconut"
+          "coconut",
+          "acid fatty glycerol"
         ],
-        "detail_weight": 2.24
+        "detail_weight": 2.54
       },
       "observe.video": {
         "picked": "Lipid overview",
+        "fit": "fits",
         "score": 78.14,
         "core_hits": [],
         "detail_hits": [
@@ -561,50 +596,53 @@
       },
       "explain.video": {
         "picked": "Molecular structure of triglycerides (fats)",
-        "score": 117.17,
+        "fit": "fits",
+        "score": 123.47,
         "core_hits": [],
         "detail_hits": [
           "acid fatty",
           "glycerol",
-          "coconut"
+          "coconut",
+          "acid fatty glycerol"
         ],
-        "detail_weight": 2.24
+        "detail_weight": 2.54
       },
       "dqb.video": {
-        "picked": "Molecular structure of triglycerides (fats)",
-        "score": 117.17,
+        "picked": "Lipid overview",
+        "fit": "fits",
+        "score": 78.14,
         "core_hits": [],
         "detail_hits": [
-          "acid fatty",
-          "glycerol",
-          "coconut"
+          "lipid"
         ],
-        "detail_weight": 2.24
+        "detail_weight": 1
       },
       "model.video": {
-        "picked": "Molecular structure of triglycerides (fats)",
-        "score": 117.17,
-        "core_hits": [],
-        "detail_hits": [
-          "acid fatty",
-          "glycerol",
-          "coconut"
-        ],
-        "detail_weight": 2.24
-      },
-      "predict.reading": {
-        "picked": "Chemical bonds",
-        "score": 52.35,
+        "picked": "Food and energy in organisms",
+        "fit": "partial",
+        "score": 23.84,
         "core_hits": [
           "chemical"
         ],
         "detail_hits": [
-          "test"
+          "food"
         ],
         "detail_weight": 0.3
       },
+      "predict.reading": {
+        "picked": "Lipids",
+        "fit": "fits",
+        "score": 50.41,
+        "core_hits": [],
+        "detail_hits": [
+          "lipid",
+          "test"
+        ],
+        "detail_weight": 1.3
+      },
       "observe.reading": {
         "picked": "Lipids",
+        "fit": "fits",
         "score": 50.41,
         "core_hits": [],
         "detail_hits": [
@@ -614,8 +652,9 @@
         "detail_weight": 1.3
       },
       "explain.reading": {
-        "picked": "Balancing Chemical Equations",
-        "score": 42.27,
+        "picked": "Chemical bonds",
+        "fit": "partial",
+        "score": 52.35,
         "core_hits": [
           "chemical"
         ],
@@ -625,26 +664,26 @@
         "detail_weight": 0.3
       },
       "dqb.reading": {
-        "picked": "Chemical bonds",
-        "score": 52.35,
-        "core_hits": [
-          "chemical"
-        ],
+        "picked": "Lipids",
+        "fit": "fits",
+        "score": 50.41,
+        "core_hits": [],
         "detail_hits": [
+          "lipid",
           "test"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.3
       },
       "model.reading": {
-        "picked": "Chemical bonds",
-        "score": 52.35,
-        "core_hits": [
-          "chemical"
-        ],
+        "picked": "Lipids",
+        "fit": "fits",
+        "score": 50.41,
+        "core_hits": [],
         "detail_hits": [
+          "lipid",
           "test"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.3
       }
     },
     "video_pool": {
@@ -689,17 +728,15 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
-        "web file not on reference image": 4,
+        "below relevance gate": 137,
+        "web file not on reference image": 3,
         "kolibri node not available on reference image": 5
       }
     },
     "reading_pool": {
-      "passed": 4,
+      "passed": 2,
       "runners_up": [
-        "Lipids",
-        "Balancing Chemical Equations",
-        "Lipids (Flexbook)"
+        "Chemical bonds"
       ],
       "rejected_sample": [
         [
@@ -736,9 +773,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 115,
+        "below relevance gate": 116,
         "excluded: answer/exam material": 27,
-        "kolibri node not available on reference image": 5
+        "kolibri node not available on reference image": 5,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -785,13 +823,20 @@
         "molecular structure",
         "chemicals life",
         "annotated diagram",
-        "food classification"
+        "food classification",
+        "carbohydrates monosaccharides disaccharides polysaccharides",
+        "glycosidic bond formation",
+        "starch glycogen structure",
+        "amino acids proteins",
+        "peptide bond formation",
+        "dehydration synthesis hydrolysis"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Dehydration synthesis or a condensation reaction",
-        "score": 206.82,
+        "fit": "fits",
+        "score": 295.17,
         "core_hits": [],
         "detail_hits": [
           "carbohydrate",
@@ -801,59 +846,68 @@
           "glucose",
           "glycogen",
           "starch",
-          "molecule"
+          "carbohydrate disaccharide monosaccharide polysaccharide"
         ],
-        "detail_weight": 4.98
+        "detail_weight": 5.5
       },
       "observe.video": {
-        "picked": "Introduction to carbohydrates",
-        "score": 154.38,
+        "picked": "Peptide bond formation",
+        "fit": "fits",
+        "score": 240.59,
+        "core_hits": [],
+        "detail_hits": [
+          "acid amino",
+          "bond peptide",
+          "bond formation peptide"
+        ],
+        "detail_weight": 1.27
+      },
+      "explain.video": {
+        "picked": "Dehydration synthesis or a condensation reaction",
+        "fit": "fits",
+        "score": 295.17,
         "core_hits": [],
         "detail_hits": [
           "carbohydrate",
+          "monosaccharide",
+          "disaccharide",
+          "polysaccharide",
           "glucose",
           "glycogen",
-          "monomer",
-          "polymer"
+          "starch",
+          "carbohydrate disaccharide monosaccharide polysaccharide"
         ],
-        "detail_weight": 2.54
-      },
-      "explain.video": {
-        "picked": "Peptide bond formation",
-        "score": 142.04,
-        "core_hits": [],
-        "detail_hits": [
-          "acid amino",
-          "bond peptide"
-        ],
-        "detail_weight": 1.04
+        "detail_weight": 5.5
       },
       "dqb.video": {
-        "picked": "Introduction to proteins and amino acids",
-        "score": 141.68,
+        "picked": "Peptide bond formation",
+        "fit": "fits",
+        "score": 240.59,
         "core_hits": [],
         "detail_hits": [
-          "protein",
           "acid amino",
-          "monomer",
-          "polymer"
+          "bond peptide",
+          "bond formation peptide"
         ],
-        "detail_weight": 1.41
+        "detail_weight": 1.27
       },
       "model.video": {
         "picked": "Hydrolysis",
-        "score": 139.56,
+        "fit": "partial",
+        "score": 178.61,
         "core_hits": [],
         "detail_hits": [
           "monosaccharide",
           "polysaccharide",
           "glycogen",
-          "starch"
+          "starch",
+          "glycogen starch"
         ],
-        "detail_weight": 2.41
+        "detail_weight": 2.66
       },
       "predict.reading": {
         "picked": "Carbohydrate Classification (Flexbook)",
+        "fit": "fits",
         "score": 49.8,
         "core_hits": [],
         "detail_hits": [
@@ -863,6 +917,7 @@
       },
       "observe.reading": {
         "picked": "Carbohydrate Classification Practice",
+        "fit": "fits",
         "score": 49.8,
         "core_hits": [],
         "detail_hits": [
@@ -872,6 +927,7 @@
       },
       "explain.reading": {
         "picked": "Carbohydrate Classification (Flexbook)",
+        "fit": "fits",
         "score": 49.8,
         "core_hits": [],
         "detail_hits": [
@@ -880,7 +936,8 @@
         "detail_weight": 1
       },
       "dqb.reading": {
-        "picked": "Carbohydrate Classification (Flexbook)",
+        "picked": "Carbohydrate Classification Practice",
+        "fit": "fits",
         "score": 49.8,
         "core_hits": [],
         "detail_hits": [
@@ -890,6 +947,7 @@
       },
       "model.reading": {
         "picked": "Carbohydrate Classification (Flexbook)",
+        "fit": "fits",
         "score": 49.8,
         "core_hits": [],
         "detail_hits": [
@@ -899,15 +957,19 @@
       }
     },
     "video_pool": {
-      "passed": 10,
+      "passed": 9,
       "runners_up": [
-        "Introduction to carbohydrates",
         "Peptide bond formation",
+        "Introduction to carbohydrates",
         "Introduction to proteins and amino acids",
-        "Hydrolysis",
-        "Molecular structure of glucose"
+        "Molecular structure of glucose",
+        "Hydrolysis"
       ],
       "rejected_sample": [
+        [
+          "Molecular structure of triglycerides (fats)",
+          "below relevance gate"
+        ],
         [
           "Molecular structure of fructose",
           "below relevance gate"
@@ -918,10 +980,6 @@
         ],
         [
           "Impact of mutations on translation into amino acids",
-          "below relevance gate"
-        ],
-        [
-          "Molecular structure of triglycerides (fats)",
           "below relevance gate"
         ],
         [
@@ -942,8 +1000,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 129,
-        "kolibri node not available on reference image": 8,
+        "below relevance gate": 136,
+        "kolibri node not available on reference image": 5,
         "web file not on reference image": 1
       }
     },
@@ -990,8 +1048,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 143,
-        "kolibri node not available on reference image": 15,
+        "below relevance gate": 139,
+        "kolibri node not available on reference image": 16,
         "excluded: answer/exam material": 2
       }
     }
@@ -1025,11 +1083,12 @@
         "iodine",
         "nutritional",
         "health",
-        "connecting",
-        "chemistry",
-        "food",
-        "outcomes",
-        "kisumu"
+        "protein",
+        "benedict's",
+        "reducing",
+        "sugars",
+        "starch",
+        "vitamin"
       ],
       "phrases": [
         "deficiency diseases",
@@ -1037,73 +1096,97 @@
         "biuret test",
         "benedict test",
         "iodine test",
-        "nutritional health"
+        "nutritional health",
+        "protein deficiency kwashiorkor",
+        "biuret test proteins",
+        "benedict's test reducing sugars",
+        "iodine test starch",
+        "vitamin deficiency diseases",
+        "amino acids proteins"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Introduction to proteins and amino acids",
-        "score": 96.76,
+        "fit": "fits",
+        "score": 102.71,
         "core_hits": [],
         "detail_hits": [
           "protein",
-          "acid amino"
+          "acid amino",
+          "acid amino protein"
         ],
-        "detail_weight": 1.54
+        "detail_weight": 1.84
       },
       "observe.video": {
         "picked": "Introduction to proteins and amino acids",
-        "score": 96.76,
+        "fit": "fits",
+        "score": 102.71,
         "core_hits": [],
         "detail_hits": [
           "protein",
-          "acid amino"
+          "acid amino",
+          "acid amino protein"
         ],
-        "detail_weight": 1.54
+        "detail_weight": 1.84
       },
       "explain.video": {
-        "picked": "Introduction to proteins and amino acids",
-        "score": 96.76,
-        "core_hits": [],
-        "detail_hits": [
-          "protein",
-          "acid amino"
-        ],
-        "detail_weight": 1.54
-      },
-      "dqb.video": {
-        "picked": "Introduction to proteins and amino acids",
-        "score": 96.76,
-        "core_hits": [],
-        "detail_hits": [
-          "protein",
-          "acid amino"
-        ],
-        "detail_weight": 1.54
-      },
-      "model.video": {
-        "picked": "Introduction to proteins and amino acids",
-        "score": 96.76,
-        "core_hits": [],
-        "detail_hits": [
-          "protein",
-          "acid amino"
-        ],
-        "detail_weight": 1.54
-      },
-      "predict.reading": {
-        "picked": "Physical and chemical changes",
-        "score": 44.27,
+        "picked": "Food and energy in organisms",
+        "fit": "partial",
+        "score": 23.84,
         "core_hits": [
           "chemical"
         ],
         "detail_hits": [
-          "chemistry"
+          "food"
         ],
         "detail_weight": 0.3
       },
+      "dqb.video": {
+        "picked": "Overview of protein structure",
+        "fit": "partial",
+        "score": 22.19,
+        "core_hits": [],
+        "detail_hits": [
+          "protein"
+        ],
+        "detail_weight": 1
+      },
+      "model.video": {
+        "picked": "Introduction to proteins and amino acids",
+        "fit": "fits",
+        "score": 102.71,
+        "core_hits": [],
+        "detail_hits": [
+          "protein",
+          "acid amino",
+          "acid amino protein"
+        ],
+        "detail_weight": 1.84
+      },
+      "predict.reading": {
+        "picked": "Proteins",
+        "fit": "fits",
+        "score": 42.11,
+        "core_hits": [],
+        "detail_hits": [
+          "protein"
+        ],
+        "detail_weight": 1
+      },
       "observe.reading": {
+        "picked": "Proteins",
+        "fit": "fits",
+        "score": 42.11,
+        "core_hits": [],
+        "detail_hits": [
+          "protein"
+        ],
+        "detail_weight": 1
+      },
+      "explain.reading": {
         "picked": "Types of chemical bonds",
+        "fit": "partial",
         "score": 43.94,
         "core_hits": [
           "chemical"
@@ -1113,18 +1196,10 @@
         ],
         "detail_weight": 0.3
       },
-      "explain.reading": {
-        "picked": "Proteins",
-        "score": 42.11,
-        "core_hits": [],
-        "detail_hits": [
-          "protein"
-        ],
-        "detail_weight": 1
-      },
       "dqb.reading": {
-        "picked": "Transcription and translation",
-        "score": 38.05,
+        "picked": "Proteins Practice",
+        "fit": "partial",
+        "score": 24.84,
         "core_hits": [],
         "detail_hits": [
           "protein"
@@ -1132,25 +1207,21 @@
         "detail_weight": 1
       },
       "model.reading": {
-        "picked": "Physical and chemical changes",
-        "score": 44.27,
-        "core_hits": [
-          "chemical"
-        ],
+        "picked": "Proteins (Flexbook)",
+        "fit": "partial",
+        "score": 24.84,
+        "core_hits": [],
         "detail_hits": [
-          "chemistry"
+          "protein"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 3,
       "runners_up": [
-        "Translation (mRNA to protein)",
-        "Brain City and the Protein Roadblocks",
-        "Endoplasmic reticulum and Golgi bodies",
-        "Scale of cells",
-        "The Protein Folding Problem"
+        "Food and energy in organisms",
+        "Overview of protein structure"
       ],
       "rejected_sample": [
         [
@@ -1170,6 +1241,10 @@
           "below relevance gate"
         ],
         [
+          "Introduction to vitamins and minerals",
+          "below relevance gate"
+        ],
+        [
           "Arabic: The Construction of Proteins",
           "kolibri node not available on reference image"
         ],
@@ -1180,26 +1255,23 @@
         [
           "Arabic-English Subtitles: The Construction of Proteins",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Preparation of acid anhydrides",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 112,
+        "below relevance gate": 115,
         "web file not on reference image": 6,
-        "kolibri node not available on reference image": 13
+        "kolibri node not available on reference image": 14,
+        "judged off-topic (independent reviewer)": 10
       }
     },
     "reading_pool": {
-      "passed": 18,
+      "passed": 7,
       "runners_up": [
         "Types of chemical bonds",
-        "Proteins",
-        "Transcription and translation",
         "Proteins Practice",
-        "Proteins (Flexbook)"
+        "Proteins (Flexbook)",
+        "Protein Classification (Flexbook)",
+        "Protein Classification Practice"
       ],
       "rejected_sample": [
         [
@@ -1236,9 +1308,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 117,
-        "kolibri node not available on reference image": 9,
-        "excluded: answer/exam material": 13
+        "below relevance gate": 123,
+        "kolibri node not available on reference image": 7,
+        "excluded: answer/exam material": 13,
+        "judged off-topic (independent reviewer)": 7
       }
     }
   },
@@ -1268,136 +1341,155 @@
         "food",
         "sources",
         "diet",
+        "macromolecules",
+        "protein",
+        "functions",
+        "dna",
+        "malnutrition",
+        "balanced",
         "consolidating",
         "behind",
-        "two",
-        "children",
-        "kisumu"
+        "two"
       ],
       "phrases": [
         "nucleic acids",
         "deficiency diseases",
         "molecular structure",
-        "food sources"
+        "food sources",
+        "macromolecules life",
+        "protein deficiency kwashiorkor",
+        "carbohydrates lipids proteins functions",
+        "vitamins minerals",
+        "nucleic acids dna structure",
+        "malnutrition balanced diet"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Introduction to vitamins and minerals",
-        "score": 61.9,
+        "fit": "fits",
+        "score": 87.63,
         "core_hits": [],
         "detail_hits": [
           "vitamin",
-          "mineral"
+          "mineral",
+          "mineral vitamin"
         ],
-        "detail_weight": 1.06
+        "detail_weight": 1.43
       },
       "observe.video": {
-        "picked": "Physical and chemical changes",
-        "score": 52.67,
-        "core_hits": [
-          "chemical"
-        ],
+        "picked": "Introduction to vitamins and minerals",
+        "fit": "fits",
+        "score": 87.63,
+        "core_hits": [],
         "detail_hits": [
-          "water",
-          "molecular"
+          "vitamin",
+          "mineral",
+          "mineral vitamin"
         ],
-        "detail_weight": 0.81
+        "detail_weight": 1.43
       },
       "explain.video": {
-        "picked": "Photosynthesis",
-        "score": 45.95,
+        "picked": "Introduction to nucleic acids and nucleotides",
+        "fit": "partial",
+        "score": 103.54,
         "core_hits": [],
         "detail_hits": [
-          "carbohydrate",
-          "water"
-        ],
-        "detail_weight": 1.45
-      },
-      "dqb.video": {
-        "picked": "Scale of cells",
-        "score": 41.36,
-        "core_hits": [],
-        "detail_hits": [
-          "protein",
-          "water"
+          "acid nucleic",
+          "acid dna nucleic"
         ],
         "detail_weight": 1.29
       },
+      "dqb.video": {
+        "picked": "Introduction to carbohydrates",
+        "fit": "partial",
+        "score": 29.94,
+        "core_hits": [],
+        "detail_hits": [
+          "carbohydrate"
+        ],
+        "detail_weight": 1
+      },
       "model.video": {
         "picked": "Introduction to vitamins and minerals",
-        "score": 61.9,
+        "fit": "fits",
+        "score": 87.63,
         "core_hits": [],
         "detail_hits": [
           "vitamin",
-          "mineral"
+          "mineral",
+          "mineral vitamin"
         ],
-        "detail_weight": 1.06
+        "detail_weight": 1.43
       },
       "predict.reading": {
         "picked": "Vitamins and Minerals (Flexbook)",
-        "score": 59.66,
+        "fit": "fits",
+        "score": 98.6,
         "core_hits": [],
         "detail_hits": [
           "vitamin",
-          "mineral"
+          "mineral",
+          "mineral vitamin"
         ],
-        "detail_weight": 1.06
+        "detail_weight": 1.43
       },
       "observe.reading": {
-        "picked": "Vitamins and Minerals Practice",
-        "score": 59.66,
+        "picked": "Vitamins and Minerals (Flexbook)",
+        "fit": "fits",
+        "score": 98.6,
         "core_hits": [],
         "detail_hits": [
           "vitamin",
-          "mineral"
+          "mineral",
+          "mineral vitamin"
         ],
-        "detail_weight": 1.06
+        "detail_weight": 1.43
       },
       "explain.reading": {
-        "picked": "Vitamins and Minerals - Advanced (Flexbook)",
-        "score": 59.05,
+        "picked": "Vitamins and Minerals Practice",
+        "fit": "partial",
+        "score": 98.6,
         "core_hits": [],
         "detail_hits": [
           "vitamin",
-          "mineral"
+          "mineral",
+          "mineral vitamin"
         ],
-        "detail_weight": 1.06
+        "detail_weight": 1.43
       },
       "dqb.reading": {
-        "picked": "Physical and chemical changes",
-        "score": 47.05,
-        "core_hits": [
-          "chemical"
-        ],
-        "detail_hits": [
-          "molecular"
-        ],
-        "detail_weight": 0.36
-      },
-      "model.reading": {
-        "picked": "Vitamins and Minerals (Flexbook)",
-        "score": 59.66,
+        "picked": "Vitamins and Minerals - Advanced (Flexbook)",
+        "fit": "partial",
+        "score": 97.01,
         "core_hits": [],
         "detail_hits": [
           "vitamin",
-          "mineral"
+          "mineral",
+          "mineral vitamin"
         ],
-        "detail_weight": 1.06
+        "detail_weight": 1.43
+      },
+      "model.reading": {
+        "picked": "Carbohydrate Classification (Flexbook)",
+        "fit": "partial",
+        "score": 30.17,
+        "core_hits": [],
+        "detail_hits": [
+          "carbohydrate"
+        ],
+        "detail_weight": 1
       }
     },
     "video_pool": {
-      "passed": 8,
+      "passed": 3,
       "runners_up": [
-        "Physical and chemical changes",
-        "Photosynthesis",
-        "Scale of cells",
-        "Introduction to carbohydrates",
-        "Dehydration synthesis or a condensation reaction"
+        "Introduction to nucleic acids and nucleotides",
+        "Introduction to carbohydrates"
       ],
       "rejected_sample": [
         [
-          "Introduction to nucleic acids and nucleotides",
+          "Molecular structure of DNA",
           "below relevance gate"
         ],
         [
@@ -1406,10 +1498,6 @@
         ],
         [
           "Molecular structure of RNA",
-          "below relevance gate"
-        ],
-        [
-          "Molecular structure of DNA",
           "below relevance gate"
         ],
         [
@@ -1427,22 +1515,27 @@
         [
           "Arabic: The Construction of Proteins",
           "kolibri node not available on reference image"
+        ],
+        [
+          "Arabic-English Subtitles: The Construction of Proteins",
+          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 123,
-        "kolibri node not available on reference image": 25,
-        "web file not on reference image": 4
+        "below relevance gate": 130,
+        "kolibri node not available on reference image": 13,
+        "web file not on reference image": 1,
+        "judged off-topic (independent reviewer)": 5
       }
     },
     "reading_pool": {
-      "passed": 10,
+      "passed": 8,
       "runners_up": [
         "Vitamins and Minerals Practice",
         "Vitamins and Minerals - Advanced (Flexbook)",
-        "Physical and chemical changes",
         "Carbohydrate Classification (Flexbook)",
-        "Carbohydrate Classification Practice"
+        "Carbohydrate Classification Practice",
+        "Carbohydrates (Flexbook)"
       ],
       "rejected_sample": [
         [
@@ -1466,22 +1559,23 @@
           "below relevance gate"
         ],
         [
+          "Properties, structure, and function of biological macromolecules",
+          "below relevance gate"
+        ],
+        [
+          "Structures, powers, and functions of Congress: foundational",
+          "below relevance gate"
+        ],
+        [
           "Nucleic Acid Classification (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Nucleic Acid Classification Practice",
-          "below relevance gate"
-        ],
-        [
-          "topical-test-form-2-biology-food-and-diet-answers",
-          "excluded: answer/exam material"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 132,
+        "below relevance gate": 136,
         "excluded: answer/exam material": 3,
-        "kolibri node not available on reference image": 23
+        "kolibri node not available on reference image": 8,
+        "judged off-topic (independent reviewer)": 2
       }
     }
   }

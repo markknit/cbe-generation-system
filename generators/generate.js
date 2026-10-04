@@ -30,10 +30,12 @@ const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const LINK_CHECK = path.join(ROOT, 'scripts', 'check_resource_links.py');
+const CONSISTENCY_CHECK = path.join(ROOT, 'scripts', 'validate_consistency.py');
 // The venv python carries jsonschema (full partner-contract validation).
 const CHECK_PYTHON = fs.existsSync(path.join(ROOT, 'venv', 'bin', 'python3'))
   ? path.join(ROOT, 'venv', 'bin', 'python3') : 'python3';
 const linkFailures = [];
+const consistencyFailures = [];
 
 async function main() {
   const args = process.argv.slice(2);
@@ -65,6 +67,25 @@ async function main() {
     console.error(`\nResource-link check FAILED for ${linkFailures.length} sub-strand(s): ${linkFailures.join(', ')}`);
     if (process.env.LINK_CHECK !== 'warn') process.exit(1);
     console.error('LINK_CHECK=warn set: not failing the run.');
+  }
+  if (consistencyFailures.length) {
+    console.error(`\nCross-document consistency check FAILED for ${consistencyFailures.length} sub-strand(s): ${consistencyFailures.join(', ')}`);
+    if (process.env.CONSISTENCY_CHECK !== 'warn') process.exit(1);
+    console.error('CONSISTENCY_CHECK=warn set: not failing the run.');
+  }
+}
+
+// Cross-document gate: Summary Table and Final Explanation must agree with the
+// lessons (scripts/validate_consistency.py). CONSISTENCY_CHECK=warn reports
+// without failing the run (diagnosis only — never for shipping).
+function checkConsistency(name, jsonPath) {
+  try {
+    const out = execFileSync(CHECK_PYTHON, [CONSISTENCY_CHECK, '--quiet', jsonPath], { encoding: 'utf8' });
+    const summary = out.split('\n').find(l => l.includes('hard failures')) || '';
+    console.log(`  Consistency check: PASS ${summary.trim()}`);
+  } catch (err) {
+    console.error(`  Consistency check: FAIL\n${(err.stdout || err.message).toString()}`);
+    consistencyFailures.push(name);
   }
 }
 
@@ -120,7 +141,7 @@ async function generateOne(dataDir, name) {
 
   console.log(`Done! ${files.length} file(s) in ${elapsed}s`);
   const jsonOut = files.find(f => f.endsWith('_data.json'));
-  if (jsonOut) checkLinks(name, jsonOut);
+  if (jsonOut) { checkLinks(name, jsonOut); checkConsistency(name, jsonOut); }
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

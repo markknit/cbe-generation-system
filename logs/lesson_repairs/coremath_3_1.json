@@ -1,0 +1,39 @@
+{
+  "module": "coremath_3_1",
+  "conflicts_in": [
+    {
+      "lessons": "1, 2, 3, 4, 5, 6, 7",
+      "severity": "major",
+      "fact": "The 40-price maize dataset (the central dataset) differs between lessons",
+      "versions": "L1 and L2 give the same list (86–115 KSh, 40 distinct-ish values, e.g. 92, 105, 88...). L3 says 86–115 range, but its think-aloud tally starts 110, 125 (125 is outside the range). L4 uses only four values (98, 105, 112, 120) with frequencies 16, 12, 8, 4 and claims this is the same list from Lesson 1. L5 uses classes 90–149 with a tail to 140–149. L6 uses classes starting 40–49 with modal class 50–59. L7 uses classes 55–94 with mean ≈72.7 and modal class 70–74. L8 uses mean 105.10 and median 103."
+    },
+    {
+      "lessons": "4, 5, 6, 7, 8",
+      "severity": "major",
+      "fact": "Mean/central value of the maize prices",
+      "versions": "L4 and L8: mean KSh 105.10 (L8 median ≈103). L7: mean ≈72.7, modal class midpoint 72, median ≈73.2. L6: modal class Ksh 50–59. L5: modal class KSh 100–109."
+    },
+    {
+      "lessons": "4",
+      "severity": "major",
+      "fact": "Internal arithmetic of Lesson 4 frequency table",
+      "versions": "Frequencies 16, 12, 8, 4 with values 98, 105, 112, 120 give Σfx = 1568+1260+896+480 = 4204 and Σf = 40, so mean = 105.1, consistent; but the listed raw list has far more 98s/105s mix and the mode 98 'occurring 40%' = 16/40 is fine. However the L4 raw list differs from the L1 list."
+    }
+  ],
+  "applied": [],
+  "rejected": [],
+  "unresolved": [
+    {
+      "conflict": "1",
+      "why": "Lessons 4, 5, 6 and 7 are each built on a different 40-price dataset, so none can be aligned to Lesson 1 with small find-and-replace edits. Lesson 4 uses four values (98, 105, 112, 120) with frequencies 16, 12, 8, 4. Lesson 5 uses classes 90–149. Lesson 6 uses classes 40–59. Lesson 7 uses classes 55–94 with its own frequencies. Their frequency tables, Σfx, cumulative frequencies, mean, median and modal class calculations, and their worked arithmetic would all have to be recomputed from the Lesson 1 raw list (86–115 KSh) and rewritten. That is a full rewrite, not a small edit. Lesson 3's think-aloud also needs a data fix (125 is outside the 86–115 range), but the only unique repair would still leave the other lessons inconsistent."
+    },
+    {
+      "conflict": "2",
+      "why": "The mean, median and modal class in Lessons 4–8 (105.10; ≈72.7; modal classes 50–59, 70–74 and 100–109) all come from different underlying datasets. Lesson 1's list has a true mean of about 100.3 (not 105.10), so Lesson 8's 105.10 and median 103 do not match Lesson 1 either. Correcting them needs the datasets and calculations reworked, which is beyond small number swaps."
+    },
+    {
+      "conflict": "3",
+      "why": "Lesson 4's internal arithmetic (16, 12, 8, 4 giving Σfx = 4204 and mean 105.10) is consistent. The contradiction is only that the raw list and table differ from Lesson 1's list. Fixing that needs the Lesson 4 dataset rebuilt, which is covered by the unresolved conflict 1."
+    }
+  ]
+}

@@ -17,21 +17,32 @@
         "factor",
         "corresponding",
         "sides",
+        "ratio",
+        "dilation",
+        "shapes",
+        "solids",
+        "volume",
         "makes",
         "two",
-        "shapes",
         "but"
       ],
       "phrases": [
         "similar figures",
         "properties similarity",
         "linear scale factor",
-        "corresponding sides"
+        "corresponding sides",
+        "similar figures",
+        "corresponding sides ratio",
+        "scale factor similarity",
+        "enlargement dilation",
+        "properties similar shapes",
+        "similar solids volume ratio"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Corresponding points and sides of scaled shapes",
+        "fit": "fits",
         "score": 120.43,
         "core_hits": [],
         "detail_hits": [
@@ -41,30 +52,33 @@
         "detail_weight": 1.37
       },
       "observe.video": {
+        "picked": "Corresponding points and sides of scaled shapes",
+        "fit": "fits",
+        "score": 120.43,
+        "core_hits": [],
+        "detail_hits": [
+          "corresponding side",
+          "shape"
+        ],
+        "detail_weight": 1.37
+      },
+      "explain.video": {
         "picked": "Using similarity to estimate ratio between side lengths",
-        "score": 112.58,
+        "fit": "partial",
+        "score": 195.42,
         "core_hits": [
           "similarity"
         ],
         "detail_hits": [
-          "corresponding side"
+          "corresponding side",
+          "corresponding ratio side"
         ],
-        "detail_weight": 1.07
-      },
-      "explain.video": {
-        "picked": "Side lengths after dilation",
-        "score": 95.61,
-        "core_hits": [
-          "enlargement"
-        ],
-        "detail_hits": [
-          "shape"
-        ],
-        "detail_weight": 0.3
+        "detail_weight": 2.01
       },
       "dqb.video": {
         "picked": "Dilations and properties",
-        "score": 94.56,
+        "fit": "partial",
+        "score": 138.41,
         "core_hits": [
           "enlargement"
         ],
@@ -74,17 +88,20 @@
         "detail_weight": 0.3
       },
       "model.video": {
-        "picked": "Corresponding points and sides of scaled shapes",
-        "score": 120.43,
-        "core_hits": [],
+        "picked": "Side lengths after dilation",
+        "fit": "partial",
+        "score": 95.61,
+        "core_hits": [
+          "enlargement"
+        ],
         "detail_hits": [
-          "corresponding side",
           "shape"
         ],
-        "detail_weight": 1.37
+        "detail_weight": 0.3
       },
       "predict.reading": {
         "picked": "Corresponding sides and points",
+        "fit": "fits",
         "score": 108.51,
         "core_hits": [],
         "detail_hits": [
@@ -94,6 +111,7 @@
       },
       "observe.reading": {
         "picked": "Corresponding Parts of Similar Figures (Flexbook)",
+        "fit": "fits",
         "score": 106.16,
         "core_hits": [],
         "detail_hits": [
@@ -103,6 +121,7 @@
       },
       "explain.reading": {
         "picked": "Corresponding Parts of Similar Figures Practice",
+        "fit": "fits",
         "score": 106.16,
         "core_hits": [],
         "detail_hits": [
@@ -111,34 +130,34 @@
         "detail_weight": 1.5
       },
       "dqb.reading": {
-        "picked": "Prove triangle similarity",
-        "score": 103.75,
-        "core_hits": [
-          "similarity"
-        ],
-        "detail_hits": [
-          "figure similar"
-        ],
-        "detail_weight": 1.5
-      },
-      "model.reading": {
         "picked": "Corresponding Sides of Similar Triangles (PLIX)",
+        "fit": "fits",
         "score": 93.29,
         "core_hits": [],
         "detail_hits": [
           "corresponding side"
         ],
         "detail_weight": 1.07
+      },
+      "model.reading": {
+        "picked": "Unknown Measures of Similar Figures (Flexbook)",
+        "fit": "fits",
+        "score": 81.94,
+        "core_hits": [],
+        "detail_hits": [
+          "figure similar"
+        ],
+        "detail_weight": 1.5
       }
     },
     "video_pool": {
-      "passed": 9,
+      "passed": 10,
       "runners_up": [
-        "Using similarity to estimate ratio between side lengths",
-        "Side lengths after dilation",
-        "Dilations and properties",
         "Scale drawings",
-        "Corresponding parts of congruent triangles are congruent"
+        "Similar shapes & transformations",
+        "Using similarity to estimate ratio between side lengths",
+        "Dilations and properties",
+        "Side lengths after dilation"
       ],
       "rejected_sample": [
         [
@@ -150,7 +169,19 @@
           "below relevance gate"
         ],
         [
+          "Equivalent ratios",
+          "below relevance gate"
+        ],
+        [
           "Identifying scale factors",
+          "below relevance gate"
+        ],
+        [
+          "Dilations: center",
+          "below relevance gate"
+        ],
+        [
+          "Using right triangle ratios to approximate angle measure",
           "below relevance gate"
         ],
         [
@@ -160,32 +191,20 @@
         [
           "Cousin Fal's shape collection",
           "below relevance gate"
-        ],
-        [
-          "Dilating triangles: find the error",
-          "below relevance gate"
-        ],
-        [
-          "Classifying shapes by lines and angles",
-          "below relevance gate"
-        ],
-        [
-          "Integrating factors 1",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 133
+        "below relevance gate": 130
       }
     },
     "reading_pool": {
-      "passed": 10,
+      "passed": 9,
       "runners_up": [
         "Corresponding Parts of Similar Figures (Flexbook)",
         "Corresponding Parts of Similar Figures Practice",
-        "Prove triangle similarity",
         "Corresponding Sides of Similar Triangles (PLIX)",
-        "Dilations and properties"
+        "Unknown Measures of Similar Figures (Flexbook)",
+        "Unknown Measures of Similar Figures Practice"
       ],
       "rejected_sample": [
         [
@@ -193,36 +212,38 @@
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors (Flexbook)",
+          "Use related volumes",
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors Practice",
+          "Compare volumes with unit cubes",
           "below relevance gate"
         ],
         [
-          "Scale Factor of Similar Polygons (Flexbook)",
+          "Volumes with cross sections: triangles and semicircles",
           "below relevance gate"
         ],
         [
-          "Scale Factor of Similar Polygons Practice",
+          "Volumes with cross sections: squares and rectangles (intro)",
           "below relevance gate"
         ],
         [
-          "Identify scale factor in scale drawings",
+          "Dilations: center",
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors: Washington Monument Model (PLIX)",
+          "Classification of Solid Figures: Naming Shapes (PLIX)",
           "below relevance gate"
         ],
         [
-          "Compare shapes",
+          "Area and Volume of Similar Solids (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140
+        "below relevance gate": 140,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 1
       }
     }
   },
@@ -257,7 +278,10 @@
         "essential",
         "mathematics",
         "measurements",
-        "geometry"
+        "geometry",
+        "dilations",
+        "center",
+        "dilation"
       ],
       "phrases": [
         "centre enlargement",
@@ -270,24 +294,33 @@
         "geometric similarity",
         "uji cups",
         "essential mathematics",
-        "measurements geometry"
+        "measurements geometry",
+        "dilations scale factor",
+        "center dilation",
+        "similar figures ratios",
+        "scale factor"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Using similarity to estimate ratio between side lengths",
-        "score": 154.81,
+        "picked": "Dilations: scale factor",
+        "fit": "fits",
+        "score": 303.34,
         "core_hits": [
-          "similarity"
+          "enlargement"
         ],
         "detail_hits": [
-          "length ratio"
+          "enlargement factor scale",
+          "factor scale",
+          "scale",
+          "factor"
         ],
-        "detail_weight": 0.75
+        "detail_weight": 1.44
       },
       "observe.video": {
         "picked": "Dilations: center",
-        "score": 149.72,
+        "fit": "fits",
+        "score": 253.73,
         "core_hits": [
           "enlargement"
         ],
@@ -299,61 +332,23 @@
       },
       "explain.video": {
         "picked": "Dilations: scale factor",
-        "score": 129.25,
+        "fit": "fits",
+        "score": 303.34,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
+          "enlargement factor scale",
+          "factor scale",
           "scale",
           "factor"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.44
       },
       "dqb.video": {
-        "picked": "Dilating shapes: shrinking",
-        "score": 110.42,
-        "core_hits": [
-          "enlargement"
-        ],
-        "detail_hits": [
-          "centre enlargement",
-          "centre",
-          "scale",
-          "factor"
-        ],
-        "detail_weight": 2.4
-      },
-      "model.video": {
-        "picked": "Dilating triangles: find the error",
-        "score": 102.09,
-        "core_hits": [
-          "enlargement"
-        ],
-        "detail_hits": [
-          "centre enlargement",
-          "centre",
-          "scale",
-          "factor"
-        ],
-        "detail_weight": 2.4
-      },
-      "predict.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 186.71,
-        "core_hits": [
-          "enlargement"
-        ],
-        "detail_hits": [
-          "centre enlargement",
-          "centre",
-          "scale",
-          "factor"
-        ],
-        "detail_weight": 2.4
-      },
-      "observe.reading": {
         "picked": "Dilations: center",
-        "score": 147.8,
+        "fit": "fits",
+        "score": 253.73,
         "core_hits": [
           "enlargement"
         ],
@@ -363,57 +358,99 @@
         ],
         "detail_weight": 1.8
       },
-      "explain.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 186.71,
+      "model.video": {
+        "picked": "Dilating shapes: shrinking",
+        "fit": "partial",
+        "score": 199.14,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
           "centre enlargement",
+          "enlargement factor scale",
+          "factor scale",
+          "enlargement shape",
           "centre",
           "scale",
           "factor"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 3.61
+      },
+      "predict.reading": {
+        "picked": "Dilations: scale factor",
+        "fit": "fits",
+        "score": 448.05,
+        "core_hits": [
+          "enlargement"
+        ],
+        "detail_hits": [
+          "centre enlargement",
+          "enlargement factor scale",
+          "factor scale",
+          "centre",
+          "scale",
+          "factor"
+        ],
+        "detail_weight": 3.24
+      },
+      "observe.reading": {
+        "picked": "Dilations: scale factor",
+        "fit": "fits",
+        "score": 448.05,
+        "core_hits": [
+          "enlargement"
+        ],
+        "detail_hits": [
+          "centre enlargement",
+          "enlargement factor scale",
+          "factor scale",
+          "centre",
+          "scale",
+          "factor"
+        ],
+        "detail_weight": 3.24
+      },
+      "explain.reading": {
+        "picked": "Prove triangle similarity",
+        "fit": "partial",
+        "score": 98.29,
+        "core_hits": [
+          "similarity"
+        ],
+        "detail_hits": [
+          "figure similar"
+        ],
+        "detail_weight": 1.07
       },
       "dqb.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 186.71,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Corresponding Parts of Similar Figures (Flexbook)",
+        "fit": "partial",
+        "score": 96.72,
+        "core_hits": [],
         "detail_hits": [
-          "centre enlargement",
-          "centre",
-          "scale",
-          "factor"
+          "figure similar"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 1.07
       },
       "model.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 186.71,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Corresponding Parts of Similar Figures Practice",
+        "fit": "partial",
+        "score": 96.72,
+        "core_hits": [],
         "detail_hits": [
-          "centre enlargement",
-          "centre",
-          "scale",
-          "factor"
+          "figure similar"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 1.07
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 14,
       "runners_up": [
         "Dilations: center",
-        "Dilations: scale factor",
-        "Dilating shapes: shrinking",
-        "Dilating triangles: find the error",
-        "Dilating shapes: shrinking by 1/2"
+        "Side lengths after dilation",
+        "Dilating shapes: expanding",
+        "Dilations and properties",
+        "Dilating shapes: shrinking"
       ],
       "rejected_sample": [
         [
@@ -421,11 +458,7 @@
           "below relevance gate"
         ],
         [
-          "Object image height and distance relationship",
-          "below relevance gate"
-        ],
-        [
-          "Object image and focal distance relationship (proof of formula)",
+          "Corresponding points and sides of scaled shapes",
           "below relevance gate"
         ],
         [
@@ -437,7 +470,7 @@
           "below relevance gate"
         ],
         [
-          "Ordering by length",
+          "Cousin Fal's shape collection",
           "below relevance gate"
         ],
         [
@@ -445,25 +478,30 @@
           "below relevance gate"
         ],
         [
-          "Side lengths after dilation",
+          "Object image height and distance relationship",
           "below relevance gate"
+        ],
+        [
+          "Using right triangle ratios to approximate angle measure",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 111,
-        "web file not on reference image": 5,
+        "below relevance gate": 105,
+        "judged off-topic (independent reviewer)": 1,
+        "web file not on reference image": 4,
         "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 5
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
       "passed": 9,
       "runners_up": [
         "Dilations: center",
+        "Dilations and properties",
         "Prove triangle similarity",
         "Corresponding Parts of Similar Figures (Flexbook)",
-        "Corresponding Parts of Similar Figures Practice",
-        "Similarity & transformations"
+        "Corresponding Parts of Similar Figures Practice"
       ],
       "rejected_sample": [
         [
@@ -471,7 +509,11 @@
           "below relevance gate"
         ],
         [
-          "Indirect measurement",
+          "Scale Factor of Similar Polygons (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Scale Factor of Similar Polygons Practice",
           "below relevance gate"
         ],
         [
@@ -479,30 +521,26 @@
           "below relevance gate"
         ],
         [
-          "Units of length (cm, m)",
+          "Identify scale factor in scale drawings",
           "below relevance gate"
         ],
         [
-          "Units of length (inch, ft)",
+          "Corresponding sides and points",
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors (Flexbook)",
+          "Find perimeter when given side lengths",
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors Practice",
-          "below relevance gate"
-        ],
-        [
-          "Scale Factor of Similar Polygons (Flexbook)",
+          "Indirect measurement",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 137,
-        "kolibri node not available on reference image": 2,
-        "excluded: answer/exam material": 12
+        "below relevance gate": 132,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 2
       }
     }
   },
@@ -524,6 +562,14 @@
         "construction",
         "similar",
         "figures",
+        "dilations",
+        "fractional",
+        "corresponding",
+        "sides",
+        "dilating",
+        "shapes",
+        "point",
+        "triangles",
         "constructing",
         "images"
       ],
@@ -531,94 +577,128 @@
         "centre enlargement",
         "linear scale factor",
         "image construction",
-        "similar figures"
+        "similar figures",
+        "dilations scale factor",
+        "enlargements centre",
+        "enlargement fractional scale factor",
+        "similar figures corresponding sides",
+        "dilating shapes point",
+        "scale factor similar triangles"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Dilations: center",
-        "score": 155.03,
+        "picked": "Dilations: scale factor",
+        "fit": "fits",
+        "score": 251.34,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
-          "centre enlargement",
-          "image",
-          "centre"
+          "enlargement factor scale",
+          "scale",
+          "factor"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 1.43
       },
       "observe.video": {
-        "picked": "Dilations: scale factor",
-        "score": 129.25,
+        "picked": "Dilating shapes: shrinking",
+        "fit": "fits",
+        "score": 231.88,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
+          "centre enlargement",
+          "enlargement factor scale",
+          "image",
+          "centre",
           "scale",
           "factor"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 3.53
       },
       "explain.video": {
-        "picked": "Dilating shapes: shrinking",
-        "score": 116.2,
+        "picked": "Dilating shapes: expanding",
+        "fit": "fits",
+        "score": 158.59,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
-          "centre enlargement",
+          "enlargement factor scale",
+          "dilating point shape",
           "image",
-          "centre",
           "scale",
           "factor"
         ],
-        "detail_weight": 2.7
+        "detail_weight": 2.36
       },
       "dqb.video": {
-        "picked": "Dilating triangles: find the error",
-        "score": 102.09,
+        "picked": "Dilating shapes: shrinking by 1/2",
+        "fit": "fits",
+        "score": 151.82,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
-          "centre enlargement",
-          "centre",
+          "enlargement factor scale",
+          "image",
           "scale",
           "factor"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 1.73
       },
       "model.video": {
-        "picked": "Dilations: center",
-        "score": 155.03,
+        "picked": "Dilations: scale factor",
+        "fit": "fits",
+        "score": 251.34,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
-          "centre enlargement",
-          "image",
-          "centre"
+          "enlargement factor scale",
+          "scale",
+          "factor"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 1.43
       },
       "predict.reading": {
         "picked": "Dilations: scale factor",
-        "score": 186.71,
+        "fit": "fits",
+        "score": 331.38,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
           "centre enlargement",
+          "enlargement factor scale",
           "centre",
           "scale",
           "factor"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 3.23
       },
       "observe.reading": {
+        "picked": "Dilations: scale factor",
+        "fit": "fits",
+        "score": 331.38,
+        "core_hits": [
+          "enlargement"
+        ],
+        "detail_hits": [
+          "centre enlargement",
+          "enlargement factor scale",
+          "centre",
+          "scale",
+          "factor"
+        ],
+        "detail_weight": 3.23
+      },
+      "explain.reading": {
         "picked": "Dilations: center",
-        "score": 153.04,
+        "fit": "partial",
+        "score": 236.29,
         "core_hits": [
           "enlargement"
         ],
@@ -629,112 +709,104 @@
         ],
         "detail_weight": 2.1
       },
-      "explain.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 186.71,
-        "core_hits": [
-          "enlargement"
-        ],
-        "detail_hits": [
-          "centre enlargement",
-          "centre",
-          "scale",
-          "factor"
-        ],
-        "detail_weight": 2.4
-      },
       "dqb.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 186.71,
+        "picked": "Prove triangle similarity",
+        "fit": "partial",
+        "score": 162.5,
         "core_hits": [
-          "enlargement"
+          "similarity"
         ],
         "detail_hits": [
-          "centre enlargement",
-          "centre",
-          "scale",
-          "factor"
+          "figure similar"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 0.94
       },
       "model.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 186.71,
+        "picked": "Similarity & transformations",
+        "fit": "partial",
+        "score": 78.01,
         "core_hits": [
-          "enlargement"
+          "similarity"
         ],
         "detail_hits": [
-          "centre enlargement",
-          "centre",
-          "scale",
-          "factor"
+          "figure similar"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 0.94
       }
     },
     "video_pool": {
-      "passed": 8,
+      "passed": 7,
       "runners_up": [
-        "Dilations: scale factor",
         "Dilating shapes: shrinking",
-        "Dilating triangles: find the error",
+        "Dilating shapes: expanding",
+        "Dilating shapes: shrinking by 1/2",
         "Side lengths after dilation",
-        "Dilating shapes: shrinking by 1/2"
+        "Dilations: center"
       ],
       "rejected_sample": [
+        [
+          "Corresponding points and sides of scaled shapes",
+          "below relevance gate"
+        ],
+        [
+          "Dilating points",
+          "below relevance gate"
+        ],
+        [
+          "Dilating in 3D",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Intro to triangle similarity",
+          "below relevance gate"
+        ],
         [
           "Scale factors and area",
           "below relevance gate"
         ],
         [
-          "Identifying scale factors",
+          "Triangle similarity postulates/criteria",
           "below relevance gate"
         ],
         [
-          "Interpreting scale factors in drawings",
+          "Using right triangle ratios to approximate angle measure",
           "below relevance gate"
         ],
         [
-          "Factoring polynomials using complex numbers",
-          "below relevance gate"
-        ],
-        [
-          "Common Factors & Greatest Common Factor (GCF) - Example 1",
-          "below relevance gate"
-        ],
-        [
-          "Identifying scale factor in drawings",
-          "below relevance gate"
-        ],
-        [
-          "Identifying transformations",
-          "below relevance gate"
-        ],
-        [
-          "Factoring using polynomial division",
+          "Using similarity to estimate ratio between side lengths",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 115
+        "below relevance gate": 121,
+        "judged off-topic (independent reviewer)": 1,
+        "web file not on reference image": 1
       }
     },
     "reading_pool": {
       "passed": 6,
       "runners_up": [
+        "Dilations and properties",
+        "Dilate triangles",
         "Dilations: center",
         "Prove triangle similarity",
-        "Similarity & transformations",
-        "Dilations and properties",
-        "Dilate triangles"
+        "Similarity & transformations"
       ],
       "rejected_sample": [
+        [
+          "Corresponding sides and points",
+          "below relevance gate"
+        ],
         [
           "Corresponding Parts of Similar Figures (Flexbook)",
           "below relevance gate"
         ],
         [
           "Corresponding Parts of Similar Figures Practice",
+          "below relevance gate"
+        ],
+        [
+          "Corresponding Sides of Similar Triangles (PLIX)",
           "below relevance gate"
         ],
         [
@@ -746,26 +818,16 @@
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors (Flexbook)",
+          "Scale drawings",
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors Practice",
-          "below relevance gate"
-        ],
-        [
-          "Scale Factor of Similar Polygons (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Scale Factor of Similar Polygons Practice",
+          "Similar Sides, Similar Triangles (PLIX)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140,
-        "kolibri node not available on reference image": 4,
-        "excluded: answer/exam material": 7
+        "below relevance gate": 137
       }
     }
   },
@@ -801,9 +863,9 @@
         "mathematics",
         "measurements",
         "geometry",
-        "cup",
-        "label",
-        "need"
+        "ratio",
+        "dilation",
+        "areas"
       ],
       "phrases": [
         "area scale factor",
@@ -814,24 +876,19 @@
         "cross sectional area",
         "pattern recognition",
         "essential mathematics",
-        "measurements geometry"
+        "measurements geometry",
+        "scale factor area",
+        "similar figures area ratio",
+        "dilation scale factor",
+        "areas similar shapes",
+        "perimeter area scaling",
+        "enlargement linear scale factor"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Dilations: scale factor",
-        "score": 129.25,
-        "core_hits": [
-          "enlargement"
-        ],
-        "detail_hits": [
-          "scale",
-          "factor"
-        ],
-        "detail_weight": 0.6
-      },
-      "observe.video": {
         "picked": "Scale factors and area",
+        "fit": "fits",
         "score": 118.52,
         "core_hits": [],
         "detail_hits": [
@@ -842,22 +899,35 @@
         ],
         "detail_weight": 2.4
       },
+      "observe.video": {
+        "picked": "Area and Perimeter of Squares and Rectangles",
+        "fit": "fits",
+        "score": 95.88,
+        "core_hits": [],
+        "detail_hits": [
+          "rectangle",
+          "square",
+          "area"
+        ],
+        "detail_weight": 1.36
+      },
       "explain.video": {
-        "picked": "Making a scale drawing",
-        "score": 86.91,
+        "picked": "Scale factors and area",
+        "fit": "fits",
+        "score": 118.52,
         "core_hits": [],
         "detail_hits": [
           "area factor scale",
           "area",
           "scale",
-          "factor",
-          "need"
+          "factor"
         ],
-        "detail_weight": 2.7
+        "detail_weight": 2.4
       },
       "dqb.video": {
-        "picked": "Measuring rectangles with different unit squares",
-        "score": 84.72,
+        "picked": "Area and Perimeter of Squares and Rectangles",
+        "fit": "fits",
+        "score": 95.88,
         "core_hits": [],
         "detail_hits": [
           "rectangle",
@@ -867,150 +937,154 @@
         "detail_weight": 1.36
       },
       "model.video": {
-        "picked": "Volume with cross sections: squares and rectangles (no graph)",
-        "score": 82.61,
-        "core_hits": [],
-        "detail_hits": [
-          "rectangle",
-          "square",
-          "area"
+        "picked": "Dilations: scale factor",
+        "fit": "partial",
+        "score": 183.02,
+        "core_hits": [
+          "enlargement"
         ],
-        "detail_weight": 1.36
+        "detail_hits": [
+          "enlargement factor scale",
+          "scale",
+          "factor"
+        ],
+        "detail_weight": 0.99
       },
       "predict.reading": {
         "picked": "Dilations: scale factor",
-        "score": 125.57,
+        "fit": "partial",
+        "score": 178.08,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
+          "enlargement factor scale",
           "scale",
           "factor"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 0.99
       },
       "observe.reading": {
-        "picked": "Prove triangle similarity",
-        "score": 98.29,
+        "picked": "Dilations: scale factor",
+        "fit": "partial",
+        "score": 178.08,
         "core_hits": [
-          "similarity"
+          "enlargement"
         ],
         "detail_hits": [
-          "figure similar"
+          "enlargement factor scale",
+          "scale",
+          "factor"
         ],
-        "detail_weight": 1.07
+        "detail_weight": 0.99
       },
       "explain.reading": {
-        "picked": "Construct scale drawings",
-        "score": 86.91,
-        "core_hits": [],
-        "detail_hits": [
-          "area factor scale",
-          "area",
-          "scale",
-          "factor",
-          "need"
+        "picked": "Dilations: scale factor",
+        "fit": "partial",
+        "score": 178.08,
+        "core_hits": [
+          "enlargement"
         ],
-        "detail_weight": 2.7
+        "detail_hits": [
+          "enlargement factor scale",
+          "scale",
+          "factor"
+        ],
+        "detail_weight": 0.99
       },
       "dqb.reading": {
-        "picked": "Similarity & transformations",
-        "score": 79.35,
+        "picked": "Dilations: scale factor",
+        "fit": "partial",
+        "score": 178.08,
         "core_hits": [
-          "similarity"
+          "enlargement"
         ],
         "detail_hits": [
-          "figure similar"
+          "enlargement factor scale",
+          "scale",
+          "factor"
         ],
-        "detail_weight": 1.07
+        "detail_weight": 0.99
       },
       "model.reading": {
         "picked": "Dilations: scale factor",
-        "score": 125.57,
+        "fit": "partial",
+        "score": 178.08,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
+          "enlargement factor scale",
           "scale",
           "factor"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 0.99
       }
     },
     "video_pool": {
-      "passed": 40,
+      "passed": 35,
       "runners_up": [
-        "Scale factors and area",
-        "Making a scale drawing",
-        "Measuring rectangles with different unit squares",
-        "Volume with cross sections: squares and rectangles (no graph)",
-        "Time dilation"
+        "Area and Perimeter of Squares and Rectangles",
+        "Area of Squares and Rectangles - Word Problems",
+        "Dilations: scale factor",
+        "Dilating shapes: expanding",
+        "Dilating shapes: shrinking by 1/2"
       ],
       "rejected_sample": [
         [
+          "Comparing areas and perimeters of rectangles",
+          "below relevance gate"
+        ],
+        [
           "Cavalieri's principle in 3D",
           "below relevance gate"
+        ],
+        [
+          "Geometry - Area and Perimeter - Math Sing-along from Ubongo Kids",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "Measuring rectangles with different unit squares",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Math patterns: toothpicks",
           "below relevance gate"
         ],
         [
-          "Intro to area and unit squares",
-          "below relevance gate"
+          "Volume with cross sections: squares and rectangles (no graph)",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Identifying scale factors",
-          "below relevance gate"
+          "Challenging perimeter problem -dubbed(KY)",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Identifying quadratic patterns",
-          "below relevance gate"
-        ],
-        [
-          "Interpreting scale factors in drawings",
-          "below relevance gate"
-        ],
-        [
-          "Terms & labels in geometry",
-          "below relevance gate"
-        ],
-        [
-          "Comparing areas and perimeters of rectangles",
+          "Area of composite shapes",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 80,
-        "web file not on reference image": 5,
-        "kolibri node not available on reference image": 1,
+        "below relevance gate": 85,
+        "kolibri node not available on reference image": 4,
+        "judged off-topic (independent reviewer)": 3,
+        "web file not on reference image": 4,
+        "conflicting sub-topic": 2,
         "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 39,
+      "passed": 36,
       "runners_up": [
         "Prove triangle similarity",
+        "Area and Perimeter of Squares and Rectangles Practice",
+        "Find Perimeter and Area of Squares and Rectangles Using Formulas (Flexbook)",
         "Construct scale drawings",
-        "Similarity & transformations",
-        "Corresponding Parts of Similar Figures (Flexbook)",
-        "Corresponding Parts of Similar Figures Practice"
+        "Similarity & transformations"
       ],
       "rejected_sample": [
         [
-          "Represent rectangle measurements",
-          "below relevance gate"
-        ],
-        [
           "Area & perimeter of rectangles word problems",
-          "below relevance gate"
-        ],
-        [
-          "Area Model Introduction",
-          "below relevance gate"
-        ],
-        [
-          "Area Model Decimals",
           "below relevance gate"
         ],
         [
@@ -1018,21 +1092,35 @@
           "below relevance gate"
         ],
         [
-          "Partitioning Composite Figures into Rectangles to Find Area 1 Practice",
+          "Compare area and perimeter",
           "below relevance gate"
         ],
         [
-          "Volume by multiplying area of base times height",
+          "Represent rectangle measurements",
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors (Flexbook)",
+          "Volumes with cross sections: squares and rectangles (intro)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Area & perimeter on the coordinate plane",
+          "below relevance gate"
+        ],
+        [
+          "Area Model Introduction",
+          "below relevance gate"
+        ],
+        [
+          "Dilations: center",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 77,
-        "excluded: answer/exam material": 35
+        "below relevance gate": 104,
+        "judged off-topic (independent reviewer)": 1,
+        "excluded: answer/exam material": 4,
+        "conflicting sub-topic": 2
       }
     }
   },
@@ -1066,11 +1154,11 @@
         "measurements",
         "geometry",
         "chain",
-        "large",
-        "holds",
-        "eight",
-        "times",
-        "much"
+        "ratio",
+        "dilation",
+        "cylinders",
+        "rectangular",
+        "prisms"
       ],
       "phrases": [
         "volume scale factor",
@@ -1084,88 +1172,41 @@
         "area scale factor",
         "essential mathematics",
         "measurements geometry",
-        "scale factor chain"
+        "scale factor chain",
+        "volume similar solids",
+        "scale factor volume",
+        "volume ratio cubed"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Area and Volume of Similar Solids Principles",
-        "score": 123.91,
+        "fit": "fits",
+        "score": 170.84,
         "core_hits": [],
         "detail_hits": [
           "similar solid",
+          "similar solid volume",
           "volume"
         ],
-        "detail_weight": 1.37
+        "detail_weight": 1.79
       },
       "observe.video": {
-        "picked": "Dilations: scale factor",
-        "score": 103.38,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Area and Volume of Similar Solids Principles",
+        "fit": "fits",
+        "score": 170.84,
+        "core_hits": [],
         "detail_hits": [
-          "scale",
-          "factor"
+          "similar solid",
+          "similar solid volume",
+          "volume"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.79
       },
       "explain.video": {
-        "picked": "Time dilation",
-        "score": 77.37,
-        "core_hits": [
-          "enlargement"
-        ],
-        "detail_hits": [
-          "time"
-        ],
-        "detail_weight": 0.3
-      },
-      "dqb.video": {
-        "picked": "What is Time Dilation?",
-        "score": 76.18,
-        "core_hits": [
-          "enlargement"
-        ],
-        "detail_hits": [
-          "time"
-        ],
-        "detail_weight": 0.3
-      },
-      "model.video": {
-        "picked": "Scale factors and area",
-        "score": 76.17,
-        "core_hits": [],
-        "detail_hits": [
-          "area factor scale",
-          "scale",
-          "factor"
-        ],
-        "detail_weight": 1.14
-      },
-      "predict.reading": {
-        "picked": "Area and Volume of Similar Solids (Flexbook)",
-        "score": 123.91,
-        "core_hits": [],
-        "detail_hits": [
-          "similar solid",
-          "volume"
-        ],
-        "detail_weight": 1.37
-      },
-      "observe.reading": {
-        "picked": "Area and Volume of Similar Solids Practice",
-        "score": 123.91,
-        "core_hits": [],
-        "detail_hits": [
-          "similar solid",
-          "volume"
-        ],
-        "detail_weight": 1.37
-      },
-      "explain.reading": {
         "picked": "Dilations: scale factor",
-        "score": 100.66,
+        "fit": "partial",
+        "score": 147.83,
         "core_hits": [
           "enlargement"
         ],
@@ -1175,76 +1216,142 @@
         ],
         "detail_weight": 0.6
       },
-      "dqb.reading": {
-        "picked": "Solid geometry word problems",
-        "score": 85.45,
-        "core_hits": [],
-        "detail_hits": [
-          "cylinder volume",
-          "geometry",
-          "volume"
-        ],
-        "detail_weight": 1.24
-      },
-      "model.reading": {
-        "picked": "Volume by multiplying area of base times height",
-        "score": 83.8,
+      "dqb.video": {
+        "picked": "Measuring volume as area times length",
+        "fit": "partial",
+        "score": 104.13,
         "core_hits": [],
         "detail_hits": [
           "cuboid volume",
+          "prism rectangular volume",
           "volume",
           "time"
         ],
-        "detail_weight": 1.28
+        "detail_weight": 1.64
+      },
+      "model.video": {
+        "picked": "Volume word problem: water tank",
+        "fit": "partial",
+        "score": 93.49,
+        "core_hits": [],
+        "detail_hits": [
+          "cuboid volume",
+          "prism rectangular volume",
+          "volume"
+        ],
+        "detail_weight": 1.34
+      },
+      "predict.reading": {
+        "picked": "Area and Volume of Similar Solids (Flexbook)",
+        "fit": "fits",
+        "score": 170.84,
+        "core_hits": [],
+        "detail_hits": [
+          "similar solid",
+          "similar solid volume",
+          "volume"
+        ],
+        "detail_weight": 1.79
+      },
+      "observe.reading": {
+        "picked": "Area and Volume of Similar Solids Practice",
+        "fit": "fits",
+        "score": 170.84,
+        "core_hits": [],
+        "detail_hits": [
+          "similar solid",
+          "similar solid volume",
+          "volume"
+        ],
+        "detail_weight": 1.79
+      },
+      "explain.reading": {
+        "picked": "Area and Volume of Similar Solids (Flexbook)",
+        "fit": "fits",
+        "score": 170.84,
+        "core_hits": [],
+        "detail_hits": [
+          "similar solid",
+          "similar solid volume",
+          "volume"
+        ],
+        "detail_weight": 1.79
+      },
+      "dqb.reading": {
+        "picked": "Area and Volume of Similar Solids Practice",
+        "fit": "fits",
+        "score": 170.84,
+        "core_hits": [],
+        "detail_hits": [
+          "similar solid",
+          "similar solid volume",
+          "volume"
+        ],
+        "detail_weight": 1.79
+      },
+      "model.reading": {
+        "picked": "Dilations: scale factor",
+        "fit": "partial",
+        "score": 144.1,
+        "core_hits": [
+          "enlargement"
+        ],
+        "detail_hits": [
+          "scale",
+          "factor"
+        ],
+        "detail_weight": 0.6
       }
     },
     "video_pool": {
       "passed": 16,
       "runners_up": [
+        "How volume changes from changing dimensions",
         "Dilations: scale factor",
-        "Time dilation",
-        "What is Time Dilation?",
-        "Scale factors and area",
-        "Measuring volume as area times length"
+        "Measuring volume as area times length",
+        "Volume word problem: water tank",
+        "Volume in unit cubes by decomposing shape"
       ],
       "rejected_sample": [
+        [
+          "Volume of a rectangular prism",
+          "below relevance gate"
+        ],
         [
           "Cylinder volume & surface area",
           "below relevance gate"
         ],
         [
-          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
-          "web file not on reference image"
-        ],
-        [
-          "Volume with cross sections: triangle",
+          "Volume of a rectangular prism: word problem",
           "below relevance gate"
         ],
         [
-          "Geometry - Area and Perimeter - Math Sing-along from Ubongo Kids",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Surface area of a box (cuboid)",
+          "Surface area using a net: rectangular prism",
           "below relevance gate"
         ],
         [
-          "Identifying scale factors",
+          "Volume of a rectangular prism: fractional dimensions",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Recognizing common 3D shapes",
           "below relevance gate"
         ],
         [
-          "Interpreting scale factors in drawings",
-          "below relevance gate"
+          "Volume with fractional cubes",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Math block",
+          "Volume of triangular prism & cube",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 113,
+        "below relevance gate": 106,
+        "judged off-topic (independent reviewer)": 4,
         "web file not on reference image": 5,
-        "kolibri node not available on reference image": 9,
+        "kolibri node not available on reference image": 6,
+        "conflicting sub-topic": 2,
         "excluded: answer/exam material": 1
       }
     },
@@ -1252,10 +1359,10 @@
       "passed": 11,
       "runners_up": [
         "Area and Volume of Similar Solids Practice",
+        "Similar Solids (PLIX)",
+        "Similar Solids Practice",
         "Dilations: scale factor",
-        "Solid geometry word problems",
-        "Volume by multiplying area of base times height",
-        "Similar Solids (PLIX)"
+        "Volume by multiplying area of base times height"
       ],
       "rejected_sample": [
         [
@@ -1263,11 +1370,15 @@
           "below relevance gate"
         ],
         [
-          "Apply volume of solids",
+          "Volume of Rectangular Prisms (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Compare volumes with unit cubes",
+          "Volume of Rectangular Prisms Practice",
+          "below relevance gate"
+        ],
+        [
+          "Apply volume of solids",
           "below relevance gate"
         ],
         [
@@ -1275,26 +1386,22 @@
           "below relevance gate"
         ],
         [
-          "Surface Area and Volume of Solids Practice",
+          "Volume of rectangular prisms with unit cubes",
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors (Flexbook)",
+          "Volume as area of base times height",
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors Practice",
-          "below relevance gate"
-        ],
-        [
-          "Scale Factor of Similar Polygons (Flexbook)",
+          "Volume of prisms and pyramids",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 133,
-        "kolibri node not available on reference image": 2,
-        "excluded: answer/exam material": 20
+        "below relevance gate": 140,
+        "conflicting sub-topic": 2,
+        "kolibri node not available on reference image": 2
       }
     }
   },
@@ -1346,12 +1453,16 @@
         "nyama choma pot",
         "finger vote",
         "cold call",
-        "formative assessment"
+        "formative assessment",
+        "similar solids volume ratio",
+        "area volume scale factors",
+        "scale factor dilations"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Area and Volume of Similar Solids Principles",
+        "fit": "fits",
         "score": 123.38,
         "core_hits": [],
         "detail_hits": [
@@ -1362,20 +1473,35 @@
         "detail_weight": 1.35
       },
       "observe.video": {
+        "picked": "Area and Volume of Similar Solids Principles",
+        "fit": "fits",
+        "score": 123.38,
+        "core_hits": [],
+        "detail_hits": [
+          "similar solid",
+          "area",
+          "volume"
+        ],
+        "detail_weight": 1.35
+      },
+      "explain.video": {
         "picked": "Dilations: scale factor",
-        "score": 103.38,
+        "fit": "partial",
+        "score": 227.27,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
+          "enlargement factor scale",
           "scale",
           "factor"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 0.91
       },
-      "explain.video": {
+      "dqb.video": {
         "picked": "Scale factors and area",
-        "score": 93.36,
+        "fit": "partial",
+        "score": 113.35,
         "core_hits": [],
         "detail_hits": [
           "area factor scale",
@@ -1385,30 +1511,23 @@
         ],
         "detail_weight": 2.15
       },
-      "dqb.video": {
-        "picked": "Area and Volume of Similar Solids Principles",
-        "score": 123.38,
-        "core_hits": [],
-        "detail_hits": [
-          "similar solid",
-          "area",
-          "volume"
-        ],
-        "detail_weight": 1.35
-      },
       "model.video": {
-        "picked": "Area and Volume of Similar Solids Principles",
-        "score": 123.38,
-        "core_hits": [],
-        "detail_hits": [
-          "similar solid",
-          "area",
-          "volume"
+        "picked": "Dilating triangles: find the error",
+        "fit": "partial",
+        "score": 62.57,
+        "core_hits": [
+          "enlargement"
         ],
-        "detail_weight": 1.35
+        "detail_hits": [
+          "enlargement factor scale",
+          "scale",
+          "factor"
+        ],
+        "detail_weight": 0.91
       },
       "predict.reading": {
         "picked": "Area and Volume of Similar Solids (Flexbook)",
+        "fit": "fits",
         "score": 123.38,
         "core_hits": [],
         "detail_hits": [
@@ -1420,6 +1539,7 @@
       },
       "observe.reading": {
         "picked": "Area and Volume of Similar Solids Practice",
+        "fit": "fits",
         "score": 123.38,
         "core_hits": [],
         "detail_hits": [
@@ -1430,19 +1550,20 @@
         "detail_weight": 1.35
       },
       "explain.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 100.66,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Area and Volume of Similar Solids (Flexbook)",
+        "fit": "fits",
+        "score": 123.38,
+        "core_hits": [],
         "detail_hits": [
-          "scale",
-          "factor"
+          "similar solid",
+          "area",
+          "volume"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.35
       },
       "dqb.reading": {
-        "picked": "Area and Volume of Similar Solids (Flexbook)",
+        "picked": "Area and Volume of Similar Solids Practice",
+        "fit": "fits",
         "score": 123.38,
         "core_hits": [],
         "detail_hits": [
@@ -1453,27 +1574,50 @@
         "detail_weight": 1.35
       },
       "model.reading": {
-        "picked": "Area and Volume of Similar Solids (Flexbook)",
-        "score": 123.38,
-        "core_hits": [],
-        "detail_hits": [
-          "similar solid",
-          "area",
-          "volume"
+        "picked": "Dilations: scale factor",
+        "fit": "partial",
+        "score": 220.01,
+        "core_hits": [
+          "enlargement"
         ],
-        "detail_weight": 1.35
+        "detail_hits": [
+          "enlargement factor scale",
+          "scale",
+          "factor"
+        ],
+        "detail_weight": 0.91
       }
     },
     "video_pool": {
-      "passed": 11,
+      "passed": 10,
       "runners_up": [
+        "Making a scale drawing",
         "Dilations: scale factor",
         "Scale factors and area",
-        "Making a scale drawing",
-        "Dilating shapes: shrinking",
-        "Dilating shapes: shrinking by 1/2"
+        "Dilating triangles: find the error",
+        "Dilating shapes: shrinking"
       ],
       "rejected_sample": [
+        [
+          "Cell size",
+          "below relevance gate"
+        ],
+        [
+          "Identifying scale factors",
+          "below relevance gate"
+        ],
+        [
+          "Dilations: center",
+          "below relevance gate"
+        ],
+        [
+          "Surface area to volume ratio of cells",
+          "below relevance gate"
+        ],
+        [
+          "Interpreting scale factors in drawings",
+          "below relevance gate"
+        ],
         [
           "Volume word problem: water tank",
           "below relevance gate"
@@ -1485,51 +1629,24 @@
         [
           "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
           "web file not on reference image"
-        ],
-        [
-          "Identifying scale factors",
-          "below relevance gate"
-        ],
-        [
-          "Interpreting scale factors in drawings",
-          "below relevance gate"
-        ],
-        [
-          "2 Digit Division With Remainders ｜ Grade 4 Math ✅💯 #Maths #Division #Education #Mathshorts",
-          "web file not on reference image"
-        ],
-        [
-          "Volumes of cones intuition",
-          "below relevance gate"
-        ],
-        [
-          "Cell size",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 119,
+        "below relevance gate": 120,
         "web file not on reference image": 6,
+        "judged off-topic (independent reviewer)": 1,
         "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 14
+        "kolibri node not available on reference image": 5
       }
     },
     "reading_pool": {
       "passed": 4,
       "runners_up": [
         "Area and Volume of Similar Solids Practice",
-        "Dilations: scale factor",
-        "Construct scale drawings"
+        "Construct scale drawings",
+        "Dilations: scale factor"
       ],
       "rejected_sample": [
-        [
-          "Similar Solids (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Similar Solids Practice",
-          "below relevance gate"
-        ],
         [
           "Volume and surface area of cylinders",
           "below relevance gate"
@@ -1539,26 +1656,33 @@
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors (Flexbook)",
+          "Similar Solids (PLIX)",
           "below relevance gate"
         ],
         [
-          "Similar Polygons and Scale Factors Practice",
+          "Similar Solids Practice",
           "below relevance gate"
         ],
         [
-          "Scale Factor of Similar Polygons (Flexbook)",
+          "Compare volumes with unit cubes",
           "below relevance gate"
         ],
         [
-          "Scale Factor of Similar Polygons Practice",
+          "Volume and surface area word problems",
+          "below relevance gate"
+        ],
+        [
+          "Use related volumes",
+          "below relevance gate"
+        ],
+        [
+          "Dilations: center",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 120,
-        "kolibri node not available on reference image": 41,
-        "excluded: answer/exam material": 20
+        "below relevance gate": 148,
+        "kolibri node not available on reference image": 5
       }
     }
   },
@@ -1591,10 +1715,12 @@
         "mandazi",
         "uji",
         "cups",
-        "problem",
-        "solving",
-        "apply",
-        "communicate"
+        "dilation",
+        "factors",
+        "ratio",
+        "distance",
+        "proportions",
+        "problem"
       ],
       "phrases": [
         "linear scale factor",
@@ -1606,29 +1732,31 @@
         "similar solids",
         "squared cubed",
         "real life applications",
-        "uji cups"
+        "uji cups",
+        "scale factor similar figures",
+        "enlargement dilation",
+        "area volume scale factors",
+        "similar solids volume ratio",
+        "map scale distance"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Dilations: scale factor",
-        "score": 189.4,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Scale factors and area",
+        "fit": "fits",
+        "score": 107.77,
+        "core_hits": [],
         "detail_hits": [
-          "scale",
-          "map scale",
-          "map"
+          "area factor scale",
+          "scale"
         ],
-        "detail_weight": 1.79
+        "detail_weight": 1.88
       },
       "observe.video": {
-        "picked": "Dilations: scale factor",
-        "score": 189.4,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Scale drawing: centimeters to kilometers",
+        "fit": "fits",
+        "score": 80.17,
+        "core_hits": [],
         "detail_hits": [
           "scale",
           "map scale",
@@ -1637,37 +1765,33 @@
         "detail_weight": 1.79
       },
       "explain.video": {
-        "picked": "Dilations: scale factor",
-        "score": 189.4,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Solving a scale drawing word problem",
+        "fit": "fits",
+        "score": 73.7,
+        "core_hits": [],
         "detail_hits": [
           "scale",
-          "map scale",
-          "map"
+          "problem",
+          "solving"
         ],
-        "detail_weight": 1.79
+        "detail_weight": 1.23
       },
       "dqb.video": {
-        "picked": "Dilations: scale factor",
-        "score": 189.4,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Scale factors and area",
+        "fit": "fits",
+        "score": 107.77,
+        "core_hits": [],
         "detail_hits": [
-          "scale",
-          "map scale",
-          "map"
+          "area factor scale",
+          "scale"
         ],
-        "detail_weight": 1.79
+        "detail_weight": 1.88
       },
       "model.video": {
-        "picked": "Dilations: scale factor",
-        "score": 189.4,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Scale drawing: centimeters to kilometers",
+        "fit": "fits",
+        "score": 80.17,
+        "core_hits": [],
         "detail_hits": [
           "scale",
           "map scale",
@@ -1676,50 +1800,45 @@
         "detail_weight": 1.79
       },
       "predict.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 183.66,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Use Scale Factor When Problem Solving (Flexbook)",
+        "fit": "fits",
+        "score": 82.23,
+        "core_hits": [],
         "detail_hits": [
           "scale",
-          "map scale",
-          "map"
+          "problem",
+          "solving"
         ],
-        "detail_weight": 1.79
+        "detail_weight": 1.23
       },
       "observe.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 183.66,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Use Unit Scale When Problem Solving (Flexbook)",
+        "fit": "fits",
+        "score": 60.81,
+        "core_hits": [],
         "detail_hits": [
           "scale",
-          "map scale",
-          "map"
+          "problem",
+          "solving"
         ],
-        "detail_weight": 1.79
+        "detail_weight": 1.23
       },
       "explain.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 183.66,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Construct scale drawings",
+        "fit": "fits",
+        "score": 55.74,
+        "core_hits": [],
         "detail_hits": [
-          "scale",
-          "map scale",
-          "map"
+          "area factor scale",
+          "scale"
         ],
-        "detail_weight": 1.79
+        "detail_weight": 1.88
       },
       "dqb.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 183.66,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Reading Maps, Legends/Scale Practice",
+        "fit": "fits",
+        "score": 53.16,
+        "core_hits": [],
         "detail_hits": [
           "scale",
           "map scale",
@@ -1728,27 +1847,26 @@
         "detail_weight": 1.79
       },
       "model.reading": {
-        "picked": "Dilations: scale factor",
-        "score": 183.66,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Use Scale Factor When Problem Solving (Flexbook)",
+        "fit": "fits",
+        "score": 82.23,
+        "core_hits": [],
         "detail_hits": [
           "scale",
-          "map scale",
-          "map"
+          "problem",
+          "solving"
         ],
-        "detail_weight": 1.79
+        "detail_weight": 1.23
       }
     },
     "video_pool": {
-      "passed": 16,
+      "passed": 18,
       "runners_up": [
-        "Scale factors and area",
-        "Challenging similarity problem",
+        "Scale drawing: centimeters to kilometers",
         "Solving a scale drawing word problem",
-        "Challenging similarity problem -dubbed(KY)",
-        "Congruence and similarity — Basic example"
+        "Making a scale drawing",
+        "Dilations: scale factor",
+        "Challenging similarity problem"
       ],
       "rejected_sample": [
         [
@@ -1756,7 +1874,15 @@
           "below relevance gate"
         ],
         [
+          "Proportion word problem: cookies",
+          "below relevance gate"
+        ],
+        [
           "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
+          "below relevance gate"
+        ],
+        [
+          "Writing proportions example",
           "below relevance gate"
         ],
         [
@@ -1764,39 +1890,31 @@
           "below relevance gate"
         ],
         [
+          "Dilations: center",
+          "below relevance gate"
+        ],
+        [
+          "Solving ratio problems with tables",
+          "below relevance gate"
+        ],
+        [
           "Interpreting scale factors in drawings",
-          "below relevance gate"
-        ],
-        [
-          "Rational number word problem: ice",
-          "below relevance gate"
-        ],
-        [
-          "Areas of Rectangular Composite Figures Challenge - Word Problems",
-          "below relevance gate"
-        ],
-        [
-          "Using related volumes",
-          "below relevance gate"
-        ],
-        [
-          "Solving Mixture Problems by Substitution: A Sample Application",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 121,
-        "kolibri node not available on reference image": 6
+        "below relevance gate": 114,
+        "kolibri node not available on reference image": 7
       }
     },
     "reading_pool": {
       "passed": 8,
       "runners_up": [
-        "Similarity & transformations",
-        "Prove triangle similarity",
-        "Use Scale Factor When Problem Solving (Flexbook)",
         "Use Unit Scale When Problem Solving (Flexbook)",
-        "Construct scale drawings"
+        "Construct scale drawings",
+        "Reading Maps, Legends/Scale Practice",
+        "Dilations: scale factor",
+        "Similarity & transformations"
       ],
       "rejected_sample": [
         [
@@ -1809,6 +1927,10 @@
         ],
         [
           "Apply volume of solids",
+          "below relevance gate"
+        ],
+        [
+          "Proportion word problems",
           "below relevance gate"
         ],
         [
@@ -1826,14 +1948,10 @@
         [
           "Compare volumes with unit cubes",
           "below relevance gate"
-        ],
-        [
-          "Corresponding Parts of Similar Figures (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 147
+        "below relevance gate": 143
       }
     }
   },
@@ -1886,23 +2004,25 @@
         "similar solids",
         "surface area ratio",
         "volume ratio",
-        "essential mathematics"
+        "essential mathematics",
+        "similar solids volume ratio",
+        "area scale factor"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Dilations: center",
-        "score": 101.91,
-        "core_hits": [
-          "enlargement"
-        ],
+        "picked": "Scale factors and area",
+        "fit": "fits",
+        "score": 94.75,
+        "core_hits": [],
         "detail_hits": [
-          "centre enlargement"
+          "area factor scale"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.25
       },
       "observe.video": {
         "picked": "Scale factors and area",
+        "fit": "fits",
         "score": 94.75,
         "core_hits": [],
         "detail_hits": [
@@ -1911,8 +2031,9 @@
         "detail_weight": 1.25
       },
       "explain.video": {
-        "picked": "Dilating triangles: find the error",
-        "score": 74.14,
+        "picked": "Dilations: center",
+        "fit": "partial",
+        "score": 148.65,
         "core_hits": [
           "enlargement"
         ],
@@ -1922,92 +2043,110 @@
         "detail_weight": 0.83
       },
       "dqb.video": {
-        "picked": "Dilating shapes: shrinking",
-        "score": 64.99,
+        "picked": "Dilating triangles: find the error",
+        "fit": "partial",
+        "score": 79.3,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
-          "centre enlargement"
+          "centre enlargement",
+          "enlargement factor scale"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.12
       },
       "model.video": {
-        "picked": "Dilations: center",
-        "score": 101.91,
+        "picked": "Dilating shapes: shrinking",
+        "fit": "partial",
+        "score": 69.51,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
-          "centre enlargement"
+          "centre enlargement",
+          "enlargement factor scale"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.12
       },
       "predict.reading": {
         "picked": "Dilations: scale factor",
-        "score": 154.38,
+        "fit": "partial",
+        "score": 260.73,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
-          "centre enlargement"
+          "centre enlargement",
+          "enlargement factor scale"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.12
       },
       "observe.reading": {
-        "picked": "Dilations: center",
-        "score": 100.7,
+        "picked": "Dilations: scale factor",
+        "fit": "partial",
+        "score": 260.73,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
-          "centre enlargement"
+          "centre enlargement",
+          "enlargement factor scale"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.12
       },
       "explain.reading": {
-        "picked": "Prove triangle similarity",
-        "score": 96.64,
+        "picked": "Dilations: scale factor",
+        "fit": "partial",
+        "score": 260.73,
         "core_hits": [
-          "similarity"
+          "enlargement"
         ],
         "detail_hits": [
-          "figure similar"
+          "centre enlargement",
+          "enlargement factor scale"
         ],
-        "detail_weight": 0.94
+        "detail_weight": 1.12
       },
       "dqb.reading": {
         "picked": "Dilations: scale factor",
-        "score": 154.38,
+        "fit": "partial",
+        "score": 260.73,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
-          "centre enlargement"
+          "centre enlargement",
+          "enlargement factor scale"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.12
       },
       "model.reading": {
         "picked": "Dilations: scale factor",
-        "score": 154.38,
+        "fit": "partial",
+        "score": 260.73,
         "core_hits": [
           "enlargement"
         ],
         "detail_hits": [
-          "centre enlargement"
+          "centre enlargement",
+          "enlargement factor scale"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.12
       }
     },
     "video_pool": {
       "passed": 5,
       "runners_up": [
-        "Scale factors and area",
+        "Dilations: center",
         "Dilating triangles: find the error",
         "Dilating shapes: shrinking",
         "Making a scale drawing"
       ],
       "rejected_sample": [
+        [
+          "Dilations: scale factor",
+          "below relevance gate"
+        ],
         [
           "Area and Volume of Similar Solids Principles",
           "below relevance gate"
@@ -2025,10 +2164,6 @@
           "below relevance gate"
         ],
         [
-          "Dilations: scale factor",
-          "below relevance gate"
-        ],
-        [
           "Surface area using a net: rectangular prism",
           "below relevance gate"
         ],
@@ -2042,7 +2177,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 122,
+        "below relevance gate": 121,
         "web file not on reference image": 5,
         "excluded: answer/exam material": 1,
         "kolibri node not available on reference image": 7

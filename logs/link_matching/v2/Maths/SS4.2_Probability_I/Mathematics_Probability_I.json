@@ -31,7 +31,8 @@
         "large",
         "uncertainty",
         "mathematics",
-        "stall"
+        "outcomes",
+        "simple"
       ],
       "phrases": [
         "experimental probability",
@@ -43,12 +44,72 @@
         "gikomba market",
         "coin flip",
         "bottle cap",
-        "law large"
+        "law large",
+        "experimental probability",
+        "relative frequency probability",
+        "sample space outcomes",
+        "law large",
+        "probability simple events"
       ]
     },
     "slots": {
       "predict.video": {
+        "picked": "Experimental probability",
+        "fit": "fits",
+        "score": 165.25,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "experimental probability",
+          "event",
+          "event probability",
+          "experimental"
+        ],
+        "detail_weight": 2.7
+      },
+      "observe.video": {
+        "picked": "Simple probability: yellow marble",
+        "fit": "fits",
+        "score": 102.37,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "outcome"
+        ],
+        "detail_weight": 0.5
+      },
+      "explain.video": {
+        "picked": "Experimental probability",
+        "fit": "fits",
+        "score": 165.25,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "experimental probability",
+          "event",
+          "event probability",
+          "experimental"
+        ],
+        "detail_weight": 2.7
+      },
+      "dqb.video": {
+        "picked": "Simple probability: yellow marble",
+        "fit": "fits",
+        "score": 102.37,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "outcome"
+        ],
+        "detail_weight": 0.5
+      },
+      "model.video": {
         "picked": "Random numbers for experimental probability",
+        "fit": "partial",
         "score": 237.37,
         "core_hits": [
           "probability"
@@ -59,69 +120,24 @@
         ],
         "detail_weight": 1.8
       },
-      "observe.video": {
-        "picked": "Theoretical probability distribution example: tables",
-        "score": 221.73,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "sample space",
-          "event"
-        ],
-        "detail_weight": 1.49
-      },
-      "explain.video": {
-        "picked": "Probability of a compound event",
-        "score": 169.55,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "sample space",
-          "event"
-        ],
-        "detail_weight": 1.49
-      },
-      "dqb.video": {
-        "picked": "Experimental probability",
-        "score": 159.25,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "experimental probability",
-          "event",
-          "experimental"
-        ],
-        "detail_weight": 2.36
-      },
-      "model.video": {
-        "picked": "Constructing a probability distribution for random variable",
-        "score": 148.18,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "coin flip"
-        ],
-        "detail_weight": 0.5
-      },
       "predict.reading": {
         "picked": "Experimental probability",
-        "score": 160.1,
+        "fit": "fits",
+        "score": 166.13,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "experimental probability",
           "event",
+          "event probability",
           "experimental"
         ],
-        "detail_weight": 2.36
+        "detail_weight": 2.7
       },
       "observe.reading": {
         "picked": "Use Simulations to Explore Experimental Probability (Flexbook)",
+        "fit": "fits",
         "score": 143.38,
         "core_hits": [
           "probability"
@@ -133,17 +149,21 @@
         "detail_weight": 1.8
       },
       "explain.reading": {
-        "picked": "Create two-way relative frequency tables",
-        "score": 155.13,
-        "core_hits": [],
-        "detail_hits": [
-          "frequency relative",
-          "frequency table"
+        "picked": "Theoretical and Experimental Probability (Flexbook)",
+        "fit": "fits",
+        "score": 146.32,
+        "core_hits": [
+          "probability"
         ],
-        "detail_weight": 1.93
+        "detail_hits": [
+          "experimental probability",
+          "experimental"
+        ],
+        "detail_weight": 1.8
       },
       "dqb.reading": {
-        "picked": "Theoretical and Experimental Probability (Flexbook)",
+        "picked": "Theoretical and Experimental Probability Practice",
+        "fit": "fits",
         "score": 146.32,
         "core_hits": [
           "probability"
@@ -155,28 +175,47 @@
         "detail_weight": 1.8
       },
       "model.reading": {
-        "picked": "Theoretical and Experimental Probability Practice",
-        "score": 146.32,
+        "picked": "Experimental probability",
+        "fit": "fits",
+        "score": 166.13,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "experimental probability",
+          "event",
+          "event probability",
           "experimental"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 2.7
       }
     },
     "video_pool": {
-      "passed": 36,
+      "passed": 29,
       "runners_up": [
-        "Theoretical probability distribution example: tables",
-        "Probability of a compound event",
-        "Experimental probability",
-        "Constructing a probability distribution for random variable",
-        "Two-way relative frequency tables"
+        "Simple probability: yellow marble",
+        "Random numbers for experimental probability",
+        "Sample spaces for compound events",
+        "\"At least one\" probability with coin flipping",
+        "Probability with counting outcomes"
       ],
       "rejected_sample": [
+        [
+          "Theoretical probability distribution example: tables",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Two-way relative frequency tables",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Probability of a compound event",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Constructing a probability distribution for random variable",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Compare rational numbers using a number line",
           "below relevance gate"
@@ -192,25 +231,10 @@
         [
           "Law of large numbers -dubbed(KY)",
           "below relevance gate"
-        ],
-        [
-          "Adding and subtracting on number line word problems",
-          "below relevance gate"
-        ],
-        [
-          "Mixed numbers on a number line",
-          "below relevance gate"
-        ],
-        [
-          "Comparing decimal numbers on a number line",
-          "below relevance gate"
-        ],
-        [
-          "Fractions greater than 1 on the number line",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "judged off-topic (independent reviewer)": 8,
         "below relevance gate": 103,
         "web file not on reference image": 5,
         "kolibri node not available on reference image": 4,
@@ -218,13 +242,13 @@
       }
     },
     "reading_pool": {
-      "passed": 25,
+      "passed": 24,
       "runners_up": [
-        "Create two-way relative frequency tables",
         "Theoretical and Experimental Probability (Flexbook)",
         "Theoretical and Experimental Probability Practice",
         "Use Simulations to Explore Experimental Probability (Flexbook)",
-        "Probabilities of compound events"
+        "Simple probability",
+        "Making predictions with probability"
       ],
       "rejected_sample": [
         [
@@ -262,7 +286,8 @@
       ],
       "rejected_by_reason": {
         "below relevance gate": 126,
-        "kolibri node not available on reference image": 3
+        "kolibri node not available on reference image": 4,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -296,6 +321,8 @@
         "graph",
         "law",
         "large",
+        "theoretical",
+        "event",
         "more",
         "patterns"
       ],
@@ -309,82 +336,100 @@
         "total trials",
         "mama njeri",
         "probability scale",
-        "law large"
+        "law large",
+        "experimental probability",
+        "relative frequency probability",
+        "law large",
+        "theoretical experimental probability",
+        "probability event"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Random numbers for experimental probability",
-        "score": 138.92,
+        "picked": "Experimental probability",
+        "fit": "fits",
+        "score": 155.72,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "experimental probability",
+          "event probability",
           "experimental"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 2.16
       },
       "observe.video": {
-        "picked": "Experimental probability",
-        "score": 119.44,
+        "picked": "Experimental versus theoretical probability simulation",
+        "fit": "fits",
+        "score": 131.95,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "experimental probability",
+          "experimental probability theoretical",
           "experimental"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 2.17
       },
       "explain.video": {
-        "picked": "Analyzing a cumulative relative frequency graph",
-        "score": 100.95,
-        "core_hits": [],
-        "detail_hits": [
-          "frequency relative",
-          "graph"
+        "picked": "Probability without equally likely events",
+        "fit": "fits",
+        "score": 128.52,
+        "core_hits": [
+          "probability"
         ],
-        "detail_weight": 1.54
+        "detail_hits": [
+          "event probability"
+        ],
+        "detail_weight": 0.36
       },
       "dqb.video": {
-        "picked": "Experimental versus theoretical probability simulation",
-        "score": 84.35,
+        "picked": "Experimental probability",
+        "fit": "fits",
+        "score": 155.72,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "experimental probability",
+          "event probability",
           "experimental"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 2.16
       },
       "model.video": {
-        "picked": "Random numbers for experimental probability",
-        "score": 138.92,
+        "picked": "Experimental versus theoretical probability simulation",
+        "fit": "fits",
+        "score": 131.95,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "experimental probability",
+          "experimental probability theoretical",
           "experimental"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 2.17
       },
       "predict.reading": {
-        "picked": "Theoretical and Experimental Probability (Flexbook)",
-        "score": 146.32,
+        "picked": "Experimental probability",
+        "fit": "fits",
+        "score": 156.55,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "experimental probability",
+          "event probability",
           "experimental"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 2.16
       },
       "observe.reading": {
         "picked": "Use Simulations to Explore Experimental Probability (Flexbook)",
+        "fit": "fits",
         "score": 143.38,
         "core_hits": [
           "probability"
@@ -396,32 +441,35 @@
         "detail_weight": 1.8
       },
       "explain.reading": {
-        "picked": "Theoretical and Experimental Probability Practice",
-        "score": 146.32,
+        "picked": "Finding the Probability of an Event (Flexbook)",
+        "fit": "fits",
+        "score": 119.31,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "experimental probability",
-          "experimental"
+          "event probability"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 0.36
       },
       "dqb.reading": {
         "picked": "Experimental probability",
-        "score": 120,
+        "fit": "fits",
+        "score": 156.55,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "experimental probability",
+          "event probability",
           "experimental"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 2.16
       },
       "model.reading": {
-        "picked": "Theoretical and Experimental Probability (Flexbook)",
-        "score": 146.32,
+        "picked": "Use Simulations to Explore Experimental Probability (Flexbook)",
+        "fit": "fits",
+        "score": 143.38,
         "core_hits": [
           "probability"
         ],
@@ -433,13 +481,13 @@
       }
     },
     "video_pool": {
-      "passed": 9,
+      "passed": 26,
       "runners_up": [
-        "Experimental probability",
-        "Analyzing a cumulative relative frequency graph",
         "Experimental versus theoretical probability simulation",
-        "Two-way relative frequency tables",
-        "Binomial probability example"
+        "Probability without equally likely events",
+        "Theoretical and experimental probabilities",
+        "Random numbers for experimental probability",
+        "Theoretical probability distribution example: tables"
       ],
       "rejected_sample": [
         [
@@ -476,20 +524,20 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
+        "below relevance gate": 114,
+        "judged off-topic (independent reviewer)": 4,
         "foreign vocabulary": 1,
-        "web file not on reference image": 2,
-        "kolibri node not available on reference image": 1
+        "web file not on reference image": 2
       }
     },
     "reading_pool": {
-      "passed": 8,
+      "passed": 14,
       "runners_up": [
-        "Theoretical and Experimental Probability Practice",
         "Use Simulations to Explore Experimental Probability (Flexbook)",
-        "Experimental probability",
+        "Finding the Probability of an Event (Flexbook)",
         "Relative Frequency Interpretation Practice",
-        "Create two-way relative frequency tables"
+        "Theoretical and Experimental Probability (Flexbook)",
+        "Theoretical and Experimental Probability Practice"
       ],
       "rejected_sample": [
         [
@@ -498,6 +546,10 @@
         ],
         [
           "Sample size and margin of error in a confidence interval for a mean",
+          "below relevance gate"
+        ],
+        [
+          "Sample spaces for compound events",
           "below relevance gate"
         ],
         [
@@ -519,15 +571,12 @@
         [
           "Create picture graphs (picture more than 1)",
           "below relevance gate"
-        ],
-        [
-          "Calculate Odds Using Outcomes or Probability (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
-        "kolibri node not available on reference image": 23
+        "below relevance gate": 129,
+        "judged off-topic (independent reviewer)": 5,
+        "kolibri node not available on reference image": 22
       }
     }
   },
@@ -554,7 +603,9 @@
         "grid",
         "list",
         "range",
-        "spaces"
+        "spaces",
+        "basics",
+        "compound"
       ],
       "phrases": [
         "sample space",
@@ -563,13 +614,20 @@
         "equally likely outcomes",
         "combined events",
         "two way table",
-        "range probability"
+        "range probability",
+        "sample spaces probability",
+        "theoretical probability basics",
+        "equally likely outcomes",
+        "two way table outcomes",
+        "compound events sample space",
+        "probability range"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Theoretical probability distribution example: tables",
-        "score": 446.71,
+        "fit": "fits",
+        "score": 467.89,
         "core_hits": [
           "probability"
         ],
@@ -577,15 +635,17 @@
           "sample space",
           "probability space",
           "probability theoretical",
+          "probability sample space",
           "space",
           "sample",
           "theoretical"
         ],
-        "detail_weight": 4.72
+        "detail_weight": 5.26
       },
       "observe.video": {
         "picked": "Theoretical probability distribution example: tables",
-        "score": 446.71,
+        "fit": "fits",
+        "score": 467.89,
         "core_hits": [
           "probability"
         ],
@@ -593,77 +653,43 @@
           "sample space",
           "probability space",
           "probability theoretical",
+          "probability sample space",
           "space",
           "sample",
           "theoretical"
         ],
-        "detail_weight": 4.72
+        "detail_weight": 5.26
       },
       "explain.video": {
-        "picked": "Theoretical probability distribution example: tables",
-        "score": 446.71,
+        "picked": "Experimental versus theoretical probability simulation",
+        "fit": "partial",
+        "score": 135.03,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "sample space",
-          "probability space",
           "probability theoretical",
-          "space",
-          "sample",
           "theoretical"
         ],
-        "detail_weight": 4.72
+        "detail_weight": 1.37
       },
       "dqb.video": {
-        "picked": "Theoretical probability distribution example: tables",
-        "score": 446.71,
+        "picked": "Theoretical probability distribution example: multiplication",
+        "fit": "partial",
+        "score": 116.16,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "sample space",
-          "probability space",
           "probability theoretical",
-          "space",
-          "sample",
           "theoretical"
         ],
-        "detail_weight": 4.72
+        "detail_weight": 1.37
       },
       "model.video": {
-        "picked": "Theoretical probability distribution example: tables",
-        "score": 446.71,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "sample space",
-          "probability space",
-          "probability theoretical",
-          "space",
-          "sample",
-          "theoretical"
-        ],
-        "detail_weight": 4.72
-      },
-      "predict.reading": {
-        "picked": "Probabilities of compound events",
-        "score": 168.41,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "sample space",
-          "probability space",
-          "space",
-          "sample"
-        ],
-        "detail_weight": 3.35
-      },
-      "observe.reading": {
-        "picked": "Sample spaces for compound events",
-        "score": 130.55,
+        "picked": "Independent Events and Sample Spaces Principles",
+        "fit": "partial",
+        "score": 87.49,
         "core_hits": [],
         "detail_hits": [
           "sample space",
@@ -672,19 +698,48 @@
         ],
         "detail_weight": 2.1
       },
-      "explain.reading": {
-        "picked": "Two-way tables, Venn diagrams, and probability",
-        "score": 117.37,
+      "predict.reading": {
+        "picked": "Sample spaces for compound events",
+        "fit": "fits",
+        "score": 166.1,
+        "core_hits": [],
+        "detail_hits": [
+          "sample space",
+          "compound event sample space",
+          "space",
+          "sample"
+        ],
+        "detail_weight": 2.57
+      },
+      "observe.reading": {
+        "picked": "Develop probability distributions: Theoretical probabilities",
+        "fit": "fits",
+        "score": 107.33,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "table way"
+          "probability theoretical",
+          "theoretical"
         ],
-        "detail_weight": 0.75
+        "detail_weight": 1.37
+      },
+      "explain.reading": {
+        "picked": "Sample spaces for compound events",
+        "fit": "fits",
+        "score": 166.1,
+        "core_hits": [],
+        "detail_hits": [
+          "sample space",
+          "compound event sample space",
+          "space",
+          "sample"
+        ],
+        "detail_weight": 2.57
       },
       "dqb.reading": {
         "picked": "Develop probability distributions: Theoretical probabilities",
+        "fit": "fits",
         "score": 107.33,
         "core_hits": [
           "probability"
@@ -697,27 +752,30 @@
       },
       "model.reading": {
         "picked": "Probabilities of compound events",
-        "score": 168.41,
+        "fit": "partial",
+        "score": 230.32,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "sample space",
           "probability space",
+          "probability sample space",
+          "compound event sample space",
           "space",
           "sample"
         ],
-        "detail_weight": 3.35
+        "detail_weight": 4.35
       }
     },
     "video_pool": {
-      "passed": 19,
+      "passed": 14,
       "runners_up": [
         "Probability of a compound event",
         "Sample spaces for compound events",
-        "Experimental versus theoretical probability simulation",
         "Intro to theoretical probability",
-        "Theoretical probability distribution example: multiplication"
+        "Die rolling probability",
+        "Experimental versus theoretical probability simulation"
       ],
       "rejected_sample": [
         [
@@ -729,6 +787,14 @@
           "below relevance gate"
         ],
         [
+          "Compound probability of independent events",
+          "below relevance gate"
+        ],
+        [
+          "Compound probability of independent events -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
           "Marginal and conditional distributions",
           "below relevance gate"
         ],
@@ -737,36 +803,29 @@
           "below relevance gate"
         ],
         [
-          "Mosaic plots and segmented bar charts",
-          "below relevance gate"
+          "Dependent Events and Sample Spaces Principles",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Analyzing event probability for independence",
-          "below relevance gate"
-        ],
-        [
-          "Compound probability of independent events",
-          "below relevance gate"
-        ],
-        [
-          "Compound probability of independent events -dubbed(KY)",
+          "Probability of Compound Events - Overview",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 116,
-        "kolibri node not available on reference image": 3,
+        "below relevance gate": 119,
+        "judged off-topic (independent reviewer)": 4,
+        "kolibri node not available on reference image": 5,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 15,
+      "passed": 13,
       "runners_up": [
-        "Sample spaces for compound events",
-        "Two-way tables, Venn diagrams, and probability",
         "Develop probability distributions: Theoretical probabilities",
         "Sample Spaces and Events (Flexbook)",
-        "Sample Spaces and Events Practice"
+        "Sample Spaces and Events Practice",
+        "Theoretical and Experimental Probability (Flexbook)",
+        "Theoretical and Experimental Probability Practice"
       ],
       "rejected_sample": [
         [
@@ -782,6 +841,14 @@
           "below relevance gate"
         ],
         [
+          "Dependent Events and Sample Spaces (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Dependent Events and Sample Spaces Practice",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Create two-way frequency tables",
           "below relevance gate"
         ],
@@ -790,20 +857,13 @@
           "below relevance gate"
         ],
         [
-          "Simple random samples",
-          "below relevance gate"
-        ],
-        [
-          "Analyze two-way frequency tables",
-          "below relevance gate"
-        ],
-        [
-          "Read two-way frequency tables",
+          "Probability of Compound Events (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 131,
+        "below relevance gate": 133,
+        "judged off-topic (independent reviewer)": 2,
         "kolibri node not available on reference image": 5
       }
     }
@@ -835,6 +895,8 @@
         "mandazi",
         "stall",
         "mathematics",
+        "diagrams",
+        "disjoint",
         "two",
         "things",
         "cannot",
@@ -848,146 +910,181 @@
         "sample space",
         "event classification",
         "market context",
-        "mandazi stall"
+        "mandazi stall",
+        "mutually exclusive events",
+        "addition rule probability",
+        "venn diagrams probability",
+        "disjoint events probability",
+        "sample space events"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Probability with Venn diagrams",
-        "score": 293.44,
+        "picked": "Addition rule for probability",
+        "fit": "fits",
+        "score": 381.49,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "addition rule",
           "diagram venn",
-          "event"
+          "addition probability rule",
+          "diagram probability venn"
         ],
-        "detail_weight": 2.62
+        "detail_weight": 3.29
       },
       "observe.video": {
-        "picked": "Addition rule for probability",
-        "score": 283.97,
+        "picked": "Addition rule for probability -dubbed(KY)",
+        "fit": "fits",
+        "score": 356.88,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "addition rule",
-          "diagram venn"
+          "diagram venn",
+          "addition probability rule",
+          "diagram probability venn"
         ],
-        "detail_weight": 2.32
+        "detail_weight": 3.29
       },
       "explain.video": {
-        "picked": "Addition rule for probability -dubbed(KY)",
-        "score": 266.55,
+        "picked": "Probability with Venn diagrams",
+        "fit": "fits",
+        "score": 324.09,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "addition rule",
-          "diagram venn"
+          "diagram venn",
+          "addition probability rule",
+          "diagram probability venn",
+          "event"
         ],
-        "detail_weight": 2.32
+        "detail_weight": 3.59
       },
       "dqb.video": {
-        "picked": "Probability of a compound event",
-        "score": 196.54,
+        "picked": "Addition rule for probability",
+        "fit": "fits",
+        "score": 381.49,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "sample space",
-          "event"
+          "addition rule",
+          "diagram venn",
+          "addition probability rule",
+          "diagram probability venn"
         ],
-        "detail_weight": 1.24
+        "detail_weight": 3.29
       },
       "model.video": {
         "picked": "Probability with Venn diagrams",
-        "score": 293.44,
+        "fit": "fits",
+        "score": 324.09,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "addition rule",
           "diagram venn",
+          "addition probability rule",
+          "diagram probability venn",
           "event"
         ],
-        "detail_weight": 2.62
+        "detail_weight": 3.59
       },
       "predict.reading": {
-        "picked": "Two-way tables, Venn diagrams, and probability",
-        "score": 280.88,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Mutually Exclusive Events (Flexbook)",
+        "fit": "fits",
+        "score": 148.99,
+        "core_hits": [],
         "detail_hits": [
-          "addition rule",
-          "diagram venn"
+          "event exclusive mutually",
+          "mutually",
+          "exclusive",
+          "event"
         ],
-        "detail_weight": 2.32
+        "detail_weight": 2.4
       },
       "observe.reading": {
-        "picked": "Two-way tables, Venn diagrams, and probability",
-        "score": 280.88,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Mutually Exclusive Events Practice",
+        "fit": "fits",
+        "score": 148.99,
+        "core_hits": [],
         "detail_hits": [
-          "addition rule",
-          "diagram venn"
+          "event exclusive mutually",
+          "mutually",
+          "exclusive",
+          "event"
         ],
-        "detail_weight": 2.32
+        "detail_weight": 2.4
       },
       "explain.reading": {
-        "picked": "Two-way tables, Venn diagrams, and probability",
-        "score": 280.88,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Mutually Exclusive Events (Flexbook)",
+        "fit": "fits",
+        "score": 148.99,
+        "core_hits": [],
         "detail_hits": [
-          "addition rule",
-          "diagram venn"
+          "event exclusive mutually",
+          "mutually",
+          "exclusive",
+          "event"
         ],
-        "detail_weight": 2.32
+        "detail_weight": 2.4
       },
       "dqb.reading": {
-        "picked": "Two-way tables, Venn diagrams, and probability",
-        "score": 280.88,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Mutually Exclusive Events Practice",
+        "fit": "fits",
+        "score": 148.99,
+        "core_hits": [],
         "detail_hits": [
-          "addition rule",
-          "diagram venn"
+          "event exclusive mutually",
+          "mutually",
+          "exclusive",
+          "event"
         ],
-        "detail_weight": 2.32
+        "detail_weight": 2.4
       },
       "model.reading": {
         "picked": "Two-way tables, Venn diagrams, and probability",
-        "score": 280.88,
+        "fit": "partial",
+        "score": 367.27,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "addition rule",
-          "diagram venn"
+          "diagram venn",
+          "addition probability rule",
+          "diagram probability venn"
         ],
-        "detail_weight": 2.32
+        "detail_weight": 3.29
       }
     },
     "video_pool": {
-      "passed": 36,
+      "passed": 34,
       "runners_up": [
-        "Addition rule for probability",
         "Addition rule for probability -dubbed(KY)",
-        "Probability of a compound event",
-        "Theoretical probability distribution example: tables",
-        "Mutually Exclusive Events Principles"
+        "Probability with Venn diagrams",
+        "Mutually Exclusive Events Principles",
+        "Two-way frequency tables and Venn diagrams",
+        "Probability of a compound event"
       ],
       "rejected_sample": [
         [
+          "Compound probability of independent events",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
           "web file not on reference image"
+        ],
+        [
+          "Analyzing event probability for independence",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Mutually Inclusive Events Principles",
@@ -1008,17 +1105,10 @@
         [
           "Ratios with tape diagrams (part:whole)",
           "below relevance gate"
-        ],
-        [
-          "Conclusion for a two-sample t test using a P-value",
-          "below relevance gate"
-        ],
-        [
-          "Electron configuration (Rules and Diagrams) - Overview",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "judged off-topic (independent reviewer)": 2,
         "web file not on reference image": 5,
         "below relevance gate": 97,
         "excluded: answer/exam material": 1,
@@ -1026,15 +1116,23 @@
       }
     },
     "reading_pool": {
-      "passed": 33,
+      "passed": 31,
       "runners_up": [
-        "Probabilities of compound events",
-        "Mutually Exclusive Events (Flexbook)",
         "Mutually Exclusive Events Practice",
-        "Independent, Conditional, and Mutually Exclusive Events (Flexbook)",
-        "Sample spaces for compound events"
+        "Probability of Unions (Flexbook)",
+        "Sample Spaces and Events (Flexbook)",
+        "Two-way tables, Venn diagrams, and probability",
+        "Probabilities of compound events"
       ],
       "rejected_sample": [
+        [
+          "Making predictions with probability",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Probability with general multiplication rule",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Mutually Inclusive Events (Flexbook)",
           "below relevance gate"
@@ -1058,17 +1156,10 @@
         [
           "Tables from rules that relate 2 variables",
           "below relevance gate"
-        ],
-        [
-          "Subsets of sample spaces",
-          "below relevance gate"
-        ],
-        [
-          "Intersection of Compound Events: Candy Store (PLIX)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "judged off-topic (independent reviewer)": 2,
         "below relevance gate": 105,
         "kolibri node not available on reference image": 6,
         "excluded: answer/exam material": 20
@@ -1107,8 +1198,8 @@
         "fallacy",
         "joint",
         "mathematics",
-        "one",
-        "outcome"
+        "two",
+        "compound"
       ],
       "phrases": [
         "independent events",
@@ -1120,168 +1211,183 @@
         "seed germination",
         "mama njeri",
         "gambler's fallacy",
-        "joint probability"
+        "joint probability",
+        "independent events probability",
+        "multiplication rule probability",
+        "independent mutually exclusive events",
+        "probability two events",
+        "gambler's fallacy"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "General multiplication rule example: independent events",
-        "score": 229.93,
+        "picked": "Compound probability of independent events",
+        "fit": "fits",
+        "score": 266.42,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "event independent",
+          "event independent probability",
+          "event probability",
+          "independent",
+          "event",
+          "affect"
+        ],
+        "detail_weight": 3.14
+      },
+      "observe.video": {
+        "picked": "Compound probability of independent events -dubbed(KY)",
+        "fit": "fits",
+        "score": 252.12,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "event independent",
+          "event independent probability",
+          "event probability",
+          "independent",
+          "event",
+          "affect"
+        ],
+        "detail_weight": 3.14
+      },
+      "explain.video": {
+        "picked": "Die rolling probability with independent events",
+        "fit": "fits",
+        "score": 218.1,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "event independent",
+          "event independent probability",
+          "event probability",
+          "independent",
+          "event"
+        ],
+        "detail_weight": 2.84
+      },
+      "dqb.video": {
+        "picked": "Die rolling probability with independent events -dubbed(KY)",
+        "fit": "fits",
+        "score": 205.39,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "event independent",
+          "event independent probability",
+          "event probability",
+          "independent",
+          "event"
+        ],
+        "detail_weight": 2.84
+      },
+      "model.video": {
+        "picked": "Independent Events and Sample Spaces Principles",
+        "fit": "fits",
+        "score": 181.04,
         "core_hits": [],
         "detail_hits": [
           "event independent",
-          "multiplication rule",
+          "sample space",
           "independent",
           "event"
         ],
-        "detail_weight": 3.35
-      },
-      "observe.video": {
-        "picked": "Compound probability of independent events",
-        "score": 215.95,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "event independent",
-          "independent",
-          "event",
-          "affect"
-        ],
-        "detail_weight": 2.4
-      },
-      "explain.video": {
-        "picked": "Compound probability of independent events -dubbed(KY)",
-        "score": 204.34,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "event independent",
-          "independent",
-          "event",
-          "affect"
-        ],
-        "detail_weight": 2.4
-      },
-      "dqb.video": {
-        "picked": "Die rolling probability with independent events",
-        "score": 201.12,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "event independent",
-          "independent",
-          "event"
-        ],
-        "detail_weight": 2.1
-      },
-      "model.video": {
-        "picked": "Die rolling probability with independent events -dubbed(KY)",
-        "score": 189.4,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "event independent",
-          "independent",
-          "event"
-        ],
-        "detail_weight": 2.1
+        "detail_weight": 3.04
       },
       "predict.reading": {
-        "picked": "Probability with general multiplication rule",
-        "score": 336.85,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Independent, Conditional, and Mutually Exclusive Events (Flexbook)",
+        "fit": "fits",
+        "score": 206.54,
+        "core_hits": [],
         "detail_hits": [
           "event independent",
-          "multiplication rule",
-          "joint probability",
+          "exclusive mutually",
+          "event exclusive independent mutually",
           "independent",
           "event"
         ],
-        "detail_weight": 3.79
+        "detail_weight": 3.53
       },
       "observe.reading": {
-        "picked": "Probability with general multiplication rule",
-        "score": 336.85,
+        "picked": "Probability of Independent Events (Flexbook)",
+        "fit": "fits",
+        "score": 205.52,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "event independent",
-          "multiplication rule",
-          "joint probability",
+          "event independent probability",
+          "event probability",
           "independent",
           "event"
         ],
-        "detail_weight": 3.79
+        "detail_weight": 2.84
       },
       "explain.reading": {
-        "picked": "Probability with general multiplication rule",
-        "score": 336.85,
+        "picked": "Probability of Independent Events Practice",
+        "fit": "fits",
+        "score": 205.52,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "event independent",
-          "multiplication rule",
-          "joint probability",
+          "event independent probability",
+          "event probability",
           "independent",
           "event"
         ],
-        "detail_weight": 3.79
+        "detail_weight": 2.84
       },
       "dqb.reading": {
-        "picked": "Probability with general multiplication rule",
-        "score": 336.85,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Independent Events and Sample Spaces (Flexbook)",
+        "fit": "fits",
+        "score": 172.26,
+        "core_hits": [],
         "detail_hits": [
           "event independent",
-          "multiplication rule",
-          "joint probability",
+          "sample space",
           "independent",
           "event"
         ],
-        "detail_weight": 3.79
+        "detail_weight": 3.04
       },
       "model.reading": {
-        "picked": "Probability with general multiplication rule",
-        "score": 336.85,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Independent Events and Sample Spaces Practice",
+        "fit": "fits",
+        "score": 172.26,
+        "core_hits": [],
         "detail_hits": [
           "event independent",
-          "multiplication rule",
-          "joint probability",
+          "sample space",
           "independent",
           "event"
         ],
-        "detail_weight": 3.79
+        "detail_weight": 3.04
       }
     },
     "video_pool": {
       "passed": 43,
       "runners_up": [
-        "Compound probability of independent events",
         "Compound probability of independent events -dubbed(KY)",
         "Die rolling probability with independent events",
         "Die rolling probability with independent events -dubbed(KY)",
-        "Independent Events and Sample Spaces Principles"
+        "Independent Events and Sample Spaces Principles",
+        "Analyzing event probability for independence"
       ],
       "rejected_sample": [
         [
-          "Analyzing a cumulative relative frequency graph",
+          "Two-way relative frequency tables",
           "below relevance gate"
         ],
         [
-          "Two-way relative frequency tables",
+          "Analyzing a cumulative relative frequency graph",
           "below relevance gate"
         ],
         [
@@ -1310,28 +1416,28 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 82,
-        "web file not on reference image": 8,
-        "kolibri node not available on reference image": 10,
-        "excluded: answer/exam material": 3
+        "below relevance gate": 88,
+        "web file not on reference image": 6,
+        "kolibri node not available on reference image": 9,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
       "passed": 28,
       "runners_up": [
-        "Independent, Conditional, and Mutually Exclusive Events (Flexbook)",
         "Probability of Independent Events (Flexbook)",
         "Probability of Independent Events Practice",
         "Independent Events and Sample Spaces (Flexbook)",
-        "Independent Events and Sample Spaces Practice"
+        "Independent Events and Sample Spaces Practice",
+        "Independent probability"
       ],
       "rejected_sample": [
         [
-          "Relative Frequency Interpretation Practice",
+          "Create two-way relative frequency tables",
           "below relevance gate"
         ],
         [
-          "Create two-way relative frequency tables",
+          "Relative Frequency Interpretation Practice",
           "below relevance gate"
         ],
         [
@@ -1360,9 +1466,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 100,
-        "kolibri node not available on reference image": 19,
-        "excluded: answer/exam material": 23
+        "below relevance gate": 116,
+        "kolibri node not available on reference image": 14,
+        "excluded: answer/exam material": 6
       }
     }
   },
@@ -1399,7 +1505,7 @@
         "counting",
         "rule",
         "mathematics",
-        "njeri's"
+        "sets"
       ],
       "phrases": [
         "addition law probability",
@@ -1412,101 +1518,122 @@
         "gikomba market",
         "combined events",
         "double counting",
-        "probability rule"
+        "probability rule",
+        "addition rule probability",
+        "venn diagram probability",
+        "mutually exclusive events",
+        "overlapping events probability"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Probability with Venn diagrams",
-        "score": 227.41,
+        "picked": "Addition rule for probability",
+        "fit": "fits",
+        "score": 289.02,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "diagram venn",
           "probability rule",
+          "addition probability rule",
+          "diagram probability venn",
+          "addition"
+        ],
+        "detail_weight": 2.58
+      },
+      "observe.video": {
+        "picked": "Addition rule for probability -dubbed(KY)",
+        "fit": "fits",
+        "score": 269.9,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "diagram venn",
+          "probability rule",
+          "addition probability rule",
+          "diagram probability venn",
+          "addition"
+        ],
+        "detail_weight": 2.58
+      },
+      "explain.video": {
+        "picked": "Probability with Venn diagrams",
+        "fit": "fits",
+        "score": 247.36,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "diagram venn",
+          "probability rule",
+          "addition probability rule",
+          "diagram probability venn",
           "addition",
           "event"
         ],
-        "detail_weight": 2.11
-      },
-      "observe.video": {
-        "picked": "Addition rule for probability",
-        "score": 208.02,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "diagram venn",
-          "probability rule",
-          "addition"
-        ],
-        "detail_weight": 1.81
-      },
-      "explain.video": {
-        "picked": "Addition rule for probability -dubbed(KY)",
-        "score": 195.01,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "diagram venn",
-          "probability rule",
-          "addition"
-        ],
-        "detail_weight": 1.81
+        "detail_weight": 2.88
       },
       "dqb.video": {
-        "picked": "Probability of a compound event",
-        "score": 190.07,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "sample space",
-          "event"
-        ],
-        "detail_weight": 0.98
-      },
-      "model.video": {
-        "picked": "Theoretical probability distribution example: tables",
-        "score": 148.34,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "sample space",
-          "event"
-        ],
-        "detail_weight": 0.98
-      },
-      "predict.reading": {
-        "picked": "Two-way tables, Venn diagrams, and probability",
-        "score": 191.53,
+        "picked": "Addition rule for probability",
+        "fit": "fits",
+        "score": 289.02,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "diagram venn",
           "probability rule",
+          "addition probability rule",
+          "diagram probability venn",
           "addition"
         ],
-        "detail_weight": 1.81
+        "detail_weight": 2.58
       },
-      "observe.reading": {
-        "picked": "Probabilities of compound events",
-        "score": 160.71,
+      "model.video": {
+        "picked": "Probability with Venn diagrams",
+        "fit": "fits",
+        "score": 247.36,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "sample space",
+          "diagram venn",
+          "probability rule",
+          "addition probability rule",
+          "diagram probability venn",
+          "addition",
           "event"
         ],
-        "detail_weight": 0.98
+        "detail_weight": 2.88
+      },
+      "predict.reading": {
+        "picked": "Union and Intersection of Sets (Flexbook)",
+        "fit": "fits",
+        "score": 119.08,
+        "core_hits": [],
+        "detail_hits": [
+          "union",
+          "intersection",
+          "intersection set union"
+        ],
+        "detail_weight": 1.67
+      },
+      "observe.reading": {
+        "picked": "Mutually Exclusive Events (Flexbook)",
+        "fit": "fits",
+        "score": 118.85,
+        "core_hits": [],
+        "detail_hits": [
+          "event exclusive mutually",
+          "event"
+        ],
+        "detail_weight": 1.24
       },
       "explain.reading": {
-        "picked": "Mutually Exclusive Events (Flexbook)",
+        "picked": "Mutually Exclusive Events Practice",
+        "fit": "fits",
         "score": 118.85,
         "core_hits": [],
         "detail_hits": [
@@ -1516,39 +1643,47 @@
         "detail_weight": 1.24
       },
       "dqb.reading": {
-        "picked": "Mutually Exclusive Events Practice",
-        "score": 118.85,
+        "picked": "Basic set notation",
+        "fit": "fits",
+        "score": 90.82,
         "core_hits": [],
         "detail_hits": [
-          "event exclusive mutually",
-          "event"
+          "union",
+          "intersection",
+          "intersection set union"
         ],
-        "detail_weight": 1.24
+        "detail_weight": 1.67
       },
       "model.reading": {
-        "picked": "Independent, Conditional, and Mutually Exclusive Events (Flexbook)",
-        "score": 115.86,
-        "core_hits": [],
-        "detail_hits": [
-          "event exclusive mutually",
-          "event"
+        "picked": "Probability of Unions (Flexbook)",
+        "fit": "fits",
+        "score": 89.7,
+        "core_hits": [
+          "probability"
         ],
-        "detail_weight": 1.24
+        "detail_hits": [
+          "union"
+        ],
+        "detail_weight": 0.83
       }
     },
     "video_pool": {
-      "passed": 29,
+      "passed": 26,
       "runners_up": [
-        "Addition rule for probability",
         "Addition rule for probability -dubbed(KY)",
-        "Probability of a compound event",
-        "Theoretical probability distribution example: tables",
-        "Mutually Exclusive Events Principles"
+        "Probability with Venn diagrams",
+        "Mutually Exclusive Events Principles",
+        "Two-way frequency tables and Venn diagrams",
+        "Intersection and union of sets"
       ],
       "rejected_sample": [
         [
           "Sample spaces for compound events",
           "below relevance gate"
+        ],
+        [
+          "Theoretical probability distribution example: tables",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Independent Events and Sample Spaces Principles",
@@ -1563,37 +1698,34 @@
           "web file not on reference image"
         ],
         [
-          "Mutually Inclusive Events Principles",
+          "Ratios with tape diagrams (part:whole)",
           "below relevance gate"
         ],
         [
-          "Solving For X In X³   11 = 53 #Shorts #Algebra #Math #Maths #Mathematics #Education #Learn #Learning",
-          "web file not on reference image"
+          "Compound probability of independent events",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Math Song - \"When You Subtract Big Numbers\" - Mama Ndege Song from Ubongo Kids",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Subsets of sample spaces",
+          "Mutually Inclusive Events Principles",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 96,
+        "below relevance gate": 99,
+        "judged off-topic (independent reviewer)": 3,
         "web file not on reference image": 7,
-        "kolibri node not available on reference image": 15,
+        "kolibri node not available on reference image": 14,
         "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 31,
+      "passed": 30,
       "runners_up": [
-        "Probabilities of compound events",
         "Mutually Exclusive Events (Flexbook)",
         "Mutually Exclusive Events Practice",
-        "Independent, Conditional, and Mutually Exclusive Events (Flexbook)",
-        "Probability with general multiplication rule"
+        "Basic set notation",
+        "Probability of Unions (Flexbook)",
+        "Two-way tables, Venn diagrams, and probability"
       ],
       "rejected_sample": [
         [
@@ -1625,14 +1757,15 @@
           "below relevance gate"
         ],
         [
-          "Mutually Inclusive Events (Flexbook)",
-          "below relevance gate"
+          "Probability with general multiplication rule",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 70,
-        "kolibri node not available on reference image": 35,
-        "excluded: answer/exam material": 20
+        "below relevance gate": 73,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 33,
+        "excluded: answer/exam material": 17
       }
     }
   },
@@ -1667,7 +1800,9 @@
         "sample",
         "space",
         "sequential",
-        "mathematics"
+        "mathematics",
+        "rule",
+        "basics"
       ],
       "phrases": [
         "multiplication law probability",
@@ -1681,24 +1816,46 @@
         "mama njeri",
         "gikomba market",
         "sample space",
-        "sequential events"
+        "sequential events",
+        "multiplication rule probability",
+        "independent dependent events",
+        "conditional probability basics"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Conditional probability tree diagram example",
-        "score": 259.53,
+        "fit": "fits",
+        "score": 270.18,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "conditional probability",
-          "diagram tree"
+          "diagram tree",
+          "diagram probability tree"
         ],
-        "detail_weight": 1.62
+        "detail_weight": 1.96
       },
       "observe.video": {
+        "picked": "Compound probability of independent events -dubbed(KY)",
+        "fit": "fits",
+        "score": 246.73,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "event independent",
+          "compound event",
+          "compound event probability",
+          "independent",
+          "event"
+        ],
+        "detail_weight": 2.8
+      },
+      "explain.video": {
         "picked": "Conditional probability and independence",
+        "fit": "fits",
         "score": 244.39,
         "core_hits": [
           "probability"
@@ -1711,89 +1868,95 @@
         ],
         "detail_weight": 2.79
       },
-      "explain.video": {
-        "picked": "Compound probability of independent events -dubbed(KY)",
-        "score": 238.39,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "event independent",
-          "compound event",
-          "independent",
-          "event"
-        ],
-        "detail_weight": 2.48
-      },
       "dqb.video": {
         "picked": "Probability of a compound event",
-        "score": 232.04,
+        "fit": "fits",
+        "score": 241.28,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "compound event",
           "sample space",
+          "compound event probability",
           "event"
         ],
-        "detail_weight": 1.37
+        "detail_weight": 1.69
       },
       "model.video": {
-        "picked": "Sample spaces for compound events",
-        "score": 231.2,
-        "core_hits": [],
-        "detail_hits": [
-          "diagram tree",
-          "compound event",
-          "sample space",
-          "event"
-        ],
-        "detail_weight": 2.05
-      },
-      "predict.reading": {
-        "picked": "Probability with general multiplication rule",
-        "score": 272.57,
+        "picked": "General multiplication rule example: dependent events",
+        "fit": "fits",
+        "score": 231.13,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
           "event independent",
           "dependent event",
+          "multiplication probability rule",
+          "dependent event independent",
           "multiplication",
           "independent",
           "dependent",
           "event"
         ],
-        "detail_weight": 3.52
+        "detail_weight": 4.25
+      },
+      "predict.reading": {
+        "picked": "Probability with general multiplication rule",
+        "fit": "fits",
+        "score": 476.4,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "event independent",
+          "dependent event",
+          "multiplication probability rule",
+          "dependent event independent",
+          "multiplication",
+          "independent",
+          "dependent",
+          "event"
+        ],
+        "detail_weight": 4.25
       },
       "observe.reading": {
-        "picked": "Probabilities of compound events",
-        "score": 251.98,
+        "picked": "Probability with general multiplication rule",
+        "fit": "fits",
+        "score": 476.4,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "compound event",
-          "sample space",
+          "event independent",
+          "dependent event",
+          "multiplication probability rule",
+          "dependent event independent",
+          "multiplication",
+          "independent",
+          "dependent",
           "event"
         ],
-        "detail_weight": 1.37
+        "detail_weight": 4.25
       },
       "explain.reading": {
-        "picked": "Calculate conditional probability",
-        "score": 201.28,
+        "picked": "Probability of Independent Events (Flexbook)",
+        "fit": "partial",
+        "score": 184.12,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "conditional probability",
-          "given",
+          "event independent",
+          "independent",
           "event"
         ],
-        "detail_weight": 1.74
+        "detail_weight": 1.85
       },
       "dqb.reading": {
-        "picked": "Probability of Independent Events (Flexbook)",
+        "picked": "Probability of Independent Events Practice",
+        "fit": "partial",
         "score": 184.12,
         "core_hits": [
           "probability"
@@ -1806,26 +1969,25 @@
         "detail_weight": 1.85
       },
       "model.reading": {
-        "picked": "Probability of Independent Events Practice",
-        "score": 184.12,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Sample spaces for compound events",
+        "fit": "partial",
+        "score": 178.46,
+        "core_hits": [],
         "detail_hits": [
-          "event independent",
-          "independent",
+          "compound event",
+          "sample space",
           "event"
         ],
-        "detail_weight": 1.85
+        "detail_weight": 1.37
       }
     },
     "video_pool": {
       "passed": 44,
       "runners_up": [
-        "Conditional probability and independence",
         "Compound probability of independent events -dubbed(KY)",
+        "Conditional probability and independence",
         "Probability of a compound event",
-        "Sample spaces for compound events",
+        "General multiplication rule example: dependent events",
         "Compound probability of independent events"
       ],
       "rejected_sample": [
@@ -1834,38 +1996,38 @@
           "web file not on reference image"
         ],
         [
+          "Addition rule for probability",
+          "below relevance gate"
+        ],
+        [
+          "Addition rule for probability -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
+          "Compound interest introduction",
+          "below relevance gate"
+        ],
+        [
+          "Arabic: Probability Theory",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "The rule of 72 for compound interest",
+          "below relevance gate"
+        ],
+        [
           "Tree Diagrams Principles",
           "below relevance gate"
         ],
         [
-          "Using Multiplication Replacement to Find a New Amount",
-          "below relevance gate"
-        ],
-        [
-          "Solving For X In X³   11 = 53 #Shorts #Algebra #Math #Maths #Mathematics #Education #Learn #Learning",
-          "web file not on reference image"
-        ],
-        [
-          "Math Song - \"When You Subtract Big Numbers\" - Mama Ndege Song from Ubongo Kids",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Subsets of sample spaces",
-          "below relevance gate"
-        ],
-        [
-          "Maths Kcse Grading System 2024 #Maths #Solveexponentialequation #Mathematics #Mathstricks #Exponen",
-          "excluded: answer/exam material"
-        ],
-        [
-          "Dependent and independent clauses",
+          "Basic derivative rules: table",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "web file not on reference image": 7,
-        "below relevance gate": 84,
-        "kolibri node not available on reference image": 12,
+        "below relevance gate": 87,
+        "kolibri node not available on reference image": 6,
         "excluded: answer/exam material": 1
       }
     },
@@ -1874,9 +2036,9 @@
       "runners_up": [
         "Probabilities of compound events",
         "Calculate conditional probability",
+        "Interpret probabilities of compound events",
         "Probability of Independent Events (Flexbook)",
-        "Probability of Independent Events Practice",
-        "Sample spaces for compound events"
+        "Probability of Independent Events Practice"
       ],
       "rejected_sample": [
         [
@@ -1900,22 +2062,22 @@
           "kolibri node not available on reference image"
         ],
         [
+          "Two-way tables, Venn diagrams, and probability",
+          "below relevance gate"
+        ],
+        [
           "Seeds and Seed Dispersal (Flexbook)",
           "below relevance gate"
         ],
         [
           "Seeds and Seed Dispersal Practice",
           "below relevance gate"
-        ],
-        [
-          "Making inferences from random samples",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 102,
-        "kolibri node not available on reference image": 21,
-        "excluded: answer/exam material": 20
+        "below relevance gate": 113,
+        "kolibri node not available on reference image": 13,
+        "excluded: answer/exam material": 6
       }
     }
   },
@@ -1975,6 +2137,7 @@
     "slots": {
       "predict.video": {
         "picked": "Conditional probability tree diagram example",
+        "fit": "fits",
         "score": 293.69,
         "core_hits": [
           "probability"
@@ -1988,19 +2151,8 @@
         "detail_weight": 2.78
       },
       "observe.video": {
-        "picked": "Conditional probability and independence",
-        "score": 209.24,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "event independent",
-          "conditional probability"
-        ],
-        "detail_weight": 1.43
-      },
-      "explain.video": {
         "picked": "Count outcomes using tree diagram",
+        "fit": "fits",
         "score": 195.61,
         "core_hits": [
           "probability"
@@ -2014,20 +2166,23 @@
         ],
         "detail_weight": 2.74
       },
-      "dqb.video": {
-        "picked": "Probability of a compound event",
-        "score": 188.83,
+      "explain.video": {
+        "picked": "Compound probability of independent events",
+        "fit": "fits",
+        "score": 176.22,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "sample space",
-          "diagram"
+          "event independent",
+          "event independent probability",
+          "compound event probability"
         ],
-        "detail_weight": 0.93
+        "detail_weight": 1.34
       },
-      "model.video": {
+      "dqb.video": {
         "picked": "Conditional probability tree diagram example",
+        "fit": "fits",
         "score": 293.69,
         "core_hits": [
           "probability"
@@ -2040,71 +2195,94 @@
         ],
         "detail_weight": 2.78
       },
-      "predict.reading": {
-        "picked": "Probability of Independent Events (Flexbook)",
-        "score": 160.34,
+      "model.video": {
+        "picked": "Count outcomes using tree diagram",
+        "fit": "fits",
+        "score": 195.61,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "event independent"
+          "diagram probability tree",
+          "branch probability",
+          "tree",
+          "diagram",
+          "outcome"
         ],
-        "detail_weight": 0.75
+        "detail_weight": 2.74
+      },
+      "predict.reading": {
+        "picked": "Probability with general multiplication rule",
+        "fit": "fits",
+        "score": 133.48,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "event independent",
+          "event independent probability",
+          "dependent event probability"
+        ],
+        "detail_weight": 1.36
       },
       "observe.reading": {
-        "picked": "Probability of Independent Events Practice",
-        "score": 160.34,
+        "picked": "Independent probability",
+        "fit": "fits",
+        "score": 132.55,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "event independent"
+          "event independent",
+          "event independent probability"
         ],
-        "detail_weight": 0.75
+        "detail_weight": 1.06
       },
       "explain.reading": {
-        "picked": "Probabilities of compound events",
-        "score": 159.66,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Independent Events and Sample Spaces (Flexbook)",
+        "fit": "fits",
+        "score": 127.4,
+        "core_hits": [],
         "detail_hits": [
-          "sample space",
-          "diagram"
+          "event independent",
+          "sample space"
         ],
-        "detail_weight": 0.93
+        "detail_weight": 1.38
       },
       "dqb.reading": {
-        "picked": "Calculate conditional probability",
-        "score": 153.59,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Independent Events and Sample Spaces Practice",
+        "fit": "fits",
+        "score": 127.4,
+        "core_hits": [],
         "detail_hits": [
-          "conditional probability"
+          "event independent",
+          "sample space"
         ],
-        "detail_weight": 0.68
+        "detail_weight": 1.38
       },
       "model.reading": {
-        "picked": "Conditional Probability (Flexbook)",
-        "score": 135.46,
+        "picked": "Probability with general multiplication rule",
+        "fit": "fits",
+        "score": 133.48,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "conditional probability"
+          "event independent",
+          "event independent probability",
+          "dependent event probability"
         ],
-        "detail_weight": 0.68
+        "detail_weight": 1.36
       }
     },
     "video_pool": {
       "passed": 35,
       "runners_up": [
-        "Conditional probability and independence",
         "Count outcomes using tree diagram",
+        "Compound probability of independent events",
+        "Die rolling probability with independent events",
         "Probability of a compound event",
-        "Conditional probability with Bayes' Theorem",
-        "Theoretical probability distribution example: tables"
+        "Conditional probability and independence"
       ],
       "rejected_sample": [
         [
@@ -2112,11 +2290,15 @@
           "below relevance gate"
         ],
         [
+          "Dependent Events and Sample Spaces Principles",
+          "below relevance gate"
+        ],
+        [
           "Arabic: Probability Theory",
           "kolibri node not available on reference image"
         ],
         [
-          "Dependent Events and Sample Spaces Principles",
+          "Independent & dependent probability -dubbed(KY)",
           "below relevance gate"
         ],
         [
@@ -2124,35 +2306,31 @@
           "below relevance gate"
         ],
         [
+          "Probability of Compound Events - Overview",
+          "below relevance gate"
+        ],
+        [
+          "Photosynthesis",
+          "below relevance gate"
+        ],
+        [
           "Parallel resistors (part 1)",
-          "below relevance gate"
-        ],
-        [
-          "Two-way frequency tables and Venn diagrams",
-          "below relevance gate"
-        ],
-        [
-          "Tree Diagrams Principles",
-          "below relevance gate"
-        ],
-        [
-          "Activation and inhibition of signal transduction pathways",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 97,
-        "kolibri node not available on reference image": 15
+        "below relevance gate": 102,
+        "kolibri node not available on reference image": 6
       }
     },
     "reading_pool": {
       "passed": 12,
       "runners_up": [
-        "Probability of Independent Events Practice",
+        "Independent probability",
+        "Independent Events and Sample Spaces (Flexbook)",
+        "Independent Events and Sample Spaces Practice",
         "Probabilities of compound events",
-        "Calculate conditional probability",
-        "Conditional Probability (Flexbook)",
-        "Conditional Probability Practice"
+        "Probability of Independent Events (Flexbook)"
       ],
       "rejected_sample": [
         [
@@ -2161,6 +2339,14 @@
         ],
         [
           "Dependent and independent events",
+          "below relevance gate"
+        ],
+        [
+          "Dependent Events and Sample Spaces (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Dependent Events and Sample Spaces Practice",
           "below relevance gate"
         ],
         [
@@ -2176,21 +2362,13 @@
           "below relevance gate"
         ],
         [
-          "Sample Spaces and Events (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Sample Spaces and Events Practice",
-          "below relevance gate"
-        ],
-        [
-          "Dependent Events and Sample Spaces (Flexbook)",
+          "Testing a Hypothesis for Dependent and Independent Samples (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 141,
-        "kolibri node not available on reference image": 23
+        "below relevance gate": 140,
+        "kolibri node not available on reference image": 15
       }
     }
   },
@@ -2226,8 +2404,8 @@
         "frequency",
         "table",
         "synthesis",
-        "assessment",
-        "helping"
+        "rule",
+        "diagrams"
       ],
       "phrases": [
         "experimental probability",
@@ -2240,77 +2418,91 @@
         "mutually exclusive events",
         "mama njeri",
         "gikomba market",
-        "frequency table"
+        "frequency table",
+        "experimental probability",
+        "sample space events",
+        "addition rule probability",
+        "multiplication rule independent events"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Theoretical probability distribution example: tables",
-        "score": 215.2,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "sample space"
-        ],
-        "detail_weight": 1.25
-      },
-      "observe.video": {
-        "picked": "Probability of a compound event",
-        "score": 196.78,
-        "core_hits": [
-          "probability"
-        ],
-        "detail_hits": [
-          "sample space"
-        ],
-        "detail_weight": 1.25
-      },
-      "explain.video": {
         "picked": "Sample spaces for compound events",
-        "score": 194.78,
+        "fit": "fits",
+        "score": 209.02,
         "core_hits": [],
         "detail_hits": [
           "sample space",
-          "diagram tree"
+          "diagram tree",
+          "event sample space"
         ],
-        "detail_weight": 2
+        "detail_weight": 2.39
+      },
+      "observe.video": {
+        "picked": "Probability of a compound event",
+        "fit": "fits",
+        "score": 206.48,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "sample space",
+          "event sample space"
+        ],
+        "detail_weight": 1.64
+      },
+      "explain.video": {
+        "picked": "Addition rule for probability",
+        "fit": "fits",
+        "score": 177.64,
+        "core_hits": [
+          "probability"
+        ],
+        "detail_hits": [
+          "addition probability rule"
+        ],
+        "detail_weight": 0.38
       },
       "dqb.video": {
-        "picked": "Compound probability of independent events -dubbed(KY)",
-        "score": 156.52,
+        "picked": "Addition rule for probability -dubbed(KY)",
+        "fit": "fits",
+        "score": 166.02,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "event independent"
+          "addition probability rule"
         ],
-        "detail_weight": 0.68
+        "detail_weight": 0.38
       },
       "model.video": {
-        "picked": "Conditional probability tree diagram example",
-        "score": 150.15,
-        "core_hits": [
-          "probability"
-        ],
+        "picked": "Independent Events and Sample Spaces Principles",
+        "fit": "fits",
+        "score": 160.87,
+        "core_hits": [],
         "detail_hits": [
-          "diagram tree"
+          "sample space",
+          "event independent",
+          "event sample space"
         ],
-        "detail_weight": 0.75
+        "detail_weight": 2.33
       },
       "predict.reading": {
         "picked": "Probabilities of compound events",
-        "score": 166.39,
+        "fit": "fits",
+        "score": 174.58,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "sample space"
+          "sample space",
+          "event sample space"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.64
       },
       "observe.reading": {
         "picked": "Probability of Independent Events (Flexbook)",
+        "fit": "fits",
         "score": 158.83,
         "core_hits": [
           "probability"
@@ -2322,6 +2514,7 @@
       },
       "explain.reading": {
         "picked": "Probability of Independent Events Practice",
+        "fit": "fits",
         "score": 158.83,
         "core_hits": [
           "probability"
@@ -2332,35 +2525,38 @@
         "detail_weight": 0.68
       },
       "dqb.reading": {
-        "picked": "Experimental probability",
-        "score": 144.84,
+        "picked": "Independent Events and Sample Spaces (Flexbook)",
+        "fit": "fits",
+        "score": 153.07,
+        "core_hits": [],
+        "detail_hits": [
+          "sample space",
+          "event independent",
+          "event sample space"
+        ],
+        "detail_weight": 2.33
+      },
+      "model.reading": {
+        "picked": "Two-way tables, Venn diagrams, and probability",
+        "fit": "fits",
+        "score": 149.4,
         "core_hits": [
           "probability"
         ],
         "detail_hits": [
-          "experimental probability"
+          "addition probability rule"
         ],
-        "detail_weight": 1.5
-      },
-      "model.reading": {
-        "picked": "Independent Events and Sample Spaces (Flexbook)",
-        "score": 142.26,
-        "core_hits": [],
-        "detail_hits": [
-          "sample space",
-          "event independent"
-        ],
-        "detail_weight": 1.93
+        "detail_weight": 0.38
       }
     },
     "video_pool": {
-      "passed": 25,
+      "passed": 28,
       "runners_up": [
         "Probability of a compound event",
-        "Sample spaces for compound events",
-        "Compound probability of independent events -dubbed(KY)",
-        "Die rolling probability with independent events -dubbed(KY)",
-        "Conditional probability tree diagram example"
+        "Addition rule for probability",
+        "Addition rule for probability -dubbed(KY)",
+        "Independent Events and Sample Spaces Principles",
+        "Compound probability of independent events -dubbed(KY)"
       ],
       "rejected_sample": [
         [
@@ -2376,15 +2572,7 @@
           "below relevance gate"
         ],
         [
-          "Probability with Venn diagrams",
-          "below relevance gate"
-        ],
-        [
-          "Addition rule for probability",
-          "below relevance gate"
-        ],
-        [
-          "Addition rule for probability -dubbed(KY)",
+          "Interpreting general multiplication rule",
           "below relevance gate"
         ],
         [
@@ -2394,11 +2582,19 @@
         [
           "Two-way relative frequency tables",
           "below relevance gate"
+        ],
+        [
+          "Theoretical probability distribution example: multiplication",
+          "below relevance gate"
+        ],
+        [
+          "Mutually Inclusive Events Principles",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 103,
-        "kolibri node not available on reference image": 13
+        "below relevance gate": 99,
+        "kolibri node not available on reference image": 8
       }
     },
     "reading_pool": {
@@ -2406,9 +2602,9 @@
       "runners_up": [
         "Probability of Independent Events (Flexbook)",
         "Probability of Independent Events Practice",
-        "Experimental probability",
         "Independent Events and Sample Spaces (Flexbook)",
-        "Independent Events and Sample Spaces Practice"
+        "Independent Events and Sample Spaces Practice",
+        "Two-way tables, Venn diagrams, and probability"
       ],
       "rejected_sample": [
         [
@@ -2428,10 +2624,6 @@
           "below relevance gate"
         ],
         [
-          "Two-way tables, Venn diagrams, and probability",
-          "below relevance gate"
-        ],
-        [
           "Independent Events (Flexbook)",
           "below relevance gate"
         ],
@@ -2440,13 +2632,17 @@
           "below relevance gate"
         ],
         [
+          "Tables from rules that relate 2 variables",
+          "below relevance gate"
+        ],
+        [
           "Dependent and independent events",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 121,
-        "kolibri node not available on reference image": 37
+        "below relevance gate": 119,
+        "kolibri node not available on reference image": 31
       }
     }
   }

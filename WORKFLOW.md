@@ -122,6 +122,35 @@ sub-strand prints `Link check: PASS ... T1=0 T2=0 DEAD=0 SHAPE=0`. **Anything
 else means do not distribute.** Why each link was chosen is logged in
 `logs/link_matching/v2/`.
 
+#### Cross-document consistency gate (added 2026-10-03)
+
+`generate.js` also runs `scripts/validate_consistency.py` on every sub-strand
+(`CONSISTENCY_CHECK=warn` reports without failing; diagnosis only). It fails if
+the Summary Table differs from the lessons, the Final Explanation has leaked
+scratch work / a malformed table / a character no lesson mentions, the student
+Final Explanation contains exemplar text, a document is missing, or
+`logs/final_explanation_issues/<module>.json` exists (an unresolved reviewer
+finding). **Any failure means do not distribute.**
+
+How the three documents are now made (cause: they used to be independent calls,
+and the Final Explanation was requested in the same batch as the lessons so it
+never saw them; see STATUS.md 2026-10-03):
+* **Summary Table** is *derived* from each lesson's own title + `summaryTablePrompt`
+  (no API call). After editing a lesson run
+  `python3 scripts/rebuild_consistency.py --summary-tables --only <module>`
+  (`patch_lesson.js` does it for the lesson it patches).
+* **Final Explanation** is generated *after* the lessons, from their content, then
+  reviewed by a second call (`generate_final_explanation`). Existing sub-strands:
+  `python3 scripts/rebuild_consistency.py --final-explanations [--only a,b] [--dry-run]`
+  (costs API money, about $0.2-0.5 per sub-strand).
+  Contradictions *between lessons* are logged separately to
+  `logs/lesson_conflicts/<module>.json` and do not block the Final Explanation.
+* Two Final Explanation files are rendered: `*_FinalExplanation.docx` (student:
+  blank answer space) and `*_FinalExplanation_TeacherKey.docx` (exemplars).
+* The link gate has a new hard check, **T3**: a sub-topic qualifier in a title
+  (centripetal, projectile, "speed of sound", integral...) that the lesson never
+  mentions (`conflict_qualifiers` in `config/link_matching.yaml`).
+
 ### Step 6a — Verify resource links before distributing
 
 (Labelled "Step 6c" before 2026-09-30, the same as the index-page step. Older

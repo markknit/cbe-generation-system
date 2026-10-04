@@ -23,6 +23,7 @@ the `ares.edu` spellings in these examples are historical):
 Override host: export ARES_HOST=10.42.0.1
 """
 
+import json
 import os
 import re
 import sqlite3
@@ -311,13 +312,87 @@ def foreign_vocab_hits(title: str, subject: str, cfg: dict) -> list[str]:
     return sorted(set(hits))
 
 
+def lesson_vocab(substrand: str, title: str, keywords: str, cfg: dict) -> set[str]:
+    """Everything the lesson itself says about its topic, canonicalised: the
+    sub-strand name, lesson title and aresKeywords. Conflict-qualifier checks
+    compare a candidate's title against this."""
+    return gate_words(f"{strip_substrand_label(substrand)} {title} {keywords}", cfg)
+
+
+def conflict_qualifier_hits(title: str, vocab: set[str], cfg: dict) -> list[str]:
+    """Sub-topic qualifiers in a candidate title that the lesson never mentions."""
+    low = canon_text(title, cfg)
+    words = {_canon(t, cfg) for t in _tokens(low)}
+    hits = []
+    for term in cfg.get("conflict_qualifiers") or []:
+        if " " in term:
+            if re.search(r"\b" + re.escape(term.lower()) + r"\b", (title or "").lower()) \
+                    and not re.search(r"\b" + re.escape(term.lower()) + r"\b", " ".join(sorted(vocab))):
+                hits.append(term)
+        else:
+            c = _canon(term, cfg)
+            if c in words and c not in vocab:
+                hits.append(term)
+    return sorted(set(hits))
+
+
+_JUDGMENTS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                               "config", "link_judgments.json")
+
+
+def judgment_key(subject: str, topic: str, lesson_title: str, resource_title: str) -> str:
+    """Cache key for one (lesson, resource) verdict. Normalised so spacing and
+    case differences between the matcher and the checker cannot split a key."""
+    n = lambda t: re.sub(r"\s+", " ", (t or "").strip().lower())   # noqa: E731
+    return "|".join(n(x) for x in (subject, topic, lesson_title, resource_title))
+
+
+_QUERIES_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                             "config", "link_queries.json")
+
+
+def query_key(subject: str, topic: str, lesson_title: str) -> str:
+    return judgment_key(subject, topic, lesson_title, "")[:-1]
+
+
+def load_queries(path: str = _QUERIES_PATH) -> dict:
+    """Model-written ARES-style search phrases per lesson (scripts/generate_link_queries.py).
+    They widen RETRIEVAL and the relevance gate; the independent judge (config/
+    link_judgments.json) is what decides whether a retrieved link is shown."""
+    try:
+        with open(path) as f:
+            return json.load(f).get("queries", {})
+    except (OSError, ValueError):
+        return {}
+
+
+_QUERIES_CACHE: dict = {}
+
+
+def load_judgments(path: str = _JUDGMENTS_PATH) -> dict:
+    """Cached independent-judge verdicts: key -> fits | partial | off_topic.
+    Produced by scripts/judge_links.py; a missing file means no verdicts."""
+    try:
+        with open(path) as f:
+            return json.load(f).get("judgments", {})
+    except (OSError, ValueError):
+        return {}
+
+
 class LessonQuery:
     """The lesson-side view used by both retrieval and the relevance gate."""
 
     def __init__(self, substrand: str, topic: str, title: str, subject: str, cfg: dict):
         stop, generic = cfg["_stop"], cfg["_generic"]
+        if not _QUERIES_CACHE:
+            _QUERIES_CACHE.update(load_queries() or {"": []})
+        extra = _QUERIES_CACHE.get(query_key(subject, strip_substrand_label(substrand), title))
+        if extra:
+            topic = (topic or "") + ", " + ", ".join(extra)
         self.subject = subject
+        self.title = title
         self.topic_name = strip_substrand_label(substrand)
+        self.vocab = lesson_vocab(substrand, title, topic, cfg)
         th = cfg["thresholds"]
         core = _content_tokens(self.topic_name, stop)
         topic_toks = _content_tokens(topic, stop)
@@ -403,6 +478,7 @@ class AresRecommender:
         self.db_path = str(db_path)
         self.cfg = load_link_config(config_path)
         self._conn: Optional[sqlite3.Connection] = None
+        self._judgments = load_judgments()
         self._ready = False
         self._available: Optional[set[str]] = None
         self._web_root = os.environ.get("WEB_MODULES_REFERENCE_ROOT") or self.cfg.get("web_modules_reference_root")
@@ -488,6 +564,10 @@ class AresRecommender:
                 c["reason"] = "below relevance gate"
             elif foreign_vocab_hits(title, q.subject, cfg) and not c["core_in_title"]:
                 c["reason"] = f"foreign vocabulary {foreign_vocab_hits(title, q.subject, cfg)}"
+            elif conflict_qualifier_hits(title, q.vocab, cfg):
+                c["reason"] = f"conflicting sub-topic {conflict_qualifier_hits(title, q.vocab, cfg)}"
+            elif self._judgments.get(judgment_key(q.subject, q.topic_name, q.title, title)) == "off_topic":
+                c["reason"] = "judged off-topic (independent reviewer)"
             if c["reason"]:
                 rejected.append(c)
                 continue
@@ -500,9 +580,13 @@ class AresRecommender:
                 _reading_tier(channel, row["source"], row["content_type"])
             rel *= (1.10, 1.05, 1.0)[min(tier, 2)]
             rel *= 1.05 if path.startswith("kolibri_storage/") else 1.0
-            c.update(score=rel, tier=tier)
+            verdict = self._judgments.get(judgment_key(q.subject, q.topic_name, q.title, title), "unjudged")
+            # Independent-judge ranking: a verified fit always outranks the rest;
+            # partial and not-yet-judged rank together below it. Within a rank,
+            # the matcher's own score decides.
+            c.update(score=rel, tier=tier, verdict=verdict, vrank=0 if verdict == "fits" else 1)
             passed.append(c)
-        passed.sort(key=lambda c: -c["score"])
+        passed.sort(key=lambda c: (c["vrank"], -c["score"]))
         return passed, rejected
 
     def _to_resource(self, c: dict, q: LessonQuery, kind: str) -> AresResource:
@@ -539,10 +623,26 @@ class AresRecommender:
         for i, kind in enumerate(("video", "reading")):
             passed, rejected = self._candidates(q, kind)
             used: set[str] = set()
+            # Verified fits come first and partial/unjudged only when no fit exists.
+            # A resource is shown in at most MAX_REUSE phases of a lesson while
+            # another candidate of the same rank is available; when the fits run
+            # out, a distinct partial (labelled in the document) is preferred to
+            # a third repeat of the same fit; with no partial, the fit repeats.
+            MAX_REUSE = 2
+            best_rank = passed[0]["vrank"] if passed else 1
+            group = [c for c in passed if c["vrank"] == best_rank]
+            rest = [c for c in passed if c["vrank"] != best_rank]
+            uses: dict[str, int] = {}
             for phase in self.PHASES:
                 hints = {_norm(h) for h in self.cfg["phase_hints"].get(phase, [])}
-                floor = self.cfg["thresholds"]["diversity_floor"] * passed[0]["score"] if passed else 0
-                pool = [c for c in passed if c["title"] not in used and c["score"] >= floor] or passed
+                floor = self.cfg["thresholds"]["diversity_floor"] * group[0]["score"] if group else 0
+                pool = [c for c in group if c["title"] not in used and c["score"] >= floor]
+                if not pool:
+                    pool = [c for c in group if uses.get(c["title"], 0) < MAX_REUSE and c["score"] >= floor]
+                if not pool and rest:
+                    pool = [c for c in rest if c["title"] not in used][:3]
+                if not pool:
+                    pool = sorted(group, key=lambda c: uses.get(c["title"], 0))
                 if pool:
                     top = pool[0]["score"]
                     # Phase hint only reorders near-ties (within 10% of the best).
@@ -550,9 +650,11 @@ class AresRecommender:
                     near.sort(key=lambda c: (-len(hints & {_norm(t) for t in _tokens(c["title"])}), -c["score"]))
                     pick = near[0]
                     used.add(pick["title"])
+                    uses[pick["title"]] = uses.get(pick["title"], 0) + 1
                     out[phase][i] = self._to_resource(pick, q, kind)
                 diag["slots"][f"{phase}.{kind}"] = {
                     "picked": out[phase][i].title if out[phase][i] else None,
+                    "fit": pick["verdict"] if pool else None,
                     "score": round(pick["score"], 2) if pool else None,
                     "core_hits": pick["core_hits"] if pool else [],
                     "detail_hits": pick["detail_hits"][:8] if pool else [],

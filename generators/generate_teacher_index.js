@@ -17,7 +17,8 @@ const SUBJECT_ORDER = ['Biology', 'Chemistry', 'Physics', 'Maths', 'English'];
 // PDF feel like one product.
 const DOC_TYPES = [
   { suffix: '_CBE_LessonSequence.pdf', label: 'Lesson Sequence', abbr: 'LP', color: '#1F3864' },
-  { suffix: '_FinalExplanation.pdf', label: 'Final Explanation', abbr: 'FE', color: '#B8620A' },
+  { suffix: '_FinalExplanation.pdf', label: 'Final Explanation (student)', abbr: 'FE', color: '#B8620A' },
+  { suffix: '_FinalExplanation_TeacherKey.pdf', label: 'Final Explanation (teacher key)', abbr: 'FEK', color: '#8A4A08' },
   { suffix: '_SummaryTable.pdf', label: 'Summary Table', abbr: 'ST', color: '#6B3FA0' },
 ];
 

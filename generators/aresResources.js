@@ -84,9 +84,20 @@ function getAllPhaseResources({ substrand, topic, subject = '', title = '' }) {
   const diag = out._diagnostics;
   delete out._diagnostics;
   _DIAGNOSTICS.push({ title, substrand, subject, ...diag });
+  // How the independent judge rated each pick (fits / partial / unjudged). Attached
+  // NON-enumerable so it reaches the docx label but never the strict contract JSON.
+  for (const ph of Object.keys(out)) {
+    for (const k of ['video', 'reading']) {
+      const r = out[ph] && out[ph][k];
+      const slot = diag && diag.slots && diag.slots[`${ph}.${k}`];
+      if (r && slot && slot.fit) Object.defineProperty(r, '_fit', { value: slot.fit, enumerable: false });
+    }
+  }
   return out;
 }
 
+// Shown under a link the independent judge rated 'partial' (right area, not the exact topic).
+const RELATED_NOTE = 'Related topic: not an exact match for this lesson.';
 const _DIAGNOSTICS = [];
 /** Return and clear the diagnostics collected since the last call. */
 function takeDiagnostics() {
@@ -115,6 +126,7 @@ function buildResourceParagraphs(resources, phase = '') {
   if (v) {
     const vUrl = v.direct_url || v.exact_search_url || fallback;
     paras.push(_linkPara(v.title, vUrl));
+    if (v._fit && v._fit !== 'fits') paras.push(_italicPara(RELATED_NOTE));
     if (v.source) paras.push(_metaPara(`Source: ${v.source}`));
     paras.push(_searchLinkPara('🔍 Search ARES for similar videos', v.search_url));
   } else {
@@ -131,6 +143,7 @@ function buildResourceParagraphs(resources, phase = '') {
   if (r) {
     const rUrl = r.direct_url || r.exact_search_url || fallback;
     paras.push(_linkPara(r.title, rUrl));
+    if (r._fit && r._fit !== 'fits') paras.push(_italicPara(RELATED_NOTE));
     if (r.source) paras.push(_metaPara(`Source: ${r.source}`));
     paras.push(_searchLinkPara('🔍 Search ARES for similar readings', r.search_url));
   } else {

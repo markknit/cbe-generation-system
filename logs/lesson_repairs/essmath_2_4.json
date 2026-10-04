@@ -1,0 +1,98 @@
+{
+  "module": "essmath_2_4",
+  "conflicts_in": [
+    {
+      "lessons": "1",
+      "severity": "major",
+      "fact": "Lesson 1 derives h = b sin C from a right-angled triangle with the right angle at B, hypotenuse AC = b, and then claims the formula works for any triangle; the diagram setup is internally inconsistent (a right angle at B makes h = AB, so sin C = h/b is fine, but the lesson then drops the right angle for a general triangle).",
+      "versions": "Lesson 1 labels b = AC as the hypotenuse of a right triangle at B, then removes the right angle and keeps b as AC."
+    },
+    {
+      "lessons": "6, 8, 1",
+      "severity": "major",
+      "fact": "Whether the pentagon is part of the courtyard: the phenomenon lists pentagon among courtyard formulas, and Lesson 7's family tree and Lesson 6 model-building treat it variously; Lesson 6 says it is a standalone tray context, but Lesson 6's Explained says the contractor can find the area of a pentagon tile.",
+      "versions": "Lesson 6 overview: standalone njugu tray separate from the courtyard, yet its Explained says the contractor finds the area of a regular pentagon tile; Lesson 8 says pentagon is not part of the courtyard layout."
+    }
+  ],
+  "applied": [
+    {
+      "lesson": 1,
+      "path": "framework[1].learnerExperience",
+      "old": "a triangle ABC with NO right angle, keeping",
+      "new": "a triangle ABC with NO right angle at B, keeping",
+      "conflict": "1"
+    },
+    {
+      "lesson": 1,
+      "path": "framework[1].learnerExperience",
+      "old": "A dashed perpendicular height h is dropped from A to line BC, creating",
+      "new": "A dashed perpendicular height h is dropped from A to line BC, meeting it at point D (the right angle is now at D, not B), creating",
+      "conflict": "1"
+    },
+    {
+      "lesson": 1,
+      "path": "framework[1].teacherMoves",
+      "old": "I am going to remove the right angle.'",
+      "new": "I am going to move the right angle: it will now sit at D, the foot of the perpendicular, not at B.'",
+      "conflict": "1"
+    },
+    {
+      "lesson": 1,
+      "path": "framework[1].teacherMoves",
+      "old": "Redraw the triangle without the right angle, keeping",
+      "new": "Redraw the triangle with no right angle at B, keeping",
+      "conflict": "1"
+    },
+    {
+      "lesson": 1,
+      "path": "framework[1].teacherMoves",
+      "old": "Draw the dashed perpendicular from A to side BC (extended if needed), label it h.",
+      "new": "Draw the dashed perpendicular from A to side BC (extended if needed), label its foot D and the perpendicular h; the right angle is at D.",
+      "conflict": "1"
+    },
+    {
+      "lesson": 6,
+      "path": "slo.purposeInStoryline",
+      "old": "solving the contractor's problem and advancing",
+      "new": "solving the vendor's problem and advancing",
+      "conflict": "2"
+    },
+    {
+      "lesson": 6,
+      "path": "framework[2].learnerExperience",
+      "old": "A second pentagon tile in the Kericho courtyard has side length 12 cm.",
+      "new": "A second pentagonal njugu tray at the Kericho market has side length 12 cm.",
+      "conflict": "2"
+    },
+    {
+      "lesson": 6,
+      "path": "framework[4].learnerExperience",
+      "old": "write a speech bubble for the contractor: 'I can now find the area of the pentagon tile because...'",
+      "new": "write a speech bubble for the vendor: 'I can now find the area of the pentagonal tray because...'",
+      "conflict": "2"
+    },
+    {
+      "lesson": 6,
+      "path": "framework[4].teacherMoves",
+      "old": "Today you add the pentagon tile areas.",
+      "new": "Today you add the pentagonal tray areas.",
+      "conflict": "2"
+    },
+    {
+      "lesson": 6,
+      "path": "summaryTablePrompt.explained",
+      "old": "that the contractor can find the exact area of a regular pentagon tile using only",
+      "new": "that the vendor can find the exact area of a regular pentagonal tray using only",
+      "conflict": "2"
+    },
+    {
+      "lesson": 7,
+      "path": "slo.purposeInStoryline",
+      "old": "the pentagon formula (Lesson 6), and now",
+      "new": "the pentagon formula (Lesson 6, a standalone njugu-tray extension, not a courtyard section), and now",
+      "conflict": "2"
+    }
+  ],
+  "rejected": [],
+  "unresolved": []
+}

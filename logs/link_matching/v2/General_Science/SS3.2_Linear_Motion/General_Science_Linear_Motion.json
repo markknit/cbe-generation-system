@@ -32,8 +32,8 @@
         "vocabulary",
         "time",
         "graph",
-        "keep",
-        "getting"
+        "vectors",
+        "scalars"
       ],
       "phrases": [
         "linear motion",
@@ -43,26 +43,37 @@
         "nyayo stadium",
         "road safety",
         "motion vocabulary",
-        "speed time graph"
+        "speed time graph",
+        "distance displacement",
+        "speed velocity",
+        "vectors scalars",
+        "acceleration velocity",
+        "speed time graphs",
+        "free fall acceleration"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Position vs. time graphs",
-        "score": 160.62,
+        "picked": "Intro to vectors and scalars",
+        "fit": "fits",
+        "score": 223.26,
         "core_hits": [],
         "detail_hits": [
           "distance",
           "displacement",
           "speed",
           "velocity",
-          "graph speed time"
+          "scalar",
+          "vector",
+          "displacement distance",
+          "speed velocity"
         ],
-        "detail_weight": 2.74
+        "detail_weight": 4.13
       },
       "observe.video": {
-        "picked": "Intro to vectors and scalars",
-        "score": 131.98,
+        "picked": "Calculating average velocity or speed",
+        "fit": "fits",
+        "score": 140.76,
         "core_hits": [],
         "detail_hits": [
           "distance",
@@ -70,13 +81,16 @@
           "speed",
           "velocity",
           "scalar",
-          "vector"
+          "vector",
+          "displacement distance",
+          "speed velocity"
         ],
-        "detail_weight": 3.2
+        "detail_weight": 4.13
       },
       "explain.video": {
-        "picked": "Calculating average velocity or speed",
-        "score": 123.22,
+        "picked": "Intro to vectors and scalars",
+        "fit": "fits",
+        "score": 223.26,
         "core_hits": [],
         "detail_hits": [
           "distance",
@@ -84,152 +98,181 @@
           "speed",
           "velocity",
           "scalar",
-          "vector"
+          "vector",
+          "displacement distance",
+          "speed velocity"
         ],
-        "detail_weight": 3.2
+        "detail_weight": 4.13
       },
       "dqb.video": {
-        "picked": "Motion problems with integrals: displacement vs. distance",
-        "score": 107.61,
+        "picked": "Calculating average velocity or speed",
+        "fit": "fits",
+        "score": 140.76,
         "core_hits": [],
         "detail_hits": [
           "distance",
           "displacement",
           "speed",
-          "velocity"
+          "velocity",
+          "scalar",
+          "vector",
+          "displacement distance",
+          "speed velocity"
         ],
-        "detail_weight": 2.39
+        "detail_weight": 4.13
       },
       "model.video": {
-        "picked": "Relating angular and regular motion variables",
-        "score": 102.67,
+        "picked": "Position vs. time graphs",
+        "fit": "partial",
+        "score": 177.28,
         "core_hits": [],
         "detail_hits": [
+          "distance",
           "displacement",
           "speed",
           "velocity",
-          "acceleration"
+          "graph speed time",
+          "displacement distance",
+          "speed velocity"
         ],
-        "detail_weight": 2.14
+        "detail_weight": 3.37
       },
       "predict.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 150.99,
+        "picked": "Calculating Acceleration from Velocity and Time (Flexbook)",
+        "fit": "fits",
+        "score": 94.95,
         "core_hits": [],
         "detail_hits": [
-          "displacement",
-          "speed",
           "velocity",
           "acceleration",
-          "vector"
+          "acceleration velocity"
         ],
-        "detail_weight": 2.52
+        "detail_weight": 1.24
       },
       "observe.reading": {
-        "picked": "2D projectile motion: Identifying graphs for projectiles",
-        "score": 104.73,
+        "picked": "Calculating Acceleration from Velocity and Time (Flexbook)",
+        "fit": "fits",
+        "score": 94.95,
         "core_hits": [],
         "detail_hits": [
-          "displacement",
           "velocity",
-          "acceleration"
+          "acceleration",
+          "acceleration velocity"
         ],
-        "detail_weight": 1.58
+        "detail_weight": 1.24
       },
       "explain.reading": {
         "picked": "Average velocity and average speed from graphs",
-        "score": 95.84,
+        "fit": "partial",
+        "score": 102.11,
         "core_hits": [],
         "detail_hits": [
           "speed",
           "velocity",
-          "graph speed time"
+          "graph speed time",
+          "speed velocity"
         ],
-        "detail_weight": 1.4
+        "detail_weight": 1.71
       },
       "dqb.reading": {
-        "picked": "Instantaneous velocity and instantaneous speed from graphs",
-        "score": 95.84,
+        "picked": "Calculating Acceleration from Velocity and Time Practice",
+        "fit": "partial",
+        "score": 94.95,
         "core_hits": [],
         "detail_hits": [
-          "speed",
-          "velocity",
-          "graph speed time"
-        ],
-        "detail_weight": 1.4
-      },
-      "model.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 150.99,
-        "core_hits": [],
-        "detail_hits": [
-          "displacement",
-          "speed",
           "velocity",
           "acceleration",
-          "vector"
+          "acceleration velocity"
         ],
-        "detail_weight": 2.52
+        "detail_weight": 1.24
+      },
+      "model.reading": {
+        "picked": "Acceleration and velocity",
+        "fit": "partial",
+        "score": 85.15,
+        "core_hits": [],
+        "detail_hits": [
+          "velocity",
+          "acceleration",
+          "acceleration velocity"
+        ],
+        "detail_weight": 1.24
       }
     },
     "video_pool": {
-      "passed": 34,
+      "passed": 20,
       "runners_up": [
-        "Intro to vectors and scalars",
         "Calculating average velocity or speed",
-        "Motion problems with integrals: displacement vs. distance",
-        "Relating angular and regular motion variables",
-        "Deriving displacement as a function of time, acceleration, and initial velocity"
+        "Displacement from time and velocity example",
+        "Instantaneous speed and velocity",
+        "Acceleration",
+        "Position vs. time graphs"
       ],
       "rejected_sample": [
         [
+          "Plotting projectile displacement, acceleration, and velocity",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Deriving displacement as a function of time, acceleration, and initial velocity",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Motion problems with integrals: displacement vs. distance",
+          "conflicting sub-topic ['integral', 'integrals']"
+        ],
+        [
+          "Relating angular and regular motion variables",
+          "conflicting sub-topic ['angular']"
+        ],
+        [
           "Acceleration vs. time graphs",
-          "below relevance gate"
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Interpreting direction of motion from position-time graph",
-          "below relevance gate"
+          "Projectile motion (part 4)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
-          "topic - linear motion - Projectile Motion Video",
-          "below relevance gate"
+          "Projectile motion (part 3)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
-          "Vector intro for linear algebra",
-          "below relevance gate"
-        ],
-        [
-          "Planar motion example: acceleration vector",
-          "below relevance gate"
-        ],
-        [
-          "Worked example: Motion problems with derivatives",
-          "below relevance gate"
-        ],
-        [
-          "Comparing linear functions: faster rate of change",
-          "below relevance gate"
-        ],
-        [
-          "Force vs. time graphs",
-          "below relevance gate"
+          "2011 Calculus BC free response #1a",
+          "conflicting sub-topic ['calculus']"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 115,
-        "kolibri node not available on reference image": 3
+        "conflicting sub-topic": 22,
+        "judged off-topic (independent reviewer)": 4,
+        "below relevance gate": 101,
+        "kolibri node not available on reference image": 3,
+        "foreign vocabulary": 1,
+        "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 8,
+      "passed": 13,
       "runners_up": [
-        "2D projectile motion: Identifying graphs for projectiles",
+        "Velocity and Acceleration (Flexbook)",
         "Average velocity and average speed from graphs",
-        "Instantaneous velocity and instantaneous speed from graphs",
-        "Parametric velocity and speed",
+        "Calculating Acceleration from Velocity and Time Practice",
+        "Acceleration and velocity",
         "Displacement During Constant Acceleration (Flexbook)"
       ],
       "rejected_sample": [
+        [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Instantaneous velocity and instantaneous speed from graphs",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Additional Resources for Free Fall",
           "kolibri node not available on reference image"
@@ -247,25 +290,15 @@
           "kolibri node not available on reference image"
         ],
         [
-          "Calculating Acceleration from Velocity and Time (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Calculating Acceleration from Velocity and Time Practice",
-          "below relevance gate"
-        ],
-        [
           "Velocity-Time Graphs (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Combined vector operations",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "conflicting sub-topic": 4,
+        "judged off-topic (independent reviewer)": 3,
         "kolibri node not available on reference image": 7,
-        "below relevance gate": 141
+        "below relevance gate": 129
       }
     }
   },
@@ -290,6 +323,11 @@
         "thika",
         "road",
         "matatu",
+        "kinematic",
+        "equation",
+        "solving",
+        "kinematics",
+        "problems",
         "giving",
         "formula"
       ],
@@ -297,71 +335,94 @@
         "uniform acceleration",
         "equations motion",
         "constant acceleration",
-        "thika road"
+        "thika road",
+        "kinematic equations",
+        "constant acceleration equations",
+        "velocity equation",
+        "displacement constant acceleration",
+        "solving kinematics problems",
+        "velocity acceleration"
       ]
     },
     "slots": {
       "predict.video": {
+        "picked": "Choosing kinematic equations",
+        "fit": "fits",
+        "score": 254.88,
+        "core_hits": [],
+        "detail_hits": [
+          "velocity",
+          "acceleration constant",
+          "equation kinematic",
+          "acceleration constant equation",
+          "equation velocity",
+          "acceleration velocity",
+          "equation"
+        ],
+        "detail_weight": 3.66
+      },
+      "observe.video": {
         "picked": "Average velocity for constant acceleration",
-        "score": 139.86,
+        "fit": "fits",
+        "score": 177.5,
         "core_hits": [],
         "detail_hits": [
           "velocity",
           "time",
           "acceleration constant",
+          "acceleration velocity",
           "formula"
         ],
-        "detail_weight": 2.32
-      },
-      "observe.video": {
-        "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "score": 130.53,
-        "core_hits": [],
-        "detail_hits": [
-          "velocity",
-          "displacement",
-          "time",
-          "acceleration constant"
-        ],
-        "detail_weight": 2.64
+        "detail_weight": 2.71
       },
       "explain.video": {
-        "picked": "Plotting projectile displacement, acceleration, and velocity",
-        "score": 97.41,
+        "picked": "Choosing kinematic equations",
+        "fit": "fits",
+        "score": 254.88,
         "core_hits": [],
         "detail_hits": [
           "velocity",
-          "displacement",
-          "time"
+          "acceleration constant",
+          "equation kinematic",
+          "acceleration constant equation",
+          "equation velocity",
+          "acceleration velocity",
+          "equation"
         ],
-        "detail_weight": 1.89
+        "detail_weight": 3.66
       },
       "dqb.video": {
         "picked": "Average velocity for constant acceleration",
-        "score": 139.86,
+        "fit": "fits",
+        "score": 177.5,
         "core_hits": [],
         "detail_hits": [
           "velocity",
           "time",
           "acceleration constant",
+          "acceleration velocity",
           "formula"
         ],
-        "detail_weight": 2.32
+        "detail_weight": 2.71
       },
       "model.video": {
-        "picked": "Average velocity for constant acceleration",
-        "score": 139.86,
+        "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
+        "fit": "partial",
+        "score": 148.89,
         "core_hits": [],
         "detail_hits": [
           "velocity",
+          "displacement",
           "time",
           "acceleration constant",
-          "formula"
+          "acceleration constant displacement",
+          "acceleration velocity"
         ],
-        "detail_weight": 2.32
+        "detail_weight": 3.48
       },
       "predict.reading": {
         "picked": "Displacement During Uniform Acceleration Practice",
+        "fit": "fits",
         "score": 135.02,
         "core_hits": [],
         "detail_hits": [
@@ -371,26 +432,31 @@
         "detail_weight": 2.12
       },
       "observe.reading": {
+        "picked": "Setting up problems with constant acceleration",
+        "fit": "fits",
+        "score": 122.56,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration constant",
+          "formula"
+        ],
+        "detail_weight": 1.05
+      },
+      "explain.reading": {
         "picked": "Displacement During Constant Acceleration (Flexbook)",
-        "score": 110.28,
+        "fit": "fits",
+        "score": 120.58,
         "core_hits": [],
         "detail_hits": [
           "displacement",
-          "acceleration constant"
+          "acceleration constant",
+          "acceleration constant displacement"
         ],
-        "detail_weight": 1.38
-      },
-      "explain.reading": {
-        "picked": "Uniform Acceleration (Flexbook)",
-        "score": 93.42,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration uniform"
-        ],
-        "detail_weight": 1.5
+        "detail_weight": 1.82
       },
       "dqb.reading": {
-        "picked": "Uniform Acceleration Practice",
+        "picked": "Uniform Acceleration (Flexbook)",
+        "fit": "fits",
         "score": 93.42,
         "core_hits": [],
         "detail_hits": [
@@ -399,7 +465,8 @@
         "detail_weight": 1.5
       },
       "model.reading": {
-        "picked": "Uniform Acceleration (PLIX)",
+        "picked": "Uniform Acceleration Practice",
+        "fit": "fits",
         "score": 93.42,
         "core_hits": [],
         "detail_hits": [
@@ -409,90 +476,90 @@
       }
     },
     "video_pool": {
-      "passed": 31,
+      "passed": 10,
       "runners_up": [
+        "Average velocity for constant acceleration",
+        "Airbus A380 take-off time",
+        "Displacement from time and velocity example",
         "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "Plotting projectile displacement, acceleration, and velocity",
-        "Choosing kinematic equations",
-        "Angular motion variables",
-        "Airbus A380 take-off time"
+        "Acceleration"
       ],
       "rejected_sample": [
         [
-          "Newton's second law of motion",
-          "below relevance gate"
+          "Worked example: Motion problems with derivatives",
+          "conflicting sub-topic ['derivative', 'derivatives']"
         ],
         [
-          "Representing linear systems with matrix equations",
-          "below relevance gate"
+          "Angular motion variables",
+          "conflicting sub-topic ['angular']"
         ],
         [
-          "Centripetal force and acceleration intuition",
-          "below relevance gate"
+          "Projectile motion (part 4)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
-          "Constant of proportionality from equation",
-          "below relevance gate"
+          "Plotting projectile displacement, acceleration, and velocity",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Projectile motion (part 3)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Introduction to one-dimensional motion with calculus",
+          "conflicting sub-topic ['calculus']"
         ],
         [
           "Worked example: motion problems (with definite integrals)",
-          "below relevance gate"
+          "conflicting sub-topic ['integral', 'integrals']"
         ],
         [
-          "2nd order linear homogeneous differential equations 1",
-          "below relevance gate"
-        ],
-        [
-          "2nd order linear homogeneous differential equations 1 -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Visually understanding balancing chemical equations",
-          "below relevance gate"
+          "Relating angular and regular motion variables",
+          "conflicting sub-topic ['angular']"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 118,
-        "web file not on reference image": 1,
-        "kolibri node not available on reference image": 6
+        "conflicting sub-topic": 14,
+        "below relevance gate": 120,
+        "judged off-topic (independent reviewer)": 6
       }
     },
     "reading_pool": {
-      "passed": 16,
+      "passed": 12,
       "runners_up": [
+        "Setting up problems with constant acceleration",
         "Displacement During Constant Acceleration (Flexbook)",
         "Uniform Acceleration (Flexbook)",
         "Uniform Acceleration Practice",
-        "Uniform Acceleration (PLIX)",
-        "2D projectile motion: Vectors and comparing multiple trajectories"
+        "Uniform Acceleration (PLIX)"
       ],
       "rejected_sample": [
+        [
+          "Kinematic formulas in one-dimension",
+          "below relevance gate"
+        ],
+        [
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Motion problems (differential calc)",
+          "conflicting sub-topic ['differential']"
+        ],
         [
           "Constant Acceleration and Inertia (PLIX)",
           "below relevance gate"
         ],
         [
-          "Motion problems (differential calc)",
-          "below relevance gate"
-        ],
-        [
-          "Forms of Linear Equations: Equation Exploration (PLIX)",
+          "Formulas for Problem Solving: Finding Distance, Rate, and Time (PLIX)",
           "below relevance gate"
         ],
         [
           "Linear equations word problems",
-          "below relevance gate"
-        ],
-        [
-          "Linear equations with unknown coefficients",
-          "below relevance gate"
-        ],
-        [
-          "Constant of proportionality from tables (with equations)",
-          "below relevance gate"
-        ],
-        [
-          "Intercepts from an equation",
           "below relevance gate"
         ],
         [
@@ -501,8 +568,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 136,
-        "kolibri node not available on reference image": 3
+        "below relevance gate": 137,
+        "conflicting sub-topic": 4,
+        "kolibri node not available on reference image": 2
       }
     }
   },
@@ -538,7 +606,9 @@
         "displacement",
         "gravitational",
         "suvat",
-        "general"
+        "general",
+        "kinematic",
+        "problems"
       ],
       "phrases": [
         "linear motion",
@@ -550,26 +620,71 @@
         "rift valley athletics",
         "boda boda",
         "road safety",
-        "gravitational acceleration"
+        "gravitational acceleration",
+        "kinematic equations constant acceleration",
+        "solving kinematics problems",
+        "free fall acceleration due gravity",
+        "deceleration stopping distance",
+        "vertical projectile motion"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Choosing kinematic equations",
-        "score": 153.41,
+        "fit": "fits",
+        "score": 162.54,
         "core_hits": [],
         "detail_hits": [
           "acceleration constant",
           "kinematic",
           "velocity",
+          "acceleration constant equation kinematic",
           "equation",
           "problem"
         ],
-        "detail_weight": 2.72
+        "detail_weight": 3.08
       },
       "observe.video": {
+        "picked": "Average velocity for constant acceleration",
+        "fit": "fits",
+        "score": 119.05,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration constant",
+          "velocity"
+        ],
+        "detail_weight": 1.56
+      },
+      "explain.video": {
+        "picked": "Choosing kinematic equations",
+        "fit": "fits",
+        "score": 162.54,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration constant",
+          "kinematic",
+          "velocity",
+          "acceleration constant equation kinematic",
+          "equation",
+          "problem"
+        ],
+        "detail_weight": 3.08
+      },
+      "dqb.video": {
+        "picked": "Average velocity for constant acceleration",
+        "fit": "fits",
+        "score": 119.05,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration constant",
+          "velocity"
+        ],
+        "detail_weight": 1.56
+      },
+      "model.video": {
         "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "score": 97.43,
+        "fit": "partial",
+        "score": 113.48,
         "core_hits": [],
         "detail_hits": [
           "acceleration constant",
@@ -578,47 +693,23 @@
         ],
         "detail_weight": 1.86
       },
-      "explain.video": {
-        "picked": "Choosing kinematic equations",
-        "score": 153.41,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration constant",
-          "kinematic",
-          "velocity",
-          "equation",
-          "problem"
-        ],
-        "detail_weight": 2.72
-      },
-      "dqb.video": {
-        "picked": "Choosing kinematic equations",
-        "score": 153.41,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration constant",
-          "kinematic",
-          "velocity",
-          "equation",
-          "problem"
-        ],
-        "detail_weight": 2.72
-      },
-      "model.video": {
-        "picked": "Choosing kinematic equations",
-        "score": 153.41,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration constant",
-          "kinematic",
-          "velocity",
-          "equation",
-          "problem"
-        ],
-        "detail_weight": 2.72
-      },
       "predict.reading": {
+        "picked": "Kinematic formulas in one-dimension",
+        "fit": "fits",
+        "score": 154.14,
+        "core_hits": [],
+        "detail_hits": [
+          "kinematic",
+          "problem solving",
+          "kinematic problem solving",
+          "problem",
+          "solving"
+        ],
+        "detail_weight": 2.25
+      },
+      "observe.reading": {
         "picked": "Setting up problems with constant acceleration",
+        "fit": "fits",
         "score": 133.58,
         "core_hits": [],
         "detail_hits": [
@@ -628,42 +719,36 @@
         ],
         "detail_weight": 2.11
       },
-      "observe.reading": {
-        "picked": "Displacement During Constant Acceleration (Flexbook)",
-        "score": 114.03,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration constant",
-          "displacement"
-        ],
-        "detail_weight": 1.54
-      },
       "explain.reading": {
         "picked": "Kinematic formulas in one-dimension",
-        "score": 103.88,
+        "fit": "fits",
+        "score": 154.14,
         "core_hits": [],
         "detail_hits": [
           "kinematic",
           "problem solving",
+          "kinematic problem solving",
           "problem",
           "solving"
         ],
-        "detail_weight": 1.91
+        "detail_weight": 2.25
       },
       "dqb.reading": {
-        "picked": "Projectile Motion Problem Solving (Flexbook)",
-        "score": 89.02,
+        "picked": "Setting up problems with constant acceleration",
+        "fit": "fits",
+        "score": 133.58,
         "core_hits": [],
         "detail_hits": [
-          "problem solving",
-          "problem",
-          "solving"
+          "acceleration constant",
+          "kinematic",
+          "problem"
         ],
-        "detail_weight": 1.35
+        "detail_weight": 2.11
       },
       "model.reading": {
-        "picked": "Problem Solving with Linear Models (Flexbook)",
-        "score": 88.87,
+        "picked": "Projectile Motion Problem Solving (Flexbook)",
+        "fit": "partial",
+        "score": 117.85,
         "core_hits": [],
         "detail_hits": [
           "problem solving",
@@ -674,33 +759,17 @@
       }
     },
     "video_pool": {
-      "passed": 39,
+      "passed": 34,
       "runners_up": [
-        "Deriving displacement as a function of time, acceleration, and initial velocity",
         "Average velocity for constant acceleration",
-        "01 Writing And Solving Equations For Problem Solving",
-        "Thin lens equation and problem solving",
-        "Period dependence for mass on spring"
+        "Airbus A380 take-off time",
+        "Deriving displacement as a function of time, acceleration, and initial velocity",
+        "Solving Length and Distance Problems Involving Time - Word Problems",
+        "Projectile motion with ordered set notation"
       ],
       "rejected_sample": [
         [
-          "Angular motion variables",
-          "below relevance gate"
-        ],
-        [
-          "topic - linear motion - Projectile Motion Video",
-          "below relevance gate"
-        ],
-        [
           "Projectile motion (part 4)",
-          "below relevance gate"
-        ],
-        [
-          "Worked example: Motion problems with derivatives",
-          "below relevance gate"
-        ],
-        [
-          "Plotting projectile displacement, acceleration, and velocity",
           "below relevance gate"
         ],
         [
@@ -708,33 +777,67 @@
           "below relevance gate"
         ],
         [
-          "Worked example: motion problems (with definite integrals)",
+          "Plotting projectile displacement, acceleration, and velocity",
           "below relevance gate"
         ],
         [
-          "Relating angular and regular motion variables",
+          "topic - linear motion - Projectile Motion Video",
           "below relevance gate"
+        ],
+        [
+          "Motion problems with integrals: displacement vs. distance",
+          "below relevance gate"
+        ],
+        [
+          "01 Writing And Solving Equations For Problem Solving",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Worked example: Motion problems with derivatives",
+          "below relevance gate"
+        ],
+        [
+          "Thin lens equation and problem solving",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 107,
-        "foreign vocabulary": 3,
+        "below relevance gate": 104,
+        "judged off-topic (independent reviewer)": 7,
+        "conflicting sub-topic": 2,
+        "foreign vocabulary": 2,
         "kolibri node not available on reference image": 2
       }
     },
     "reading_pool": {
       "passed": 64,
       "runners_up": [
-        "Displacement During Constant Acceleration (Flexbook)",
-        "Kinematic formulas in one-dimension",
+        "Setting up problems with constant acceleration",
         "Projectile Motion Problem Solving (Flexbook)",
         "Projectile Motion Problem Solving Practice",
-        "Problem Solving with Linear Models (Flexbook)"
+        "Displacement During Constant Acceleration (Flexbook)",
+        "Formulas for Problem Solving: Finding Distance, Rate, and Time (PLIX)"
       ],
       "rejected_sample": [
         [
           "2D projectile motion: Identifying graphs for projectiles",
           "below relevance gate"
+        ],
+        [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "below relevance gate"
+        ],
+        [
+          "Problem Solving with Linear Models (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Problem Solving with Linear Models Practice",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Problem Solving Is More Than Solving Problems",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Additional Resources for Free Fall",
@@ -747,27 +850,13 @@
         [
           "Free Fall..: Written Transcript of this video lesson",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Free Fall..:Download hand-out for this video lesson",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Free Fall..:Read Teacher's Guide to this video lesson",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "2D projectile motion: Vectors and comparing multiple trajectories",
-          "below relevance gate"
-        ],
-        [
-          "Writing linear equations word problems",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 90,
-        "kolibri node not available on reference image": 4
+        "below relevance gate": 78,
+        "judged off-topic (independent reviewer)": 3,
+        "kolibri node not available on reference image": 4,
+        "conflicting sub-topic": 2
       }
     }
   },
@@ -800,10 +889,12 @@
         "equations",
         "road",
         "safety",
+        "due",
+        "gravity",
+        "difference",
         "matter",
         "dropping",
-        "objects",
-        "height"
+        "objects"
       ],
       "phrases": [
         "free fall",
@@ -814,62 +905,79 @@
         "mass independence free fall",
         "newton's second law",
         "equations motion",
-        "road safety"
+        "road safety",
+        "free fall acceleration",
+        "acceleration due gravity",
+        "mass free fall",
+        "free fall equations",
+        "kinematics equations free fall",
+        "weight mass difference"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Period dependence for mass on spring",
-        "score": 80.01,
+        "picked": "Viewing g as the value of Earth's gravitational field near the surface",
+        "fit": "partial",
+        "score": 118.24,
         "core_hits": [],
         "detail_hits": [
           "acceleration gravitational",
-          "mass"
+          "acceleration due gravity",
+          "object"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.99
       },
       "observe.video": {
         "picked": "Viewing g as the value of Earth's gravitational field near the surface",
-        "score": 56.45,
+        "fit": "partial",
+        "score": 118.24,
         "core_hits": [],
         "detail_hits": [
           "acceleration gravitational",
+          "acceleration due gravity",
           "object"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.99
       },
       "explain.video": {
-        "picked": "Period dependence for mass on spring",
-        "score": 80.01,
+        "picked": "Viewing g as the value of Earth's gravitational field near the surface",
+        "fit": "partial",
+        "score": 118.24,
         "core_hits": [],
         "detail_hits": [
           "acceleration gravitational",
-          "mass"
+          "acceleration due gravity",
+          "object"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.99
       },
       "dqb.video": {
-        "picked": "Period dependence for mass on spring",
-        "score": 80.01,
+        "picked": "Viewing g as the value of Earth's gravitational field near the surface",
+        "fit": "partial",
+        "score": 118.24,
         "core_hits": [],
         "detail_hits": [
           "acceleration gravitational",
-          "mass"
+          "acceleration due gravity",
+          "object"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.99
       },
       "model.video": {
-        "picked": "Period dependence for mass on spring",
-        "score": 80.01,
+        "picked": "Viewing g as the value of Earth's gravitational field near the surface",
+        "fit": "partial",
+        "score": 118.24,
         "core_hits": [],
         "detail_hits": [
           "acceleration gravitational",
-          "mass"
+          "acceleration due gravity",
+          "object"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 1.99
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -877,6 +985,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -884,6 +993,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -891,6 +1001,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -898,6 +1009,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -907,7 +1019,7 @@
     "video_pool": {
       "passed": 4,
       "runners_up": [
-        "Viewing g as the value of Earth's gravitational field near the surface",
+        "Mass and weight clarification",
         "Interpreting direction of motion from position-time graph",
         "Interpreting direction of motion from velocity-time graph"
       ],
@@ -925,7 +1037,15 @@
           "below relevance gate"
         ],
         [
+          "Introduction to Newton's law of gravitation",
+          "below relevance gate"
+        ],
+        [
           "Applying Newton's first law of motion",
+          "below relevance gate"
+        ],
+        [
+          "Acceleration due to gravity at the space station",
           "below relevance gate"
         ],
         [
@@ -935,19 +1055,12 @@
         [
           "Topic - newton's law of Forces and Motion",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Newton's first law of motion",
-          "below relevance gate"
-        ],
-        [
-          "Newton's first law of motion introduction",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 132,
+        "below relevance gate": 134,
         "kolibri node not available on reference image": 18,
+        "judged off-topic (independent reviewer)": 1,
         "web file not on reference image": 1
       }
     },
@@ -976,21 +1089,21 @@
           "below relevance gate"
         ],
         [
+          "Acceleration Due to Gravity (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Acceleration Due to Gravity Practice",
+          "below relevance gate"
+        ],
+        [
           "All of Newton's laws of motion",
-          "below relevance gate"
-        ],
-        [
-          "Newton's First and Second Laws Practice",
-          "below relevance gate"
-        ],
-        [
-          "Oil Drop Experiment (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 149,
-        "kolibri node not available on reference image": 5
+        "below relevance gate": 147,
+        "kolibri node not available on reference image": 6
       }
     }
   },
@@ -1042,13 +1155,28 @@
         "kisumu mango",
         "road safety",
         "cooperative learning",
-        "free fall dangers"
+        "free fall dangers",
+        "free fall acceleration",
+        "kinematic equations free fall",
+        "falling object speed calculation"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Motion problems with integrals: displacement vs. distance",
-        "score": 82.22,
+        "picked": "Viewing g as the value of Earth's gravitational field near the surface",
+        "fit": "partial",
+        "score": 100.69,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration gravitational",
+          "acceleration due gravity"
+        ],
+        "detail_weight": 1.2
+      },
+      "observe.video": {
+        "picked": "Position vs. time graphs",
+        "fit": "partial",
+        "score": 81.59,
         "core_hits": [],
         "detail_hits": [
           "velocity",
@@ -1057,9 +1185,10 @@
         ],
         "detail_weight": 1.04
       },
-      "observe.video": {
+      "explain.video": {
         "picked": "Average velocity for constant acceleration",
-        "score": 68.06,
+        "fit": "partial",
+        "score": 78.77,
         "core_hits": [],
         "detail_hits": [
           "velocity",
@@ -1068,30 +1197,22 @@
         ],
         "detail_weight": 1.06
       },
-      "explain.video": {
-        "picked": "Position vs. time graphs",
-        "score": 67.12,
-        "core_hits": [],
-        "detail_hits": [
-          "velocity",
-          "speed",
-          "distance"
-        ],
-        "detail_weight": 1.04
-      },
       "dqb.video": {
-        "picked": "Projectile motion (part 1)",
-        "score": 59.28,
-        "core_hits": [],
-        "detail_hits": [
-          "equation motion",
-          "falling"
+        "picked": "Interpreting direction of motion from velocity-time graph",
+        "fit": "partial",
+        "score": 76.09,
+        "core_hits": [
+          "linear motion"
         ],
-        "detail_weight": 1.37
+        "detail_hits": [
+          "velocity"
+        ],
+        "detail_weight": 0.5
       },
       "model.video": {
         "picked": "Calculating average velocity or speed",
-        "score": 58.82,
+        "fit": "partial",
+        "score": 69.02,
         "core_hits": [],
         "detail_hits": [
           "velocity",
@@ -1101,103 +1222,108 @@
         "detail_weight": 1.04
       },
       "predict.reading": {
-        "picked": "Motion along a curve (differential calc)",
-        "score": 32.03,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "equation motion"
-        ],
-        "detail_weight": 1.07
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.reading": {
-        "picked": "Motion along a curve (differential calc)",
-        "score": 32.03,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "equation motion"
-        ],
-        "detail_weight": 1.07
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.reading": {
-        "picked": "Motion along a curve (differential calc)",
-        "score": 32.03,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "equation motion"
-        ],
-        "detail_weight": 1.07
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.reading": {
-        "picked": "Motion along a curve (differential calc)",
-        "score": 32.03,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "equation motion"
-        ],
-        "detail_weight": 1.07
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.reading": {
-        "picked": "Motion along a curve (differential calc)",
-        "score": 32.03,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "equation motion"
-        ],
-        "detail_weight": 1.07
+        "detail_hits": [],
+        "detail_weight": 0
       }
     },
     "video_pool": {
-      "passed": 11,
+      "passed": 6,
       "runners_up": [
-        "Average velocity for constant acceleration",
         "Position vs. time graphs",
-        "Projectile motion (part 1)",
+        "Average velocity for constant acceleration",
+        "Interpreting direction of motion from velocity-time graph",
         "Calculating average velocity or speed",
-        "Interpreting direction of motion from velocity-time graph"
+        "Intro to vectors and scalars"
       ],
       "rejected_sample": [
-        [
-          "Relating angular and regular motion variables",
-          "below relevance gate"
-        ],
-        [
-          "Angular motion variables",
-          "below relevance gate"
-        ],
         [
           "Deriving displacement as a function of time, acceleration, and initial velocity",
           "below relevance gate"
         ],
         [
-          "topic - linear motion - Projectile Motion Video",
+          "English: Free Fall",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "English-Portuguese Subtitles: Free Fall",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "Acceleration due to gravity at the space station",
           "below relevance gate"
         ],
         [
-          "Projectile motion (part 4)",
+          "Choosing kinematic equations",
+          "below relevance gate"
+        ],
+        [
+          "Motion problems with integrals: displacement vs. distance",
+          "conflicting sub-topic ['integral', 'integrals']"
+        ],
+        [
+          "Relating angular and regular motion variables",
           "below relevance gate"
         ],
         [
           "Plotting projectile displacement, acceleration, and velocity",
           "below relevance gate"
-        ],
-        [
-          "Projectile motion (part 3)",
-          "below relevance gate"
-        ],
-        [
-          "Introduction to one-dimensional motion with calculus",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 137,
-        "kolibri node not available on reference image": 9
+        "below relevance gate": 128,
+        "kolibri node not available on reference image": 15,
+        "conflicting sub-topic": 4,
+        "judged off-topic (independent reviewer)": 2
       }
     },
     "reading_pool": {
-      "passed": 1,
+      "passed": 0,
       "runners_up": [],
       "rejected_sample": [
+        [
+          "Acceleration Due to Gravity (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Acceleration Due to Gravity Practice",
+          "below relevance gate"
+        ],
         [
           "2D projectile motion: Vectors and comparing multiple trajectories",
           "below relevance gate"
@@ -1215,25 +1341,18 @@
           "kolibri node not available on reference image"
         ],
         [
-          "Free Fall..:Download hand-out for this video lesson",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Free Fall..:Read Teacher's Guide to this video lesson",
-          "kolibri node not available on reference image"
-        ],
-        [
           "Acceleration and velocity",
           "below relevance gate"
         ],
         [
-          "Motion problems (differential calc)",
-          "below relevance gate"
+          "Free Fall..:Download hand-out for this video lesson",
+          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 155,
-        "kolibri node not available on reference image": 8
+        "below relevance gate": 153,
+        "kolibri node not available on reference image": 8,
+        "conflicting sub-topic": 1
       }
     }
   },
@@ -1294,6 +1413,7 @@
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1301,6 +1421,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1308,6 +1429,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1315,6 +1437,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1322,6 +1445,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1329,6 +1453,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1336,6 +1461,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1343,6 +1469,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1350,6 +1477,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1357,6 +1485,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1367,6 +1496,14 @@
       "passed": 0,
       "runners_up": [],
       "rejected_sample": [
+        [
+          "Choosing kinematic equations",
+          "below relevance gate"
+        ],
+        [
+          "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
+          "below relevance gate"
+        ],
         [
           "Question 3b: 2015 AP Physics 1 free response",
           "below relevance gate"
@@ -1384,25 +1521,17 @@
           "below relevance gate"
         ],
         [
-          "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
+          "Average velocity for constant acceleration",
           "below relevance gate"
         ],
         [
-          "Choosing kinematic equations",
-          "below relevance gate"
-        ],
-        [
-          "topic - linear motion - Projectile Motion Video",
-          "below relevance gate"
-        ],
-        [
-          "Analyzing relationships between variables",
+          "Centripetal force and acceleration intuition",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 145,
-        "kolibri node not available on reference image": 5
+        "below relevance gate": 152,
+        "judged off-topic (independent reviewer)": 1
       }
     },
     "reading_pool": {
@@ -1418,33 +1547,34 @@
           "below relevance gate"
         ],
         [
-          "Additional Resources for Free Fall",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Interpret a quadratic graph",
+          "Kinematic formulas in one-dimension",
           "below relevance gate"
         ],
         [
-          "Free Fall..: Written Transcript of this video lesson",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Free Fall..:Download hand-out for this video lesson",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Free Fall..:Read Teacher's Guide to this video lesson",
-          "kolibri node not available on reference image"
+          "Linear equations word problems",
+          "below relevance gate"
         ],
         [
           "Graphing linear relationships word problems",
           "below relevance gate"
+        ],
+        [
+          "Linear equations word problems: graphs",
+          "below relevance gate"
+        ],
+        [
+          "Linear equations word problems: tables",
+          "below relevance gate"
+        ],
+        [
+          "Quadratic systems",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 150,
-        "kolibri node not available on reference image": 7
+        "below relevance gate": 146,
+        "kolibri node not available on reference image": 6,
+        "conflicting sub-topic": 1
       }
     }
   },
@@ -1470,6 +1600,13 @@
         "real",
         "life",
         "application",
+        "time",
+        "graphs",
+        "distance",
+        "constant",
+        "kinematics",
+        "stopping",
+        "speed",
         "group",
         "presentations",
         "collaborative"
@@ -1479,46 +1616,68 @@
         "free fall",
         "equations motion",
         "road safety",
-        "real life application"
+        "real life application",
+        "equations motion",
+        "acceleration velocity time graphs",
+        "free fall acceleration",
+        "displacement distance",
+        "constant acceleration kinematics",
+        "stopping distance speed"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Angular motion variables",
-        "score": 95.01,
+        "picked": "Position vs. time graphs",
+        "fit": "fits",
+        "score": 159.59,
         "core_hits": [],
         "detail_hits": [
-          "acceleration",
           "displacement",
-          "velocity"
+          "velocity",
+          "displacement distance"
         ],
-        "detail_weight": 2.06
+        "detail_weight": 1.56
       },
       "observe.video": {
-        "picked": "Plotting projectile displacement, acceleration, and velocity",
-        "score": 83.85,
+        "picked": "Choosing kinematic equations",
+        "fit": "fits",
+        "score": 103.25,
         "core_hits": [],
         "detail_hits": [
           "acceleration",
-          "displacement",
-          "velocity"
+          "velocity",
+          "acceleration constant kinematic"
         ],
-        "detail_weight": 2.06
+        "detail_weight": 1.97
       },
       "explain.video": {
-        "picked": "Relating angular and regular motion variables",
-        "score": 82.65,
+        "picked": "Position vs. time graphs",
+        "fit": "fits",
+        "score": 159.59,
         "core_hits": [],
         "detail_hits": [
-          "acceleration",
           "displacement",
-          "velocity"
+          "velocity",
+          "displacement distance"
         ],
-        "detail_weight": 2.06
+        "detail_weight": 1.56
       },
       "dqb.video": {
+        "picked": "Choosing kinematic equations",
+        "fit": "fits",
+        "score": 103.25,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration",
+          "velocity",
+          "acceleration constant kinematic"
+        ],
+        "detail_weight": 1.97
+      },
+      "model.video": {
         "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "score": 71.61,
+        "fit": "partial",
+        "score": 103.55,
         "core_hits": [],
         "detail_hits": [
           "acceleration",
@@ -1527,9 +1686,10 @@
         ],
         "detail_weight": 2.06
       },
-      "model.video": {
-        "picked": "Projectile motion (part 4)",
-        "score": 59.1,
+      "predict.reading": {
+        "picked": "Acceleration and velocity",
+        "fit": "fits",
+        "score": 79.52,
         "core_hits": [],
         "detail_hits": [
           "acceleration",
@@ -1537,31 +1697,21 @@
         ],
         "detail_weight": 1.5
       },
-      "predict.reading": {
-        "picked": "2D projectile motion: Identifying graphs for projectiles",
-        "score": 91.68,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration",
-          "displacement",
-          "velocity"
-        ],
-        "detail_weight": 2.06
-      },
       "observe.reading": {
-        "picked": "2D projectile motion: Vectors and comparing multiple trajectories",
-        "score": 81.46,
+        "picked": "Setting up problems with constant acceleration",
+        "fit": "fits",
+        "score": 69.32,
         "core_hits": [],
         "detail_hits": [
           "acceleration",
-          "displacement",
-          "velocity"
+          "acceleration constant kinematic"
         ],
-        "detail_weight": 2.06
+        "detail_weight": 1.47
       },
       "explain.reading": {
-        "picked": "Acceleration and velocity",
-        "score": 64.88,
+        "picked": "Calculating Acceleration from Velocity and Time (Flexbook)",
+        "fit": "fits",
+        "score": 67.81,
         "core_hits": [],
         "detail_hits": [
           "acceleration",
@@ -1570,84 +1720,104 @@
         "detail_weight": 1.5
       },
       "dqb.reading": {
-        "picked": "Motion problems (differential calc)",
-        "score": 62.01,
+        "picked": "Acceleration Due to Gravity (Flexbook)",
+        "fit": "fits",
+        "score": 53.7,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration",
+          "gravity"
+        ],
+        "detail_weight": 1.71
+      },
+      "model.reading": {
+        "picked": "Velocity and Acceleration (Flexbook)",
+        "fit": "fits",
+        "score": 51.37,
         "core_hits": [],
         "detail_hits": [
           "acceleration",
           "velocity"
         ],
         "detail_weight": 1.5
-      },
-      "model.reading": {
-        "picked": "Displacement During Constant Acceleration (Flexbook)",
-        "score": 55.4,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration",
-          "displacement"
-        ],
-        "detail_weight": 1.56
       }
     },
     "video_pool": {
-      "passed": 32,
+      "passed": 15,
       "runners_up": [
-        "Plotting projectile displacement, acceleration, and velocity",
-        "Relating angular and regular motion variables",
-        "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "Projectile motion (part 4)",
-        "Projectile motion (part 3)"
+        "Choosing kinematic equations",
+        "Average velocity for constant acceleration",
+        "Interpreting direction of motion from velocity-time graph",
+        "Calculating average velocity or speed",
+        "Acceleration"
       ],
       "rejected_sample": [
         [
-          "topic - linear motion - Projectile Motion Video",
-          "below relevance gate"
+          "Motion problems with integrals: displacement vs. distance",
+          "conflicting sub-topic ['integral', 'integrals']"
         ],
         [
-          "Solve Applications Using Rational Equations: A Sample Application",
-          "below relevance gate"
+          "Relating angular and regular motion variables",
+          "conflicting sub-topic ['angular']"
         ],
         [
-          "Solving Real-World Problems Using Quadratic Equations: A Sample Application",
-          "below relevance gate"
+          "Plotting projectile displacement, acceleration, and velocity",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
-          "Modeling with linear equations: snow",
-          "below relevance gate"
+          "Projectile motion (part 4)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
-          "Testing solutions to linear equations",
-          "below relevance gate"
+          "Projectile motion (part 3)",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
-          "Constructing linear equations from context",
-          "below relevance gate"
+          "Angular motion variables",
+          "conflicting sub-topic ['angular']"
         ],
         [
-          "Angular momentum",
-          "below relevance gate"
+          "Centripetal force and acceleration intuition",
+          "conflicting sub-topic ['centripetal']"
         ],
         [
-          "Parallel lines from equation",
+          "Interpreting change in speed from velocity-time graph",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 112,
-        "kolibri node not available on reference image": 9
+        "conflicting sub-topic": 15,
+        "below relevance gate": 110,
+        "judged off-topic (independent reviewer)": 2,
+        "kolibri node not available on reference image": 4
       }
     },
     "reading_pool": {
-      "passed": 14,
+      "passed": 13,
       "runners_up": [
-        "2D projectile motion: Vectors and comparing multiple trajectories",
-        "Acceleration and velocity",
-        "Motion problems (differential calc)",
-        "Displacement During Constant Acceleration (Flexbook)",
-        "Displacement During Uniform Acceleration Practice"
+        "Setting up problems with constant acceleration",
+        "Calculating Acceleration from Velocity and Time (Flexbook)",
+        "Acceleration Due to Gravity (Flexbook)",
+        "Velocity and Acceleration (Flexbook)",
+        "Displacement During Constant Acceleration (Flexbook)"
       ],
       "rejected_sample": [
+        [
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Average velocity and average speed from graphs",
+          "below relevance gate"
+        ],
+        [
+          "Instantaneous velocity and instantaneous speed from graphs",
+          "below relevance gate"
+        ],
         [
           "Additional Resources for Free Fall",
           "kolibri node not available on reference image"
@@ -1663,27 +1833,12 @@
         [
           "Free Fall..:Read Teacher's Guide to this video lesson",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Writing linear equations word problems",
-          "below relevance gate"
-        ],
-        [
-          "Forms of Linear Equations: Equation Exploration (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Linear equations with unknown coefficients",
-          "below relevance gate"
-        ],
-        [
-          "Linear equations word problems",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 5,
-        "below relevance gate": 133
+        "conflicting sub-topic": 3,
+        "below relevance gate": 133,
+        "kolibri node not available on reference image": 5
       }
     }
   },
@@ -1717,6 +1872,9 @@
         "road",
         "safety",
         "sep",
+        "problems",
+        "due",
+        "kinematic",
         "consolidation",
         "solved"
       ],
@@ -1729,44 +1887,58 @@
         "limuru escarpment",
         "half squared",
         "squared squared 2as",
-        "road safety"
+        "road safety",
+        "equations motion",
+        "constant acceleration problems",
+        "free fall acceleration",
+        "acceleration due gravity",
+        "displacement velocity",
+        "kinematic equations"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Deriving displacement as a function of time, acceleration, and initial velocity",
-        "score": 98.93,
+        "picked": "Choosing kinematic equations",
+        "fit": "fits",
+        "score": 183.98,
         "core_hits": [],
         "detail_hits": [
           "acceleration constant",
-          "displacement",
-          "velocity"
+          "velocity",
+          "acceleration constant problem",
+          "equation kinematic"
         ],
-        "detail_weight": 1.94
+        "detail_weight": 2.27
       },
       "observe.video": {
-        "picked": "Average velocity for constant acceleration",
-        "score": 92.42,
+        "picked": "Choosing kinematic equations",
+        "fit": "fits",
+        "score": 183.98,
         "core_hits": [],
         "detail_hits": [
           "acceleration constant",
-          "velocity"
+          "velocity",
+          "acceleration constant problem",
+          "equation kinematic"
         ],
-        "detail_weight": 1.58
+        "detail_weight": 2.27
       },
       "explain.video": {
-        "picked": "Period dependence for mass on spring",
-        "score": 83.7,
+        "picked": "Viewing g as the value of Earth's gravitational field near the surface",
+        "fit": "partial",
+        "score": 98.26,
         "core_hits": [],
         "detail_hits": [
-          "acceleration constant",
-          "acceleration gravitational"
+          "gravity",
+          "acceleration gravitational",
+          "acceleration due gravity"
         ],
-        "detail_weight": 2.08
+        "detail_weight": 1.8
       },
       "dqb.video": {
-        "picked": "Choosing kinematic equations",
-        "score": 80.14,
+        "picked": "Average velocity for constant acceleration",
+        "fit": "partial",
+        "score": 92.42,
         "core_hits": [],
         "detail_hits": [
           "acceleration constant",
@@ -1776,6 +1948,7 @@
       },
       "model.video": {
         "picked": "Airbus A380 take-off time",
+        "fit": "partial",
         "score": 64.82,
         "core_hits": [],
         "detail_hits": [
@@ -1784,7 +1957,19 @@
         "detail_weight": 1.25
       },
       "predict.reading": {
+        "picked": "Setting up problems with constant acceleration",
+        "fit": "fits",
+        "score": 121.55,
+        "core_hits": [],
+        "detail_hits": [
+          "acceleration constant",
+          "acceleration constant problem"
+        ],
+        "detail_weight": 1.62
+      },
+      "observe.reading": {
         "picked": "Displacement During Constant Acceleration (Flexbook)",
+        "fit": "fits",
         "score": 115.66,
         "core_hits": [],
         "detail_hits": [
@@ -1793,26 +1978,20 @@
         ],
         "detail_weight": 1.61
       },
-      "observe.reading": {
-        "picked": "Constant Acceleration and Inertia (PLIX)",
-        "score": 80.95,
-        "core_hits": [],
-        "detail_hits": [
-          "acceleration constant"
-        ],
-        "detail_weight": 1.25
-      },
       "explain.reading": {
         "picked": "Setting up problems with constant acceleration",
-        "score": 71.78,
+        "fit": "fits",
+        "score": 121.55,
         "core_hits": [],
         "detail_hits": [
-          "acceleration constant"
+          "acceleration constant",
+          "acceleration constant problem"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.62
       },
       "dqb.reading": {
         "picked": "Displacement During Constant Acceleration (Flexbook)",
+        "fit": "fits",
         "score": 115.66,
         "core_hits": [],
         "detail_hits": [
@@ -1822,28 +2001,32 @@
         "detail_weight": 1.61
       },
       "model.reading": {
-        "picked": "Displacement During Constant Acceleration (Flexbook)",
-        "score": 115.66,
+        "picked": "Constant Acceleration and Inertia (PLIX)",
+        "fit": "partial",
+        "score": 80.95,
         "core_hits": [],
         "detail_hits": [
-          "acceleration constant",
-          "displacement"
+          "acceleration constant"
         ],
-        "detail_weight": 1.61
+        "detail_weight": 1.25
       }
     },
     "video_pool": {
-      "passed": 12,
+      "passed": 9,
       "runners_up": [
-        "Average velocity for constant acceleration",
-        "Period dependence for mass on spring",
-        "Choosing kinematic equations",
-        "Airbus A380 take-off time",
-        "Viewing g as the value of Earth's gravitational field near the surface"
+        "Deriving displacement as a function of time, acceleration, and initial velocity",
+        "Displacement from time and velocity example",
+        "Calculating average velocity or speed",
+        "Viewing g as the value of Earth's gravitational field near the surface",
+        "Average velocity for constant acceleration"
       ],
       "rejected_sample": [
         [
           "Angular motion variables",
+          "conflicting sub-topic ['angular']"
+        ],
+        [
+          "Acceleration due to gravity at the space station",
           "below relevance gate"
         ],
         [
@@ -1851,50 +2034,63 @@
           "below relevance gate"
         ],
         [
+          "Worked example: Motion problems with derivatives",
+          "below relevance gate"
+        ],
+        [
           "Plotting projectile displacement, acceleration, and velocity",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "Period dependence for mass on spring",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Worked example: motion problems (with definite integrals)",
           "below relevance gate"
         ],
         [
           "Relating angular and regular motion variables",
-          "below relevance gate"
-        ],
-        [
-          "Acceleration",
-          "below relevance gate"
-        ],
-        [
-          "2011 Calculus BC free response #1a",
-          "below relevance gate"
-        ],
-        [
-          "Representing linear systems with matrix equations",
-          "below relevance gate"
-        ],
-        [
-          "Projectile motion (part 4)",
-          "below relevance gate"
+          "conflicting sub-topic ['angular']"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140,
+        "conflicting sub-topic": 8,
+        "below relevance gate": 131,
+        "judged off-topic (independent reviewer)": 2,
         "kolibri node not available on reference image": 4
       }
     },
     "reading_pool": {
-      "passed": 4,
+      "passed": 3,
       "runners_up": [
-        "Constant Acceleration and Inertia (PLIX)",
-        "Setting up problems with constant acceleration",
-        "Motion along a curve (differential calc)"
+        "Displacement During Constant Acceleration (Flexbook)",
+        "Constant Acceleration and Inertia (PLIX)"
       ],
       "rejected_sample": [
         [
-          "2D projectile motion: Identifying graphs for projectiles",
+          "Acceleration Due to Gravity (Flexbook)",
           "below relevance gate"
+        ],
+        [
+          "Acceleration Due to Gravity Practice",
+          "below relevance gate"
+        ],
+        [
+          "2D projectile motion: Vectors and comparing multiple trajectories",
+          "conflicting sub-topic ['projectile', 'projectiles']"
+        ],
+        [
+          "2D projectile motion: Identifying graphs for projectiles",
+          "conflicting sub-topic ['projectile', 'projectiles']"
         ],
         [
           "Additional Resources for Free Fall",
           "kolibri node not available on reference image"
+        ],
+        [
+          "Motion problems (differential calc)",
+          "below relevance gate"
         ],
         [
           "Free Fall..: Written Transcript of this video lesson",
@@ -1903,28 +2099,12 @@
         [
           "Free Fall..:Download hand-out for this video lesson",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Free Fall..:Read Teacher's Guide to this video lesson",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "2D projectile motion: Vectors and comparing multiple trajectories",
-          "below relevance gate"
-        ],
-        [
-          "Acceleration and velocity",
-          "below relevance gate"
-        ],
-        [
-          "Motion problems (differential calc)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 141,
-        "kolibri node not available on reference image": 9,
-        "excluded: answer/exam material": 4
+        "below relevance gate": 145,
+        "conflicting sub-topic": 3,
+        "kolibri node not available on reference image": 5
       }
     }
   }

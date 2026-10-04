@@ -19,6 +19,11 @@
         "physics",
         "demonstration",
         "air",
+        "basics",
+        "collapsing",
+        "containers",
+        "gas",
+        "particles",
         "begins",
         "launching"
       ],
@@ -29,13 +34,20 @@
         "crushed jerrycan",
         "fluid pressure",
         "jerrycan demonstration",
-        "air pressure"
+        "air pressure",
+        "atmospheric pressure basics",
+        "pressure force per area",
+        "air pressure collapsing containers",
+        "pressure difference force",
+        "fluid pressure",
+        "gas pressure particles"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 100.1,
+        "fit": "partial",
+        "score": 136.43,
         "core_hits": [
           "pressure"
         ],
@@ -47,7 +59,8 @@
       },
       "observe.video": {
         "picked": "Pressure and Pascal's principle (part 1) -dubbed(KY)",
-        "score": 93.95,
+        "fit": "partial",
+        "score": 127.96,
         "core_hits": [
           "pressure"
         ],
@@ -58,30 +71,35 @@
         "detail_weight": 2.08
       },
       "explain.video": {
-        "picked": "Pressure at a depth in a fluid -dubbed(KY)",
-        "score": 75.92,
+        "picked": "Pressure and Pascal's principle (part 1)",
+        "fit": "partial",
+        "score": 136.43,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
+          "difference pressure",
           "fluid pressure"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 2.08
       },
       "dqb.video": {
-        "picked": "Pressure at a depth in a fluid",
-        "score": 72.48,
+        "picked": "Pressure and Pascal's principle (part 1) -dubbed(KY)",
+        "fit": "partial",
+        "score": 127.96,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
+          "difference pressure",
           "fluid pressure"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 2.08
       },
       "model.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 100.1,
+        "fit": "partial",
+        "score": 136.43,
         "core_hits": [
           "pressure"
         ],
@@ -93,6 +111,7 @@
       },
       "predict.reading": {
         "picked": "Atmospheric Pressure (Flexbook)",
+        "fit": "fits",
         "score": 145.68,
         "core_hits": [
           "pressure"
@@ -103,7 +122,8 @@
         "detail_weight": 1.5
       },
       "observe.reading": {
-        "picked": "Atmospheric Pressure Practice",
+        "picked": "Atmospheric Pressure (Flexbook)",
+        "fit": "fits",
         "score": 145.68,
         "core_hits": [
           "pressure"
@@ -114,7 +134,20 @@
         "detail_weight": 1.5
       },
       "explain.reading": {
+        "picked": "Atmospheric Pressure Practice",
+        "fit": "partial",
+        "score": 145.68,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "atmospheric pressure"
+        ],
+        "detail_weight": 1.5
+      },
+      "dqb.reading": {
         "picked": "Fluid Pressure And Flow",
+        "fit": "partial",
         "score": 131.42,
         "core_hits": [
           "pressure"
@@ -124,19 +157,9 @@
         ],
         "detail_weight": 0.83
       },
-      "dqb.reading": {
-        "picked": "Air Pressure and Altitude (Flexbook)",
-        "score": 125.64,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "air pressure"
-        ],
-        "detail_weight": 0.62
-      },
       "model.reading": {
-        "picked": "Air Pressure and Altitude Practice",
+        "picked": "Air Pressure and Altitude (Flexbook)",
+        "fit": "partial",
         "score": 125.64,
         "core_hits": [
           "pressure"
@@ -148,7 +171,7 @@
       }
     },
     "video_pool": {
-      "passed": 9,
+      "passed": 6,
       "runners_up": [
         "Pressure and Pascal's principle (part 1) -dubbed(KY)",
         "Pressure at a depth in a fluid -dubbed(KY)",
@@ -158,68 +181,60 @@
       ],
       "rejected_sample": [
         [
-          "Intermolecular forces and vapor pressure",
+          "Real gases: Deviations from ideal behavior",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Bernoulli's equation derivation part 1",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Worked example: Calculating partial pressures",
           "below relevance gate"
         ],
         [
-          "Buoyant force example problems",
+          "Gas mixtures and partial pressures",
           "below relevance gate"
         ],
         [
-          "Normal forces on Lubricon VI",
+          "Video: Forces and Motion: Basics",
           "below relevance gate"
         ],
         [
-          "Total consumer surplus as area",
+          "The kinetic molecular theory of gases",
           "below relevance gate"
         ],
         [
-          "Buoyant force example problems -dubbed(KY)",
+          "Concentration gradients",
           "below relevance gate"
         ],
         [
-          "Finding torque for angled forces",
-          "below relevance gate"
-        ],
-        [
-          "Time differences example",
-          "below relevance gate"
-        ],
-        [
-          "AP Physics 1 review of Centripetal Forces",
+          "The Maxwell–Boltzmann distribution",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 136,
-        "kolibri node not available on reference image": 13,
-        "web file not on reference image": 2
+        "judged off-topic (independent reviewer)": 4,
+        "below relevance gate": 127,
+        "kolibri node not available on reference image": 17
       }
     },
     "reading_pool": {
-      "passed": 8,
+      "passed": 7,
       "runners_up": [
         "Atmospheric Pressure Practice",
         "Fluid Pressure And Flow",
         "Air Pressure and Altitude (Flexbook)",
-        "Air Pressure and Altitude Practice",
+        "Under Pressure",
         "Pressure in Fluids Practice"
       ],
       "rejected_sample": [
         [
+          "Air Pressure and Altitude Practice",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Moments and Centers of Mass, Work and Force, Fluid Forces Practice",
-          "below relevance gate"
-        ],
-        [
-          "Applications: Fluid Forces (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Pressure and Force (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Pressure and Force Practice",
           "below relevance gate"
         ],
         [
@@ -231,18 +246,27 @@
           "below relevance gate"
         ],
         [
-          "Additional Resources for Static and Kinetic Friction Forces: Similarities and Differences",
-          "kolibri node not available on reference image"
+          "Forces and Motion: Basics",
+          "below relevance gate"
         ],
         [
-          "topical-test-form-2-physics-fluid-flow-a",
-          "excluded: answer/exam material"
+          "Applications: Fluid Forces (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "States of Matter",
+          "below relevance gate"
+        ],
+        [
+          "Pressure and Force (Flexbook)",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 148,
-        "kolibri node not available on reference image": 4,
-        "excluded: answer/exam material": 1
+        "judged off-topic (independent reviewer)": 1,
+        "below relevance gate": 143,
+        "kolibri node not available on reference image": 5,
+        "excluded: answer/exam material": 2
       }
     }
   },
@@ -270,6 +294,9 @@
         "chart",
         "revision",
         "physics",
+        "calculating",
+        "basics",
+        "weight",
         "measuring",
         "invisible",
         "push",
@@ -282,35 +309,109 @@
         "contact area",
         "force diagram",
         "pressure balance",
-        "bar chart"
+        "bar chart",
+        "pressure force per area",
+        "calculating pressure",
+        "pascals pressure",
+        "atmospheric pressure basics",
+        "contact area pressure",
+        "weight force"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Pressure and Pascal's principle (part 2)",
-        "score": 73.72,
+        "fit": "partial",
+        "score": 77.65,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "pascal"
+          "pascal",
+          "pascal pressure"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.23
       },
       "observe.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 69.04,
+        "fit": "partial",
+        "score": 72.72,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "pascal"
+          "pascal",
+          "pascal pressure"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.23
       },
       "explain.video": {
-        "picked": "Intermolecular forces and vapor pressure",
-        "score": 55.69,
+        "picked": "Pressure and Pascal's principle (part 2)",
+        "fit": "partial",
+        "score": 77.65,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "pascal",
+          "pascal pressure"
+        ],
+        "detail_weight": 1.23
+      },
+      "dqb.video": {
+        "picked": "Pressure and Pascal's principle (part 1)",
+        "fit": "partial",
+        "score": 72.72,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "pascal",
+          "pascal pressure"
+        ],
+        "detail_weight": 1.23
+      },
+      "model.video": {
+        "picked": "Pressure and Pascal's principle (part 2)",
+        "fit": "partial",
+        "score": 77.65,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "pascal",
+          "pascal pressure"
+        ],
+        "detail_weight": 1.23
+      },
+      "predict.reading": {
+        "picked": "Pressure Units and Conversions (Flexbook)",
+        "fit": "fits",
+        "score": 78.05,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "conversion"
+        ],
+        "detail_weight": 0.38
+      },
+      "observe.reading": {
+        "picked": "Pressure Units and Conversions Practice",
+        "fit": "fits",
+        "score": 78.05,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "conversion"
+        ],
+        "detail_weight": 0.38
+      },
+      "explain.reading": {
+        "picked": "Pressure and Force (Flexbook)",
+        "fit": "fits",
+        "score": 69.34,
         "core_hits": [
           "pressure"
         ],
@@ -319,90 +420,35 @@
         ],
         "detail_weight": 0.3
       },
-      "dqb.video": {
-        "picked": "Pressure and Pascal's principle (part 2)",
-        "score": 73.72,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "pascal"
-        ],
-        "detail_weight": 0.83
-      },
-      "model.video": {
-        "picked": "Pressure and Pascal's principle (part 2)",
-        "score": 73.72,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "pascal"
-        ],
-        "detail_weight": 0.83
-      },
-      "predict.reading": {
-        "picked": "Atmospheric Pressure (Flexbook)",
-        "score": 138.01,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "atmospheric pressure"
-        ],
-        "detail_weight": 1.07
-      },
-      "observe.reading": {
-        "picked": "Atmospheric Pressure Practice",
-        "score": 138.01,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "atmospheric pressure"
-        ],
-        "detail_weight": 1.07
-      },
-      "explain.reading": {
-        "picked": "Atmospheric Pressure (Flexbook)",
-        "score": 138.01,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "atmospheric pressure"
-        ],
-        "detail_weight": 1.07
-      },
       "dqb.reading": {
-        "picked": "Atmospheric Pressure (Flexbook)",
-        "score": 138.01,
+        "picked": "Pressure and Force Practice",
+        "fit": "fits",
+        "score": 69.34,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "atmospheric pressure"
+          "force"
         ],
-        "detail_weight": 1.07
+        "detail_weight": 0.3
       },
       "model.reading": {
-        "picked": "Atmospheric Pressure (Flexbook)",
-        "score": 138.01,
+        "picked": "Pressure Units and Conversions (Flexbook)",
+        "fit": "fits",
+        "score": 78.05,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "atmospheric pressure"
+          "conversion"
         ],
-        "detail_weight": 1.07
+        "detail_weight": 0.38
       }
     },
     "video_pool": {
-      "passed": 4,
+      "passed": 2,
       "runners_up": [
-        "Pressure and Pascal's principle (part 1)",
-        "Intermolecular forces and vapor pressure",
-        "Macrostates and microstates"
+        "Pressure and Pascal's principle (part 1)"
       ],
       "rejected_sample": [
         [
@@ -412,6 +458,14 @@
         [
           "Mosaic plots and segmented bar charts",
           "below relevance gate"
+        ],
+        [
+          "Calculating Total Weight from Scales (Metric Units)",
+          "below relevance gate"
+        ],
+        [
+          "English: Recognizing Forces: Does the Floor Know when You Put on Weight?",
+          "kolibri node not available on reference image"
         ],
         [
           "Mean absolute deviation example",
@@ -428,33 +482,42 @@
         [
           "Normal forces on Lubricon VI",
           "below relevance gate"
-        ],
-        [
-          "English: Recognizing Forces: Does the Floor Know when You Put on Weight?",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Reading bar charts: putting it together with central tendency",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 125,
-        "kolibri node not available on reference image": 4,
+        "below relevance gate": 126,
+        "kolibri node not available on reference image": 6,
+        "judged off-topic (independent reviewer)": 3,
         "excluded: answer/exam material": 4,
         "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 9,
+      "passed": 8,
       "runners_up": [
-        "Atmospheric Pressure Practice",
-        "Pressure Units and Conversions (Flexbook)",
         "Pressure Units and Conversions Practice",
         "Pressure and Force (Flexbook)",
-        "Pressure and Force Practice"
+        "Pressure and Force Practice",
+        "Atmospheric Pressure (Flexbook)",
+        "Atmospheric Pressure Practice"
       ],
       "rejected_sample": [
+        [
+          "Calculating Total Weight from Scales (Metric Units) Practice",
+          "below relevance gate"
+        ],
+        [
+          "Calculations using the ideal gas equation",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Forces and Motion: Basics",
+          "below relevance gate"
+        ],
+        [
+          "pH Scale: Basics",
+          "below relevance gate"
+        ],
         [
           "Caterpillar Looks for a Shoe",
           "below relevance gate"
@@ -464,34 +527,19 @@
           "below relevance gate"
         ],
         [
+          "Using Scales to Find and Compare Weights (Metric Units) Practice",
+          "below relevance gate"
+        ],
+        [
           "Double Bar Graphs: Favorite Cookies Chart (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Make bar graphs",
-          "below relevance gate"
-        ],
-        [
-          "Unit Conversion: Conversions of Length, Mass, Speed in Metric Units (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Using Pictures to Balance a Scale (Metric Units) Practice",
-          "below relevance gate"
-        ],
-        [
-          "General Phase Diagram: Changes in Pressure (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Moments and Centers of Mass, Work and Force, Fluid Forces Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
-        "excluded: answer/exam material": 4,
-        "kolibri node not available on reference image": 12
+        "below relevance gate": 137,
+        "judged off-topic (independent reviewer)": 2,
+        "kolibri node not available on reference image": 13,
+        "excluded: answer/exam material": 4
       }
     }
   },
@@ -516,157 +564,183 @@
         "data",
         "table",
         "graph",
+        "liquids",
+        "formula",
+        "hydrostatic",
         "going",
         "deeper",
         "factors",
-        "affecting",
-        "liquids"
+        "affecting"
       ],
       "phrases": [
         "liquid pressure",
         "gravitational field strength",
         "fluid column",
-        "data table"
+        "data table",
+        "pressure liquids",
+        "pressure depth",
+        "fluid pressure formula",
+        "density liquids",
+        "hydrostatic pressure",
+        "pascal pressure"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 188.26,
+        "picked": "Pressure at a depth in a fluid",
+        "fit": "fits",
+        "score": 212.19,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "liquid pressure",
-          "pascal",
-          "liquid"
+          "depth",
+          "depth pressure",
+          "fluid formula pressure"
         ],
-        "detail_weight": 2.3
+        "detail_weight": 1.95
       },
       "observe.video": {
-        "picked": "Pressure and Pascal's principle (part 1) -dubbed(KY)",
-        "score": 176.78,
+        "picked": "Pressure at a depth in a fluid -dubbed(KY)",
+        "fit": "fits",
+        "score": 198.9,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "liquid pressure",
-          "pascal",
-          "liquid"
+          "depth",
+          "depth pressure",
+          "fluid formula pressure"
         ],
-        "detail_weight": 2.3
+        "detail_weight": 1.95
       },
       "explain.video": {
-        "picked": "Pressure at a depth in a fluid -dubbed(KY)",
-        "score": 117.12,
+        "picked": "Pressure at a depth in a fluid",
+        "fit": "fits",
+        "score": 212.19,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "depth"
+          "depth",
+          "depth pressure",
+          "fluid formula pressure"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.95
       },
       "dqb.video": {
-        "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 188.26,
+        "picked": "Pressure at a depth in a fluid -dubbed(KY)",
+        "fit": "fits",
+        "score": 198.9,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "liquid pressure",
-          "pascal",
-          "liquid"
+          "depth",
+          "depth pressure",
+          "fluid formula pressure"
         ],
-        "detail_weight": 2.3
+        "detail_weight": 1.95
       },
       "model.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 188.26,
+        "fit": "partial",
+        "score": 197.49,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
           "liquid pressure",
           "pascal",
+          "pascal pressure",
           "liquid"
         ],
-        "detail_weight": 2.3
+        "detail_weight": 2.74
       },
       "predict.reading": {
-        "picked": "Factors Affecting Gas Pressure (Flexbook)",
-        "score": 118.62,
-        "core_hits": [
-          "pressure"
-        ],
+        "picked": "Represent Real-World Data Using Bar Graphs, Frequency Tables and Histograms (Flexbook)",
+        "fit": "partial",
+        "score": 58.31,
+        "core_hits": [],
         "detail_hits": [
-          "factor",
-          "affecting"
+          "data table",
+          "graph"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.1
       },
       "observe.reading": {
-        "picked": "Factors Affecting Gas Pressure Practice",
-        "score": 118.62,
+        "picked": "Intermolecular forces and properties of liquids",
+        "fit": "partial",
+        "score": 38.39,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "factor",
-          "affecting"
+          "liquid pressure",
+          "liquid"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.8
       },
       "explain.reading": {
-        "picked": "Pressure and Density of the Atmosphere (Flexbook)",
-        "score": 72.06,
-        "core_hits": [
-          "pressure"
-        ],
+        "picked": "Represent Real-World Data Using Bar Graphs, Frequency Tables and Histograms (Flexbook)",
+        "fit": "partial",
+        "score": 58.31,
+        "core_hits": [],
         "detail_hits": [
-          "density"
+          "data table",
+          "graph"
         ],
-        "detail_weight": 0.71
+        "detail_weight": 1.1
       },
       "dqb.reading": {
-        "picked": "Pressure and Density of the Atmosphere Practice",
-        "score": 72.06,
+        "picked": "Intermolecular forces and properties of liquids",
+        "fit": "partial",
+        "score": 38.39,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "density"
+          "liquid pressure",
+          "liquid"
         ],
-        "detail_weight": 0.71
+        "detail_weight": 1.8
       },
       "model.reading": {
-        "picked": "Pressure and Density of the Atmosphere (PLIX)",
-        "score": 72.06,
-        "core_hits": [
-          "pressure"
-        ],
+        "picked": "Represent Real-World Data Using Bar Graphs, Frequency Tables and Histograms (Flexbook)",
+        "fit": "partial",
+        "score": 58.31,
+        "core_hits": [],
         "detail_hits": [
-          "density"
+          "data table",
+          "graph"
         ],
-        "detail_weight": 0.71
+        "detail_weight": 1.1
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 8,
       "runners_up": [
-        "Pressure and Pascal's principle (part 1) -dubbed(KY)",
         "Pressure at a depth in a fluid -dubbed(KY)",
-        "Pressure at a depth in a fluid",
+        "Pressure and Pascal's principle (part 1)",
+        "Pressure and Pascal's principle (part 1) -dubbed(KY)",
         "Pressure and Pascal's principle (part 2)",
-        "Intermolecular forces and vapor pressure"
+        "Finding height of fluid in a barometer"
       ],
       "rejected_sample": [
+        [
+          "Square-root functions & their graphs",
+          "below relevance gate"
+        ],
         [
           "Two-way relative frequency tables",
           "below relevance gate"
         ],
         [
           "Fluid flow and vector fields",
+          "below relevance gate"
+        ],
+        [
+          "Graphs of logarithmic functions",
           "below relevance gate"
         ],
         [
@@ -682,35 +756,34 @@
           "below relevance gate"
         ],
         [
-          "Pressure and Pascal's principle (part 2) -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Reading line graphs",
-          "below relevance gate"
-        ],
-        [
-          "Identifying horizontal squash from graph",
+          "Analyzing graphs of exponential functions",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 137
+        "below relevance gate": 139,
+        "web file not on reference image": 1,
+        "judged off-topic (independent reviewer)": 4
       }
     },
     "reading_pool": {
-      "passed": 10,
+      "passed": 3,
       "runners_up": [
-        "Factors Affecting Gas Pressure Practice",
-        "Pressure and Density of the Atmosphere (Flexbook)",
-        "Pressure and Density of the Atmosphere Practice",
-        "Pressure and Density of the Atmosphere (PLIX)",
-        "Represent Real-World Data Using Bar Graphs, Frequency Tables and Histograms (Flexbook)"
+        "Intermolecular forces and properties of liquids",
+        "States of Matter"
       ],
       "rejected_sample": [
         [
           "Inverse functions: graphs and tables",
           "below relevance gate"
+        ],
+        [
+          "Factors Affecting Gas Pressure (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Factors Affecting Gas Pressure Practice",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Average rate of change: graphs & tables",
@@ -725,25 +798,18 @@
           "below relevance gate"
         ],
         [
+          "Piecewise functions graphs",
+          "below relevance gate"
+        ],
+        [
           "Create bar graphs",
-          "below relevance gate"
-        ],
-        [
-          "Factors Affecting Reaction Rates (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Factors Affecting Reaction Rate (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Factors Affecting Reaction Rate Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "below relevance gate": 142,
-        "kolibri node not available on reference image": 3,
+        "judged off-topic (independent reviewer)": 7,
+        "kolibri node not available on reference image": 2,
         "excluded: answer/exam material": 1
       }
     }
@@ -794,12 +860,17 @@
         "pressure balance",
         "air column weight",
         "sea level pressure",
-        "erc organiser"
+        "erc organiser",
+        "atmospheric pressure basics",
+        "mercury barometer explained",
+        "torricelli barometer experiment",
+        "fluid pressure directions"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Finding height of fluid in a barometer",
+        "fit": "fits",
         "score": 137.31,
         "core_hits": [
           "pressure"
@@ -812,6 +883,7 @@
       },
       "observe.video": {
         "picked": "Finding height of fluid in a barometer -dubbed(KY)",
+        "fit": "fits",
         "score": 128.42,
         "core_hits": [
           "pressure"
@@ -823,31 +895,8 @@
         "detail_weight": 1.46
       },
       "explain.video": {
-        "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 103.05,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "fluid pressure",
-          "pascal"
-        ],
-        "detail_weight": 1.01
-      },
-      "dqb.video": {
-        "picked": "Pressure and Pascal's principle (part 1) -dubbed(KY)",
-        "score": 96.93,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "fluid pressure",
-          "pascal"
-        ],
-        "detail_weight": 1.01
-      },
-      "model.video": {
         "picked": "Finding height of fluid in a barometer",
+        "fit": "fits",
         "score": 137.31,
         "core_hits": [
           "pressure"
@@ -858,8 +907,35 @@
         ],
         "detail_weight": 1.46
       },
+      "dqb.video": {
+        "picked": "Finding height of fluid in a barometer -dubbed(KY)",
+        "fit": "fits",
+        "score": 128.42,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "barometer mercury",
+          "fluid pressure"
+        ],
+        "detail_weight": 1.46
+      },
+      "model.video": {
+        "picked": "Pressure and Pascal's principle (part 1)",
+        "fit": "partial",
+        "score": 103.05,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "fluid pressure",
+          "pascal"
+        ],
+        "detail_weight": 1.01
+      },
       "predict.reading": {
         "picked": "Atmospheric Pressure (Flexbook)",
+        "fit": "fits",
         "score": 145.68,
         "core_hits": [
           "pressure"
@@ -871,6 +947,7 @@
       },
       "observe.reading": {
         "picked": "Atmospheric Pressure Practice",
+        "fit": "fits",
         "score": 145.68,
         "core_hits": [
           "pressure"
@@ -881,18 +958,20 @@
         "detail_weight": 1.5
       },
       "explain.reading": {
-        "picked": "Fluid Pressure And Flow",
-        "score": 127.74,
+        "picked": "Atmospheric Pressure (Flexbook)",
+        "fit": "fits",
+        "score": 145.68,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "fluid pressure"
+          "atmospheric pressure"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 1.5
       },
       "dqb.reading": {
-        "picked": "Atmospheric Pressure (Flexbook)",
+        "picked": "Atmospheric Pressure Practice",
+        "fit": "fits",
         "score": 145.68,
         "core_hits": [
           "pressure"
@@ -903,19 +982,20 @@
         "detail_weight": 1.5
       },
       "model.reading": {
-        "picked": "Atmospheric Pressure (Flexbook)",
-        "score": 145.68,
+        "picked": "Fluid Pressure And Flow",
+        "fit": "partial",
+        "score": 127.74,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "atmospheric pressure"
+          "fluid pressure"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 0.62
       }
     },
     "video_pool": {
-      "passed": 8,
+      "passed": 7,
       "runners_up": [
         "Finding height of fluid in a barometer -dubbed(KY)",
         "Pressure and Pascal's principle (part 1)",
@@ -941,6 +1021,10 @@
           "excluded: answer/exam material"
         ],
         [
+          "Bernoulli's equation derivation part 1",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Complete Form 1 Physics Exam (100 Marks) Revision ｜ Revision ｜ Physics  Form 1 ｜ Physics ｜ Kcse 2020",
           "excluded: answer/exam material"
         ],
@@ -949,18 +1033,15 @@
           "below relevance gate"
         ],
         [
-          "Gravitational Waves: The Invisible Key to Unlocking Our Universe",
-          "below relevance gate"
-        ],
-        [
-          "Cosmic Microwave Background: Our Invisible Past",
+          "Demo: ant bot",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 122,
-        "excluded: answer/exam material": 5,
-        "kolibri node not available on reference image": 2,
+        "below relevance gate": 130,
+        "excluded: answer/exam material": 4,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 7,
         "web file not on reference image": 1
       }
     },
@@ -968,10 +1049,10 @@
       "passed": 9,
       "runners_up": [
         "Atmospheric Pressure Practice",
-        "Fluid Pressure And Flow",
-        "Pressure in Fluids Practice",
-        "Pressure in Fluids (Flexbook)",
-        "Pressure and Density of the Atmosphere (Flexbook)"
+        "Pressure and Density of the Atmosphere (Flexbook)",
+        "Pressure and Density of the Atmosphere Practice",
+        "Pressure and Density of the Atmosphere (PLIX)",
+        "Fluid Pressure And Flow"
       ],
       "rejected_sample": [
         [
@@ -991,6 +1072,10 @@
           "below relevance gate"
         ],
         [
+          "Equality Explorer: Basics",
+          "below relevance gate"
+        ],
+        [
           "A Fish and A Gift",
           "below relevance gate"
         ],
@@ -999,18 +1084,14 @@
           "below relevance gate"
         ],
         [
-          "Kno 100435 Collapsing Latrine Pits",
-          "below relevance gate"
-        ],
-        [
-          "How has citizenship changed over time: level 1",
+          "Masses and Springs: Basics",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 136,
+        "below relevance gate": 138,
         "excluded: answer/exam material": 5,
-        "kolibri node not available on reference image": 8
+        "kolibri node not available on reference image": 10
       }
     }
   },
@@ -1036,7 +1117,11 @@
         "force",
         "multiplication",
         "equation",
-        "law"
+        "law",
+        "equals",
+        "over",
+        "area",
+        "lifts"
       ],
       "phrases": [
         "pascal's principle",
@@ -1048,12 +1133,18 @@
         "hydraulic brakes",
         "force multiplication",
         "pressure equation",
-        "pascal's law"
+        "pascal's law",
+        "pascal's principle",
+        "hydraulic systems force multiplication",
+        "pressure fluids",
+        "hydraulic press",
+        "pressure equals force over area"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
+        "fit": "fits",
         "score": 284.02,
         "core_hits": [
           "pressure"
@@ -1069,6 +1160,7 @@
       },
       "observe.video": {
         "picked": "Pressure and Pascal's principle (part 1) -dubbed(KY)",
+        "fit": "fits",
         "score": 264.04,
         "core_hits": [
           "pressure"
@@ -1082,6 +1174,7 @@
       },
       "explain.video": {
         "picked": "Pressure and Pascal's principle (part 2) -dubbed(KY)",
+        "fit": "fits",
         "score": 264.04,
         "core_hits": [
           "pressure"
@@ -1095,6 +1188,7 @@
       },
       "dqb.video": {
         "picked": "Pressure and Pascal's principle (part 2)",
+        "fit": "fits",
         "score": 230.64,
         "core_hits": [
           "pressure"
@@ -1108,6 +1202,7 @@
       },
       "model.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
+        "fit": "fits",
         "score": 284.02,
         "core_hits": [
           "pressure"
@@ -1123,6 +1218,7 @@
       },
       "predict.reading": {
         "picked": "Pascal's Principle (Flexbook)",
+        "fit": "fits",
         "score": 140.84,
         "core_hits": [],
         "detail_hits": [
@@ -1133,20 +1229,21 @@
         "detail_weight": 2.1
       },
       "observe.reading": {
-        "picked": "Fluid Pressure And Flow",
-        "score": 138.61,
-        "core_hits": [
-          "pressure"
-        ],
+        "picked": "Pascal's Principle (Flexbook)",
+        "fit": "fits",
+        "score": 140.84,
+        "core_hits": [],
         "detail_hits": [
-          "fluid pressure",
-          "fluid"
+          "pascal' principle",
+          "pascal'",
+          "principle"
         ],
-        "detail_weight": 1.24
+        "detail_weight": 2.1
       },
       "explain.reading": {
         "picked": "Pressure in Fluids Practice",
-        "score": 89.25,
+        "fit": "partial",
+        "score": 147.44,
         "core_hits": [
           "pressure"
         ],
@@ -1158,7 +1255,8 @@
       },
       "dqb.reading": {
         "picked": "Pressure in Fluids (Flexbook)",
-        "score": 89.25,
+        "fit": "partial",
+        "score": 147.44,
         "core_hits": [
           "pressure"
         ],
@@ -1169,27 +1267,33 @@
         "detail_weight": 1.24
       },
       "model.reading": {
-        "picked": "Pascal's Principle (Flexbook)",
-        "score": 140.84,
-        "core_hits": [],
-        "detail_hits": [
-          "pascal' principle",
-          "pascal'",
-          "principle"
+        "picked": "Fluid Pressure And Flow",
+        "fit": "partial",
+        "score": 138.61,
+        "core_hits": [
+          "pressure"
         ],
-        "detail_weight": 2.1
+        "detail_hits": [
+          "fluid pressure",
+          "fluid"
+        ],
+        "detail_weight": 1.24
       }
     },
     "video_pool": {
-      "passed": 11,
+      "passed": 8,
       "runners_up": [
         "Pressure and Pascal's principle (part 1) -dubbed(KY)",
         "Pressure and Pascal's principle (part 2) -dubbed(KY)",
         "Pressure and Pascal's principle (part 2)",
-        "Bernoulli's equation derivation part 1",
-        "Pressure at a depth in a fluid -dubbed(KY)"
+        "Pressure at a depth in a fluid -dubbed(KY)",
+        "Pressure at a depth in a fluid"
       ],
       "rejected_sample": [
+        [
+          "Bernoulli's equation derivation part 1",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Forming systems of equations with different numbers of solutions",
           "below relevance gate"
@@ -1217,25 +1321,21 @@
         [
           "Pascal's triangle and binomial expansion",
           "below relevance gate"
-        ],
-        [
-          "Expanding binomials w/o Pascal's triangle",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
-        "kolibri node not available on reference image": 2
+        "judged off-topic (independent reviewer)": 2,
+        "below relevance gate": 132,
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 6,
+      "passed": 5,
       "runners_up": [
-        "Fluid Pressure And Flow",
         "Pressure in Fluids Practice",
         "Pressure in Fluids (Flexbook)",
-        "Under Pressure",
-        "Calculations using the ideal gas equation"
+        "Fluid Pressure And Flow",
+        "Under Pressure"
       ],
       "rejected_sample": [
         [
@@ -1272,9 +1372,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 147,
+        "below relevance gate": 149,
         "kolibri node not available on reference image": 2,
-        "excluded: answer/exam material": 1
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -1305,7 +1405,12 @@
         "fluid",
         "pascal",
         "tower",
-        "formula"
+        "fluids",
+        "formula",
+        "calculating",
+        "liquids",
+        "gauge",
+        "absolute"
       ],
       "phrases": [
         "liquid pressure",
@@ -1316,66 +1421,79 @@
         "lake naivasha",
         "atmospheric pressure",
         "fluid pressure",
-        "water tower"
+        "water tower",
+        "pressure fluids",
+        "hydrostatic pressure depth",
+        "pressure depth formula",
+        "density fluid pressure",
+        "calculating pressure liquids",
+        "gauge pressure absolute pressure"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 194.77,
+        "picked": "Pressure at a depth in a fluid",
+        "fit": "fits",
+        "score": 161.28,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "liquid pressure",
+          "depth",
           "fluid pressure",
-          "pascal",
-          "liquid"
+          "depth formula pressure",
+          "formula"
         ],
-        "detail_weight": 2.61
+        "detail_weight": 2.03
       },
       "observe.video": {
-        "picked": "Pressure and Pascal's principle (part 1) -dubbed(KY)",
-        "score": 182.89,
+        "picked": "Pressure at a depth in a fluid -dubbed(KY)",
+        "fit": "fits",
+        "score": 151.82,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "liquid pressure",
+          "depth",
           "fluid pressure",
-          "pascal",
-          "liquid"
+          "depth formula pressure",
+          "formula"
         ],
-        "detail_weight": 2.61
+        "detail_weight": 2.03
       },
       "explain.video": {
         "picked": "Pressure at a depth in a fluid",
-        "score": 153.86,
+        "fit": "fits",
+        "score": 161.28,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
           "depth",
           "fluid pressure",
+          "depth formula pressure",
           "formula"
         ],
-        "detail_weight": 1.63
+        "detail_weight": 2.03
       },
       "dqb.video": {
         "picked": "Pressure at a depth in a fluid -dubbed(KY)",
-        "score": 144.84,
+        "fit": "fits",
+        "score": 151.82,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
           "depth",
           "fluid pressure",
+          "depth formula pressure",
           "formula"
         ],
-        "detail_weight": 1.63
+        "detail_weight": 2.03
       },
       "model.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
+        "fit": "partial",
         "score": 194.77,
         "core_hits": [
           "pressure"
@@ -1389,30 +1507,33 @@
         "detail_weight": 2.61
       },
       "predict.reading": {
-        "picked": "Atmospheric Pressure (Flexbook)",
-        "score": 128.55,
+        "picked": "Pressure in Fluids Practice",
+        "fit": "fits",
+        "score": 133.64,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "atmospheric pressure"
+          "fluid pressure"
         ],
-        "detail_weight": 0.54
+        "detail_weight": 0.5
       },
       "observe.reading": {
-        "picked": "Atmospheric Pressure Practice",
-        "score": 128.55,
+        "picked": "Pressure in Fluids (Flexbook)",
+        "fit": "fits",
+        "score": 133.64,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "atmospheric pressure"
+          "fluid pressure"
         ],
-        "detail_weight": 0.54
+        "detail_weight": 0.5
       },
       "explain.reading": {
-        "picked": "Fluid Pressure And Flow",
-        "score": 125.64,
+        "picked": "Pressure in Fluids Practice",
+        "fit": "fits",
+        "score": 133.64,
         "core_hits": [
           "pressure"
         ],
@@ -1422,8 +1543,9 @@
         "detail_weight": 0.5
       },
       "dqb.reading": {
-        "picked": "Under Pressure",
-        "score": 87.53,
+        "picked": "Pressure in Fluids (Flexbook)",
+        "fit": "fits",
+        "score": 133.64,
         "core_hits": [
           "pressure"
         ],
@@ -1433,23 +1555,24 @@
         "detail_weight": 0.5
       },
       "model.reading": {
-        "picked": "Pressure in Fluids Practice",
-        "score": 80.9,
+        "picked": "Atmospheric Pressure (Flexbook)",
+        "fit": "partial",
+        "score": 128.55,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "fluid pressure"
+          "atmospheric pressure"
         ],
-        "detail_weight": 0.5
+        "detail_weight": 0.54
       }
     },
     "video_pool": {
-      "passed": 11,
+      "passed": 8,
       "runners_up": [
-        "Pressure and Pascal's principle (part 1) -dubbed(KY)",
-        "Pressure at a depth in a fluid",
         "Pressure at a depth in a fluid -dubbed(KY)",
+        "Pressure and Pascal's principle (part 1)",
+        "Pressure and Pascal's principle (part 1) -dubbed(KY)",
         "Pressure and Pascal's principle (part 2)",
         "Finding height of fluid in a barometer"
       ],
@@ -1460,6 +1583,10 @@
         ],
         [
           "Fluid flow and vector fields",
+          "below relevance gate"
+        ],
+        [
+          "Worked example: Calculating partial pressures",
           "below relevance gate"
         ],
         [
@@ -1475,32 +1602,29 @@
           "below relevance gate"
         ],
         [
-          "Viewing g as the value of Earth's gravitational field near the surface",
+          "Calculating correlation coefficient r",
           "below relevance gate"
         ],
         [
-          "Pascal's triangle & combinatorics",
-          "below relevance gate"
-        ],
-        [
-          "Finding fluid speed exiting hole",
-          "below relevance gate"
+          "Bernoulli's equation derivation part 1",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 113,
+        "below relevance gate": 115,
+        "judged off-topic (independent reviewer)": 3,
         "web file not on reference image": 4,
         "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 11,
+      "passed": 10,
       "runners_up": [
+        "Pressure in Fluids (Flexbook)",
+        "Atmospheric Pressure (Flexbook)",
         "Atmospheric Pressure Practice",
         "Fluid Pressure And Flow",
-        "Under Pressure",
-        "Pressure in Fluids Practice",
-        "Pressure in Fluids (Flexbook)"
+        "Under Pressure"
       ],
       "rejected_sample": [
         [
@@ -1512,7 +1636,15 @@
           "below relevance gate"
         ],
         [
+          "Expected counts in chi-squared tests with two-way tables",
+          "below relevance gate"
+        ],
+        [
           "Test Your Strength (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "Comparison of Integers with Absolute Value: Diving Depth (PLIX)",
           "below relevance gate"
         ],
         [
@@ -1524,22 +1656,15 @@
           "below relevance gate"
         ],
         [
-          "Test statistic and P-value in chi-square tests with two-way tables",
-          "below relevance gate"
-        ],
-        [
-          "Recursive formulas for geometric sequences",
-          "below relevance gate"
-        ],
-        [
-          "Recursive formulas for arithmetic sequences",
+          "Positive and Negative Term Series: The Ratio and Root Tests for Absolute Convergence (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "kolibri node not available on reference image": 4,
-        "below relevance gate": 139,
-        "excluded: answer/exam material": 2
+        "below relevance gate": 140,
+        "excluded: answer/exam material": 2,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -1576,7 +1701,7 @@
         "undiminished",
         "brakes",
         "matatu",
-        "transmitted"
+        "fluids"
       ],
       "phrases": [
         "pascal's principle",
@@ -1592,12 +1717,14 @@
         "output force",
         "pressure undiminished",
         "hydraulic brakes",
-        "matatu brakes"
+        "matatu brakes",
+        "pascal's principle"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
+        "fit": "fits",
         "score": 322.63,
         "core_hits": [
           "pressure"
@@ -1613,6 +1740,7 @@
       },
       "observe.video": {
         "picked": "Pressure and Pascal's principle (part 1) -dubbed(KY)",
+        "fit": "fits",
         "score": 317.34,
         "core_hits": [
           "pressure"
@@ -1626,6 +1754,7 @@
       },
       "explain.video": {
         "picked": "Pressure and Pascal's principle (part 2) -dubbed(KY)",
+        "fit": "fits",
         "score": 317.34,
         "core_hits": [
           "pressure"
@@ -1639,6 +1768,7 @@
       },
       "dqb.video": {
         "picked": "Pressure and Pascal's principle (part 2)",
+        "fit": "fits",
         "score": 290.11,
         "core_hits": [
           "pressure"
@@ -1653,6 +1783,7 @@
       },
       "model.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
+        "fit": "fits",
         "score": 322.63,
         "core_hits": [
           "pressure"
@@ -1668,6 +1799,7 @@
       },
       "predict.reading": {
         "picked": "Pascal's Principle (Flexbook)",
+        "fit": "fits",
         "score": 186.83,
         "core_hits": [],
         "detail_hits": [
@@ -1679,40 +1811,8 @@
         "detail_weight": 2.46
       },
       "observe.reading": {
-        "picked": "Atmospheric Pressure (Flexbook)",
-        "score": 129.27,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "atmospheric pressure"
-        ],
-        "detail_weight": 0.58
-      },
-      "explain.reading": {
-        "picked": "Atmospheric Pressure Practice",
-        "score": 129.27,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "atmospheric pressure"
-        ],
-        "detail_weight": 0.58
-      },
-      "dqb.reading": {
-        "picked": "Fluid Pressure And Flow",
-        "score": 125.64,
-        "core_hits": [
-          "pressure"
-        ],
-        "detail_hits": [
-          "fluid pressure"
-        ],
-        "detail_weight": 0.5
-      },
-      "model.reading": {
         "picked": "Pascal's Principle (Flexbook)",
+        "fit": "fits",
         "score": 186.83,
         "core_hits": [],
         "detail_hits": [
@@ -1722,10 +1822,46 @@
           "principle"
         ],
         "detail_weight": 2.46
+      },
+      "explain.reading": {
+        "picked": "Pressure in Fluids Practice",
+        "fit": "partial",
+        "score": 133.64,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "fluid pressure"
+        ],
+        "detail_weight": 0.5
+      },
+      "dqb.reading": {
+        "picked": "Pressure in Fluids (Flexbook)",
+        "fit": "partial",
+        "score": 133.64,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "fluid pressure"
+        ],
+        "detail_weight": 0.5
+      },
+      "model.reading": {
+        "picked": "Atmospheric Pressure (Flexbook)",
+        "fit": "partial",
+        "score": 129.27,
+        "core_hits": [
+          "pressure"
+        ],
+        "detail_hits": [
+          "atmospheric pressure"
+        ],
+        "detail_weight": 0.58
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 8,
       "runners_up": [
         "Pressure and Pascal's principle (part 1) -dubbed(KY)",
         "Pressure and Pascal's principle (part 2) -dubbed(KY)",
@@ -1768,18 +1904,18 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 101,
+        "judged off-topic (independent reviewer)": 2
       }
     },
     "reading_pool": {
       "passed": 7,
       "runners_up": [
+        "Pressure in Fluids Practice",
+        "Pressure in Fluids (Flexbook)",
         "Atmospheric Pressure (Flexbook)",
         "Atmospheric Pressure Practice",
-        "Fluid Pressure And Flow",
-        "Pressure in Fluids Practice",
-        "Pressure in Fluids (Flexbook)"
+        "Fluid Pressure And Flow"
       ],
       "rejected_sample": [
         [
@@ -1811,12 +1947,12 @@
           "below relevance gate"
         ],
         [
-          "Piston Pressure (PLIX)",
+          "Forces and Motion: Basics",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 143,
+        "below relevance gate": 145,
         "kolibri node not available on reference image": 1,
         "excluded: answer/exam material": 1
       }
@@ -1853,7 +1989,9 @@
         "arrows",
         "quantitative",
         "jerrycan",
-        "applying"
+        "formula",
+        "calculating",
+        "hydrostatic"
       ],
       "phrases": [
         "liquid pressure",
@@ -1867,43 +2005,45 @@
         "pressure calculation",
         "water infrastructure",
         "pressure depth",
-        "pressure arrows"
+        "pressure arrows",
+        "pressure liquids",
+        "pressure depth density formula",
+        "calculating fluid pressure"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 245.61,
+        "picked": "Pressure at a depth in a fluid",
+        "fit": "fits",
+        "score": 206.28,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "liquid pressure",
+          "depth",
           "fluid pressure",
-          "pascal",
-          "calculation pressure",
-          "liquid"
+          "depth pressure"
         ],
-        "detail_weight": 3.23
+        "detail_weight": 1.71
       },
       "observe.video": {
-        "picked": "Pressure and Pascal's principle (part 1) -dubbed(KY)",
-        "score": 230.53,
+        "picked": "Pressure at a depth in a fluid -dubbed(KY)",
+        "fit": "fits",
+        "score": 193.36,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "liquid pressure",
+          "depth",
           "fluid pressure",
-          "pascal",
-          "calculation pressure",
-          "liquid"
+          "depth pressure"
         ],
-        "detail_weight": 3.23
+        "detail_weight": 1.71
       },
       "explain.video": {
         "picked": "Pressure at a depth in a fluid",
-        "score": 175.89,
+        "fit": "fits",
+        "score": 206.28,
         "core_hits": [
           "pressure"
         ],
@@ -1916,7 +2056,8 @@
       },
       "dqb.video": {
         "picked": "Pressure at a depth in a fluid -dubbed(KY)",
-        "score": 164.99,
+        "fit": "fits",
+        "score": 193.36,
         "core_hits": [
           "pressure"
         ],
@@ -1929,7 +2070,8 @@
       },
       "model.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 245.61,
+        "fit": "partial",
+        "score": 253.06,
         "core_hits": [
           "pressure"
         ],
@@ -1938,35 +2080,39 @@
           "fluid pressure",
           "pascal",
           "calculation pressure",
+          "pascal pressure",
           "liquid"
         ],
-        "detail_weight": 3.23
+        "detail_weight": 3.53
       },
       "predict.reading": {
-        "picked": "Atmospheric Pressure (Flexbook)",
-        "score": 129.98,
+        "picked": "Pressure in Fluids Practice",
+        "fit": "fits",
+        "score": 81.8,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "atmospheric pressure"
+          "fluid pressure"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 0.58
       },
       "observe.reading": {
-        "picked": "Atmospheric Pressure Practice",
-        "score": 129.98,
+        "picked": "Pressure in Fluids (Flexbook)",
+        "fit": "fits",
+        "score": 81.8,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "atmospheric pressure"
+          "fluid pressure"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 0.58
       },
       "explain.reading": {
-        "picked": "Fluid Pressure And Flow",
-        "score": 127.04,
+        "picked": "Pressure in Fluids Practice",
+        "fit": "fits",
+        "score": 81.8,
         "core_hits": [
           "pressure"
         ],
@@ -1976,8 +2122,9 @@
         "detail_weight": 0.58
       },
       "dqb.reading": {
-        "picked": "Under Pressure",
-        "score": 88.51,
+        "picked": "Pressure in Fluids (Flexbook)",
+        "fit": "fits",
+        "score": 81.8,
         "core_hits": [
           "pressure"
         ],
@@ -1987,79 +2134,89 @@
         "detail_weight": 0.58
       },
       "model.reading": {
-        "picked": "Pressure in Fluids Practice",
-        "score": 81.8,
+        "picked": "Atmospheric Pressure (Flexbook)",
+        "fit": "partial",
+        "score": 129.98,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "fluid pressure"
+          "atmospheric pressure"
         ],
-        "detail_weight": 0.58
+        "detail_weight": 0.62
       }
     },
     "video_pool": {
-      "passed": 11,
+      "passed": 8,
       "runners_up": [
-        "Pressure and Pascal's principle (part 1) -dubbed(KY)",
-        "Pressure at a depth in a fluid",
         "Pressure at a depth in a fluid -dubbed(KY)",
-        "Pressure and Pascal's principle (part 2)",
-        "Pressure and Pascal's principle (part 2) -dubbed(KY)"
+        "Finding height of fluid in a barometer",
+        "Finding height of fluid in a barometer -dubbed(KY)",
+        "Pressure and Pascal's principle (part 1)",
+        "Pressure and Pascal's principle (part 1) -dubbed(KY)"
       ],
       "rejected_sample": [
+        [
+          "Bernoulli's equation derivation part 1",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Volume flow rate and equation of continuity",
+          "below relevance gate"
+        ],
         [
           "Global winds and currents",
           "below relevance gate"
         ],
         [
-          "WATCH: International Commerce, Snorkeling Camels, and The Indian Ocean Trade",
-          "below relevance gate"
-        ],
-        [
-          "Curly arrow conventions in organic chemistry",
-          "below relevance gate"
-        ],
-        [
-          "Liquid water denser than solid water (ice)",
-          "below relevance gate"
-        ],
-        [
-          "Finding the Amount of Water with Illustrations and Calculations (Metric Units)",
-          "below relevance gate"
-        ],
-        [
-          "Worked example: analyzing an ocean food web",
-          "below relevance gate"
-        ],
-        [
-          "Finding fluid speed exiting hole",
+          "Bernoulli's equation derivation part 2",
           "below relevance gate"
         ],
         [
           "More on finding fluid speed from hole",
           "below relevance gate"
+        ],
+        [
+          "Worked example: Calculating partial pressures",
+          "below relevance gate"
+        ],
+        [
+          "Buffer solution pH calculations",
+          "below relevance gate"
+        ],
+        [
+          "Visually understanding balancing chemical equations",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 112,
-        "kolibri node not available on reference image": 6,
-        "web file not on reference image": 2
+        "judged off-topic (independent reviewer)": 3,
+        "below relevance gate": 145,
+        "web file not on reference image": 1,
+        "kolibri node not available on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 12,
+      "passed": 10,
       "runners_up": [
+        "Pressure in Fluids (Flexbook)",
+        "Atmospheric Pressure (Flexbook)",
         "Atmospheric Pressure Practice",
         "Fluid Pressure And Flow",
-        "Under Pressure",
-        "Pressure in Fluids Practice",
-        "Pressure in Fluids (Flexbook)"
+        "Under Pressure"
       ],
       "rejected_sample": [
         [
+          "Calculations using the ideal gas equation",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "The Towers of Hanoi:..:Tower Slides",
           "kolibri node not available on reference image"
+        ],
+        [
+          "Calculating the equation of the least-squares line",
+          "below relevance gate"
         ],
         [
           "Water Harvesting Dams Sudan",
@@ -2070,30 +2227,22 @@
           "below relevance gate"
         ],
         [
+          "Derivation of the Triangle Area Formula (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Derivation of the Triangle Area Formula Practice",
+          "below relevance gate"
+        ],
+        [
           "Ocean Conservation: reading informational text; Our Oceans, Our Planet 6",
-          "below relevance gate"
-        ],
-        [
-          "pH Scale: Basics",
-          "below relevance gate"
-        ],
-        [
-          "Normal calculations in reverse",
-          "below relevance gate"
-        ],
-        [
-          "Kno 100026 Sand Dams",
-          "below relevance gate"
-        ],
-        [
-          "Pishi Caught in a Storm",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 7,
-        "below relevance gate": 141,
-        "excluded: answer/exam material": 1
+        "judged off-topic (independent reviewer)": 2,
+        "kolibri node not available on reference image": 5,
+        "below relevance gate": 137
       }
     }
   },
@@ -2120,10 +2269,17 @@
         "systems",
         "transmission",
         "synthesis",
-        "putting",
-        "together",
-        "finalisation",
-        "resolution"
+        "explained",
+        "liquids",
+        "depth",
+        "formula",
+        "pascal's",
+        "hydraulics",
+        "boyle's",
+        "gas",
+        "barometers",
+        "manometers",
+        "putting"
       ],
       "phrases": [
         "atmospheric pressure",
@@ -2132,13 +2288,20 @@
         "pascal principle",
         "boyle law",
         "hydraulic systems",
-        "pressure transmission"
+        "pressure transmission",
+        "atmospheric pressure explained",
+        "pressure liquids",
+        "pressure depth formula",
+        "pascal's principle hydraulics",
+        "boyle's law gas pressure",
+        "barometers manometers"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 226.86,
+        "fit": "fits",
+        "score": 315.82,
         "core_hits": [
           "pressure"
         ],
@@ -2150,7 +2313,8 @@
       },
       "observe.video": {
         "picked": "Pressure and Pascal's principle (part 1) -dubbed(KY)",
-        "score": 212.93,
+        "fit": "fits",
+        "score": 296.61,
         "core_hits": [
           "pressure"
         ],
@@ -2162,7 +2326,8 @@
       },
       "explain.video": {
         "picked": "Pressure and Pascal's principle (part 2)",
-        "score": 146.41,
+        "fit": "fits",
+        "score": 229.74,
         "core_hits": [
           "pressure"
         ],
@@ -2173,7 +2338,8 @@
       },
       "dqb.video": {
         "picked": "Pressure and Pascal's principle (part 2) -dubbed(KY)",
-        "score": 137.66,
+        "fit": "fits",
+        "score": 216.19,
         "core_hits": [
           "pressure"
         ],
@@ -2184,7 +2350,8 @@
       },
       "model.video": {
         "picked": "Pressure and Pascal's principle (part 1)",
-        "score": 226.86,
+        "fit": "fits",
+        "score": 315.82,
         "core_hits": [
           "pressure"
         ],
@@ -2196,6 +2363,7 @@
       },
       "predict.reading": {
         "picked": "Atmospheric Pressure (Flexbook)",
+        "fit": "partial",
         "score": 145.68,
         "core_hits": [
           "pressure"
@@ -2207,6 +2375,7 @@
       },
       "observe.reading": {
         "picked": "Atmospheric Pressure Practice",
+        "fit": "partial",
         "score": 145.68,
         "core_hits": [
           "pressure"
@@ -2217,19 +2386,20 @@
         "detail_weight": 1.5
       },
       "explain.reading": {
-        "picked": "Putting It All Together  Pressure  Flow  And Resistance",
-        "score": 97.48,
+        "picked": "Atmospheric Pressure (Flexbook)",
+        "fit": "partial",
+        "score": 145.68,
         "core_hits": [
           "pressure"
         ],
         "detail_hits": [
-          "putting",
-          "together"
+          "atmospheric pressure"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.5
       },
       "dqb.reading": {
-        "picked": "Atmospheric Pressure (Flexbook)",
+        "picked": "Atmospheric Pressure Practice",
+        "fit": "partial",
         "score": 145.68,
         "core_hits": [
           "pressure"
@@ -2241,6 +2411,7 @@
       },
       "model.reading": {
         "picked": "Atmospheric Pressure (Flexbook)",
+        "fit": "partial",
         "score": 145.68,
         "core_hits": [
           "pressure"
@@ -2252,41 +2423,41 @@
       }
     },
     "video_pool": {
-      "passed": 8,
+      "passed": 9,
       "runners_up": [
         "Pressure and Pascal's principle (part 1) -dubbed(KY)",
         "Pressure and Pascal's principle (part 2)",
         "Pressure and Pascal's principle (part 2) -dubbed(KY)",
-        "Intermolecular forces and vapor pressure",
-        "Finding height of fluid in a barometer"
+        "Pressure at a depth in a fluid",
+        "Kinetic molecular theory and the gas laws"
       ],
       "rejected_sample": [
+        [
+          "Pascal's triangle & combinatorics",
+          "below relevance gate"
+        ],
+        [
+          "Pascal's Triangle - Overview",
+          "below relevance gate"
+        ],
+        [
+          "Pascal's triangle and binomial expansion",
+          "below relevance gate"
+        ],
+        [
+          "Expanding binomials w/o Pascal's triangle",
+          "below relevance gate"
+        ],
         [
           "Gas mixtures and partial pressures",
           "below relevance gate"
         ],
         [
-          "Le Chatelier's principle -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Kinetic molecular theory and the gas laws",
+          "Expanding binomials",
           "below relevance gate"
         ],
         [
           "Worked example: Calculating partial pressures",
-          "below relevance gate"
-        ],
-        [
-          "Reading bar charts: putting it together with central tendency",
-          "below relevance gate"
-        ],
-        [
-          "Undetermined coefficients 4",
-          "below relevance gate"
-        ],
-        [
-          "Undetermined coefficients 4 -dubbed(KY)",
           "below relevance gate"
         ],
         [
@@ -2295,23 +2466,19 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 142,
-        "kolibri node not available on reference image": 2
+        "below relevance gate": 139,
+        "kolibri node not available on reference image": 2,
+        "web file not on reference image": 1,
+        "judged off-topic (independent reviewer)": 2
       }
     },
     "reading_pool": {
-      "passed": 5,
+      "passed": 3,
       "runners_up": [
         "Atmospheric Pressure Practice",
-        "Putting It All Together  Pressure  Flow  And Resistance",
-        "Intermolecular forces and properties of liquids",
         "States of Matter"
       ],
       "rejected_sample": [
-        [
-          "Pascal's Principle (Flexbook)",
-          "below relevance gate"
-        ],
         [
           "Boyle's Law Practice",
           "below relevance gate"
@@ -2321,30 +2488,35 @@
           "below relevance gate"
         ],
         [
+          "Pascal's Principle (Flexbook)",
+          "below relevance gate"
+        ],
+        [
           "Pascal's Law Practice",
           "below relevance gate"
         ],
         [
-          "Dalton's Law of Partial Pressures (Flexbook)",
+          "Pascal's Triangle Practice",
           "below relevance gate"
         ],
         [
-          "Dalton's Law of Partial Pressures Practice",
+          "Pascal's Triangle (PLIX)",
           "below relevance gate"
         ],
         [
-          "Putting it Together (Flexbook)",
+          "Pascal's Triangle and the Coefficients in the Expansion of Binomials (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Putting it all Together (Flexbook)",
-          "below relevance gate"
+          "Putting It All Together  Pressure  Flow  And Resistance",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 154,
-        "kolibri node not available on reference image": 4,
-        "excluded: answer/exam material": 1
+        "below relevance gate": 147,
+        "judged off-topic (independent reviewer)": 2,
+        "kolibri node not available on reference image": 2,
+        "excluded: answer/exam material": 2
       }
     }
   }

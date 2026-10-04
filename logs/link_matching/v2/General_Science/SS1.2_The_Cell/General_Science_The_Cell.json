@@ -27,6 +27,11 @@
         "general",
         "kisumu",
         "microscopes",
+        "preparing",
+        "slide",
+        "magnification",
+        "resolution",
+        "photosynthesis",
         "windows"
       ],
       "phrases": [
@@ -37,25 +42,60 @@
         "plant cell",
         "electron micrograph",
         "wet mount",
-        "based learning"
+        "based learning",
+        "light electron microscopes",
+        "plant cell organelles",
+        "preparing wet mount slide",
+        "microscope magnification resolution",
+        "chloroplasts photosynthesis"
       ]
     },
     "slots": {
       "predict.video": {
+        "picked": "Overview of animal and plant cells",
+        "fit": "fits",
+        "score": 146.27,
+        "core_hits": [
+          "cell"
+        ],
+        "detail_hits": [
+          "cell plant",
+          "chloroplast"
+        ],
+        "detail_weight": 1.35
+      },
+      "observe.video": {
+        "picked": "Overview of animal and plant cells",
+        "fit": "fits",
+        "score": 146.27,
+        "core_hits": [
+          "cell"
+        ],
+        "detail_hits": [
+          "cell plant",
+          "chloroplast"
+        ],
+        "detail_weight": 1.35
+      },
+      "explain.video": {
         "picked": "Comparing animal and plant cells",
-        "score": 256.45,
+        "fit": "partial",
+        "score": 296.6,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "cell plant",
           "organelle",
-          "chloroplast"
+          "chloroplast",
+          "cell organelle plant",
+          "chloroplast photosynthesis"
         ],
-        "detail_weight": 1.91
+        "detail_weight": 2.65
       },
-      "observe.video": {
+      "dqb.video": {
         "picked": "Plant cell walls",
+        "fit": "partial",
         "score": 154.35,
         "core_hits": [
           "cell"
@@ -65,47 +105,23 @@
         ],
         "detail_weight": 0.94
       },
-      "explain.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 256.45,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "cell plant",
-          "organelle",
-          "chloroplast"
-        ],
-        "detail_weight": 1.91
-      },
-      "dqb.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 256.45,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "cell plant",
-          "organelle",
-          "chloroplast"
-        ],
-        "detail_weight": 1.91
-      },
       "model.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 256.45,
+        "picked": "Organelles in eukaryotic cells",
+        "fit": "partial",
+        "score": 106.23,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "cell plant",
           "organelle",
-          "chloroplast"
+          "chloroplast",
+          "chloroplast photosynthesis"
         ],
-        "detail_weight": 1.91
+        "detail_weight": 1.31
       },
       "predict.reading": {
         "picked": "Plant Cell Structures (Flexbook)",
+        "fit": "fits",
         "score": 169.37,
         "core_hits": [
           "cell"
@@ -116,7 +132,8 @@
         "detail_weight": 0.94
       },
       "observe.reading": {
-        "picked": "Plant Cell Structures Practice",
+        "picked": "Plant Cell Structures (Flexbook)",
+        "fit": "fits",
         "score": 169.37,
         "core_hits": [
           "cell"
@@ -127,7 +144,8 @@
         "detail_weight": 0.94
       },
       "explain.reading": {
-        "picked": "Plant Cell Structures (Flexbook)",
+        "picked": "Plant Cell Structures Practice",
+        "fit": "partial",
         "score": 169.37,
         "core_hits": [
           "cell"
@@ -138,36 +156,38 @@
         "detail_weight": 0.94
       },
       "dqb.reading": {
-        "picked": "Plant Cell Structures (Flexbook)",
-        "score": 169.37,
+        "picked": "Cell Organelles (PLIX)",
+        "fit": "partial",
+        "score": 84.15,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "cell plant"
+          "organelle"
         ],
-        "detail_weight": 0.94
+        "detail_weight": 0.56
       },
       "model.reading": {
-        "picked": "Plant Cell Structures (Flexbook)",
-        "score": 169.37,
+        "picked": "Other Cell Organelles (Flexbook)",
+        "fit": "partial",
+        "score": 83.71,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "cell plant"
+          "organelle"
         ],
-        "detail_weight": 0.94
+        "detail_weight": 0.56
       }
     },
     "video_pool": {
-      "passed": 9,
+      "passed": 8,
       "runners_up": [
-        "Plant cell walls",
-        "Overview of animal and plant cells",
-        "Organelles in eukaryotic cells",
         "Cell theory",
-        "Cells and their Organelles - Example 1"
+        "Comparing animal and plant cells",
+        "Plant cell walls",
+        "Organelles in eukaryotic cells",
+        "Prokaryotic and eukaryotic cells"
       ],
       "rejected_sample": [
         [
@@ -177,6 +197,18 @@
         [
           "Photosynthesis: Overview of the light-dependent reactions -dubbed(KY)",
           "below relevance gate"
+        ],
+        [
+          "ATP synthase",
+          "below relevance gate"
+        ],
+        [
+          "Photosynthesis in ecosystems",
+          "below relevance gate"
+        ],
+        [
+          "Endosymbiosis theory",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Counting valence electrons for main group elements",
@@ -189,38 +221,40 @@
         [
           "Concentration cell",
           "below relevance gate"
-        ],
-        [
-          "Introduction to galvanic/voltaic cells",
-          "below relevance gate"
-        ],
-        [
-          "Wheel mounts and fenders",
-          "below relevance gate"
-        ],
-        [
-          "Naming alkanes with alkyl groups",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 132,
-        "kolibri node not available on reference image": 14,
-        "web file not on reference image": 3
+        "below relevance gate": 139,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 12,
+        "web file not on reference image": 2,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 9,
+      "passed": 8,
       "runners_up": [
+        "Plant Cells (Flexbook)",
+        "Plant Cells Practice",
+        "Plant vs animal cells",
         "Plant Cell Structures Practice",
-        "Cell Organelles (PLIX)",
-        "Other Cell Organelles (Flexbook)",
-        "Other Cell Organelles Practice",
-        "Plant Cells (Flexbook)"
+        "Cell Organelles (PLIX)"
       ],
       "rejected_sample": [
         [
           "Basic cell structures",
+          "below relevance gate"
+        ],
+        [
+          "Photosynthesis and Energy for Cells Practice",
+          "below relevance gate"
+        ],
+        [
+          "Light Reactions of Photosynthesis (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Light Reactions of Photosynthesis Practice",
           "below relevance gate"
         ],
         [
@@ -238,24 +272,12 @@
         [
           "External Structures of Cells Practice",
           "below relevance gate"
-        ],
-        [
-          "Other Structures of Cells - Advanced (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Lewis Electron-Dot Structures (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Lewis Electron-Dot Structures Practice",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 132,
-        "kolibri node not available on reference image": 3,
-        "excluded: answer/exam material": 1
+        "below relevance gate": 127,
+        "kolibri node not available on reference image": 21,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -289,9 +311,10 @@
         "general",
         "kisumu",
         "microscopes",
-        "revealing",
-        "hidden",
-        "structures"
+        "transmission",
+        "basics",
+        "preparing",
+        "specimens"
       ],
       "phrases": [
         "light microscope",
@@ -300,128 +323,140 @@
         "cell structure",
         "sukuma wiki",
         "comparison table",
-        "obtaining communicating information"
+        "obtaining communicating information",
+        "light electron microscopes",
+        "microscope resolution magnification",
+        "transmission electron microscope basics",
+        "preparing specimens microscopy",
+        "plant cell organelles structure",
+        "comparing microscope images cells"
       ]
     },
     "slots": {
       "predict.video": {
+        "picked": "Comparing animal and plant cells",
+        "fit": "partial",
+        "score": 179.2,
+        "core_hits": [
+          "cell"
+        ],
+        "detail_hits": [
+          "cell organelle plant"
+        ],
+        "detail_weight": 0.34
+      },
+      "observe.video": {
+        "picked": "Comparing animal and plant cells",
+        "fit": "partial",
+        "score": 179.2,
+        "core_hits": [
+          "cell"
+        ],
+        "detail_hits": [
+          "cell organelle plant"
+        ],
+        "detail_weight": 0.34
+      },
+      "explain.video": {
         "picked": "Cell theory",
+        "fit": "partial",
         "score": 85.66,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "microscope"
-        ],
-        "detail_weight": 0.3
-      },
-      "observe.video": {
-        "picked": "Concentration cell",
-        "score": 74.63,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "electron"
-        ],
-        "detail_weight": 0.3
-      },
-      "explain.video": {
-        "picked": "Introduction to galvanic/voltaic cells",
-        "score": 72.8,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "electron"
         ],
         "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Cell theory",
-        "score": 85.66,
+        "picked": "Comparing animal and plant cells",
+        "fit": "partial",
+        "score": 179.2,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "microscope"
+          "cell organelle plant"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.34
       },
       "model.video": {
-        "picked": "Cell theory",
-        "score": 85.66,
+        "picked": "Comparing animal and plant cells",
+        "fit": "partial",
+        "score": 179.2,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "microscope"
+          "cell organelle plant"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.34
       },
       "predict.reading": {
-        "picked": "Dry Cell Electron Flow (PLIX)",
-        "score": 67.74,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "electron"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.reading": {
-        "picked": "General Overview Of The Raas System   Cells And Hormones",
-        "score": 56.48,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "general"
-        ],
-        "detail_weight": 0.31
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.reading": {
-        "picked": "Dry Cell Electron Flow (PLIX)",
-        "score": 67.74,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "electron"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.reading": {
-        "picked": "Dry Cell Electron Flow (PLIX)",
-        "score": 67.74,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "electron"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.reading": {
-        "picked": "Dry Cell Electron Flow (PLIX)",
-        "score": 67.74,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "electron"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       }
     },
     "video_pool": {
       "passed": 3,
       "runners_up": [
-        "Concentration cell",
-        "Introduction to galvanic/voltaic cells"
+        "Cell theory",
+        "Prokaryotic and eukaryotic cells"
       ],
       "rejected_sample": [
+        [
+          "Plant cell walls",
+          "below relevance gate"
+        ],
+        [
+          "Basic ratios",
+          "below relevance gate"
+        ],
+        [
+          "Comparing mitosis and meiosis",
+          "below relevance gate"
+        ],
+        [
+          "Overview of animal and plant cells",
+          "below relevance gate"
+        ],
         [
           "More on orbitals and electron configuration -dubbed(KY)",
           "below relevance gate"
@@ -435,51 +470,23 @@
           "below relevance gate"
         ],
         [
-          "Cell parts and their functions",
-          "below relevance gate"
-        ],
-        [
-          "Comparing animal and plant cells",
-          "below relevance gate"
-        ],
-        [
-          "Plant cell walls",
-          "below relevance gate"
-        ],
-        [
-          "Valence Electrons and the Periodic Table - Overview",
-          "below relevance gate"
-        ],
-        [
-          "Comparing mitosis and meiosis",
+          "Cells and their Organelles - Example 1",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
-        "kolibri node not available on reference image": 2
+        "below relevance gate": 139,
+        "judged off-topic (independent reviewer)": 2,
+        "kolibri node not available on reference image": 12,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 2,
-      "runners_up": [
-        "General Overview Of The Raas System   Cells And Hormones"
-      ],
+      "passed": 0,
+      "runners_up": [],
       "rejected_sample": [
         [
           "Basic cell structures",
-          "below relevance gate"
-        ],
-        [
-          "Create two-way frequency tables",
-          "below relevance gate"
-        ],
-        [
-          "Other Structures of Cells Practice",
-          "below relevance gate"
-        ],
-        [
-          "External Structures of Cells Practice",
           "below relevance gate"
         ],
         [
@@ -491,17 +498,30 @@
           "below relevance gate"
         ],
         [
-          "Other Structures of Cells - Advanced (Flexbook)",
+          "Identifying cell structures",
           "below relevance gate"
         ],
         [
-          "Lewis Electron-Dot Structures (Flexbook)",
+          "Create two-way frequency tables",
+          "below relevance gate"
+        ],
+        [
+          "Cell Organelles (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "Other Cell Organelles (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Other Cell Organelles Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 146,
-        "kolibri node not available on reference image": 6
+        "below relevance gate": 143,
+        "judged off-topic (independent reviewer)": 2,
+        "kolibri node not available on reference image": 10
       }
     }
   },
@@ -552,13 +572,17 @@
         "cell function",
         "cell biology",
         "sukuma wiki",
-        "jiko analogy"
+        "jiko analogy",
+        "animal cell organelles",
+        "electron microscope cell images",
+        "mitochondria structure function"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Organelles in eukaryotic cells",
-        "score": 386.27,
+        "fit": "fits",
+        "score": 435.26,
         "core_hits": [
           "cell"
         ],
@@ -568,13 +592,15 @@
           "mitochondria",
           "endoplasmic reticulum",
           "lysosome",
-          "cell membrane"
+          "cell membrane",
+          "endoplasmic golgi reticulum"
         ],
-        "detail_weight": 3.13
+        "detail_weight": 3.36
       },
       "observe.video": {
         "picked": "Comparing animal and plant cells",
-        "score": 296.16,
+        "fit": "fits",
+        "score": 336.19,
         "core_hits": [
           "cell"
         ],
@@ -582,30 +608,16 @@
           "animal cell",
           "organelle",
           "cell membrane",
+          "animal cell organelle",
+          "animal cell plant",
           "animal"
         ],
-        "detail_weight": 2.89
+        "detail_weight": 3.36
       },
       "explain.video": {
-        "picked": "Prokaryotic and eukaryotic cells",
-        "score": 285.23,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "animal cell",
-          "organelle",
-          "nucleus",
-          "mitochondria",
-          "cell membrane",
-          "cytoplasm",
-          "animal"
-        ],
-        "detail_weight": 4.24
-      },
-      "dqb.video": {
         "picked": "Overview of animal and plant cells",
-        "score": 269.82,
+        "fit": "fits",
+        "score": 276.19,
         "core_hits": [
           "cell"
         ],
@@ -613,13 +625,15 @@
           "animal cell",
           "mitochondria",
           "lysosome",
+          "animal cell plant",
           "animal"
         ],
-        "detail_weight": 2.66
+        "detail_weight": 2.88
       },
-      "model.video": {
+      "dqb.video": {
         "picked": "Organelles in eukaryotic cells",
-        "score": 386.27,
+        "fit": "fits",
+        "score": 435.26,
         "core_hits": [
           "cell"
         ],
@@ -629,58 +643,46 @@
           "mitochondria",
           "endoplasmic reticulum",
           "lysosome",
-          "cell membrane"
+          "cell membrane",
+          "endoplasmic golgi reticulum"
         ],
-        "detail_weight": 3.13
+        "detail_weight": 3.36
       },
-      "predict.reading": {
-        "picked": "Plant vs animal cells",
-        "score": 128.05,
+      "model.video": {
+        "picked": "Comparing animal and plant cells",
+        "fit": "fits",
+        "score": 336.19,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "animal cell",
+          "organelle",
+          "cell membrane",
+          "animal cell organelle",
+          "animal cell plant",
           "animal"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 3.36
+      },
+      "predict.reading": {
+        "picked": "Plant vs animal cells",
+        "fit": "fits",
+        "score": 190.72,
+        "core_hits": [
+          "cell"
+        ],
+        "detail_hits": [
+          "animal cell",
+          "animal cell plant",
+          "animal"
+        ],
+        "detail_weight": 2.02
       },
       "observe.reading": {
-        "picked": "Cell Membrane (Flexbook)",
-        "score": 125.38,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "cell membrane"
-        ],
-        "detail_weight": 0.47
-      },
-      "explain.reading": {
-        "picked": "Cell Membrane Practice",
-        "score": 125.38,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "cell membrane"
-        ],
-        "detail_weight": 0.47
-      },
-      "dqb.reading": {
-        "picked": "The cell membrane",
-        "score": 121.64,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "cell membrane"
-        ],
-        "detail_weight": 0.47
-      },
-      "model.reading": {
         "picked": "Eukaryotic cell structures",
-        "score": 114.32,
+        "fit": "fits",
+        "score": 147.32,
         "core_hits": [
           "cell"
         ],
@@ -688,18 +690,60 @@
           "mitochondria"
         ],
         "detail_weight": 0.5
+      },
+      "explain.reading": {
+        "picked": "Plant vs animal cells",
+        "fit": "fits",
+        "score": 190.72,
+        "core_hits": [
+          "cell"
+        ],
+        "detail_hits": [
+          "animal cell",
+          "animal cell plant",
+          "animal"
+        ],
+        "detail_weight": 2.02
+      },
+      "dqb.reading": {
+        "picked": "Eukaryotic cell structures",
+        "fit": "fits",
+        "score": 147.32,
+        "core_hits": [
+          "cell"
+        ],
+        "detail_hits": [
+          "mitochondria"
+        ],
+        "detail_weight": 0.5
+      },
+      "model.reading": {
+        "picked": "Cell Membrane (Flexbook)",
+        "fit": "partial",
+        "score": 125.38,
+        "core_hits": [
+          "cell"
+        ],
+        "detail_hits": [
+          "cell membrane"
+        ],
+        "detail_weight": 0.47
       }
     },
     "video_pool": {
       "passed": 24,
       "runners_up": [
         "Comparing animal and plant cells",
-        "Prokaryotic and eukaryotic cells",
         "Overview of animal and plant cells",
         "Endoplasmic reticulum and Golgi bodies",
-        "Cell parts and their functions"
+        "Cell parts and their functions",
+        "Prokaryotic and eukaryotic cells"
       ],
       "rejected_sample": [
+        [
+          "Plant cell walls",
+          "below relevance gate"
+        ],
         [
           "Role of the sarcoplasmic reticulum in muscle cells",
           "below relevance gate"
@@ -709,44 +753,40 @@
           "below relevance gate"
         ],
         [
-          "Plant reproductive success",
-          "below relevance gate"
-        ],
-        [
           "Cell theory",
           "below relevance gate"
         ],
         [
-          "Plant cell walls",
+          "Plant reproductive success",
+          "below relevance gate"
+        ],
+        [
+          "Skeletal structure and function",
+          "below relevance gate"
+        ],
+        [
+          "Counting valence electrons for main group elements",
           "below relevance gate"
         ],
         [
           "Introduction to electron configurations",
           "below relevance gate"
-        ],
-        [
-          "Concentration cell",
-          "below relevance gate"
-        ],
-        [
-          "Introduction to galvanic/voltaic cells",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 121,
+        "below relevance gate": 119,
         "web file not on reference image": 4,
-        "kolibri node not available on reference image": 8
+        "kolibri node not available on reference image": 6
       }
     },
     "reading_pool": {
-      "passed": 13,
+      "passed": 12,
       "runners_up": [
-        "Cell Membrane (Flexbook)",
-        "Cell Membrane Practice",
-        "The cell membrane",
         "Eukaryotic cell structures",
-        "Cell Organelles (PLIX)"
+        "Cell structures and their functions",
+        "Other Cell Organelles (Flexbook)",
+        "Other Cell Organelles Practice",
+        "Cell Nucleus (Flexbook)"
       ],
       "rejected_sample": [
         [
@@ -758,7 +798,19 @@
           "below relevance gate"
         ],
         [
+          "Cell Membrane Practice",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Cell Biology Practice",
+          "below relevance gate"
+        ],
+        [
+          "Plant Cell Structures (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Plant Cell Structures Practice",
           "below relevance gate"
         ],
         [
@@ -768,23 +820,12 @@
         [
           "Ribosomes and Mitochondria (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Ribosomes and Mitochondria Practice",
-          "below relevance gate"
-        ],
-        [
-          "Microscopes in Biology Practice",
-          "below relevance gate"
-        ],
-        [
-          "Microscopes in Biology - Advanced (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 126,
-        "kolibri node not available on reference image": 7,
+        "below relevance gate": 123,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 11,
         "excluded: answer/exam material": 5
       }
     }
@@ -806,6 +847,12 @@
         "vacuole",
         "electron",
         "micrograph",
+        "structure",
+        "function",
+        "tonoplast",
+        "animal",
+        "microscope",
+        "images",
         "makes",
         "sukuma",
         "wiki",
@@ -815,143 +862,184 @@
         "plant cell ultrastructure",
         "cell wall",
         "central vacuole",
-        "electron micrograph"
+        "electron micrograph",
+        "plant cell structure",
+        "chloroplast structure function",
+        "cell wall function",
+        "central vacuole tonoplast",
+        "plant animal cells",
+        "electron microscope images cells"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 281.4,
+        "picked": "Organelles in eukaryotic cells",
+        "fit": "fits",
+        "score": 65.77,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "chloroplast",
-          "cell wall",
-          "plant",
-          "make"
+          "chloroplast"
         ],
-        "detail_weight": 2.5
+        "detail_weight": 0.83
       },
       "observe.video": {
-        "picked": "Overview of animal and plant cells",
-        "score": 254.38,
+        "picked": "Organelles in eukaryotic cells",
+        "fit": "fits",
+        "score": 65.77,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "chloroplast",
-          "cell wall",
-          "plant"
+          "chloroplast"
         ],
-        "detail_weight": 2.2
+        "detail_weight": 0.83
       },
       "explain.video": {
-        "picked": "Plant cell walls",
-        "score": 186.28,
+        "picked": "Comparing animal and plant cells",
+        "fit": "partial",
+        "score": 393.09,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
+          "chloroplast",
           "cell wall",
-          "plant"
+          "cell plant",
+          "animal cell plant",
+          "plant",
+          "make"
         ],
-        "detail_weight": 1.37
+        "detail_weight": 3.79
       },
       "dqb.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 281.4,
+        "picked": "Overview of animal and plant cells",
+        "fit": "partial",
+        "score": 340.95,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "chloroplast",
           "cell wall",
-          "plant",
-          "make"
+          "cell plant",
+          "animal cell plant",
+          "plant"
         ],
-        "detail_weight": 2.5
+        "detail_weight": 3.49
       },
       "model.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 281.4,
+        "picked": "Plant cell walls",
+        "fit": "partial",
+        "score": 227.86,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "chloroplast",
           "cell wall",
-          "plant",
-          "make"
+          "cell plant",
+          "plant"
         ],
-        "detail_weight": 2.5
+        "detail_weight": 2.12
       },
       "predict.reading": {
-        "picked": "Plant Cells (Flexbook)",
-        "score": 71.83,
+        "picked": "Plant Cell Structures (Flexbook)",
+        "fit": "fits",
+        "score": 116.69,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
+          "cell plant",
           "plant"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.05
       },
       "observe.reading": {
-        "picked": "Plant Cells Practice",
-        "score": 71.83,
+        "picked": "Plant Cells (Flexbook)",
+        "fit": "fits",
+        "score": 79.56,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
+          "cell plant",
           "plant"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.05
       },
       "explain.reading": {
         "picked": "Plant Cell Structures (Flexbook)",
-        "score": 70.71,
+        "fit": "fits",
+        "score": 116.69,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
+          "cell plant",
           "plant"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.05
       },
       "dqb.reading": {
-        "picked": "Plant Cell Structures Practice",
-        "score": 70.71,
+        "picked": "Plant Cells (Flexbook)",
+        "fit": "fits",
+        "score": 79.56,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
+          "cell plant",
           "plant"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.05
       },
       "model.reading": {
         "picked": "Plant vs animal cells",
-        "score": 68.82,
+        "fit": "partial",
+        "score": 181.28,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
+          "cell plant",
+          "animal cell plant",
           "plant"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.59
       }
     },
     "video_pool": {
-      "passed": 8,
+      "passed": 7,
       "runners_up": [
+        "Comparing animal and plant cells",
         "Overview of animal and plant cells",
         "Plant cell walls",
-        "Organelles in eukaryotic cells",
-        "Zygote differentiating into somatic and germ cells",
+        "Prokaryotic and eukaryotic cells",
         "Cell membrane overview and fluid mosaic model"
       ],
       "rejected_sample": [
+        [
+          "Cell parts and their functions",
+          "below relevance gate"
+        ],
+        [
+          "Plant reproductive success",
+          "below relevance gate"
+        ],
+        [
+          "Cell theory",
+          "below relevance gate"
+        ],
+        [
+          "Skeletal structure and function",
+          "below relevance gate"
+        ],
+        [
+          "Counting valence electrons for main group elements",
+          "below relevance gate"
+        ],
         [
           "Concentration cell",
           "below relevance gate"
@@ -961,81 +1049,62 @@
           "below relevance gate"
         ],
         [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
-          "below relevance gate"
-        ],
-        [
-          "06 Plant Diversity And Evolution, Introduction To Seed Plants",
-          "below relevance gate"
-        ],
-        [
-          "VSEPR for 5 electron clouds (part 2)",
-          "below relevance gate"
-        ],
-        [
-          "VSEPR for 4 electron clouds",
-          "below relevance gate"
-        ],
-        [
-          "VSEPR for 6 electron clouds",
-          "below relevance gate"
-        ],
-        [
-          "VSEPR for 5 electron clouds (part 1)",
-          "below relevance gate"
-        ]
-      ],
-      "rejected_by_reason": {
-        "below relevance gate": 138,
-        "kolibri node not available on reference image": 8,
-        "web file not on reference image": 1
-      }
-    },
-    "reading_pool": {
-      "passed": 5,
-      "runners_up": [
-        "Plant Cells Practice",
-        "Plant Cell Structures (Flexbook)",
-        "Plant Cell Structures Practice",
-        "Plant vs animal cells"
-      ],
-      "rejected_sample": [
-        [
-          "08 Plant Evolution, Seeded Plants",
-          "below relevance gate"
-        ],
-        [
-          "Dry Cell Electron Flow (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Roots, Shoots, and W..:Poster: “Plant Cells and Molecules” size 8.5 X11 here.",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Basic cell structures",
-          "below relevance gate"
-        ],
-        [
-          "Introduction to cells",
-          "below relevance gate"
-        ],
-        [
-          "Vesicles and Vacuoles Practice",
-          "below relevance gate"
-        ],
-        [
-          "Vesicles and Vacuoles - Advanced (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Tra's Red Bean Plant",
+          "Restricting domains of functions to make them invertible",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "below relevance gate": 140,
         "kolibri node not available on reference image": 4,
+        "judged off-topic (independent reviewer)": 1,
+        "web file not on reference image": 1
+      }
+    },
+    "reading_pool": {
+      "passed": 5,
+      "runners_up": [
+        "Plant Cells (Flexbook)",
+        "Plant vs animal cells",
+        "Plant Cell Structures Practice",
+        "Plant Cells Practice"
+      ],
+      "rejected_sample": [
+        [
+          "Basic cell structures",
+          "below relevance gate"
+        ],
+        [
+          "Cell structures and their functions",
+          "below relevance gate"
+        ],
+        [
+          "Structures, powers, and functions of Congress: foundational",
+          "below relevance gate"
+        ],
+        [
+          "Biogas Plants In Animal Husbandry",
+          "below relevance gate"
+        ],
+        [
+          "08 Plant Evolution, Seeded Plants",
+          "below relevance gate"
+        ],
+        [
+          "Restrict domains of functions to make them invertible",
+          "below relevance gate"
+        ],
+        [
+          "Structures of Flowering Plants - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Other Structures of Cells Practice",
+          "below relevance gate"
+        ]
+      ],
+      "rejected_by_reason": {
+        "below relevance gate": 140,
+        "kolibri node not available on reference image": 9,
         "excluded: answer/exam material": 1
       }
     }
@@ -1056,6 +1125,15 @@
         "animal",
         "chloroplast",
         "photosynthesis",
+        "chloroplasts",
+        "mitochondria",
+        "cellular",
+        "respiration",
+        "membrane",
+        "wall",
+        "nucleus",
+        "ribosomes",
+        "vacuole",
         "each",
         "structure",
         "sukuma",
@@ -1067,77 +1145,89 @@
         "plant cell components",
         "animal cell components",
         "chloroplast photosynthesis",
-        "cell organelle"
+        "cell organelle",
+        "organelle functions cells",
+        "plant animal cells",
+        "chloroplasts photosynthesis",
+        "mitochondria cellular respiration",
+        "cell membrane cell wall",
+        "ribosomes vacuole"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 288.04,
+        "picked": "Overview of animal and plant cells",
+        "fit": "fits",
+        "score": 283.81,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "chloroplast photosynthesis",
-          "cell organelle",
-          "organelle"
+          "animal cell plant"
         ],
-        "detail_weight": 2.07
+        "detail_weight": 0.68
       },
       "observe.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 288.04,
+        "picked": "Organelles in eukaryotic cells",
+        "fit": "fits",
+        "score": 240.4,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "chloroplast photosynthesis",
           "cell organelle",
+          "nucleus",
           "organelle"
         ],
-        "detail_weight": 2.07
+        "detail_weight": 2.43
       },
       "explain.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 288.04,
+        "picked": "Overview of animal and plant cells",
+        "fit": "fits",
+        "score": 283.81,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "chloroplast photosynthesis",
-          "cell organelle",
-          "organelle"
+          "animal cell plant"
         ],
-        "detail_weight": 2.07
+        "detail_weight": 0.68
       },
       "dqb.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 288.04,
+        "picked": "Organelles in eukaryotic cells",
+        "fit": "fits",
+        "score": 240.4,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "chloroplast photosynthesis",
           "cell organelle",
+          "nucleus",
           "organelle"
         ],
-        "detail_weight": 2.07
+        "detail_weight": 2.43
       },
       "model.video": {
         "picked": "Comparing animal and plant cells",
-        "score": 288.04,
+        "fit": "partial",
+        "score": 434.83,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "chloroplast photosynthesis",
           "cell organelle",
+          "animal cell plant",
+          "cell membrane wall",
           "organelle"
         ],
-        "detail_weight": 2.07
+        "detail_weight": 3.33
       },
       "predict.reading": {
         "picked": "Cell structures and their functions",
+        "fit": "fits",
         "score": 93.79,
         "core_hits": [
           "cell"
@@ -1149,6 +1239,7 @@
       },
       "observe.reading": {
         "picked": "Cell Organelles (PLIX)",
+        "fit": "fits",
         "score": 90.78,
         "core_hits": [
           "cell"
@@ -1161,6 +1252,7 @@
       },
       "explain.reading": {
         "picked": "Other Cell Organelles (Flexbook)",
+        "fit": "fits",
         "score": 90.31,
         "core_hits": [
           "cell"
@@ -1173,6 +1265,7 @@
       },
       "dqb.reading": {
         "picked": "Other Cell Organelles Practice",
+        "fit": "fits",
         "score": 90.31,
         "core_hits": [
           "cell"
@@ -1185,6 +1278,7 @@
       },
       "model.reading": {
         "picked": "Apply: cell parts and functions",
+        "fit": "fits",
         "score": 56.56,
         "core_hits": [
           "cell"
@@ -1196,17 +1290,21 @@
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 11,
       "runners_up": [
         "Organelles in eukaryotic cells",
         "Cell parts and their functions",
-        "Cells and their Organelles - Example 1",
+        "Comparing animal and plant cells",
         "Prokaryotic and eukaryotic cells",
-        "Concentration cell"
+        "Endosymbiosis theory"
       ],
       "rejected_sample": [
         [
-          "Overview of animal and plant cells",
+          "ATP synthase",
+          "below relevance gate"
+        ],
+        [
+          "Plant cell walls",
           "below relevance gate"
         ],
         [
@@ -1214,7 +1312,11 @@
           "below relevance gate"
         ],
         [
-          "Plant cell walls",
+          "Cellular respiration",
+          "below relevance gate"
+        ],
+        [
+          "2c-d, Cellular respiration & cell compartmentalization and its origins",
           "below relevance gate"
         ],
         [
@@ -1226,26 +1328,19 @@
           "below relevance gate"
         ],
         [
-          "Plant reproductive success",
+          "Cell membrane overview and fluid mosaic model",
           "below relevance gate"
-        ],
-        [
-          "Skeletal structure and function",
-          "below relevance gate"
-        ],
-        [
-          "Arabic: Plants and Environmental Resources",
-          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
-        "kolibri node not available on reference image": 4,
-        "web file not on reference image": 1
+        "below relevance gate": 133,
+        "web file not on reference image": 1,
+        "kolibri node not available on reference image": 3,
+        "judged off-topic (independent reviewer)": 3
       }
     },
     "reading_pool": {
-      "passed": 6,
+      "passed": 9,
       "runners_up": [
         "Cell Organelles (PLIX)",
         "Other Cell Organelles (Flexbook)",
@@ -1255,7 +1350,19 @@
       ],
       "rejected_sample": [
         [
-          "Plant vs animal cells",
+          "The Mitochondria in Cellular Respiration Practice",
+          "below relevance gate"
+        ],
+        [
+          "The Mitochondria in Cellular Respiration - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Connecting Cellular Respiration and Photosynthesis (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Connecting Cellular Respiration and Photosynthesis Practice",
           "below relevance gate"
         ],
         [
@@ -1267,29 +1374,17 @@
           "below relevance gate"
         ],
         [
-          "Basic cell structures",
+          "Eukaryotic cell structures",
           "below relevance gate"
         ],
         [
-          "Structures, powers, and functions of Congress: foundational",
-          "below relevance gate"
-        ],
-        [
-          "Photosynthesis and Energy for Cells Practice",
-          "below relevance gate"
-        ],
-        [
-          "Biogas Plants In Animal Husbandry",
-          "below relevance gate"
-        ],
-        [
-          "08 Plant Evolution, Seeded Plants",
+          "Ribosomes and Mitochondria (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 131,
-        "kolibri node not available on reference image": 9,
+        "below relevance gate": 130,
+        "kolibri node not available on reference image": 7,
         "excluded: answer/exam material": 1
       }
     }
@@ -1317,6 +1412,10 @@
         "digestive",
         "system",
         "hierarchy",
+        "biological",
+        "organization",
+        "specialized",
+        "organelles",
         "sukuma",
         "wiki",
         "leaf",
@@ -1328,48 +1427,61 @@
         "tissues organs organ systems",
         "concept map biology",
         "plant cell organisation",
-        "human digestive system hierarchy"
+        "human digestive system hierarchy",
+        "levels biological organization",
+        "cells tissues organs organ systems",
+        "plant tissues organs",
+        "human digestive system organs",
+        "specialized cells tissues",
+        "organelles cells"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Cells and organisms",
-        "score": 137.67,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "living",
-          "organism"
-        ],
-        "detail_weight": 0.6
-      },
-      "observe.video": {
         "picked": "Organization in the human body",
-        "score": 103.9,
+        "fit": "fits",
+        "score": 178.57,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "organ system tissue",
+          "cell organ system tissue",
+          "cell specialized tissue",
           "organism"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 2.77
       },
-      "explain.video": {
-        "picked": "Cells and organisms",
-        "score": 137.67,
+      "observe.video": {
+        "picked": "Organization in the human body",
+        "fit": "fits",
+        "score": 178.57,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "living",
+          "organ system tissue",
+          "cell organ system tissue",
+          "cell specialized tissue",
           "organism"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 2.77
+      },
+      "explain.video": {
+        "picked": "Comparing animal and plant cells",
+        "fit": "partial",
+        "score": 139.61,
+        "core_hits": [
+          "cell"
+        ],
+        "detail_hits": [
+          "cell organelle"
+        ],
+        "detail_weight": 0.5
       },
       "dqb.video": {
         "picked": "Cells and organisms",
+        "fit": "partial",
         "score": 137.67,
         "core_hits": [
           "cell"
@@ -1381,52 +1493,56 @@
         "detail_weight": 0.6
       },
       "model.video": {
-        "picked": "Cells and organisms",
-        "score": 137.67,
+        "picked": "Cells and their Organelles - Example 1",
+        "fit": "partial",
+        "score": 82.55,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "living",
-          "organism"
+          "cell organelle"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 0.5
       },
       "predict.reading": {
-        "picked": "Understand: cells and organisms",
-        "score": 66.04,
+        "picked": "Cell Organelles (PLIX)",
+        "fit": "partial",
+        "score": 83.45,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "organism"
+          "cell organelle"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.5
       },
       "observe.reading": {
-        "picked": "Understand: cells and organisms",
-        "score": 66.04,
+        "picked": "Other Cell Organelles (Flexbook)",
+        "fit": "partial",
+        "score": 83.02,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "organism"
+          "cell organelle"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.5
       },
       "explain.reading": {
-        "picked": "Understand: cells and organisms",
-        "score": 66.04,
+        "picked": "Other Cell Organelles Practice",
+        "fit": "partial",
+        "score": 83.02,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "organism"
+          "cell organelle"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.5
       },
       "dqb.reading": {
         "picked": "Understand: cells and organisms",
+        "fit": "partial",
         "score": 66.04,
         "core_hits": [
           "cell"
@@ -1437,33 +1553,38 @@
         "detail_weight": 0.3
       },
       "model.reading": {
-        "picked": "Understand: cells and organisms",
-        "score": 66.04,
+        "picked": "Cell Organelles (PLIX)",
+        "fit": "partial",
+        "score": 83.45,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "organism"
+          "cell organelle"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.5
       }
     },
     "video_pool": {
-      "passed": 6,
+      "passed": 8,
       "runners_up": [
-        "Organization in the human body",
-        "Prokaryotic and eukaryotic cells",
-        "Cell theory",
-        "Introduction to Middle school biology",
-        "Molecular variation"
+        "Comparing animal and plant cells",
+        "Cells and organisms",
+        "Cells and their Organelles - Example 1",
+        "Organelles in eukaryotic cells",
+        "Cell theory"
       ],
       "rejected_sample": [
         [
-          "Comparing animal and plant cells",
-          "below relevance gate"
+          "Prokaryotic and eukaryotic cells",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Zygote differentiating into somatic and germ cells",
+          "below relevance gate"
+        ],
+        [
+          "Plant reproductive success",
           "below relevance gate"
         ],
         [
@@ -1483,24 +1604,25 @@
           "below relevance gate"
         ],
         [
-          "Digestive System Structure and Function - Overview",
-          "below relevance gate"
-        ],
-        [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
-          "below relevance gate"
+          "Mandarin: The Biological Mysteries of Kimchi: Examining How Plants Absorb and Lose Water",
+          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
-        "kolibri node not available on reference image": 21,
-        "web file not on reference image": 2,
+        "judged off-topic (independent reviewer)": 3,
+        "below relevance gate": 126,
+        "kolibri node not available on reference image": 20,
+        "web file not on reference image": 3,
         "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 1,
-      "runners_up": [],
+      "passed": 4,
+      "runners_up": [
+        "Other Cell Organelles (Flexbook)",
+        "Other Cell Organelles Practice",
+        "Understand: cells and organisms"
+      ],
       "rejected_sample": [
         [
           "Digestive System Organs Practice",
@@ -1536,9 +1658,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 131,
+        "below relevance gate": 128,
         "excluded: answer/exam material": 5,
-        "kolibri node not available on reference image": 13
+        "kolibri node not available on reference image": 14
       }
     }
   },
@@ -1588,13 +1710,18 @@
         "light microscope",
         "sukuma wiki",
         "levels cell organisation",
-        "creativity imagination"
+        "creativity imagination",
+        "plant animal cells",
+        "cell organelles functions",
+        "cell wall chloroplasts",
+        "mitochondria ribosomes"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Comparing animal and plant cells",
-        "score": 613.62,
+        "fit": "fits",
+        "score": 640.47,
         "core_hits": [
           "cell"
         ],
@@ -1605,14 +1732,15 @@
           "cell wall",
           "chloroplast",
           "cell membrane",
-          "plant",
-          "animal"
+          "animal cell plant",
+          "cell chloroplast wall"
         ],
-        "detail_weight": 6.13
+        "detail_weight": 6.69
       },
       "observe.video": {
         "picked": "Overview of animal and plant cells",
-        "score": 570.6,
+        "fit": "fits",
+        "score": 595.65,
         "core_hits": [
           "cell"
         ],
@@ -1624,13 +1752,14 @@
           "mitochondria",
           "vacuole",
           "lysosome",
-          "plant"
+          "animal cell plant"
         ],
-        "detail_weight": 6.09
+        "detail_weight": 6.65
       },
       "explain.video": {
         "picked": "Organelles in eukaryotic cells",
-        "score": 475.33,
+        "fit": "fits",
+        "score": 530.09,
         "core_hits": [
           "cell"
         ],
@@ -1644,11 +1773,12 @@
           "endoplasmic reticulum",
           "lysosome"
         ],
-        "detail_weight": 4.05
+        "detail_weight": 4.3
       },
       "dqb.video": {
         "picked": "Comparing animal and plant cells",
-        "score": 613.62,
+        "fit": "fits",
+        "score": 640.47,
         "core_hits": [
           "cell"
         ],
@@ -1659,57 +1789,65 @@
           "cell wall",
           "chloroplast",
           "cell membrane",
-          "plant",
-          "animal"
+          "animal cell plant",
+          "cell chloroplast wall"
         ],
-        "detail_weight": 6.13
+        "detail_weight": 6.69
       },
       "model.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 613.62,
+        "picked": "Overview of animal and plant cells",
+        "fit": "fits",
+        "score": 595.65,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "cell plant",
           "animal cell",
-          "organelle",
           "cell wall",
           "chloroplast",
-          "cell membrane",
-          "plant",
-          "animal"
+          "mitochondria",
+          "vacuole",
+          "lysosome",
+          "animal cell plant"
         ],
-        "detail_weight": 6.13
+        "detail_weight": 6.65
       },
       "predict.reading": {
         "picked": "Plant vs animal cells",
-        "score": 151.49,
+        "fit": "fits",
+        "score": 226.28,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "cell plant",
           "animal cell",
+          "animal cell plant",
           "plant",
           "animal"
         ],
-        "detail_weight": 3.35
+        "detail_weight": 3.64
       },
       "observe.reading": {
-        "picked": "Plant Cell Structures (Flexbook)",
-        "score": 146.42,
+        "picked": "Plant vs animal cells",
+        "fit": "fits",
+        "score": 226.28,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
           "cell plant",
-          "plant"
+          "animal cell",
+          "animal cell plant",
+          "plant",
+          "animal"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 3.64
       },
       "explain.reading": {
-        "picked": "Plant Cell Structures Practice",
+        "picked": "Plant Cell Structures (Flexbook)",
+        "fit": "partial",
         "score": 146.42,
         "core_hits": [
           "cell"
@@ -1721,18 +1859,21 @@
         "detail_weight": 1.8
       },
       "dqb.reading": {
-        "picked": "Cell Membrane (Flexbook)",
-        "score": 127.31,
+        "picked": "Plant Cell Structures Practice",
+        "fit": "partial",
+        "score": 146.42,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "cell membrane"
+          "cell plant",
+          "plant"
         ],
-        "detail_weight": 0.58
+        "detail_weight": 1.8
       },
       "model.reading": {
-        "picked": "Cell Membrane Practice",
+        "picked": "Cell Membrane (Flexbook)",
+        "fit": "partial",
         "score": 127.31,
         "core_hits": [
           "cell"
@@ -1744,13 +1885,13 @@
       }
     },
     "video_pool": {
-      "passed": 26,
+      "passed": 25,
       "runners_up": [
         "Overview of animal and plant cells",
         "Organelles in eukaryotic cells",
-        "Prokaryotic and eukaryotic cells",
         "Plant cell walls",
-        "Endoplasmic reticulum and Golgi bodies"
+        "Endoplasmic reticulum and Golgi bodies",
+        "Cell parts and their functions"
       ],
       "rejected_sample": [
         [
@@ -1787,19 +1928,19 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 110,
-        "web file not on reference image": 3,
-        "kolibri node not available on reference image": 14
+        "below relevance gate": 124,
+        "web file not on reference image": 2,
+        "kolibri node not available on reference image": 4
       }
     },
     "reading_pool": {
-      "passed": 14,
+      "passed": 16,
       "runners_up": [
-        "Plant Cell Structures (Flexbook)",
-        "Plant Cell Structures Practice",
-        "Cell Membrane (Flexbook)",
-        "Cell Membrane Practice",
-        "The cell membrane"
+        "Eukaryotic cell structures",
+        "Plant Cells (Flexbook)",
+        "Plant Cells Practice",
+        "Cell Organelles (PLIX)",
+        "Plant Cell Structures (Flexbook)"
       ],
       "rejected_sample": [
         [
@@ -1808,14 +1949,6 @@
         ],
         [
           "Endoplasmic Reticulum - Advanced (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Ribosomes and Mitochondria (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Ribosomes and Mitochondria Practice",
           "below relevance gate"
         ],
         [
@@ -1833,11 +1966,19 @@
         [
           "The “Tenants” My Bod..:Animal vs Bacteria Cell Comparison in English",
           "kolibri node not available on reference image"
+        ],
+        [
+          "The Ecological Cost ..:Activity 2, What Do Plants and Animals Do With Energy?",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "HOW PLANTS FUNCTION",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 127,
-        "kolibri node not available on reference image": 8,
+        "below relevance gate": 133,
+        "kolibri node not available on reference image": 6,
         "excluded: answer/exam material": 1
       }
     }
@@ -1874,8 +2015,8 @@
         "synthesis",
         "performance",
         "task",
-        "assessment",
-        "keeps"
+        "organization",
+        "organisms"
       ],
       "phrases": [
         "cell organelles",
@@ -1886,13 +2027,20 @@
         "organ system",
         "electron microscope",
         "light microscope",
-        "performance task"
+        "performance task",
+        "plant cell organelles",
+        "plant animal cells",
+        "cell organization cells organisms",
+        "electron light microscope",
+        "chloroplast mitochondria functions",
+        "cell wall vacuole"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Comparing animal and plant cells",
-        "score": 495.94,
+        "fit": "fits",
+        "score": 520.01,
         "core_hits": [
           "cell"
         ],
@@ -1902,13 +2050,16 @@
           "animal cell",
           "cell wall",
           "chloroplast",
-          "organelle"
+          "organelle",
+          "cell organelle plant",
+          "animal cell plant"
         ],
-        "detail_weight": 5.49
+        "detail_weight": 6.08
       },
       "observe.video": {
         "picked": "Overview of animal and plant cells",
-        "score": 432.55,
+        "fit": "fits",
+        "score": 453.02,
         "core_hits": [
           "cell"
         ],
@@ -1918,13 +2069,16 @@
           "cell wall",
           "chloroplast",
           "vacuole",
-          "mitochondria"
+          "mitochondria",
+          "animal cell plant",
+          "cell vacuole wall"
         ],
-        "detail_weight": 4.53
+        "detail_weight": 5.06
       },
       "explain.video": {
         "picked": "Comparing animal and plant cells",
-        "score": 495.94,
+        "fit": "fits",
+        "score": 520.01,
         "core_hits": [
           "cell"
         ],
@@ -1934,29 +2088,35 @@
           "animal cell",
           "cell wall",
           "chloroplast",
-          "organelle"
+          "organelle",
+          "cell organelle plant",
+          "animal cell plant"
         ],
-        "detail_weight": 5.49
+        "detail_weight": 6.08
       },
       "dqb.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 495.94,
+        "picked": "Overview of animal and plant cells",
+        "fit": "fits",
+        "score": 453.02,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "cell organelle",
           "cell plant",
           "animal cell",
           "cell wall",
           "chloroplast",
-          "organelle"
+          "vacuole",
+          "mitochondria",
+          "animal cell plant",
+          "cell vacuole wall"
         ],
-        "detail_weight": 5.49
+        "detail_weight": 5.06
       },
       "model.video": {
-        "picked": "Comparing animal and plant cells",
-        "score": 495.94,
+        "picked": "Prokaryotic and eukaryotic cells",
+        "fit": "partial",
+        "score": 307.5,
         "core_hits": [
           "cell"
         ],
@@ -1964,14 +2124,31 @@
           "cell organelle",
           "cell plant",
           "animal cell",
-          "cell wall",
-          "chloroplast",
-          "organelle"
+          "mitochondria",
+          "nucleus",
+          "organelle",
+          "organ",
+          "organism"
         ],
-        "detail_weight": 5.49
+        "detail_weight": 6.1
       },
       "predict.reading": {
+        "picked": "Plant vs animal cells",
+        "fit": "fits",
+        "score": 203.67,
+        "core_hits": [
+          "cell"
+        ],
+        "detail_hits": [
+          "cell plant",
+          "animal cell",
+          "animal cell plant"
+        ],
+        "detail_weight": 2.61
+      },
+      "observe.reading": {
         "picked": "Cell Organelles (PLIX)",
+        "fit": "fits",
         "score": 167.71,
         "core_hits": [
           "cell"
@@ -1982,32 +2159,21 @@
         ],
         "detail_weight": 1.83
       },
-      "observe.reading": {
-        "picked": "Other Cell Organelles (Flexbook)",
-        "score": 166.84,
-        "core_hits": [
-          "cell"
-        ],
-        "detail_hits": [
-          "cell organelle",
-          "organelle"
-        ],
-        "detail_weight": 1.83
-      },
       "explain.reading": {
-        "picked": "Other Cell Organelles Practice",
-        "score": 166.84,
+        "picked": "Plant Cell Structures (Flexbook)",
+        "fit": "fits",
+        "score": 136.91,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "cell organelle",
-          "organelle"
+          "cell plant"
         ],
-        "detail_weight": 1.83
+        "detail_weight": 1.25
       },
       "dqb.reading": {
-        "picked": "Plant Cell Structures (Flexbook)",
+        "picked": "Plant Cell Structures Practice",
+        "fit": "fits",
         "score": 136.91,
         "core_hits": [
           "cell"
@@ -2018,27 +2184,34 @@
         "detail_weight": 1.25
       },
       "model.reading": {
-        "picked": "Plant Cell Structures Practice",
-        "score": 136.91,
+        "picked": "Plant vs animal cells",
+        "fit": "fits",
+        "score": 203.67,
         "core_hits": [
           "cell"
         ],
         "detail_hits": [
-          "cell plant"
+          "cell plant",
+          "animal cell",
+          "animal cell plant"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 2.61
       }
     },
     "video_pool": {
-      "passed": 12,
+      "passed": 9,
       "runners_up": [
         "Overview of animal and plant cells",
-        "Prokaryotic and eukaryotic cells",
         "Plant cell walls",
         "Organelles in eukaryotic cells",
-        "Cells and organisms"
+        "Cells and organisms",
+        "Cells and their Organelles - Example 1"
       ],
       "rejected_sample": [
+        [
+          "Endosymbiosis theory",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Organism growth and the environment",
           "below relevance gate"
@@ -2052,6 +2225,10 @@
           "below relevance gate"
         ],
         [
+          "Cell parts and their functions",
+          "below relevance gate"
+        ],
+        [
           "ATP synthase",
           "below relevance gate"
         ],
@@ -2062,30 +2239,22 @@
         [
           "Introduction to electron configurations",
           "below relevance gate"
-        ],
-        [
-          "Bohr model energy levels (derivation using physics)",
-          "below relevance gate"
-        ],
-        [
-          "Cell theory",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138,
-        "kolibri node not available on reference image": 7,
-        "web file not on reference image": 1
+        "judged off-topic (independent reviewer)": 3,
+        "below relevance gate": 134,
+        "kolibri node not available on reference image": 5
       }
     },
     "reading_pool": {
       "passed": 11,
       "runners_up": [
-        "Other Cell Organelles (Flexbook)",
-        "Other Cell Organelles Practice",
+        "Cell Organelles (PLIX)",
         "Plant Cell Structures (Flexbook)",
         "Plant Cell Structures Practice",
-        "Plant vs animal cells"
+        "Plant Cells (Flexbook)",
+        "Plant Cells Practice"
       ],
       "rejected_sample": [
         [
@@ -2122,8 +2291,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 36,
-        "below relevance gate": 124,
+        "kolibri node not available on reference image": 19,
+        "below relevance gate": 125,
         "excluded: answer/exam material": 2
       }
     }

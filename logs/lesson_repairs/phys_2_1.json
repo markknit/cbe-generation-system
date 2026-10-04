@@ -1,0 +1,273 @@
+{
+  "module": "phys_2_1",
+  "conflicts_in": [
+    {
+      "lessons": "1, 5, 6, 9, 11, 12",
+      "severity": "major",
+      "fact": "Kabete tunnel dimension used (width/opening vs length)",
+      "versions": "Lessons 1, 5, 6, 12 use tunnel width/opening ~8 m. Lesson 9 overview/explain use ~8 m, but its model-building teacher script uses a 4 m tunnel mouth. Lesson 11 uses a tunnel length of ~120 m for resonance."
+    },
+    {
+      "lessons": "3, 5, 6, 8, 10",
+      "severity": "major",
+      "fact": "Lesson numbering of diffraction and wave-equation topics / lesson sequence cross-references",
+      "versions": "Lesson 3 and Lesson 5 both teach v = fλ in full (Classic 105 and KBC AM calculations duplicated). Lesson 8 says the antenna thread is completed in Lesson 10, but Lesson 10 is refraction/TIR. Lesson 11 says diffraction was Lesson 10 and interference was Lesson 10, whereas diffraction is Lesson 6 (and 9) and interference is Lesson 7."
+    },
+    {
+      "lessons": "10, 6, 12",
+      "severity": "major",
+      "fact": "Why FM fades in the tunnel",
+      "versions": "Lessons 6 and 12 explain it as limited diffraction because FM λ is small compared with the tunnel opening. Lesson 10 attributes it to total internal reflection/refraction at tunnel walls, which is inappropriate for the tunnel/radio case (FM wave described as TIR-trapped in the tunnel)."
+    },
+    {
+      "lessons": "11, 6, 7, 9",
+      "severity": "major",
+      "fact": "Whether AM or FM undergoes standing waves/interference in the tunnel",
+      "versions": "Lesson 9 says reflected AM waves create constructive interference over wide zones; Lesson 11 says AM cannot form any standing wave in the tunnel (wavelength >> 120 m tunnel). Lesson 11 also says FM resonance in tunnel may reinforce, versus Lessons 7/9 treating reflections as destructive dead-zones."
+    }
+  ],
+  "applied": [
+    {
+      "lesson": 11,
+      "path": "overview",
+      "old": "tunnel's approximate length (~120 m)",
+      "new": "tunnel's approximate length (~120 m; note the ~8 m opening width is the dimension that matters for diffraction)",
+      "conflict": "1"
+    },
+    {
+      "lesson": 8,
+      "path": "framework[3].learnerExperience",
+      "old": "the full answer will come in Lesson 10.",
+      "new": "the full answer will come in Lesson 12.",
+      "conflict": "2"
+    },
+    {
+      "lesson": 8,
+      "path": "framework[3].teacherMoves",
+      "old": "Lessons 9 and 10 will close it.",
+      "new": "Lessons 9 and 12 will close it.",
+      "conflict": "2"
+    },
+    {
+      "lesson": 8,
+      "path": "summaryTablePrompt.explained",
+      "old": "a thread we will complete in Lesson 10.",
+      "new": "a thread we will complete in Lesson 12.",
+      "conflict": "2"
+    },
+    {
+      "lesson": 11,
+      "path": "slo.purposeInStoryline",
+      "old": "Combined with diffraction (Lesson 10)",
+      "new": "Combined with diffraction (Lessons 6 and 9)",
+      "conflict": "2"
+    },
+    {
+      "lesson": 11,
+      "path": "framework[2].learnerExperience",
+      "old": "diffraction in Lesson 10 to explain",
+      "new": "diffraction in Lessons 6 and 9 to explain",
+      "conflict": "2"
+    },
+    {
+      "lesson": 11,
+      "path": "framework[2].teacherMoves",
+      "old": "You studied diffraction last lesson.",
+      "new": "You studied diffraction in Lessons 6 and 9.",
+      "conflict": "2"
+    },
+    {
+      "lesson": 11,
+      "path": "framework[2].teacherMoves",
+      "old": "struggled with diffraction in Lesson 10",
+      "new": "struggled with diffraction in Lessons 6 and 9",
+      "conflict": "2"
+    },
+    {
+      "lesson": 11,
+      "path": "framework[4].learnerExperience",
+      "old": "see Lesson 10 diagram.'",
+      "new": "see Lesson 6 diagram.'",
+      "conflict": "2"
+    },
+    {
+      "lesson": 11,
+      "path": "framework[4].formativeAssessment",
+      "old": "Look at your Lesson 10 model.",
+      "new": "Look at your Lesson 6 model.",
+      "conflict": "2"
+    },
+    {
+      "lesson": 11,
+      "path": "overview",
+      "old": "investigated interference (Lesson 10) using LabXchange",
+      "new": "investigated interference (Lesson 7) using LabXchange",
+      "conflict": "2"
+    },
+    {
+      "lesson": 11,
+      "path": "summaryTablePrompt.explained",
+      "old": "(2) DIFFRACTION (Lesson 10)",
+      "new": "(2) DIFFRACTION (Lessons 6 and 9)",
+      "conflict": "2"
+    },
+    {
+      "lesson": 11,
+      "path": "framework[0].sensemakingStrategy",
+      "old": "reflection and interference from Lessons 9–10",
+      "new": "reflection and interference from Lessons 6–7",
+      "conflict": "2"
+    },
+    {
+      "lesson": 5,
+      "path": "slo.purposeInStoryline",
+      "old": "learners established that waves transfer energy, identified wave properties (amplitude, frequency, wavelength, period), and observed reflection and diffraction qualitatively.",
+      "new": "learners established that waves transfer energy, identified wave properties (amplitude, frequency, wavelength, period), and first met v = fλ with FM and AM wavelengths in Lesson 3 (this lesson deepens it by derivation).",
+      "conflict": "2"
+    },
+    {
+      "lesson": 10,
+      "path": "summaryTablePrompt.explained",
+      "old": "This is why FM radio waves (shorter wavelength, less able to diffract) are more likely to be reflected or attenuated at the Kabete tunnel walls than AM waves — and it is the same physics",
+      "new": "The Kabete FM fade is explained by limited diffraction (FM λ ≈ 2.85 m is small compared with the ~8 m tunnel opening), not by total internal reflection; TIR is the physics",
+      "conflict": "3"
+    },
+    {
+      "lesson": 10,
+      "path": "slo.purposeInStoryline",
+      "old": "This directly advances the tunnel mystery (why do FM waves, with shorter wavelengths, fail to diffract or penetrate the tunnel boundary while AM waves do?), and introduces",
+      "new": "The tunnel fade itself is explained by diffraction (Lessons 6 and 9); this lesson contrasts it with TIR and introduces",
+      "conflict": "3"
+    },
+    {
+      "lesson": 10,
+      "path": "overview",
+      "old": "the concept of a wave being 'trapped' or 'blocked' at a boundary depending on angle and wavelength deepens the class's model of why FM signals disappear in the tunnel.",
+      "new": "TIR is contrasted with the diffraction explanation for the tunnel, which remains the cause of the FM fade.",
+      "conflict": "3"
+    },
+    {
+      "lesson": 11,
+      "path": "overview",
+      "old": "discovering that AM wavelengths (hundreds of metres) cannot form a standing wave in the tunnel at all, while certain FM wavelengths can — partially explaining the selective signal behaviour.",
+      "new": "noting that AM wavelengths (hundreds of metres) are far too long to form a standing wave in the tunnel, while FM wavelengths are short enough that reflections inside the tunnel can interfere, creating destructive dead-zones as well as reinforcement hot-spots.",
+      "conflict": "1"
+    },
+    {
+      "lesson": 11,
+      "path": "summaryTablePrompt.observed",
+      "old": "while AM wavelengths (~529 m for KBC 567 kHz) cannot.",
+      "new": "while AM wavelengths (~529 m for KBC 567 kHz) cannot form a standing wave in the tunnel.",
+      "conflict": "1"
+    },
+    {
+      "lesson": 9,
+      "path": "summaryTablePrompt.explained",
+      "old": "and their much longer wavelength means reflected AM waves create constructive interference patterns across much wider zones, maintaining a usable signal.",
+      "new": "and because their wavelength is vastly longer than the tunnel, reflected AM waves cannot form the fine pattern of interference dead-zones that affects FM, so a usable signal is maintained.",
+      "conflict": "1"
+    },
+    {
+      "lesson": 11,
+      "path": "summaryTablePrompt.explained",
+      "old": "(1) RESONANCE / STATIONARY WAVES — FM wavelengths are short enough to form standing waves inside the tunnel, meaning some FM frequencies are reinforced (antinodes) and others are cancelled (nodes) depending on the tunnel's exact length.",
+      "new": "(1) INTERFERENCE / STATIONARY WAVES — FM wavelengths are short enough for reflections inside the tunnel to interfere, creating destructive dead-zones (nodes) where the signal is cancelled, as well as reinforcement spots (antinodes), depending on position.",
+      "conflict": "1"
+    },
+    {
+      "lesson": 11,
+      "path": "summaryTablePrompt.learned",
+      "old": "FM signals (short wavelength) can satisfy resonance conditions inside the Kabete tunnel, contributing to signal reinforcement OR cancellation depending on exact frequency;",
+      "new": "FM signals (short wavelength) can form interference patterns inside the Kabete tunnel, producing destructive dead-zones as well as reinforcement spots depending on position;",
+      "conflict": "1"
+    }
+  ],
+  "rejected": [
+    {
+      "lesson": 9,
+      "path": "framework[5].teacherMoves",
+      "old": "FM ≈ 2.85 m, AM ≈ 300 m, tunnel mouth ≈ 4 m.",
+      "new": "FM ≈ 2.85 m, AM ≈ 529 m, tunnel mouth ≈ 8 m.",
+      "conflict": "1",
+      "rejected": "path not found"
+    },
+    {
+      "lesson": 9,
+      "path": "framework[5].teacherMoves",
+      "old": "The tunnel mouth is 4 metres. The FM wavelength is 2.85 metres. The AM wavelength is 300 metres.",
+      "new": "The tunnel mouth is 8 metres. The FM wavelength is 2.85 metres. The AM wavelength is 529 metres.",
+      "conflict": "1",
+      "rejected": "path not found"
+    },
+    {
+      "lesson": 8,
+      "path": "framework[2].teacherMoves",
+      "old": "advancing the narrative toward the full resolution of the anchoring phenomenon in Lesson 10",
+      "new": "advancing the narrative toward the full resolution of the anchoring phenomenon in Lesson 12",
+      "conflict": "2",
+      "rejected": "old text occurs 0 times (need exactly 1)"
+    },
+    {
+      "lesson": 11,
+      "path": "framework[4].formativeAssessment",
+      "old": "(Lesson 10). Students meeting",
+      "new": "(Lessons 6 and 9). Students meeting",
+      "conflict": "2",
+      "rejected": "old text occurs 0 times (need exactly 1)"
+    },
+    {
+      "lesson": 10,
+      "path": "framework[5].learnerExperience",
+      "old": "they draw a cross-section of the Kabete underpass showing an FM wave ray hitting the tunnel wall at a steep angle, bending away, and undergoing TIR — trapping it or deflecting it rather than allowing it to propagate through.",
+      "new": "they draw a cross-section of the Kabete underpass showing the ~8 m tunnel opening with FM (λ ≈ 2.85 m) diffracting only slightly, and add a separate small sketch of TIR in a fibre-optic cable for contrast (TIR does not explain the tunnel fade).",
+      "conflict": "3",
+      "rejected": "path not found"
+    },
+    {
+      "lesson": 10,
+      "path": "framework[5].learnerExperience",
+      "old": "(a) the angle of incidence label, (b) the critical angle label, (c) a note on why FM (shorter wavelength, higher frequency) is more affected than AM at the boundary.",
+      "new": "(a) the opening width and FM wavelength, (b) the critical angle label on the fibre sketch, (c) a note on why FM (shorter wavelength) diffracts less than AM at the tunnel opening.",
+      "conflict": "3",
+      "rejected": "path not found"
+    },
+    {
+      "lesson": 10,
+      "path": "framework[5].teacherMoves",
+      "old": "Show a wave ray hitting the boundary. Label: angle of incidence, critical angle, refracted ray or TIR. Add a note: WHY is FM more affected than AM?",
+      "new": "Show FM and AM waves at the ~8 m opening. Label wavelengths. Add a note: WHY does FM diffract less than AM? (TIR is for the fibre sketch only.)",
+      "conflict": "3",
+      "rejected": "path not found"
+    },
+    {
+      "lesson": 10,
+      "path": "framework[5].teacherMoves",
+      "old": "We explored diffraction in Lesson 8",
+      "new": "We explored diffraction in Lesson 6",
+      "conflict": "2",
+      "rejected": "path not found"
+    },
+    {
+      "lesson": 10,
+      "path": "framework[4].teacherMoves",
+      "old": "'We now know that waves bend AND can be totally internally reflected at boundaries. How does this add to our model of why FM signals struggle in the Kabete tunnel?'",
+      "new": "'We now know that waves bend AND can be totally internally reflected at boundaries. Is TIR what makes FM fade in the Kabete tunnel, or is that still diffraction?'",
+      "conflict": "3",
+      "rejected": "old text occurs 0 times (need exactly 1)"
+    },
+    {
+      "lesson": 10,
+      "path": "framework[4].learnerExperience",
+      "old": "diffraction (Lesson 8), wavelength and wave speed (Lesson 6)",
+      "new": "diffraction (Lesson 6), wavelength and wave speed (Lesson 3)",
+      "conflict": "2",
+      "rejected": "old text occurs 0 times (need exactly 1)"
+    }
+  ],
+  "unresolved": [
+    {
+      "conflict": "1",
+      "why": "Lesson 11 uses the ~120 m tunnel length for resonance, a different dimension from the 8 m opening; it was only clarified, not changed. Lesson 11's resonance argument (FM standing waves) is built around length and cannot be aligned by small edits."
+    }
+  ]
+}

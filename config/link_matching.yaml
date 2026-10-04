@@ -130,6 +130,33 @@ foreign_vocab:
             trigonometric, polygon, polygons, congruence, congruent, matrix,
             matrices]
 
+# Sub-topic qualifiers: words that name a DIFFERENT topic within the same
+# subject family. A title that contains one is rejected unless the lesson's own
+# vocabulary (sub-strand name + lesson title + aresKeywords) also contains it.
+# This closes the gap the relevance gate leaves open: a broad shared word
+# ("acceleration", "motion", "force") satisfies the gate, and then "Calculus proof
+# of centripetal acceleration" is shown on a linear-motion lesson. Found by the
+# partner's validator on Core Mathematics 2.9 (2026-10-03: projectile motion,
+# centripetal acceleration, speed of sound, magnetic force on Lessons 1-7).
+# Multi-word terms match as phrases. Add a term only if it names a topic that is
+# never the right resource for a lesson that does not itself mention it. Terms
+# that sibling lessons legitimately use (reaction, genetic, electric, vector,
+# matrix, nuclear, quantum, thermodynamics, sound) are deliberately NOT here: a
+# trial run showed they rejected correct matches ("Light Reactions of
+# Photosynthesis", "Genetic Drift"). Rejection costs a null slot, so err short.
+conflict_qualifiers: [
+  # mechanics sub-topics
+  centripetal, centrifugal, projectile, projectiles, orbital, orbit, orbits,
+  angular, rotational, torque, pendulum, "circular motion", "around curve",
+  "around a curve", "uniform circular",
+  # other physics topics that borrow motion vocabulary
+  "speed of sound", mach, doppler, magnetic, magnet, electromagnetic,
+  relativity, "time dilation", "length contraction",
+  # calculus borrowed by motion and graph lessons
+  calculus, integral, integrals, derivative, derivatives, differential,
+  differentiation, integration
+]
+
 # Phase words: a small tiebreak between candidates that already passed the
 # relevance gate. They are NOT search terms (that was root cause RC2).
 phase_hints:

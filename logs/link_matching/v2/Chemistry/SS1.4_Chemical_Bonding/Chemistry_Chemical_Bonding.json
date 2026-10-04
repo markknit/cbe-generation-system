@@ -24,6 +24,10 @@
         "chemistry",
         "covalent",
         "paradox",
+        "bonds",
+        "basics",
+        "electrical",
+        "materials",
         "launching"
       ],
       "phrases": [
@@ -33,33 +37,44 @@
         "valence electrons",
         "atomic structure",
         "covalent bonding",
-        "carbon paradox"
+        "carbon paradox",
+        "allotropes carbon",
+        "diamond graphite structure",
+        "valence electrons atomic structure",
+        "covalent bonds basics",
+        "electrical conductivity materials",
+        "hardness physical properties"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Metallic bonds",
-        "score": 92.74,
-        "core_hits": [],
-        "detail_hits": [
-          "physical",
-          "conductivity"
-        ],
-        "detail_weight": 1.18
-      },
-      "observe.video": {
         "picked": "06 Application, Structure Of Diamond And Graphite",
-        "score": 64.32,
+        "fit": "fits",
+        "score": 70.51,
         "core_hits": [],
         "detail_hits": [
           "diamond",
-          "graphite"
+          "graphite",
+          "diamond graphite"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 2.02
+      },
+      "observe.video": {
+        "picked": "06 Application, Structure Of Diamond And Graphite",
+        "fit": "fits",
+        "score": 70.51,
+        "core_hits": [],
+        "detail_hits": [
+          "diamond",
+          "graphite",
+          "diamond graphite"
+        ],
+        "detail_weight": 2.02
       },
       "explain.video": {
         "picked": "Metallic bonds",
-        "score": 92.74,
+        "fit": "partial",
+        "score": 112.6,
         "core_hits": [],
         "detail_hits": [
           "physical",
@@ -68,27 +83,33 @@
         "detail_weight": 1.18
       },
       "dqb.video": {
-        "picked": "Metallic bonds",
-        "score": 92.74,
+        "picked": "Covalent network solids",
+        "fit": "partial",
+        "score": 75.02,
         "core_hits": [],
         "detail_hits": [
-          "physical",
-          "conductivity"
+          "diamond",
+          "graphite",
+          "diamond graphite",
+          "bond covalent"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 2.43
       },
       "model.video": {
-        "picked": "Metallic bonds",
-        "score": 92.74,
-        "core_hits": [],
-        "detail_hits": [
-          "physical",
-          "conductivity"
+        "picked": "01 Bonding, How To Determine Ionic And Covalent Chemical Bonding",
+        "fit": "partial",
+        "score": 48.5,
+        "core_hits": [
+          "bonding chemical"
         ],
-        "detail_weight": 1.18
+        "detail_hits": [
+          "bonding covalent"
+        ],
+        "detail_weight": 0.54
       },
       "predict.reading": {
         "picked": "Valence electrons and ionic compounds",
+        "fit": "partial",
         "score": 81.66,
         "core_hits": [],
         "detail_hits": [
@@ -99,6 +120,7 @@
       },
       "observe.reading": {
         "picked": "Valence electrons and ionic compounds",
+        "fit": "partial",
         "score": 81.66,
         "core_hits": [],
         "detail_hits": [
@@ -109,6 +131,7 @@
       },
       "explain.reading": {
         "picked": "Valence electrons and ionic compounds",
+        "fit": "partial",
         "score": 81.66,
         "core_hits": [],
         "detail_hits": [
@@ -119,6 +142,7 @@
       },
       "dqb.reading": {
         "picked": "Valence electrons and ionic compounds",
+        "fit": "partial",
         "score": 81.66,
         "core_hits": [],
         "detail_hits": [
@@ -129,6 +153,7 @@
       },
       "model.reading": {
         "picked": "Valence electrons and ionic compounds",
+        "fit": "partial",
         "score": 81.66,
         "core_hits": [],
         "detail_hits": [
@@ -141,11 +166,19 @@
     "video_pool": {
       "passed": 4,
       "runners_up": [
-        "06 Application, Structure Of Diamond And Graphite",
+        "Metallic bonds",
         "Covalent network solids",
         "01 Bonding, How To Determine Ionic And Covalent Chemical Bonding"
       ],
       "rejected_sample": [
+        [
+          "Dot structures I: Single bonds",
+          "below relevance gate"
+        ],
+        [
+          "Dot structures II: Multiple bonds",
+          "below relevance gate"
+        ],
         [
           "Counting valence electrons for main group elements",
           "below relevance gate"
@@ -159,37 +192,27 @@
           "web file not on reference image"
         ],
         [
-          "Dot structures I: Single bonds",
+          "Arabic-English Subtitles: Plastics and Covalent Chemical Bonds",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "Covalent bonds",
           "below relevance gate"
         ],
         [
-          "Dot structures II: Multiple bonds",
-          "below relevance gate"
-        ],
-        [
-          "Valence Electrons and the Periodic Table - Overview",
-          "below relevance gate"
-        ],
-        [
-          "Valence electrons",
-          "below relevance gate"
-        ],
-        [
-          "Valence electrons and ionic compounds",
+          "Basic Physical Properties - Example 1",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
-        "web file not on reference image": 6,
-        "kolibri node not available on reference image": 5
+        "below relevance gate": 137,
+        "web file not on reference image": 7,
+        "kolibri node not available on reference image": 8
       }
     },
     "reading_pool": {
-      "passed": 2,
-      "runners_up": [
-        "Physical and chemical changes"
-      ],
+      "passed": 1,
+      "runners_up": [],
       "rejected_sample": [
         [
           "Atomic structure and electron configuration",
@@ -225,8 +248,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 115,
-        "kolibri node not available on reference image": 5,
+        "below relevance gate": 122,
+        "kolibri node not available on reference image": 6,
+        "judged off-topic (independent reviewer)": 1,
         "excluded: answer/exam material": 3
       }
     }
@@ -265,7 +289,7 @@
         "groups",
         "context",
         "chemistry",
-        "bookkeeping"
+        "explained"
       ],
       "phrases": [
         "valence electrons",
@@ -279,24 +303,30 @@
         "carbon bonding",
         "chemical bonding",
         "carbon paradox",
-        "periods groups"
+        "periods groups",
+        "valence electrons explained",
+        "electron configuration first elements",
+        "octet rule duplet rule"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Counting valence electrons for main group elements",
-        "score": 250.17,
+        "fit": "fits",
+        "score": 263.9,
         "core_hits": [],
         "detail_hits": [
           "electron valence",
           "configuration electron",
+          "configuration electron element",
           "valence",
           "electron"
         ],
-        "detail_weight": 3.04
+        "detail_weight": 3.39
       },
       "observe.video": {
         "picked": "Drawing Lewis diagrams",
+        "fit": "fits",
         "score": 237.26,
         "core_hits": [],
         "detail_hits": [
@@ -312,29 +342,34 @@
       },
       "explain.video": {
         "picked": "Noble gas configuration",
-        "score": 165.11,
+        "fit": "fits",
+        "score": 175.61,
         "core_hits": [],
         "detail_hits": [
           "configuration electron",
           "configuration gas noble",
+          "configuration electron gas noble",
           "electron"
         ],
-        "detail_weight": 1.86
+        "detail_weight": 2.19
       },
       "dqb.video": {
-        "picked": "Electron configurations for the third and fourth periods",
-        "score": 151.75,
+        "picked": "Counting valence electrons for main group elements",
+        "fit": "fits",
+        "score": 263.9,
         "core_hits": [],
         "detail_hits": [
+          "electron valence",
           "configuration electron",
-          "element period",
-          "configuration gas noble",
+          "configuration electron element",
+          "valence",
           "electron"
         ],
-        "detail_weight": 2.61
+        "detail_weight": 3.39
       },
       "model.video": {
         "picked": "Drawing Lewis diagrams",
+        "fit": "fits",
         "score": 237.26,
         "core_hits": [],
         "detail_hits": [
@@ -350,6 +385,7 @@
       },
       "predict.reading": {
         "picked": "Atomic structure and electron configuration",
+        "fit": "fits",
         "score": 109.74,
         "core_hits": [],
         "detail_hits": [
@@ -360,19 +396,20 @@
         "detail_weight": 1.5
       },
       "observe.reading": {
-        "picked": "Valence electrons and ionic compounds",
-        "score": 105.58,
+        "picked": "Octet Rule (Flexbook)",
+        "fit": "fits",
+        "score": 98.41,
         "core_hits": [],
         "detail_hits": [
-          "electron valence",
-          "chemistry",
-          "valence",
-          "electron"
+          "octet rule",
+          "octet",
+          "rule"
         ],
-        "detail_weight": 2.36
+        "detail_weight": 1.85
       },
       "explain.reading": {
-        "picked": "Octet Rule (Flexbook)",
+        "picked": "Octet Rule Practice",
+        "fit": "fits",
         "score": 98.41,
         "core_hits": [],
         "detail_hits": [
@@ -383,8 +420,9 @@
         "detail_weight": 1.85
       },
       "dqb.reading": {
-        "picked": "Octet Rule Practice",
-        "score": 98.41,
+        "picked": "Octet Rule: Octopuses (PLIX)",
+        "fit": "fits",
+        "score": 97.4,
         "core_hits": [],
         "detail_hits": [
           "octet rule",
@@ -394,27 +432,44 @@
         "detail_weight": 1.85
       },
       "model.reading": {
-        "picked": "Octet Rule: Octopuses (PLIX)",
-        "score": 97.4,
+        "picked": "Valence Electrons (Flexbook)",
+        "fit": "fits",
+        "score": 94.6,
         "core_hits": [],
         "detail_hits": [
-          "octet rule",
-          "octet",
-          "rule"
+          "electron valence",
+          "valence",
+          "electron"
         ],
-        "detail_weight": 1.85
+        "detail_weight": 2.1
       }
     },
     "video_pool": {
-      "passed": 36,
+      "passed": 34,
       "runners_up": [
         "Drawing Lewis diagrams",
         "Noble gas configuration",
-        "Electron configurations for the third and fourth periods",
-        "Worked example: Lewis diagram of formaldehyde (CH₂O)",
-        "Electron configurations for the second period"
+        "Electron configuration (Rules and Diagrams) - Overview",
+        "Dot structures I: Single bonds",
+        "Electron configurations for the third and fourth periods"
       ],
       "rejected_sample": [
+        [
+          "Worked example: Lewis diagram of xenon difluoride (XeF₂)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "More on orbitals and electron configuration -dubbed(KY)",
+          "conflicting sub-topic ['orbital']"
+        ],
+        [
+          "First and second ionization energy",
+          "below relevance gate"
+        ],
+        [
+          "Ionization energy: group trend",
+          "below relevance gate"
+        ],
         [
           "Sn2 mechanism: stereospecificity",
           "below relevance gate"
@@ -430,38 +485,24 @@
         [
           "Drawing dot structures",
           "below relevance gate"
-        ],
-        [
-          "Worked example: Lewis diagram of the cyanide ion (CN⁻)",
-          "below relevance gate"
-        ],
-        [
-          "Atomic and ionic radii",
-          "below relevance gate"
-        ],
-        [
-          "Division in context",
-          "below relevance gate"
-        ],
-        [
-          "Identifying Groups/Families and Periods - Example 1",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 106,
-        "web file not on reference image": 5,
+        "judged off-topic (independent reviewer)": 1,
+        "conflicting sub-topic": 1,
+        "below relevance gate": 104,
+        "web file not on reference image": 6,
         "kolibri node not available on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 13,
+      "passed": 11,
       "runners_up": [
-        "Valence electrons and ionic compounds",
         "Octet Rule (Flexbook)",
         "Octet Rule Practice",
         "Octet Rule: Octopuses (PLIX)",
-        "Exceptions to the Octet Rule (Flexbook)"
+        "Valence Electrons (Flexbook)",
+        "Valence Electrons Practice"
       ],
       "rejected_sample": [
         [
@@ -481,26 +522,27 @@
           "below relevance gate"
         ],
         [
+          "Exceptions to the Octet Rule (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Exceptions to the Octet Rule Practice",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Chemical Bonding (Flexbook)",
           "below relevance gate"
         ],
         [
           "Chemical Bonding Practice",
           "below relevance gate"
-        ],
-        [
-          "Modern Periodic Table: Periods and Groups (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Lewis Electron-Dot Structures (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 124,
+        "below relevance gate": 123,
+        "judged off-topic (independent reviewer)": 2,
         "excluded: answer/exam material": 3,
-        "kolibri node not available on reference image": 4
+        "kolibri node not available on reference image": 5
       }
     }
   },
@@ -553,13 +595,16 @@
         "ion formation",
         "melting point",
         "electrical conductivity",
-        "chemical bonding"
+        "chemical bonding",
+        "ionic bonding basics",
+        "electron transfer ionic bonds"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Ionic bonds",
-        "score": 210.75,
+        "fit": "fits",
+        "score": 237.27,
         "core_hits": [],
         "detail_hits": [
           "ion",
@@ -571,68 +616,76 @@
         "detail_weight": 2.43
       },
       "observe.video": {
-        "picked": "Metallic bonds",
-        "score": 147.72,
+        "picked": "Valence electrons and ionic compounds",
+        "fit": "fits",
+        "score": 171.03,
         "core_hits": [],
         "detail_hits": [
-          "attraction electrostatics",
-          "cation",
+          "ion",
+          "electron valence",
+          "compound ionic",
+          "ionic",
           "electron"
         ],
-        "detail_weight": 1.24
+        "detail_weight": 2.09
       },
       "explain.video": {
-        "picked": "Valence electrons and ionic compounds",
-        "score": 142.55,
+        "picked": "Ionic bonds",
+        "fit": "fits",
+        "score": 237.27,
         "core_hits": [],
         "detail_hits": [
           "ion",
+          "attraction electrostatics",
           "electron valence",
           "ionic",
           "electron"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 2.43
       },
       "dqb.video": {
-        "picked": "Ionic bonds",
-        "score": 210.75,
+        "picked": "Valence electrons and ionic compounds",
+        "fit": "fits",
+        "score": 171.03,
         "core_hits": [],
         "detail_hits": [
           "ion",
-          "attraction electrostatics",
           "electron valence",
+          "compound ionic",
           "ionic",
           "electron"
         ],
-        "detail_weight": 2.43
+        "detail_weight": 2.09
       },
       "model.video": {
-        "picked": "Ionic bonds",
-        "score": 210.75,
+        "picked": "Drawing Lewis diagrams",
+        "fit": "partial",
+        "score": 124.67,
         "core_hits": [],
         "detail_hits": [
-          "ion",
-          "attraction electrostatics",
+          "octet rule",
           "electron valence",
-          "ionic",
           "electron"
         ],
-        "detail_weight": 2.43
+        "detail_weight": 1.71
       },
       "predict.reading": {
         "picked": "Valence electrons and ionic compounds",
-        "score": 111.55,
+        "fit": "fits",
+        "score": 140.32,
         "core_hits": [],
         "detail_hits": [
           "electron valence",
           "chemistry",
+          "compound ionic",
           "ionic",
           "electron"
         ],
-        "detail_weight": 1.4
+        "detail_weight": 1.69
       },
       "observe.reading": {
         "picked": "Ionic Bonding (Flexbook)",
+        "fit": "fits",
         "score": 96.99,
         "core_hits": [],
         "detail_hits": [
@@ -643,6 +696,7 @@
       },
       "explain.reading": {
         "picked": "Ionic Bonding Practice",
+        "fit": "fits",
         "score": 96.99,
         "core_hits": [],
         "detail_hits": [
@@ -652,36 +706,45 @@
         "detail_weight": 1.8
       },
       "dqb.reading": {
-        "picked": "Covalent and Ionic Bonding (PLIX)",
-        "score": 95.5,
+        "picked": "Valence electrons and ionic compounds",
+        "fit": "fits",
+        "score": 140.32,
+        "core_hits": [],
+        "detail_hits": [
+          "electron valence",
+          "chemistry",
+          "compound ionic",
+          "ionic",
+          "electron"
+        ],
+        "detail_weight": 1.69
+      },
+      "model.reading": {
+        "picked": "Ionic Bonding (Flexbook)",
+        "fit": "fits",
+        "score": 96.99,
         "core_hits": [],
         "detail_hits": [
           "bonding ionic",
           "ionic"
         ],
         "detail_weight": 1.8
-      },
-      "model.reading": {
-        "picked": "Transition Metal Ion Formation (Flexbook)",
-        "score": 79.95,
-        "core_hits": [],
-        "detail_hits": [
-          "ion",
-          "formation ion"
-        ],
-        "detail_weight": 1.12
       }
     },
     "video_pool": {
-      "passed": 26,
+      "passed": 30,
       "runners_up": [
-        "Metallic bonds",
         "Valence electrons and ionic compounds",
-        "Drawing Lewis diagrams",
         "Lattice energy",
-        "Solubility and complex ion formation"
+        "Ionic solids",
+        "Ionic Bonding - Overview",
+        "Worked example: Finding the formula of an ionic compound"
       ],
       "rejected_sample": [
+        [
+          "Metallic bonds",
+          "judged off-topic (independent reviewer)"
+        ],
         [
           "Dot structures I: Single bonds",
           "below relevance gate"
@@ -691,34 +754,31 @@
           "below relevance gate"
         ],
         [
+          "Solubility and complex ion formation",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Counting valence electrons for main group elements",
           "below relevance gate"
         ],
         [
-          "Exceptions to the octet rule",
-          "below relevance gate"
-        ],
-        [
-          "Representing ionic solids using particulate models",
-          "below relevance gate"
-        ],
-        [
-          "Valence electrons",
-          "below relevance gate"
-        ],
-        [
-          "Valence Electrons and the Periodic Table - Overview",
-          "below relevance gate"
+          "Naming ionic compound with polyvalent ion",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "2015 AP Chemistry free response 2d and e",
           "below relevance gate"
+        ],
+        [
+          "2015 AP Chemistry free response 6",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 120,
-        "web file not on reference image": 5,
-        "kolibri node not available on reference image": 2
+        "judged off-topic (independent reviewer)": 3,
+        "below relevance gate": 110,
+        "kolibri node not available on reference image": 1,
+        "web file not on reference image": 7
       }
     },
     "reading_pool": {
@@ -730,6 +790,14 @@
         "Transition Metal Ion Formation (Flexbook)"
       ],
       "rejected_sample": [
+        [
+          "Physical Properties of Ionic Compounds (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Physical Properties of Ionic Compounds Practice",
+          "below relevance gate"
+        ],
         [
           "Octet Rule (Flexbook)",
           "below relevance gate"
@@ -753,20 +821,12 @@
         [
           "Chemical Bonding (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Chemical Bonding Practice",
-          "below relevance gate"
-        ],
-        [
-          "Valence Electrons (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
-        "kolibri node not available on reference image": 4,
-        "excluded: answer/exam material": 4
+        "below relevance gate": 138,
+        "kolibri node not available on reference image": 5,
+        "excluded: answer/exam material": 5
       }
     }
   },
@@ -827,81 +887,91 @@
     "slots": {
       "predict.video": {
         "picked": "Dot structures II: Multiple bonds",
-        "score": 217.86,
+        "fit": "fits",
+        "score": 226.93,
         "core_hits": [],
         "detail_hits": [
           "bond double",
           "bond triple",
           "electron valence",
+          "bond double triple",
           "electron"
         ],
-        "detail_weight": 1.95
+        "detail_weight": 2.17
       },
       "observe.video": {
         "picked": "Drawing Lewis diagrams",
-        "score": 189.49,
+        "fit": "fits",
+        "score": 204.78,
         "core_hits": [],
         "detail_hits": [
           "lewis",
           "lone",
           "octet rule",
           "electron valence",
+          "dot lewis",
+          "electron octet rule valence",
           "electron"
         ],
-        "detail_weight": 2.49
+        "detail_weight": 2.96
       },
       "explain.video": {
         "picked": "Dot structures I: Single bonds",
-        "score": 177.9,
+        "fit": "fits",
+        "score": 183.92,
         "core_hits": [],
         "detail_hits": [
           "bond single",
           "electron valence",
+          "single",
           "electron"
         ],
-        "detail_weight": 1.39
+        "detail_weight": 1.55
       },
       "dqb.video": {
         "picked": "Covalent bonds",
-        "score": 155.07,
+        "fit": "fits",
+        "score": 161.46,
         "core_hits": [],
         "detail_hits": [
           "bond covalent",
           "electron sharing",
+          "bond covalent electron sharing",
           "covalent",
           "electron",
           "sharing"
         ],
-        "detail_weight": 2.73
+        "detail_weight": 2.98
       },
       "model.video": {
-        "picked": "Worked example: Lewis diagram of formaldehyde (CH₂O)",
-        "score": 153.93,
+        "picked": "Covalent network solids",
+        "fit": "fits",
+        "score": 150.38,
         "core_hits": [],
         "detail_hits": [
-          "lewis",
-          "bond single",
-          "octet rule",
-          "electron valence",
-          "electron"
+          "bond covalent",
+          "graphite",
+          "diamond",
+          "covalent diamond graphite network solid",
+          "covalent"
         ],
-        "detail_weight": 2.68
+        "detail_weight": 2.66
       },
       "predict.reading": {
-        "picked": "Molecule Shapes",
-        "score": 128.95,
+        "picked": "Coordinate Covalent Bond (Flexbook)",
+        "fit": "fits",
+        "score": 121.93,
         "core_hits": [],
         "detail_hits": [
-          "lone",
-          "bond single",
-          "bond double",
-          "bond triple",
-          "electron"
+          "bond covalent",
+          "bond coordinate",
+          "covalent"
         ],
-        "detail_weight": 2.91
+        "detail_weight": 2.08
       },
       "observe.reading": {
-        "picked": "Coordinate Covalent Bond (Flexbook)",
+        "picked": "Coordinate Covalent Bond Practice",
+        "fit": "fits",
         "score": 121.93,
         "core_hits": [],
         "detail_hits": [
@@ -912,50 +982,60 @@
         "detail_weight": 2.08
       },
       "explain.reading": {
-        "picked": "Coordinate Covalent Bond Practice",
-        "score": 121.93,
+        "picked": "Lewis Electron-Dot Structures (Flexbook)",
+        "fit": "fits",
+        "score": 96.96,
+        "core_hits": [],
+        "detail_hits": [
+          "lewis",
+          "dot lewis",
+          "electron"
+        ],
+        "detail_weight": 1.26
+      },
+      "dqb.reading": {
+        "picked": "Lewis Electron-Dot Structures Practice",
+        "fit": "fits",
+        "score": 96.96,
+        "core_hits": [],
+        "detail_hits": [
+          "lewis",
+          "dot lewis",
+          "electron"
+        ],
+        "detail_weight": 1.26
+      },
+      "model.reading": {
+        "picked": "Single Covalent Bonds (Flexbook)",
+        "fit": "fits",
+        "score": 93.47,
         "core_hits": [],
         "detail_hits": [
           "bond covalent",
-          "bond coordinate",
+          "bond single",
+          "single",
           "covalent"
         ],
-        "detail_weight": 2.08
-      },
-      "dqb.reading": {
-        "picked": "Lewis Electron-Dot Structures (Flexbook)",
-        "score": 91.69,
-        "core_hits": [],
-        "detail_hits": [
-          "lewis",
-          "electron"
-        ],
-        "detail_weight": 1.01
-      },
-      "model.reading": {
-        "picked": "Lewis Electron-Dot Structures Practice",
-        "score": 91.69,
-        "core_hits": [],
-        "detail_hits": [
-          "lewis",
-          "electron"
-        ],
-        "detail_weight": 1.01
+        "detail_weight": 2.71
       }
     },
     "video_pool": {
-      "passed": 28,
+      "passed": 25,
       "runners_up": [
         "Drawing Lewis diagrams",
         "Dot structures I: Single bonds",
         "Covalent bonds",
-        "Worked example: Lewis diagram of formaldehyde (CH₂O)",
+        "Covalent network solids",
         "Counting valence electrons for main group elements"
       ],
       "rejected_sample": [
         [
           "Noble gas configuration",
           "below relevance gate"
+        ],
+        [
+          "IR spectra for hydrocarbons",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Triple bonds cause linear configurations",
@@ -966,28 +1046,25 @@
           "below relevance gate"
         ],
         [
+          "Hydration",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Drawing dot structures",
+          "below relevance gate"
+        ],
+        [
           "Electron configuration (Rules and Diagrams) - Overview",
           "below relevance gate"
         ],
         [
-          "Exceptions to the octet rule",
-          "below relevance gate"
-        ],
-        [
-          "Valence electrons and ionic compounds",
-          "below relevance gate"
-        ],
-        [
-          "Valence electrons",
-          "below relevance gate"
-        ],
-        [
-          "Electron configurations for the third and fourth periods",
+          "Condensed structures",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 111,
+        "below relevance gate": 112,
+        "judged off-topic (independent reviewer)": 3,
         "kolibri node not available on reference image": 1,
         "web file not on reference image": 3
       }
@@ -995,11 +1072,11 @@
     "reading_pool": {
       "passed": 13,
       "runners_up": [
-        "Coordinate Covalent Bond (Flexbook)",
         "Coordinate Covalent Bond Practice",
         "Lewis Electron-Dot Structures (Flexbook)",
         "Lewis Electron-Dot Structures Practice",
-        "Single Covalent Bonds (Flexbook)"
+        "Single Covalent Bonds (Flexbook)",
+        "Single Covalent Bonds Practice"
       ],
       "rejected_sample": [
         [
@@ -1037,7 +1114,7 @@
       ],
       "rejected_by_reason": {
         "below relevance gate": 130,
-        "kolibri node not available on reference image": 6,
+        "kolibri node not available on reference image": 5,
         "excluded: answer/exam material": 1
       }
     }
@@ -1099,6 +1176,7 @@
     "slots": {
       "predict.video": {
         "picked": "Van der Waals forces -dubbed(KY)",
+        "fit": "fits",
         "score": 592.64,
         "core_hits": [],
         "detail_hits": [
@@ -1115,6 +1193,7 @@
       },
       "observe.video": {
         "picked": "Van der Waals forces -dubbed(KY)",
+        "fit": "fits",
         "score": 592.64,
         "core_hits": [],
         "detail_hits": [
@@ -1130,55 +1209,46 @@
         "detail_weight": 6.26
       },
       "explain.video": {
-        "picked": "Van der Waals forces -dubbed(KY)",
-        "score": 592.64,
+        "picked": "Boiling points of organic compounds",
+        "fit": "partial",
+        "score": 110.23,
         "core_hits": [],
         "detail_hits": [
-          "bonding hydrogen",
-          "der force van waal",
-          "dispersion force london",
-          "dipole force",
-          "hydrogen",
-          "van",
-          "der",
-          "waal"
+          "force intermolecular",
+          "force"
         ],
-        "detail_weight": 6.26
+        "detail_weight": 1.13
       },
       "dqb.video": {
-        "picked": "Van der Waals forces -dubbed(KY)",
-        "score": 592.64,
+        "picked": "Van der Waals and Casimir Forces",
+        "fit": "partial",
+        "score": 105.95,
         "core_hits": [],
         "detail_hits": [
-          "bonding hydrogen",
           "der force van waal",
-          "dispersion force london",
-          "dipole force",
-          "hydrogen",
           "van",
           "der",
-          "waal"
+          "waal",
+          "force"
         ],
-        "detail_weight": 6.26
+        "detail_weight": 2.45
       },
       "model.video": {
-        "picked": "Van der Waals forces -dubbed(KY)",
-        "score": 592.64,
+        "picked": "Surface tension",
+        "fit": "partial",
+        "score": 103.73,
         "core_hits": [],
         "detail_hits": [
           "bonding hydrogen",
-          "der force van waal",
-          "dispersion force london",
-          "dipole force",
+          "bonding hydrogen water",
           "hydrogen",
-          "van",
-          "der",
-          "waal"
+          "water"
         ],
-        "detail_weight": 6.26
+        "detail_weight": 2.39
       },
       "predict.reading": {
         "picked": "Van der Waals Forces (Flexbook)",
+        "fit": "fits",
         "score": 152.4,
         "core_hits": [],
         "detail_hits": [
@@ -1192,6 +1262,7 @@
       },
       "observe.reading": {
         "picked": "Van der Waals Forces Practice",
+        "fit": "fits",
         "score": 152.4,
         "core_hits": [],
         "detail_hits": [
@@ -1205,35 +1276,42 @@
       },
       "explain.reading": {
         "picked": "Structure of water and hydrogen bonding",
-        "score": 133.14,
+        "fit": "fits",
+        "score": 140.24,
         "core_hits": [],
         "detail_hits": [
           "bonding hydrogen",
+          "bonding hydrogen water",
           "hydrogen",
           "water"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 2.39
       },
       "dqb.reading": {
         "picked": "Water and hydrogen bonding",
-        "score": 113.23,
+        "fit": "fits",
+        "score": 119.28,
         "core_hits": [],
         "detail_hits": [
           "bonding hydrogen",
+          "bonding hydrogen water",
           "hydrogen",
           "water"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 2.39
       },
       "model.reading": {
-        "picked": "Intermolecular forces and properties of liquids",
-        "score": 100.1,
+        "picked": "Structure of water and hydrogen bonding",
+        "fit": "fits",
+        "score": 140.24,
         "core_hits": [],
         "detail_hits": [
-          "force intermolecular",
-          "force"
+          "bonding hydrogen",
+          "bonding hydrogen water",
+          "hydrogen",
+          "water"
         ],
-        "detail_weight": 1.13
+        "detail_weight": 2.39
       }
     },
     "video_pool": {
@@ -1241,9 +1319,9 @@
       "runners_up": [
         "Van der Waals Forces - Overview",
         "London dispersion forces",
+        "Hydrogen bonding in water",
         "Hydrogen bonding",
-        "Dipole–dipole forces",
-        "Hydrogen bonding in water"
+        "Dipole–dipole forces"
       ],
       "rejected_sample": [
         [
@@ -1282,7 +1360,8 @@
       "rejected_by_reason": {
         "below relevance gate": 116,
         "foreign vocabulary": 1,
-        "web file not on reference image": 2
+        "web file not on reference image": 2,
+        "kolibri node not available on reference image": 1
       }
     },
     "reading_pool": {
@@ -1291,8 +1370,8 @@
         "Van der Waals Forces Practice",
         "Structure of water and hydrogen bonding",
         "Water and hydrogen bonding",
-        "Intermolecular forces and properties of liquids",
-        "Hydrogen Bonding (Flexbook)"
+        "Hydrogen Bonding (Flexbook)",
+        "Hydrogen Bonding Practice"
       ],
       "rejected_sample": [
         [
@@ -1301,6 +1380,10 @@
         ],
         [
           "Periodic Trends: Electronegativity Practice",
+          "below relevance gate"
+        ],
+        [
+          "Atomic Interactions",
           "below relevance gate"
         ],
         [
@@ -1321,10 +1404,6 @@
         ],
         [
           "Lewis Electron-Dot Structures Practice",
-          "below relevance gate"
-        ],
-        [
-          "Visual divergence",
           "below relevance gate"
         ]
       ],
@@ -1360,6 +1439,13 @@
         "aluminium",
         "copper",
         "iron",
+        "delocalized",
+        "metals",
+        "conduct",
+        "electricity",
+        "ionic",
+        "covalent",
+        "comparison",
         "wire",
         "foil"
       ],
@@ -1368,82 +1454,94 @@
         "delocalised electrons",
         "sea electrons",
         "metal cations",
-        "lattice positive ions"
+        "lattice positive ions",
+        "metallic bonding",
+        "sea electrons",
+        "delocalized electrons metals",
+        "metals conduct electricity",
+        "malleability ductility",
+        "ionic covalent metallic comparison"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Metallic bonds",
-        "score": 306.9,
+        "fit": "fits",
+        "score": 364.41,
         "core_hits": [],
         "detail_hits": [
           "bonding metallic",
           "cation metal",
           "conductivity",
           "malleability",
+          "delocalized electron metal",
           "metallic",
           "electron"
         ],
-        "detail_weight": 4.05
+        "detail_weight": 4.52
       },
       "observe.video": {
-        "picked": "Metallic bonds",
-        "score": 306.9,
+        "picked": "Metallic solids",
+        "fit": "fits",
+        "score": 248.99,
         "core_hits": [],
         "detail_hits": [
           "bonding metallic",
+          "electron sea",
           "cation metal",
-          "conductivity",
-          "malleability",
+          "delocalized electron metal",
           "metallic",
+          "sea",
           "electron"
         ],
-        "detail_weight": 4.05
+        "detail_weight": 4.88
       },
       "explain.video": {
         "picked": "Metallic bonds",
-        "score": 306.9,
+        "fit": "fits",
+        "score": 364.41,
         "core_hits": [],
         "detail_hits": [
           "bonding metallic",
           "cation metal",
           "conductivity",
           "malleability",
+          "delocalized electron metal",
           "metallic",
           "electron"
         ],
-        "detail_weight": 4.05
+        "detail_weight": 4.52
       },
       "dqb.video": {
-        "picked": "Metallic bonds",
-        "score": 306.9,
+        "picked": "Metallic solids",
+        "fit": "fits",
+        "score": 248.99,
         "core_hits": [],
         "detail_hits": [
           "bonding metallic",
+          "electron sea",
           "cation metal",
-          "conductivity",
-          "malleability",
+          "delocalized electron metal",
           "metallic",
+          "sea",
           "electron"
         ],
-        "detail_weight": 4.05
+        "detail_weight": 4.88
       },
       "model.video": {
-        "picked": "Metallic bonds",
-        "score": 306.9,
+        "picked": "05 Bonding, Metallic Bonding",
+        "fit": "partial",
+        "score": 32.65,
         "core_hits": [],
         "detail_hits": [
           "bonding metallic",
-          "cation metal",
-          "conductivity",
-          "malleability",
-          "metallic",
-          "electron"
+          "metallic"
         ],
-        "detail_weight": 4.05
+        "detail_weight": 1.8
       },
       "predict.reading": {
         "picked": "Metallic Bonding (Flexbook)",
+        "fit": "fits",
         "score": 98.77,
         "core_hits": [],
         "detail_hits": [
@@ -1454,6 +1552,7 @@
       },
       "observe.reading": {
         "picked": "Metallic Bonding Practice",
+        "fit": "fits",
         "score": 98.77,
         "core_hits": [],
         "detail_hits": [
@@ -1464,6 +1563,7 @@
       },
       "explain.reading": {
         "picked": "Metallic Bonding (Flexbook)",
+        "fit": "fits",
         "score": 98.77,
         "core_hits": [],
         "detail_hits": [
@@ -1473,7 +1573,8 @@
         "detail_weight": 1.8
       },
       "dqb.reading": {
-        "picked": "Metallic Bonding (Flexbook)",
+        "picked": "Metallic Bonding Practice",
+        "fit": "fits",
         "score": 98.77,
         "core_hits": [],
         "detail_hits": [
@@ -1484,6 +1585,7 @@
       },
       "model.reading": {
         "picked": "Metallic Bonding (Flexbook)",
+        "fit": "fits",
         "score": 98.77,
         "core_hits": [],
         "detail_hits": [
@@ -1502,27 +1604,11 @@
       ],
       "rejected_sample": [
         [
-          "Current direction",
+          "Electrolytic conductivity",
           "below relevance gate"
         ],
         [
-          "The periodic table - transition metals",
-          "below relevance gate"
-        ],
-        [
-          "Lattice energy",
-          "below relevance gate"
-        ],
-        [
-          "First and second ionization energy",
-          "below relevance gate"
-        ],
-        [
-          "Foil leaf electroscope",
-          "below relevance gate"
-        ],
-        [
-          "Thermal conductivity of metal and wood",
+          "Covalent networks, metallic crystals, and ionic crystals -dubbed(KY)",
           "below relevance gate"
         ],
         [
@@ -1530,14 +1616,30 @@
           "below relevance gate"
         ],
         [
-          "Electron configurations of the 3d transition metals",
+          "Predicting bond type (metals vs. nonmetals)",
+          "below relevance gate"
+        ],
+        [
+          "Electronegativity and bonding",
+          "below relevance gate"
+        ],
+        [
+          "Naming ions and ionic compounds",
+          "below relevance gate"
+        ],
+        [
+          "Naming ionic compound with polyvalent ion",
+          "below relevance gate"
+        ],
+        [
+          "Atomic and ionic radii",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 133,
+        "below relevance gate": 139,
         "web file not on reference image": 3,
-        "kolibri node not available on reference image": 2
+        "kolibri node not available on reference image": 4
       }
     },
     "reading_pool": {
@@ -1547,6 +1649,10 @@
       ],
       "rejected_sample": [
         [
+          "Covalent and Ionic Bonding (PLIX)",
+          "below relevance gate"
+        ],
+        [
           "Covalent Bonding in Polyatomic Ions (Flexbook)",
           "below relevance gate"
         ],
@@ -1555,33 +1661,30 @@
           "below relevance gate"
         ],
         [
+          "Covalent Bonding (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Covalent Bonding Practice",
+          "below relevance gate"
+        ],
+        [
+          "Ionic Bonding (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Ionic Bonding Practice",
+          "below relevance gate"
+        ],
+        [
           "Transition Metal Ions (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Transition Metal Ions Practice",
-          "below relevance gate"
-        ],
-        [
-          "Transition Metal Ion Formation (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Chemical Bonding (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Chemical Bonding Practice",
-          "below relevance gate"
-        ],
-        [
-          "Predict the charge on monatomic ions",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 129,
-        "kolibri node not available on reference image": 2
+        "below relevance gate": 135,
+        "kolibri node not available on reference image": 3,
+        "excluded: answer/exam material": 6
       }
     }
   },
@@ -1641,71 +1744,75 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Physical and chemical changes",
-        "score": 162.26,
+        "picked": "Covalent network solids",
+        "fit": "fits",
+        "score": 153.59,
         "core_hits": [],
         "detail_hits": [
-          "molecular",
-          "nacl",
-          "force intermolecular",
+          "melting point",
+          "diamond",
+          "graphite",
           "bond",
-          "physical"
+          "diamond network solid"
         ],
-        "detail_weight": 2.09
+        "detail_weight": 1.65
       },
       "observe.video": {
+        "picked": "Covalent network solids",
+        "fit": "fits",
+        "score": 153.59,
+        "core_hits": [],
+        "detail_hits": [
+          "melting point",
+          "diamond",
+          "graphite",
+          "bond",
+          "diamond network solid"
+        ],
+        "detail_weight": 1.65
+      },
+      "explain.video": {
         "picked": "Molecular solids",
-        "score": 151.26,
+        "fit": "partial",
+        "score": 184.82,
         "core_hits": [],
         "detail_hits": [
           "molecular",
           "melting point",
           "force intermolecular",
-          "electron valence"
+          "electron valence",
+          "force intermolecular melting point"
         ],
-        "detail_weight": 2.18
-      },
-      "explain.video": {
-        "picked": "Physical and chemical changes",
-        "score": 162.26,
-        "core_hits": [],
-        "detail_hits": [
-          "molecular",
-          "nacl",
-          "force intermolecular",
-          "bond",
-          "physical"
-        ],
-        "detail_weight": 2.09
+        "detail_weight": 2.41
       },
       "dqb.video": {
-        "picked": "Physical and chemical changes",
-        "score": 162.26,
+        "picked": "Ionic bonds and Coulomb's law",
+        "fit": "partial",
+        "score": 88.68,
         "core_hits": [],
         "detail_hits": [
-          "molecular",
-          "nacl",
-          "force intermolecular",
+          "melting point",
           "bond",
-          "physical"
+          "compound ionic"
         ],
-        "detail_weight": 2.09
+        "detail_weight": 1.1
       },
       "model.video": {
-        "picked": "Physical and chemical changes",
-        "score": 162.26,
+        "picked": "Worked example: Lewis diagram of formaldehyde (CH₂O)",
+        "fit": "partial",
+        "score": 83.44,
         "core_hits": [],
         "detail_hits": [
-          "molecular",
-          "nacl",
-          "force intermolecular",
-          "bond",
-          "physical"
+          "lewis",
+          "electron valence",
+          "octet rule",
+          "bond"
         ],
-        "detail_weight": 2.09
+        "detail_weight": 1.01
       },
       "predict.reading": {
         "picked": "Solubility",
+        "fit": "partial",
         "score": 98.66,
         "core_hits": [],
         "detail_hits": [
@@ -1716,18 +1823,20 @@
         "detail_weight": 1.09
       },
       "observe.reading": {
-        "picked": "Physical and chemical changes",
-        "score": 81.85,
+        "picked": "Solubility",
+        "fit": "partial",
+        "score": 98.66,
         "core_hits": [],
         "detail_hits": [
-          "molecular",
-          "chemistry",
-          "physical"
+          "solubility",
+          "force intermolecular",
+          "chemistry"
         ],
-        "detail_weight": 1.31
+        "detail_weight": 1.09
       },
       "explain.reading": {
         "picked": "Solubility",
+        "fit": "partial",
         "score": 98.66,
         "core_hits": [],
         "detail_hits": [
@@ -1739,6 +1848,7 @@
       },
       "dqb.reading": {
         "picked": "Solubility",
+        "fit": "partial",
         "score": 98.66,
         "core_hits": [],
         "detail_hits": [
@@ -1750,6 +1860,7 @@
       },
       "model.reading": {
         "picked": "Solubility",
+        "fit": "partial",
         "score": 98.66,
         "core_hits": [],
         "detail_hits": [
@@ -1761,13 +1872,13 @@
       }
     },
     "video_pool": {
-      "passed": 7,
+      "passed": 6,
       "runners_up": [
+        "Dissolution and precipitation",
         "Molecular solids",
-        "Covalent network solids",
+        "Ionic bonds and Coulomb's law",
         "Worked example: Lewis diagram of formaldehyde (CH₂O)",
-        "The kinetic molecular theory of gases",
-        "Dissolution and precipitation"
+        "Molecular polarity"
       ],
       "rejected_sample": [
         [
@@ -1775,11 +1886,23 @@
           "below relevance gate"
         ],
         [
+          "Physical and chemical changes",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Covalent networks, metallic crystals, and ionic crystals -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
+          "Valence electrons and ionic compounds",
+          "below relevance gate"
+        ],
+        [
           "Metallic bonds",
           "below relevance gate"
         ],
         [
-          "Covalent networks, metallic crystals, and ionic crystals -dubbed(KY)",
+          "Boiling points of organic compounds",
           "below relevance gate"
         ],
         [
@@ -1789,34 +1912,23 @@
         [
           "Solubility and intermolecular forces",
           "below relevance gate"
-        ],
-        [
-          "Dot structures II: Multiple bonds",
-          "below relevance gate"
-        ],
+        ]
+      ],
+      "rejected_by_reason": {
+        "below relevance gate": 137,
+        "judged off-topic (independent reviewer)": 3,
+        "kolibri node not available on reference image": 1,
+        "web file not on reference image": 7
+      }
+    },
+    "reading_pool": {
+      "passed": 1,
+      "runners_up": [],
+      "rejected_sample": [
         [
           "Valence electrons and ionic compounds",
           "below relevance gate"
         ],
-        [
-          "Ionic bonds",
-          "below relevance gate"
-        ]
-      ],
-      "rejected_by_reason": {
-        "below relevance gate": 138,
-        "kolibri node not available on reference image": 2,
-        "web file not on reference image": 5
-      }
-    },
-    "reading_pool": {
-      "passed": 4,
-      "runners_up": [
-        "Physical and chemical changes",
-        "Kinetic molecular theory",
-        "Spectroscopy and the electromagnetic spectrum"
-      ],
-      "rejected_sample": [
         [
           "Physical Properties and Intermolecular Forces (Flexbook)",
           "below relevance gate"
@@ -1826,11 +1938,15 @@
           "below relevance gate"
         ],
         [
-          "Intermolecular forces and properties of liquids",
+          "Physical Properties of Ionic Compounds (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Valence electrons and ionic compounds",
+          "Physical Properties of Ionic Compounds Practice",
+          "below relevance gate"
+        ],
+        [
+          "Intermolecular forces and properties of liquids",
           "below relevance gate"
         ],
         [
@@ -1840,18 +1956,11 @@
         [
           "Intermolecular forces",
           "below relevance gate"
-        ],
-        [
-          "Function Rules for Input-Output Tables: Soda Sugar Function Table (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Octet Rule (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 135,
+        "below relevance gate": 134,
+        "judged off-topic (independent reviewer)": 2,
         "kolibri node not available on reference image": 3,
         "excluded: answer/exam material": 4
       }
@@ -1907,12 +2016,14 @@
         "bond type",
         "data collection",
         "pattern recognition",
-        "evidence gathering"
+        "evidence gathering",
+        "ionic compounds properties"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Metallic bonds",
+        "fit": "fits",
         "score": 165.51,
         "core_hits": [],
         "detail_hits": [
@@ -1924,7 +2035,53 @@
         "detail_weight": 2.22
       },
       "observe.video": {
+        "picked": "Covalent network solids",
+        "fit": "fits",
+        "score": 144.23,
+        "core_hits": [],
+        "detail_hits": [
+          "melting point",
+          "graphite",
+          "diamond",
+          "bond",
+          "diamond graphite",
+          "melting",
+          "point"
+        ],
+        "detail_weight": 2.82
+      },
+      "explain.video": {
+        "picked": "Metallic bonds",
+        "fit": "fits",
+        "score": 165.51,
+        "core_hits": [],
+        "detail_hits": [
+          "physical",
+          "bonding metallic",
+          "bond",
+          "conductivity"
+        ],
+        "detail_weight": 2.22
+      },
+      "dqb.video": {
+        "picked": "Covalent network solids",
+        "fit": "fits",
+        "score": 144.23,
+        "core_hits": [],
+        "detail_hits": [
+          "melting point",
+          "graphite",
+          "diamond",
+          "bond",
+          "diamond graphite",
+          "melting",
+          "point"
+        ],
+        "detail_weight": 2.82
+      },
+      "model.video": {
         "picked": "Ionic bonds and Coulomb's law",
+        "fit": "partial",
         "score": 137.38,
         "core_hits": [],
         "detail_hits": [
@@ -1936,46 +2093,9 @@
         ],
         "detail_weight": 2.66
       },
-      "explain.video": {
-        "picked": "Covalent network solids",
-        "score": 109.73,
-        "core_hits": [],
-        "detail_hits": [
-          "melting point",
-          "graphite",
-          "diamond",
-          "bond",
-          "melting",
-          "point"
-        ],
-        "detail_weight": 2.52
-      },
-      "dqb.video": {
-        "picked": "Metallic bonds",
-        "score": 165.51,
-        "core_hits": [],
-        "detail_hits": [
-          "physical",
-          "bonding metallic",
-          "bond",
-          "conductivity"
-        ],
-        "detail_weight": 2.22
-      },
-      "model.video": {
-        "picked": "Metallic bonds",
-        "score": 165.51,
-        "core_hits": [],
-        "detail_hits": [
-          "physical",
-          "bonding metallic",
-          "bond",
-          "conductivity"
-        ],
-        "detail_weight": 2.22
-      },
       "predict.reading": {
         "picked": "Physical Properties of Ionic Compounds (Flexbook)",
+        "fit": "fits",
         "score": 158.54,
         "core_hits": [],
         "detail_hits": [
@@ -1986,6 +2106,7 @@
       },
       "observe.reading": {
         "picked": "Physical Properties of Ionic Compounds Practice",
+        "fit": "fits",
         "score": 158.54,
         "core_hits": [],
         "detail_hits": [
@@ -1995,17 +2116,19 @@
         "detail_weight": 1.83
       },
       "explain.reading": {
-        "picked": "Ionic Bonds and Ionic Compounds Practice",
-        "score": 99.12,
+        "picked": "Physical Properties of Ionic Compounds (Flexbook)",
+        "fit": "fits",
+        "score": 158.54,
         "core_hits": [],
         "detail_hits": [
-          "compound ionic",
-          "bond"
+          "physical",
+          "compound ionic"
         ],
-        "detail_weight": 1.13
+        "detail_weight": 1.83
       },
       "dqb.reading": {
-        "picked": "Physical Properties of Ionic Compounds (Flexbook)",
+        "picked": "Physical Properties of Ionic Compounds Practice",
+        "fit": "fits",
         "score": 158.54,
         "core_hits": [],
         "detail_hits": [
@@ -2015,24 +2138,25 @@
         "detail_weight": 1.83
       },
       "model.reading": {
-        "picked": "Physical Properties of Ionic Compounds (Flexbook)",
-        "score": 158.54,
+        "picked": "Ionic Bonds and Ionic Compounds Practice",
+        "fit": "partial",
+        "score": 99.12,
         "core_hits": [],
         "detail_hits": [
-          "physical",
-          "compound ionic"
+          "compound ionic",
+          "bond"
         ],
-        "detail_weight": 1.83
+        "detail_weight": 1.13
       }
     },
     "video_pool": {
-      "passed": 27,
+      "passed": 22,
       "runners_up": [
-        "Ionic bonds and Coulomb's law",
         "Covalent network solids",
-        "Physical and chemical changes",
-        "2015 AP Chemistry free response 6",
-        "pH and solubility"
+        "Molecular solids",
+        "Ionic solids",
+        "Ionic bonds and Coulomb's law",
+        "Physical and chemical changes"
       ],
       "rejected_sample": [
         [
@@ -2040,11 +2164,15 @@
           "below relevance gate"
         ],
         [
+          "Covalent networks, metallic crystals, and ionic crystals -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
           "Predicting bond type (electronegativity)",
           "below relevance gate"
         ],
         [
-          "Covalent networks, metallic crystals, and ionic crystals -dubbed(KY)",
+          "Resonance structure patterns",
           "below relevance gate"
         ],
         [
@@ -2056,32 +2184,29 @@
           "below relevance gate"
         ],
         [
+          "pH and solubility",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Naming ionic compound with polyvalent ion",
-          "below relevance gate"
-        ],
-        [
-          "Gcse Chemistry   Covalent Bonding Rap",
-          "web file not on reference image"
-        ],
-        [
-          "Empirical, molecular, and structural formulas",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "below relevance gate": 119,
-        "web file not on reference image": 6,
-        "kolibri node not available on reference image": 2
+        "judged off-topic (independent reviewer)": 5,
+        "web file not on reference image": 7,
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
       "passed": 13,
       "runners_up": [
         "Physical Properties of Ionic Compounds Practice",
-        "Ionic Bonds and Ionic Compounds Practice",
-        "Valence electrons and ionic compounds",
         "Melting Point (Flexbook)",
-        "Melting Point Practice"
+        "Physical Properties (Flexbook)",
+        "Ionic Bonds and Ionic Compounds Practice",
+        "Valence electrons and ionic compounds"
       ],
       "rejected_sample": [
         [
@@ -2118,9 +2243,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 126,
-        "kolibri node not available on reference image": 5,
-        "excluded: answer/exam material": 3
+        "below relevance gate": 124,
+        "kolibri node not available on reference image": 6,
+        "excluded: answer/exam material": 4
       }
     }
   },
@@ -2152,10 +2277,13 @@
         "type",
         "property",
         "relationship",
-        "physical",
+        "compounds",
         "properties",
-        "analysis",
-        "update"
+        "network",
+        "solids",
+        "substances",
+        "delocalized",
+        "points"
       ],
       "phrases": [
         "giant ionic structure",
@@ -2165,135 +2293,142 @@
         "delocalised electrons",
         "melting point",
         "bond type",
-        "structure property relationship"
+        "structure property relationship",
+        "ionic compounds properties",
+        "covalent network solids",
+        "simple molecular substances",
+        "metallic bonding delocalized electrons",
+        "melting points bonding",
+        "electrical conductivity compounds"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Metallic bonds",
-        "score": 116.95,
+        "fit": "fits",
+        "score": 150.9,
         "core_hits": [],
         "detail_hits": [
           "conductivity",
           "bond",
+          "bonding delocalized electron metallic",
           "physical"
         ],
-        "detail_weight": 1.11
+        "detail_weight": 1.51
       },
       "observe.video": {
-        "picked": "Physical and chemical changes",
-        "score": 71.59,
+        "picked": "Covalent network solids",
+        "fit": "fits",
+        "score": 148.49,
         "core_hits": [],
         "detail_hits": [
-          "molecular",
+          "melting point",
           "bond",
-          "physical"
+          "covalent network solid"
         ],
-        "detail_weight": 1.49
+        "detail_weight": 1.38
       },
       "explain.video": {
         "picked": "Metallic bonds",
-        "score": 116.95,
+        "fit": "fits",
+        "score": 150.9,
         "core_hits": [],
         "detail_hits": [
           "conductivity",
           "bond",
+          "bonding delocalized electron metallic",
           "physical"
         ],
-        "detail_weight": 1.11
+        "detail_weight": 1.51
       },
       "dqb.video": {
-        "picked": "Metallic bonds",
-        "score": 116.95,
+        "picked": "Covalent network solids",
+        "fit": "fits",
+        "score": 148.49,
         "core_hits": [],
         "detail_hits": [
-          "conductivity",
+          "melting point",
           "bond",
-          "physical"
+          "covalent network solid"
         ],
-        "detail_weight": 1.11
+        "detail_weight": 1.38
       },
       "model.video": {
-        "picked": "Metallic bonds",
-        "score": 116.95,
+        "picked": "Ionic bonds and Coulomb's law",
+        "fit": "partial",
+        "score": 94.68,
         "core_hits": [],
         "detail_hits": [
-          "conductivity",
+          "melting point",
           "bond",
-          "physical"
+          "compound ionic"
         ],
-        "detail_weight": 1.11
+        "detail_weight": 1.4
       },
       "predict.reading": {
-        "picked": "Physical and chemical changes",
-        "score": 49.53,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "molecular",
-          "physical"
-        ],
-        "detail_weight": 1.13
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.reading": {
-        "picked": "Physical and chemical changes",
-        "score": 49.53,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "molecular",
-          "physical"
-        ],
-        "detail_weight": 1.13
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.reading": {
-        "picked": "Physical and chemical changes",
-        "score": 49.53,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "molecular",
-          "physical"
-        ],
-        "detail_weight": 1.13
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.reading": {
-        "picked": "Physical and chemical changes",
-        "score": 49.53,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "molecular",
-          "physical"
-        ],
-        "detail_weight": 1.13
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.reading": {
-        "picked": "Physical and chemical changes",
-        "score": 49.53,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "molecular",
-          "physical"
-        ],
-        "detail_weight": 1.13
+        "detail_hits": [],
+        "detail_weight": 0
       }
     },
     "video_pool": {
       "passed": 5,
       "runners_up": [
-        "Physical and chemical changes",
+        "Covalent network solids",
         "Molecular solids",
-        "Molecular polarity",
-        "Molecular evidence for evolutionary relationships examples"
+        "Ionic bonds and Coulomb's law",
+        "Molecular polarity"
       ],
       "rejected_sample": [
-        [
-          "Predicting bond type (metals vs. nonmetals)",
-          "below relevance gate"
-        ],
         [
           "Covalent networks, metallic crystals, and ionic crystals -dubbed(KY)",
           "below relevance gate"
         ],
         [
+          "Predicting bond type (metals vs. nonmetals)",
+          "below relevance gate"
+        ],
+        [
           "Predicting bond type (electronegativity)",
+          "below relevance gate"
+        ],
+        [
+          "Metallic solids",
           "below relevance gate"
         ],
         [
@@ -2305,30 +2440,35 @@
           "below relevance gate"
         ],
         [
-          "Ionic bonds and Coulomb's law",
+          "Representing ionic solids using particulate models",
           "below relevance gate"
         ],
         [
-          "Resonance structure patterns",
+          "Ionic solids",
           "below relevance gate"
-        ],
-        [
-          "Arabic-English Subtitles: Plastics and Covalent Chemical Bonds",
-          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 143,
+        "below relevance gate": 139,
         "kolibri node not available on reference image": 2,
-        "web file not on reference image": 2
+        "judged off-topic (independent reviewer)": 3,
+        "web file not on reference image": 5
       }
     },
     "reading_pool": {
-      "passed": 1,
+      "passed": 0,
       "runners_up": [],
       "rejected_sample": [
         [
           "Types of chemical bonds",
+          "below relevance gate"
+        ],
+        [
+          "Physical Properties of Ionic Compounds (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Physical Properties of Ionic Compounds Practice",
           "below relevance gate"
         ],
         [
@@ -2344,26 +2484,19 @@
           "below relevance gate"
         ],
         [
+          "Ionic Bonds and Ionic Compounds Practice",
+          "below relevance gate"
+        ],
+        [
           "Additional Resources for Plastics and Covalent Chemical Bonds",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Physical Properties of Ionic Compounds (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Physical Properties of Ionic Compounds Practice",
-          "below relevance gate"
-        ],
-        [
-          "Melting Metallic Mercury (PLIX)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
+        "below relevance gate": 141,
         "kolibri node not available on reference image": 3,
-        "excluded: answer/exam material": 1
+        "judged off-topic (independent reviewer)": 1,
+        "excluded: answer/exam material": 2
       }
     }
   },
@@ -2417,72 +2550,81 @@
         "delocalised electrons",
         "tetrahedral network",
         "layered structure",
-        "melting point"
+        "melting point",
+        "giant covalent structures"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Metallic bonds",
-        "score": 174.31,
-        "core_hits": [],
-        "detail_hits": [
-          "bonding metallic",
-          "physical",
-          "conductivity",
-          "bond"
-        ],
-        "detail_weight": 1.92
-      },
-      "observe.video": {
         "picked": "Covalent network solids",
-        "score": 130.46,
+        "fit": "fits",
+        "score": 169.62,
         "core_hits": [],
         "detail_hits": [
           "diamond",
           "graphite",
           "melting point",
+          "diamond graphite",
+          "network solid",
           "bond"
         ],
-        "detail_weight": 1.66
+        "detail_weight": 2.17
+      },
+      "observe.video": {
+        "picked": "Covalent network solids",
+        "fit": "fits",
+        "score": 169.62,
+        "core_hits": [],
+        "detail_hits": [
+          "diamond",
+          "graphite",
+          "melting point",
+          "diamond graphite",
+          "network solid",
+          "bond"
+        ],
+        "detail_weight": 2.17
       },
       "explain.video": {
         "picked": "Metallic bonds",
-        "score": 174.31,
+        "fit": "partial",
+        "score": 209.6,
         "core_hits": [],
         "detail_hits": [
           "bonding metallic",
           "physical",
           "conductivity",
+          "conductivity delocalized electron",
           "bond"
         ],
-        "detail_weight": 1.92
+        "detail_weight": 2.18
       },
       "dqb.video": {
-        "picked": "Metallic bonds",
-        "score": 174.31,
+        "picked": "Electronegativity and bonding",
+        "fit": "partial",
+        "score": 85.31,
         "core_hits": [],
         "detail_hits": [
-          "bonding metallic",
-          "physical",
-          "conductivity",
+          "bonding ionic",
           "bond"
         ],
-        "detail_weight": 1.92
+        "detail_weight": 1.24
       },
       "model.video": {
-        "picked": "Metallic bonds",
-        "score": 174.31,
-        "core_hits": [],
-        "detail_hits": [
-          "bonding metallic",
-          "physical",
-          "conductivity",
-          "bond"
+        "picked": "01 Bonding, How To Determine Ionic And Covalent Chemical Bonding",
+        "fit": "partial",
+        "score": 65.53,
+        "core_hits": [
+          "bonding chemical"
         ],
-        "detail_weight": 1.92
+        "detail_hits": [
+          "bonding ionic"
+        ],
+        "detail_weight": 0.94
       },
       "predict.reading": {
         "picked": "Metallic Bonding (Flexbook)",
+        "fit": "partial",
         "score": 84.72,
         "core_hits": [],
         "detail_hits": [
@@ -2492,6 +2634,7 @@
       },
       "observe.reading": {
         "picked": "Metallic Bonding Practice",
+        "fit": "partial",
         "score": 84.72,
         "core_hits": [],
         "detail_hits": [
@@ -2501,6 +2644,7 @@
       },
       "explain.reading": {
         "picked": "Metallic Bonding (Flexbook)",
+        "fit": "partial",
         "score": 84.72,
         "core_hits": [],
         "detail_hits": [
@@ -2509,7 +2653,8 @@
         "detail_weight": 1.07
       },
       "dqb.reading": {
-        "picked": "Metallic Bonding (Flexbook)",
+        "picked": "Metallic Bonding Practice",
+        "fit": "partial",
         "score": 84.72,
         "core_hits": [],
         "detail_hits": [
@@ -2519,6 +2664,7 @@
       },
       "model.reading": {
         "picked": "Metallic Bonding (Flexbook)",
+        "fit": "partial",
         "score": 84.72,
         "core_hits": [],
         "detail_hits": [
@@ -2528,17 +2674,21 @@
       }
     },
     "video_pool": {
-      "passed": 7,
+      "passed": 6,
       "runners_up": [
-        "Covalent network solids",
-        "Electronegativity and bonding",
+        "Metallic solids",
         "06 Application, Structure Of Diamond And Graphite",
-        "Physical and chemical changes",
+        "Metallic bonds",
+        "Electronegativity and bonding",
         "01 Bonding, How To Determine Ionic And Covalent Chemical Bonding"
       ],
       "rejected_sample": [
         [
           "Covalent networks, metallic crystals, and ionic crystals -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
+          "Ionic bonds and Coulomb's law",
           "below relevance gate"
         ],
         [
@@ -2554,26 +2704,23 @@
           "below relevance gate"
         ],
         [
-          "Predicting bond type (electronegativity)",
+          "Ionic solids",
           "below relevance gate"
         ],
         [
-          "Ionic bonds and Coulomb's law",
+          "Predicting bond type (electronegativity)",
           "below relevance gate"
         ],
         [
           "Using matrices to represent data: Networks",
           "below relevance gate"
-        ],
-        [
-          "Gcse Chemistry   Covalent Bonding Rap",
-          "web file not on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138,
-        "web file not on reference image": 4,
-        "kolibri node not available on reference image": 4
+        "below relevance gate": 137,
+        "web file not on reference image": 6,
+        "kolibri node not available on reference image": 3,
+        "judged off-topic (independent reviewer)": 1
       }
     },
     "reading_pool": {
@@ -2587,15 +2734,15 @@
           "below relevance gate"
         ],
         [
-          "Types of chemical bonds",
-          "below relevance gate"
-        ],
-        [
           "Physical Properties of Ionic Compounds (Flexbook)",
           "below relevance gate"
         ],
         [
           "Physical Properties of Ionic Compounds Practice",
+          "below relevance gate"
+        ],
+        [
+          "Types of chemical bonds",
           "below relevance gate"
         ],
         [
@@ -2616,9 +2763,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140,
+        "below relevance gate": 138,
         "kolibri node not available on reference image": 2,
-        "excluded: answer/exam material": 2
+        "excluded: answer/exam material": 3
       }
     }
   },
@@ -2671,53 +2818,64 @@
         "delocalised electrons",
         "digital literacy chemistry",
         "carbon paradox",
-        "van der waals forces"
+        "van der waals forces",
+        "ionic bonding lattices",
+        "covalent bonds molecules"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Electronegativity and bonding",
-        "score": 66.63,
+        "picked": "Covalent network solids",
+        "fit": "fits",
+        "score": 63.17,
         "core_hits": [],
         "detail_hits": [
-          "bonding covalent"
+          "diamond",
+          "graphite",
+          "diamond graphite"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.52
       },
       "observe.video": {
         "picked": "06 Application, Structure Of Diamond And Graphite",
-        "score": 58.08,
+        "fit": "fits",
+        "score": 62.45,
         "core_hits": [],
         "detail_hits": [
           "diamond",
-          "graphite"
+          "graphite",
+          "diamond graphite"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 1.52
       },
       "explain.video": {
-        "picked": "01 Bonding, How To Determine Ionic And Covalent Chemical Bonding",
-        "score": 50.35,
-        "core_hits": [
-          "bonding chemical"
-        ],
-        "detail_hits": [
-          "bonding covalent"
-        ],
-        "detail_weight": 1.25
-      },
-      "dqb.video": {
         "picked": "Covalent network solids",
-        "score": 45.74,
+        "fit": "fits",
+        "score": 63.17,
         "core_hits": [],
         "detail_hits": [
           "diamond",
-          "graphite"
+          "graphite",
+          "diamond graphite"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 1.52
+      },
+      "dqb.video": {
+        "picked": "06 Application, Structure Of Diamond And Graphite",
+        "fit": "fits",
+        "score": 62.45,
+        "core_hits": [],
+        "detail_hits": [
+          "diamond",
+          "graphite",
+          "diamond graphite"
+        ],
+        "detail_weight": 1.52
       },
       "model.video": {
         "picked": "Electronegativity and bonding",
-        "score": 66.63,
+        "fit": "partial",
+        "score": 85.49,
         "core_hits": [],
         "detail_hits": [
           "bonding covalent"
@@ -2725,8 +2883,9 @@
         "detail_weight": 1.25
       },
       "predict.reading": {
-        "picked": "Covalent Bonding (Flexbook)",
-        "score": 85.54,
+        "picked": "Covalent and Ionic Bonding (PLIX)",
+        "fit": "fits",
+        "score": 77.61,
         "core_hits": [],
         "detail_hits": [
           "bonding covalent"
@@ -2734,8 +2893,9 @@
         "detail_weight": 1.25
       },
       "observe.reading": {
-        "picked": "Covalent Bonding Practice",
-        "score": 85.54,
+        "picked": "Covalent and Ionic Bonding (PLIX)",
+        "fit": "fits",
+        "score": 77.61,
         "core_hits": [],
         "detail_hits": [
           "bonding covalent"
@@ -2743,8 +2903,9 @@
         "detail_weight": 1.25
       },
       "explain.reading": {
-        "picked": "Covalent Bonding in Polyatomic Ions (Flexbook)",
-        "score": 83.37,
+        "picked": "Covalent Bonding (Flexbook)",
+        "fit": "partial",
+        "score": 85.54,
         "core_hits": [],
         "detail_hits": [
           "bonding covalent"
@@ -2752,8 +2913,9 @@
         "detail_weight": 1.25
       },
       "dqb.reading": {
-        "picked": "Covalent Bonding in Polyatomic Ions Practice",
-        "score": 83.37,
+        "picked": "Covalent Bonding Practice",
+        "fit": "partial",
+        "score": 85.54,
         "core_hits": [],
         "detail_hits": [
           "bonding covalent"
@@ -2762,6 +2924,7 @@
       },
       "model.reading": {
         "picked": "Covalent and Ionic Bonding (PLIX)",
+        "fit": "fits",
         "score": 77.61,
         "core_hits": [],
         "detail_hits": [
@@ -2774,8 +2937,8 @@
       "passed": 4,
       "runners_up": [
         "06 Application, Structure Of Diamond And Graphite",
-        "01 Bonding, How To Determine Ionic And Covalent Chemical Bonding",
-        "Covalent network solids"
+        "Electronegativity and bonding",
+        "01 Bonding, How To Determine Ionic And Covalent Chemical Bonding"
       ],
       "rejected_sample": [
         [
@@ -2787,7 +2950,15 @@
           "below relevance gate"
         ],
         [
-          "Van der Waals and Casimir Forces",
+          "Worked example: Lewis diagram of xenon difluoride (XeF₂)",
+          "below relevance gate"
+        ],
+        [
+          "Worked example: Lewis diagram of formaldehyde (CH₂O)",
+          "below relevance gate"
+        ],
+        [
+          "Drawing Lewis diagrams",
           "below relevance gate"
         ],
         [
@@ -2795,35 +2966,25 @@
           "web file not on reference image"
         ],
         [
-          "Drawing Lewis diagrams",
+          "Worked example: Lewis diagram of the cyanide ion (CN⁻)",
           "below relevance gate"
         ],
         [
-          "Covalent networks, metallic crystals, and ionic crystals -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Gcse Chemistry   Covalent Bonding",
-          "web file not on reference image"
-        ],
-        [
-          "Worked example: Lewis diagram of formaldehyde (CH₂O)",
+          "Metallic bonds",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 131,
+        "below relevance gate": 136,
         "web file not on reference image": 5,
-        "kolibri node not available on reference image": 11
+        "kolibri node not available on reference image": 4
       }
     },
     "reading_pool": {
-      "passed": 5,
+      "passed": 3,
       "runners_up": [
-        "Covalent Bonding Practice",
-        "Covalent Bonding in Polyatomic Ions (Flexbook)",
-        "Covalent Bonding in Polyatomic Ions Practice",
-        "Covalent and Ionic Bonding (PLIX)"
+        "Covalent Bonding (Flexbook)",
+        "Covalent Bonding Practice"
       ],
       "rejected_sample": [
         [
@@ -2833,6 +2994,14 @@
         [
           "Van der Waals Forces Practice",
           "below relevance gate"
+        ],
+        [
+          "Covalent Bonding in Polyatomic Ions (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Covalent Bonding in Polyatomic Ions Practice",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Chemical Bonding (Flexbook)",
@@ -2849,18 +3018,11 @@
         [
           "Lewis Electron-Dot Structures Practice",
           "below relevance gate"
-        ],
-        [
-          "Lewis diagrams",
-          "below relevance gate"
-        ],
-        [
-          "Valence electrons and ionic compounds",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
+        "below relevance gate": 135,
+        "judged off-topic (independent reviewer)": 2,
         "kolibri node not available on reference image": 7,
         "excluded: answer/exam material": 3
       }
@@ -2923,56 +3085,67 @@
     "slots": {
       "predict.video": {
         "picked": "Covalent network solids",
-        "score": 120.66,
+        "fit": "fits",
+        "score": 192.04,
         "core_hits": [],
         "detail_hits": [
           "graphite",
-          "covalent network"
+          "covalent network",
+          "diamond graphite",
+          "covalent network solid"
         ],
-        "detail_weight": 1.21
+        "detail_weight": 1.8
       },
       "observe.video": {
         "picked": "Covalent network solids",
-        "score": 120.66,
+        "fit": "fits",
+        "score": 192.04,
         "core_hits": [],
         "detail_hits": [
           "graphite",
-          "covalent network"
+          "covalent network",
+          "diamond graphite",
+          "covalent network solid"
         ],
-        "detail_weight": 1.21
+        "detail_weight": 1.8
       },
       "explain.video": {
-        "picked": "Covalent network solids",
-        "score": 120.66,
+        "picked": "06 Application, Structure Of Diamond And Graphite",
+        "fit": "partial",
+        "score": 58.4,
         "core_hits": [],
         "detail_hits": [
           "graphite",
-          "covalent network"
+          "diamond graphite"
         ],
-        "detail_weight": 1.21
+        "detail_weight": 1.01
       },
       "dqb.video": {
         "picked": "Covalent network solids",
-        "score": 120.66,
+        "fit": "fits",
+        "score": 192.04,
         "core_hits": [],
         "detail_hits": [
           "graphite",
-          "covalent network"
+          "covalent network",
+          "diamond graphite",
+          "covalent network solid"
         ],
-        "detail_weight": 1.21
+        "detail_weight": 1.8
       },
       "model.video": {
-        "picked": "Covalent network solids",
-        "score": 120.66,
+        "picked": "Representing ionic solids using particulate models",
+        "fit": "fits",
+        "score": 106.19,
         "core_hits": [],
         "detail_hits": [
-          "graphite",
-          "covalent network"
+          "ionic lattice"
         ],
-        "detail_weight": 1.21
+        "detail_weight": 1.5
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2980,6 +3153,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2987,6 +3161,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -2994,6 +3169,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -3001,6 +3177,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -3008,13 +3185,18 @@
       }
     },
     "video_pool": {
-      "passed": 2,
+      "passed": 3,
       "runners_up": [
-        "Representing ionic solids using particulate models"
+        "Representing ionic solids using particulate models",
+        "06 Application, Structure Of Diamond And Graphite"
       ],
       "rejected_sample": [
         [
           "Van der Waals forces -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
+          "Covalent networks, metallic crystals, and ionic crystals -dubbed(KY)",
           "below relevance gate"
         ],
         [
@@ -3030,10 +3212,6 @@
           "below relevance gate"
         ],
         [
-          "Covalent networks, metallic crystals, and ionic crystals -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
           "Covalent bonds",
           "below relevance gate"
         ],
@@ -3042,13 +3220,13 @@
           "below relevance gate"
         ],
         [
-          "Arabic-English Subtitles: Plastics and Covalent Chemical Bonds",
-          "kolibri node not available on reference image"
+          "VSEPR for 4 electron clouds",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140,
-        "kolibri node not available on reference image": 6,
+        "below relevance gate": 138,
+        "kolibri node not available on reference image": 5,
         "web file not on reference image": 4
       }
     },
@@ -3081,11 +3259,11 @@
           "below relevance gate"
         ],
         [
-          "Covalent and Ionic Bonding (PLIX)",
+          "Structure of ionic solids",
           "below relevance gate"
         ],
         [
-          "Types of chemical bonds",
+          "Covalent and Ionic Bonding (PLIX)",
           "below relevance gate"
         ]
       ],
@@ -3152,40 +3330,47 @@
     },
     "slots": {
       "predict.video": {
+        "picked": "Metallic bonds",
+        "fit": "fits",
+        "score": 170.22,
+        "core_hits": [],
+        "detail_hits": [
+          "bond metallic",
+          "physical",
+          "bonding delocalized electron metallic"
+        ],
+        "detail_weight": 1.55
+      },
+      "observe.video": {
         "picked": "Covalent network solids",
-        "score": 157.32,
+        "fit": "fits",
+        "score": 163.78,
         "core_hits": [],
         "detail_hits": [
           "bond covalent",
           "melting point",
           "diamond",
-          "graphite"
+          "graphite",
+          "diamond graphite"
         ],
-        "detail_weight": 2.03
-      },
-      "observe.video": {
-        "picked": "Metallic bonds",
-        "score": 140,
-        "core_hits": [],
-        "detail_hits": [
-          "bond metallic",
-          "physical"
-        ],
-        "detail_weight": 1.33
+        "detail_weight": 2.25
       },
       "explain.video": {
         "picked": "Drawing Lewis diagrams",
-        "score": 138.71,
+        "fit": "fits",
+        "score": 144.56,
         "core_hits": [],
         "detail_hits": [
           "electron valence",
           "octet rule",
-          "diagram dot lewis"
+          "diagram dot lewis",
+          "dot lewis"
         ],
-        "detail_weight": 1.41
+        "detail_weight": 1.61
       },
       "dqb.video": {
         "picked": "Ionic bonds",
+        "fit": "fits",
         "score": 118.24,
         "core_hits": [],
         "detail_hits": [
@@ -3195,36 +3380,42 @@
         "detail_weight": 2
       },
       "model.video": {
-        "picked": "Electronegativity and bonding",
-        "score": 113.47,
+        "picked": "Predicting bond type (metals vs. nonmetals)",
+        "fit": "fits",
+        "score": 114.13,
         "core_hits": [],
         "detail_hits": [
           "bond ionic",
-          "bond covalent"
+          "bond covalent",
+          "bond metallic",
+          "bond covalent ionic"
         ],
-        "detail_weight": 2.75
+        "detail_weight": 4.05
       },
       "predict.reading": {
-        "picked": "Coordinate Covalent Bond (Flexbook)",
-        "score": 79.68,
+        "picked": "Ionic Bonds and Ionic Compounds Practice",
+        "fit": "fits",
+        "score": 52.77,
         "core_hits": [],
         "detail_hits": [
-          "bond covalent"
+          "bond ionic"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.5
       },
       "observe.reading": {
-        "picked": "Coordinate Covalent Bond Practice",
-        "score": 79.68,
+        "picked": "Ionic Bonds and Ionic Compounds Practice",
+        "fit": "fits",
+        "score": 52.77,
         "core_hits": [],
         "detail_hits": [
-          "bond covalent"
+          "bond ionic"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.5
       },
       "explain.reading": {
-        "picked": "Energy and Covalent Bond Formation (Flexbook)",
-        "score": 78.47,
+        "picked": "Coordinate Covalent Bond (Flexbook)",
+        "fit": "partial",
+        "score": 79.68,
         "core_hits": [],
         "detail_hits": [
           "bond covalent"
@@ -3232,8 +3423,9 @@
         "detail_weight": 1.25
       },
       "dqb.reading": {
-        "picked": "Energy and Covalent Bond Formation Practice",
-        "score": 78.47,
+        "picked": "Coordinate Covalent Bond Practice",
+        "fit": "partial",
+        "score": 79.68,
         "core_hits": [],
         "detail_hits": [
           "bond covalent"
@@ -3241,23 +3433,24 @@
         "detail_weight": 1.25
       },
       "model.reading": {
-        "picked": "Ionic Bonds and Ionic Compounds Practice",
-        "score": 52.77,
+        "picked": "Energy and Covalent Bond Formation (Flexbook)",
+        "fit": "partial",
+        "score": 78.47,
         "core_hits": [],
         "detail_hits": [
-          "bond ionic"
+          "bond covalent"
         ],
-        "detail_weight": 1.5
+        "detail_weight": 1.25
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 12,
       "runners_up": [
-        "Metallic bonds",
+        "Covalent network solids",
         "Drawing Lewis diagrams",
         "Ionic bonds",
-        "Electronegativity and bonding",
-        "Physical and chemical changes"
+        "Predicting bond type (metals vs. nonmetals)",
+        "Molecular solids"
       ],
       "rejected_sample": [
         [
@@ -3294,7 +3487,8 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 126,
+        "below relevance gate": 124,
+        "judged off-topic (independent reviewer)": 1,
         "kolibri node not available on reference image": 2,
         "web file not on reference image": 2
       }
@@ -3302,10 +3496,10 @@
     "reading_pool": {
       "passed": 11,
       "runners_up": [
+        "Coordinate Covalent Bond (Flexbook)",
         "Coordinate Covalent Bond Practice",
         "Energy and Covalent Bond Formation (Flexbook)",
         "Energy and Covalent Bond Formation Practice",
-        "Ionic Bonds and Ionic Compounds Practice",
         "Single Covalent Bonds (Flexbook)"
       ],
       "rejected_sample": [
@@ -3315,6 +3509,14 @@
         ],
         [
           "Van der Waals Forces Practice",
+          "below relevance gate"
+        ],
+        [
+          "Physical Properties and Intermolecular Forces (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Physical Properties and Intermolecular Forces (PLIX)",
           "below relevance gate"
         ],
         [
@@ -3331,14 +3533,6 @@
         ],
         [
           "Physical Properties of Ionic Compounds (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Physical Properties of Ionic Compounds Practice",
-          "below relevance gate"
-        ],
-        [
-          "Octet Rule (Flexbook)",
           "below relevance gate"
         ]
       ],

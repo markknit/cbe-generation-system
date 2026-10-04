@@ -1,0 +1,81 @@
+{
+  "module": "phys_1_3",
+  "conflicts_in": [
+    {
+      "lessons": "2, 3",
+      "severity": "major",
+      "fact": "Which metal in the bimetallic strip expands more (brass vs copper) and the metals used",
+      "versions": "Lesson 2 says the strip bends toward the copper side, so brass expands more than copper. Lesson 3 gives a steel/copper/aluminium/glass α table, and copper (17×10⁻⁶) is higher than brass is typically, but brass is not listed. Lesson 5 uses brass bonded to invar. The pairings are inconsistent; the Lesson 2 'brass bends toward copper' claim contradicts the Lesson 2 station description 'copper-brass junction' only loosely."
+    },
+    {
+      "lessons": "1, 2, 4, 6",
+      "severity": "major",
+      "fact": "Temperature at which water starts to expand/freeze and what causes the lattice formation",
+      "versions": "Lessons 1, 2 say water freezes at 0°C and forms a lattice from cooling to the freezer temperature (−18°C). Lesson 4 says 'as water cooled below 4 °C its molecules arranged into a hexagonal ice crystal lattice' and that water 'expands below 4 °C', while Lesson 6 says the lattice forms between 4°C and 0°C at freezing. The lattice is attributed to the 4–0°C range in Lessons 4 and 6, but to freezing at 0°C in Lesson 1."
+    },
+    {
+      "lessons": "3, 5",
+      "severity": "major",
+      "fact": "Particle behaviour on heating: separation vs vibration only",
+      "versions": "Lesson 3 says heating increases vibration amplitude and average particle separation. Lesson 5's teacher notes say the particles do not fly apart, and the error to correct is learners drawing particles moving apart (increasing spacing) rather than vibrating more, citing Lesson 3 as saying so."
+    }
+  ],
+  "applied": [
+    {
+      "lesson": 4,
+      "path": "summaryTablePrompt.learned",
+      "old": "it expands below 4 °C because water molecules arrange into",
+      "new": "it expands as it cools below 4 °C, and on freezing at 0 °C water molecules arrange into",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "summaryTablePrompt.explained",
+      "old": "As the water cooled below 4 °C, its molecules arranged into",
+      "new": "As the water cooled below 4 °C it began to expand, and on freezing at 0 °C its molecules arranged into",
+      "conflict": "2"
+    },
+    {
+      "lesson": 2,
+      "path": "framework[2].teacherMoves",
+      "old": "At 255 Kelvin in the freezer, they slow down so much",
+      "new": "As the water cools to 273 Kelvin (0 °C) and freezes in the freezer, they slow down so much",
+      "conflict": "2"
+    },
+    {
+      "lesson": 2,
+      "path": "summaryTablePrompt.explained",
+      "old": "As the freezer cooled the water to −18 °C (255 K), the water molecules",
+      "new": "As the freezer cooled the water to 0 °C (273 K) it froze: the water molecules",
+      "conflict": "2"
+    },
+    {
+      "lesson": 5,
+      "path": "framework[4].teacherMoves",
+      "old": "learners drawing particles as if they move apart (increasing spacing) rather than vibrate more vigorously in place",
+      "new": "learners drawing particles flying far apart or breaking away from each other rather than vibrating more vigorously in place",
+      "conflict": "3"
+    },
+    {
+      "lesson": 5,
+      "path": "framework[4].teacherMoves",
+      "old": "What changes is how hard they vibrate.",
+      "new": "What changes is how hard they vibrate, which slightly increases their average separation.",
+      "conflict": "3"
+    },
+    {
+      "lesson": 5,
+      "path": "framework[4].teacherMoves",
+      "old": "rather than inter-particle spacing change",
+      "new": "rather than particles flying apart",
+      "conflict": "3"
+    }
+  ],
+  "rejected": [],
+  "unresolved": [
+    {
+      "conflict": "1",
+      "why": "Both Lesson 2 (brass-copper strip bending toward copper) and Lesson 5 (brass-invar strip bending toward invar) say brass expands more than its partner, so they do not contradict each other. They are different example strips. The Lesson 3 α table simply does not list brass. Removing the apparent inconsistency would mean adding new data, such as a brass α value, which small edits should not invent."
+    }
+  ]
+}

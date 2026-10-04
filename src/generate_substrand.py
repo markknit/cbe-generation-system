@@ -899,109 +899,212 @@ def _get_lesson_storyline(unit: dict, num: int) -> str:
 
 # ── Final Explanation & Summary Table generation ──────────────────────────────
 
-def generate_final_explanation(curriculum_text: str, unit: dict,
-                                lessons: list, args,
-                                fe_template: dict | None = None,
-                                lesson_template: dict | None = None) -> dict | None:
-    """Generate Final Explanation document data."""
-    print("  Generating Final Explanation...")
+VERIFY_TOOL_SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "properties": {
+        "issues": {"type": "array", "items": {
+            "type": "object", "additionalProperties": False,
+            "properties": {"where": _s(), "problem": _s(),
+                           "kind": {"type": "string", "enum": ["final_explanation", "lesson_sequence"]}},
+            "required": ["where", "problem", "kind"]}},
+    },
+    "required": ["issues"],
+}
 
-    lesson_titles = "\n".join(f"  Lesson {l['number']}: {l['title']}" for l in lessons)
 
+def lesson_digest(lessons: list, unit: dict) -> str:
+    """What the lessons actually taught: the facts the Final Explanation must
+    agree with. Titles alone (the old input) let the model invent its own
+    dataset, characters and numbers."""
+    out = []
+    ph = (unit or {}).get('phenomenon', '')
+    if ph:
+        out.append(f"PHENOMENON AND ANCHOR DATA:\n{ph}\n")
+    for l in lessons:
+        stp = l.get('summaryTablePrompt') or {}
+        out.append(
+            f"LESSON {l.get('number')}: {l.get('title', '')}\n"
+            f"  Overview: {l.get('overview', '')}\n"
+            f"  What learners observed: {stp.get('observed', '')}\n"
+            f"  What learners learned: {stp.get('learned', '')}\n"
+            f"  How it explains the phenomenon: {stp.get('explained', '')}\n")
+    return "\n".join(out)
+
+
+FE_RULES = """HARD RULES (a validator and a second reviewer will check every one):
+1. GROUNDED IN THE LESSONS. Use the same phenomenon, characters, places and data the
+   lessons above used. If the lessons give numbers (times, distances, masses...),
+   reuse those exact numbers. Do not invent a second, different dataset.
+   The lessons were written separately and may disagree with EACH OTHER about a
+   detail. Where they do, treat LESSON 1 (the anchor) and the LAST lesson as
+   authoritative, and keep this document consistent with itself. Do not try to
+   satisfy every lesson; do not state a contested detail more precisely than the
+   authoritative lessons do.
+2. If you give the student a data table, it must be internally consistent: check
+   every cumulative value, every difference, every "who is ahead / which is larger"
+   statement and every crossing point against the table BEFORE you write the
+   exemplar. Prompts must never state something the table contradicts.
+3. Prompts ask questions; they must NOT contain the answers. Exemplars hold the answers.
+4. Exemplars are finished model answers. No scratch work, no "[Re-calculation]",
+   no "wait", no self-corrections.
+5. Use only ideas, terms and methods taught in the lesson sequence above.
+6. Tables use well-formed markdown rows ("| a | b |" with one separator row).
+7. Use scalar/vector, distance/displacement, and similar paired terms exactly as the
+   lessons did, and consistently within the document.
+"""
+
+
+def _fe_prompt(unit: dict, lessons: list, args, fe_template, lesson_template,
+               feedback: list | None, prev_fe: dict | None = None) -> str:
     fe_template_section = ""
     if fe_template and fe_template.get('paragraphs'):
         fe_template_section = (
             "\nTEACHER TEMPLATE — FINAL EXPLANATION REFERENCE "
             "(use as structural and content guidance; improve quality where possible):\n"
-            + "\n".join(fe_template['paragraphs'][:40])
-        )
-
-    prompt = f"""AUDIENCE: This Final Explanation document is for STUDENTS to use as a model for answering the driving question. Use clear, student-accessible language. Write in second person when appropriate.
+            + "\n".join(fe_template['paragraphs'][:40]))
+    fix = ""
+    if feedback:
+        fix = ("\nA REVIEWER FOUND THESE PROBLEMS IN YOUR PREVIOUS ATTEMPT. "
+               "Fix every one:\n"
+               + "\n".join(f"- [{i['where']}] {i['problem']}" for i in feedback) + "\n")
+        if prev_fe:
+            fix += ("\nYOUR PREVIOUS ATTEMPT (JSON). Return the SAME document with the minimum "
+                    "edits needed to fix the problems above. Do not rewrite, reorder or re-number "
+                    "anything that was not flagged; keep every other number, name and sentence "
+                    "exactly as it is:\n" + json.dumps(prev_fe, ensure_ascii=False, indent=1) + "\n")
+    return f"""AUDIENCE: This Final Explanation document is for STUDENTS to answer (the prompts) and for TEACHERS to mark against (the exemplars). Use clear, student-accessible language. Write in second person when appropriate.
 
 Generate a Final Explanation assessment document for:
 Subject: {_subject_display(args.subject)} Grade {args.grade}
 Sub-strand: {args.substrand} {args.substrand_name}
 Driving question: {unit.get('drivingQuestion', '')}
-Phenomenon: {unit.get('phenomenon', '')}
 
-Lesson sequence completed:
-{lesson_titles}
+THE LESSON SEQUENCE AS ACTUALLY TAUGHT (the Final Explanation must agree with this):
+{lesson_digest(lessons, unit)}
 {fe_template_section}{template_fe_context(lesson_template)}
-
-Return ONLY this JSON:
-{{
-  "subjectLabel": "{args.substrand_name.upper()}",
-  "instructions": "Multi-sentence instructions for students including what to use (Summary Table, experiments conducted, models), what to include (phenomenon connection, Kenya examples, evidence), and word count requirement (minimum 300 words)",
-  "sections": [
-    {{
-      "title": "SECTION 1: [TITLE IN CAPS]",
-      "prompt": "Specific prompt telling student what to explain in this section",
-      "exemplar": "2-3 paragraph model answer demonstrating expected quality, using Kenyan contexts"
-    }}
-  ],
-  "rubric": [
-    {{
-      "criterion": "Criterion name",
-      "excellent": "Excellent (4) descriptor",
-      "proficient": "Proficient (3) descriptor",
-      "developing": "Developing (1-2) descriptor"
-    }}
-  ]
-}}
-
-Include 4-5 sections covering the main content areas.
-Include 4-5 rubric criteria covering key scientific concepts.
+{FE_RULES}{fix}
+Fields: "instructions" are given to the students (they will write in a blank space under each prompt, so do not say the answers are printed). "sections": 4-5 sections, each with a "prompt" (student-facing, no answers) and an "exemplar" (the model answer). "rubric": 4-5 criteria.
 """
 
-    return call_claude(prompt, schema=FE_TOOL_SCHEMA)
+
+def verify_final_explanation(unit: dict, lessons: list, fe: dict, args) -> list | None:
+    """Independent consistency review. Returns the list of issues ([] = clean),
+    or None if the reviewer call itself failed."""
+    prompt = f"""You are a meticulous reviewer of a Kenyan CBE Grade {args.grade} {_subject_display(args.subject)} assessment. Find ONLY real defects; do not comment on style.
+
+THE LESSON SEQUENCE AS TAUGHT:
+{lesson_digest(lessons, unit)}
+
+THE FINAL EXPLANATION UNDER REVIEW (JSON):
+{json.dumps(fe, ensure_ascii=False, indent=1)}
+
+Check, working through the numbers yourself:
+1. Every data table: recompute cumulative values, differences, averages and the claimed winner/leader/crossing point. Report any statement in a prompt or exemplar that the data contradicts, or any exemplar calculation that is wrong.
+2. Two passages of the document that disagree with each other (different numbers for the same fact, different outcomes).
+3. Disagreement with the lessons: different characters, places, datasets or key numbers for the same phenomenon, or a method/term the lessons never taught.
+4. Prompts that contain their own answer.
+5. Scratch work or self-correction text left in an exemplar ("[Re-calculation]", "wait", "actually").
+6. A scientific or mathematical error, or a term used inconsistently (e.g. distance vs displacement).
+7. CROSS-PART NUMBERS: list every numeric fact the document states about each named person, object or situation (a speed, a time, a mass, a distance, a rate) and compare them across ALL parts, prompts and exemplars. Flag any entity given two different values for the same moment or phase (e.g. 'about 19 km/h, nearly constant' in one part and 21 km/h in another) unless the text explains the change.
+CLASSIFY every issue with "kind":
+- "final_explanation": a defect that the Final Explanation's author can fix (cases 1, 2, 4, 5, 6 above, and a disagreement with LESSON 1 or the LAST lesson).
+- "lesson_sequence": the LESSONS contradict EACH OTHER or contain an impossible/unrealistic figure, so no Final Explanation could agree with all of them. Report these once each, naming the lessons involved, but do NOT also report them against the Final Explanation.
+Return {{"issues": []}} if you find none. Otherwise one entry per defect, "where" naming the section/part or lessons, "problem" stating exactly what is wrong and what the right value is."""
+    r = call_claude(prompt, schema=VERIFY_TOOL_SCHEMA)
+    if r is None:
+        return None
+    return r.get('issues', [])
+
+
+def generate_final_explanation(curriculum_text: str, unit: dict,
+                               lessons: list, args,
+                               fe_template: dict | None = None,
+                               lesson_template: dict | None = None,
+                               max_rounds: int = 4,
+                               log_name: str | None = None) -> dict | None:
+    """Generate the Final Explanation FROM THE FINISHED LESSONS, then have a
+    second call check it for contradictions; regenerate with the reviewer's
+    findings until clean (up to max_rounds). If issues remain, the unresolved
+    list is written to logs/final_explanation_issues/<name>.json, which the
+    cross-document validator treats as a hard failure."""
+    print("  Generating Final Explanation (from lesson content)...")
+    feedback, best, best_issues, lesson_conflicts = None, None, None, []
+    for rnd in range(1, max_rounds + 1):
+        fe = call_claude(_fe_prompt(unit, lessons, args, fe_template, lesson_template, feedback,
+                                     prev_fe=best if feedback else None),
+                         schema=FE_TOOL_SCHEMA)
+        if fe is None:
+            print(f"    FE generation failed (round {rnd})")
+            continue
+        issues = verify_final_explanation(unit, lessons, fe, args)
+        if issues is None:
+            print(f"    FE review call failed (round {rnd}); treating as unverified")
+            continue
+        mine = [i for i in issues if i.get('kind') != 'lesson_sequence']
+        lesson_conflicts = [i for i in issues if i.get('kind') == 'lesson_sequence'] or lesson_conflicts
+        print(f"    FE review round {rnd}: {len(mine)} Final Explanation issue(s), "
+              f"{len(issues) - len(mine)} lesson-sequence conflict(s)")
+        if best is None or len(mine) < len(best_issues):
+            best, best_issues = fe, mine          # keep the best attempt, not the last
+        if not mine:
+            break
+        feedback = mine
+    name = log_name or getattr(args, 'output', None) or f"{args.subject}_{args.substrand}"
+    root = Path(__file__).resolve().parent.parent / 'logs'
+    # Contradictions BETWEEN LESSONS are a different class of problem: they cannot
+    # be fixed here and must not block the Final Explanation. Recorded for review.
+    lc_path = root / 'lesson_conflicts' / f"{name}.json"
+    if lesson_conflicts:
+        lc_path.parent.mkdir(parents=True, exist_ok=True)
+        lc_path.write_text(json.dumps({"name": name, "conflicts": lesson_conflicts},
+                                      indent=2, ensure_ascii=False))
+    elif lc_path.exists():
+        lc_path.unlink()
+    log_path = root / 'final_explanation_issues' / f"{name}.json"
+    if best is not None and best_issues == []:
+        if log_path.exists():
+            log_path.unlink()
+        return best
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    log_path.write_text(json.dumps({"name": name, "status": "needs_review",
+                                    "unresolved": best_issues,
+                                    "verified": best_issues is not None},
+                                   indent=2, ensure_ascii=False))
+    print(f"    WARNING: best attempt has {len(best_issues or [])} unresolved finding(s): "
+          f"written, but flagged for human review — see {log_path}")
+    return best
 
 
 def generate_summary_table(unit: dict, lessons: list, args,
-                            st_template: dict | None = None) -> dict | None:
-    """Generate teacher reference Summary Table data."""
-    print("  Generating Summary Table...")
+                           st_template: dict | None = None) -> dict | None:
+    """Summary Table, DERIVED from the lessons — no API call.
 
-    # Pre-compute outside f-string to avoid dict/brace escaping issues
-    lesson_refs = json.dumps([
-        {
-            "number": l["number"],
-            "title": l["title"],
-            "summary": l.get("summaryTablePrompt", {}).get("learned", "")[:150]
-        }
-        for l in lessons
-    ], indent=2, ensure_ascii=False)
+    It used to be a separate model call that was shown the lesson titles and
+    free to rewrite them; in 73 of 85 sub-strands it did, so the teacher
+    reference described a different lesson sequence from the one taught
+    (partner validator, 2026-10-03). Each lesson already carries its own
+    summaryTablePrompt {observed, learned, explained}; the table is those
+    rows, with the lesson's own title. Drift is impossible by construction."""
+    print("  Building Summary Table from lessons...")
+    return derive_summary_table(unit, lessons, args.substrand, args.substrand_name)
 
-    dq = unit.get("drivingQuestion", "").split("\n")[0]
-    ss = f"Sub-Strand {args.substrand}: {args.substrand_name}"
 
-    st_template_section = ""
-    if st_template and st_template.get('paragraphs'):
-        st_template_section = (
-            "\nTEACHER TEMPLATE — SUMMARY TABLE REFERENCE "
-            "(use as structural and content guidance; improve quality where possible):\n"
-            + "\n".join(st_template['paragraphs'][:30])
-            + "\n"
-        )
-
-    prompt = (
-        f"AUDIENCE: This Summary Table is a TEACHER REFERENCE — a pre-filled answer key "
-        f"for use while teaching. Write in third-person teacher voice; include pedagogical "
-        f"notes a teacher would find helpful.\n\n"
-        f"Generate a teacher reference Summary Table for:\n"
-        f"Subject: {_subject_display(args.subject)} Grade {args.grade}\n"
-        f"Sub-strand: {ss}\n"
-        f"Driving question: {dq}\n"
-        f"{st_template_section}\n"
-        f"Return ONLY this JSON (no other text):\n"
-        f'{{ "subStrand": "{ss}", "drivingQuestion": "{dq}", "lessons": ['
-        f' {{ "number": 1, "title": "title", "observed": "...", "learned": "...", "explained": "..." }}'
-        f' ] }}\n\n'
-        f"Generate one entry per lesson for all {args.lessons} lessons.\n"
-        f"Lesson titles and summaries for reference:\n"
-        f"{lesson_refs}\n"
-    )
-
-    return call_claude(prompt, schema=ST_TOOL_SCHEMA)
+def derive_summary_table(unit: dict, lessons: list, substrand_id: str, substrand_name: str) -> dict:
+    dq = (unit or {}).get("drivingQuestion", "").split("\n")[0]
+    return {
+        "subStrand": f"Sub-Strand {substrand_id}: {substrand_name}",
+        "drivingQuestion": dq,
+        "lessons": [
+            {
+                "number": l["number"],
+                "title": l["title"],
+                "observed": (l.get("summaryTablePrompt") or {}).get("observed", ""),
+                "learned": (l.get("summaryTablePrompt") or {}).get("learned", ""),
+                "explained": (l.get("summaryTablePrompt") or {}).get("explained", ""),
+            }
+            for l in lessons
+        ],
+    }
 
 
 # ── Data file writer ──────────────────────────────────────────────────────────
@@ -1603,7 +1706,8 @@ def collect_batch_results(batch_id: str) -> dict:
 def build_batch_requests(curriculum_text: str, lesson_template: dict,
                           unit: dict, args,
                           fe_template: dict | None = None) -> list:
-    """Build all lesson + FE requests for batch submission.
+    """Build all lesson requests for batch submission (the Final Explanation is
+    generated afterwards, from the collected lessons — see run_collect).
     Note: prev_summaries context is omitted in batch mode since all
     requests are submitted simultaneously. The unit storyline thread
     provides sufficient continuity.
@@ -1648,40 +1752,10 @@ def build_batch_requests(curriculum_text: str, lesson_template: dict,
             },
         })
 
-    # Final Explanation request
-    fe_template_section = ""
-    if fe_template and fe_template.get('paragraphs'):
-        fe_template_section = (
-            "\nTEACHER TEMPLATE — FINAL EXPLANATION REFERENCE "
-            "(use as structural and content guidance; improve quality where possible):\n"
-            + "\n".join(fe_template['paragraphs'][:40])
-            + "\n"
-        )
-
-    fe_prompt = (
-        f"AUDIENCE: This Final Explanation document is for STUDENTS to use as a model "
-        f"for answering the driving question. Use clear, student-accessible language. "
-        f"Write in second person when appropriate.\n\n"
-        f"Generate a Final Explanation assessment document for:\n"
-        f"Subject: {_subject_display(args.subject)} Grade {args.grade}\n"
-        f"Sub-strand: {args.substrand} {args.substrand_name}\n"
-        f"Driving question: {unit.get('drivingQuestion', '')}\n"
-        f"Phenomenon: {unit.get('phenomenon', '')}\n"
-        f"Number of lessons in sequence: {args.lessons}\n"
-        f"{fe_template_section}{template_fe_context(lesson_template)}\n"
-        f"Return the Final Explanation as JSON matching the provided schema, with 4-5 sections and 4-5 rubric criteria."
-    )
-
-    requests.append({
-        "custom_id": "final_explanation",
-        "params": {
-            "model": MODEL,
-            "max_tokens": 16000,
-            "system": SYSTEM_PROMPT,
-            "messages": [{"role": "user", "content": fe_prompt}],
-            **_structured_params(FE_TOOL_SCHEMA),
-        },
-    })
+    # No Final Explanation request here: it is generated AFTER the lessons are
+    # collected (run_collect), from their actual content. Requested alongside
+    # them it could only see the driving question, so it invented its own
+    # dataset and contradicted the lessons (Core Mathematics 2.9, 2026-10-03).
 
     return requests
 
@@ -1752,8 +1826,24 @@ def run_collect(output_name: str, args):
                 "summaryTablePrompt": {"observed":"","learned":"","explained":""},
             })
 
-    # Extract FE
-    fe = results.get('final_explanation')
+    # Final Explanation: generated now, from the collected lessons (not in the
+    # batch), then reviewed for contradictions.
+    class _FeArgs:
+        pass
+    fe_args = _FeArgs()
+    fe_args.grade          = meta['grade']
+    fe_args.subject        = meta.get('subject', 'Biology').lower()
+    fe_args.substrand      = meta.get('substrand_id', '')
+    fe_args.substrand_name = meta.get('substrand_name', '')
+    fe_args.lessons        = n_lessons
+    fe_args.output         = output_name
+    _v2 = find_v2_templates(fe_args.grade, fe_args.subject, fe_args.substrand)
+    _fe_path = _v2.get('fe')
+    fe_template = extract_template_docx(str(_fe_path)) if _fe_path else None
+    _lt_path = _v2.get('lesson')
+    lesson_template = extract_template_docx(str(_lt_path)) if _lt_path else {}
+    fe = generate_final_explanation('', unit, lessons, fe_args, fe_template=fe_template,
+                                    lesson_template=lesson_template, log_name=output_name)
     if not fe:
         print("  WARNING: Final Explanation missing or failed")
 
@@ -2050,7 +2140,8 @@ def main():
     # FINAL EXPLANATION
     fe = generate_final_explanation(curriculum_text, unit, lessons, args,
                                      fe_template=fe_template,
-                                     lesson_template=lesson_template)
+                                     lesson_template=lesson_template,
+                                     log_name=args.output)
     if fe:
         print("  Final Explanation generated ✓")
     else:

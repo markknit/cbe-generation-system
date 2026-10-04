@@ -20,17 +20,29 @@
         "ratio",
         "essential",
         "mathematics",
+        "converting",
+        "cubic",
+        "centimeters",
+        "milliliters",
+        "liters",
         "container",
         "launching"
       ],
       "phrases": [
         "tea farming",
-        "essential mathematics"
+        "essential mathematics",
+        "volume cylinder",
+        "volume cone",
+        "volume frustum",
+        "converting cubic centimeters milliliters",
+        "converting volume",
+        "capacity volume liters"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Visually Comparing the Capacity and Volume of Two Containers (Metric Units)",
+        "picked": "Visually Comparing the Capacity and Volume of Three Containers (Metric Units)",
+        "fit": "fits",
         "score": 168.94,
         "core_hits": [
           "volume",
@@ -42,19 +54,22 @@
         "detail_weight": 0.3
       },
       "observe.video": {
-        "picked": "Visually Comparing the Capacity and Volume of Three Containers (Metric Units)",
-        "score": 168.94,
+        "picked": "Metric system: units of volume",
+        "fit": "fits",
+        "score": 161.78,
         "core_hits": [
           "volume",
           "capacity"
         ],
         "detail_hits": [
-          "container"
+          "litre",
+          "capacity litre volume"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.02
       },
       "explain.video": {
         "picked": "Comparing the Capacity and Volume of Three or More Containers (Metric Units)",
+        "fit": "fits",
         "score": 160.36,
         "core_hits": [
           "volume",
@@ -67,184 +82,193 @@
       },
       "dqb.video": {
         "picked": "Volumes of cones intuition",
-        "score": 122.72,
+        "fit": "fits",
+        "score": 130.91,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "cone"
+          "cone",
+          "cone volume"
         ],
-        "detail_weight": 0.83
+        "detail_weight": 1.33
       },
       "model.video": {
-        "picked": "Metric system: units of volume",
-        "score": 105.06,
+        "picked": "Volume of a cone",
+        "fit": "fits",
+        "score": 123.53,
         "core_hits": [
-          "volume",
-          "capacity"
+          "volume"
+        ],
+        "detail_hits": [
+          "cone",
+          "cone volume"
+        ],
+        "detail_weight": 1.33
+      },
+      "predict.reading": {
+        "picked": "Volume of the Cone (PLIX)",
+        "fit": "fits",
+        "score": 148.35,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cone",
+          "cone volume"
+        ],
+        "detail_weight": 1.33
+      },
+      "observe.reading": {
+        "picked": "Volume of Cylinder: Big Can of Soup (PLIX)",
+        "fit": "fits",
+        "score": 143.88,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cylinder",
+          "cylinder volume"
+        ],
+        "detail_weight": 1.54
+      },
+      "explain.reading": {
+        "picked": "Estimate volume (milliliters and liters)",
+        "fit": "fits",
+        "score": 119.42,
+        "core_hits": [
+          "volume"
         ],
         "detail_hits": [
           "litre"
         ],
         "detail_weight": 0.62
       },
-      "predict.reading": {
-        "picked": "Apply volume of solids",
-        "score": 159.53,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cylinder",
-          "cone"
-        ],
-        "detail_weight": 1.83
-      },
-      "observe.reading": {
-        "picked": "Volume of cylinders, spheres, and cones word problems",
-        "score": 142.76,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cylinder",
-          "cone"
-        ],
-        "detail_weight": 1.83
-      },
-      "explain.reading": {
-        "picked": "Volume and surface area of cylinders",
-        "score": 121.96,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cylinder"
-        ],
-        "detail_weight": 1
-      },
       "dqb.reading": {
-        "picked": "Apply volume of solids",
-        "score": 159.53,
+        "picked": "Volume of Cylinders (Flexbook)",
+        "fit": "fits",
+        "score": 93.23,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "cylinder",
-          "cone"
+          "cylinder volume"
         ],
-        "detail_weight": 1.83
+        "detail_weight": 1.54
       },
       "model.reading": {
-        "picked": "Apply volume of solids",
-        "score": 159.53,
+        "picked": "Volume of the Cone (PLIX)",
+        "fit": "fits",
+        "score": 148.35,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "cylinder",
-          "cone"
+          "cone",
+          "cone volume"
         ],
-        "detail_weight": 1.83
+        "detail_weight": 1.33
       }
     },
     "video_pool": {
-      "passed": 25,
+      "passed": 27,
       "runners_up": [
-        "Visually Comparing the Capacity and Volume of Three Containers (Metric Units)",
+        "Metric system: units of volume",
         "Comparing the Capacity and Volume of Three or More Containers (Metric Units)",
         "Volumes of cones intuition",
-        "Metric system: units of volume",
+        "Volume of a cone",
         "Cylinder volume & surface area"
       ],
       "rejected_sample": [
+        [
+          "Converting Between Liters and Milliliters",
+          "below relevance gate"
+        ],
+        [
+          "Converting Between Liters and Milliliters II",
+          "below relevance gate"
+        ],
+        [
+          "Converting Between Kiloliters, Liters and Milliliters",
+          "below relevance gate"
+        ],
         [
           "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
           "web file not on reference image"
         ],
         [
-          "Solving For X In X³   11 = 53 #Shorts #Algebra #Math #Maths #Mathematics #Education #Learn #Learning",
-          "web file not on reference image"
-        ],
-        [
-          "Maths Kcse Grading System 2024 #Maths #Solveexponentialequation #Mathematics #Mathstricks #Exponen",
-          "excluded: answer/exam material"
-        ],
-        [
-          "Factorize #Viral #Trending  #Viralvideo #Shorts #Maths #Viralshort #Shortsfeed #Factorization #Math",
-          "web file not on reference image"
-        ],
-        [
-          "Definition Of Number Types In Math  ｜ Learn & Nurture #Shortsvideo #Maths #Mathfacts #Mathstricks",
-          "web file not on reference image"
-        ],
-        [
-          "Using related volumes",
+          "Dimensions of a cube from its volume",
           "below relevance gate"
         ],
         [
-          "Ratios and measurement",
+          "Convert liters to milliliters",
           "below relevance gate"
         ],
         [
-          "Ratios on coordinate plane",
+          "Choosing the Correct Unit with Liters Or Milliliters",
+          "below relevance gate"
+        ],
+        [
+          "Finding the Total Amount of Liquid in Liters and Milliliters",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "web file not on reference image": 8,
+        "below relevance gate": 84,
+        "web file not on reference image": 7,
+        "foreign vocabulary": 1,
         "excluded: answer/exam material": 1,
-        "below relevance gate": 90,
-        "kolibri node not available on reference image": 5,
-        "foreign vocabulary": 1
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 39,
+      "passed": 45,
       "runners_up": [
-        "Volume of cylinders, spheres, and cones word problems",
-        "Volume and surface area of cylinders",
+        "Volume of Cylinder: Big Can of Soup (PLIX)",
+        "Estimate volume (milliliters and liters)",
         "Volume of Cylinders (Flexbook)",
-        "Volume of Cylinders Practice",
-        "Heights of Cylinders Given Volume (Flexbook)"
+        "Volume Of A Cone",
+        "Apply volume of solids"
       ],
       "rejected_sample": [
         [
-          "Unit Conversion: Conversions of Length, Mass, Speed in Metric Units (PLIX)",
+          "Converting Between Liters and Milliliters Practice",
           "below relevance gate"
         ],
         [
-          "Visually Comparing Capacity and Volume Practice",
+          "Converting Between Liters and Milliliters II Practice",
           "below relevance gate"
         ],
         [
-          "Ratio tables",
+          "Converting Between Kiloliters, Liters and Milliliters Practice",
           "below relevance gate"
         ],
         [
-          "Compare volumes with unit cubes",
+          "Choosing the Correct Unit with Liters Or Milliliters Practice",
           "below relevance gate"
         ],
         [
-          "Basic ratios",
+          "Converting Between Kiloliters and Liters Practice",
           "below relevance gate"
         ],
         [
-          "Ratios with tape diagrams",
+          "Converting Centimeters to Millimeters Practice",
           "below relevance gate"
         ],
         [
-          "Part-part-whole ratios",
+          "Converting Meters to Centimeters Practice",
           "below relevance gate"
         ],
         [
-          "Ratios with double number lines",
+          "Converting Centimeters to Meters Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 96,
+        "below relevance gate": 86,
         "kolibri node not available on reference image": 5,
+        "foreign vocabulary": 1,
         "excluded: answer/exam material": 20
       }
     }
@@ -278,7 +302,12 @@
         "conversion",
         "frustum",
         "essential",
-        "mathematics"
+        "mathematics",
+        "relationship",
+        "cylinders",
+        "derivation",
+        "converting",
+        "cubic"
       ],
       "phrases": [
         "cone volume formula",
@@ -291,117 +320,78 @@
         "pouring demonstration",
         "derive formula",
         "litres conversion",
-        "essential mathematics"
+        "essential mathematics",
+        "volume cone",
+        "cone cylinder volume relationship",
+        "volume cylinders",
+        "cone volume formula derivation"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Volumes of cones intuition",
-        "score": 170.87,
+        "fit": "fits",
+        "score": 180.03,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "cone formula volume",
+          "cone volume",
           "cone",
           "formula"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 2.57
       },
       "observe.video": {
-        "picked": "Cylinder volume & surface area",
-        "score": 169.98,
+        "picked": "Volume of a cone",
+        "fit": "fits",
+        "score": 177.69,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "cylinder volume",
-          "cylinder",
+          "cone formula volume",
+          "cone volume",
+          "cone",
           "formula"
         ],
-        "detail_weight": 1.67
+        "detail_weight": 2.57
       },
       "explain.video": {
-        "picked": "Volume of a cone",
-        "score": 120.42,
+        "picked": "Volumes of cones intuition",
+        "fit": "fits",
+        "score": 180.03,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "cone formula volume",
+          "cone volume",
           "cone",
           "formula"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 2.57
       },
       "dqb.video": {
-        "picked": "Volumes of cones intuition",
-        "score": 170.87,
+        "picked": "Volume of a cone",
+        "fit": "fits",
+        "score": 177.69,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "cone formula volume",
+          "cone volume",
           "cone",
           "formula"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 2.57
       },
       "model.video": {
-        "picked": "Volumes of cones intuition",
-        "score": 170.87,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cone formula volume",
-          "cone",
-          "formula"
-        ],
-        "detail_weight": 2.1
-      },
-      "predict.reading": {
-        "picked": "Apply volume of solids",
-        "score": 156.53,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cylinder volume",
-          "cone",
-          "cylinder"
-        ],
-        "detail_weight": 1.67
-      },
-      "observe.reading": {
-        "picked": "Volume of cylinders, spheres, and cones word problems",
-        "score": 140.07,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cylinder volume",
-          "cone",
-          "cylinder"
-        ],
-        "detail_weight": 1.67
-      },
-      "explain.reading": {
-        "picked": "Volume of cones",
-        "score": 139.26,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cone formula volume",
-          "cone",
-          "formula"
-        ],
-        "detail_weight": 2.1
-      },
-      "dqb.reading": {
-        "picked": "Volume of cylinders",
-        "score": 132.26,
+        "picked": "Cylinder volume & surface area",
+        "fit": "partial",
+        "score": 168.96,
         "core_hits": [
           "volume"
         ],
@@ -410,11 +400,27 @@
           "cylinder",
           "formula"
         ],
-        "detail_weight": 1.67
+        "detail_weight": 1.62
       },
-      "model.reading": {
-        "picked": "Volume and surface area of cylinders",
-        "score": 127.85,
+      "predict.reading": {
+        "picked": "Volume of cones",
+        "fit": "fits",
+        "score": 206.21,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cone formula volume",
+          "cone volume",
+          "cone",
+          "formula"
+        ],
+        "detail_weight": 2.57
+      },
+      "observe.reading": {
+        "picked": "Volume of Cylinders (Flexbook)",
+        "fit": "fits",
+        "score": 147.28,
         "core_hits": [
           "volume"
         ],
@@ -422,19 +428,73 @@
           "cylinder volume",
           "cylinder"
         ],
-        "detail_weight": 1.37
+        "detail_weight": 1.32
+      },
+      "explain.reading": {
+        "picked": "Volume of Cylinders Practice",
+        "fit": "fits",
+        "score": 147.28,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cylinder volume",
+          "cylinder"
+        ],
+        "detail_weight": 1.32
+      },
+      "dqb.reading": {
+        "picked": "Volume of the Cone (PLIX)",
+        "fit": "fits",
+        "score": 137.96,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cone volume",
+          "cone"
+        ],
+        "detail_weight": 0.77
+      },
+      "model.reading": {
+        "picked": "Volume of Cones (Flexbook)",
+        "fit": "fits",
+        "score": 137.89,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cone volume",
+          "cone"
+        ],
+        "detail_weight": 0.77
       }
     },
     "video_pool": {
-      "passed": 10,
+      "passed": 5,
       "runners_up": [
-        "Cylinder volume & surface area",
         "Volume of a cone",
-        "Comparing the Capacity by Formula in Quarts, Pints and Cups",
+        "Cylinder volume & surface area",
         "Formulas and units: Volume of a pool",
-        "Optimization: box volume (Part 2)"
+        "Interpreting expressions with multiple variables: Cylinder"
       ],
       "rejected_sample": [
+        [
+          "Intro to proportional relationships",
+          "below relevance gate"
+        ],
+        [
+          "Related rates: water pouring into a cone",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Measurement word problem: tea party",
+          "below relevance gate"
+        ],
+        [
+          "Derivation of beat frequency formula",
+          "below relevance gate"
+        ],
         [
           "Young's double slit equation",
           "below relevance gate"
@@ -450,78 +510,63 @@
         [
           "One-step Conversions Between Hundreds, Tens, and Ones",
           "below relevance gate"
-        ],
-        [
-          "Using related volumes",
-          "below relevance gate"
-        ],
-        [
-          "Conversions Between Thousands, Hundreds, Tens, and Ones",
-          "below relevance gate"
-        ],
-        [
-          "Solving For X In X³   11 = 53 #Shorts #Algebra #Math #Maths #Mathematics #Education #Learn #Learning",
-          "web file not on reference image"
-        ],
-        [
-          "Maths Kcse Grading System 2024 #Maths #Solveexponentialequation #Mathematics #Mathstricks #Exponen",
-          "excluded: answer/exam material"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 114,
-        "web file not on reference image": 11,
+        "below relevance gate": 120,
+        "judged off-topic (independent reviewer)": 5,
+        "web file not on reference image": 8,
         "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 7
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
       "passed": 24,
       "runners_up": [
-        "Volume of cylinders, spheres, and cones word problems",
-        "Volume of cones",
-        "Volume of cylinders",
-        "Volume and surface area of cylinders",
-        "Volume of Cylinders (Flexbook)"
+        "Volume of Cylinders (Flexbook)",
+        "Volume of Cylinders Practice",
+        "Volume of the Cone (PLIX)",
+        "Volume of Cones (Flexbook)",
+        "Volume Of A Cone"
       ],
       "rejected_sample": [
-        [
-          "One-step Conversions Between Hundreds, Tens, and Ones Practice",
-          "below relevance gate"
-        ],
         [
           "Identify geometric solids (3D shapes)",
           "below relevance gate"
         ],
         [
-          "Conversions of Length, Mass, Capacity in Metric Units (Flexbook)",
+          "One-step Conversions Between Hundreds, Tens, and Ones Practice",
           "below relevance gate"
         ],
         [
-          "Conversions of Length, Mass, Capacity in Metric Units Practice",
+          "Proportional relationships",
           "below relevance gate"
         ],
         [
-          "Conversions Between Thousands, Hundreds, Tens, and Ones Practice",
+          "Ratios with tape diagrams",
           "below relevance gate"
         ],
         [
-          "Unit Conversion: Conversions of Length, Mass, Speed in Metric Units (PLIX)",
+          "Ratios with double number lines",
           "below relevance gate"
         ],
         [
-          "Conversions Between Moles and Gas Volume (Flexbook)",
+          "Molarity",
           "below relevance gate"
         ],
         [
-          "Conversions between Moles and Gas Volume Practice",
+          "Converting Between Liters and Milliliters Practice",
+          "below relevance gate"
+        ],
+        [
+          "Converting Between Kiloliters and Liters Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 116,
-        "kolibri node not available on reference image": 4,
-        "excluded: answer/exam material": 20
+        "below relevance gate": 113,
+        "kolibri node not available on reference image": 1,
+        "excluded: answer/exam material": 18
       }
     }
   },
@@ -575,125 +620,113 @@
         "grain store",
         "rift valley",
         "pyramidal storage",
-        "essential mathematics"
+        "essential mathematics",
+        "volume pyramids"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Volumes of cones intuition",
-        "score": 313.35,
+        "picked": "Volume of pyramids intuition",
+        "fit": "fits",
+        "score": 267.54,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "pyramid volume",
-          "formula pyramid",
+          "prism rectangular volume",
           "pyramid"
         ],
-        "detail_weight": 3.05
+        "detail_weight": 2.1
       },
       "observe.video": {
-        "picked": "Volumes of cones intuition",
-        "score": 313.35,
+        "picked": "Volume of a Pyramid - Overview",
+        "fit": "fits",
+        "score": 161.04,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "pyramid volume",
-          "formula pyramid",
           "pyramid"
         ],
-        "detail_weight": 3.05
+        "detail_weight": 1.8
       },
       "explain.video": {
-        "picked": "Volumes of cones intuition",
-        "score": 313.35,
+        "picked": "Volume of pyramids intuition",
+        "fit": "fits",
+        "score": 267.54,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "pyramid volume",
-          "formula pyramid",
+          "prism rectangular volume",
           "pyramid"
         ],
-        "detail_weight": 3.05
+        "detail_weight": 2.1
       },
       "dqb.video": {
-        "picked": "Volumes of cones intuition",
-        "score": 313.35,
+        "picked": "Volume of a Pyramid - Overview",
+        "fit": "fits",
+        "score": 161.04,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "pyramid volume",
-          "formula pyramid",
           "pyramid"
         ],
-        "detail_weight": 3.05
+        "detail_weight": 1.8
       },
       "model.video": {
         "picked": "Volumes of cones intuition",
-        "score": 313.35,
+        "fit": "partial",
+        "score": 334.96,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "pyramid volume",
           "formula pyramid",
+          "formula pyramid volume",
+          "cone pyramid volume",
           "pyramid"
         ],
-        "detail_weight": 3.05
+        "detail_weight": 3.72
       },
       "predict.reading": {
-        "picked": "Apply volume of solids",
-        "score": 215.63,
+        "picked": "Surface Area and Volume of Pyramids Practice",
+        "fit": "fits",
+        "score": 291.4,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "pyramid volume",
-          "cone cylinder pyramid",
+          "area pyramid surface volume",
           "pyramid"
         ],
-        "detail_weight": 2.38
+        "detail_weight": 2.09
       },
       "observe.reading": {
-        "picked": "Volume of prisms and pyramids",
-        "score": 183.58,
+        "picked": "Surface Area and Volume of Pyramids (PLIX)",
+        "fit": "fits",
+        "score": 291.4,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "pyramid volume",
+          "area pyramid surface volume",
           "pyramid"
         ],
-        "detail_weight": 1.8
+        "detail_weight": 2.09
       },
       "explain.reading": {
-        "picked": "Volume by multiplying area of base times height",
-        "score": 172.44,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "area base height time"
-        ],
-        "detail_weight": 0.94
-      },
-      "dqb.reading": {
-        "picked": "Volume as area of base times height",
-        "score": 145.07,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "area base height time"
-        ],
-        "detail_weight": 0.94
-      },
-      "model.reading": {
-        "picked": "Volume of Pyramids: Fluctuating Height (PLIX)",
-        "score": 139.19,
+        "picked": "Volume of prisms and pyramids",
+        "fit": "fits",
+        "score": 255.8,
         "core_hits": [
           "volume"
         ],
@@ -702,36 +735,47 @@
           "pyramid"
         ],
         "detail_weight": 1.8
+      },
+      "dqb.reading": {
+        "picked": "Volume of Pyramids: Fluctuating Height (PLIX)",
+        "fit": "fits",
+        "score": 195.96,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "pyramid volume",
+          "pyramid"
+        ],
+        "detail_weight": 1.8
+      },
+      "model.reading": {
+        "picked": "Surface Area and Volume of Pyramids Practice",
+        "fit": "fits",
+        "score": 291.4,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "pyramid volume",
+          "area pyramid surface volume",
+          "pyramid"
+        ],
+        "detail_weight": 2.09
       }
     },
     "video_pool": {
-      "passed": 9,
+      "passed": 17,
       "runners_up": [
         "Volume of a Pyramid - Overview",
-        "Volume of pyramids intuition",
-        "Selecting the Correct Capacity Conversion (English Units)",
-        "Identify the Incorrect Capacity Conversion (English Units)",
-        "Recognizing common 3D shapes"
+        "Volumes of cones intuition",
+        "Recognizing common 3D shapes",
+        "Measuring volume as area times length",
+        "Volume with fractional cubes"
       ],
       "rejected_sample": [
         [
-          "Area of a triangle",
-          "below relevance gate"
-        ],
-        [
-          "Formulas and units: Volume of a pool",
-          "below relevance gate"
-        ],
-        [
-          "Surface area word problem example",
-          "below relevance gate"
-        ],
-        [
-          "Measuring volume as area times length",
-          "below relevance gate"
-        ],
-        [
-          "Area of a parallelogram",
+          "Surface area using a net: rectangular prism",
           "below relevance gate"
         ],
         [
@@ -739,29 +783,45 @@
           "below relevance gate"
         ],
         [
+          "Volume of a rectangular prism",
+          "below relevance gate"
+        ],
+        [
+          "Volume of a rectangular prism: word problem",
+          "below relevance gate"
+        ],
+        [
+          "Surface area word problem example",
+          "below relevance gate"
+        ],
+        [
+          "Surface area using a net: triangular prism",
+          "below relevance gate"
+        ],
+        [
           "Cylinder volume & surface area",
           "below relevance gate"
         ],
         [
-          "Manipulating formulas: area",
+          "Area of a triangle",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 108,
+        "below relevance gate": 94,
         "web file not on reference image": 6,
-        "kolibri node not available on reference image": 5,
+        "kolibri node not available on reference image": 3,
         "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 19,
+      "passed": 28,
       "runners_up": [
+        "Surface Area and Volume of Pyramids (PLIX)",
         "Volume of prisms and pyramids",
-        "Volume by multiplying area of base times height",
-        "Volume as area of base times height",
         "Volume of Pyramids: Fluctuating Height (PLIX)",
-        "Selecting the Correct Capacity Conversion (English Units) Practice"
+        "Apply volume of solids",
+        "Volume by multiplying area of base times height"
       ],
       "rejected_sample": [
         [
@@ -769,11 +829,7 @@
           "below relevance gate"
         ],
         [
-          "Heights of Cylinders Given Volume (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Heights of Cylinders Given Volume Practice",
+          "Identify geometric solids (3D shapes)",
           "below relevance gate"
         ],
         [
@@ -785,21 +841,25 @@
           "below relevance gate"
         ],
         [
-          "Identify geometric solids (3D shapes)",
+          "Surface Area of Rectangular Prisms (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Volume of cylinders, spheres, and cones word problems",
+          "Surface Area of Rectangular Prisms Practice",
           "below relevance gate"
         ],
         [
-          "Volume of cones",
+          "Surface Area and Volume of Cones Practice",
+          "below relevance gate"
+        ],
+        [
+          "Surface Area and Volume of Cylinders Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 132,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 117,
+        "foreign vocabulary": 1
       }
     }
   },
@@ -830,6 +890,8 @@
         "centimetres",
         "essential",
         "mathematics",
+        "ratios",
+        "truncated",
         "frustums",
         "cones",
         "formula",
@@ -845,25 +907,33 @@
         "cone volume",
         "cylinder volume",
         "cubic centimetres",
-        "essential mathematics"
+        "essential mathematics",
+        "volume frustum",
+        "frustum cone",
+        "volume cone",
+        "similar triangles ratios",
+        "volume truncated cone"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Cylinder volume & surface area",
+        "picked": "Volumes of cones intuition",
+        "fit": "fits",
         "score": 154.89,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "cylinder volume",
+          "cone volume",
+          "cone",
           "formula"
         ],
-        "detail_weight": 0.93
+        "detail_weight": 1.28
       },
       "observe.video": {
-        "picked": "Volumes of cones intuition",
-        "score": 154.89,
+        "picked": "Volume of a cone",
+        "fit": "fits",
+        "score": 152.87,
         "core_hits": [
           "volume"
         ],
@@ -875,20 +945,8 @@
         "detail_weight": 1.28
       },
       "explain.video": {
-        "picked": "Volume of a cone",
-        "score": 109.16,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cone volume",
-          "cone",
-          "formula"
-        ],
-        "detail_weight": 1.28
-      },
-      "dqb.video": {
         "picked": "Metric system: units of volume",
+        "fit": "fits",
         "score": 101.31,
         "core_hits": [
           "volume",
@@ -899,8 +957,9 @@
         ],
         "detail_weight": 0.36
       },
-      "model.video": {
+      "dqb.video": {
         "picked": "Solving similar triangles",
+        "fit": "fits",
         "score": 100.79,
         "core_hits": [],
         "detail_hits": [
@@ -909,34 +968,33 @@
         ],
         "detail_weight": 1.24
       },
+      "model.video": {
+        "picked": "Solving similar triangles: same side plays different roles",
+        "fit": "fits",
+        "score": 97.01,
+        "core_hits": [],
+        "detail_hits": [
+          "similar triangle",
+          "solving"
+        ],
+        "detail_weight": 1.24
+      },
       "predict.reading": {
-        "picked": "Apply volume of solids",
-        "score": 155.4,
+        "picked": "Volume of the Cone (PLIX)",
+        "fit": "fits",
+        "score": 141.86,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "cone volume",
-          "cylinder volume",
           "cone"
         ],
-        "detail_weight": 1.61
+        "detail_weight": 0.98
       },
       "observe.reading": {
-        "picked": "Volume of cylinders, spheres, and cones word problems",
-        "score": 139.06,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cone volume",
-          "cylinder volume",
-          "cone"
-        ],
-        "detail_weight": 1.61
-      },
-      "explain.reading": {
         "picked": "Volume of cones",
+        "fit": "fits",
         "score": 126.24,
         "core_hits": [
           "volume"
@@ -948,38 +1006,54 @@
         ],
         "detail_weight": 1.28
       },
-      "dqb.reading": {
-        "picked": "Volume of cylinders",
-        "score": 120.52,
+      "explain.reading": {
+        "picked": "Volume of Cones (Flexbook)",
+        "fit": "fits",
+        "score": 87.03,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "cylinder volume",
-          "formula"
+          "cone volume",
+          "cone"
         ],
-        "detail_weight": 0.93
+        "detail_weight": 0.98
+      },
+      "dqb.reading": {
+        "picked": "Volume of Cones Practice",
+        "fit": "fits",
+        "score": 87.03,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cone volume",
+          "cone"
+        ],
+        "detail_weight": 0.98
       },
       "model.reading": {
-        "picked": "Volume and surface area of cylinders",
-        "score": 115.92,
+        "picked": "Volume of the Cone (PLIX)",
+        "fit": "fits",
+        "score": 141.86,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "cylinder volume"
+          "cone volume",
+          "cone"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 0.98
       }
     },
     "video_pool": {
-      "passed": 15,
+      "passed": 13,
       "runners_up": [
-        "Volumes of cones intuition",
         "Volume of a cone",
         "Metric system: units of volume",
         "Solving similar triangles",
-        "Solving similar triangles: same side plays different roles"
+        "Solving similar triangles: same side plays different roles",
+        "Solving similar triangles -dubbed(KY)"
       ],
       "rejected_sample": [
         [
@@ -992,6 +1066,10 @@
         ],
         [
           "CA Geometry: More on congruent and similar triangles -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
+          "Ratios and measurement",
           "below relevance gate"
         ],
         [
@@ -1009,28 +1087,25 @@
         [
           "Manipulating formulas: area",
           "below relevance gate"
-        ],
-        [
-          "Proving slope is constant using similarity",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 120,
-        "web file not on reference image": 11,
+        "below relevance gate": 128,
+        "web file not on reference image": 10,
         "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 7,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 2,
         "foreign vocabulary": 1
       }
     },
     "reading_pool": {
-      "passed": 25,
+      "passed": 26,
       "runners_up": [
-        "Volume of cylinders, spheres, and cones word problems",
         "Volume of cones",
-        "Volume of cylinders",
-        "Volume and surface area of cylinders",
-        "Volume of Cones (Flexbook)"
+        "Volume of Cones (Flexbook)",
+        "Volume of Cones Practice",
+        "Volume Of A Cone",
+        "Apply volume of solids"
       ],
       "rejected_sample": [
         [
@@ -1067,9 +1142,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 119,
+        "below relevance gate": 125,
         "kolibri node not available on reference image": 1,
-        "excluded: answer/exam material": 20
+        "excluded: answer/exam material": 10
       }
     }
   },
@@ -1129,124 +1204,139 @@
     },
     "slots": {
       "predict.video": {
-        "picked": "Volumes of cones intuition",
-        "score": 163.69,
+        "picked": "Volume density",
+        "fit": "fits",
+        "score": 94.4,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "pyramid"
+          "density mass volume"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.68
       },
       "observe.video": {
-        "picked": "Volume of pyramids intuition",
-        "score": 126.96,
+        "picked": "Applying volume of solids",
+        "fit": "fits",
+        "score": 65.19,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "pyramid"
+          "grain"
         ],
         "detail_weight": 0.3
       },
       "explain.video": {
-        "picked": "Volumes of cones intuition",
-        "score": 163.69,
+        "picked": "Volume density",
+        "fit": "fits",
+        "score": 94.4,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "pyramid"
+          "density mass volume"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.68
       },
       "dqb.video": {
-        "picked": "Volumes of cones intuition",
-        "score": 163.69,
+        "picked": "Applying volume of solids",
+        "fit": "fits",
+        "score": 65.19,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "pyramid"
+          "grain"
         ],
         "detail_weight": 0.3
       },
       "model.video": {
         "picked": "Volumes of cones intuition",
-        "score": 163.69,
+        "fit": "partial",
+        "score": 171.68,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
+          "pyramid volume",
           "pyramid"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.64
       },
       "predict.reading": {
         "picked": "Volume of prisms and pyramids",
-        "score": 151.06,
+        "fit": "partial",
+        "score": 158.43,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
+          "pyramid volume",
           "pyramid"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.64
       },
       "observe.reading": {
         "picked": "Use related volumes",
-        "score": 123.56,
+        "fit": "partial",
+        "score": 129.59,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
+          "pyramid volume",
           "pyramid"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.64
       },
       "explain.reading": {
         "picked": "Volume of Pyramids: Fluctuating Height (PLIX)",
-        "score": 114.53,
+        "fit": "partial",
+        "score": 120.12,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
+          "pyramid volume",
           "pyramid"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.64
       },
       "dqb.reading": {
         "picked": "Surface Area and Volume of Pyramids Practice",
-        "score": 106.66,
+        "fit": "partial",
+        "score": 111.87,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
+          "pyramid volume",
           "pyramid"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.64
       },
       "model.reading": {
         "picked": "Surface Area and Volume of Pyramids (PLIX)",
-        "score": 106.66,
+        "fit": "partial",
+        "score": 111.87,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
+          "pyramid volume",
           "pyramid"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.64
       }
     },
     "video_pool": {
-      "passed": 6,
+      "passed": 5,
       "runners_up": [
-        "Volume of pyramids intuition",
-        "Volume density",
-        "Volume of a Pyramid - Overview",
         "Applying volume of solids",
-        "Triple integrals 2"
+        "Volumes of cones intuition",
+        "Volume of a Pyramid - Overview",
+        "Volume of pyramids intuition"
       ],
       "rejected_sample": [
         [
@@ -1266,25 +1356,26 @@
           "below relevance gate"
         ],
         [
-          "Factoring perfect squares: negative common factor",
+          "Formulas and units: Volume of a pool",
           "below relevance gate"
         ],
         [
-          "Formulas and units: Volume of a pool",
+          "Measuring volume as area times length",
+          "below relevance gate"
+        ],
+        [
+          "Factoring perfect squares: negative common factor",
           "below relevance gate"
         ],
         [
           "Volume with cross sections: semicircle",
           "below relevance gate"
-        ],
-        [
-          "Factoring perfect squares: shared factors",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 110,
-        "kolibri node not available on reference image": 4
+        "below relevance gate": 109,
+        "conflicting sub-topic": 1,
+        "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
@@ -1331,7 +1422,7 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 144
+        "below relevance gate": 139
       }
     }
   },
@@ -1391,7 +1482,35 @@
     },
     "slots": {
       "predict.video": {
+        "picked": "Challenging Problems Involving Capacity in Liters - Word Problems",
+        "fit": "fits",
+        "score": 211.8,
+        "core_hits": [
+          "capacity"
+        ],
+        "detail_hits": [
+          "capacity litre",
+          "problem word",
+          "problem"
+        ],
+        "detail_weight": 1.82
+      },
+      "observe.video": {
+        "picked": "Cylinder volume & surface area",
+        "fit": "fits",
+        "score": 196.25,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cylinder volume",
+          "problem"
+        ],
+        "detail_weight": 1.55
+      },
+      "explain.video": {
         "picked": "Volume word problem: water tank",
+        "fit": "fits",
         "score": 191.26,
         "core_hits": [
           "volume"
@@ -1402,56 +1521,35 @@
         ],
         "detail_weight": 0.98
       },
-      "observe.video": {
-        "picked": "Volume of a cone",
-        "score": 190.5,
+      "dqb.video": {
+        "picked": "Volumes of cones intuition",
+        "fit": "fits",
+        "score": 180.65,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "cone volume",
-          "problem"
+          "cone volume"
         ],
-        "detail_weight": 1.8
-      },
-      "explain.video": {
-        "picked": "Visually Comparing the Capacity and Volume of Two Containers (Metric Units)",
-        "score": 168.94,
-        "core_hits": [
-          "volume",
-          "capacity"
-        ],
-        "detail_hits": [
-          "container"
-        ],
-        "detail_weight": 0.3
-      },
-      "dqb.video": {
-        "picked": "Visually Comparing the Capacity and Volume of Three Containers (Metric Units)",
-        "score": 168.94,
-        "core_hits": [
-          "volume",
-          "capacity"
-        ],
-        "detail_hits": [
-          "container"
-        ],
-        "detail_weight": 0.3
+        "detail_weight": 1.5
       },
       "model.video": {
-        "picked": "Comparing the Capacity and Volume of Three or More Containers (Metric Units)",
-        "score": 160.36,
+        "picked": "Challenging Problems Involving Capacity in Liters - Word Problems",
+        "fit": "fits",
+        "score": 211.8,
         "core_hits": [
-          "volume",
           "capacity"
         ],
         "detail_hits": [
-          "container"
+          "capacity litre",
+          "problem word",
+          "problem"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.82
       },
       "predict.reading": {
         "picked": "Volume of cylinders, spheres, and cones word problems",
+        "fit": "fits",
         "score": 298.83,
         "core_hits": [
           "volume"
@@ -1466,6 +1564,7 @@
       },
       "observe.reading": {
         "picked": "Apply volume of solids",
+        "fit": "fits",
         "score": 288.08,
         "core_hits": [
           "volume"
@@ -1479,7 +1578,20 @@
         "detail_weight": 3.35
       },
       "explain.reading": {
+        "picked": "Volume and surface area of cylinders",
+        "fit": "fits",
+        "score": 223.54,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cylinder volume"
+        ],
+        "detail_weight": 1.25
+      },
+      "dqb.reading": {
         "picked": "Solid geometry word problems",
+        "fit": "fits",
         "score": 210.65,
         "core_hits": [
           "volume"
@@ -1492,48 +1604,38 @@
         ],
         "detail_weight": 3.73
       },
-      "dqb.reading": {
-        "picked": "Volume word problems: fractions & decimals",
-        "score": 209.44,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "problem word",
-          "problem solving",
-          "problem",
-          "solving"
-        ],
-        "detail_weight": 1.78
-      },
       "model.reading": {
-        "picked": "Volume of cylinders, spheres, and cones word problems",
-        "score": 298.83,
+        "picked": "Challenging Problems Involving Capacity in Liters - Word Problems Practice",
+        "fit": "fits",
+        "score": 197.64,
         "core_hits": [
-          "volume"
+          "capacity"
         ],
         "detail_hits": [
-          "cone volume",
-          "cylinder volume",
+          "capacity litre",
           "problem word",
           "problem"
         ],
-        "detail_weight": 3.73
+        "detail_weight": 1.82
       }
     },
     "video_pool": {
-      "passed": 53,
+      "passed": 52,
       "runners_up": [
+        "Cylinder volume & surface area",
+        "Volume word problem: water tank",
+        "Volumes of cones intuition",
         "Volume of a cone",
-        "Visually Comparing the Capacity and Volume of Two Containers (Metric Units)",
-        "Visually Comparing the Capacity and Volume of Three Containers (Metric Units)",
-        "Comparing the Capacity and Volume of Three or More Containers (Metric Units)",
-        "Volumes of cones intuition"
+        "Visually Comparing the Capacity and Volume of Two Containers (Metric Units)"
       ],
       "rejected_sample": [
         [
           "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
           "web file not on reference image"
+        ],
+        [
+          "Comparing Lengths in Centimeters - Word Problems",
+          "below relevance gate"
         ],
         [
           "One-step Subtraction Conversions with Compound Units (Metric Units) - Word Problems",
@@ -1552,31 +1654,28 @@
           "below relevance gate"
         ],
         [
-          "Turning Words into Numbers within Word Problems (Place Values to 1,000)",
+          "Areas of Rectangular Composite Figures Challenge - Word Problems",
           "below relevance gate"
         ],
         [
-          "Turning Numbers into Words within Word Problems (Place Values to 1,000)",
-          "below relevance gate"
-        ],
-        [
-          "Linear functions word problem: iceberg",
+          "Surface area word problem example",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "web file not on reference image": 2,
-        "below relevance gate": 73
+        "below relevance gate": 70,
+        "conflicting sub-topic": 1
       }
     },
     "reading_pool": {
-      "passed": 106,
+      "passed": 101,
       "runners_up": [
         "Apply volume of solids",
+        "Volume and surface area of cylinders",
         "Solid geometry word problems",
-        "Volume word problems: fractions & decimals",
-        "Volume of the Cone (PLIX)",
-        "Challenging Problems Involving Capacity in Liters - Word Problems Practice"
+        "Challenging Problems Involving Capacity in Liters - Word Problems Practice",
+        "Volume and surface area word problems"
       ],
       "rejected_sample": [
         [
@@ -1585,6 +1684,10 @@
         ],
         [
           "Graphing linear relationships word problems",
+          "below relevance gate"
+        ],
+        [
+          "Surface area word problems",
           "below relevance gate"
         ],
         [
@@ -1606,14 +1709,11 @@
         [
           "Sequences word problems",
           "below relevance gate"
-        ],
-        [
-          "Average rate of change word problems",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 40
+        "below relevance gate": 46,
+        "conflicting sub-topic": 2
       }
     }
   },
@@ -1647,8 +1747,11 @@
         "project",
         "essential",
         "mathematics",
-        "measurement",
-        "containers"
+        "pyramids",
+        "cones",
+        "converting",
+        "cubic",
+        "centimeters"
       ],
       "phrases": [
         "volume cone",
@@ -1661,61 +1764,32 @@
         "experimental verification",
         "tea farmers",
         "hands project",
-        "essential mathematics"
+        "essential mathematics",
+        "volume cone",
+        "volume frustum",
+        "volume pyramids cones",
+        "slant height height"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Volumes of cones intuition",
-        "score": 206.7,
+        "fit": "fits",
+        "score": 215.89,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "cone volume",
+          "cone pyramid volume",
           "pyramid",
           "cone"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 2.49
       },
       "observe.video": {
-        "picked": "Visually Comparing the Capacity and Volume of Two Containers (Metric Units)",
-        "score": 168.94,
-        "core_hits": [
-          "volume",
-          "capacity"
-        ],
-        "detail_hits": [
-          "container"
-        ],
-        "detail_weight": 0.3
-      },
-      "explain.video": {
-        "picked": "Visually Comparing the Capacity and Volume of Three Containers (Metric Units)",
-        "score": 168.94,
-        "core_hits": [
-          "volume",
-          "capacity"
-        ],
-        "detail_hits": [
-          "container"
-        ],
-        "detail_weight": 0.3
-      },
-      "dqb.video": {
-        "picked": "Comparing the Capacity and Volume of Three or More Containers (Metric Units)",
-        "score": 160.36,
-        "core_hits": [
-          "volume",
-          "capacity"
-        ],
-        "detail_hits": [
-          "container"
-        ],
-        "detail_weight": 0.3
-      },
-      "model.video": {
         "picked": "Volume of a cone",
+        "fit": "fits",
         "score": 130.79,
         "core_hits": [
           "volume"
@@ -1726,21 +1800,50 @@
         ],
         "detail_weight": 1.8
       },
-      "predict.reading": {
-        "picked": "Apply volume of solids",
-        "score": 164.84,
+      "explain.video": {
+        "picked": "Volumes of cones intuition",
+        "fit": "fits",
+        "score": 215.89,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "cone volume",
+          "cone pyramid volume",
           "pyramid",
           "cone"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 2.49
       },
-      "observe.reading": {
+      "dqb.video": {
+        "picked": "Volume of a cone",
+        "fit": "fits",
+        "score": 130.79,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cone volume",
+          "cone"
+        ],
+        "detail_weight": 1.8
+      },
+      "model.video": {
+        "picked": "Visually Comparing the Capacity and Volume of Two Containers (Metric Units)",
+        "fit": "partial",
+        "score": 168.94,
+        "core_hits": [
+          "volume",
+          "capacity"
+        ],
+        "detail_hits": [
+          "container"
+        ],
+        "detail_weight": 0.3
+      },
+      "predict.reading": {
         "picked": "Volume of the Cone (PLIX)",
+        "fit": "fits",
         "score": 157.07,
         "core_hits": [
           "volume"
@@ -1751,8 +1854,9 @@
         ],
         "detail_weight": 1.8
       },
-      "explain.reading": {
+      "observe.reading": {
         "picked": "Volume of Pyramids: Fluctuating Height (PLIX)",
+        "fit": "fits",
         "score": 114.53,
         "core_hits": [
           "volume"
@@ -1762,8 +1866,9 @@
         ],
         "detail_weight": 0.3
       },
-      "dqb.reading": {
+      "explain.reading": {
         "picked": "Volume of prisms and pyramids",
+        "fit": "fits",
         "score": 109.94,
         "core_hits": [
           "volume"
@@ -1773,27 +1878,40 @@
         ],
         "detail_weight": 0.3
       },
-      "model.reading": {
-        "picked": "Apply volume of solids",
-        "score": 164.84,
+      "dqb.reading": {
+        "picked": "Volume of Cones (Flexbook)",
+        "fit": "fits",
+        "score": 96.37,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
           "cone volume",
-          "pyramid",
           "cone"
         ],
-        "detail_weight": 2.1
+        "detail_weight": 1.8
+      },
+      "model.reading": {
+        "picked": "Volume of Cones Practice",
+        "fit": "fits",
+        "score": 96.37,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "cone volume",
+          "cone"
+        ],
+        "detail_weight": 1.8
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 15,
       "runners_up": [
+        "Volume of a cone",
         "Visually Comparing the Capacity and Volume of Two Containers (Metric Units)",
         "Visually Comparing the Capacity and Volume of Three Containers (Metric Units)",
         "Comparing the Capacity and Volume of Three or More Containers (Metric Units)",
-        "Volume of a cone",
         "Metric system: units of volume"
       ],
       "rejected_sample": [
@@ -1802,50 +1920,50 @@
           "web file not on reference image"
         ],
         [
-          "Solving For X In X³   11 = 53 #Shorts #Algebra #Math #Maths #Mathematics #Education #Learn #Learning",
-          "web file not on reference image"
-        ],
-        [
-          "Maths Kcse Grading System 2024 #Maths #Solveexponentialequation #Mathematics #Mathstricks #Exponen",
-          "excluded: answer/exam material"
-        ],
-        [
-          "Factorize #Viral #Trending  #Viralvideo #Shorts #Maths #Viralshort #Shortsfeed #Factorization #Math",
-          "web file not on reference image"
-        ],
-        [
-          "Finding percentages with a double number line",
+          "Percent of a whole number",
           "below relevance gate"
         ],
         [
-          "Definition Of Number Types In Math  ｜ Learn & Nurture #Shortsvideo #Maths #Mathfacts #Mathstricks",
-          "web file not on reference image"
-        ],
-        [
-          "Recognizing common 3D shapes",
+          "Dimensions of a cube from its volume",
           "below relevance gate"
         ],
         [
-          "Using related volumes",
+          "Arabic: Pythagoras and the Juice Seller",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "English Voice-over: Pythagoras and the Juice Seller",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "Arabic-Portuguese Subtitles: Pythagoras and the Juice Seller",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "Measuring volume as area times length",
+          "below relevance gate"
+        ],
+        [
+          "Percents from fraction models",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "web file not on reference image": 9,
-        "excluded: answer/exam material": 1,
-        "below relevance gate": 111,
+        "web file not on reference image": 8,
+        "below relevance gate": 102,
         "kolibri node not available on reference image": 9,
-        "foreign vocabulary": 1
+        "foreign vocabulary": 1,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 20,
+      "passed": 22,
       "runners_up": [
-        "Volume of the Cone (PLIX)",
         "Volume of Pyramids: Fluctuating Height (PLIX)",
         "Volume of prisms and pyramids",
         "Volume of Cones (Flexbook)",
-        "Volume of Cones Practice"
+        "Volume of Cones Practice",
+        "Volume of cones"
       ],
       "rejected_sample": [
         [
@@ -1857,33 +1975,34 @@
           "below relevance gate"
         ],
         [
+          "Units of length (cm, m)",
+          "below relevance gate"
+        ],
+        [
+          "Benchmark percents",
+          "below relevance gate"
+        ],
+        [
           "Identify geometric solids (3D shapes)",
+          "below relevance gate"
+        ],
+        [
+          "Percent Error (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Percent Error Practice",
           "below relevance gate"
         ],
         [
           "Heights of Cylinders Given Volume (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Heights of Cylinders Given Volume Practice",
-          "below relevance gate"
-        ],
-        [
-          "Surface area using nets",
-          "below relevance gate"
-        ],
-        [
-          "Indirect Measurement: Treehouse Height (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Visually Comparing Capacity and Volume Practice",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 123,
-        "kolibri node not available on reference image": 4,
+        "below relevance gate": 116,
+        "kolibri node not available on reference image": 1,
+        "foreign vocabulary": 1,
         "excluded: answer/exam material": 20
       }
     }
@@ -1945,7 +2064,8 @@
     "slots": {
       "predict.video": {
         "picked": "Volumes of cones intuition",
-        "score": 220.49,
+        "fit": "fits",
+        "score": 245.24,
         "core_hits": [
           "volume"
         ],
@@ -1956,8 +2076,9 @@
         "detail_weight": 2.75
       },
       "observe.video": {
-        "picked": "Visually Comparing the Capacity and Volume of Two Containers (Metric Units)",
-        "score": 168.94,
+        "picked": "Visually Comparing the Capacity and Volume of Three Containers (Metric Units)",
+        "fit": "fits",
+        "score": 222.49,
         "core_hits": [
           "volume",
           "capacity"
@@ -1968,8 +2089,9 @@
         "detail_weight": 0.3
       },
       "explain.video": {
-        "picked": "Visually Comparing the Capacity and Volume of Three Containers (Metric Units)",
-        "score": 168.94,
+        "picked": "Comparing the Capacity and Volume of Three or More Containers (Metric Units)",
+        "fit": "fits",
+        "score": 222.49,
         "core_hits": [
           "volume",
           "capacity"
@@ -1980,19 +2102,8 @@
         "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Comparing the Capacity and Volume of Three or More Containers (Metric Units)",
-        "score": 160.36,
-        "core_hits": [
-          "volume",
-          "capacity"
-        ],
-        "detail_hits": [
-          "container"
-        ],
-        "detail_weight": 0.3
-      },
-      "model.video": {
         "picked": "Volume of a cone",
+        "fit": "fits",
         "score": 157.1,
         "core_hits": [
           "volume"
@@ -2002,21 +2113,34 @@
         ],
         "detail_weight": 1.5
       },
-      "predict.reading": {
-        "picked": "Apply volume of solids",
-        "score": 177.06,
+      "model.video": {
+        "picked": "Volume of a Pyramid - Overview",
+        "fit": "fits",
+        "score": 150.58,
         "core_hits": [
           "volume"
         ],
         "detail_hits": [
-          "cone volume",
           "pyramid volume"
         ],
-        "detail_weight": 2.75
+        "detail_weight": 1.25
+      },
+      "predict.reading": {
+        "picked": "Surface Area and Volume of Solids Practice",
+        "fit": "fits",
+        "score": 180.45,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "area solid surface volume"
+        ],
+        "detail_weight": 0.31
       },
       "observe.reading": {
-        "picked": "Volume of the Cone (PLIX)",
-        "score": 151.5,
+        "picked": "Surface Area and Volume of Cones Practice",
+        "fit": "fits",
+        "score": 159.17,
         "core_hits": [
           "volume"
         ],
@@ -2026,8 +2150,33 @@
         "detail_weight": 1.5
       },
       "explain.reading": {
-        "picked": "Volume of cones",
-        "score": 129.73,
+        "picked": "Surface Area and Volume of Pyramids Practice",
+        "fit": "fits",
+        "score": 154.41,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "pyramid volume"
+        ],
+        "detail_weight": 1.25
+      },
+      "dqb.reading": {
+        "picked": "Surface Area and Volume of Pyramids (PLIX)",
+        "fit": "fits",
+        "score": 154.41,
+        "core_hits": [
+          "volume"
+        ],
+        "detail_hits": [
+          "pyramid volume"
+        ],
+        "detail_weight": 1.25
+      },
+      "model.reading": {
+        "picked": "Volume of the Cone (PLIX)",
+        "fit": "fits",
+        "score": 151.5,
         "core_hits": [
           "volume"
         ],
@@ -2035,95 +2184,72 @@
           "cone volume"
         ],
         "detail_weight": 1.5
-      },
-      "dqb.reading": {
-        "picked": "Apply volume of solids",
-        "score": 177.06,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cone volume",
-          "pyramid volume"
-        ],
-        "detail_weight": 2.75
-      },
-      "model.reading": {
-        "picked": "Apply volume of solids",
-        "score": 177.06,
-        "core_hits": [
-          "volume"
-        ],
-        "detail_hits": [
-          "cone volume",
-          "pyramid volume"
-        ],
-        "detail_weight": 2.75
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 10,
       "runners_up": [
-        "Visually Comparing the Capacity and Volume of Two Containers (Metric Units)",
         "Visually Comparing the Capacity and Volume of Three Containers (Metric Units)",
         "Comparing the Capacity and Volume of Three or More Containers (Metric Units)",
         "Volume of a cone",
-        "Volume of a Pyramid - Overview"
+        "Volume of a Pyramid - Overview",
+        "Volume of pyramids intuition"
       ],
       "rejected_sample": [
-        [
-          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
-          "web file not on reference image"
-        ],
-        [
-          "Manipulating formulas: perimeter",
-          "below relevance gate"
-        ],
         [
           "Manipulating formulas: area",
           "below relevance gate"
         ],
         [
-          "Using related volumes",
+          "Formulas and units: Volume of a pool",
           "below relevance gate"
         ],
         [
-          "Solving For X In X³   11 = 53 #Shorts #Algebra #Math #Maths #Mathematics #Education #Learn #Learning",
+          "Cylinder volume & surface area",
+          "below relevance gate"
+        ],
+        [
+          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
           "web file not on reference image"
         ],
         [
-          "Squared error of regression line",
+          "Area and Volume of Similar Solids Principles",
           "below relevance gate"
         ],
         [
-          "Squared error of regression line -dubbed(KY)",
+          "Arabic: Pythagoras and the Juice Seller",
+          "kolibri node not available on reference image"
+        ],
+        [
+          "Electrode (surface area test)",
           "below relevance gate"
         ],
         [
-          "Maths class",
-          "below relevance gate"
+          "English Voice-over: Pythagoras and the Juice Seller",
+          "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "web file not on reference image": 11,
-        "below relevance gate": 112,
+        "below relevance gate": 111,
+        "web file not on reference image": 12,
+        "kolibri node not available on reference image": 8,
         "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 11,
-        "foreign vocabulary": 1
+        "foreign vocabulary": 1,
+        "judged off-topic (independent reviewer)": 2
       }
     },
     "reading_pool": {
-      "passed": 20,
+      "passed": 21,
       "runners_up": [
+        "Surface Area and Volume of Cones Practice",
+        "Surface Area and Volume of Pyramids Practice",
+        "Surface Area and Volume of Pyramids (PLIX)",
         "Volume of the Cone (PLIX)",
-        "Volume of cones",
-        "Volume of prisms and pyramids",
-        "Volume of Cones (Flexbook)",
-        "Volume of Cones Practice"
+        "Volume of prisms and pyramids"
       ],
       "rejected_sample": [
         [
-          "Lower Primary Level Curriculum Designs   Volume One",
+          "Volume and surface area of cylinders",
           "below relevance gate"
         ],
         [
@@ -2131,7 +2257,7 @@
           "below relevance gate"
         ],
         [
-          "Get Me The Bucket!",
+          "Compare volumes with unit cubes",
           "below relevance gate"
         ],
         [
@@ -2139,26 +2265,25 @@
           "below relevance gate"
         ],
         [
-          "Lower Primary Level Curriculum Designs   Volume Two",
+          "Visually Comparing Capacity and Volume Practice",
           "below relevance gate"
         ],
         [
-          "Lower Primary Level Curriculum Designs   Volume Three",
+          "Basic Formula of Areas of Surfaces of Revolution Practice",
           "below relevance gate"
         ],
         [
-          "Lower Primary Level Curriculum Designs   Volume Four",
+          "Area and Volume of Similar Solids (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Volume Formulas",
+          "Area and Volume of Similar Solids Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 109,
-        "kolibri node not available on reference image": 44,
-        "excluded: answer/exam material": 20
+        "below relevance gate": 138,
+        "kolibri node not available on reference image": 8
       }
     }
   }

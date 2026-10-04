@@ -17,6 +17,9 @@
         "particle",
         "reversible",
         "irreversible",
+        "physical",
+        "chemical",
+        "properties",
         "defining",
         "dough"
       ],
@@ -25,12 +28,18 @@
         "matter changes",
         "chapati jiko",
         "states matter",
-        "reversible irreversible changes"
+        "reversible irreversible changes",
+        "states matter",
+        "physical chemical changes",
+        "reversible irreversible changes",
+        "particle matter",
+        "matter properties"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Video: States of Matter",
+        "fit": "fits",
         "score": 80.63,
         "core_hits": [],
         "detail_hits": [
@@ -41,6 +50,7 @@
       },
       "observe.video": {
         "picked": "Video: States of Matter: Basics",
+        "fit": "fits",
         "score": 79.22,
         "core_hits": [],
         "detail_hits": [
@@ -51,6 +61,7 @@
       },
       "explain.video": {
         "picked": "States of matter",
+        "fit": "fits",
         "score": 76.03,
         "core_hits": [],
         "detail_hits": [
@@ -60,18 +71,21 @@
         "detail_weight": 1.77
       },
       "dqb.video": {
-        "picked": "States of matter follow-up",
-        "score": 74.14,
-        "core_hits": [],
-        "detail_hits": [
-          "matter",
-          "matter state"
+        "picked": "Intro to Chemistry",
+        "fit": "fits",
+        "score": 57.35,
+        "core_hits": [
+          "chemistry"
         ],
-        "detail_weight": 1.77
+        "detail_hits": [
+          "matter"
+        ],
+        "detail_weight": 0.83
       },
       "model.video": {
-        "picked": "States of matter -dubbed(KY)",
-        "score": 70.97,
+        "picked": "Video: States of Matter",
+        "fit": "fits",
+        "score": 80.63,
         "core_hits": [],
         "detail_hits": [
           "matter",
@@ -81,6 +95,7 @@
       },
       "predict.reading": {
         "picked": "States of Matter (Flexbook)",
+        "fit": "fits",
         "score": 80.63,
         "core_hits": [],
         "detail_hits": [
@@ -90,27 +105,8 @@
         "detail_weight": 1.77
       },
       "observe.reading": {
-        "picked": "States of Matter Practice",
-        "score": 80.63,
-        "core_hits": [],
-        "detail_hits": [
-          "matter",
-          "matter state"
-        ],
-        "detail_weight": 1.77
-      },
-      "explain.reading": {
-        "picked": "States of Matter in Biological Systems Practice",
-        "score": 77.22,
-        "core_hits": [],
-        "detail_hits": [
-          "matter",
-          "matter state"
-        ],
-        "detail_weight": 1.77
-      },
-      "dqb.reading": {
         "picked": "States of Matter: Basics",
+        "fit": "fits",
         "score": 77,
         "core_hits": [],
         "detail_hits": [
@@ -119,9 +115,33 @@
         ],
         "detail_weight": 1.77
       },
+      "explain.reading": {
+        "picked": "Defining Chemistry (Flexbook)",
+        "fit": "fits",
+        "score": 71.03,
+        "core_hits": [
+          "chemistry"
+        ],
+        "detail_hits": [
+          "defining"
+        ],
+        "detail_weight": 0.3
+      },
+      "dqb.reading": {
+        "picked": "States of Matter",
+        "fit": "fits",
+        "score": 69.29,
+        "core_hits": [],
+        "detail_hits": [
+          "matter",
+          "matter state"
+        ],
+        "detail_weight": 1.77
+      },
       "model.reading": {
-        "picked": "States of Matter in Biological Systems - Advanced (Flexbook)",
-        "score": 75.95,
+        "picked": "States of Matter (Flexbook)",
+        "fit": "fits",
+        "score": 80.63,
         "core_hits": [],
         "detail_hits": [
           "matter",
@@ -131,13 +151,13 @@
       }
     },
     "video_pool": {
-      "passed": 13,
+      "passed": 8,
       "runners_up": [
         "Video: States of Matter: Basics",
         "States of matter",
+        "Intro to Chemistry",
         "States of matter follow-up",
-        "States of matter -dubbed(KY)",
-        "States of matter follow-up -dubbed(KY)"
+        "States of matter -dubbed(KY)"
       ],
       "rejected_sample": [
         [
@@ -149,85 +169,86 @@
           "below relevance gate"
         ],
         [
+          "Heisenberg uncertainty principle",
+          "below relevance gate"
+        ],
+        [
+          "Physical and chemical changes",
+          "below relevance gate"
+        ],
+        [
           "Worked example: Using the ideal gas law to calculate a change in volume",
           "below relevance gate"
+        ],
+        [
+          "Arabic: Plasma: the Fourth State of Matter",
+          "kolibri node not available on reference image"
         ],
         [
           "Thermodynamic entropy definition clarification",
           "below relevance gate"
         ],
         [
-          "Thermodynamic entropy definition clarification -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "De Broglie wavelength",
-          "foreign vocabulary ['broglie', 'wavelength']"
-        ],
-        [
-          "Topic- particulate nature of matter - States of Matter- Basics Video",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "Arabic: Plasma: the Fourth State of Matter",
-          "kolibri node not available on reference image"
+          "The wave-particle duality of matter",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 128,
+        "below relevance gate": 126,
+        "kolibri node not available on reference image": 9,
+        "judged off-topic (independent reviewer)": 5,
         "foreign vocabulary": 1,
-        "kolibri node not available on reference image": 2,
-        "web file not on reference image": 6,
-        "excluded: answer/exam material": 1
+        "web file not on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 10,
+      "passed": 8,
       "runners_up": [
-        "States of Matter Practice",
-        "States of Matter in Biological Systems Practice",
         "States of Matter: Basics",
-        "States of Matter in Biological Systems - Advanced (Flexbook)",
-        "Defining Chemistry (Flexbook)"
+        "Defining Chemistry (Flexbook)",
+        "States of Matter",
+        "14 The Three States Of Matter",
+        "Physical and chemical changes"
       ],
       "rejected_sample": [
+        [
+          "States of Matter in Biological Systems Practice",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "States of Matter in Biological Systems - Advanced (Flexbook)",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Chemical Properties of Matter (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Chemical Properties of Matter Practice",
+          "below relevance gate"
+        ],
+        [
+          "Physical Properties of Matter Practice",
+          "below relevance gate"
+        ],
         [
           "Focus on continuity and change: Byzantine state-building",
           "below relevance gate"
         ],
         [
-          "Defining transformations",
-          "below relevance gate"
+          "Recognizing Chemical..:See easy recipe for play dough",
+          "kolibri node not available on reference image"
         ],
         [
-          "Changes of State Practice",
-          "below relevance gate"
-        ],
-        [
-          "Changes of State and Free Energy Practice",
-          "below relevance gate"
-        ],
-        [
-          "Multi-Step Problems with Changes of State (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Multi-Step Problems with Changes of State Practice",
-          "below relevance gate"
-        ],
-        [
-          "Change of State (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Additional Resources for Plasma: the Fourth State of Matter",
+          "Recognizing Chemical..:See information on alternative activity with play dough or clay",
           "kolibri node not available on reference image"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 125,
-        "kolibri node not available on reference image": 4,
-        "excluded: answer/exam material": 8
+        "judged off-topic (independent reviewer)": 3,
+        "below relevance gate": 137,
+        "kolibri node not available on reference image": 5,
+        "excluded: answer/exam material": 1
       }
     }
   },
@@ -280,67 +301,54 @@
         "kenyatta national hospital",
         "concept map",
         "careers chemistry",
-        "matter changes"
+        "matter changes",
+        "branches chemistry"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Organic chemistry naming examples 4",
-        "score": 116.77,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "chemistry organic"
-        ],
-        "detail_weight": 1.25
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "Organic chemistry naming examples 2",
-        "score": 113.88,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "chemistry organic"
-        ],
-        "detail_weight": 1.25
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "Organic chemistry naming examples 3",
-        "score": 113.42,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "chemistry organic"
-        ],
-        "detail_weight": 1.25
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "Curly arrow conventions in organic chemistry",
-        "score": 107.53,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "chemistry organic"
-        ],
-        "detail_weight": 1.25
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "Organic chemistry naming examples 4",
-        "score": 116.77,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "chemistry organic"
-        ],
-        "detail_weight": 1.25
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "predict.reading": {
         "picked": "Organic Chemistry (Flexbook)",
+        "fit": "partial",
         "score": 119.85,
         "core_hits": [
           "chemistry"
@@ -352,6 +360,7 @@
       },
       "observe.reading": {
         "picked": "Organic Chemistry Practice",
+        "fit": "partial",
         "score": 119.85,
         "core_hits": [
           "chemistry"
@@ -363,6 +372,7 @@
       },
       "explain.reading": {
         "picked": "Organic Chemistry 1&2",
+        "fit": "partial",
         "score": 108.95,
         "core_hits": [
           "chemistry"
@@ -373,18 +383,21 @@
         "detail_weight": 1.25
       },
       "dqb.reading": {
-        "picked": "Organic Chemistry (Flexbook)",
-        "score": 119.85,
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 91.89,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "chemistry organic"
+          "chemistry physical",
+          "chemical physical"
         ],
-        "detail_weight": 1.25
+        "detail_weight": 1.24
       },
       "model.reading": {
         "picked": "Organic Chemistry (Flexbook)",
+        "fit": "partial",
         "score": 119.85,
         "core_hits": [
           "chemistry"
@@ -396,51 +409,47 @@
       }
     },
     "video_pool": {
-      "passed": 5,
-      "runners_up": [
-        "Organic chemistry naming examples 2",
-        "Organic chemistry naming examples 3",
-        "Curly arrow conventions in organic chemistry",
-        "Ka and pKa review"
-      ],
+      "passed": 0,
+      "runners_up": [],
       "rejected_sample": [
-        [
-          "Alkanes ｜ Homologous Series ｜ General Organic Chemistry #Chemistry #Hydrocarbons #Organicchemistry",
-          "web file not on reference image"
-        ],
-        [
-          "More rigorous Gibbs free energy / spontaneity relationship",
-          "below relevance gate"
-        ],
-        [
-          "More rigorous Gibbs free energy / spontaneity relationship -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Hess's law and reaction enthalpy change",
-          "below relevance gate"
-        ],
         [
           "Chemical reactions introduction",
           "below relevance gate"
         ],
         [
-          "Mapping shapes",
-          "below relevance gate"
+          "Organic chemistry naming examples 4",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Checks on the judicial branch",
-          "below relevance gate"
+          "Organic chemistry naming examples 2",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Physical Changes - Overview",
+          "Alkanes ｜ Homologous Series ｜ General Organic Chemistry #Chemistry #Hydrocarbons #Organicchemistry",
+          "web file not on reference image"
+        ],
+        [
+          "Organic chemistry naming examples 3",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Curly arrow conventions in organic chemistry",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Ka and pKa review",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "More rigorous Gibbs free energy / spontaneity relationship",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "web file not on reference image": 1,
-        "below relevance gate": 137,
-        "kolibri node not available on reference image": 7
+        "below relevance gate": 138,
+        "judged off-topic (independent reviewer)": 5,
+        "web file not on reference image": 5,
+        "kolibri node not available on reference image": 15
       }
     },
     "reading_pool": {
@@ -454,6 +463,10 @@
         [
           "topical-test-form-4-chemistry-organic-chemistry-2-answers",
           "excluded: answer/exam material"
+        ],
+        [
+          "States of Matter: Basics",
+          "below relevance gate"
         ],
         [
           "Physical Science Careers (Flexbook)",
@@ -478,15 +491,11 @@
         [
           "Checks on the judicial branch: advanced",
           "below relevance gate"
-        ],
-        [
-          "Changes in Oxidation Number in Redox Reactions (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "excluded: answer/exam material": 4,
-        "below relevance gate": 152,
+        "excluded: answer/exam material": 5,
+        "below relevance gate": 138,
         "kolibri node not available on reference image": 3
       }
     }
@@ -537,67 +546,57 @@
         "importance chemistry agriculture",
         "importance chemistry food industry",
         "chemical change matter daily life",
-        "chemistry careers agro processing"
+        "chemistry careers agro processing",
+        "fertilizers plant nutrients",
+        "nitrogen phosphorus potassium fertilizer",
+        "pesticides food safety",
+        "soil plant growth"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "2015 AP Chemistry free response 5",
-        "score": 58.63,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "food"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "2015 AP Chemistry free response 5a: Finding order of reaction",
-        "score": 48.37,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "food"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "2015 AP Chemistry free response 5",
-        "score": 58.63,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "food"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "2015 AP Chemistry free response 5",
-        "score": 58.63,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "food"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "2015 AP Chemistry free response 5",
-        "score": 58.63,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "food"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -605,6 +604,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -612,6 +612,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -619,6 +620,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -626,6 +628,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -633,13 +636,15 @@
       }
     },
     "video_pool": {
-      "passed": 2,
-      "runners_up": [
-        "2015 AP Chemistry free response 5a: Finding order of reaction"
-      ],
+      "passed": 0,
+      "runners_up": [],
       "rejected_sample": [
         [
           "Lactic acid fermentation",
+          "below relevance gate"
+        ],
+        [
+          "Matter and energy in food webs",
           "below relevance gate"
         ],
         [
@@ -647,34 +652,31 @@
           "web file not on reference image"
         ],
         [
-          "Matter and energy in food webs",
-          "below relevance gate"
-        ],
-        [
           "Why Was Agriculture So Important?",
           "below relevance gate"
         ],
         [
-          "Threshold 7: Agriculture",
+          "Sodium potassium pump",
           "below relevance gate"
         ],
         [
-          "Food truck manager and chef: How I got my job and where I'm going",
+          "Correction to sodium-potassium pump video -dubbed(KY)",
           "below relevance gate"
         ],
         [
-          "Terms & labels in geometry",
+          "Organism growth and the environment",
           "below relevance gate"
         ],
         [
-          "Director of photography: How I got my job and where I'm going",
+          "Photosynthesis in ecosystems",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 135,
+        "below relevance gate": 141,
         "web file not on reference image": 4,
-        "kolibri node not available on reference image": 10
+        "judged off-topic (independent reviewer)": 2,
+        "kolibri node not available on reference image": 11
       }
     },
     "reading_pool": {
@@ -690,34 +692,34 @@
           "below relevance gate"
         ],
         [
+          "Food and Nutrients Practice",
+          "below relevance gate"
+        ],
+        [
+          "Food and Nutrients (Flexbook)",
+          "below relevance gate"
+        ],
+        [
           "Physical and chemical changes",
           "below relevance gate"
         ],
         [
-          "Introduction to acid–base reactions",
+          "Tra's Red Bean Plant",
           "below relevance gate"
         ],
         [
-          "Kno 100228 Food Processing Equipment Design",
+          "Sodium-Potassium Pump (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Kno 100229 Food Processing Parcona Peru",
-          "below relevance gate"
-        ],
-        [
-          "Kno 100227 Food Processing  Building Design",
-          "below relevance gate"
-        ],
-        [
-          "Water Supplies For Food Processing Kno 100428",
+          "Sodium-Potassium Pump Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 128,
-        "kolibri node not available on reference image": 9,
-        "excluded: answer/exam material": 54
+        "below relevance gate": 152,
+        "kolibri node not available on reference image": 4,
+        "excluded: answer/exam material": 17
       }
     }
   },
@@ -768,12 +770,16 @@
         "drug substance use",
         "consumer protection",
         "knh kenyatta national hospital",
-        "quality control chemistry"
+        "quality control chemistry",
+        "chemistry medicine",
+        "drug dosage safety",
+        "fermentation sugars"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -781,6 +787,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -788,6 +795,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -795,6 +803,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -802,45 +811,71 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
         "detail_weight": 0
       },
       "predict.reading": {
-        "picked": null,
-        "score": null,
-        "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 74.61,
+        "core_hits": [
+          "chemistry"
+        ],
+        "detail_hits": [
+          "chemical physical"
+        ],
+        "detail_weight": 0.38
       },
       "observe.reading": {
-        "picked": null,
-        "score": null,
-        "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 74.61,
+        "core_hits": [
+          "chemistry"
+        ],
+        "detail_hits": [
+          "chemical physical"
+        ],
+        "detail_weight": 0.38
       },
       "explain.reading": {
-        "picked": null,
-        "score": null,
-        "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 74.61,
+        "core_hits": [
+          "chemistry"
+        ],
+        "detail_hits": [
+          "chemical physical"
+        ],
+        "detail_weight": 0.38
       },
       "dqb.reading": {
-        "picked": null,
-        "score": null,
-        "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 74.61,
+        "core_hits": [
+          "chemistry"
+        ],
+        "detail_hits": [
+          "chemical physical"
+        ],
+        "detail_weight": 0.38
       },
       "model.reading": {
-        "picked": null,
-        "score": null,
-        "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 74.61,
+        "core_hits": [
+          "chemistry"
+        ],
+        "detail_hits": [
+          "chemical physical"
+        ],
+        "detail_weight": 0.38
       }
     },
     "video_pool": {
@@ -849,6 +884,10 @@
       "rejected_sample": [
         [
           "Using units to solve problems: Drug dosage",
+          "below relevance gate"
+        ],
+        [
+          "Physical and chemical changes",
           "below relevance gate"
         ],
         [
@@ -874,26 +913,18 @@
         [
           "Changes in POV and dramatic irony | Reading",
           "below relevance gate"
-        ],
-        [
-          "Character change | Reading",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138,
-        "kolibri node not available on reference image": 12,
-        "web file not on reference image": 4
+        "below relevance gate": 141,
+        "kolibri node not available on reference image": 10,
+        "web file not on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 0,
+      "passed": 1,
       "runners_up": [],
       "rejected_sample": [
-        [
-          "Physical and chemical changes",
-          "below relevance gate"
-        ],
         [
           "Reading Maps, Legends/Scale Practice",
           "below relevance gate"
@@ -921,10 +952,14 @@
         [
           "Pcr Tool 10 Quality Control",
           "below relevance gate"
+        ],
+        [
+          "Discovering Medicine..:Handout Chemical Structures Answers",
+          "excluded: answer/exam material"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 146,
+        "below relevance gate": 147,
         "kolibri node not available on reference image": 16,
         "excluded: answer/exam material": 4
       }
@@ -962,7 +997,8 @@
         "evidence",
         "reasoning",
         "expert",
-        "other"
+        "physical",
+        "chemical"
       ],
       "phrases": [
         "chemistry industries",
@@ -971,12 +1007,19 @@
         "entertainment chemistry dyes pyrotechnics nairobi",
         "environmental chemistry lake victoria",
         "matter change",
-        "claim evidence reasoning"
+        "claim evidence reasoning",
+        "physical chemical changes",
+        "nuclear fission energy",
+        "geothermal energy power",
+        "chemistry sports nutrition",
+        "pyrotechnics flame colors",
+        "water pollution chemistry"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Intro to Chemistry",
+        "fit": "partial",
         "score": 54.82,
         "core_hits": [
           "chemistry"
@@ -987,29 +1030,32 @@
         "detail_weight": 0.5
       },
       "observe.video": {
-        "picked": "2015 AP Chemistry free response 7",
-        "score": 52.53,
+        "picked": "Introduction to chemistry",
+        "fit": "partial",
+        "score": 41.83,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "energy"
+          "other"
         ],
         "detail_weight": 0.3
       },
       "explain.video": {
-        "picked": "2015 AP Chemistry free response 2c",
-        "score": 51.94,
+        "picked": "Intro to Chemistry",
+        "fit": "partial",
+        "score": 54.82,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "energy"
+          "matter"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.5
       },
       "dqb.video": {
         "picked": "Introduction to chemistry",
+        "fit": "partial",
         "score": 41.83,
         "core_hits": [
           "chemistry"
@@ -1021,6 +1067,7 @@
       },
       "model.video": {
         "picked": "Intro to Chemistry",
+        "fit": "partial",
         "score": 54.82,
         "core_hits": [
           "chemistry"
@@ -1032,6 +1079,7 @@
       },
       "predict.reading": {
         "picked": "Energy in Chemistry (Flexbook)",
+        "fit": "fits",
         "score": 61.25,
         "core_hits": [
           "chemistry"
@@ -1042,7 +1090,8 @@
         "detail_weight": 0.3
       },
       "observe.reading": {
-        "picked": "Energy in Chemistry Practice",
+        "picked": "Energy in Chemistry (Flexbook)",
+        "fit": "fits",
         "score": 61.25,
         "core_hits": [
           "chemistry"
@@ -1053,18 +1102,20 @@
         "detail_weight": 0.3
       },
       "explain.reading": {
-        "picked": "Energy in Chemistry (Flexbook)",
-        "score": 61.25,
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 78.63,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "energy"
+          "chemical physical"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.58
       },
       "dqb.reading": {
-        "picked": "Energy in Chemistry (Flexbook)",
+        "picked": "Energy in Chemistry Practice",
+        "fit": "partial",
         "score": 61.25,
         "core_hits": [
           "chemistry"
@@ -1076,6 +1127,7 @@
       },
       "model.reading": {
         "picked": "Energy in Chemistry (Flexbook)",
+        "fit": "fits",
         "score": 61.25,
         "core_hits": [
           "chemistry"
@@ -1087,10 +1139,8 @@
       }
     },
     "video_pool": {
-      "passed": 4,
+      "passed": 2,
       "runners_up": [
-        "2015 AP Chemistry free response 7",
-        "2015 AP Chemistry free response 2c",
         "Introduction to chemistry"
       ],
       "rejected_sample": [
@@ -1099,15 +1149,15 @@
           "web file not on reference image"
         ],
         [
-          "Evaluating a source’s reasoning and evidence",
+          "Energy By Fission： The Principle Of Nuclear Reactors",
+          "web file not on reference image"
+        ],
+        [
+          "Mastering color: natural dyes of the Indian Subcontinent",
           "below relevance gate"
         ],
         [
-          "Environmental change and adaptation in Galápagos finches",
-          "below relevance gate"
-        ],
-        [
-          "02 Environmental Matter Exchange",
+          "Physical and chemical changes",
           "below relevance gate"
         ],
         [
@@ -1115,68 +1165,70 @@
           "kolibri node not available on reference image"
         ],
         [
-          "Mutations",
+          "Evaluating a source’s reasoning and evidence",
           "below relevance gate"
         ],
         [
-          "Long run supply when industry costs aren't constant",
+          "Matter and energy in food webs",
           "below relevance gate"
         ],
         [
-          "Flow of energy and matter through ecosystems",
+          "Sony",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "web file not on reference image": 2,
-        "below relevance gate": 140,
-        "kolibri node not available on reference image": 11
+        "web file not on reference image": 6,
+        "below relevance gate": 133,
+        "kolibri node not available on reference image": 23,
+        "judged off-topic (independent reviewer)": 2
       }
     },
     "reading_pool": {
       "passed": 3,
       "runners_up": [
-        "Energy in Chemistry Practice",
-        "Intramolecular force and potential energy"
+        "Physical and chemical changes",
+        "Energy in Chemistry Practice"
       ],
       "rejected_sample": [
+        [
+          "Concentration",
+          "below relevance gate"
+        ],
+        [
+          "Geothermal Power (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Geothermal Power Practice",
+          "below relevance gate"
+        ],
         [
           "Sport",
           "below relevance gate"
         ],
         [
-          "Conservation of Mass and Energy in Nuclear Reactions (Flexbook)",
+          "Nuclear Fission",
           "below relevance gate"
         ],
         [
-          "Conservation of Mass and Energy in Nuclear Reactions Practice",
+          "Nuclear Fission (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Energy Forms And Changes",
+          "Nuclear Fission Practice",
           "below relevance gate"
         ],
         [
-          "Changes of State and Free Energy Practice",
-          "below relevance gate"
-        ],
-        [
-          "Apply: adaptation and environmental change",
-          "below relevance gate"
-        ],
-        [
-          "Calculating Free Energy Change Practice",
-          "below relevance gate"
-        ],
-        [
-          "Calculating Free Energy Change (ΔG°) (Flexbook)",
+          "Nuclear Fission Processes (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 173,
-        "kolibri node not available on reference image": 5,
-        "excluded: answer/exam material": 1
+        "below relevance gate": 175,
+        "kolibri node not available on reference image": 3,
+        "excluded: answer/exam material": 3,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -1226,12 +1278,17 @@
         "environmental chemist lake victoria",
         "self efficacy chemistry",
         "structured academic controversy",
-        "concept map revision"
+        "concept map revision",
+        "careers chemistry",
+        "chemists food industry",
+        "pharmaceutical chemist career",
+        "women stem careers"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1239,6 +1296,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1246,6 +1304,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1253,6 +1312,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1260,6 +1320,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1267,6 +1328,7 @@
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1274,6 +1336,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1281,6 +1344,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1288,6 +1352,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1295,6 +1360,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1310,39 +1376,39 @@
           "web file not on reference image"
         ],
         [
+          "Applications Using Radicals: A Sample Application",
+          "below relevance gate"
+        ],
+        [
+          "Applications Using Square Roots: A Sample Application",
+          "below relevance gate"
+        ],
+        [
+          "Solve Applications Using Rational Functions: A Sample Application",
+          "below relevance gate"
+        ],
+        [
+          "Solve Applications Using Rational Equations: A Sample Application",
+          "below relevance gate"
+        ],
+        [
           "Chemistry Form 1 Exam Revision ｜ Form 1 Work ｜ Questions & Answers, Chemistry Revision ｜ Chemistry",
           "excluded: answer/exam material"
         ],
         [
+          "Applications Using the Pythagorean Theorem: An Explanation of the Concept",
+          "below relevance gate"
+        ],
+        [
           "Volunteer coordinator: Boundaries and self-care in a direct service career",
-          "below relevance gate"
-        ],
-        [
-          "2015 AP Chemistry free response 5",
-          "below relevance gate"
-        ],
-        [
-          "From Foraging to Food Shopping",
-          "below relevance gate"
-        ],
-        [
-          "Sony",
-          "below relevance gate"
-        ],
-        [
-          "Environmental specialist: My budget and planning for the future",
-          "below relevance gate"
-        ],
-        [
-          "Bahoz",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "web file not on reference image": 14,
-        "excluded: answer/exam material": 6,
-        "below relevance gate": 120,
-        "kolibri node not available on reference image": 10
+        "web file not on reference image": 4,
+        "below relevance gate": 126,
+        "excluded: answer/exam material": 5,
+        "kolibri node not available on reference image": 19
       }
     },
     "reading_pool": {
@@ -1351,6 +1417,10 @@
       "rejected_sample": [
         [
           "Sport",
+          "below relevance gate"
+        ],
+        [
+          "Contextual and analytical applications of integration (calculator-active)",
           "below relevance gate"
         ],
         [
@@ -1366,26 +1436,22 @@
           "below relevance gate"
         ],
         [
+          "Stems Practice",
+          "below relevance gate"
+        ],
+        [
           "Physical Science Careers (Flexbook)",
           "below relevance gate"
         ],
         [
           "Ponds and Lakes (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Ponds and Lakes Practice",
-          "below relevance gate"
-        ],
-        [
-          "Gender",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140,
-        "excluded: answer/exam material": 10,
-        "kolibri node not available on reference image": 10
+        "below relevance gate": 155,
+        "excluded: answer/exam material": 6,
+        "kolibri node not available on reference image": 9
       }
     }
   },
@@ -1422,7 +1488,7 @@
         "competency",
         "pharmacy",
         "health",
-        "meaning"
+        "dose"
       ],
       "phrases": [
         "drug definition",
@@ -1438,120 +1504,100 @@
         "irreversible change",
         "citizenship competency",
         "drug substance use",
-        "health chemistry"
+        "health chemistry",
+        "prescription over counter medicine"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Using units to solve problems: Drug dosage",
-        "score": 62.38,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "dosage",
-          "drug"
-        ],
-        "detail_weight": 1.01
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "Using units to solve problems: Drug dosage",
-        "score": 62.38,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "dosage",
-          "drug"
-        ],
-        "detail_weight": 1.01
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "Using units to solve problems: Drug dosage",
-        "score": 62.38,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "dosage",
-          "drug"
-        ],
-        "detail_weight": 1.01
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "Using units to solve problems: Drug dosage",
-        "score": 62.38,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "dosage",
-          "drug"
-        ],
-        "detail_weight": 1.01
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "Using units to solve problems: Drug dosage",
-        "score": 62.38,
+        "picked": null,
+        "fit": null,
+        "score": null,
         "core_hits": [],
-        "detail_hits": [
-          "dosage",
-          "drug"
-        ],
-        "detail_weight": 1.01
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "predict.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 30.92,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "substance"
-        ],
-        "detail_weight": 0.56
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 30.92,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "substance"
-        ],
-        "detail_weight": 0.56
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 30.92,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "substance"
-        ],
-        "detail_weight": 0.56
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 30.92,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "substance"
-        ],
-        "detail_weight": 0.56
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 30.92,
-        "core_hits": [
-          "chemistry"
-        ],
-        "detail_hits": [
-          "substance"
-        ],
-        "detail_weight": 0.56
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       }
     },
     "video_pool": {
-      "passed": 1,
+      "passed": 0,
       "runners_up": [],
       "rejected_sample": [
+        [
+          "Using units to solve problems: Drug dosage",
+          "below relevance gate"
+        ],
         [
           "Pharmacology Medical Abbreviations #Medicine #Pharmacy #Medical",
           "web file not on reference image"
@@ -1579,20 +1625,16 @@
         [
           "What are affixes? | Reading",
           "below relevance gate"
-        ],
-        [
-          "Using context clues to figure out new words | Reading",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
+        "below relevance gate": 138,
         "web file not on reference image": 2,
-        "below relevance gate": 137,
         "kolibri node not available on reference image": 10
       }
     },
     "reading_pool": {
-      "passed": 1,
+      "passed": 0,
       "runners_up": [],
       "rejected_sample": [
         [
@@ -1631,7 +1673,8 @@
       "rejected_by_reason": {
         "kolibri node not available on reference image": 18,
         "below relevance gate": 151,
-        "excluded: answer/exam material": 2
+        "excluded: answer/exam material": 2,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -1668,7 +1711,7 @@
         "chapati",
         "health",
         "promotion",
-        "effects"
+        "chemicals"
       ],
       "phrases": [
         "tobacco chemistry",
@@ -1679,12 +1722,19 @@
         "claim evidence reasoning",
         "lung tissue",
         "natural safe",
-        "health promotion"
+        "health promotion",
+        "chemicals tobacco smoke",
+        "effects smoking lungs",
+        "carbon monoxide hemoglobin",
+        "nicotine addiction brain",
+        "physical chemical changes",
+        "drug abuse health effects"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Chemical reactions introduction",
+        "fit": "partial",
         "score": 49.2,
         "core_hits": [],
         "detail_hits": [
@@ -1695,6 +1745,7 @@
       },
       "observe.video": {
         "picked": "Chemical reactions introduction",
+        "fit": "partial",
         "score": 49.2,
         "core_hits": [],
         "detail_hits": [
@@ -1705,6 +1756,7 @@
       },
       "explain.video": {
         "picked": "Chemical reactions introduction",
+        "fit": "partial",
         "score": 49.2,
         "core_hits": [],
         "detail_hits": [
@@ -1715,6 +1767,7 @@
       },
       "dqb.video": {
         "picked": "Chemical reactions introduction",
+        "fit": "partial",
         "score": 49.2,
         "core_hits": [],
         "detail_hits": [
@@ -1725,6 +1778,7 @@
       },
       "model.video": {
         "picked": "Chemical reactions introduction",
+        "fit": "partial",
         "score": 49.2,
         "core_hits": [],
         "detail_hits": [
@@ -1734,59 +1788,64 @@
         "detail_weight": 1.37
       },
       "predict.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 28.86,
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 74.61,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "substance"
+          "chemical physical"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.38
       },
       "observe.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 28.86,
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 74.61,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "substance"
+          "chemical physical"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.38
       },
       "explain.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 28.86,
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 74.61,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "substance"
+          "chemical physical"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.38
       },
       "dqb.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 28.86,
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 74.61,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "substance"
+          "chemical physical"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.38
       },
       "model.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 28.86,
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 74.61,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "substance"
+          "chemical physical"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.38
       }
     },
     "video_pool": {
@@ -1795,6 +1854,14 @@
       "rejected_sample": [
         [
           "Evaluating a source’s reasoning and evidence",
+          "below relevance gate"
+        ],
+        [
+          "Physical and chemical changes",
+          "below relevance gate"
+        ],
+        [
+          "Split-brain syndrome",
           "below relevance gate"
         ],
         [
@@ -1814,21 +1881,13 @@
           "below relevance gate"
         ],
         [
-          "Environmental change and adaptation in Galápagos finches",
-          "below relevance gate"
-        ],
-        [
-          "Conditional probability tree diagram example",
-          "below relevance gate"
-        ],
-        [
-          "Calculating change in spending or taxes to close output gaps",
+          "How to grow my brain",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 141,
-        "kolibri node not available on reference image": 9,
+        "below relevance gate": 139,
+        "kolibri node not available on reference image": 11,
         "web file not on reference image": 2
       }
     },
@@ -1838,10 +1897,6 @@
       "rejected_sample": [
         [
           "Effect of changes in policies and economic conditions on the foreign exchange market",
-          "below relevance gate"
-        ],
-        [
-          "Physical and chemical changes",
           "below relevance gate"
         ],
         [
@@ -1861,17 +1916,22 @@
           "excluded: answer/exam material"
         ],
         [
-          "Chemistry of Carbon",
+          "Grade 5   Physical Health",
           "below relevance gate"
         ],
         [
-          "topical-test-form-2-chemistry-carbon-and-its-compounds-answers",
-          "excluded: answer/exam material"
+          "Grade 6   Physical Health Education (Phe)",
+          "below relevance gate"
+        ],
+        [
+          "Chemistry of Carbon",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 142,
+        "below relevance gate": 140,
         "excluded: answer/exam material": 4,
+        "judged off-topic (independent reviewer)": 1,
         "kolibri node not available on reference image": 27
       }
     }
@@ -1932,6 +1992,7 @@
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1939,6 +2000,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1946,6 +2008,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1953,6 +2016,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1960,6 +2024,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1967,6 +2032,7 @@
       },
       "predict.reading": {
         "picked": "Chemistry and the Environment (Flexbook)",
+        "fit": "partial",
         "score": 66.52,
         "core_hits": [
           "chemistry"
@@ -1977,7 +2043,8 @@
         "detail_weight": 0.3
       },
       "observe.reading": {
-        "picked": "Chemistry and the Environment Practice",
+        "picked": "Chemistry and the Environment (Flexbook)",
+        "fit": "partial",
         "score": 66.52,
         "core_hits": [
           "chemistry"
@@ -1989,6 +2056,7 @@
       },
       "explain.reading": {
         "picked": "Chemistry and the Environment (Flexbook)",
+        "fit": "partial",
         "score": 66.52,
         "core_hits": [
           "chemistry"
@@ -2000,6 +2068,7 @@
       },
       "dqb.reading": {
         "picked": "Chemistry and the Environment (Flexbook)",
+        "fit": "partial",
         "score": 66.52,
         "core_hits": [
           "chemistry"
@@ -2011,6 +2080,7 @@
       },
       "model.reading": {
         "picked": "Chemistry and the Environment (Flexbook)",
+        "fit": "partial",
         "score": 66.52,
         "core_hits": [
           "chemistry"
@@ -2025,6 +2095,14 @@
       "passed": 0,
       "runners_up": [],
       "rejected_sample": [
+        [
+          "Matter and energy in food webs",
+          "below relevance gate"
+        ],
+        [
+          "Quotient rule from product & chain rules",
+          "below relevance gate"
+        ],
         [
           "Using units to solve problems: Drug dosage",
           "below relevance gate"
@@ -2042,33 +2120,23 @@
           "below relevance gate"
         ],
         [
-          "Matter and energy in food webs",
+          "Differentiating products",
           "below relevance gate"
         ],
         [
           "English: Introducing Green Chemistry: The Science of Solutions",
           "kolibri node not available on reference image"
-        ],
-        [
-          "How to stay safe online shopping",
-          "below relevance gate"
-        ],
-        [
-          "Does it really matter what browser I chose?",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
         "below relevance gate": 141,
-        "kolibri node not available on reference image": 14,
+        "kolibri node not available on reference image": 11,
         "web file not on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 2,
-      "runners_up": [
-        "Chemistry and the Environment Practice"
-      ],
+      "passed": 1,
+      "runners_up": [],
       "rejected_sample": [
         [
           "The rights and responsibilities of citizenship: level 1",
@@ -2083,30 +2151,31 @@
           "kolibri node not available on reference image"
         ],
         [
-          "Reactants, Products and Leftovers",
+          "Apply: matter and energy in food webs",
           "below relevance gate"
         ],
         [
-          "Physical and chemical changes",
+          "Understand: matter and energy in food webs",
           "below relevance gate"
         ],
         [
-          "Apply: natural hazards",
+          "Differentiating using multiple rules: strategy",
           "below relevance gate"
         ],
         [
-          "Chemical Substances - Advanced (Flexbook)",
+          "Use the logarithm change of base rule",
           "below relevance gate"
         ],
         [
-          "Safety in the Life Sciences (Flexbook)",
+          "Additive and Multiplicative Rules for Probability (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 155,
-        "kolibri node not available on reference image": 18,
-        "excluded: answer/exam material": 2
+        "below relevance gate": 158,
+        "kolibri node not available on reference image": 10,
+        "excluded: answer/exam material": 3,
+        "judged off-topic (independent reviewer)": 1
       }
     }
   },
@@ -2156,126 +2225,144 @@
         "substance misuse",
         "chemical change",
         "irreversible reaction",
-        "metacognitive reflection"
+        "metacognitive reflection",
+        "branches chemistry",
+        "physical chemical changes",
+        "irreversible chemical reactions",
+        "drug abuse body"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Intro to Chemistry",
-        "score": 54.82,
-        "core_hits": [
-          "chemistry"
-        ],
+        "picked": "Chemical reactions introduction",
+        "fit": "partial",
+        "score": 93.06,
+        "core_hits": [],
         "detail_hits": [
-          "matter"
+          "chemical",
+          "irreversible reaction",
+          "chemical irreversible reaction"
         ],
-        "detail_weight": 0.5
+        "detail_weight": 1.09
       },
       "observe.video": {
-        "picked": "Intro to Chemistry",
-        "score": 54.82,
-        "core_hits": [
-          "chemistry"
-        ],
+        "picked": "Chemical reactions introduction",
+        "fit": "partial",
+        "score": 93.06,
+        "core_hits": [],
         "detail_hits": [
-          "matter"
+          "chemical",
+          "irreversible reaction",
+          "chemical irreversible reaction"
         ],
-        "detail_weight": 0.5
+        "detail_weight": 1.09
       },
       "explain.video": {
-        "picked": "Intro to Chemistry",
-        "score": 54.82,
-        "core_hits": [
-          "chemistry"
-        ],
+        "picked": "Chemical reactions introduction",
+        "fit": "partial",
+        "score": 93.06,
+        "core_hits": [],
         "detail_hits": [
-          "matter"
+          "chemical",
+          "irreversible reaction",
+          "chemical irreversible reaction"
         ],
-        "detail_weight": 0.5
+        "detail_weight": 1.09
       },
       "dqb.video": {
-        "picked": "Intro to Chemistry",
-        "score": 54.82,
-        "core_hits": [
-          "chemistry"
-        ],
+        "picked": "Chemical reactions introduction",
+        "fit": "partial",
+        "score": 93.06,
+        "core_hits": [],
         "detail_hits": [
-          "matter"
+          "chemical",
+          "irreversible reaction",
+          "chemical irreversible reaction"
         ],
-        "detail_weight": 0.5
+        "detail_weight": 1.09
       },
       "model.video": {
-        "picked": "Intro to Chemistry",
-        "score": 54.82,
-        "core_hits": [
-          "chemistry"
-        ],
+        "picked": "Chemical reactions introduction",
+        "fit": "partial",
+        "score": 93.06,
+        "core_hits": [],
         "detail_hits": [
-          "matter"
+          "chemical",
+          "irreversible reaction",
+          "chemical irreversible reaction"
         ],
-        "detail_weight": 0.5
+        "detail_weight": 1.09
       },
       "predict.reading": {
         "picked": "Physical and chemical changes",
-        "score": 40.78,
+        "fit": "partial",
+        "score": 80.44,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "chemical"
+          "chemical",
+          "chemical physical"
         ],
-        "detail_weight": 0.31
+        "detail_weight": 0.67
       },
       "observe.reading": {
-        "picked": "Elemental composition of pure substances",
-        "score": 28.86,
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 80.44,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "substance"
+          "chemical",
+          "chemical physical"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 0.67
       },
       "explain.reading": {
-        "picked": "Types of chemical bonds",
-        "score": 25.53,
+        "picked": "Physical and chemical changes",
+        "fit": "partial",
+        "score": 80.44,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "chemical"
+          "chemical",
+          "chemical physical"
         ],
-        "detail_weight": 0.31
+        "detail_weight": 0.67
       },
       "dqb.reading": {
         "picked": "Physical and chemical changes",
-        "score": 40.78,
+        "fit": "partial",
+        "score": 80.44,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "chemical"
+          "chemical",
+          "chemical physical"
         ],
-        "detail_weight": 0.31
+        "detail_weight": 0.67
       },
       "model.reading": {
         "picked": "Physical and chemical changes",
-        "score": 40.78,
+        "fit": "partial",
+        "score": 80.44,
         "core_hits": [
           "chemistry"
         ],
         "detail_hits": [
-          "chemical"
+          "chemical",
+          "chemical physical"
         ],
-        "detail_weight": 0.31
+        "detail_weight": 0.67
       }
     },
     "video_pool": {
-      "passed": 3,
+      "passed": 2,
       "runners_up": [
-        "Oxidation and reduction in cellular respiration",
-        "Oxidation and reduction in cellular respiration -dubbed(KY)"
+        "Intro to Chemistry"
       ],
       "rejected_sample": [
         [
@@ -2284,10 +2371,6 @@
         ],
         [
           "More rigorous Gibbs free energy / spontaneity relationship -dubbed(KY)",
-          "below relevance gate"
-        ],
-        [
-          "Chemical reactions introduction",
           "below relevance gate"
         ],
         [
@@ -2309,20 +2392,22 @@
         [
           "Determining reflections",
           "below relevance gate"
+        ],
+        [
+          "Physical and chemical changes",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 136,
-        "kolibri node not available on reference image": 14,
-        "web file not on reference image": 5
+        "below relevance gate": 132,
+        "kolibri node not available on reference image": 17,
+        "web file not on reference image": 5,
+        "judged off-topic (independent reviewer)": 2
       }
     },
     "reading_pool": {
-      "passed": 3,
-      "runners_up": [
-        "Elemental composition of pure substances",
-        "Types of chemical bonds"
-      ],
+      "passed": 1,
+      "runners_up": [],
       "rejected_sample": [
         [
           "How Big Is a Mole? D..:Poster Project Evaluation Criteria",
@@ -2358,9 +2443,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 15,
-        "below relevance gate": 141,
-        "excluded: answer/exam material": 5
+        "kolibri node not available on reference image": 19,
+        "below relevance gate": 134,
+        "excluded: answer/exam material": 6,
+        "judged off-topic (independent reviewer)": 2
       }
     }
   }

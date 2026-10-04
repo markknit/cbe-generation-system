@@ -1,0 +1,146 @@
+{
+  "module": "essmath_2_8",
+  "conflicts_in": [
+    {
+      "lessons": "7, 8 vs. phenomenon/1",
+      "severity": "major",
+      "fact": "Direction of the UGX-per-KES conversion rule and which rate applies when Amina hands over KES. The lessons contradict standard bureau practice and also disagree internally on rule wording.",
+      "versions": "Lesson 7 Learned says 'use the selling rate' to convert KES to foreign currency, then says for UGX-per-KES rates multiply by the buying rate. Lesson 7 Explained says the buying rate is less favourable to Amina. Lesson 8 says 28.50 instead of 27.80 would be an error, and that the buying rate applies when Amina hands over KES. The sequence says 'selling rate to get foreign currency' but applies the buying rate, so the stated rule and the applied rate conflict."
+    },
+    {
+      "lessons": "4, 7",
+      "severity": "major",
+      "fact": "Who handles the Uganda transfer and how it is charged. Lesson 4 has the transfer charged only a 3% commission with no exchange rate step, while Lesson 7 places the transfer at a Kondele agent applying both 3% commission and a forex spread, and Lesson 4 locates the agent in Kericho.",
+      "versions": "Lesson 4: a Kericho M-PESA agent charges 3% on KSh 1,140, and the aunt receives KSh 1,105.80 (in KSh). Lesson 4 predict scene: Amina goes to a kiosk near Kondele, and the aunt receives KSh 1,106. Lesson 7: the Kondele mobile-money agent deducts 3% and also converts at the buying rate, and the aunt gets UGX 30,741."
+    },
+    {
+      "lessons": "5, 6, 8",
+      "severity": "major",
+      "fact": "Amina's mandazi weekly costs and sales, and the profit used to explain her KSh 4,500 savings.",
+      "versions": "Lesson 5: Amina earns weekly revenue KSh 2,250 on KSh 1,800 costs (profit KSh 450). Lesson 6 Explained: her KSh 4,500 came from two weeks of revenue of KSh 2,250, yet profit is only KSh 450 a week, so two weeks of profit is KSh 900, not KSh 4,500. Lesson 6 Model Building treats revenue (KSh 4,500 = 2 x 2,250) as her savings, ignoring the KSh 1,800 weekly cost."
+    }
+  ],
+  "applied": [
+    {
+      "lesson": 7,
+      "path": "framework[1].learnerExperience",
+      "old": "To GET foreign currency, use the SELLING rate (for KES-per-unit rates such as USD, divide KES by the selling rate;",
+      "new": "To GET foreign currency, use the rate that matches how it is quoted (for KES-per-unit rates such as USD, use the SELLING rate and divide KES by it;",
+      "conflict": "1"
+    },
+    {
+      "lesson": 7,
+      "path": "summaryTablePrompt.learned",
+      "old": "use the selling rate: divide for KES-per-unit rates (USD), for UGX-per-KES rates",
+      "new": "use the rate that matches the quote: for KES-per-unit rates (USD) use the selling rate and divide; for UGX-per-KES rates",
+      "conflict": "1"
+    },
+    {
+      "lesson": 4,
+      "path": "slo.purpose",
+      "old": "M-PESA agents in Kericho",
+      "new": "M-PESA agents in Kondele",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "overview",
+      "old": "a Kericho M-PESA agent who earns",
+      "new": "a Kondele M-PESA agent who earns",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "framework[0].learnerExperience",
+      "old": "Amina's aunt receives KSh 1,106.",
+      "new": "After the agent's charge, KSh 1,106 is left to convert and send on to her aunt.",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "framework[1].learnerExperience",
+      "old": "called 'Kericho Kiosk.'",
+      "new": "called 'Kondele Kiosk.'",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "framework[1].teacherMoves",
+      "old": "kiosk in Kericho",
+      "new": "kiosk in Kondele",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "framework[2].learnerExperience",
+      "old": "How much does her aunt in Uganda receive?",
+      "new": "How much remains to be converted into Uganda Shillings for her aunt after the commission?",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "framework[2].teacherMoves",
+      "old": "her aunt receives only KSh 1,105.80 — not KSh 1,140",
+      "new": "only KSh 1,105.80 is left to convert into Uganda Shillings — not KSh 1,140",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "framework[3].learnerExperience",
+      "old": "will only deliver KSh 1,105.80 to her aunt in Uganda",
+      "new": "will leave only KSh 1,105.80 to convert into Uganda Shillings for her aunt",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "framework[4].learnerExperience",
+      "old": "and her aunt receives KSh 1,105.80",
+      "new": "and KSh 1,105.80 remains to be converted into UGX for her aunt",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "summaryTablePrompt.observed",
+      "old": "simulated Kericho mobile-money kiosk",
+      "new": "simulated Kondele mobile-money kiosk",
+      "conflict": "2"
+    },
+    {
+      "lesson": 4,
+      "path": "summaryTablePrompt.explained",
+      "old": "Amina's aunt receives only KSh 1,105.80",
+      "new": "only KSh 1,105.80 is left to convert into Uganda Shillings",
+      "conflict": "2"
+    },
+    {
+      "lesson": 6,
+      "path": "slo.purposeInStoryline",
+      "old": "Amina earned KSh 4,500 from selling mandazi.",
+      "new": "Amina took KSh 4,500 in revenue from two weeks of selling mandazi.",
+      "conflict": "3"
+    },
+    {
+      "lesson": 6,
+      "path": "framework[4].learnerExperience",
+      "old": "'weekly revenue × 2 weeks → savings → KSh 4,500'",
+      "new": "'weekly revenue × 2 weeks → takings → KSh 4,500 (profit KSh 900)'",
+      "conflict": "3"
+    },
+    {
+      "lesson": 6,
+      "path": "summaryTablePrompt.explained",
+      "old": "came from two weeks of mandazi sales",
+      "new": "is the revenue from two weeks of mandazi sales",
+      "conflict": "3"
+    },
+    {
+      "lesson": 6,
+      "path": "summaryTablePrompt.explained",
+      "old": "her profit is KSh 450 a week",
+      "new": "her profit is KSh 450 a week (KSh 900 over the two weeks)",
+      "conflict": "3"
+    }
+  ],
+  "rejected": [],
+  "unresolved": []
+}

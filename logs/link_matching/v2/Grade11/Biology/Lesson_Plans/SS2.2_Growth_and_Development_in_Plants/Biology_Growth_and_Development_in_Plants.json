@@ -19,6 +19,13 @@
         "shoot",
         "time",
         "lapse",
+        "stages",
+        "monocot",
+        "dicot",
+        "seeds",
+        "epigeal",
+        "hypogeal",
+        "structure",
         "farmer's",
         "behave",
         "differently",
@@ -26,67 +33,82 @@
         "rain"
       ],
       "phrases": [
-        "time lapse"
+        "time lapse",
+        "seed germination stages",
+        "monocot dicot seeds",
+        "epigeal hypogeal germination",
+        "plant growth development",
+        "seed structure germination"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Exponential growth & decay word problems",
-        "score": 49.4,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "after"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "Exponential growth & decay word problems",
-        "score": 49.4,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "after"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "Exponential growth & decay word problems",
-        "score": 49.4,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "after"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "Exponential growth & decay word problems",
-        "score": 49.4,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "after"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "Exponential growth & decay word problems",
-        "score": 49.4,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "after"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "predict.reading": {
+        "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 75.38,
+        "core_hits": [],
+        "detail_hits": [
+          "germination",
+          "seed",
+          "germination seed"
+        ],
+        "detail_weight": 2.02
+      },
+      "observe.reading": {
+        "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 75.38,
+        "core_hits": [],
+        "detail_hits": [
+          "germination",
+          "seed",
+          "germination seed"
+        ],
+        "detail_weight": 2.02
+      },
+      "explain.reading": {
         "picked": "Tra's Red Bean Plant",
+        "fit": "partial",
         "score": 74.86,
         "core_hits": [],
         "detail_hits": [
@@ -95,8 +117,9 @@
         ],
         "detail_weight": 1.18
       },
-      "observe.reading": {
+      "dqb.reading": {
         "picked": "Root Growth - Advanced (Flexbook)",
+        "fit": "partial",
         "score": 71.91,
         "core_hits": [
           "growth"
@@ -106,18 +129,9 @@
         ],
         "detail_weight": 0.5
       },
-      "explain.reading": {
-        "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
-        "score": 68.9,
-        "core_hits": [],
-        "detail_hits": [
-          "germination",
-          "seed"
-        ],
-        "detail_weight": 1.56
-      },
-      "dqb.reading": {
+      "model.reading": {
         "picked": "An A-maize-ing Story",
+        "fit": "partial",
         "score": 57.05,
         "core_hits": [],
         "detail_hits": [
@@ -125,20 +139,10 @@
           "seed"
         ],
         "detail_weight": 1.27
-      },
-      "model.reading": {
-        "picked": "Tra's Red Bean Plant",
-        "score": 74.86,
-        "core_hits": [],
-        "detail_hits": [
-          "bean",
-          "seed"
-        ],
-        "detail_weight": 1.18
       }
     },
     "video_pool": {
-      "passed": 1,
+      "passed": 0,
       "runners_up": [],
       "rejected_sample": [
         [
@@ -146,7 +150,23 @@
           "below relevance gate"
         ],
         [
+          "Comparing animal and plant cells",
+          "below relevance gate"
+        ],
+        [
           "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
+          "below relevance gate"
+        ],
+        [
+          "The Four Main Plant Structures - Example 1",
+          "below relevance gate"
+        ],
+        [
+          "10 Plant Structure",
+          "below relevance gate"
+        ],
+        [
+          "Plant Organ Structure - Overview",
           "below relevance gate"
         ],
         [
@@ -156,34 +176,19 @@
         [
           "Repeated roots of the characteristic equation -dubbed(KY)",
           "below relevance gate"
-        ],
-        [
-          "Intro to square roots",
-          "below relevance gate"
-        ],
-        [
-          "Understanding square roots",
-          "below relevance gate"
-        ],
-        [
-          "Intro to cube roots",
-          "below relevance gate"
-        ],
-        [
-          "Plant reproductive success",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 134,
-        "kolibri node not available on reference image": 11
+        "below relevance gate": 137,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 8
       }
     },
     "reading_pool": {
       "passed": 4,
       "runners_up": [
+        "Tra's Red Bean Plant",
         "Root Growth - Advanced (Flexbook)",
-        "Seed Dormancy and Germination - Advanced (Flexbook)",
         "An A-maize-ing Story"
       ],
       "rejected_sample": [
@@ -256,18 +261,27 @@
         "scutellum",
         "coleoptile",
         "coleorhiza",
-        "meaning",
+        "seeds",
         "structure",
-        "seeds"
+        "germination",
+        "basics",
+        "coat",
+        "meaning"
       ],
       "phrases": [
         "maize grain",
-        "bean seed"
+        "bean seed",
+        "monocot dicot seeds",
+        "seed structure",
+        "plant growth development",
+        "seed germination basics",
+        "seed coat radicle"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -275,6 +289,7 @@
       },
       "observe.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -282,6 +297,7 @@
       },
       "explain.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -289,6 +305,7 @@
       },
       "dqb.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -296,6 +313,7 @@
       },
       "model.video": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -303,6 +321,7 @@
       },
       "predict.reading": {
         "picked": "Embryo Growth and Development Practice",
+        "fit": "partial",
         "score": 119.62,
         "core_hits": [
           "growth"
@@ -313,17 +332,20 @@
         "detail_weight": 0.38
       },
       "observe.reading": {
-        "picked": "Tra's Red Bean Plant",
-        "score": 75.85,
-        "core_hits": [],
-        "detail_hits": [
-          "bean seed",
-          "seed"
+        "picked": "Embryo Growth and Development Practice",
+        "fit": "partial",
+        "score": 119.62,
+        "core_hits": [
+          "growth"
         ],
-        "detail_weight": 1.24
+        "detail_hits": [
+          "embryo"
+        ],
+        "detail_weight": 0.38
       },
       "explain.reading": {
         "picked": "Embryo Growth and Development Practice",
+        "fit": "partial",
         "score": 119.62,
         "core_hits": [
           "growth"
@@ -335,6 +357,7 @@
       },
       "dqb.reading": {
         "picked": "Embryo Growth and Development Practice",
+        "fit": "partial",
         "score": 119.62,
         "core_hits": [
           "growth"
@@ -346,6 +369,7 @@
       },
       "model.reading": {
         "picked": "Embryo Growth and Development Practice",
+        "fit": "partial",
         "score": 119.62,
         "core_hits": [
           "growth"
@@ -389,24 +413,30 @@
           "below relevance gate"
         ],
         [
-          "Embryonic stem cells -dubbed(KY)",
+          "Consumption function basics",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 124,
-        "kolibri node not available on reference image": 10
+        "below relevance gate": 149,
+        "kolibri node not available on reference image": 15,
+        "web file not on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 5,
+      "passed": 2,
       "runners_up": [
-        "Tra's Red Bean Plant",
-        "Growth Mindset: word meanings 4",
-        "Growth Mindset: vocabulary; Neuron Fire at the Nelsons 4",
         "Monocots - Advanced (Flexbook)"
       ],
       "rejected_sample": [
+        [
+          "Tra's Red Bean Plant",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Seed Dormancy and Germination - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
         [
           "An A-maize-ing Story",
           "below relevance gate"
@@ -430,18 +460,11 @@
         [
           "Seed Plants Practice",
           "below relevance gate"
-        ],
-        [
-          "Evolution of Seed Plants (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Evolution of Seed Plants Practice",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 140,
+        "judged off-topic (independent reviewer)": 3,
+        "below relevance gate": 142,
         "excluded: answer/exam material": 2,
         "kolibri node not available on reference image": 3
       }
@@ -475,79 +498,73 @@
         "beans",
         "khan",
         "academy",
+        "breaking",
+        "conditions",
+        "cold",
+        "seeds",
         "some",
         "healthy",
         "looking",
-        "seeds",
-        "refuse",
-        "germinate"
+        "refuse"
       ],
       "phrases": [
         "seed dormancy",
         "impermeable seed coat",
         "immature embryo",
         "after ripening",
-        "khan academy"
+        "khan academy",
+        "seed dormancy",
+        "seed coat scarification",
+        "breaking seed dormancy",
+        "seed germination conditions",
+        "imbibition germination",
+        "cold stratification seeds"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Critically looking at data on ROC and economic growth over millenia",
-        "score": 64.15,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "looking"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "Critically looking at data on ROC and economic growth over millenia",
-        "score": 64.15,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "looking"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "Critically looking at data on ROC and economic growth over millenia",
-        "score": 64.15,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "looking"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "Critically looking at data on ROC and economic growth over millenia",
-        "score": 64.15,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "looking"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "Critically looking at data on ROC and economic growth over millenia",
-        "score": 64.15,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "looking"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "predict.reading": {
         "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
+        "fit": "fits",
         "score": 178.29,
         "core_hits": [],
         "detail_hits": [
@@ -560,6 +577,7 @@
       },
       "observe.reading": {
         "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
+        "fit": "fits",
         "score": 178.29,
         "core_hits": [],
         "detail_hits": [
@@ -572,6 +590,7 @@
       },
       "explain.reading": {
         "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
+        "fit": "fits",
         "score": 178.29,
         "core_hits": [],
         "detail_hits": [
@@ -584,6 +603,7 @@
       },
       "dqb.reading": {
         "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
+        "fit": "fits",
         "score": 178.29,
         "core_hits": [],
         "detail_hits": [
@@ -596,6 +616,7 @@
       },
       "model.reading": {
         "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
+        "fit": "fits",
         "score": 178.29,
         "core_hits": [],
         "detail_hits": [
@@ -608,7 +629,7 @@
       }
     },
     "video_pool": {
-      "passed": 1,
+      "passed": 0,
       "runners_up": [],
       "rejected_sample": [
         [
@@ -645,8 +666,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 139,
-        "kolibri node not available on reference image": 13,
+        "below relevance gate": 142,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 12,
         "web file not on reference image": 1
       }
     },
@@ -688,9 +710,9 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 146,
+        "below relevance gate": 142,
         "excluded: answer/exam material": 2,
-        "kolibri node not available on reference image": 8
+        "kolibri node not available on reference image": 12
       }
     }
   },
@@ -720,32 +742,43 @@
         "plumule",
         "maize",
         "beans",
+        "seed",
         "process",
-        "types",
         "conditions",
-        "necessary",
-        "bean",
-        "seeds"
+        "monocot",
+        "dicot",
+        "seeds",
+        "structure",
+        "dormancy",
+        "types",
+        "necessary"
       ],
       "phrases": [
-        "suitable temperature"
+        "suitable temperature",
+        "seed germination process",
+        "conditions seed germination",
+        "epigeal hypogeal germination",
+        "monocot dicot seeds",
+        "seed structure",
+        "seed dormancy viability"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Resources and population growth",
-        "score": 77.42,
+        "picked": "Organism growth and the environment",
+        "fit": "partial",
+        "score": 72.28,
         "core_hits": [
           "growth"
         ],
         "detail_hits": [
-          "water",
-          "oxygen"
+          "condition"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 0.3
       },
       "observe.video": {
         "picked": "Organism growth and the environment",
+        "fit": "partial",
         "score": 72.28,
         "core_hits": [
           "growth"
@@ -756,108 +789,112 @@
         "detail_weight": 0.3
       },
       "explain.video": {
-        "picked": "Photosynthesis in organisms",
-        "score": 58,
+        "picked": "Organism growth and the environment",
+        "fit": "partial",
+        "score": 72.28,
         "core_hits": [
           "growth"
         ],
         "detail_hits": [
-          "water",
-          "oxygen",
-          "process"
+          "condition"
         ],
-        "detail_weight": 1.48
+        "detail_weight": 0.3
       },
       "dqb.video": {
-        "picked": "Linear vs. exponential growth: from data (example 2)",
-        "score": 49.16,
+        "picked": "Organism growth and the environment",
+        "fit": "partial",
+        "score": 72.28,
         "core_hits": [
           "growth"
         ],
         "detail_hits": [
-          "water"
+          "condition"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 0.3
       },
       "model.video": {
-        "picked": "Resources and population growth",
-        "score": 77.42,
+        "picked": "Organism growth and the environment",
+        "fit": "partial",
+        "score": 72.28,
         "core_hits": [
           "growth"
         ],
         "detail_hits": [
-          "water",
-          "oxygen"
+          "condition"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 0.3
       },
       "predict.reading": {
-        "picked": "Tra's Red Bean Plant",
-        "score": 91.89,
-        "core_hits": [],
-        "detail_hits": [
-          "water",
-          "bean",
-          "seed"
-        ],
-        "detail_weight": 1.2
-      },
-      "observe.reading": {
         "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
-        "score": 65.24,
+        "fit": "fits",
+        "score": 101.21,
         "core_hits": [],
         "detail_hits": [
           "germination",
           "seed"
         ],
-        "detail_weight": 1.3
+        "detail_weight": 1.22
+      },
+      "observe.reading": {
+        "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 101.21,
+        "core_hits": [],
+        "detail_hits": [
+          "germination",
+          "seed"
+        ],
+        "detail_weight": 1.22
       },
       "explain.reading": {
         "picked": "Tra's Red Bean Plant",
-        "score": 91.89,
+        "fit": "partial",
+        "score": 90.27,
         "core_hits": [],
         "detail_hits": [
           "water",
           "bean",
           "seed"
         ],
-        "detail_weight": 1.2
+        "detail_weight": 1.12
       },
       "dqb.reading": {
-        "picked": "Tra's Red Bean Plant",
-        "score": 91.89,
+        "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 101.21,
         "core_hits": [],
         "detail_hits": [
-          "water",
-          "bean",
+          "germination",
           "seed"
         ],
-        "detail_weight": 1.2
+        "detail_weight": 1.22
       },
       "model.reading": {
-        "picked": "Tra's Red Bean Plant",
-        "score": 91.89,
+        "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 101.21,
         "core_hits": [],
         "detail_hits": [
-          "water",
-          "bean",
+          "germination",
           "seed"
         ],
-        "detail_weight": 1.2
+        "detail_weight": 1.22
       }
     },
     "video_pool": {
-      "passed": 6,
-      "runners_up": [
-        "Organism growth and the environment",
-        "Photosynthesis in organisms",
-        "Linear vs. exponential growth: from data (example 2)",
-        "Photosynthesis in ecosystems",
-        "Photosynthesis"
-      ],
+      "passed": 1,
+      "runners_up": [],
       "rejected_sample": [
         [
           "06 Plant Diversity And Evolution, Introduction To Seed Plants",
+          "below relevance gate"
+        ],
+        [
+          "Photosynthesis in organisms",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Resonance structure patterns",
           "below relevance gate"
         ],
         [
@@ -865,41 +902,32 @@
           "below relevance gate"
         ],
         [
+          "Photosynthesis in ecosystems",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Comparing animal and plant cells",
+          "below relevance gate"
+        ],
+        [
           "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
           "below relevance gate"
         ],
         [
-          "14 Plant Control",
-          "below relevance gate"
-        ],
-        [
-          "WATCH: Frames in Era 3",
-          "below relevance gate"
-        ],
-        [
-          "Conditions for confidence interval for a proportion worked examples",
-          "below relevance gate"
-        ],
-        [
-          "Switch block",
-          "below relevance gate"
-        ],
-        [
-          "Evaluating exponent expressions with variables",
+          "The Four Main Plant Structures - Example 1",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 145,
+        "below relevance gate": 137,
+        "judged off-topic (independent reviewer)": 5,
         "kolibri node not available on reference image": 12
       }
     },
     "reading_pool": {
-      "passed": 4,
+      "passed": 2,
       "runners_up": [
-        "Seed Dormancy and Germination - Advanced (Flexbook)",
-        "Expressions with One or More Variables: Water Bottle Expression (PLIX)",
-        "Kno 100372 Water Hyacinth Control"
+        "Tra's Red Bean Plant"
       ],
       "rejected_sample": [
         [
@@ -936,9 +964,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 116,
+        "below relevance gate": 120,
         "kolibri node not available on reference image": 35,
-        "excluded: answer/exam material": 2
+        "excluded: answer/exam material": 1,
+        "judged off-topic (independent reviewer)": 2
       }
     }
   },
@@ -970,6 +999,11 @@
         "hypogeal",
         "epigeal",
         "cer",
+        "function",
+        "stems",
+        "structure",
+        "tree",
+        "wood",
         "show"
       ],
       "phrases": [
@@ -980,67 +1014,79 @@
         "cork cambium",
         "monocot stem",
         "dicot stem",
-        "annual rings"
+        "annual rings",
+        "primary secondary growth",
+        "apical meristem function",
+        "vascular cambium cork cambium",
+        "monocot dicot stems",
+        "xylem phloem structure",
+        "tree rings wood"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Character change | Reading",
-        "score": 24.71,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "12 Plant Transport Xylem And Phloem, Transpiration [3D Animation]",
+        "fit": "partial",
+        "score": 97.35,
+        "core_hits": [],
         "detail_hits": [
-          "show"
+          "xylem",
+          "phloem",
+          "phloem xylem"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.3
       },
       "observe.video": {
-        "picked": "Character change | Reading",
-        "score": 24.71,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "12 Plant Transport Xylem And Phloem, Transpiration [3D Animation]",
+        "fit": "partial",
+        "score": 97.35,
+        "core_hits": [],
         "detail_hits": [
-          "show"
+          "xylem",
+          "phloem",
+          "phloem xylem"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.3
       },
       "explain.video": {
-        "picked": "Character change | Reading",
-        "score": 24.71,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "12 Plant Transport Xylem And Phloem, Transpiration [3D Animation]",
+        "fit": "partial",
+        "score": 97.35,
+        "core_hits": [],
         "detail_hits": [
-          "show"
+          "xylem",
+          "phloem",
+          "phloem xylem"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.3
       },
       "dqb.video": {
-        "picked": "Character change | Reading",
-        "score": 24.71,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "12 Plant Transport Xylem And Phloem, Transpiration [3D Animation]",
+        "fit": "partial",
+        "score": 97.35,
+        "core_hits": [],
         "detail_hits": [
-          "show"
+          "xylem",
+          "phloem",
+          "phloem xylem"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.3
       },
       "model.video": {
-        "picked": "Character change | Reading",
-        "score": 24.71,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "12 Plant Transport Xylem And Phloem, Transpiration [3D Animation]",
+        "fit": "partial",
+        "score": 97.35,
+        "core_hits": [],
         "detail_hits": [
-          "show"
+          "xylem",
+          "phloem",
+          "phloem xylem"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.3
       },
       "predict.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1048,6 +1094,7 @@
       },
       "observe.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1055,6 +1102,7 @@
       },
       "explain.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1062,6 +1110,7 @@
       },
       "dqb.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1069,6 +1118,7 @@
       },
       "model.reading": {
         "picked": null,
+        "fit": null,
         "score": null,
         "core_hits": [],
         "detail_hits": [],
@@ -1080,11 +1130,15 @@
       "runners_up": [],
       "rejected_sample": [
         [
-          "12 Plant Transport Xylem And Phloem, Transpiration [3D Animation]",
+          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
           "below relevance gate"
         ],
         [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
+          "Modeling with function combination",
+          "below relevance gate"
+        ],
+        [
+          "Overview of protein structure",
           "below relevance gate"
         ],
         [
@@ -1092,35 +1146,36 @@
           "below relevance gate"
         ],
         [
-          "06 Plant Diversity And Evolution, Introduction To Seed Plants",
+          "Linear vs. exponential growth: from data",
           "below relevance gate"
         ],
         [
-          "Embryonic stem cells -dubbed(KY)",
+          "Evaluating discrete functions",
           "below relevance gate"
         ],
         [
-          "Oxidation of alcohols II: Examples",
+          "Comparing animal and plant cells",
           "below relevance gate"
         ],
         [
-          "Plant reproductive success",
-          "below relevance gate"
-        ],
-        [
-          "Formation of imines and enamines",
+          "Transforming the square-root function",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 128,
-        "kolibri node not available on reference image": 11
+        "below relevance gate": 147,
+        "kolibri node not available on reference image": 2,
+        "judged off-topic (independent reviewer)": 1
       }
     },
     "reading_pool": {
       "passed": 0,
       "runners_up": [],
       "rejected_sample": [
+        [
+          "Stem Structure and Function - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
         [
           "Vascular Plants (Flexbook)",
           "below relevance gate"
@@ -1148,16 +1203,12 @@
         [
           "Evolution of Vascular Plants - Advanced (Flexbook)",
           "below relevance gate"
-        ],
-        [
-          "Vascular Tissue of Plants - Advanced (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 148,
-        "excluded: answer/exam material": 3,
-        "kolibri node not available on reference image": 7
+        "below relevance gate": 147,
+        "excluded: answer/exam material": 1,
+        "kolibri node not available on reference image": 2
       }
     }
   },
@@ -1184,8 +1235,12 @@
         "maize",
         "bean",
         "seedling",
-        "grow",
+        "function",
+        "curves",
+        "zones",
         "measuring",
+        "meristems",
+        "grow",
         "seedlings"
       ],
       "phrases": [
@@ -1194,68 +1249,60 @@
         "root tip",
         "primary growth",
         "secondary growth",
-        "growth curve"
+        "growth curve",
+        "apical meristem function",
+        "primary secondary growth",
+        "plant growth curves",
+        "root tip growth zones",
+        "measuring plant growth",
+        "meristems plant growth"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Growth models: introduction",
-        "score": 48.51,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "grow"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "The logistic  growth model",
-        "score": 52.55,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "grow"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "The logistic  growth model",
-        "score": 52.55,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "grow"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "The logistic  growth model",
-        "score": 52.55,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "grow"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "The logistic  growth model",
-        "score": 52.55,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "grow"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "predict.reading": {
-        "picked": "Exponential vs. linear growth",
-        "score": 60.2,
+        "picked": "Linear vs. exponential growth: from data",
+        "fit": "partial",
+        "score": 57.88,
         "core_hits": [
           "growth"
         ],
@@ -1266,6 +1313,7 @@
       },
       "observe.reading": {
         "picked": "Linear vs. exponential growth: from data",
+        "fit": "partial",
         "score": 57.88,
         "core_hits": [
           "growth"
@@ -1276,8 +1324,9 @@
         "detail_weight": 0.3
       },
       "explain.reading": {
-        "picked": "Exponential vs. linear growth",
-        "score": 60.2,
+        "picked": "Linear vs. exponential growth: from data",
+        "fit": "partial",
+        "score": 57.88,
         "core_hits": [
           "growth"
         ],
@@ -1287,8 +1336,9 @@
         "detail_weight": 0.3
       },
       "dqb.reading": {
-        "picked": "Exponential vs. linear growth",
-        "score": 60.2,
+        "picked": "Linear vs. exponential growth: from data",
+        "fit": "partial",
+        "score": 57.88,
         "core_hits": [
           "growth"
         ],
@@ -1298,8 +1348,9 @@
         "detail_weight": 0.3
       },
       "model.reading": {
-        "picked": "Exponential vs. linear growth",
-        "score": 60.2,
+        "picked": "Linear vs. exponential growth: from data",
+        "fit": "partial",
+        "score": 57.88,
         "core_hits": [
           "growth"
         ],
@@ -1310,13 +1361,21 @@
       }
     },
     "video_pool": {
-      "passed": 4,
-      "runners_up": [
-        "Growth models: introduction",
-        "Business cycles and the production possibilities curve",
-        "Production Possibilities Curve as a model of a country's economy"
-      ],
+      "passed": 0,
+      "runners_up": [],
       "rejected_sample": [
+        [
+          "Parametric curves",
+          "below relevance gate"
+        ],
+        [
+          "Vector-valued functions intro",
+          "below relevance gate"
+        ],
+        [
+          "Transforming the square-root function",
+          "below relevance gate"
+        ],
         [
           "Growth Mindset - \"Grow Your Brain\"",
           "kolibri node not available on reference image"
@@ -1336,42 +1395,40 @@
         [
           "Growth Mindset with Ubongo Kids + Goodall Foundation! - \"Grow Your Brain\"",
           "kolibri node not available on reference image"
-        ],
-        [
-          "Garden",
-          "below relevance gate"
-        ],
-        [
-          "Repeated roots of the characteristic equation",
-          "below relevance gate"
-        ],
-        [
-          "Repeated roots of the characteristic equation -dubbed(KY)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "kolibri node not available on reference image": 9,
-        "below relevance gate": 147,
-        "web file not on reference image": 2
+        "below relevance gate": 150,
+        "kolibri node not available on reference image": 10,
+        "judged off-topic (independent reviewer)": 4
       }
     },
     "reading_pool": {
-      "passed": 2,
-      "runners_up": [
-        "Linear vs. exponential growth: from data"
-      ],
+      "passed": 1,
+      "runners_up": [],
       "rejected_sample": [
         [
           "Tra's Red Bean Plant",
           "below relevance gate"
         ],
         [
+          "Exponential vs. linear growth",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "Units of length (cm, m)",
           "below relevance gate"
         ],
         [
+          "Area with polar functions (calculator-active)",
+          "below relevance gate"
+        ],
+        [
           "Units of length (inch, ft)",
+          "below relevance gate"
+        ],
+        [
+          "Graphs of square and cube root functions",
           "below relevance gate"
         ],
         [
@@ -1381,24 +1438,13 @@
         [
           "08 Plant Evolution, Seeded Plants",
           "below relevance gate"
-        ],
-        [
-          "Plant Growth Practice",
-          "below relevance gate"
-        ],
-        [
-          "Climate and Plant Growth - Advanced (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Hormones and Plant Growth - Advanced (Flexbook)",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 149,
-        "kolibri node not available on reference image": 7,
-        "excluded: answer/exam material": 2
+        "below relevance gate": 151,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 6,
+        "excluded: answer/exam material": 1
       }
     }
   },
@@ -1426,6 +1472,10 @@
         "dormancy",
         "secondary",
         "regions",
+        "phototropism",
+        "seed",
+        "fruit",
+        "ripening",
         "controls",
         "maize",
         "bean",
@@ -1436,51 +1486,76 @@
         "abscisic acid",
         "apical dominance",
         "secondary growth",
-        "regions growth"
+        "regions growth",
+        "plant hormones",
+        "auxins phototropism",
+        "gibberellins seed germination",
+        "apical dominance cytokinins",
+        "abscisic acid dormancy",
+        "ethylene fruit ripening"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": null,
-        "score": null,
+        "picked": "Phototropism",
+        "fit": "partial",
+        "score": 76.16,
         "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "detail_hits": [
+          "auxin",
+          "auxin phototropism"
+        ],
+        "detail_weight": 1.3
       },
       "observe.video": {
-        "picked": null,
-        "score": null,
+        "picked": "Phototropism",
+        "fit": "partial",
+        "score": 76.16,
         "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "detail_hits": [
+          "auxin",
+          "auxin phototropism"
+        ],
+        "detail_weight": 1.3
       },
       "explain.video": {
-        "picked": null,
-        "score": null,
+        "picked": "Phototropism",
+        "fit": "partial",
+        "score": 76.16,
         "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "detail_hits": [
+          "auxin",
+          "auxin phototropism"
+        ],
+        "detail_weight": 1.3
       },
       "dqb.video": {
-        "picked": null,
-        "score": null,
+        "picked": "Phototropism",
+        "fit": "partial",
+        "score": 76.16,
         "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "detail_hits": [
+          "auxin",
+          "auxin phototropism"
+        ],
+        "detail_weight": 1.3
       },
       "model.video": {
-        "picked": null,
-        "score": null,
+        "picked": "Phototropism",
+        "fit": "partial",
+        "score": 76.16,
         "core_hits": [],
-        "detail_hits": [],
-        "detail_weight": 0
+        "detail_hits": [
+          "auxin",
+          "auxin phototropism"
+        ],
+        "detail_weight": 1.3
       },
       "predict.reading": {
-        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
-        "score": 140.12,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "Plant Hormones Practice",
+        "fit": "fits",
+        "score": 104.35,
+        "core_hits": [],
         "detail_hits": [
           "hormone plant",
           "hormone"
@@ -1489,6 +1564,7 @@
       },
       "observe.reading": {
         "picked": "Plant Hormones Practice",
+        "fit": "fits",
         "score": 104.35,
         "core_hits": [],
         "detail_hits": [
@@ -1498,7 +1574,21 @@
         "detail_weight": 1.8
       },
       "explain.reading": {
+        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
+        "fit": "partial",
+        "score": 140.12,
+        "core_hits": [
+          "growth"
+        ],
+        "detail_hits": [
+          "hormone plant",
+          "hormone"
+        ],
+        "detail_weight": 1.8
+      },
+      "dqb.reading": {
         "picked": "Plant Hormones - Advanced (Flexbook)",
+        "fit": "partial",
         "score": 103.27,
         "core_hits": [],
         "detail_hits": [
@@ -1507,24 +1597,11 @@
         ],
         "detail_weight": 1.8
       },
-      "dqb.reading": {
-        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
-        "score": 140.12,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "hormone plant",
-          "hormone"
-        ],
-        "detail_weight": 1.8
-      },
       "model.reading": {
-        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
-        "score": 140.12,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "Plant Hormones Practice",
+        "fit": "fits",
+        "score": 104.35,
+        "core_hits": [],
         "detail_hits": [
           "hormone plant",
           "hormone"
@@ -1533,9 +1610,13 @@
       }
     },
     "video_pool": {
-      "passed": 0,
+      "passed": 1,
       "runners_up": [],
       "rejected_sample": [
+        [
+          "06 Plant Diversity And Evolution, Introduction To Seed Plants",
+          "below relevance gate"
+        ],
         [
           "#Shorts #Glands Produces Hormones #Different Types Of Gland Produces Different Hormones 😍😍👉👉👉",
           "web file not on reference image"
@@ -1546,10 +1627,6 @@
         ],
         [
           "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
-          "below relevance gate"
-        ],
-        [
-          "06 Plant Diversity And Evolution, Introduction To Seed Plants",
           "below relevance gate"
         ],
         [
@@ -1570,24 +1647,24 @@
         ]
       ],
       "rejected_by_reason": {
+        "below relevance gate": 135,
         "web file not on reference image": 2,
-        "below relevance gate": 139,
-        "kolibri node not available on reference image": 9
+        "kolibri node not available on reference image": 12
       }
     },
     "reading_pool": {
       "passed": 3,
       "runners_up": [
-        "Plant Hormones Practice",
+        "Hormones and Plant Growth - Advanced (Flexbook)",
         "Plant Hormones - Advanced (Flexbook)"
       ],
       "rejected_sample": [
         [
-          "Abscisic Acid - Advanced (Flexbook)",
+          "Seed Dormancy and Germination - Advanced (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Seed Dormancy and Germination - Advanced (Flexbook)",
+          "Abscisic Acid - Advanced (Flexbook)",
           "below relevance gate"
         ],
         [
@@ -1595,30 +1672,30 @@
           "below relevance gate"
         ],
         [
-          "08 Plant Evolution, Seeded Plants",
+          "An A-maize-ing Story",
           "below relevance gate"
         ],
         [
-          "Plant Growth Practice",
+          "Seeds and Seed Dispersal (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Climate and Plant Growth - Advanced (Flexbook)",
+          "Seeds and Seed Dispersal Practice",
           "below relevance gate"
         ],
         [
-          "Strong and Weak Acids and Acid Ionization Constant (Ka) (Flexbook)",
+          "Fruit and Seed Dispersal - Advanced (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Embryo Growth and Development Practice",
+          "Plants And Seeds",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 143,
-        "excluded: answer/exam material": 3,
-        "kolibri node not available on reference image": 2
+        "below relevance gate": 154,
+        "excluded: answer/exam material": 2,
+        "kolibri node not available on reference image": 4
       }
     }
   },
@@ -1646,19 +1723,28 @@
         "maize",
         "beans",
         "hormones",
+        "curves",
         "measuring",
-        "curves"
+        "primary",
+        "secondary"
       ],
       "phrases": [
         "growth curve",
         "sigmoid curve",
         "seedling height",
-        "stem width"
+        "stem width",
+        "plant growth curves",
+        "sigmoid growth curve",
+        "lag exponential",
+        "measuring plant growth",
+        "plant hormones growth",
+        "primary secondary growth"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Logistic growth versus exponential growth",
+        "fit": "partial",
         "score": 78.06,
         "core_hits": [
           "growth"
@@ -1669,8 +1755,9 @@
         "detail_weight": 0.62
       },
       "observe.video": {
-        "picked": "Exponential vs. linear growth",
-        "score": 77.35,
+        "picked": "Exponential and logistic growth in populations",
+        "fit": "partial",
+        "score": 76.18,
         "core_hits": [
           "growth"
         ],
@@ -1680,8 +1767,9 @@
         "detail_weight": 0.62
       },
       "explain.video": {
-        "picked": "Per capita population growth and exponential growth",
-        "score": 77.16,
+        "picked": "Graphs of exponential growth",
+        "fit": "partial",
+        "score": 63.01,
         "core_hits": [
           "growth"
         ],
@@ -1691,8 +1779,9 @@
         "detail_weight": 0.62
       },
       "dqb.video": {
-        "picked": "Exponential growth & decay word problems",
-        "score": 76.76,
+        "picked": "Logistic growth versus exponential growth",
+        "fit": "partial",
+        "score": 78.06,
         "core_hits": [
           "growth"
         ],
@@ -1702,7 +1791,8 @@
         "detail_weight": 0.62
       },
       "model.video": {
-        "picked": "Exponential vs. linear growth over time",
+        "picked": "Exponential and logistic growth in populations",
+        "fit": "partial",
         "score": 76.18,
         "core_hits": [
           "growth"
@@ -1714,17 +1804,20 @@
       },
       "predict.reading": {
         "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
-        "score": 116.29,
+        "fit": "partial",
+        "score": 123.07,
         "core_hits": [
           "growth"
         ],
         "detail_hits": [
-          "hormone"
+          "hormone",
+          "growth hormone plant"
         ],
-        "detail_weight": 0.36
+        "detail_weight": 0.77
       },
       "observe.reading": {
         "picked": "Stem Growth - Advanced (Flexbook)",
+        "fit": "partial",
         "score": 77.04,
         "core_hits": [
           "growth"
@@ -1735,47 +1828,51 @@
         "detail_weight": 0.3
       },
       "explain.reading": {
-        "picked": "Exponential Growth (Flexbook)",
-        "score": 74.37,
+        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
+        "fit": "partial",
+        "score": 123.07,
         "core_hits": [
           "growth"
         ],
         "detail_hits": [
-          "exponential"
+          "hormone",
+          "growth hormone plant"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 0.77
       },
       "dqb.reading": {
-        "picked": "Exponential Growth Practice",
-        "score": 74.37,
+        "picked": "Stem Growth - Advanced (Flexbook)",
+        "fit": "partial",
+        "score": 77.04,
         "core_hits": [
           "growth"
         ],
         "detail_hits": [
-          "exponential"
+          "stem"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 0.3
       },
       "model.reading": {
-        "picked": "Exponential Growth and Decay (Flexbook)",
-        "score": 73.23,
+        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
+        "fit": "partial",
+        "score": 123.07,
         "core_hits": [
           "growth"
         ],
         "detail_hits": [
-          "exponential"
+          "hormone",
+          "growth hormone plant"
         ],
-        "detail_weight": 0.62
+        "detail_weight": 0.77
       }
     },
     "video_pool": {
-      "passed": 18,
+      "passed": 5,
       "runners_up": [
-        "Exponential vs. linear growth",
-        "Per capita population growth and exponential growth",
-        "Exponential growth & decay word problems",
-        "Exponential vs. linear growth over time",
-        "Linear vs. exponential growth: from data"
+        "Exponential and logistic growth in populations",
+        "Graphs of exponential growth",
+        "Exponential vs. linear  models: verbal",
+        "Modeling with function combination"
       ],
       "rejected_sample": [
         [
@@ -1799,32 +1896,32 @@
           "below relevance gate"
         ],
         [
+          "Exponential vs. linear growth",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Per capita population growth and exponential growth",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "English: The Power of Exponentials, Big and Small",
           "kolibri node not available on reference image"
-        ],
-        [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
-          "below relevance gate"
-        ],
-        [
-          "06 Plant Diversity And Evolution, Introduction To Seed Plants",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 125,
+        "below relevance gate": 128,
         "web file not on reference image": 3,
+        "judged off-topic (independent reviewer)": 12,
         "kolibri node not available on reference image": 9
       }
     },
     "reading_pool": {
-      "passed": 15,
+      "passed": 5,
       "runners_up": [
         "Stem Growth - Advanced (Flexbook)",
-        "Exponential Growth (Flexbook)",
-        "Exponential Growth Practice",
-        "Exponential Growth and Decay (Flexbook)",
-        "Exponential Growth and Decay Practice"
+        "Warmup: exponential vs. linear growth",
+        "Graphs of exponential growth",
+        "Connecting exponential graphs with contexts"
       ],
       "rejected_sample": [
         [
@@ -1861,8 +1958,10 @@
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 135,
-        "excluded: answer/exam material": 1,
+        "below relevance gate": 137,
+        "judged off-topic (independent reviewer)": 9,
+        "excluded: answer/exam material": 2,
+        "conflicting sub-topic": 1,
         "kolibri node not available on reference image": 1
       }
     }
@@ -1896,24 +1995,32 @@
         "kericho",
         "tree",
         "nursery",
-        "role",
         "hormones",
-        "maize",
-        "bean",
-        "grow",
-        "differently"
+        "responses",
+        "seed",
+        "cell",
+        "division",
+        "fruit",
+        "ripening"
       ],
       "phrases": [
         "abscisic acid",
         "apical dominance",
         "rooting hormone",
         "tea plucking kericho",
-        "tree nursery"
+        "tree nursery",
+        "plant hormones responses",
+        "auxins apical dominance",
+        "gibberellins seed germination",
+        "cytokinins cell division",
+        "abscisic acid seed dormancy",
+        "ethylene fruit ripening"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Phototropism",
+        "fit": "partial",
         "score": 58.75,
         "core_hits": [],
         "detail_hits": [
@@ -1923,29 +2030,30 @@
         "detail_weight": 1.3
       },
       "observe.video": {
-        "picked": "The logistic  growth model",
-        "score": 52.55,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "Phototropism",
+        "fit": "partial",
+        "score": 58.75,
+        "core_hits": [],
         "detail_hits": [
-          "grow"
+          "auxin",
+          "role"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.3
       },
       "explain.video": {
-        "picked": "Growth models: introduction",
-        "score": 48.51,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "Phototropism",
+        "fit": "partial",
+        "score": 58.75,
+        "core_hits": [],
         "detail_hits": [
-          "grow"
+          "auxin",
+          "role"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1.3
       },
       "dqb.video": {
         "picked": "Phototropism",
+        "fit": "partial",
         "score": 58.75,
         "core_hits": [],
         "detail_hits": [
@@ -1956,6 +2064,7 @@
       },
       "model.video": {
         "picked": "Phototropism",
+        "fit": "partial",
         "score": 58.75,
         "core_hits": [],
         "detail_hits": [
@@ -1965,29 +2074,28 @@
         "detail_weight": 1.3
       },
       "predict.reading": {
-        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
-        "score": 115.29,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "Auxins - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 38.13,
+        "core_hits": [],
         "detail_hits": [
-          "hormone"
+          "auxin"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1
       },
       "observe.reading": {
-        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
-        "score": 115.29,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "Auxins - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 38.13,
+        "core_hits": [],
         "detail_hits": [
-          "hormone"
+          "auxin"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1
       },
       "explain.reading": {
         "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
+        "fit": "partial",
         "score": 115.29,
         "core_hits": [
           "growth"
@@ -1998,91 +2106,82 @@
         "detail_weight": 0.3
       },
       "dqb.reading": {
-        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
-        "score": 115.29,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "Auxins - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 38.13,
+        "core_hits": [],
         "detail_hits": [
-          "hormone"
+          "auxin"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1
       },
       "model.reading": {
-        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
-        "score": 115.29,
-        "core_hits": [
-          "growth"
-        ],
+        "picked": "Auxins - Advanced (Flexbook)",
+        "fit": "fits",
+        "score": 38.13,
+        "core_hits": [],
         "detail_hits": [
-          "hormone"
+          "auxin"
         ],
-        "detail_weight": 0.3
+        "detail_weight": 1
       }
     },
     "video_pool": {
-      "passed": 6,
-      "runners_up": [
-        "The logistic  growth model",
-        "Growth models: introduction",
-        "Teacher leader: What I do and how much I make",
-        "Commercial airline pilot: How I got my job and where I'm going",
-        "Exponential decay intro"
-      ],
+      "passed": 1,
+      "runners_up": [],
       "rejected_sample": [
-        [
-          "#Shorts #Glands Produces Hormones #Different Types Of Gland Produces Different Hormones 😍😍👉👉👉",
-          "web file not on reference image"
-        ],
-        [
-          "Hormone concentration metabolism and negative feedback",
-          "below relevance gate"
-        ],
-        [
-          "Growth Mindset - \"Grow Your Brain\"",
-          "kolibri node not available on reference image"
-        ],
-        [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
-          "below relevance gate"
-        ],
         [
           "06 Plant Diversity And Evolution, Introduction To Seed Plants",
           "below relevance gate"
         ],
         [
-          "Growth Mindset with Ubongo Kids + Goodall Foundation! - \"Grow Your Brain\"",
+          "Comparing animal and plant cells",
+          "below relevance gate"
+        ],
+        [
+          "Overview of animal and plant cells",
+          "below relevance gate"
+        ],
+        [
+          "Role of the sarcoplasmic reticulum in muscle cells",
+          "below relevance gate"
+        ],
+        [
+          "Role of the sarcoplasmic reticulum in muscle cells -dubbed(KY)",
+          "below relevance gate"
+        ],
+        [
+          "How do Fruits and Vegetables Grow?!",
           "kolibri node not available on reference image"
         ],
         [
-          "Strong Acids And Base #Chemistry #Acid#Base #Viralshorts",
-          "web file not on reference image"
+          "Apoptosis",
+          "below relevance gate"
         ],
         [
-          "Discovering the tree of life",
+          "Plant cell walls",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "web file not on reference image": 3,
-        "below relevance gate": 137,
-        "kolibri node not available on reference image": 17
+        "below relevance gate": 136,
+        "kolibri node not available on reference image": 21,
+        "web file not on reference image": 4,
+        "judged off-topic (independent reviewer)": 4
       }
     },
     "reading_pool": {
-      "passed": 4,
+      "passed": 2,
       "runners_up": [
-        "Exponential vs. linear growth",
-        "Linear vs. exponential growth: from data",
-        "Auxins - Advanced (Flexbook)"
+        "Hormones and Plant Growth - Advanced (Flexbook)"
       ],
       "rejected_sample": [
         [
-          "Abscisic Acid - Advanced (Flexbook)",
+          "Seed Dormancy and Germination - Advanced (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Seed Dormancy and Germination - Advanced (Flexbook)",
+          "Abscisic Acid - Advanced (Flexbook)",
           "below relevance gate"
         ],
         [
@@ -2090,30 +2189,31 @@
           "below relevance gate"
         ],
         [
-          "Plant Hormones Practice",
-          "below relevance gate"
-        ],
-        [
-          "Plant Hormones - Advanced (Flexbook)",
-          "below relevance gate"
-        ],
-        [
           "An A-maize-ing Story",
           "below relevance gate"
         ],
         [
-          "08 Plant Evolution, Seeded Plants",
+          "Seeds and Seed Dispersal (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Plant Growth Practice",
+          "Seeds and Seed Dispersal Practice",
+          "below relevance gate"
+        ],
+        [
+          "Fruit and Seed Dispersal - Advanced (Flexbook)",
+          "below relevance gate"
+        ],
+        [
+          "Plant Hormones Practice",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 146,
-        "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 6
+        "below relevance gate": 151,
+        "judged off-topic (independent reviewer)": 2,
+        "kolibri node not available on reference image": 9,
+        "excluded: answer/exam material": 2
       }
     }
   },
@@ -2144,6 +2244,9 @@
         "cuttings",
         "tree",
         "nursery",
+        "seed",
+        "hormones",
+        "propagating",
         "synthesis",
         "application",
         "farmer's",
@@ -2157,136 +2260,143 @@
         "secondary growth",
         "apical dominance",
         "stem cuttings",
-        "tree nursery"
+        "tree nursery",
+        "seed germination dormancy",
+        "epigeal hypogeal germination",
+        "primary secondary growth",
+        "auxin apical dominance",
+        "plant hormones growth",
+        "propagating plants cuttings"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Linear vs. exponential growth: from data",
-        "score": 54.72,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "tree"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "observe.video": {
-        "picked": "Linear vs. exponential growth: from data",
-        "score": 54.72,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "tree"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "explain.video": {
-        "picked": "Linear vs. exponential growth: from data",
-        "score": 54.72,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "tree"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "dqb.video": {
-        "picked": "Linear vs. exponential growth: from data",
-        "score": 54.72,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "tree"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "model.video": {
-        "picked": "Linear vs. exponential growth: from data",
-        "score": 54.72,
-        "core_hits": [
-          "growth"
-        ],
-        "detail_hits": [
-          "tree"
-        ],
-        "detail_weight": 0.3
+        "picked": null,
+        "fit": null,
+        "score": null,
+        "core_hits": [],
+        "detail_hits": [],
+        "detail_weight": 0
       },
       "predict.reading": {
         "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
-        "score": 77.82,
+        "fit": "partial",
+        "score": 119,
         "core_hits": [],
         "detail_hits": [
           "germination",
-          "dormancy"
+          "dormancy",
+          "dormancy germination seed"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 2.02
       },
       "observe.reading": {
-        "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
-        "score": 77.82,
-        "core_hits": [],
-        "detail_hits": [
-          "germination",
-          "dormancy"
+        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
+        "fit": "partial",
+        "score": 116.62,
+        "core_hits": [
+          "growth"
         ],
-        "detail_weight": 1.55
+        "detail_hits": [
+          "growth hormone plant"
+        ],
+        "detail_weight": 0.38
       },
       "explain.reading": {
         "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
-        "score": 77.82,
+        "fit": "partial",
+        "score": 119,
         "core_hits": [],
         "detail_hits": [
           "germination",
-          "dormancy"
+          "dormancy",
+          "dormancy germination seed"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 2.02
       },
       "dqb.reading": {
-        "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
-        "score": 77.82,
-        "core_hits": [],
-        "detail_hits": [
-          "germination",
-          "dormancy"
+        "picked": "Hormones and Plant Growth - Advanced (Flexbook)",
+        "fit": "partial",
+        "score": 116.62,
+        "core_hits": [
+          "growth"
         ],
-        "detail_weight": 1.55
+        "detail_hits": [
+          "growth hormone plant"
+        ],
+        "detail_weight": 0.38
       },
       "model.reading": {
         "picked": "Seed Dormancy and Germination - Advanced (Flexbook)",
-        "score": 77.82,
+        "fit": "partial",
+        "score": 119,
         "core_hits": [],
         "detail_hits": [
           "germination",
-          "dormancy"
+          "dormancy",
+          "dormancy germination seed"
         ],
-        "detail_weight": 1.55
+        "detail_weight": 2.02
       }
     },
     "video_pool": {
-      "passed": 2,
-      "runners_up": [
-        "Modeling with function combination"
-      ],
+      "passed": 0,
+      "runners_up": [],
       "rejected_sample": [
+        [
+          "06 Plant Diversity And Evolution, Introduction To Seed Plants",
+          "below relevance gate"
+        ],
         [
           "Synthesis of alcohols using Grignard reagents I",
           "below relevance gate"
+        ],
+        [
+          "#Shorts #Glands Produces Hormones #Different Types Of Gland Produces Different Hormones 😍😍👉👉👉",
+          "web file not on reference image"
         ],
         [
           "Evaluating a source’s reasoning and evidence",
           "below relevance gate"
         ],
         [
-          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
+          "Hormone concentration metabolism and negative feedback",
           "below relevance gate"
         ],
         [
-          "06 Plant Diversity And Evolution, Introduction To Seed Plants",
+          "05 Plant Diversity And Evolution, Seedless Vascular Plants (Ferns)",
           "below relevance gate"
         ],
         [
@@ -2296,63 +2406,58 @@
         [
           "Applications Using Radicals: A Sample Application",
           "below relevance gate"
-        ],
-        [
-          "Applications Using Square Roots: A Sample Application",
-          "below relevance gate"
-        ],
-        [
-          "Solve Applications Using Rational Functions: A Sample Application",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 157,
-        "web file not on reference image": 1,
+        "below relevance gate": 158,
+        "web file not on reference image": 2,
+        "judged off-topic (independent reviewer)": 2,
         "kolibri node not available on reference image": 9
       }
     },
     "reading_pool": {
-      "passed": 1,
-      "runners_up": [],
+      "passed": 2,
+      "runners_up": [
+        "Hormones and Plant Growth - Advanced (Flexbook)"
+      ],
       "rejected_sample": [
         [
           "Tra's Red Bean Plant",
           "below relevance gate"
         ],
         [
-          "Stem Growth - Advanced (Flexbook)",
+          "An A-maize-ing Story",
           "below relevance gate"
         ],
         [
-          "08 Plant Evolution, Seeded Plants",
+          "Seeds and Seed Dispersal (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Plant Growth Practice",
+          "Seeds and Seed Dispersal Practice",
           "below relevance gate"
         ],
         [
-          "Trees",
+          "Plant Hormones Practice",
           "below relevance gate"
         ],
         [
-          "Climate and Plant Growth - Advanced (Flexbook)",
+          "Plant Hormones - Advanced (Flexbook)",
           "below relevance gate"
         ],
         [
-          "Hormones and Plant Growth - Advanced (Flexbook)",
+          "Plants And Seeds",
           "below relevance gate"
         ],
         [
-          "Embryo Growth and Development Practice",
+          "Seed Plants (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 152,
+        "below relevance gate": 156,
         "excluded: answer/exam material": 2,
-        "kolibri node not available on reference image": 8
+        "kolibri node not available on reference image": 7
       }
     }
   }

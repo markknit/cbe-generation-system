@@ -10,6 +10,10 @@ Design: DESIGN_link_selection_v2.md §4.7.
 HARD FAILURES (exit 1):
   T1  answer/exam material in a slot          (config exclude_patterns)
   T2  foreign-subject vocabulary in a title with no overlap with the lesson
+  T3  sub-topic qualifier in a title (centripetal, projectile, sound ...) that the
+      lesson itself never mentions (config conflict_qualifiers)
+  T4  the independent reviewer (scripts/judge_links.py, cached in
+      config/link_judgments.json) judged this link off-topic for this lesson
   DEAD direct_url does not resolve on the reference ARES image
        (Kolibri node missing/unavailable, or web module file missing)
   SHAPE _data.json fails ares-contract.schema.json (needs `jsonschema`; falls
@@ -151,6 +155,7 @@ def main(argv: list[str]) -> int:
     quiet = "--quiet" in argv
     args = [a for a in argv if not a.startswith("--")]
     cfg = ar.load_link_config()
+    judgments = ar.load_judgments()
     ref = Reference(cfg)
     validator = schema_validator()
     files = find_json(args)
@@ -179,6 +184,9 @@ def main(argv: list[str]) -> int:
         for L in d.get("LESSONS", []):
             rl = L.get("resourceLinks") or {}
             words = lesson_words(L, cfg)
+            # Same lesson vocabulary the matcher used (aresKeywords + the cached search phrases).
+            vocab = ar.LessonQuery(L.get('substrand', ''), L.get('aresKeywords') or L.get('title', ''),
+                                   L.get('title', ''), subject, cfg).vocab
             per_lesson = Counter()
             for ph in PHASES:
                 for s in SLOTS:
@@ -199,6 +207,17 @@ def main(argv: list[str]) -> int:
                     if foreign and not (ar.gate_words(title, cfg) & words):
                         fails.append(f"T2 {where}: foreign vocabulary {foreign} in {title!r}")
                         counts["T2"] += 1
+                    verdict = judgments.get(ar.judgment_key(subject, ar.strip_substrand_label(L.get("substrand", "")),
+                                                            L.get("title", ""), title))
+                    if verdict == "off_topic":
+                        fails.append(f"T4 {where}: judged off-topic by the independent reviewer: {title!r}")
+                        counts["T4"] += 1
+                    elif verdict is None:
+                        counts["UNJUDGED"] += 1
+                    conflict = ar.conflict_qualifier_hits(title, vocab, cfg)
+                    if conflict:
+                        fails.append(f"T3 {where}: conflicting sub-topic {conflict} in {title!r}")
+                        counts["T3"] += 1
                     dead = ref.dead_reason(r.get("direct_url", ""))
                     if dead:
                         fails.append(f"DEAD {where}: {dead} ({title!r})")
@@ -217,9 +236,9 @@ def main(argv: list[str]) -> int:
             warns.append(f"reuse: {title!r} x{n} across {sorted(title_where[title])}")
 
     print(f"check_resource_links: {len(files)} file(s)")
-    print(f"  hard failures: T1={counts['T1']}  T2={counts['T2']}  DEAD={counts['DEAD']}  SHAPE={counts['SHAPE']}")
+    print(f"  hard failures: T1={counts['T1']}  T2={counts['T2']}  T3={counts['T3']}  T4={counts['T4']}  DEAD={counts['DEAD']}  SHAPE={counts['SHAPE']}")
     print(f"  warnings: same resource in 3+ phases of a lesson={counts['REPEAT_IN_LESSON']}  "
-          f"titles reused 6+ times={counts['HIGH_REUSE_TITLES']}")
+          f"titles reused 6+ times={counts['HIGH_REUSE_TITLES']}  links with no judge verdict yet={counts['UNJUDGED']}")
     print("  fill rate (slots with a direct match / all slots):")
     for subj, (f_, t) in sorted(fill.items()):
         print(f"    {subj:<24} {f_:>5}/{t:<5} {100 * f_ / t:5.1f}%")

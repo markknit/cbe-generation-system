@@ -30,9 +30,9 @@
         "motion",
         "translation",
         "reflection",
-        "spinning",
-        "nairobi's",
-        "tower"
+        "rotating",
+        "shapes",
+        "point"
       ],
       "phrases": [
         "centre rotation",
@@ -46,36 +46,30 @@
         "fixed centre",
         "turning motion",
         "translation rotation",
-        "reflection rotation"
+        "reflection rotation",
+        "rotating shapes point",
+        "clockwise counterclockwise rotation",
+        "angle rotation"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Identifying transformations",
-        "score": 120.78,
+        "fit": "fits",
+        "score": 130.69,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "rotation translation",
-          "reflection rotation"
+          "reflection rotation",
+          "reflection rotation translation"
         ],
-        "detail_weight": 0.81
+        "detail_weight": 1.15
       },
       "observe.video": {
-        "picked": "Defining transformations",
-        "score": 111.74,
-        "core_hits": [
-          "rotation"
-        ],
-        "detail_hits": [
-          "rotation translation",
-          "reflection rotation"
-        ],
-        "detail_weight": 0.81
-      },
-      "explain.video": {
         "picked": "Determining rotations",
+        "fit": "fits",
         "score": 107.86,
         "core_hits": [
           "rotation"
@@ -85,21 +79,36 @@
         ],
         "detail_weight": 1.25
       },
-      "dqb.video": {
-        "picked": "Working with matrices as transformations of the plane",
-        "score": 76.2,
+      "explain.video": {
+        "picked": "Rotating points",
+        "fit": "fits",
+        "score": 91.84,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "geometric transformation",
-          "reflection rotation"
+          "angle rotation"
         ],
-        "detail_weight": 1.23
+        "detail_weight": 1.25
+      },
+      "dqb.video": {
+        "picked": "Identifying transformations",
+        "fit": "fits",
+        "score": 130.69,
+        "core_hits": [
+          "rotation"
+        ],
+        "detail_hits": [
+          "rotation translation",
+          "reflection rotation",
+          "reflection rotation translation"
+        ],
+        "detail_weight": 1.15
       },
       "model.video": {
-        "picked": "Examples: Determine Angles of Rotation",
-        "score": 74.34,
+        "picked": "Determining rotations",
+        "fit": "fits",
+        "score": 107.86,
         "core_hits": [
           "rotation"
         ],
@@ -110,18 +119,21 @@
       },
       "predict.reading": {
         "picked": "Rigid transformations: preserved properties",
-        "score": 153.45,
+        "fit": "fits",
+        "score": 183.13,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "rotation translation",
-          "reflection rotation"
+          "reflection rotation",
+          "reflection rotation translation"
         ],
-        "detail_weight": 0.81
+        "detail_weight": 1.15
       },
       "observe.reading": {
         "picked": "Determine rotations",
+        "fit": "fits",
         "score": 147.99,
         "core_hits": [
           "rotation"
@@ -134,30 +146,21 @@
       },
       "explain.reading": {
         "picked": "Translations, Rotations, and Reflections (Flexbook)",
-        "score": 139,
+        "fit": "fits",
+        "score": 145.33,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "rotation translation",
-          "reflection rotation"
+          "reflection rotation",
+          "reflection rotation translation"
         ],
-        "detail_weight": 0.81
+        "detail_weight": 1.15
       },
       "dqb.reading": {
-        "picked": "Translations, Rotations, and Reflections Practice",
-        "score": 139,
-        "core_hits": [
-          "rotation"
-        ],
-        "detail_hits": [
-          "rotation translation",
-          "reflection rotation"
-        ],
-        "detail_weight": 0.81
-      },
-      "model.reading": {
         "picked": "Determine rotations (basic)",
+        "fit": "fits",
         "score": 138.12,
         "core_hits": [
           "rotation"
@@ -167,20 +170,41 @@
           "angle rotation"
         ],
         "detail_weight": 2.75
+      },
+      "model.reading": {
+        "picked": "Identify transformations",
+        "fit": "fits",
+        "score": 132.61,
+        "core_hits": [
+          "rotation"
+        ],
+        "detail_hits": [
+          "rotation translation",
+          "reflection rotation",
+          "reflection rotation translation"
+        ],
+        "detail_weight": 1.15
       }
     },
     "video_pool": {
-      "passed": 8,
+      "passed": 5,
       "runners_up": [
-        "Defining transformations",
         "Determining rotations",
-        "Working with matrices as transformations of the plane",
-        "Examples: Determine Angles of Rotation",
-        "Radian angles & quadrants"
+        "Rotating points",
+        "Defining transformations",
+        "Examples: Determine Angles of Rotation"
       ],
       "rejected_sample": [
         [
           "Rigid transformations: preserved properties",
+          "below relevance gate"
+        ],
+        [
+          "Working with matrices as transformations of the plane",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Dilations intro",
           "below relevance gate"
         ],
         [
@@ -196,37 +220,30 @@
           "below relevance gate"
         ],
         [
-          "Dilations intro",
+          "Dilations and properties",
           "below relevance gate"
         ],
         [
-          "Proving the ASA and AAS triangle congruence criteria using transformations",
-          "below relevance gate"
-        ],
-        [
-          "Proving the SAS triangle congruence criterion using transformations",
-          "below relevance gate"
-        ],
-        [
-          "Linear transformation examples: Rotations in R2",
+          "Mapping shapes",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 120,
-        "web file not on reference image": 6,
+        "below relevance gate": 123,
+        "judged off-topic (independent reviewer)": 3,
+        "web file not on reference image": 5,
         "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 6
+        "kolibri node not available on reference image": 1
       }
     },
     "reading_pool": {
-      "passed": 14,
+      "passed": 13,
       "runners_up": [
         "Determine rotations",
         "Translations, Rotations, and Reflections (Flexbook)",
-        "Translations, Rotations, and Reflections Practice",
         "Determine rotations (basic)",
-        "Angles of Rotation in Standard Positions: Clock Angles (PLIX)"
+        "Identify transformations",
+        "Translations, Rotations, and Reflections Practice"
       ],
       "rejected_sample": [
         [
@@ -234,38 +251,39 @@
           "below relevance gate"
         ],
         [
+          "Rotate points (basic)",
+          "below relevance gate"
+        ],
+        [
+          "Determine reflections",
+          "below relevance gate"
+        ],
+        [
+          "Trig identities from reflections and rotations",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
           "The Towers of Hanoi:..:Tower Slides",
           "kolibri node not available on reference image"
         ],
         [
+          "Analyze shapes by angles",
+          "below relevance gate"
+        ],
+        [
+          "Identify points, lines, line segments, rays, and angles",
+          "below relevance gate"
+        ],
+        [
           "Prove parallelogram properties",
-          "below relevance gate"
-        ],
-        [
-          "Prove triangle properties",
-          "below relevance gate"
-        ],
-        [
-          "Ordering triangle sides and angles",
-          "below relevance gate"
-        ],
-        [
-          "Find angles in triangles",
-          "below relevance gate"
-        ],
-        [
-          "Vertical Angles: Yo-Yo Eiffel Tower Trick (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Telling time on a clock",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 119,
+        "below relevance gate": 130,
+        "judged off-topic (independent reviewer)": 1,
         "kolibri node not available on reference image": 6,
-        "excluded: answer/exam material": 20
+        "excluded: answer/exam material": 4
       }
     }
   },
@@ -314,12 +332,18 @@
         "angular displacement",
         "university nairobi clock",
         "posho mill",
-        "core mathematics"
+        "core mathematics",
+        "rotations plane",
+        "properties rotations",
+        "rotating shapes point",
+        "center rotation angle",
+        "clockwise counterclockwise rotation"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Determining rotations",
+        "fit": "fits",
         "score": 139.37,
         "core_hits": [
           "rotation"
@@ -331,40 +355,36 @@
         "detail_weight": 1.23
       },
       "observe.video": {
-        "picked": "Proving the SAS triangle congruence criterion using transformations",
-        "score": 109.63,
-        "core_hits": [],
-        "detail_hits": [
-          "congruence",
-          "triangle",
-          "transformation"
+        "picked": "Rotating points",
+        "fit": "fits",
+        "score": 108.98,
+        "core_hits": [
+          "rotation"
         ],
-        "detail_weight": 1.68
+        "detail_hits": [
+          "angle rotation",
+          "image"
+        ],
+        "detail_weight": 1.23
       },
       "explain.video": {
-        "picked": "Proving the ASA and AAS triangle congruence criteria using transformations",
-        "score": 109.19,
-        "core_hits": [],
-        "detail_hits": [
-          "congruence",
-          "triangle",
-          "transformation"
+        "picked": "Rotating shapes",
+        "fit": "fits",
+        "score": 102.16,
+        "core_hits": [
+          "rotation"
         ],
-        "detail_weight": 1.68
+        "detail_hits": [
+          "triangle",
+          "image",
+          "plane rotation"
+        ],
+        "detail_weight": 1.02
       },
       "dqb.video": {
-        "picked": "Proving triangle congruence",
-        "score": 99.23,
-        "core_hits": [],
-        "detail_hits": [
-          "congruence",
-          "triangle"
-        ],
-        "detail_weight": 1.42
-      },
-      "model.video": {
-        "picked": "Proving the SSS triangle congruence criterion using transformations",
-        "score": 92.52,
+        "picked": "Congruent shapes & transformations",
+        "fit": "fits",
+        "score": 91.43,
         "core_hits": [],
         "detail_hits": [
           "congruence",
@@ -372,83 +392,127 @@
           "transformation"
         ],
         "detail_weight": 1.68
+      },
+      "model.video": {
+        "picked": "Determining rotations",
+        "fit": "fits",
+        "score": 139.37,
+        "core_hits": [
+          "rotation"
+        ],
+        "detail_hits": [
+          "angle rotation",
+          "image"
+        ],
+        "detail_weight": 1.23
       },
       "predict.reading": {
         "picked": "Determine rotations",
-        "score": 213.13,
+        "fit": "fits",
+        "score": 226.79,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "centre rotation",
           "angle rotation",
-          "figure plane"
+          "figure plane",
+          "plane rotation",
+          "angle centre rotation"
         ],
-        "detail_weight": 2.69
+        "detail_weight": 3.29
       },
       "observe.reading": {
         "picked": "Determine rotations (basic)",
-        "score": 197.57,
+        "fit": "fits",
+        "score": 210.24,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "centre rotation",
           "angle rotation",
-          "figure plane"
+          "figure plane",
+          "plane rotation",
+          "angle centre rotation"
         ],
-        "detail_weight": 2.69
+        "detail_weight": 3.29
       },
       "explain.reading": {
         "picked": "Determine rotations",
-        "score": 213.13,
+        "fit": "fits",
+        "score": 226.79,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "centre rotation",
           "angle rotation",
-          "figure plane"
+          "figure plane",
+          "plane rotation",
+          "angle centre rotation"
         ],
-        "detail_weight": 2.69
+        "detail_weight": 3.29
       },
       "dqb.reading": {
-        "picked": "Determine rotations",
-        "score": 213.13,
+        "picked": "Determine rotations (basic)",
+        "fit": "fits",
+        "score": 210.24,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "centre rotation",
           "angle rotation",
-          "figure plane"
+          "figure plane",
+          "plane rotation",
+          "angle centre rotation"
         ],
-        "detail_weight": 2.69
+        "detail_weight": 3.29
       },
       "model.reading": {
-        "picked": "Determine rotations",
-        "score": 213.13,
+        "picked": "Angles of Rotation in Standard Positions: Clock Angles (PLIX)",
+        "fit": "partial",
+        "score": 115.83,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "centre rotation",
-          "angle rotation",
-          "figure plane"
+          "angle rotation"
         ],
-        "detail_weight": 2.69
+        "detail_weight": 0.94
       }
     },
     "video_pool": {
-      "passed": 47,
+      "passed": 43,
       "runners_up": [
-        "Proving the SAS triangle congruence criterion using transformations",
-        "Proving the ASA and AAS triangle congruence criteria using transformations",
+        "Rotating points",
+        "Rotating shapes",
+        "Congruent shapes & transformations",
         "Proving triangle congruence",
-        "Proving the SSS triangle congruence criterion using transformations",
         "Calculating angle measures to verify congruence"
       ],
       "rejected_sample": [
+        [
+          "Proving the SAS triangle congruence criterion using transformations",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Proving the ASA and AAS triangle congruence criteria using transformations",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Rotating 2D shapes in 3D",
+          "below relevance gate"
+        ],
+        [
+          "Proving the SSS triangle congruence criterion using transformations",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Dilating shapes: shrinking",
+          "below relevance gate"
+        ],
         [
           "Inscribed quadrilaterals proof",
           "below relevance gate"
@@ -458,82 +522,64 @@
           "below relevance gate"
         ],
         [
-          "Solving inscribed quadrilaterals",
-          "below relevance gate"
-        ],
-        [
-          "Angular motion variables",
-          "below relevance gate"
-        ],
-        [
-          "Quadrilateral properties",
-          "below relevance gate"
-        ],
-        [
-          "Measuring angles in degrees",
-          "below relevance gate"
-        ],
-        [
-          "Easy Math Tricks Never Taught In School!  #Maths  #Mathstricks  #Mathematics",
-          "web file not on reference image"
-        ],
-        [
-          "Matrices as transformations of the plane",
+          "Non-congruent shapes & transformations",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 80,
+        "judged off-topic (independent reviewer)": 4,
+        "below relevance gate": 79,
         "web file not on reference image": 4,
         "excluded: answer/exam material": 1,
         "kolibri node not available on reference image": 2
       }
     },
     "reading_pool": {
-      "passed": 48,
+      "passed": 40,
       "runners_up": [
         "Determine rotations (basic)",
-        "Prove triangle properties",
+        "Congruence & transformations",
+        "Rotate shapes",
         "Angles of Rotation in Standard Positions: Clock Angles (PLIX)",
-        "Prove triangle congruence",
-        "Congruence & transformations"
+        "Determine congruent triangles"
       ],
       "rejected_sample": [
         [
-          "Rotate points (basic)",
-          "below relevance gate"
+          "Prove triangle properties",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Identify transformations",
-          "below relevance gate"
+          "Prove triangle congruence",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Rigid transformations: preserved properties",
           "below relevance gate"
         ],
         [
-          "Find angles in triangles",
+          "Justify constructions",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Properties of shapes",
           "below relevance gate"
         ],
         [
-          "Prove parallelogram properties",
+          "Mapping shapes",
           "below relevance gate"
         ],
         [
-          "Solve for an angle in right triangles",
-          "below relevance gate"
+          "Line and angle proofs",
+          "judged off-topic (independent reviewer)"
         ],
         [
-          "Ordering triangle sides and angles",
-          "below relevance gate"
-        ],
-        [
-          "Quadrilateral problems on the coordinate plane",
+          "Identify transformations",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 92,
+        "judged off-topic (independent reviewer)": 5,
+        "below relevance gate": 97,
         "excluded: answer/exam material": 4
       }
     }
@@ -555,45 +601,69 @@
         "plane",
         "surface",
         "rotating",
-        "objects",
+        "shapes",
+        "around",
+        "point",
+        "performing",
+        "protractor",
+        "center",
+        "coordinate",
         "constructing",
-        "images"
+        "rotated",
+        "images",
+        "compass",
+        "transformations",
+        "polygons",
+        "objects"
       ],
       "phrases": [
         "rotation construction",
         "centre rotation",
         "angle rotation",
         "geometrical set",
-        "plane surface rotation"
+        "plane surface rotation",
+        "rotating shapes around point",
+        "performing rotations protractor",
+        "center rotation angle",
+        "rotations coordinate plane",
+        "constructing rotated images compass",
+        "rotation transformations polygons"
       ]
     },
     "slots": {
       "predict.video": {
-        "picked": "Determining rotations",
-        "score": 141.84,
+        "picked": "Rotating shapes",
+        "fit": "fits",
+        "score": 113.81,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "angle rotation",
+          "coordinate plane rotation",
+          "rotating",
+          "plane",
           "image"
         ],
-        "detail_weight": 1.37
+        "detail_weight": 1.48
       },
       "observe.video": {
-        "picked": "Disc method rotation around horizontal line",
-        "score": 88.01,
+        "picked": "Rotating shapes",
+        "fit": "fits",
+        "score": 113.81,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "rotating",
-          "constructing"
+          "plane",
+          "image"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.48
       },
       "explain.video": {
         "picked": "Determining rotations",
+        "fit": "partial",
         "score": 141.84,
         "core_hits": [
           "rotation"
@@ -605,103 +675,111 @@
         "detail_weight": 1.37
       },
       "dqb.video": {
-        "picked": "Determining rotations",
-        "score": 141.84,
+        "picked": "Rotating points",
+        "fit": "partial",
+        "score": 119.49,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "angle rotation",
+          "rotating",
           "image"
         ],
-        "detail_weight": 1.37
+        "detail_weight": 1.67
       },
       "model.video": {
-        "picked": "Determining rotations",
-        "score": 141.84,
+        "picked": "Examples: Determine Angles of Rotation",
+        "fit": "partial",
+        "score": 72.65,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "angle rotation",
-          "image"
+          "angle rotation"
         ],
-        "detail_weight": 1.37
+        "detail_weight": 1.07
       },
       "predict.reading": {
-        "picked": "Determine rotations",
-        "score": 178.49,
+        "picked": "Rotate shapes",
+        "fit": "fits",
+        "score": 87.01,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "centre rotation",
-          "angle rotation",
-          "plane"
+          "coordinate plane rotation",
+          "plane",
+          "image"
         ],
-        "detail_weight": 2.62
+        "detail_weight": 1.18
       },
       "observe.reading": {
-        "picked": "Determine rotations (basic)",
-        "score": 165.63,
+        "picked": "Rotate shapes",
+        "fit": "fits",
+        "score": 87.01,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "centre rotation",
-          "angle rotation",
-          "plane"
+          "coordinate plane rotation",
+          "plane",
+          "image"
         ],
-        "detail_weight": 2.62
+        "detail_weight": 1.18
       },
       "explain.reading": {
-        "picked": "Determine rotations",
-        "score": 178.49,
+        "picked": "Determine rotations (basic)",
+        "fit": "partial",
+        "score": 251.89,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "centre rotation",
           "angle rotation",
+          "angle centre rotation",
+          "coordinate plane rotation",
           "plane"
         ],
-        "detail_weight": 2.62
+        "detail_weight": 3.82
       },
       "dqb.reading": {
         "picked": "Determine rotations",
-        "score": 178.49,
+        "fit": "partial",
+        "score": 241.13,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "centre rotation",
           "angle rotation",
+          "angle centre rotation",
+          "coordinate plane rotation",
           "plane"
         ],
-        "detail_weight": 2.62
+        "detail_weight": 3.82
       },
       "model.reading": {
-        "picked": "Determine rotations",
-        "score": 178.49,
+        "picked": "Rotate points (basic)",
+        "fit": "partial",
+        "score": 122.78,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "centre rotation",
-          "angle rotation",
+          "coordinate plane rotation",
           "plane"
         ],
-        "detail_weight": 2.62
+        "detail_weight": 0.88
       }
     },
     "video_pool": {
-      "passed": 9,
+      "passed": 4,
       "runners_up": [
-        "Disc method rotation around horizontal line",
+        "Determining rotations",
         "Rotating points",
-        "Rotation in R3 around the x-axis",
-        "Examples: Determine Angles of Rotation",
-        "Rotating shapes"
+        "Examples: Determine Angles of Rotation"
       ],
       "rejected_sample": [
         [
@@ -709,86 +787,84 @@
           "below relevance gate"
         ],
         [
-          "Geometric constructions: congruent angles",
-          "below relevance gate"
-        ],
-        [
-          "Geometric constructions: angle bisector",
-          "below relevance gate"
-        ],
-        [
-          "Constructing angles",
-          "below relevance gate"
-        ],
-        [
           "Dilating shapes: shrinking",
           "below relevance gate"
         ],
         [
-          "Object image height and distance relationship",
+          "Reflecting points in the coordinate plane",
           "below relevance gate"
         ],
         [
-          "Congruent Angles and Angle Bisectors Principles - Basic",
+          "Rotation in R3 around the x-axis",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Translation challenge problem",
           "below relevance gate"
         ],
         [
-          "Estimating the Metric Lengths of Objects by Image",
+          "Disc method rotation around horizontal line",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Dilating shapes: expanding",
+          "below relevance gate"
+        ],
+        [
+          "Similar shapes & transformations",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 115,
-        "kolibri node not available on reference image": 3
+        "below relevance gate": 123,
+        "judged off-topic (independent reviewer)": 3
       }
     },
     "reading_pool": {
-      "passed": 12,
+      "passed": 5,
       "runners_up": [
         "Determine rotations (basic)",
-        "Introduction to Angles of Rotation, Coterminal Angles, and Reference Angles (Flexbook)",
-        "Angles of Rotation in Standard Positions: Clock Angles (PLIX)",
-        "Angles of Rotation in Standard Positions (Flexbook)",
-        "Angles of Rotation in Standard Positions Practice"
+        "Determine rotations",
+        "Rotate points (basic)",
+        "Rotate points"
       ],
       "rejected_sample": [
         [
-          "Justify constructions",
+          "Drawing polygons with coordinates",
           "below relevance gate"
         ],
         [
-          "Finding tangent planes",
+          "Translate points",
           "below relevance gate"
         ],
         [
-          "Create equations to solve for missing angles",
+          "Transform polygons using matrices",
           "below relevance gate"
         ],
         [
-          "Images in a Plane Mirror (Flexbook)",
+          "Reflect points",
           "below relevance gate"
         ],
         [
-          "Congruent Angles and Angle Bisectors (Flexbook)",
+          "Mapping shapes",
           "below relevance gate"
         ],
         [
-          "Congruent Angles and Angle Bisectors Practice",
+          "Coordinate plane word problems (quadrant 1 - challenging)",
           "below relevance gate"
         ],
         [
-          "Angle Measurement: Fuel Gauge Angles (PLIX)",
+          "Graph points",
           "below relevance gate"
         ],
         [
-          "Congruent Angles and Angle Bisectors: Bisecting Pepperoni Pizza (PLIX)",
+          "Coordinate plane problems in all four quadrants",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 143,
-        "excluded: answer/exam material": 7,
-        "kolibri node not available on reference image": 5
+        "below relevance gate": 136,
+        "judged off-topic (independent reviewer)": 7
       }
     }
   },
@@ -807,160 +883,181 @@
         "rules",
         "origin",
         "degrees",
+        "rotating",
+        "points",
+        "degree",
+        "coordinates",
+        "clockwise",
+        "counterclockwise",
+        "transformations",
+        "geometry",
         "discovering",
         "applying"
       ],
       "phrases": [
-        "rotation cartesian plane coordinate rules origin degrees degrees"
+        "rotation cartesian plane coordinate rules origin degrees degrees",
+        "rotating points origin",
+        "degree rotation rules",
+        "degree rotation coordinates",
+        "rotations coordinate plane",
+        "clockwise counterclockwise rotations",
+        "rotation transformations geometry"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Rotating shapes",
-        "score": 57.32,
+        "fit": "partial",
+        "score": 93.02,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "plane",
           "coordinate"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.43
       },
       "observe.video": {
         "picked": "Rotating shapes",
-        "score": 57.32,
+        "fit": "partial",
+        "score": 93.02,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "plane",
           "coordinate"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.43
       },
       "explain.video": {
         "picked": "Rotating shapes",
-        "score": 57.32,
+        "fit": "partial",
+        "score": 93.02,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "plane",
           "coordinate"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.43
       },
       "dqb.video": {
         "picked": "Rotating shapes",
-        "score": 57.32,
+        "fit": "partial",
+        "score": 93.02,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "plane",
           "coordinate"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.43
       },
       "model.video": {
         "picked": "Rotating shapes",
-        "score": 57.32,
+        "fit": "partial",
+        "score": 93.02,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "plane",
           "coordinate"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.43
       },
       "predict.reading": {
-        "picked": "Determine rotations (basic)",
-        "score": 135.7,
+        "picked": "Rotate points (basic)",
+        "fit": "fits",
+        "score": 134.21,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "plane",
           "coordinate"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.43
       },
       "observe.reading": {
-        "picked": "Determine rotations",
-        "score": 118.8,
+        "picked": "Rotate points",
+        "fit": "fits",
+        "score": 105.8,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "plane",
           "coordinate"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.43
       },
       "explain.reading": {
         "picked": "Rotate points (basic)",
-        "score": 84.19,
+        "fit": "fits",
+        "score": 134.21,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "plane",
           "coordinate"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.43
       },
       "dqb.reading": {
-        "picked": "Determine rotations (basic)",
-        "score": 135.7,
+        "picked": "Rotate points",
+        "fit": "fits",
+        "score": 105.8,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "plane",
           "coordinate"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.43
       },
       "model.reading": {
         "picked": "Determine rotations (basic)",
-        "score": 135.7,
+        "fit": "partial",
+        "score": 151.2,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
+          "coordinate plane rotation",
           "plane",
           "coordinate"
         ],
-        "detail_weight": 0.6
+        "detail_weight": 1.43
       }
     },
     "video_pool": {
-      "passed": 3,
+      "passed": 2,
       "runners_up": [
-        "Working with matrices as transformations of the plane",
-        "2011 Calculus BC free response #3 (b & c)"
+        "Working with matrices as transformations of the plane"
       ],
       "rejected_sample": [
         [
-          "Drawing a quadrilateral on the coordinate plane example",
+          "Points on the coordinate plane examples",
           "below relevance gate"
         ],
         [
-          "Coordinates of rectangle example",
-          "below relevance gate"
-        ],
-        [
-          "Complex numbers",
-          "below relevance gate"
-        ],
-        [
-          "Introduction to the coordinate plane",
-          "below relevance gate"
-        ],
-        [
-          "Parallelogram on the coordinate plane",
+          "Rotating points",
           "below relevance gate"
         ],
         [
@@ -968,26 +1065,39 @@
           "below relevance gate"
         ],
         [
-          "Dilating shapes: shrinking by 1/2",
+          "Reflecting points in the coordinate plane",
+          "below relevance gate"
+        ],
+        [
+          "Introduction to the coordinate plane",
           "below relevance gate"
         ],
         [
           "Translation challenge problem",
           "below relevance gate"
+        ],
+        [
+          "Changing coordinate systems to help find a transformation matrix",
+          "below relevance gate"
+        ],
+        [
+          "Coordinate plane: graphing points",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138
+        "below relevance gate": 148,
+        "conflicting sub-topic": 1
       }
     },
     "reading_pool": {
       "passed": 6,
       "runners_up": [
-        "Determine rotations",
-        "Rotate points (basic)",
+        "Rotate points",
         "Rules for Rotations (Flexbook)",
         "Rotate shapes",
-        "Rotate points"
+        "Determine rotations (basic)",
+        "Determine rotations"
       ],
       "rejected_sample": [
         [
@@ -995,15 +1105,11 @@
           "below relevance gate"
         ],
         [
-          "Drawing polygons with coordinates",
+          "Translate points",
           "below relevance gate"
         ],
         [
-          "Area and perimeter on the coordinate plane",
-          "below relevance gate"
-        ],
-        [
-          "Quadrilateral problems on the coordinate plane",
+          "Reflect points",
           "below relevance gate"
         ],
         [
@@ -1011,21 +1117,25 @@
           "below relevance gate"
         ],
         [
+          "Graph points",
+          "below relevance gate"
+        ],
+        [
           "Coordinate plane problems in all four quadrants",
           "below relevance gate"
         ],
         [
-          "Rules that relate 2 variables",
+          "Distance between points in first quadrant",
           "below relevance gate"
         ],
         [
-          "Tables from rules that relate 2 variables",
+          "Points in the Coordinate Plane (Flexbook)",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138,
-        "kolibri node not available on reference image": 18,
+        "below relevance gate": 143,
+        "kolibri node not available on reference image": 17,
         "excluded: answer/exam material": 1
       }
     }
@@ -1062,7 +1172,8 @@
         "nairobi",
         "clock",
         "verification",
-        "investigate"
+        "point",
+        "center"
       ],
       "phrases": [
         "centre rotation",
@@ -1076,22 +1187,28 @@
         "protractor measurement",
         "core mathematics",
         "university nairobi clock",
-        "verification rotation"
+        "verification rotation",
+        "rotations point",
+        "center rotation",
+        "perpendicular bisector construction"
       ]
     },
     "slots": {
       "predict.video": {
         "picked": "Geometric constructions: perpendicular bisector",
-        "score": 179.44,
+        "fit": "fits",
+        "score": 192.54,
         "core_hits": [],
         "detail_hits": [
           "bisector perpendicular",
-          "compass construction"
+          "compass construction",
+          "bisector construction perpendicular"
         ],
-        "detail_weight": 2.01
+        "detail_weight": 2.4
       },
       "observe.video": {
         "picked": "Determining rotations",
+        "fit": "fits",
         "score": 145.02,
         "core_hits": [
           "rotation"
@@ -1103,40 +1220,48 @@
         "detail_weight": 1.55
       },
       "explain.video": {
-        "picked": "Geometric constructions: congruent angles",
-        "score": 120.56,
+        "picked": "Geometric constructions: perpendicular bisector",
+        "fit": "fits",
+        "score": 192.54,
         "core_hits": [],
         "detail_hits": [
+          "bisector perpendicular",
           "compass construction",
-          "congruence",
-          "angle"
+          "bisector construction perpendicular"
         ],
-        "detail_weight": 1.62
+        "detail_weight": 2.4
       },
       "dqb.video": {
-        "picked": "Geometric constructions: angle bisector",
-        "score": 116.52,
-        "core_hits": [],
+        "picked": "Determining rotations",
+        "fit": "fits",
+        "score": 145.02,
+        "core_hits": [
+          "rotation"
+        ],
         "detail_hits": [
-          "compass construction",
+          "angle rotation",
           "angle"
         ],
-        "detail_weight": 1.24
+        "detail_weight": 1.55
       },
       "model.video": {
-        "picked": "Geometric constructions: parallel line",
-        "score": 109.53,
-        "core_hits": [],
+        "picked": "Rotating points",
+        "fit": "partial",
+        "score": 126.65,
+        "core_hits": [
+          "rotation"
+        ],
         "detail_hits": [
-          "compass construction",
-          "congruence",
+          "angle rotation",
+          "point rotation",
           "angle"
         ],
-        "detail_weight": 1.62
+        "detail_weight": 1.97
       },
       "predict.reading": {
         "picked": "Determine rotations",
-        "score": 192.52,
+        "fit": "fits",
+        "score": 230.32,
         "core_hits": [
           "rotation"
         ],
@@ -1149,8 +1274,9 @@
         "detail_weight": 3.35
       },
       "observe.reading": {
-        "picked": "Determine rotations (basic)",
-        "score": 178.65,
+        "picked": "Determine rotations",
+        "fit": "fits",
+        "score": 230.32,
         "core_hits": [
           "rotation"
         ],
@@ -1163,31 +1289,9 @@
         "detail_weight": 3.35
       },
       "explain.reading": {
-        "picked": "Justify constructions",
-        "score": 168.37,
-        "core_hits": [],
-        "detail_hits": [
-          "bisector perpendicular",
-          "congruence",
-          "angle"
-        ],
-        "detail_weight": 1.76
-      },
-      "dqb.reading": {
-        "picked": "Angles of Rotation in Standard Positions: Clock Angles (PLIX)",
-        "score": 125.12,
-        "core_hits": [
-          "rotation"
-        ],
-        "detail_hits": [
-          "angle rotation",
-          "angle"
-        ],
-        "detail_weight": 1.55
-      },
-      "model.reading": {
-        "picked": "Determine rotations",
-        "score": 192.52,
+        "picked": "Determine rotations (basic)",
+        "fit": "partial",
+        "score": 212.81,
         "core_hits": [
           "rotation"
         ],
@@ -1198,68 +1302,98 @@
           "angle"
         ],
         "detail_weight": 3.35
+      },
+      "dqb.reading": {
+        "picked": "Justify constructions",
+        "fit": "partial",
+        "score": 181.26,
+        "core_hits": [],
+        "detail_hits": [
+          "bisector perpendicular",
+          "congruence",
+          "bisector construction perpendicular",
+          "angle"
+        ],
+        "detail_weight": 2.15
+      },
+      "model.reading": {
+        "picked": "Angles of Rotation in Standard Positions: Clock Angles (PLIX)",
+        "fit": "partial",
+        "score": 125.12,
+        "core_hits": [
+          "rotation"
+        ],
+        "detail_hits": [
+          "angle rotation",
+          "angle"
+        ],
+        "detail_weight": 1.55
       }
     },
     "video_pool": {
-      "passed": 14,
+      "passed": 10,
       "runners_up": [
         "Determining rotations",
+        "Perpendicular Bisectors Principles - Basic",
+        "Rotating points",
         "Geometric constructions: congruent angles",
-        "Geometric constructions: angle bisector",
-        "Geometric constructions: parallel line",
-        "Examples: Determine Angles of Rotation"
+        "Geometric constructions: angle bisector"
       ],
       "rejected_sample": [
-        [
-          "Congruent Angles and Angle Bisectors Principles - Basic",
-          "below relevance gate"
-        ],
         [
           "Geometric constructions: perpendicular line through a point on the line",
           "below relevance gate"
         ],
         [
-          "Angle congruence equivalent to having same measure",
-          "below relevance gate"
-        ],
-        [
-          "Object image height and distance relationship",
-          "below relevance gate"
-        ],
-        [
-          "Proving the ASA and AAS triangle congruence criteria using transformations",
-          "below relevance gate"
+          "Geometric constructions: parallel line",
+          "judged off-topic (independent reviewer)"
         ],
         [
           "Proving the SAS triangle congruence criterion using transformations",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Proving the ASA and AAS triangle congruence criteria using transformations",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Congruent Angles and Angle Bisectors Principles - Basic",
           "below relevance gate"
         ],
         [
-          "Object image and focal distance relationship (proof of formula)",
+          "Rotating 2D shapes in 3D",
           "below relevance gate"
         ],
         [
           "Geometric constructions: perpendicular line through a point not on the line",
           "below relevance gate"
+        ],
+        [
+          "Congruent shapes & transformations",
+          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 115,
-        "web file not on reference image": 5,
-        "excluded: answer/exam material": 1,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 111,
+        "judged off-topic (independent reviewer)": 4,
+        "web file not on reference image": 4,
+        "excluded: answer/exam material": 1
       }
     },
     "reading_pool": {
-      "passed": 13,
+      "passed": 9,
       "runners_up": [
+        "Perpendicular Bisectors (Flexbook)",
+        "Perpendicular Bisectors Practice",
         "Determine rotations (basic)",
         "Justify constructions",
-        "Angles of Rotation in Standard Positions: Clock Angles (PLIX)",
-        "Introduction to Angles of Rotation, Coterminal Angles, and Reference Angles (Flexbook)",
-        "Angles of Rotation in Standard Positions (Flexbook)"
+        "Angles of Rotation in Standard Positions: Clock Angles (PLIX)"
       ],
       "rejected_sample": [
+        [
+          "Congruence & transformations",
+          "below relevance gate"
+        ],
         [
           "Congruent Angles and Angle Bisectors (Flexbook)",
           "below relevance gate"
@@ -1269,34 +1403,29 @@
           "below relevance gate"
         ],
         [
+          "Mapping shapes",
+          "below relevance gate"
+        ],
+        [
+          "Rigid transformations: preserved properties",
+          "below relevance gate"
+        ],
+        [
           "Congruent Angles and Angle Bisectors: Bisecting Pepperoni Pizza (PLIX)",
           "below relevance gate"
         ],
         [
-          "Congruence & transformations",
+          "Rotate shapes",
           "below relevance gate"
         ],
         [
-          "Angle Measurement: Fuel Gauge Angles (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Find angles in congruent triangles",
-          "below relevance gate"
-        ],
-        [
-          "Identify transformations",
-          "below relevance gate"
-        ],
-        [
-          "Line and angle proofs",
+          "Translate points",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 131,
-        "kolibri node not available on reference image": 2,
-        "excluded: answer/exam material": 10
+        "below relevance gate": 134,
+        "judged off-topic (independent reviewer)": 6
       }
     }
   },
@@ -1356,6 +1485,7 @@
     "slots": {
       "predict.video": {
         "picked": "Intro to rotational symmetry",
+        "fit": "fits",
         "score": 162.75,
         "core_hits": [
           "rotation"
@@ -1370,8 +1500,25 @@
         "detail_weight": 2.62
       },
       "observe.video": {
+        "picked": "Intro to rotational symmetry",
+        "fit": "fits",
+        "score": 162.75,
+        "core_hits": [
+          "rotation"
+        ],
+        "detail_hits": [
+          "rotational symmetry",
+          "degree",
+          "rotational",
+          "symmetry",
+          "figure"
+        ],
+        "detail_weight": 2.62
+      },
+      "explain.video": {
         "picked": "Recognizing common 3D shapes",
-        "score": 138.66,
+        "fit": "partial",
+        "score": 161.73,
         "core_hits": [],
         "detail_hits": [
           "square",
@@ -1381,83 +1528,66 @@
         ],
         "detail_weight": 1.67
       },
-      "explain.video": {
-        "picked": "Intro to rotational symmetry",
-        "score": 162.75,
-        "core_hits": [
-          "rotation"
-        ],
-        "detail_hits": [
-          "rotational symmetry",
-          "degree",
-          "rotational",
-          "symmetry",
-          "figure"
-        ],
-        "detail_weight": 2.62
-      },
       "dqb.video": {
-        "picked": "Intro to rotational symmetry",
-        "score": 162.75,
+        "picked": "Determining rotations",
+        "fit": "partial",
+        "score": 96.15,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "rotational symmetry",
-          "degree",
-          "rotational",
-          "symmetry",
-          "figure"
+          "angle rotation"
         ],
-        "detail_weight": 2.62
+        "detail_weight": 0.39
       },
       "model.video": {
-        "picked": "Intro to rotational symmetry",
-        "score": 162.75,
+        "picked": "Examples: Determine Angles of Rotation",
+        "fit": "partial",
+        "score": 66.27,
+        "core_hits": [
+          "rotation"
+        ],
+        "detail_hits": [
+          "angle rotation"
+        ],
+        "detail_weight": 0.39
+      },
+      "predict.reading": {
+        "picked": "Rotational symmetry of 2D shapes",
+        "fit": "fits",
+        "score": 279.66,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "rotational symmetry",
-          "degree",
+          "rotational shape symmetry",
           "rotational",
           "symmetry",
           "figure"
         ],
-        "detail_weight": 2.62
-      },
-      "predict.reading": {
-        "picked": "Determine rotations",
-        "score": 208.34,
-        "core_hits": [
-          "rotation"
-        ],
-        "detail_hits": [
-          "figure plane",
-          "centre rotation",
-          "angle rotation",
-          "plane",
-          "figure"
-        ],
-        "detail_weight": 2.48
+        "detail_weight": 2.69
       },
       "observe.reading": {
         "picked": "Rotational symmetry of 2D shapes",
-        "score": 205.93,
+        "fit": "fits",
+        "score": 279.66,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "rotational symmetry",
+          "rotational shape symmetry",
           "rotational",
           "symmetry",
           "figure"
         ],
-        "detail_weight": 2.4
+        "detail_weight": 2.69
       },
       "explain.reading": {
-        "picked": "Determine rotations (basic)",
-        "score": 193.13,
+        "picked": "Determine rotations",
+        "fit": "partial",
+        "score": 208.34,
         "core_hits": [
           "rotation"
         ],
@@ -1471,8 +1601,9 @@
         "detail_weight": 2.48
       },
       "dqb.reading": {
-        "picked": "Determine rotations",
-        "score": 208.34,
+        "picked": "Determine rotations (basic)",
+        "fit": "partial",
+        "score": 193.13,
         "core_hits": [
           "rotation"
         ],
@@ -1486,29 +1617,26 @@
         "detail_weight": 2.48
       },
       "model.reading": {
-        "picked": "Determine rotations",
-        "score": 208.34,
-        "core_hits": [
-          "rotation"
-        ],
+        "picked": "Identify geometric solids (3D shapes)",
+        "fit": "partial",
+        "score": 116.36,
+        "core_hits": [],
         "detail_hits": [
-          "figure plane",
-          "centre rotation",
-          "angle rotation",
-          "plane",
-          "figure"
+          "solid",
+          "pyramid",
+          "cone"
         ],
-        "detail_weight": 2.48
+        "detail_weight": 1.05
       }
     },
     "video_pool": {
-      "passed": 16,
+      "passed": 11,
       "runners_up": [
-        "Recognizing common 3D shapes",
-        "Determining rotations",
         "Rotational Symmetry Tutorial",
         "Overview of Rotational Symmetry",
-        "L403 2 Rotational Symmetry Tetrahedron"
+        "L403 2 Rotational Symmetry Tetrahedron",
+        "Rotation Symmetry Principles - Basic",
+        "L401 2D Rotational Symmetry"
       ],
       "rejected_sample": [
         [
@@ -1540,25 +1668,26 @@
           "below relevance gate"
         ],
         [
-          "Area of equilateral triangle -dubbed(KY)",
+          "Mapping shapes",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 106,
+        "below relevance gate": 104,
+        "judged off-topic (independent reviewer)": 3,
         "web file not on reference image": 5,
         "excluded: answer/exam material": 1,
         "kolibri node not available on reference image": 4
       }
     },
     "reading_pool": {
-      "passed": 25,
+      "passed": 18,
       "runners_up": [
-        "Rotational symmetry of 2D shapes",
-        "Determine rotations (basic)",
-        "Angles of Rotation in Standard Positions: Clock Angles (PLIX)",
-        "Identify geometric solids (3D shapes)",
-        "Shapes for Rotational Symmetry (PLIX)"
+        "Shapes for Rotational Symmetry (PLIX)",
+        "Rotational Symmetry",
+        "2D Rotational Symmetry",
+        "Rotation Symmetry (Flexbook)",
+        "Determine rotations"
       ],
       "rejected_sample": [
         [
@@ -1566,7 +1695,19 @@
           "below relevance gate"
         ],
         [
+          "Mapping shapes",
+          "below relevance gate"
+        ],
+        [
           "Area of a Triangular Prism (PLIX)",
+          "below relevance gate"
+        ],
+        [
+          "Apply volume of solids",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Name shapes 3",
           "below relevance gate"
         ],
         [
@@ -1574,29 +1715,18 @@
           "below relevance gate"
         ],
         [
+          "Area & perimeter on the coordinate plane",
+          "below relevance gate"
+        ],
+        [
           "Regular and Irregular Polygons: Polygon States (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Solve for an angle in right triangles",
-          "below relevance gate"
-        ],
-        [
-          "Conversion between Degrees and Radians: Clock Angles and Measures (PLIX)",
-          "below relevance gate"
-        ],
-        [
-          "Counting Rectangles, Squares, and Triangles in Composite Figures Practice",
-          "below relevance gate"
-        ],
-        [
-          "Name shapes 3",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 116,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 125,
+        "judged off-topic (independent reviewer)": 1,
+        "kolibri node not available on reference image": 2
       }
     }
   },
@@ -1628,7 +1758,12 @@
         "geometric",
         "figures",
         "cutout",
-        "shape"
+        "congruent",
+        "transformations",
+        "reflections",
+        "translations",
+        "transformed",
+        "rigid"
       ],
       "phrases": [
         "direct congruence",
@@ -1637,12 +1772,45 @@
         "university nairobi clock",
         "cartesian plane",
         "geometric transformation",
-        "plane figures"
+        "plane figures",
+        "congruent figures transformations",
+        "rotations plane",
+        "reflections congruence",
+        "translations geometric figures",
+        "orientation transformed figures",
+        "rigid transformations congruence"
       ]
     },
     "slots": {
       "predict.video": {
+        "picked": "Congruent shapes & transformations",
+        "fit": "fits",
+        "score": 101.38,
+        "core_hits": [],
+        "detail_hits": [
+          "congruence",
+          "transformation",
+          "congruence rigid transformation",
+          "shape"
+        ],
+        "detail_weight": 2
+      },
+      "observe.video": {
+        "picked": "Congruent shapes & transformations",
+        "fit": "fits",
+        "score": 101.38,
+        "core_hits": [],
+        "detail_hits": [
+          "congruence",
+          "transformation",
+          "congruence rigid transformation",
+          "shape"
+        ],
+        "detail_weight": 2
+      },
+      "explain.video": {
         "picked": "Identifying transformations",
+        "fit": "partial",
         "score": 129.51,
         "core_hits": [
           "rotation"
@@ -1654,8 +1822,9 @@
         ],
         "detail_weight": 1.57
       },
-      "observe.video": {
+      "dqb.video": {
         "picked": "Defining transformations",
+        "fit": "partial",
         "score": 105.53,
         "core_hits": [
           "rotation"
@@ -1667,82 +1836,78 @@
         ],
         "detail_weight": 1.57
       },
-      "explain.video": {
-        "picked": "Working with matrices as transformations of the plane",
-        "score": 98.76,
-        "core_hits": [
-          "rotation"
-        ],
-        "detail_hits": [
-          "reflection",
-          "transformation",
-          "geometric transformation"
-        ],
-        "detail_weight": 1.41
-      },
-      "dqb.video": {
-        "picked": "Congruent shapes & transformations",
-        "score": 87.05,
+      "model.video": {
+        "picked": "Non-congruent shapes & transformations",
+        "fit": "partial",
+        "score": 100.42,
         "core_hits": [],
         "detail_hits": [
           "congruence",
           "transformation",
+          "congruence rigid transformation",
           "shape"
         ],
-        "detail_weight": 1.68
-      },
-      "model.video": {
-        "picked": "Linear transformation examples: Rotations in R2",
-        "score": 85.76,
-        "core_hits": [
-          "rotation"
-        ],
-        "detail_hits": [
-          "transformation"
-        ],
-        "detail_weight": 0.38
+        "detail_weight": 2
       },
       "predict.reading": {
-        "picked": "Translations, Rotations, and Reflections (Flexbook)",
-        "score": 145.88,
+        "picked": "Rigid transformations: preserved properties",
+        "fit": "fits",
+        "score": 158.24,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "translation",
-          "reflection"
+          "reflection",
+          "transformation",
+          "shape"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 1.87
       },
       "observe.reading": {
-        "picked": "Translations, Rotations, and Reflections Practice",
-        "score": 145.88,
-        "core_hits": [
-          "rotation"
-        ],
+        "picked": "Congruence & transformations",
+        "fit": "fits",
+        "score": 131.75,
+        "core_hits": [],
         "detail_hits": [
-          "translation",
-          "reflection"
+          "congruence",
+          "transformation",
+          "figure plane",
+          "congruence figure transformation",
+          "congruence rigid transformation"
         ],
-        "detail_weight": 1.18
+        "detail_weight": 2.53
       },
       "explain.reading": {
-        "picked": "Mapping shapes",
-        "score": 138.09,
+        "picked": "Determine rotations",
+        "fit": "fits",
+        "score": 120.78,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "translation",
-          "reflection",
-          "transformation",
-          "shape"
+          "figure plane",
+          "plane rotation"
         ],
-        "detail_weight": 1.87
+        "detail_weight": 0.82
       },
       "dqb.reading": {
+        "picked": "Determine rotations (basic)",
+        "fit": "fits",
+        "score": 113.12,
+        "core_hits": [
+          "rotation"
+        ],
+        "detail_hits": [
+          "figure plane",
+          "plane rotation"
+        ],
+        "detail_weight": 0.82
+      },
+      "model.reading": {
         "picked": "Rigid transformations: preserved properties",
-        "score": 129.96,
+        "fit": "fits",
+        "score": 158.24,
         "core_hits": [
           "rotation"
         ],
@@ -1753,33 +1918,24 @@
           "shape"
         ],
         "detail_weight": 1.87
-      },
-      "model.reading": {
-        "picked": "Identify transformations",
-        "score": 128.96,
-        "core_hits": [
-          "rotation"
-        ],
-        "detail_hits": [
-          "translation",
-          "reflection",
-          "transformation"
-        ],
-        "detail_weight": 1.57
       }
     },
     "video_pool": {
-      "passed": 32,
+      "passed": 25,
       "runners_up": [
+        "Identifying transformations",
         "Defining transformations",
-        "Working with matrices as transformations of the plane",
-        "Congruent shapes & transformations",
-        "Linear transformation examples: Rotations in R2",
-        "Proof: Opposite sides of a parallelogram"
+        "Non-congruent shapes & transformations",
+        "Proving the SSS triangle congruence criterion using transformations",
+        "Proving the SAS triangle congruence criterion using transformations"
       ],
       "rejected_sample": [
         [
-          "Non-congruent shapes & transformations",
+          "Working with matrices as transformations of the plane",
+          "judged off-topic (independent reviewer)"
+        ],
+        [
+          "Mapping shapes",
           "below relevance gate"
         ],
         [
@@ -1791,6 +1947,10 @@
           "below relevance gate"
         ],
         [
+          "Rigid transformations: preserved properties",
+          "below relevance gate"
+        ],
+        [
           "Determining translations",
           "below relevance gate"
         ],
@@ -1799,30 +1959,23 @@
           "below relevance gate"
         ],
         [
-          "Mapping shapes",
-          "below relevance gate"
-        ],
-        [
-          "Overview of Forming Figures with Cutouts",
-          "below relevance gate"
-        ],
-        [
-          "Reflecting shapes: diagonal line of reflection",
-          "below relevance gate"
+          "Proof: Opposite sides of a parallelogram",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
+        "judged off-topic (independent reviewer)": 7,
         "below relevance gate": 101
       }
     },
     "reading_pool": {
-      "passed": 27,
+      "passed": 28,
       "runners_up": [
-        "Translations, Rotations, and Reflections Practice",
-        "Mapping shapes",
-        "Rigid transformations: preserved properties",
-        "Identify transformations",
-        "Determine rotations"
+        "Congruence & transformations",
+        "Determine rotations",
+        "Determine rotations (basic)",
+        "Determine translations",
+        "Determine reflections (advanced)"
       ],
       "rejected_sample": [
         [
@@ -1838,28 +1991,29 @@
           "below relevance gate"
         ],
         [
+          "Rotational symmetry of 2D shapes",
+          "conflicting sub-topic ['rotational']"
+        ],
+        [
+          "Defining transformations",
+          "below relevance gate"
+        ],
+        [
           "Determine reflections",
+          "below relevance gate"
+        ],
+        [
+          "Find measures using rigid transformations",
           "below relevance gate"
         ],
         [
           "Translate shapes",
           "below relevance gate"
-        ],
-        [
-          "Reflect shapes",
-          "below relevance gate"
-        ],
-        [
-          "Polar and Cartesian Transformation (Flexbook)",
-          "below relevance gate"
-        ],
-        [
-          "Polar and Cartesian Transformation Practice",
-          "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 118
+        "below relevance gate": 116,
+        "conflicting sub-topic": 1
       }
     }
   },
@@ -1919,6 +2073,7 @@
     "slots": {
       "predict.video": {
         "picked": "Intro to rotational symmetry",
+        "fit": "fits",
         "score": 146.73,
         "core_hits": [
           "rotation"
@@ -1931,6 +2086,7 @@
       },
       "observe.video": {
         "picked": "Determining rotations",
+        "fit": "fits",
         "score": 100.1,
         "core_hits": [
           "rotation"
@@ -1942,6 +2098,7 @@
       },
       "explain.video": {
         "picked": "Intro to rotational symmetry",
+        "fit": "fits",
         "score": 146.73,
         "core_hits": [
           "rotation"
@@ -1953,19 +2110,20 @@
         "detail_weight": 1.41
       },
       "dqb.video": {
-        "picked": "Intro to rotational symmetry",
-        "score": 146.73,
+        "picked": "Determining rotations",
+        "fit": "fits",
+        "score": 100.1,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "degree rotation",
-          "rotational symmetry"
+          "angle rotation"
         ],
-        "detail_weight": 1.41
+        "detail_weight": 0.68
       },
       "model.video": {
         "picked": "Intro to rotational symmetry",
+        "fit": "fits",
         "score": 146.73,
         "core_hits": [
           "rotation"
@@ -1978,30 +2136,49 @@
       },
       "predict.reading": {
         "picked": "Determine rotations",
-        "score": 186.17,
+        "fit": "fits",
+        "score": 192.84,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "centre rotation",
-          "angle rotation"
+          "angle rotation",
+          "coordinate plane rotation"
         ],
-        "detail_weight": 1.43
+        "detail_weight": 1.72
       },
       "observe.reading": {
-        "picked": "Determine rotations (basic)",
-        "score": 172.02,
+        "picked": "Determine rotations",
+        "fit": "fits",
+        "score": 192.84,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
           "centre rotation",
-          "angle rotation"
+          "angle rotation",
+          "coordinate plane rotation"
         ],
-        "detail_weight": 1.43
+        "detail_weight": 1.72
       },
       "explain.reading": {
+        "picked": "Determine rotations (basic)",
+        "fit": "partial",
+        "score": 178.18,
+        "core_hits": [
+          "rotation"
+        ],
+        "detail_hits": [
+          "centre rotation",
+          "angle rotation",
+          "coordinate plane rotation"
+        ],
+        "detail_weight": 1.72
+      },
+      "dqb.reading": {
         "picked": "Angles of Rotation in Standard Positions: Clock Angles (PLIX)",
+        "fit": "partial",
         "score": 111.87,
         "core_hits": [
           "rotation"
@@ -2011,46 +2188,45 @@
         ],
         "detail_weight": 0.68
       },
-      "dqb.reading": {
-        "picked": "Determine rotations",
-        "score": 186.17,
-        "core_hits": [
-          "rotation"
-        ],
-        "detail_hits": [
-          "centre rotation",
-          "angle rotation"
-        ],
-        "detail_weight": 1.43
-      },
       "model.reading": {
-        "picked": "Determine rotations",
-        "score": 186.17,
+        "picked": "Introduction to Angles of Rotation, Coterminal Angles, and Reference Angles (Flexbook)",
+        "fit": "partial",
+        "score": 68.37,
         "core_hits": [
           "rotation"
         ],
         "detail_hits": [
-          "centre rotation",
           "angle rotation"
         ],
-        "detail_weight": 1.43
+        "detail_weight": 0.68
       }
     },
     "video_pool": {
-      "passed": 5,
+      "passed": 4,
       "runners_up": [
         "Determining rotations",
-        "Complex rotation",
-        "Complex numbers",
+        "Rotating points",
         "Examples: Determine Angles of Rotation"
       ],
       "rejected_sample": [
+        [
+          "Proving the SAS triangle congruence criterion using transformations",
+          "below relevance gate"
+        ],
+        [
+          "Proving the ASA and AAS triangle congruence criteria using transformations",
+          "below relevance gate"
+        ],
         [
           "Congruent Angles and Angle Bisectors Principles - Basic",
           "below relevance gate"
         ],
         [
           "Geometric constructions: perpendicular bisector",
+          "below relevance gate"
+        ],
+        [
+          "Proving the SSS triangle congruence criterion using transformations",
           "below relevance gate"
         ],
         [
@@ -2062,41 +2238,42 @@
           "below relevance gate"
         ],
         [
-          "Proving the ASA and AAS triangle congruence criteria using transformations",
-          "below relevance gate"
-        ],
-        [
-          "Proving the SAS triangle congruence criterion using transformations",
-          "below relevance gate"
-        ],
-        [
-          "Overview of Rotational Symmetry",
-          "below relevance gate"
-        ],
-        [
-          "Parallel & perpendicular lines",
+          "Reflecting points in the coordinate plane",
           "below relevance gate"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 127,
+        "below relevance gate": 125,
+        "judged off-topic (independent reviewer)": 2,
         "web file not on reference image": 4,
         "excluded: answer/exam material": 1,
         "kolibri node not available on reference image": 3
       }
     },
     "reading_pool": {
-      "passed": 16,
+      "passed": 9,
       "runners_up": [
+        "Rotational symmetry of 2D shapes",
         "Determine rotations (basic)",
         "Angles of Rotation in Standard Positions: Clock Angles (PLIX)",
-        "Functions on a Cartesian Plane (Flexbook)",
-        "Functions on a Cartesian Plane Practice",
-        "Functions on a Cartesian Plane (PLIX)"
+        "Introduction to Angles of Rotation, Coterminal Angles, and Reference Angles (Flexbook)",
+        "Angles of Rotation in Standard Positions (Flexbook)"
       ],
       "rejected_sample": [
         [
+          "Congruence & transformations",
+          "below relevance gate"
+        ],
+        [
+          "Rotate points (basic)",
+          "below relevance gate"
+        ],
+        [
           "Justify constructions",
+          "below relevance gate"
+        ],
+        [
+          "Rotate points",
           "below relevance gate"
         ],
         [
@@ -2112,25 +2289,13 @@
           "below relevance gate"
         ],
         [
-          "Congruence & transformations",
-          "below relevance gate"
-        ],
-        [
-          "Rotate points (basic)",
-          "below relevance gate"
-        ],
-        [
-          "Rotational Symmetry",
-          "below relevance gate"
-        ],
-        [
-          "2D Rotational Symmetry",
-          "below relevance gate"
+          "Graphs of rules that relate 2 variables",
+          "judged off-topic (independent reviewer)"
         ]
       ],
       "rejected_by_reason": {
-        "below relevance gate": 138,
-        "kolibri node not available on reference image": 1
+        "below relevance gate": 139,
+        "judged off-topic (independent reviewer)": 7
       }
     }
   }

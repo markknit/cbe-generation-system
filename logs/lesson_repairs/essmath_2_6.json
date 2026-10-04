@@ -1,0 +1,191 @@
+{
+  "module": "essmath_2_6",
+  "conflicts_in": [
+    {
+      "lessons": "2",
+      "severity": "major",
+      "fact": "Square pyramid TSA arithmetic and the slant-height geometry of the rectangular pyramid",
+      "versions": "Lesson 2 says TSA = l² + 2ls with l=10, s=13 gives 100+260=360 cm², which is internally consistent. The rectangular pyramid has slant heights 12 cm and 12.6 cm, which is geometrically fine. No clear contradiction. (Not counted)"
+    },
+    {
+      "lessons": "1, 5, 8",
+      "severity": "major",
+      "fact": "Whether the cone bucket is open or closed and its dimensions (cone with 10 L volume), and which bucket uses the most metal",
+      "versions": "Lesson 1 states the shopkeeper says the frustum bucket uses the most metal, and Lesson 1's formula for the cone is the closed TSA = πrl + πr². Lesson 8 uses an open cone (πrl + πr²) with apex at the bottom and open top, which is described as having a base, yet the open cone is said to have the greatest area. Lesson 6 says the verdict depends on dimensions, while Lesson 8 states that the cone is the greatest."
+    },
+    {
+      "lessons": "3, 8",
+      "severity": "major",
+      "fact": "Sphere/cone bucket comparison and whether the cylinder bucket is open",
+      "versions": "Lesson 3 compares the sphere to the 'open-topped cylindrical and conical buckets', but treats the cone data from Lesson 1 as the cone's TSA (closed cone formula, with an r that is a separate value from Lesson 1). Lesson 8 uses a cone with r = 13.4 cm, the same value that Lesson 3 gives as the radius of a 10-litre sphere (r ≈ 13.4 cm), a coincidence that is suspicious. Lesson 3's sphere radius for 10 L is actually (3·10000/(4π))^(1/3) ≈ 13.4 cm, which is correct, so it is not a contradiction."
+    },
+    {
+      "lessons": "1, 5, 6",
+      "severity": "major",
+      "fact": "Which circular end the open frustum bucket keeps, and what R and r mean",
+      "versions": "Lesson 5 defines R as the open top and r as the base. Lesson 6's Model Building says to cross out the top circle for an open frustum, and gives the open-frustum TSA = π(R+r)l + πr², which is consistent. Lesson 7 says that for the open-top pyramidal frustum, the top area a² is omitted, which is also consistent. No contradiction."
+    },
+    {
+      "lessons": "5, 8",
+      "severity": "major",
+      "fact": "Frustum bucket dimensions",
+      "versions": "Lesson 5 gives the tapered bucket on Kirinyaga Road as R = 18 cm, r = 12 cm, h = 30 cm. Its volume is about π·30/3·(324+216+144) ≈ 21.5 L, not 10 L. Lesson 8 gives the 10-litre frustum bucket as R = 14, r = 8, h = 25.7, l = 26.4. Slant height from Lesson 8's own numbers is √(25.7²+6²) ≈ 26.4, which is consistent. The Lesson 5 bucket is therefore inconsistent with the 10 L phenomenon."
+    },
+    {
+      "lessons": "1, 2",
+      "severity": "major",
+      "fact": "Prior lesson content for the cumulative model and cone data",
+      "versions": "Lesson 1 sets cone TSA for the paper cup at r=3.5, l=8 as 126.5 cm² (π·3.5·8 + π·12.25 = 88 + 38.5 = 126.5, correct). Lesson 1 net kit uses a sector of radius 10 cm with arc ≈22 cm and base radius 3.5 cm, which is inconsistent with l = 8 cm and the arc = 2πr = 22 cm; the slant height is 10 cm in the kit but 8 cm in the cup, which is a different object."
+    },
+    {
+      "lessons": "6, 8",
+      "severity": "major",
+      "fact": "Lesson 6 says the anchoring question is resolved in Lesson 6, whereas Lesson 6 also says it must be checked in Lesson 8",
+      "versions": "Lesson 6 overview says 'the class resolves the anchoring question' in the Explain phase and 'completing the three-bucket comparison', and its Explain uses cylinder and cone values, whereas the Learned section says the claim 'must be checked against the dimensions of the actual buckets (Lesson 8)'. Lesson 8 then performs the full comparison."
+    }
+  ],
+  "applied": [
+    {
+      "lesson": 1,
+      "path": "framework[0].learnerExperience",
+      "old": "but Bucket B costs the most because it uses the most metal sheet to make.'",
+      "new": "but Bucket B (the frustum) costs the most because the shopkeeper believes it uses the most metal sheet to make.'",
+      "conflict": "2"
+    },
+    {
+      "lesson": 1,
+      "path": "framework[3].learnerExperience",
+      "old": "By the end of the unit, we will be able to tell the shopkeeper on Kirinyaga Road whether he is correct.'",
+      "new": "By the end of the unit, we will be able to tell the shopkeeper on Kirinyaga Road whether he is correct, using the actual dimensions of the three buckets.'",
+      "conflict": "2"
+    },
+    {
+      "lesson": 3,
+      "path": "framework[4].learnerExperience",
+      "old": "Cone (from Lesson 1), Sphere",
+      "new": "Open Cone (πrl + πr², using the Lesson 8 Bucket Data Sheet dimensions r = 13.4 cm, h = 52.9 cm), Sphere",
+      "conflict": "3"
+    },
+    {
+      "lesson": 3,
+      "path": "framework[4].learnerExperience",
+      "old": "the cone's own base radius is a separate value from Lesson 1",
+      "new": "its radius, 13.4 cm, only coincidentally equals the cone's base radius",
+      "conflict": "3"
+    },
+    {
+      "lesson": 3,
+      "path": "summaryTablePrompt.explained",
+      "old": "(cone data from Lesson 1)",
+      "new": "(open cone, Lesson 8 data)",
+      "conflict": "3"
+    },
+    {
+      "lesson": 3,
+      "path": "framework[2].learnerExperience",
+      "old": "the cylindrical bucket in our phenomenon (which has the same 10-litre capacity)",
+      "new": "the open cylindrical bucket in our phenomenon (r = 10.6 cm, h = 28.4 cm, same 10-litre capacity)",
+      "conflict": "3"
+    },
+    {
+      "lesson": 1,
+      "path": "framework[1].learnerExperience",
+      "old": "radius = 10 cm, arc length ≈ 22 cm",
+      "new": "radius = 8 cm, arc length ≈ 22 cm",
+      "conflict": "3"
+    },
+    {
+      "lesson": 5,
+      "path": "overview",
+      "old": "R = 18 cm, r = 12 cm, h = 30 cm",
+      "new": "R = 14 cm, r = 8 cm, h = 25.7 cm",
+      "conflict": "2"
+    },
+    {
+      "lesson": 5,
+      "path": "framework[2].learnerExperience",
+      "old": "R = 18 cm, r = 12 cm, h = 30 cm",
+      "new": "R = 14 cm, r = 8 cm, h = 25.7 cm",
+      "conflict": "2"
+    },
+    {
+      "lesson": 5,
+      "path": "framework[2].formativeAssessment",
+      "old": "(l ≈ 33.3 cm, curved SA ≈ 3,140 cm²)",
+      "new": "(l ≈ 26.4 cm, curved SA ≈ 1,825 cm²)",
+      "conflict": "2"
+    },
+    {
+      "lesson": 6,
+      "path": "overview",
+      "old": "In the Explain phase, the class resolves the anchoring question: does the frustum bucket use more sheet metal than the cylindrical or conical bucket of equal 10-litre capacity?",
+      "new": "In the Explain phase, the class makes a first test of the anchoring question: does the frustum bucket use more sheet metal than the cylindrical or conical bucket of equal 10-litre capacity? The full verdict is reached in Lesson 8.",
+      "conflict": "1"
+    },
+    {
+      "lesson": 6,
+      "path": "overview",
+      "old": "completing the three-bucket comparison.",
+      "new": "preparing for the full three-bucket comparison in Lesson 8.",
+      "conflict": "1"
+    },
+    {
+      "lesson": 6,
+      "path": "framework[2].learnerExperience",
+      "old": "Whole-class resolution of the anchoring question.",
+      "new": "Whole-class first test of the anchoring question (full verdict in Lesson 8).",
+      "conflict": "1"
+    },
+    {
+      "lesson": 6,
+      "path": "framework[2].sensemakingStrategy",
+      "old": "Anchoring Phenomenon Resolution with a Three-Way Comparison Table.",
+      "new": "Anchoring Phenomenon First Test with a Three-Way Comparison Table.",
+      "conflict": "1"
+    },
+    {
+      "lesson": 6,
+      "path": "slo.skills",
+      "old": "interpreting results to resolve the anchoring question.",
+      "new": "interpreting results to begin testing the anchoring question.",
+      "conflict": "1"
+    },
+    {
+      "lesson": 6,
+      "path": "slo.purpose",
+      "old": "beginning to test whether the shopkeeper on Kirinyaga Road is correct (fully settled in Lesson 8).",
+      "new": "beginning to test whether the shopkeeper on Kirinyaga Road is correct (the verdict is settled in Lesson 8).",
+      "conflict": "1"
+    },
+    {
+      "lesson": 6,
+      "path": "slo.purposeInStoryline",
+      "old": "and evaluate the shopkeeper's claim directly.",
+      "new": "and make a first evaluation of the shopkeeper's claim, to be finalised in Lesson 8 with the Bucket Data Sheet.",
+      "conflict": "1"
+    },
+    {
+      "lesson": 6,
+      "path": "framework[2].formativeAssessment",
+      "old": "Collect the written justifications",
+      "new": "Collect the written first-test justifications",
+      "conflict": "1"
+    }
+  ],
+  "rejected": [
+    {
+      "lesson": 6,
+      "path": "framework[2].teacherMoves",
+      "old": "the cylindrical bucket (using the open-cylinder formula) and the conical bucket (from Lesson 1 class data)",
+      "new": "the open cylindrical bucket (open-cylinder formula) and the open conical bucket (πrl + πr², base included), using the Lesson 8 Bucket Data Sheet dimensions",
+      "conflict": "2",
+      "rejected": "old text occurs 0 times (need exactly 1)"
+    }
+  ],
+  "unresolved": [
+    {
+      "conflict": "1",
+      "why": "The reviewer noted there is no real contradiction (not counted), so no edit is needed."
+    }
+  ]
+}
