@@ -127,5 +127,51 @@
         "note": "L6 overstates that the boundary is preserved under all operations (e.g. sqrt2 x sqrt2 = 2); real but minor overclaim; not edited."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:25:56",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "summaryTablePrompt.explained",
+        "old": "(36.8 + 37.0 + 37.5 ÷ 3)",
+        "new": "((36.8 + 37.0 + 37.5) ÷ 3)",
+        "class": "dataset",
+        "conflict": "average temperature expression missing brackets",
+        "lesson": 4
+      },
+      {
+        "target": "lesson",
+        "path": "framework[0].learnerExperience",
+        "old": "36.8 + 37.0 + 37.5 ÷ 3",
+        "new": "(36.8 + 37.0 + 37.5) ÷ 3",
+        "class": "dataset",
+        "conflict": "average temperature expression missing brackets",
+        "lesson": 8
+      },
+      {
+        "target": "lesson",
+        "path": "framework[0].teacherMoves",
+        "old": "36.8 + 37.0 + 37.5 ÷ 3",
+        "new": "(36.8 + 37.0 + 37.5) ÷ 3",
+        "class": "dataset",
+        "conflict": "average temperature expression missing brackets",
+        "lesson": 8
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Average temperature written without brackets (L4, L8) vs (36.8+37.0+37.5)/3 in L1, L3, L8, FE",
+        "class": "dataset",
+        "note": "L1 form (36.8 + 37.0 + 37.5) ÷ 3 = 37.1 is authoritative; brackets added in L4 summary and L8 Predict phase (unbracketed form would give 85.8 by BODMAS)."
+      },
+      {
+        "conflict": "L6 reciprocal table x * (1/x) = exactly 1 vs truncated calculator display",
+        "class": "false_positive",
+        "note": "L6 teacher moves explicitly address the 0.999999999 display as a rounding artefact while the product is mathematically exactly 1; not a contradiction."
+      }
+    ]
   }
 ]

@@ -1,0 +1,152 @@
+[
+  {
+    "when": "2026-10-04T11:24:58",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[3].teacherMoves",
+        "old": "does the agent also charge a flat fee on top of the spread?",
+        "new": "does the agent also charge a flat fee on top of the 3% commission and the spread?",
+        "class": "cross_reference",
+        "conflict": "L7 agent charges 3% commission and spread"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "(÷ selling rate to buy foreign currency; × buying rate to sell back)",
+        "new": "(for KES-per-unit quotes such as USD: ÷ selling rate to buy foreign currency, × buying rate to sell back; for UGX-per-KES quotes: × buying rate, ÷ selling rate to sell back)",
+        "class": "cross_reference",
+        "conflict": "KES to UGX conversion rule direction"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "If I sent the same KSh 1,200 to the USA",
+        "new": "If I sent the same KSh 1,140 to the USA",
+        "class": "dataset",
+        "conflict": "KES to UGX conversion rule direction"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "slo.purposeInStoryline",
+        "old": "Amina took KSh 4,500 in revenue from two weeks of selling mandazi.",
+        "new": "Amina saved KSh 4,500 from the profit on her mandazi sales.",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "how many weeks of sales gave her KSh 4,500?",
+        "new": "how many weeks of profit gave her KSh 4,500?",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].learnerExperience",
+        "old": "weekly revenue × 2 weeks → takings → KSh 4,500 (profit KSh 900)",
+        "new": "weekly profit KSh 450 × 10 weeks → savings → KSh 4,500",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].teacherMoves",
+        "old": "If she earns KSh 2,250 revenue per week, how many weeks to reach KSh 4,500?",
+        "new": "If she earns KSh 2,250 revenue and spends KSh 1,800 per week, how many weeks of profit to save KSh 4,500?",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].teacherMoves",
+        "old": "[Expected: KSh 4,500 ÷ KSh 2,250 = 2 weeks.]",
+        "new": "[Expected: KSh 4,500 ÷ KSh 450 = 10 weeks.]",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].teacherMoves",
+        "old": "Of that KSh 4,500 from mandazi sales, how much was profit after the KSh 1,800 weekly costs? (KSh 450 × 2 = KSh 900.)",
+        "new": "How much profit does she keep each week after the KSh 1,800 weekly costs? (KSh 2,250 − KSh 1,800 = KSh 450.)",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].teacherMoves",
+        "old": "two weeks of mandazi sales, carefully priced",
+        "new": "ten weeks of mandazi sales, carefully priced",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "framework[4].formativeAssessment",
+        "old": "(KSh 4,500 ÷ KSh 2,250 = 2)",
+        "new": "(KSh 4,500 ÷ KSh 450 = 10)",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.explained",
+        "old": "is the revenue from two weeks of mandazi sales (KSh 2,250 a week)",
+        "new": "is the profit she saved from ten weeks of mandazi sales (KSh 2,250 revenue a week)",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.explained",
+        "old": "(KSh 900 over the two weeks)",
+        "new": "(KSh 4,500 over the ten weeks)",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[1].teacherMoves",
+        "old": "She sold for two weeks to save this money.",
+        "new": "She sold for ten weeks to save this money.",
+        "class": "dataset",
+        "conflict": "KSh 4,500 is savings (L1), not two weeks of revenue"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "How the mobile-money commission and exchange rate apply to the Uganda transfer (L4 visible 3% vs L7 3% plus spread; agent sign vs CBK bureau table)",
+        "class": "cross_reference",
+        "note": "Rates on the agent sign and bureau table are identical and L4 now leaves KSh 1,105.80 to convert, so commission + spread is consistent; fixed L7 Link-phase line that implied only the spread was charged."
+      },
+      {
+        "conflict": "Origin of Amina's KSh 4,500: L1 'saved' vs L6/L8 two weeks of revenue (profit KSh 900)",
+        "class": "dataset",
+        "note": "L1 authoritative (she saved KSh 4,500). L6 and L8 reframed as 10 weeks of KSh 450 profit (450 × 10 = 4,500); matches L6 reflection that 1-2 batches is implausible. FE does not state it."
+      },
+      {
+        "conflict": "Which rate applies when converting KES to UGX (L7 rules vs L8 'buying rate when Amina hands over KES')",
+        "class": "cross_reference",
+        "note": "L7 reference box, L7 knowledge, L8 and FE all use × buying rate 27.80 for UGX-per-KES; L7 model step still gave the unqualified USD rule - aligned it to the reference box. Also fixed L7 extension 'same KSh 1,200' to 1,140."
+      }
+    ]
+  }
+]

@@ -106,5 +106,23 @@
         "note": "L5 already operates; L6 overview corrected. L6 3.142 vs L5 88 rounding is just a different example (false positive)."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:24:58",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Size and direction of the sufuria string error (88 vs 28π)",
+        "class": "false_positive",
+        "note": "All lessons give ≈0.035 cm; |28π − 88| = |88 − 28π|; L7 sign already fixed earlier. Saying the error is irrational in one lesson only is not a contradiction."
+      },
+      {
+        "conflict": "Whether 22/7 equals π's decimal / its expansion",
+        "class": "false_positive",
+        "note": "22/7 = 3.142857... (rational) used as an approximation of π throughout; reviewer itself finds no contradiction."
+      }
+    ]
   }
 ]

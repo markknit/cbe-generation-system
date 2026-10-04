@@ -82,5 +82,33 @@
         "note": "Different experiments use different masses; 50 g = 0.5 N with g = 10 is the module's convention."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:26:49",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Which Kericho rope has higher k / stores more energy (L3 old rope 0.18 J vs L6 higher k means less energy)",
+        "class": "false_positive",
+        "note": "Under the same force Ep = F²/2k, so the lower-k old rope stores more energy; L3's 0.18 J is a lab-graph value. Earlier pass judged the same."
+      },
+      {
+        "conflict": "Material in stretching experiments: L3 builds on 'Lesson 2 steel spring graphs' that L2 never produced (spring first tested in L4); sisal twine thresholds L1 vs L2",
+        "class": "already_listed",
+        "note": "L3's L2-spring premise was recorded earlier as structural residue under 'Source of the steel-spring force-extension graphs'; sisal thresholds are the earlier science item 'Sisal twine elastic behaviour (L1 vs L2)'."
+      },
+      {
+        "conflict": "Sequence of content: L3 uses Hooke's law and Ep = ½kx² before L4 introduces Hooke's law/k; L6 'formally introduces' elastic limit and Ep",
+        "class": "structural",
+        "note": "Lessons 3 and 4 are effectively out of order (L3 applies k and the elastic limit that L4 introduces); not fixable by small edits. L5's 'Lessons 1-4' summary is consistent."
+      },
+      {
+        "conflict": "Cause of rope failure: L5 fracture stress / Young's modulus vs L6 low k beyond elastic limit; 3.73 m extension",
+        "class": "science",
+        "note": "Two different explanations of failure (stress exceeding fracture stress vs extension beyond elastic limit) and an unrealistic 3.73 m rope extension (784/210 is arithmetically right); content review, not edited."
+      }
+    ]
   }
 ]

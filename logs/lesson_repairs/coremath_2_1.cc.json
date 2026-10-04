@@ -87,5 +87,28 @@
         "note": "Different activities use different groupings."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:24:31",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Meaning of 1:200 scale in grid units and L4 enlargements with L.S.F 2 and 3 on the plan",
+        "class": "false_positive",
+        "note": "1 cm = 1 grid unit = 2 m is consistent with 10 m = 5 cm at 1:200; L4's L.S.F 2 enlargement of a shape on the grid is a separate transformation, not a claim about the plan's scale."
+      },
+      {
+        "conflict": "Classroom 4 m x 6 m (2 cm x 3 cm) in L5 vs classroom block 10 m (5 cm) in L1/L2",
+        "class": "false_positive",
+        "note": "Both are consistent with 1:200 (400/200 = 2 cm, 1000/200 = 5 cm); one is a single classroom, the other the whole classroom block. Earlier pass already aligned the block name."
+      },
+      {
+        "conflict": "Direction of L.S.F 1:200 (plan as image, L.S.F = 1/200) vs L5 real-to-plan area ratio 200^2",
+        "class": "science",
+        "note": "Presentation inconsistency: L2/L3 distinguish L.S.F 1/200 (real->plan) from 200 (plan->real), L5 writes 'L.S.F = 1:200' and asks for real/plan area ratio without stating the inversion; answer 40 000 is correct. Author should state direction explicitly."
+      }
+    ]
   }
 ]

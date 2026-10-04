@@ -195,5 +195,28 @@
         "note": "Fixed L2 storyline, DQB move and Problem 3 to stop claiming Lesson 1 covered cylinders."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:24:45",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Frustum tank dimensions differ (L3, 7, 10) and cannot hold 5,000 L",
+        "class": "already_listed",
+        "note": "Same as earlier structural item (frustum volume never reaches 5,000 L; dataset redesign needed)."
+      },
+      {
+        "conflict": "Cylinder-hemisphere tank dimensions/SA (L5 vs L10)",
+        "class": "false_positive",
+        "note": "As earlier: L5 and FE agree on 16.09 m²; L10 Design B is a different tank in a separate design brief."
+      },
+      {
+        "conflict": "Frustum SA includes base/top (L3) vs excludes base (L10)",
+        "class": "already_listed",
+        "note": "Same as earlier science item (base included vs excluded, different modelling conventions)."
+      }
+    ]
   }
 ]

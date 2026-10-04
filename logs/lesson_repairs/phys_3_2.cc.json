@@ -153,5 +153,56 @@
         "note": "Different circuit configurations in L6 and L7; both consistent with their own diagrams."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:25:57",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[0].learnerExperience",
+        "old": "If electricity costs Ksh 20 per unit",
+        "new": "If electricity costs Ksh 12 per unit",
+        "class": "dataset",
+        "conflict": "Kenya Power tariff Ksh 12.00/kWh",
+        "lesson": 10
+      },
+      {
+        "target": "lesson",
+        "path": "framework[4].learnerExperience",
+        "old": "approximately KES 22 per kWh for the first 50 kWh",
+        "new": "approximately KES 12 per kWh",
+        "class": "dataset",
+        "conflict": "Kenya Power tariff Ksh 12.00/kWh",
+        "lesson": 12
+      },
+      {
+        "target": "lesson",
+        "path": "framework[4].formativeAssessment",
+        "old": "approximately KES 792, correctly advised",
+        "new": "approximately KES 1,179 (98.25 kWh x KES 12), correctly advised",
+        "class": "dataset",
+        "conflict": "Kenya Power tariff Ksh 12.00/kWh; recomputed monthly cost",
+        "lesson": 12
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Kenya Power tariff: Ksh 12.00 (L10, FE) vs Ksh 20 (L10 Predict card) vs KES 22 (L12)",
+        "class": "dataset",
+        "note": "L10 sets Ksh 12.00/kWh and the FE uses it; L10 Predict card and L12 aligned. L12's KES 792 was wrong under any tariff: daily 1.2 + 0.375 + 0.8 + 0.9 = 3.275 kWh, x30 = 98.25 kWh, x 12 = KES 1,179, still within the KES 2,000 budget (at KES 22 it would have been 2,162, over budget). Dropped 'first 50 kWh' since usage is 98 kWh."
+      },
+      {
+        "conflict": "Kettle rating 2200 W (L10) vs 9.2 A / 26 ohm (L11) vs 1,200 W (L12)",
+        "class": "false_positive",
+        "note": "240/26 = 9.23 A, 2215 W ~ 2200 W (rounding); L12's 1,200 W kettle belongs to a different household (Wanjiku family)."
+      },
+      {
+        "conflict": "Cause of dim lights at restoration: Ir drop (L2, L8, L12) vs brownout (L11)",
+        "class": "already_listed",
+        "note": "Earlier science item '5 cause of dim lights at power restoration'."
+      }
+    ]
   }
 ]

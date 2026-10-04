@@ -1,0 +1,30 @@
+[
+  {
+    "when": "2026-10-04T11:24:45",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Bimetallic strip metals: brass-copper (L2) vs brass-invar (L5)",
+        "class": "false_positive",
+        "note": "Different example strips; both have brass expanding more (brass α≈19e-6 > copper 17e-6). Earlier pass reached the same conclusion."
+      },
+      {
+        "conflict": "Temperature at which water starts expanding: 0 °C freezing vs below 4 °C (L1, 2, 4, 6)",
+        "class": "science",
+        "note": "Anomalous expansion below 4 °C plus the 9% freezing expansion are both true; L6's 'lattice forms from 4 to 0 °C' wording is a science imprecision for teacher review."
+      },
+      {
+        "conflict": "Whether the 9% freezing expansion is covered by ΔV = γV₀ΔT (L4, 6)",
+        "class": "science",
+        "note": "L4 summaryTablePrompt.explained ends 'The volumetric expansion can be quantified using ΔV = γV₀ΔT', contradicting L4 Q2/L6/FE (phase change beyond the formula); science wording for teacher review."
+      },
+      {
+        "conflict": "Kenya Power cables: aluminium Kisumu 25.3 cm (L3) vs copper Nairobi-Thika 8.5 cm (L5)",
+        "class": "false_positive",
+        "note": "Two separate practice problems with different material, location and ΔT; each arithmetic checks (23e-6×200×55=0.253 m; 17e-6×200×25=0.085 m)."
+      }
+    ]
+  }
+]

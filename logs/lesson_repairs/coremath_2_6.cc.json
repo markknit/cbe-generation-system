@@ -91,5 +91,33 @@
         "note": "Omitting arc length from a list is not a contradiction."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:24:58",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Radius of the running Laikipia pivot / sector diagram (L2 r=40 vs L3 r=21, 90°/120°)",
+        "class": "already_listed",
+        "note": "Same as earlier structural item 'Radius of the Laikipia running diagram'."
+      },
+      {
+        "conflict": "Full-field radius of the Laikipia farm (L1 120/80, L2 40, L4 70/40, L6 42/35, L8 45/30)",
+        "class": "already_listed",
+        "note": "Same as earlier structural item 'Radius of the Laikipia running diagram' (different pivot dimensions per lesson)."
+      },
+      {
+        "conflict": "Segment area formula and angle definition (L5 θ vs L6 2θ/2α)",
+        "class": "false_positive",
+        "note": "L6 writes the central angle as 2α (half-angle α from the cosine rule), equivalent to L5's θ; L8 'not 2θ' refers to L6's notation. Already judged notation-only earlier."
+      },
+      {
+        "conflict": "Lens area arithmetic: segment sum 485.8 + 662.3",
+        "class": "false_positive",
+        "note": "Rechecked: 1367.7 − 881.9 ≈ 485.8, 1220.5 − 558.2 ≈ 662.3, sum 1148.1; FE matches. Reviewer itself says consistent."
+      }
+    ]
   }
 ]

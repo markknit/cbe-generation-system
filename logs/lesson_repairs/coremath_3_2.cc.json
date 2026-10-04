@@ -93,5 +93,74 @@
         "note": "L4/L8 authoritative (10/14); L7 now derives 7/10 as a rounding of 10/14 from Lesson 4, so its tree arithmetic (49/100 etc.) stays valid. Also fixed L8's (10/14)^14 ≈ 0.021 to the correct 0.009 (matches FE). Residual: L4 says 14/20 is the frequency of completely full trips, but full trips are 8/20 (L1, L8) - L4's misconception framing is internally flawed; left (structural)."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:25:57",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[1].formativeAssessment",
+        "old": "4 trips with fewer than 8 passengers out of 20 = 0.2 for K",
+        "new": "3 trips with fewer than 8 passengers out of 20 = 0.15 for K",
+        "class": "dataset",
+        "conflict": "P(fewer than 8) 4/20 vs tally 3/20"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[2].learnerExperience",
+        "old": "P(Fewer than 8 passengers) = 4/20 = 0.2",
+        "new": "P(Fewer than 8 passengers) = 3/20 = 0.15",
+        "class": "dataset",
+        "conflict": "P(fewer than 8) 4/20 vs tally 3/20"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[4].learnerExperience",
+        "old": "P(Fewer than 8 passengers) = 0.2.",
+        "new": "P(Fewer than 8 passengers) = 0.15.",
+        "class": "dataset",
+        "conflict": "P(fewer than 8) 4/20 vs tally 3/20"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "teacherReflection",
+        "old": "(8/20 and 4/20)",
+        "new": "(8/20 and 3/20)",
+        "class": "dataset",
+        "conflict": "P(fewer than 8) 4/20 vs tally 3/20"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "summaryTablePrompt.observed",
+        "old": "P(Fewer than 8) = 0.2)",
+        "new": "P(Fewer than 8) = 0.15)",
+        "class": "dataset",
+        "conflict": "P(fewer than 8) 4/20 vs tally 3/20"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "P(full bus)=8/20=0.4 (L1,2,6,8) vs P(seat filled)=10/14 (L4,7); 10/14 not derivable from the tally",
+        "class": "already_listed",
+        "note": "Same as the earlier run's 'Single-seat probability 7/10 vs 10/14; P(full)=0.4' item (L7 aligned to L4's 10/14) and its recorded structural residual that L4's 10/14 vs 14/20 misconception framing does not follow from the tally (mean is 222/20 = 11.1 seats). Full-bus and single-seat are different events."
+      },
+      {
+        "conflict": "L4 uses 'the Lesson 1 dice-rolling experiment results'; L1 only had a coin-toss experiment",
+        "class": "structural",
+        "note": "No lesson in the module runs a two-dice rolling experiment (L1 coins, L3 dice grid only), so there is no lesson to repoint the reference to; L4 Task 1 needs rewording or a dice experiment added."
+      },
+      {
+        "conflict": "Addition-law/tally arithmetic: L5 P(F or L)=8/20+2/20 vs L2 P(fewer than 8)=4/20",
+        "class": "dataset",
+        "note": "L5 is correct (two trips of 6). L2 was wrong: tally (L1) has 3 trips below 8 (6,7,6), so P = 3/20 = 0.15; fixed in 5 L2 fields. FE does not state this value."
+      }
+    ]
   }
 ]

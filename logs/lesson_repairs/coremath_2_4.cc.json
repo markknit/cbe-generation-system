@@ -137,5 +137,28 @@
         "note": "Predict and Explain use different problems; tan 50 rounding consistent"
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:25:56",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Angle of depression at mast top 40 deg (L3) vs equals elevation 50 deg (L7)",
+        "class": "already_listed",
+        "note": "Earlier science item 'Angle of depression at mast top 40 vs equals elevation 50'."
+      },
+      {
+        "conflict": "Mombasa dhow distance 28.6 m vs 31.1 m (L7)",
+        "class": "false_positive",
+        "note": "Two different problems: teacher demo (20 m cliff, 35 deg -> 20/tan35 = 28.6 m) and group Problem 3 (27 m cliff, 41 deg -> 27/tan41 = 31.1 m); both correct."
+      },
+      {
+        "conflict": "Lake Victoria lighthouse angles, overview vs Explain (L8)",
+        "class": "already_listed",
+        "note": "Earlier structural item 'Lake Victoria lighthouse angles: overview 32/25 vs explain 120 m, 38/22 in L8'."
+      }
+    ]
   }
 ]

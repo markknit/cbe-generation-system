@@ -237,5 +237,64 @@
         "note": "L7 Predict uses separate small translation examples; not a claim about the 8 km routes."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:24:37",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[1].teacherMoves",
+        "old": "the column vector (−5, 6) as an approximation",
+        "new": "the column vector (−6, 5) as an approximation",
+        "class": "dataset",
+        "conflict": "Westlands column vector"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[2].learnerExperience",
+        "old": "the Westlands vector (−5, 6)?",
+        "new": "the Westlands vector (−6, 5)?",
+        "class": "dataset",
+        "conflict": "Westlands column vector"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[2].teacherMoves",
+        "old": "your journey is vector (−5, 6)",
+        "new": "your journey is vector (−6, 5)",
+        "class": "dataset",
+        "conflict": "Westlands column vector"
+      },
+      {
+        "target": "lesson",
+        "lesson": 6,
+        "path": "summaryTablePrompt.explained",
+        "old": "they confirm that both drivers travel the same straight-line distance",
+        "new": "they confirm that both drivers travel roughly the same straight-line distance",
+        "class": "dataset",
+        "conflict": "8 km vs magnitudes 7.8 / 7.2"
+      },
+      {
+        "target": "lesson",
+        "lesson": 8,
+        "path": "framework[3].teacherMoves",
+        "old": "the other went South.",
+        "new": "the other went South-East.",
+        "class": "dataset",
+        "conflict": "route directions"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Westlands vector (-5,6) in L2 vs (-6;5) in L5/L6; 8 km vs 7.8/7.2 km magnitudes",
+        "class": "dataset",
+        "note": "L2 aligned to (-6, 5) used by L5, L6 and FE (same NW direction, sqrt61); L6 'same straight-line distance' softened to 'roughly the same' (8 km vs 7.8/7.2 already listed earlier as softened); L8 'went South' -> South-East per L1."
+      }
+    ]
   }
 ]

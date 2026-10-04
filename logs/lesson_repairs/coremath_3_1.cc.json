@@ -1,0 +1,35 @@
+[
+  {
+    "when": "2026-10-04T11:25:09",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "40-price maize dataset changes between lessons",
+        "class": "structural",
+        "note": "Dataset differs throughout (earlier unresolved conflict 1/2 in logs/lesson_repairs/coremath_3_1.json: each lesson 4-7 built on a different 40-price dataset; needs dataset rework)."
+      },
+      {
+        "conflict": "L4 frequency table mean 105.10 vs L1/L2 list and L8 Rift Valley spike",
+        "class": "structural",
+        "note": "L4 arithmetic is internally correct (4204/40=105.1); mismatch is the differing dataset (earlier unresolved conflict 1/2 in logs/lesson_repairs/coremath_3_1.json: each lesson 4-7 built on a different 40-price dataset; needs dataset rework)."
+      },
+      {
+        "conflict": "Distribution shape / cause of mean>median (L4, L5, L8)",
+        "class": "structural",
+        "note": "Follows from different datasets in L4/L5/L8 (earlier unresolved conflict 1/2 in logs/lesson_repairs/coremath_3_1.json: each lesson 4-7 built on a different 40-price dataset; needs dataset rework)."
+      },
+      {
+        "conflict": "Modal class / mode (L4 98, L5 100-109, L6 50-59, L7 70-74)",
+        "class": "structural",
+        "note": "Each from a different dataset (earlier unresolved conflict 1/2 in logs/lesson_repairs/coremath_3_1.json: each lesson 4-7 built on a different 40-price dataset; needs dataset rework)."
+      },
+      {
+        "conflict": "Mean/median L7 (72.7/73.2) vs L8 (105.10/103)",
+        "class": "structural",
+        "note": "Different datasets (earlier unresolved conflict 1/2 in logs/lesson_repairs/coremath_3_1.json: each lesson 4-7 built on a different 40-price dataset; needs dataset rework)."
+      }
+    ]
+  }
+]

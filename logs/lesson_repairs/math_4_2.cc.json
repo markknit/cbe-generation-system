@@ -487,5 +487,56 @@
         "note": "Same artefact described two ways."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:25:57",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[0].teacherMoves",
+        "old": "Some of you got cap-up 8 out of 30 times. Others got 12 out of 30.",
+        "new": "Some groups got cap-up 10 out of 40 times. Others got 14 out of 40.",
+        "class": "dataset",
+        "conflict": "bottle-cap tosses per group (L1: 40)",
+        "lesson": 2
+      },
+      {
+        "target": "lesson",
+        "path": "overview",
+        "old": "from ~30 (individual)",
+        "new": "from ~40 (one group)",
+        "class": "dataset",
+        "conflict": "bottle-cap tosses per group (L1: 40)",
+        "lesson": 2
+      },
+      {
+        "target": "lesson",
+        "path": "framework[2].learnerExperience",
+        "old": "P(rain) = 0.3 and",
+        "new": "P(rain) = 0.35 and",
+        "class": "dataset",
+        "conflict": "P(rain) for Mama Njeri",
+        "lesson": 9
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "L4 P(sold out) 0.25 / P(half unsold) 0.30 vs P(good day) 0.4",
+        "class": "false_positive",
+        "note": "Already reconciled by the earlier dataset fix: sold out is a subset of good days (0.25 <= 0.4); sold out and half unsold are mutually exclusive, not complementary (union 0.55)."
+      },
+      {
+        "conflict": "Lesson 1 bottle-cap data: 40 tosses per group (L1) vs ~30 per individual (L2)",
+        "class": "dataset",
+        "note": "L1 (authoritative) has each group toss the cap 40 times; L2 teacher example tallies and overview changed from 30 per individual to 40 per group. The ~900 pooled total depends on class size (earlier false_positive on that point stands)."
+      },
+      {
+        "conflict": "P(rain) 0.3 (L9) vs P(heavy rain) 0.35 (L6) for Mama Njeri",
+        "class": "dataset",
+        "note": "L9 Part 3 used P(rain) = 0.3 with P(sells>=80% AND rain) = 0.15, matching L6's pair except rain; since heavy-rain days are a subset of rain days, 0.3 < 0.35 is impossible. L6's 0.35 is set first and feeds L6's worked answer (0.60) and the Nakuru 7/20 data in the FE, so L9 was aligned (no stated answer in L9 to recompute; it now gives 0.40 + 0.35 - 0.15 = 0.60)."
+      }
+    ]
   }
 ]

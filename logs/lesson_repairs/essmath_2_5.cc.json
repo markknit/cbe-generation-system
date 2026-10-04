@@ -1,0 +1,20 @@
+[
+  {
+    "when": "2026-10-04T11:25:57",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Watermelon piece angles/radii: L1 (30,90,120,180 deg, r=7) vs L2 (r=14) vs L3 vendor cuts (90,180 deg, r=7) vs L8 (r=18)",
+        "class": "false_positive",
+        "note": "L3's two vendor cuts are explicitly 'pieces B and D from Lesson 1' (90 and 180 deg at r=7), so L3 matches L1; L2/L8 are separate worked examples, and L8's false 'reuses earlier cut-outs' claim was already fixed in the earlier pass."
+      },
+      {
+        "conflict": "L7 treats the customer's piece as a segment (90 deg, r=21: 346.4-220.5=125.9 cm2) while L1/L2 treat it as a sector wedge",
+        "class": "science",
+        "note": "Arithmetic is correct throughout; the difference is a modelling reframe (wedge = sector vs chord cut = segment) that the lessons do not reconcile. No edit."
+      }
+    ]
+  }
+]

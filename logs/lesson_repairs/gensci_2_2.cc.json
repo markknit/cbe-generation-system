@@ -147,5 +147,38 @@
         "note": "Both are valid representations (anhydrous vs hydrated oxide); not a real contradiction."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:24:37",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Noble gases Group 0 (L2) vs Group 18 (L5, L8)",
+        "class": "false_positive",
+        "note": "Earlier logged false_positive: Group 0 and Group 18 are both accepted labels for the same group."
+      },
+      {
+        "conflict": "Lesson order: Group 2 in L3 and again in L6, Group 1 in L4, halogen lesson promised but absent",
+        "class": "already_listed",
+        "note": "Same as earlier structural items 'lesson order Group 1/Group 2' and 'halogens never taught'."
+      },
+      {
+        "conflict": "Chlorine bleaching / L8 'do NOTHING' question attributed to a Lesson 7 halogen sticky note",
+        "class": "already_listed",
+        "note": "Same as earlier structural item 'halogens never taught': L8's Lesson 7 bleaching note and 'Lesson 6 hibiscus bleaching' cite a halogen lesson that does not exist; fixing needs the design decision."
+      },
+      {
+        "conflict": "Mg with cold water/steam, HCl 0.5 M vs 1 M, who uses the splint (L3 vs L6)",
+        "class": "already_listed",
+        "note": "Same as earlier items 'Mg with cold water' (science) and 'HCl concentration / steam reaction rate' (false_positive); root cause is the structural Group 2 duplication in L3 and L6."
+      },
+      {
+        "conflict": "Sodium lamp glow: excitation (L4, L8) vs 'loses its outer electron' (L5)",
+        "class": "already_listed",
+        "note": "Same as earlier science item 'sodium lamp mechanism' (L5 error)."
+      }
+    ]
   }
 ]

@@ -1939,3 +1939,10 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 
 - Committed and pushed `7cb36a1` (84-module repairs, fact sheet + consistency pass, teacher list, re-render, PDFs).
 - **In progress:** Claude Code verification pass (Mark approved option 1): agents check the 215 current major findings in 91 sub-strands against the text, fix real cross-reference/dataset leftovers via `scripts/apply_edits.py`, and classify the rest (science / structural / false positive / already listed) for the teacher list.
+
+## Updates — 2026-10-04 (fifth entry) — verification pass done
+
+- 8 Claude Code agents (no API) checked every current MAJOR drift finding (230 across 91 sub-strands) against the lesson text: **63 false positive, 96 already on the teacher list, 39 real cross-reference/dataset conflicts fixed (94 edits, 0 rejected), 21 new science, 11 new structural.** Includes fixes the API pass could not apply (coremath_2_9 runner speeds) and corrected arithmetic (phys_3_2 bill KES 1,179 at Ksh 12/kWh; essmath_2_8 savings; coremath_3_2 trip fraction).
+- **Teacher list rebuilt, deduplicated and verified:** `TEACHER_REVIEW_LIST_2026-10-04.md`, **207 items in 83 sub-strands (128 science, 79 structural)**; every item was judged real by an agent reading the text. Worst structural cases (rewrite/regenerate candidates): essmath_3_1, essmath_2_1, coremath_1_3, coremath_3_1, gensci_2_2 (missing halogen lesson), phys_2_1 (Doppler lesson cited but absent), math_2_1, bio_1_2.
+- Summary Tables re-derived (9 changed), all 95 re-rendered (links 0 failures), PDFs + index rebuilt (590, 0 failed). `validate_corpus.js` PASS. 47 Final Explanations still flagged needs_review.
+- With the reviewer's false positives removed, the remaining real between-lesson problems are the 207 listed items: science explanations and structure, not facts/references.

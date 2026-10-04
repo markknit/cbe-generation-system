@@ -1,0 +1,72 @@
+[
+  {
+    "when": "2026-10-04T11:24:31",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "showing the overtake with about 4 km to go",
+        "new": "showing the overtake during the 30–35 km stretch",
+        "class": "dataset",
+        "conflict": "L7 model-building velocities/overtake vs L1/L2/L7 explanation/FE"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "(Runner A: 21 km/h, Runner B: 17 km/h)",
+        "new": "(Runner A: 19 km/h, Runner B: 17.6 km/h)",
+        "class": "dataset",
+        "conflict": "L7 model-building velocities/overtake vs L1/L2/L7 explanation/FE"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "(21 − 17 = 4 km/h)",
+        "new": "(19 − 17.6 = 1.4 km/h)",
+        "class": "dataset",
+        "conflict": "L7 model-building velocities/overtake vs L1/L2/L7 explanation/FE"
+      },
+      {
+        "target": "lesson",
+        "lesson": 7,
+        "path": "framework[4].learnerExperience",
+        "old": "only 4 km/h — but that was enough to close the 200 m gap in 3 minutes",
+        "new": "only 1.4 km/h — but that was enough to close the 200 m gap in about 8.6 minutes",
+        "class": "dataset",
+        "conflict": "L7 model-building velocities/overtake vs L1/L2/L7 explanation/FE"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Runner B's velocity in the slow middle section (17.6 km/h in L2/L7 explanation vs 17 km/h in L7 model-building; L5 5.6->4.9 m/s)",
+        "class": "dataset",
+        "note": "L7 model-building now uses 17.6 km/h like L2, L7 explanation and FE. L5's 5.6 m/s (20 km/h) -> 4.9 m/s (17.6 km/h) matches L2's 20 km/h (20-25 km) -> 17.6 km/h."
+      },
+      {
+        "conflict": "Runner A at 21 km/h in L7 model-building vs about 19 km/h elsewhere (finding framed as B's sprint)",
+        "class": "dataset",
+        "note": "B's sprint (~22 km/h, 6.2 m/s) is consistent; the real conflict was Runner A 21 km/h in L7 model-building - changed to 19 km/h."
+      },
+      {
+        "conflict": "Runner A's velocity and relative speed (21-17 = 4 km/h vs 19-17.6 = 1.4 km/h) in L7",
+        "class": "dataset",
+        "note": "Aligned L7 model-building to 19 - 17.6 = 1.4 km/h (L1, L2, L7 explanation, FE)."
+      },
+      {
+        "conflict": "Overtake time for 200 m gap (8.6 min at 1.4 km/h vs 3 min at 4 km/h)",
+        "class": "dataset",
+        "note": "L7 model-building now says about 8.6 minutes; check: 0.2/1.4 = 0.143 h = 8.6 min."
+      },
+      {
+        "conflict": "Where Runner A overtook Runner B (30-35 km vs about 4 km to go in L7 model)",
+        "class": "dataset",
+        "note": "L7 model-building 'about 4 km to go' changed to 'during the 30-35 km stretch', matching L3 and L7 purpose; L1 (B ahead at 30 km) and L6 (within 25-35 km slow section) are compatible."
+      }
+    ]
+  }
+]

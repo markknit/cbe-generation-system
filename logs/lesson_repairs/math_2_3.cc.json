@@ -119,5 +119,43 @@
         "note": "Real arithmetic error: half x 21^2 x sin80 = 217.15, not 216.5; segment = 307.88 - 217.15 = 90.73 (matches FE); Part E 90.73/0.4 = 226.8, still enough for 200 plants. Part A uses pi = 22/7 (29.33) while B/C use pi (307.9, 1077.6): mixed pi left as is."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:26:49",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 4,
+        "path": "framework[0].learnerExperience",
+        "old": "Learners are shown the same circular pizza/chapati diagram from Lesson 1, now annotated",
+        "new": "Learners are shown a circular pizza/chapati diagram like the one from Lesson 1, annotated",
+        "class": "cross_reference",
+        "conflict": "L4 pizza said to be the L1 pizza (L1 r = 15 cm, L4 r = 14 cm)"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "When the sector area formula is taught: L1 Explain names and writes A = (θ/360°)πr², L2 formalises it, L3/L4 treat it as derived new in L4",
+        "class": "structural",
+        "note": "L1's Explain and model phases already name and apply the sector area formula although its overview says no formula is taught, and L4 derives it as new; sequencing issue, not edited (earlier pass missed L1's Explain phase)."
+      },
+      {
+        "conflict": "Pizza radius 15 cm (L1, L5) vs 14 cm for the 'same pizza from Lesson 1' in L4",
+        "class": "cross_reference",
+        "note": "L4 values (102.6, 205.2, 14.67 for r = 14) are internally correct and reused in L6/L9; changed L4's claim that it is the same L1 diagram rather than recomputing."
+      },
+      {
+        "conflict": "Sector vs segment terminology for the 80° Eldoret plot (L5, L7)",
+        "class": "false_positive",
+        "note": "L7 correctly uses the minor sector angle to find minor/major segments; L5 minor/major sector use is correct. No mixing."
+      },
+      {
+        "conflict": "L10 summative numbers (r = 21 m, θ = 80°)",
+        "class": "false_positive",
+        "note": "Rechecked: arc 29.33 m (π = 22/7), minor sector 307.9, major 1077.6, triangle 217.15, segment 90.73 (matches FE). Reviewer itself says ok."
+      }
+    ]
   }
 ]

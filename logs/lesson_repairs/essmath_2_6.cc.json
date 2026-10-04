@@ -1,0 +1,103 @@
+[
+  {
+    "when": "2026-10-04T11:25:56",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "path": "framework[4].learnerExperience",
+        "old": "Cylinder (Lesson 2)",
+        "new": "Pyramid (Lesson 2)",
+        "class": "cross_reference",
+        "conflict": "L2 covers pyramids, not cylinders",
+        "lesson": 1
+      },
+      {
+        "target": "lesson",
+        "path": "framework[4].learnerExperience",
+        "old": "Sphere/Hemisphere (Lesson 3)",
+        "new": "Sphere/Hemisphere (Lessons 3–4)",
+        "class": "cross_reference",
+        "conflict": "hemisphere is L4",
+        "lesson": 1
+      },
+      {
+        "target": "lesson",
+        "path": "teacherReflection",
+        "old": "before moving to the cylinder",
+        "new": "before moving to the pyramid",
+        "class": "cross_reference",
+        "conflict": "L2 covers pyramids, not cylinders",
+        "lesson": 1
+      },
+      {
+        "target": "lesson",
+        "path": "slo.purposeInStoryline",
+        "old": "In Lesson 1 learners explored nets of cones and pyramids; in Lesson 2 they computed surface areas of cylinders and cones.",
+        "new": "In Lesson 1 learners explored nets of cones; in Lesson 2 they computed surface areas of pyramids.",
+        "class": "cross_reference",
+        "conflict": "L1 cones, L2 pyramids",
+        "lesson": 3
+      },
+      {
+        "target": "lesson",
+        "path": "teacherReflection",
+        "old": "into Lesson 4 for the frustum",
+        "new": "into Lesson 5 for the frustum",
+        "class": "cross_reference",
+        "conflict": "frustum starts in L5",
+        "lesson": 3
+      },
+      {
+        "target": "lesson",
+        "path": "framework[3].teacherMoves",
+        "old": "to be done in Lessons 6–7",
+        "new": "to be done in Lessons 6 and 8",
+        "class": "cross_reference",
+        "conflict": "bucket comparison in L6 and L8",
+        "lesson": 5
+      },
+      {
+        "target": "lesson",
+        "path": "framework[2].learnerExperience",
+        "old": "(from Lesson 1 class data)",
+        "new": "(using the cone formula from Lesson 1)",
+        "class": "cross_reference",
+        "conflict": "L1 has no 10-litre cone data",
+        "lesson": 6
+      },
+      {
+        "target": "lesson",
+        "path": "slo.purposeInStoryline",
+        "old": "cone from Lesson 1",
+        "new": "cone from the bucket data sheet",
+        "class": "cross_reference",
+        "conflict": "L1 has no 10-litre cone data",
+        "lesson": 6
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Conical bucket data said to come from Lesson 1 class data (L1, L6, L8)",
+        "class": "cross_reference",
+        "note": "L1 only computed a paper cup; L6 now uses the L1 cone formula and the bucket data sheet. Separate maths slip for teachers: L8/L3 'open cone (apex at bottom, open top)' uses pi r l + pi r^2, but such a cone has no circular face, so its area is pi r l only (changes the cone-is-greatest verdict)."
+      },
+      {
+        "conflict": "Open vs closed frustum formula; frustum net 'larger and more complex' vs cone using most metal (L5, L6, L8)",
+        "class": "false_positive",
+        "note": "L6 derives the closed formula then removes the open top, consistent with L5 and L8; 'larger and more complex net' describes the net's shape, and L6 itself says the verdict depends on dimensions."
+      },
+      {
+        "conflict": "Which lesson covers cylinder/sphere/hemisphere/frustum; cylinder never taught (L1-L5)",
+        "class": "structural",
+        "note": "No lesson teaches the cylinder surface area although the cylinder bucket is used in L3, L6 and L8 (and L3/L4 both derive the hemisphere). Wrong lesson pointers fixed as cross_reference: L1 placeholders and reflection, L3 storyline and reflection, L5 'Lessons 6-7'."
+      },
+      {
+        "conflict": "Frustum bucket dimensions, volume and slant height (L5, L8)",
+        "class": "false_positive",
+        "note": "R=14, r=8, h=25.7 gives l = 26.4 cm and V = (pi*25.7/3)(196+112+64) = 10 011 cm3 ~ 10 L; consistent. L5/L6 never claim the frustum uses most metal (L6 says it depends on dimensions)."
+      }
+    ]
+  }
+]

@@ -158,5 +158,33 @@
         "note": "L4 values are consistent; the L7 42° reading is now 38°, and L8's 42° at 8 m is a field reading."
       }
     ]
+  },
+  {
+    "when": "2026-10-04T11:24:31",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Amina (10 m, 38 deg) and Baraka (20 m, 22 deg) give 7.81 m vs 8.08 m, not exactly the same height",
+        "class": "false_positive",
+        "note": "All lessons and FE treat them as nearly the same (about 8 m) and attribute the 0.3 m difference to measurement uncertainty; L1's 'should calculate the same height' is the expectation being tested."
+      },
+      {
+        "conflict": "L4 re-discovers ratios after L3; L5 and L6 both teach complementary angles",
+        "class": "already_listed",
+        "note": "Same as earlier structural items (L4 duplication of constant-ratio discovery; L5/L6 duplicate complementary-angle content). Related: L3/L5 promise angle-of-depression lessons (L4-5 / L6-7) that no lesson delivers - also structural."
+      },
+      {
+        "conflict": "L5 tank scenario Akinyi 8 m at 60 deg / Baraka 30 deg vs Amina 10 m 38 deg / Baraka 20 m 22 deg",
+        "class": "already_listed",
+        "note": "Same as earlier dataset item, where L5's 60/30 complementary scenario was left because the lesson is built around it (structural)."
+      },
+      {
+        "conflict": "L6 claims complementary angles explain why the two heights agree (38+22 = 60, not 90)",
+        "class": "already_listed",
+        "note": "Same as earlier science item: complementary angles do not explain the observers' agreement; left for author."
+      }
+    ]
   }
 ]

@@ -1,0 +1,66 @@
+[
+  {
+    "when": "2026-10-04T11:24:33",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[4].teacherMoves",
+        "old": " — and why it doesn't crush your body the way it crushed the jerrycan.'",
+        "new": " — remembering from Lesson 1 that it doesn't crush your body because your body fluids push back equally.'",
+        "class": "cross_reference",
+        "conflict": "lesson that explains why bodies are not crushed"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "summaryTablePrompt.explained",
+        "old": "Lesson 4 will quantify exactly how large atmospheric pressure is and why our bodies are not similarly crushed.",
+        "new": "Lesson 4 will quantify exactly how large atmospheric pressure is; why our bodies are not similarly crushed was explained in Lesson 1 (body fluids push back equally).",
+        "class": "cross_reference",
+        "conflict": "lesson that explains why bodies are not crushed"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "summaryTablePrompt.explained",
+        "old": "that the full jerrycan remained intact",
+        "new": "that the sealed jerrycan remained intact",
+        "class": "dataset",
+        "conflict": "jerrycan empty and sealed, not full"
+      },
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "framework[4].formativeAssessment",
+        "old": "the reason the full jerrycan stayed intact",
+        "new": "the reason the sealed jerrycan stayed intact",
+        "class": "dataset",
+        "conflict": "jerrycan empty and sealed, not full"
+      },
+      {
+        "target": "lesson",
+        "lesson": 1,
+        "path": "overview",
+        "old": "the next 19 lessons",
+        "new": "the next 8 lessons",
+        "class": "cross_reference",
+        "conflict": "sequence has 9 lessons"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Which lesson explains why bodies are not crushed (L2 points to L4; L1 gives it; L4 does not)",
+        "class": "cross_reference",
+        "note": "L2's two forward references now point back to L1 for the body explanation; L4 still quantifies atmospheric pressure."
+      },
+      {
+        "conflict": "Jerrycan full vs empty; L1 partial recovery vs L9 pump re-inflation",
+        "class": "dataset",
+        "note": "L2 said 'full jerrycan' twice; changed to 'sealed' to match L1's empty sealed jerrycan. Recovery is compatible: L1 partial recovery, L2 still dented, L9 pumps it back to full shape. Also fixed L1 overview 'next 19 lessons' (9-lesson sequence)."
+      }
+    ]
+  }
+]
