@@ -29,5 +29,179 @@
         "note": "L1 gives storage as a reason plants lack kidneys; L2's open question is how stored insoluble wastes finally leave, which L3 answers with deposition plus tissue fall. Compatible."
       }
     ]
+  },
+  {
+    "when": "2026-10-05T09:37:59",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "lesson",
+        "lesson": 2,
+        "path": "overview",
+        "old": "so the experiment is set up at the end of Day 1 and read on Day 2.",
+        "new": "so the experiment is set up in Lesson 2 and read at the start of Lesson 3.",
+        "class": "cross_reference",
+        "conflict": "guttation experiment set-up/reading lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "overview",
+        "old": "A POE setup for a guttation extension is started for observation the next morning.",
+        "new": "The guttation POE set up in Lesson 2 is read in this lesson.",
+        "class": "cross_reference",
+        "conflict": "guttation experiment set-up/reading lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].learnerExperience",
+        "old": "record a POE prediction table (Predict column) for the guttation setup: a potted seedling (e.g. maize or sukuma wiki) covered with a clear polythene bag overnight, and what they expect to see in the morning.",
+        "new": "collect the guttation POE setup from Lesson 2 (a potted seedling under a cover, with a control) and compare what they see with their Lesson 2 predictions.",
+        "class": "cross_reference",
+        "conflict": "guttation experiment set-up/reading lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[0].teacherMoves",
+        "old": "Pre-position POE setups across groups and say: 'Predict what you will see on the leaves by morning.'",
+        "new": "Bring out the Lesson 2 POE setups across groups and say: 'Record what you see on the leaves this morning.'",
+        "class": "cross_reference",
+        "conflict": "guttation experiment set-up/reading lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[1].learnerExperience",
+        "old": "Part D: Groups check the POE guttation setups and leave them overnight.",
+        "new": "Part D: Groups check the Lesson 2 POE guttation setups.",
+        "class": "cross_reference",
+        "conflict": "guttation experiment set-up/reading lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[2].learnerExperience",
+        "old": "after reading the next morning's results or a teacher-provided description",
+        "new": "after reading the results of the Lesson 2 setup or a teacher-provided description",
+        "class": "cross_reference",
+        "conflict": "guttation experiment set-up/reading lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "framework[4].learnerExperience",
+        "old": "plan the interviews for the portfolio project on local uses of plant products, and are reminded to check the guttation setup in the morning.",
+        "new": "plan the interviews for the portfolio project on local uses of plant products.",
+        "class": "cross_reference",
+        "conflict": "guttation experiment set-up/reading lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 3,
+        "path": "summaryTablePrompt.observed",
+        "old": "and set up the guttation experiment.",
+        "new": "and checked the guttation experiment set up in Lesson 2.",
+        "class": "cross_reference",
+        "conflict": "guttation experiment set-up/reading lesson"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[3].learnerExperience",
+        "old": "L3, exudation of latex",
+        "new": "L2, exudation of latex",
+        "class": "cross_reference",
+        "conflict": "Lesson 5 DQB example cites L3 for latex exudation (explained in L2)"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "slo.purposeInStoryline",
+        "old": "stored in dead tissues,",
+        "new": "stored in non-vital tissues,",
+        "class": "other",
+        "conflict": "L5 'dead tissues' vs L1/L3/L4 non-vital tissues/vacuoles"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "framework[2].learnerExperience",
+        "old": "and store wastes in dead tissues,",
+        "new": "and store wastes in non-vital tissues,",
+        "class": "other",
+        "conflict": "L5 'dead tissues' vs L1/L3/L4 non-vital tissues/vacuoles"
+      },
+      {
+        "target": "lesson",
+        "lesson": 5,
+        "path": "summaryTablePrompt.learned",
+        "old": "and store wastes in dead tissues;",
+        "new": "and store wastes in non-vital tissues;",
+        "class": "other",
+        "conflict": "L5 'dead tissues' vs L1/L3/L4 non-vital tissues/vacuoles"
+      }
+    ],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "Insoluble wastes: L1 says stored vs L2 raises as new question",
+        "class": "false_positive",
+        "note": "L1 says wastes are stored; L2 asks how insoluble wastes are dealt with/removed. Different questions (storage vs removal); L3 answers. No edit."
+      },
+      {
+        "conflict": "Guttation fluid composition / L1 treats droplets as unexplained",
+        "class": "false_positive",
+        "note": "L1 deliberately leaves the route unexplained; L2 explains."
+      },
+      {
+        "conflict": "Leaf fall in dry season; L5 calls L1 model 'drawing of how plant gets rid of wastes' vs L1 revising Day 1 diagram",
+        "class": "false_positive",
+        "note": "Same L1 diagram, revised; seasonal leaf drop consistent."
+      },
+      {
+        "conflict": "L5 'few toxic wastes' vs L1 low metabolic rate",
+        "class": "false_positive",
+        "note": "Consistent with low-waste/low-toxicity framing; L5 is authoritative."
+      },
+      {
+        "conflict": "Guttation fluid as 'waste' (xylem sap with dissolved minerals/sugars; root pressure, not strictly excretion)",
+        "class": "science",
+        "note": "Curriculum treats guttation as an elimination route; nuance for human biology review. No edit."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-05T09:43:44",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "final_explanation",
+        "path": "subjectLabel",
+        "old": "Biology Grade 10",
+        "new": "Biology Grade 11",
+        "class": "other",
+        "conflict": "grade label wrong"
+      },
+      {
+        "target": "final_explanation",
+        "path": "sections[0].exemplar",
+        "old": "resin, latex, gum and crystals in tissues",
+        "new": "resin, latex and gum in tissues",
+        "class": "other",
+        "conflict": "crystals not in Lesson 1"
+      },
+      {
+        "target": "final_explanation",
+        "path": "sections[2].exemplar",
+        "old": "; the wastes found in old leaves are carried away when those leaves fall.",
+        "new": "; old leaves had more crystals than young leaves and the crystals did not dissolve in dilute acid, so the wastes build up in old leaves and are carried away when those leaves fall.",
+        "class": "other",
+        "conflict": "evidence not a real finding"
+      }
+    ],
+    "rejected": [],
+    "classified": []
   }
 ]

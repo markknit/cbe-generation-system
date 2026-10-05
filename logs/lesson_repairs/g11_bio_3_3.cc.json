@@ -89,5 +89,34 @@
         "note": "Correct (marine cartilaginous fish retain urea); adjusted L1 summaryTablePrompt.learned which still said 'marine fish ... make urea' so L1 summary matches FE and L1 SLO."
       }
     ]
+  },
+  {
+    "when": "2026-10-05T09:38:06",
+    "by": "claude-code",
+    "applied": [],
+    "rejected": [],
+    "classified": [
+      {
+        "conflict": "marine fish nitrogenous waste L1/3/5",
+        "class": "false_positive",
+        "note": "All mentions already qualify urea/TMAO as marine cartilaginous fish; no unqualified 'marine fish make urea' text found. Marine bony fish not separately taught (oversimplification, not contradiction)."
+      }
+    ]
+  },
+  {
+    "when": "2026-10-05T09:43:44",
+    "by": "claude-code",
+    "applied": [
+      {
+        "target": "final_explanation",
+        "path": "sections[1].exemplar",
+        "old": "Urea is a waste and is not reabsorbed in the same way, while water is taken back into the blood, so urea becomes more concentrated",
+        "new": "Urea is a waste and most of it stays in the filtrate, while water is taken back into the blood, so urea becomes more concentrated",
+        "class": "other",
+        "conflict": "urea reabsorption imprecise"
+      }
+    ],
+    "rejected": [],
+    "classified": []
   }
 ]

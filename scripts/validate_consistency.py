@@ -114,6 +114,10 @@ def check(path: Path, quiet: bool):
         fails.append(f"FE-EMPTY {where}: Final Explanation missing, <3 sections, or an empty prompt/exemplar")
     else:
         fe_text = json.dumps(FE, ensure_ascii=False)
+        gm = re.search(r"Grade\s+(\d+)", FE.get("subjectLabel", ""))
+        mg = str((d.get("META") or {}).get("grade", ""))
+        if gm and mg and gm.group(1) != mg:
+            fails.append(f"FE-GRADE {where}: label says Grade {gm.group(1)}, sub-strand is Grade {mg}")
         m = LEAK.search(fe_text)
         if m:
             fails.append(f"FE-LEAK {where}: {m.group(0)!r} in the Final Explanation")
