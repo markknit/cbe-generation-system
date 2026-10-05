@@ -1968,3 +1968,5 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - **Teacher list:** 60 items in 42 sub-strands (was 207), plus 4 template problems for the owners (bio_2_1 and math_3_3 templates filed under the wrong topic; chem_2_1 and math_2_2 have no real phenomenon).
 - **Still open:** attribution decisions (`ATTRIBUTION_RECOMMENDATIONS_2026-10-03.md`); review of 39 flagged Final Explanations and the 60 list items; spot-check of the 20 templated sub-strands judged "same idea"; partner heads-up on regenerated sub-strands (content changed, schema unchanged); Drive sync (Mark); Grade 11 Chemistry/Physics/Core Maths generation can now use the safeguards (pilot first).
 - **Spend this round about $19** (batches 16.8, queries 0.8, FE 0.2, quizzes ~0.5, small judges). Whole rework since 2026-10-03 roughly $125-135 by my tally (the Console is authoritative).
+
+- Committed and pushed 2026-10-04 as `f2a6c5d`. Drive sync is still Mark's step.
