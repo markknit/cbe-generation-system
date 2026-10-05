@@ -1,0 +1,71 @@
+{
+  "anchorData": "FORECAST: Kenya Meteorological Department (KMD) forecast issued on a March morning before the long rains: P(rain) = 0.7 (70%) for Kericho and the Rift Valley on the day; P(no rain) = 0.3 (30%). P(storm) = 0.1 (10%) on the same day, where a storm is a separate state from ordinary rain. DAY STATES (one-day sample space): S = {rain, storm, dry}; P(rain only, no storm) = 0.6, P(storm) = 0.1, P(dry) = 0.3. Check: 0.6 + 0.1 + 0.3 = 1.0. 'Rain' for the farmer means rain or storm = 0.6 + 0.1 = 0.7. KERICHO RECORD (last 20 years, same March date window, 20 days observed in total as a teaching sample, 1 day per year): rain on 14 days, no rain on 6 days. Relative frequency of rain = 14/20 = 0.7. Pooled-table for lessons 1-2 (coin or bottle-top toss, Heads = 'rain'): Group of 10 tosses example: heads 6, tails 4 (rel. freq heads 0.6). Class pooled example (8 groups x 10 = 80 tosses): heads 42, tails 38 (rel. freq heads 42/80 = 0.525). Running relative frequency of heads for cumulative tosses: 10 tosses -> 6/10 = 0.6; 20 -> 11/20 = 0.55; 40 -> 22/40 = 0.55; 80 -> 42/80 = 0.525. Fair coin theoretical P(H) = 1/2 = 0.5. Fair die: sample space {1,2,3,4,5,6}, P(each) = 1/6; event 'even number' = {2,4,6}, P = 3/6 = 1/2. Two coins sample space = {HH, HT, TH, TT}, each 1/4. TWO-DAY WEATHER (days independent, rain R with P = 0.7, no rain N with P = 0.3): P(RR) = 0.7 x 0.7 = 0.49; P(RN) = 0.7 x 0.3 = 0.21; P(NR) = 0.3 x 0.7 = 0.21; P(NN) = 0.3 x 0.3 = 0.09. Total = 0.49 + 0.21 + 0.21 + 0.09 = 1.00. P(rain on at least one of two days) = 1 - 0.09 = 0.91 (= 0.49 + 0.21 + 0.21). P(rain on exactly one day) = 0.21 + 0.21 = 0.42. Mutually exclusive example: rain and dry on the same day at the same place (cannot both happen). Addition law: P(rain only or storm) = 0.6 + 0.1 = 0.7. P(storm or dry) = 0.1 + 0.3 = 0.4. DECISION THRESHOLDS used in lesson 9 (fixed for the class): farmer plants if P(rain on each of next two days) >= 0.49 is considered good, or if P(at least one rainy day in two) >= 0.9; pilot delays or reroutes if P(storm) >= 0.1 on the route day; county disaster office prepares drainage and issues a warning if P(rain) >= 0.7 or P(storm) >= 0.1. Teachers should note these thresholds are classroom decision rules, not real KMD rules.",
+  "characters": "Kenya Meteorological Department (KMD): issues the forecast of 70% rain; forecasts come from past records and models. Wanjiru Chebet: a maize farmer near Eldoret with 2 acres who must decide whether to plant today, wait, or irrigate. Captain Otieno: pilot at JKIA planning a flight to Kisumu who checks the storm probability (0.1). Nairobi County disaster office, led by Ms Achieng: decides on drainage preparation and warning residents about floods. Kericho: tea and farming town in the Rift Valley whose past March records give 14 rainy days out of 20. Mr Kamau: the class teacher who runs the coin and bottle-top toss. Learners work in groups of 5; each group tosses a coin or bottle top 10 times (Heads = rain, Tails = no rain). Place names: Eldoret, Kericho, Kisumu, JKIA (Nairobi), Rift Valley. Foods/context: maize, beans, ugali, githeri. Bottle-top: treated as a 2-outcome object for lessons 1-2 only with an uneven result possible; coin is fair.",
+  "outcome": "The forecast 'a 70% chance of rain' does not guarantee rain; it means that in a long run of similar days about 7 out of every 10 have rain, worked out from past records (relative frequency 14/20 = 0.7) and models. Because the numbers are based on many past trials, farmer Wanjiru, Captain Otieno and the county office can compare probabilities with their own cost of being wrong and act sensibly: Wanjiru prepares to plant and keeps irrigation as backup, Captain Otieno plans for a possible 10% storm and checks again before take-off, and the county office prepares drainage and warns residents. A decision made on probability can still turn out unlucky on one day, but it is the best choice over many days.",
+  "conventions": "Probability is written as a fraction, decimal or percentage between 0 and 1 (0% to 100%); 0 = impossible, 1 = certain. P(A) means the probability of event A. Experimental probability = relative frequency = number of times the event occurred / total number of trials. Theoretical probability = number of favourable outcomes / total number of equally likely outcomes. Sample space (probability space) is written S = {...}; an event is a subset of S. Heads = H = rain (R), Tails = T = no rain (N) in coin activities. Use 'trial' for each toss. Mutually exclusive: cannot happen together, P(A and B) = 0. Independent: one does not affect the chance of the other. Addition law (mutually exclusive): P(A or B) = P(A) + P(B). Multiplication law (independent): P(A and B) = P(A) x P(B). 'Or' means union, 'and' means intersection. Complement: P(not A) = 1 - P(A). Tree diagrams: probabilities written on branches, multiply along branches, add across the outcomes that make an event; all final outcomes sum to 1. Keep to the numbers in anchorData; never change 0.7, 0.3, 0.1, 0.6. Avoid the formal general addition law with overlap and avoid conditional probability. Use the word 'chance' informally and 'probability' formally. Law names: 'addition law' and 'multiplication law'.",
+  "lessonMap": [
+    {
+      "number": 1,
+      "focus": "Experimental probability I: coin tosses and the forecast",
+      "teaches": "Doing trials, recording frequencies, and calculating relative frequency as an estimate of likelihood (Heads = rain); introduces the 70% forecast puzzle",
+      "buildsOn": "None; launches the phenomenon and DQB",
+      "usesData": "KMD forecast 0.7; group of 10 tosses (6 heads, 4 tails, 0.6); Kericho record 14/20 introduced as a teaser"
+    },
+    {
+      "number": 2,
+      "focus": "Experimental probability II: more trials and Kericho records",
+      "teaches": "As the number of trials increases relative frequency stabilises (law of large numbers, informally); pooled data used to estimate P(rain)",
+      "buildsOn": "Lesson 1: relative frequency and group data",
+      "usesData": "Running relative frequency table (0.6, 0.55, 0.55, 0.525); class pooled 42/80; Kericho 14/20 = 0.7"
+    },
+    {
+      "number": 3,
+      "focus": "Probability space I: sample spaces and events",
+      "teaches": "Listing all possible outcomes as a sample space and defining an event as a subset",
+      "buildsOn": "Lessons 1-2: trials and outcomes of coin tosses",
+      "usesData": "Coin {H,T}; two coins {HH,HT,TH,TT}; die {1..6}, even = {2,4,6}; weather S = {rain, storm, dry}"
+    },
+    {
+      "number": 4,
+      "focus": "Probability space II: theoretical probability",
+      "teaches": "Calculating theoretical probability = favourable / total outcomes, comparing it with experimental results and explaining differences",
+      "buildsOn": "Lessons 2-3: relative frequency and sample space",
+      "usesData": "P(H) = 0.5 vs 0.525; die P(even) = 1/2; day-state probabilities 0.6, 0.1, 0.3 sum to 1; revise forecast model"
+    },
+    {
+      "number": 5,
+      "focus": "Mutually exclusive and independent events",
+      "teaches": "Classifying pairs of events as mutually exclusive, independent or neither",
+      "buildsOn": "Lesson 3: events as subsets, outcomes that overlap or not",
+      "usesData": "Rain and dry same day (mutually exclusive); rain Monday and rain Tuesday (independent); die and coin events"
+    },
+    {
+      "number": 6,
+      "focus": "Laws of probability I: the addition law",
+      "teaches": "P(A or B) = P(A) + P(B) for mutually exclusive events, and the complement rule P(not A) = 1 - P(A)",
+      "buildsOn": "Lessons 4-5: probabilities of outcomes and mutually exclusive events",
+      "usesData": "P(rain only) 0.6 + P(storm) 0.1 = 0.7; P(storm or dry) = 0.4; P(no rain) = 0.3"
+    },
+    {
+      "number": 7,
+      "focus": "Laws of probability II: the multiplication law",
+      "teaches": "P(A and B) = P(A) x P(B) for independent events",
+      "buildsOn": "Lessons 5-6: independence and use of probability laws",
+      "usesData": "P(rain two days) = 0.7 x 0.7 = 0.49; P(no rain two days) = 0.09; die and coin example"
+    },
+    {
+      "number": 8,
+      "focus": "Probability tree diagrams",
+      "teaches": "Drawing tree diagrams for combined events, multiplying along branches and adding outcomes",
+      "buildsOn": "Lessons 6-7: addition and multiplication laws",
+      "usesData": "Two-day tree: RR 0.49, RN 0.21, NR 0.21, NN 0.09 (total 1.00); at least one rainy day 0.91; exactly one 0.42"
+    },
+    {
+      "number": 9,
+      "focus": "Applying probability to real decisions",
+      "teaches": "Using the full probability model to justify decisions for the farmer, pilot and county office, and answering the driving question",
+      "buildsOn": "Lessons 1-8: relative frequency, sample space, laws, tree diagrams",
+      "usesData": "All anchorData: forecast 0.7, storm 0.1, Kericho 14/20, two-day tree, decision thresholds"
+    }
+  ]
+}

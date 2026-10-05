@@ -10,116 +10,103 @@
  "lessons": [
   {
    "number": 2,
-   "title": "What Is Pressure? Measuring the Invisible Push — Shoes, Scales, and Force Per Unit Area",
+   "title": "What is Pressure? Force and Area on Flour",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-09-30T05:43:49+00:00",
+   "generatedAt": "2026-10-05T03:52:35+00:00",
    "quiz": [
     {
-     "prompt": "A sealed empty plastic jerrycan has had some air removed from inside and it is crumpling inwards. Which statement best describes how the air OUTSIDE is acting on it?",
+     "prompt": "A 2 kg brick (weight 20 N) is placed gently on flour, first on its large face and then on its small face. Which statement about the force the brick presses on the flour with is correct?",
      "choices": [
-      "It pushes only on the sides, because the top and bottom are flat",
-      "It pushes only downwards on the top of the jerrycan",
-      "It pushes inwards on every face: top, bottom and all four sides",
-      "It does not push at all; the plastic simply becomes weak"
-     ],
-     "correctIndex": 2,
-     "rationale": "Atmospheric pressure acts on every exposed face of an object, so the outside air pushes inwards on all six faces. Students who draw arrows only on the top hold the 'downward only' misconception.",
-     "phase": "predict",
-     "placement": "Silent Force-Diagramming of the collapsed jerrycan"
-    },
-    {
-     "prompt": "A teacher presses a flat textbook onto her palm, then presses a sharp pencil tip onto her palm with about the same force. The pencil feels much more painful. What is the best explanation?",
-     "choices": [
-      "The book has a smaller area, so it spreads the force less",
-      "The force is about the same, but the pencil tip has a much smaller contact area, so the pressure is greater",
-      "The pencil is heavier than the book",
-      "The pencil tip pushes with a much bigger force than the book"
+      "The force is greater on the small face because it is narrower.",
+      "The force is 20 N on both faces because the weight does not change.",
+      "The force is greater on the large face because it is bigger.",
+      "The force on the small face is zero because the brick is balanced."
      ],
      "correctIndex": 1,
-     "rationale": "Pressure is force divided by area (P = F/A). With the same force, a smaller contact area gives a larger pressure.",
-     "phase": "observe",
-     "placement": "Part A: Pencil vs. Book Demonstration"
+     "rationale": "The force is the brick's weight, W = mg = 2 x 10 = 20 N, however the brick is placed. Only the contact area changes.",
+     "phase": "predict",
+     "placement": "Predict: brick placed on the large, medium and small face on the tray of flour"
     },
     {
-     "prompt": "A student has a mass of 50 kg (g = 10 N/kg). She stands on one shoe whose sole has a contact area of 200 cm². Taking her weight as shared equally between both feet, what pressure does one shoe exert on the floor? (1 m² = 10,000 cm²)",
+     "prompt": "The large face of a brick measures 20 cm by 10 cm, so its area is 200 cm2. Given that 1 m2 = 10,000 cm2, what is this area in m2?",
      "choices": [
-      "1.25 Pa",
-      "25,000 Pa",
-      "12,500 Pa",
-      "125,000 Pa"
-     ],
-     "correctIndex": 2,
-     "rationale": "Weight = 50 × 10 = 500 N, so one foot carries 250 N. Area = 200 ÷ 10,000 = 0.02 m². P = 250 ÷ 0.02 = 12,500 Pa.",
-     "phase": "observe",
-     "placement": "Part B: Shoe Pressure Investigation",
-     "check": "(50*10/2)/(200/10000)"
-    },
-    {
-     "prompt": "Which choice correctly gives the definition of pressure and its SI unit?",
-     "choices": [
-      "Pressure = area ÷ force; unit is the Newton (N)",
-      "Pressure = mass ÷ area; unit is the kilogram (kg)",
-      "Pressure = force × area; unit is the square metre (m²)",
-      "Pressure = force ÷ area; unit is the Pascal (Pa), which is N/m²"
-     ],
-     "correctIndex": 3,
-     "rationale": "Pressure is force per unit area, P = F/A, measured in Pascals where 1 Pa = 1 N/m². Inverting the formula or using mass instead of force are common errors.",
-     "phase": "explain",
-     "placement": "Formal definition and note frame (P = F/A, unit Pascal)"
-    },
-    {
-     "prompt": "A maize bag of mass 90 kg (g = 10 N/kg) is placed on a wooden pallet in a warehouse in Eldoret. The pallet has 4 legs, each with a base area of 25 cm². The weight is shared equally by the legs. What pressure does each leg exert on the floor? (1 m² = 10,000 cm²)",
-     "choices": [
-      "90,000 Pa",
-      "9,000 Pa",
-      "900,000 Pa",
-      "360,000 Pa"
+      "0.02 m2",
+      "0.002 m2",
+      "0.2 m2",
+      "2 m2"
      ],
      "correctIndex": 0,
-     "rationale": "Weight = 90 × 10 = 900 N; each leg carries 900 ÷ 4 = 225 N. Area = 25 ÷ 10,000 = 0.0025 m². P = 225 ÷ 0.0025 = 90,000 Pa.",
-     "phase": "explain",
-     "placement": "Extension Problem 1: maize bag on a wooden pallet",
-     "check": "(90*10/4)/(25/10000)"
+     "rationale": "Divide by 10,000 to change cm2 to m2: 200 / 10,000 = 0.02 m2.",
+     "phase": "observe",
+     "placement": "Observe: converting each face area from cm2 to m2 in the data table",
+     "check": "200/10000"
     },
     {
-     "prompt": "A Maasai elder leans on a rungu whose handle tip has an area of 2 cm², with a force of 150 N. A nurse at Kenyatta National Hospital leans on a flat crutch base of area 50 cm² with the same 150 N force. How do the pressures on the floor compare?",
+     "prompt": "A 2 kg brick (g = 10 N/kg) rests on its small face, which has an area of 0.005 m2. What pressure does it exert on the flour?",
      "choices": [
-      "The rungu exerts 48 times more pressure than the crutch",
-      "The pressures are equal, because both forces are 150 N",
-      "The rungu exerts 25 times more pressure than the crutch",
-      "The crutch exerts 25 times more pressure than the rungu"
+      "4,000 Pa",
+      "1,000 Pa",
+      "0.1 Pa",
+      "0.00025 Pa"
+     ],
+     "correctIndex": 0,
+     "rationale": "F = mg = 2 x 10 = 20 N. P = F/A = 20 / 0.005 = 4,000 Pa.",
+     "phase": "observe",
+     "placement": "Observe: calculating P = F/A for each face of the brick",
+     "check": "20/0.005"
+    },
+    {
+     "prompt": "The same brick of weight 20 N makes the deepest dent in flour when it rests on its small face. What is the best explanation?",
+     "choices": [
+      "The small face makes the brick heavier.",
+      "The small face pushes with a bigger force than the large face.",
+      "The same 20 N is spread over a smaller area, so the pressure is greater.",
+      "Force and pressure are the same thing, so the dent depends only on the force."
      ],
      "correctIndex": 2,
-     "rationale": "Rungu: 150 ÷ 0.0002 = 750,000 Pa. Crutch: 150 ÷ 0.005 = 30,000 Pa. The ratio is 750,000 ÷ 30,000 = 25, so the crutch is safer for a soft floor.",
+     "rationale": "The weight is 20 N on every face, but a smaller area gives a larger force per unit area, so the pressure is greater and the dent is deeper.",
      "phase": "explain",
-     "placement": "Extension Problem 2: rungu and crutch comparison",
-     "check": "(150/(2/10000))/(150/(50/10000))"
+     "placement": "Explain: claim-evidence-reasoning statement on why the small face sinks deepest"
     },
     {
-     "prompt": "Which statement best describes atmospheric pressure?",
+     "prompt": "A force of 30 N acts at right angles on a surface of area 0.5 m2. What is the pressure on the surface?",
      "choices": [
-      "It is a force that acts only downwards on the top of objects",
-      "It is the weight of the column of air above a surface, and it acts on every exposed face of an object",
-      "It is the force of moving wind, and it acts only in the direction the wind blows",
-      "It is the pressure of the air trapped inside a container only"
+      "0.017 Pa",
+      "30 Pa",
+      "60 Pa",
+      "15 Pa"
      ],
-     "correctIndex": 1,
-     "rationale": "Atmospheric pressure comes from the weight of the air column above a surface and it pushes on all exposed faces, not just the top.",
-     "phase": "dqb",
-     "placement": "Two-colour DQB cards: 'What do I now THINK is causing the jerrycan to crush?'"
+     "correctIndex": 2,
+     "rationale": "P = F/A = 30 / 0.5 = 60 Pa.",
+     "phase": "explain",
+     "placement": "Explain: quick calculation check (30 N on 0.5 m2)",
+     "check": "30/0.5"
     },
     {
-     "prompt": "An empty sealed jerrycan with normal air inside and outside stays intact. After some air is pumped out of it, it collapses. Which explanation is correct?",
+     "prompt": "Which statement correctly defines pressure and its unit?",
      "choices": [
-      "Before, there was no air pushing on the jerrycan at all",
-      "Before, the air pressure inside pushing outwards balanced the air pressure outside pushing inwards; after, the pressure inside was much less, so the outside pressure crushed it",
-      "The air outside became heavier after the air inside was removed",
-      "The plastic was already weak and only needed a small push from the pump"
+      "Pressure is the force multiplied by the area, measured in pascals.",
+      "Pressure is the total force on a surface, measured in newtons.",
+      "Pressure is the mass of an object, measured in kilograms.",
+      "Pressure is the force acting at right angles per unit area, measured in pascals where 1 Pa = 1 N/m2."
      ],
-     "correctIndex": 1,
-     "rationale": "With equal pressure inside and outside the inward and outward pushes balance. Removing air lowers the inside pressure, so the unbalanced outside pressure collapses the jerrycan.",
+     "correctIndex": 3,
+     "rationale": "Pressure is force acting normally per unit area, P = F/A, and its unit is the pascal (1 Pa = 1 N/m2). It is not the same as force.",
+     "phase": "explain",
+     "placement": "Explain: writing the definition of pressure as P = F/A with the unit Pa"
+    },
+    {
+     "prompt": "Mama Wanjiru pushes with the same 40 N force on a sharp knife and on a blunt knife. The sharp knife cuts a tomato easily. Using what you learnt from the brick on flour, what is the best explanation?",
+     "choices": [
+      "The pressure is the same for both knives because the force is the same.",
+      "The sharp knife has a bigger force on the tomato than the blunt knife.",
+      "The sharp knife has a larger contact area, so it cuts better.",
+      "The sharp edge has a much smaller contact area, so the same force gives a greater pressure."
+     ],
+     "correctIndex": 3,
+     "rationale": "The force is the same, but the sharp edge touches the food over a much smaller area, so P = F/A is greater. This is the same idea as the brick's small face.",
      "phase": "model",
-     "placement": "Revised jerrycan model: sentence frame 'Before the air was removed... After air was removed...'"
+     "placement": "Model: revising the Lesson 1 knife model with 'same force, small area, P = F/A'"
     }
    ]
   }

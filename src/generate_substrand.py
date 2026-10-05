@@ -68,7 +68,13 @@ def _track_sync_usage(response) -> None:
     usage = getattr(response, 'usage', None)
     if usage is None:
         return
-    _USAGE['sync_input']  += getattr(usage, 'input_tokens', 0) or 0
+    # Prompt caching: cache writes bill at 1.25x input, cache reads at 0.1x. Fold both into
+    # an input-equivalent so _estimate_cost() stays right.
+    _cw = getattr(usage, 'cache_creation_input_tokens', 0) or 0
+    _cr = getattr(usage, 'cache_read_input_tokens', 0) or 0
+    _USAGE['cache_write'] = _USAGE.get('cache_write', 0) + _cw
+    _USAGE['cache_read'] = _USAGE.get('cache_read', 0) + _cr
+    _USAGE['sync_input']  += (getattr(usage, 'input_tokens', 0) or 0) + 1.25 * _cw + 0.1 * _cr
     _USAGE['sync_output'] += getattr(usage, 'output_tokens', 0) or 0
     _USAGE['sync_calls']  += 1
 
@@ -426,12 +432,62 @@ def extract_template_docx(docx_path: str) -> dict:
             if row_data:
                 result['table_content'].append(row_data)
 
-    # Find phenomenon (usually in row with "PHENOMENON")
-    for row in result['table_content']:
-        for i, cell in enumerate(row):
-            if 'PHENOMENON' in cell.upper() and i + 1 < len(row):
-                result['phenomenon'] = row[i + 1][:500]
+    # The TEACHER'S phenomenon: the row whose FIRST cell is the label "THE PHENOMENON" /
+    # "Phenomenon" / "Anchoring Phenomenon" (not a lesson row such as "Phenomenon
+    # Introduction: ..."), taking the next cell, in full. The previous version matched
+    # any cell containing 'phenomenon' and the LAST match won, so it returned a lesson
+    # row's resource list for most templates (found 2026-10-04) and cut it at 500 chars.
+    label = re.compile(r'^\s*(?:the\s+)?(?:anchoring\s+)?phenomenon\s*:?\s*(?:\b|$)', re.I)
+    for table in doc.tables:
+        for row in table.rows:
+            cells = []
+            for c in row.cells:                       # merged cells repeat; keep distinct, in order
+                ct = c.text.strip()
+                if ct and ct not in cells:
+                    cells.append(ct)
+            if len(cells) >= 2 and label.match(cells[0]) and not re.match(
+                    r'^\s*phenomenon\s+(introduction|exploration|connection)', cells[0], re.I):
+                # a label cell can carry its own description; the teacher's text is the next cell
+                result['phenomenon'] = cells[1][:3000]
                 break
+        if result['phenomenon']:
+            break
+    # Some templates state it in paragraphs instead ("1. Phenomenon" / "Core Phenomenon:" /
+    # "ANCHORING PHENOMENON" + "MAIN PHENOMENON:"): take the label's text, and the
+    # paragraphs that follow it up to the supporting phenomena / next lesson / next heading.
+    if len(result['phenomenon']) < 60:
+        paras = result['paragraphs']
+        stop = re.compile(r'^\s*(?:\d+\.\s*)?(?:driving question|supporting phenomen|lesson\s+\d|key inquiry)', re.I)
+        lab = re.compile(r'^\s*(?:\d+\.\s*)?(?:core\s+|main\s+|anchoring\s+)?phenomenon\s*:?\s*(.*)$', re.I | re.S)
+        for i, ptxt in enumerate(paras):
+            m = lab.match(ptxt)
+            if not m or re.match(r'^\s*phenomenon\s+(introduction|exploration|connection)', ptxt, re.I):
+                continue
+            body = m.group(1).strip()
+            j = i
+            while j + 1 < len(paras) and j - i < 6 and len(body) < 1500:
+                nxt = paras[j + 1]
+                if stop.match(nxt):
+                    break
+                j += 1
+                body = (body + ' ' + lab.sub(r'\1', nxt).strip()).strip() if lab.match(nxt) else (body + ' ' + nxt).strip()
+            if len(body) >= 40:
+                result['phenomenon'] = body[:3000]
+                break
+    # Driving question stated in its own row ("Driving Question" / "Key Inquiry Questions / ...")
+    for table in doc.tables:
+        for row in table.rows:
+            cells = []
+            for c in row.cells:
+                ct = c.text.strip()
+                if ct and ct not in cells:
+                    cells.append(ct)
+            if len(cells) >= 2 and re.match(r'^\s*(?:main\s+)?(?:driving|key inquiry)', cells[0], re.I) \
+                    and not re.search(r'board|DQB', cells[0], re.I):
+                result['teacher_driving_question'] = cells[1][:1500]
+                break
+        if result.get('teacher_driving_question'):
+            break
 
     # Find lesson sequence
     for row in result['table_content']:
@@ -660,7 +716,7 @@ def _text_of(content) -> str:
 
 
 def call_claude(user_prompt: str, max_tokens: int = 16000, retries: int = 3,
-                schema: dict | None = None) -> dict | None:
+                schema: dict | None = None, cache_prefix: str | None = None) -> dict | None:
     """Call Claude and return a dict.
 
     If `schema` (a JSON Schema) is given, output is constrained to it via
@@ -676,6 +732,12 @@ def call_claude(user_prompt: str, max_tokens: int = 16000, retries: int = 3,
                 system=SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": user_prompt}],
             )
+            if cache_prefix:
+                # A large block that several calls share (lesson digest, lesson JSON) goes first
+                # and is cached for 5 minutes: repeat calls read it at 10% of the input price.
+                kwargs["messages"] = [{"role": "user", "content": [
+                    {"type": "text", "text": cache_prefix, "cache_control": {"type": "ephemeral"}},
+                    {"type": "text", "text": user_prompt}]}]
             if schema is not None:
                 kwargs.update(_structured_params(schema))
 
@@ -740,6 +802,24 @@ def call_claude(user_prompt: str, max_tokens: int = 16000, retries: int = 3,
 
 # ── Unit generation ───────────────────────────────────────────────────────────
 
+def has_teacher_phenomenon(template: dict | None) -> bool:
+    return bool(template) and len((template.get('phenomenon') or '').strip()) >= 60
+
+
+def _teacher_phenomenon_rule(template: dict | None) -> str:
+    """The teachers chose the phenomenon; the model must not substitute its own."""
+    if not has_teacher_phenomenon(template):
+        return ""
+    dq = (template.get('teacher_driving_question') or '').strip()
+    return ("\nTHE TEACHERS' PHENOMENON ABOVE IS AUTHORITATIVE. The unit's \"phenomenon\" field MUST be this "
+            "phenomenon: keep the teacher's scenario, objects, numbers and Kenyan context, and only add "
+            "realistic detail and why it is puzzling. Do NOT replace it with a different scenario. If several "
+            "phenomena are listed, the FIRST is the anchoring phenomenon and the others belong in "
+            "\"supportingPhenomena\"."
+            + (f" Use the teacher's driving question verbatim as the DRIVING QUESTION:\n{dq}" if dq else "")
+            + "\n")
+
+
 def generate_unit(curriculum_text: str, template: dict, args) -> dict | None:
     """Generate the UNIT sub-strand overview data."""
     print("  Generating UNIT data...")
@@ -755,7 +835,7 @@ KICD CURRICULUM CONTENT (use verbatim for SLOs, competencies, values, PCIs):
 
 TEACHER TEMPLATE — PHENOMENON:
 {template.get('phenomenon', '')}
-
+{_teacher_phenomenon_rule(template)}
 TEACHER TEMPLATE — LESSON SEQUENCE OUTLINE:
 {template.get('lesson_sequence', '')}
 
@@ -1010,6 +1090,14 @@ def _fs_block(args) -> str:
             "rule 1's Lesson 1 / last-lesson default):\n" + lc.fact_sheet_block(fs))
 
 
+def _fe_shared_prefix(unit: dict, lessons: list, args) -> str:
+    """The big block identical across every Final Explanation generation AND review call
+    of one sub-strand (digest of the taught lessons + fact sheet): sent as a cached prefix,
+    so the 3-6 calls of the loop read it at 10% of the input price."""
+    return (f"THE LESSON SEQUENCE AS ACTUALLY TAUGHT (a Final Explanation must agree with this):\n"
+            f"{lesson_digest(lessons, unit)}\n{_fs_block(args)}\n")
+
+
 def _fe_prompt(unit: dict, lessons: list, args, fe_template, lesson_template,
                feedback: list | None, prev_fe: dict | None = None) -> str:
     fe_template_section = ""
@@ -1035,9 +1123,7 @@ Subject: {_subject_display(args.subject)} Grade {args.grade}
 Sub-strand: {args.substrand} {args.substrand_name}
 Driving question: {unit.get('drivingQuestion', '')}
 
-THE LESSON SEQUENCE AS ACTUALLY TAUGHT (the Final Explanation must agree with this):
-{lesson_digest(lessons, unit)}
-{_fs_block(args)}
+(The lesson sequence as actually taught, and the fact sheet, are given above; the Final Explanation must agree with them.)
 {fe_template_section}{template_fe_context(lesson_template)}
 {FE_RULES}{fix}
 Fields: "instructions" are given to the students (they will write in a blank space under each prompt, so do not say the answers are printed). "sections": 4-5 sections, each with a "prompt" (student-facing, no answers) and an "exemplar" (the model answer). "rubric": 4-5 criteria.
@@ -1049,8 +1135,7 @@ def verify_final_explanation(unit: dict, lessons: list, fe: dict, args) -> list 
     or None if the reviewer call itself failed."""
     prompt = f"""You are a meticulous reviewer of a Kenyan CBE Grade {args.grade} {_subject_display(args.subject)} assessment. Find ONLY real defects; do not comment on style.
 
-THE LESSON SEQUENCE AS TAUGHT:
-{lesson_digest(lessons, unit)}
+(The lesson sequence as taught, and the fact sheet, are given above.)
 
 THE FINAL EXPLANATION UNDER REVIEW (JSON):
 {json.dumps(fe, ensure_ascii=False, indent=1)}
@@ -1067,7 +1152,7 @@ CLASSIFY every issue with "kind":
 - "final_explanation": a defect that the Final Explanation's author can fix (cases 1, 2, 4, 5, 6 above, and a disagreement with LESSON 1 or the LAST lesson).
 - "lesson_sequence": the LESSONS contradict EACH OTHER or contain an impossible/unrealistic figure, so no Final Explanation could agree with all of them. Report these once each, naming the lessons involved, but do NOT also report them against the Final Explanation.
 Return {{"issues": []}} if you find none. Otherwise one entry per defect, "where" naming the section/part or lessons, "problem" stating exactly what is wrong and what the right value is."""
-    r = call_claude(prompt, schema=VERIFY_TOOL_SCHEMA)
+    r = call_claude(prompt, schema=VERIFY_TOOL_SCHEMA, cache_prefix=_fe_shared_prefix(unit, lessons, args))
     if r is None:
         return None
     return r.get('issues', [])
@@ -1077,7 +1162,7 @@ def generate_final_explanation(curriculum_text: str, unit: dict,
                                lessons: list, args,
                                fe_template: dict | None = None,
                                lesson_template: dict | None = None,
-                               max_rounds: int = 4,
+                               max_rounds: int = 3,
                                log_name: str | None = None) -> dict | None:
     """Generate the Final Explanation FROM THE FINISHED LESSONS, then have a
     second call check it for contradictions; regenerate with the reviewer's
@@ -1089,7 +1174,7 @@ def generate_final_explanation(curriculum_text: str, unit: dict,
     for rnd in range(1, max_rounds + 1):
         fe = call_claude(_fe_prompt(unit, lessons, args, fe_template, lesson_template, feedback,
                                      prev_fe=best if feedback else None),
-                         schema=FE_TOOL_SCHEMA)
+                         schema=FE_TOOL_SCHEMA, cache_prefix=_fe_shared_prefix(unit, lessons, args))
         if fe is None:
             print(f"    FE generation failed (round {rnd})")
             continue
@@ -1995,6 +2080,10 @@ def main():
                         help='Resume from checkpoint if interrupted')
     parser.add_argument('--run',       action='store_true',
                         help='Run node generators/generate.js after creating data file')
+    parser.add_argument('--keep-unit', metavar='MODULE', default=None,
+                        help="Reuse the existing UNIT (phenomenon, driving question, storyline) from "
+                             "generators/data/MODULE_data.js instead of generating a new one, UNLESS a teacher "
+                             "template supplies a phenomenon: then the unit is rebuilt around the teacher's.")
     parser.add_argument('--unit-only', action='store_true',
                         help='Generate UNIT only (for testing)')
     args = parser.parse_args()
@@ -2103,7 +2192,20 @@ def main():
     print("\n2. Generating content via Claude API...")
 
     # UNIT
-    unit = generate_unit(curriculum_text, lesson_template, args)
+    unit = None
+    if args.keep_unit and not has_teacher_phenomenon(lesson_template):
+        import subprocess
+        _mod = PROJECT_ROOT / 'generators' / 'data' / f"{args.keep_unit}_data.js"
+        _r = subprocess.run(["node", "-e", "process.stdout.write(JSON.stringify(require(process.argv[1]).UNIT))", str(_mod)],
+                            capture_output=True, text=True)
+        if _r.returncode == 0 and _r.stdout.strip() not in ('', 'null'):
+            unit = json.loads(_r.stdout)
+            # the storyline lists lessons by number: keep it only if the lesson count matches
+            print(f"  Keeping the existing UNIT from {_mod.name} (no teacher phenomenon in a template)")
+    if args.keep_unit and has_teacher_phenomenon(lesson_template):
+        print("  Teacher template supplies a phenomenon: rebuilding the unit around it")
+    if unit is None:
+        unit = generate_unit(curriculum_text, lesson_template, args)
     if not unit:
         print("ERROR: Failed to generate UNIT data")
         sys.exit(1)

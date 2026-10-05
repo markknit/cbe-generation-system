@@ -1,6 +1,6 @@
 # Content gaps: lessons with no verified-fit ARES resource
 
-818 lessons. With at least one verified fit: **648** (79%). Only partial matches: **105**. No links at all: **65**.
+806 lessons. With at least one verified fit: **633** (78%). Only partial matches: **105**. No links at all: **68**.
 
 Each lesson below needs new library content for its topic; keywords show what to look for.
 
@@ -57,23 +57,25 @@ Each lesson below needs new library content for its topic; keywords show what to
 - L8 **The Return Journey: Translocation and Final Model Build** — only partial (1). Keywords: plant transport, phloem, xylem, translocation, pressure-flow hypothesis, mass flow, source to sink, sucrose transport, girdling experiment, 
 
 ## Grade 10 Chemistry: Acids and Bases (1 lesson(s))
-- L1 **The Colour-Changing Drinks of the School Canteen — Launching the Phenomenon** — only partial (2). Keywords: acids and bases, universal indicator, colour change, pH, litmus paper, observable properties, Kenyan liquids, lemon juice, Stoney Tangawizi,
+- L9 **Uses of Acids and Bases and Safety: Why Vinegar Pickles, Soap Cleans, Lime Heals Soil and ** — only partial (2). Keywords: uses of acids, uses of bases, food preservation, pickling, cleaning, lime, acidic soil, antacid, hyperacidity, neutralisation, safety precau
 
-## Grade 10 Chemistry: Introduction to Chemistry (8 lesson(s))
-- L2 **Branches of Chemistry: Mapping the Science to Our World** — only partial (4). Keywords: branches of chemistry, Organic Chemistry, Inorganic Chemistry, Physical Chemistry, Analytical Chemistry, Biochemistry, Nuclear Chemistry, In
-- L3 **Chemistry in Agriculture and Food — How Chemistry Feeds Kenya** — NO LINKS. Keywords: fertilisers Kenya, NPK urea Rift Valley maize, pyrethrum pesticide Nakuru, soil pH Kericho tea farming, food preservatives sodium benzoate, 
-- L4 **Chemistry in Medicine, Pharmaceuticals, and Manufacturing** — only partial (1). Keywords: Chemistry in medicine Kenya, pharmaceutical industry KEBS, drug prescription dosage, EABL fermentation, Bidco oil refining, irreversible che
-- L6 **Careers in Chemistry and Gender Stereotyping** — NO LINKS. Keywords: Chemistry careers Kenya, gender stereotyping Chemistry, food chemist KEBS, pharmaceutical chemist KEMRI, agricultural chemist Kericho, indus
-- L7 **Meaning of Drug, Prescription, Dosage and Substance Use** — NO LINKS. Keywords: drug definition, prescription medicine, dosage, over-the-counter medicine, substance use, substance abuse, Panadol label, Metformin label, p
-- L8 **Effects of Drug and Substance Use: Tobacco — Chemistry of an Irreversible Harm** — only partial (2). Keywords: tobacco chemistry, tar nicotine carbon monoxide, irreversible chemical changes, drug and substance use, CER argument, claim evidence reasoni
-- L9 **Consumer Protection and the Safe Learning Environment** — only partial (1). Keywords: consumer protection, KEBS quality mark, product labels, expiry date, preservatives, E-numbers, nutritional information, safety warnings, dos
-- L10 **Project: Poster on Drug & Substance Use — Unit Synthesis & Final Explanation** — only partial (2). Keywords: Final Explanation, Driving Question Board, concept map finalisation, poster project, drug and substance use, community awareness, Chemistry 
+## Grade 10 Chemistry: Introduction to Chemistry (7 lesson(s))
+- L1 **The Kisumu Tray: Eight Substances, Many Puzzles** — only partial (4). Keywords: phenomenon, predict, observe, sort, property, appearance, substance, dissolve, float, sink, magnet, antacid, paracetamol, Driving Question B
+- L5 **Branches of Chemistry: Matching the Five Branches to the Kisumu Tray** — only partial (3). Keywords: branches of chemistry, organic chemistry, inorganic chemistry, physical chemistry, analytical chemistry, biochemistry, respect, Kisumu tray,
+- L6 **Importance of Chemistry in Kenya: From the Kisumu Tray to Our Industries (Model v2)** — only partial (2). Keywords: importance of chemistry, agriculture, pharmaceutical industry, medicine, manufacturing, entertainment, nuclear chemistry, food, sports, ener
+- L7 **Careers in Chemistry: Who Works with the Kisumu Tray Substances, and Who Gets to Choose?** — NO LINKS. Keywords: careers in chemistry, pharmacist, analytical chemist, quality control, chemical engineer, gender stereotypes, career choice, Pharmacy and Po
+- L8 **Consumer Protection and Product Labels: Reading the Story a Label Tells** — NO LINKS. Keywords: label, quality mark, KEBS Diamond Mark, expiry date, ingredients, preservative, caution, dosage, consumer protection, Pharmacy and Poisons B
+- L9 **Drugs and Substance Abuse: Why the Dose Makes the Difference** — only partial (2). Keywords: drug, prescription, dosage, substance use, substance abuse, paracetamol, antacid, label, overdose, poster, Pharmacy and Poisons Board
+- L10 **Safe and Healthy Learning Environment and the Final Model: How Properties of Substances Sh** — only partial (3). Keywords: rights, responsibilities, safe and healthy learning environment, lab safety, Driving Question Board, final model, Final Explanation, propert
 
 ## Grade 10 Chemistry: Introduction to Salts (4 lesson(s))
 - L1 **What Is a Salt? Classification and Types** — only partial (3). Keywords: salts classification, normal salt, acidic salt, basic salt, double salt, CAN fertiliser, washing soda, sodium carbonate, copper sulphate, ta
 - L6 **Behaviour of Salts in Air: Hygroscopic, Deliquescent and Efflorescent Salts** — NO LINKS. Keywords: hygroscopic salts, deliquescent salts, efflorescent salts, behaviour of salts in air, anhydrous calcium chloride, sodium carbonate decahydra
 - L7 **Applications of Salts in Daily Life in Kenya** — NO LINKS. Keywords: salts applications Kenya, CAN fertiliser Rift Valley, sodium chloride fish preservation Lake Victoria, oral rehydration salts ORS, washing s
 - L8 **Unit Synthesis, Model Revision and Summative Assessment** — only partial (2). Keywords: salts unit synthesis, model revision, driving question board closure, final explanation, deliquescence, efflorescence, hygroscopic salts, wa
+
+## Grade 10 Chemistry: The Periodic Table (1 lesson(s))
+- L8 **Radicals and Deriving Formulae: Predicting the Compounds Elements Form** — only partial (4). Keywords: radicals, valency, oxidation number, criss-cross method, chemical formula, brackets, nitrate, sulfate, hydroxide, carbonate, ammonium, phosp
 
 ## Grade 10 Core Mathematics: Area of a Part of a Circle (1 lesson(s))
 - L4 **Area of an Annular Sector: Combining the Ring and the Wedge** — only partial (3). Keywords: annular sector, area of annular sector, circle decomposition, sector area, annulus area, A = (θ/360) × π(R² − r²), centre-pivot irrigation, 
@@ -82,9 +84,8 @@ Each lesson below needs new library content for its topic; keywords show what to
 - L5 **Using Mathematical Tables and Calculators for Logarithms and Antilogarithms** — only partial (6). Keywords: common logarithms, four-figure tables, antilogarithms, mantissa, characteristic
 - L8 **Consolidation, Combined Operations, and Model Revision: Answering the Driving Question** — only partial (7). Keywords: indices and logarithms, combined logarithm operations, product law, quotient law, power law, root law, four-figure mathematical tables, anti
 
-## Grade 10 Core Mathematics: Statistics I (2 lesson(s))
+## Grade 10 Core Mathematics: Statistics I (1 lesson(s))
 - L4 **Grouping the Gaps into Classes** — only partial (3). Keywords: grouped data, class, class width, class boundaries, grouped frequency table, tally, modal class, range, gap, Thika Road
-- L6 **Histograms and frequency density: seeing where the long gaps are on Thika Road** — only partial (6). Keywords: histogram, frequency density, class width, equal class width, unequal class width, continuous axis, area represents frequency, gap, Thika Ro
 
 ## Grade 10 Essential Mathematics: Commercial Arithmetic 1 (2 lesson(s))
 - L5 **Profit and Loss (Part 1 — Concepts & Calculation) — From Wakulima Market to Amina's Stall** — NO LINKS. Keywords: profit and loss, cost price selling price, percentage profit, percentage loss, commercial arithmetic Kenya
@@ -142,10 +143,9 @@ Each lesson below needs new library content for its topic; keywords show what to
 - L7 **DQB Curation and Cumulative Model Building** — NO LINKS. Keywords: DQB curation, cumulative model building, principle of inference, General Science careers Kenya, Kisumu maize farmer, mind-map science, peer 
 - L8 **Synthesis, Presentations and Unit Assessment — Final Explanation & Model Consolidation** — NO LINKS. Keywords: scientific inference, indirect evidence, General Science careers Kenya, science process skills, driving question synthesis
 
-## Grade 10 General Science: Linear Motion (3 lesson(s))
-- L4 **Investigating Free Fall: Does Mass Matter? Dropping Objects from the Limuru Escarpment Hei** — only partial (1). Keywords: free fall, gravitational acceleration, g = 9.8 m/s², h = ½gt², v = gt, linear motion, mkokoteni, Limuru escarpment, drop experiment, mass in
-- L5 **Freely Falling Bodies — Explain & Calculate: Using g to Predict the Mkokoteni's Speed and ** — only partial (5). Keywords: linear motion, free fall, freely falling bodies, equations of motion, gravitational acceleration, g = 10 m/s², v = at, s = ½at², v² = 2as, i
-- L6 **Applications, Road Safety & Real-Life Contexts of Linear Motion** — NO LINKS. Keywords: linear motion, braking distance, equations of motion, v squared equals u squared plus 2as, uniform deceleration, road safety, NTSA, Mombasa 
+## Grade 10 General Science: Linear Motion (2 lesson(s))
+- L3 **Problem Solving with the Equations of Linear Motion: Slowing Down and Going Upward** — only partial (2). Keywords: equations of linear motion, sign convention, negative acceleration, deceleration, retardation, thrown upward, a = -10 m/s², multi-step probl
+- L6 **Road Safety: Stopping Distance and Real-Life Applications of Linear Motion** — NO LINKS. Keywords: stopping distance, reaction distance, braking distance, deceleration, v² = u² + 2as, Mombasa Road, Kinangop descent, NTSA, road safety, mkok
 
 ## Grade 10 General Science: Magnetism and Electromagnetic Induction (2 lesson(s))
 - L1 **Anchoring Phenomenon & Methods of Magnetisation** — only partial (1). Keywords: electromagnetic induction, magnetisation, soft iron, stroking method, electrical method, induction method, magnetic domains, bicycle dynamo,
@@ -186,8 +186,19 @@ Each lesson below needs new library content for its topic; keywords show what to
 ## Grade 10 Mathematics: Area of Polygons (1 lesson(s))
 - L7 **Area of Irregular Polygons: Decomposing the Surveyor's Shamba** — only partial (1). Keywords: area of irregular polygons, polygon decomposition, triangulation of polygons, Heron's formula application, sine rule area formula, area of q
 
+## Grade 10 Mathematics: Linear Motion (1 lesson(s))
+- L9 **Applying Linear Motion: Is Wanjiru's Overtake Safe?** — only partial (3). Keywords: overtaking, relative speed, safety margin, total road needed, velocity-time graph, area under graph, oncoming lorry, Naivasha highway
+
+## Grade 10 Mathematics: Quadratic Equations (1 lesson(s))
+- L1 **Predict & Anchor Phenomenon: The Githurai Harambee Hall** — only partial (7). Keywords: quadratic equation, unknown multiplied by itself, w(w + 2) = 120, general form ax^2 + bx + c = 0, coefficients a, b, c, linear equation, tri
+
+## Grade 10 Mathematics: Rotation (3 lesson(s))
+- L1 **Phenomenon: Day and Night over Kenya** — only partial (5). Keywords: rotation, centre of rotation, angle, direction, anticlockwise, clockwise, axis, 360°, 15° per hour, day, night, Driving Question Board, mode
+- L6 **Axis and Order of Rotational Symmetry of Solids: From Cuboids to Earth's Axis** — only partial (7). Keywords: axis of rotation, order of rotational symmetry, solid, cuboid, square-based prism, cone, globe, North and South Poles, 360° ÷ order, smalles
+- L9 **Revisiting the Phenomenon: Explaining Day and Night over Mombasa, Nairobi and Kisumu with ** — only partial (5). Keywords: rotation, centre of rotation, angle, direction, anticlockwise, Earth's axis, 15° per hour, 360° in 24 hours, longitude, Mombasa, Nairobi, Ki
+
 ## Grade 10 Mathematics: Statistics I (1 lesson(s))
-- L2 **Sorting the Story: Simple Distribution Tables & Tally Charts** — only partial (2). Keywords: frequency distribution table, tally chart, tally marks, frequency, raw data, organising data, data patterns, sukuma wiki, Kongowea Market, M
+- L3 **Grouped Frequency Distribution Tables: Choosing Class Intervals and Classifying the Scores** — only partial (4). Keywords: grouped data, class interval, class width, class limits, class boundaries, midpoint, range, tally, frequency, Subject 1, Subject 2
 
 ## Grade 10 Mathematics: Surface Area and Volume of Solids (3 lesson(s))
 - L3 **Surface Area of Frustums of a Cone** — only partial (2). Keywords: frustum, cone, surface area, slant height, radius, composite solids, water tank, Kisumu, manufacturing, cost efficiency, CBE Grade 10, mathe
@@ -204,25 +215,19 @@ Each lesson below needs new library content for its topic; keywords show what to
 - L5 **How Do Engineers Keep Things From Falling? — Factors Affecting Stability and Real-Life App** — NO LINKS. Keywords: centre of gravity, base of support, stability, toppling, moment, perpendicular distance, engineering design, equilibrium
 - L6 **Can We Explain and Predict Toppling? — Consolidation, Model Finalisation, and DQB Review** — only partial (5). Keywords: moment of a force, principle of moments, centre of gravity, base of support, stable equilibrium, unstable equilibrium, neutral equilibrium, 
 
-## Grade 10 Physics: 3.3 Introduction to Electronics (1 lesson(s))
-- L5 **PhET Semiconductor Lab: Exploring p-n Junctions, Bias, and Temperature Effects** — only partial (4). Keywords: semiconductor, p-n junction, forward bias, reverse bias, doping concentration, I-V characteristics, depletion region, temperature effect, so
-
-## Grade 10 Physics: 3.4 Electrostatics (1 lesson(s))
-- L8 **How Much Energy Can a Capacitor Store? (Energy Stored in a Capacitor)** — only partial (5). Keywords: energy stored in a capacitor, E = half CV squared, capacitance, potential difference, discharge, lightning energy, electrostatic precipitato
-
 ## Grade 10 Physics: 4.1 Greenhouse Effect and Climate Change (2 lesson(s))
 - L2 **What Human Activities in Kenya Are Increasing Greenhouse Gases?** — only partial (2). Keywords: greenhouse gases, carbon dioxide, methane, nitrous oxide, deforestation, charcoal burning, livestock emissions, Mau Forest, emission sources
 - L7 **Final Model Building, Driving Question Board Closure, and Unit Synthesis: Answering the My** — only partial (2). Keywords: greenhouse effect, infrared radiation, carbon dioxide, methane, ozone layer, CFCs, global warming, glacier retreat, mitigation, adaptation, 
 
 ## Grade 10 Physics: Current Electricity (1 lesson(s))
-- L11 **Heating Effect of Electric Current & Electrical Safety** — only partial (1). Keywords: Joule heating, Q=I²Rt, heating effect of current, electrical safety, fuse, circuit breaker, earthing, nichrome wire, electric cooker, immers
+- L11 **Domestic Wiring and Safety: Why the Fuse Blows When a Socket Is Overloaded** — only partial (1). Keywords: fuse, circuit breaker, earthing, live wire, neutral wire, earth wire, overload, short circuit, 13 A, 240 V, P = IV, parallel appliances, ext
 
 ## Grade 10 Physics: Greenhouse Effect and Climate Change (2 lesson(s))
 - L1 **What Is the Greenhouse Effect? — Anchoring Phenomenon Introduction** — only partial (1). Keywords: greenhouse effect, climate change, Mount Kenya, Lewis Glacier, infrared radiation, solar radiation, greenhouse gases, carbon dioxide, atmosp
 - L3 **How Does the Greenhouse Effect Actually Work? — Tracing Energy Through Kenya's Atmosphere** — only partial (2). Keywords: greenhouse effect, infrared radiation, shortwave radiation, longwave radiation, CO2 absorption, re-emission, back-radiation, enhanced greenh
 
 ## Grade 10 Physics: Introduction to Electronics (1 lesson(s))
-- L3 **Intrinsic Semiconductors — The Energy Band Model and Silicon's Dual Identity** — only partial (2). Keywords: intrinsic semiconductor, energy band model, valence band, conduction band, band gap, silicon band gap 1.12 eV, electron-hole pairs, carrier 
+- L3 **Intrinsic Semiconductors: Silicon and Germanium** — NO LINKS. Keywords: intrinsic semiconductor, silicon, germanium, energy gap, band gap, free electron, hole, electron-hole pair, temperature, conductivity, resis
 
 ## Grade 10 Physics: Introduction to Space Physics (4 lesson(s))
 - L3 **Classification of Celestial Bodies: Reading the Kenyan Night Sky** — only partial (4). Keywords: space physics, celestial bodies, classification, stars, planets, moons, comets, asteroids, galaxies, Stellarium, Nairobi night sky, cosmic t
@@ -238,8 +243,9 @@ Each lesson below needs new library content for its topic; keywords show what to
 - L3 **Lesson 3: Centre of Gravity and the Tipping Point — Why Does the Jiko Stool Fall?** — NO LINKS. Keywords: centre of gravity, base of support, stable equilibrium, unstable equilibrium, neutral equilibrium, toppling condition, plumb-line method, mo
 - L4 **The Principle of Moments: Balancing Forces on a Bao Plank** — NO LINKS. Keywords: Principle of Moments, clockwise moment, anti-clockwise moment, moment arm, pivot, equilibrium, turning force, Newton-metre, beam balance, ce
 
-## Grade 10 Physics: Properties of Waves (1 lesson(s))
-- L4 **Echoes, Sonar and Hall Design: Putting Reflection to Work** — only partial (3). Keywords: echo, reflection, sonar, time delay, d = vt/2, minimum echo distance, reverberation, hall acoustics, Lake Victoria, absorber
+## Grade 10 Physics: Properties of Waves (2 lesson(s))
+- L2 **Rectilinear Propagation: Light and Wave Paths from Source to Cliff and Back** — only partial (4). Keywords: rectilinear propagation, ray, ray model, shadow, umbra, penumbra, pinhole camera, inverted image, PhET Geometric Optics, speed of light, spe
+- L12 **Noise Pollution and the Final Model: Why Do Some Places Echo and Others Do Not?** — only partial (6). Keywords: noise pollution, decibel (dB), echo, reverberation, absorption, reflection, interference, resonance, final model, Driving Question Board
 
 ## Grade 10 Physics: Temperature and Thermal Expansion (3 lesson(s))
 - L3 **Linear Expansion of Solids — The Stretching Rod** — only partial (1). Keywords: linear expansion, coefficient of linear expansivity, alpha, ΔL = αL₀ΔT, thermal expansion of solids, bar and gauge experiment, SGR railway g
@@ -272,12 +278,13 @@ Each lesson below needs new library content for its topic; keywords show what to
 - L5 **The Chemical Switch: How Juvenile Hormone Decides Whether an Insect Stays Young or Becomes** — only partial (2). Keywords: juvenile hormone, ecdysone, moulting, ecdysis, metamorphosis, nymph, larva, pupa, imago, exuvia, endocrine gland, corpora allata, prothoraci
 - L6 **Final Explanation: Controlled Growth, Metamorphosis and Survival in Kenyan Insects** — only partial (1). Keywords: exuvia, moulting, ecdysis, ecdysone, juvenile hormone, complete metamorphosis, incomplete metamorphosis, nymph, pupa, growth curve, intermit
 
-## Grade 11 Biology: Growth and Development in Plants (5 lesson(s))
-- L2 **Meaning of Growth and Development; Structure of Monocot and Dicot Seeds** — only partial (1). Keywords: growth, development, monocot, dicot, maize grain, bean seed, testa, pericarp, cotyledon, endosperm, embryo, plumule, radicle, hilum, micropy
-- L5 **Primary and Secondary Growth: How Do Plants Show Growth?** — only partial (1). Keywords: primary growth, secondary growth, apical meristem, vascular cambium, cork cambium, xylem, phloem, monocot stem, dicot stem, annual rings, hy
-- L6 **Where Does a Maize or Bean Plant Grow? Measuring Growth and Regions of Growth in Seedlings** — only partial (1). Keywords: growth, regions of growth, apical meristem, root tip, primary growth, secondary growth, growth curve, measurement, maize, bean, seedling
-- L8 **Measuring Growth: Seedling Height, Stem Width and Growth Curves of Maize and Beans** — only partial (5). Keywords: growth, measurement, growth curve, sigmoid curve, lag phase, exponential phase, stationary phase, seedling height, stem width, maize, beans,
-- L10 **Synthesis and Application: Explaining the Farmer's Maize and Beans and Planning the Tree N** — only partial (2). Keywords: final explanation, claim-evidence-reasoning, cumulative model, Driving Question Board, germination, dormancy, hypogeal, epigeal, primary gro
+## Grade 11 Biology: Growth and Development in Plants (6 lesson(s))
+- L1 **Meeting the Phenomenon: Mr. Wafula's Maize and Beans** — only partial (1). Keywords: phenomenon, germination, emergence, growth, time-lapse, initial model, Driving Question Board, maize H614, bean Rosecoco
+- L2 **Growth vs Development and Inside the Seed: Maize H614 and Rosecoco Beans** — only partial (1). Keywords: growth, development, monocot, dicot, testa, micropyle, hilum, cotyledon, scutellum, endosperm, coleoptile, coleorhiza, plumule, radicle, epi
+- L5 **Primary and Secondary Growth: Why Does Maize Thicken but Not Make Wood?** — NO LINKS. Keywords: primary growth, secondary growth, apical meristem, vascular cambium, woody dicot, annual rings, Grevillea robusta, stem thickness, monocot, 
+- L6 **Measuring Growth: Regions of Growth and Growth Curves of Maize H614 and Bean Rosecoco** — NO LINKS. Keywords: growth curve, sigmoid, lag phase, log (exponential) phase, stationary phase, apical meristem, region of cell division, region of elongation,
+- L9 **Consolidating the Evidence and Building the Final Model: Why Did Mr. Wafula's Maize and Be** — only partial (1). Keywords: consolidation, final model, claim-evidence-reasoning, Driving Question Board, germination, emergence, dormancy, viability, hypogeal, epigeal
+- L10 **Presenting Our Final Explanation and Sharing Seedlings with Kitale** — NO LINKS. Keywords: final explanation, claim-evidence-reasoning, gallery walk, model comparison, driving question board, tree nursery, seedling sales, conservat
 
 ## Grade 11 Biology: Reproduction in Animals (6 lesson(s))
 - L1 **Frogs, Hens and Cows: Many Ways to One Goal – How Do Animals Reproduce?** — NO LINKS. Keywords: external fertilisation, internal fertilisation, oviparous, viviparous, ovoviviparous, amphibians, aquatic environment, classification chart,

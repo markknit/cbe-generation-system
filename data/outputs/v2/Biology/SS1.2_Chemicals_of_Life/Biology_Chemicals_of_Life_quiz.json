@@ -10,609 +10,615 @@
  "lessons": [
   {
    "number": 1,
-   "title": "Predict: What Is Food Really Made Of?",
+   "title": "The Blood Glucose Puzzle: Why Does Glucose Rise and Fall After Eating Ugali?",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-09-30T07:54:16+00:00",
+   "generatedAt": "2026-10-05T03:52:34+00:00",
    "quiz": [
     {
-     "prompt": "Two children live in the same village near Kisumu and eat about the same amount of food each day. Child A has a swollen belly, thin limbs and reddish hair. Child B looks healthy and energetic. Which of these is something you NOTICE (an observation) rather than a guess?",
+     "prompt": "Wanjiru fasted, then ate ugali, sukuma wiki and beans. Her blood glucose was 4.5 mmol/L at 0 min and reached its highest value of 8.0 mmol/L at 60 min. By how much did her blood glucose rise from 0 to 60 min?",
      "choices": [
-      "Child B has more money than Child A's family.",
-      "Child A was born with a disease.",
-      "Child A is sick because something is missing from the food.",
-      "Child A has a swollen belly and thin limbs."
-     ],
-     "correctIndex": 3,
-     "rationale": "An observation is something you can see directly, such as a swollen belly and thin limbs. The other statements are guesses about causes that the photographs do not show.",
-     "phase": "predict",
-     "placement": "Notice & Wonder entry after silent observation of Photo A and Photo B"
-    },
-    {
-     "prompt": "Child A eats ugali (maize starch) as the main meal every day. Child B eats githeri (maize and beans) regularly. Which statement matches the information given about the two children?",
-     "choices": [
-      "Both children eat only ugali every day.",
-      "The children live in different parts of Kenya.",
-      "Both children eat about the same amount of food and live in the same village near Kisumu.",
-      "Child B eats much more food each day than Child A."
+      "8.0 mmol/L",
+      "4.5 mmol/L",
+      "3.5 mmol/L",
+      "12.5 mmol/L"
      ],
      "correctIndex": 2,
-     "rationale": "The caption states that both children eat approximately the same amount of food and live in the same village. What differs is the kind of food, not the quantity or the place.",
-     "phase": "predict",
-     "placement": "Teacher reveals the food details (ugali vs githeri) and students write 'I think the difference in the children's bodies is caused by ___ because ___'"
-    },
-    {
-     "prompt": "A group is filling in a two-column table about the two Kisumu children: 'What the evidence shows us' and 'What we still need to find out'. Which entry belongs in the SECOND column?",
-     "choices": [
-      "Which specific chemicals are different between ugali and githeri.",
-      "Child B eats githeri and looks healthy and energetic.",
-      "Both children live in the same village near Kisumu.",
-      "Child A eats ugali every day and has a swollen belly."
-     ],
-     "correctIndex": 0,
-     "rationale": "The first three entries are facts already given on the Phenomenon Card. The chemical difference between the foods has not been investigated yet, so it belongs under what we still need to find out.",
+     "rationale": "Rise = peak minus starting value = 8.0 - 4.5 = 3.5 mmol/L. Learners who choose 12.5 added the values instead of finding the difference.",
      "phase": "observe",
-     "placement": "Groups complete the two-column table 'What the evidence shows us' vs 'What we still need to find out' after reading the Phenomenon Card"
+     "placement": "Observe: data questions on Wanjiru's table and graph (By how much did glucose rise from 0 to 60 min?)",
+     "check": "8.0-4.5"
     },
     {
-     "prompt": "Right now the class has only seen photographs and read a short card about the two children. Which is the best response to the question 'Why do the two children have such different bodies?'",
+     "prompt": "Wanjiru's blood glucose started at 4.5 mmol/L and rose by 3.5 mmol/L to a peak of 8.0 mmol/L. About what percentage above her starting level was the peak?",
      "choices": [
-      "We do not know yet. We need to find out what the two foods are made of before we can explain it.",
-      "The child with the swollen belly is just tired from playing too much.",
-      "Ugali is bad food and githeri is good food, so nothing more needs to be studied.",
-      "Child A is not eating enough food, and that is the only reason."
+      "About 56%",
+      "About 3.5%",
+      "About 78%",
+      "About 44%"
      ],
-     "correctIndex": 0,
-     "rationale": "At this stage the class has evidence of a puzzle but has not investigated the foods. Saying honestly that it is not yet explained keeps the question open. The other answers are unsupported or contradict the given information that the food quantity is similar.",
+     "correctIndex": 2,
+     "rationale": "Percentage rise = rise divided by starting value times 100 = 3.5 / 4.5 x 100 = about 78%. Dividing by the peak (3.5 / 8.0) gives the common error of about 44%.",
      "phase": "observe",
-     "placement": "Debrief of the Phenomenon Card: 'What does this evidence show us, and what does it NOT tell us yet?'"
+     "placement": "Observe: calculating the rise (3.5 mmol/L, about 78% above the start)",
+     "check": "round(3.5/4.5*100)"
     },
     {
-     "prompt": "In the Chemical Families Card Sort, groups match foods such as ugali, githeri, sukuma wiki, nyama choma, fish from Lake Victoria and mandazi to the chemical family each is richest in. Which of these lists names the six chemical families used in the card sort?",
+     "prompt": "Wanjiru's blood glucose rose by 3.5 mmol/L between 0 and 60 min (4.5 to 8.0 mmol/L). It then fell by 3.5 mmol/L between 60 and 180 min (8.0 back to 4.5 mmol/L). What do these numbers show?",
      "choices": [
-      "Carbohydrates, proteins, lipids, vitamins, mineral salts, oxygen",
-      "Starch, ugali, beans, oil, salt, water",
-      "Carbohydrates, proteins, lipids, vitamins, fibre, air",
-      "Carbohydrates, proteins, lipids, vitamins, mineral salts, water"
+      "The rise and fall cannot be compared because they have different start times.",
+      "The rise was faster because the same 3.5 mmol/L change took 60 min going up but 120 min coming down.",
+      "The fall was faster because glucose ended at a lower value than the peak.",
+      "The rise and the fall were equally fast because both changes were 3.5 mmol/L."
+     ],
+     "correctIndex": 1,
+     "rationale": "The same change of 3.5 mmol/L took 60 min on the way up and 120 min on the way down, so the rise was about twice as fast. Equal change does not mean equal speed.",
+     "phase": "observe",
+     "placement": "Observe: 'Which is faster, rise or fall? Prove it with numbers.'"
+    },
+    {
+     "prompt": "A meal card for Wanjiru's lunch lists: ugali about 70 g carbohydrate, beans about 20 g protein and 15 g carbohydrate, sukuma wiki about 3 g protein plus fibre, vitamins and minerals, cooking oil about 10 g fat. Which food in the meal contained the largest amount of carbohydrate?",
+     "choices": [
+      "Sukuma wiki",
+      "Cooking oil",
+      "Ugali",
+      "Beans"
+     ],
+     "correctIndex": 2,
+     "rationale": "Ugali has about 70 g carbohydrate, far more than the 15 g in beans. Sukuma wiki is mostly protein, fibre, vitamins and minerals, and cooking oil is fat.",
+     "phase": "observe",
+     "placement": "Observe: looking at the meal composition card"
+    },
+    {
+     "prompt": "After looking at the graph of blood glucose rising to 8.0 mmol/L and then falling back to 4.5 mmol/L, a group is asked what causes the fall after the peak. Which statement is the most honest scientific position at this stage of the unit?",
+     "choices": [
+      "Glucose is burnt off in the stomach straight after the meal.",
+      "The graph shows that glucose falls, but we have not yet explained what causes it, so it is a question to investigate.",
+      "Glucose falls only because the person has stopped eating.",
+      "Glucose simply disappears from the blood with time and nothing is involved."
+     ],
+     "correctIndex": 1,
+     "rationale": "The data show the pattern but not its cause. The class still has to investigate it, and saying 'I do not know yet' is acceptable. The other choices are unsupported everyday ideas.",
+     "phase": "explain",
+     "placement": "Explain: Claim-Evidence-Reasoning organiser and 'What I am sure about / not sure about yet'"
+    },
+    {
+     "prompt": "Learners are writing questions for the Driving Question Board about the glucose graph. Which question is the most specific and can be investigated?",
+     "choices": [
+      "Is glucose good?",
+      "What chemicals are in ugali?",
+      "Did Wanjiru enjoy her lunch?",
+      "Why is food?"
+     ],
+     "correctIndex": 1,
+     "rationale": "'What chemicals are in ugali?' is clear and can be investigated, for example by testing foods in the lab. The others are vague, opinion-based or not linked to the graph.",
+     "phase": "dqb",
+     "placement": "DQB: writing and sorting questions under 'What chemicals are in the food we eat, and what happens to them in our bodies?'"
+    },
+    {
+     "prompt": "Learners draw an initial model of Wanjiru's meal and her glucose graph, using boxes and arrows with question marks where they are unsure. Which skeleton shows the correct order of the parts?",
+     "choices": [
+      "Back to normal → ? → Food chemicals → ? → Glucose in blood",
+      "Glucose in blood → ? → Food chemicals → ? → Back to normal",
+      "Food chemicals → ? → Back to normal → ? → Glucose in blood",
+      "Food chemicals → ? → Glucose in blood (rises to 8.0 mmol/L) → ? → Back to normal (4.5 mmol/L)"
      ],
      "correctIndex": 3,
-     "rationale": "The six chemicals of life named in this lesson are carbohydrates, proteins, lipids (fats and oils), vitamins, mineral salts and water. The other lists include foods, air, oxygen or fibre, which are not among the six families.",
-     "phase": "explain",
-     "placement": "Chemical Families Card Sort: the 6 'Chemical Family' cards"
-    },
-    {
-     "prompt": "After the card sort and gallery walk, some groups disagree about which chemical family a food is richest in, and nobody corrects them. How will the class find out which matches are correct?",
-     "choices": [
-      "By doing chemical tests on foods in the next lessons.",
-      "By choosing the match that sounds most scientific.",
-      "By asking the group with the neatest handwriting.",
-      "By voting for the match that most groups chose."
-     ],
-     "correctIndex": 0,
-     "rationale": "The lesson says no tests are done today and that later lessons will use chemical tests to check the matches. Voting or sounding scientific does not provide evidence.",
-     "phase": "explain",
-     "placement": "Whole-class debrief after the gallery walk and revision of the card sort"
-    },
-    {
-     "prompt": "You have drawn your first model of what happens inside the body of each child, and written 'My model cannot yet explain ___ because ___'. Which statement about this first model is correct?",
-     "choices": [
-      "It is your best current explanation and will be revised as you learn more.",
-      "It should be erased if it turns out to be wrong.",
-      "It must use all the correct chemical names before it is finished.",
-      "It is your final answer for the whole unit."
-     ],
-     "correctIndex": 0,
-     "rationale": "A first model is a best current explanation that can use everyday words. Students keep it without erasing and revise it lesson by lesson, so being incomplete is expected.",
+     "rationale": "The pattern runs from food chemicals, to a rise of glucose in the blood to 8.0 mmol/L, to a return to normal at 4.5 mmol/L. The question marks show the processes still unknown.",
      "phase": "model",
-     "placement": "Students draw their first explanatory model and complete the 'Model Limitations Statement'"
+     "placement": "Model: initial flow-diagram model (Food chemicals → ? → Glucose in blood → ? → Back to normal)"
     }
    ]
   },
   {
    "number": 2,
-   "title": "What Is Food Really Made Of? Introducing the Six Chemicals of Life",
+   "title": "Elements and Compounds of Life: What Is Wanjiru's Lunch Made Of?",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-09-30T07:54:15+00:00",
+   "generatedAt": "2026-10-05T03:52:34+00:00",
    "quiz": [
     {
-     "prompt": "Two children in the same village in Kisumu eat about the same amount of food every day. Child A eats only ugali and develops a swollen belly and thin limbs (kwashiorkor). Child B eats githeri (maize and beans) and stays healthy. Which idea best explains the difference?",
+     "prompt": "Wanjiru's meal has ugali (about 70 g carbohydrate), beans (about 20 g protein and 15 g carbohydrate), sukuma wiki (about 3 g protein plus fibre) and cooking oil (about 10 g fat). What is the total mass of carbohydrate in the meal?",
      "choices": [
-      "Child B simply eats more food than Child A",
-      "The two foods are made of different chemicals, and ugali has very little protein",
-      "Ugali has no nutrients at all",
-      "Child A is ill only because he drinks too little water"
+      "70 g",
+      "85 g",
+      "105 g",
+      "95 g"
      ],
      "correctIndex": 1,
-     "rationale": "Quantity is the same, so the difference must come from what the foods are made of. Ugali is mostly starch with very little protein, while githeri adds protein from beans.",
-     "phase": "predict",
-     "placement": "Predict: written and pair predictions about the two Kisumu children (ugali vs githeri)"
-    },
-    {
-     "prompt": "Which list correctly names the six major chemicals of life?",
-     "choices": [
-      "Carbohydrates, proteins, energy, nucleic acids, vitamins/minerals, water",
-      "Carbohydrates, proteins, lipids, nucleic acids, vitamins/minerals, water",
-      "Starch, sugar, proteins, lipids, vitamins/minerals, water",
-      "Carbohydrates, proteins, lipids, fibre, vitamins/minerals, water"
-     ],
-     "correctIndex": 1,
-     "rationale": "The six major chemicals of life are carbohydrates, proteins, lipids, nucleic acids, vitamins/minerals and water. Fibre and energy are not chemical groups on this list, and starch and sugar are both carbohydrates.",
+     "rationale": "Carbohydrate comes from ugali and beans only: 70 g + 15 g = 85 g. The other values leave out the beans or wrongly add protein or fat.",
      "phase": "observe",
-     "placement": "Observe: Food Card Sort and the Six Chemicals of Life reference chart"
+     "placement": "Station A: Nutrient data",
+     "check": "70+15"
     },
     {
-     "prompt": "During the food card sort, a learner places beans under carbohydrates because 'githeri is just a starch food'. Which response best corrects this idea?",
+     "prompt": "Mr Otieno heats a small piece of dry maize flour in a flame and it turns black. Table salt heated in the same flame does not turn black. What does the black residue show?",
      "choices": [
-      "Beans are a rich source of protein, so they belong under proteins even though maize in githeri is mostly carbohydrate",
-      "Beans belong under vitamins because they are small and round",
-      "Beans belong under water because they are cooked in water",
-      "Beans belong under carbohydrates because all plant foods are mainly starch"
-     ],
-     "correctIndex": 0,
-     "rationale": "Maize supplies mostly carbohydrate, but beans are a good source of protein. This is why githeri gives the body building chemicals that ugali alone lacks.",
-     "phase": "observe",
-     "placement": "Observe: second sort of food cards into the six chemical categories in the graphic organiser"
-    },
-    {
-     "prompt": "The child who eats only ugali gets plenty of energy from starch but still develops kwashiorkor. What is the best explanation?",
-     "choices": [
-      "The child gets too much protein from ugali",
-      "Starch is harmful and damages the body",
-      "Carbohydrates supply energy, but ugali has almost no protein, so the body cannot build and repair its tissues",
-      "Energy is not needed by the body, so the starch is wasted"
-     ],
-     "correctIndex": 2,
-     "rationale": "Carbohydrates give energy, while proteins build and repair muscles, enzymes and hormones. Without enough protein the body cannot build tissues, which causes the swollen belly and thin muscles of kwashiorkor.",
-     "phase": "explain",
-     "placement": "Explain: Cause and Effect writing task on why the child eating ugali alone developed kwashiorkor"
-    },
-    {
-     "prompt": "A learner writes this on a green sticky note: 'I now understand that ugali has no nutrients at all.' Which statement is the correct improvement?",
-     "choices": [
-      "Ugali is made only of water",
-      "Ugali is rich in carbohydrate for energy, but it has too little protein to build and repair the body",
-      "Ugali is a poor food because it has no carbohydrate",
-      "Ugali contains more protein than githeri"
+      "The maize flour contains salt, which turns black when heated",
+      "The maize flour contains carbon, which is present in organic compounds",
+      "The maize flour contains iron, which turns black when heated",
+      "The maize flour contains water, which turns black when heated"
      ],
      "correctIndex": 1,
-     "rationale": "Ugali is about 75% carbohydrate and gives energy, so it does have nutrients. The problem is that it supplies very little protein.",
-     "phase": "dqb",
-     "placement": "DQB: green 'What We Now Understand' sticky notes"
+     "rationale": "Blackening (charring) is the carbon left behind when an organic food burns. Salt is inorganic and has no carbon, so it does not blacken.",
+     "phase": "observe",
+     "placement": "Station C: Burn test demonstration"
     },
     {
-     "prompt": "You draw a model with one circle for ugali and one for githeri, showing the six chemicals of life in each. Which feature would show the biggest chemical difference that explains the health of the two children?",
+     "prompt": "Starch (a carbohydrate) is made of C, H and O. Which element is found in proteins, such as those in beans and milk, but is NOT found in carbohydrates like starch?",
      "choices": [
-      "A larger water section in the ugali circle only",
-      "A much larger carbohydrate section in the githeri circle than in the ugali circle",
-      "A larger protein section in the githeri circle than in the ugali circle",
-      "No difference at all between the two circles"
+      "Oxygen (O)",
+      "Nitrogen (N)",
+      "Hydrogen (H)",
+      "Carbon (C)"
      ],
-     "correctIndex": 2,
-     "rationale": "Githeri contains beans, so it has much more protein than ugali. This difference explains why one child developed kwashiorkor and the other stayed healthy.",
-     "phase": "model",
-     "placement": "Model: first-draft molecular model of Ugali (Child A) and Githeri (Child B)"
+     "correctIndex": 1,
+     "rationale": "Proteins contain nitrogen (and sometimes sulphur) in addition to C, H and O. Carbohydrates contain only C, H and O.",
+     "phase": "observe",
+     "placement": "Station B: Element cards"
     },
     {
-     "prompt": "Which pairing of a Kenyan food with the chemical of life it is especially rich in is correct?",
+     "prompt": "Which list contains ONLY organic compounds found in Wanjiru's meal?",
      "choices": [
-      "Sukuma wiki: lipids",
-      "Omena: carbohydrates",
-      "Ugali: proteins",
-      "Avocado: lipids (fats and oils)"
+      "Protein, calcium salts, fat, starch",
+      "Starch, water, fat, vitamin C",
+      "Water, iron salts, calcium salts, protein",
+      "Starch, protein, fat, vitamin C"
      ],
      "correctIndex": 3,
-     "rationale": "Avocado is rich in lipids. Ugali is mainly carbohydrate, omena is a good protein source, and sukuma wiki is a source of vitamins and minerals.",
-     "phase": "end",
-     "placement": "End of lesson: review of the graphic organiser (chemical, role, Kenyan food source)"
+     "rationale": "Carbohydrates (starch), proteins, lipids (fat) and vitamins are organic. Water and mineral salts such as calcium and iron salts are inorganic, so they spoil the other lists.",
+     "phase": "explain",
+     "placement": "Classification Chart: Organic and Inorganic columns"
+    },
+    {
+     "prompt": "Water is found in every living thing and in all foods, yet it is placed in the inorganic column. Why?",
+     "choices": [
+      "Water is a liquid and organic compounds are always solids",
+      "Water is not a chemical, so it cannot be organic",
+      "Water is made of only hydrogen and oxygen and has no carbon bonded to hydrogen",
+      "Water is not found inside cells"
+     ],
+     "correctIndex": 2,
+     "rationale": "Organic compounds contain carbon bonded to hydrogen. Water (H and O only) has no carbon, so it is inorganic even though living things need it.",
+     "phase": "explain",
+     "placement": "Classification Chart: why water goes in the inorganic column"
+    },
+    {
+     "prompt": "Wanjiru's blood glucose rose after she ate a meal containing about 70 g carbohydrate in ugali, about 20 g protein in beans and about 10 g fat from cooking oil. Which claim and evidence is best supported by this data?",
+     "choices": [
+      "Water is most likely the cause, because it is found in all foods",
+      "Protein is most likely the cause, because beans contain 20 g of it",
+      "Fat is most likely the cause, because cooking oil is added to the meal",
+      "Carbohydrate is most likely the cause, because the meal contains about 70 g of it in ugali, more than any other nutrient"
+     ],
+     "correctIndex": 3,
+     "rationale": "The largest amount of any nutrient is carbohydrate (about 70 g in ugali), so it is the most likely link to the glucose rise. The other claims are not supported by the quantities given.",
+     "phase": "explain",
+     "placement": "Claim-Evidence-Reasoning statement"
+    },
+    {
+     "prompt": "In the class model, the first box 'Food chemicals' is filled in, but the box 'Glucose in blood' is left as a question mark. Why?",
+     "choices": [
+      "We know the kinds of chemicals in the lunch, but we do not yet know which one becomes glucose or how",
+      "Carbohydrates have no link to the glucose rise",
+      "Glucose is never found in blood",
+      "The model is finished and no more boxes are needed"
+     ],
+     "correctIndex": 0,
+     "rationale": "Models grow only with evidence. This lesson gives evidence about the groups of chemicals in food, not how they change into glucose, so that box stays open for later lessons.",
+     "phase": "model",
+     "placement": "Class model flow diagram: filling in the first box, Food chemicals"
     }
    ]
   },
   {
    "number": 3,
-   "title": "Observe (Part 2): Lipids and Vitamins — Structure, Function, and Food Tests",
+   "title": "Carbohydrates: Starch and Sugars",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-09-30T07:54:15+00:00",
+   "generatedAt": "2026-10-05T03:52:34+00:00",
    "quiz": [
     {
-     "prompt": "A learner rubs mashed groundnuts on a piece of brown paper bag and waits 5 minutes for it to dry. Which observation shows that the groundnuts contain lipids?",
+     "prompt": "A group adds 2-3 drops of iodine solution to some maize flour mixed with water. Which result shows that starch is present?",
      "choices": [
-      "A translucent (greasy) spot stays on the paper even after it is dry",
-      "A wet spot appears but disappears completely once the paper dries",
-      "The paper stays completely dry and unmarked",
-      "The paper turns a purple colour where the food was rubbed"
-     ],
-     "correctIndex": 0,
-     "rationale": "Lipids leave a permanent translucent spot that does not disappear on drying. Water-based foods leave a spot that dries and disappears.",
-     "phase": "observe",
-     "placement": "Activity 1: Translucent Spot Test"
-    },
-    {
-     "prompt": "In the ethanol emulsion test, a learner dissolves a food sample in ethanol, then pours the clear ethanol layer into a test tube of distilled water. What result shows that lipid is present?",
-     "choices": [
-      "The mixture stays clear and colourless",
-      "A cloudy white emulsion forms",
-      "The mixture bubbles and gives off heat",
-      "The mixture turns purple"
+      "The mixture turns brick-red",
+      "The mixture turns blue-black",
+      "The mixture turns yellow-orange and stays clear",
+      "The mixture turns green"
      ],
      "correctIndex": 1,
-     "rationale": "Lipids dissolve in ethanol but not in water, so when the ethanol is added to water the lipid comes out as tiny droplets, forming a cloudy white emulsion. A clear solution means no lipid.",
+     "rationale": "Iodine turns blue-black when starch is present. Brick-red and green are Benedict's test colours for reducing sugar, not iodine results.",
      "phase": "observe",
-     "placement": "Activity 2: Ethanol Emulsion Test"
+     "placement": "Test 1: iodine test for starch"
     },
     {
-     "prompt": "A group tests ugali paste (maize starch) with both the translucent spot test and the ethanol emulsion test. Which set of results would you expect?",
+     "prompt": "A learner mixes 2 cm3 of mashed ripe banana solution with 2 cm3 of Benedict's solution and heats it in a hot water bath for 4 minutes. It turns orange to brick-red. What does this show?",
      "choices": [
-      "A permanent translucent spot and a cloudy white emulsion",
-      "No permanent translucent spot but a cloudy white emulsion",
-      "No permanent translucent spot and a clear solution in water",
-      "A permanent translucent spot but a clear solution in water"
-     ],
-     "correctIndex": 2,
-     "rationale": "Ugali is mostly starch and has very little lipid, so it should give a negative result in both tests. Two tests that agree make the evidence stronger.",
-     "phase": "observe",
-     "placement": "Activity 1 and Activity 2: results table for ugali (A)"
-    },
-    {
-     "prompt": "Which row correctly matches a vitamin with its type and the deficiency disease it causes?",
-     "choices": [
-      "Vitamin C: fat-soluble; deficiency causes scurvy",
-      "Vitamin A: fat-soluble; deficiency causes night blindness",
-      "B-complex vitamins: fat-soluble; deficiency causes beriberi",
-      "Vitamin D: water-soluble; deficiency causes rickets"
+      "The banana contains starch",
+      "The banana contains a lot of reducing sugar",
+      "The banana contains protein",
+      "The banana contains no carbohydrate"
      ],
      "correctIndex": 1,
-     "rationale": "Vitamins A, D, E and K are fat-soluble, and lack of vitamin A causes night blindness. Vitamin C and the B-complex vitamins are water-soluble, and vitamin D is fat-soluble.",
+     "rationale": "Benedict's solution changes from blue through green, yellow and orange to brick-red as the amount of reducing sugar increases, so orange to brick-red means a lot of reducing sugar is present.",
      "phase": "observe",
-     "placement": "Activity 3: Guided Reading on Vitamins and the Vitamin Summary Strip"
+     "placement": "Test 2: Benedict's test for reducing sugars"
     },
     {
-     "prompt": "A child eats a meal rich in vitamin A but has almost no fat in their diet. Why might the child still develop night blindness?",
+     "prompt": "Ugali turns blue-black with iodine solution but stays blue when heated with Benedict's solution. What does this tell us about the carbohydrate in ugali before digestion?",
      "choices": [
-      "Vitamin A is fat-soluble and needs dietary fat to be absorbed",
-      "Vitamin A is a protein, so it cannot be used without amino acids",
-      "Fat destroys vitamin A in the stomach",
-      "Vitamin A is water-soluble and is washed out of the body too quickly"
+      "It contains starch but no reducing sugar such as glucose",
+      "It contains no carbohydrate",
+      "It contains both starch and a lot of glucose",
+      "It contains glucose but no starch"
      ],
      "correctIndex": 0,
-     "rationale": "Vitamins A, D, E and K are fat-soluble and are absorbed only when fat is present in the diet. Without fat, the body cannot fully absorb vitamin A even from a vitamin-rich meal.",
+     "rationale": "Blue-black with iodine shows starch is present. Benedict's staying blue shows there is no reducing sugar (glucose) in the ugali before digestion.",
      "phase": "explain",
-     "placement": "Whole-class discussion: essential fatty acids and fat-soluble vitamin absorption, and the Temperature Check on night blindness"
+     "placement": "Explain Step 1: group discussion on ugali being blue-black with iodine but blue with Benedict's"
     },
     {
-     "prompt": "At the chemical level, what is a lipid (fat) made of?",
+     "prompt": "Ugali has no reducing sugar, yet Wanjiru's blood glucose went up after she ate it. Which statement best explains this?",
      "choices": [
-      "Vitamins joined to a mineral salt",
-      "A glycerol backbone joined to fatty acid chains",
-      "Long chains of amino acids joined together",
-      "Many glucose units joined in a long chain"
+      "Starch is already glucose, so it passes straight into the blood",
+      "Beans turn into starch in the stomach, which raises the glucose",
+      "Starch changes into protein, which then enters the blood as glucose",
+      "Starch is made of many glucose units joined together, so it must be broken down into glucose before entering the blood"
+     ],
+     "correctIndex": 3,
+     "rationale": "Starch is a large carbohydrate made of many glucose units. It must be broken down into single glucose units (monosaccharides) before glucose can enter the blood.",
+     "phase": "explain",
+     "placement": "Explain Step 2: bead or paper-chain model of starch breaking into glucose"
+    },
+    {
+     "prompt": "Wanjiru's blood glucose concentration was 4.5 mmol/L before lunch and reached a peak of 8.0 mmol/L after 60 minutes. By how much did it rise, in mmol/L?",
+     "choices": [
+      "3.0",
+      "3.5",
+      "12.5",
+      "4.5"
      ],
      "correctIndex": 1,
-     "rationale": "A lipid such as a fat is made of one glycerol molecule joined to three fatty acids. Amino acid chains are proteins and glucose chains are starch.",
-     "phase": "model",
-     "placement": "Revising the Cumulative Chemical Model of Food: 'Lipids' section showing structure"
+     "rationale": "Rise = peak minus starting value = 8.0 - 4.5 = 3.5 mmol/L.",
+     "phase": "explain",
+     "placement": "Explain Step 3: using the numbers from the graph to write the CER statement",
+     "check": "8.0-4.5"
     },
     {
-     "prompt": "Which statement correctly describes the roles of lipids in living organisms?",
+     "prompt": "After today's food tests, the class DQB has these four questions. Which one can the class now answer using the test results?",
      "choices": [
-      "Lipids are harmful chemicals that the body does not need",
-      "Lipids only provide vitamins and have no other role",
-      "Lipids store energy and are part of cell membranes",
-      "Lipids are the main chemicals used to build muscles and repair tissues"
+      "Does the body use only carbohydrates for energy?",
+      "Why did Wanjiru's blood glucose fall after 60 minutes?",
+      "Which enzyme breaks starch into glucose?",
+      "Do ugali and maize flour contain starch?"
      ],
-     "correctIndex": 2,
-     "rationale": "Lipids store energy, form part of cell membranes and help absorb fat-soluble vitamins. Building and repairing muscles is mainly the role of proteins, and calling fat 'unhealthy' is a common misconception.",
-     "phase": "end",
-     "placement": "End of lesson: after the Cumulative Chemical Model revision and peer feedback"
+     "correctIndex": 3,
+     "rationale": "The blue-black iodine result for ugali and maize flour answers this directly. The other questions need further investigation in later lessons.",
+     "phase": "dqb",
+     "placement": "DQB: sorting sticky notes into answered, partly answered and still to investigate"
+    },
+    {
+     "prompt": "Which statement about the chain from ugali to blood glucose is supported by today's evidence and should be added to the 'food chemicals' box of the class model?",
+     "choices": [
+      "Ugali contains starch, which is made of glucose units, so it can be a source of the glucose in the blood",
+      "Nyama choma gives a blue-black result with iodine, so it is the main source of starch in Wanjiru's lunch",
+      "Ugali gives a brick-red result with Benedict's solution, so it already contains glucose",
+      "Only sweet foods contain carbohydrates, so ugali cannot be a source of glucose"
+     ],
+     "correctIndex": 0,
+     "rationale": "Ugali is blue-black with iodine, so it contains starch, and starch is made of glucose units. Ugali stays blue with Benedict's, and nyama choma does not give a positive starch test.",
+     "phase": "model",
+     "placement": "Revising the class flow-diagram model: adding evidence to the 'Food chemicals' box"
     }
    ]
   },
   {
    "number": 4,
-   "title": "Building Life's Molecules: Structure of Carbohydrates and Proteins",
+   "title": "Proteins and Lipids: Do They Cause the Glucose Spike?",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-09-30T07:54:16+00:00",
+   "generatedAt": "2026-10-05T03:52:34+00:00",
    "quiz": [
     {
-     "prompt": "Ugali is mostly starch, which is a long chain made of many small units joined together. Which small unit is repeated in a starch chain?",
+     "prompt": "Before the tests, a learner says: \"Iodine shows starch in ugali, so I will use iodine to find out whether beans contain protein.\" Which response is correct?",
      "choices": [
-      "Amino acid",
-      "Maltose",
-      "Glucose",
-      "Glycogen"
+      "Iodine will turn violet if protein is present, so the plan works",
+      "Iodine tests for all food chemicals, so it will show protein and fat as well",
+      "Iodine tests for starch only, so a different test (the biuret test) is needed for protein",
+      "Protein cannot be tested for in the laboratory, so beans must be judged by taste"
      ],
      "correctIndex": 2,
-     "rationale": "Starch is a polysaccharide built from many glucose monomers joined together. Amino acids are the units of proteins, not starch.",
-     "phase": "observe",
-     "placement": "Activity A: Guided Reading & Annotated Diagrams (From Sugar to Starch)"
+     "rationale": "Iodine reacts with starch (blue-black). Protein needs its own test, the biuret test, which uses sodium hydroxide and dilute copper sulphate.",
+     "phase": "predict",
+     "placement": "Predict: teacher asks \"Which test method from Lesson 3 could we adapt to check?\""
     },
     {
-     "prompt": "Two glucose molecules join to form maltose, a disaccharide. What is the name of the bond that joins them?",
+     "prompt": "A group adds 2 cm³ of dilute sodium hydroxide and then 2-3 drops of dilute copper sulphate to a tube of bean paste mixed with water. The mixture turns violet (purple). What does this result show?",
      "choices": [
-      "Glycosidic bond",
-      "Peptide bond",
-      "Protein bond",
-      "Amino bond"
-     ],
-     "correctIndex": 0,
-     "rationale": "Sugar units are joined by glycosidic bonds. Peptide bonds join amino acids, and learners often confuse the two.",
-     "phase": "observe",
-     "placement": "Activity A: Guided Reading & Annotated Diagrams (annotating the bond type)"
-    },
-    {
-     "prompt": "In a model, each bottle top is an amino acid and each straw is a peptide bond. A group joins 3 bottle tops in a single chain to make a tripeptide. How many straws (peptide bonds) do they need?",
-     "choices": [
-      "1",
-      "3",
-      "2",
-      "4"
-     ],
-     "correctIndex": 2,
-     "rationale": "Each peptide bond joins two neighbouring amino acids, so a chain of 3 needs 3 - 1 = 2 bonds.",
-     "phase": "observe",
-     "placement": "Activity B: Model Building (dipeptide and tripeptide)",
-     "check": "3-1"
-    },
-    {
-     "prompt": "Groups built protein models using bottle tops of different colours for different R-groups. What does this model show about why proteins are so varied?",
-     "choices": [
-      "Different amino acids can be joined in many different orders and combinations",
-      "Proteins are made of only one type of amino acid repeated many times",
-      "Each protein uses a different kind of bond to join its units",
-      "Proteins are varied because they contain more glucose than starch does"
-     ],
-     "correctIndex": 0,
-     "rationale": "Amino acids differ in their R-groups and can be linked in any order and length, so many different proteins are possible. Proteins are joined by peptide bonds, not by different bond types.",
-     "phase": "observe",
-     "placement": "Activity B: Model Building (one sentence: why are proteins so varied?)"
-    },
-    {
-     "prompt": "Glycogen is stored in animal tissue such as the meat in nyama choma. On a chart with the columns Monosaccharide, Disaccharide, Polysaccharide and Protein, where does glycogen belong?",
-     "choices": [
-      "Monosaccharide",
-      "Polysaccharide",
-      "Protein",
-      "Disaccharide"
+      "The beans contain starch",
+      "The beans contain protein",
+      "The beans contain lipids (fats and oils)",
+      "The beans contain reducing sugar"
      ],
      "correctIndex": 1,
-     "rationale": "Glycogen is a long branched chain of many glucose units, so it is a polysaccharide. It is found in meat but is not a protein.",
+     "rationale": "A blue to violet/purple colour change in the biuret test shows that protein is present. Starch gives blue-black with iodine, reducing sugar gives a brick-red colour with Benedict's, and lipids give a translucent spot or cloudy emulsion.",
      "phase": "observe",
-     "placement": "Activity C: Kenyan Food Molecule Mapping"
+     "placement": "Test A: biuret test for protein on beans, milk, nyama choma and ugali"
     },
     {
-     "prompt": "Glucose contains carbon, hydrogen and oxygen only. Which extra element is found in amino acids but NOT in glucose?",
+     "prompt": "A learner rubs crushed groundnuts on a piece of brown paper, dries it gently and holds it up to the light. A translucent (see-through) spot is left on the paper. What does this show?",
      "choices": [
-      "Oxygen",
-      "Hydrogen",
-      "Nitrogen",
-      "Carbon"
+      "The groundnuts contain starch",
+      "The groundnuts contain protein",
+      "The groundnuts contain lipids (oil)",
+      "The groundnuts contain only water, which has made the paper thin"
      ],
      "correctIndex": 2,
-     "rationale": "Amino acids contain nitrogen as well as C, H and O. This is the key elemental difference between carbohydrates and proteins.",
-     "phase": "explain",
-     "placement": "Whole-class sensemaking discussion (Q2: extra element in amino acids)"
+     "rationale": "Lipids leave a translucent grease spot that does not disappear when the paper dries. Water would evaporate on drying, and the protein and starch tests use different reagents.",
+     "phase": "observe",
+     "placement": "Test B (i): grease-spot test on groundnuts, mandazi, milk and ugali"
     },
     {
-     "prompt": "A child from Kisumu eats only ugali every day and develops a swollen belly and thin limbs. Which explanation is best?",
+     "prompt": "Which row correctly matches each food chemical to the smaller units it is built from?",
      "choices": [
-      "Ugali contains no glucose, so the child has no energy at all",
-      "Githeri contains more starch than ugali, so it prevents kwashiorkor",
-      "Ugali is not enough in quantity, and the child would be healthy if given more ugali",
-      "Ugali gives glucose for energy but no amino acids, so the body cannot build proteins such as muscle and albumin"
+      "Carbohydrates: glucose units; proteins: amino acids; lipids: fatty acids and glycerol",
+      "Carbohydrates: glucose units; proteins: fatty acids and glycerol; lipids: amino acids",
+      "Carbohydrates: amino acids; proteins: glucose units; lipids: fatty acids and glycerol",
+      "Carbohydrates: fatty acids and glycerol; proteins: glucose units; lipids: amino acids"
+     ],
+     "correctIndex": 0,
+     "rationale": "Starch and other carbohydrates are chains of glucose units, proteins are chains of amino acids, and lipids are made of fatty acids and glycerol.",
+     "phase": "explain",
+     "placement": "Explain: comparison table of carbohydrates, proteins and lipids (building blocks)"
+    },
+    {
+     "prompt": "Wanjiru's ugali contains about 70 g of carbohydrate and about 10 g of fat. About how many times more carbohydrate than fat is this?",
+     "choices": [
+      "60 times",
+      "80 times",
+      "7 times",
+      "0.14 times"
+     ],
+     "correctIndex": 2,
+     "rationale": "70 g ÷ 10 g = 7, so there is about 7 times more carbohydrate than fat. This supports the claim that carbohydrate, not fat, is the main cause of the glucose rise from 4.5 to 8.0 mmol/L.",
+     "phase": "explain",
+     "placement": "Explain: Claim-Evidence-Reasoning using the meal numbers (70 g carbohydrate, 10 g fat)",
+     "check": "70/10"
+    },
+    {
+     "prompt": "Beans, milk and groundnuts are not the main cause of the glucose spike after a meal. Why do they still matter for the body?",
+     "choices": [
+      "They are turned into glucose immediately, so they cause the spike as well",
+      "They only add sweetness, so they have no use in the body",
+      "They replace carbohydrates completely, so ugali is not needed",
+      "Proteins in them are used for growth and repair of body tissues, and lipids are used for energy storage"
      ],
      "correctIndex": 3,
-     "rationale": "Ugali is starch (glucose units) and gives energy, but it has no amino acids. Without amino acids the body cannot make muscle protein or albumin, which leads to thin limbs and a swollen belly.",
+     "rationale": "Proteins are needed for growth and repair of body tissues, and lipids store energy and give insulation. Their roles differ from carbohydrates, which are the main energy source and cause the spike.",
      "phase": "explain",
-     "placement": "Whole-class sensemaking discussion (Sensemaking Summary: why ugali alone leads to kwashiorkor)"
+     "placement": "Explain: \"Why do beans, milk and groundnuts still matter for Wanjiru...?\""
     },
     {
-     "prompt": "Which pair correctly matches a molecule with its main function in the body?",
+     "prompt": "Learners are updating their flow-diagram model of what happens to a meal of ugali, beans and cooking oil. Which arrow should be drawn thick, as the main cause of the glucose spike in the blood?",
      "choices": [
-      "Haemoglobin: energy storage",
-      "Haemoglobin: a transport protein that carries oxygen",
-      "Glucose: transports oxygen in the blood",
-      "Glycogen: body building and repair"
+      "Proteins (beans, nyama choma) to glucose in blood",
+      "Carbohydrates (starch in ugali) to glucose in blood",
+      "Proteins and lipids to glucose in blood, equally with carbohydrates",
+      "Lipids (cooking oil, groundnuts) to glucose in blood"
      ],
      "correctIndex": 1,
-     "rationale": "Haemoglobin is a protein that carries oxygen in the blood. Glycogen stores energy, and glucose is a monomer that releases energy.",
-     "phase": "end",
-     "placement": "End of lesson: after the Phenomenon Connection sentence in the cumulative model (Layer 4: Molecular Structure)"
+     "rationale": "The meal data (about 70 g carbohydrate against about 20 g protein and 10 g fat) and the test results link carbohydrates to the glucose rise. Proteins and lipids go on thinner arrows towards growth, repair and energy storage.",
+     "phase": "model",
+     "placement": "Model: expanding the 'Food chemicals' box with thick and thin arrows"
     }
    ]
   },
   {
    "number": 5,
-   "title": "Sensemaking: Connecting the Chemistry of Food to Health Outcomes in Kisumu",
+   "title": "Water, Mineral Salts and Enzymes in Digestion",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-09-30T07:54:16+00:00",
+   "generatedAt": "2026-10-05T03:52:34+00:00",
    "quiz": [
     {
-     "prompt": "Two children in a village in Kisumu eat the same amount of food each day. One eats only ugali (maize starch). The other eats githeri (maize and beans). Based on food test results, what is the most important chemical difference between ugali and githeri?",
+     "prompt": "Wanjiru's blood glucose rose from 4.5 to 8.0 mmol/L after she ate ugali, which is mostly starch. Why must starch be digested before it can raise her blood glucose?",
      "choices": [
-      "Githeri contains protein as well as carbohydrate, but ugali is mainly carbohydrate",
-      "Ugali contains protein, but githeri does not",
-      "Ugali contains more food than githeri, so it gives less energy",
-      "Githeri contains no carbohydrates, but ugali does"
+      "Starch is a very large insoluble molecule and must be broken down into small soluble sugars first",
+      "Starch is already glucose, but it needs to be warmed to 37 degrees C first",
+      "Starch turns directly into blood once it is swallowed",
+      "Saliva only makes the food wet so it can be swallowed, and this is all that is needed"
      ],
      "correctIndex": 0,
-     "rationale": "Ugali is mainly starch (a carbohydrate), while githeri combines maize (carbohydrate) with beans (protein). The difference is the type of chemical, not the quantity of food.",
+     "rationale": "Digestion breaks large insoluble food molecules into small soluble ones. Starch is too large to enter the blood, so it must first become sugars such as glucose.",
      "phase": "predict",
-     "placement": "Predict: individual prediction sentence on the most important chemical difference between ugali and githeri"
+     "placement": "Predict: Wanjiru's blood glucose graph and prediction about starch and saliva"
     },
     {
-     "prompt": "In a Biuret test, a bean extract turns purple and a sample of ugali stays blue. What does this result show?",
+     "prompt": "In an investigation, tube A has starch and saliva. Tube B has starch and boiled saliva. Both are kept at about 37 degrees C. Why is tube B included?",
      "choices": [
-      "Beans contain starch and ugali does not",
-      "Ugali contains more lipids than beans",
-      "Beans contain vitamin C and ugali does not",
-      "Beans contain protein, while ugali has little or no protein"
+      "To make sure there is more liquid to test with iodine",
+      "To show that boiled saliva digests starch faster than fresh saliva",
+      "To test whether Benedict's solution can change colour without heating",
+      "To show that the changes in tube A are caused by active saliva and not by warmth or time alone"
      ],
      "correctIndex": 3,
-     "rationale": "The Biuret test gives a purple colour when protein is present. Beans give a purple result and ugali does not, so ugali is a poor source of protein.",
+     "rationale": "The control differs only in having boiled saliva. If tube B stays unchanged while tube A changes, the change must be due to something active in saliva (the enzyme), not warmth or time.",
      "phase": "observe",
-     "placement": "Observe: Deficiency Disease Matching Card, citing the Biuret test result for kwashiorkor"
+     "placement": "Observe: saliva and starch investigation, control tube B (starch + boiled saliva or water)"
     },
     {
-     "prompt": "In a diet audit, Child 1 eats ugali three times a day. Child 2 eats githeri twice and ugali once. Which statement about their diets is correct?",
+     "prompt": "At 10 minutes, a sample from the tube of starch and fresh saliva at 37 degrees C gives a yellow-brown colour with iodine and a brick-red colour with Benedict's solution after heating. What do these results show?",
      "choices": [
-      "Child 2's diet supplies protein but no carbohydrates",
-      "Child 1's diet supplies carbohydrates but too little protein, and Child 2's diet supplies both",
-      "Child 1's diet has no carbohydrates, but Child 2's diet has carbohydrates",
-      "Both diets supply the same chemicals of life because they contain the same amount of food"
+      "Starch is still present, and the saliva has turned into a reducing sugar",
+      "Starch has been used up and a reducing sugar is now present",
+      "Starch is still present and no sugar has formed",
+      "Starch has increased and Benedict's solution has turned it into protein"
      ],
      "correctIndex": 1,
-     "rationale": "Ugali supplies starch (carbohydrate) but little protein. Githeri adds protein from beans, so Child 2 gets both carbohydrate and protein.",
+     "rationale": "Iodine stays blue-black while starch is present, so yellow-brown means starch has gone. A brick-red Benedict's result means reducing sugar has formed from the starch.",
      "phase": "observe",
-     "placement": "Observe: diet audit of the daily menus for the two Kisumu children"
+     "placement": "Observe: Steps 5 and 6, iodine tests at 5 and 10 min and Benedict's test at 10 min"
     },
     {
-     "prompt": "A learner tests orange juice with DCPIP in the lab and it changes colour. A disease is caused by a lack of this same chemical in the diet. Which disease is it?",
+     "prompt": "A tube of starch and saliva was boiled before the test and stayed blue-black with iodine after 10 minutes. What is the correct explanation?",
      "choices": [
-      "Marasmus",
-      "Kwashiorkor",
-      "Scurvy",
-      "Rickets"
+      "Boiling turned the enzyme into starch",
+      "Boiling made the starch molecules too big to be digested",
+      "Boiling used up all the enzyme by making it work too fast",
+      "Boiling denatured the enzyme, so it could no longer digest starch"
      ],
-     "correctIndex": 2,
-     "rationale": "DCPIP tests for vitamin C, which orange juice contains. A lack of vitamin C causes scurvy.",
-     "phase": "observe",
-     "placement": "Observe: Deficiency Disease Matching Card, completing the row for scurvy"
-    },
-    {
-     "prompt": "A child with kwashiorkor has a swollen belly, thin limbs and discoloured hair. Which row correctly links a symptom to the protein that is lacking?",
-     "choices": [
-      "Swollen belly: keratin loss",
-      "Thin limbs: keratin loss",
-      "Swollen belly: albumin loss",
-      "Discoloured hair: albumin loss"
-     ],
-     "correctIndex": 2,
-     "rationale": "Albumin helps keep fluid in the blood, so too little albumin causes oedema (swollen belly). Keratin makes hair, and muscle protein makes muscle, so its loss causes thin limbs.",
+     "correctIndex": 3,
+     "rationale": "Salivary amylase is a protein. Boiling changes its shape (denatures it), so it cannot digest the starch and the iodine stays blue-black.",
      "phase": "explain",
-     "placement": "Explain: written group explanation using the sentence starter on albumin, keratin and muscle fibres"
+     "placement": "Explain: claim-evidence-reasoning for how saliva changed the starch, and why boiled saliva did not work"
     },
     {
-     "prompt": "Which statement is the best scientific explanation for why the child who eats only ugali develops kwashiorkor, while the child who eats githeri stays healthy?",
+     "prompt": "A tube of starch and fresh saliva is placed in ice at 0 degrees C. After 10 minutes it is still blue-black with iodine. What does this tell us about the enzyme?",
      "choices": [
-      "The ugali child does not get enough energy because ugali has no carbohydrates",
-      "The ugali child gets enough energy from starch but too little protein for building body tissues",
-      "The githeri child gets more vitamins, and vitamins alone build muscle and hair",
-      "The ugali child eats a smaller quantity of food than the githeri child"
+      "The enzyme is inactive at this low temperature",
+      "The enzyme works fastest at 0 degrees C",
+      "The enzyme is not needed to digest starch",
+      "The enzyme has been denatured and destroyed for ever by the cold"
      ],
-     "correctIndex": 1,
-     "rationale": "Ugali gives energy from carbohydrate, but the body needs protein (amino acids) to build tissues such as albumin, keratin and muscle. The problem is a lack of protein, not a lack of food quantity.",
+     "correctIndex": 0,
+     "rationale": "At 0 degrees C the enzyme is inactive, so the starch is not digested. Enzymes work best at about 37 degrees C in the body, and boiling is what denatures them.",
      "phase": "explain",
-     "placement": "Explain: whole-class discussion evaluating each group's explanation of the anchoring phenomenon"
+     "placement": "Explain: discussion (b) on why the enzyme did not work at 0 degrees C or after boiling"
     },
     {
-     "prompt": "A group is filling in the protein box of their 'Our Chemicals of Life Model' template. Which entry is correct?",
+     "prompt": "Water is an inorganic compound found in the starch solution and in saliva. What is its main role in the digestion of starch?",
      "choices": [
-      "Food source: orange juice; consequence of deficiency: rickets",
-      "Food source: beans; consequence of deficiency: kwashiorkor",
-      "Food source: ugali; consequence of deficiency: scurvy",
-      "Food source: ugali; consequence of deficiency: anaemia"
+      "It is the enzyme that breaks starch into sugar",
+      "It is the medium in which the enzyme and starch react and in which the digested sugars are carried",
+      "It makes the enzyme a protein",
+      "It changes the iodine from blue-black to yellow-brown"
      ],
      "correctIndex": 1,
-     "rationale": "Beans are a Kenyan source of protein, and a lack of protein causes kwashiorkor. Ugali is mainly carbohydrate, and scurvy, rickets and anaemia are linked to other missing chemicals.",
+     "rationale": "Water is the medium in which reactions happen and it carries the digested sugars. It is not the enzyme and does not act as the iodine indicator.",
+     "phase": "explain",
+     "placement": "Explain: discussion (c) on the roles of water and mineral salts"
+    },
+    {
+     "prompt": "A group is revising the 'Digestion by enzymes' box in the class model. Which statement about salivary amylase should they write?",
+     "choices": [
+      "It is a protein catalyst that speeds up the digestion of starch to maltose, and it is not used up",
+      "It is a lipid that stores energy in the mouth",
+      "It is a carbohydrate that is used up as it digests starch",
+      "It is a mineral salt that works best at 0 degrees C"
+     ],
+     "correctIndex": 0,
+     "rationale": "Amylase is an enzyme, which is a protein that acts as a biological catalyst. A catalyst speeds up a reaction and is not used up. It digests starch to maltose, which is then broken to glucose.",
      "phase": "model",
-     "placement": "Model: partial A3 'Our Chemicals of Life Model' template, filling in the protein box"
+     "placement": "Model: revising the class flow-diagram, 'Digestion by enzymes' box"
     }
    ]
   },
   {
    "number": 6,
-   "title": "Building Our Chemicals of Life Model: Consolidating the Science Behind Two Children in Kisumu",
+   "title": "Absorption, Respiration and Regulation: Explaining the Fall Back to 4.5 mmol/L",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-09-30T07:54:15+00:00",
+   "generatedAt": "2026-10-05T03:52:34+00:00",
    "quiz": [
     {
-     "prompt": "At the start of the unit, a group wrote: \"Food is just energy, so two children eating the same amount should be equally healthy.\" Which updated statement shows the best evidence-based change in thinking?",
+     "prompt": "Wanjiru's blood glucose reached a peak of 8.0 mmol/L at 60 minutes after her meal of ugali, sukuma wiki and beans. Suppose nothing removed glucose from her blood after that time. What would her blood glucose concentration do?",
      "choices": [
-      "Only carbohydrates matter, because they give the body glucose.",
-      "Food is made of six chemicals of life with different structures and functions, and missing one can cause a specific disease.",
-      "Food is mainly energy, but children who eat more of it become healthier.",
-      "Food with more water in it is healthier because water is a chemical of life."
+      "It would keep rising without limit because glucose is made in the blood",
+      "It would stay high, close to 8.0 mmol/L, because nothing is taking glucose out",
+      "It would fall back to 4.5 mmol/L anyway because glucose slowly disappears",
+      "It would fall because glucose is lost in sweat and urine"
      ],
      "correctIndex": 1,
-     "rationale": "The Before and After shift moves from 'food is just energy' to specific chemical classes, each with its own function and deficiency consequence. The other options keep the idea that quantity or a single nutrient is what matters.",
+     "rationale": "The fall on the graph is caused by processes that remove glucose (uptake by cells, respiration, storage). If nothing removed it, the level would stay high. Glucose does not simply disappear or get lost in sweat.",
      "phase": "predict",
-     "placement": "Revisiting Lesson 1 prediction cards and writing the Before and After statement"
+     "placement": "Predict: 'What would the graph look like if nothing removed glucose from the blood?' (dotted line sketch)"
     },
     {
-     "prompt": "On a group poster about two children in Kisumu, one child eats only ugali (maize starch) every day and the other eats githeri (maize and beans). Which arrow label correctly links the ugali child to the chemicals of life?",
+     "prompt": "Wanjiru's blood glucose was 8.0 mmol/L at 60 minutes and 6.5 mmol/L at 90 minutes. By how much did it fall in this 30-minute interval?",
      "choices": [
-      "Excess protein and too little carbohydrate",
-      "Plenty of carbohydrate but too little protein",
-      "No carbohydrate at all, so no energy",
-      "Balanced intake of all six chemicals"
+      "3.5 mmol/L",
+      "1.5 mmol/L",
+      "0.5 mmol/L",
+      "14.5 mmol/L"
      ],
      "correctIndex": 1,
-     "rationale": "Ugali is mostly starch, a carbohydrate, so the child gets energy but very little protein. Balanced intake belongs to the githeri child.",
+     "rationale": "Fall = 8.0 - 6.5 = 1.5 mmol/L. 3.5 mmol/L is the total fall over 120 minutes, not this one interval.",
      "phase": "observe",
-     "placement": "Completing the A3 poster model with the central anchor image of the two Kisumu children"
+     "placement": "Part 1: Data analysis in groups of 4 (calculating the fall in each interval)",
+     "check": "8.0-6.5"
     },
     {
-     "prompt": "A learner crushes avocado, shakes it with ethanol, then pours the liquid into water. A cloudy white layer forms. What does this ethanol emulsion result show?",
+     "prompt": "Wanjiru's blood glucose rose by 3.5 mmol/L in the first 60 minutes (4.5 to 8.0). It then fell by 3.5 mmol/L from 60 to 180 minutes (8.0 to 4.5). How many times longer did the fall take than the rise?",
      "choices": [
-      "Starch is present",
-      "Glucose is present",
-      "Lipids (fats and oils) are present",
-      "Proteins are present"
+      "3.5 times as long",
+      "2 times as long",
+      "The same time, because both changes are 3.5 mmol/L",
+      "Half as long, because the body removes glucose quickly"
+     ],
+     "correctIndex": 1,
+     "rationale": "The rise took 60 min and the fall took 180 - 60 = 120 min, so the fall took 120 ÷ 60 = 2 times as long. The change in concentration is the same but the fall is slower.",
+     "phase": "observe",
+     "placement": "Part 1: Data analysis in groups of 4 (comparing the rise with the fall)",
+     "check": "120/60"
+    },
+    {
+     "prompt": "In the role-play of glucose after a meal, a learner holds up insulin cards when the blood glucose is high. Which statement correctly describes insulin?",
+     "choices": [
+      "The pancreas releases insulin, and it causes cells, the liver and muscles to take up glucose from the blood",
+      "The small intestine releases insulin, and it moves glucose into the blood",
+      "Insulin is a food that gives the body energy when we eat",
+      "The liver releases insulin, and it digests starch into glucose"
+     ],
+     "correctIndex": 0,
+     "rationale": "Insulin is a hormone made by the pancreas. It is released when blood glucose is high and causes cells, liver and muscles to take up glucose, so blood glucose falls.",
+     "phase": "observe",
+     "placement": "Part 2: Role-play 'Journey of the glucose' (pancreas holds insulin cards)"
+    },
+    {
+     "prompt": "Inside body cells, glucose is used in respiration to release energy. Which equation correctly shows respiration?",
+     "choices": [
+      "Glucose + water gives starch + oxygen + energy",
+      "Glucose + carbon dioxide gives oxygen + water + energy",
+      "Glucose + oxygen gives carbon dioxide + water + energy",
+      "Glucose + oxygen gives glycogen + carbon dioxide + energy"
      ],
      "correctIndex": 2,
-     "rationale": "Lipids dissolve in ethanol but not in water, so adding the solution to water forms a cloudy white emulsion. This is the positive test for lipids in avocado.",
+     "rationale": "In respiration, glucose reacts with oxygen to produce carbon dioxide and water, and energy (ATP) is released. This is also why we breathe harder after running to catch a matatu.",
      "phase": "observe",
-     "placement": "Completing the Kenyan Food Sources and lipids part of the poster, recalling the avocado ethanol emulsion result from Lesson 4"
+     "placement": "Part 2: Role-play 'Journey of the glucose' (step 5: respiration in the cells)"
     },
     {
-     "prompt": "A child eating only ugali develops a swollen belly (oedema). Which explanation is scientifically correct?",
+     "prompt": "After a meal, some glucose is not needed straight away. What happens to this excess glucose?",
      "choices": [
-      "The body has no keratin, so the belly cannot hold its shape.",
-      "The child has no DNA to carry the genetic code.",
-      "The body cannot make enough albumin, a protein, because too few amino acids come from food.",
-      "Too much starch is stored in the belly as fat."
-     ],
-     "correctIndex": 2,
-     "rationale": "Without dietary protein the body lacks amino acids to make albumin. Low albumin leads to fluid build-up (oedema) and a swollen belly. Keratin is linked to hair discolouration, not the swollen belly.",
-     "phase": "explain",
-     "placement": "Group presentations: why the ugali child develops kwashiorkor"
-    },
-    {
-     "prompt": "A child in Kisumu eats githeri (maize and beans) regularly and stays healthy. What is the best chemical explanation?",
-     "choices": [
-      "Beans contain more starch, giving the child more energy than ugali does.",
-      "Maize in githeri contains protein instead of starch.",
-      "Githeri contains more water than ugali, so the child stays hydrated.",
-      "Maize supplies carbohydrate and beans supply protein, providing the amino acids the body needs for protein synthesis."
+      "It is removed from the body as sugar in urine",
+      "It is changed to insulin in the pancreas",
+      "It is destroyed in the blood",
+      "It is stored as glycogen in the liver and muscles"
      ],
      "correctIndex": 3,
-     "rationale": "Githeri combines carbohydrate from maize with protein from beans. The amino acids from the protein let the body build albumin, keratin and muscle proteins, which prevents deficiency.",
+     "rationale": "The liver and muscles store excess glucose as glycogen. This helps to bring blood glucose back to normal. It is not simply lost in urine or destroyed.",
+     "phase": "observe",
+     "placement": "Part 2: Role-play 'Journey of the glucose' (step 6: liver and muscles store glycogen)"
+    },
+    {
+     "prompt": "Learners write a Claim-Evidence-Reasoning explanation of Wanjiru's graph. Which piece of evidence best shows that the glucose in the blood came from digesting the starch in ugali?",
+     "choices": [
+      "Her blood glucose fell by 3.5 mmol/L over 120 minutes",
+      "The normal fasting range of blood glucose is 4.0 to 5.5 mmol/L",
+      "Saliva containing amylase, kept at 37 degrees C with starch, gave a brick-red colour with Benedict's test after 10 minutes",
+      "Sukuma wiki is a green vegetable"
+     ],
+     "correctIndex": 2,
+     "rationale": "The brick-red colour shows that enzyme action turned starch into a reducing sugar. This links starch to glucose. The other choices do not show where the glucose came from.",
      "phase": "explain",
-     "placement": "Whole-class synthesis and writing the master answer to the driving question"
+     "placement": "Final Explanation (Claim-Evidence-Reasoning): choosing evidence that glucose came from the starch in ugali"
     },
     {
-     "prompt": "During the Driving Question Board review, a learner asks: \"How do cells use DNA to know which proteins to build?\" How should the class sort this question?",
+     "prompt": "Which flow diagram shows the correct order of the final model that explains Wanjiru's blood glucose graph?",
      "choices": [
-      "Not a science question, so it should be removed",
-      "Answered, because githeri contains protein",
-      "New Question Generated, to investigate in a future unit on genetics",
-      "Answered, because amino acids explain kwashiorkor"
+      "Food chemicals, then digestion by enzymes, then glucose in blood, then cells (respiration) and storage, then back to normal",
+      "Food chemicals, then glucose in blood, then digestion by enzymes, then cells and storage, then back to normal",
+      "Digestion by enzymes, then food chemicals, then glucose in blood, then back to normal, then cells and storage",
+      "Food chemicals, then cells and storage, then digestion by enzymes, then glucose in blood, then back to normal"
      ],
-     "correctIndex": 2,
-     "rationale": "The unit covered that DNA carries the genetic code and that proteins are built from amino acids. How cells read DNA to build specific proteins is a new question that leads into genetics.",
-     "phase": "dqb",
-     "placement": "Driving Question Board review: sorting questions as Answered, Partially Answered or New Question Generated"
-    },
-    {
-     "prompt": "A typical Kenyan daily menu is: breakfast, uji (thin maize porridge) with sugar; lunch, ugali with sukuma wiki; supper, rice with a small piece of fried fish. Which nutritional gap is most likely?",
-     "choices": [
-      "No carbohydrates, because uji is thin",
-      "No lipids, because fried food contains no fats or oils",
-      "Insufficient protein, because the only protein source is a small piece of fish",
-      "Too much protein, because fish is eaten"
-     ],
-     "correctIndex": 2,
-     "rationale": "Uji, sugar, ugali and rice are mostly carbohydrate, and sukuma wiki adds vitamins and minerals. The small piece of fish is the only protein source, so protein is insufficient. Frying adds lipids, and the menu has plenty of carbohydrate.",
+     "correctIndex": 0,
+     "rationale": "Food is first digested by enzymes into glucose, which is absorbed into the blood. Cells use it in respiration and the liver and muscles store it, so the level returns to normal (4.5 mmol/L).",
      "phase": "model",
-     "placement": "Kisumu Menu Evaluation: identifying chemicals that are missing or insufficient"
+     "placement": "Part 1: Build the final flow-diagram model on chart paper"
     }
    ]
   }

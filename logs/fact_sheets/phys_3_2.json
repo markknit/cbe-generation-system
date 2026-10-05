@@ -1,0 +1,92 @@
+{
+  "anchorData": "BENCH DEMO (all lessons use these exact values). Source: 9 V battery pack (six 1.5 V dry cells in a holder), treated as ideal with negligible internal resistance. Bulbs: three identical bulbs, each rated 9 V, 2.7 W, filament resistance treated as constant 30 Ω (R = V²/P = 81/2.7 = 30). SERIES (3 bulbs in one loop): total R = 30+30+30 = 90 Ω; current I = 9/90 = 0.10 A at every point; voltage across each bulb = 0.10 x 30 = 3.0 V (3 x 3.0 = 9.0 V); power in each bulb = 3.0 x 0.10 = 0.30 W; so each bulb glows dim. If one bulb is removed or blown, I = 0 and all go out. PARALLEL (3 bulbs on separate branches): each bulb has 9.0 V across it; current in each branch = 9/30 = 0.30 A; total battery current = 0.90 A; effective R = 9/0.90 = 10 Ω (check: 1/R = 1/30+1/30+1/30 = 3/30); power in each bulb = 9 x 0.30 = 2.7 W (full brightness, 9 times the 0.30 W in series). If one bulb is removed, the other two still have 9.0 V and 0.30 A each, and the total current falls to 0.60 A. OHM'S LAW LAB (30 Ω fixed resistor): V (V) : I (A) = 1.5:0.05, 3.0:0.10, 4.5:0.15, 6.0:0.20, 7.5:0.25; gradient of I against V = 0.0333 A/V, so R = V/I = 30 Ω (if V is plotted on the y-axis, the gradient = 30 Ω). MIXED CIRCUIT (L9): one 30 Ω bulb in series with two 30 Ω bulbs in parallel; parallel pair = 15 Ω; total R = 45 Ω; I = 9/45 = 0.20 A; series bulb has 6.0 V; each parallel bulb has 3.0 V and 0.10 A (6.0+3.0 = 9.0 V). CELLS: each dry cell 1.5 V. Three cells in series = 4.5 V; six in series = 9.0 V; cells in parallel keep 1.5 V but last longer. Solar home system in a Kisumu/Rift Valley home: 12 V battery. CLASSROOM (Nairobi, mains 240 V): 4 fluorescent tubes, each 36 W, wired in parallel; current per tube = 36/240 = 0.15 A (approximation, ballast ignored); all four = 0.60 A; when one blows, three remain = 0.45 A, each still at 240 V. ENERGY AND COST: assumed teaching tariff KSh 25 per kWh. Four tubes (144 W = 0.144 kW) for 5 h = 0.72 kWh = KSh 18. Compare a 60 W filament bulb and a 9 W LED, each used 5 h: 0.300 kWh (KSh 7.50) against 0.045 kWh (KSh 1.125, about KSh 1.13). SAFETY: kettle 3000 W = 12.5 A at 240 V; heater 2000 W = 8.33 A; both on one socket = 5000 W = 20.8 A, which exceeds a 13 A fuse, so the fuse blows.",
+  "characters": "Setting 1: a Form 3 / Grade 10 evening prep class in a Nairobi school with 4 fluorescent tubes in parallel on 240 V mains; one tube blows and the other three stay lit. Setting 2: a boarding school dormitory in Kericho, where all lights share the same 240 V supply and each tube has its own branch. Student characters: Wanjiru (asks why the series bulbs are dim), Kipchirchir (predicts that the battery gets used up faster in parallel; this is partly right, since the parallel circuit draws 0.90 A and the series circuit 0.10 A), and Achieng from Kisumu (her family has a 12 V solar home system). Teacher: Mr. Otieno, who runs the bench demos. Objects: old string of Christmas lights wired in SERIES (one dead bulb breaks the loop, so the whole string goes dark); the 9 V pack with three identical 9 V, 2.7 W, 30 Ω bulbs; ammeter (in series) and voltmeter (in parallel); 30 Ω resistor; a 13 A fuse in a plug; a long thin extension cable that heats up. Students must not claim that any of these facts differ between lessons.",
+  "outcome": "The other tubes stay lit because they are connected in parallel: each tube sits on its own branch directly across the 240 V supply, so when one branch is broken the others still have the same voltage and the same current. Three identical bulbs in series share the 9 V (3.0 V each), the total resistance is 90 Ω, and the current is only 0.10 A, so each gives 0.30 W and glows dim; in parallel each gets the full 9 V and 0.30 A, giving 2.7 W each. In series a failed component opens the single loop so everything goes out, which is why an old Christmas-light string goes dark. The classroom should therefore use a parallel lighting circuit, with a fuse or breaker on the live wire and earthing.",
+  "conventions": "Quantities and units: current I in amperes (A), measured by an ammeter connected in SERIES; potential difference V in volts (V), measured by a voltmeter connected in PARALLEL across the component; resistance R in ohms (Ω); power P in watts (W); energy E in joules (J) and in kWh (1 kWh = 1000 W for 1 hour = 3.6 million J). Use the term 'potential difference' (p.d.) for the voltage across a component and 'e.m.f.' for the energy per unit charge supplied by the source (1 V = 1 J/C). Ohm's law: V = IR, valid for a constant temperature; the 'resistor' in L5 is ohmic. Treat the bulb filaments in the demo as a constant 30 Ω (a simplification; real filaments get hotter and their resistance rises). Always call the arrangement 'in series' (one loop) or 'in parallel' (branches). Current is shown by conventional current direction (from + to -); in wires the charge carriers are electrons moving the other way. Formulas: series R = R1+R2+R3; parallel 1/R = 1/R1+1/R2+1/R3; P = IV, E = IVt = Pt. Use these exact numbers from anchorData: 9 V, 30 Ω, 0.10 A, 0.30 A, 3.0 V, 0.30 W, 2.7 W, 90 Ω, 10 Ω, KSh 25/kWh. Mains in Kenya = 240 V. Round money to the nearest cent only where shown. Use Kenyan contexts only (ugali cooking on a stove, Kericho, Nairobi, Kisumu).",
+  "lessonMap": [
+    {
+      "number": 1,
+      "focus": "The blown tube and the dim bulbs: anchoring phenomenon",
+      "teaches": "Observe the phenomenon, make predictions, and start the DQB and initial models (no explanation is given yet)",
+      "buildsOn": "None (launch lesson)",
+      "usesData": "Whole demo: three series bulbs dim vs three parallel bulbs bright; the Nairobi classroom with 4 tubes (one blown); the Christmas-light string"
+    },
+    {
+      "number": 2,
+      "focus": "Circuit components and symbols",
+      "teaches": "A bulb lights only in a complete closed loop with a source; circuit symbols and diagrams",
+      "buildsOn": "L1: the series and parallel bulb arrangements observed",
+      "usesData": "The 9 V pack and one bulb; the simple loop; a diagram of the series and parallel demo"
+    },
+    {
+      "number": 3,
+      "focus": "Electric current",
+      "teaches": "Current is the flow of charge (I = Q/t), is measured with an ammeter in series, and is the same everywhere in a series loop",
+      "buildsOn": "L2: closed circuits and symbols",
+      "usesData": "Series circuit: 0.10 A at every point; parallel battery current 0.90 A and 0.30 A per branch (only measured, not yet explained)"
+    },
+    {
+      "number": 4,
+      "focus": "Potential difference and e.m.f.",
+      "teaches": "p.d. is the energy transferred per unit charge (1 V = 1 J/C) and is measured with a voltmeter in parallel; e.m.f. is the energy supplied by the source",
+      "buildsOn": "L3: current as charge flow; L2: symbols",
+      "usesData": "9 V battery; 3.0 V across each series bulb; 9.0 V across each parallel bulb; 1.5 V cells"
+    },
+    {
+      "number": 5,
+      "focus": "Ohm's law",
+      "teaches": "V = IR: V against I is a straight line for an ohmic conductor and R is found from the gradient",
+      "buildsOn": "L3 (measuring I), L4 (measuring V)",
+      "usesData": "The 30 Ω resistor table (1.5 V:0.05 A ... 7.5 V:0.25 A) and the 30 Ω bulb"
+    },
+    {
+      "number": 6,
+      "focus": "Factors affecting resistance",
+      "teaches": "Resistance increases with length and temperature and decreases with cross-section area; it depends on the material (why long thin cables heat up)",
+      "buildsOn": "L5: R = V/I as a measure of resistance",
+      "usesData": "Thin long extension cable; the 30 Ω filament compared with copper wire; no new circuit numbers"
+    },
+    {
+      "number": 7,
+      "focus": "Resistors in series",
+      "teaches": "R(total) = R1+R2+R3; the current is the same and the p.d. is shared (so series bulbs are dim)",
+      "buildsOn": "L3 (same current), L4 (p.d. shares out), L5 (V = IR)",
+      "usesData": "Series bulbs: 90 Ω, 0.10 A, 3.0 V each, 0.30 W each; one bulb removed so I = 0"
+    },
+    {
+      "number": 8,
+      "focus": "Resistors in parallel",
+      "teaches": "Each branch has the same p.d., currents add up, and 1/R = 1/R1+1/R2+1/R3 (so one failed branch does not affect the others)",
+      "buildsOn": "L4 (p.d.), L5, L7 (series contrast)",
+      "usesData": "Parallel bulbs: 9.0 V each, 0.30 A each, 0.90 A total, 10 Ω; two bulbs left = 0.60 A; classroom tubes 0.15 A each, 0.60 A, then 0.45 A"
+    },
+    {
+      "number": 9,
+      "focus": "Combined circuits and cells",
+      "teaches": "Reduce a mixed circuit step by step; cells in series add e.m.f., while cells in parallel give the same e.m.f. for longer",
+      "buildsOn": "L7 and L8: series and parallel rules",
+      "usesData": "Mixed circuit: 45 Ω, 0.20 A, 6.0 V and 3.0 V; cells 1.5 V, 4.5 V, 9 V; Achieng's 12 V solar system"
+    },
+    {
+      "number": 10,
+      "focus": "Electrical energy and power",
+      "teaches": "P = IV, E = IVt = Pt and the cost in kWh",
+      "buildsOn": "L4 (energy per charge) and L8 (the current in each bulb)",
+      "usesData": "0.30 W vs 2.7 W bulbs; 4 tubes 144 W, 0.72 kWh = KSh 18; 60 W vs 9 W bulbs: KSh 7.50 vs KSh 1.13; tariff KSh 25/kWh"
+    },
+    {
+      "number": 11,
+      "focus": "Domestic wiring and safety",
+      "teaches": "Fuses, circuit breakers and earthing protect against excess current (overload, short circuit) and shock",
+      "buildsOn": "L6 (heating in wires), L8 (parallel appliances add current), L10 (P = IV)",
+      "usesData": "Kettle 12.5 A + heater 8.33 A = 20.8 A on a 13 A fuse; 240 V mains; the extension cable"
+    },
+    {
+      "number": 12,
+      "focus": "Model revision and application",
+      "teaches": "Synthesis: complete the final model, resolve the DQB and design a safe parallel classroom lighting circuit with a fuse and earthing (no new physics concept)",
+      "buildsOn": "L1-L11: all the ideas",
+      "usesData": "All of anchorData: the 90 Ω vs 10 Ω demo; the 4 tubes at 0.60 A, then 0.45 A; the 144 W / KSh 18 cost; the fuse rating"
+    }
+  ]
+}

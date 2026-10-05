@@ -10,100 +10,114 @@
  "lessons": [
   {
    "number": 4,
-   "title": "Differences Between Acids and Bases Using Commercial Indicators",
+   "title": "Why is Lemon Juice Sour? Acids Release H⁺ Ions in Water (Arrhenius Definition)",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-09-30T05:44:12+00:00",
+   "generatedAt": "2026-10-05T03:52:36+00:00",
    "quiz": [
     {
-     "prompt": "Two partners disagree about what colour methyl orange will turn in baking soda solution. Before testing, what is the best way to settle the disagreement?",
+     "prompt": "Pure water has pH 7.0 and H⁺ concentration of 1 x 10⁻⁷ mol/L. Which statement about the H⁺ ions in pure water is correct?",
      "choices": [
-      "Carry out the test and record the colour actually seen",
-      "Ask the teacher to say which prediction is right",
-      "Vote and go with the answer most students choose",
-      "Let the student who is more confident decide"
+      "It has a tiny amount of H⁺, far less than lemon juice",
+      "It has more H⁺ than vinegar",
+      "It has the same amount of H⁺ as lemon juice",
+      "It has no H⁺ ions at all"
      ],
      "correctIndex": 0,
-     "rationale": "In science, disagreements between predictions are settled by evidence from the experiment, not by confidence, authority or votes.",
-     "phase": "predict",
-     "placement": "Think-Pair and cold-call poll of the pre-lab prediction table"
-    },
-    {
-     "prompt": "In Experiment 1, a student puts 2-3 drops of freshly squeezed lemon juice on a strip of blue litmus paper. What colour does the paper turn?",
-     "choices": [
-      "Red",
-      "Blue (no change)",
-      "Pink",
-      "Colourless"
-     ],
-     "correctIndex": 0,
-     "rationale": "Lemon juice is an acid, and acids turn blue litmus paper red.",
+     "rationale": "1 x 10⁻⁷ mol/L is very small but not zero, and it is much less than lemon juice (1 x 10⁻² mol/L) or vinegar (about 1.6 x 10⁻³ mol/L).",
      "phase": "observe",
-     "placement": "Experiment 1 procedure, Step 1: litmus strips with Test Solution 1 (lemon juice)"
+     "placement": "Part A (data): data card with pH and H+ concentration"
     },
     {
-     "prompt": "A group predicted that cow's milk would be strongly basic. Their litmus and indicator results do not match this prediction. What should the recorders do?",
+     "prompt": "Lemon juice has pH 2.0 and H⁺ = 1 x 10⁻² mol/L. Vinegar has pH 2.8 and H⁺ about 1.6 x 10⁻³ mol/L. About how many times more H⁺ does lemon juice have than vinegar?",
      "choices": [
-      "Write down the colours exactly as seen, even if they differ from the prediction",
-      "Leave the milk row blank because the result was unexpected",
-      "Copy the results from another group's table",
-      "Change the results in the table to match the prediction"
+      "About 0.8 times",
+      "About 10 times",
+      "About 6 times",
+      "About 60 times"
      ],
-     "correctIndex": 0,
-     "rationale": "Honest, accurate recording is essential. An unexpected result is useful data and must never be altered to fit a prediction.",
+     "correctIndex": 2,
+     "rationale": "Divide the concentrations: (1 x 10⁻²) ÷ (1.6 x 10⁻³) = 6.25, which is about 6 times. The pH difference of 0.8 does not mean 0.8 times more H⁺, because each pH unit is a 10-fold change.",
      "phase": "observe",
-     "placement": "Experiment 1: circulation and 'check for honest recording' while groups fill the results table"
+     "placement": "Part A (data): 'How many times more H+ does lemon juice have than vinegar?'",
+     "check": "round(1e-2/1.6e-3)"
     },
     {
-     "prompt": "Liquid soap solution turns red litmus paper blue and turns phenolphthalein pink. How should it be classified, and why?",
+     "prompt": "In a particle simulation, acid molecules from lemon juice dissolve in water. What do learners see happen?",
      "choices": [
-      "Acid, because it changes the colour of litmus paper",
-      "Base, because red litmus turns blue and phenolphthalein turns pink",
-      "Neutral, because it does not make methyl orange red",
-      "Acid, because phenolphthalein changes colour"
-     ],
-     "correctIndex": 1,
-     "rationale": "Bases turn red litmus blue and phenolphthalein pink or magenta. Both results point to a base.",
-     "phase": "explain",
-     "placement": "Consensus Results Table and pattern rules for each indicator (Explain phase)"
-    },
-    {
-     "prompt": "A student tests tap water. Litmus paper shows no colour change, phenolphthalein stays colourless and methyl orange is orange-yellow. What is the best conclusion?",
-     "choices": [
-      "It is neutral, because none of the indicators show an acid or base colour",
-      "It cannot be classified because no indicator turned red",
-      "It is a base, because methyl orange is yellowish",
-      "It is an acid, because phenolphthalein is colourless"
-     ],
-     "correctIndex": 0,
-     "rationale": "Neutral substances do not change litmus, leave phenolphthalein colourless and make methyl orange orange-yellow. Colourless phenolphthalein alone cannot separate acids from neutral liquids, so the other indicators must be used as well.",
-     "phase": "explain",
-     "placement": "Pattern Statement: writing rules for acids, bases and neutral substances from the consensus table"
-    },
-    {
-     "prompt": "After Experiment 1, students can tell whether a liquid is an acid, a base or neutral using indicators. Which question is still NOT answered by this experiment?",
-     "choices": [
-      "How do acids react, for example do they corrode or react with other substances?",
-      "Is baking soda solution a base?",
-      "What colour does phenolphthalein turn in a base?",
-      "Is vinegar (siki) an acid?"
-     ],
-     "correctIndex": 0,
-     "rationale": "Indicators only classify a liquid by colour change. They do not show what an acid will do chemically, and this question leads into the next lesson. The other three questions were answered by today's results.",
-     "phase": "dqb",
-     "placement": "DQB: sticky-note questions, clustering, and the SOLVED zone"
-    },
-    {
-     "prompt": "A student revises a model by labelling the liquids tested in Experiment 1 using the evidence. Which set of labels is correct?",
-     "choices": [
-      "Lemon juice: base; baking soda solution: acid; tap water: neutral",
-      "Lemon juice: neutral; baking soda solution: base; tap water: acid",
-      "Lemon juice: acid; baking soda solution: neutral; tap water: base",
-      "Lemon juice: acid; baking soda solution: base; tap water: neutral"
+      "The acid molecules stay whole and release nothing",
+      "The acid molecules turn into sugar particles",
+      "The acid molecules remove all the water particles",
+      "The acid molecules release H⁺ (aq) ions into the water"
      ],
      "correctIndex": 3,
-     "rationale": "Lemon juice is an acid (blue litmus turns red). Baking soda solution is a base (red litmus turns blue, phenolphthalein turns pink). Tap water is neutral (no change).",
+     "rationale": "An acid dissolving in water releases H⁺ (aq) ions. This is the particle-level change that explains the properties of acids.",
+     "phase": "observe",
+     "placement": "Part B (simulation or paper model): acid molecules dissolving in water and releasing H+ (aq) ions"
+    },
+    {
+     "prompt": "Which statement is the Arrhenius definition of an acid?",
+     "choices": [
+      "A substance that is harmful if swallowed",
+      "A substance that contains no water",
+      "A substance that produces H⁺ (aq) ions when dissolved in water",
+      "A substance that tastes sour in the laboratory"
+     ],
+     "correctIndex": 2,
+     "rationale": "The Arrhenius definition says an acid produces H⁺ (aq) ions in water. Being harmful or tasting sour is not the definition, and we never taste chemicals in the laboratory.",
+     "phase": "explain",
+     "placement": "Pairs' CER explanation and the class definition recorded on the board"
+    },
+    {
+     "prompt": "Lemon juice (pH 2.0) and vinegar (pH 2.8) are both acids. Why does lemon juice have the lower pH?",
+     "choices": [
+      "It contains no water, but vinegar does",
+      "It has fewer H⁺ ions than vinegar",
+      "It has a higher concentration of H⁺ ions than vinegar",
+      "It contains more sugar than vinegar"
+     ],
+     "correctIndex": 2,
+     "rationale": "A lower pH means a higher H⁺ concentration. Lemon juice has about 6 times more H⁺ (1 x 10⁻² mol/L) than vinegar (about 1.6 x 10⁻³ mol/L).",
+     "phase": "explain",
+     "placement": "Claim-evidence-reasoning: 'Why is lemon juice sour, and why does it have a lower pH than vinegar?'"
+    },
+    {
+     "prompt": "Stomach acid is hydrochloric acid. Which particle does it release when it dissolves in water, making it an acid?",
+     "choices": [
+      "No particles, because it is a liquid",
+      "Only water particles",
+      "H⁺ (aq) ions",
+      "Sugar particles"
+     ],
+     "correctIndex": 2,
+     "rationale": "Hydrochloric acid is an acid, so by the Arrhenius definition it releases H⁺ (aq) ions in water, just like the acids in lemon juice and vinegar.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: linking notes to the hyperacidity question"
+    },
+    {
+     "prompt": "In a Model drawing, lemon juice (H⁺ = 1 x 10⁻² mol/L) is shown with 6 H⁺ dots. Which drawing for vinegar (about 1.6 x 10⁻³ mol/L) and water (1 x 10⁻⁷ mol/L) is best?",
+     "choices": [
+      "Vinegar 6 dots, water 0 dots",
+      "Vinegar 1 dot, water almost no dots",
+      "Vinegar 1 dot, water exactly 0 dots",
+      "Vinegar 12 dots, water 6 dots"
+     ],
+     "correctIndex": 1,
+     "rationale": "Lemon juice has about 6 times more H⁺ than vinegar, so 6 dots against 1 dot. Water has a tiny amount of H⁺, so it is drawn with almost none, not exactly zero.",
      "phase": "model",
-     "placement": "Anchor model revision: labelling each cup as ACID, BASE or NEUTRAL"
+     "placement": "Model page: three boxes for lemon juice, vinegar and water showing H+ (aq) ions"
+    },
+    {
+     "prompt": "Lemon juice turns blue litmus paper red. Which explanation uses the idea from this lesson?",
+     "choices": [
+      "Lemon juice contains H⁺ (aq) ions released by its acid in water",
+      "Lemon juice is red in colour",
+      "Lemon juice has no water particles",
+      "Lemon juice contains sugar particles"
+     ],
+     "correctIndex": 0,
+     "rationale": "Acids release H⁺ (aq) ions in water. These ions explain the low pH, the sour taste and the colour change of indicators such as litmus.",
+     "phase": "end",
+     "placement": "End of lesson: linking H+ ions to the litmus and indicator colours from Lessons 2-3"
     }
    ]
   }

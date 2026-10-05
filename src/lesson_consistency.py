@@ -182,20 +182,22 @@ def repair(call, subject: str, grade, substrand: str, lessons: list, conflicts: 
         listing = "\n".join(f"{i + 1}. [{c['severity']}] lessons {c['lessons']}: {c['fact']}\n   {c['versions']}"
                             for i, c in enumerate(group))
         slim = [{k: v for k, v in l.items() if k != "resourceLinks"} for l in lessons]
-        prompt = f"""You are repairing contradictions BETWEEN LESSONS of one Kenyan CBE Grade {grade} {subject} sub-strand ({substrand}). A reviewer found:
+        # The lessons (large, identical across the chunked calls of one repair round) go in a
+        # cached prefix; the conflicts to fix go after it.
+        prefix = f"""Kenyan CBE Grade {grade} {subject} sub-strand ({substrand}). THE LESSONS (JSON):
+{json.dumps(slim, ensure_ascii=False, indent=1)}
+
+VALID "framework" INDICES: {valid_idx}
+"""
+        prompt = f"""You are repairing contradictions BETWEEN THE LESSONS above. A reviewer found:
 
 {listing}
 
 For each contradiction, {authority}
 Change the lessons that disagree, as little as possible: a number, a name, an outcome, a dataset value, a wrong "in Lesson N we did X" reference. If a changed number feeds a calculation, fix that arithmetic too and check it.
 
-VALID "framework" INDICES: {valid_idx}
-
-THE LESSONS (JSON):
-{json.dumps(slim, ensure_ascii=False, indent=1)}
-
 Return EXACT find-and-replace edits: "lesson" (number), "path" (e.g. "overview", "summaryTablePrompt.explained", "framework[3].teacherMoves", "slo.knowledge"), "old" (a short EXACT substring that occurs once in that field), "new", "conflict" (its number). Do not rewrite paragraphs or add teaching content. If a contradiction needs more than small edits, put it in "unresolved" with the reason."""
-        r = call(prompt, max_tokens=16000, schema=REPAIR_SCHEMA)
+        r = call(prompt, max_tokens=16000, schema=REPAIR_SCHEMA, cache_prefix=prefix)
         if not r:
             if len(group) > 1:
                 for c in group:
