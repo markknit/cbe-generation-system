@@ -93,6 +93,27 @@ def check(path: Path, quiet: bool):
     where = str(path.relative_to(ROOT))
     L, ST, FE = d.get("LESSONS", []), d.get("SUMMARY_TABLE") or {}, d.get("FINAL_EXPLANATION")
 
+    # Pipe tables only render as tables in fields that go through richCell()
+    # (docx_kit.js). Anywhere else they print as raw "|" text.
+    RICH = {"overview", "learnerExperience", "teacherMoves", "sensemakingStrategy", "formativeAssessment",
+            "instructions", "prompt", "exemplar"}
+    pipe = re.compile(r"^\s*\|.*\|\s*$", re.M)
+
+    def walk(o, key=""):
+        if isinstance(o, str):
+            if key not in RICH and pipe.search(o):
+                yield key
+        elif isinstance(o, dict):
+            for k, v in o.items():
+                if k != "resourceLinks":
+                    yield from walk(v, k)
+        elif isinstance(o, list):
+            for v in o:
+                yield from walk(v, key)
+    bad = sorted(set(walk(L)) | set(walk(FE)))
+    if bad:
+        fails.append(f"PIPE-RAW {where}: pipe table in field(s) the renderer prints raw: {', '.join(bad)}")
+
     # Summary Table vs lessons
     rows = ST.get("lessons", [])
     if len(rows) != len(L):

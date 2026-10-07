@@ -1983,3 +1983,9 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - **New bug found + fixed:** 3 Grade 11 FEs (1_1, 2_3, 3_1) had `subjectLabel` "Grade 10" (model slip). Fixed; new validator check `FE-GRADE` in `validate_consistency.py`.
 - For teachers: avocado "lone tree sets no fruit" (protogynous, can set some); guttation fluid called a "waste" route; 3_1 L4 "rising progesterone inhibits FSH" imprecise (FE repeats it); 1_3 animal counts loose; viruses living/non-living unstated.
 - Next: Mark/teacher clears 7 FEs -> `node generators/generate.js g11_bio_*` -> generate_pdfs + teacher index. Quizzes unchanged.
+
+## Updates — 2026-10-06 — partner audit: raw pipe tables in documents
+- Partner's independent audit confirmed: pipe tables printed raw in FE `instructions` (5 files) and lesson `learnerExperience` (audit found 2; I found a 3rd, Essential Maths Quadratic Equations L2). Fix: `richCell` moved to `docx_kit.js` and used for FE instructions and lesson overview / learnerExperience / teacherMoves / sensemakingStrategy / formativeAssessment. JSON unchanged (contract unaffected). Layout: `keepNext` support in `para`/`cell`/`fullHeader`; student prompt kept with its answer box, FE section headers kept with their content.
+- New validator check `PIPE-RAW` (validate_consistency.py): pipe table in a field the renderer does not render as a table = hard failure. 0 hits now.
+- Re-rendered all 95 (with CONSISTENCY_CHECK=warn since 39 FEs are flagged; includes the 7 Grade 11 Bio modules whose edited data was rendered before clearing), PDFs 590 + index rebuilt. Text-diff vs previous docx: exactly the 13 expected docs changed (10 FE docs, 3 lesson sequences); all others text-identical. No raw pipe rows in any docx. Link gate 95/95 PASS.
+- Tell partner: JSON identical; if his editor shows these cells raw, that is on his side.
