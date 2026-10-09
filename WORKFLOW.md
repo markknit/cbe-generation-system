@@ -217,6 +217,16 @@ node generators/build_quiz.js
 
 Then run Step 6b: its PDFs include the decks and answer keys.
 
+### Step 6d — Partner (Lesson3) checks — after EVERY regeneration or renderer change
+
+`scripts/run_lesson3_checks.sh` runs the DB-free checks from the partner's editor repo against our
+output (contract drift, resourceLinks round-trip, all four documents rendered through his vendored
+generator with raw-table detection, and docx fidelity vs ours for Physics 4.1, Essential Maths Indices
+and Trigonometry I). Setup once: clone https://github.com/james-beep-boop/Lesson3 to `~/ares/Lesson3`,
+`cd app && npm ci` (his repo pins Node 24.21.0). Details and why the DB/Docker tiers are not part of this:
+`lesson3-tests.md`. If fidelity fails after a *renderer* change, the partner must re-vendor our generator
+(`app/src/generator/vendor/PROVENANCE.md`): tell him the commit. Log: `logs/lesson3_checks.log`.
+
 ### Step 6b — Generate PDFs (teacher distribution copies)
 
 `.docx` is the working/master format: it's what the partner's contract
