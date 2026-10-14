@@ -90,7 +90,7 @@ def check(path: Path, quiet: bool):
     fails, warns = [], []
     d = json.loads(path.read_text())
     name = path.name.removesuffix("_data.json")
-    where = str(path.relative_to(ROOT))
+    where = str(path.relative_to(ROOT)) if path.is_relative_to(ROOT) else str(path)
     L, ST, FE = d.get("LESSONS", []), d.get("SUMMARY_TABLE") or {}, d.get("FINAL_EXPLANATION")
 
     # Pipe tables only render as tables in fields that go through richCell()

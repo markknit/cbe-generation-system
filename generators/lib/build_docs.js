@@ -265,7 +265,9 @@ async function buildSummaryTable(META, ST) {
 async function run(dataModule) {
   const { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE } = dataModule;
 
-  const outBase = path.join(__dirname, '..', '..', 'data', 'outputs', META.outputDir);
+  // CBE_OUTPUT_ROOT redirects all output (used for the revised-corpus build, which must never touch data/outputs)
+  const outRoot = process.env.CBE_OUTPUT_ROOT || path.join(__dirname, '..', '..', 'data', 'outputs');
+  const outBase = path.join(outRoot, META.outputDir);
   if (!fs.existsSync(outBase)) fs.mkdirSync(outBase, { recursive: true });
 
   const files = [];
@@ -281,7 +283,9 @@ async function run(dataModule) {
   // the contract JSON, mirrored under logs/link_matching/<outputDir>/.
   const diag = takeDiagnostics();
   if (diag.length) {
-    const diagDir = path.join(__dirname, '..', '..', 'logs', 'link_matching', META.outputDir);
+    const diagDir = process.env.CBE_OUTPUT_ROOT
+      ? path.join(outRoot, '_link_matching', META.outputDir)
+      : path.join(__dirname, '..', '..', 'logs', 'link_matching', META.outputDir);
     fs.mkdirSync(diagDir, { recursive: true });
     fs.writeFileSync(path.join(diagDir, `${META.filePrefix}.json`), JSON.stringify(diag, null, 2));
   }

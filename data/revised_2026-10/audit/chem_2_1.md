@@ -1,0 +1,13 @@
+# Known audit items: chem_2_1
+
+## Lesson-sequence items (teacher review list)
+- none
+
+## Final Explanation reviewer findings (unverified; some are false alarms)
+- **Part 4 exemplar (c), washing soda equation**: The exemplar writes Na₂CO₃·10H₂O → Na₂CO₃ + 10H₂O and then hedges that the product 'may keep some water, for example the monohydrate'. This is inconsistent, because the monohydrate would require 9H₂O released. The hedge contradicts the equation given. Also, the equation lacks state symbols, which the instructions require for equations.
+- **Part 4 exemplar (c) vs Part 2 exemplar (c)/Part 1**: The exemplar states that CAN is 'deliquescent, or strongly hygroscopic', hedging. It treats CAN as a single normal salt (Part 1) while the explanation relies on its ions attracting water. It also says washing soda is 'soluble' yet in the phenomenon behaves differently, which is fine, but the Part 5 (b) claim that efflorescence is why it works as a water softener is not supported. Efflorescence is unrelated to softening, which happens by precipitating Ca²⁺ and Mg²⁺ as carbonates. The exemplar does say it reacts with these ions, but the section links the usefulness to the same property as in Lesson 7.
+- **Part 2 exemplar (b) vs Lesson 8 solubility rules**: The Final Explanation states the chloride rule as 'Most chlorides are soluble' without exceptions, and the carbonate rule omits that ammonium and Group 1 carbonates are the soluble ones. This is incomplete relative to the Lesson 8 statement (chlorides except lead and silver) and gives an incorrect over-generalisation. It also omits calcium sulphate being slightly soluble.
+- **Part 3 exemplar (c)**: The exemplar says that the methods in (a) and (b) fail because the product must stay dissolved so the leftover solid can be filtered out. Part 3 prompt (c) also asks the learner for the method and the net ionic equation, but the prompt already states 'why can you not use the methods in (a) and (b)', which is fine. However, the exemplar states barium sulphate is made by mixing barium chloride and sodium sulphate, which is correct. No defect other than the mild hint in the prompt.
+
+## Other
+- Template problem: Template has activities but no real phenomenon.

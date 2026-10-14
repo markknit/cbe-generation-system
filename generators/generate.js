@@ -46,7 +46,7 @@ async function main() {
     process.exit(1);
   }
 
-  const dataDir = path.join(__dirname, 'data');
+  const dataDir = process.env.CBE_DATA_DIR || path.join(__dirname, 'data');   // CBE_DATA_DIR: revised-corpus modules
 
   if (args[0] === '--all') {
     // Generate all data modules found in generators/data/

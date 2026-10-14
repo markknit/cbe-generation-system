@@ -22,7 +22,8 @@ set -u
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 L3="${LESSON3_DIR:-$HOME/ares/Lesson3}"
 N24="$(ls -d "$HOME"/ares/tools/node-v24.21.0-*/bin 2>/dev/null | head -1)"; [ -n "$N24" ] && export PATH="$N24:$PATH"   # his repo pins Node 24.21.0
-LOG="$ROOT/logs/lesson3_checks.log"
+OUT="${LESSON3_OUT_DIR:-$ROOT/data/outputs/v2}"   # LESSON3_OUT_DIR: test another output tree (e.g. the revised corpus); the 3 fidelity sub-strands are then skipped if absent
+LOG="${LESSON3_LOG:-$ROOT/logs/lesson3_checks.log}"
 UPDATE=0; UNIT=0
 for a in "$@"; do case "$a" in --update) UPDATE=1;; --unit) UNIT=1;; esac; done
 
@@ -35,7 +36,7 @@ STAGE="$(mktemp -d)"; trap 'rm -rf "$STAGE"' EXIT
 FILES=0; LESSONS=0
 while IFS= read -r f; do
   cp "$f" "$STAGE/$(basename "$f")"; FILES=$((FILES+1))
-done < <(find "$ROOT/data/outputs/v2" -name '*_data.json' -not -path '*/PDF/*' | sort)
+done < <(find "$OUT" -name '*_data.json' -not -path '*/PDF/*' | sort)
 LESSONS=$(python3 - "$STAGE" <<'EOF'
 import glob, json, sys
 print(sum(len(json.load(open(f))["LESSONS"]) for f in glob.glob(sys.argv[1] + "/*_data.json")))
@@ -65,10 +66,10 @@ echo "--- ingest-extract-check (informational)" | tee -a "$LOG"
   && echo "    PASS" | tee -a "$LOG" || echo "    not clean (his gate; see log, not counted)" | tee -a "$LOG"
 run "contract-check"          npx tsx scripts/contract-check.ts
 for d in Physics/SS4.1_Greenhouse_Effect_and_Climate_Change Essential_Mathematics/SS1.2_Indices Maths/SS3.1_Trigonometry_I; do
-  dir="$(find "$ROOT/data/outputs/v2" -type d -path "*/$d" -not -path '*/PDF/*' | head -1)"
-  if [ -z "$dir" ]; then dir="$(find "$ROOT/data/outputs/v2" -type d -name "$(basename "$d")" -not -path '*/PDF/*' | head -1)"; fi
+  dir="$(find "$OUT" -type d -path "*/$d" -not -path '*/PDF/*' | head -1)"
+  if [ -z "$dir" ]; then dir="$(find "$OUT" -type d -name "$(basename "$d")" -not -path '*/PDF/*' | head -1)"; fi
   [ -n "$dir" ] && run "adapter-fidelity $(basename "$d")" env ARES_FIDELITY_SUBSTRAND_DIR="$dir" npx tsx scripts/adapter-fidelity.ts \
-    || { echo "--- adapter-fidelity $d: directory not found" | tee -a "$LOG"; FAILED+=("adapter-fidelity $d (missing)"); }
+    || { echo "--- adapter-fidelity $d: directory not found" | tee -a "$LOG"; [ -n "${LESSON3_OUT_DIR:-}" ] || FAILED+=("adapter-fidelity $d (missing)"); }
 done
 [ "$UNIT" = 1 ] && run "test:unit" npm run test:unit
 
