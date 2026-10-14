@@ -29,6 +29,8 @@ RECORDS.json: {"records": [ {
     "severity": "minor" | "substantial",
     "teacher_decision": true|false,   # a judgement call a teacher should confirm (shown flagged in the journal)
     "why": "...", "reference": "required when category=science",
+    "group": "G3",                    # optional: records that stem from ONE root fix share a group key;
+    "group_headline": "...",          #   the root record carries a one-line plain-English headline (the journal shows one item per group)
     "location": "optional human-readable override of where the change is" } ] }
 The Summary Table is re-derived from the lessons after every apply. Edits that do not apply
 (path missing, old text not found exactly once) are rejected and reported, never forced.
@@ -164,6 +166,10 @@ def apply(module: str, records_file: str, dry: bool):
             applied.append(r)
         else:
             rejected.append((r["id"], why))
+    allr = hist["records"] + applied
+    for g in sorted({r["group"] for r in allr if r.get("group")}):
+        if not any(r.get("group") == g and r.get("group_headline") for r in allr):
+            print(f"  warning: group {g} has no record with group_headline")
     print(f"{module}: {len(applied)} applied, {len(rejected)} rejected")
     for i, why in rejected:
         print(f"  rejected {i}: {why}")

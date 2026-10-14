@@ -83,6 +83,46 @@ function recordRow(r) {
   ];
 }
 
+
+// ---------- grouping: one journal item per root fix, knock-on edits listed beneath it ----------
+const clip = (t, n) => { t = String(t || '').replace(/\s+/g, ' ').trim(); return t.length > n ? t.slice(0, n - 1) + '…' : t; };
+function journalItems(rs) {
+  const items = []; const seen = new Map();
+  for (const r of rs.slice().sort((a, b) => (a.kind === 'flag') - (b.kind === 'flag') || natural(a.id, b.id))) {
+    if (!r.group) { items.push({ root: r, members: [r] }); continue; }
+    if (seen.has(r.group)) { seen.get(r.group).members.push(r); continue; }
+    const it = { group: r.group, root: r, members: [r] }; seen.set(r.group, it); items.push(it);
+  }
+  for (const it of items) if (it.group) it.root = it.members.find((r) => r.group_headline) || it.members[0];
+  return items;
+}
+const needsDecision = (it) => it.members.some((r) => r.teacher_decision || r.kind === 'flag');
+function itemRow(it) {
+  if (!it.group || it.members.length === 1) return recordRow(it.root);
+  const r = it.root, ms = it.members;
+  const td = ms.some((x) => x.teacher_decision), sub = ms.some((x) => x.severity === 'substantial');
+  const fill = td ? 'FFF2CC' : undefined;
+  const bits = [`${ms.length} EDITS`, ...(sub ? ['SUBSTANTIAL'] : []), ...(td ? ['TEACHER DECISION'] : [])];
+  const crit = [...new Set(ms.flatMap((x) => x.criteria || []))].sort((a, b) => a - b).map((c) => `${c}. ${CRITERIA[c] || ''}`).join('; ');
+  const ref = ms.map((x) => x.reference).find(Boolean);
+  const what = [P([tr(r.group_headline || r.why, { bold: true })], { after: 60 }), ...changeCell(r)];
+  const rest = ms.filter((x) => x !== r);
+  if (rest.length) {
+    what.push(P([tr(`Related edits made for consistency (${rest.length}). Exact wording is in the tracked-change document.`, { bold: true, size: 15, color: '666666' })], { before: 60, after: 20 }));
+    for (const x of rest) what.push(P([tr(`${x.where}: `, { bold: true, size: 15 }), tr(x.kind === 'flag' ? '(flag, no text changed) ' + clip(x.why, 140) : clip(x.new, 150), { size: 15, color: '1B6B1B' })], { after: 20 }));
+  }
+  return [
+    { __cell: true, content: [P([tr(it.group, { bold: true })]), ...bits.map((b) => P([tr(b, { bold: true, size: 14, color: 'C55A11' })], { after: 10 }))], o: { fill } },
+    { __cell: true, content: [P([tr(DOC[r.target] || r.target, { bold: true })], { after: 30 }), P(r.where || ''), P(`and ${rest.length} related place${rest.length === 1 ? '' : 's'}`, { italics: true, size: 15 })], o: { fill } },
+    { __cell: true, content: what, o: { fill } },
+    { __cell: true, content: [P([tr(r.why)], { after: 40 }), P([tr('Guideline: ' + crit + '  |  Type: ' + r.category, { italics: true, size: 15, color: '555555' })])], o: { fill } },
+    { __cell: true, content: [P(ref || (r.category === 'science' ? '(none given)' : '—'), { size: 16 })], o: { fill } },
+    { __cell: true, content: [P(BOX, { size: 22, align: AlignmentType.CENTER }), P('Accept / reject / edit', { size: 13, align: AlignmentType.CENTER })], o: { fill } },
+  ];
+}
+const keyChanges = (items) => items.filter((it) => (it.group && it.members.length > 1) || it.members.some((r) => r.severity === 'substantial'))
+  .map((it) => P([tr('• ' + (it.root.group_headline || it.root.why), { size: 17 }), tr(`  [guideline ${[...new Set(it.members.flatMap((x) => x.criteria || []))].sort((a, b) => a - b).join(', ')}${it.members.some((x) => x.teacher_decision) ? '; teacher decision' : ''}]`, { size: 15, color: '666666' })], { after: 30 }));
+
 // ---------- load ----------
 const recs = {};
 for (const f of fs.readdirSync(path.join(REV, 'change_records')).filter((x) => x.endsWith('.json'))) {
@@ -108,17 +148,20 @@ const howTo = () => [
 function volume(title, modules) {
   const kids = [P([new TextRun({ text: title, font: FONT, size: 40, bold: true, color: '1F3864' })], { after: 60 }),
     P('Revision journal. Grade 10, 14 October 2026 revision. Prepared by Claude (AI), proposed for teacher review.', { size: 20, after: 140 }), ...howTo()];
-  const srows = modules.map((m) => { const s = stats(recs[m]); const mt = meta(m); return [`${mt.substrand_id} ${mt.substrand_name}`, String(s.edits), String(s.science), String(s.substantial), String(s.decide)]; });
+  const srows = modules.map((m) => { const s = stats(recs[m]); const mt = meta(m); const its = journalItems(recs[m]); return [`${mt.substrand_id} ${mt.substrand_name}`, String(s.edits), String(its.length), String(s.science), String(s.substantial), String(its.filter(needsDecision).length)]; });
   const tot = stats(modules.flatMap((m) => recs[m]));
-  srows.push(['Total', String(tot.edits), String(tot.science), String(tot.substantial), String(tot.decide)]);
+  const allIts = modules.flatMap((m) => journalItems(recs[m]));
+  srows.push(['Total', String(tot.edits), String(allIts.length), String(tot.science), String(tot.substantial), String(allIts.filter(needsDecision).length)]);
   kids.push(H2('Summary'));
-  kids.push(table([6000, 1800, 1800, 2000, 2080], ['Sub-strand', 'Changes made', 'Science corrections', 'Substantial', 'Need a teacher decision'], srows));
+  kids.push(table([5000, 1700, 1700, 1700, 1700, 1880], ['Sub-strand', 'Edits made', 'Journal items (fixes)', 'Science corrections', 'Substantial', 'Items needing a teacher decision'], srows));
   for (const m of modules) {
     const mt = meta(m);
     kids.push(new Paragraph({ children: [new PageBreak()] }));
     kids.push(H2(`${mt.substrand_id} ${mt.substrand_name}   (${m})`));
-    const order = recs[m].slice().sort((a, b) => (a.kind === 'flag') - (b.kind === 'flag') || natural(a.id, b.id));
-    kids.push(table([800, 2200, 4700, 3200, 1900, 880], ['#', 'Where', 'What changed', 'Why', 'Reference (science)', 'Teacher'], order.map(recordRow)));
+    const items = journalItems(recs[m]);
+    const kc = keyChanges(items);
+    if (kc.length) { kids.push(P([tr('Key changes at a glance', { bold: true, size: 20, color: '1F3864' })], { before: 60, after: 60, keepNext: true })); kids.push(...kc); kids.push(P('', { after: 80 })); }
+    kids.push(table([1050, 2000, 4600, 3150, 1900, 980], ['#', 'Where', 'What changed', 'Why', 'Reference (science)', 'Teacher'], items.map(itemRow)));
   }
   return new Document({ styles: { default: { document: { run: { font: FONT, size: 17 } } } }, sections: [{
     properties: { page: { size: { width: 12240, height: 15840, orientation: 'landscape' }, margin: { top: 900, bottom: 900, left: 1080, right: 1080 } } },
@@ -151,10 +194,10 @@ function volume(title, modules) {
   for (const r of all) for (const c of r.criteria || []) byC[c] = (byC[c] || 0) + 1;
   kids.push(table([900, 9000, 3780], ['#', 'Guideline', 'Changes'], Object.keys(CRITERIA).map((c) => [c, CRITERIA[c], String(byC[c] || 0)])));
   kids.push(H2('Items needing a teacher decision'));
-  const dec = Object.entries(recs).flatMap(([m, rs]) => rs.filter((r) => r.teacher_decision || r.kind === 'flag').map((r) => [m, r]));
-  kids.push(table([2200, 3200, 6580, 1700], ['Sub-strand', 'Where', 'What and why', 'Journal'], dec.map(([m, r]) => {
-    const mt = meta(m); const s = subjOf(m);
-    return [`${mt.substrand_id} ${mt.substrand_name}`, r.where || '', (r.kind === 'flag' ? '' : 'Suggested change: ') + r.why, s ? `Journal_${s[1].replace(/ /g, '_')}` : ''];
+  const dec = Object.entries(recs).flatMap(([m, rs]) => journalItems(rs).filter(needsDecision).map((it) => [m, it]));
+  kids.push(table([2200, 3200, 6580, 1700], ['Sub-strand', 'Where', 'What and why', 'Journal'], dec.map(([m, it]) => {
+    const mt = meta(m); const s = subjOf(m); const r = it.members.find((x) => x.teacher_decision || x.kind === 'flag') || it.root;
+    return [`${mt.substrand_id} ${mt.substrand_name}`, (it.root.where || '') + (it.members.length > 1 ? ` (+${it.members.length - 1} related)` : ''), (r.kind === 'flag' ? '' : 'Suggested change: ') + (it.root.group_headline ? it.root.group_headline + '. ' : '') + r.why, s ? `Journal_${s[1].replace(/ /g, '_')}` : ''];
   })));
   const fm = path.join(jdir, 'Journal_00_Master_Index.docx');
   fs.writeFileSync(fm, await Packer.toBuffer(new Document({ styles: { default: { document: { run: { font: FONT, size: 17 } } } }, sections: [{
