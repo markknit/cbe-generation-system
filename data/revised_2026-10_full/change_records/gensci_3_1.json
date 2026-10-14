@@ -1,0 +1,1757 @@
+{
+ "module": "gensci_3_1",
+ "records": [
+  {
+   "id": "gensci_3_1-001",
+   "kind": "edit",
+   "target": "unit",
+   "path": "totalDuration",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The overview said 8 x 40 = 320 minutes, but five lessons (2, 3, 4, 6 and 8) are double periods. Sum of the real lesson durations: L1 40 + L2 80 + L3 80 + L4 80 + L5 40 + L6 80 + L7 40 + L8 80 = 520 minutes (3 x 40 + 5 x 80 = 120 + 400). Phase times inside the lessons are now also given as pacing guides that add up to each lesson's period.",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons = 13 forty-minute periods = 520 minutes total (3 single lessons of 40 minutes and 5 double lessons of 80 minutes)",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-002",
+   "kind": "edit",
+   "target": "unit",
+   "path": "supportingPhenomena",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The wheelbarrow supporting phenomenon was backwards. With the wheel axle as pivot, the load W at distance a from the axle and the lifting force F at the handles at distance L, balance gives F x L = W x a, so F = W x a / L. A smaller a (load nearer the wheel) needs a smaller F, so it is EASIER to lift. Check with numbers: a 600 N load at 0.4 m from the axle and handles at 1.2 m need F = 600 x 0.4 / 1.2 = 200 N; the same load at 0.8 m needs 400 N.",
+   "old": "Learners notice that placing the load above the wheel (close to the pivot) is much harder to lift than placing it further back — the opposite of what they might expect.",
+   "new": "Learners notice that placing the load close to the wheel (the pivot) is much easier to lift than placing it further back towards the handles, because a shorter distance from the pivot gives the load a smaller moment.",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "group": "G-WB",
+   "group_headline": "Wheelbarrow phenomenon was backwards: a load close to the wheel is easier to lift, not harder, because its distance from the pivot is smaller; the look-fors in Lesson 7 now match",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-003",
+   "kind": "flag",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "KICD wording check: the Grade 10 KICD PDFs available in data/raw/curriculum_pdfs/ cover Biology, Chemistry, Mathematics and Physics only. General Science Strand 3.0, Sub-Strand 3.1 'Turning Effect of Force' is not in them (the closest text, Physics 1.5 'Moments and equilibrium', is a different sub-strand with different outcomes), so the learning outcomes (a-d), key inquiry question, core competencies, values and PCIs could not be compared word for word and were left unchanged. Please check them against the KICD General Science Grade 10 curriculum design. Coverage check done: outcome a (moments of a force at a point) is taught in Lessons 2-3 and assessed in Final Explanation Parts 1-3; outcome b (moments of anti-parallel forces) is taught in Lessons 4-5 and assessed in Part 3 and Part 4 (a calculation was added); outcome c (real-life applications) is taught in Lessons 6-7 and assessed in Part 5; outcome d (appreciate) is observed in the Lesson 8 reflection journal.",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-004",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The script named a specific person ('Dr. Mwangi Gitahi') with a job and a quote-like story that teachers cannot verify. A named real person should not be invented or implied; the sentence now makes the same point (rough sketches are how experts start) without naming anyone.",
+   "lesson": 1,
+   "old": "Scientists draw rough models all the time. Dr. Mwangi Gitahi, the Kenyan engineer who designs agricultural tools for small-scale farmers in the Rift Valley, started with rough sketches just like these.",
+   "new": "Scientists and engineers draw rough models all the time; Kenyan tool-makers and engineers start with rough sketches just like these.",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-005",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3,
+    4
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Estimated time of the lesson as written: Predict about 11 (15 s think + 3 min video + 4 min writing + five cold-calls about 3.5 min), Observe about 10 (replay 3 + pair talk 2 + four pair cold-calls 2.5 + ruler play 1.5), Explain about 12 (annotation 2 + group-of-four sentence 3 + reading and clustering 2 + finger vote 2 + one-sentence writing 1.5 + cold-calls 1.5), Driving Question Board about 8, Model Building about 7: roughly 48 minutes in a 40-minute period. This record adds a pacing guide (9 + 8 + 8 + 8 + 7 = 40) and the next four records trim the cold-calls and the group-of-four step to fit it. It also fixes a contradiction: the overview said 'pivot' is not introduced, but the activities and the phenomenon text use the word.",
+   "lesson": 1,
+   "old": "No scientific vocabulary (moment, torque, pivot) is formally introduced yet; this lesson is purely about noticing, wondering, and predicting.",
+   "new": "Pacing for the 40-minute period (use a visible timer): Predict 9, Observe 8, Explain 8, Driving Question Board 8, Model Building 7. No formal definitions of moment or torque are given yet, and 'pivot' is used only as an everyday word for the point the jembe turns about; this lesson is purely about noticing, wondering, and predicting.",
+   "group": "G-L1T",
+   "group_headline": "Lesson 1 added up to about 48 minutes in a 40-minute period; added a pacing guide and shortened cold-calls and the group-of-four step to fit",
+   "where": "Lesson 1, overview",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-006",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Cold-calls cut from five to three (spoken line and instruction), saving about 1.5 minutes in the Predict phase (see the group headline).",
+   "lesson": 1,
+   "old": "I will ask five of you to read your prediction aloud — anyone can be called.' Cold-call 5 learners deliberately choosing a spread: 1 from category A, 1 from B, 1 from C, 1 who seems uncertain, 1 high-confidence writer.",
+   "new": "I will ask three of you to read your prediction aloud — anyone can be called.' Cold-call 3 learners, one from each category (A, B and C).",
+   "group": "G-L1T",
+   "where": "Lesson 1, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-007",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Saves about 1.5 minutes in the Observe phase (see the group headline).",
+   "lesson": 1,
+   "old": "cold-calls 4 pairs — 'Tell me one thing from your SAME column' and 'Tell me one thing from your DIFFERENT column.'",
+   "new": "cold-calls 2 pairs — 'Tell me one thing from your SAME column' and 'Tell me one thing from your DIFFERENT column.'",
+   "group": "G-L1T",
+   "where": "Lesson 1, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-008",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the shortened share-out in the learner experience.",
+   "lesson": 1,
+   "old": "I will cold-call four pairs.",
+   "new": "I will cold-call two pairs.",
+   "group": "G-L1T",
+   "where": "Lesson 1, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-009",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Pairs instead of groups of four saves about 2 minutes of moving and negotiating; the agreed-sentence idea and the board clustering stay.",
+   "lesson": 1,
+   "old": "Pairs share with another pair (groups of 4) for 3 minutes; each group of 4 must agree on one shared sentence that starts: 'We think the distance from the blade pivot matters because ___.' Each group writes their agreed sentence",
+   "new": "Each pair agrees on one shared sentence (2 minutes) that starts: 'We think the distance from the blade pivot matters because ___.' Each pair writes their agreed sentence",
+   "group": "G-L1T",
+   "where": "Lesson 1, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-010",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the pair-only step in the learner experience.",
+   "lesson": 1,
+   "old": "Now share with your partner — then join with the pair behind you. Your group of four must write ONE agreed sentence on this strip of paper: We think the distance from the blade pivot matters because ___. You have 3 minutes.",
+   "new": "Now share with your partner. Together you must write ONE agreed sentence on this strip of paper: We think the distance from the blade pivot matters because ___. You have 2 minutes.",
+   "group": "G-L1T",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-011",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    8,
+    3
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The set-up could not work: 2 N x 30 cm = 60 N·cm, so the 1 N mass would have to sit at 60 cm from the pivot, but a metre rule balanced at 50 cm only extends 50 cm each side. Recomputed with 200 g (2 N, g = 10 N/kg) at 20 cm: 2 x 20 = 40 N·cm, so 1 N needs d = 40 cm, which is inside the 50 cm limit. This is the audit item and it was correct.",
+   "lesson": 2,
+   "old": "at 30 cm from the pivot on the LEFT side. The group's task: find a position on the RIGHT side where a 100 g mass (1 N) balances it.",
+   "new": "at 20 cm from the pivot on the LEFT side. The group's task: find a position on the RIGHT side where a 100 g mass (1 N) balances it (expected: about 40 cm from the pivot, because 2 N x 20 cm = 1 N x 40 cm = 40 N·cm).",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines); KICD Grade 10 curriculum design, Physics 1.5 (principle of moments)",
+   "group": "G-L2",
+   "group_headline": "Balance set-up could not work: 100 g needed 60 cm from the pivot on a rule that only extends 50 cm each side; now 200 g at 20 cm is balanced by 100 g at 40 cm",
+   "where": "Lesson 2, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-012",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Teachers were not told what good data look like. The expected position follows from the corrected Step 2 (2 N x 20 cm = 1 N x 40 cm). Reading distances from the end of the rule is the most likely measuring error with a pivot at 50 cm.",
+   "lesson": 2,
+   "old": "At the 10-minute mark, visit each group and ask: 'What does F₁×d₁ equal for your first trial? What does F₂×d₂ equal? What do you notice?'",
+   "new": "At the 10-minute mark, visit each group and ask: 'What does F₁×d₁ equal for your first trial? What does F₂×d₂ equal? What do you notice?' Look-fors: Step 2 should balance with the 100 g mass at about 40 cm (accept 39–41 cm), and F₁×d₁ and F₂×d₂ of a balanced trial should agree within about 5–10%. Common slip: measuring distances from the END of the rule instead of from the pivot (the 50 cm mark); say: 'Distance from the PIVOT, not from the end.'",
+   "group": "G-L2",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-013",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "Slotted masses are not in every partner school. The lesson only listed slotted masses; a low-cost substitute is now given. The teacher must decide which substitute their school actually has (bottles of water, packets of sugar or flour, stones weighed on a balance).",
+   "lesson": 2,
+   "old": "Distribute apparatus efficiently (pre-packed in labelled trays — one tray per group).",
+   "new": "Distribute apparatus efficiently (pre-packed in labelled trays — one tray per group). If slotted masses are not available, use small plastic bottles of equal empty mass filled with measured water to a total of 100 g, 200 g and 500 g (check on a kitchen or shop balance), and a pencil, round pen or wedge as the pivot.",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-014",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The closing preview promised a wheelbarrow investigation in Lesson 3 that does not exist (Lesson 3 consolidates the equation with a market balance, a seesaw and the jembe; Lesson 4 teaches opposite forces). Previews now match what the next lessons do.",
+   "lesson": 2,
+   "old": "In Lesson 3 we will investigate what happens when MORE THAN ONE force acts on the same beam — which is exactly what happens when a wheelbarrow carries a load of maize at a farm in Kisumu.'",
+   "new": "In Lesson 3 we will put names and units to what you found and use it on a market balance, a seesaw and the jembe itself. In Lesson 4 we will see what happens when TWO equal forces pull in opposite directions, as with two hands on a matatu steering wheel.'",
+   "group": "G-L2P",
+   "group_headline": "Lesson 2 promised a wheelbarrow investigation in Lesson 3 and parallel-force work in Lessons 3-4 that those lessons do not contain; previews now match",
+   "where": "Lesson 2, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-015",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].sensemakingStrategy",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the changed closing preview.",
+   "lesson": 2,
+   "old": "The closing preview (wheelbarrow in Kisumu) anchors the next investigation in a new Kenyan context while maintaining continuity with the jembe phenomenon.",
+   "new": "The closing preview (a market balance and a seesaw next lesson, then two-handed turning) keeps the storyline moving while maintaining continuity with the jembe phenomenon.",
+   "group": "G-L2P",
+   "where": "Lesson 2, Model Building Phase, sensemakingStrategy",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-016",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Opposite and parallel forces are taught in Lessons 4 and 5, not Lesson 3. Knock-on of the changed previews.",
+   "lesson": 2,
+   "old": "are exactly what Lessons 3 and 4 will investigate",
+   "new": "are exactly what Lessons 4 and 5 will investigate",
+   "group": "G-L2P",
+   "where": "Lesson 2, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-017",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 3 was written as if the moment equation were new, but Lesson 2's Explain phase already introduces M = F × d and the Principle of Moments from learners' data (and its data are quantitative, not qualitative). Lesson 3 is now described as consolidating and applying them, so the sequence is honest and teachers do not feel they are repeating Lesson 2.",
+   "lesson": 3,
+   "old": "Lessons 1 and 2 established the puzzle (the jembe handle length changes effort) and generated qualitative observations and predictions. Lesson 3 is the formal EXPLAIN phase: learners now receive the scientific language and mathematical tools",
+   "new": "Lesson 1 raised the puzzle and Lesson 2 produced the F × d pattern from learners' own metre-rule data and gave a first definition of the moment. Lesson 3 is the formal EXPLAIN phase: learners now consolidate that language and use the mathematical tools",
+   "group": "G-L3",
+   "group_headline": "Lesson 3 was framed as introducing the moment equation, but Lesson 2 already finds it from data; Lesson 3 now consolidates and applies it, and no longer lists anti-parallel forces (taught in Lessons 4-5)",
+   "where": "Lesson 3, slo.purposeInStoryline",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-018",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the changed role of Lesson 3.",
+   "lesson": 3,
+   "old": "Building on the qualitative observations and class predictions from Lessons 1–2, the teacher formally introduces the definition of the moment of a force",
+   "new": "Building on the F × d pattern learners found in Lesson 2, the teacher consolidates the definition of the moment of a force",
+   "group": "G-L3",
+   "where": "Lesson 3, overview",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-019",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.knowledge",
+   "criteria": [
+    2,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 3 does not teach anti-parallel forces (Lessons 4 and 5 do), so listing the outcome here promised something the lesson does not deliver.",
+   "lesson": 3,
+   "old": "calculate the moments of anti-parallel forces; ",
+   "new": "",
+   "group": "G-L3",
+   "where": "Lesson 3, slo.knowledge",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-020",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The beans hang on the LEFT of the pivot, and a downward force there turns the arm anticlockwise; the githeri on the right is the clockwise one (the principle of moments in the next sentence then pairs them correctly). Checked with the right-hand rule: pivot at origin, force down at x = -0.3 m gives torque = x·Fy = (-0.3)(-4) = +1.2 N·m (anticlockwise positive).",
+   "lesson": 3,
+   "old": "What is the clockwise moment of the beans?",
+   "new": "What is the anticlockwise moment of the beans (a downward force to the left of the pivot turns the arm anticlockwise)?",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-021",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "No Kiswahili or English-learner support appeared anywhere in the sequence. A short, optional support was added where the key words are first written down. The teacher must decide the Kiswahili terms: they are everyday words, but KICD or the school's Kiswahili teacher may prefer other physics terms.",
+   "lesson": 3,
+   "old": "Cold-call 2 learners to read their 'My Meaning' column aloud.",
+   "new": "Cold-call 2 learners to read their 'My Meaning' column aloud. Language support: let English learners write the 'My Meaning' column in Kiswahili first, and write these words beside the English terms (please check with your Kiswahili teacher): nguvu = force, umbali = distance, uzito = weight, kiegemeo = pivot; the turning effect can be explained as 'nguvu ya kuzungusha' (turning power of a force).",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-022",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The task says 'calculate exactly what we saw in the video', but the numbers (0.15 m and 0.75 m, a ratio of 5) did not match the video (30 cm and 90 cm) or the Final Explanation (ratio 3). Recomputed with 80 N: 80 x 0.30 = 24 N·m; 80 x 0.90 = 72 N·m; 72 / 24 = 3 times.",
+   "lesson": 3,
+   "old": "(a) If the grip is 0.15 m from the blade pivot, what is the moment? (b) If the grip is moved to 0.75 m from the pivot, what is the moment?",
+   "new": "(a) If the grip is 0.30 m from the blade pivot (Juma's short handle in the Lesson 1 video), what is the moment? (b) If the grip is moved to 0.90 m from the pivot (Amina's long handle), what is the moment?",
+   "group": "G-L3N",
+   "group_headline": "Lesson 3's jembe numbers (0.15 m and 0.75 m, 5 times) did not match the Lesson 1 video (30 cm and 90 cm) or the Final Explanation (3 times); now 24 and 72 N·m, 3 times, with matching answers and summary",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-023",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the new jembe numbers (80 x 0.30 = 24; 80 x 0.90 = 72; ratio 3). The key also now gives the answers to the Gikomba mirror question (5 x 0.4 = 2; 2 / 8 = 0.25 m) and the seesaw (300 x 1.5 = 450; 450 / 200 = 2.25 m), which teachers did not have.",
+   "lesson": 3,
+   "old": "(c) Jembe calculation: correct answers are (a) 12 Nm, (b) 60 Nm, (c) 5 times greater.",
+   "new": "(c) Answers: mirror question d = 0.25 m (5 N x 0.4 m = 2 N·m, then 2 ÷ 8 N); seesaw d = 2.25 m (300 N x 1.5 m = 450 N·m, then 450 ÷ 200 N); jembe (a) 24 Nm, (b) 72 Nm, (c) 3 times greater.",
+   "group": "G-L3N",
+   "where": "Lesson 3, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-024",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the new jembe numbers.",
+   "lesson": 3,
+   "old": "(12 Nm vs. 60 Nm)",
+   "new": "(24 Nm vs. 72 Nm)",
+   "group": "G-L3N",
+   "where": "Lesson 3, teacherReflection",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-025",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the new jembe numbers; the Summary Table feeds the Final Explanation.",
+   "lesson": 3,
+   "old": "that moving the jembe grip five times farther from the pivot (0.15 m to 0.75 m) produces a moment 5× greater for the same applied force",
+   "new": "that moving the jembe grip three times farther from the pivot (0.30 m to 0.90 m) produces a moment 3× greater for the same applied force",
+   "group": "G-L3N",
+   "where": "Lesson 3, summaryTablePrompt.learned",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-026",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purpose",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Audit item confirmed. The lesson said the two-handed jembe grip is a couple and that widening the grip explains the handle-length puzzle. That mixes up two different distances: for the jembe, d is the distance from the blade pivot to the single effort force (M = F x d, Lessons 2-3); for a couple, d is the distance BETWEEN the two forces. The distance between the farmer's hands does not change the jembe's moment about the blade (a grip 0.9 m from the blade gives M = F x 0.9 however far apart the hands are). The jembe therefore stays a single-force moment, and the couple is now taught on objects that really turn about their own centre. Lesson 5 and the Final Explanation now say the same. Teacher to confirm this reading of the storyline.",
+   "lesson": 4,
+   "old": "— advancing their explanation of why the jembe handle length matters.",
+   "new": "— extending the turning-effect model from one force about a pivot (the jembe) to two equal, opposite forces that turn an object about its own centre (steering wheel, tap, pipe wrench).",
+   "reference": "Moment of a couple = F x perpendicular distance between the two forces (Nelkon and Parker, Advanced Level Physics, chapter on moments, couples and equilibrium); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "group_headline": "Lesson 4 said the two-handed jembe grip is a couple that explains handle length, mixing up 'distance between the forces' with 'distance from the pivot'; the jembe stays a single-force moment about the blade and the couple is taught on a steering wheel, tap and wrench",
+   "where": "Lesson 4, slo.purpose",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-027",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.skills",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A door handle pushed with one hand is a single force, and the jembe grip is not a couple (see the group headline); the examples are now real couples.",
+   "lesson": 4,
+   "old": "(steering wheels, jembe grip, door handles, tap spanners)",
+   "new": "(steering wheels, pipe wrenches, tap handles, bicycle handlebars)",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Lesson 4, slo.skills",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-028",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Part of the group fix: removes the claim that the jembe grip is a couple.",
+   "lesson": 4,
+   "old": "This directly addresses why a farmer gripping the jembe with both hands at different positions creates a rotational effect, and why widening the grip (increasing d) reduces the effort needed. By the end of this lesson, learners can quantify the turning power of any two-handed or two-force system, building the conceptual bridge toward Lesson 5 (applications and equilibrium).",
+   "new": "The jembe puzzle itself stays explained by ONE effort force at a distance d from the blade pivot (Lessons 2 and 3); a couple is a different situation, where two equal, opposite forces turn an object about its own centre, as with a steering wheel or a pipe wrench. By the end of this lesson, learners can quantify the turning power of a couple and tell it apart from a single-force moment about a pivot; Lesson 5 returns to the jembe to settle which one it is.",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Lesson 4, slo.purposeInStoryline",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-029",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix: the opening question no longer treats two hands on the jembe as the couple.",
+   "lesson": 4,
+   "old": "Learners begin by revisiting the jembe puzzle: the farmer uses TWO hands on the handle — what does each hand do, and why does spreading the hands apart make turning easier?",
+   "new": "Learners begin with a new question: does turning a steering wheel with TWO hands do something different from pushing with one finger, and how is that different from the single force about a pivot used for the jembe?",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples)",
+   "group": "G-L4",
+   "where": "Lesson 4, overview",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-030",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix: the jembe grip is not a couple.",
+   "lesson": 4,
+   "old": "and the two-handed jembe grip — updating the class Driving Question Board.",
+   "new": "and bicycle handlebars — updating the class Driving Question Board.",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples)",
+   "group": "G-L4",
+   "where": "Lesson 4, overview",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-031",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix: the bridge to the anchor phenomenon no longer claims the two hands form a couple.",
+   "lesson": 4,
+   "old": "Teacher connects to phenomenon: 'Remember our Kericho farmer — she uses BOTH hands on the jembe handle. Today we investigate what happens when two forces act together to make something spin.'",
+   "new": "Teacher connects to the unit: 'Our jembe puzzle was about ONE effort force turning the jembe about the blade. Today we investigate something new: what happens when TWO equal forces act in opposite directions to make something spin.'",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples)",
+   "group": "G-L4",
+   "where": "Lesson 4, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-032",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix (same bridge as in the learner experience).",
+   "lesson": 4,
+   "old": "7. Bridge to phenomenon: 'Our Kericho farmer grips the jembe with both hands. Both hands exert force. Today we find out what two opposite forces do to a turning effect.'",
+   "new": "7. Bridge to the unit: 'In the jembe puzzle one effort force turned the jembe about the blade. Today we find out what two opposite forces do to a turning effect — and later we will check whether the jembe is one of these.'",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples)",
+   "group": "G-L4",
+   "where": "Lesson 4, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-033",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The marks listed are positions on the rule, not distances 'from the pivot' (that would be 40, 30, 20, 10 cm), and for a couple d is the distance BETWEEN the forces. Recomputed: 90-10 = 80, 80-20 = 60, 70-30 = 40, 60-40 = 20 cm. Mixing the two is the most common error named in the Lesson 4 reflection, so the instruction itself must not make it.",
+   "lesson": 4,
+   "old": "(use positions: 10&90, 20&80, 30&70, 40&60 cm from pivot)",
+   "new": "(use the cm marks 10 & 90, 20 & 80, 30 & 70, 40 & 60 on the rule, so the distance d between the two forces is 80, 60, 40 and 20 cm)",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-034",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].sensemakingStrategy",
+   "criteria": [
+    8,
+    5
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "With a freely turning rule the 'turning effect' is not measured; the table column is calculated. Saying so keeps the lesson honest and avoids circular 'discovery' of F x d.",
+   "lesson": 4,
+   "old": "together they constructed the full picture.",
+   "new": "together they constructed the full picture. Be open with learners that F × d is CALCULATED here: what they observe is that the rule spins more vigorously (and is harder to hold still) as F or d increases, which supports the formula but does not measure the moment directly.",
+   "where": "Lesson 4, Observe Phase, sensemakingStrategy",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-035",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "Clamp stands and two spring balances per group are not available in every partner school. The teacher must decide whether this qualitative substitute suits the school's equipment.",
+   "lesson": 4,
+   "old": "Read the instructions on your sheet first — all 4 steps — before touching any equipment. I will time 1 minute of reading.'",
+   "new": "Read the instructions on your sheet first — all 4 steps — before touching any equipment. I will time 1 minute of reading.' Low-cost substitute if clamp stands or spring balances are missing: fix a ruler to a flat desk with a nail or pencil through a hole at its centre, and have two learners push with one finger each on opposite sides, in opposite directions, then one learner push alone; learners judge the turning effect by how easily the ruler spins, so this version is qualitative only.",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-036",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Part of the group fix: the model layer for the couple is now a separate steering-wheel panel next to the jembe, and the caption states the difference between the two distances, so learners do not merge the two models.",
+   "lesson": 4,
+   "old": "(1) a new annotated diagram showing the farmer's two hands on the jembe handle as a COUPLE — labelling Force F (left hand), Force F (right hand, opposite direction), perpendicular distance d between the hands, and the calculated moment of the couple τ = F × d; (2) a written caption: 'When the farmer grips the jembe with both hands spread wide apart, the couple moment = F × d. Increasing d (wider grip) increases the moment, making it easier to rotate the blade into the soil without changing how hard each hand pushes.' Teacher circulates and stamps/initials models that correctly show the couple annotation. Learners who finish early are challenged: 'On your model, show what happens to the couple moment if the farmer HALVES the distance between her hands — rewrite the caption for that scenario.",
+   "new": "(1) a NEW panel beside the jembe showing a steering wheel turned by two hands as a COUPLE — labelling Force F (left hand), Force F (right hand, opposite direction), the perpendicular distance d between the hands, and the calculated moment of the couple τ = F × d; (2) a written caption: 'The jembe is explained by ONE effort force at distance d from the blade pivot. A couple is different: two equal, opposite forces turn an object about its own centre, and the moment is F × d, where d is the distance BETWEEN the forces. Spreading the hands wider increases the couple moment without pushing harder.' Teacher circulates and stamps/initials models that correctly show the couple annotation. Learners who finish early are challenged: 'On your model, show what happens to the couple moment if the driver HALVES the distance between her hands — rewrite the caption for that scenario.",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Lesson 4, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-037",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix (matches the new model panel).",
+   "lesson": 4,
+   "old": "1. Say: 'Take out your jembe model from Lesson 1. Today you add Layer 4: the couple.' Display a reference annotated diagram on the board (drawn quickly by teacher) showing the two forces and distance d on a handle.",
+   "new": "1. Say: 'Take out your jembe model from Lesson 1. Today you add a NEW panel next to it: the couple.' Display a reference diagram on the board (drawn quickly by teacher) showing the two forces and the distance d between them on a steering wheel.",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-038",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix. It also removes 'lever classification', which is not taught in Lessons 1-4 (a sequence problem), and replaces 'brings it all together' with the question Lesson 5 now answers.",
+   "lesson": 4,
+   "old": "You should now have four layers: (1) single force moment, (2) Principle of Moments, (3) lever classification, (4) couple moment. Each layer explains MORE of why the Kericho farmer's jembe handle length matters. Next lesson we bring it all together to explain the FULL phenomenon.'",
+   "new": "It should now show: (1) the single-force moment on the jembe, (2) the Principle of Moments, (3) a NEW panel with a couple. Layers (1) and (2) explain why the Kericho farmer's jembe handle length matters; the couple explains a different kind of turning. Next lesson we calculate with both and ask: is the jembe a couple or not?'",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-039",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix (matches the new model panel).",
+   "lesson": 4,
+   "old": "(1) two force arrows drawn in opposite, parallel directions on the handle;",
+   "new": "(1) two force arrows drawn in opposite, parallel directions on the steering wheel (or tap or wrench);",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Lesson 4, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-040",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix: the reflection question now checks the right idea.",
+   "lesson": 4,
+   "old": "how many correctly identified the two-handed jembe grip as a couple versus a single-force moment? If fewer than half connected it, the bridge between the investigation and the phenomenon may need a more explicit teacher-facilitated link at the start of Lesson 5.",
+   "new": "how many recognised that the jembe handle length is a single-force moment about the blade, not a couple, and that a couple needs two equal, opposite forces? If fewer than half did, start Lesson 5 by answering the DQB question about the jembe blade going into the ground explicitly (see Lesson 5, Explain phase).",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Lesson 4, teacherReflection",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-041",
+   "kind": "set",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix: removes the jembe grip from the list of couples and states the definition without the repeated word 'antiparallel' (equal, parallel forces acting in opposite directions).",
+   "lesson": 4,
+   "value": "Learners learned that a COUPLE is a pair of equal, parallel forces acting in opposite directions (anti-parallel) whose lines of action do not coincide. The moment of a couple = F × d (where d is the perpendicular distance between the two forces). A couple produces pure rotation with zero net translational force. Real-life Kenyan examples include a matatu steering wheel, a pipe wrench used by a Kisumu plumber, and a tap or bottle cap turned with finger and thumb.",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "old": "Learners learned that a COUPLE is a pair of equal, parallel, antiparallel forces whose lines of action do not coincide. The moment of a couple = F × d (where d is the perpendicular distance between the two forces). A couple produces pure rotation with zero net translational force. Real-life Kenyan examples include a matatu steering wheel, a pipe wrench used by a Kisumu plumber, and the two-handed jembe grip.",
+   "new": "Learners learned that a COUPLE is a pair of equal, parallel forces acting in opposite directions (anti-parallel) whose lines of action do not coincide. The moment of a couple = F × d (where d is the perpendicular distance between the two forces). A couple produces pure rotation with zero net translational force. Real-life Kenyan examples include a matatu steering wheel, a pipe wrench used by a Kisumu plumber, and a tap or bottle cap turned with finger and thumb.",
+   "where": "Lesson 4, summaryTablePrompt.learned",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-042",
+   "kind": "set",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Part of the group fix: the old text said the two-handed jembe grip is a couple whose widening explains the handle. It now states what the jembe is (a single-force moment about the blade) and how a couple differs, so the Summary Table that feeds the Final Explanation is correct.",
+   "lesson": 4,
+   "value": "The jembe is NOT a couple: one effort force at the grip acts at a distance d from the blade pivot, so its moment is M = F × d and a longer handle gives a larger moment (Lessons 2 and 3). A couple needs two equal and opposite forces, as with two hands on a steering wheel: spreading the hands apart increases the distance d between the forces, so the same push from each hand gives a larger turning effect. Both ideas use the rule moment = force × distance, but the distance is measured differently: from the pivot to the force for a single force, and between the two forces for a couple.",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "old": "The Kericho farmer's two-handed jembe grip forms a couple. By spreading her hands further apart (increasing d), she increases the moment of the couple (τ = F × d) without pushing harder (F unchanged). This greater rotational effect drives the blade into the soil more powerfully. This explains why widening the grip — or lengthening the handle — reduces the perceived effort needed to turn the jembe.",
+   "new": "The jembe is NOT a couple: one effort force at the grip acts at a distance d from the blade pivot, so its moment is M = F × d and a longer handle gives a larger moment (Lessons 2 and 3). A couple needs two equal and opposite forces, as with two hands on a steering wheel: spreading the hands apart increases the distance d between the forces, so the same push from each hand gives a larger turning effect. Both ideas use the rule moment = force × distance, but the distance is measured differently: from the pivot to the force for a single force, and between the two forces for a couple.",
+   "where": "Lesson 4, summaryTablePrompt.explained",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-043",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 4 shows a couple turning a rule one way, not 'opposing moments'. Knock-on of the group fix.",
+   "lesson": 5,
+   "old": "In Lesson 4 learners gathered evidence that anti-parallel forces can create opposing moments on a beam or tool. In this lesson they move",
+   "new": "In Lesson 4 learners found that a couple (two equal, opposite forces) turns an object about its own centre with moment F × d. In this lesson they move",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Lesson 5, slo.purposeInStoryline",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-044",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Closes the loop of the audit item: the Lesson 4 DQB question 'is the jembe a couple?' was parked for Lesson 5 but never answered. Check: 50 N and 20 N are unequal, so the net force is 30 N, not zero, so it is not a couple. Also shortens this wait from 30 to 10 seconds (see the Lesson 5 timing group).",
+   "lesson": 5,
+   "old": "Aisha, tell us — using your calculation.' WAIT 30 seconds.",
+   "new": "Aisha, tell us — using your calculation.' WAIT 10 seconds. Finally answer the Lesson 4 DQB question (is the jembe a couple?): 'In Problem Set A the push at the grip (50 N) and the soil's force (20 N) are not equal and not at the same distance from the pivot, so this is not a couple; the jembe works through the moment of one force about the blade, so a longer handle means a larger moment. A couple needs two EQUAL, opposite forces, as with two hands on a steering wheel.' Move the card to the answered column.",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-045",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 5's preview named applications (bridges, wheelbarrows, a bus) that Lessons 6 and 7 do not contain, and said Lesson 7 was about applications although it is the synthesis lesson. The preview now matches.",
+   "lesson": 5,
+   "old": "These wonder questions will guide Lessons 6 and 7 where we look at real applications — bridges, wheelbarrows, and the steering on a Rift Valley bus.'",
+   "new": "These wonder questions will guide Lesson 6, where we look at real applications — gates, taps, cranes, pliers and bicycle brakes — and Lesson 7, where we bring everything back to the Driving Question Board.'",
+   "group": "G-L6P",
+   "group_headline": "Lessons 5 and 6 told learners that anti-parallel forces and applications such as bridges come later, but those were taught in Lessons 4-5 and Lesson 7 is the synthesis lesson; previews now match",
+   "where": "Lesson 5, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-046",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].exemplar",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the couple group fix: the exemplar listed the two-handed jembe grip as a couple. The same edit gives the answer to the new calculation part (f): 12 x 0.30 = 3.6 N·m (checked twice: 12 x 0.3 = 3.6).",
+   "old": "(e) Any two of: a pipe wrench used by a plumber in Kisumu, a tap wrench used by a plumber in Nairobi, the two-handed grip on a jembe handle.",
+   "new": "(e) Any two of: a pipe wrench used by a plumber in Kisumu, a tap wrench used by a plumber in Nairobi, a bicycle handlebar turned with both hands, a tap or bottle cap turned with finger and thumb. (The two-handed jembe grip is not an example: the jembe handle length works through the moment of one force about the blade.)\n(f) M = F × d = 12 N × 0.30 m = 3.6 N·m (a couple, so d is the distance between the two forces, not the distance from a pivot).",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Final Explanation, Part 4: Two hands on a steering wheel – couples, exemplar",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-047",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].prompt",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD outcome (b) is 'calculate the moments of anti-parallel forces', but Part 4 only asked learners to describe and explain couples; no calculation was assessed. A short calculation (answer 3.6 N·m) was added.",
+   "old": "(e) Give TWO other Kenyan examples of a couple.",
+   "new": "(e) Give TWO other Kenyan examples of a couple. (f) A plumber turns a tap wrench by pushing with 12 N from each hand, with the hands 0.30 m apart on the handle. Calculate the moment of the couple, with units.",
+   "where": "Final Explanation, Part 4: Two hands on a steering wheel – couples, prompt",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-048",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].exemplar",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "'Wide grips' invited the same confusion between hand spacing (a couple) and handle length (a single moment about the pivot) as Lesson 4; the jembe answer now speaks only of handle length.",
+   "old": "design tools with long handles or wide grips to increase",
+   "new": "design tools with long handles to increase",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Final Explanation, Part 5: Answering the driving question, exemplar",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-049",
+   "kind": "edit",
+   "target": "unit",
+   "path": "storylineThread",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The Lesson 4 storyline named the wheelbarrow and door handle, but Lesson 4 actually uses a steering wheel and a metre rule, and neither of those two examples is a couple.",
+   "old": "Learners are introduced to anti-parallel forces through the supporting phenomenon of the wheelbarrow and the door-handle.",
+   "new": "Learners are introduced to anti-parallel forces through a steering wheel turned with one finger versus two hands.",
+   "reference": "Moment of a couple (Nelkon and Parker, Advanced Level Physics, couples); KICD Grade 10 Physics curriculum design, Strand 1.0, Sub-strand 1.5 Moments and equilibrium (torque and couple)",
+   "group": "G-L4",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-050",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The direction was missing and 'upward' was ambiguous: an upward force on the grip's side turns the jembe the same way as a downward push on the far side of the pivot, so learners could not decide the direction of rotation. The wording now matches the overview and the Final Explanation Part 3 (clockwise 20 x 0.1 = 2 N·m against anticlockwise 50 x 0.8 = 40 N·m).",
+   "lesson": 5,
+   "old": "The soil resists the blade with an upward force of 20 N acting only 0.10 m from the same pivot.",
+   "new": "The soil resists the blade with a force of 20 N acting only 0.10 m from the same pivot, on the other side of the pivot from the grip, so that it turns the jembe clockwise while Kamau's push turns it anticlockwise.",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "where": "Lesson 5, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-051",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A sliding door has no hinge, so 'the same hinge' and a moment about it make no sense. A hinged door keeps the numbers (35 x 0.60 = 21 N·m against 15 x 0.40 = 6 N·m) and the question.",
+   "lesson": 5,
+   "old": "A conductor pushes a matatu sliding door FORWARD with 35 N",
+   "new": "A conductor pushes the hinged back door of a matatu FORWARD with 35 N",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-052",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "No answer key was given although teachers must judge the pair work. Recomputed: 50 x 0.8 = 40; 20 x 0.1 = 2; 40 - 2 = 38. 35 x 0.6 = 21; 15 x 0.4 = 6; 21 - 6 = 15. 400 x 0.6 = 240; 300 x 0.6 = 180; 240 + 180 = 420 (opposite forces at opposite ends of a bar about its midpoint turn it the same way).",
+   "lesson": 5,
+   "old": "Write the correct solutions on the board ONLY after cold-calling, not before.",
+   "new": "Write the correct solutions on the board ONLY after cold-calling, not before. ANSWER KEY — Set A: Kamau 50 × 0.80 = 40 N·m anticlockwise; soil 20 × 0.10 = 2 N·m clockwise; net 38 N·m anticlockwise, so the blade digs in. Set B: push 35 × 0.60 = 21 N·m; spring 15 × 0.40 = 6 N·m; both forces act on the same side of the hinge, so the moments oppose: net 15 N·m in the direction of the push. Set C: Ox A 400 × 0.60 = 240 N·m; Ox B 300 × 0.60 = 180 N·m; the forces are opposite and at opposite ends of the bar, so both turn it the SAME way and the moments ADD: net 420 N·m (not 60). Common slip: using 1.20 m instead of 0.60 m.",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "where": "Lesson 5, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-053",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The Summary Table said the moments of anti-parallel forces always act in opposite directions. That is false when the forces act on opposite sides of the pivot (the ox-cart crossbar: 240 + 180 = 420 N·m, both the same way), and it contradicts the Final Explanation Part 4, which says the two moments of a couple turn the same way and add. Checked: bar along x, pivot at the midpoint; Ox A at x = -0.6 m pulling +y gives torque x·Fy = (-0.6)(400) = -240 N·m, and Ox B at x = +0.6 m pulling -y gives (+0.6)(-300) = -180 N·m: same sign, so they add to -420 N·m.",
+   "lesson": 5,
+   "old": "For anti-parallel forces, the moments act in opposite directions; the net moment determines which way the object rotates.",
+   "new": "Each force has a moment about the pivot, and its direction (clockwise or anticlockwise) depends on which side of the pivot the force acts and which way it pushes. Moments in opposite senses are subtracted (as in the jembe and door problems); two opposite forces on opposite sides of the pivot, like the oxen on the cart crossbar, turn it the same way and their moments are added. The net moment decides which way the object rotates.",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "group": "G-L5",
+   "group_headline": "Lesson 5 said the moments of anti-parallel forces always oppose each other, but forces on opposite sides of a pivot (the ox-cart bar, a couple) give moments that add (240 + 180 = 420 N·m); summary, error example and answer key corrected",
+   "where": "Lesson 5, summaryTablePrompt.learned",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-054",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix (same rule stated in the 'explained' column).",
+   "lesson": 5,
+   "old": "When two anti-parallel forces act on an object, each creates a moment about the pivot: M = F × d. If the anticlockwise",
+   "new": "When two anti-parallel forces act on an object, each creates a moment about the pivot: M = F × d. The two moments add if the forces act on opposite sides of the pivot (as with the oxen) and subtract if both forces act on the same side (as with the door). If the anticlockwise",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "group": "G-L5",
+   "where": "Lesson 5, summaryTablePrompt.explained",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-055",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The original 'error' was not an error: for a steering wheel turned by two hands in opposite directions both moments ARE clockwise (or both anticlockwise), so labelling them both 'clockwise' is correct. The autopsy would have taught a wrong rule. It now uses the real common slip, subtracting moments that act the same way.",
+   "lesson": 5,
+   "old": "(wrong solution: student labelled both moments as 'clockwise' for a steering wheel turned by two hands in opposite directions)",
+   "new": "(wrong solution: a student SUBTRACTED the two ox-cart moments, 240 − 180 = 60 N·m, treating them as opposing; correct: the oxen pull in opposite directions at opposite ends, so both moments turn the bar the same way and ADD to 420 N·m)",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "group": "G-L5",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-056",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the group fix (matches the new first error example).",
+   "lesson": 5,
+   "old": "(one with missing direction, one using the wrong distance)",
+   "new": "(one that subtracts moments which actually turn the same way, one using the wrong distance)",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "group": "G-L5",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-057",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3,
+    2
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Time as written: Predict 2 min writing + two 30 s waits + cold-calls (about 4); Observe 13 min of problems plus 4 cold-calls per set with 30 s waits (up to 12 more minutes); Explain two error autopsies with three 30 s waits each plus a 3-minute summary box and the prediction check (about 10). The total could not fit 40 minutes. Wait times are cut to 10 s, and a pacing guide that adds up (5 + 15 + 8 + 5 + 5 + 2 = 40) is given. The overview also listed a 'steering wheel' problem set that does not exist (the sets are jembe, matatu door, ox-cart).",
+   "lesson": 5,
+   "old": "(Kenyan contexts: ox-cart axle in the Rift Valley, matatu door handle, steering wheel) in pairs using the Predict–Calculate–Check cycle, with teacher cold-calling a minimum of 4 learners per problem set and enforcing a 30-second wait time.",
+   "new": "(jembe, matatu back door and ox-cart crossbar in the Rift Valley) in pairs using the Predict–Calculate–Check cycle, with teacher cold-calling at least 4 learners per problem set and using a 10-second wait time. Pacing for the 40-minute period: Predict 5, Observe 15, Explain 8, Driving Question Board 5, Model Building 5, transitions 2.",
+   "group": "G-L5T",
+   "group_headline": "Lesson 5's 30-second waits and cold-calls could not fit 40 minutes; waits cut to 10 seconds and a pacing guide added",
+   "where": "Lesson 5, overview",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-058",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Wait time shortened (see the group headline).",
+   "lesson": 5,
+   "old": "'Aisha, tell me your prediction for direction of rotation.' WAIT 30 seconds before prompting. 'Brian, give me your rough estimate — which moment do you think is bigger?' WAIT 30 seconds.",
+   "new": "'Aisha, tell me your prediction for direction of rotation.' WAIT 10 seconds before prompting. 'Brian, give me your rough estimate — which moment do you think is bigger?' WAIT 10 seconds.",
+   "group": "G-L5T",
+   "where": "Lesson 5, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-059",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Wait time shortened (see the group headline).",
+   "lesson": 5,
+   "old": "what direction is Kamau's moment?' WAIT 30 seconds. 'Otieno, do you agree with Zawadi? Why or why not?' WAIT 30 seconds.",
+   "new": "what direction is Kamau's moment?' WAIT 10 seconds. 'Otieno, do you agree with Zawadi? Why or why not?' WAIT 10 seconds.",
+   "group": "G-L5T",
+   "where": "Lesson 5, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-060",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Wait times after the silent 30-second search shortened (see the group headline).",
+   "lesson": 5,
+   "old": "WAIT 30 seconds. Cold-call: 'Fatuma, what is the error?' WAIT 30 seconds. 'Mwangi, can you explain WHY that error leads to a wrong answer?' WAIT 30 seconds.",
+   "new": "WAIT 30 seconds. Cold-call: 'Fatuma, what is the error?' WAIT 10 seconds. 'Mwangi, can you explain WHY that error leads to a wrong answer?' WAIT 10 seconds.",
+   "group": "G-L5T",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-061",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the shortened wait times.",
+   "lesson": 5,
+   "old": "Were the 30-second wait times observed",
+   "new": "Were the 10-second wait times observed",
+   "group": "G-L5T",
+   "where": "Lesson 5, teacherReflection",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-062",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Time as written: Predict about 10; walk-around 25 + 5 to choose examples = 30; 10 groups x 2 min talks = 20 + 3 min mounting + three 2-3 minute videos = about 32; Driving Question Board 8; Model Building about 9 = roughly 90 minutes in an 80-minute period. Teachers were also told to spend 5 minutes at each group zone, which is 50 minutes for 10 groups during a 25-minute walk. Talks are now 1 minute (10 minutes for 10 groups) and teacher visits about 2 minutes per group; pacing 8 + 28 + 24 + 8 + 10 + 2 = 80.",
+   "lesson": 6,
+   "old": "Back in class, groups mount a mini gallery display and present their findings in a 2-minute structured talk.",
+   "new": "Back in class, groups mount a mini gallery display and present one example each in a 1-minute structured talk. Pacing for the 80-minute period: Predict 8, walk-around and choosing examples 28, gallery talks and videos 24, Driving Question Board 8, Model Building 10, transitions 2.",
+   "group": "G-L6T",
+   "group_headline": "Lesson 6 added up to about 90 minutes in an 80-minute period (and asked for 5 minutes at each of 10 groups during a 25-minute walk); talks and visits shortened and a pacing guide added",
+   "where": "Lesson 6, overview",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-063",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "5 minutes per group is impossible in a 25-minute walk with about 10 groups (see group headline).",
+   "lesson": 6,
+   "old": "spending approximately 5 minutes per group zone.",
+   "new": "spending about 2 minutes per group (longer only where a group is stuck).",
+   "group": "G-L6T",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-064",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Talk time cut from 2 to 1 minute (10 groups x 1 min = about 10 minutes instead of 15-20).",
+   "lesson": 6,
+   "old": "Groups then do a 2-minute structured stand-up presentation: Spokesperson 1 names the object and points to pivot, effort, and load. Spokesperson 2 states the estimated moment calculation aloud (e.g., 'The school gate hinge is the pivot. We pushed at 0.9 m from the hinge with about 15 N of force. Moment = 15 × 0.9 = 13.5 N·m.'). After all group presentations (approximately 15 minutes)",
+   "new": "Groups then do a 1-minute structured stand-up presentation of ONE of their two sketches: Spokesperson 1 names the object and points to pivot, effort, and load. Spokesperson 2 states the estimated moment calculation aloud (e.g., 'The school gate hinge is the pivot. We pushed at 0.9 m from the hinge with about 15 N of force. Moment = 15 × 0.9 = 13.5 N·m.'). After all group presentations (approximately 10 minutes)",
+   "group": "G-L6T",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-065",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 1-minute talks.",
+   "lesson": 6,
+   "old": "T times each presentation strictly at 2 minutes using a visible timer. After each group, T asks ONE clarifying question to the presenting group using cold-call, rotating through different group members:",
+   "new": "T times each presentation strictly at 1 minute using a visible timer. After about every third group, T asks ONE clarifying question using cold-call, rotating through different group members and groups:",
+   "group": "G-L6T",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-066",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A 'moment ratio of 6:1' is wrong: when a lever balances, the two moments are EQUAL. What is 6:1 is the ratio of the arms (12 cm : 2 cm), which multiplies the force: F_hand x 12 = F_cable x 2, so F_cable = 6 x F_hand (checked: 12 / 2 = 6). The look-fors for the pliers and crane clips give teachers the expected answers for the table learners fill in.",
+   "lesson": 6,
+   "old": "T writes key values on the board: 'Bicycle brake lever: pivot = brake pivot bolt; effort arm ≈ 12 cm; braking force arm ≈ 2 cm. Moment ratio = 6:1 — why does this matter for the boda-boda rider?'",
+   "new": "T writes key values on the board: 'Bicycle brake lever: pivot = brake pivot bolt; effort arm ≈ 12 cm; cable (braking force) arm ≈ 2 cm. The arms are in the ratio 6:1, so the cable pulls about 6 times harder than the hand — why does this matter for the boda-boda rider?' Look-fors for the other clips: pliers — pivot = the joint (rivet) between the jaws; the long handles give a long effort arm and the short jaws a short load arm, so a small squeeze gives a large force on the metal. Crane — pivot = the hinge or tower at the base of the boom; a counterweight on the other side balances the moment of the load.",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque', section on simple machines (levers: mechanical advantage = effort arm / load arm)",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-067",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "criteria": [
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The words effort, load, effort arm and load arm are used on the observation guide and in the slides and videos but were never defined earlier (Lessons 1-5 only use force, pivot and distance), so learners met new vocabulary while labelling real objects.",
+   "lesson": 6,
+   "old": "Object name / Pivot location / Where effort is applied / Estimated effort arm length / Estimated moment.",
+   "new": "Object name / Pivot location / Where effort is applied / Estimated effort arm length / Estimated moment. Give working meanings in one minute: effort = the force you apply; load = the force you are working against (for example the soil on the jembe blade or the weight in a wheelbarrow); effort arm and load arm = the perpendicular distance from the pivot to the effort and to the load, the same 'd' as in M = F × d.",
+   "where": "Lesson 6, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-068",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The outdoor walk assumed every learner can walk the route and sketch; no accommodation or alternative way to show understanding was given.",
+   "lesson": 6,
+   "old": "T assigns each group a starting zone to avoid crowding.",
+   "new": "T assigns each group a starting zone to avoid crowding. For learners who use a wheelchair, have low vision or tire easily, include a nearby accessible zone (for example the classroom door, desks and window stays), or give them the role of recorder or timekeeper; a sketch, a photograph, a spoken description or a labelled drawing made by a partner are all acceptable ways to record an example.",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-069",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 6 said anti-parallel forces come in 'the next lesson', but they were taught in Lessons 4 and 5; Lesson 7 is the synthesis lesson. The preview now says what Lesson 7 does.",
+   "lesson": 6,
+   "old": "In our next lesson we will look at anti-parallel forces — where two moments act on the same object in opposite directions, like a seesaw or a loaded wheelbarrow. Will the same rule still hold? That is your question to think about before Lesson 7.",
+   "new": "In our next lesson we will bring everything back to the Driving Question Board and to the seesaw, wheelbarrow and spanner puzzles from the start of the unit. Will the same rule explain them all? That is your question to think about before Lesson 7.",
+   "group": "G-L6P",
+   "where": "Lesson 6, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-070",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the corrected Lesson 7 preview.",
+   "lesson": 6,
+   "old": "This will directly inform the emphasis of Lesson 7 (anti-parallel forces and the principle of moments in balance).",
+   "new": "This will directly inform the emphasis of Lesson 7 (bringing the supporting phenomena back to the Driving Question Board).",
+   "group": "G-L6P",
+   "where": "Lesson 6, teacherReflection",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-071",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    1,
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The numbers did not show what the lesson claimed. With load moment 40 x 0.1 = 4 N·m, the SHORT handle's 24 N·m was still six times larger, so it would also have dug easily ('much closer to or less than the load' was false). New numbers, recomputed twice: load 300 N x 0.1 m = 30 N·m; long handle 80 x 0.9 = 72 N·m (greater, digs); short handle 80 x 0.3 = 24 N·m (less, does not); effort needed with the short handle = 30 / 0.3 = 100 N, with the long handle = 30 / 0.9 = 33 N. Handle lengths now match the Lesson 1 video and the Final Explanation (90 cm and 30 cm). 'Weight of soil' was also wrong: the load is the soil's resisting force on the blade.",
+   "lesson": 7,
+   "old": "the load force arrow (weight of soil resisting blade) with direction, the perpendicular distance from pivot to load (load arm in metres), the calculated moment of the effort (M = F x d), and the calculated moment of the load (M = F x d). Learners use realistic Kenyan farm values: effort force approximately 80 N, effort arm 1.2 m for long handle versus 0.3 m for short handle, load force 40 N, load arm 0.1 m. They calculate both moments and write a conclusion: For the long-handled jembe, effort moment = 80 x 1.2 = 96 Nm. Load moment = 40 x 0.1 = 4 Nm. The effort moment far exceeds the load moment, so the blade easily rotates into the soil. For the short-handled jembe, effort moment = 80 x 0.3 = 24 Nm — much closer to or less than the load moment, making digging much harder.",
+   "new": "the load force arrow (the soil's resisting force on the blade) with direction, the perpendicular distance from pivot to load (load arm in metres), the calculated moment of the effort (M = F x d), and the calculated moment of the load (M = F x d). Learners use realistic values that match the Lesson 1 video: effort force approximately 80 N, effort arm 0.9 m for the long handle versus 0.3 m for the short handle, and a soil resistance (load) of about 300 N acting 0.1 m from the pivot. They calculate both moments and write a conclusion: For the long-handled jembe, effort moment = 80 x 0.9 = 72 Nm. Load moment = 300 x 0.1 = 30 Nm. The effort moment exceeds the load moment, so the blade rotates into the soil. For the short-handled jembe, effort moment = 80 x 0.3 = 24 Nm — less than the load moment of 30 Nm, so the same 80 N push is not enough; the farmer must push harder (about 100 N) or tire quickly.",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "group": "G-L7N",
+   "group_headline": "Lesson 7's numbers showed the short handle still winning (24 N·m against a 4 N·m load); now load 30 N·m, long handle 72 N·m digs, short handle 24 N·m does not, with lengths matching the video",
+   "where": "Lesson 7, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-072",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the corrected Lesson 7 numbers.",
+   "lesson": 7,
+   "old": "the effort moment of 96 Nm far exceeds the load moment of 4 Nm,",
+   "new": "the effort moment of 72 Nm exceeds the load moment of 30 Nm while the short handle's 24 Nm does not,",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "group": "G-L7N",
+   "where": "Lesson 7, summaryTablePrompt.explained",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-073",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Time as written: Predict about 4, Observe 6, Explain 8 + peer review 3 = 11, Driving Question Board 5 + 2 + 3 + 1 = 11, Model Building about 5 + 3 + 4 + 1 = 13: roughly 45 minutes in a 40-minute period. Trimmed: drawing 6 min, group model 4, gallery 2, discussion 3; new pacing 4 + 6 + 9 + 11 + 10 = 40.",
+   "lesson": 7,
+   "old": "directly answering the driving question.",
+   "new": "directly answering the driving question. Pacing for the 40-minute period: Predict 4, Observe 6, Explain 9, Driving Question Board 11, Model Building 10.",
+   "group": "G-L7T",
+   "group_headline": "Lesson 7 added up to about 45 minutes in a 40-minute period; drawing, group-model, gallery and discussion times trimmed and a pacing guide added",
+   "where": "Lesson 7, overview",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-074",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Drawing time trimmed (see the group headline).",
+   "lesson": 7,
+   "old": "You have 8 minutes. Begin.",
+   "new": "You have 6 minutes. Begin.",
+   "group": "G-L7T",
+   "where": "Lesson 7, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-075",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Gallery and discussion trimmed (see the group headline).",
+   "lesson": 7,
+   "old": "Groups display models on desks for a 3-minute standing gallery walk. Each group leaves one member as a guide at their model to answer questions from peers passing by. After the gallery walk, teacher facilitates a 4-minute whole-class sensemaking discussion",
+   "new": "Groups display models on desks for a 2-minute standing gallery walk. Each group leaves one member as a guide at their model to answer questions from peers passing by. After the gallery walk, teacher facilitates a 3-minute whole-class sensemaking discussion",
+   "group": "G-L7T",
+   "where": "Lesson 7, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-076",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Group model time trimmed (see the group headline).",
+   "lesson": 7,
+   "old": "During group model building (approximately 5 minutes)",
+   "new": "During group model building (approximately 4 minutes)",
+   "group": "G-L7T",
+   "where": "Lesson 7, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-077",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The seesaw is worked in Lesson 3 and the wheelbarrow is a supporting phenomenon of the unit, not of Lessons 4 or 6, so the options now say where each comes from.",
+   "lesson": 7,
+   "old": "chosen by the group from Lessons 4 or 6 (door handle, seesaw, wheelbarrow, crane, pliers, or bicycle brake)",
+   "new": "chosen by the group from Lessons 3 to 6 or the unit's supporting phenomena (seesaw, steering wheel, gate or door handle, wheelbarrow, crane, pliers, or bicycle brake)",
+   "group": "G-WB",
+   "where": "Lesson 7, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-078",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Teachers had no expected answers for the wheelbarrow or crane, and the unit's wheelbarrow phenomenon was wrong (see the group headline). Checked: F x (hand distance) = W x (load distance); the load is nearer the pivot, so F < W.",
+   "lesson": 7,
+   "old": "For groups that chose the wheelbarrow or crane, affirm the complexity and ask: What is the pivot in this system? How did the engineer use a long effort arm here?",
+   "new": "For groups that chose the wheelbarrow or crane, affirm the complexity and ask: What is the pivot in this system? How did the engineer use a long effort arm here? Look-fors — wheelbarrow: pivot = the wheel axle; the hands lift far from the pivot while the load sits closer to it, so a small effort balances a bigger load, and sliding the load towards the wheel makes lifting easier. Crane: pivot = the hinge or tower at the base of the boom; a counterweight on the other side balances the load's moment.",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "group": "G-WB",
+   "where": "Lesson 7, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-079",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Time as written: Predict 7, written paper 25 + collecting 2, practical 15 + whole-class explanation 10, Driving Question Board about 12 (5 min + all groups sharing 30 s each), Model Building 6 + 5 + closing = 12: about 84 minutes in an 80-minute period. Only four groups now share aloud (saves 3 minutes): 7 + 27 + 25 + 9 + 12 = 80.",
+   "lesson": 8,
+   "old": "and what this means for tool design in Kenya and beyond.",
+   "new": "and what this means for tool design in Kenya and beyond. Pacing for the 80-minute period: Predict 7, Observe 27, Explain 25, Driving Question Board 9, Model Building 12.",
+   "group": "G-L8T",
+   "group_headline": "Lesson 8 added up to about 84 minutes in an 80-minute period; the Driving Question Board share-out is shortened to four groups and a pacing guide added",
+   "where": "Lesson 8, overview",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-080",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Shortened share-out (see the group headline).",
+   "lesson": 8,
+   "old": "Groups share their 'Connections to Real Life' notes aloud (30 seconds per group, teacher calls on all groups).",
+   "new": "Four groups chosen by the teacher share their 'Connections to Real Life' notes aloud (30 seconds each); the other notes stay on the board.",
+   "group": "G-L8T",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-081",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the shortened share-out.",
+   "lesson": 8,
+   "old": "After 5 minutes, call groups back. Go around all groups for 'Connections to Real Life'",
+   "new": "After 5 minutes, call groups back. Call on four groups for 'Connections to Real Life' (30 seconds each)",
+   "group": "G-L8T",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-082",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    5,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The item said the water was both the pivot and the resistance, so the problem could not be set up. In this simplified oar model the rowlock is the pivot: effort arm = 2.4 - 0.4 = 2.0 m, effort moment = 80 x 2.0 = 160 N·m; load moment = 480 x 0.4 = 192 N·m; 160 is not equal to 192, so the oar is not in equilibrium (the water wins; 400 N would balance 160 N·m). The marks (6) and numbers are unchanged.",
+   "lesson": 8,
+   "old": "uses a 2.4 m wooden oar as a lever to push his boat away from a dock. He applies a force of 80 N at one end; the water acts as a pivot at a point 0.4 m from the blade end. (a) Identify the effort, load, and pivot. (b) Calculate the moment of Ochieng's effort about the pivot. (c) If the water resistance is 480 N, is the oar in equilibrium? Show your working.",
+   "new": "uses a 2.4 m wooden oar as a lever to row his boat. The oar turns about the rowlock (the pivot), which is 0.4 m from the blade end. He pulls with a force of 80 N at the handle end, and the water pushes back on the blade end with a force of 480 N. (a) Identify the effort, load, and pivot. (b) Calculate the moment of Ochieng's effort about the pivot. (c) Calculate the moment of the water force about the pivot. Is the oar in equilibrium? Show your working.",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-083",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "No answer key was given for the marked paper. Recomputed: 2.4 - 0.4 = 2.0; 80 x 2.0 = 160; 480 x 0.4 = 192. 3 x 30 = 90; 90 / 4 = 22.5 cm, and 50 + 22.5 = 72.5 cm (on the other side of the pivot). 200 x 1.8 = 360. 50 x 0.4 = 20; 50 x 0.8 = 40.",
+   "lesson": 8,
+   "old": "Collect all papers promptly.",
+   "new": "Collect all papers promptly. ANSWER KEY — Item 1: effort = the 80 N pull at the handle, load = the 480 N water force on the blade, pivot = the rowlock; effort moment 80 × 2.0 = 160 N·m; load moment 480 × 0.4 = 192 N·m; not in equilibrium (160 < 192). Item 2: 3 N × 30 cm = 90 N·cm = 4 N × d, so d = 22.5 cm, at the 72.5 cm mark. Item 3: (a) 0 N; (b) 200 N × 1.8 m = 360 N·m; (c) it rotates but does not translate (zero resultant force, non-zero moment). Item 4: (a) 50 × 0.4 = 20 N·m and 50 × 0.8 = 40 N·m; (b) the longer handle doubles the distance from the pivot, so the moment doubles for the same force.",
+   "reference": "OpenStax College Physics 2e, Chapter 9 'Statics and Torque' (torque, static equilibrium, simple machines)",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-084",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "As written, the teacher called learners one at a time to ONE bench for 15 minutes; with 40 learners that is under 40 seconds each for three questions with 10-second waits, and the teacher notes themselves contradicted it (8 stations prepared, 'two simultaneous stations' for 40 learners). Groups of 4-5 at 8 stations with 2 minutes per group fits 15 minutes (8 x 2 = 16, about 15 with rounding) and still gives every learner an individual question. The teacher must decide whether to assess in groups like this or to assess the practical over several lessons.",
+   "lesson": 8,
+   "old": "PART A — PRACTICAL ASSESSMENT (15 minutes, staggered): While most of the class completes a structured peer-review task (see below), the teacher calls learners one at a time to the demonstration bench. Each learner is given a metre rule balanced on a pencil pivot at the 50 cm mark, two known masses (e.g., a 100 g stone tied with string at a known position), and a third unknown mass. The learner must: (i) hang the two known masses at specified positions, (ii) find the position to hang the third mass to achieve balance, and (iii) verbally explain what they did using the Principle of Moments ('The sum of clockwise moments equals the sum of anti-clockwise moments'). Teacher awards marks for correct placement AND for verbal explanation. While waiting, learners complete a peer-review of a model answer to Item 2 (printed on a card), marking it using a provided 3-point rubric.",
+   "new": "PART A — PRACTICAL ASSESSMENT (15 minutes, by group): Learners work in groups of four or five at practical stations while the teacher visits each station in turn (about 2 minutes per group). Each station has a metre rule balanced on a pencil pivot at the 50 cm mark, two known masses (e.g., a 100 g stone tied with string at a known position), and a third unknown mass. The group must: (i) hang the two known masses at specified positions, (ii) find the position to hang the third mass to achieve balance, and (iii) explain what they did using the Principle of Moments ('The sum of clockwise moments equals the sum of anti-clockwise moments'). When the teacher arrives, each member answers one of the three questions (the teacher chooses who, and rotates the questions between groups), so every learner is assessed on at least one question; marks are given for correct placement AND for the verbal explanation. Before the teacher arrives, and while the teacher is at another station, learners complete a peer-review of a model answer to Item 2 (printed on a card), marking it using a provided 3-point rubric.",
+   "group": "G-L8TP",
+   "group_headline": "Assessing every learner one by one on the metre rule in 15 minutes was impossible for 40 learners (under 40 seconds each); now groups of four or five at stations, each member answering one question",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-085",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the group-based practical assessment.",
+   "lesson": 8,
+   "old": "so that multiple learners can be assessed in rotation if the class is large (adjust timing for class size; for 40 learners, run two simultaneous assessment stations). At each station, ask exactly these three questions:",
+   "new": "one per group of four or five (for a smaller class use fewer stations; if you have fewer than 8 metre rules, run the practical in two rounds of about 7 minutes while the rest of the class does the peer-review task). Visit each station in turn (about 2 minutes) and, at each station, ask exactly these three questions, giving each question to a different group member:",
+   "group": "G-L8TP",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-086",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "instructions",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Guideline 7 asks that completed Summary Tables are used to build the final explanation; the task did not point learners to them.",
+   "old": "using the evidence you collected in this unit.",
+   "new": "using the evidence you collected in this unit (your Summary Tables and the Driving Question Board will help you).",
+   "where": "Final Explanation, instructions",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-087",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The rubric descriptors now name the levels (Exceeds, Meets, Approaches Expectations) so teachers can see the CBE level wording in the printed text. The couples criterion also now asks for a calculation, matching the new Part 4(f). The old text did not change otherwise.",
+   "value": [
+    {
+     "criterion": "Use of M = F × d and the Principle of Moments",
+     "excellent": "Exceeds Expectations: calculates every moment correctly with units, converts masses to weights using g = 10 N/kg, identifies clockwise and anticlockwise moments, and states the Principle of Moments accurately.",
+     "proficient": "Meets Expectations: calculates most moments correctly with units and states the Principle of Moments with minor gaps, such as a missing direction or unit.",
+     "developing": "Approaches Expectations: makes frequent calculation errors, omits units or directions, or cannot state the Principle of Moments."
+    },
+    {
+     "criterion": "Explaining the Jembe Handle Puzzle",
+     "excellent": "Exceeds Expectations: identifies the blade-soil contact as the pivot and explains that the longer handle (90 cm against 30 cm) gives a larger perpendicular distance and so a larger moment for the same force, rejecting the idea that a bigger force is needed.",
+     "proficient": "Meets Expectations: explains that a longer handle makes digging easier and refers to distance and moment, but the pivot or the same-force reasoning is incomplete.",
+     "developing": "Approaches Expectations: says only that a longer handle is easier or gives vague reasons, without linking to moment, pivot or perpendicular distance."
+    },
+    {
+     "criterion": "Understanding of couples and net moment",
+     "excellent": "Exceeds Expectations: defines a couple correctly, explains zero net force with pure rotation, calculates the moment of a couple using F × d with the distance between the forces, and explains a real couple such as the two-handed steering wheel grip. Uses the perpendicular distance, not the arrow length.",
+     "proficient": "Meets Expectations: defines a couple and gives F × d, with small gaps in the calculation, in explaining net force, or in the steering wheel example.",
+     "developing": "Approaches Expectations: confuses a couple with a single force, or does not explain why the object turns."
+    },
+    {
+     "criterion": "Connecting to Kenyan contexts and the driving question",
+     "excellent": "Exceeds Expectations: gives a coherent answer to the driving question with at least two correct Kenyan examples, each with pivot and design reason, and clearly shows how thinking changed since Lesson 1.",
+     "proficient": "Meets Expectations: gives a mostly complete answer with two examples, where the pivot or design reasoning is partly missing.",
+     "developing": "Approaches Expectations: gives one example or none, with little link to the driving question or to the change in thinking."
+    }
+   ],
+   "old": "[{\"criterion\": \"Use of M = F × d and the Principle of Moments\", \"excellent\": \"Calculates every moment correctly with units, converts masses to weights using g = 10 N/kg, identifies clockwise and anticlockwise moments, and states the Principle of Moments accurately.\", \"proficient\": \"Calculates most moments correctly with units and states the Principle of Moments with minor gaps, such as a missing direction or unit.\", \"developing\": \"Makes frequent calculation errors, omits units or directions, or cannot state the Principle of Moments.\"}, {\"criterion\": \"Explaining the Jembe Handle Puzzle\", \"excellent\": \"Identifies the blade-soil contact as the pivot and explains that the longer handle (90 cm against 30 cm) gives a larger perpendicular distance and so a larger moment for the same force, rejecting the idea that a bigger force is needed.\", \"proficient\": \"Explains that a longer handle makes digging easier and refers to distance and moment, but the pivot or the same-force reasoning is incomplete.\", \"developing\": \"Says only that a longer handle is easier or gives vague reasons, without linking to moment, pivot or perpendicular distance.\"}, {\"criterion\": \"Understanding of couples and net moment\", \"excellent\": \"Defines a couple correctly, explains zero net force with pure rotation, uses F × d between the forces, and explains a real couple such as the two-handed steering wheel grip. Uses the perpendicular distance, not the arrow length.\", \"proficient\": \"Defines a couple and gives F × d, with small gaps in explaining net force or the steering wheel example.\", \"developing\": \"Confuses a couple with a single force, or does not explain why the object turns.\"}, {\"criterion\": \"Connecting to Kenyan contexts and the driving question\", \"excellent\": \"Gives a coherent answer to the driving question with at least two correct Kenyan examples, each with pivot and design reason, and clearly shows how thinking changed since Lesson 1.\", \"proficient\": \"Gives a mostly complete answer with two examples, where the pivot or design reasoning is partly missing.\", \"developing\": \"Gives one example or none, with little link to the driving question or to the change in thinking.\"}]",
+   "new": "[{\"criterion\": \"Use of M = F × d and the Principle of Moments\", \"excellent\": \"Exceeds Expectations: calculates every moment correctly with units, converts masses to weights using g = 10 N/kg, identifies clockwise and anticlockwise moments, and states the Principle of Moments accurately.\", \"proficient\": \"Meets Expectations: calculates most moments correctly with units and states the Principle of Moments with minor gaps, such as a missing direction or unit.\", \"developing\": \"Approaches Expectations: makes frequent calculation errors, omits units or directions, or cannot state the Principle of Moments.\"}, {\"criterion\": \"Explaining the Jembe Handle Puzzle\", \"excellent\": \"Exceeds Expectations: identifies the blade-soil contact as the pivot and explains that the longer handle (90 cm against 30 cm) gives a larger perpendicular distance and so a larger moment for the same force, rejecting the idea that a bigger force is needed.\", \"proficient\": \"Meets Expectations: explains that a longer handle makes digging easier and refers to distance and moment, but the pivot or the same-force reasoning is incomplete.\", \"developing\": \"Approaches Expectations: says only that a longer handle is easier or gives vague reasons, without linking to moment, pivot or perpendicular distance.\"}, {\"criterion\": \"Understanding of couples and net moment\", \"excellent\": \"Exceeds Expectations: defines a couple correctly, explains zero net force with pure rotation, calculates the moment of a couple using F × d with the distance between the forces, and explains a real couple such as the two-handed steering wheel grip. Uses the perpendicular distance, not the arrow length.\", \"proficient\": \"Meets Expectations: defines a couple and gives F × d, with small gaps in the calculation, in explaining net force, or in the steering wheel example.\", \"developing\": \"Approaches Expectations: confuses a couple with a single force, or does not explain why the object turns.\"}, {\"criterion\": \"Connecting to Kenyan contexts and the driving question\", \"excellent\": \"Exceeds Expectations: gives a coherent answer to the driving question with at least two correct Kenyan examples, each with pivot and design reason, and clearly shows how thinking changed since Lesson 1.\", \"proficient\": \"Meets Expectations: gives a mostly complete answer with two examples, where the pivot or design reasoning is partly missing.\", \"developing\": \"Approaches Expectations: gives one example or none, with little link to the driving question or to the change in thinking.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-14T09:29:46"
+  },
+  {
+   "id": "gensci_3_1-088",
+   "kind": "flag",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The contract allows only three level fields (excellent, proficient, developing) and the printed headings are fixed by the template, so the fourth CBE level, Below Expectations, cannot be represented. Suggestion for teachers: add a 'Below Expectations' column by hand when marking, for a learner who cannot calculate any moment or link force, distance and turning effect. The template or contract needs a decision from the project owner.",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-14T09:29:46"
+  }
+ ]
+}

@@ -1,0 +1,2068 @@
+{
+ "module": "math_2_4",
+ "records": [
+  {
+   "id": "math_2_4-001",
+   "kind": "edit",
+   "target": "unit",
+   "path": "phenomenon",
+   "old": "advertised as holding exactly 5,000 litres of water. When a group of Grade 10 students visits the factory, they notice that the frustum tank uses noticeably less metal sheet than the composite cylinder-hemisphere tank, yet holds the same volume of water. The students are puzzled: if both tanks hold the same amount of water (same volume), why does one require significantly less material to build",
+   "new": "advertised as holding 5,000 litres of water (Lessons 6 and 7 check this: about 5,030 litres and about 5,010 litres). When a group of Grade 10 students visits the factory, they notice that the frustum tank uses less metal sheet than the composite cylinder-hemisphere tank (about 4% less: 16.29 m² against 16.93 m²), yet holds the same amount of water. The students are puzzled: if both tanks hold the same amount of water (same volume), why does one require less material to build",
+   "teacher_decision": true,
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "group_headline": "The two tanks did not add up: the frustum tank held only 1,300-3,300 L in the lessons and the composite tank had different sizes in Lessons 5, 6 and 10. One pair of tanks (both about 5,000 L, frustum about 4% less metal) is now used in every lesson.",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Old data: the frustum tank in Lesson 3 (R 0.8, r 0.4, l 1.2 m) holds only about 1.3 m3 and in Lesson 7 (R 0.9, r 0.5, h 2.1 m) 3.3 m3, never 5,000 L; the composite tank was r 0.8, h 2.0 m in Lesson 5 but r 0.7, h 2.8 m in Lesson 6; Lesson 10 used a third set. I also searched by computer all closed frustums of volume 5 m3: the smallest total surface is about 16.19 m2, so a saving of 9 m2 (old text) is impossible against any sensibly shaped composite tank. New common data. Composite: cylinder r 0.7 m, h 2.8 m plus hemisphere r 0.7 m: V = pi(0.49x2.8 + 2/3x0.343) = 5.029 m3 (5,030 L); SA = 3.92pi + 0.49pi + 0.98pi = 5.39pi = 16.93 m2. Frustum: R 1.0 m, r 0.8 m, h 1.96 m, slant l = sqrt(1.96^2 + 0.2^2) = 1.97 m: V = pi x 1.96/3 x (1 + 0.8 + 0.64) = 5.008 m3 (5,010 L); SA = pi(1 + 0.64) + pi x 1.8 x 1.97 = 16.29 m2. Checked by hand and by script. The frustum saves 0.64 m2 (about 4%, about Ksh 540 per tank at Ksh 850/m2): the real size of the effect, because the composite tank is tall and narrow while the frustum is shorter and wider. TEACHER DECISION: accept this smaller difference (all later lessons now say 'about 4%'), or replace the tanks with a different pair.",
+   "where": "Unit overview, phenomenon",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-002",
+   "kind": "edit",
+   "target": "unit",
+   "path": "storylineThread",
+   "old": "directly comparing it to the frustum tank from Lessons 3–4",
+   "new": "directly comparing it to the frustum tank from Lesson 3",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Lesson 4 is the frustum of a pyramid, not the Kisumu tank; the tank frustum is only in Lesson 3.",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-003",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "lesson": 1,
+   "old": "that both hold exactly 5,000 litres, but the frustum uses noticeably less metal sheet",
+   "new": "that both hold 5,000 litres (checked in Lessons 6 and 7), but the frustum uses somewhat less metal sheet",
+   "teacher_decision": false,
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "The two tanks hold about 5,030 L and 5,010 L and differ in metal by about 4%, so 'exactly' and 'noticeably less' overstated it (see group headline).",
+   "where": "Lesson 1, overview",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-004",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "lesson": 1,
+   "old": "can have very different surface areas",
+   "new": "can have different surface areas",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Matches the corrected tank data: same-volume solids differ in surface area, but for the two Kisumu tanks only by about 4%.",
+   "where": "Lesson 1, summaryTablePrompt.explained",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-005",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].formativeAssessment",
+   "lesson": 1,
+   "old": "Cold-call responses reveal the range of prior conceptions to inform pacing.",
+   "new": "Cold-call responses reveal the range of prior conceptions to inform pacing. What good sounds like: 'Tank B is shorter and wider, so it needs less wall' or 'Tank A is tall and has a dome on top, so more curved sheet'. If a learner says 'Tank B is smaller so it holds less water', point to the two 5,000-litre labels: same volume. If a learner says 'same volume means the same metal', record it as a prediction to test, not as an error.",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "why": "Teachers had no example of what a good prediction sounds like or what to do with the two commonest wrong ideas. The 'shorter and wider' answer is the one the data in Lessons 5 to 10 will support.",
+   "where": "Lesson 1, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-006",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "lesson": 1,
+   "old": "Say: 'Write in your own words — no group discussion yet.'",
+   "new": "Say: 'Write in your own words — no group discussion yet.' Language support: write the key terms on the board in English with Kiswahili beside them (surface area = eneo la uso, volume = ujazo, cone = koni, sphere = tufe, cylinder = silinda) and let learners discuss in Kiswahili or their home language before writing in English. Offer the frame 'The surface area is ___ because ___.' A learner who finds writing hard may explain orally to a partner who scribes, or draw and label instead.",
+   "teacher_decision": true,
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "why": "The sub-strand had no language support at all. Kiswahili terms are given only for words I am sure of; the teacher decides which terms and which local language their learners actually use.",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-007",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "lesson": 3,
+   "old": "has a large base radius R = 0.8 m, a small top radius r = 0.4 m, and a slant height l = 1.2 m. (a) Calculate the curved surface area of the frustum. (b) Calculate the area of the two circular faces. (c) Calculate the TOTAL surface area of the frustum tank in m². (d) The factory uses metal sheet that costs Ksh 850 per m². How much does the metal sheet for this tank cost?' Pairs first work independently (5 min), then compare and reconcile answers (5 min), then selected pairs share with the class. Learners then write a 'comparison sentence' in their books: 'The frustum tank has a surface area of ___ m², while the composite cylinder-hemisphere tank from Lesson 1 had a surface area of ___ m². The frustum tank uses ___ m² less/more metal, which saves Ksh ___.' This directly re-engages the anchoring phenomenon.",
+   "new": "has a large base radius R = 1.0 m, a small top radius r = 0.8 m, and a slant height l = 1.97 m (its vertical height is 1.96 m, which you will need in Lesson 7). (a) Calculate the curved surface area of the frustum. (b) Calculate the area of the two circular faces. (c) Calculate the TOTAL surface area of the frustum tank in m². (d) The factory uses metal sheet that costs Ksh 850 per m². How much does the metal sheet for this tank cost?' Pairs first work independently (5 min), then compare and reconcile answers (5 min), then selected pairs share with the class. Learners then write a 'record sentence' in their books: 'The frustum tank has a surface area of ___ m² and its metal sheet costs Ksh ___. In Lesson 5 we will find the surface area of the cylinder-hemisphere tank and compare the two.' This keeps the anchoring phenomenon in view; the other tank's surface area is not known until Lesson 5.",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "New common frustum data (see group headline). Also the old comparison sentence asked for the composite tank's surface area 'from Lesson 1', but nobody calculates it until Lesson 5; learners would have had nothing to write. Recomputed: curved area pi x 1.97 x 1.8 = 11.14 m2; circular faces pi(1 + 0.64) = 5.15 m2; total 16.29 m2; cost 16.29 x 850 = Ksh 13,846, about 13,850.",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-008",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "lesson": 3,
+   "old": "Now write your comparison sentence. This is the evidence we needed to start answering our driving question.",
+   "new": "Now write your record sentence. This is the first of the two surface-area numbers we need; Lesson 5 gives us the second.",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Follows the change to the record sentence in the learner column.",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-009",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "lesson": 3,
+   "old": "(1) Curved surface area = π × 1.2 × (0.8 + 0.4) ≈ 4.52 m²; (2) Circular faces = π(0.8²) + π(0.4²) ≈ 2.51 m²; (3) Total ≈ 7.03 m²; (4) Cost ≈ Ksh 5,975.",
+   "new": "(1) Curved surface area = π × 1.97 × (1.0 + 0.8) ≈ 11.14 m²; (2) Circular faces = π(1.0²) + π(0.8²) ≈ 5.15 m²; (3) Total ≈ 16.29 m²; (4) Cost ≈ 16.29 × 850 ≈ Ksh 13,850. Common slips: using the vertical height 1.96 m instead of the slant height 1.97 m, or counting only one circular face.",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Answer key updated to the new frustum. Also, the old key's total 7.03 was wrong even for the old data: 4.5239 + 2.5133 = 7.037, which rounds to 7.04. New key recomputed twice.",
+   "where": "Lesson 3, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-010",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "lesson": 3,
+   "old": "Beneath both diagrams, learners write a 'Designer's Note' in the voice of a Kisumu tank manufacturer: 'I would choose the frustum shape because… / I would choose the composite shape because…', justifying their choice using the surface area values calculated in Phase 3.",
+   "new": "Beneath both diagrams, learners write a 'Designer's Prediction' in the voice of a Kisumu tank manufacturer: 'I predict the ___ tank will need less metal sheet because…', giving a reason based on the shapes. The composite tank's surface area is not yet known, so Lesson 5 will test the prediction.",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "group": "G1",
+   "why": "The old Designer's Note asked learners to choose a design 'using the surface area values', but they only have one of the two values in Lesson 3. A prediction is honest and sets up Lesson 5.",
+   "where": "Lesson 3, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-011",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "lesson": 3,
+   "old": "Now write your Designer's Note. You are the factory manager in Kisumu. You have the data — the surface areas, the costs. Which shape do you manufacture and why?' WAIT TIME 12 seconds. Cold-call 2 learners to read their Designer's Note: 'Achieng, what would you manufacture and what is your evidence?' / 'Njoroge, do you agree? Would any situation change your decision?' Close the lesson by saying: 'Next lesson, we will investigate the volume of the frustum — then we will have ALL the evidence we need to fully answer our driving question.'",
+   "new": "Now write your Designer's Prediction. You are the factory manager in Kisumu. You know the frustum tank's surface area and cost. Which tank do you think will need less metal, and why? Lesson 5 will test your prediction.' WAIT TIME 12 seconds. Cold-call 2 learners to read their Designer's Note: 'Achieng, which tank do you predict will need less metal, and why?' / 'Njoroge, do you agree? What would you need to calculate to be sure?' Close the lesson by saying: 'Next lesson we look at the frustum of a pyramid; in Lesson 5 we find the surface area of the other Kisumu tank, and later we calculate volumes. Then we will have ALL the evidence we need to fully answer our driving question.'",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Follows the Designer's Prediction change, and corrects 'next lesson, volume of the frustum': Lesson 4 is surface area of a frustum of a pyramid; frustum volume is Lesson 7.",
+   "where": "Lesson 3, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-012",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "lesson": 3,
+   "old": "The Designer's Note contains at least one specific numerical value (e.g., 'the frustum uses 7.03 m² of metal, saving Ksh X compared to the composite tank') as evidence for the choice.",
+   "new": "The Designer's Prediction contains a reason based on the shapes, and the diagram records the frustum's calculated value (e.g., 'the frustum tank needs 16.29 m² of metal, costing about Ksh 13,850').",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "The old indicator asked for a saving compared with the composite tank, which cannot be known until Lesson 5.",
+   "where": "Lesson 3, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-013",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "lesson": 3,
+   "old": "approximately 7.03 m², costing approximately Ksh 5,975",
+   "new": "approximately 16.29 m² (R = 1.0 m, r = 0.8 m, l = 1.97 m), costing approximately Ksh 13,850",
+   "teacher_decision": false,
+   "criteria": [
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Summary Table must carry the corrected numbers, since it feeds the Final Explanation.",
+   "where": "Lesson 3, summaryTablePrompt.learned",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-014",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "lesson": 3,
+   "old": "Learners explained why the frustum-shaped tank in the anchoring phenomenon uses less metal sheet than the composite cylinder-hemisphere tank by comparing their calculated surface areas, and justified — in the role of a Kisumu tank manufacturer — which shape they would choose to produce based on cost and material efficiency evidence.",
+   "new": "Learners recorded the frustum tank's surface area and metal cost and, in the role of a Kisumu tank manufacturer, predicted whether it will need less metal sheet than the composite cylinder-hemisphere tank; Lesson 5 tests the prediction.",
+   "teacher_decision": false,
+   "criteria": [
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "In Lesson 3 learners cannot yet compare the two tanks, so the Summary Table must not claim they did.",
+   "where": "Lesson 3, summaryTablePrompt.explained",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-015",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "lesson": 3,
+   "old": "(3) Were learners able to write a meaningful comparison sentence connecting frustum surface area to the composite tank from Lesson 1? If learners could not recall the Lesson 1 value, consider keeping a running 'Evidence Wall' poster in the classroom that displays key calculated values from each lesson for reference. (4) Did the cost calculation (Ksh 850/m²) generate authentic engagement with the Kenya context? If learners seemed disengaged, invite a local hardware or construction materials supplier price list for the next lesson to ground the numbers further. (5) Review the DQB — do the new questions posted suggest learners are ready to investigate frustum volume in Lesson 4, or do they need more consolidation on surface area first?",
+   "new": "(3) Did learners record the frustum's surface area and cost clearly enough to use again in Lesson 5? If some could not find their value later, consider keeping a running 'Evidence Wall' poster in the classroom that displays key calculated values from each lesson for reference. (4) Did the cost calculation (Ksh 850/m²) generate authentic engagement with the Kenya context? If learners seemed disengaged, invite a local hardware or construction materials supplier price list for the next lesson to ground the numbers further. (5) Review the DQB — do the new questions posted suggest learners are ready for the frustum of a pyramid in Lesson 4 and composite solids in Lesson 5, or need more consolidation on the frustum of a cone first?",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Reflection (3) referred to a Lesson 1 value that never existed; (5) said frustum volume is in Lesson 4 (it is Lesson 7).",
+   "where": "Lesson 3, teacherReflection",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-016",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "lesson": 3,
+   "old": "(Prompt learners to anticipate upcoming lessons on spheres or composite solids.)",
+   "new": "(Prompt learners to anticipate the composite cylinder-hemisphere tank, the other Kisumu tank, and later volume.)",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G2",
+   "group_headline": "Several 'next lesson' and 'in Lesson N' references pointed to the wrong lesson (spheres, frustum volume, cone formula, Lesson 8 for composites) and were corrected.",
+   "why": "Spheres were already done in Lesson 2; the missing shape at this point is the composite tank.",
+   "where": "Lesson 3, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-017",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "lesson": 2,
+   "old": "PART A — CONE NET INVESTIGATION (30 min): Each group of 4 receives a pre-cut cone net (a circle and a sector of a larger circle) and a complete cone model. Groups are guided through the following steps: (1) Identify the two components of the cone's surface — the circular base (radius r) and the curved lateral surface (sector). (2) Measure the slant height l (the radius of the sector) using a ruler. (3) Notice that the arc length of the sector equals the circumference of the base circle (2πr). (4) Using the formula for the area of a sector (Area = ½ × arc length × radius), derive that Lateral Surface Area = ½ × 2πr × l = πrl. (5) Write the total surface area: SA = πrl + πr² = πr(r + l). Groups record each step in a structured observation table provided on a worksheet. PART B — SPHERE INTUITION ACTIVITY (15 min)",
+   "new": "PART A — CONE NET INVESTIGATION (20 min): Each group of 4 receives a pre-cut cone net (a circle and a sector of a larger circle) and a complete cone model. Groups are guided through the following steps: (1) Identify the two components of the cone's surface — the circular base (radius r) and the curved lateral surface (sector). (2) Measure the slant height l (the radius of the sector) using a ruler. (3) Notice that the arc length of the sector equals the circumference of the base circle (2πr). (4) Using the formula for the area of a sector (Area = ½ × arc length × radius), derive that Lateral Surface Area = ½ × 2πr × l = πrl. (5) Write the total surface area: SA = πrl + πr² = πr(r + l). Groups record each step in a structured observation table provided on a worksheet. PART B — SPHERE INTUITION ACTIVITY (10 min)",
+   "teacher_decision": false,
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "GT",
+   "group_headline": "Lessons 2, 6 and 10 had more activities than an 80-minute period holds; minutes were trimmed so each lesson now fits.",
+   "why": "Lesson 2 added up to about 90 minutes: Predict about 8, Observe 45 (30 + 15), Explain about 20, Driving Question Board about 7, Model Building about 10. Trimming the cone-net work to 20 and the orange-peel work to 10 minutes gives about 78 to 80 minutes, which fits a double period.",
+   "where": "Lesson 2, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-018",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "lesson": 2,
+   "old": "This signals readiness for Lesson 4 (frustum surface area).",
+   "new": "This signals readiness for Lesson 3 (frustum surface area).",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G2",
+   "why": "The frustum of a cone is taught in Lesson 3; Lesson 4 is the frustum of a pyramid.",
+   "where": "Lesson 2, teacherReflection",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-019",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "lesson": 4,
+   "old": "(SA = 2.4² + 4 × ½(2.4 + 1.2) × 1.5 = 5.76 + 10.8 = 16.56 m², minus the top opening = 5.76 + 4 × ½(2.4+1.2)×1.5 = 5.76 + 10.8 = 16.56 m² total including base)",
+   "new": "(open-top store: SA = base + four trapezoidal faces = 2.4² + 4 × ½(2.4 + 1.2) × 1.5 = 5.76 + 10.8 = 16.56 m². A fully closed store would add the 1.2 m × 1.2 m top: 16.56 + 1.44 = 18.00 m²)",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G5",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Surface Area and Volume of Solids; frustum of a pyramid, e.g. Wolfram MathWorld 'Pyramidal Frustum'",
+   "group_headline": "Kitale grain-store answer key was muddled (it quoted 16.56 m2 both 'minus the top' and 'including base'): open-top store is 16.56 m2, closed store 18.00 m2.",
+   "why": "The old key subtracted 'the top opening' but then wrote the same 16.56 m2 as 'including base'. Recomputed: base 2.4 x 2.4 = 5.76; four trapezium faces 4 x 0.5 x (2.4 + 1.2) x 1.5 = 10.8; open top total 16.56; adding the top 1.2 x 1.2 = 1.44 gives 18.00. Checked twice. I also fixed the wording below that went with it.",
+   "where": "Lesson 4, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-020",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "lesson": 4,
+   "old": "and a slant height of 1.5 m on each triangular face",
+   "new": "and a slant height of 1.5 m on each trapezoidal face",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G5",
+   "reference": "Wolfram MathWorld 'Pyramidal Frustum'",
+   "why": "The side faces of a frustum of a pyramid are trapeziums, not triangles (the same lesson derives their area with the trapezium formula).",
+   "where": "Lesson 4, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-021",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "lesson": 4,
+   "old": "SA = a² + b² + 2l(a + b) [square base] and generalise for rectangular base: SA = 2(lw) + 2(lw) + lateral faces. Bring the class back to the anchoring phenomenon: 'Think about the frustum tank in Kisumu. The manufacturer uses a frustum of a pyramid for metal sheet panels — does our new formula help explain why the frustum tank might use less metal than the cylinder-hemisphere tank?'",
+   "new": "SA = a² + b² + 2l(a + b) [closed solid, square base; for an open-top store leave out b²]. For a rectangular base: SA = (area of base) + (area of top) + (sum of the areas of the four trapezium faces). Bring the class back to the anchoring phenomenon: 'The Kisumu tank is a frustum of a cone, not of a pyramid, but the same idea applies: a base, a top and sloping sides. Which measurements decide how much metal sheet a frustum needs?'",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G5",
+   "reference": "Wolfram MathWorld 'Pyramidal Frustum'",
+   "why": "The old rectangular-base formula '2(lw) + 2(lw) + lateral faces' double-counted the bases and was unclear; the old question wrongly said the Kisumu tank is a frustum of a pyramid (it is a frustum of a cone).",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-022",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "lesson": 4,
+   "old": "In Lesson 3, learners explored the surface area of cones and frustums of cones.",
+   "new": "In Lessons 2 and 3, learners explored the surface area of cones and of frustums of cones.",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Cones are Lesson 2; Lesson 3 is the frustum of a cone.",
+   "where": "Lesson 4, slo.purposeInStoryline",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-023",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "lesson": 5,
+   "old": "CALCULATION B — Cylinder-Hemisphere Water Tank (Phenomenon): Using dimensions established in prior lessons for a 5,000-litre capacity tank: cylinder radius r = 0.8 m, cylinder height h = 2.0 m, hemisphere radius r = 0.8 m. Learners apply the strategy: (i) Cylinder: lateral surface = 2πrh = 2π(0.8)(2.0) = 3.2π m². Cylinder base (bottom, exposed) = πr² = 0.64π m². Cylinder top is hidden (joined to hemisphere flat face). (ii) Hemisphere: curved surface = 2πr² = 2π(0.64) = 1.28π m². Hemisphere flat base is hidden. (iii) Total SA = 3.2π + 0.64π + 1.28π = 5.12π ≈ 16.09 m². Learners then retrieve their frustum surface area from Lesson 3 notes and record both values in a Comparison Table: Tank | Surface Area (m²) | Volume (L). They answer: 'Which tank uses more metal? By how much (in m²)?' in writing.",
+   "new": "CALCULATION B — Cylinder-Hemisphere Water Tank (Phenomenon): The factory data card for the tank advertised as 5,000 litres gives: cylinder radius r = 0.7 m, cylinder height h = 2.8 m, hemisphere radius r = 0.7 m (Lesson 6 checks the volume). Learners apply the strategy: (i) Cylinder: lateral surface = 2πrh = 2π(0.7)(2.8) = 3.92π m². Cylinder base (bottom, exposed) = πr² = 0.49π m². Cylinder top is hidden (joined to hemisphere flat face). (ii) Hemisphere: curved surface = 2πr² = 2π(0.49) = 0.98π m². Hemisphere flat base is hidden. (iii) Total SA = 3.92π + 0.49π + 0.98π = 5.39π ≈ 16.93 m². Learners then retrieve their frustum surface area from Lesson 3 notes and record both values in a Comparison Table: Tank | Surface Area (m²) | Advertised volume (L). They answer: 'Which tank uses more metal? By how much (in m², and as a percentage)?' in writing.",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "The old tank (r 0.8, h 2.0 m) was a different tank from Lesson 6 (r 0.7, h 2.8 m) and was said to come from 'prior lessons' although Lesson 5 is the first lesson to use it. Now the data card gives r 0.7 m, h 2.8 m (the Lesson 6 tank). Recomputed: lateral 2 x pi x 0.7 x 2.8 = 3.92pi; base pi x 0.49 = 0.49pi; dome 2 x pi x 0.49 = 0.98pi; total 5.39pi = 16.93 m2. The 'Volume (L)' column is now 'Advertised volume' because neither volume is calculated until Lessons 6 and 7.",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-024",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "lesson": 5,
+   "old": "These are the actual dimensions we have been using since Lesson 1. Use the exact same three-step strategy.' [Allow 8 minutes for group work on Calculation B.] Circulate and prompt with: 'Which face is touching the hemisphere flat side? Is it exposed to the outside?' and 'What does the cylinder's bottom face represent in the real tank — is it exposed?' After 8 minutes, say: 'Look at the number you got for the cylinder-hemisphere tank. Now find your frustum surface area from Lesson 3. Write both in your Comparison Table.' [Allow 2 minutes.] Ask: 'Who is surprised by what they see? Hands up.' Acknowledge responses.",
+   "new": "These are the dimensions from the factory data card. Use the exact same three-step strategy.' [Allow 8 minutes for group work on Calculation B.] Circulate and prompt with: 'Which face is touching the hemisphere flat side? Is it exposed to the outside?' and 'What does the cylinder's bottom face represent in the real tank — is it exposed?' After 8 minutes, say: 'Look at the number you got for the cylinder-hemisphere tank. Now find your frustum surface area from Lesson 3. Write both in your Comparison Table.' [Allow 2 minutes.] Ask: 'Who is surprised by what they see? Hands up.' Acknowledge responses. Then ask: 'The difference is 16.93 − 16.29 = 0.64 m², about 4%, or about Ksh 540 per tank. Is that a lot? When would it matter?' (Expected: small for one tank, but a factory making 500 tanks saves about Ksh 270,000.)",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Dimensions were never used 'since Lesson 1'. The new difference is modest, so the teacher needs a prompt that turns it into a discussion about scale (0.64 m2 x Ksh 850 = Ksh 544; x 500 tanks = Ksh 272,000).",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-025",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "lesson": 5,
+   "old": "a final answer of approximately 16.09 m², compared to their Lesson 3 frustum surface area.",
+   "new": "a final answer of approximately 16.93 m² (5.39π), compared to their Lesson 3 frustum surface area of 16.29 m² (difference 0.64 m², about 4%).",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Answer key for the new tank data; 16.93 - 16.29 = 0.64; 0.64 / 16.93 = 3.8%.",
+   "where": "Lesson 5, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-026",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "lesson": 5,
+   "old": "'The cylinder-hemisphere tank has a surface area of ~16.09 m² while the frustum tank has ~7.03 m² — for the same 5,000-litre volume, the frustum uses less metal.'",
+   "new": "'The cylinder-hemisphere tank has a surface area of ~16.93 m² while the frustum tank has ~16.29 m² — for about the same 5,000-litre volume, the frustum uses about 4% less metal.'",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Example evidence note updated to the corrected numbers.",
+   "where": "Lesson 5, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-027",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "lesson": 5,
+   "old": "cylinder base: 0.64π m²",
+   "new": "cylinder base: 0.49π m²",
+   "teacher_decision": false,
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Cylinder base area for r = 0.7 m is pi x 0.49 = 0.49pi.",
+   "where": "Lesson 5, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-028",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "lesson": 5,
+   "old": "approximately 16.09 m² (5.12π m²), which is measurably larger than the frustum tank's surface area computed in Lesson 3 — even though both tanks hold exactly 5,000 litres of water",
+   "new": "approximately 16.93 m² (5.39π m²), which is about 0.64 m² (4%) larger than the frustum tank's 16.29 m² computed in Lesson 3 — even though both tanks are advertised as holding 5,000 litres of water",
+   "teacher_decision": false,
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Summary Table feeds the Final Explanation, so it carries the corrected numbers.",
+   "where": "Lesson 5, summaryTablePrompt.learned",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-029",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "lesson": 5,
+   "old": "using the same volume-equivalent dimensions established in previous lessons",
+   "new": "using the factory data card dimensions (cylinder r = 0.7 m, h = 2.8 m)",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "No earlier lesson had established these dimensions; the lesson now introduces them on a data card.",
+   "where": "Lesson 5, overview",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-030",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "lesson": 5,
+   "old": "Both hold exactly 5,000 litres — same volume.",
+   "new": "Both are advertised as 5,000 litres — about the same volume.",
+   "teacher_decision": false,
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "The computed volumes are about 5,030 L and 5,010 L, not exactly equal.",
+   "where": "Lesson 5, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-031",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "lesson": 6,
+   "old": "both the cylindrical-hemispherical tank and the frustum tank hold 5 000 litres — learners now have the mathematical tools to verify that claim and to understand how manufacturers engineer equal volumes into different shapes",
+   "new": "both the cylindrical-hemispherical tank and the frustum tank are advertised as 5 000 litres — learners now have the tools to verify the composite tank's claim today and the frustum tank's claim in Lesson 7",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Only the composite tank is calculated in this lesson (Part 3); the frustum tank volume needs the Lesson 7 formula.",
+   "where": "Lesson 6, slo.purposeInStoryline",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-032",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "lesson": 6,
+   "old": "They then calculate, compare, and verify volumes of the two tank designs from the Kisumu anchoring phenomenon, confirming the manufacturer's claim of equal 5 000-litre capacity.",
+   "new": "They then calculate the volume of the cylinder-hemisphere tank from the Kisumu anchoring phenomenon and check it against the 5 000-litre claim (the frustum tank follows in Lesson 7).",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "The overview promised both tanks; the lesson only does the composite tank.",
+   "where": "Lesson 6, overview",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-033",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "lesson": 6,
+   "old": "The Kisumu tank manufacturer claims both tanks hold exactly 5 000 litres.",
+   "new": "The Kisumu tank manufacturer advertises each tank as holding 5 000 litres.",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Part 3 only calculates the composite tank (5.029 m3 = 5 030 L), and the claim is 'about 5 000 L'; 'both ... exactly' was wrong on both counts.",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-034",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "lesson": 6,
+   "old": "deliver a 5-minute direct teaching summary",
+   "new": "deliver a 3-minute direct teaching summary",
+   "teacher_decision": false,
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "GT",
+   "why": "Lesson 6 added up to about 84 minutes (Predict 7, Observe about 26, Explain about 32, Driving Question Board about 9, Model Building about 10). Cutting the direct summary by 2 minutes (it repeats the formula card) and making the personal tracker optional (next record) brings it to about 80.",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-035",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "lesson": 6,
+   "old": "Individually, learners also update their personal DQB tracker in their exercise books, completing the sentence stems:",
+   "new": "If time allows (otherwise for homework), learners also update their personal DQB tracker in their exercise books, completing the sentence stems:",
+   "teacher_decision": false,
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "GT",
+   "why": "See Lesson 6 timing: this step is the easiest to move to homework.",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-036",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.safetyNotes",
+   "lesson": 6,
+   "old": "Handle any glass measuring cylinders with care.",
+   "new": "Handle any glass measuring cylinders with care. For the sand activity, pour slowly over a tray or newspaper, keep sand away from eyes, do not throw it, sweep spills at once (slip risk) and wash hands afterwards. Low-cost substitutes from the home or school environment: a clean tin or plastic bottle cut to a cylinder, a cone rolled from card with the same radius and height, and dry fine sand or dry fine soil.",
+   "teacher_decision": false,
+   "criteria": [
+    8
+   ],
+   "category": "safety",
+   "severity": "minor",
+   "why": "The sand practical had no sand-handling safety and no low-cost substitutes, although schools may not have identical tins and sand. Using containers from the local environment is also what the KICD learning experience for this sub-strand asks for.",
+   "where": "Lesson 6, slo.safetyNotes",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-037",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "lesson": 6,
+   "old": "before Lesson 8 (which addresses the frustum)",
+   "new": "before Lesson 7 (the frustum of a cone) and Lesson 9 (composite volumes)",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Lesson 8 is the frustum of a pyramid; the cone frustum is Lesson 7 and composite volume is Lesson 9.",
+   "where": "Lesson 6, teacherReflection",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-038",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "lesson": 7,
+   "old": "The frustum tank has dimensions: R = 0.9 m, r = 0.5 m, h = 2.1 m.",
+   "new": "The frustum tank has dimensions: R = 1.0 m, r = 0.8 m, h = 1.96 m (the same tank whose surface area you found in Lesson 3).",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "The old dimensions gave only about 3.3 m3, so the lesson told learners the manufacturer's claim failed. Using the common tank (R 1.0, r 0.8, h 1.96 m) gives V = pi x 1.96/3 x (1 + 0.8 + 0.64) = 5.008 m3, about 5,010 L, matching the claim and the hands-up range in the teacher moves (4,900 to 5,100 L).",
+   "where": "Lesson 7, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-039",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "lesson": 7,
+   "old": "V ≈ (1/3) × π × 2.1 × (0.81 + 0.45 + 0.25) = (1/3) × π × 2.1 × 1.51 ≈ 3.328 m³ ≈ 3,328 L — which is less than 5,000 L, prompting a rich discussion about whether the manufacturer's claim is accurate or whether additional dimensions are needed.",
+   "new": "V = (1/3) × π × 1.96 × (1.00 + 0.80 + 0.64) = (1/3) × π × 1.96 × 2.44 ≈ 5.008 m³ ≈ 5,010 L — within 1% of the advertised 5,000 L, so the claim holds. Part C: V = (1/3) × π × 3.0 × (1.44 + 0.84 + 0.49) = π × 2.77 ≈ 8.70 m³, so the mass of flour ≈ 8.70 × 600 ≈ 5,220 kg.",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Answer key for the new data, with the Part C answer that was missing. (The old key's own arithmetic was also slightly off: pi x 2.1 x 1.51 / 3 = 3.321, not 3.328.) Recomputed: 1.96 x 2.44 = 4.7824; x pi / 3 = 5.008. Part C: 1.44 + 0.84 + 0.49 = 2.77; pi x 2.77 = 8.702; x 600 = 5,221.",
+   "where": "Lesson 7, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-040",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "lesson": 7,
+   "old": "(1) the composite cylinder-hemisphere tank's volume has not yet been calculated, and (2) a direct numerical comparison of both surface areas and both volumes is still needed. Say: 'Add those to your tracking sheet as the target for Lessons 8 and 9.'",
+   "new": "(1) both tanks now hold about 5,000 litres (about 5,030 L and 5,010 L) and the frustum uses about 4% less metal, but we have not yet explained WHY, and (2) a side-by-side table of both surface areas and both volumes is still needed. Say: 'Add those to your tracking sheet as the target for Lesson 9; Lesson 8 adds the frustum of a pyramid.'",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "The composite tank's volume was already calculated in Lesson 6 (Part 3), so it cannot still be a 'remaining question'; the side-by-side comparison is Lesson 9, not 8.",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-041",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].sensemakingStrategy",
+   "lesson": 7,
+   "old": "they can identify the remaining gap (the composite tank's volume) as the next investigative target",
+   "new": "they can identify the remaining gap (explaining why the frustum tank needs less metal for the same volume) as the next investigative target",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Same correction as the teacher moves: the composite volume is already known.",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, sensemakingStrategy",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-042",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].formativeAssessment",
+   "lesson": 7,
+   "old": "identified 'the composite tank's volume' as a remaining question",
+   "new": "identified 'why the frustum tank needs less metal for the same volume' as a remaining question",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Same correction as the teacher moves.",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-043",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "lesson": 7,
+   "old": "and identified that the composite cylinder-hemisphere tank's volume must still be calculated before a full comparison",
+   "new": "and identified that the two tanks' numbers must still be set side by side (Lesson 9) before a full comparison",
+   "teacher_decision": false,
+   "criteria": [
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Summary Table must not say the composite volume is still missing.",
+   "where": "Lesson 7, summaryTablePrompt.explained",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-044",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "lesson": 7,
+   "old": "found it was significantly less than 5,000 litres using the given dimensions, how did they respond? Did they question the dimensions provided, or did they accept the result uncritically? Use this as a diagnostic of mathematical confidence and critical thinking.\n3. DQB QUALITY — Were the 'We still wonder' cards specific enough to drive Lesson 8? If most cards were vague (e.g., 'we wonder about the other tank'), prompt more precise questioning at the start of Lesson 8: 'What specific calculation do we need to do next, and which formula will we use?'\n4. PACING — The algebraic derivation in Phase 3 is the most cognitively demanding section. If the class ran short on time, Phase 5 model building can begin as a homework task, with learners completing the 'Explanation' column at home and sharing at the start of Lesson 8.\n5. DIFFERENTIATION — Note which pairs required the scaffolded hint card for Part C. Plan to seat these learners near the board during Lesson 8's composite volume derivation",
+   "new": "found it was about 5,008 litres, did they notice it agrees with the advertised 5,000 litres to within 1%, or did some expect exactly 5,000 and doubt a correct answer? Use this as a diagnostic of mathematical confidence and critical thinking.\n3. DQB QUALITY — Were the 'We still wonder' cards specific enough to drive Lesson 8? If most cards were vague (e.g., 'we wonder about the other tank'), prompt more precise questioning at the start of Lesson 8: 'What specific calculation do we need to do next, and which formula will we use?'\n4. PACING — The algebraic derivation in Phase 3 is the most cognitively demanding section. If the class ran short on time, Phase 5 model building can begin as a homework task, with learners completing the 'Explanation' column at home and sharing at the start of Lesson 8.\n5. DIFFERENTIATION — Note which pairs required the scaffolded hint card for Part C. Plan to seat these learners near the board during Lesson 8's pyramid-frustum derivation",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Reflection 2 described the old wrong result; reflection 5 named the wrong content for Lesson 8 (Lesson 8 is the frustum of a pyramid, composites are Lesson 9).",
+   "where": "Lesson 7, teacherReflection",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-045",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].formativeAssessment",
+   "lesson": 7,
+   "old": "Note these learners for targeted support during the Observe phase.",
+   "new": "Note these learners for targeted support during the Observe phase. Answer for the teacher: it depends on how much is cut off. For the Kisumu tank (R = 1.0 m, r = 0.8 m, h = 1.96 m) the whole cone is 9.8 m tall and the removed cone 7.84 m tall, so the frustum (5.01 m³) is about half (49%) of the whole cone (10.26 m³). A learner who says 'about half' is right for this tank.",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Teachers had no answer to the prediction question. Checked: whole cone height H = 1.96 x 1.0 / (1.0 - 0.8) = 9.8; V(whole) = pi/3 x 1.0^2 x 9.8 = 10.26; frustum 5.008 / 10.26 = 0.488.",
+   "where": "Lesson 7, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-046",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "lesson": 8,
+   "old": "the shape used in many traditional grain stores (mapunjas) and modern architectural plinths across Kenya",
+   "new": "the shape used in many grain stores (ghala) and modern architectural plinths across Kenya",
+   "teacher_decision": true,
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "group": "G6",
+   "group_headline": "'Mapunja' is not a term I could confirm as a Kenyan word for a grain store; replaced with the standard Kiswahili 'ghala' (grain store).",
+   "why": "I could not confirm 'mapunja(s)' as a Kiswahili or other Kenyan word for a grain store; 'ghala' is the standard Kiswahili word. Teacher decision: if a local word is used in your area for this kind of store, use that instead.",
+   "where": "Lesson 8, slo.purposeInStoryline",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-047",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "lesson": 8,
+   "old": "(1) a frustum-shaped grain store (mapunjas) used by a maize farmer",
+   "new": "(1) a frustum-shaped grain store (ghala) used by a maize farmer",
+   "teacher_decision": false,
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "group": "G6",
+   "why": "Same term change.",
+   "where": "Lesson 8, overview",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-048",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "lesson": 8,
+   "old": "labelled as a traditional mapunjas grain store from the Rift Valley",
+   "new": "labelled as a grain store (ghala) from the Rift Valley",
+   "teacher_decision": false,
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "group": "G6",
+   "why": "Same term change (also dropped 'traditional': frustum-of-pyramid stores of this kind are modern metal or concrete structures).",
+   "where": "Lesson 8, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-049",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "lesson": 8,
+   "old": "A frustum-shaped mapunjas grain store used by a maize farmer in Nakuru",
+   "new": "A frustum-shaped ghala (grain store) used by a maize farmer in Nakuru",
+   "teacher_decision": false,
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "group": "G6",
+   "why": "Same term change.",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-050",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].exemplar",
+   "old": "(mapunja)",
+   "new": "(ghala)",
+   "teacher_decision": false,
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "group": "G6",
+   "why": "Same term change in the Final Explanation exemplar.",
+   "where": "Final Explanation, Section 5: Using this mathematics in Kenya, exemplar",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-051",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "lesson": 8,
+   "old": "Flag pairs who multiply h by (A₁ + A₂) without the √(A₁A₂) term — this is the most common structural error and requires targeted re-teaching of the geometric mean term.",
+   "new": "Flag pairs who multiply h by (A₁ + A₂) without the √(A₁A₂) term — this is the most common structural error and requires targeted re-teaching of the geometric mean term. Expected answers: Problem 1: A₁ = 9 m², A₂ = 2.25 m², √(A₁A₂) = 4.5 m²; V = (2/3)(15.75) = 10.5 m³ = 10 500 L. Problem 2: A₁ = 12 m², A₂ = 3 m², √(A₁A₂) = 6 m²; V = (2.5/3)(21) = 17.5 m³. (The Predict-phase store, 2 m, 1 m, h = 1.5 m, holds 3.5 m³.) Limit of the formula: it works only when the top is a scaled-down copy of the base (here 4 : 3 and 2 : 1.5 are the same ratio); if the top had a different shape from the base, the √(A₁A₂) formula would not apply.",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    6,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "reference": "Wolfram MathWorld 'Pyramidal Frustum' (V = h/3 (A1 + A2 + sqrt(A1 A2)) for similar bases); KICD Grade 10 curriculum design, Mathematics, Surface Area and Volume of Solids",
+   "why": "There was no answer key for either problem and the limit of the formula was not stated. Checked: 9 x 2.25 = 20.25, sqrt = 4.5; 9 + 2.25 + 4.5 = 15.75; x 2/3 = 10.5. 12 x 3 = 36, sqrt = 6; 12 + 3 + 6 = 21; x 2.5/3 = 17.5; Predict: 4 + 1 + 2 = 7; x 1.5/3 = 3.5.",
+   "where": "Lesson 8, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-052",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "lesson": 9,
+   "old": "Each group receives a data card with the dimensions of both Kisumu tank designs and the surface area values computed in previous lessons. Groups are tasked with computing the volume of each tank using the decomposition strategy modelled in the video.",
+   "new": "Each group receives a data card with the dimensions of both Kisumu tanks (composite: cylinder r = 0.7 m, h = 2.8 m with hemisphere r = 0.7 m; frustum: R = 1.0 m, r = 0.8 m, h = 1.96 m) and the surface areas from Lessons 3 and 5 (16.29 m² and 16.93 m²). Groups re-check the volume of each tank with the decomposition strategy (about 8 minutes; the answers match Lessons 6 and 7), then solve one new composite problem: a grain silo in Kitale is a cylinder of radius 1.5 m and height 3 m topped by a cone of height 1 m; find its volume in m³ and litres.",
+   "teacher_decision": true,
+   "criteria": [
+    2,
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "group": "G9",
+   "group_headline": "Lesson 9 repeated the tank volumes already found in Lessons 6 and 7 and gave no dimensions; learners now re-check them quickly and solve a new composite problem (Kitale silo).",
+   "why": "Old Lesson 9 asked learners to compute both tank volumes, which they had already done in Lessons 6 and 7, and the data card had no dimensions. KICD outcome (d), the volume of composite solids in real-life situations, therefore had little new practice. I give the card its dimensions, shorten the re-check, and add one new composite problem. Checked: cylinder pi x 2.25 x 3 = 21.206; cone (1/3) x pi x 2.25 x 1 = 2.356; total 23.562 m3. TEACHER DECISION: this changes the lesson design (a different problem in the group-work slot); keep or swap the silo for a problem from your own textbook.",
+   "where": "Lesson 9, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-053",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "lesson": 9,
+   "old": "In your groups, calculate: (a) the volume of the cylinder-hemisphere tank, and (b) the volume of the frustum tank. Show every step — decompose, formula, substitute, calculate. You have 18 minutes.' Circulate and check: Are groups correctly decomposing? Are they using the right formula for the hemisphere [V = (2/3)πr³]? Are they converting units correctly (cm³ to litres)? Prompt struggling groups with: 'What two shapes make up that tank? Write them down first.'",
+   "new": "In your groups, calculate: (a) the volume of the cylinder-hemisphere tank, and (b) the volume of the frustum tank (you met both in Lessons 6 and 7, so compare with your earlier answers), then (c) the volume of the Kitale silo. Show every step — decompose, formula, substitute, calculate. You have 18 minutes.' Circulate and check: Are groups correctly decomposing? Are they using the right formula for the hemisphere [V = (2/3)πr³]? Are they converting units correctly (m³ to litres: multiply by 1,000)? Prompt struggling groups with: 'What two shapes make up that tank? Write them down first.' Expected silo answer: cylinder ≈ 21.21 m³, cone ≈ 2.36 m³, total ≈ 23.56 m³ ≈ 23,560 L.",
+   "teacher_decision": false,
+   "criteria": [
+    2,
+    4,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "group": "G9",
+   "why": "Follows the data card change; corrects the unit (dimensions are in metres, so m3 to litres, not cm3); adds the answer key for the new silo problem.",
+   "where": "Lesson 9, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-054",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "lesson": 9,
+   "old": "Prompt with: 'You mentioned surface area is smaller — so what does that mean in shillings for the manufacturer?' and 'Why might a family in Siaya prefer the frustum tank?'",
+   "new": "Prompt with: 'You mentioned surface area is smaller — so what does that mean in shillings for the manufacturer?' and 'Why might a family in Siaya prefer the frustum tank?' What good sounds like: the frustum needs 0.64 m² (about 4%) less sheet, about Ksh 540 per tank at Ksh 850 per m², a small saving for one tank that adds up across a factory's output. Reason: the cylinder-hemisphere tank is tall and narrow (a 2.8 m cylinder of radius 0.7 m) while the frustum is shorter and wider, so it needs less wall for the same water. Per cubic metre of water the composite tank needs 16.93 ÷ 5.03 ≈ 3.37 m² of sheet and the frustum 16.29 ÷ 5.01 ≈ 3.25 m². Push back on 'far cheaper'. Inclusion: a learner who finds writing hard may give the explanation orally to a partner who scribes, or as a labelled diagram with numbered sentences.",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    5,
+    12,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "With the corrected tanks the saving is about 4%, so teachers need to know what a correct explanation sounds like and not accept 'far cheaper'. Checked: 16.93 / 5.029 = 3.367; 16.29 / 5.008 = 3.253. Also adds a way for learners to show understanding without a long written paragraph (guideline 12).",
+   "where": "Lesson 9, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-055",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].formativeAssessment",
+   "lesson": 9,
+   "old": "is [X] cm² compared to [Y] cm² for",
+   "new": "is [X] m² (16.29) compared to [Y] m² (16.93) for",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Surface areas in this unit are in m2, not cm2; values added from the corrected data.",
+   "where": "Lesson 9, Driving Question Board (DQB) Creation, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-056",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "lesson": 9,
+   "old": "because it has a smaller surface area, even though both tanks hold exactly the same volume of water (5,000 litres)",
+   "new": "because it has a smaller surface area (about 4% smaller; it is shorter and wider while the cylinder-hemisphere tank is tall and narrow), even though both tanks hold about the same volume of water (about 5,030 and 5,010 litres)",
+   "teacher_decision": false,
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Summary Table feeds the Final Explanation, so it states the corrected size of the effect and the real reason.",
+   "where": "Lesson 9, summaryTablePrompt.explained",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-057",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "lesson": 10,
+   "old": "Nyakach Secondary School in Siaya County needs a water storage tank that holds exactly 5,000 litres (5 m³). You must choose between three designs: Design A — a pure cylinder (r = 0.9 m, h = 1.97 m); Design B — a cylinder topped with a hemisphere (cylinder r = 0.85 m, h = 1.6 m, hemisphere r = 0.85 m); Design C — a frustum (R = 1.2 m, r = 0.7 m, h = 1.8 m).",
+   "new": "a rural secondary school in Siaya County needs a water storage tank that holds at least 5,000 litres (5 m³). You must choose between three designs: Design A — a pure cylinder (r = 0.9 m, h = 1.97 m); Design B — the Kisumu cylinder topped with a hemisphere (cylinder r = 0.7 m, h = 2.8 m, hemisphere r = 0.7 m); Design C — the Kisumu frustum (R = 1.0 m, r = 0.8 m, h = 1.96 m).",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    3,
+    9
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Old Design B (r 0.85, h 1.6 m) holds only 4.92 m3, failing the lesson's own 'at least 5 m3' check, and Design C (R 1.2, r 0.7, h 1.8 m) holds 5.22 m3 (4% extra, so it was not a fair comparison). Designs B and C are now the same two tanks as in every other lesson, so the lesson really revisits the phenomenon. Checked: A: pi x 0.81 x 1.97 = 5.013 m3; B 5.029; C 5.008, all at least 5 m3. Also: Nyakach is in Kisumu County, not Siaya County, so the school is now a generic 'rural secondary school in Siaya County'.",
+   "where": "Lesson 10, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-058",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "lesson": 10,
+   "old": "Frustum lateral SA = π(R+r)l where l = √[h²+(R−r)²]; Frustum base area = πR².",
+   "new": "Frustum lateral SA = π(R+r)l where l = √[h²+(R−r)²]; the frustum's top area πr² is counted, but its wide base πR² sits on the platform and is not counted.",
+   "teacher_decision": false,
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "The formula list gave the frustum 'base area' but the task excludes the base (tank on a platform), so learners could not tell whether to count the top or the base; the top must be counted.",
+   "where": "Lesson 10, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-059",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "lesson": 10,
+   "old": "Red flags: groups who skip the volume verification step",
+   "new": "Expected results (base not counted): A: V = 5.01 m³, SA = 13.69 m², cost ≈ KSh 11,640. B: V = 5.03 m³, SA = 15.39 m², cost ≈ KSh 13,080. C: V = 5.01 m³, SA = 11.14 + 2.01 = 13.15 m², cost ≈ KSh 11,180 (the lowest). Red flags: groups who skip the volume verification step",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "No answer key existed for the design task. Checked: A: 2 x pi x 0.9 x 1.97 + pi x 0.81 = 13.69 m2; B: 3.92pi + 0.98pi = 4.9pi = 15.39 m2; C: pi x 1.8 x 1.97 = 11.14, plus pi x 0.64 = 2.01, total 13.15 m2; costs at KSh 850 per m2, rounded to the nearest 10.",
+   "where": "Lesson 10, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-060",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "lesson": 10,
+   "old": "'What about the slant height, the radii, the absence of a full circular top?'",
+   "new": "'Compare the heights and radii of the two tanks. Which is tall and narrow, which is shorter and wider? What does that do to the amount of wall needed for the same volume?' Teacher note: the order depends on what is counted. With the base counted (as in Lessons 3 and 5) the pure cylinder (16.23 m²) and the frustum (16.29 m²) are within 1%; the large saving is against the tall, narrow composite tank. If a learner asks whether any shape could use less, the sphere is the least: for 5 m³ a sphere of radius 1.06 m needs about 14.1 m², but it is hard to build and to stand on the ground.",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    5,
+    6
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "reference": "Wolfram MathWorld 'Sphere' (surface area 4 pi r^2, volume 4/3 pi r^3; the sphere has the least surface area for a given volume); KICD Grade 10 curriculum design, Mathematics, Surface Area and Volume of Solids",
+   "why": "The old prompt pointed learners to 'the absence of a full circular top', which is false (the frustum has a top). The real reason is proportions: tall and narrow against shorter and wider. I also state the limit of the model (the ranking depends on whether the base is counted) and answer the sphere question raised on the Driving Question Board in Lessons 5 and 9. Checked: closed cylinder 2 x pi x 0.9 x 2.87 = 16.23; sphere r = (3 x 5 / 4pi)^(1/3) = 1.061, SA = 4 x pi x 1.1253 = 14.14.",
+   "where": "Lesson 10, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-061",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "lesson": 10,
+   "old": "(3) During Q2, at least one learner references slant height or the comparative radii of the frustum as geometric reasons for smaller surface area.",
+   "new": "(3) During Q2, at least one learner explains that the frustum is shorter and wider (the cylinder-hemisphere tank is tall and narrow), so it needs less wall for the same volume.",
+   "teacher_decision": false,
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Look-for updated to the real reason (see Explain teacher moves).",
+   "where": "Lesson 10, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-062",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "lesson": 10,
+   "old": "Groups rotate (5 minutes) to read other groups' tables, placing a sticky dot next to the recommendation they agree with most. After the gallery walk, learners return to seats. The teacher facilitates a 12-minute whole-class discussion",
+   "new": "Groups rotate (4 minutes) to read other groups' tables, placing a sticky dot next to the recommendation they agree with most. After the gallery walk, learners return to seats. The teacher facilitates an 8-minute whole-class discussion",
+   "teacher_decision": false,
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "GT",
+   "why": "Lesson 10 added up to about 100 minutes (Predict about 9, Observe about 24, Explain about 26, Driving Question Board about 15, Model Building 28 or more with 2-minute presentations for every group). Target plan: Predict 8, Observe 24, Explain 18, Driving Question Board 12, Model Building 18 = 80.",
+   "where": "Lesson 10, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-063",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "lesson": 10,
+   "old": "Display the Design Brief on the board. Say:",
+   "new": "Time plan for this 80-minute lesson: Predict 8, Observe 24, Explain 18, Driving Question Board 12, Model Building 18. Display the Design Brief on the board. Say:",
+   "teacher_decision": false,
+   "criteria": [
+    3,
+    13
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "GT",
+   "why": "Gives the teacher the phase budget for this crowded final lesson.",
+   "where": "Lesson 10, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-064",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "lesson": 10,
+   "old": "Each group presents their final annotated cumulative model (built and revised across Lessons 1–10) to the class in a 2-minute presentation. The model must show: (1) a labelled diagram of at least two solid shapes with formulas; (2) annotations tracing how their understanding changed from Lesson 1 (e.g., 'In Lesson 1 we only knew the cylinder formula — arrow pointing to later annotation: By Lesson 6 we added the frustum'); (3) a final conclusion statement answering the Driving Question. After all groups present, the teacher facilitates a whole-class Careers in Mathematics reflection (5 minutes)",
+   "new": "Four groups chosen at random present their final annotated cumulative model (built and revised across Lessons 1–10) for 2 minutes each; the other groups put their models on their desks for a 3-minute walk-around with sticky-note feedback. The model must show: (1) a labelled diagram of at least two solid shapes with formulas; (2) annotations tracing how their understanding changed from Lesson 1 (e.g., 'In Lesson 1 we only knew prisms and pyramids — arrow pointing to later annotation: By Lesson 3 we added the frustum'); (3) a final conclusion statement answering the Driving Question. After all groups present, the teacher facilitates a whole-class Careers in Mathematics reflection (3 minutes)",
+   "teacher_decision": false,
+   "criteria": [
+    3,
+    1
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "GT",
+   "why": "Presentations by every group (about 9 groups x 2 minutes) alone take 18 minutes, so four groups present and the rest are seen in a walk-around. The example annotation also named the wrong lessons: Lesson 1 covers prisms and pyramids, and the frustum was added in Lesson 3, not Lesson 6.",
+   "where": "Lesson 10, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-065",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "lesson": 10,
+   "old": "Show me where you changed your model after Lesson 4. Where did you add the cone formula?",
+   "new": "Show me where you changed your model after Lesson 2. Where did you add the cone formula?",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G2",
+   "why": "The cone formula was added in Lesson 2, not Lesson 4.",
+   "where": "Lesson 10, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-066",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "lesson": 10,
+   "old": "to supply 5,000 litres of water to Nyakach Secondary School in Siaya County",
+   "new": "to supply 5,000 litres of water to a rural secondary school in Siaya County",
+   "teacher_decision": false,
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "group": "G7",
+   "group_headline": "Nyakach is in Kisumu County, not Siaya County; the school is now a generic rural secondary school in Siaya County.",
+   "why": "Nyakach is a sub-county of Kisumu County, so 'Nyakach Secondary School in Siaya County' was a wrong place pairing. A generic school avoids naming a real institution wrongly.",
+   "where": "Lesson 10, overview",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-067",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.observed",
+   "lesson": 10,
+   "old": "can each hold exactly 5,000 litres (5 m³) of water while having significantly different outer surface areas",
+   "new": "can each hold about 5,000 litres (5 m³) of water while having different outer surface areas (13.15 m², 13.69 m² and 15.39 m² with the base not counted)",
+   "teacher_decision": false,
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Summary Table carries the checked numbers for the three designs (see the answer key in the Observe phase).",
+   "where": "Lesson 10, summaryTablePrompt.observed",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-068",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "lesson": 10,
+   "old": "the frustum-shaped tank at the Kisumu factory uses less metal sheet than the composite cylinder-hemisphere tank for the same 5,000-litre volume because the frustum's geometry — specifically its sloping lateral surface, defined by slant height l = √[h² + (R−r)²], and the fact that its top opening is narrower (smaller r) than a full cylinder's top — results in a smaller total outer surface area.",
+   "new": "the frustum-shaped tank at the Kisumu factory (R = 1.0 m, r = 0.8 m, h = 1.96 m) uses about 4% less metal sheet than the composite cylinder-hemisphere tank (16.29 m² against 16.93 m² with both bases counted) for about the same 5,000 litres, because it is shorter and wider: the cylinder-hemisphere tank is tall and narrow (a 2.8 m cylinder of radius 0.7 m), so it needs more wall for the same volume. The slant height l = √[h² + (R−r)²] links the frustum's dimensions to the area of its sloping side.",
+   "teacher_decision": false,
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "The old explanation said the frustum's 'narrower top' makes its surface smaller, which is not the reason (a narrower top does not by itself reduce area). The checked reason is proportions: both tanks are closed with similar volume; the tall, narrow composite tank has more wall per litre (3.37 against 3.25 m2 per m3).",
+   "where": "Lesson 10, summaryTablePrompt.explained",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-069",
+   "kind": "set",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "value": "By the end of the sub strand, the learner should be able to:\na) determine the surface area of prisms, pyramids, cones, frustums and spheres,\nb) calculate the surface area of composite solids,\nc) calculate the volume of prisms, pyramids, cones, frustums and spheres,\nd) determine the volume of composite solids,\ne) explore the use of the surface area and volume of solids in real-life situations.",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "group_headline": "Learning outcomes and key inquiry questions did not match the KICD curriculum design; restored word for word (5 outcomes, 2 key inquiry questions).",
+   "why": "The data listed eight self-worded outcomes (a to h), including 'appreciate...' which is not in KICD. The KICD design lists five: a) surface area of prisms, pyramids, cones, frustums and spheres; b) surface area of composite solids; c) volume of those solids; d) volume of composite solids; e) use of surface area and volume in real-life situations. Each is taught: a) Lessons 1 to 4, b) Lesson 5, c) Lessons 6 to 8, d) Lessons 6 (Part 3) and 9, e) Lessons 9 and 10 and the Final Explanation, so the lesson plans still serve them. Source text compared from the KICD PDF (Sub-Strand 2.7 as printed there).",
+   "old": "By the end of the sub-strand, the learner should be able to:\na) determine the surface area of prisms, pyramids, cones, and spheres in different situations,\nb) determine the surface area of frustums of a cone and a pyramid in different situations,\nc) calculate the surface area of composite solids in real-life contexts,\nd) calculate the volume of prisms, pyramids, cones, and spheres in different situations,\ne) determine the volume of frustums of a cone and a pyramid in different situations,\nf) determine the volume of composite solids in real-life contexts,\ng) apply surface area and volume of solids to solve real-life problems,\nh) appreciate the use of surface area and volume of solids in day-to-day activities.",
+   "new": "By the end of the sub strand, the learner should be able to:\na) determine the surface area of prisms, pyramids, cones, frustums and spheres,\nb) calculate the surface area of composite solids,\nc) calculate the volume of prisms, pyramids, cones, frustums and spheres,\nd) determine the volume of composite solids,\ne) explore the use of the surface area and volume of solids in real-life situations.",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-070",
+   "kind": "edit",
+   "target": "unit",
+   "path": "drivingQuestion",
+   "old": "1. How do we apply surface area and volume of solids in day-to-day activities?\n2. How does the shape of a solid affect its surface area and volume?",
+   "new": "1. How do we determine the surface area and volume of solids?\n2. Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "The two questions listed as 'KICD key inquiry questions' were not the KICD ones. KICD: 1. How do we determine the surface area and volume of solids? 2. Why do we determine the surface area and volume of solids? The project's own Driving Question stays unchanged.",
+   "where": "Unit overview, drivingQuestion",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-071",
+   "kind": "edit",
+   "target": "unit",
+   "path": "strand",
+   "old": "Strand 2.0: Geometry",
+   "new": "Strand 2.0: Measurements and Geometry",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "KICD names Strand 2.0 'Measurements and Geometry'.",
+   "where": "Unit overview, strand",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-072",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "lesson": 1,
+   "value": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Key inquiry questions replaced by the two KICD questions (word for word); the lesson's activities (nets, formulae, the tank puzzle) answer how and why we determine surface area and volume.",
+   "old": "How do we apply surface area and volume of solids in day-to-day activities? | How does the shape of a solid affect its surface area and volume?",
+   "new": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "where": "Lesson 1, slo.keyInquiry",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-073",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "lesson": 2,
+   "value": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Key inquiry questions replaced by the two KICD questions (word for word); the lesson's activities (nets, formulae, the tank puzzle) answer how and why we determine surface area and volume.",
+   "old": "How does the shape of a solid affect its surface area and volume?",
+   "new": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "where": "Lesson 2, slo.keyInquiry",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-074",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "lesson": 3,
+   "value": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Key inquiry questions replaced by the two KICD questions (word for word); the lesson's activities (nets, formulae, the tank puzzle) answer how and why we determine surface area and volume.",
+   "old": "How does the shape of a solid affect its surface area and volume?",
+   "new": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "where": "Lesson 3, slo.keyInquiry",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-075",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "lesson": 4,
+   "value": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Key inquiry questions replaced by the two KICD questions (word for word); the lesson's activities (nets, formulae, the tank puzzle) answer how and why we determine surface area and volume.",
+   "old": "How does the shape of a solid affect its surface area and volume?",
+   "new": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "where": "Lesson 4, slo.keyInquiry",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-076",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "lesson": 5,
+   "value": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Key inquiry questions replaced by the two KICD questions (word for word); the lesson's activities (nets, formulae, the tank puzzle) answer how and why we determine surface area and volume.",
+   "old": "How does the shape of a solid affect its surface area and volume? / How do we apply surface area and volume of solids in day-to-day activities?",
+   "new": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "where": "Lesson 5, slo.keyInquiry",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-077",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "lesson": 6,
+   "value": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Key inquiry questions replaced by the two KICD questions (word for word); the lesson's activities (nets, formulae, the tank puzzle) answer how and why we determine surface area and volume.",
+   "old": "How does the shape of a solid affect its surface area and volume?",
+   "new": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "where": "Lesson 6, slo.keyInquiry",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-078",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "lesson": 7,
+   "value": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Key inquiry questions replaced by the two KICD questions (word for word); the lesson's activities (nets, formulae, the tank puzzle) answer how and why we determine surface area and volume.",
+   "old": "How does the shape of a solid affect its surface area and volume?",
+   "new": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "where": "Lesson 7, slo.keyInquiry",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-079",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "lesson": 8,
+   "value": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Key inquiry questions replaced by the two KICD questions (word for word); the lesson's activities (nets, formulae, the tank puzzle) answer how and why we determine surface area and volume.",
+   "old": "How do we apply surface area and volume of solids in day-to-day activities? How does the shape of a solid affect its surface area and volume?",
+   "new": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "where": "Lesson 8, slo.keyInquiry",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-080",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "lesson": 9,
+   "value": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Key inquiry questions replaced by the two KICD questions (word for word); the lesson's activities (nets, formulae, the tank puzzle) answer how and why we determine surface area and volume.",
+   "old": "How does the shape of a solid affect its surface area and volume — and how do manufacturers in Kenya use this knowledge to design tanks that minimise material cost while maximising storage capacity?",
+   "new": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "where": "Lesson 9, slo.keyInquiry",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-081",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "lesson": 10,
+   "value": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Key inquiry questions replaced by the two KICD questions (word for word); the lesson's activities (nets, formulae, the tank puzzle) answer how and why we determine surface area and volume.",
+   "old": "1. How do we apply surface area and volume of solids in day-to-day activities? 2. How does the shape of a solid affect its surface area and volume?",
+   "new": "How do we determine the surface area and volume of solids? | Why do we determine the surface area and volume of solids?",
+   "where": "Lesson 10, slo.keyInquiry",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-082",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "lesson": 10,
+   "old": "(KIQ 1) 'How do we apply surface area and volume of solids in day-to-day activities?' — the class co-constructs a list of 5 real Kenyan applications on the board (e.g., water tank design in Siaya, grain silo sizing in Eldoret, packaging design for Bidco Kenya, football production in Athi River, architectural dome design in Nairobi). (KIQ 2) 'How does the shape of a solid affect its surface area and volume?' — the class agrees on a one-sentence consensus answer that is written on a large card and pinned to the board.",
+   "new": "(KIQ 1) 'How do we determine the surface area and volume of solids?' — the class agrees a short list of methods on the board (nets and adding face areas, formulae, the cone-and-cylinder sand model, subtracting a small cone or pyramid from a large one, splitting composite solids). (KIQ 2) 'Why do we determine the surface area and volume of solids?' — the class co-constructs a list of 5 real Kenyan applications on the board (e.g., water tank design in Siaya, grain silo sizing in Eldoret, packaging design at a Thika manufacturer, roofing sheet for a conical turret in Nairobi, concrete for a frustum-shaped plinth). The class then writes a one-sentence consensus answer to the unit's Driving Question ('How does the shape of a solid determine how much material is needed and how much it can hold?') on a large card pinned to the board.",
+   "teacher_decision": false,
+   "criteria": [
+    2,
+    9
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Uses the real KICD key inquiry questions: KIQ 1 (how) is answered with the methods learnt, KIQ 2 (why) with Kenyan applications; the shape question becomes the Driving Question consensus. I also removed 'football production in Athi River' and the Bidco example, which I could not verify as accurate local facts.",
+   "where": "Lesson 10, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-083",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "lesson": 10,
+   "old": "Read KIQ 1. Say: 'Give me real Kenyan examples — industries, farms, buildings. Turn to your partner for 1 minute.' Cold-call 5 pairs to contribute one example each — compile the list on the board. For KIQ 2, say: 'In one sentence — not a formula, a sentence — how does shape affect surface area and volume?' Wait 15 seconds. Take 3 responses, synthesise them, and write the consensus sentence aloud as you speak.",
+   "new": "Read KIQ 1. Say: 'How do we find the surface area and volume of a solid we have never met?' Turn to your partner for 1 minute.' Cold-call 4 pairs and compile the methods on the board. Read KIQ 2. Say: 'Why do we need them? Give me real Kenyan examples — industries, farms, buildings.' Cold-call 5 pairs to contribute one example each — compile the list on the board. For the Driving Question card, say: 'In one sentence — not a formula, a sentence — how does shape affect how much material a solid needs and how much it can hold?' Wait 15 seconds. Take 3 responses, synthesise them, and write the consensus sentence aloud as you speak.",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Follows the change to the KICD key inquiry questions in the learner column.",
+   "where": "Lesson 10, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-084",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].formativeAssessment",
+   "lesson": 10,
+   "old": "(2) The KIQ 2 consensus sentence includes at minimum: reference to shape, surface area, volume, and independence of these two quantities.",
+   "new": "(2) The Driving Question consensus sentence includes at minimum: reference to shape, surface area, volume, and the idea that the two quantities are independent (equal volumes can come with different surface areas).",
+   "teacher_decision": false,
+   "criteria": [
+    2,
+    5
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G3",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Follows the change to the KICD key inquiry questions.",
+   "where": "Lesson 10, Driving Question Board (DQB) Creation, formativeAssessment",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-085",
+   "kind": "edit",
+   "target": "unit",
+   "path": "coreCompetencies",
+   "old": "• Communication and Collaboration: the learner discusses with peers and works in groups to derive and verify formulae for surface area and volume of various solids, sharing findings and explaining reasoning to classmates.\n• Critical Thinking and Problem Solving: the learner applies knowledge of surface area and volume",
+   "new": "• Creativity and Imagination: the learner uses a cylinder and a cone of the same radius and height, and a substance such as sand or water, to determine the volume of a cone as a third the volume of a cylinder.\n• Communication and Collaboration: the learner discusses with peers and works in groups to derive and verify formulae for surface area and volume of various solids, sharing findings and explaining reasoning to classmates.\n• Critical Thinking and Problem Solving: the learner uses a cylinder and a cone of the same radius and height, and a substance such as sand or water, to determine the volume of a cone as a third of the volume of a cylinder. The learner also applies knowledge of surface area and volume",
+   "teacher_decision": true,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G4",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "group_headline": "Core competencies, values and PCI now include the KICD-listed ones word for word (Lesson 6 sand activity); the earlier extras were kept where they match lesson activities.",
+   "why": "KICD lists two core competencies (Critical Thinking and Problem Solving; Creativity and Imagination), two values (Unity, Respect) and the PCI 'Environment and technology', all tied to the cone-and-cylinder sand activity (Lesson 6). The data had other competencies, values and PCIs not in KICD (Digital Literacy, Self-efficacy, Integrity, Financial Literacy...). TEACHER DECISION: I restored the KICD wording and kept the extras that match real lesson activities; delete extras if your school wants the KICD list only.",
+   "where": "Unit overview, coreCompetencies",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-086",
+   "kind": "edit",
+   "target": "unit",
+   "path": "values",
+   "old": "• Respect: the learner listens to and values the contributions of peers during group discussions on the properties and measurements of solids.\n• Unity: the learner works collaboratively in groups to measure, compute, and verify surface areas and volumes of physical models of solids.",
+   "new": "• Respect: the learner listens to others’ opinions as they discuss in groups and work out the volumes of prisms, pyramids, cones, frustums and spheres.\n• Unity: the learner discusses in a group and establishes the relationship between the volume of a cone and the volume of a cylinder.",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G4",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "KICD wording for the two values listed for this sub-strand (Unity, Respect).",
+   "where": "Unit overview, values",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-087",
+   "kind": "edit",
+   "target": "unit",
+   "path": "pcis",
+   "old": "• Life Skills (Creative Thinking):",
+   "new": "• Environment and technology: as the learner collects and uses containers from the immediate environment and uses them to discuss and work out their volumes.\n• Life Skills (Creative Thinking):",
+   "teacher_decision": false,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G4",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "KICD wording for the PCI listed for this sub-strand; Lesson 6 now names containers from the home or school environment.",
+   "where": "Unit overview, pcis",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-088",
+   "kind": "edit",
+   "target": "unit",
+   "path": "substrand",
+   "old": "Sub-Strand 2.7:",
+   "new": "Sub-Strand 2.4:",
+   "teacher_decision": true,
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The unit header said Sub-Strand 2.7 while all ten lessons, the module name, file names and document titles say 2.4. KICD prints this sub-strand as 2.7 in the curriculum design, but 2.4 is the number the teacher templates and this project use everywhere else. I made the unit match 2.4. TEACHER DECISION: if you prefer the KICD number, all references must change to 2.7 together.",
+   "where": "Unit overview, substrand",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-089",
+   "kind": "edit",
+   "target": "unit",
+   "path": "totalDuration",
+   "old": "10 lessons × 40 minutes = 400 minutes total",
+   "new": "10 lessons × 80 minutes (double periods) = 800 minutes total",
+   "teacher_decision": false,
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Every lesson is a double period of 80 minutes (duration field), so 10 x 80 = 800 minutes (13 hours 20 minutes), not 10 x 40 = 400. Phase minutes inside Lessons 2, 6 and 10 were also trimmed so each lesson fits 80 minutes.",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-090",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "instructions",
+   "old": "yet the frustum tank uses less metal sheet than the cylinder-hemisphere tank. Use your notes, your formulae, your Comparison Table and your cumulative model",
+   "new": "yet the frustum tank uses a little less metal sheet (about 4%) than the cylinder-hemisphere tank. Use your notes, your formulae, your Summary Tables, your Comparison Table and your cumulative model",
+   "teacher_decision": false,
+   "criteria": [
+    7,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Matches the corrected tank data, and sends learners back to their Summary Tables (guideline 7: Summary Tables are used to build the final explanation).",
+   "where": "Final Explanation, instructions",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-091",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[0].prompt",
+   "old": "| Cylinder with hemispherical lid | approx. 5,000 litres | approx. 16.09 m² | approx. KSh 13,677 |\n| Frustum | approx. 5,000 litres | approx. 7.03 m² | approx. KSh 5,975 |\n\n(a) Which tank needs less metal sheet? By roughly how many square metres, and by roughly how much money, does it differ from the other tank?\n(b) Explain in your own words why the students at the factory were puzzled. Use the words volume and surface area in your answer.",
+   "new": "| Cylinder with hemispherical lid | approx. 5,030 litres | approx. 16.93 m² | approx. KSh 14,390 |\n| Frustum | approx. 5,010 litres | approx. 16.29 m² | approx. KSh 13,850 |\n\n(a) Which tank needs less metal sheet? By roughly how many square metres, and by roughly how much money, does it differ from the other tank?\n(b) Explain in your own words why the students at the factory were puzzled. Use the words volume and surface area in your answer.\n(c) Check the frustum tank's volume yourself. The frustum has R = 1.0 m, r = 0.8 m and h = 1.96 m. Use V = (1/3)πh(R² + Rr + r²) and give the volume in litres.",
+   "teacher_decision": false,
+   "criteria": [
+    10
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Table updated to the corrected tank data (costs: 16.93 x 850 = 14,390 and 16.29 x 850 = 13,846, about 13,850). New part (c) makes the task also assess the volume formula for a frustum (KICD outcome c), not only the surface-area story.",
+   "where": "Final Explanation, Section 1: Reading the evidence from the Kisumu factory, prompt",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-092",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[0].exemplar",
+   "old": "The difference in surface area is about 16.09 − 7.03 = 9.06 m². In cost, the difference is about KSh 13,677 − KSh 5,975 = about KSh 7,700 saved on metal sheet for each tank. (b) The students saw that both tanks hold the same amount of water, so they have the same volume (about 5,000 litres). They expected that tanks holding the same amount would need the same amount of metal. But the frustum has a much smaller surface area, so it needs far less sheet. This showed that volume and surface area are not linked in the way they first thought.",
+   "new": "The difference in surface area is about 16.93 − 16.29 = 0.64 m² (about 4%). In cost, the difference is about KSh 14,390 − KSh 13,850 = about KSh 540 saved on metal sheet for each tank. (b) The students saw that both tanks hold the same amount of water, so they have the same volume (about 5,000 litres). They expected that tanks holding the same amount would need the same amount of metal. But the frustum has a smaller surface area, so it needs a little less sheet. This showed that volume and surface area are not linked in the way they first thought. (c) V = (1/3) × π × 1.96 × (1.00 + 0.80 + 0.64) = (1/3) × π × 1.96 × 2.44 ≈ 5.01 m³, which is about 5,010 litres.",
+   "teacher_decision": false,
+   "criteria": [
+    10
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Answer key for the corrected table and the new part (c). Checked: 16.93 - 16.29 = 0.64; 14,390 - 13,850 = 540; 1.96 x 2.44 = 4.7824, x pi / 3 = 5.008 m3.",
+   "where": "Final Explanation, Section 1: Reading the evidence from the Kisumu factory, exemplar",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-093",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[1].exemplar",
+   "old": "(about 16.09 m² and 7.03 m²)",
+   "new": "(about 16.93 m² and 16.29 m²)",
+   "teacher_decision": false,
+   "criteria": [
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Corrected tank surface areas.",
+   "where": "Final Explanation, Section 2: Why surface area and volume are independent, exemplar",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-094",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[2].exemplar",
+   "old": "The cylinder-hemisphere tank has a tall curved cylinder wall plus a curved hemispherical lid, which together expose about 16.09 m² of surface. The frustum has only a base, a narrower top and one sloping side, which expose about 7.03 m². Its sloping side, whose size depends on the slant height and the two radii, lets the frustum hold the same 5,000 litres with much less outer surface, so less metal sheet is needed.",
+   "new": "Both tanks hold about 5,000 litres. The cylinder-hemisphere tank is tall and narrow: a 2.8 m cylinder with radius 0.7 m plus a dome. It has a lot of wall for its volume and exposes about 16.93 m² of surface. The frustum is shorter and wider (1.96 m high, radii 1.0 m and 0.8 m), so it holds the same water with less wall; its sloping side, whose size depends on the slant height and the two radii, together with its two circular faces, exposes about 16.29 m². The difference is small, about 4% (0.64 m²), but it means less metal sheet for every tank made.",
+   "teacher_decision": false,
+   "criteria": [
+    10,
+    1
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "The old exemplar said the frustum 'has only a base, a narrower top and one sloping side' while the other tank has 'a tall curved wall plus a lid'. Both tanks are closed solids, so this was not the reason. The real reason is proportions (tall and narrow against shorter and wider; 3.37 against 3.25 m2 of sheet per m3 of water). Numbers checked twice.",
+   "where": "Final Explanation, Section 3: Explaining the result using formulae and nets, exemplar",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-095",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].title",
+   "old": "for Nyakach Secondary School",
+   "new": "for a Siaya County school",
+   "teacher_decision": false,
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "group": "G7",
+   "why": "Nyakach is in Kisumu County, not Siaya County (see the Lesson 10 overview).",
+   "where": "Final Explanation, Section 4: Engineer's recommendation for a Siaya County school, title",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-096",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].prompt",
+   "old": "Nyakach Secondary School in Siaya County needs a tank",
+   "new": "A rural secondary school in Siaya County needs a tank",
+   "teacher_decision": false,
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "group": "G7",
+   "why": "Same place correction.",
+   "where": "Final Explanation, Section 4: Engineer's recommendation for a Siaya County school, prompt",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-097",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].exemplar",
+   "old": "Cost = surface area × price per square metre = 7.03 × 850 ≈ KSh 5,975. (b) I would recommend the frustum tank. Evidence 1: both tanks hold about 5,000 litres, so the frustum meets the school's capacity requirement just as well as the cylinder-hemisphere tank. Evidence 2: the frustum's surface area is about 7.03 m² compared with about 16.09 m², so its metal sheet costs about KSh 5,975 compared with about KSh 13,677, a saving of about KSh 7,700. Using less metal also means less material to transport and use up.",
+   "new": "Cost = surface area × price per square metre = 16.29 × 850 ≈ KSh 13,850. (b) I would recommend the frustum tank. Evidence 1: both tanks hold about 5,000 litres, so the frustum meets the school's capacity requirement just as well as the cylinder-hemisphere tank. Evidence 2: the frustum's surface area is about 16.29 m² compared with about 16.93 m², so its metal sheet costs about KSh 13,850 compared with about KSh 14,390, a saving of about KSh 540 per tank (about 4%). The saving is small for one tank, so the other things in part (c) may matter as much. Using less metal also means less material to transport and use up.",
+   "teacher_decision": false,
+   "criteria": [
+    10
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum' (volume and surface-area formulas); KICD Grade 10 curriculum design, Mathematics, Strand 2.0 Measurements and Geometry, Surface Area and Volume of Solids",
+   "why": "Corrected numbers and an honest statement that the saving per tank is small (about 4%), which also supports part (c).",
+   "where": "Final Explanation, Section 4: Engineer's recommendation for a Siaya County school, exemplar",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-098",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "rubric",
+   "value": [
+    {
+     "criterion": "Use of evidence from the lessons",
+     "excellent": "Exceeds Expectations: uses the table values and the Kisumu tank data accurately and refers to them in every answer, including correct differences, costs and the checked frustum volume.",
+     "proficient": "Meets Expectations: uses most of the table values correctly, with minor slips in differences or costs.",
+     "developing": "Approaches Expectations: uses little of the data or quotes values incorrectly."
+    },
+    {
+     "criterion": "Understanding that surface area and volume are independent",
+     "excellent": "Exceeds Expectations: clearly explains with the two tanks and the cone and cylinder comparison that equal volume can come with different surface areas, and that shape affects each quantity differently.",
+     "proficient": "Meets Expectations: states that surface area and volume are independent and supports it with one example.",
+     "developing": "Approaches Expectations: confuses surface area with volume or says a larger volume always means a larger surface area."
+    },
+    {
+     "criterion": "Mathematical reasoning with formulae and strategies",
+     "excellent": "Exceeds Expectations: correctly identifies each term in the frustum formula, describes the three-step composite solid strategy including hidden faces, and uses the proportions of the tanks (tall and narrow against shorter and wider) to explain the result.",
+     "proficient": "Meets Expectations: identifies most terms and steps, with small gaps in explaining hidden faces or slant height.",
+     "developing": "Approaches Expectations: names formulae or steps incompletely or incorrectly."
+    },
+    {
+     "criterion": "Justified recommendation and Kenyan applications",
+     "excellent": "Exceeds Expectations: gives a clear recommendation supported by at least two pieces of evidence, and gives accurate, relevant Kenyan examples and a career link.",
+     "proficient": "Meets Expectations: gives a recommendation with some evidence and at least one suitable Kenyan example.",
+     "developing": "Approaches Expectations: gives a recommendation without evidence or gives examples that are unclear or unrelated."
+    }
+   ],
+   "teacher_decision": false,
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "why": "The printed headings come from the template, so the CBE level names Exceeds / Meets / Approaches Expectations are written into the descriptors. Criterion 3 now also asks learners to use the tanks' proportions, which is the real explanation of the phenomenon, and criterion 1 includes the new volume check.",
+   "old": "[{\"criterion\": \"Use of evidence from the lessons\", \"excellent\": \"Uses the table values and the Kisumu tank data accurately and refers to them in every answer, including correct differences and costs.\", \"proficient\": \"Uses most of the table values correctly, with minor slips in differences or costs.\", \"developing\": \"Uses little of the data or quotes values incorrectly.\"}, {\"criterion\": \"Understanding that surface area and volume are independent\", \"excellent\": \"Clearly explains with the two tanks and the cone and cylinder comparison that equal volume can come with different surface areas, and that shape affects each quantity differently.\", \"proficient\": \"States that surface area and volume are independent and supports it with one example.\", \"developing\": \"Confuses surface area with volume or says a larger volume always means a larger surface area.\"}, {\"criterion\": \"Mathematical reasoning with formulae and strategies\", \"excellent\": \"Correctly identifies each term in the frustum formula, describes the three-step composite solid strategy including hidden faces, and links these to the result.\", \"proficient\": \"Identifies most terms and steps, with small gaps in explaining hidden faces or slant height.\", \"developing\": \"Names formulae or steps incompletely or incorrectly.\"}, {\"criterion\": \"Justified recommendation and Kenyan applications\", \"excellent\": \"Gives a clear recommendation supported by at least two pieces of evidence, and gives accurate, relevant Kenyan examples and a career link.\", \"proficient\": \"Gives a recommendation with some evidence and at least one suitable Kenyan example.\", \"developing\": \"Gives a recommendation without evidence or gives examples that are unclear or unrelated.\"}]",
+   "new": "[{\"criterion\": \"Use of evidence from the lessons\", \"excellent\": \"Exceeds Expectations: uses the table values and the Kisumu tank data accurately and refers to them in every answer, including correct differences, costs and the checked frustum volume.\", \"proficient\": \"Meets Expectations: uses most of the table values correctly, with minor slips in differences or costs.\", \"developing\": \"Approaches Expectations: uses little of the data or quotes values incorrectly.\"}, {\"criterion\": \"Understanding that surface area and volume are independent\", \"excellent\": \"Exceeds Expectations: clearly explains with the two tanks and the cone and cylinder comparison that equal volume can come with different surface areas, and that shape affects each quantity differently.\", \"proficient\": \"Meets Expectations: states that surface area and volume are independent and supports it with one example.\", \"developing\": \"Approaches Expectations: confuses surface area with volume or says a larger volume always means a larger surface area.\"}, {\"criterion\": \"Mathematical reasoning with formulae and strategies\", \"excellent\": \"Exceeds Expectations: correctly identifies each term in the frustum formula, describes the three-step composite solid strategy including hidden faces, and uses the proportions of the tanks (tall and narrow against shorter and wider) to explain the result.\", \"proficient\": \"Meets Expectations: identifies most terms and steps, with small gaps in explaining hidden faces or slant height.\", \"developing\": \"Approaches Expectations: names formulae or steps incompletely or incorrectly.\"}, {\"criterion\": \"Justified recommendation and Kenyan applications\", \"excellent\": \"Exceeds Expectations: gives a clear recommendation supported by at least two pieces of evidence, and gives accurate, relevant Kenyan examples and a career link.\", \"proficient\": \"Meets Expectations: gives a recommendation with some evidence and at least one suitable Kenyan example.\", \"developing\": \"Approaches Expectations: gives a recommendation without evidence or gives examples that are unclear or unrelated.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-099",
+   "kind": "flag",
+   "target": "final_explanation",
+   "path": "rubric",
+   "teacher_decision": true,
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "why": "The CBE level 'Below Expectations' cannot be represented: the partner contract allows only three level fields (excellent, proficient, developing). Teachers should treat any answer that does not reach 'Approaches Expectations' (for example, no attempt or no correct use of the data) as Below Expectations. Suggestion: ask the partner whether a fourth level field can be added to the contract.",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-14T09:29:53"
+  },
+  {
+   "id": "math_2_4-100",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "lesson": 8,
+   "old": "Display the diagram of the mapunjas frustum on the board or projector.",
+   "new": "Display the diagram of the ghala frustum on the board or projector.",
+   "teacher_decision": false,
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "group": "G6",
+   "why": "Same term change as the other Lesson 8 edits ('ghala' instead of the unconfirmed 'mapunjas').",
+   "where": "Lesson 8, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-14T09:30:08"
+  },
+  {
+   "id": "math_2_4-101",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "lesson": 5,
+   "old": "why the factory's frustum tank uses noticeably less metal sheet",
+   "new": "why the factory's frustum tank uses less metal sheet (about 4% less)",
+   "teacher_decision": false,
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Wolfram MathWorld, 'Conical Frustum'; KICD Grade 10 curriculum design, Mathematics, Surface Area and Volume of Solids",
+   "why": "The corrected data give a saving of about 4% (16.93 against 16.29 m2), so 'noticeably' overstated it.",
+   "where": "Lesson 5, slo.purposeInStoryline",
+   "applied_at": "2026-10-14T09:30:08"
+  },
+  {
+   "id": "math_2_4-102",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "lesson": 9,
+   "old": "(2) 'If both tanks hold exactly 5,000 litres, what does that tell you about their volumes?'",
+   "new": "(2) 'If both tanks are advertised as holding 5,000 litres, what does that tell you about their volumes?'",
+   "teacher_decision": false,
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G1",
+   "why": "The two volumes are about 5,030 L and 5,010 L, so the lesson says 'advertised' rather than 'exactly'.",
+   "where": "Lesson 9, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-14T09:30:08"
+  }
+ ]
+}
