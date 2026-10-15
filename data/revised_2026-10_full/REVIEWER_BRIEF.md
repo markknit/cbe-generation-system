@@ -45,3 +45,4 @@ more than speed or cost: read everything carefully, think about the science and 
 - Report as in H. Also state in one line: sub-strand number/name mismatches against KICD (flag, do not rename), and any KICD content that is not taught.
 - The sub-strand's student-facing text may be in English with Kiswahili supports; never put unverified Kiswahili in as fact: mark such records `teacher_decision: true` (one grouped record, not one per term).
 - Keep the teachers' anchoring phenomenon unless it is scientifically false as stated; if it is, keep the phenomenon but correct the explanation, and mark the group `teacher_decision: true`.
+- NEVER edit the `phase` label of a framework phase (the contract allows only these exact strings: "Predict Phase", "Observe Phase", "Explain Phase", "Driving Question Board (DQB) Creation", "Model Building Phase"). The renderer and the partner's validator key on them. If you think a label is wrong, add one flag record instead.
