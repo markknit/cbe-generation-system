@@ -2022,3 +2022,6 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 
 ### 2026-10-15 (later) — sync_to_drive.bat extended (jobs 3-4)
 - `scripts/sync_to_drive.bat` now has 4 jobs. New: job 3 revised `.docx` (changes accepted) `data/revised_2026-10_full/outputs/v2` -> `G:\My Drive\CBE Revised 2026-10\Final Documents` (`/E`, no purge, docx only); job 4 journals `data/revised_2026-10_full/journal` -> `...\CBE Revised 2026-10\Journals`, copy-new-only by default (`/XC /XN /XO`) so teacher mark-ups on Drive are not overwritten; `refresh-journals` argument overwrites. Jobs 3-4 are skipped with a warning if the revised folders are missing. Tracked-change files and json are NOT synced. **Written on Linux, not run on Windows: test with `scripts\sync_to_drive.bat preview` first.**
+
+### 2026-10-15 (end of day) — Core Mathematics complete; run on HOLD
+- coremath_2_9 revised (111 records, 9 groups, 0 rejected), built, journals regenerated, partner checks pass. Core Mathematics is now 14/14. Overall **59 of 85 done**; remaining 26 (all Essential Mathematics except 1_3/2_1, and General Science except 3_1): essmath_1_1 1_2 2_2 2_3 2_4 2_5 2_6 2_7 2_8 3_1 3_2; gensci_1_1..1_7 2_1..2_5 3_2 3_3 3_4. Run is on HOLD at Mark's request (weekly plan limit also resets 2026-10-17 12:00 PT). Resume steps: `data/revised_2026-10_full/RUN_QUEUE.md`.
