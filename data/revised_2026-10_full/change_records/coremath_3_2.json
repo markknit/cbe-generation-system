@@ -1,0 +1,1807 @@
+{
+ "module": "coremath_3_2",
+ "records": [
+  {
+   "id": "coremath_3_2-001",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[1].formativeAssessment",
+   "old": "On the class grid, scan for any pair claiming exactly 0.50 — ask them to double-check, as this is statistically unlikely with only 30 tosses and may indicate fabricated data",
+   "new": "A pair reporting exactly 0.50 is not suspicious: about 1 pair in 7 gets exactly 15 heads in 30 fair tosses by chance. Only if MANY pairs report exactly 0.50, or a pair's tallies do not add up to 30, ask them to recount calmly together",
+   "criteria": [
+    5,
+    9
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G4",
+   "group_headline": "Exactly 15 heads in 30 tosses is NOT suspicious (about 1 pair in 7 gets it by chance); the lesson wrongly treated it as a sign of cheating and expected an impossibly tight class total.",
+   "why": "The old note said exactly 0.50 is 'statistically unlikely' and 'may indicate fabricated data'. Checked: C(30,15) = 155,117,520 and 2^30 = 1,073,741,824, so the chance is 0.144, about 1 pair in 7. For 300 fair tosses the standard deviation is sqrt(300x0.25) = 8.7 heads, so 95% of class totals fall within about 150 +/- 17 (133 to 167), not 147 to 153. Accusing learners of cheating also goes against the respectful tone the unit wants.",
+   "reference": "Binomial distribution, P(15 heads in 30 fair tosses) = C(30,15)/2^30 = 155,117,520/1,073,741,824 ≈ 0.144 (OpenStax Introductory Statistics, chapter on the binomial distribution)",
+   "where": "Lesson 1, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-002",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[2].teacherMoves",
+   "old": "ed ≈ 147–153 heads, giving ≈ 0.49–0.51.]\n3. Ask: 'Why is the class total closer to 0.5 than most individual pairs?' [WAIT 15 seconds. This is a KEY thinking moment — resist filling the silence.] Cold-call 4 learners. Write key phrases from their answers on the board.\n4. Bridge back to Kamau: Say: 'Now — here is the link to Kamau. If the theoretical probability of a full bus is, say, 0.4 — based on his data — should we expect exactly 8 full trips in every 20? Or sometimes 7, sometimes 9, sometimes 10?' [WAIT 10 seconds. Take 3 responses.]\n5. Say: 'What Kamau found with his matatu, and what we found with our 10-shilling coin, has a mathematical name.' Write on the board:\n   EXPERIMENTAL PROBABILITY = Number of times event occurs ÷ Total number of trials\n   Also written as: P(event) ≈ frequency / n\n6. Ask: 'In Kamau's notebook, what is the experimental probability of a full bus?' [8 ÷ 20 = 0.4.] Cold-call one learner to compute it live.\n7. Ask: 'What is the experimental probability of heads from our CLASS data?' [Class total ÷ total tosses.] Cold-call a different learner.\n8. Say: 'The mathematical word for this fraction — outcomes we observed ÷ total trials — is RELATIVE FREQUENCY. Experimental probability and relative frequency are the same thing. Write that definition in your exercise books now.'\n9. Pose the synthesis question: 'In pairs, write two sentences: How does the coin experiment help explain why Kamau gets 8 full buses — not exactly 10 — in 20 trips",
+   "new": " roughly 135–165 heads, giving about 0.45–0.55; the exact class total will vary.]\n3. Ask: 'Why is the class total closer to 0.5 than most individual pairs?' [WAIT 15 seconds. This is a KEY thinking moment — resist filling the silence.] Cold-call 4 learners. Write key phrases from their answers on the board.\n4. Bridge back to Kamau: Say: 'Now — here is the link to Kamau. If the long-run chance of a full bus is about 0.4 (our estimate from his data), should we expect exactly 8 full trips in every 20? Or sometimes 7, sometimes 9, sometimes 10?' [WAIT 10 seconds. Take 3 responses.]\n5. Say: 'What Kamau found with his matatu, and what we found with our 10-shilling coin, has a mathematical name.' Write on the board:\n   EXPERIMENTAL PROBABILITY = Number of times event occurs ÷ Total number of trials\n   Also written as: P(event) ≈ frequency / n\n6. Ask: 'In Kamau's notebook, what is the experimental probability of a full bus?' [8 ÷ 20 = 0.4.] Cold-call one learner to compute it live.\n7. Ask: 'What is the experimental probability of heads from our CLASS data?' [Class total ÷ total tosses.] Cold-call a different learner.\n8. Say: 'The mathematical word for this fraction — outcomes we observed ÷ total trials — is RELATIVE FREQUENCY. Experimental probability and relative frequency are the same thing. Write that definition in your exercise books now.'\n9. Pose the synthesis question: 'In pairs, write two sentences: How does the coin experiment help explain why Kamau got 8 full buses in these 20 trips and could get a different number in the next 20",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G4",
+   "why": "(1) The expected spread for 300 tosses was far too narrow (see root). (2) 0.4 comes from Kamau's tally, so it is an experimental estimate, not a 'theoretical' probability; the old wording taught the two terms the wrong way round just before they are defined. (3) 'Not exactly 10' implied the true chance was 0.5, which it is not.",
+   "reference": "Binomial distribution, P(15 heads in 30 fair tosses) = C(30,15)/2^30 = 155,117,520/1,073,741,824 ≈ 0.144 (OpenStax Introductory Statistics, chapter on the binomial distribution)",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-003",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[2].learnerExperience",
+   "old": "data shows 8 full trips out of 20 — not exactly 10",
+   "new": "20 trips gave 8 full trips and could give a different number next time",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G4",
+   "why": "Same wording fix as in the teacher moves: nothing in the data says Kamau 'should' get 10 full trips, so the question now asks about variation between batches of trips.",
+   "where": "Lesson 1, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-004",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "teacherReflection",
+   "old": "Were any pairs getting suspiciously round numbers (exactly 15 heads, exactly 15 tails)? If so, were they fabricating data to 'look correct'? This is a values and integrity issue — address it in the next lesson by reinforcing that real experimental data is SUPPOSED to be imperfect, and that honesty in",
+   "new": "Did every pair's tally add up to 30? A few pairs getting exactly 15 heads is normal (about 1 pair in 7), so do not accuse anyone. If many pairs report exactly 15, or tallies do not add up to 30, remind the class in the next lesson that real experimental data is SUPPOSED to be imperfect, and that honest",
+   "criteria": [
+    5,
+    9
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G4",
+   "why": "Matches the corrected note: exactly 15 heads happens by chance about 14% of the time.",
+   "reference": "Binomial distribution, P(15 heads in 30 fair tosses) = C(30,15)/2^30 = 155,117,520/1,073,741,824 ≈ 0.144 (OpenStax Introductory Statistics, chapter on the binomial distribution)",
+   "where": "Lesson 1, teacherReflection",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-005",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "summaryTablePrompt.observed",
+   "old": "no pair getting exactly 15 of each",
+   "new": "pairs ranging from about 12 to 18 heads (for example 12 in one pair and 17 in another)",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G4",
+   "why": "The old line promised that no pair would get exactly 15 heads, which is not something a teacher can guarantee (about 1 pair in 7 will). It now describes the spread instead.",
+   "reference": "Binomial distribution, P(15 heads in 30 fair tosses) = C(30,15)/2^30 = 155,117,520/1,073,741,824 ≈ 0.144 (OpenStax Introductory Statistics, chapter on the binomial distribution)",
+   "where": "Lesson 1, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-006",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[0].prompt",
+   "old": "No pair got exactly 15 heads",
+   "new": "Different pairs got different numbers of heads (for example 12 in one pair and 17 in another)",
+   "criteria": [
+    7,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G4",
+   "why": "The Final Explanation prompt told students that no pair got exactly 15 heads, but real class data may include such a pair. The prompt now works with whatever the class actually got.",
+   "reference": "Binomial distribution, P(15 heads in 30 fair tosses) = C(30,15)/2^30 = 155,117,520/1,073,741,824 ≈ 0.144 (OpenStax Introductory Statistics, chapter on the binomial distribution)",
+   "where": "Final Explanation, Section 1: Why can't Kamau predict one trip, yet still say something useful?, prompt",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-007",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[3].teacherMoves",
+   "old": "deeper in Lesson 2)\n   — 'What if we tossed the coin 1000 times — would it be exactly 0.5?' → Lesson 2\n   — 'How do you work out the probability of something when you cannot do an experiment?' → Lesson 3 (theoretical probability, sample space)\n   — 'Can two things happen at the same time — like a full bus AND a half-empty bus?' → Lesson 5 (mutually exclusive events)\n4. Read 3–4 UNDERSTANDING slips aloud. Say: 'Listen — your classmates are already making sense of Kamau's puzzle.'\n5. Post all slips on the DQB. Say: 'This board is our intellectual home for the next 12 lessons",
+   "new": "fuller answer in Lesson 4)\n   — 'What if we tossed the coin 1000 times — would it be exactly 0.5?' → Lesson 4\n   — 'How do you work out the probability of something when you cannot do an experiment?' → Lesson 3 (theoretical probability, sample space)\n   — 'Can two things happen at the same time — like a full bus AND a half-empty bus?' → Lesson 5 (mutually exclusive events)\n4. Read 3–4 UNDERSTANDING slips aloud. Say: 'Listen — your classmates are already making sense of Kamau's puzzle.'\n5. Post all slips on the DQB. Say: 'This board is our intellectual home for the whole unit",
+   "criteria": [
+    1,
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "why": "The unit has 8 lessons, not 12 (KICD suggests 12 but this sequence is 8). Also, the 'does experiment ever exactly equal theory' and '1000 tosses' questions are answered in Lesson 4 (Convergence Chart), not Lesson 2, which is only about the probability scale.",
+   "where": "Lesson 1, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-008",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[0].teacherMoves",
+   "old": "tly.'",
+   "new": "tly.'\n8. Language support (English learners): post a bilingual word bank for the unit and let learners write answers in either language first. Suggested Kiswahili terms: uwezekano (probability), tukio (event), matokeo (outcome/result), jaribio (trial/experiment). Ask your Kiswahili colleague to confirm the terms and add the school's usual word for sample space.",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "G_KIS",
+   "group_headline": "Added a short Kiswahili word bank (uwezekano, tukio, matokeo, jaribio) for English learners in Lesson 1.",
+   "why": "Guideline 12 asks for language supports including Kiswahili where it helps. These four terms are the ones I am fairly sure of, but I cannot verify Kenyan classroom usage; the teacher must confirm or replace them and add the term for sample space.",
+   "where": "Lesson 1, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-009",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 2,
+   "path": "overview",
+   "old": "\\n\\nThe Explain phase then bridges back to Kamau's notebook: every frequency ratio from Lesson 1 is verified to sit inside the scale, and learners compute two new probability estimates from the tally data — P(bus carries fewer than 8 passengers) and P(bus is completely full) — confirming both land between 0 and 1. This grounds the abstract rule in familiar evidence and reinforces that Kamau's notebook is a mathematical object, not just a record.\\n\\n",
+   "new": "\n\nThe Explain phase then bridges back to Kamau's notebook: every frequency ratio from Lesson 1 is verified to sit inside the scale, and learners compute two new probability estimates from the tally data — P(bus carries fewer than 8 passengers) and P(bus is completely full) — confirming both land between 0 and 1. This grounds the abstract rule in familiar evidence and reinforces that Kamau's notebook is a mathematical object, not just a record.\n\n",
+   "why": "The text contained the two characters backslash-n instead of a real line break, so they would print literally in the document.",
+   "criteria": [
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "group": "G_FMT",
+   "group_headline": "Stray '\\n' characters were printing as text in the Lesson 2 and 3 documents; replaced with real line breaks.",
+   "where": "Lesson 2, overview",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-010",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 2,
+   "path": "teacherReflection",
+   "old": "\\n2. Which of the 12 event-cards generated the most disagreement, and does that disagreement reveal a specific misconception (e.g., confusing 'very unlikely' with 'impossible') that I need to address explicitly at the start of Lesson 3?\\n3. When I introduced the formal inequality 0 ≤ P(E) ≤ 1, did learners connect both boundary conditions (P = 0 AND P = 1) with equal confidence, or did they find one boundary more intuitive than the other? What adjustment to the Explain phase would help the less-intuitive boundary?\\n4. Looking at the DQB sticky notes collected today, what is the most common type of student question — boundary questions, data questions, or misconception questions — and how does this inform the opening hook I will use in Lesson 3?\\n",
+   "new": "\n2. Which of the 12 event-cards generated the most disagreement, and does that disagreement reveal a specific misconception (e.g., confusing 'very unlikely' with 'impossible') that I need to address explicitly at the start of Lesson 3?\n3. When I introduced the formal inequality 0 ≤ P(E) ≤ 1, did learners connect both boundary conditions (P = 0 AND P = 1) with equal confidence, or did they find one boundary more intuitive than the other? What adjustment to the Explain phase would help the less-intuitive boundary?\n4. Looking at the DQB sticky notes collected today, what is the most common type of student question — boundary questions, data questions, or misconception questions — and how does this inform the opening hook I will use in Lesson 3?\n",
+   "why": "The text contained the two characters backslash-n instead of a real line break, so they would print literally in the document.",
+   "criteria": [
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "group": "G_FMT",
+   "where": "Lesson 2, teacherReflection",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-011",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 3,
+   "path": "teacherReflection",
+   "old": "\\n\\n1. COMPLETENESS OF ENUMERATION: Did the majority of learners successfully fill all 36 cells of the 6×6 dice grid without prompting? If not, what systematic error did you observe — were learners skipping rows, confusing ordered and unordered pairs, or stopping early? How will you address this in Lesson 4?\\n\\n2. TRANSITION FROM EXPERIMENTAL TO THEORETICAL: When you pointed to the connecting arrow on the cumulative model, could learners articulate in their own words why the Lesson 1 tally data and the theoretical fraction 1/4 are related but not identical? If learners struggled, consider opening Lesson 4 with a quick comparison of experimental frequencies from the tally against the theoretical 1/4 — computing the difference explicitly.\\n\\n3. FAIRNESS DISCUSSION: Did the game-stall fairness question generate genuine debate, or did learners simply calculate 1/6 and stop? The social justice dimension (is a game stall at a school fair exploiting students?) should surface authentic engagement. If it did not, consider assigning a short home task: 'Find one game of chance in your community (e.g., a board game, a betting stall at a local market). List its sample space and decide if it is fair.'\\n\\n4. THREE-STOP EXTENSION: The question about Kamau's three-stop model (8 outcomes) was introduced but not fully resolved. Did learners who attempted the extension correctly identify 2³ = 8 outcomes? This is a seed for the multiplication principle, which will be formalised in the tree diagram lesson (Lesson 7). Note which learners spontaneously used a tree structure versus a three-way table — this reveals readiness.\\n\\n",
+   "new": "\n\n1. COMPLETENESS OF ENUMERATION: Did the majority of learners successfully fill all 36 cells of the 6×6 dice grid without prompting? If not, what systematic error did you observe — were learners skipping rows, confusing ordered and unordered pairs, or stopping early? How will you address this in Lesson 4?\n\n2. TRANSITION FROM EXPERIMENTAL TO THEORETICAL: When you pointed to the connecting arrow on the cumulative model, could learners articulate in their own words why the Lesson 1 tally data and the theoretical fraction 1/4 are related but not identical? If learners struggled, consider opening Lesson 4 with a quick comparison of experimental frequencies from the tally against the theoretical 1/4 — computing the difference explicitly.\n\n3. FAIRNESS DISCUSSION: Did the game-stall fairness question generate genuine debate, or did learners simply calculate 1/6 and stop? The social justice dimension (is a game stall at a school fair exploiting students?) should surface authentic engagement. If it did not, consider assigning a short home task: 'Find one game of chance in your community (e.g., a board game, a betting stall at a local market). List its sample space and decide if it is fair.'\n\n4. THREE-STOP EXTENSION: The question about Kamau's three-stop model (8 outcomes) was introduced but not fully resolved. Did learners who attempted the extension correctly identify 2³ = 8 outcomes? This is a seed for the multiplication principle, which will be formalised in the tree diagram lesson (Lesson 7). Note which learners spontaneously used a tree structure versus a three-way table — this reveals readiness.\n\n",
+   "criteria": [
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "group": "G_FMT",
+   "why": "Same stray backslash-n characters in the Lesson 3 teacher reflection.",
+   "where": "Lesson 3, teacherReflection",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-012",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 2,
+   "path": "framework[2].teacherMoves",
+   "old": "Work through all 12 cards with brief justifications",
+   "new": "Place all 12 cards on the board line quickly (about 3 minutes in total), pausing for justification only on cards A, C, G and K",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T2",
+   "group_headline": "Lesson 2 (40 minutes) held about 45 minutes of activity; the 12-card walk-through on the board is shortened and a pacing line added.",
+   "why": "Adding the phase times: Predict about 5, Observe about 12, Explain 15 or more (12 cards, three calculations, a 60-second pair task), DQB about 6, Model about 7 = 45 or more. Cutting the full card-by-card walk-through to about 3 minutes brings Explain to about 12 and the lesson to 40.",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-013",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 2,
+   "path": "framework[0].teacherMoves",
+   "old": "Displ",
+   "new": "Pacing for this 40-minute lesson: Predict 5, Observe 12, Explain 12, Driving Question Board 5, Model Building 6. Displ",
+   "criteria": [
+    3,
+    13
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T2",
+   "why": "Pacing line so a teacher can keep to 40 minutes (5+12+12+5+6 = 40).",
+   "where": "Lesson 2, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-014",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 2,
+   "path": "slo.safetyNotes",
+   "old": "vity.",
+   "new": "vity. Learners with mobility or visual difficulties can place the cards on an A3 desk-top number line instead of the floor rope, with a partner reading each card aloud.",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "why": "The card-line activity needs learners to walk and read small cards; an alternative way to take part was missing.",
+   "where": "Lesson 2, slo.safetyNotes",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-015",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 2,
+   "path": "framework[3].formativeAssessment",
+   "old": "4",
+   "new": "5",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "why": "Mutually exclusive events are taught in Lesson 5, not Lesson 4.",
+   "where": "Lesson 2, Driving Question Board (DQB) Creation, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-016",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 3,
+   "path": "framework[1].learnerExperience",
+   "old": "25 min): Working in pairs, learners receive (or draw) a blank two-way table with 'Stop 1: Mlolongo' across the top (columns: T, E) and 'Stop 2: Athi River' down the side (rows: T, E). They fill in each cell with the combined outcome (e.g., row T / col T → TT). They list the four outcomes as a set: {TT, TE, ET, EE}. They answer three questions on the ARES activity card: (i) How many outcomes are in the sample space? (ii) In how many outcomes is at least one seat Taken? (iii) What is the theoretical probability that both seats are Empty? They record answers in their books.\n\nPART B — School Game Stall Extension (20 min): Learners are told: 'At the Athi River Secondary School end-of-term fundi fair, a game stall uses two standard dice. A player wins a prize if both dice show the same number. Let's build the full sample space.' Each pair draws a 6×6 grid. The columns are labelled Die 1: 1–6; rows are Die 2: 1–6. They write all 36 ordered pairs in the cells. They then: (i) circle all outcomes where both dice show the same number; (ii) count the favourable outcomes; (iii) calculate the theoretical probability of winning. They compare this to the question: 'Is this game at the fundi fair fair to the player? Why or why not?'\n\nPART C — Link to Kamau (5",
+   "new": "12 min): Working in pairs, learners receive (or draw) a blank two-way table with 'Stop 1: Mlolongo' across the top (columns: T, E) and 'Stop 2: Athi River' down the side (rows: T, E). They fill in each cell with the combined outcome (e.g., row T / col T → TT). They list the four outcomes as a set: {TT, TE, ET, EE}. They answer three questions on the ARES activity card: (i) How many outcomes are in the sample space? (ii) In how many outcomes is at least one seat Taken? (iii) What is the theoretical probability that both seats are Empty? They record answers in their books.\n\nPART B — School Game Stall Extension (18 min): Learners are told: 'At the Athi River Secondary School end-of-term fundi fair, a game stall uses two standard dice. A player wins a prize if both dice show the same number. Let's build the full sample space.' Each pair draws a 6×6 grid. The columns are labelled Die 1: 1–6; rows are Die 2: 1–6. They write all 36 ordered pairs in the cells. They then: (i) circle all outcomes where both dice show the same number; (ii) count the favourable outcomes; (iii) calculate the theoretical probability of winning. They compare this to the question: 'Is this game at the fundi fair fair to the player? Why or why not?'\n\nPART C — Link to Kamau (4",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T3",
+   "group_headline": "Lesson 3 (80 minutes) listed 50 minutes for the Observe phase alone; part times trimmed to match the teacher moves and a pacing line added.",
+   "why": "Old Observe total 25+20+5 = 50 min, which with Predict about 10, Explain about 25, DQB about 8 and Model about 8 is about 100 min in an 80-minute lesson. The teacher moves already allow only 8 min to fill the 2x2 table, 12 min for the 6x6 grid and 3 min for Part C, so the labels now say 12 + 18 + 4 = 34. New budget 10 + 34 + 21 + 7 + 8 = 80.",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-017",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 3,
+   "path": "framework[0].teacherMoves",
+   "old": "Distr",
+   "new": "Pacing for this 80-minute double lesson: Predict 10, Observe 34, Explain 21, Driving Question Board 7, Model Building 8. Distr",
+   "criteria": [
+    3,
+    13
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T3",
+   "why": "Pacing line (10+34+21+7+8 = 80) so the teacher can keep each phase to time.",
+   "where": "Lesson 3, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-018",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 3,
+   "path": "framework[1].teacherMoves",
+   "old": "\n\nPART B: Say: 'Now we scale up. Same idea, bigger table. Take 12 minutes to fill your 6×6 grid — every cell.' Circulate; if pairs miss cells, tap the blank cell and say: 'Is this stop",
+   "new": " Then add the assumption note: 'The answer 1/4 for both seats Empty is correct only if T and E are equally likely, like Heads and Tails on a fair coin. On Kamau's real route a seat is taken more often than empty (his notebook averages about 11 of 14 seats filled), so the four outcomes are NOT equally likely. We will use his real probabilities in Lessons 6 and 7.'\n\nPART B: Say: 'Now we scale up. Same idea, bigger table. Take 12 minutes to fill your 6×6 grid — every cell.' Circulate; if pairs miss cells, tap the blank cell and say: 'Is this outcome",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G_EQ",
+   "group_headline": "Lesson 3 gave 1/4 for 'both seats empty' without saying the four outcomes are only equally likely for a fair coin, not for Kamau's real route.",
+   "why": "Theoretical probability = favourable/total only works when the outcomes are equally likely. For Kamau about 79% of seat-trips are taken (222/280), so P(EE) is nowhere near 1/4. Without the note a learner could believe 1/4 is true for the real matatu. The second change fixes a leftover word ('stop' instead of 'outcome') in a prompt about the dice grid.",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 3.0 Sub-strand 3.2 Probability 1 (probability space and theoretical probability from equally likely outcomes); standard classical-probability definition, e.g. OpenStax Introductory Statistics, Sample Spaces and Probability",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-019",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 3,
+   "path": "framework[3].teacherMoves",
+   "old": "4 we will use this to explore what happens when two outcomes cannot both occur at the same time — like a seat being both Taken AND Empty. Can you think of an example from Kamau's route?' Give 10 seconds. Cold-call 1 learner. Leave the question unanswered — it seeds Lesson 4",
+   "new": "5 we will explore what happens when two outcomes cannot both occur at the same time — like a seat being both Taken AND Empty. Can you think of an example from Kamau's route?' Give 10 seconds. Cold-call 1 learner. Leave the question unanswered — it seeds Lesson 5",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "why": "Mutually exclusive events are taught in Lesson 5. Lesson 4 is about theoretical probability of single events.",
+   "where": "Lesson 3, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-020",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[1].learnerExperience",
+   "old": "game-stall scenario from the Machakos Bus Station), and (B) a printed 'Convergence Worksheet' containing Kamau's 20-trip tally table alongside two calculation tasks. Task 1 (using the sample space grid): List all outcomes where the sum of two dice equals 7. Count favourable outcomes. Count total equally likely outcomes in the grid. Write the theoretical probability P(sum = 7). Then count how many times sum = 7 appeared in the Lesson 1 dice-rolling experiment results (posted on the board from Lesson 1). Write the experimental frequency as a fraction of total rolls. Record both values in the comparison table on the worksheet. Task 2 (Kamau's matatu seat): The matatu has 14 seats. On an average trip, 10 seats are filled. Assume each of the 14 seats is equally likely to be the 'randomly chosen' seat. What is the theoretical probability P(chosen seat is occupied)? Write it as a fraction, a decimal, and a percentage. Compare this to the experimental relative frequency of full-seat trips from Lesson 1 tally data",
+   "new": "Athi River school fundi-fair game-stall scenario), and (B) a printed 'Convergence Worksheet' containing Kamau's 20-trip tally table alongside two calculation tasks. Task 1 (using the sample space grid): List all outcomes where the sum of two dice equals 7. Count favourable outcomes. Count total equally likely outcomes in the grid. Write the theoretical probability P(sum = 7). Then test your answer: roll two dice 36 times in your group (one learner rolls, one tallies, one checks) and count how many times the sum is 7. Write the experimental frequency as a fraction of 36 and add your group's count to the class total on the board. (No dice? Use two bags of six numbered paper slips: draw one slip from each bag, record the sum, and put the slips back.) Record both values in the comparison table on the worksheet. Task 2 (Kamau's matatu seat): The matatu has 14 seats. On an average trip, 11 seats are filled. Assume each of the 14 seats is equally likely to be the 'randomly chosen' seat. What is the theoretical probability P(chosen seat is occupied)? Write it as a fraction, a decimal, and a percentage. Compare this with the experimental value from all 20 trips: total seats filled ÷ total seats = 222 ÷ 280 ≈ 0.79",
+   "criteria": [
+    2,
+    4
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "group": "G2",
+   "group_headline": "Audit item: Lesson 4 used a 'Lesson 1 dice-rolling experiment' that was never run; learners now roll two dice 36 times in Lesson 4 (which also covers the KICD 'throw dice' experiment).",
+   "why": "The audit item is real: Lesson 1 only has a coin toss, so no dice results exist to compare with. Rather than delete the comparison, the lesson now includes a short two-dice experiment (about 4 minutes; expected about 6 sevens in 36 rolls, 3 to 9 is normal), which also delivers the KICD experience 'tossing coins or throwing dice'. The Task 2 numbers now start from the notebook (222 total, 11.1 per trip) and compare 11/14 with 222/280, a like-for-like comparison. The teacher must decide whether the class has dice or the paper-slip substitute and whether 4 extra minutes fit. The scenario name is also corrected: the game stall was at the Athi River fundi fair in Lesson 3, not at the bus station. Also carries the 10-to-11 and 14/20-to-8/20 corrections (see group G1).",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-021",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[1].teacherMoves",
+   "old": "18 minutes for both tasks. Task 1 uses the grid from Lesson 3 — no re-rolling needed, we are calculating from the list of outcomes. Task 2 uses Kamau's notebook. Both tasks ask you to compute a theoretical probability AND find the matching experimental value. Record both in the comparison table.' Circulate continuously. At the 8-minute mark do a mid-activity check: cold-call one group on Task 1 — 'How many favourable outcomes did you find for sum = 7? Tell me which squares on your grid.' (Expected: 6 outcomes: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) out of 36 total → P = 6/36 = 1/6.) Give 10 seconds WAIT TIME before accepting answers. At the 15-minute mark prompt groups still on Task 1: 'Move to Task 2 now even if Task 1 is not fully written up — we will consolidate Task 1 together.' For Task 2, listen for the misconception of using 14/20 (trips where all seats were full) instead of 10",
+   "new": "22 minutes for both tasks. In Task 1 you first calculate from the grid from Lesson 3, then roll two dice 36 times to test your answer. Task 2 uses Kamau's notebook: start by adding up the 20 passenger counts (the total is 222). Both tasks ask you to compute a theoretical probability AND find the matching experimental value. Record both in the comparison table.' Circulate continuously. At the 8-minute mark do a mid-activity check: cold-call one group on Task 1 — 'How many favourable outcomes did you find for sum = 7? Tell me which squares on your grid.' (Expected: 6 outcomes: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) out of 36 total → P = 6/36 = 1/6; expect about 6 sevens in 36 rolls, but anything from 3 to 9 is normal.) If a group says there are 11 possible sums (2 to 12) so P(7) = 1/11, ask: 'How many different pairs of dice give a sum of 2? How many give 7?' (1 pair versus 6 pairs: the 36 pairs are equally likely, the sums are not.) Give 10 seconds WAIT TIME before accepting answers. At the 15-minute mark prompt groups still on Task 1: 'Move to Task 2 now even if Task 1 is not fully written up — we will consolidate Task 1 together.' For Task 2, listen for the misconception of using 8/20 (trips where all seats were full) instead of 11",
+   "criteria": [
+    2,
+    4,
+    5
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "group": "G2",
+   "why": "Matches the new Task 1 (calculate from the grid, then roll two dice 36 times) and Task 2 (start from the notebook total of 222). Adds the common dice misconception that the 11 sums 2 to 12 are equally likely, with a plan for the teacher. Time raised from 18 to 22 minutes to fit the roll experiment (Lesson 4 has room: total about 75 minutes).",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-022",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[2].learnerExperience",
+   "old": "Lesson 1",
+   "new": "our dice rolls and Kamau's 20 trips",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G2",
+   "why": "The chart column no longer points to a Lesson 1 dice experiment that never existed.",
+   "where": "Lesson 4, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-023",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "summaryTablePrompt.observed",
+   "old": "and extracted experimental relative frequencies from Kamau's 20-trip tally notebook, recording both values side-by-side in a Convergence Worksheet. They also observed the teacher-facilitated public examination of the 10/14 vs 14",
+   "new": "rolled two dice 36 times per group to test P(sum = 7), and extracted experimental relative frequencies from Kamau's 20-trip tally notebook, recording both values side-by-side in a Convergence Worksheet. They also observed the teacher-facilitated public examination of the 11/14 vs 8",
+   "criteria": [
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Summary Table now records the dice experiment, and uses 8/20 for the full-trip fraction (see group G1).",
+   "where": "Lesson 4, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-024",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "overview",
+   "old": "extracting relative frequencies from Kamau's Lesson 1",
+   "new": "testing them with a short two-dice rolling experiment and relative frequencies from Kamau's",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Overview now matches the lesson's activities.",
+   "where": "Lesson 4, overview",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-025",
+   "kind": "edit",
+   "target": "unit",
+   "path": "storylineThread",
+   "old": "compare their computed values against the experimental frequencies from Lesson 1 and discuss convergence. Kamau's scenario is revisited: what is the theoretical probability that a randomly chosen seat on a given trip is occupied if historically 10 out of 14 seats are filled on average",
+   "new": "roll two dice 36 times per group to compare the theoretical P(sum = 7) with an experimental frequency, compare with Kamau's notebook, and discuss convergence. Kamau's scenario is revisited: what is the theoretical probability that a randomly chosen seat on a given trip is occupied if, from his notebook, about 11 of 14 seats are filled on average (222 passengers in 20 trips = 11.1 per trip)",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Unit storyline for Lesson 4 now matches the lesson (dice experiment is in Lesson 4, not Lesson 1) and the notebook average (also G1).",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-026",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "slo.purposeInStoryline",
+   "old": "0",
+   "new": "1",
+   "why": "Kamau's 20 counts add to 6+9+14+11+14+8+14+12+7+14+10+14+13+6+14+9+14+11+8+14 = 222 passengers, so the average is 222/20 = 11.1 of 14 seats (222/280 = 0.79), not 10. Lesson 7 and 8 then claim 10/14 was 'estimated from the data' or 'derived in Lesson 4'. The full-trip count is 8 of 20, so '14/20' was never a real fraction from the notebook. Recomputed twice by adding the list in two halves (first ten = 117, last ten = 105; total 222). Knock-on: this Lesson 4 purpose now says 11 of 14.",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "group_headline": "Kamau's 'average 10 of 14 seats filled' did not match his own notebook (222 passengers in 20 trips = 11.1 of 14); every use now says 11 of 14, and the mixed-up '14/20' is now the correct '8/20'.",
+   "where": "Lesson 4, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-027",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[0].teacherMoves",
+   "old": "ted 10/14, ",
+   "new": "ted 11/14, ",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-028",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[0].formativeAssessment",
+   "old": "0 out of 14 seats per trip versus 14",
+   "new": "1 out of 14 seats per trip versus 8",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-029",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[1].formativeAssessment",
+   "old": "0/14 (correct) versus 14",
+   "new": "1/14 (correct) versus 8",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-030",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[2].teacherMoves",
+   "old": "0/14 vs 14/20 misconception directly — without naming the group, write both fractions on the board and ask: 'Someone calculated 14/20 for Kamau's seat probability. Talk with your partner: what does 14/20 actually mean in Kamau's context? What does 10/14 mean?' (Wait 10 seconds — cold-call 2 pairs.) Confirm: '14/20 tells us the experimental frequency of completely full trips; 10/14 tells us the theoretical probability that a specific randomly chosen seat is occupied, based on average occupancy — these answer different questions.' For the mandazi task: give 5 minutes of individual silent work, then say: 'Check your answer for P(plain) with your partner.' Cold-call 2 pairs for each of the three probabilities. For each, ask: 'Did your partner get the same answer? If different, whose reasoning is correct and why?' Emphasise that P(not coconut) = 1 − P(coconut) = 1 − 2/10 = 8/10 — the complement rule emerges naturally here. Close the phase by returning to predictions: 'Look at your Prediction Bank on the board. Who had 10/14? Who had something different? What does the definition of theoretical probability tell us about why 10",
+   "new": "1/14 vs 8/20 misconception directly — without naming the group, write both fractions on the board and ask: 'Someone calculated 8/20 for Kamau's seat probability. Talk with your partner: what does 8/20 actually mean in Kamau's context? What does 11/14 mean?' (Wait 10 seconds — cold-call 2 pairs.) Confirm: '8/20 tells us the experimental frequency of completely full trips; 11/14 tells us the theoretical probability that a specific randomly chosen seat is occupied, based on average occupancy — these answer different questions.' For the mandazi task: give 5 minutes of individual silent work, then say: 'Check your answer for P(plain) with your partner.' Cold-call 2 pairs for each of the three probabilities. For each, ask: 'Did your partner get the same answer? If different, whose reasoning is correct and why?' Emphasise that P(not coconut) = 1 − P(coconut) = 1 − 2/10 = 8/10 — the complement rule emerges naturally here. Close the phase by returning to predictions: 'Look at your Prediction Bank on the board. Who had 11/14? Who had something different? What does the definition of theoretical probability tell us about why 11",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-031",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[2].sensemakingStrategy",
+   "old": "0/14 vs 14",
+   "new": "1/14 vs 8",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, Explain Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-032",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[2].formativeAssessment",
+   "old": "0/14 and 14",
+   "new": "1/14 and 8",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-033",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[4].learnerExperience",
+   "old": "0",
+   "new": "1",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-034",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[4].formativeAssessment",
+   "old": "0/14 (not 14/20 or another erroneous value) — residual presence of 14",
+   "new": "1/14 (not 8/20 or another erroneous value) — residual presence of 8",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-035",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "teacherReflection",
+   "old": "0/14 vs 14",
+   "new": "1/14 vs 8",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, teacherReflection",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-036",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "summaryTablePrompt.learned",
+   "old": "0/14 ≈ 0.71",
+   "new": "1/14 ≈ 0.79",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, summaryTablePrompt.learned",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-037",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "summaryTablePrompt.explained",
+   "old": "0/14, connecting this to the insufficiency of small sample sizes; why 10/14 and 14",
+   "new": "1/14, connecting this to the insufficiency of small sample sizes; why 11/14 and 8",
+   "why": "Knock-on of the notebook average: 10 of 14 becomes 11 of 14, and the mistaken '14/20' becomes 8/20 (full trips out of all trips).",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally in this module (222 passengers over 20 trips of a 14-seat matatu)",
+   "where": "Lesson 4, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-038",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[1].learnerExperience",
+   "old": "Form 3} = {S1–S12}, so 12 students. Event B = {student is in Form 4",
+   "new": "Grade 10} = {S1–S12}, so 12 students. Event B = {student is in Grade 11",
+   "criteria": [
+    2
+   ],
+   "category": "language",
+   "severity": "minor",
+   "group": "G_FORM",
+   "group_headline": "Replaced 'Form 3 / Form 4' with Grade 10 / Grade 11 (CBE language) in the Lesson 5 prize-draw example.",
+   "why": "Guideline 2: CBE language (Grade, not Form). The prize draw still has 12 + 18 = 30 students; only the labels change.",
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-039",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[4].teacherMoves",
+   "old": "Form 3 AND Form 4",
+   "new": "Grade 10 AND Grade 11",
+   "criteria": [
+    2
+   ],
+   "category": "language",
+   "severity": "minor",
+   "group": "G_FORM",
+   "why": "Same label change in the Model Building prompt.",
+   "where": "Lesson 5, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-040",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[4].learnerExperience",
+   "old": "events CAN overlap",
+   "new": "one event does not change the other",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "why": "Lesson 6 is about independent events and the Multiplication Law, not overlapping events or the general Addition Rule (not in this sub-strand). The 'next' arrow now points to what Lesson 6 really does.",
+   "where": "Lesson 5, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-041",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[4].sensemakingStrategy",
+   "old": "non-mutually exclusive events and the general Addition Rule",
+   "new": "independent events and the Multiplication Law",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "why": "Matches what Lesson 6 teaches.",
+   "where": "Lesson 5, Model Building Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-042",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "teacherReflection",
+   "old": "introduces tree diagrams. (3) Were the We-Still-Wonder entries on the DQB genuinely anticipatory of non-mutually exclusive events, or did they repeat content already covered? If the latter, learners may not yet perceive the logical gap that Lesson 6 will fill — spend 2 extra minutes at the start of Lesson 6 posing a deliberately overlapping event scenario (e.g., 'What if Event A = trip has more than 10 passengers AND Event B = trip has an even number of passengers?') to create productive confusion",
+   "new": "multiplies probabilities from tally data. (3) Did learners keep 'cannot happen together' (mutually exclusive) separate from 'one does not affect the other' (independent)? If their We-Still-Wonder entries mix the two up, spend 2 extra minutes at the start of Lesson 6 on the contrast: two coin tosses CAN both be Heads, and the first toss does not change the second",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "why": "Tree diagrams are in Lesson 7, and Lesson 6 does not cover overlapping events; the reflection prompts now point to the real next steps and name the usual mix-up between mutually exclusive and independent.",
+   "where": "Lesson 5, teacherReflection",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-043",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "slo.purposeInStoryline",
+   "old": "identified sample spaces, distinguished mutually exclusive events, and used tree diagrams for sequential",
+   "new": "the probability scale, sample spaces, theoretical probability and the Addition Law for mutually exclusive",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "why": "Tree diagrams are first built in Lesson 7, not before Lesson 6.",
+   "where": "Lesson 6, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-044",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "framework[3].learnerExperience",
+   "old": "laws of probability, combined events, probability tree diagrams with more complex scenarios)",
+   "new": "probability tree diagrams, using the laws together, and the unit synthesis); questions about dependent events are kept for Probability II",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "why": "Lesson 7 is about tree diagrams; dependent events belong to Probability II, so learners should not be promised them in Lessons 7-8.",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-045",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "framework[3].formativeAssessment",
+   "old": "Lesson 7",
+   "new": "a Probability II topic, so acknowledge the question and note it for later",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "why": "Dependent events are not taught in Lesson 7.",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-046",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "framework[4].teacherMoves",
+   "old": "8 minutes of individual drawing, ask: 'Pause. Check that your four end-branch probabilities add to exactly 1. If they don't, find the arithmetic error.' Allow 2 minutes for self-correction. Circulate and specifically check that learners label the branches P(Full) = 2/5, not P(Full) = 8 — they must write probabilities, not raw frequencies. For the interpretation statement, say: 'Kamau is not a mathematician — write your statement so he could read it and immediately use it to plan his week. No symbols — plain sentences.' Cold-call 2 learners to read their interpretation aloud. Close the lesson by asking: 'Hold up your model page. Look at how much it has grown since Lesson 1. Next lesson, we will add the final law — what happens when we want EITHER event A OR event B to occur — and we will discover that addition and multiplication laws together give Kamau",
+   "new": "6 minutes of individual drawing, ask: 'Pause. Check that your four end-branch probabilities add to exactly 1. If they don't, find the arithmetic error.' Allow 1 minute for self-correction. Circulate and specifically check that learners label the branches P(Full) = 2/5, not P(Full) = 8 — they must write probabilities, not raw frequencies. For the interpretation statement, say: 'Kamau is not a mathematician — write your statement so he could read it and immediately use it to plan his week. No symbols — plain sentences.' Cold-call 2 learners to read their interpretation aloud. Close the lesson by asking: 'Hold up your model page. Look at how much it has grown since Lesson 1. Next lesson, we will use tree diagrams to put the addition and multiplication laws together, so Kamau has",
+   "criteria": [
+    3,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "why": "The 'EITHER A OR B' law was already taught in Lesson 5; Lesson 7 is tree diagrams. Also trims drawing time by 3 minutes (see the Lesson 6 timing group).",
+   "where": "Lesson 6, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-047",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "framework[0].teacherMoves",
+   "old": "Distr",
+   "new": "Pacing for this 80-minute double lesson: Predict 10, Observe 25, Explain 27, Driving Question Board 8, Model Building 10. Distr",
+   "criteria": [
+    3,
+    13
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T6",
+   "group_headline": "Lesson 6 held about 90 minutes of activity in 80; small trims to DQB writing, dependent-event preview and model drawing, plus a pacing line.",
+   "why": "Adding the teacher-move times gives about 12 (Predict) + 28 (Observe) + 30 (Explain A-D) + 10 (DQB) + 14 (Model) = about 94 minutes. New budget 10 + 25 + 27 + 8 + 10 = 80.",
+   "where": "Lesson 6, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-048",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "framework[2].teacherMoves",
+   "old": "2 minutes",
+   "new": "1 minute",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T6",
+   "why": "Part of the Lesson 6 time trim (Explain 27 min).",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-049",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "framework[3].teacherMoves",
+   "old": "ners 5 minu",
+   "new": "ners 3 minu",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T6",
+   "why": "Part of the Lesson 6 time trim (DQB 8 min).",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-050",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "framework[2].learnerExperience",
+   "old": "≈ ½ of the first-Heads trials, i.e., P(HH) ≈ ¼",
+   "new": "about ½. This is different from the overall P(HH), which is about ¼ because the first toss must also be Heads",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "why": "The old text said the fraction of first-Heads trials with a second Heads is 'about ½, i.e. P(HH) about ¼', which mixes two different quantities and would confuse learners. If the first toss is Heads, the second toss is Heads about half the time (1/2); the chance of Heads on both is 1/2 x 1/2 = 1/4.",
+   "reference": "Independence of two fair coin tosses, P(A and B) = P(A) x P(B); OpenStax Introductory Statistics, Independent and Mutually Exclusive Events",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-051",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "framework[2].sensemakingStrategy",
+   "old": "first use their own experimental data as evidence, then formalise the multiplication law as a claim, then reason through",
+   "new": "write a claim that answers the question 'Does the first toss change the second?', support it with evidence from their own data (Heads on the second toss after Heads on the first is about ½, the same as Heads overall), and give the reasoning that links them: when one result does not change the other's probability the events are independent, so we multiply, P(A and B) = P(A) × P(B). They then test that reasoning on",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "why": "Claim-Evidence-Reasoning was described the wrong way round (the law was called the claim). Claim = the answer to the question; Evidence = the data; Reasoning = the idea (independence, so multiply) that links them.",
+   "where": "Lesson 6, Explain Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-052",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "framework[1].learnerExperience",
+   "old": "~160 trials total for a class of 40",
+   "new": "about 400 trials in total for a class of 40: 20 pairs × 20 trials",
+   "criteria": [
+    3,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G_N6",
+   "group_headline": "Pooled coin-toss numbers in Lesson 6 were wrong (about 160 trials for 20 pairs doing 20 trials each is 400).",
+   "why": "A class of 40 is 20 pairs; 20 pairs x 20 trials = 400 trials (not 160). Groups of 4 each reach 40 trials, 10 groups x 40 = 400.",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-053",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "framework[1].sensemakingStrategy",
+   "old": "~16",
+   "new": "about 40",
+   "criteria": [
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G_N6",
+   "why": "Same corrected total.",
+   "where": "Lesson 6, Observe Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-054",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 6,
+   "path": "summaryTablePrompt.observed",
+   "old": "~16",
+   "new": "about 40",
+   "criteria": [
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G_N6",
+   "why": "Same corrected total.",
+   "where": "Lesson 6, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-055",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "overview",
+   "old": "0/14 ≈ 0.71, rounded to 7/10, and that it is filled at Stop 2 (independently) is also 7/10. Learners first predict what fraction of trips would have both seats filled, using only their intuition. They then construct a full two-stage tree diagram — labelling four terminal branches (Filled–Filled, Filled–Empty, Empty–Filled, Empty–Empty) — and discover the multiplication rule by verifying that the four branch products sum to 1. A second tree diagram models a road-safety scenario: the probability that a pedestrian in Nairobi's CBD crosses at an undesignated point is 3/5, and given that they cross there, the probability of a near-miss is 2/5; learners use the tree to find P(undesignated crossing AND near-miss). The DQB is updated with a new anchor card: \"A tree diagram forces every possible outcome into the open — and the multiplication rule gives each outcome its exact probability.\"",
+   "new": "1/14 ≈ 0.79 (222 passengers ÷ 280 seats), rounded to 4/5, and that it is filled at Stop 2 (independently) is also 4/5. Learners first predict what fraction of trips would have both seats filled, using only their intuition. They then construct a full two-stage tree diagram — labelling four terminal branches (Filled–Filled, Filled–Empty, Empty–Filled, Empty–Empty) — and discover the multiplication rule by verifying that the four branch products sum to 1. A second tree diagram models a road-safety scenario: in an illustrative practice survey (made-up numbers, not real statistics), the probability that a pedestrian in Nairobi's CBD crosses at an undesignated point is 3/5, and given that they cross there, the probability of a near-miss is 2/5; learners use the tree to find P(undesignated crossing AND near-miss). The DQB is updated with a new anchor card: \"A tree diagram forces every possible outcome into the open — and the multiplication rule gives each outcome its exact probability.\" Pacing for this 80-minute double lesson: Predict 8, Observe 30, Explain 20, Driving Question Board 10, Model Building 12.",
+   "criteria": [
+    3,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Kamau's notebook averages 11.1 of 14 seats filled (222/20), i.e. 222/280 = 0.79, which rounds to 4/5, not 7/10. The old overview said the 20-trip data gave 10/14 ≈ 0.71 (also wrong, see group G1). With p = 4/5: end branches 4/5 x 4/5 = 16/25, 4/5 x 1/5 = 4/25, 1/5 x 4/5 = 4/25, 1/5 x 1/5 = 1/25; 16+4+4+1 = 25 so they sum to 1. Both seats filled 16/25 = 0.64; at least one filled 1 - 1/25 = 24/25; exactly one 8/25. Checked by recomputing each product and the sums twice. A pacing line is added: 8 + 30 + 20 + 10 + 12 = 80.",
+   "group_headline": "Lesson 7's tree used 7/10 'from the data', but Kamau's data gives 11/14 (about 4/5); the whole tree and its answers are recomputed (16/25, 4/25, 4/25, 1/25).",
+   "where": "Lesson 7, overview",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-056",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[0].learnerExperience",
+   "old": "0/14 — about 7/10",
+   "new": "1/14 — about 4/5",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Knock-on of the Kamau tree numbers: with p(filled) = 4/5 each end-branch becomes 16/25, 4/25, 4/25, 1/25 (sum 25/25), at least one filled = 24/25, exactly one = 8/25.",
+   "where": "Lesson 7, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-057",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[0].teacherMoves",
+   "old": "0/14 from Lesson 4, rounded to 7/10. Say verbatim: 'We know each stop is independent — like two separate coin flips. Your job right now is to PREDICT, not calculate. What does your gut say?' 2. Allow 2 minutes silent individual prediction. Do NOT allow pair talk during this phase. 3. After 2 minutes, say: 'Show me fingers — more than half, exactly half, less than half.' Scan the room. 4. WAIT TIME: after calling on each of 3 cold-called learners, wait 10 seconds before prompting. Record their predictions verbatim on the board (e.g., 'Amina says 1/2, Brian says 49/100, Cynthia says 7/10",
+   "new": "1/14 ≈ 0.79 from Lesson 4, rounded to 4/5. Say verbatim: 'We know each stop is independent — like two separate coin flips. Your job right now is to PREDICT, not calculate. What does your gut say?' 2. Allow 2 minutes silent individual prediction. Do NOT allow pair talk during this phase. 3. After 2 minutes, say: 'Show me fingers — more than half, exactly half, less than half.' Scan the room. 4. WAIT TIME: after calling on each of 3 cold-called learners, wait 10 seconds before prompting. Record their predictions verbatim on the board (e.g., 'Amina says 1/2, Brian says 16/25, Cynthia says 4/5",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Knock-on of the Kamau tree numbers: with p(filled) = 4/5 each end-branch becomes 16/25, 4/25, 4/25, 1/25 (sum 25/25), at least one filled = 24/25, exactly one = 8/25.",
+   "where": "Lesson 7, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-058",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[0].formativeAssessment",
+   "old": "7/10",
+   "new": "4/5",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Knock-on of the Kamau tree numbers: with p(filled) = 4/5 each end-branch becomes 16/25, 4/25, 4/25, 1/25 (sum 25/25), at least one filled = 24/25, exactly one = 8/25.",
+   "where": "Lesson 7, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-059",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[1].teacherMoves",
+   "old": "7/10 and 3/10 add to 1?' — cold-call 1 learner, wait 10 seconds. Expected answer: because filled and empty are mutually exclusive and exhaustive. If wrong, redirect: 'Look at your Lesson 4",
+   "new": "4/5 and 1/5 add to 1?' — cold-call 1 learner, wait 10 seconds. Expected answer: because filled and empty are mutually exclusive and exhaustive. If wrong, redirect: 'Look at your Lesson 5",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Knock-on of the tree numbers (7/10 and 3/10 become 4/5 and 1/5). Also fixes a wrong cross-reference: mutually exclusive events are in Lesson 5, not Lesson 4.",
+   "where": "Lesson 7, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-060",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[1].formativeAssessment",
+   "old": "7/10 + 7/10 = 14/10",
+   "new": "4/5 + 4/5 = 8/5",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Knock-on of the Kamau tree numbers: with p(filled) = 4/5 each end-branch becomes 16/25, 4/25, 4/25, 1/25 (sum 25/25), at least one filled = 24/25, exactly one = 8/25.",
+   "where": "Lesson 7, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-061",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[4].learnerExperience",
+   "old": "49/100",
+   "new": "16/25",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Knock-on of the Kamau tree numbers: with p(filled) = 4/5 each end-branch becomes 16/25, 4/25, 4/25, 1/25 (sum 25/25), at least one filled = 24/25, exactly one = 8/25.",
+   "where": "Lesson 7, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-062",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "teacherReflection",
+   "old": "7/10",
+   "new": "4/5",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Knock-on of the Kamau tree numbers: with p(filled) = 4/5 each end-branch becomes 16/25, 4/25, 4/25, 1/25 (sum 25/25), at least one filled = 24/25, exactly one = 8/25.",
+   "where": "Lesson 7, teacherReflection",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-063",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "summaryTablePrompt.observed",
+   "old": "7/10 and P(Empty) = 3/10",
+   "new": "4/5 and P(Empty) = 1/5",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Knock-on of the Kamau tree numbers: with p(filled) = 4/5 each end-branch becomes 16/25, 4/25, 4/25, 1/25 (sum 25/25), at least one filled = 24/25, exactly one = 8/25.",
+   "where": "Lesson 7, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-064",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "slo.purposeInStoryline",
+   "old": "(Lessons 1–2), sample space (Lesson 3), mutually exclusive events (Lesson 4), independent events (Lessons 5–",
+   "new": "and the probability scale (Lessons 1–2), sample space (Lesson 3), theoretical probability (Lesson 4), mutually exclusive events (Lesson 5) and independent events (Lesson ",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G5",
+   "group_headline": "Fixed wrong 'Lesson N' cross-references across the unit (mutually exclusive events are Lesson 5, independent events Lesson 6, tree diagrams Lesson 7, 8 lessons not 12).",
+   "why": "The old line placed mutually exclusive events in Lesson 4 and independent events in Lessons 5-6. Checked against the lessons: L4 theoretical probability, L5 mutually exclusive events and Addition Law, L6 independent events and Multiplication Law.",
+   "where": "Lesson 7, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-065",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[1].learnerExperience",
+   "old": "5 min): Learners receive a structured worksheet (or draw in exercise books following teacher board-work). Step 1: Teacher draws the trunk — a dot labelled 'Start (Kamau leaves Machakos Country Bus Station)'. Step 2: Two first-level branches grow rightward — 'Stop 1: Filled (F₁)' with probability 7/10 written above the branch, and 'Stop 1: Empty (E₁)' with probability 3/10 written below. Teacher asks: 'Why must these two branch probabilities add to 1?' (Cold-call 1 learner, 10-second wait.) Step 3: From each first-level node, two second-level branches — 'Stop 2: Filled (F₂)' and 'Stop 2: Empty (E₂)' — each labelled 7/10 and 3/10 respectively. Teacher says: 'These probabilities are the SAME on both sides — why? Discuss with a partner for 60 seconds.' Step 4: Learners label four terminal nodes and write the PRODUCT along each path: F₁F₂ = 7/10 × 7/10 = 49/100; F₁E₂ = 7/10 × 3/10 = 21/100; E₁F₂ = 3/10 × 7/10 = 21/100; E₁E₂ = 3/10 × 3/10 = 9/100. Step 5: Learners ADD all four terminal values: 49+21+21+9 = 100/100 = 1. Teacher: 'This is your CHECK — if your terminal probabilities do not sum to 1, you have made an error.' PART B — Road-Safety Tree (10 min): Teacher introduces a new scenario on the board: 'The Nairobi City County traffic data shows that the probability a randomly chosen pedestrian crosses at an undesignated point in the CBD",
+   "new": "2 min): Learners receive a structured worksheet (or draw in exercise books following teacher board-work). Step 1: Teacher draws the trunk — a dot labelled 'Start (Kamau leaves Machakos Country Bus Station)'. Step 2: Two first-level branches grow rightward — 'Stop 1: Filled (F₁)' with probability 4/5 written above the branch, and 'Stop 1: Empty (E₁)' with probability 1/5 written below. Teacher asks: 'Why must these two branch probabilities add to 1?' (Cold-call 1 learner, 10-second wait.) Step 3: From each first-level node, two second-level branches — 'Stop 2: Filled (F₂)' and 'Stop 2: Empty (E₂)' — each labelled 4/5 and 1/5 respectively. Teacher says: 'These probabilities are the SAME on both sides — why? Discuss with a partner for 60 seconds.' Step 4: Learners label four terminal nodes and write the PRODUCT along each path: F₁F₂ = 4/5 × 4/5 = 16/25; F₁E₂ = 4/5 × 1/5 = 4/25; E₁F₂ = 1/5 × 4/5 = 4/25; E₁E₂ = 1/5 × 1/5 = 1/25. Step 5: Learners ADD all four terminal values: 16+4+4+1 = 25/25 = 1. Teacher: 'This is your CHECK — if your terminal probabilities do not sum to 1, you have made an error.' PART B — Road-Safety Tree (8 min): Teacher introduces a new scenario on the board: 'Suppose a pedestrian survey in Nairobi's CBD (these numbers are made up for practice, not real statistics) shows that the probability a randomly chosen pedestrian crosses at an undesignated point",
+   "criteria": [
+    3,
+    8,
+    9
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G_ROAD",
+   "group_headline": "Lesson 7 road-safety tree: made-up numbers were presented as real Nairobi City County data, and the '6 times more dangerous' claim compared totals, not risk per crossing (it is 4 times).",
+   "why": "(1) The numbers 3/5, 2/5 and 1/10 are teaching numbers, not published statistics, so they are now labelled as a practice survey instead of 'Nairobi City County traffic data' (guideline 9: accurate local claims). (2) Kamau tree numbers recomputed for 4/5 (see group G1). (3) Time labels trimmed 25+10 to 22+8 (Lesson 7 total was about 90 minutes). (4) Dependence of the second stage is explained in the Explain teacher moves. Checked: 3/5 x 2/5 = 6/25 and 2/5 x 1/10 = 2/50 = 1/25.",
+   "reference": "Conditional/tree-diagram probability, e.g. OpenStax Introductory Statistics, Tree and Venn Diagrams",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-066",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[2].learnerExperience",
+   "old": "10 min): Teacher leads a whole-class discussion to draw out two explicit rules from what learners observed: (1) Multiplication Rule along a branch: 'To find the probability of a sequence of independent events, MULTIPLY the probabilities along the path.' (2) Addition Rule across branches: 'To find the probability that ANY ONE of several mutually exclusive outcomes occurs, ADD the terminal probabilities.' Learners write both rules in their own words in a 'Rules' box in their exercise book. Teacher then returns to the predictions from Phase 1 written on the board. The class confirms that P(both seats filled) = 49/100 — checking which prediction was closest. PART B — Extended Application (10 min): Pairs are given a challenge: 'Using Kamau's tree, find: (a) P(at least one seat is filled across the two stops); (b) P(exactly one seat is filled).' Learners must identify which terminal branches satisfy each condition and add those branches. For (a): F₁F₂ + F₁E₂ + E₁F₂ = 49/100 + 21/100 + 21/100 = 91/100. For (b): F₁E₂ + E₁F₂ = 21/100 + 21/100 = 42/100. Pairs share answers with an adjacent pair (Think-Pair-Square). PART C — Civic Connection (5 min): Teacher facilitates brief discussion: 'The road-safety tree shows P(undesignated AND near-miss) = 6/25. What advice would you give the Nairobi City County based on this tree diagram? Is 6/25 high or low compared to P(designated AND near-miss) = 2/5 × 1/10 = 2/50 = 1/25?' Learners compare 6/25 versus 1/25 and articulate that crossing at an undesignated point is 6 times more dangerous in terms of near-misses",
+   "new": "8 min): Teacher leads a whole-class discussion to draw out two explicit rules from what learners observed: (1) Multiplication Rule along a branch: 'To find the probability of a sequence of independent events, MULTIPLY the probabilities along the path.' (2) Addition Rule across branches: 'To find the probability that ANY ONE of several mutually exclusive outcomes occurs, ADD the terminal probabilities.' Learners write both rules in their own words in a 'Rules' box in their exercise book. Teacher then returns to the predictions from Phase 1 written on the board. The class confirms that P(both seats filled) = 16/25 — checking which prediction was closest. PART B — Extended Application (8 min): Pairs are given a challenge: 'Using Kamau's tree, find: (a) P(at least one seat is filled across the two stops); (b) P(exactly one seat is filled).' Learners must identify which terminal branches satisfy each condition and add those branches. For (a): F₁F₂ + F₁E₂ + E₁F₂ = 16/25 + 4/25 + 4/25 = 24/25. For (b): F₁E₂ + E₁F₂ = 4/25 + 4/25 = 8/25. Pairs share answers with an adjacent pair (Think-Pair-Square). PART C — Civic Connection (4 min): Teacher facilitates brief discussion: 'The road-safety tree shows P(undesignated AND near-miss) = 6/25. What advice would you give the Nairobi City County based on this tree diagram? Is 6/25 high or low compared to P(designated AND near-miss) = 2/5 × 1/10 = 2/50 = 1/25?' Learners compare 6/25 versus 1/25 and see that, across all pedestrians, 6 times as many near-misses come from undesignated crossings. They then compare the risk per crossing, 2/5 versus 1/10, and articulate that a crossing at an undesignated point is 4 times as likely to end in a near-miss (2/5 ÷ 1/10 = 4); the total is 6 times because more people also cross there (3/5 versus 2/5)",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G_ROAD",
+   "why": "The old text said crossing at an undesignated point is '6 times more dangerous'. 6/25 versus 1/25 compares the two joint events (crossing there AND a near-miss) across everyone, which is 6 times, but the danger PER CROSSING is 2/5 versus 1/10 = 4 times. 6 = 4 x (3/5)/(2/5) = 4 x 1.5, so both numbers are right but mean different things. Also numbers for the Kamau tree updated (group G1) and Explain part times trimmed 10+10+5 to 8+8+4.",
+   "reference": "Conditional probability and relative risk, e.g. OpenStax Introductory Statistics, Tree and Venn Diagrams",
+   "where": "Lesson 7, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-067",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[2].teacherMoves",
+   "old": "49/100. Why might our intuition fail here?' Draw out the idea that multiplication of fractions less than 1 always gives a SMALLER number. 3. For the extended application: circulate during pair work. Listen for: do learners correctly identify which branches to add for 'at least one'? If a pair includes E₁E₂ in their 'at least one' calculation, ask: 'Read back the terminal label on that branch — does it include any seat being filled?' 4. For Part C civic discussion: say verbatim: 'A mathematician does not just compute — they communicate findings to help people. What would you put on a road-safety poster using these numbers?' Cold-call 2 learners. Validate responses that reference the 6× difference",
+   "new": "16/25. Why might our intuition fail here?' Draw out the idea that multiplication of fractions less than 1 always gives a SMALLER number. 3. For the extended application: circulate during pair work. Listen for: do learners correctly identify which branches to add for 'at least one'? If a pair includes E₁E₂ in their 'at least one' calculation, ask: 'Read back the terminal label on that branch — does it include any seat being filled?' 4. For Part C civic discussion: say verbatim: 'A mathematician does not just compute — they communicate findings to help people. What would you put on a road-safety poster using these numbers?' Point out that, unlike the matatu tree, the second-stage probabilities here differ on the two branches (2/5 and 1/10): whether there is a near-miss depends on where the person crosses, so these events are NOT independent. Multiplying along a branch still gives the probability of both events; dependent events are studied in Probability II. Cold-call 2 learners. Validate responses that reference the 4× difference per crossing (and, as a follow-up, why the totals differ by 6×)",
+   "criteria": [
+    2,
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "group": "G_ROAD",
+   "why": "KICD asks for tree diagrams for INDEPENDENT events. The road-safety tree has different second-stage probabilities (2/5 vs 1/10), so it is a conditional (dependent) tree. Rather than remove the road-safety link (a KICD PCI), the teacher now names the difference and keeps the multiplication-along-branches rule. Also swaps 6x for 4x and updates the Kamau numbers.",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-strand 3.2 Probability 1 (tree diagrams for independent events; PCI Road safety)",
+   "where": "Lesson 7, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-068",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[2].formativeAssessment",
+   "old": "91/100 and P(exactly one seat filled) = 42/100 are correctly derived by both members of at least 4 pairs spot-checked during circulation; (iii) learners can articulate the 6× risk comparison for the road-safety scenario",
+   "new": "24/25 and P(exactly one seat filled) = 8/25 are correctly derived by both members of at least 4 pairs spot-checked during circulation; (iii) learners can state the per-crossing comparison (4 times as likely) and explain why the totals differ by 6 times",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G_ROAD",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Look-for now matches the corrected road-safety comparison; Kamau numbers updated (group G1).",
+   "where": "Lesson 7, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-069",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "summaryTablePrompt.learned",
+   "old": "49/100; P(at least one seat filled) = 91/100; P(exactly one seat filled) = 42/100; (6) crossing at an undesignated point in Nairobi is 6× more likely to result in a near-miss than crossing at a designated point",
+   "new": "16/25; P(at least one seat filled) = 24/25; P(exactly one seat filled) = 8/25; (6) in the practice survey, a crossing at an undesignated point is 4 times as likely to end in a near-miss as one at a designated point (2/5 ÷ 1/10), and 6 times as many near-misses come from undesignated crossings overall (6/25 versus 1/25)",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G_ROAD",
+   "reference": "Arithmetic: 11/14 = 0.786 rounds to 4/5; (4/5)^2 = 16/25, (4/5)(1/5) = 4/25, (1/5)^2 = 1/25 and 16+4+4+1 = 25",
+   "why": "Summary Table now states the road-safety result correctly and uses the recomputed Kamau numbers (16/25, 24/25, 8/25).",
+   "where": "Lesson 7, summaryTablePrompt.learned",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-070",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[3].learnerExperience",
+   "old": "2 minutes",
+   "new": "1 minute",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T7",
+   "group_headline": "Lesson 7 held about 90 minutes of activity in 80; part times trimmed and a pacing line added.",
+   "why": "Summing the stated times: Predict about 8, Observe 35, Explain 25, DQB about 10, Model about 13 = about 91. New budget 8 + 30 + 20 + 10 + 12 = 80 (Observe 22+8, Explain 8+8+4, DQB journal 1 minute, Model drawing 6 minutes; pacing line in the overview).",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-071",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[3].teacherMoves",
+   "old": "2 minutes",
+   "new": "1 minute",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T7",
+   "why": "Matches the 1-minute journal entry.",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-072",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 7,
+   "path": "framework[4].teacherMoves",
+   "old": "8 minutes while learners draw and annotate their trees. Prioritise checking: (i) branch probabilities are correctly placed (on the branch, not at the node); (ii) terminal branch products are computed correctly; (iii) the four products are written in a small sum-check box. 3. If a learner's four products do not sum to 1: crouch to their level and say quietly: 'Your tree is telling you something is wrong — what does the sum give you?' Do not correct directly; let them self-correct. 4. After 8 minutes, prompt pair sharing: 'Compare your model with your partner. Point to ONE branch where you have different numbers. Whose is correct — and how do you know?' 5. With 2 minutes",
+   "new": "6 minutes while learners draw and annotate their trees. Prioritise checking: (i) branch probabilities are correctly placed (on the branch, not at the node); (ii) terminal branch products are computed correctly; (iii) the four products are written in a small sum-check box. 3. If a learner's four products do not sum to 1: crouch to their level and say quietly: 'Your tree is telling you something is wrong — what does the sum give you?' Do not correct directly; let them self-correct. 4. After 8 minutes, prompt pair sharing: 'Compare your model with your partner. Point to ONE branch where you have different numbers. Whose is correct — and how do you know?' 5. With 1 minute",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T7",
+   "why": "Model Building trimmed from about 13 to 12 minutes.",
+   "where": "Lesson 7, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-073",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[0].learnerExperience",
+   "old": "3 minutes, then share predictions with a partner (Think-Pair-Share) for 2 minutes",
+   "new": "2 minutes, then share predictions with a partner (Think-Pair-Share) for 1 minute",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T8",
+   "group_headline": "Lesson 8 listed about 120 minutes of activity for an 80-minute double lesson; every phase has trimmed times and the Probability Report can finish as homework.",
+   "why": "Adding the times in the teacher moves: Predict about 10, Observe 50 (25 + 25), Explain about 28, DQB about 14, Model about 18 = about 120 minutes. New budget 6 + 36 + 18 + 9 + 11 = 80. Predict is cut from about 10 to 6 minutes.",
+   "where": "Lesson 8, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-074",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[0].teacherMoves",
+   "old": "Display Kamau's original tally table on the board (trip numbers 1–20 with passenger counts: 6, 9, 14, 11, 14, 8, 14, 12, 7, 14, 10, 14, 13, 6, 14, 9, 14, 11, 8, 14). Say: 'We have lived with Kamau's puzzle for seven lessons. Today we answer it — with full mathematical power. But before we calculate anything, I want your best prediction right now. Look at the data. Think silently. Write.' [WAIT TIME: 3 minutes silent writing — do not prompt.] After 3 minutes: 'Turn to your partner. Compare your predictions on all three questions. Do you agree? Disagree? Note where you differ.' [WAIT TIME: 2 minutes pair discussion.] Then cold-call 3 different students on prompt 1 ('What fraction?'), 2 different students on prompt 2 ('What does a fair game look like?'), and 2 students on prompt",
+   "new": "Pacing for this 80-minute double lesson: Predict 6, Observe 36, Explain 18, Driving Question Board 9, Model Building 11. Display Kamau's original tally table on the board (trip numbers 1–20 with passenger counts: 6, 9, 14, 11, 14, 8, 14, 12, 7, 14, 10, 14, 13, 6, 14, 9, 14, 11, 8, 14). Say: 'We have lived with Kamau's puzzle for seven lessons. Today we answer it — with full mathematical power. But before we calculate anything, I want your best prediction right now. Look at the data. Think silently. Write.' [WAIT TIME: 2 minutes silent writing — do not prompt.] After 3 minutes: 'Turn to your partner. Compare your predictions on all three questions. Do you agree? Disagree? Note where you differ.' [WAIT TIME: 1 minute pair discussion.] Then cold-call 2 students on prompt 1 ('What fraction?') and 1 student each on prompts 2 ('What does a fair game look like?') and",
+   "criteria": [
+    3,
+    13
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T8",
+   "why": "Matches the shorter Predict (6 minutes) and gives the teacher a pacing line (6+36+18+9+11 = 80).",
+   "where": "Lesson 8, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-075",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[1].learnerExperience",
+   "old": "5 minutes): Groups of 3–4 receive a 'Game Design Brief' card. Each group must design a probability-based game for a school fete at their school. The game must specify: (a) the physical setup (spinner divided into sectors, a standard deck of cards, two dice, or a bag of counters — using materials available in a Kenyan classroom); (b) the complete sample space, listed explicitly; (c) the theoretical probability of each player winning, calculated and shown; (d) a written fairness verdict — is the game fair? If not, how would they adjust it to make it fair? Groups record all work on a single A3 sheet (or two taped exercise-book pages). After 15 minutes of group work, groups rotate their A3 sheets one position clockwise. Each group then spends 8 minutes peer-evaluating the game they have received: they must identify at least one correct probability calculation, at least one error or fairness concern (if any), and write a signed 'Fairness Verdict' using a calculation to justify it. ACT 2 — PROBABILITY REPORT (25 minutes): The class reconvenes. The teacher projects Kamau's full dataset. Guided by three structured questions on the board, learners individually compute: (Q1) the experimental probability of a fully booked trip from the 20-trip data; (Q2) what a naive independent-seats theoretical model predicts for P(full trip); (Q3) why the two answers differ, and what this means for how Kamau should plan. Learners write a structured one-page 'Probability Report for Kamau' in their exercise books using a teacher-provided scaffold with three headings: WHAT THE DATA SHOWS / WHAT A MATHEMATICAL MODEL PREDICTS / MY ADVICE TO KAMAU",
+   "new": "0 minutes): Groups of 3–4 receive a 'Game Design Brief' card. Each group must design a probability-based game for a school fete at their school. The game must specify: (a) the physical setup (spinner divided into sectors, a standard deck of cards, two dice, or a bag of counters — using materials available in a Kenyan classroom); (b) the complete sample space, listed explicitly; (c) the theoretical probability of each player winning, calculated and shown; (d) a written fairness verdict — is the game fair? If not, how would they adjust it to make it fair? Groups record all work on a single A3 sheet (or two taped exercise-book pages). After 12 minutes of group work, groups rotate their A3 sheets one position clockwise. Each group then spends 6 minutes peer-evaluating the game they have received: they must identify at least one correct probability calculation, at least one error or fairness concern (if any), and write a signed 'Fairness Verdict' using a calculation to justify it. ACT 2 — PROBABILITY REPORT (16 minutes): The class reconvenes. The teacher projects Kamau's full dataset. Guided by three structured questions on the board, learners individually compute: (Q1) the experimental probability of a fully booked trip from the 20-trip data; (Q2) what a naive independent-seats theoretical model predicts for P(full trip); (Q3) why the two answers differ, and what this means for how Kamau should plan. Learners write a structured one-page 'Probability Report for Kamau' in their exercise books using a teacher-provided scaffold with three headings: WHAT THE DATA SHOWS / WHAT A MATHEMATICAL MODEL PREDICTS / MY ADVICE TO KAMAU. Learners who need more time finish the report as homework",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T8",
+   "why": "Observe was 25 + 25 = 50 minutes; now 20 + 16 = 36. The report is written in 8 minutes in class and can be finished at home.",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-076",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[1].teacherMoves",
+   "old": "5 minutes. Use any of the probability tools from Lessons 1 to 7.' [WAIT TIME: allow 15 minutes of genuine group work — circulate and ask probing questions: 'How do you know your sample space is complete?', 'What does the Addition Law say about these two outcomes?', 'Is this game fair — what calculation proves it?'] After 15 minutes: 'Stop writing. Rotate your sheets clockwise. You are now a probability judge. Your job: check the maths, find any errors, and write a fairness verdict with calculations. You have 8 minutes.' [WAIT TIME: 8 minutes.] After rotation: cold-call 2 groups to share the most interesting fairness concern they found. Say: 'Good. You have just done what a professional statistician does — design, then audit.' ACT 2 setup: Project Kamau's data. Say: 'Let us now return to where we began. Here is Kamau's complete notebook.' Point to the 20 trip counts. Ask: 'How many of these trips were fully booked? Count them now.' [WAIT TIME: 30 seconds.] Cold-call 1 student. Confirm: 8 trips show count = 14. Write on board: P(full trip, experimental) = 8/20 = 0.4. Then say: 'Now here is a challenge. In Lesson 4, we said the probability that any single seat is occupied is about 10/14. If the 14 seats fill independently, what is the theoretical probability that ALL 14 are occupied?' [WAIT TIME: 2 minutes for individual calculation.] Cold-call 2 students. Guide toward (10/14)^14 ≈ 0.009. Write both values on the board side by side: EXPERIMENTAL = 0.4, THEORETICAL (independent model) = 0.009. Say: 'These are very different. Why? Discuss with your partner for 90 seconds.' [WAIT TIME: 90 seconds.] Cold-call 3 pairs. Confirm: seats do not fill independently — market days, school trips, and social groups cause clustering. Say: 'Now write your Probability Report for Kamau. Use the three headings on the board. You have 15 minutes",
+   "new": "2 minutes. Use any of the probability tools from Lessons 1 to 7.' [WAIT TIME: allow 12 minutes of genuine group work — circulate and ask probing questions: 'How do you know your sample space is complete?', 'What does the Addition Law say about these two outcomes?', 'Is this game fair — what calculation proves it?'] After 15 minutes: 'Stop writing. Rotate your sheets clockwise. You are now a probability judge. Your job: check the maths, find any errors, and write a fairness verdict with calculations. You have 6 minutes.' [WAIT TIME: 6 minutes.] After rotation: cold-call 2 groups to share the most interesting fairness concern they found. Say: 'Good. You have just done what a professional statistician does — design, then audit.' ACT 2 setup: Project Kamau's data. Say: 'Let us now return to where we began. Here is Kamau's complete notebook.' Point to the 20 trip counts. Ask: 'How many of these trips were fully booked? Count them now.' [WAIT TIME: 30 seconds.] Cold-call 1 student. Confirm: 8 trips show count = 14. Write on board: P(full trip, experimental) = 8/20 = 0.4. Then say: 'Now here is a challenge. In Lesson 4, we said the probability that any single seat is occupied is about 11/14. If the 14 seats fill independently, what is the theoretical probability that ALL 14 are occupied?' [WAIT TIME: 1 minute for individual calculation.] Cold-call 2 students. Guide toward (11/14)^14 ≈ 0.034. Write both values on the board side by side: EXPERIMENTAL = 0.4, THEORETICAL (independent model) = 0.034. Say: 'These are very different. Why? Discuss with your partner for 90 seconds.' [WAIT TIME: 90 seconds.] Cold-call 3 pairs. Confirm: seats do not fill independently — market days, school trips, and social groups cause clustering. Say: 'Now write your Probability Report for Kamau. Use the three headings on the board. You have 8 minutes; finish at home if you need more time",
+   "criteria": [
+    3,
+    5
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T8",
+   "why": "Matches the shorter Observe (20 + 16 minutes). Also carries the 10/14 to 11/14 and 0.009 to 0.034 corrections (group G1; (11/14)^14 = 0.0342, checked by squaring: 0.7857^2 = 0.6173, ^4 = 0.3811, ^8 = 0.1452, ^14 = 0.1452 x 0.3811 x 0.6173 = 0.0342).",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-077",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[2].teacherMoves",
+   "old": "5 minutes.' [WAIT TIME: 5 minutes.] Then say: 'Let us hear Kamau's advice. Three volunteers — read your advice paragraph aloud.' After each reading, ask: 'Does this advice use the experimental probability correctly? Does it acknowledge uncertainty? Is it specific enough for Kamau to act on?' [WAIT TIME: 10 seconds after each question.] Cold-call 2 evaluators per report. Close with: 'Now write one sentence — your Final Explanation Sentence — answering this question: How can Kamau use mathematics to make smarter decisions even though he can never predict any single trip with certainty?' [WAIT TIME: 2 minutes silent writing.] Cold-call 5",
+   "new": "3 minutes.' [WAIT TIME: 3 minutes.] Then say: 'Let us hear Kamau's advice. Two volunteers — read your advice paragraph aloud.' After each reading, ask: 'Does this advice use the experimental probability correctly? Does it acknowledge uncertainty? Is it specific enough for Kamau to act on?' [WAIT TIME: 10 seconds after each question.] Cold-call 1 evaluator per report. Close with: 'Now write one sentence — your Final Explanation Sentence — answering this question: How can Kamau use mathematics to make smarter decisions even though he can never predict any single trip with certainty?' [WAIT TIME: 1 minute silent writing.] Cold-call 3",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T8",
+   "why": "Explain trimmed from about 28 to 18 minutes (fewer volunteers, shorter copying and writing times).",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-078",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[3].teacherMoves",
+   "old": "6 minutes group work.] After dotting: 'Let us review. Which questions got green dots? Read one aloud and give the answer.' Cold-call 4",
+   "new": "4 minutes group work.] After dotting: 'Let us review. Which questions got green dots? Read one aloud and give the answer.' Cold-call 2",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T8",
+   "why": "DQB review trimmed from about 14 to 9 minutes.",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-079",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[4].teacherMoves",
+   "old": "8 minutes.' [WAIT TIME: 8 minutes individual silent work — do not offer hints; this is an individual assessment opportunity.] After 8 minutes: 'Find your Lesson 1 notes or your first rough idea about probability. Look at what you wrote then. Write three sentences: what you thought probability was in Lesson 1, what you know now, and what surprised you most.' [WAIT TIME: 3 minutes.] Then: 'Share your completed model with your partner. Give them one green star and one orange question mark on their diagram. Be specific — write the star and question mark directly on their diagram.' [WAIT TIME: 3",
+   "new": "6 minutes.' [WAIT TIME: 6 minutes individual silent work — do not offer hints; this is an individual assessment opportunity.] After 8 minutes: 'Find your Lesson 1 notes or your first rough idea about probability. Look at what you wrote then. Write three sentences: what you thought probability was in Lesson 1, what you know now, and what surprised you most.' [WAIT TIME: 2 minutes.] Then: 'Share your completed model with your partner. Give them one green star and one orange question mark on their diagram. Be specific — write the star and question mark directly on their diagram.' [WAIT TIME: 2",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G_T8",
+   "why": "Model Building trimmed from about 18 to 11 minutes.",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-080",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "overview",
+   "old": "0/14 ≈ 0.714 (derived in Lesson 4), the probability that ALL 14 are filled is (10/14)^14 ≈ 0.009",
+   "new": "1/14 ≈ 0.79 (derived in Lesson 4), the probability that ALL 14 are filled is (11/14)^14 ≈ 0.034",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Knock-on of the notebook average (11 of 14 instead of 10 of 14). The 'all 14 seats full if independent' model now gives (11/14)^14 = 0.034 instead of 0.009; still far below the observed 0.4, so the lesson's conclusion (seats are not filled independently) is unchanged. Recomputed: 11/14 = 0.7857, ln = -0.2412, x14 = -3.376, e^-3.376 = 0.0342.",
+   "reference": "Arithmetic from Kamau's own tally; probability of all of n independent seats filled = p^n",
+   "where": "Lesson 8, overview",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-081",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[1].sensemakingStrategy",
+   "old": "09",
+   "new": "34",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Knock-on of the notebook average (11 of 14 instead of 10 of 14). The 'all 14 seats full if independent' model now gives (11/14)^14 = 0.034 instead of 0.009; still far below the observed 0.4, so the lesson's conclusion (seats are not filled independently) is unchanged. Recomputed: 11/14 = 0.7857, ln = -0.2412, x14 = -3.376, e^-3.376 = 0.0342.",
+   "reference": "Arithmetic from Kamau's own tally; probability of all of n independent seats filled = p^n",
+   "where": "Lesson 8, Observe Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-082",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[4].learnerExperience",
+   "old": "0/14 ≈ 0.714); Node 4 shows a mutually exclusive events example from Kamau's route; Node 5 shows the multiplication law applied to two consecutive trips and the tree diagram summary; Node 6 shows the Probability Report advice. Learners then compare their final model to a quick sketch they made in Lesson 1 (or, if unavailable, write a brief 'How my thinking changed' paragraph). They share their completed model with a partner for a 3",
+   "new": "1/14 ≈ 0.79); Node 4 shows a mutually exclusive events example from Kamau's route; Node 5 shows the multiplication law applied to two consecutive trips and the tree diagram summary; Node 6 shows the Probability Report advice. Learners then compare their final model to a quick sketch they made in Lesson 1 (or, if unavailable, write a brief 'How my thinking changed' paragraph). They share their completed model with a partner for a 2",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Knock-on of the notebook average (11 of 14 instead of 10 of 14). The 'all 14 seats full if independent' model now gives (11/14)^14 = 0.034 instead of 0.009; still far below the observed 0.4, so the lesson's conclusion (seats are not filled independently) is unchanged. Recomputed: 11/14 = 0.7857, ln = -0.2412, x14 = -3.376, e^-3.376 = 0.0342. Peer annotation time also trimmed to 2 minutes (Lesson 8 timing group).",
+   "reference": "Arithmetic from Kamau's own tally; probability of all of n independent seats filled = p^n",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-083",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[4].formativeAssessment",
+   "old": "P = 10/14 a",
+   "new": "P = 11/14 a",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Knock-on of the notebook average (11 of 14 instead of 10 of 14). The 'all 14 seats full if independent' model now gives (11/14)^14 = 0.034 instead of 0.009; still far below the observed 0.4, so the lesson's conclusion (seats are not filled independently) is unchanged. Recomputed: 11/14 = 0.7857, ln = -0.2412, x14 = -3.376, e^-3.376 = 0.0342.",
+   "reference": "Arithmetic from Kamau's own tally; probability of all of n independent seats filled = p^n",
+   "where": "Lesson 8, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-084",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "teacherReflection",
+   "old": "09",
+   "new": "34",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Knock-on of the notebook average (11 of 14 instead of 10 of 14). The 'all 14 seats full if independent' model now gives (11/14)^14 = 0.034 instead of 0.009; still far below the observed 0.4, so the lesson's conclusion (seats are not filled independently) is unchanged. Recomputed: 11/14 = 0.7857, ln = -0.2412, x14 = -3.376, e^-3.376 = 0.0342.",
+   "reference": "Arithmetic from Kamau's own tally; probability of all of n independent seats filled = p^n",
+   "where": "Lesson 8, teacherReflection",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-085",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "summaryTablePrompt.observed",
+   "old": "09",
+   "new": "34",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "why": "Knock-on of the notebook average (11 of 14 instead of 10 of 14). The 'all 14 seats full if independent' model now gives (11/14)^14 = 0.034 instead of 0.009; still far below the observed 0.4, so the lesson's conclusion (seats are not filled independently) is unchanged. Recomputed: 11/14 = 0.7857, ln = -0.2412, x14 = -3.376, e^-3.376 = 0.0342.",
+   "reference": "Arithmetic from Kamau's own tally; probability of all of n independent seats filled = p^n",
+   "where": "Lesson 8, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-086",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 8,
+   "path": "framework[1].formativeAssessment",
+   "old": "8 Mondays per",
+   "new": "5 Mondays in a 13-week",
+   "criteria": [
+    5
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "With P(full) = 0.4, a 13-week term has about 0.4 x 13 = 5.2, so about 5 full Mondays. 'Roughly 8 Mondays per term' did not match the data.",
+   "where": "Lesson 8, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-087",
+   "kind": "edit",
+   "target": "unit",
+   "path": "totalDuration",
+   "old": " × 40 minutes = 320 minutes total",
+   "new": ": 7 double lessons × 80 minutes + 1 single lesson × 40 minutes = 600 minutes total (15 periods of 40 minutes)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "why": "The old line said 8 lessons x 40 minutes = 320. The lessons' own durations are L1 80, L2 40, L3 80, L4 80, L5 80, L6 80, L7 80, L8 80, i.e. 7 x 80 + 40 = 560 + 40 = 600 minutes (15 forty-minute periods). Teachers need the real total to plan the timetable. Note: KICD allocates 12 lessons to Probability 1; this sequence has 8 lessons (see flag).",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-088",
+   "kind": "edit",
+   "target": "unit",
+   "path": "supportingPhenomena",
+   "old": "40 times: learners expect exactly 20",
+   "new": "30 times: learners expect exactly 15",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Lesson 1 has each pair toss 30 times, not 40, so 15 heads is the expected count.",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-089",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].prompt",
+   "old": "0/14. The probability that all 14 seats are filled would then be about 0.009",
+   "new": "1/14. The probability that all 14 seats are filled would then be about 0.03",
+   "criteria": [
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally; probability of all of n independent seats filled = p^n",
+   "why": "Knock-on of the notebook average (11 of 14 seats): (11/14)^14 = 0.034, so about 0.03 (was 0.009 with 10/14). Still far below the observed 0.4, so the question's reasoning is unchanged.",
+   "where": "Final Explanation, Section 5: Advising Kamau – the Probability Report, prompt",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-090",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].exemplar",
+   "old": "09",
+   "new": "3",
+   "criteria": [
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "group": "G1",
+   "reference": "Arithmetic from Kamau's own tally; probability of all of n independent seats filled = p^n",
+   "why": "Exemplar answer matches the corrected prompt: (11/14)^14 is about 0.03.",
+   "where": "Final Explanation, Section 5: Advising Kamau – the Probability Report, exemplar",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-091",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "rubric",
+   "value": [
+    {
+     "criterion": "Experimental probability and use of data",
+     "excellent": "Exceeds Expectations: Correctly counts 8 full trips from the tally, gets 8/20 = 0.4, and clearly links more trials to a more reliable estimate.",
+     "proficient": "Meets Expectations: Gets 0.4 correctly but gives only a brief explanation of why more trials matter.",
+     "developing": "Approaches Expectations: Miscounts the data or does not use the relative-frequency definition."
+    },
+    {
+     "criterion": "Sample space, probability scale and the Addition Law",
+     "excellent": "Exceeds Expectations: Lists {TT, TE, ET, EE} correctly, explains why 0 ≤ P ≤ 1, and correctly applies the Addition Law with a justification of mutual exclusivity.",
+     "proficient": "Meets Expectations: Gets the sample space and the answer of 1/2 but gives a weak justification for the scale or mutual exclusivity.",
+     "developing": "Approaches Expectations: Omits outcomes, gives a probability outside 0 to 1, or adds probabilities without checking the events."
+    },
+    {
+     "criterion": "Independent events, Multiplication Law and tree diagram",
+     "excellent": "Exceeds Expectations: Defines independence accurately, completes all four branches with correct products (0.16, 0.24, 0.24, 0.36), finds 0.16 and 0.48, and uses the sum-to-1 check.",
+     "proficient": "Meets Expectations: Gets most branch probabilities and the main answers right but misses the check or explains independence loosely.",
+     "developing": "Approaches Expectations: Adds instead of multiplies along branches, or leaves out outcomes."
+    },
+    {
+     "criterion": "Reasoning, model critique and communication",
+     "excellent": "Exceeds Expectations: Writes a clear report with numbers, explains why the independent-seats model fails, and links probability to fair or safe decisions in Kenyan contexts.",
+     "proficient": "Meets Expectations: Gives usable advice with numbers but only a partial explanation of the model mismatch.",
+     "developing": "Approaches Expectations: Gives vague advice with no numbers or no link to the data."
+    }
+   ],
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "why": "Guideline 10 asks for CBE levels. The three allowed fields (printed headings fixed by the template) now start with the CBE level names: Exceeds, Meets and Approaches Expectations, so the level is clear in the descriptor text. The descriptors themselves are unchanged.",
+   "old": "[{\"criterion\": \"Experimental probability and use of data\", \"excellent\": \"Correctly counts 8 full trips from the tally, gets 8/20 = 0.4, and clearly links more trials to a more reliable estimate.\", \"proficient\": \"Gets 0.4 correctly but gives only a brief explanation of why more trials matter.\", \"developing\": \"Miscounts the data or does not use the relative-frequency definition.\"}, {\"criterion\": \"Sample space, probability scale and the Addition Law\", \"excellent\": \"Lists {TT, TE, ET, EE} correctly, explains why 0 ≤ P ≤ 1, and correctly applies the Addition Law with a justification of mutual exclusivity.\", \"proficient\": \"Gets the sample space and the answer of 1/2 but gives a weak justification for the scale or mutual exclusivity.\", \"developing\": \"Omits outcomes, gives a probability outside 0 to 1, or adds probabilities without checking the events.\"}, {\"criterion\": \"Independent events, Multiplication Law and tree diagram\", \"excellent\": \"Defines independence accurately, completes all four branches with correct products (0.16, 0.24, 0.24, 0.36), finds 0.16 and 0.48, and uses the sum-to-1 check.\", \"proficient\": \"Gets most branch probabilities and the main answers right but misses the check or explains independence loosely.\", \"developing\": \"Adds instead of multiplies along branches, or leaves out outcomes.\"}, {\"criterion\": \"Reasoning, model critique and communication\", \"excellent\": \"Writes a clear report with numbers, explains why the independent-seats model fails, and links probability to fair or safe decisions in Kenyan contexts.\", \"proficient\": \"Gives usable advice with numbers but only a partial explanation of the model mismatch.\", \"developing\": \"Gives vague advice with no numbers or no link to the data.\"}]",
+   "new": "[{\"criterion\": \"Experimental probability and use of data\", \"excellent\": \"Exceeds Expectations: Correctly counts 8 full trips from the tally, gets 8/20 = 0.4, and clearly links more trials to a more reliable estimate.\", \"proficient\": \"Meets Expectations: Gets 0.4 correctly but gives only a brief explanation of why more trials matter.\", \"developing\": \"Approaches Expectations: Miscounts the data or does not use the relative-frequency definition.\"}, {\"criterion\": \"Sample space, probability scale and the Addition Law\", \"excellent\": \"Exceeds Expectations: Lists {TT, TE, ET, EE} correctly, explains why 0 ≤ P ≤ 1, and correctly applies the Addition Law with a justification of mutual exclusivity.\", \"proficient\": \"Meets Expectations: Gets the sample space and the answer of 1/2 but gives a weak justification for the scale or mutual exclusivity.\", \"developing\": \"Approaches Expectations: Omits outcomes, gives a probability outside 0 to 1, or adds probabilities without checking the events.\"}, {\"criterion\": \"Independent events, Multiplication Law and tree diagram\", \"excellent\": \"Exceeds Expectations: Defines independence accurately, completes all four branches with correct products (0.16, 0.24, 0.24, 0.36), finds 0.16 and 0.48, and uses the sum-to-1 check.\", \"proficient\": \"Meets Expectations: Gets most branch probabilities and the main answers right but misses the check or explains independence loosely.\", \"developing\": \"Approaches Expectations: Adds instead of multiplies along branches, or leaves out outcomes.\"}, {\"criterion\": \"Reasoning, model critique and communication\", \"excellent\": \"Exceeds Expectations: Writes a clear report with numbers, explains why the independent-seats model fails, and links probability to fair or safe decisions in Kenyan contexts.\", \"proficient\": \"Meets Expectations: Gives usable advice with numbers but only a partial explanation of the model mismatch.\", \"developing\": \"Approaches Expectations: Gives vague advice with no numbers or no link to the data.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-092",
+   "kind": "flag",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The CBE scale has four levels (Exceeds, Meets, Approaches, Below Expectations) but the data contract only allows three level fields, so Below Expectations cannot be represented in this rubric. Suggestion: teachers treat any response that does not reach 'Approaches Expectations' as Below Expectations, or the partner contract is extended later.",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-093",
+   "kind": "flag",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD check (Grade10_Mathematics_Curriculum.pdf, Strand 3.0, sub-strand 3.2 'Probability 1'): learning outcomes a-g, key inquiry question (apart from a hyphen in 'real-life'), and all three core competencies match. Differences to note, not changed: (1) KICD gives this sub-strand 12 lessons, this sequence has 8; (2) KICD name is 'Probability 1', ours 'Probability I'; (3) KICD content has 5 bullets (experimental probability, probability space, mutually exclusive and independent events, laws of probability, probability tree diagrams), ours has 9 expanded bullets; (4) KICD suggests learners 'discuss, create and play games'; Lesson 8 has them design and audit a game, but not play it; adding a short play round is a teacher choice. Every outcome a-g is taught and assessed in Lessons 1-8 and the Final Explanation. The PDF is the general Grade 10 Mathematics design; it does not separate Core from Essential Mathematics.",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-094",
+   "kind": "flag",
+   "target": "unit",
+   "path": "values",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "KICD lists only two values for this sub-strand (Responsibility, Social justice) and three PCIs (Social Cohesion, Life skills and values education, Road safety). The unit also lists the value 'Integrity' and the PCI 'Financial Literacy', which are not in the KICD text for this sub-strand. They fit the lessons (honest recording, hawker example) so I did not delete them, but the teacher should decide whether to keep them as additions or remove them to stay verbatim to KICD.",
+   "where": "Unit overview, values",
+   "applied_at": "2026-10-15T10:54:17"
+  },
+  {
+   "id": "coremath_3_2-095",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[1].learnerExperience",
+   "old": "On an average trip, 11 seats are filled.",
+   "new": "First add up all 20 passenger counts in Kamau's notebook (the total is 222) and divide by 20: an average trip carries 11.1 passengers, so about 11 of the 14 seats are filled.",
+   "criteria": [
+    2,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Task 2 now derives the average from the notebook (6+9+14+11+14+8+14+12+7+14+10+14+13+6+14+9+14+11+8+14 = 222; 222/20 = 11.1) instead of stating it, so learners see where '11 of 14' comes from (follows the dice-experiment and 11/14 changes in this group).",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:54:31"
+  }
+ ]
+}

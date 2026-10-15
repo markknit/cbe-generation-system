@@ -1,0 +1,1370 @@
+{
+ "module": "essmath_1_3",
+ "records": [
+  {
+   "id": "essmath_1_3-001",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The unit said '8 lessons x 40 minutes = 320 minutes', but the lessons are actually 80, 80, 80, 80, 80, 40, 80 and 80 minutes. Recomputed: 7 x 80 = 560, plus 1 x 40 = 40, total 600 minutes. (After the Lesson 6 and Lesson 8 timing trims below, the phase minutes inside each lesson fit these periods.)",
+   "path": "totalDuration",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons: 7 double lessons × 80 minutes + 1 single lesson × 40 minutes = 600 minutes total",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-002",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The first supporting phenomenon gave only a perimeter (56 m of fencing) and said it needed a quadratic equation. A perimeter gives a LINEAR equation (2(w + 2w + 2) = 56 gives w = 26/3, not a whole number), so no quadratic arises. It now gives the AREA (96 m²) with length = width + 4, so w(w + 4) = 96 gives w² + 4w − 96 = 0 = (w + 12)(w − 8), w = 8 or −12. Check: 8 x 12 = 96 and fencing 2(8 + 12) = 40 m, which matches the 40 m used in Lesson 3. The second bullet did not say how big the removed square was, so the problem could not be solved; with a 2 cm square removed and 45 cm² left, s² − 4 = 45 gives s = 7 (7² − 4 = 45).",
+   "path": "supportingPhenomena",
+   "old": "• A farmer in the Rift Valley has 56 metres of fencing and wants to enclose a rectangular shamba whose length is 2 metres more than twice its width — learners discover that finding the dimensions requires solving a quadratic equation, and that one solution may be negative (physically meaningless) while the other gives the actual farm dimensions.\n• A mandazi vendor in Mombasa's Old Town cuts a square piece of dough and removes a smaller square from one corner to create an L-shaped piece; knowing the total area of dough remaining, learners write and solve a quadratic equation to find the side length of the original square.",
+   "new": "• A farmer in the Rift Valley wants to fence a rectangular shamba of area 96 square metres whose length is 4 metres more than its width — learners discover that finding the dimensions requires solving a quadratic equation, and that one solution is negative (physically meaningless) while the other gives the actual plot (8 m by 12 m, which needs 40 metres of fencing wire).\n• A mandazi vendor in Mombasa's Old Town cuts a square piece of dough and removes a 2 cm by 2 cm square from one corner to create an L-shaped piece; knowing the area of dough remaining is 45 square centimetres, learners write s² − 4 = 45, rearrange it to s² − 49 = 0 and solve it by factorisation to find the side length of the original square (7 cm).",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G1",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-003",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Scenario A gave a perimeter (40 m) and asked for area. Perimeter with length = width + 4 gives a linear equation (4w + 8 = 40, w = 8), not a quadratic. It now gives the area (96 m²) so learners form w(w + 4) = 96 and find the unknowns. Checked: w = 8, length 12, 8 x 12 = 96.",
+   "lesson": 3,
+   "path": "framework[0].learnerExperience",
+   "old": "'A farmer in the Rift Valley has 40 metres of fencing wire. She wants to enclose a rectangular plot so that the length is 4 metres more than the width. What is the area of the plot?'",
+   "new": "'A farmer in the Rift Valley wants to fence a rectangular plot whose area is 96 square metres. The length of the plot is 4 metres more than the width. What are the length and the width?'",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G1",
+   "where": "Lesson 3, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-004",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Card A used 'perimeter = 40 m' to form the equation; that cannot produce a squared term. It now uses the area, like Cards B and C. Expected equation: w(w + 4) = 96, so w² + 4w − 96 = 0 (roots 8 and −12; 8 x 12 = 96, wire needed 2(8 + 12) = 40 m).",
+   "lesson": 3,
+   "path": "framework[1].learnerExperience",
+   "old": "Card A (Rift Valley fencing — perimeter constraint): width = w, length = w + 4, perimeter = 40 m → form the equation.",
+   "new": "Card A (Rift Valley plot to be fenced — area constraint): width = w, length = w + 4, area = 96 m² → form the equation (expected: w(w + 4) = 96, so w² + 4w − 96 = 0).",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G1",
+   "group_headline": "Fencing problem could never give a quadratic: it used a perimeter (a linear equation); it now gives the area (96 m²), so w² + 4w − 96 = 0 and the plot is 8 m by 12 m (needing exactly the 40 m of wire it first mentioned)",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-005",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Step 3 told learners to use the perimeter formula for Card A; with the area given, the equation comes from area = length x width, as in Cards B and C.",
+   "lesson": 3,
+   "path": "framework[1].teacherMoves",
+   "old": "Step 3 — use the perimeter formula.",
+   "new": "Step 3 — use area = length × width.",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G1",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-006",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The strategy text named 'perimeter/area' as one of the three contexts; all three cards now work from an area or total, so it says so.",
+   "lesson": 3,
+   "path": "framework[1].sensemakingStrategy",
+   "old": "(perimeter/area, seating product, seedling product)",
+   "new": "(plot area, seating product, seedling product)",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G1",
+   "where": "Lesson 3, Observe Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-007",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Defining feature (3) said a quadratic equation 'is set equal to zero'. But r² + 7r = 120 is already a quadratic equation; zero on one side is the STANDARD FORM we need before factorising. Wording now says that, so a correct equation is not marked wrong.",
+   "lesson": 3,
+   "path": "framework[1].teacherMoves",
+   "old": "(3) the equation is set equal to zero.",
+   "new": "(3) it can be rearranged so that one side is zero (standard form ax² + bx + c = 0), which we need before factorising.",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Strand 1.0 Numbers and Algebra (quadratic equations); OpenStax Algebra and Trigonometry 2e, Quadratic Equations (standard form)",
+   "group": "G2",
+   "group_headline": "A correct equation (r² + 7r = 120) was being marked as an error for 'not equal to zero'; it is now described as correct but not yet in standard form",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-008",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Strip (iii) r² + 7r = 120 is a correct equation for Achieng's chairs; it is just not yet in standard form. The strip is now described that way, so the sort has no wrongly marked strip.",
+   "lesson": 3,
+   "path": "framework[2].learnerExperience",
+   "old": "(iii) equation is not set equal to zero (r² + 7r = 120 left unsimplified as 'the answer')",
+   "new": "(iii) equation is correct but not yet in standard form (r² + 7r = 120 left with the 120 on the right, as if it were finished)",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G2",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-009",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Keeps the Summary Table consistent with the corrected feature (3) and error names.",
+   "lesson": 3,
+   "path": "summaryTablePrompt.learned",
+   "old": "and the equation set equal to zero. They also named three common formation errors: the linear error, the cancellation error, and the incomplete-form error.",
+   "new": "and an equation that can be written with zero on one side (standard form). They also named three common formation errors: the linear error, the cancellation error, and the incomplete-form error (stopping at r² + 7r = 120 before rearranging).",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G2",
+   "where": "Lesson 3, summaryTablePrompt.learned",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-010",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 1 promised that Lesson 2 would let learners replace the question mark with numbers. Lesson 2 only teaches quadratic expressions; factorising is Lesson 4 and solving is Lesson 5.",
+   "lesson": 1,
+   "path": "framework[4].teacherMoves",
+   "old": "In Lesson 2 we will learn a technique that will let us replace that question mark with actual numbers.",
+   "new": "In Lessons 4 and 5 we will learn a technique that will let us replace that question mark with actual numbers.",
+   "group": "G3",
+   "group_headline": "Several 'next lesson' pointers named the wrong lesson (solving was said to start in Lesson 2 or 3; it is taught in Lessons 4 and 5)",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-011",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The 'how do we solve it' cluster was labelled 'Target: Lesson 3', but Lesson 3 forms equations; solving comes in Lessons 4 and 5.",
+   "lesson": 2,
+   "path": "framework[3].teacherMoves",
+   "old": "'Target: Lesson 3.'",
+   "new": "'Target: Lessons 4 and 5.'",
+   "group": "G3",
+   "where": "Lesson 2, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-012",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The closing line said finding x is tackled in Lesson 3; Lesson 3 forms equations and Lessons 4-5 solve them.",
+   "lesson": 2,
+   "path": "framework[4].teacherMoves",
+   "old": "it is exactly what we tackle in Lesson 3.'",
+   "new": "we first learn to write such equations in Lesson 3, then to solve them in Lessons 4 and 5.'",
+   "group": "G3",
+   "where": "Lesson 2, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-013",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "At Lesson 5 the model has been built over five lessons, not all eight.",
+   "lesson": 5,
+   "path": "framework[4].sensemakingStrategy",
+   "old": "across all 8 lessons",
+   "new": "across this sub-strand",
+   "group": "G3",
+   "where": "Lesson 5, Model Building Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-014",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 6 is five lessons after Lesson 1, not seven.",
+   "lesson": 6,
+   "path": "framework[2].sensemakingStrategy",
+   "old": "seven lessons ago",
+   "new": "five lessons ago",
+   "group": "G3",
+   "where": "Lesson 6, Explain Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-015",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The question 'Can factorisation always work?' was promised an answer in Lesson 5; it is now kept on the board until the Lesson 8 review (see the root record).",
+   "lesson": 4,
+   "path": "framework[3].learnerExperience",
+   "old": "as the key open question to be explored in Lesson 5.",
+   "new": "as the key open question; it stays on the board until the Lesson 8 review.",
+   "group": "G4",
+   "where": "Lesson 4, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-016",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same: the closing line said the question would be faced in Lesson 5, which does not deal with non-factorisable cases.",
+   "lesson": 4,
+   "path": "framework[3].teacherMoves",
+   "old": "is exactly what Achieng and Mr Otieno will face in Lesson 5. Keep it in mind.'",
+   "new": "stays on our board. We will answer it in Lesson 8. Keep it in mind.'",
+   "group": "G4",
+   "where": "Lesson 4, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-017",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The reflection pointed to a quadratic formula 'later in the sequence', but no lesson in this sequence teaches one.",
+   "lesson": 4,
+   "path": "teacherReflection",
+   "old": "to prepare learners for the quadratic formula later in the sequence.",
+   "new": "so that it is on the board for the Lesson 8 review.",
+   "group": "G4",
+   "where": "Lesson 4, teacherReflection",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-018",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The note said Lesson 6 would address 'what if you cannot factorise'. Lesson 6 is about verification; the question is now answered in Lesson 8.",
+   "lesson": 5,
+   "path": "framework[3].teacherMoves",
+   "old": "it is exactly what Lesson 6 will address.'",
+   "new": "we will keep it on the board and answer it together in Lesson 8.'",
+   "group": "G4",
+   "where": "Lesson 5, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-019",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 6 does not teach completing the square or the quadratic formula; the reflection now points to the real next step.",
+   "lesson": 5,
+   "path": "teacherReflection",
+   "old": "This will calibrate how much scaffolding Lesson 6 (completing the square or quadratic formula) will need.",
+   "new": "This tells you how ready learners are for the Lesson 8 discussion of cases where factorisation does not work.",
+   "group": "G4",
+   "where": "Lesson 5, teacherReflection",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-020",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 6 said Lesson 7 would explore difficult or impossible factorisation. Lesson 7 is the applications and digital research lesson.",
+   "lesson": 6,
+   "path": "framework[4].teacherMoves",
+   "old": "Next lesson, Lesson 7, we will explore what happens when factorisation is difficult or impossible — but every step in today's model will still apply.'",
+   "new": "Next lesson, Lesson 7, we will research where else quadratic equations are used in Kenya — and every step in today's model will still apply.'",
+   "group": "G4",
+   "where": "Lesson 6, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-021",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "No quadratic formula is taught in later lessons of this sub-strand.",
+   "lesson": 6,
+   "path": "teacherReflection",
+   "old": "before progressing to the quadratic formula in later lessons?",
+   "new": "before the Lesson 8 assessment?",
+   "group": "G4",
+   "where": "Lesson 6, teacherReflection",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-022",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    2
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "'Grade 11' is a claim about a future curriculum we cannot verify; it now says 'studied later'.",
+   "lesson": 8,
+   "path": "framework[3].learnerExperience",
+   "old": "(e.g., quadratic formula in Grade 11)",
+   "new": "(e.g., the quadratic formula, studied later)",
+   "group": "G4",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-023",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Teachers had no answer to give for 'Can factorisation always work?', which sat on the board from Lesson 4. Added a short, correct answer for the Lesson 8 closure and removed the unverified 'Grade 11' claim. Check: x² + x − 1 = 0 has no pair of whole numbers with product −1 and sum 1, so it cannot be factorised by product-and-sum. Teacher decision: whether to answer the question here (Lesson 8) or earlier.",
+   "lesson": 8,
+   "path": "framework[3].teacherMoves",
+   "old": "This is a real question that mathematics has an answer to — we will meet it again when we study the quadratic formula in Grade 11.'",
+   "new": "This is a real question that mathematics has an answer to.' For \"Can factorisation always work?\" give this answer: 'No. The product-and-sum method works when two whole numbers with the right product and sum exist, as in x² + 7x − 120 = 0. For an equation such as x² + x − 1 = 0 there are no such numbers, so we need another method (for example the quadratic formula), which we will meet later.'",
+   "group": "G4",
+   "group_headline": "A Driving Question Board question ('Can factorisation always work?') was promised an answer in Lessons 5, 6 and 7 but never got one; it now stays on the board and is answered directly in the Lesson 8 review",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-024",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Removes the unverified 'Grade 11' claim.",
+   "lesson": 8,
+   "path": "teacherReflection",
+   "old": "genuine Grade 11 content (e.g., quadratic formula, completing the square)",
+   "new": "genuine later-year content (e.g., quadratic formula, completing the square)",
+   "group": "G4",
+   "where": "Lesson 8, teacherReflection",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-025",
+   "kind": "set",
+   "target": "lesson",
+   "criteria": [
+    13
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "This field contained the two characters backslash-n typed literally, so the five reflection questions would print as one block with stray backslashes. Replaced with real line breaks; wording unchanged.",
+   "lesson": 1,
+   "path": "teacherReflection",
+   "value": "After the lesson, reflect on the following questions:\n1. PHENOMENON UPTAKE: Did learners engage genuinely with Achieng's story, or did it feel like a contrived 'story problem'? What adjustments to the narrative would make it feel more real to learners in this specific school context?\n2. VARIABLE CHOICE: How many learners defaulted to writing columns as the variable rather than rows? Does this matter mathematically? How did you handle it?\n3. DQB QUALITY: Read all the wonder slips. Are learners asking questions about the mathematics (e.g., 'how do we find r?', 'what if r is negative?') or surface questions (e.g., 'what is the formula?')? What does this tell you about their readiness for Lesson 2?\n4. MISCONCEPTION CHECK: Were there learners who wrote r + (r+7) = 120 instead of r(r+7) = 120? Plan a targeted intervention at the start of Lesson 2 using the Kongowea tomato context to revisit the difference between sum and product.\n5. HOME CONNECTION: In the next lesson, create space (5 minutes) for 3–4 learners to share the real-life situations they found at home. This validates the relevance of the mathematics and enriches the class's collective knowledge of Kenyan contexts.",
+   "old": "After the lesson, reflect on the following questions:\\n1. PHENOMENON UPTAKE: Did learners engage genuinely with Achieng's story, or did it feel like a contrived 'story problem'? What adjustments to the narrative would make it feel more real to learners in this specific school context?\\n2. VARIABLE CHOICE: How many learners defaulted to writing columns as the variable rather than rows? Does this matter mathematically? How did you handle it?\\n3. DQB QUALITY: Read all the wonder slips. Are learners asking questions about the mathematics (e.g., 'how do we find r?', 'what if r is negative?') or surface questions (e.g., 'what is the formula?')? What does this tell you about their readiness for Lesson 2?\\n4. MISCONCEPTION CHECK: Were there learners who wrote r + (r+7) = 120 instead of r(r+7) = 120? Plan a targeted intervention at the start of Lesson 2 using the Kongowea tomato context to revisit the difference between sum and product.\\n5. HOME CONNECTION: In the next lesson, create space (5 minutes) for 3–4 learners to share the real-life situations they found at home. This validates the relevance of the mathematics and enriches the class's collective knowledge of Kenyan contexts.",
+   "new": "After the lesson, reflect on the following questions:\n1. PHENOMENON UPTAKE: Did learners engage genuinely with Achieng's story, or did it feel like a contrived 'story problem'? What adjustments to the narrative would make it feel more real to learners in this specific school context?\n2. VARIABLE CHOICE: How many learners defaulted to writing columns as the variable rather than rows? Does this matter mathematically? How did you handle it?\n3. DQB QUALITY: Read all the wonder slips. Are learners asking questions about the mathematics (e.g., 'how do we find r?', 'what if r is negative?') or surface questions (e.g., 'what is the formula?')? What does this tell you about their readiness for Lesson 2?\n4. MISCONCEPTION CHECK: Were there learners who wrote r + (r+7) = 120 instead of r(r+7) = 120? Plan a targeted intervention at the start of Lesson 2 using the Kongowea tomato context to revisit the difference between sum and product.\n5. HOME CONNECTION: In the next lesson, create space (5 minutes) for 3–4 learners to share the real-life situations they found at home. This validates the relevance of the mathematics and enriches the class's collective knowledge of Kenyan contexts.",
+   "where": "Lesson 1, teacherReflection",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-026",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Teachers were not told what the right answer is or what typical guesses sound like. Checked: rows r and columns r + 7 with r(r + 7) = 120 gives r = 8 (8 x 15 = 120, 15 − 8 = 7). Other factor pairs of 120: 1x120, 2x60, 3x40, 4x30, 5x24, 6x20, 8x15, 10x12; only 8 and 15 differ by 7.",
+   "lesson": 1,
+   "path": "framework[0].formativeAssessment",
+   "old": "target them for support in Phase 2.",
+   "new": "target them for support in Phase 2. Teacher key (do not reveal yet): the answer is 8 rows and 15 columns (8 × 15 = 120 and 15 − 8 = 7). Likely guesses to expect: 10 rows and 12 columns (product 120 but they differ by 2), 6 and 20 (differ by 14), 5 and 24; each has the right product but the wrong difference.",
+   "where": "Lesson 1, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-027",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Gives the expected student answers for Part C. Checked: Card 1 r(r + 5) = 84 gives r² + 5r − 84 = 0; Card 3 w(w + 2) = 48 gives w² + 2w − 48 = 0.",
+   "lesson": 1,
+   "path": "framework[2].formativeAssessment",
+   "old": "correct choice of variable, correct expression for the second unknown, correct expansion.",
+   "new": "correct choice of variable, correct expression for the second unknown, correct expansion. Expected answers: Card 1 r(r + 5) = 84, so r² + 5r − 84 = 0; Card 3 w(w + 2) = 48, so w² + 2w − 48 = 0.",
+   "where": "Lesson 1, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-028",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The flag said a learner 'writes b = 4 instead of b = 4', which says nothing. For Context 1, x(x + 4) = x² + 4x, so a = 1, b = 4, c = 0. The likely mistakes are writing c = 4 or b = 0, or not seeing why there is no constant.",
+   "lesson": 2,
+   "path": "framework[2].formativeAssessment",
+   "old": "any learner who writes b = 4 instead of b = 4 for Context 1 but cannot explain why",
+   "new": "any learner who writes c = 4 or b = 0 for Context 1 (the correct values are a = 1, b = 4, c = 0), or who cannot explain why there is no constant term,",
+   "where": "Lesson 2, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-029",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Adds the answer key a teacher needs. Checked: x(x + 7) = x² + 7x; x(x + 5) = x² + 5x; (x + 3)(x − 2) = x² − 2x + 3x − 6 = x² + x − 6. Part B: linear = 3x + 5, 2x, x + 7; quadratic = x² + 4x − 3, x² − 9, 2x² − x + 1.",
+   "lesson": 2,
+   "path": "framework[2].teacherMoves",
+   "old": "What did we actually do to get from the problem to the expression?' Allow 10 seconds WAIT TIME. Cold-call 2 learners.",
+   "new": "What did we actually do to get from the problem to the expression?' Allow 10 seconds WAIT TIME. Cold-call 2 learners. Answer key for the teacher: Part A — chairs x² + 7x (a = 1, b = 7, c = 0); maize plot x² + 5x (a = 1, b = 5, c = 0); mandazi tray x² + x − 6 (a = 1, b = 1, c = −6); b is never 0 in these three, but c = 0 in the first two. Part B — LINEAR: (i), (iii), (v); QUADRATIC: (ii), (iv), (vi) (x² − 9 is quadratic with b = 0).",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-030",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Adds the common factorising errors with a response. Checked: (n + 8)(n − 15) = n² − 7n − 120 (wrong sign of b); (n + 12)(n + 9) = n² + 21n + 108 (c sign ignored).",
+   "lesson": 4,
+   "path": "framework[2].formativeAssessment",
+   "old": "re-models Step 2 for the whole class using a brief second example before moving to Phase 4.",
+   "new": "re-models Step 2 for the whole class using a brief second example before moving to Phase 4. Common errors to listen for: a pair with the right product but the wrong sum, e.g. (n + 8)(n − 15) for n² + 7n − 120, which expands to n² − 7n − 120 — ask the learner to expand and compare with b; and (n + 12)(n + 9) for n² + 3n − 108, where the minus sign in c was ignored — ask 'what does the product of your two numbers give?'",
+   "where": "Lesson 4, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-031",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The roots shown for the Kericho plot (x = 12 and x = −7) only fit if x is the LENGTH, but the question then asked about a width of −7 m, and the lessons teach letting the smaller side be the unknown. With width x: x(x + 5) = 84, x² + 5x − 84 = 0 = (x + 12)(x − 7), so x = 7 or −12 (plot 7 m by 12 m). With length x: x(x − 5) = 84 gives x = 12 or −7 (same plot). Checked: 7 x 12 = 84 and 12 − 7 = 5.",
+   "lesson": 5,
+   "path": "framework[2].teacherMoves",
+   "old": "Display or write the correct roots (x = 12 and x = −7). Ask: 'Can a field have a width of −7 metres? Naliaka, explain.'",
+   "new": "Display or write the correct roots. If x is the width: x = 7 and x = −12 (the plot is 7 m by 12 m). If a pair let x be the length, they get x = 12 and x = −7 — the same plot. Ask: 'Can a field have a width of −12 metres? Naliaka, explain.'",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-032",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The overview named a 'Predict–Solve–Interpret–Discuss cycle'. The unit's phases are Predict, Observe, Explain, Driving Question Board and Model Building, used in the same way in every SoW.",
+   "lesson": 5,
+   "path": "overview",
+   "old": "The lesson uses a Predict–Solve–Interpret–Discuss cycle.",
+   "new": "The lesson uses the Predict–Observe–Explain cycle: learners solve in the Observe phase and interpret in the Explain phase.",
+   "where": "Lesson 5, overview",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-033",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Adds the most common error when solving: applying the Zero Product Property to a product that is not zero. Check: x(x + 7) = 120 does NOT give x = 120 or x + 7 = 120 (e.g. 120 + 7 = 127 and 120 x 127 is not 120).",
+   "lesson": 5,
+   "path": "framework[1].formativeAssessment",
+   "old": "This is the primary misconception the Explain phase must address.",
+   "new": "This is the primary misconception the Explain phase must address. A second misconception to listen for: a learner who applies the Zero Product Property to x(x + 7) = 120 and writes x = 120 or x + 7 = 120. Respond: 'The product must be ZERO before we can say one factor is zero — that is why we first rearrange to standard form.'",
+   "where": "Lesson 5, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-034",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Problem 4 used 'h² − 5h + 4 = 0' with h called both a height and 'simplified time units', which is physically meaningless. It is now a clear model: height H = 5t − t² (simplified; real gravity would give a different t² coefficient). Setting H = 4 gives t² − 5t + 4 = 0 = (t − 1)(t − 4), t = 1 or 4. Checked: 5(1) − 1 = 4 and 5(4) − 16 = 4. The matatu problem also now says the equation is the break-even point (profit = 0).",
+   "lesson": 6,
+   "path": "overview",
+   "old": "(1) a matatu operator in Nairobi whose weekly profit P (in hundreds of shillings) satisfies n² − 3n − 40 = 0, where n is the number of extra trips; (2) a market trader in Kisumu whose rectangular display table has area 28 m² and whose length exceeds width by 3 m; and (3) a Kenyan athletics coach at Iten who models a shot-put throw with h² − 5h + 4 = 0 (in simplified time units).",
+   "new": "(1) a matatu operator in Nairobi whose weekly profit P (in hundreds of shillings) is n² − 3n − 40, where n is the number of extra trips, so that break-even (P = 0) gives n² − 3n − 40 = 0; (2) a market trader in Kisumu whose rectangular display table has area 28 m² and whose length exceeds width by 3 m; and (3) a Kenyan athletics coach at Iten who models the height of a thrown shot-put as H = 5t − t² (H in metres, t in seconds, simplified numbers) and asks when it is 4 m high, giving t² − 5t + 4 = 0.",
+   "reference": "OpenStax, University Physics Volume 1, chapter on Motion Along a Straight Line (free fall: y = y0 + v0 t − ½ g t²)",
+   "group": "G5",
+   "group_headline": "Lesson 6 Problem 4 had an equation whose letter was both a height and a time, so its two answers meant nothing; it is now a proper height-against-time model where both answers (1 s going up, 4 s coming down) make sense",
+   "where": "Lesson 6, overview",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-035",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old Problem 4 text (h² − 5h + 4 = 0, 'h is height at key instants') did not describe a real situation. Replaced with the height-time model; answers t = 1 s (rising) and t = 4 s (falling) both valid. Recomputed: H(1) = 4, H(4) = 20 − 16 = 4; (t − 1)(t − 4) = t² − 5t + 4.",
+   "lesson": 6,
+   "path": "framework[1].teacherMoves",
+   "old": "Coach Kiplagat at Iten models a shot-put arc with the equation h² − 5h + 4 = 0, where h is height in metres at key instants. Factorise, solve, verify, and interpret both solutions.",
+   "new": "Coach Kiplagat at Iten models a thrown shot-put so that its height H (in metres) after t seconds is H = 5t − t² (simplified numbers). He asks: when is the shot-put 4 m above the ground? Write 4 = 5t − t², rearrange to t² − 5t + 4 = 0, factorise, solve, verify, and interpret both solutions.",
+   "reference": "OpenStax, University Physics Volume 1, chapter on Motion Along a Straight Line (free fall: y = y0 + v0 t − ½ g t²)",
+   "group": "G5",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-036",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "In Problem 2, 'weekly profit model gives n² − 3n − 40 = 0' did not say why the profit expression equals zero. It now says it is the break-even point. Roots: n² − 3n − 40 = (n − 8)(n + 5), n = 8 or −5 (8 x −5 = −40 and 8 − 5 = 3).",
+   "lesson": 6,
+   "path": "framework[1].teacherMoves",
+   "old": "His weekly profit model gives n² − 3n − 40 = 0, where n is the number of extra trips above his minimum.",
+   "new": "His weekly profit (in hundreds of shillings) is n² − 3n − 40, where n is the number of extra trips above his minimum. Set the profit to zero to find his break-even number of extra trips: n² − 3n − 40 = 0.",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G5",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-037",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The old look-for said h = 1 and h = 4 were 'two heights at the same elevation', which makes no sense. Rewritten for the time model, and the teacher answer key for Problems 2-4 added. Checked: (n − 8)(n + 5) = n² − 3n − 40; w² + 3w − 28 = (w + 7)(w − 4), 4 x 7 = 28; (t − 1)(t − 4) = t² − 5t + 4.",
+   "lesson": 6,
+   "path": "framework[1].formativeAssessment",
+   "old": "(3) For Problem 4, do learners recognise that h = 1 and h = 4 are both non-negative and therefore both contextually possible (representing two heights at which the shot-put is at the same elevation)? This is the lesson's richest contextual discussion point.",
+   "new": "(3) For Problem 4, do learners recognise that t = 1 and t = 4 are both positive times and therefore both valid: the shot-put is 4 m high once on the way up (t = 1 s) and once on the way down (t = 4 s)? This is the lesson's richest contextual discussion point. Answer key: Problem 2 — (n − 8)(n + 5) = 0, n = 8 accepted, n = −5 rejected (extra trips cannot be negative). Problem 3 — w² + 3w − 28 = 0, (w + 7)(w − 4) = 0, w = 4 accepted, w = −7 rejected, table 4 m by 7 m. Problem 4 — (t − 1)(t − 4) = 0, both roots accepted.",
+   "reference": "OpenStax, University Physics Volume 1, chapter on Motion Along a Straight Line (free fall: y = y0 + v0 t − ½ g t²)",
+   "group": "G5",
+   "where": "Lesson 6, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-038",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Keeps the Summary Table consistent with the corrected Problem 4.",
+   "lesson": 6,
+   "path": "summaryTablePrompt.observed",
+   "old": "while in the Iten athletics problem both roots were non-negative and both could be physically meaningful.",
+   "new": "while in the Iten athletics problem both roots (t = 1 s and t = 4 s) were positive times and both were physically meaningful (the shot-put is 4 m high on the way up and on the way down).",
+   "reference": "OpenStax, University Physics Volume 1, chapter on Motion Along a Straight Line (free fall: y = y0 + v0 t − ½ g t²)",
+   "group": "G5",
+   "where": "Lesson 6, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-039",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Lesson 6 is a 40-minute period but asked pairs to do four problems with full factorisation, substitution and a peer-check swap after each one (about 50+ minutes with the other phases). Now all pairs do Problem 1 and then one of Problems 2-4 (jigsaw) with one peer-check swap; the Explain phase already uses Problems 3 and 4 and one pair gives the Problem 2 verdict. Budget (40 min): Predict 4, Observe 14, Explain 10, Driving Question Board 5, Model Building 7. Teacher decision: this trims the lesson to fit 40 minutes; the other option is to make Lesson 6 an 80-minute lesson (the unit total would then be 640 minutes).",
+   "lesson": 6,
+   "path": "framework[1].learnerExperience",
+   "old": "Working in pairs, learners complete a structured Verification and Practice Worksheet with four problems of increasing complexity. Problem 1 (Achieng's chairs): substitute r = 8 and r = −15 into r² + 7r − 120 = 0, show all arithmetic, state whether each substitution balances, then decide which value works for the seating arrangement. Problems 2–4 introduce new Kenyan contexts — a Nairobi matatu operator, a Kisumu market trader, and a Iten athletics coach — each requiring full factorisation, both roots, verification by substitution, and a written contextual verdict. After completing each problem, pairs swap books and peer-check the substitution arithmetic step-by-step, marking any error with a circled 'E' and a correction note.",
+   "new": "Working in pairs, learners complete a structured Verification and Practice Worksheet. All pairs begin with Problem 1 (Achieng's chairs): substitute r = 8 and r = −15 into r² + 7r − 120 = 0, show all arithmetic, state whether each substitution balances, then decide which value works for the seating arrangement. Pairs are then labelled A, B or C: A-pairs take Problem 2 (a Nairobi matatu operator), B-pairs Problem 3 (a Kisumu market trader) and C-pairs Problem 4 (an Iten athletics coach), each requiring full factorisation, both roots, verification by substitution, and a written contextual verdict. Pairs then swap books with a pair that did a different problem and peer-check the substitution arithmetic step-by-step, marking any error with a circled 'E' and a correction note.",
+   "group": "G6",
+   "group_headline": "Lesson 6 could not fit in 40 minutes (four full problems plus peer checks); now all pairs do Problem 1 and one of Problems 2-4, with a time plan that adds to 40 minutes",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-040",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Fits the jigsaw: Problem 1 in 3 minutes, then pairs are assigned Problem 2, 3 or 4 (8 minutes).",
+   "lesson": 6,
+   "path": "framework[1].teacherMoves",
+   "old": "[WAIT TIME: allow 4 minutes for Problem 1 before intervening.]",
+   "new": "[WAIT TIME: allow 3 minutes for Problem 1 before intervening.]",
+   "group": "G6",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-041",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Tells the teacher how to run the jigsaw.",
+   "lesson": 6,
+   "path": "framework[1].teacherMoves",
+   "old": "For Problem 2 (matatu), read aloud:",
+   "new": "Then label the pairs A, B and C: A-pairs do Problem 2, B-pairs Problem 3, C-pairs Problem 4 (8 minutes in all). Read each problem aloud to its pairs. For Problem 2 (matatu), read aloud:",
+   "group": "G6",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-042",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The swap now follows the 8 minutes of jigsaw work and lasts 3 minutes.",
+   "lesson": 6,
+   "path": "framework[1].teacherMoves",
+   "old": "After Problem 4, direct pairs to swap and peer-check — say:",
+   "new": "After the 8 minutes, direct each pair to swap with a pair that did a different problem and peer-check for 3 minutes — say:",
+   "group": "G6",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-043",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "With the jigsaw, the class hears Problem 2 from an A-pair.",
+   "lesson": 6,
+   "path": "framework[2].learnerExperience",
+   "old": "The class compares verdicts across all four problems",
+   "new": "An A-pair gives the Problem 2 verdict in one sentence, and the class compares verdicts across all four problems",
+   "group": "G6",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-044",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The Driving Question Board phase is budgeted at 5 minutes: 1 minute to re-read and 1 minute to write new notes (was 2 + 2).",
+   "lesson": 6,
+   "path": "framework[3].teacherMoves",
+   "old": "Allow 2 minutes for learners to re-read all posted questions silently.",
+   "new": "Allow 1 minute for learners to re-read all posted questions silently.",
+   "group": "G6",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-045",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same budget as above.",
+   "lesson": 6,
+   "path": "framework[3].teacherMoves",
+   "old": "Allow 2 minutes for learners to write new sticky notes and post them.",
+   "new": "Allow 1 minute for learners to write new sticky notes and post them.",
+   "group": "G6",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-046",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Two research examples could not be solved with the method taught. Sports: h = −5t² + 20t + 1 gives 5t² − 20t − 1 = 0, whose roots (about 4.05 and −0.05) do not factorise. Business: P = −2x² + 80x − 300 gives x² − 40x + 150 = 0, discriminant 1000 (not a perfect square), so no whole-number roots. Replaced with examples that factorise and keep the teacher's questions (negative time to reject; profit zero twice). Sports: ball thrown up at 10 m/s from a 15 m stand, h = 15 + 10t − 5t² (g taken as 10 m/s² to keep the numbers simple); h = 0 gives t² − 2t − 3 = (t − 3)(t + 1), t = 3 s or −1 s; check: −45 + 30 + 15 = 0 and −5 − 10 + 15 = 0. Business: P = −2x² + 80x − 600 = −2(x − 10)(x − 30); P = 0 at x = 10 and 30; check: −200 + 800 − 600 = 0 and −1800 + 2400 − 600 = 0. Also: 'arch spans in Nairobi's KICC building' is a doubtful claim, so the architecture example is now generic; 'by factorisation or other method from prior lessons' is now 'by factorisation', the only method taught.",
+   "lesson": 7,
+   "path": "framework[1].learnerExperience",
+   "old": "Group A: Architecture (e.g., arch spans in Nairobi's KICC building, rectangular floor plans). Group B: Agriculture (e.g., optimal rectangular plot dimensions for a maize shamba in the Rift Valley, irrigation channel cross-sections). Group C: Sports (e.g., trajectory of a football kicked by Harambee Stars players at Kasarani Stadium — projectile motion producing h = −5t² + 20t + 1). Group D: Business (e.g., a Mombasa market trader's profit function P = −2x² + 80x − 300 where x is the number of units sold).",
+   "new": "Group A: Architecture (e.g., rectangular floor plans, or the span of a parabolic arch such as a bridge or gateway). Group B: Agriculture (e.g., optimal rectangular plot dimensions for a maize shamba in the Rift Valley, irrigation channel cross-sections). Group C: Sports (e.g., a ball thrown upward at 10 m/s from a stand 15 m above the pitch at Kasarani Stadium, whose height after t seconds is h = 15 + 10t − 5t², taking gravity as 10 m/s² to keep the numbers simple). Group D: Business (e.g., a Mombasa market trader's profit function P = −2x² + 80x − 600 where x is the number of units sold).",
+   "reference": "OpenStax, University Physics Volume 1, chapter on Motion Along a Straight Line (free fall: y = y0 + v0 t − ½ g t²); OpenStax Algebra and Trigonometry 2e, Quadratic Equations",
+   "group": "G7",
+   "group_headline": "Two Lesson 7 research examples (ball height and trader profit) gave equations that cannot be solved by factorisation; they are replaced with equally realistic ones that factorise, so every group can finish",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-047",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Only factorisation has been taught, so 'or other method from prior lessons' pointed to nothing.",
+   "lesson": 7,
+   "path": "framework[1].learnerExperience",
+   "old": "(by factorisation or other method from prior lessons)",
+   "new": "(by factorisation)",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G7",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-048",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Business probing question: with P = −2x² + 80x − 600 both x = 10 and x = 30 are break-even points, so the question 'which makes business sense' no longer fits; it now asks what the two values mean. (Profit at x = 20 is −800 + 1600 − 600 = 200 > 0, so the business makes money between 10 and 30 units.)",
+   "lesson": 7,
+   "path": "framework[1].teacherMoves",
+   "old": "'At what number of units sold is the profit zero? Which of the two values makes business sense?'",
+   "new": "'At what numbers of units sold is the profit zero? What do the two values tell the trader?' [Both are break-even points: the trader makes a profit between 10 and 30 units.]",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G7",
+   "where": "Lesson 7, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-049",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Keeps the Summary Table consistent with the new sports example.",
+   "lesson": 7,
+   "path": "summaryTablePrompt.observed",
+   "old": "sports (e.g., football trajectory at Kasarani Stadium)",
+   "new": "sports (e.g., a ball thrown from a stand at Kasarani Stadium)",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G7",
+   "where": "Lesson 7, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-050",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The Observe phase asked for 2 + 20 + 8 minutes, and with Predict (8), Explain (26), Driving Question Board (8) and Model Building (12) the lesson ran about 84 minutes. Research is trimmed to 16 minutes: 8 + 26 + 26 + 8 + 12 = 80.",
+   "lesson": 7,
+   "path": "framework[1].learnerExperience",
+   "old": "Groups have 20 minutes for research and 8 minutes for poster/slide preparation.",
+   "new": "Groups have 16 minutes for research and 8 minutes for poster/slide preparation.",
+   "group": "G8",
+   "group_headline": "Lesson 7 added up to about 84 minutes and its time cues contradicted each other (a '25-minute' warning in a 20-minute research slot); trimmed to 80 minutes with consistent cues",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-051",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 16-minute research slot.",
+   "lesson": 7,
+   "path": "framework[1].teacherMoves",
+   "old": "You have 20 minutes to research, then 8 minutes to prepare your poster.",
+   "new": "You have 16 minutes to research, then 8 minutes to prepare your poster.",
+   "group": "G8",
+   "where": "Lesson 7, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-052",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The cues said 'At 25 minutes' for a 20-minute research slot and 'At 5 minutes remaining' followed by 'One minute'. They now match the 16 + 8 minute plan.",
+   "lesson": 7,
+   "path": "framework[1].teacherMoves",
+   "old": "At 25 minutes: give a 3-minute warning: 'Three minutes left for research — move to poster preparation.' Remind groups: 'Your poster must show the equation clearly — a person walking past must be able to read and understand it without you explaining.'\n\nAt 5 minutes remaining in poster prep:",
+   "new": "At 13 minutes of research: give a 3-minute warning: 'Three minutes left for research — move to poster preparation.' Remind groups: 'Your poster must show the equation clearly — a person walking past must be able to read and understand it without you explaining.'\n\nAt 7 minutes into poster preparation:",
+   "group": "G8",
+   "where": "Lesson 7, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-053",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Lesson 8 needed well over 80 minutes: a 15-minute build, ten or more 3-minute presentations, a 20-minute written task and a 10-minute career talk. Budget (80): Predict 7, Observe 15, Explain 24 (12 build, 9 for three presentations, 3 convergence), Driving Question Board 8, Model Building 26 (20 task + 6 careers). Teacher decision: which groups present (suggested: groups with different Kenyan contexts).",
+   "lesson": 8,
+   "path": "framework[2].learnerExperience",
+   "old": "Groups have 15 minutes to build. Each group then presents their model to the class in 3 minutes.",
+   "new": "Groups have 12 minutes to build. Three groups, chosen by the teacher to show different Kenyan contexts, then present their model to the class in 2 minutes each; the other posters stay on the walls for learners to read at the end of the lesson.",
+   "group": "G9",
+   "group_headline": "Lesson 8 could not fit in 80 minutes (every group presenting, a 20-minute test and a 10-minute career talk); trimmed so the phases add up to 80 minutes",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-054",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 12-minute build.",
+   "lesson": 8,
+   "path": "framework[2].teacherMoves",
+   "old": "During construction (15 minutes), circulate",
+   "new": "During construction (12 minutes), circulate",
+   "group": "G9",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-055",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Convergence discussion shortened to 3 minutes to fit the plan.",
+   "lesson": 8,
+   "path": "framework[2].teacherMoves",
+   "old": "facilitate a 5-minute whole-class convergence discussion",
+   "new": "facilitate a 3-minute whole-class convergence discussion",
+   "group": "G9",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-056",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The Driving Question Board review had no time limit and could take 15+ minutes with every question read and voted on. A cap of 8 minutes is added.",
+   "lesson": 8,
+   "path": "framework[3].teacherMoves",
+   "old": "Read each question slowly.",
+   "new": "Keep the whole review to 8 minutes: group similar questions and read one for each group. Read each question slowly.",
+   "group": "G9",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-057",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Career talk shortened from 10 to 6 minutes.",
+   "lesson": 8,
+   "path": "framework[4].learnerExperience",
+   "old": "PART B — Career Connections Discussion (10 minutes): After submitting the assessment, learners participate in a structured Think-Pair-Share. Prompt: 'Name one Kenyan career where a professional would NEED to solve a quadratic equation, and describe a specific situation in that career where the equation would arise.' Pairs share for 2 minutes, then 6 pairs report to the whole class.",
+   "new": "PART B — Career Connections Discussion (6 minutes): After submitting the assessment, learners participate in a structured Think-Pair-Share. Prompt: 'Name one Kenyan career where a professional would NEED to solve a quadratic equation, and describe a specific situation in that career where the equation would arise.' Pairs share for 1 minute, then 3 pairs report to the whole class.",
+   "group": "G9",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-058",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 6-minute career talk.",
+   "lesson": 8,
+   "path": "framework[4].teacherMoves",
+   "old": "WAIT TIME 2 minutes for individual thinking before pairs discuss. Cold-call 6 pairs",
+   "new": "WAIT TIME 1 minute for individual thinking before pairs discuss. Cold-call 3 pairs",
+   "group": "G9",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-059",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The levels left a gap: 'Meets' = all four sections correct, 'Approaches' = any two, but three correct was not covered. Approaches is now two or three sections; Below Expectations is one or none.",
+   "lesson": 8,
+   "path": "framework[4].formativeAssessment",
+   "old": "Approaches Expectations = any two of four correct; Below Expectations = any one of four correct.",
+   "new": "Approaches Expectations = two or three of the four sections correct; Below Expectations = one or none correct.",
+   "where": "Lesson 8, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-060",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "No lesson had language supports for English learners. Added key words with Kiswahili beside them and permission to discuss in home languages. Teacher decision: please check the Kiswahili terms and add the words your learners use.",
+   "lesson": 1,
+   "path": "framework[0].teacherMoves",
+   "old": "Let us find out why — and whether algebra can rescue us.'",
+   "new": "Let us find out why — and whether algebra can rescue us.' Language support: write the key words on the board with Kiswahili beside them — rows (safu mlalo), columns (safu wima), square (mraba), equation (mlinganyo), multiply (kuzidisha) — read the story aloud twice, and let learners talk in Kiswahili or their home language before writing in English.",
+   "group": "G10",
+   "group_headline": "No inclusion supports anywhere in the sub-strand; added Kiswahili key words (to be checked by teachers) and one accommodation each in Lessons 1, 4 and 8",
+   "where": "Lesson 1, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-061",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Adds an accommodation for learners with low vision or slow writing.",
+   "lesson": 4,
+   "path": "framework[1].teacherMoves",
+   "old": "Record the identified pair (−9, +12) on the board in a box labelled 'KEY PAIR.'",
+   "new": "Record the identified pair (−9, +12) on the board in a box labelled 'KEY PAIR.' Support: for learners with low vision or slow writing, give the factor-pair table pre-printed in large print with the sum column ready to fill; they may circle the key pair and explain it aloud to their partner instead of writing.",
+   "group": "G10",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-062",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Adds more than one way to show understanding in the written task.",
+   "lesson": 8,
+   "path": "framework[4].teacherMoves",
+   "old": "The JOURNEY is what is being assessed.'",
+   "new": "The JOURNEY is what is being assessed.' Support: learners who find extended writing hard may explain Parts (iii) and (iv) aloud to you, or use a sentence-frame sheet ('Let w = ___. The length is ___. The equation is ___.').",
+   "group": "G10",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-063",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Guideline 7: the Final Explanation should be built from the Summary Tables. The instructions now tell learners to use them and the Driving Question Board notes.",
+   "path": "instructions",
+   "old": "Use r for the number of rows in Achieng's problem.",
+   "new": "Use r for the number of rows in Achieng's problem. Use your Summary Tables and your Driving Question Board notes to help you.",
+   "where": "Final Explanation, instructions",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-064",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part 4 was exactly Lesson 6 Problem 3 (28 m², length 3 m more than width), so the 'new context' could be answered from memory. New numbers keep the same skills. Checked: w(w + 3) = 54 gives w² + 3w − 54 = (w + 9)(w − 6), w = 6 (6 x 9 = 54, 9 − 6 = 3).",
+   "path": "sections[3].prompt",
+   "old": "A market trader in Kisumu has a rectangular display table with an area of 28 m².",
+   "new": "A market trader in Kisumu has a rectangular display table with an area of 54 m².",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G11",
+   "group_headline": "The Final Explanation 'new context' repeated a Lesson 6 problem exactly; it now uses new numbers (54 m²), with the worked answer and the Part 5 reference updated to match",
+   "where": "Final Explanation, Part 4: Using the method in a new Kenyan context, prompt",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-065",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Worked answer updated for the new numbers. Recomputed: 9 x (−6) = −54 and 9 + (−6) = 3; (w + 9)(w − 6) = w² + 3w − 54; 36 + 18 − 54 = 0; 6 x 9 = 54.",
+   "path": "sections[3].exemplar",
+   "old": "(a) Let w = the width in metres. Then the length = w + 3. Area: w(w + 3) = 28, so w² + 3w = 28, which gives w² + 3w − 28 = 0. (b) We need two numbers with product −28 and sum +3. They are +7 and −4. So (w + 7)(w − 4) = 0, which gives w = −7 or w = 4. (c) A width cannot be negative, so w = −7 is rejected and w = 4 is valid. The width is 4 m and the length is 4 + 3 = 7 m. (d) Substitute w = 4 into the equation: 4² + 3(4) − 28 = 16 + 12 − 28 = 0. Also, area = 4 × 7 = 28 m², which matches the situation.",
+   "new": "(a) Let w = the width in metres. Then the length = w + 3. Area: w(w + 3) = 54, so w² + 3w = 54, which gives w² + 3w − 54 = 0. (b) We need two numbers with product −54 and sum +3. They are +9 and −6. So (w + 9)(w − 6) = 0, which gives w = −9 or w = 6. (c) A width cannot be negative, so w = −9 is rejected and w = 6 is valid. The width is 6 m and the length is 6 + 3 = 9 m. (d) Substitute w = 6 into the equation: 6² + 3(6) − 54 = 36 + 18 − 54 = 0. Also, area = 6 × 9 = 54 m², which matches the situation.",
+   "reference": "OpenStax, Algebra and Trigonometry 2e, chapter on Quadratic Equations (solving by factoring and modelling with quadratics: area A = length x width, perimeter P = 2(length + width))",
+   "group": "G11",
+   "where": "Final Explanation, Part 4: Using the method in a new Kenyan context, exemplar",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-066",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part 5 exemplar quoted the old table size (4 m by 7 m); now 6 m by 9 m.",
+   "path": "sections[4].exemplar",
+   "old": "the trader's table has width 4 m and length 7 m.",
+   "new": "the trader's table has width 6 m and length 9 m.",
+   "group": "G11",
+   "where": "Final Explanation, Part 5: Answering the driving question, exemplar",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-067",
+   "kind": "set",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The rubric printed headings are fixed by the template, so the CBE level names (Exceeds, Meets, Approaches Expectations) now appear at the start of each descriptor. Wording of the descriptors is unchanged apart from the level names.",
+   "path": "rubric",
+   "value": [
+    {
+     "criterion": "Forming quadratic equations",
+     "excellent": "Exceeds Expectations: writes correct Let statements and expressions, forms the product equation, and rearranges it correctly into standard form with a, b and c identified, in every context.",
+     "proficient": "Meets Expectations: forms the equations correctly with minor slips in rearranging or in identifying a, b and c.",
+     "developing": "Approaches Expectations: has difficulty writing the expression for the second unknown or forms a linear equation or an equation not set to zero."
+    },
+    {
+     "criterion": "Solving by factorisation",
+     "excellent": "Exceeds Expectations: uses the product-and-sum method accurately, writes correct factors, applies the Zero Product Property to get both roots, and checks by expanding.",
+     "proficient": "Meets Expectations: factorises and finds both roots correctly but does not always check by expansion or explain the Zero Product Property.",
+     "developing": "Approaches Expectations: chooses the wrong factor pair, makes sign errors, or finds only one root."
+    },
+    {
+     "criterion": "Verification and contextual validity",
+     "excellent": "Exceeds Expectations: substitutes both roots, correctly rejects the invalid root with a clear reason from the context, and checks that the final dimensions give the known total.",
+     "proficient": "Meets Expectations: substitutes the roots and rejects the invalid root, but the reason or the final check is incomplete.",
+     "developing": "Approaches Expectations: does not verify by substitution or does not use the context to choose the valid answer."
+    },
+    {
+     "criterion": "Explaining the full journey and the driving question",
+     "excellent": "Exceeds Expectations: gives a clear, ordered pathway from real-life situation to verified answer, explains why the squared term appears, and links to at least two Kenyan contexts.",
+     "proficient": "Meets Expectations: describes most steps of the pathway with a Kenyan example but with limited explanation of why the squared term appears.",
+     "developing": "Approaches Expectations: lists some steps with little reasoning and few or no links to real-life situations."
+    }
+   ],
+   "old": "[{\"criterion\": \"Forming quadratic equations\", \"excellent\": \"Writes correct Let statements and expressions, forms the product equation, and rearranges it correctly into standard form with a, b and c identified, in every context.\", \"proficient\": \"Forms the equations correctly with minor slips in rearranging or in identifying a, b and c.\", \"developing\": \"Has difficulty writing the expression for the second unknown or forms a linear equation or an equation not set to zero.\"}, {\"criterion\": \"Solving by factorisation\", \"excellent\": \"Uses the product-and-sum method accurately, writes correct factors, applies the Zero Product Property to get both roots, and checks by expanding.\", \"proficient\": \"Factorises and finds both roots correctly but does not always check by expansion or explain the Zero Product Property.\", \"developing\": \"Chooses the wrong factor pair, makes sign errors, or finds only one root.\"}, {\"criterion\": \"Verification and contextual validity\", \"excellent\": \"Substitutes both roots, correctly rejects the invalid root with a clear reason from the context, and checks that the final dimensions give the known total.\", \"proficient\": \"Substitutes the roots and rejects the invalid root, but the reason or the final check is incomplete.\", \"developing\": \"Does not verify by substitution or does not use the context to choose the valid answer.\"}, {\"criterion\": \"Explaining the full journey and the driving question\", \"excellent\": \"Gives a clear, ordered pathway from real-life situation to verified answer, explains why the squared term appears, and links to at least two Kenyan contexts.\", \"proficient\": \"Describes most steps of the pathway with a Kenyan example but with limited explanation of why the squared term appears.\", \"developing\": \"Lists some steps with little reasoning and few or no links to real-life situations.\"}]",
+   "new": "[{\"criterion\": \"Forming quadratic equations\", \"excellent\": \"Exceeds Expectations: writes correct Let statements and expressions, forms the product equation, and rearranges it correctly into standard form with a, b and c identified, in every context.\", \"proficient\": \"Meets Expectations: forms the equations correctly with minor slips in rearranging or in identifying a, b and c.\", \"developing\": \"Approaches Expectations: has difficulty writing the expression for the second unknown or forms a linear equation or an equation not set to zero.\"}, {\"criterion\": \"Solving by factorisation\", \"excellent\": \"Exceeds Expectations: uses the product-and-sum method accurately, writes correct factors, applies the Zero Product Property to get both roots, and checks by expanding.\", \"proficient\": \"Meets Expectations: factorises and finds both roots correctly but does not always check by expansion or explain the Zero Product Property.\", \"developing\": \"Approaches Expectations: chooses the wrong factor pair, makes sign errors, or finds only one root.\"}, {\"criterion\": \"Verification and contextual validity\", \"excellent\": \"Exceeds Expectations: substitutes both roots, correctly rejects the invalid root with a clear reason from the context, and checks that the final dimensions give the known total.\", \"proficient\": \"Meets Expectations: substitutes the roots and rejects the invalid root, but the reason or the final check is incomplete.\", \"developing\": \"Approaches Expectations: does not verify by substitution or does not use the context to choose the valid answer.\"}, {\"criterion\": \"Explaining the full journey and the driving question\", \"excellent\": \"Exceeds Expectations: gives a clear, ordered pathway from real-life situation to verified answer, explains why the squared term appears, and links to at least two Kenyan contexts.\", \"proficient\": \"Meets Expectations: describes most steps of the pathway with a Kenyan example but with limited explanation of why the squared term appears.\", \"developing\": \"Approaches Expectations: lists some steps with little reasoning and few or no links to real-life situations.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-068",
+   "kind": "flag",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "The contract allows only three level fields (excellent / proficient / developing), so the fourth CBE level, Below Expectations, cannot be represented in the Final Explanation rubric. Suggested: ask the partner whether a fourth field can be added; until then, teachers can treat work that does not reach 'Approaches Expectations' as Below Expectations.",
+   "path": "rubric",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T10:57:07"
+  },
+  {
+   "id": "essmath_1_3-069",
+   "kind": "flag",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "KICD alignment could not be verified. The KICD Grade 10 Mathematics PDF in data/raw/curriculum_pdfs/ is the Core Mathematics design: its Sub-Strand 1.3 is 'Quadratic Expressions and Equations' (16 lessons) with outcomes a-h that include quadratic identities, and it does not contain Essential Mathematics. The outcomes (a-e), content, key inquiry question, competencies, values and PCIs in this module therefore could not be compared with KICD text and were left unchanged. Suggested: the project owner supplies the KICD Essential Mathematics design so the wording can be checked; also confirm the sub-strand name ('Quadratic Equations' here, 'Quadratic Expressions and Equations' in the Core design). All five stated outcomes are taught and assessed in the lessons and the Final Explanation.",
+   "path": "learningOutcomes",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-15T10:57:07"
+  }
+ ]
+}
