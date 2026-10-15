@@ -469,4 +469,6 @@ just the contingency margin.
 | Drive sync script (Windows) | `scripts/sync_to_drive.bat` — run after `git pull`; `sync_to_drive.bat preview` for a dry run |
 | Drive destination (docx + json + quiz pptx, editable master) | `G:\My Drive\CBE Outputs` — copied with `/E`, **no** purge |
 | Drive destination (PDF + index.html, teachers) | `G:\My Drive\CBE Outputs\PDF` — **true mirror** (`/MIR`); hand-placed files there get deleted |
+| Drive destination (revised lesson plans, changes accepted; `.docx` only) | `G:\My Drive\CBE Revised 2026-10\Final Documents` — from `data/revised_2026-10_full/outputs/v2`, `/E`, **no** purge (sync_to_drive.bat job 3, added 2026-10-15; not yet teacher-approved) |
+| Drive destination (revision journals) | `G:\My Drive\CBE Revised 2026-10\Journals` — from `data/revised_2026-10_full/journal`; job 4 copies **new files only** so teachers' marked-up copies are never overwritten; `refresh-journals` argument overwrites all |
 | ARES resource hostname | `ares.local` (default in `src/ares_recommender.py`; override per box with `ARES_HOST`) |

@@ -9,8 +9,12 @@ REM
 REM  Usage:
 REM      scripts\sync_to_drive.bat            actually sync
 REM      scripts\sync_to_drive.bat preview    dry run, writes nothing (/L)
+REM      scripts\sync_to_drive.bat refresh-journals
+REM                                           also OVERWRITE journals already on Drive (see job 4)
+REM      (the two words can be combined, in any order)
 REM
-REM  Two independent jobs, because the two trees serve different audiences and
+REM  Four independent jobs (1-2 are the released corpus, 3-4 are the Grade 10
+REM  revision project, added 2026-10-15), because the two trees serve different audiences and
 REM  need DIFFERENT delete behaviour:
 REM
 REM    1. docx + json  ->  G:\My Drive\CBE Outputs        /E    (no purge)
@@ -26,6 +30,21 @@ REM       a PDF, and sub-strand renames DO happen (the Phase 3 filePrefix change
 REM       orphaned files), so stale PDFs should be removed. Mirroring is correct.
 REM       *** This job is a TRUE MIRROR: anything you put in the Drive PDF
 REM       folder by hand WILL be deleted on the next run. Keep it output-only.
+REM
+REM    3. revised .docx  ->  G:\My Drive\CBE Revised 2026-10\Final Documents   /E  (no purge)
+REM       The revised lesson plans with every proposed change ACCEPTED, from
+REM       data\revised_2026-10_full\outputs\v2. Word files only (no json, no
+REM       tracked-change files, no originals). Same Subject\SubStrand layout as
+REM       the main tree. Not yet signed off by teachers: kept in its own Drive
+REM       folder so it cannot be confused with the released CBE Outputs.
+REM
+REM    4. journals  ->  G:\My Drive\CBE Revised 2026-10\Journals   /E  (no purge)
+REM       Journal_<Subject>.docx + Journal_00_Master_Index.docx from
+REM       data\revised_2026-10_full\journal. Teachers tick ACCEPT/EDIT in these
+REM       files. By DEFAULT this job only copies journals that are NOT yet on
+REM       Drive (/XC /XN /XO), so a re-run can never overwrite a teacher's
+REM       marked-up copy. To publish a regenerated journal, delete the old one
+REM       on Drive, or run with "refresh-journals" (overwrites ALL journals).
 REM
 REM  Path handling that matters:
 REM    - job 1 excludes the PDF subdirectory (/XD), or it walks into the PDF
@@ -57,6 +76,12 @@ set "SRC_PDF=%REPO%\data\outputs\v2\PDF"
 set "DRIVE_ROOT=G:\My Drive"
 set "DEST_DOCX=%DRIVE_ROOT%\CBE Outputs"
 set "DEST_PDF=%DRIVE_ROOT%\CBE Outputs\PDF"
+REM Revision project (jobs 3-4)
+set "SRC_REV_DOCX=%REPO%\data\revised_2026-10_full\outputs\v2"
+set "SRC_REV_JOURNAL=%REPO%\data\revised_2026-10_full\journal"
+set "DEST_REV=%DRIVE_ROOT%\CBE Revised 2026-10"
+set "DEST_REV_DOCX=%DEST_REV%\Final Documents"
+set "DEST_REV_JOURNAL=%DEST_REV%\Journals"
 
 REM /FFT  - 2-second timestamp granularity. Google Drive is a virtual filesystem
 REM         and without this robocopy re-copies unchanged files every run.
@@ -64,10 +89,18 @@ REM /R:2 /W:5 - 2 retries, 5s apart, instead of robocopy's default 1,000,000.
 REM /NP   - no per-file progress percentages (keeps the log readable).
 set "COMMON=/FFT /R:2 /W:5 /NP /TEE"
 
-REM --- Preview mode ---------------------------------------------------------
+REM --- Arguments -----------------------------------------------------------
 set "DRYRUN="
-if /i "%~1"=="preview" (
-    set "DRYRUN=/L"
+set "JOURNAL_MODE=/XC /XN /XO"
+set "JOURNAL_NOTE=new files only, existing journals on Drive are never overwritten"
+for %%A in (%*) do (
+    if /i "%%~A"=="preview" set "DRYRUN=/L"
+    if /i "%%~A"=="refresh-journals" (
+        set "JOURNAL_MODE="
+        set "JOURNAL_NOTE=OVERWRITES journals already on Drive (teacher mark-ups lost)"
+    )
+)
+if defined DRYRUN (
     echo.
     echo *** PREVIEW MODE - nothing will be written or deleted. ***
     echo *** Lines marked EXTRA under job 2 are what /MIR would DELETE.  ***
@@ -101,6 +134,16 @@ if not exist "%DRIVE_ROOT%\" (
     exit /b 1
 )
 
+set "DO_REV=1"
+if not exist "%SRC_REV_DOCX%\" (
+    echo WARNING: revised documents not found: "%SRC_REV_DOCX%" - jobs 3 and 4 will be skipped. Have you pulled?
+    set "DO_REV="
+)
+if not exist "%SRC_REV_JOURNAL%\" (
+    echo WARNING: revised journals not found: "%SRC_REV_JOURNAL%" - jobs 3 and 4 will be skipped. Have you pulled?
+    set "DO_REV="
+)
+
 echo.
 echo Repo:      %REPO%
 echo Log:       %LOG%
@@ -110,7 +153,7 @@ REM --- Job 1: docx + json + pptx (no purge) ---------------------------------
 REM *.pptx = quiz/ Quick Check decks (added 2026-09-30); the PDF tree only has
 REM their PDF, and teachers presenting a deck need the .pptx.
 echo ============================================================
-echo  JOB 1/2  docx + json + pptx  ^-^>  %DEST_DOCX%   (/E, no delete)
+echo  JOB 1/4  docx + json + pptx  ^-^>  %DEST_DOCX%   (/E, no delete)
 echo ============================================================
 robocopy "%SRC_DOCX%" "%DEST_DOCX%" *.docx *.json *.pptx /E /XD "%SRC_PDF%" %COMMON% %DRYRUN% /LOG+:"%LOG%"
 set "RC1=%ERRORLEVEL%"
@@ -118,7 +161,7 @@ set "RC1=%ERRORLEVEL%"
 REM --- Job 2: pdf + html (mirror) -------------------------------------------
 echo.
 echo ============================================================
-echo  JOB 2/2  pdf + html   ^-^>  %DEST_PDF%   (/MIR, deletes stale)
+echo  JOB 2/4  pdf + html   ^-^>  %DEST_PDF%   (/MIR, deletes stale)
 echo ============================================================
 REM No file mask here, deliberately. Two reasons:
 REM  1. /MIR + a file mask is a robocopy trap: source files excluded by the mask
@@ -132,6 +175,29 @@ REM 28 *.html (index + 27 quiz answer keys) and nothing else - so there is no st
 robocopy "%SRC_PDF%" "%DEST_PDF%" /MIR %COMMON% %DRYRUN% /LOG+:"%LOG%"
 set "RC2=%ERRORLEVEL%"
 
+REM --- Job 3: revised .docx, changes accepted (no purge) --------------------
+set "RC3=0"
+set "RC4=0"
+if not defined DO_REV goto :afterrev
+echo.
+echo ============================================================
+echo  JOB 3/4  revised docx (accepted)  ^-^>  %DEST_REV_DOCX%   (/E, no delete)
+echo ============================================================
+REM *.docx only: no json, no *_TRACKED.docx (those live in the separate tracked\
+REM folder, which is not under outputs\v2), no baseline files.
+robocopy "%SRC_REV_DOCX%" "%DEST_REV_DOCX%" *.docx /E %COMMON% %DRYRUN% /LOG+:"%LOG%"
+set "RC3=%ERRORLEVEL%"
+
+REM --- Job 4: journals (copy-new-only by default) ---------------------------
+echo.
+echo ============================================================
+echo  JOB 4/4  journals  ^-^>  %DEST_REV_JOURNAL%
+echo  mode: %JOURNAL_NOTE%
+echo ============================================================
+robocopy "%SRC_REV_JOURNAL%" "%DEST_REV_JOURNAL%" *.docx %JOURNAL_MODE% %COMMON% %DRYRUN% /LOG+:"%LOG%"
+set "RC4=%ERRORLEVEL%"
+:afterrev
+
 REM --- Result ---------------------------------------------------------------
 REM Robocopy exit codes are a bitmask: 0-7 are success (1=copied, 2=extra,
 REM 4=mismatched, 8=failed, 16=fatal). Anything >=8 is a real failure.
@@ -139,8 +205,12 @@ echo.
 echo ============================================================
 echo  docx/json job exit code: %RC1%
 echo  pdf/html  job exit code: %RC2%
+echo  revised docx job exit code: %RC3%
+echo  journals  job exit code: %RC4%
 if %RC1% GEQ 8 goto :failed
 if %RC2% GEQ 8 goto :failed
+if %RC3% GEQ 8 goto :failed
+if %RC4% GEQ 8 goto :failed
 echo  RESULT: OK  (codes under 8 mean success)
 echo  Log: %LOG%
 echo ============================================================

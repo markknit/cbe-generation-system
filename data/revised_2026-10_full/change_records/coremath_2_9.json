@@ -1,0 +1,2092 @@
+{
+ "module": "coremath_2_9",
+ "records": [
+  {
+   "id": "coremath_2_9-001",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "Key data points highlighted: Runner B's 0–5 km split is 16 min (very fast); Runner A's 0–5 km split is 18 min (steady). At 30 km, Runner B is ahead by 4 minutes total. By 42 km, Runner A wins by 2 minutes.",
+   "new": "THE SPLIT-TIME TABLE (illustrative data prepared for this unit, modelled on elite marathon pace; elapsed time in minutes at each mark): at km 5 / 10 / 15 / 20 / 25 / 30 / 35 / 40 / 42, Runner A: 16 / 31 / 47 / 63 / 79 / 94 / 110 / 126 / 132. Runner B: 14 / 28 / 43 / 58 / 73 / 92 / 110.5 / 128.5 / 134. Key data points highlighted: Runner B's 0–5 km split is 14 min (very fast); Runner A's 0–5 km split is 16 min (steady). At 30 km, Runner B is ahead by 2 minutes (92 min against 94 min). By 35 km Runner A has moved ahead, and at 42 km Runner A wins by 2 minutes (132 min against 134 min).",
+   "criteria": [
+    1,
+    3,
+    13
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "why": "The unit never printed the split-time table that Lessons 1 to 8 depend on, and the numbers quoted in different places contradicted each other. Example: 18 minutes for the first 5 km would make Runner A's race 8.4 x 18 = 151 min, not the 132 min used in the calculation; and the velocity key in Lesson 2 (B about 21, 21.5, 20, 20, 20, 17.6, 17.6, 19, 22 km/h) gives B a finish of about 128.6 min, so B would have WON by about 4 minutes, and a lead of 4 minutes at 30 km (about 1.3 km) could never be closed at a relative speed of 1.4 km/h before km 42. I built one table that makes every claim true and checked it by recomputing: A = 42 km in 132 min = 19.09 km/h, segments 16,15,16,16,16,15,16,16,6 min. B segments 14,14,15,15,15,19,18.5,18,5.5 min = 21.4, 21.4, 20, 20, 20, 15.8, 16.2, 16.7, 21.8 km/h. B at km 30 = 92 min against A 94 min (B leads by 2 min); lines cross at about minute 107, km 34 (A: 30+5(t-94)/16 = B: 30+5(t-92)/18.5 gives t = 106.8); A finishes at 132, B at 134. The data are labelled illustrative because they are not the real race results. The teacher must decide whether to keep these illustrative numbers or substitute the real 2023 race splits (the story must still be: B ahead at 30 km, A wins).",
+   "lesson": 1,
+   "group": "G1",
+   "group_headline": "The marathon split-time table did not exist and the numbers did not add up (Runner A could not have won); one consistent table is now given in Lesson 1 and used everywhere",
+   "teacher_decision": true,
+   "where": "Lesson 1, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-002",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].formativeAssessment",
+   "old": "slowdown (km 25–35)",
+   "new": "slowdown (km 25–40)",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. The slowdown now runs from km 25 to km 40.",
+   "lesson": 1,
+   "group": "G1",
+   "where": "Lesson 1, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-003",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "e.g., the Nairobi Marathon start and finish are both on Uhuru Highway, so displacement ≠ 42 km",
+   "new": "e.g., on a loop route that finishes where it started, the displacement is about 0 km even though the distance is 42 km",
+   "criteria": [
+    9,
+    1
+   ],
+   "category": "local",
+   "severity": "minor",
+   "why": "The lesson stated as fact where the real marathon starts and finishes, and the example contradicted itself. The wording now describes the route in our illustrative data. The teacher must check the real route if the real race is used.",
+   "lesson": 1,
+   "group": "G1",
+   "where": "Lesson 1, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-004",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "The marathon route runs from the Kenya National Theatre along Uhuru Highway and loops back.",
+   "new": "In our marathon data the route is a loop that finishes close to where it started.",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "why": "The route description is not part of the data given to learners and could not be verified, so it now says only what our illustrative data assume.",
+   "lesson": 1,
+   "group": "G1",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-005",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "old": "between 30 km and 42 km",
+   "new": "from 25 km to 42 km",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. Runner B's split times start to change at km 25, not km 30.",
+   "lesson": 1,
+   "group": "G1",
+   "where": "Lesson 1, summaryTablePrompt.learned",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-006",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "dips to around 17.6 km/h between 25 km and 35 km",
+   "new": "dips to around 16 km/h between 25 km and 40 km",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 2,
+   "group": "G1",
+   "where": "Lesson 2, overview",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-007",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "old": "times between 25 km and 35 km",
+   "new": "times between 25 km and 40 km",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 2,
+   "group": "G1",
+   "where": "Lesson 2, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-008",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "old": "dip between 25–35 km and a spike in the final 2 km? A correct velocity table for Runner B should show approximately: Seg 1–5 km: ~21 km/h, Seg 5–10 km: ~21.5 km/h, Seg 10–15 km: ~20 km/h, Seg 15–20 km: ~20 km/h, Seg 20–25 km: ~20 km/h, Seg 25–30 km: ~17.6 km/h, Seg 30–35 km: ~17.6 km/h, Seg 35–40 km: ~19 km/h, Seg 40–42 km: ~22 km/h.",
+   "new": "dip between 25–40 km and a spike in the final 2 km? A correct velocity table (v = 5 km ÷ segment time, from the cumulative times in the Lesson 1 split-time table; the last segment is 2 km) is, in km/h: Runner A: 18.8, 20.0, 18.8, 18.8, 18.8, 20.0, 18.8, 18.8, 20.0 (about 19 throughout). Runner B: km 0–5: 21.4; 5–10: 21.4; 10–15: 20.0; 15–20: 20.0; 20–25: 20.0; 25–30: 15.8; 30–35: 16.2; 35–40: 16.7; 40–42: 21.8.",
+   "criteria": [
+    1,
+    13
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. The answer key for the Observe phase is replaced by values recomputed from the table (for example B 25–30 km: 5 km in 19 min = 15.8 km/h; A 0–5 km: 5 km in 16 min = 18.75 km/h). The old key could not be produced from any table.",
+   "lesson": 2,
+   "group": "G1",
+   "where": "Lesson 2, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-009",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "calculate the acceleration between the 30–35 km segment (v ≈ 17.6 km/h) and the 40–42 km segment (v ≈ 22 km/h). The time for this change was approximately 48 minutes. Is this positive or negative acceleration? What does it mean physically?'",
+   "new": "calculate the acceleration between the 35–40 km segment (v ≈ 16 km/h, rounded) and the 40–42 km segment (v ≈ 22 km/h, rounded). The time between the middle of the two segments was about 12 minutes. Is this positive or negative acceleration? What does it mean physically?' (Answer: Δv = 6 km/h = 1.67 m/s; Δt = 12 min = 720 s; a = 1.67 ÷ 720 ≈ +0.0023 m/s², positive, so he is speeding up. The number is tiny because a marathon runner changes velocity gently, over many minutes.)",
+   "criteria": [
+    1,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. Check: the middle of the 35–40 km segment is at minute 119.5 and the middle of the final segment at minute 131.25, a gap of about 12 minutes; 6 km/h = 6000 ÷ 3600 = 1.67 m/s and 1.67 ÷ 720 = 0.0023. I added the worked answer so a teacher can mark it.",
+   "lesson": 2,
+   "group": "G1",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-010",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "NON-UNIFORM MOTION sections (Runner B, 25–35 km and 40–42 km)",
+   "new": "NON-UNIFORM MOTION sections (Runner B, where his velocity changes at km 25 and again at km 40)",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 2,
+   "group": "G1",
+   "where": "Lesson 2, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-011",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.observed",
+   "old": "varied from ~17.6 km/h in the 25–35 km section to ~22 km/h in the final sprint",
+   "new": "varied from about 16 km/h in the 25–40 km section to about 22 km/h in the final sprint",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 2,
+   "group": "G1",
+   "where": "Lesson 2, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-012",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "between 25 km and 35 km cost him",
+   "new": "between 25 km and 40 km cost him",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 2,
+   "group": "G1",
+   "where": "Lesson 2, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-013",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "(the overtake during the 30–35 km stretch of the slowdown)",
+   "new": "(the overtake, which falls between the 30 km and 35 km checkpoints, at about minute 107 and km 34)",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 3,
+   "group": "G1",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-014",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "old": "(roughly t = 95–105 min, d = 31–33 km)",
+   "new": "(roughly t = 107 min, d = 34 km, found from the Lesson 1 table)",
+   "criteria": [
+    1,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. The crossing point of the two straight-line graphs is at t = 106.8 min, d = 34.0 km (checked by solving the two line equations).",
+   "lesson": 3,
+   "group": "G1",
+   "where": "Lesson 3, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-015",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Runner B's average speed — about 5.3 m/s — could NEVER show us.'",
+   "new": "Runner B's average speed — about 5.2 m/s (42 km in 134 min = 18.8 km/h) — could NEVER show us.' EXPECTED ANSWERS from the Lesson 1 table: Q1 Runner A's line is almost straight; the steepest parts are km 5–10 and km 25–30 (5 km in 15 min, 20 km/h) against 5 km in 16 min elsewhere, so the differences are small. Q2 Runner B's line is less steep from km 25 to km 40: he was slowing down. Q3 A horizontal line (displacement not changing). Q4 About minute 73, when Runner B reaches km 25 and is about 1.8 km ahead of Runner A. Q5 Example: 'Runner B starts with a steep line, becomes gentler from km 25 to km 40 so Runner A catches him at about km 34, then steepens again in the last 2 km but too late.'",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. B's average over the race is 42 km ÷ (134 ÷ 60 h) = 18.8 km/h = 5.2 m/s. Expected answers are added so a teacher can mark Q1 to Q5 without working them out; the lesson had none (guidelines 5 and 13). Q4: at t = 73 min B is at 25 km, A at 73 x 42/132 = 23.2 km, so B leads by about 1.8 km, the biggest gap.",
+   "lesson": 3,
+   "group": "G1",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-016",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "old": "between 25 km and 35 km, showing",
+   "new": "between 25 km and 40 km, showing",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 3,
+   "group": "G1",
+   "where": "Lesson 3, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-017",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "less steep between 25 km and 35 km (slowing down)",
+   "new": "less steep between 25 km and 40 km (slowing down)",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 3,
+   "group": "G1",
+   "where": "Lesson 3, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-018",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "old": "between 25 km and 35 km was lower",
+   "new": "between 25 km and 40 km was lower",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 4,
+   "group": "G1",
+   "where": "Lesson 4, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-019",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "look like between 25 km and 35 km compared to Runner A's? Which graph shape wins the race?' Allow 15 seconds WAIT TIME. Cold-call 3 learners. Summarise on the board: 'Higher gradient while Runner B slows (25–35 km)",
+   "new": "look like between 25 km and 40 km compared to Runner A's? Which graph shape wins the race?' Allow 15 seconds WAIT TIME. Cold-call 3 learners. Summarise on the board: 'Higher gradient while Runner B slows (25–40 km)",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 4,
+   "group": "G1",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-020",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "old": "while Runner B slowed (25–35 km)",
+   "new": "while Runner B slowed (25–40 km)",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 4,
+   "group": "G1",
+   "where": "Lesson 4, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-021",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "the water-station segment (horizontal, gradient = 0), and the 25–35 km slowdown segment (comparing gradients of the two runners, showing Runner A's is steeper)",
+   "new": "the 25–40 km slowdown segment (comparing gradients of the two runners, showing Runner A's is steeper), and, from Worksheet Graph 2, the rest at the water station (horizontal, gradient = 0, copied as a small sketch)",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. The marathon graph from Lesson 3 has no horizontal (water-station) segment, because the runners in the data never stop, so the learners are now asked to take the rest segment from Worksheet Graph 2 instead.",
+   "lesson": 4,
+   "group": "G1",
+   "where": "Lesson 4, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-022",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "The water-station stop — label its gradient. The 25–35 km slowdown — label both Runner A's gradient and Runner B's gradient and circle the winner.",
+   "new": "The 25–40 km slowdown — label both Runner A's gradient and Runner B's gradient and circle the winner. From Worksheet Graph 2, copy the rest at the water station and label its gradient (0).",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. Same water-station fix as in the learner experience.",
+   "lesson": 4,
+   "group": "G1",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-023",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "old": "Runner A's 25–35 km segment",
+   "new": "Runner A's 25–40 km segment",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 4,
+   "group": "G1",
+   "where": "Lesson 4, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-024",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "old": "while Runner B slowed (25–35 km)",
+   "new": "while Runner B slowed (25–40 km)",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 4,
+   "group": "G1",
+   "where": "Lesson 4, summaryTablePrompt.learned",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-025",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "showing Runner B's velocity dropping from approximately 5.6 m/s (about 20 km/h) to 4.9 m/s (17.6 km/h) between km 25 and km 35, then surging back to 6.2 m/s in the final 2 km (km 40–42). Learners calculate the gradient (acceleration) for each segment and annotate their marathon data sheet. Third, learners write a two-sentence explanation in their exercise books: 'The gradient of a velocity-time graph tells us ___. This explains what happened to Runner B between km 35 and km 42 because ___.",
+   "new": "showing Runner B's velocity dropping from approximately 5.6 m/s (20 km/h) to 4.4 m/s (16 km/h) around km 25, staying near 4.4 m/s until km 40, then rising to 6.1 m/s (22 km/h) in the final 2 km (km 40–42). Learners calculate the gradient (acceleration) for each change (the drop takes about 17 minutes, the rise about 12 minutes) and annotate their marathon data sheet. Third, learners write a two-sentence explanation in their exercise books: 'The gradient of a velocity-time graph tells us ___. This explains what happened to Runner B in the final 2 km because ___.",
+   "criteria": [
+    1,
+    13
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. Recomputed: 20 km/h = 5.56 m/s, 16 km/h = 4.44 m/s, 22 km/h = 6.11 m/s. The drop (20 to 16 km/h) takes about 17 min (between the middle of the 20–25 km and 25–30 km segments) so a = -1.11 ÷ 1020 ≈ -0.0011 m/s². The old text mixed km and time on one axis ('gradient between km 35 and km 42') and its velocities (4.9 and 6.2 m/s) did not match its own km/h figures (22 km/h is 6.1 m/s).",
+   "lesson": 5,
+   "group": "G1",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-026",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "I want you to calculate the gradient between km 35 and km 42 — remember, time values are on the x-axis. Work individually for 3 minutes.' After 3 minutes, cold-call 2 learners for their gradient values and units. Write: 'Runner B's acceleration in the final sprint = +0.027 m/s².'",
+   "new": "I want you to calculate the gradient of the final sprint: the velocity rises from 4.4 m/s to 6.1 m/s in about 12 minutes. Remember, time values are on the x-axis, so change minutes to seconds first (12 min = 720 s). Work individually for 3 minutes.' After 3 minutes, cold-call 2 learners for their gradient values and units. Write: 'Runner B's acceleration in the final sprint = (6.11 − 4.44) ÷ 720 ≈ +0.0023 m/s².' Say: 'A tiny number, because a marathon runner changes velocity slowly, over minutes. Compare the matatu's 1.5 m/s².'",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. (6.11 - 4.44) = 1.67 m/s; 1.67 ÷ 720 = 0.0023 m/s². The old +0.027 m/s² followed from no stated time interval. The matatu's 1.5 m/s² is (15 - 0) ÷ 10 from Phase 2 of this lesson.",
+   "lesson": 5,
+   "group": "G1",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-027",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].formativeAssessment",
+   "old": "+0.027 m/s²",
+   "new": "+0.0023 m/s²",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 5,
+   "group": "G1",
+   "where": "Lesson 5, Driving Question Board (DQB) Creation, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-028",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "Runner B's steep positive gradient between km 35 and km 42 confirms a genuine sprint-finish acceleration, but the graph also shows that his velocity during km 25–35 was significantly lower",
+   "new": "Runner B's positive gradient in the final 2 km confirms a genuine sprint-finish acceleration, but the graph also shows that his velocity during km 25–40 was significantly lower",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 5,
+   "group": "G1",
+   "where": "Lesson 5, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-029",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "old": "Runner B had slowed to about 17.6 km/h while Runner A held a steady 19 km/h, making the relative speed between them only about 1.4 km/h",
+   "new": "Runner B had slowed to about 16 km/h while Runner A held a steady 19 km/h, making the relative speed between them only about 3 km/h",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. Relative speed 19 − 16 = 3 km/h (same direction, subtract).",
+   "lesson": 7,
+   "group": "G1",
+   "where": "Lesson 7, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-030",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "during the slow middle section (25–35 km)",
+   "new": "during the slow middle section (25–40 km)",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 7,
+   "group": "G1",
+   "where": "Lesson 7, overview",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-031",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "During the slow middle section of the Nairobi Marathon (25–35 km), Runner A is travelling at 19 km/h and Runner B (who is 200 m ahead) has slowed to about 17.6 km/h. Students calculate the relative speed (about 1.4 km/h) and the time for Runner A to close the 200 m gap (about 8.6 minutes).",
+   "new": "During the slow middle section of the Nairobi Marathon (25–40 km), Runner A is travelling at 19 km/h and Runner B (who is 200 m ahead) has slowed to about 16 km/h. Students calculate the relative speed (19 − 16 = 3 km/h) and the time for Runner A to close the 200 m gap (0.2 ÷ 3 h = 4 minutes).",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. Recomputed: relative speed 3 km/h; 0.2 km ÷ 3 km/h = 0.0667 h = 4 min. (With the old 1.4 km/h it was 8.6 min, but the lead at km 30 was never 200 m.)",
+   "lesson": 7,
+   "group": "G1",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-032",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "old": "what was happening to Runner B's speed in the final 2 km according to the velocity-time graph we drew in Lesson 6?",
+   "new": "what was happening to Runner B's speed between km 25 and km 40 according to the velocity-time graph we used in Lesson 6?",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. The overtake happens before the final 2 km, so the prompt pointed at the wrong part of the race.",
+   "lesson": 7,
+   "group": "G1",
+   "where": "Lesson 7, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-033",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "Runner B: 17.6 km/h), write the relative speed calculation beside the diagram (19 − 17.6 = 1.4 km/h), and annotate the 200 m gap with the time calculation showing when Runner A catches Runner B. Below the diagram they write a one-sentence 'mathematical story' of the overtake in plain English, for example: 'From Runner B's perspective, Runner A appeared to be approaching at only 1.4 km/h — but that was enough to close the 200 m gap in about 8.6 minutes and win the race.'",
+   "new": "Runner B: 16 km/h), write the relative speed calculation beside the diagram (19 − 16 = 3 km/h), and annotate the 200 m gap with the time calculation showing when Runner A catches Runner B. Below the diagram they write a one-sentence 'mathematical story' of the overtake in plain English, for example: 'From Runner B's perspective, Runner A appeared to be approaching at only 3 km/h — but that was enough to close the 200 m gap in about 4 minutes and go on to win the race.'",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. Same numbers as the Observe phase (3 km/h, 4 minutes).",
+   "lesson": 7,
+   "group": "G1",
+   "where": "Lesson 7, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-034",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.observed",
+   "old": "Runner A appeared to approach Runner B at just 1.4 km/h when overtaking",
+   "new": "Runner A appeared to approach Runner B at just 3 km/h (19 − 16) when overtaking",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 7,
+   "group": "G1",
+   "where": "Lesson 7, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-035",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "Because Runner B had slowed to about 17.6 km/h and Runner A was running at about 19 km/h, the relative speed between them was about 1.4 km/h. At that closing rate, Runner A covered the 200 m gap in approximately 8.6 minutes.",
+   "new": "Because Runner B had slowed to about 16 km/h and Runner A was running at about 19 km/h, the relative speed between them was about 3 km/h. At that closing rate, Runner A covered a 200 m gap in 4 minutes.",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 7,
+   "group": "G1",
+   "where": "Lesson 7, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-036",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "Identify the segment where Runner B decelerates most sharply (between 25–35 km) and compute the acceleration.",
+   "new": "Identify where Runner B's velocity drops most sharply (from the 20–25 km segment to the 25–30 km segment) and compute the acceleration (the method from Lesson 5).",
+   "criteria": [
+    1,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. The sharpest change is at km 25 (20.0 to 15.8 km/h), so the task now points there.",
+   "lesson": 8,
+   "group": "G1",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-037",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "old": "dropping in the 25–35 km segment and spiking for the sprint?",
+   "new": "dropping at km 25 and staying low until km 40 before spiking for the sprint?",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 8,
+   "group": "G1",
+   "where": "Lesson 8, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-038",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "decreased significantly between km 25 and km 35, shown by",
+   "new": "decreased significantly between km 25 and km 40, shown by",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 8,
+   "group": "G1",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-039",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "graph between km 25 and km 35: what does the shallower gradient tell you",
+   "new": "graph between km 25 and km 40: what does the shallower gradient tell you",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 8,
+   "group": "G1",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-040",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "decreased sharply between 25 km and 35 km",
+   "new": "decreased sharply between 25 km and 40 km",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "lesson": 8,
+   "group": "G1",
+   "where": "Lesson 8, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-041",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[1].prompt",
+   "old": "middle of the race was about 17.6 km/h",
+   "new": "middle of the race was about 16 km/h",
+   "criteria": [
+    1,
+    10
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "group": "G1",
+   "where": "Final Explanation, Section 2: Calculating velocity and acceleration, prompt",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-042",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[1].exemplar",
+   "old": "Runner B: 17.6 × 0.5 = 8.8 km. Difference = 9.5 − 8.8 = 0.7 km, so A runs 0.7 km (700 m) further in 30 minutes.",
+   "new": "Runner B: 16 × 0.5 = 8.0 km. Difference = 9.5 − 8.0 = 1.5 km, so A runs 1.5 km (1500 m) further in 30 minutes.",
+   "criteria": [
+    10,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. Recomputed: 16 x 0.5 = 8.0; 9.5 - 8.0 = 1.5 km.",
+   "group": "G1",
+   "where": "Final Explanation, Section 2: Calculating velocity and acceleration, exemplar",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-043",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[2].exemplar",
+   "old": "(he slows to about 17.6 km/h)",
+   "new": "(he slows to about 16 km/h from km 25 to km 40)",
+   "criteria": [
+    10
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "group": "G1",
+   "where": "Final Explanation, Section 3: Displacement-time graphs (Key Inquiry Question 2: How do we use displacement-time graphs in real life?), exemplar",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-044",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].exemplar",
+   "old": "Runner B: 17.6 km/h × 0.5 h = 8.8 km. Runner A's area is larger by 0.7 km.",
+   "new": "Runner B: 16 km/h × 0.5 h = 8.0 km. Runner A's area is larger by 1.5 km.",
+   "criteria": [
+    10
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. Recomputed: 16 x 0.5 = 8.0; 9.5 - 8.0 = 1.5.",
+   "group": "G1",
+   "where": "Final Explanation, Section 4: Velocity-time graphs (Key Inquiry Question 3: How do we use velocity-time graphs?), exemplar",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-045",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].prompt",
+   "old": "Runner B had slowed to about 17.6 km/h",
+   "new": "Runner B had slowed to about 16 km/h",
+   "criteria": [
+    10
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. ",
+   "group": "G1",
+   "where": "Final Explanation, Section 5: Relative speed and the full story of the marathon, prompt",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-046",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].exemplar",
+   "old": "19 − 17.6 = 1.4 km/h. Time = gap ÷ relative speed = 0.2 ÷ 1.4 = 0.143 h, which is about 8.6 minutes (0.143 × 60). (b) Same direction: 90 − 60 = 30 km/h. (c) Opposite directions: relative speed = 80 + 80 = 160 km/h. When bodies move in opposite directions their speeds add, but in the same direction they are subtracted, so the closing speed is much greater (160 km/h compared with 30 km/h). (d) A single average speed or total time cannot show what happened at each point of the race, so we need velocities, acceleration and graphs. Runner A kept a nearly constant velocity of about 19 km/h, so his acceleration was about zero. Runner B accelerated off the start and was ahead at 30 km. In the middle section he decelerated, his velocity fell to about 17.6 km/h, and he covered less distance than Runner A. On the displacement-time graph B's line became less steep (smaller gradient = lower velocity), while A's stayed steady, so A's line crossed B's after 30 km, when A overtook him. On the velocity-time graph B's line fell (negative gradient) in the middle, so the area under his graph, which is his distance, was smaller than A's for that section. His final sprint was a positive acceleration, but it came too late to recover the lost time. Because A only needed to be faster than B's current speed (relative speed of about 1.4 km/h)",
+   "new": "19 − 16 = 3 km/h. Time = gap ÷ relative speed = 0.2 ÷ 3 = 0.067 h, which is 4 minutes (0.067 × 60). (b) Same direction: 90 − 60 = 30 km/h. (c) Opposite directions: relative speed = 80 + 80 = 160 km/h. When bodies move in opposite directions their speeds add, but in the same direction they are subtracted, so the closing speed is much greater (160 km/h compared with 30 km/h). (d) A single average speed or total time cannot show what happened at each point of the race, so we need velocities, acceleration and graphs. Runner A kept a nearly constant velocity of about 19 km/h, so his acceleration was about zero. Runner B accelerated off the start and was ahead at 30 km. In the middle section he decelerated, his velocity fell to about 16 km/h, and he covered less distance than Runner A. On the displacement-time graph B's line became less steep (smaller gradient = lower velocity), while A's stayed steady, so A's line crossed B's after 30 km, when A overtook him. On the velocity-time graph B's line fell (negative gradient) in the middle, so the area under his graph, which is his distance, was smaller than A's for that section. His final sprint was a positive acceleration, but it came too late to recover the lost time. Because A only needed to be faster than B's current speed (relative speed of about 3 km/h)",
+   "criteria": [
+    10,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Knock-on of the new split-time table (Lesson 1): Runner B slows from km 25 to km 40 at about 16 km/h, is 2 minutes ahead at km 30, and Runner A (about 19 km/h) overtakes him between km 30 and km 35 and wins by 2 minutes. Recomputed: 0.2 ÷ 3 = 0.0667 h = 4.0 min.",
+   "group": "G1",
+   "where": "Final Explanation, Section 5: Relative speed and the full story of the marathon, exemplar",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-047",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "Finally, the teacher presents a simplified version of the Runner A vs Runner B velocity-time graph for km 25–35 of the Nairobi Marathon. Learners calculate the area under each curve for this segment. The calculation reveals that Runner B's area (distance covered) in km 25–35 is smaller than Runner A's — proving mathematically that Runner A overtook Runner B after his slowdown even though they covered the same total 42 km race distance.",
+   "new": "Finally, the teacher presents a simplified version of the Runner A vs Runner B velocity-time graph for the same stretch of time for both runners, minute 73 to minute 128 (Runner B's slow phase, idealised as two horizontal lines: A at 19 km/h, B at 16 km/h). Learners calculate the area under each line for these 55 minutes (55 min = 11/12 h): A = 19 × 11/12 ≈ 17.4 km; B = 16 × 11/12 ≈ 14.7 km. The calculation shows that in the same 55 minutes Runner A covered about 2.7 km more than Runner B, enough to turn B's lead of about 1.8 km at minute 73 into a small deficit by minute 128 — proving mathematically that Runner A overtook Runner B after his slowdown even though they covered the same total 42 km race distance.",
+   "criteria": [
+    1,
+    4,
+    7
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "group_headline": "Lesson 6 compared the runners' areas over 'km 25 to 35', but the runners are at those kilometres at different times; the comparison is now made over the same stretch of time (minute 73 to 128)",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-048",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Display the simplified Runner A vs Runner B velocity-time graph for km 25–35. Say: 'Calculate the area under Runner A's line for this 10 km segment. Then calculate the area under Runner B's line. What do you notice?' [Allow 6 minutes.] Cold-call 2 groups. Say: 'So — mathematically — who covered more distance in the final 12 km? Why did Runner A win?' [WAIT TIME: 15 seconds. Expect: 'Runner A covered more distance in km 25–35 because the area under Runner A's graph is larger, meaning Runner A's velocity was higher for longer.']",
+   "new": "Display the simplified Runner A vs Runner B velocity-time graph for minute 73 to minute 128 (A: horizontal line at 19 km/h; B: horizontal line at 16 km/h). Say: 'Both runners ran for the same 55 minutes. Calculate the area under Runner A's line, then under Runner B's line. What do you notice?' [Allow 5 minutes. Expected: A ≈ 17.4 km, B ≈ 14.7 km. If a group uses 55 minutes without changing it to hours, ask: 'What are the units of velocity? Of time?'] Cold-call 2 groups. Say: 'So — mathematically — who covered more distance in the same 55 minutes? Why did Runner A win?' [WAIT TIME: 15 seconds. Expect: 'Runner A covered about 2.7 km more in the same time because the area under Runner A's graph is larger, so Runner A made up Runner B's lead.']",
+   "criteria": [
+    1,
+    4,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-049",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "old": "specifically the area lost under the curve between 25 km and 35 km — mathematically explains",
+   "new": "specifically the smaller area under Runner B's graph than under Runner A's over the same stretch of time (minute 73 to minute 128) — mathematically explains",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "where": "Lesson 6, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-050",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "computing the area under each curve for the 25–35 km segment to prove mathematically why Runner B lost",
+   "new": "computing the area under each graph for the same 55 minutes of the race (minute 73 to minute 128) to prove mathematically why Runner B lost",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "where": "Lesson 6, overview",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-051",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "old": "because the area under Runner A's graph between km 25 and 35 is bigger.'",
+   "new": "because the area under Runner A's graph between minute 73 and minute 128 is bigger.'",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-052",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "(iii) shaded regions on the km 25–35 segment of each runner's graph with a written label: 'Area = distance covered in km 25–35. Runner A's area > Runner B's area. Therefore Runner A wins.' Learners write a 3-sentence model summary at the bottom: 'A velocity-time graph shows how velocity changes with time. The gradient of any segment tells us the acceleration or deceleration at that point. The area under the graph tells us the total distance travelled — and this is why Runner A, who had a higher velocity for longer between km 25 and 35, overtook",
+   "new": "(iii) shaded regions between minute 73 and minute 128 on each runner's graph with a written label: 'Area = distance covered from minute 73 to minute 128. Runner A's area > Runner B's area. Therefore Runner A gains on Runner B.' Learners write a 3-sentence model summary at the bottom: 'A velocity-time graph shows how velocity changes with time. The gradient of any segment tells us the acceleration or deceleration at that point. The area under the graph tells us the total distance travelled — and this is why Runner A, who had a higher velocity than Runner B between minute 73 and minute 128, overtook",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "where": "Lesson 6, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-053",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "Then shade the km 25–35 section on each runner's graph and write the area comparison.",
+   "new": "Then shade the minute 73 to minute 128 section on each runner's graph and write the area comparison.",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "where": "Lesson 6, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-054",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "old": "(iii) km 25–35 shaded on both runners' graphs;",
+   "new": "(iii) minute 73 to minute 128 shaded on both runners' graphs;",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "where": "Lesson 6, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-055",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.observed",
+   "old": "comparing Runner A and Runner B's motion between km 25 and 35 of the 2023 Nairobi Marathon",
+   "new": "comparing Runner A and Runner B's motion between minute 73 and minute 128 of the 2023 Nairobi Marathon",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "where": "Lesson 6, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-056",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "old": "velocity-time graphs for km 25–35 mathematically proves that Runner A covered more ground in that segment",
+   "new": "velocity-time graphs for minute 73 to minute 128 mathematically proves that Runner A covered more ground in that time",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "where": "Lesson 6, summaryTablePrompt.learned",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-057",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "Runner B's velocity dropped significantly between km 25 and 35 (smaller area",
+   "new": "Runner B's velocity dropped significantly between km 25 and km 40 (smaller area",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The area under a velocity-time graph is distance covered in a TIME interval, and the two runners reach km 25 and km 35 at different times, so 'area in km 25–35' cannot be compared. The comparison now uses the same 55 minutes for both runners (minute 73 to minute 128, when Runner B is in his slow phase). Idealised: A = 19 km/h, B = 16 km/h. Checked: 19 x 55/60 = 17.4 km; 16 x 55/60 = 14.7 km; A covers about 2.7 km more. In the real table B is 1.8 km ahead at minute 73 (B at km 25, A at 73 x 42/132 = 23.2 km) and A is about 0.8 km ahead at minute 128, a swing of 2.6 km, which agrees. ",
+   "lesson": 6,
+   "group": "G2",
+   "where": "Lesson 6, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-058",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "GRAPH 1 — SGR Madaraka Express (Nairobi to Athi River segment, approximately 30 minutes): the table gives velocity in km/h at 5-minute intervals: 0, 60, 120, 150, 150, 150, 130, 90, 0. Learners plot this on a 1 cm = 10 minutes (x) and 1 cm = 20 km/h (y) grid. GRAPH 2 — 400 m school race at Nakuru High School: the table gives velocity in m/s at 2-second intervals over 60 seconds for two athletes, Athlete Achieng (steady pace) and Athlete Kamau (fast start, tires midway, sprints last 10 s).",
+   "new": "GRAPH 1 — SGR Madaraka Express (first section out of Nairobi to Athi River, 25 minutes; illustrative values, the train's top speed is 120 km/h): the table gives velocity in km/h at 5-minute intervals, t = 0, 5, 10, 15, 20, 25 min: v = 0, 60, 120, 120, 60, 0. Learners plot this on a 1 cm = 2 minutes (x) and 1 cm = 20 km/h (y) grid. GRAPH 2 — 400 m school race at Nakuru High School: the table gives velocity in m/s at 10-second intervals over 60 seconds (t = 0, 10, 20, 30, 40, 50, 60 s) for two athletes: Athlete Achieng (steady pace) v = 0, 6, 7.5, 7.5, 7.5, 7.5, 8; Athlete Kamau (fast start, tires midway, sprints in the last 10 s) v = 0, 8, 8, 7, 6.5, 6.5, 8.",
+   "criteria": [
+    3,
+    8,
+    13
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "why": "The SGR graph in Lesson 6 used speeds up to 150 km/h, but the Madaraka Express runs at a maximum of 120 km/h; its 9 values at 5-minute intervals covered 40 minutes, not the stated 30, and the teacher notes described a triangle, two rectangles and a trapezium that the data did not contain. The Nakuru race had no table at all. New data: SGR 0, 60, 120, 120, 60, 0 km/h at t = 0, 5, 10, 15, 20, 25 min (the Nairobi to Athi River section used again in Lesson 4: area = 10 + 10 + 10 = 30 km); race tables every 10 s for 400 m: Achieng 0, 6, 7.5, 7.5, 7.5, 7.5, 8 and Kamau 0, 8, 8, 7, 6.5, 6.5, 8 m/s. Each area was recomputed with the trapezium rule on each 10 s interval and equals exactly 400 m. Reference note: Madaraka Express passenger services run at up to 120 km/h.",
+   "lesson": 6,
+   "group": "G4",
+   "group_headline": "Lesson 6's two graphs could not be plotted or marked (SGR speed of 150 km/h, table longer than its 30 minutes, no race table); both now have complete tables with answers",
+   "reference": "Kenya Railways Corporation, Madaraka Express passenger service information (maximum operating speed 120 km/h)",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-059",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "a triangle (acceleration phase), two rectangles (constant velocity phase), and a trapezium (deceleration phase), and calculates area for each.",
+   "new": "a triangle (acceleration phase, 0–10 min: ½ × 10/60 h × 120 km/h = 10 km), a rectangle (constant velocity, 10–15 min: 120 × 5/60 = 10 km) and a triangle (deceleration, 15–25 min: 10 km), giving 30 km, and then checks the total by treating the whole shape as a trapezium: ½ × (25 + 5) min × 120 km/h = ½ × 0.5 h × 120 = 30 km.",
+   "criteria": [
+    3,
+    8,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "why": "The SGR graph in Lesson 6 used speeds up to 150 km/h, but the Madaraka Express runs at a maximum of 120 km/h; its 9 values at 5-minute intervals covered 40 minutes, not the stated 30, and the teacher notes described a triangle, two rectangles and a trapezium that the data did not contain. The Nakuru race had no table at all. New data: SGR 0, 60, 120, 120, 60, 0 km/h at t = 0, 5, 10, 15, 20, 25 min (the Nairobi to Athi River section used again in Lesson 4: area = 10 + 10 + 10 = 30 km); race tables every 10 s for 400 m: Achieng 0, 6, 7.5, 7.5, 7.5, 7.5, 8 and Kamau 0, 8, 8, 7, 6.5, 6.5, 8 m/s. Each area was recomputed with the trapezium rule on each 10 s interval and equals exactly 400 m. ",
+   "lesson": 6,
+   "group": "G4",
+   "reference": "Kenya Railways Corporation, Madaraka Express passenger service information (maximum operating speed 120 km/h)",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-060",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "[Model calculation step by step, writing units at every step.] Say: 'Now you calculate the gradient of the deceleration phase — the segment where the train slows to zero. Work individually, then compare with your group. You have 3 minutes.' [WAIT. Circulate. After 3 minutes, cold-call 2 learners — choose one confident and one who appeared uncertain during circulation — to share their answers.] [WAIT TIME: 12 seconds between nomination and response.] Correct errors. Write on board: 'Gradient of velocity-time graph = acceleration (m/s²). Positive gradient = acceleration. Negative gradient = deceleration. Zero gradient = constant velocity.' PART B: Say: 'Now the big idea of today's lesson. Look at the SGR graph. The area of the region under the graph — between the line and the time axis — equals the total distance the train travelled. Let me show you how to find it by breaking the shape into pieces we know.' [Decompose into triangle, rectangles, trapezium. Calculate each. Sum them.] Say: 'Now use the same method to find the total distance Athlete Kamau ran. Use shape decomposition first, then count squares to check. You have 8 minutes.'",
+   "new": "[Model calculation step by step, writing units at every step. Answer: 12 km/h per minute = (120 ÷ 3.6) m/s ÷ (10 × 60) s ≈ 0.056 m/s²; deceleration phase −0.056 m/s².] Say: 'Now you calculate the gradient of the deceleration phase — the segment where the train slows to zero. Work individually, then compare with your group. You have 3 minutes.' [WAIT. Circulate. After 3 minutes, cold-call 2 learners — choose one confident and one who appeared uncertain during circulation — to share their answers.] [WAIT TIME: 12 seconds between nomination and response.] Correct errors. Write on board: 'Gradient of velocity-time graph = acceleration (m/s²). Positive gradient = acceleration. Negative gradient = deceleration. Zero gradient = constant velocity.' PART B: Say: 'Now the big idea of today's lesson. Look at the SGR graph. The area of the region under the graph — between the line and the time axis — equals the total distance the train travelled. Let me show you how to find it by breaking the shape into pieces we know.' [Decompose into triangle, rectangle, triangle (10 km each = 30 km), then check with the whole trapezium. Convert minutes to hours.] Say: 'Now use the same method to find the total distance Athlete Kamau ran. Use shape decomposition first, then count squares to check. Answer: 400 m, the length of the race. You have 6 minutes.'",
+   "criteria": [
+    3,
+    8,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "why": "The SGR graph in Lesson 6 used speeds up to 150 km/h, but the Madaraka Express runs at a maximum of 120 km/h; its 9 values at 5-minute intervals covered 40 minutes, not the stated 30, and the teacher notes described a triangle, two rectangles and a trapezium that the data did not contain. The Nakuru race had no table at all. New data: SGR 0, 60, 120, 120, 60, 0 km/h at t = 0, 5, 10, 15, 20, 25 min (the Nairobi to Athi River section used again in Lesson 4: area = 10 + 10 + 10 = 30 km); race tables every 10 s for 400 m: Achieng 0, 6, 7.5, 7.5, 7.5, 7.5, 8 and Kamau 0, 8, 8, 7, 6.5, 6.5, 8 m/s. Each area was recomputed with the trapezium rule on each 10 s interval and equals exactly 400 m. Answers added for the teacher (120 km/h = 33.3 m/s; 33.3 ÷ 600 s = 0.056 m/s²). The Kamau time is also trimmed from 8 to 6 minutes because the new table has only 7 values per athlete.",
+   "lesson": 6,
+   "group": "G4",
+   "reference": "Kenya Railways Corporation, Madaraka Express passenger service information (maximum operating speed 120 km/h)",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-061",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "reaches a cruising velocity of 120 km/h in 4 minutes. Calculate the acceleration in km/h/min and describe the motion.' [WAIT 6 minutes for individual work. Circulate — note errors in Δv sign convention and unit conversion.]",
+   "new": "reaches a cruising velocity of 120 km/h in 10 minutes. Calculate the acceleration in km/h/min and describe the motion.' (Answer: 120 ÷ 10 = 12 km/h per minute, about 0.056 m/s². Set Problem 2 as homework if time is short.) [WAIT 5 minutes for individual work on Problem 1. Circulate — note errors in Δv sign convention and unit conversion.]",
+   "criteria": [
+    3,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The SGR graph in Lesson 6 used speeds up to 150 km/h, but the Madaraka Express runs at a maximum of 120 km/h; its 9 values at 5-minute intervals covered 40 minutes, not the stated 30, and the teacher notes described a triangle, two rectangles and a trapezium that the data did not contain. The Nakuru race had no table at all. New data: SGR 0, 60, 120, 120, 60, 0 km/h at t = 0, 5, 10, 15, 20, 25 min (the Nairobi to Athi River section used again in Lesson 4: area = 10 + 10 + 10 = 30 km); race tables every 10 s for 400 m: Achieng 0, 6, 7.5, 7.5, 7.5, 7.5, 8 and Kamau 0, 8, 8, 7, 6.5, 6.5, 8 m/s. Each area was recomputed with the trapezium rule on each 10 s interval and equals exactly 400 m. The same train leaving Nairobi took 4 minutes to reach 120 km/h here but 10 minutes in Lesson 6 (and Lesson 4); it is now 10 minutes everywhere. The time to finish Explain is also trimmed (see the timing group).",
+   "lesson": 2,
+   "group": "G4",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-062",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "They then calculate how far the oncoming car travels in that same 1 minute at 100 km/h, and compare it to the 3 km gap.",
+   "new": "They then use the opposite-direction rule for the matatu and the oncoming car (90 + 100 = 190 km/h) to find how long until those two meet (3 ÷ 190 h ≈ 57 s), and compare it with the 60 s the overtake needs just to draw level with the bus.",
+   "criteria": [
+    4,
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "why": "The worked solution let the oncoming car travel 1.67 km in one minute and then said it was 'still 1.33 km away', but the matatu is driving towards it at the same time. Vehicles moving in opposite directions close at the SUM of their speeds: 90 + 100 = 190 km/h, so the 3 km gap closes in 3 ÷ 190 h = 0.0158 h = 57 s. The overtake needs at least 60 s just to draw level with the bus (0.5 ÷ 30 h = 1 min), so the matatu meets the car first: NOT safe. Checked twice: in 60 s the matatu travels 1.5 km and the car 1.67 km, total 3.17 km, which is more than the 3 km gap. Reference: relative motion in one dimension.",
+   "lesson": 7,
+   "group": "G3",
+   "group_headline": "The overtaking prediction was marked 'safe' because the matatu's own motion was left out; the matatu and the oncoming car close at 190 km/h, so the overtake is NOT safe",
+   "reference": "OpenStax University Physics Volume 1, Chapter 4, Section 4.5 Relative Motion in One and Two Dimensions",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-063",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Step 4: In 1 minute, the oncoming car travels 100 × (1/60) = 1.67 km. Step 5: The oncoming car started 3 km away and has covered 1.67 km — it is now only 1.33 km away. So what is your verdict?' [WAIT 15 seconds, cold-call 2 students.] Then say: 'Now I want you to tell me WHY head-on collisions are so much more deadly than rear-end collisions. Use the words RELATIVE SPEED in your answer.' [WAIT 15 seconds.] Cold-call 3 students. Formalise: 'Head-on collision relative speed = 80 + 80 = 160 km/h. Rear-end: 90 − 60 = 30 km/h. The force of impact depends on this relative speed. That is why NTSA sets speed limits — it is not arbitrary, it is mathematics protecting lives.' For the extension problems, say: 'In your books — 3 minutes. Go.'",
+   "new": "Step 4: The matatu and the oncoming car move in OPPOSITE directions, so we ADD: 90 + 100 = 190 km/h. Step 5: Time until they meet = 3 ÷ 190 = 0.0158 h ≈ 57 seconds. Step 6: The overtake needs 60 seconds just to draw level with the bus, and longer to pull back in. The car arrives first. So what is your verdict?' (Verdict: NOT safe. The matatu is also above the 80 km/h limit that NTSA governors set for matatus, so ask learners to notice that too.) [WAIT 15 seconds, cold-call 2 students.] Then say: 'Now I want you to tell me WHY head-on collisions are so much more deadly than rear-end collisions. Use the words RELATIVE SPEED in your answer.' [WAIT 15 seconds.] Cold-call 3 students. Formalise: 'Head-on collision relative speed = 80 + 80 = 160 km/h. Rear-end: 90 − 60 = 30 km/h. The energy of impact grows with the square of this relative speed. That is why NTSA sets speed limits — it is not arbitrary, it is mathematics protecting lives.' For extension problem (a), say: 'In your books — 3 minutes. Go.' (Answer: 110 − 70 = 40 km/h; 1.2 ÷ 40 = 0.03 h = 1.8 minutes.) Set problem (b) as homework (Answer: 80 + 100 = 180 km/h; 480 ÷ 180 = 2 h 40 min; 80 × 8/3 ≈ 213 km from Nairobi.)",
+   "criteria": [
+    4,
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "why": "The worked solution let the oncoming car travel 1.67 km in one minute and then said it was 'still 1.33 km away', but the matatu is driving towards it at the same time. Vehicles moving in opposite directions close at the SUM of their speeds: 90 + 100 = 190 km/h, so the 3 km gap closes in 3 ÷ 190 h = 0.0158 h = 57 s. The overtake needs at least 60 s just to draw level with the bus (0.5 ÷ 30 h = 1 min), so the matatu meets the car first: NOT safe. Checked twice: in 60 s the matatu travels 1.5 km and the car 1.67 km, total 3.17 km, which is more than the 3 km gap. Also: impact energy is ½mv², so it grows with the square of the speed, not 'the force depends on relative speed'. Answers are added for the extension problems, which had none (checked: 1.2/40 = 0.03 h; 480/180 = 2.667 h; 80 x 2.667 = 213.3 km). The 80 km/h NTSA limit for matatus is recalled from NTSA public-service-vehicle rules, so the teacher should check the current limit.",
+   "lesson": 7,
+   "group": "G3",
+   "reference": "OpenStax University Physics Volume 1, Chapter 4, Section 4.5 (relative motion) and Chapter 7 (kinetic energy)",
+   "where": "Lesson 7, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-064",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "has a relative speed of 160 km/h — four times more dangerous than a rear-end collision between a 90 km/h matatu and a 60 km/h bus.",
+   "new": "has a relative speed of 160 km/h — more than five times the 30 km/h closing speed of a rear-end collision between a 90 km/h matatu and a 60 km/h bus, and impact energy grows with the square of that speed.",
+   "criteria": [
+    4,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "why": "The worked solution let the oncoming car travel 1.67 km in one minute and then said it was 'still 1.33 km away', but the matatu is driving towards it at the same time. Vehicles moving in opposite directions close at the SUM of their speeds: 90 + 100 = 190 km/h, so the 3 km gap closes in 3 ÷ 190 h = 0.0158 h = 57 s. The overtake needs at least 60 s just to draw level with the bus (0.5 ÷ 30 h = 1 min), so the matatu meets the car first: NOT safe. Checked twice: in 60 s the matatu travels 1.5 km and the car 1.67 km, total 3.17 km, which is more than the 3 km gap. 160 ÷ 30 = 5.3, so 'four times' was wrong.",
+   "lesson": 7,
+   "group": "G3",
+   "reference": "OpenStax University Physics Volume 1, Chapter 7 (kinetic energy depends on v squared)",
+   "where": "Lesson 7, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-065",
+   "kind": "edit",
+   "target": "unit",
+   "path": "supportingPhenomena",
+   "old": "a matatu overtaking a lorry on the Nairobi–Nakuru highway: the matatu travels at 120 km/h and the lorry at 80 km/h in the same direction.",
+   "new": "a matatu overtaking a bus on the Nairobi–Nakuru highway: the matatu travels at 90 km/h and the bus at 60 km/h in the same direction.",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The worked solution let the oncoming car travel 1.67 km in one minute and then said it was 'still 1.33 km away', but the matatu is driving towards it at the same time. Vehicles moving in opposite directions close at the SUM of their speeds: 90 + 100 = 190 km/h, so the 3 km gap closes in 3 ÷ 190 h = 0.0158 h = 57 s. The overtake needs at least 60 s just to draw level with the bus (0.5 ÷ 30 h = 1 min), so the matatu meets the car first: NOT safe. Checked twice: in 60 s the matatu travels 1.5 km and the car 1.67 km, total 3.17 km, which is more than the 3 km gap. The supporting phenomenon gave 120 and 80 km/h (and a lorry), but Lesson 7, which uses it, works with 90 and 60 km/h and a bus; 120 km/h is also above Kenya's legal limits. The unit text now matches the lesson.",
+   "group": "G3",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-066",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "revised and expanded as a graph in Lesson 2",
+   "new": "revised and expanded as a graph in Lesson 3",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The graph lessons are Lesson 3 (draw displacement-time), 4 (interpret), 5 (draw velocity-time), 6 (interpret). Lesson 2 is calculation; the first graph is drawn in Lesson 3.",
+   "lesson": 1,
+   "group": "G6",
+   "group_headline": "Several lessons pointed to the wrong lesson for graph work; the cross-references now match the real lesson order",
+   "where": "Lesson 1, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-067",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "We will use this data in the next lesson to draw our first graph.",
+   "new": "We will use this data in Lesson 3 to draw our first graph.",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The graph lessons are Lesson 3 (draw displacement-time), 4 (interpret), 5 (draw velocity-time), 6 (interpret). ",
+   "lesson": 1,
+   "group": "G6",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-068",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "old": "In Lessons 4–5 learners mastered displacement-time graphs and average speed.",
+   "new": "In Lessons 3–4 learners mastered displacement-time graphs, and in Lesson 5 they drew velocity-time graphs.",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The graph lessons are Lesson 3 (draw displacement-time), 4 (interpret), 5 (draw velocity-time), 6 (interpret). ",
+   "lesson": 6,
+   "group": "G6",
+   "where": "Lesson 6, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-069",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "In Lessons 4–5 they added displacement-time graphs and speed calculations to the model.",
+   "new": "In Lessons 3–5 they added displacement-time graphs, gradients and velocity-time sketches to the model.",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The graph lessons are Lesson 3 (draw displacement-time), 4 (interpret), 5 (draw velocity-time), 6 (interpret). ",
+   "lesson": 6,
+   "group": "G6",
+   "where": "Lesson 6, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-070",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].sensemakingStrategy",
+   "old": "displacement-time graph (from Lesson 5)",
+   "new": "displacement-time graph (from Lesson 3)",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The graph lessons are Lesson 3 (draw displacement-time), 4 (interpret), 5 (draw velocity-time), 6 (interpret). ",
+   "lesson": 6,
+   "group": "G6",
+   "where": "Lesson 6, Model Building Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-071",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "In Lesson 5, we will discover what a curve on this graph means, and that will lead us to velocity-time graphs and acceleration — the final tools we need to explain the sprint finish completely.",
+   "new": "In Lesson 5, we will meet a new graph, velocity against time, which shows acceleration — the tool we need to explain the sprint finish completely.",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Lesson 5 does not study curves on a displacement-time graph; it introduces velocity-time graphs. The closing line promised something the next lesson does not do.",
+   "lesson": 4,
+   "group": "G6",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-072",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "a matatu journey on the Nakuru–Nairobi highway that provides a rich three-phase scenario (accelerating from a bus stop, cruising at constant speed, braking before Nakuru town)",
+   "new": "a matatu journey from the Kencom bus stop in Nairobi that provides a rich three-phase scenario (accelerating from the bus stop, cruising at constant speed, braking before the next stage)",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The data table (Observe phase) uses the Kencom bus stop on Moi Avenue, and the whole journey lasts 55 seconds and about 640 m (75 + 450 + 112.5 m), so it cannot be a drive to Nakuru. Distance check: 0.5 x 10 x 15 = 75 m; 30 x 15 = 450 m; 0.5 x 15 x 15 = 112.5 m.",
+   "lesson": 5,
+   "group": "G7",
+   "group_headline": "The Lesson 5 matatu journey was set in three different places (Uhuru Highway, the Nakuru highway, Kencom); it is now one Nairobi journey from the Kencom bus stop",
+   "where": "Lesson 5, overview",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-073",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "old": "leaving a bus stop on Uhuru Highway in Nairobi:",
+   "new": "leaving the Kencom bus stop on Moi Avenue in Nairobi:",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The data table (Observe phase) uses the Kencom bus stop on Moi Avenue, and the whole journey lasts 55 seconds and about 640 m (75 + 450 + 112.5 m), so it cannot be a drive to Nakuru. ",
+   "lesson": 5,
+   "group": "G7",
+   "where": "Lesson 5, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-074",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.observed",
+   "old": "for a matatu journey on Uhuru Highway, Nairobi, produces",
+   "new": "for a matatu journey from the Kencom bus stop on Moi Avenue, Nairobi, produces",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The data table (Observe phase) uses the Kencom bus stop on Moi Avenue, and the whole journey lasts 55 seconds and about 640 m (75 + 450 + 112.5 m), so it cannot be a drive to Nakuru. ",
+   "lesson": 5,
+   "group": "G7",
+   "where": "Lesson 5, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-075",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "You have 8 minutes.' [WAIT 8 minutes, circulate actively.] After 4 minutes, pause and do a mid-task check: cold-call 1 pair and ask: 'What velocity did you get for Runner B between 5 km and 10 km?' If the answer is incorrect, ask: 'What did you use as your time for that segment — was it the cumulative time or the split time for just that 5 km?' [WAIT 10 seconds.] Redirect as needed. At 8 minutes: 'Now compare",
+   "new": "You have 6 minutes.' [WAIT 6 minutes, circulate actively.] After 3 minutes, pause and do a mid-task check: cold-call 1 pair and ask: 'What velocity did you get for Runner B between 5 km and 10 km?' If the answer is incorrect, ask: 'What did you use as your time for that segment — was it the cumulative time or the split time for just that 5 km?' [WAIT 10 seconds.] Redirect as needed. At 6 minutes: 'Now compare",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Adding the planned minutes in Lesson 2 (a 40-minute period): Predict about 4, Observe about 13, Explain about 19 to 20, Driving Question Board about 5, Model about 7 = about 48. Trimmed: Observe 8 to 6 min (each pair calculates only one runner), Explain: Problem 2 becomes homework and Problem 1 gets 5 min, Model 5 to 4 min. New total about 38 to 40. The Kenyan examples and all content are kept.",
+   "lesson": 2,
+   "group": "G5",
+   "group_headline": "Several lessons planned more activity than the period allows (e.g. Lesson 2 about 48 min in 40, Lesson 8 about 93 min in 80, Lesson 1 had the field race overlapping other phases); times are re-balanced",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-076",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "You have 5 minutes.' [WAIT 5 minutes. Circulate and stamp",
+   "new": "You have 4 minutes.' [WAIT 4 minutes. Circulate and stamp",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Part of the Lesson 2 trim to fit 40 minutes (Model Building 5 to 4 minutes).",
+   "lesson": 2,
+   "group": "G5",
+   "where": "Lesson 2, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-077",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "CALCULATION TASK (48–55 min): Write on the board: 'Runner A finishes in 2 hours 12 minutes. The race is 42 km. Calculate Runner A's average speed.' Say: 'Work individually. You have 4 minutes. Show every step.' After 4 minutes, cold-call",
+   "new": "CALCULATION TASK (48–52 min): Write on the board: 'Runner A finishes in 2 hours 12 minutes. The race is 42 km. Calculate Runner A's average speed.' Say: 'Work individually. You have 3 minutes. Show every step.' After 3 minutes, cold-call",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 1 (80 min) had the 15-minute field race 'overlapping' the Explain and Driving Question Board phases, which cannot happen with one teacher and one class: the written timeline came to about 95 minutes. New order and minutes: Predict 0-10, Observe 10-30, Explain 30-52, field race 52-69, Driving Question Board 69-74, data analysis 74-80.",
+   "lesson": 1,
+   "group": "G5",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-078",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "old": "(which runs concurrently with or immediately after Phase 3 — see teacher moves)",
+   "new": "(which runs after Phase 3 — see teacher moves)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Same Lesson 1 re-timing: the race happens after the Explain phase, not at the same time.",
+   "lesson": 1,
+   "group": "G5",
+   "where": "Lesson 1, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-079",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "old": "DQB SETUP (55–65 min): Before this phase, prepare the DQB space on the board. Distribute two sticky notes (or paper squares) per learner. Say: 'You have three minutes. On the YELLOW note, write one thing you now understand. On the GREEN note, write one question you still have. Be specific — use the marathon or the race we just ran as your example.' WAIT 3 MINUTES of silent writing. | POSTING (65–68 min): Invite all learners to post their notes simultaneously. Quickly scan the board. Read 5–6 questions aloud, paraphrasing where needed: 'Mutua asks: why did Runner B slow down — is that acceleration?' 'Zawadi asks: how do we draw a graph from the split times?' Say: 'These are exactly the questions we will answer in this unit. Every lesson, we will come back to this board and move questions from the question side to the answer side.' | DRIVING QUESTION POSTING (68–70 min)",
+   "new": "DQB SETUP (69–72 min): Before this phase, prepare the DQB space on the board. Distribute two sticky notes (or paper squares) per learner. Say: 'You have two minutes. On the YELLOW note, write one thing you now understand. On the GREEN note, write one question you still have. Be specific — use the marathon or the race we just ran as your example.' WAIT 2 MINUTES of silent writing. | POSTING (72–73 min): Invite all learners to post their notes simultaneously. Quickly scan the board. Read 5–6 questions aloud, paraphrasing where needed: 'Mutua asks: why did Runner B slow down — is that acceleration?' 'Zawadi asks: how do we draw a graph from the split times?' Say: 'These are exactly the questions we will answer in this unit. Every lesson, we will come back to this board and move questions from the question side to the answer side.' | DRIVING QUESTION POSTING (73–74 min)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Same Lesson 1 re-timing (Driving Question Board 69 to 74 minutes, after the field race).",
+   "lesson": 1,
+   "group": "G5",
+   "where": "Lesson 1, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-080",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "FIELD SETUP (run during or immediately after Phase 3, approximately 35–50 min mark, adjust to school timetable)",
+   "new": "FIELD SETUP (run after the Explain phase, approximately minutes 52–69; the Driving Question Board follows on return and the data analysis closes the lesson; adjust to the school timetable)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Same Lesson 1 re-timing (field race minutes 52 to 69).",
+   "lesson": 1,
+   "group": "G5",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-081",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "DATA ANALYSIS BACK IN CLASS (50–55 min, overlaps with Phase 3 close)",
+   "new": "DATA ANALYSIS BACK IN CLASS (74–80 min, after the Driving Question Board)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Same Lesson 1 re-timing (data analysis minutes 74 to 80).",
+   "lesson": 1,
+   "group": "G5",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-082",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "measured distances of 40 m and 80 m",
+   "new": "a measured 40 m course",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "The lesson plan itself only uses a 40 m course; the 80 m option was never planned or timed.",
+   "lesson": 1,
+   "group": "G5",
+   "where": "Lesson 1, overview",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-083",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "[Allow 12 minutes for plotting. Circulate and check: axes labelled with units, correct scale chosen, points joined with straight lines between consecutive points — not curves — for this piecewise linear data.] After plotting, say: 'Now fill in your observation worksheet. For each graph, identify the phases and describe the shape. Do not calculate yet — just describe what you see.' [Allow 6 minutes.] After worksheets are partially completed",
+   "new": "[Allow 10 minutes for plotting. Circulate and check: axes labelled with units, correct scale chosen, points joined with straight lines between consecutive points — not curves — for this piecewise linear data.] After plotting, say: 'Now fill in your observation worksheet. For each graph, identify the phases and describe the shape. Do not calculate yet — just describe what you see.' [Allow 4 minutes.] After worksheets are partially completed",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 6 (80 min) planned about 85 to 86 minutes (Predict about 10, Observe about 21, Explain about 35, DQB about 8, Model about 12). The new tables are shorter, so plotting is trimmed from 12 to 10 minutes, the worksheet from 6 to 4, and the Kamau area task from 8 to 6 (in the data group). New total about 79.",
+   "lesson": 6,
+   "group": "G5",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-084",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "old": "Take 3 minutes in your groups. Look at our DQB. Which questions can we NOW answer that we could not answer before Lesson 7? Write your answer on the GREEN note. Then think: did today's lesson raise a NEW question for you? Write it on the ORANGE note.' [WAIT 3 minutes. Circulate and prompt quiet groups",
+   "new": "Take 2 minutes in your groups. Look at our DQB. Which questions can we NOW answer that we could not answer before Lesson 7? Write your answer on the GREEN note. Then think: did today's lesson raise a NEW question for you? Write it on the ORANGE note.' [WAIT 2 minutes. Circulate and prompt quiet groups",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 7 (40 min) planned about 43 to 44 minutes (Predict 5, Observe 12, Explain 13, DQB 6, Model 7). Extension problem (b) becomes homework (in the safety group) and the DQB step is trimmed by 1 minute. New total about 40.",
+   "lesson": 7,
+   "group": "G5",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-085",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "A 20-minute class written assessment",
+   "new": "An 18-minute class written assessment",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 (80 min) planned 10 + 27 + 18 + 8 + 30 = 93 minutes. New plan: Predict 8, Observe 25, Explain 14, DQB 6, Model Building 26 (5 + 18 + 3) = 79.",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, overview",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-086",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "old": "opening 90 seconds of the Nairobi Marathon video clip again — the same clip from Lesson 1. They then receive back their original Lesson 1 prediction sheet (kept by the teacher) showing what they wrote about Runner A and Runner B before instruction began. Working individually for 3 minutes, learners write a 'Then vs. Now' comparison: (1) What did I think was happening in Lesson 1? (2) What do I know now that I did not know then? (3) In one sentence, what is my complete explanation of why Runner A won? Learners then share their 'Then vs. Now' with a shoulder partner for 2 minutes",
+   "new": "opening 60 seconds of the Nairobi Marathon video clip again — the same clip from Lesson 1. They then receive back their original Lesson 1 prediction sheet (kept by the teacher) showing what they wrote about Runner A and Runner B before instruction began. Working individually for 2 minutes, learners write a 'Then vs. Now' comparison: (1) What did I think was happening in Lesson 1? (2) What do I know now that I did not know then? (3) In one sentence, what is my complete explanation of why Runner A won? Learners then share their 'Then vs. Now' with a shoulder partner for 1 minute",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Predict trimmed to 8 minutes (see the overview record).",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-087",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "old": "Set a 3-minute silent individual writing timer. After 3 minutes, say: 'Turn to your shoulder partner. Share your Then vs. Now. You have 2 minutes.' WAIT for full 2 minutes. After pairs share, cold-call exactly 3 learners using a name stick: 'Tell us in one sentence — why did Runner A win?' After each response, probe with: 'How do you know that mathematically?' Record the three responses on the board under the heading 'Our Current Best Explanation.' Do NOT confirm or correct yet — hold the tension for the Observe phase. Estimated time: 10 minutes.",
+   "new": "Set a 2-minute silent individual writing timer. After 2 minutes, say: 'Turn to your shoulder partner. Share your Then vs. Now. You have 1 minute.' WAIT for the full minute. After pairs share, cold-call exactly 3 learners using a name stick: 'Tell us in one sentence — why did Runner A win?' After each response, probe with: 'How do you know that mathematically?' Record the three responses on the board under the heading 'Our Current Best Explanation.' Do NOT confirm or correct yet — hold the tension for the Observe phase. Estimated time: 8 minutes.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Predict trimmed to 8 minutes.",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-088",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "Groups have 25 minutes for all four tasks.",
+   "new": "Groups have 23 minutes for all four tasks.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Observe is 2 minutes of set-up plus 23 minutes of group work (25 total).",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-089",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "Say: 'You have 25 minutes. Every member",
+   "new": "Say: 'You have 23 minutes. Every member",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Observe re-timed.",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-090",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "Estimated time: 27 minutes (2 min setup + 25 min group work).",
+   "new": "Estimated time: 25 minutes (2 min setup + 23 min group work).",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Observe re-timed.",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-091",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "Each group has 3 minutes to present their portfolio to the class. One member holds up the A3 graph; another reads the written explanation; a third fields questions. Groups post their A3 graphs on the classroom wall (gallery style) after presenting. After all groups present, learners do a 3-minute silent 'gallery walk' — they move to look at the other groups' graphs on the wall and place a sticky dot next to the feature they find most clearly explained. The class then reconvenes and the teacher facilitates a 5-minute whole-class discussion",
+   "new": "Each group has 2 minutes to present their portfolio to the class. One member holds up the A3 graph; another reads the written explanation; a third fields questions. Groups post their A3 graphs on the classroom wall (gallery style) after presenting. After all groups present, learners do a 2-minute silent 'gallery walk' — they move to look at the other groups' graphs on the wall and place a sticky dot next to the feature they find most clearly explained. The class then reconvenes and the teacher facilitates a 4-minute whole-class discussion",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Explain re-timed to 14 minutes.",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-092",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Each group has exactly 3 minutes.",
+   "new": "Each group has exactly 2 minutes.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Explain re-timed to 14 minutes.",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-093",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Estimated time: 18 minutes (3 groups × 3 min + 1 min transition each = ~12 min; gallery walk = 3 min; discussion = 5 min — adjust group count as needed).",
+   "new": "Estimated time: 14 minutes (4 groups × 2 min = 8 min; gallery walk = 2 min; consensus statement = 4 min). If there are more than four groups, only four present; the others post their graphs for the gallery walk.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Explain re-timed to 14 minutes.",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-094",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "old": "Estimated time: 8 minutes.",
+   "new": "Estimated time: 6 minutes.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Driving Question Board closure re-timed to 6 minutes.",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-095",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "Part B — Written Assessment (20 minutes)",
+   "new": "Part B — Written Assessment (18 minutes)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Model Building re-timed (5 + 18 + 3 = 26).",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-096",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "Part C — Career Reflection (5 minutes, post-assessment)",
+   "new": "Part C — Career Reflection (3 minutes, post-assessment)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Model Building re-timed.",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-097",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "You have exactly 20 minutes. Use the class consensus explanation on the board as a reminder of your mathematical vocabulary — but all working must be your own.' Set a timer. Circulate silently, noting learners who appear stuck on Q2 (common error: forgetting to include the stationary period on the graph). Do not give answers but may prompt: 'Read the question again. How many stages does this journey have?' With 5 minutes remaining, give a verbal warning. Collect all papers. Open the career reflection chart and ask: 'Shout out a Kenyan career that uses what you learned.' Scribe rapidly for 3 minutes. Close with: 'The Nairobi Marathon runners and the matatu drivers on the Nakuru highway do not know they are living inside a mathematics lesson — but you do. That is the power of what you have learned.' Estimated time: 5 min model comparison + 20 min assessment + 5 min careers = 30 minutes.",
+   "new": "You have exactly 18 minutes. Use the class consensus explanation on the board as a reminder of your mathematical vocabulary — but all working must be your own.' Set a timer. Circulate silently, noting learners who appear stuck on Q2 (common error: forgetting to include the stationary period on the graph). Do not give answers but may prompt: 'Read the question again. How many stages does this journey have?' With 3 minutes remaining, give a verbal warning. Collect all papers. Open the career reflection chart and ask: 'Shout out a Kenyan career that uses what you learned.' Scribe rapidly for 3 minutes. Close with: 'The Nairobi Marathon runners and the matatu drivers on the Nakuru highway do not know they are living inside a mathematics lesson — but you do. That is the power of what you have learned.' Estimated time: 5 min model comparison + 18 min assessment + 3 min careers = 26 minutes. If time is short, drop Q1 or set Q5 as homework.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Lesson 8 Model Building re-timed.",
+   "lesson": 8,
+   "group": "G5",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-098",
+   "kind": "edit",
+   "target": "unit",
+   "path": "totalDuration",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons: 5 double periods × 80 minutes (Lessons 1, 3, 4, 6, 8) + 3 single periods × 40 minutes (Lessons 2, 5, 7) = 520 minutes total",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "Sum of the lesson durations: 80 + 40 + 80 + 80 + 40 + 80 + 40 + 80 = 520 minutes (5 x 80 = 400, 3 x 40 = 120). The old '8 x 40 = 320' did not match the lessons, which are a mix of 80-minute and 40-minute periods. (KICD lists 15 lessons for this sub-strand; see the flag on lesson count.)",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-099",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "WORKED EXAMPLE 1 — Kipchoge's Finish Sprint: 'Eliud Kipchoge, the greatest marathon runner in history, increased his velocity from 20.0 km/h to 22.5 km/h in the final 600 m of a race, taking approximately 96 seconds. What was his acceleration?' Write on board step by step: Δv = 22.5 − 20.0 = 2.5 km/h. Convert: 2.5 km/h = 2500 m / 3600 s ≈ 0.694 m/s. Δt = 96 s. a = 0.694 ÷ 96 ≈ 0.0072 m/s². Say: 'That seems small — but for a runner after 42 km, any acceleration is extraordinary. This is why Kipchoge is remarkable.' [Pause 10 seconds — allow learners to finish copying.]\n\nWORKED EXAMPLE 2 — Boda-boda on Mombasa Road: 'A boda-boda accelerates from rest at a stage near the Nyayo Stadium roundabout, reaching a velocity of 36 km/h in 10 seconds. Calculate its acceleration in m/s².' Write: v_initial = 0 m/s (rest). v_final = 36 km/h = 36000/3600 = 10 m/s. Δt = 10 s. a = (10 − 0) ÷ 10 = 1 m/s². Say: 'That is a much larger acceleration — the boda-boda changes velocity much faster than Kipchoge did.",
+   "new": "WORKED EXAMPLE 1 — An elite runner's finish: 'Imagine an elite marathon runner, as fast as Eliud Kipchoge (whose record pace is about 21 km/h). In the final 600 m the runner increases velocity from 20.0 km/h to 22.5 km/h, taking about 100 seconds. What is the acceleration?' (Check: the average velocity is 21.25 km/h = 5.9 m/s and 600 ÷ 5.9 ≈ 102 s.) Write on board step by step: Δv = 22.5 − 20.0 = 2.5 km/h. Convert: 2.5 km/h = 2500 m / 3600 s ≈ 0.694 m/s. Δt = 100 s. a = 0.694 ÷ 100 ≈ 0.0069 m/s². Say: 'That seems small, and it is typical: a runner changes velocity gently, over many seconds.' [Pause 10 seconds — allow learners to finish copying.]\n\nWORKED EXAMPLE 2 — Boda-boda on Mombasa Road: 'A boda-boda accelerates from rest at a stage near the Nyayo Stadium roundabout, reaching a velocity of 36 km/h in 10 seconds. Calculate its acceleration in m/s².' Write: v_initial = 0 m/s (rest). v_final = 36 km/h = 36000/3600 = 10 m/s. Δt = 10 s. a = (10 − 0) ÷ 10 = 1 m/s². Say: 'That is a much larger acceleration — the boda-boda changes velocity much faster than the runner did.",
+   "criteria": [
+    1,
+    9
+   ],
+   "category": "science",
+   "severity": "minor",
+   "why": "The example attributed invented figures to a real athlete, and the time did not fit the speeds: a runner averaging 21.25 km/h (5.90 m/s) covers 600 m in 600 ÷ 5.90 = 102 s, not 96 s (a 96 s run would need 22.5 km/h throughout, so no speed-up). Rechecked with 100 s: 2.5 km/h = 0.694 m/s, ÷ 100 = 0.0069 m/s². Kipchoge's marathon record of 2:01:09 is 42.195 ÷ 2.019 h = 20.9 km/h, so 'about 21 km/h' is right.",
+   "lesson": 2,
+   "reference": "World Athletics marathon record, Eliud Kipchoge 2:01:09 (Berlin 2022); OpenStax University Physics Volume 1, Chapter 3 (average acceleration)",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-100",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.knowledge",
+   "old": "state its SI unit (m/s or km/h)",
+   "new": "state its SI unit (m/s; km/h is also widely used)",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "why": "km/h is not an SI unit; the SI unit of velocity is metres per second. The lesson itself works in both, so the wording now says so.",
+   "lesson": 2,
+   "reference": "BIPM, The International System of Units (SI Brochure), coherent derived units: metre per second",
+   "where": "Lesson 2, slo.knowledge",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-101",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "Write correct gradient values on board in a summary column.",
+   "new": "Write correct gradient values on board in a summary column. ANSWER KEY (illustrative coordinates; draw the worksheet graphs from these, as (time in min, displacement in km)): Graph 1 matatu from Nakuru: (0,0)-(20,25), (20,25)-(30,25), (30,25)-(60,55); gradients 1.25 km/min (75 km/h), 0, 1.0 km/min (60 km/h). Graph 2 runner at a water station: (0,0)-(15,5), (15,5)-(18,5), (18,5)-(36,10); gradients 0.33 km/min (20 km/h), 0, 0.28 km/min (16.7 km/h). Graph 3 boda-boda rider: (0,0)-(10,5), (10,5)-(15,5), (15,5)-(25,0); gradients +0.5 km/min (30 km/h), 0, −0.5 km/min (returning home at 30 km/h). Graph 4 SGR (5 travel segments and the Mtito Andei stop, 270 min in all, matching the 08:00 to 12:30 timetable; distances are rounded, not the official timetable): Nairobi–Athi River (0,0)-(25,30) 1.2 km/min (72 km/h); Athi River–Emali (25,30)-(80,130) 1.82 km/min (109 km/h); Emali–Mtito Andei (80,130)-(142,250) 1.94 km/min (116 km/h); stop (142,250)-(152,250) gradient 0; Mtito Andei–Voi (152,250)-(210,360) 1.90 km/min (114 km/h); Voi–Mombasa (210,360)-(270,480) 2.0 km/min (120 km/h). Ranking for Graph 4 prediction 3: Voi–Mombasa fastest, then Emali–Mtito Andei, Mtito Andei–Voi, Athi River–Emali, Nairobi–Athi River slowest.",
+   "criteria": [
+    13,
+    5
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "why": "The four worksheet graphs were described but no values were given, so a teacher could not draw them or check the learners' gradients. I added illustrative coordinates and answers. Checks: 25/20 = 1.25; 45/30 = 1.5 (not used) so segment 3 is 30/30 = 1.0; 100/55 = 1.82; 120/62 = 1.94; 110/58 = 1.90; 120/60 = 2.0 km/min; SGR distances sum 30 + 100 + 120 + 110 + 120 = 480 km (matches the unit's 480 km) and times 25 + 55 + 62 + 10 + 58 + 60 = 270 min = 08:00 to 12:30; no speed exceeds 120 km/h. The first segment (30 km in 25 min) matches the Lesson 6 graph. The teacher may replace the values with real timetable data.",
+   "lesson": 4,
+   "teacher_decision": true,
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-102",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "old": "Display the matatu scenario on the board (written in large text or on a manila card). Say: 'Before we look at any numbers, I want you to think about what is actually happening to the matatu's speed at each stage of this journey. In your exercise books, sketch what you think a velocity-time graph would look like — velocity on the y-axis, time on the x-axis. You have 3 minutes working silently and individually.' Start a visible timer. After 3 minutes, say:",
+   "new": "OPENING HOOK (1 minute): show the strobe photograph (or printed simulation) of the ball rolling down the ramp, with equal time steps and unequal spacing. Ask: 'What is happening to the ball's speed, and how can you tell?' (Expected: it is speeding up, because the gaps between positions get bigger.) Then say: 'A ball on a ramp and a matatu leaving a stage both speed up. What would their velocity-time graphs look like?' Now display the matatu scenario on the board (written in large text or on a manila card). Say: 'Before we look at any numbers, I want you to think about what is actually happening to the matatu's speed at each stage of this journey. In your exercise books, sketch what you think a velocity-time graph would look like — velocity on the y-axis, time on the x-axis. You have 2 minutes working silently and individually.' Start a visible timer. After 2 minutes, say:",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "why": "The unit lists a strobe photograph of a ball on a ramp as a supporting phenomenon and Lesson 5's overview says it is 'introduced briefly', but no phase uses it, so one supporting phenomenon never appeared. A one-minute hook now uses it, and the sketching time is cut from 3 to 2 minutes so the Predict phase stays at 5 minutes (1 + 2 + 2).",
+   "lesson": 5,
+   "where": "Lesson 5, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-103",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Refine the definition collaboratively and write it.",
+   "new": "Refine the definition collaboratively and write it. LANGUAGE SUPPORT: beside each English term on the anchor chart, add a Kiswahili word where it helps (for example umbali = distance, kasi = speed, mwelekeo = direction, kuongeza kasi = speeding up, kupunguza kasi = slowing down) and invite learners to offer the word they use at home. Ask the Kiswahili teacher for the standard terms for displacement, velocity and acceleration. Sentence frame for English learners: 'The runner's ______ changed from ______ to ______.'",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "why": "The guidelines ask for language supports, including Kiswahili where it helps, and the lessons had none (only one sentence starter in Lesson 1). The teacher must decide: I could not verify standard Kiswahili mathematics terms, so only common everyday words are given and the standard terms for displacement, velocity and acceleration are left to the Kiswahili teacher.",
+   "lesson": 1,
+   "group": "G8",
+   "group_headline": "Added language and access supports (Kiswahili terms, sentence frames, alternative ways to show understanding) where there were none",
+   "teacher_decision": true,
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-104",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "(Do NOT draw it for them.)",
+   "new": "(Do NOT draw it for them.) SUPPORT: give learners who find setting up the scale hard, or who have difficulty drawing, a pre-ruled grid with the axes already scaled; a partner can plot while the learner reads out the values; a learner who cannot draw can place coloured stickers on a large class grid and describe the shape aloud.",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "why": "Adds accommodations for learners with fine-motor or visual difficulty and a second way to take part, as the guidelines ask.",
+   "lesson": 3,
+   "group": "G8",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-105",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "For Task 4 — 'Avoid saying faster or slower. Use the words gradient, velocity, and acceleration.'",
+   "new": "For Task 4 — 'Avoid saying faster or slower. Use the words gradient, velocity, and acceleration.' Learners who find extended writing hard may explain Task 4 aloud to you or a partner, using a labelled diagram and the sentence frames from Lessons 1 and 2.",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "why": "Gives more than one way to show understanding in the final lesson.",
+   "lesson": 8,
+   "group": "G8",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-106",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "Demonstrate stopwatch use.",
+   "new": "Demonstrate stopwatch use. If stopwatches are scarce, one phone or wristwatch timer per group is enough (with a second timer as a back-up); if there is no tape measure, use a 10 m rope or string marked with chalk and checked against a metre rule.",
+   "criteria": [
+    8
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "why": "Materials must be available in Kenyan partner schools and low-cost substitutes listed (guideline 8); the race needs several stopwatches and tape measures.",
+   "lesson": 1,
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-107",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "A matatu travels from Nakuru to Naivasha (90 km) in 1.5 hours, stops for 10 minutes, then travels 60 km to Nairobi in 45 minutes. Draw the displacement-time graph and calculate the average speed for the entire journey. (Q3) From the velocity-time graph provided, calculate the acceleration in the first 10 minutes and find the total displacement for the 40-minute journey. (Q4) Two matatus leave Kisumu and Eldoret simultaneously, travelling toward each other at 80 km/h and 60 km/h respectively. The distance between the two towns is 280 km. At what time do they meet, and how far from Kisumu?",
+   "new": "A matatu travels from Nakuru to Naivasha (60 km) in 1 hour, stops for 10 minutes, then travels 90 km to Nairobi in 1.5 hours. Draw the displacement-time graph and calculate the average speed for the entire journey. (Q3) From the SGR velocity-time graph used in Lesson 6 (0, 60, 120, 120, 60, 0 km/h at 5-minute intervals), calculate the acceleration in the first 10 minutes and find the total displacement for the 25-minute journey. (Q4) Two matatus leave Kisumu and Eldoret simultaneously, travelling toward each other at 80 km/h and 60 km/h respectively. The distance between the two towns is 140 km. At what time do they meet, and how far from Kisumu?",
+   "criteria": [
+    4,
+    9
+   ],
+   "category": "local",
+   "severity": "substantial",
+   "why": "Nakuru to Naivasha is about 60 km by road and Naivasha to Nairobi about 90 km (the question had them the wrong way round), and 90 km in 45 minutes would need 120 km/h. Recomputed: total distance 150 km in 1 + 10/60 + 1.5 = 2.667 h gives an average speed of 56.25 km/h. Kisumu to Eldoret is about 140 to 150 km by road (the question had 280 km, nearly double); with 140 km: 140 ÷ (80 + 60) = 1 h, and 80 x 1 = 80 km from Kisumu. Q3 pointed to a graph 'provided' without saying which; it now uses the Lesson 6 SGR graph (acceleration 12 km/h per min = 0.056 m/s^2; displacement 30 km). The teacher must decide: use the real road distances you know, or keep these rounded numbers.",
+   "lesson": 8,
+   "group": "G9",
+   "group_headline": "The Lesson 8 written assessment had wrong road distances (Nakuru–Naivasha 90 km) and an impossible matatu time, no marking key; fixed and answers added",
+   "teacher_decision": true,
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-108",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "old": "Written assessment Q2 and Q3 are the primary summative indicators",
+   "new": "ANSWER KEY: Q2 graph points (0,0), (60,60), (70,60), (160,150) in (minutes, km); average speed = 150 ÷ 2.667 h = 56.25 km/h (the stop counts). Q3 acceleration = 12 km/h per min ≈ 0.056 m/s²; displacement = area = 30 km. Q4 relative speed 140 km/h; they meet after 1 h, 80 km from Kisumu. Q5 Runner B's gradient is gentler from km 25 to km 40 (about 16 km/h against about 20 km/h before), so he covers less distance each minute and Runner A closes the gap. Written assessment Q2 and Q3 are the primary summative indicators",
+   "criteria": [
+    13,
+    10
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "why": "The assessment had no marking key (guideline 13). Answers recomputed: (60 + 90) km ÷ (1 + 1/6 + 1.5) h = 150 ÷ 2.667 = 56.25; 0.5 x 10/60 x 120... = 30 km (see Lesson 6); 140 ÷ 140 = 1 h; 80 x 1 = 80 km.",
+   "lesson": 8,
+   "group": "G9",
+   "where": "Lesson 8, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-109",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "rubric",
+   "value": [
+    {
+     "criterion": "Use of key terms (distance/displacement, speed/velocity, scalar/vector, acceleration)",
+     "excellent": "Exceeds Expectations: defines all terms correctly, correctly labels each as scalar or vector, and uses them accurately and consistently throughout, including in new situations.",
+     "proficient": "Meets Expectations: defines most terms correctly with only minor slips in labelling scalar or vector.",
+     "developing": "Approaches Expectations: confuses distance with displacement or speed with velocity, or omits scalar/vector."
+    },
+    {
+     "criterion": "Calculations (v = s/t, a = Δv/Δt, area under graph, relative speed)",
+     "excellent": "Exceeds Expectations: all calculations are correct with clear working, correct formulas and correct units, and answers are checked for sense.",
+     "proficient": "Meets Expectations: most calculations are correct; occasional errors in units or working.",
+     "developing": "Approaches Expectations: several incorrect calculations or formulas, little working or missing units."
+    },
+    {
+     "criterion": "Graph interpretation (gradient and area)",
+     "excellent": "Exceeds Expectations: correctly states that the gradient of a displacement-time graph is velocity, the gradient of a velocity-time graph is acceleration and the area is displacement. Sketches are neat, labelled, and linked to Runner A and Runner B.",
+     "proficient": "Meets Expectations: states the meaning of gradient and area correctly, but sketches or links to the runners are partly incomplete.",
+     "developing": "Approaches Expectations: mixes up what the gradient or area means on the two types of graph, or sketches are unlabelled."
+    },
+    {
+     "criterion": "Explaining the phenomenon with evidence",
+     "excellent": "Exceeds Expectations: gives a complete, logical explanation of why Runner A won despite Runner B leading at 30 km, using velocity, acceleration, graph shape and relative speed, with numbers from the data.",
+     "proficient": "Meets Expectations: explains the main reason (B slowed in the middle) using at least two ideas from the unit.",
+     "developing": "Approaches Expectations: only restates that A won, or uses average speed alone, with little evidence."
+    },
+    {
+     "criterion": "Kenyan contexts and communication",
+     "excellent": "Exceeds Expectations: links ideas clearly to Kenyan examples (matatu, boda-boda, Nairobi Marathon) in clear, well-organised sentences.",
+     "proficient": "Meets Expectations: uses some Kenyan examples; writing is mostly clear.",
+     "developing": "Approaches Expectations: few or no links to the contexts; explanations are unclear or very short."
+    }
+   ],
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "why": "The contract allows three level fields whose printed headings are fixed (Excellent, Proficient, Developing). The CBE names (Exceeds, Meets, Approaches Expectations) now appear at the start of each descriptor so teachers and learners see the CBE level; wording is otherwise unchanged except two small additions at the top level.",
+   "old": "[{\"criterion\": \"Use of key terms (distance/displacement, speed/velocity, scalar/vector, acceleration)\", \"excellent\": \"Defines all terms correctly, correctly labels each as scalar or vector, and uses them accurately and consistently throughout.\", \"proficient\": \"Defines most terms correctly with only minor slips in labelling scalar or vector.\", \"developing\": \"Confuses distance with displacement or speed with velocity, or omits scalar/vector.\"}, {\"criterion\": \"Calculations (v = s/t, a = Δv/Δt, area under graph, relative speed)\", \"excellent\": \"All calculations are correct with clear working, correct formulas and correct units.\", \"proficient\": \"Most calculations are correct; occasional errors in units or working.\", \"developing\": \"Several incorrect calculations or formulas, little working or missing units.\"}, {\"criterion\": \"Graph interpretation (gradient and area)\", \"excellent\": \"Correctly states that the gradient of a displacement-time graph is velocity, the gradient of a velocity-time graph is acceleration and the area is displacement. Sketches are neat, labelled, and linked to Runner A and Runner B.\", \"proficient\": \"States the meaning of gradient and area correctly, but sketches or links to the runners are partly incomplete.\", \"developing\": \"Mixes up what the gradient or area means on the two types of graph, or sketches are unlabelled.\"}, {\"criterion\": \"Explaining the phenomenon with evidence\", \"excellent\": \"Gives a complete, logical explanation of why Runner A won despite Runner B leading at 30 km, using velocity, acceleration, graph shape and relative speed.\", \"proficient\": \"Explains the main reason (B slowed in the middle) using at least two ideas from the unit.\", \"developing\": \"Only restates that A won, or uses average speed alone, with little evidence.\"}, {\"criterion\": \"Kenyan contexts and communication\", \"excellent\": \"Links ideas clearly to Kenyan examples (matatu, boda-boda, Nairobi Marathon) in clear, well-organised sentences.\", \"proficient\": \"Uses some Kenyan examples; writing is mostly clear.\", \"developing\": \"Few or no links to the contexts; explanations are unclear or very short.\"}]",
+   "new": "[{\"criterion\": \"Use of key terms (distance/displacement, speed/velocity, scalar/vector, acceleration)\", \"excellent\": \"Exceeds Expectations: defines all terms correctly, correctly labels each as scalar or vector, and uses them accurately and consistently throughout, including in new situations.\", \"proficient\": \"Meets Expectations: defines most terms correctly with only minor slips in labelling scalar or vector.\", \"developing\": \"Approaches Expectations: confuses distance with displacement or speed with velocity, or omits scalar/vector.\"}, {\"criterion\": \"Calculations (v = s/t, a = Δv/Δt, area under graph, relative speed)\", \"excellent\": \"Exceeds Expectations: all calculations are correct with clear working, correct formulas and correct units, and answers are checked for sense.\", \"proficient\": \"Meets Expectations: most calculations are correct; occasional errors in units or working.\", \"developing\": \"Approaches Expectations: several incorrect calculations or formulas, little working or missing units.\"}, {\"criterion\": \"Graph interpretation (gradient and area)\", \"excellent\": \"Exceeds Expectations: correctly states that the gradient of a displacement-time graph is velocity, the gradient of a velocity-time graph is acceleration and the area is displacement. Sketches are neat, labelled, and linked to Runner A and Runner B.\", \"proficient\": \"Meets Expectations: states the meaning of gradient and area correctly, but sketches or links to the runners are partly incomplete.\", \"developing\": \"Approaches Expectations: mixes up what the gradient or area means on the two types of graph, or sketches are unlabelled.\"}, {\"criterion\": \"Explaining the phenomenon with evidence\", \"excellent\": \"Exceeds Expectations: gives a complete, logical explanation of why Runner A won despite Runner B leading at 30 km, using velocity, acceleration, graph shape and relative speed, with numbers from the data.\", \"proficient\": \"Meets Expectations: explains the main reason (B slowed in the middle) using at least two ideas from the unit.\", \"developing\": \"Approaches Expectations: only restates that A won, or uses average speed alone, with little evidence.\"}, {\"criterion\": \"Kenyan contexts and communication\", \"excellent\": \"Exceeds Expectations: links ideas clearly to Kenyan examples (matatu, boda-boda, Nairobi Marathon) in clear, well-organised sentences.\", \"proficient\": \"Meets Expectations: uses some Kenyan examples; writing is mostly clear.\", \"developing\": \"Approaches Expectations: few or no links to the contexts; explanations are unclear or very short.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-110",
+   "kind": "flag",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "why": "The CBE rubric has four levels (Exceeds, Meets, Approaches, Below Expectations) but the current contract and template can only hold three level fields, so Below Expectations cannot be represented. Teachers/partner must decide whether to extend the contract or to describe Below Expectations in the marking guidance (for now: anything below the 'Approaches' descriptor).",
+   "teacher_decision": true,
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T13:35:16"
+  },
+  {
+   "id": "coremath_2_9-111",
+   "kind": "flag",
+   "target": "unit",
+   "path": "totalDuration",
+   "criteria": [
+    2,
+    3
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "KICD lists 15 lessons for Sub-Strand 2.9 Linear Motion (15 x 40 = 600 min); this sequence has 8 lessons (520 min). The sub-strand number and name match KICD (Strand 2.0 Measurements and Geometry, 2.9 Linear Motion). Not taught or only lightly: KICD's suggested experience 'use digital devices and other resources to explore more on linear motion in day-to-day life' (no lesson uses digital tools), and 'demonstrate motion by moving an object from a point to another for a specified distance and direction' (only touched in Lesson 1 questions). Also the unit's eighth content bullet, 'Application of linear motion', is not in KICD's content list (KICD has seven bullets), and KICD names 'cars' where the data says 'matatus'. Teachers decide whether to add lessons or accept the 8-lesson plan. The specific learning outcomes (a to h), the three key inquiry questions, core competencies, values and PCIs match KICD wording; no change needed.",
+   "teacher_decision": true,
+   "location": "Unit overview, lesson count and KICD coverage",
+   "where": "Unit overview, lesson count and KICD coverage",
+   "applied_at": "2026-10-15T13:35:16"
+  }
+ ]
+}
