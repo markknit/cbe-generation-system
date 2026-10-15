@@ -1,0 +1,2552 @@
+{
+ "module": "math_3_1",
+ "records": [
+  {
+   "id": "math_3_1-001",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1,
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 2 claimed the mango-tree height could be found from sin 53° and the 9.0 m shadow alone. It cannot: sine needs the sun's ray (hypotenuse), which nobody measured, and the shadow is the adjacent side. The lesson now says so openly (a productive gap that Lessons 3 and 4 close) and its practice problem is one that sine really can solve. Checked twice: 9.0 × tan 53° = 11.94 m; 9.0 ÷ cos 53° = 14.96 m and 14.96 × sin 53° = 11.95 m, so the sine route works once the sun's ray is known.",
+   "lesson": 2,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (sine, cosine and tangent of acute angles); OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry",
+   "group": "G1",
+   "group_headline": "Lesson 2 said sine plus the 9.0 m shadow gives the tree height, but sine needs the sun's ray, which was never measured; the lesson and its follow-ups now say so and use a problem sine can solve",
+   "old": "if sin 53° is always 0.7986, then once you know the sun makes a 53° angle with the ground, you can calculate the mango tree's height from nothing but the shadow length — no climbing required.",
+   "new": "if sin 53° is always 0.7986, then the tree height is always 0.7986 times the length of the sun's ray. The shadow is not the sun's ray, so using the shadow length still needs the cosine and tangent ratios of Lessons 3 and 4.",
+   "where": "Lesson 2, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-002",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Knock-on of the Lesson 2 root fix: replaces the unsolvable mast problem (a shadow length is the adjacent side, so sin 40° cannot give the height) with a guy-wire problem that uses sine: 12 × 0.6428 = 7.71 m.",
+   "lesson": 2,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (sine of acute angles)",
+   "group": "G1",
+   "old": "The teacher then models applying sin 53° = 0.7986 to solve the mango tree problem: if the shadow is 9.0 m and the angle of elevation is 53°, what is the hypotenuse (sun-ray length)? From that, what is the tree height? Learners solve a parallel problem individually: a mobile phone mast in Nakuru casts a shadow of 12 m when the sun's elevation angle is 40°. Find the height of the mast using sin 40° from tables.",
+   "new": "The teacher then returns to the mango tree: sin 53° = 0.7986 = tree height ÷ sun-ray length, but only the shadow (the adjacent side) is known, not the sun-ray, so sine alone cannot give the height yet. The class writes this as a question in the Still Wondering column of the Driving Question Board. Learners then solve a parallel problem where sine does work, individually: a 12 m guy wire holds a telecommunications mast near Kericho (supporting phenomenon 1) and makes an angle of 40° with the ground. How far up the mast is the wire fixed? Use sin 40° from tables.",
+   "where": "Lesson 2, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-003",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Knock-on of the Lesson 2 root fix: the teacher no longer sets up a cos 53° step before cosine is taught, the Lesson 3 cross-reference for the opposite/adjacent ratio is corrected to Lesson 4 (tangent), and the mast problem becomes the guy wire.",
+   "lesson": 2,
+   "group": "G1",
+   "old": "'sin 53° = opposite / hypotenuse → 0.7986 = tree height / sun-ray length. But wait — we know the shadow, not the sun-ray. Which ratio connects opposite and adjacent? We will explore that in Lesson 3. For now, let's use what we do know.' Guide learners to set up: shadow/hypotenuse = cos 53° [preview only — do not teach cosine yet]. Then pivot to the Nakuru mast problem and circulate while learners solve individually. Cold-call Student 10: 'Kiptoo, walk us through your setup for the Nakuru mast. What did you write as your sine equation?'",
+   "new": "'sin 53° = opposite / hypotenuse → 0.7986 = tree height / sun-ray length. But wait — we know the shadow, not the sun-ray, so sine alone cannot give the height yet. Which ratio uses the shadow, the sun-ray and the angle? Lesson 3 gives us that one, and Lesson 4 the ratio that links the height and the shadow directly.' Write 'What else do we need besides sine?' in the Still Wondering column (do not teach cosine or tangent yet). Then pivot to the Kericho guy-wire problem, where sine does work, and circulate while learners solve individually. Cold-call Student 10: 'Kiptoo, walk us through your setup for the Kericho guy wire. What did you write as your sine equation?'",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-004",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Gives the teacher the expected answer for the new guy-wire problem (12 × 0.6428 = 7.71 m, checked with sin 40° from tables and by calculator).",
+   "lesson": 2,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (sine of acute angles)",
+   "group": "G1",
+   "old": "(sin 40° = height / hypotenuse) before attempting to solve.",
+   "new": "(sin 40° = height / 12 m) before attempting to solve. Expected answer: height = 12 × 0.6428 ≈ 7.7 m.",
+   "where": "Lesson 2, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-005",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.skills",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Skill statement matched to the corrected Lesson 2 problem.",
+   "lesson": 2,
+   "group": "G1",
+   "old": "apply the sine ratio to estimate heights in real contexts such as the mango tree shadow problem.",
+   "new": "apply the sine ratio to find heights in real contexts such as the guy wire of a phone mast.",
+   "where": "Lesson 2, slo.skills",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-006",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    4,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 2 never produced a sine-based sun-ray length to check against (see the group headline). The extension now simply finds the sun-ray length with cosine: 9.0 ÷ 0.6018 = 14.96 m.",
+   "lesson": 3,
+   "group": "G1",
+   "old": "checking it against the value obtained from sine in Lesson 2.",
+   "new": "(9.0 ÷ 0.6018 ≈ 14.96 m), the missing length that Lesson 2 needed. They keep this number for Lesson 4.",
+   "where": "Lesson 3, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-007",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the Lesson 2 fix: removes the check against a sine result that does not exist.",
+   "lesson": 3,
+   "group": "G1",
+   "old": "Does that length match what you calculated using sine in Lesson 2? If it does not, find the error.",
+   "new": "This is the length Lesson 2 could not find. Keep it: in Lesson 4 you can use it to check the tree height.",
+   "where": "Lesson 3, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-008",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].sensemakingStrategy",
+   "criteria": [
+    4,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the Lesson 2 fix. Also removes a promise that Pythagorean relationships are formalised in Lessons 6 and 7 (they are not part of this sub-strand's lessons).",
+   "lesson": 3,
+   "group": "G1",
+   "old": "Asking learners to use cosine to find the sun-ray length and cross-check with the sine result from Lesson 2 is a coherence check — both approaches must give the same hypotenuse, reinforcing that sine and cosine are complementary tools describing the same triangle. This foreshadows the Pythagorean and complementary relationships to be formalised in Lessons 6 and 7.",
+   "new": "Asking learners to use cosine to find the sun-ray length and cross-check with the sine result from Lesson 2 supplies the length that sine needed in Lesson 2: once the sun-ray is known, sine gives the tree height (14.96 × 0.7986 ≈ 11.95 m). It shows sine and cosine describing the same triangle and foreshadows the complementary relationship formalised in Lesson 6.",
+   "where": "Lesson 3, Model Building Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-009",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old check was wrong: 1.6 ÷ sin 53° is about 2.0 m, not 14.96 m. Recomputed: 9.0 ÷ 0.6018 = 14.955; 14.955 × 0.7986 = 11.94; the extension answer is about 14.96 m.",
+   "lesson": 3,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (cosine of acute angles); OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry",
+   "group": "G1",
+   "old": "The extension calculation should yield hypotenuse approximately equal to 9.0 divided by 0.6018 which is approximately 14.96 m, consistent with 1.6 divided by sin 53 degrees from Lesson 2 (approximately 14.96 m if the tree height was calculated as approximately 11.95 m and used as opposite). Teacher notes any discrepancy as a discussion seed for Lesson 4.",
+   "new": "The extension calculation should yield a hypotenuse of 9.0 divided by 0.6018, approximately 14.96 m. Teacher check: 14.96 × sin 53 degrees (0.7986) gives about 11.95 m, matching the tangent result of Lesson 4. Teacher notes any learner who multiplies (9.0 × 0.6018 = 5.4 m) instead of dividing as a discussion seed for Lesson 4.",
+   "where": "Lesson 3, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-010",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    4,
+    13
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "In Lesson 1 each group chose its own angle (mostly 30°, 45° or 60°), so nobody has a 53° triangle of their own to compare with. The comparison now uses each group's own angle.",
+   "lesson": 2,
+   "group": "G2",
+   "group_headline": "Lessons 2 and 5 asked learners to compare with a 53° triangle from Lesson 1, but each group drew its own angle; the comparison now uses the angle they drew",
+   "old": "For 53° and one angle of their choice from Lesson 1, they also retrieve the ratio they computed from their own drawn triangles and write both values side by side for comparison.",
+   "new": "For the angle they chose in Lesson 1 (they look up its sine as well if it is not in the list), they also retrieve the ratio opposite ÷ hypotenuse they computed from their own drawn triangles and write both values side by side for comparison.",
+   "where": "Lesson 2, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-011",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    4,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix: learners compare with the angle they actually drew.",
+   "lesson": 2,
+   "group": "G2",
+   "old": "'Mwangi, what is sin 53°? Now look at the ratio you measured for your 53° triangle in Lesson 1 — what do you notice?'",
+   "new": "'Mwangi, what is the sine of the angle you drew in Lesson 1? Now look at the ratio opposite ÷ hypotenuse you measured — what do you notice?'",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-012",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix, with expected answers for the commonest chosen angles: sin 30° = 0.5000, sin 45° = 0.7071, sin 60° = 0.8660 (from tables).",
+   "lesson": 2,
+   "group": "G2",
+   "old": "(2) For sin 53°, learners can articulate that their Lesson 1 measured ratio (≈ 0.80) matches the table value (0.7986) within measurement error.",
+   "new": "(2) For the angle they drew in Lesson 1, learners can articulate that their measured ratio matches the table value within measurement error (about 0.50 for 30°, 0.71 for 45°, 0.87 for 60°).",
+   "where": "Lesson 2, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-013",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    4,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix: learners drew their own angle in Lesson 1, so the percentage error is worked out for that angle, not for 53°.",
+   "lesson": 5,
+   "group": "G2",
+   "old": "finds the ratio they recorded for tan 53° (or the closest angle they measured).",
+   "new": "finds the opposite ÷ adjacent ratio they recorded for the angle they drew, then uses the calculator to find tan of that same angle.",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-014",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    4,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline.",
+   "lesson": 5,
+   "group": "G2",
+   "old": "Find your measured value for tan 53° or the tangent of the angle closest to 53°. Write it at the top of a new page.",
+   "new": "Find the opposite ÷ adjacent ratio you measured for the angle you drew. Use your calculator to find tan of that same angle, and write both values at the top of a new page.",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-015",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    5,
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Problem 2 could not be solved as written. The 10 m vertical pole is OPPOSITE the 40° angle at the base, so cos 40° cannot be used with it, yet the text told learners it was adjacent. The 10 m is now the distance along the ground, which is adjacent. Checked twice: 10 ÷ cos 40° = 10 ÷ 0.7660 = 13.05 m, and by calculator 13.054 m.",
+   "lesson": 3,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (cosine of acute angles); OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry",
+   "group": "G3",
+   "group_headline": "Lesson 3 problem 2 told learners a vertical 10 m pole was the adjacent side to the base angle (it is the opposite side); the problem now gives the 10 m along the ground",
+   "old": "(2) A telecommunications cable runs from the top of a 10 m vertical pole in Kisumu to a point on the ground, making an angle of 40 degrees with the ground. Find the length of the cable (the hypotenuse) using the adjacent side (10 m) and cos 40 degrees — learners must recognise that 10 m is the adjacent side to the 40-degree angle at the base. Wait — teacher pauses class to confirm the triangle orientation before continuing. (3) A solar panel",
+   "new": "(2) A support cable runs from the top of a pole in Kisumu to a point on the ground 10 m from the foot of the pole, making an angle of 40 degrees with the ground. Find the length of the cable (the hypotenuse) using the adjacent side (10 m) and cos 40 degrees: hypotenuse = 10 ÷ 0.7660 ≈ 13.1 m. Learners must recognise that the 10 m along the ground is adjacent to the 40-degree angle. (3) A solar panel",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-016",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Gives the teacher the expected answer to the mid-activity check for the corrected problem 2.",
+   "lesson": 3,
+   "group": "G3",
+   "old": "Is the 10 m side the opposite or adjacent to the 40-degree angle?",
+   "new": "Is the 10 m side the opposite or adjacent to the 40-degree angle? (Expected: adjacent, because it lies along the ground next to the angle; the pole itself would be the opposite side.)",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-017",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The lesson gave no answer key for the five problems. Recomputed with 4-figure table values: 4 × 0.9781 = 3.91 m; 10 ÷ 0.7660 = 13.05 m; 2.4 × 0.9063 = 2.18 m; 500 × 0.8192 = 409.6 m; 30 × 0.6691 = 20.07 cm.",
+   "lesson": 3,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (cosine of acute angles); OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry",
+   "group": "G3",
+   "old": "Common error to watch for:",
+   "new": "Expected answers: P1 about 3.9 m, P2 about 13.1 m, P3 about 2.2 m, P4 about 410 m, P5 about 20 cm. Common error to watch for:",
+   "where": "Lesson 3, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-018",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The lesson plan added up to about 45 minutes of activity in a 40-minute period. Planned timing now: Predict 4, Observe 11, Explain 13, Driving Question Board 4, Model Building 6, about 38 minutes. The main change is three core problems instead of five (problems 4 and 5 become extension or homework), plus slightly tighter table-reading time.",
+   "lesson": 3,
+   "group": "G4",
+   "group_headline": "Lesson 3 had about 45 minutes of activity in a 40-minute period; five problems become three core problems and table reading is tightened",
+   "old": "Pairs then solve five structured problems involving Kenyan contexts.",
+   "new": "Pairs then solve three core structured problems involving Kenyan contexts (two more are extension or homework).",
+   "where": "Lesson 3, overview",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-019",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 3 timing fix.",
+   "lesson": 3,
+   "group": "G4",
+   "old": "Teacher formally defines cosine and then sets pairs to work on five structured problems. Problem contexts:",
+   "new": "Teacher formally defines cosine and then sets pairs to work on three core structured problems (1 to 3); problems 4 and 5 are extension or homework. Problem contexts:",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-020",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 3 timing fix.",
+   "lesson": 3,
+   "group": "G4",
+   "old": "tackle the five problems on your worksheet",
+   "new": "tackle problems 1 to 3 on your worksheet (4 and 5 are for fast finishers or homework)",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-021",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 3 timing fix (the pair that presents now shows problem 3, the last core problem).",
+   "lesson": 3,
+   "group": "G4",
+   "old": "Problem 4 solution to the class",
+   "new": "Problem 3 solution to the class",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-022",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 3 timing fix: table reading 5 to 4 minutes and comparison 3 to 2 minutes.",
+   "lesson": 3,
+   "group": "G4",
+   "old": "I want complete silence for 5 minutes while you find each value and write it in your table. WAIT 5 minutes, circulating to check table-reading technique. If a learner is struggling, teacher points to the correct row and column silently. After 5 minutes: Compare your cosine column with your sine column. Answer the two observation questions on your worksheet. You have 3 minutes. WAIT 3 minutes.",
+   "new": "I want complete silence for 4 minutes while you find each value and write it in your table. WAIT 4 minutes, circulating to check table-reading technique. If a learner is struggling, teacher points to the correct row and column silently. After 4 minutes: Compare your cosine column with your sine column. Answer the two observation questions on your worksheet. You have 2 minutes. WAIT 2 minutes.",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-023",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 2's list of angles did not include 10°, 70° or 80°, so learners had no sine values to put beside them.",
+   "lesson": 3,
+   "group": "G4",
+   "old": "record them alongside the sine values they already recorded in Lesson 2.",
+   "new": "record them alongside the sine values from Lesson 2 (looking up sine for 10°, 70° and 80° too, which Lesson 2 did not list).",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-024",
+   "kind": "edit",
+   "target": "unit",
+   "path": "storylineThread",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Storyline thread matched to the Lesson 3 change.",
+   "group": "G4",
+   "old": "Pairs solve five structured problems finding unknown sides of right-angled triangles in Kenyan contexts",
+   "new": "Pairs solve three core structured problems (two more as extension) finding unknown sides of right-angled triangles in Kenyan contexts",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-025",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 1 never sets up a yellow/green sticky-note colour code, so teachers could not look it up. The lesson now sets the code itself.",
+   "lesson": 3,
+   "group": "G5",
+   "group_headline": "Four wrong 'in Lesson N we did X' references corrected (colour code, definitions, tan = sin/cos, sin 30° exact)",
+   "old": "a colour code established in Lesson 1",
+   "new": "use the same two colours in every later lesson",
+   "where": "Lesson 3, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-026",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Cosine was defined in Lesson 3, so the definitions come from Lessons 1 to 3.",
+   "lesson": 4,
+   "group": "G5",
+   "old": "from the definitions we built in Lessons 1 and 2.",
+   "new": "from the definitions we built in Lessons 1 to 3.",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-027",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].sensemakingStrategy",
+   "criteria": [
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The tan θ = sin θ ÷ cos θ identity was verified numerically in Lesson 4, not Lesson 7.",
+   "lesson": 8,
+   "group": "G5",
+   "old": "discovered numerically in Lesson 7.",
+   "new": "discovered numerically in Lesson 4.",
+   "where": "Lesson 8, Observe Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-028",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].formativeAssessment",
+   "criteria": [
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Exact special-angle values were derived in Lesson 7; Lesson 4 used tables.",
+   "lesson": 10,
+   "group": "G5",
+   "old": "In Lesson 4 we found that sin 30° = 0.5 exactly",
+   "new": "In Lesson 7 we derived sin 30° = 1/2 exactly",
+   "where": "Lesson 10, Driving Question Board (DQB) Creation, formativeAssessment",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-029",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 5 said learners had already derived special-angle ratios, but special angles are not taught until Lesson 7 (Lesson 6 also asked learners to use 'special-angles tables from Lessons 4 and 5', which do not exist).",
+   "lesson": 5,
+   "group": "G6",
+   "group_headline": "Lessons 5 and 6 referred to special angles learners do not meet until Lesson 7",
+   "old": "By Lesson 5 the class has defined SOH CAH TOA, derived special-angle ratios from 30-60-90 and 45-45-90 triangles, and confirmed that similar triangles give consistent ratios.",
+   "new": "By Lesson 5 the class has defined sine, cosine and tangent (SOH CAH TOA), read their values from tables, derived tan θ = sin θ ÷ cos θ, and used tan 53° to find the mango-tree height.",
+   "where": "Lesson 5, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-030",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].sensemakingStrategy",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Special angles are taught in Lesson 7.",
+   "lesson": 5,
+   "group": "G6",
+   "old": "(hand-drawn triangles, SOH CAH TOA, special angles)",
+   "new": "(hand-drawn triangles, SOH CAH TOA, tables)",
+   "where": "Lesson 5, Predict Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-031",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Learners have sine and cosine tables from Lessons 2 and 3 and calculators from Lesson 5; there are no special-angles tables before Lesson 7.",
+   "lesson": 6,
+   "group": "G6",
+   "old": "Learners use their special-angles tables from Lessons 4–5 for the first three rows and a calculator (or ARES tool) for the last two.",
+   "new": "Learners use their sine and cosine tables from Lessons 2–3, or a calculator (or ARES tool) as in Lesson 5, for all five rows.",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-032",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline.",
+   "lesson": 6,
+   "group": "G6",
+   "old": "Use your special-angles tables from Lessons 4 and 5.",
+   "new": "Use your sine and cosine tables from Lessons 2 and 3, or your calculator.",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-033",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Calling out every learner's value takes too long in a class of 40 to 60 (about 4 minutes) in a lesson already planned to the minute. Groups now report for their members. This brings the lesson's planned activity from about 80 minutes to about 76, leaving a little slack for shared calculators.",
+   "lesson": 5,
+   "group": "G7",
+   "group_headline": "Lesson 5 was planned to the full 80 minutes with no slack; the class tally now takes group reports instead of every learner calling out",
+   "old": "by asking each learner to call out their percentage error while a class frequency tally is built on the board.",
+   "new": "by asking each group to report the percentage errors of its members while a class frequency tally is built on the board.",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-034",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 5 timing fix.",
+   "lesson": 5,
+   "group": "G7",
+   "old": "I am going to go around the room. When I point to you, call out your percentage error — just the number. I will tally on the board.' Record a frequency distribution on the board (e.g., 0–2%, 2–5%, 5–10%, >10%). After collecting data from all learners say:",
+   "new": "I am going to go around the groups. When I point to your group, call out each member's percentage error — just the numbers. I will tally on the board.' Record a frequency distribution on the board (e.g., 0–2%, 2–5%, 5–10%, >10%). After collecting data from all groups say:",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-035",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Grade 10 learners have not met the unit circle, and the phrase does not explain what a calculator does. A calculator uses a built-in accurate calculation of the ratio for each angle; the teacher can add that it is not read off a drawing.",
+   "lesson": 5,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions (introduction); KICD Grade 10 curriculum design, Mathematics, Trigonometry 1, outcome a",
+   "old": "(ultimately rooted in the unit circle)",
+   "new": "(a stored, accurately calculated value for that angle, not a drawing)",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-036",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The angle that complements the sun's elevation at the top of the tree is the angle between the sun's ray and the tree, not an 'angle of depression' (angles of depression are measured down from the horizontal and are taught in Lesson 9).",
+   "lesson": 6,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry (cofunction identities); KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1, outcome b",
+   "group": "G8",
+   "group_headline": "Lesson 6 implied the identity means one angle reading is enough to find the tree height, and called the complement an 'angle of depression'; both corrected",
+   "old": "the sine of the sun's elevation angle equals the cosine of the complementary depression angle,",
+   "new": "the sine of the sun's elevation angle equals the cosine of its complement (the angle between the sun's ray and the upright tree),",
+   "where": "Lesson 6, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-037",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The identity does not make one angle reading enough to find a height; a length is always needed too. Rewritten so the class answer on the Driving Question Board is correct.",
+   "lesson": 6,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry (cofunction identities)",
+   "group": "G8",
+   "old": "'Because sine and cosine of complementary angles are equal, a surveyor only needs one clinometer reading — either the elevation angle OR its complement — to compute the tree height.'",
+   "new": "'Because sin θ = cos(90° − θ), the angle at the ground and the angle at the top of the tree give the same ratio of sides, so a surveyor can use sine or cosine, whichever fits the side that is known. To find the height the surveyor still needs one measured length as well as an angle.'",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-038",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline, in the Summary Table prompt.",
+   "lesson": 6,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry (cofunction identities)",
+   "group": "G8",
+   "old": "only needs one clinometer reading — the sun's elevation angle θ — to calculate the tree height, because sin θ and cos(90° − θ) reference the same ratio of sides in the same triangle.",
+   "new": "can use the angle at the ground (θ) or the angle at the top of the tree (90° − θ): sin θ and cos(90° − θ) are the same ratio of sides in the same triangle. One angle and one measured length are still needed to find the tree height.",
+   "where": "Lesson 6, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-039",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Complementary angles were Lesson 6; Lesson 8 is about applying the exact special-angle values.",
+   "lesson": 7,
+   "group": "G9",
+   "group_headline": "Lesson 7 told learners Lesson 8 was about complementary angles (that was Lesson 6); Lesson 8 applies exact values",
+   "old": "In Lesson 8, we will look at the relationship between complementary angles more deeply — your wondering questions today will guide us there.",
+   "new": "In Lesson 8, we will use these exact values to solve real problems without a calculator — your wondering questions today will help us choose which ones to try.",
+   "where": "Lesson 7, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-040",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "criteria": [
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline.",
+   "lesson": 7,
+   "group": "G9",
+   "old": "shape the inquiry direction of Lesson 8 on complementary-angle relationships?",
+   "new": "shape the problems chosen for Lesson 8?",
+   "where": "Lesson 7, teacherReflection",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-041",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The equilateral triangle construction has no angle near 90°, so the question could not be answered from it. A ladder (a right-angled triangle whose base angle grows towards 90°) shows the adjacent side shrinking to zero, so tan 90° is undefined: dividing by zero.",
+   "lesson": 7,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry",
+   "old": "In our equilateral triangle construction, what happens to the Opposite side as the angle approaches 90°? What about the Adjacent?'",
+   "new": "Imagine a ladder leaning on a wall: as the angle at the ground gets closer and closer to 90°, what happens to the Adjacent side along the ground? What does tan θ = Opposite ÷ Adjacent then do?'",
+   "where": "Lesson 7, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-042",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The sin θ = cos(90° − θ) identity was discovered and proved in Lesson 6, so Lesson 7 asks learners to recognise it rather than discover it again.",
+   "lesson": 7,
+   "old": "(ii) What is the relationship between sin θ and cos(90° − θ) for any special angle?",
+   "new": "(ii) Which identity from Lesson 6 does your table confirm for sin θ and cos(90° − θ) at the special angles?",
+   "where": "Lesson 7, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-043",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1,
+    4,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Lesson 8 repeated Lesson 7: guessing the special-angle values, deriving them again with equilateral and isosceles right-angled triangles, and the 60°-sun mango-tree calculation (9√3 m) all appeared in both lessons. Lesson 8 is now retrieval, a short re-check, and new problems (including working backwards from an exact height to the angle). Teachers decide whether to keep this redesign or merge the two lessons.",
+   "lesson": 8,
+   "group": "G10",
+   "group_headline": "Lessons 7 and 8 both derived the special-angle values and both solved the same 60° mango-tree problem; Lesson 8 now recalls and applies the values, with a new backwards problem",
+   "old": "Now, in Lesson 8, they discover that for five special angles the ratios are exact — no approximation needed.",
+   "new": "In Lesson 7 they derived exact values for five special angles; in Lesson 8 they recall those values from memory, re-check them quickly with card triangles, and use them without a calculator to solve new problems.",
+   "where": "Lesson 8, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-044",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    4,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 8 redesign.",
+   "lesson": 8,
+   "group": "G10",
+   "old": "Learners begin by predicting exact ratio values for 30°, 45°, and 60° using symmetry and prior knowledge of equilateral and isosceles right triangles. They then derive the exact values through a structured card-triangle activity and validate them against their calculator/table findings from earlier lessons.",
+   "new": "Learners begin by recalling from memory, with passport cards closed, the exact ratio values they derived in Lesson 7. They then re-check them quickly with card triangles and validate them against their calculator/table findings from earlier lessons.",
+   "where": "Lesson 8, overview",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-045",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 8 redesign: this is retrieval of Lesson 7, not a first guess.",
+   "lesson": 8,
+   "group": "G10",
+   "old": "using only memory, symmetry reasoning, or any prior knowledge.",
+   "new": "from memory of Lesson 7 (passport cards closed), using symmetry reasoning to rebuild any value they cannot recall.",
+   "where": "Lesson 8, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-046",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].sensemakingStrategy",
+   "criteria": [
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 8 redesign.",
+   "lesson": 8,
+   "group": "G10",
+   "old": "Activation of Prior Knowledge + Prediction Journal. Learners surface informal geometric intuitions (e.g., 'at 45° the triangle looks symmetric so sin = cos') before formal derivation.",
+   "new": "Retrieval practice + Prediction Journal. Learners bring back what they derived in Lesson 7 and surface any gaps (e.g., 'at 45° the triangle is symmetric so sin = cos') before the quick re-check.",
+   "where": "Lesson 8, Predict Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-047",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3,
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 8 redesign: the card activity is now a check, not a new derivation.",
+   "lesson": 8,
+   "group": "G10",
+   "old": "Groups of 4 receive two pre-cut card triangles:",
+   "new": "Groups of 4 receive two pre-cut card triangles to re-derive quickly (about 10 minutes) and check the values they found in Lesson 7:",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-048",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 8 redesign: the time saved on re-deriving goes to the new problems in the Explain phase.",
+   "lesson": 8,
+   "group": "G10",
+   "old": "Allow 18 minutes for Steps 1–5. Circulate; at the 8-minute mark cold-call one group: 'Kamau, what did your group get for the altitude of the equilateral triangle? How did you get √3?' WAIT 12 seconds. If groups stall on √3, prompt: 'What theorem connects sides of a right triangle? Use it on the 30-60-90 triangle.' At the 14-minute mark",
+   "new": "Allow 10 minutes for Steps 1–5. Circulate; at the 5-minute mark cold-call one group: 'Kamau, what did your group get for the altitude of the equilateral triangle? How did you get √3?' WAIT 12 seconds. If groups stall on √3, prompt: 'What theorem connects sides of a right triangle? Use it on the 30-60-90 triangle.' At the 8-minute mark",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-049",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old question (60° sun, 9.0 m shadow, height 9√3 m) was exactly the Lesson 7 Explain problem and the Lesson 7 model table. The new question reverses it: tan θ = 9√3 ÷ 9 = √3, so θ = 60° (checked: tan 60° = √3).",
+   "lesson": 8,
+   "group": "G10",
+   "old": "(3) Reconnect to the phenomenon: if the Kisumu mango-tree clinometer had read exactly 60° instead of 53°, and the shadow was still 9.0 m, what would the tree height be using an exact value?",
+   "new": "(3) Work backwards: a tree on a different compound is 9√3 m tall and casts a 9.0 m shadow. Use tan θ = height ÷ shadow and your special-angles table to find the sun angle without a calculator.",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-050",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 8 redesign (the Part B Q3 handling now matches the new backwards question).",
+   "lesson": 8,
+   "group": "G10",
+   "old": "cold-call 2 pairs for Part B Q3: 'Omondi, what tree height did you get? Show your working on the board.' WAIT 12 seconds. Confirm: tan 60° = h/9.0 → √3 = h/9.0 → h = 9√3 ≈ 15.6 m. Say: 'Notice — same method as in our Kisumu phenomenon, but now exact. The angle and the shadow length are all we need.'",
+   "new": "cold-call 2 pairs for Part B Q3: 'Omondi, which angle did you get, and how do you know? Show your working on the board.' WAIT 12 seconds. Confirm: tan θ = 9√3 ÷ 9.0 = √3, and tan 60° = √3, so θ = 60°. Say: 'Notice — we have turned the Lesson 7 problem around: the same exact values give the angle as well as the height. An angle and a shadow give a height, and a height and a shadow give an angle.'",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-051",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 8 redesign.",
+   "lesson": 8,
+   "group": "G10",
+   "old": "(3) Q3 answer of 9√3 m with tan 60° = √3 substituted explicitly.",
+   "new": "(3) Q3 answer θ = 60°, with tan θ = 9√3 ÷ 9.0 = √3 shown and matched to the table.",
+   "where": "Lesson 8, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-052",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].sensemakingStrategy",
+   "criteria": [
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 8 redesign.",
+   "lesson": 8,
+   "group": "G10",
+   "old": "learners must carry the SOH CAH TOA structure from Lessons 1–7, substitute a special angle, and produce an exact answer",
+   "new": "learners must carry the SOH CAH TOA structure from Lessons 1–7 and use an exact special-angle value in reverse, to find an angle",
+   "where": "Lesson 8, Explain Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-053",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old answer key was wrong and contradicted itself: it said cos 30° or sin 60° equals ½ and gave 8 m, then 8√3/3 m. Both cos 30° and sin 60° equal √3/2, and 4 ÷ (√3/2) = 8/√3 = 4.62 m. Checked twice by hand and by calculator (4 ÷ 0.8660 = 4.619).",
+   "lesson": 8,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Trigonometry 1, outcome d (special angles); OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry",
+   "old": "(2) Working shows cos 30° or sin 60° = ½ used correctly to give hypotenuse = 8 m for Q2 (note: hypotenuse = 4/cos 30° = 4/(√3/2) = 8/√3 = 8√3/3 m, OR if using sin: sin 30°=opp/hyp so hyp = 4/sin 60° — accept both approaches with correct working);",
+   "new": "(2) Working for Q2 shows the brace is the hypotenuse and the 4 m beam is the adjacent side: hypotenuse = 4 ÷ cos 30° = 4 ÷ (√3/2) = 8/√3 = 8√3/3 ≈ 4.62 m (accept 4 ÷ sin 60°, which is the same value because sin 60° = cos 30°);",
+   "where": "Lesson 8, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-054",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    1,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 9 is about angles of elevation and depression with a clinometer, not a general test beyond special angles; teachers could not follow the promise.",
+   "lesson": 8,
+   "group": "G11",
+   "group_headline": "Lesson 8 promised that Lesson 9 would 'test non-special angles' and never mentioned the clinometer learners need; the previews now match Lesson 9",
+   "old": "but Lesson 9 will test whether this works beyond special angles, at any angle, for any tree in Kenya.'",
+   "new": "but Lesson 9 takes the method outdoors: we will measure a real angle of elevation with a clinometer, and it will not be a special angle, so we will use our tables or calculators.'",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-055",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    2,
+    8
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline. Also asks groups to bring the clinometer they make, which Lesson 9 now uses (KICD sub-strand project); see the Lesson 9 clinometer group.",
+   "lesson": 8,
+   "group": "G11",
+   "old": "In Lesson 9 we will test it against angles that are NOT special — does it still hold? Bring this model to every remaining lesson.",
+   "new": "In Lesson 9 we measure a real angle outside with a clinometer. It will not be a special angle, so we will use our tables and calculators. Bring your clinometer for Lesson 9: each group makes a simple one at home from a protractor or cardboard, a straw, string and a small stone, with help from a parent or guardian. Bring this model to every remaining lesson.",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-056",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "criteria": [
+    1,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Interpolation is not taught anywhere in this sub-strand, and Lesson 9 does not extend to non-special angles in that way.",
+   "lesson": 8,
+   "group": "G11",
+   "old": "extend to non-special angles using tables and interpolation in Lesson 9",
+   "new": "use tan with real measured angles in Lesson 9",
+   "where": "Lesson 8, teacherReflection",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-057",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "duration",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Lesson 9 plans about 60 minutes of activity: Predict 6, video and reading and worked examples and glide-path problem 25, outdoor clinometer work with error discussion 18, Driving Question Board 6, Model Building 7. That does not fit a 40-minute period, and an outdoor practical for a large class needs time to move and share equipment. It is now a double period (80 minutes). The alternative is to keep 40 minutes and move the worked examples and glide-path problem to homework; the teacher decides which suits the timetable.",
+   "lesson": 9,
+   "group": "G12",
+   "group_headline": "Lesson 9 planned about 60 minutes of activity in a 40-minute period; it is now a double period (80 minutes), and the unit total is recomputed",
+   "old": "40 minutes",
+   "new": "80 minutes",
+   "where": "Lesson 9, duration",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-058",
+   "kind": "edit",
+   "target": "unit",
+   "path": "totalDuration",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Recomputed from the real lesson durations: 40 + 80 + 40 + 80 + 80 + 80 + 80 + 80 + 80 (Lesson 9, now 80) + 80 = 720 minutes. The old line said 10 × 40 = 400, which matched neither the lesson headings nor the phase minutes.",
+   "group": "G12",
+   "old": "10 lessons × 40 minutes = 400 minutes total",
+   "new": "10 lessons: 2 single periods × 40 minutes (Lessons 1 and 3) + 8 double periods × 80 minutes (Lessons 2, 4, 5, 6, 7, 8, 9, 10) = 720 minutes (12 hours) in total",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-059",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old wording ('equal when the observer and the object are at the same base level') is muddled: if they were at the same level there would be no angle. The equality is between the elevation from the lower point and the depression from the higher point (alternate angles).",
+   "lesson": 9,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1, outcome e; OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry (angles of elevation and depression)",
+   "group": "G13",
+   "group_headline": "Lesson 9 stated the elevation = depression rule wrongly; corrected, with the expected answer for the opening prediction",
+   "old": "and (iii) that these two angles are alternate interior angles and therefore equal in size when the observer and the object are at the same base level.",
+   "new": "and (iii) that the angle of elevation of a high point seen from a low point is equal to the angle of depression of the low point seen from the high point, because they are alternate angles between the two parallel horizontal lines.",
+   "where": "Lesson 9, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-060",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The lesson asked whether the two angles are the same but never told the teacher the answer.",
+   "lesson": 9,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry (angles of elevation and depression)",
+   "group": "G13",
+   "old": "Flag learners who write only the angle or only a length",
+   "new": "Expected answer for the first question: the two angles are equal in size (alternate angles) when the passenger stands at the runway point the pilot is looking at. Flag learners who write only the angle or only a length",
+   "where": "Lesson 9, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-061",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Wilson Airport serves light and regional aircraft; Kenya Airways jets use Jomo Kenyatta International Airport, so the example would not be authentic.",
+   "lesson": 9,
+   "old": "a passenger looking UP at a Kenya Airways plane approaching Wilson Airport",
+   "new": "a passenger looking UP at a small passenger aircraft approaching Wilson Airport",
+   "where": "Lesson 9, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-062",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A 28 m school water tank and a 40 m ranger watch-tower are not realistic (the same lesson expects a school flagpole or tank of about 8 to 10 m). New values: tank 15 × tan 25° = 15 × 0.4663 = 7.0 m; tower 20 ÷ tan 28° = 20 ÷ 0.5317 = 37.6 m. Both recomputed with a calculator (6.99 m, 37.61 m).",
+   "lesson": 9,
+   "old": "Example 1 (Elevation) — A student stands 15 m from the base of the school water tank. The angle of elevation to the top of the tank is 62 degrees. Find the height of the tank. Draw, label, write tan 62 degrees equals height divided by 15, solve: height equals 15 times tan 62 degrees equals 15 times 1.8807 equals 28.2 m. Example 2 (Depression) — A ranger at the top of a 40 m watch-tower at Maasai Mara spots a vehicle on the flat plain. The angle of depression is 28 degrees. How far is the vehicle from the base of the tower? Draw, label, write tan 28 degrees equals 40 divided by distance, solve: distance equals 40 divided by tan 28 degrees equals 40 divided by 0.5317 equals 75.2 m.",
+   "new": "Example 1 (Elevation) — A student stands 15 m from the base of the school water tank. The angle of elevation to the top of the tank is 25 degrees. Find the height of the tank. Draw, label, write tan 25 degrees equals height divided by 15, solve: height equals 15 times tan 25 degrees equals 15 times 0.4663 equals 7.0 m. Example 2 (Depression) — A ranger at the top of a 20 m watch-tower at Maasai Mara spots a vehicle on the flat plain. The angle of depression is 28 degrees. How far is the vehicle from the base of the tower? Draw, label, write tan 28 degrees equals 20 divided by distance, solve: distance equals 20 divided by tan 28 degrees equals 20 divided by 0.5317 equals 37.6 m.",
+   "where": "Lesson 9, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-063",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    2,
+    8
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "The KICD sub-strand project is to make a simple clinometer from locally available materials, and its Creativity and Imagination competency and its Parental Engagement and Environmental Education PCIs depend on it. The lesson only handed out pre-assembled clinometers, so none of these were tied to a real activity. Teachers decide whether learners make the clinometer at home or in class, and which materials they can really find.",
+   "lesson": 9,
+   "group": "G14",
+   "group_headline": "The KICD clinometer project (and the competency and PCIs that depend on it) was missing; groups now bring a clinometer they made, with spares",
+   "old": "Groups of four receive a pre-assembled clinometer (a protractor taped to a 30 cm cardboard strip, with a straw taped along the straight edge and a plumb-line — a piece of string with a small stone — hanging from the centre hole of the protractor).",
+   "new": "Groups of four use the simple clinometer they made as the sub-strand project from locally available materials, with help from a parent or guardian (a protractor taped to a 30 cm cardboard strip, with a straw taped along the straight edge and a plumb-line — a piece of string with a small stone — hanging from the centre hole of the protractor). The teacher keeps a few spare clinometers for groups that did not manage to make one.",
+   "where": "Lesson 9, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-064",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD asks learners to identify shapes that make right-angled triangles in the immediate environment (Environmental Education PCI); this was not in any lesson.",
+   "lesson": 9,
+   "group": "G14",
+   "old": "Ask: What angle are you reading? Which side is the opposite? Which is the adjacent?",
+   "new": "Ask: What angle are you reading? Which side is the opposite? Which is the adjacent? Also ask each group to name two right-angled triangles they can see in the school compound (for example a ladder against a wall, a roof truss, a ramp).",
+   "where": "Lesson 9, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-065",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 9 promised that the 'sloping ground' and 'cannot measure the baseline' questions would be addressed in Lesson 10, but Lesson 10 has no such problem. Promising only what the lessons deliver keeps the Driving Question Board honest.",
+   "lesson": 9,
+   "group": "G15",
+   "group_headline": "Lessons 5 and 9 promised later lessons would answer 'sloping ground' questions that no lesson addresses; the promises now say what is true",
+   "old": "We will begin to address them in Lesson 10.",
+   "new": "Hold on to them: Lesson 10 uses distances we can measure, and any question we cannot yet answer stays on the board as an open question.",
+   "where": "Lesson 9, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-066",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Gives a correct hint (angles of elevation are measured from the horizontal) and avoids promising a full answer in Lesson 9.",
+   "lesson": 5,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry (angles of elevation and depression)",
+   "group": "G15",
+   "old": "We will come back to that when we study angles of elevation and depression. Hold that question.",
+   "new": "We will meet it again when we study angles of elevation and depression: the angle is always measured from the horizontal, not from the slope, so a sloping hill needs extra information. Hold that question.",
+   "where": "Lesson 5, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-067",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].sensemakingStrategy",
+   "criteria": [
+    6
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The model's limits were never stated; teachers need them to answer the 'what if the ground is not flat?' questions that learners raise on the Driving Question Board.",
+   "lesson": 4,
+   "old": "over rote memorisation.",
+   "new": "over rote memorisation. Limits of the model: the triangle assumes level ground, an upright tree and parallel sun rays, so a sloping hill or a leaning mast needs more information than one angle and a shadow.",
+   "where": "Lesson 4, Model Building Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-068",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.knowledge",
+   "criteria": [
+    2,
+    4
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 10 assessed cosec, sec and cot ('all six ratios') but they are never taught in Lessons 1 to 9 and are not in the KICD Grade 10 Trigonometry 1 outcomes. Removed from every place they appear.",
+   "lesson": 10,
+   "group": "G16",
+   "group_headline": "Lesson 10 expected learners to use the reciprocal ratios cosec, sec and cot, which are never taught and are not in the KICD outcomes; removed everywhere",
+   "old": "(sin, cos, tan and their reciprocals) for acute angles define consistent relationships between angles and side lengths in right-angled triangles using SOH CAH TOA, that special angles (0°, 30°, 45°, 60°, 90°) yield exact, memorable ratios derived from 30-60-90 and 45-45-90 triangles, and that complementary-angle identities (sin θ = cos(90°−θ)) link all six ratios into a unified framework",
+   "new": "(sin, cos and tan) for acute angles define consistent relationships between angles and side lengths in right-angled triangles using SOH CAH TOA, that special angles (0°, 30°, 45°, 60°, 90°) yield exact, memorable ratios derived from 30-60-90 and 45-45-90 triangles, and that complementary-angle identities (sin θ = cos(90°−θ)) link the three ratios into a unified framework",
+   "where": "Lesson 10, slo.knowledge",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-069",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline.",
+   "lesson": 10,
+   "group": "G16",
+   "old": "special angles, reciprocal ratios, complementary relationships",
+   "new": "special angles, complementary relationships",
+   "where": "Lesson 10, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-070",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline.",
+   "lesson": 10,
+   "group": "G16",
+   "old": "→ special angles → reciprocals → complementary-identities chain that answers the driving question. The DQB phase closes every prediction and question card posted across all ten lessons. Finally, in the Model Building phase each learner submits an individually annotated final model diagram — a right-angled triangle labelled with all six ratios, the original",
+   "new": "→ special angles → complementary-identities chain that answers the driving question. The DQB phase closes every prediction and question card posted across all ten lessons. Finally, in the Model Building phase each learner submits an individually annotated final model diagram — a right-angled triangle labelled with the three ratios (sin, cos, tan), the original",
+   "where": "Lesson 10, overview",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-071",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline.",
+   "lesson": 10,
+   "group": "G16",
+   "old": "special angles (30°, 45°, 60°), reciprocal ratios (cosec, sec, cot), complementary identities",
+   "new": "special angles (30°, 45°, 60°), complementary identities",
+   "where": "Lesson 10, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-072",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline.",
+   "lesson": 10,
+   "group": "G16",
+   "old": "(2) All six trigonometric ratios written as fractions",
+   "new": "(2) The three trigonometric ratios (sin, cos, tan) written as fractions",
+   "where": "Lesson 10, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-073",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline.",
+   "lesson": 10,
+   "group": "G16",
+   "old": "(sin, cos, tan and their reciprocals cosec, sec, cot)",
+   "new": "(sin, cos and tan)",
+   "where": "Lesson 10, summaryTablePrompt.learned",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-074",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "aresKeywords",
+   "criteria": [
+    11
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Search keywords for the resource matcher no longer ask for reciprocal-ratio resources, which would not match the lesson.",
+   "lesson": 10,
+   "group": "G16",
+   "old": "reciprocal ratios, cosecant secant cotangent, ",
+   "new": "",
+   "where": "Lesson 10, aresKeywords",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-075",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old text said the angle of elevation from the runway to the aircraft is 87°. It is 3° (alternate angles); 87° is the angle between the flight path and the vertical. Checked: sin 3° = 0.0523 = cos 87°, and altitude ÷ slant distance = sin 3° because the altitude is opposite the 3° angle and adjacent to the 87° angle.",
+   "lesson": 10,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry (angles of elevation and depression, cofunction identities); KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1, outcomes b and e",
+   "group": "G17",
+   "group_headline": "Station C said the elevation angle from the runway to the plane was 87°; it is 3° (87° is the angle to the vertical), and the station now reflects this",
+   "old": "(iii) The co-pilot says the angle of elevation from the threshold of the runway to the aircraft is 87°. Explain why this makes sense using the complementary angle identity sin θ = cos(90°−θ).",
+   "new": "(iii) The angle of elevation from the runway threshold to the aircraft is also 3° (alternate angles with the pilot's angle of depression). The co-pilot adds that the flight path makes 87° with the vertical line down to the ground. Show that 3° and 87° are complementary and explain, using sin θ = cos(90°−θ), why altitude ÷ slant distance equals both sin 3° and cos 87°.",
+   "where": "Lesson 10, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-076",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as the group headline.",
+   "lesson": 10,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry (angles of elevation and depression)",
+   "group": "G17",
+   "old": "'The pilot's angle is 3° and the co-pilot says 87°. Where did 87° come from? Convince me with an identity.'",
+   "new": "'The pilot's angle below the horizontal is 3°. Why is the angle of elevation from the runway also 3°? And where does 87° come from: which two lines make it? Convince me with an identity.'",
+   "where": "Lesson 10, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-077",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    5,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Pythagoras cannot check the shorter side by itself, because the longer side is also unknown. Checked: 48 × sin 37° = 28.9 m; 48 × cos 37° = 38.3 m; 28.9² + 38.3² = 2304 = 48².",
+   "lesson": 10,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry",
+   "old": "(iii) Verify using Pythagoras' theorem.",
+   "new": "(iii) Find the longer side using cos 37°, then verify with Pythagoras' theorem that the two sides and the 48 m diagonal fit together.",
+   "where": "Lesson 10, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-078",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Gives teachers the answers for all three stations. Recomputed: 48 sin 37° = 28.89; 48 cos 37° = 38.33; 30 tan 60° = 51.96 and 30 ÷ cos 60° = 60 (checks: √(30² + 51.96²) = 60); 300 ÷ sin 3° = 5732; 300 ÷ tan 3° = 5724.",
+   "lesson": 10,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry",
+   "old": "(2) At Station B, learners write '30√3 m' or '51.96 m' — either is acceptable but exact form is preferred.",
+   "new": "(2) Expected answers: Station A shorter side about 28.9 m, longer side about 38.3 m; Station B mast height 30√3 m or 51.96 m (either is acceptable but exact form is preferred) and wire length 30 ÷ cos 60° = 60 m; Station C slant distance about 5.7 km and horizontal ground distance about 5.7 km (300 ÷ sin 3° ≈ 5732 m; 300 ÷ tan 3° ≈ 5724 m).",
+   "where": "Lesson 10, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-079",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "9.0 × tan 53° = 9.0 × 1.3270 = 11.94 m, not 12.0 m, as Lesson 4 and the Final Explanation already say. The difference comes from the rounded angle: tan 53.13° = 1.3333, giving exactly 12.0 m. Checked by calculator.",
+   "lesson": 10,
+   "reference": "OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry",
+   "old": "(tree height ≈ 12.0 m from shadow ratio; ≈ 12.0 m from tan 53° × 9.0 m)",
+   "new": "(tree height ≈ 12.0 m from the shadow ratio; ≈ 11.9 m from 9.0 × tan 53°; the small difference is because 53° is rounded, the exact angle being tan⁻¹(1.6 ÷ 1.2) = 53.13°)",
+   "where": "Lesson 10, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-080",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 10 planned about 119 minutes of activity in an 80-minute period (stations 38, presentations and concept map 32, board closure 18, final model 21 plus the opening 10). New plan: Predict 8, stations 3 × 6 + transitions + poll about 22, presentations 3 × 4 minutes plus concept map and driving-question writing about 20, Driving Question Board closure about 10, final model about 15: about 75 minutes. Station tasks are short enough for 6 minutes; a class that runs late can treat sub-question (iii) as extension.",
+   "lesson": 10,
+   "group": "G18",
+   "group_headline": "Lesson 10 planned about 119 minutes of activity in an 80-minute period; stations, presentations, board review and model time are shortened to about 75 minutes",
+   "old": "(12 minutes each, 1-minute transition)",
+   "new": "(6 minutes each, 1-minute transition)",
+   "where": "Lesson 10, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-081",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 10 timing fix.",
+   "lesson": 10,
+   "group": "G18",
+   "old": "Set a visible 12-minute timer. At the 11-minute mark say:",
+   "new": "Set a visible 6-minute timer. At the 5-minute mark say:",
+   "where": "Lesson 10, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-082",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 10 timing fix.",
+   "lesson": 10,
+   "group": "G18",
+   "old": "(5 minutes per group, 15 minutes total)",
+   "new": "(about 4 minutes per group including the critique, 12 minutes total)",
+   "where": "Lesson 10, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-083",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 10 timing fix.",
+   "lesson": 10,
+   "group": "G18",
+   "old": "They spend 8 minutes marking each card",
+   "new": "They spend 4 minutes marking each card",
+   "where": "Lesson 10, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-084",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 10 timing fix.",
+   "lesson": 10,
+   "group": "G18",
+   "old": "In 8 minutes, stamp every card. Be honest — if something is still unclear to you, mark it with a question mark. That is not failure; that is intellectual honesty.' After 8 minutes, say:",
+   "new": "In 4 minutes, stamp every card. Be honest — if something is still unclear to you, mark it with a question mark. That is not failure; that is intellectual honesty.' After 4 minutes, say:",
+   "where": "Lesson 10, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-085",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 10 timing fix.",
+   "lesson": 10,
+   "group": "G18",
+   "old": "Learners spend 15 minutes on their models.",
+   "new": "Learners spend 12 minutes on their models.",
+   "where": "Lesson 10, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-086",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 10 timing fix.",
+   "lesson": 10,
+   "group": "G18",
+   "old": "You have 15 minutes. Work in silence — this is individual. I will be circulating and I may ask you to explain any part of your model to me verbally.' Circulate every 2 minutes. When you see a learner struggling with the mango-tree calculation, crouch to their level and ask quietly: 'Which sides do you know? Which ratio connects them?' — do not give the answer. When you see a strong model, ask the learner: 'Can you add one more thing that would make this model useful to someone who has never studied trigonometry?' At the 13-minute mark say: 'Two minutes — make sure your Final Explanation box is complete and your mango-tree answers are circled.' At 15 minutes say:",
+   "new": "You have 12 minutes. Work in silence — this is individual. I will be circulating and I may ask you to explain any part of your model to me verbally.' Circulate every 2 minutes. When you see a learner struggling with the mango-tree calculation, crouch to their level and ask quietly: 'Which sides do you know? Which ratio connects them?' — do not give the answer. When you see a strong model, ask the learner: 'Can you add one more thing that would make this model useful to someone who has never studied trigonometry?' At the 10-minute mark say: 'Two minutes — make sure your Final Explanation box is complete and your mango-tree answers are circled.' At 12 minutes say:",
+   "where": "Lesson 10, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-087",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 1 asked each group to draw three triangles, measure nine sides and work out nine ratios in the Observe and Explain phases, which does not fit 40 minutes. Group members now share the drawing and the calculations, and the overview gives a pacing guide: Predict 6 + Observe 12 + Explain 10 + Driving Question Board 6 + Model Building 6 = 40.",
+   "lesson": 1,
+   "group": "G19",
+   "group_headline": "Lesson 1 asked each group to draw three triangles and compute nine ratios in a 40-minute period; the work is now shared among group members, with a pacing guide",
+   "old": "leaving the full calculation for Lesson 4.",
+   "new": "leaving the full calculation for Lesson 4. Pacing for the 40-minute period: Predict 6, Observe 12, Explain 10, Driving Question Board 6, Model Building 6.",
+   "where": "Lesson 1, overview",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-088",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 1 timing fix.",
+   "lesson": 1,
+   "group": "G19",
+   "old": "Draw all three triangles on the same sheet of paper. Measure every side carefully. Record your values in the table. You have seven minutes. [WAIT TIME: 7 minutes",
+   "new": "Share the work: three of you each draw one of the triangles on the same sheet (all with the same angle) while the fourth checks the angle and the labels. Measure every side carefully. Record your values in the table. You have ten minutes. [WAIT TIME: 10 minutes",
+   "where": "Lesson 1, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-089",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 1 timing fix.",
+   "lesson": 1,
+   "group": "G19",
+   "old": "They compute each ratio as a decimal to two decimal places for all three triangles.",
+   "new": "Each member computes the three ratios, to two decimal places, for the triangle they drew, and the group completes the shared table.",
+   "where": "Lesson 1, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-090",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The sub-strand had no language supports for English learners and no accommodations or alternative ways to show understanding. Short supports are added to four lessons where they matter most (first vocabulary, the construction work, the outdoor practical and the final model). The Kiswahili terms are my best suggestions and must be confirmed by a teacher; the teacher also decides which access options suit the learners in the class.",
+   "lesson": 1,
+   "group": "G20",
+   "group_headline": "Added language support (Kiswahili terms to be confirmed by teachers) and alternative ways to take part or show understanding in Lessons 1, 7, 9 and 10",
+   "old": "Do you notice anything interesting about the measurements?",
+   "new": "Do you notice anything interesting about the measurements? Language support: write each key word in English with a Kiswahili support beside it on the board (angle = pembe, triangle = pembetatu, height = urefu, shadow = kivuli, ratio = uwiano) and let learners discuss in Kiswahili or their home language before writing in English. Access: a learner who finds protractor or measuring work hard can be the group's checker or recorder, or use a large-print or raised (string on card) triangle; any learner may show the pattern by drawing, speaking or writing.",
+   "where": "Lesson 1, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-091",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the inclusion group (alternative ways to take part and show understanding).",
+   "lesson": 7,
+   "group": "G20",
+   "old": "Give 3 minutes for annotation.",
+   "new": "Give 3 minutes for annotation. Access: learners who find compass or protractor work hard can fold pre-cut card triangles instead of drawing, and any learner may explain their values to the group aloud or on a labelled diagram instead of writing the full table.",
+   "where": "Lesson 7, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-092",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the inclusion group (every learner has a real role in the outdoor practical).",
+   "lesson": 9,
+   "group": "G20",
+   "old": "How might a professional surveyor reduce this error? Wait 8 seconds. Cold-call two students.",
+   "new": "How might a professional surveyor reduce this error? Wait 8 seconds. Cold-call two students. Access: a learner who cannot go outdoors or hold the clinometer steadily can be the recorder, tape holder or calculator, or join the indoor wall alternative, so that every group member has a real role.",
+   "where": "Lesson 9, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-093",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the inclusion group (more than one way to show understanding).",
+   "lesson": 10,
+   "group": "G20",
+   "old": "Collect all final models.",
+   "new": "Collect all final models. Learners who find writing hard may explain their model aloud to you or a partner instead, and Kiswahili labels are accepted beside the English mathematical terms.",
+   "where": "Lesson 10, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-094",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].phase",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Phase 4 is always called 'Driving Question Board' in the template. The old heading said 'Creation' in all ten lessons, although only Lesson 1 creates the board.",
+   "lesson": 1,
+   "group": "G21",
+   "group_headline": "Phase 4 heading is now 'Driving Question Board' in all ten lessons (it said '... (DQB) Creation', although only Lesson 1 creates the board)",
+   "old": "Driving Question Board (DQB) Creation",
+   "new": "Driving Question Board",
+   "where": "Lesson 1, Driving Question Board, phase",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-095",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].phase",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Phase 4 is always called 'Driving Question Board' in the template. The old heading said 'Creation' in all ten lessons, although only Lesson 1 creates the board.",
+   "lesson": 2,
+   "group": "G21",
+   "old": "Driving Question Board (DQB) Creation",
+   "new": "Driving Question Board",
+   "where": "Lesson 2, Driving Question Board, phase",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-096",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].phase",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Phase 4 is always called 'Driving Question Board' in the template. The old heading said 'Creation' in all ten lessons, although only Lesson 1 creates the board.",
+   "lesson": 3,
+   "group": "G21",
+   "old": "Driving Question Board (DQB) Creation",
+   "new": "Driving Question Board",
+   "where": "Lesson 3, Driving Question Board, phase",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-097",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].phase",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Phase 4 is always called 'Driving Question Board' in the template. The old heading said 'Creation' in all ten lessons, although only Lesson 1 creates the board.",
+   "lesson": 4,
+   "group": "G21",
+   "old": "Driving Question Board (DQB) Creation",
+   "new": "Driving Question Board",
+   "where": "Lesson 4, Driving Question Board, phase",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-098",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].phase",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Phase 4 is always called 'Driving Question Board' in the template. The old heading said 'Creation' in all ten lessons, although only Lesson 1 creates the board.",
+   "lesson": 5,
+   "group": "G21",
+   "old": "Driving Question Board (DQB) Creation",
+   "new": "Driving Question Board",
+   "where": "Lesson 5, Driving Question Board, phase",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-099",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].phase",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Phase 4 is always called 'Driving Question Board' in the template. The old heading said 'Creation' in all ten lessons, although only Lesson 1 creates the board.",
+   "lesson": 6,
+   "group": "G21",
+   "old": "Driving Question Board (DQB) Creation",
+   "new": "Driving Question Board",
+   "where": "Lesson 6, Driving Question Board, phase",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-100",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].phase",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Phase 4 is always called 'Driving Question Board' in the template. The old heading said 'Creation' in all ten lessons, although only Lesson 1 creates the board.",
+   "lesson": 7,
+   "group": "G21",
+   "old": "Driving Question Board (DQB) Creation",
+   "new": "Driving Question Board",
+   "where": "Lesson 7, Driving Question Board, phase",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-101",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].phase",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Phase 4 is always called 'Driving Question Board' in the template. The old heading said 'Creation' in all ten lessons, although only Lesson 1 creates the board.",
+   "lesson": 8,
+   "group": "G21",
+   "old": "Driving Question Board (DQB) Creation",
+   "new": "Driving Question Board",
+   "where": "Lesson 8, Driving Question Board, phase",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-102",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].phase",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Phase 4 is always called 'Driving Question Board' in the template. The old heading said 'Creation' in all ten lessons, although only Lesson 1 creates the board.",
+   "lesson": 9,
+   "group": "G21",
+   "old": "Driving Question Board (DQB) Creation",
+   "new": "Driving Question Board",
+   "where": "Lesson 9, Driving Question Board, phase",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-103",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].phase",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Phase 4 is always called 'Driving Question Board' in the template. The old heading said 'Creation' in all ten lessons, although only Lesson 1 creates the board.",
+   "lesson": 10,
+   "group": "G21",
+   "old": "Driving Question Board (DQB) Creation",
+   "new": "Driving Question Board",
+   "where": "Lesson 10, Driving Question Board, phase",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-104",
+   "kind": "set",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The unit's learning outcomes were nine paraphrased outcomes (a to i), some of them not KICD outcomes. They are replaced by the six KICD March 2025 outcomes (a to f) word for word, with a line showing where each is taught and assessed. Teaching 0° as a limit case in Lesson 7 is kept as an extra beyond the KICD list.",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (specific learning outcomes)",
+   "group": "G22",
+   "group_headline": "The unit text now uses KICD March 2025 wording for the outcomes, key inquiry questions, competencies, values and PCIs, and shows where each outcome is taught and assessed",
+   "value": "By the end of the sub strand, the learner should be able to:\na) determine trigonometric ratios of acute angles from mathematical tables and calculators,\nb) relate sines and cosines of complementary angles,\nc) relate the sine, cosine and tangent of acute angles,\nd) determine trigonometric ratios of special angles: 30°, 45°, 60° and 90° using triangles,\ne) apply trigonometric ratios to angles of elevation and depression,\nf) reflect on the use of trigonometry in real life situations.\n\nWhere taught and assessed: a) Lessons 2 to 5, Final Explanation Parts 2 and 5; b) Lesson 6, Part 4; c) Lessons 1 and 4, Part 2; d) Lessons 7 and 8, Part 4; e) Lessons 9 and 10, Part 5; f) Lesson 10 and Part 5(c).",
+   "old": "By the end of the sub-strand, the learner should be able to:\na) define sine, cosine and tangent of an acute angle using measurements from right-angled triangles drawn by hand,\nb) determine trigonometric ratios of acute angles using mathematical tables,\nc) determine trigonometric ratios of acute angles using a calculator,\nd) establish the relationship between sine, cosine and tangent of acute angles (tan θ = sin θ / cos θ),\ne) identify and apply the relationship between trigonometric ratios of complementary angles (sin θ = cos(90° − θ)),\nf) derive and recall exact trigonometric ratios for special angles (0°, 30°, 45°, 60°, 90°),\ng) distinguish between angles of elevation and angles of depression in diagrams and real contexts,\nh) apply trigonometric ratios to solve problems involving heights and distances in real-life Kenyan contexts,\ni) appreciate the relevance of trigonometry in architecture, surveying, navigation, and everyday problem-solving.",
+   "new": "By the end of the sub strand, the learner should be able to:\na) determine trigonometric ratios of acute angles from mathematical tables and calculators,\nb) relate sines and cosines of complementary angles,\nc) relate the sine, cosine and tangent of acute angles,\nd) determine trigonometric ratios of special angles: 30°, 45°, 60° and 90° using triangles,\ne) apply trigonometric ratios to angles of elevation and depression,\nf) reflect on the use of trigonometry in real life situations.\n\nWhere taught and assessed: a) Lessons 2 to 5, Final Explanation Parts 2 and 5; b) Lesson 6, Part 4; c) Lessons 1 and 4, Part 2; d) Lessons 7 and 8, Part 4; e) Lessons 9 and 10, Part 5; f) Lesson 10 and Part 5(c).",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-105",
+   "kind": "set",
+   "target": "unit",
+   "path": "content",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Restores the four KICD content bullets word for word (the data had a ten-bullet paraphrase). The lessons still teach the same material.",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (sub-strand content)",
+   "group": "G22",
+   "value": "• Trigonometric ratios of acute angles\n• Sines and Cosines of complementary angles\n• Trigonometric ratios of special angle\n• Application of trigonometric ratios",
+   "old": "• Trigonometric ratios of acute angles (sine, cosine, tangent defined from right-angled triangles)\n• Sine of an acute angle — definition, values, and use of mathematical tables\n• Cosine of an acute angle — definition, values, and use of mathematical tables\n• Tangent of an acute angle — definition, values, and use of mathematical tables\n• Finding trigonometric ratios using calculators\n• Relationship between sine, cosine and tangent of acute angles (tan θ = sin θ / cos θ)\n• Trigonometric ratios of complementary angles (sin θ = cos(90° − θ))\n• Special angles (0°, 30°, 45°, 60°, 90°) — exact values without tables\n• Angles of elevation and depression\n• Application of trigonometry in real-life situations (heights, distances, surveying)",
+   "new": "• Trigonometric ratios of acute angles\n• Sines and Cosines of complementary angles\n• Trigonometric ratios of special angle\n• Application of trigonometric ratios",
+   "where": "Unit overview, content",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-106",
+   "kind": "set",
+   "target": "unit",
+   "path": "coreCompetencies",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The KICD core competencies for this sub-strand are Creativity and Imagination, Critical Thinking and Problem Solving, and Digital literacy. The data listed five different ones (and left out Creativity and Imagination). Restored word for word and tied to lessons; the extra competency the lessons really use is labelled as such.",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (core competencies)",
+   "group": "G22",
+   "value": "• Creativity and Imagination: the learner makes a simple clinometer using locally available material and uses it as a learning resource (Lesson 9 project and outdoor measurement).\n• Critical Thinking and Problem Solving: the learner discusses and makes observations about the sine and cosine of complementary angles, and applies trigonometric ratios in the solution of triangles (Lessons 3, 4 and 6 to 10).\n• Digital literacy: the learner uses digital devices and other resources such as books, manuals, and journals to learn more about trigonometric ratios (calculators in Lesson 5; ARES videos and readings in Lessons 2, 6, 7 and 9).\nAlso practised in the lessons: Communication and Collaboration (group work throughout).",
+   "old": "• Communication and Collaboration: learners work in groups to draw right-angled triangles of chosen measurements, measure angles with a protractor, share computed ratios, and discuss patterns observed across different triangles.\n• Critical Thinking and Problem Solving: learners analyse why opposite/hypotenuse always gives the same ratio for a fixed angle regardless of triangle size, and use this insight to solve height-and-distance problems set in Kenyan contexts (e.g., estimating the height of a flagpole at a Nairobi school).\n• Digital Literacy: learners use scientific calculators and, where available, digital devices to determine trigonometric ratios and verify table values.\n• Learning to Learn: learners derive exact values for special angles independently using equilateral and isosceles right-angled triangles, building self-directed inquiry habits.\n• Self-efficacy: learners gain confidence in applying abstract angle ratios to concrete, visible real-world situations such as measuring the height of a building or a hill in the Rift Valley.",
+   "new": "• Creativity and Imagination: the learner makes a simple clinometer using locally available material and uses it as a learning resource (Lesson 9 project and outdoor measurement).\n• Critical Thinking and Problem Solving: the learner discusses and makes observations about the sine and cosine of complementary angles, and applies trigonometric ratios in the solution of triangles (Lessons 3, 4 and 6 to 10).\n• Digital literacy: the learner uses digital devices and other resources such as books, manuals, and journals to learn more about trigonometric ratios (calculators in Lesson 5; ARES videos and readings in Lessons 2, 6, 7 and 9).\nAlso practised in the lessons: Communication and Collaboration (group work throughout).",
+   "where": "Unit overview, coreCompetencies",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-107",
+   "kind": "set",
+   "target": "unit",
+   "path": "values",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The KICD values for this sub-strand are Responsibility and Unity. Restored word for word and tied to lessons; Integrity and Respect, which the lessons practise, are labelled as extras.",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (values)",
+   "group": "G22",
+   "value": "• Responsibility: the learner takes care of mathematical tables and calculators used in determining trigonometric ratios (Lessons 2 to 5).\n• Unity: the learner works in a group, for instance, when using an isosceles right-angled triangle and an equilateral triangle to generate the trigonometric ratios of special angles 30°, 45°, 60°, and 90° (Lessons 7 and 8).\nAlso practised in the lessons: Integrity (recording measurements honestly, Lessons 1, 5 and 9) and Respect (listening to peers' explanations).",
+   "old": "• Responsibility: learners handle protractors, rulers, calculators, and mathematical tables carefully during hands-on triangle-drawing activities, returning equipment in good condition.\n• Integrity: learners record actual measured values honestly, even when results differ slightly from expected ratios, and reflect on sources of measurement error.\n• Unity: learners collaborate in diverse groups during the triangle-drawing phenomenon activity and the special-angles derivation task, valuing each member's contribution.\n• Respect: learners listen to peers' explanations during sensemaking discussions and appreciate different approaches to solving trigonometric problems.\n• Social Justice: learners recognise how trigonometry empowers communities — e.g., local surveyors and engineers in Kisumu or Mombasa use these tools — making mathematics relevant beyond the classroom.",
+   "new": "• Responsibility: the learner takes care of mathematical tables and calculators used in determining trigonometric ratios (Lessons 2 to 5).\n• Unity: the learner works in a group, for instance, when using an isosceles right-angled triangle and an equilateral triangle to generate the trigonometric ratios of special angles 30°, 45°, 60°, and 90° (Lessons 7 and 8).\nAlso practised in the lessons: Integrity (recording measurements honestly, Lessons 1, 5 and 9) and Respect (listening to peers' explanations).",
+   "where": "Unit overview, values",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-108",
+   "kind": "set",
+   "target": "unit",
+   "path": "pcis",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The KICD PCIs for this sub-strand are Environmental Education and Protection and Parental Engagement and Empowerment. The data listed Life Skills and Career Guidance instead (careers are still covered in the careers field). Restored word for word and tied to the clinometer project.",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (PCIs)",
+   "group": "G22",
+   "value": "• Environmental Education and Protection: the learner identifies shapes in the immediate environment that have right-angled triangles, and makes a simple clinometer using materials from the immediate environment (Lesson 9).\n• Parental Engagement and Empowerment: the learner gets support from parents/guardians to get resources to make a clinometer (Lesson 8 homework for the Lesson 9 clinometer).",
+   "old": "• Life Skills (Critical Thinking and Problem Solving): learners apply step-by-step logical reasoning to set up and solve angle-of-elevation and angle-of-depression problems, building real-world decision-making skills.\n• Life Skills (Self-Esteem): learners gain confidence as they successfully derive exact special-angle values using geometric reasoning rather than memorisation, reinforcing belief in their own mathematical ability.\n• Career Guidance: learners explore careers — surveying, architecture, engineering, aviation, and game-park tourism (e.g., tracking animal positions using bearings at Maasai Mara) — where trigonometry is directly applied.\n• Environmental Education: learners consider how trigonometry supports responsible land surveying and forest-boundary mapping in Kenya, linking mathematics to sustainable land use in areas such as the Aberdare Range.",
+   "new": "• Environmental Education and Protection: the learner identifies shapes in the immediate environment that have right-angled triangles, and makes a simple clinometer using materials from the immediate environment (Lesson 9).\n• Parental Engagement and Empowerment: the learner gets support from parents/guardians to get resources to make a clinometer (Lesson 8 homework for the Lesson 9 clinometer).",
+   "where": "Unit overview, pcis",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-109",
+   "kind": "edit",
+   "target": "unit",
+   "path": "drivingQuestion",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Restores the two KICD key inquiry questions word for word; the data had two different questions.",
+   "group": "G22",
+   "old": "1. How do we apply trigonometric ratios in day-to-day activities?\n2. How are the trigonometric ratios of acute angles related to each other?",
+   "new": "1. What is trigonometry?\n2. How do we use trigonometry in real-life situations?",
+   "where": "Unit overview, drivingQuestion",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-110",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question restored to the KICD wording (Lessons 1 to 4, 6 and 7 build the meaning of the ratios: 'What is trigonometry?'; Lessons 5 and 8 to 10 apply them: 'How do we use trigonometry in real-life situations?').",
+   "lesson": 1,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (key inquiry questions)",
+   "group": "G22",
+   "value": "What is trigonometry?",
+   "old": "How do we apply trigonometric ratios in day-to-day activities?",
+   "new": "What is trigonometry?",
+   "where": "Lesson 1, slo.keyInquiry",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-111",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question restored to the KICD wording (Lessons 1 to 4, 6 and 7 build the meaning of the ratios: 'What is trigonometry?'; Lessons 5 and 8 to 10 apply them: 'How do we use trigonometry in real-life situations?').",
+   "lesson": 2,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (key inquiry questions)",
+   "group": "G22",
+   "value": "What is trigonometry?",
+   "old": "How do we apply trigonometric ratios in day-to-day activities? How are the trigonometric ratios of acute angles related to each other?",
+   "new": "What is trigonometry?",
+   "where": "Lesson 2, slo.keyInquiry",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-112",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question restored to the KICD wording (Lessons 1 to 4, 6 and 7 build the meaning of the ratios: 'What is trigonometry?'; Lessons 5 and 8 to 10 apply them: 'How do we use trigonometry in real-life situations?').",
+   "lesson": 3,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (key inquiry questions)",
+   "group": "G22",
+   "value": "What is trigonometry?",
+   "old": "How are the trigonometric ratios of acute angles related to each other? — specifically, how does cosine compare with the sine values already discovered, and what pattern begins to emerge?",
+   "new": "What is trigonometry?",
+   "where": "Lesson 3, slo.keyInquiry",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-113",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question restored to the KICD wording (Lessons 1 to 4, 6 and 7 build the meaning of the ratios: 'What is trigonometry?'; Lessons 5 and 8 to 10 apply them: 'How do we use trigonometry in real-life situations?').",
+   "lesson": 4,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (key inquiry questions)",
+   "group": "G22",
+   "value": "What is trigonometry?",
+   "old": "How do we apply trigonometric ratios in day-to-day activities? How are the trigonometric ratios of acute angles related to each other?",
+   "new": "What is trigonometry?",
+   "where": "Lesson 4, slo.keyInquiry",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-114",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question restored to the KICD wording (Lessons 1 to 4, 6 and 7 build the meaning of the ratios: 'What is trigonometry?'; Lessons 5 and 8 to 10 apply them: 'How do we use trigonometry in real-life situations?').",
+   "lesson": 5,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (key inquiry questions)",
+   "group": "G22",
+   "value": "How do we use trigonometry in real-life situations?",
+   "old": "How do we apply trigonometric ratios in day-to-day activities? How are the trigonometric ratios of acute angles related to each other?",
+   "new": "How do we use trigonometry in real-life situations?",
+   "where": "Lesson 5, slo.keyInquiry",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-115",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question restored to the KICD wording (Lessons 1 to 4, 6 and 7 build the meaning of the ratios: 'What is trigonometry?'; Lessons 5 and 8 to 10 apply them: 'How do we use trigonometry in real-life situations?').",
+   "lesson": 6,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (key inquiry questions)",
+   "group": "G22",
+   "value": "What is trigonometry?",
+   "old": "How are the trigonometric ratios of acute angles related to each other?",
+   "new": "What is trigonometry?",
+   "where": "Lesson 6, slo.keyInquiry",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-116",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question restored to the KICD wording (Lessons 1 to 4, 6 and 7 build the meaning of the ratios: 'What is trigonometry?'; Lessons 5 and 8 to 10 apply them: 'How do we use trigonometry in real-life situations?').",
+   "lesson": 7,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (key inquiry questions)",
+   "group": "G22",
+   "value": "What is trigonometry?",
+   "old": "How are the trigonometric ratios of acute angles related to each other, and how do exact values for special angles make real-world calculations — like finding the height of a tree or a hill in the Rift Valley — faster and more precise?",
+   "new": "What is trigonometry?",
+   "where": "Lesson 7, slo.keyInquiry",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-117",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question restored to the KICD wording (Lessons 1 to 4, 6 and 7 build the meaning of the ratios: 'What is trigonometry?'; Lessons 5 and 8 to 10 apply them: 'How do we use trigonometry in real-life situations?').",
+   "lesson": 8,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (key inquiry questions)",
+   "group": "G22",
+   "value": "How do we use trigonometry in real-life situations?",
+   "old": "How do we apply trigonometric ratios in day-to-day activities? How are the trigonometric ratios of acute angles related to each other?",
+   "new": "How do we use trigonometry in real-life situations?",
+   "where": "Lesson 8, slo.keyInquiry",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-118",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question restored to the KICD wording (Lessons 1 to 4, 6 and 7 build the meaning of the ratios: 'What is trigonometry?'; Lessons 5 and 8 to 10 apply them: 'How do we use trigonometry in real-life situations?').",
+   "lesson": 9,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (key inquiry questions)",
+   "group": "G22",
+   "value": "How do we use trigonometry in real-life situations?",
+   "old": "How do we apply trigonometric ratios in day-to-day activities?",
+   "new": "How do we use trigonometry in real-life situations?",
+   "where": "Lesson 9, slo.keyInquiry",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-119",
+   "kind": "set",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question restored to the KICD wording (Lessons 1 to 4, 6 and 7 build the meaning of the ratios: 'What is trigonometry?'; Lessons 5 and 8 to 10 apply them: 'How do we use trigonometry in real-life situations?').",
+   "lesson": 10,
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1 (key inquiry questions)",
+   "group": "G22",
+   "value": "How do we use trigonometry in real-life situations?",
+   "old": "How do we apply trigonometric ratios in day-to-day activities? How are the trigonometric ratios of acute angles related to each other?",
+   "new": "How do we use trigonometry in real-life situations?",
+   "where": "Lesson 10, slo.keyInquiry",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-120",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].prompt",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the KICD key inquiry questions.",
+   "group": "G22",
+   "old": "How do we apply trigonometric ratios in day-to-day activities? How are the trigonometric ratios of acute angles related to each other?",
+   "new": "What is trigonometry? How do we use trigonometry in real-life situations?",
+   "where": "Final Explanation, Part 5: Answering the driving question for any height, prompt",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-121",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].exemplar",
+   "criteria": [
+    5,
+    10
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The exemplar now also answers 'What is trigonometry?'.",
+   "group": "G22",
+   "old": "(c) A sunbeam, or a line of sight, makes an angle with the ground",
+   "new": "(c) Trigonometry uses the ratios sin, cos and tan to link the angles and sides of right-angled triangles. A sunbeam, or a line of sight, makes an angle with the ground",
+   "where": "Final Explanation, Part 5: Answering the driving question for any height, exemplar",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-122",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].prompt",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD outcome e covers angles of elevation AND depression, but the Final Explanation only assessed elevation. One sentence is added to Part 5(a) and its exemplar.",
+   "group": "G23",
+   "group_headline": "The Final Explanation now also assesses angles of depression (KICD outcome e)",
+   "old": "Name the angle you measure, the length you measure, and the ratio you use.",
+   "new": "Name the angle you measure, the length you measure, and the ratio you use. Then explain how the angle of depression from the top of the flagpole to a classmate standing on the ground is related to your angle of elevation.",
+   "where": "Final Explanation, Part 5: Answering the driving question for any height, prompt",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-123",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].exemplar",
+   "criteria": [
+    5,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Exemplar for the added depression question. Alternate angles between parallel lines are equal.",
+   "reference": "KICD Grade 10 curriculum design, Mathematics, Sub-Strand Trigonometry 1, outcome e; OpenStax Precalculus 2e, Chapter 5 Trigonometric Functions, section Right Triangle Trigonometry (angles of elevation and depression)",
+   "group": "G23",
+   "old": "This is the same method used for the mango tree, with the baseline replacing the shadow.",
+   "new": "This is the same method used for the mango tree, with the baseline replacing the shadow. Looking down from the top of the pole to the classmate, the angle of depression equals the angle of elevation (alternate angles between the horizontal and the line of sight), so either angle gives the same ratio.",
+   "where": "Final Explanation, Part 5: Answering the driving question for any height, exemplar",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-124",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The contract has three level fields (the printed headings are fixed by the template). Each descriptor now begins with the CBE level name: Exceeds Expectations, Meets Expectations, Approaches Expectations. Wording of the descriptors is unchanged.",
+   "value": [
+    {
+     "criterion": "Use of similar triangles and ratio ideas",
+     "excellent": "Exceeds Expectations: Clearly explains that triangles with the same angle are similar, so the ratios are fixed by the angle alone, and links this to the Kisumu data.",
+     "proficient": "Meets Expectations: States that the ratios stay the same for the same angle but gives only a partial reason about similarity.",
+     "developing": "Approaches Expectations: Describes the ratios without explaining why they stay constant, or confuses the sides."
+    },
+    {
+     "criterion": "Correct calculations and exact values",
+     "excellent": "Exceeds Expectations: Correctly finds the tree height (about 11.94 m and 12.0 m) and the special-angle heights (9√3 m and 9.0 m), showing every step with units and exact values.",
+     "proficient": "Meets Expectations: Calculations are mostly correct with minor slips in steps, units or rounding.",
+     "developing": "Approaches Expectations: Calculations are incomplete or incorrect, or the opposite and adjacent sides are mixed up."
+    },
+    {
+     "criterion": "Relationships among the ratios",
+     "excellent": "Exceeds Expectations: Proves tan θ = sin θ ÷ cos θ and explains sin θ = cos(90° − θ) using the swap of opposite and adjacent sides.",
+     "proficient": "Meets Expectations: States both relationships correctly and checks them with numbers, but the explanation is brief.",
+     "developing": "Approaches Expectations: States a relationship without a reason or with errors."
+    },
+    {
+     "criterion": "Application, reasoning and integrity",
+     "excellent": "Exceeds Expectations: Describes a complete method for finding any height from an angle and a baseline, explains measurement error honestly, and answers the driving question clearly with Kenyan examples.",
+     "proficient": "Meets Expectations: Describes a workable method and mentions error, with a general answer to the driving question.",
+     "developing": "Approaches Expectations: Method is unclear or missing, and error and honesty are not discussed."
+    }
+   ],
+   "old": "[{\"criterion\": \"Use of similar triangles and ratio ideas\", \"excellent\": \"Clearly explains that triangles with the same angle are similar, so the ratios are fixed by the angle alone, and links this to the Kisumu data.\", \"proficient\": \"States that the ratios stay the same for the same angle but gives only a partial reason about similarity.\", \"developing\": \"Describes the ratios without explaining why they stay constant, or confuses the sides.\"}, {\"criterion\": \"Correct calculations and exact values\", \"excellent\": \"Correctly finds the tree height (about 11.94 m and 12.0 m) and the special-angle heights (9√3 m and 9.0 m), showing every step with units and exact values.\", \"proficient\": \"Calculations are mostly correct with minor slips in steps, units or rounding.\", \"developing\": \"Calculations are incomplete or incorrect, or the opposite and adjacent sides are mixed up.\"}, {\"criterion\": \"Relationships among the ratios\", \"excellent\": \"Proves tan θ = sin θ ÷ cos θ and explains sin θ = cos(90° − θ) using the swap of opposite and adjacent sides.\", \"proficient\": \"States both relationships correctly and checks them with numbers, but the explanation is brief.\", \"developing\": \"States a relationship without a reason or with errors.\"}, {\"criterion\": \"Application, reasoning and integrity\", \"excellent\": \"Describes a complete method for finding any height from an angle and a baseline, explains measurement error honestly, and answers the driving question clearly with Kenyan examples.\", \"proficient\": \"Describes a workable method and mentions error, with a general answer to the driving question.\", \"developing\": \"Method is unclear or missing, and error and honesty are not discussed.\"}]",
+   "new": "[{\"criterion\": \"Use of similar triangles and ratio ideas\", \"excellent\": \"Exceeds Expectations: Clearly explains that triangles with the same angle are similar, so the ratios are fixed by the angle alone, and links this to the Kisumu data.\", \"proficient\": \"Meets Expectations: States that the ratios stay the same for the same angle but gives only a partial reason about similarity.\", \"developing\": \"Approaches Expectations: Describes the ratios without explaining why they stay constant, or confuses the sides.\"}, {\"criterion\": \"Correct calculations and exact values\", \"excellent\": \"Exceeds Expectations: Correctly finds the tree height (about 11.94 m and 12.0 m) and the special-angle heights (9√3 m and 9.0 m), showing every step with units and exact values.\", \"proficient\": \"Meets Expectations: Calculations are mostly correct with minor slips in steps, units or rounding.\", \"developing\": \"Approaches Expectations: Calculations are incomplete or incorrect, or the opposite and adjacent sides are mixed up.\"}, {\"criterion\": \"Relationships among the ratios\", \"excellent\": \"Exceeds Expectations: Proves tan θ = sin θ ÷ cos θ and explains sin θ = cos(90° − θ) using the swap of opposite and adjacent sides.\", \"proficient\": \"Meets Expectations: States both relationships correctly and checks them with numbers, but the explanation is brief.\", \"developing\": \"Approaches Expectations: States a relationship without a reason or with errors.\"}, {\"criterion\": \"Application, reasoning and integrity\", \"excellent\": \"Exceeds Expectations: Describes a complete method for finding any height from an angle and a baseline, explains measurement error honestly, and answers the driving question clearly with Kenyan examples.\", \"proficient\": \"Meets Expectations: Describes a workable method and mentions error, with a general answer to the driving question.\", \"developing\": \"Approaches Expectations: Method is unclear or missing, and error and honesty are not discussed.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-125",
+   "kind": "flag",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The CBE rubric has four levels (Exceeds, Meets, Approaches, Below Expectations) but the current contract allows only three level fields per criterion, so Below Expectations cannot be represented. Suggestion: teachers treat any work that does not reach the Approaches descriptor as Below Expectations, or the partner contract is extended with a fourth field.",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-126",
+   "kind": "flag",
+   "target": "unit",
+   "path": "strand",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "KICD Grade 10 Mathematics lists this as Strand 2.0 Measurements and Geometry, Sub-Strand 2.4 Trigonometry 1 (15 suggested lessons). The data says Strand 3.0: Geometry, Sub-Strand 3.1: Trigonometry I (10 lessons). Not renamed, because the numbering is also used in file names and the partner contract. Teachers or the project owner decide whether to align it.",
+   "where": "Unit overview, strand",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-127",
+   "kind": "flag",
+   "target": "unit",
+   "path": "supportingPhenomena",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "Supporting phenomenon 1 (leaning phone mast) is now used in Lesson 2 (guy-wire problem), but supporting phenomenon 2 ('Reading the mountain', Mount Longonot, angle of elevation from a photo) is not used in any lesson. Suggestion: use it as an extra problem in Lesson 9 or 10, or remove it from the unit. Not changed, because it is the teachers' storyline.",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-15T05:44:48"
+  },
+  {
+   "id": "math_3_1-128",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 2,
+   "path": "teacherReflection",
+   "old": "Did the Nakuru mast individual problem reveal",
+   "new": "Did the Kericho guy-wire individual problem reveal",
+   "criteria": [
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Reflection question matched to the corrected Lesson 2 practice problem.",
+   "group": "G1",
+   "where": "Lesson 2, teacherReflection",
+   "applied_at": "2026-10-15T05:45:02"
+  }
+ ]
+}
