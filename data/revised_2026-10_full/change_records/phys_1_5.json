@@ -1,0 +1,1606 @@
+{
+ "module": "phys_1_5",
+ "records": [
+  {
+   "id": "phys_1_5-001",
+   "target": "unit",
+   "path": "totalDuration",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The lesson sequence has four 80-minute lessons (1 to 4) and two 40-minute lessons (5 and 6), not six 40-minute lessons. Calculation: 4 × 80 = 320; 2 × 40 = 80; 320 + 80 = 400 minutes. The phase minutes inside each lesson were checked against these periods (Lessons 5 and 6 are trimmed separately).",
+   "kind": "edit",
+   "old": "6 lessons × 40 minutes = 240 minutes total",
+   "new": "6 lessons: 4 double lessons × 80 minutes + 2 single lessons × 40 minutes = 400 minutes total",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-002",
+   "target": "unit",
+   "path": "phenomenon",
+   "criteria": [
+    1,
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "A stool tips only when the vertical line through the combined centre of gravity of stool plus load falls outside the tipping edge. A 20 kg jerrycan standing wholly over the legs cannot do that with a gentle nudge, so the original demonstration would simply not topple. The phenomenon is kept (the teachers' choice), but the set-up now says the jerrycan overhangs the seat edge, which makes the toppling real and the explanation correct. Checked by comparing moments about the tipping leg: jerrycan 200 N × 0.10 m = 20 N·m against the narrow stool's own weight 50 N × 0.15 m = 7.5 N·m (topples), and 80 N × 0.30 m = 24 N·m for a wider, heavier stool (rocks back). TEACHER DECISION: please try the demonstration with your own stool and adjust the overhang (about 10 cm beyond the leg is a good start) until the narrow stool topples and the wide one rocks back.",
+   "kind": "edit",
+   "old": "on one corner of the stool and gently nudges it, the stool topples dramatically. Strikingly, a wider, lower four-legged stool with the same jerrycan placed at the same corner barely tilts",
+   "new": "on one corner of the seat so that part of it overhangs the seat edge beyond the leg (its weight then acts outside the triangle formed by the legs) and gently nudges it, the stool topples dramatically. Strikingly, a wider, lower, heavier four-legged stool with the same jerrycan placed at the same corner with the same small overhang barely tilts",
+   "group": "G1",
+   "group_headline": "The anchoring stool demo could not work as written: a load wholly over the legs does not tip a stool with a nudge. The jerrycan must overhang the seat edge beyond the leg.",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Unit overview, phenomenon",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-003",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    1,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the stool set-up fix: Card B now describes the same overhanging position as the demonstration so students predict the real situation.",
+   "lesson": 1,
+   "kind": "edit",
+   "old": "is placed on one corner of the same stool.",
+   "new": "is placed on one corner of the seat of the same stool, with part of its base overhanging the seat edge beyond the leg.",
+   "group": "G1",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 1, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-004",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    1,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the stool set-up fix: Demo 2 now states the overhanging position.",
+   "lesson": 1,
+   "kind": "edit",
+   "old": "placed on one corner of the stool, then gives",
+   "new": "placed on one corner of the seat, overhanging the seat edge beyond the leg, then gives",
+   "group": "G1",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 1, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-005",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    8,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: gives the teacher the set-up detail needed to make the demonstration work and be repeatable.",
+   "lesson": 1,
+   "kind": "edit",
+   "old": "1. Before Demo 2, say verbatim:",
+   "new": "1. Before the lesson, rehearse Demo 2: place the jerrycan so that its centre is about 10 cm beyond the leg (a load wholly above the legs will not topple the stool) and adjust until a gentle nudge topples the narrow stool while the wide four-legged stool still rocks back. Before Demo 2, say verbatim:",
+   "group": "G1",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 1, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-006",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "criteria": [
+    8,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: a 20-litre jerrycan on a stool seat cannot overhang a leg by 0.35 m. Recomputed: 200 N × 0.12 m = 24 N·m.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "200 N × 0.35 m ≈ 70 N·m (depending on student estimates)",
+   "new": "200 N × 0.12 m ≈ 24 N·m (depending on student estimates; the jerrycan's centre sits only about 10 to 15 cm beyond the leg)",
+   "group": "G1",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-007",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: a 500 g mass resting inside the base cannot topple a tower; it topples only when the combined centre of gravity leaves the base, i.e. when the mass overhangs. Light blocks make this observable with school equipment.",
+   "lesson": 3,
+   "kind": "edit",
+   "old": "first on the centre, then gradually shift it to the edge, observing at what point each tower topples.",
+   "new": "first on the centre of the top, then slide it gradually outward until it overhangs the edge, observing how far it has to overhang before each tower topples (use light blocks such as empty cartons or matchboxes so that the 500 g mass makes a difference).",
+   "group": "G1",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-008",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "A large moment alone does not make a stool topple: the moment of the load about the tipping leg must beat the opposing moment of the stool's own weight. The original closing statement ('topples because d is large') would leave the misconception that distance alone decides. The new wording keeps the evidence statement but sets up Lessons 3 and 4. Checked: moment about the leg = load weight × horizontal distance; direction depends on which side of the leg the load sits.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "It topples because the jerrycan is FAR from the pivot — the supporting leg — so the moment is LARGE. This is our first answer to the driving question.",
+   "new": "Hanging out FAR beyond the supporting leg, the jerrycan has a LARGE moment about that leg and it tries to turn the stool over. Whether the stool really goes over depends on whether the stool's own weight can turn it back — we find out how in Lessons 3 and 4. This is our first piece of evidence for the driving question.",
+   "group": "G2",
+   "group_headline": "Lesson 2 said a load near the centre has a 'small moment' so the stool stays up. In fact a load over the legs turns the stool back; only a load beyond the leg tries to turn it over.",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-009",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the closing-statement fix: the annotation no longer claims that a large moment alone topples the stool.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "'When the jerrycan is at the corner, d is LARGE → moment is LARGE → large turning effect → stool topples.'",
+   "new": "'When the jerrycan overhangs the corner, d is LARGE → the moment about the leg is LARGE → a large turning effect that tries to topple the stool.'",
+   "group": "G2",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-010",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    1,
+    5,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: a jerrycan at the centre lies on the inner side of the tipping leg, so its moment about that leg is restoring, not a 'smaller toppling moment'. Checked by the sign of the moment about the leg: load on the inner side gives the opposite turning sense to a load beyond the leg.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "(4) Add a caption: 'Large d → Large Moment → Large turning effect → Stool topples.' Students also add a contrasting mini-diagram: the same jerrycan placed at the centre of the stool — shorter d, smaller moment — with the caption 'Small d → Small Moment → Stool stays upright.'",
+   "new": "(4) Add a caption: 'Jerrycan beyond the leg → LARGE moment about the leg → turning effect that tries to topple the stool.' Students also add a contrasting mini-diagram: the same jerrycan placed at the centre of the stool, over the legs — its weight now turns the stool the other way about the leg (a restoring moment) — with the caption 'Jerrycan over the legs → its moment turns the stool back → stool stays upright.'",
+   "group": "G2",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-011",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the question now points students to the direction of the moment, which is what changes when the jerrycan moves to the centre.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "Smaller d. What happens to the moment? Calculate it.'",
+   "new": "Which way does its moment about the leg turn the stool now, the same way or the opposite way? Calculate its size.'",
+   "group": "G2",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-012",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the look-for matches the corrected captions.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "(d) captions distinguishing large-d (topples) from small-d (stable) ✓",
+   "new": "(d) captions distinguishing a load beyond the leg (tries to turn the stool over) from a load over the legs (turns it back) ✓",
+   "group": "G2",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-013",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Summary Table now carries the corrected idea into the Final Explanation.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "This explains why the jerrycan at the corner of the Jiko stool produces a larger toppling moment than the same jerrycan placed at the centre.",
+   "new": "This explains why a jerrycan overhanging the corner of the Jiko stool has a toppling moment about the leg, whereas the same jerrycan placed over the legs turns the stool the opposite way and cannot topple it.",
+   "group": "G2",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, summaryTablePrompt.learned",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-014",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    7,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: corrects the centre-of-stool explanation and the lesson number for the Principle of Moments (it is Lesson 4, not Lesson 3).",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "When the jerrycan is near the centre, the distance d is small, so the moment is small and the stool remains upright. What students cannot yet explain: what happens when there are turning forces acting in OPPOSITE directions (clockwise and anticlockwise) — this is the Principle of Moments, which is the focus of Lesson 3.",
+   "new": "When the jerrycan is over the legs, its weight turns the stool back about the leg and the stool remains upright. What students cannot yet explain: what happens when turning forces act in OPPOSITE directions (clockwise and anticlockwise), and where the stool's own weight acts. Centre of gravity is the focus of Lesson 3 and the Principle of Moments is the focus of Lesson 4.",
+   "group": "G2",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-015",
+   "target": "final_explanation",
+   "path": "sections[4].exemplar",
+   "criteria": [
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: a load at the centre has no toppling moment about the tipping edge; the old exemplar said it was 'small', which would teach the wrong idea.",
+   "kind": "edit",
+   "old": "It would stay upright. The jerrycan's distance from the tipping edge would be small, so its toppling moment is small, and the combined centre of gravity stays inside the base of support, so the stool is in equilibrium.",
+   "new": "It would stay upright. The jerrycan would sit over the legs, on the inner side of every tipping edge, so its weight would not try to turn the stool over and would even add to the restoring moment. The combined centre of gravity stays inside the base of support, so the stool is in equilibrium.",
+   "group": "G2",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Final Explanation, Part 5: Explaining and Predicting with the Jiko Stool, exemplar",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-016",
+   "target": "unit",
+   "path": "storylineThread",
+   "criteria": [
+    1,
+    4,
+    14
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Compared the storyline with the six lesson titles and content. The storyline had Lesson 2 = Principle of Moments, Lesson 3 = centre of gravity, Lesson 4 = states of equilibrium, but the lessons actually are: 2 = moment (measurements), 3 = centre of gravity and states, 4 = Principle of Moments. Lesson texts quoted the old numbers in many places, so the order of the written lessons was kept and the storyline and references were corrected. Lesson 1 and 6 paragraphs are unchanged except a small wording change.",
+   "kind": "set",
+   "value": "Lesson 1 — \"Why Did the Stool Fall?\" (Moment of a Force)\nStudents observe the anchoring phenomenon (Jiko stool toppling vs. staying upright) and record initial predictions. They are introduced to the concept of the turning effect of a force — the moment — and meet the formula Moment = Force × Perpendicular Distance. They calculate moments for simple scenarios (e.g., pushing open a school gate at different distances from the hinge) and post their first \"I notice / I wonder\" questions on the Driving Question Board. The cumulative model begins: a diagram of the stool with force arrows.\n\nLesson 2 — \"Turning Forces\" (Moment of a Force, from measurements)\nStudents revisit their predictions and measure how the turning effect of the same mass grows with its distance from a pivot on a metre rule. They derive and apply M = F × d in Kenyan contexts (school gate, handcart), calculate the moment of the jerrycan about the stool's leg and see that a load over the legs turns the stool back while a load beyond the leg tries to turn it over. The cumulative model gains moment-arm annotations. The lesson ends by asking where the stool's own weight acts.\n\nLesson 3 — \"Where Is the 'Balance Point' Hiding?\" (Centre of Gravity and States of Equilibrium)\nStudents determine the centre of gravity of regular shapes (rectangular cardboard) and irregular shapes (cardboard cut-outs of a stool profile and a sufuria lid) by the plumb-line suspension method, and test towers of blocks to see when they topple. They define stable, unstable and neutral equilibrium from their evidence and link the toppling condition (vertical line through the centre of gravity outside the base of support) to the stool. The cumulative model gains a centre-of-gravity marker and a tipping line.\n\nLesson 4 — \"The Principle of Moments\" (Balancing on a Bao Plank)\nStudents investigate the Principle of Moments experimentally using a metre rule, a pencil pivot and improvised masses (bags of beans, coins). They tabulate clockwise and anti-clockwise moments, identify the pattern, state the Principle, and apply it to quantitative problems including a traditional Kenyan see-saw (bao plank across a log) and the toppling and restoring moments of the narrow and wide stools. The cumulative model gains moment arms and a balance-condition label.\n\nLesson 5 — \"How Do Engineers Keep Things From Falling?\" (Factors Affecting Stability and Real-Life Applications)\nStudents investigate how lowering the centre of gravity (adding clay to the base of a tall cardboard box) and widening the base (adjusting cardboard flaps) each independently increase stability. They connect findings to real engineering contexts: crane design, double-decker bus geometry, and why maize sacks are stacked in an interlocking pattern. A case-study card on a tower-crane accident is analysed using moment and stability principles. The cumulative model is updated with stability-factor labels and an engineering example inset.\n\nLesson 6 — \"Can We Explain and Predict Toppling?\" (Consolidation, Model Finalisation, and DQB Review)\nStudents return to the full anchoring phenomenon and all supporting phenomena, using their completed cumulative model to write a full scientific explanation of when and why objects topple or remain stable. The Driving Question Board is reviewed: each posted question is answered with evidence from the unit. Students present their models in groups, peer-assess using a co-constructed rubric, and reflect on career connections. A summative problem set (including a jerrycan-on-stool moment calculation) is completed individually to assess mastery of learning outcomes.",
+   "group": "G3",
+   "group_headline": "The unit storyline listed the lessons in a different order from the lessons written (it put the Principle of Moments in Lesson 2). Storyline and every 'in Lesson N' reference now match: L2 moment, L3 centre of gravity and states, L4 Principle of Moments, L5 stability.",
+   "old": "Lesson 1 — \"Why Did the Stool Fall?\" (Moment of a Force)\nStudents observe the anchoring phenomenon (Jiko stool toppling vs. staying upright) and record initial predictions. They are introduced to the concept of the turning effect of a force — the moment — and derive the formula Moment = Force × Perpendicular Distance. They calculate moments for simple scenarios (e.g., pushing open a school gate at different distances from the hinge) and post their first \"I notice / I wonder\" questions on the Driving Question Board. The cumulative model begins: a diagram of the stool with force arrows.\n\nLesson 2 — \"What Makes a See-Saw Balance?\" (Principle of Moments)\nStudents investigate the Principle of Moments experimentally using a metre rule, a pencil pivot, and improvised masses (bags of beans, coins). They tabulate clockwise and anti-clockwise moments, identify the pattern, and state the Principle. They apply it to solve quantitative problems including a traditional Kenyan see-saw (bao plank across a log). The cumulative model gains moment-arm annotations and a balance condition label.\n\nLesson 3 — \"Where Is the 'Balance Point' Hiding?\" (Centre of Gravity — Regular and Irregular Objects)\nStudents determine the centre of gravity of regular shapes (ruler, rectangular cardboard) by calculation and of irregular shapes (cut-out map of Kenya, oddly shaped plywood) by the plumb-line suspension method. They link the position of centre of gravity to the balance-point concept established in Lesson 2. The cumulative model gains a centre-of-gravity marker (×) on the stool diagram.\n\nLesson 4 — \"Stable, Unstable, or Neutral — How Do We Decide?\" (States of Equilibrium)\nStudents test objects of different shapes and base widths (a tall thin bottle, a wide flat tin, a ball, a cone) by tilting them to small angles and observing whether they return, continue to fall, or stay tilted. They classify each as stable, unstable, or neutral and construct explanations linking each state to the vertical line through the centre of gravity and the base of support. The anchoring phenomenon is revisited: students now explain the stool's behaviour in these terms. The cumulative model gains stability-state annotations.\n\nLesson 5 — \"How Do Engineers Keep Things From Falling?\" (Factors Affecting Stability and Real-Life Applications)\nStudents investigate how lowering the centre of gravity (adding clay to the base of a tall cardboard box) and widening the base (adjusting cardboard flaps) each independently increase stability. They connect findings to real engineering contexts: crane design, double-decker bus geometry, and why maize sacks are stacked in an interlocking pattern. A case-study card on a Nairobi construction-site crane accident is analysed using moment and stability principles. The cumulative model is updated with stability-factor labels and an engineering example inset.\n\nLesson 6 — \"Can We Explain and Predict Toppling?\" (Consolidation, Model Finalisation, and DQB Review)\nStudents return to the full anchoring phenomenon and all supporting phenomena, using their completed cumulative model to write a full scientific explanation of when and why objects topple or remain stable. The Driving Question Board is reviewed: each posted question is answered with evidence from the unit. Students present their models in groups, peer-assess using a co-constructed rubric, and reflect on career connections. A summative problem set (including a jerrycan-on-stool moment calculation) is completed individually to assess mastery of learning outcomes.",
+   "new": "Lesson 1 — \"Why Did the Stool Fall?\" (Moment of a Force)\nStudents observe the anchoring phenomenon (Jiko stool toppling vs. staying upright) and record initial predictions. They are introduced to the concept of the turning effect of a force — the moment — and meet the formula Moment = Force × Perpendicular Distance. They calculate moments for simple scenarios (e.g., pushing open a school gate at different distances from the hinge) and post their first \"I notice / I wonder\" questions on the Driving Question Board. The cumulative model begins: a diagram of the stool with force arrows.\n\nLesson 2 — \"Turning Forces\" (Moment of a Force, from measurements)\nStudents revisit their predictions and measure how the turning effect of the same mass grows with its distance from a pivot on a metre rule. They derive and apply M = F × d in Kenyan contexts (school gate, handcart), calculate the moment of the jerrycan about the stool's leg and see that a load over the legs turns the stool back while a load beyond the leg tries to turn it over. The cumulative model gains moment-arm annotations. The lesson ends by asking where the stool's own weight acts.\n\nLesson 3 — \"Where Is the 'Balance Point' Hiding?\" (Centre of Gravity and States of Equilibrium)\nStudents determine the centre of gravity of regular shapes (rectangular cardboard) and irregular shapes (cardboard cut-outs of a stool profile and a sufuria lid) by the plumb-line suspension method, and test towers of blocks to see when they topple. They define stable, unstable and neutral equilibrium from their evidence and link the toppling condition (vertical line through the centre of gravity outside the base of support) to the stool. The cumulative model gains a centre-of-gravity marker and a tipping line.\n\nLesson 4 — \"The Principle of Moments\" (Balancing on a Bao Plank)\nStudents investigate the Principle of Moments experimentally using a metre rule, a pencil pivot and improvised masses (bags of beans, coins). They tabulate clockwise and anti-clockwise moments, identify the pattern, state the Principle, and apply it to quantitative problems including a traditional Kenyan see-saw (bao plank across a log) and the toppling and restoring moments of the narrow and wide stools. The cumulative model gains moment arms and a balance-condition label.\n\nLesson 5 — \"How Do Engineers Keep Things From Falling?\" (Factors Affecting Stability and Real-Life Applications)\nStudents investigate how lowering the centre of gravity (adding clay to the base of a tall cardboard box) and widening the base (adjusting cardboard flaps) each independently increase stability. They connect findings to real engineering contexts: crane design, double-decker bus geometry, and why maize sacks are stacked in an interlocking pattern. A case-study card on a tower-crane accident is analysed using moment and stability principles. The cumulative model is updated with stability-factor labels and an engineering example inset.\n\nLesson 6 — \"Can We Explain and Predict Toppling?\" (Consolidation, Model Finalisation, and DQB Review)\nStudents return to the full anchoring phenomenon and all supporting phenomena, using their completed cumulative model to write a full scientific explanation of when and why objects topple or remain stable. The Driving Question Board is reviewed: each posted question is answered with evidence from the unit. Students present their models in groups, peer-assess using a co-constructed rubric, and reflect on career connections. A summative problem set (including a jerrycan-on-stool moment calculation) is completed individually to assess mastery of learning outcomes.",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-017",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lessons 1 and 2 both introduce the moment and M = F × d. Titles cannot change, so Lesson 2 is now described as the measured derivation and extension of what Lesson 1 introduced informally.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "In this lesson (Lesson 2 of 6) students gather the first piece of explanatory evidence:",
+   "new": "In Lesson 1 they met M = F × d and its unit informally; in this lesson (Lesson 2 of 6) they re-derive it from measured data, extend it to more contexts, and gather the first piece of explanatory evidence:",
+   "group": "G3",
+   "where": "Lesson 2, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-018",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Principle of Moments is Lesson 4.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "That is what we will investigate in Lesson 3.",
+   "new": "That is what we will investigate in Lesson 4, after Lesson 3 shows where the stool's weight acts.",
+   "group": "G3",
+   "where": "Lesson 2, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-019",
+   "target": "lesson",
+   "path": "framework[3].formativeAssessment",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Principle of Moments is Lesson 4.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "signal readiness for the principle of moments (Lesson 3)",
+   "new": "signal readiness for the principle of moments (Lesson 4)",
+   "group": "G3",
+   "where": "Lesson 2, Driving Question Board (DQB) Creation, formativeAssessment",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-020",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Principle of Moments and the two-sided balance task belong to Lesson 4.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "you can introduce the Principle of Moments in Lesson 3 with confidence that students are cognitively ready. If fewer than a quarter did, begin Lesson 3 with a 5-minute",
+   "new": "you can introduce the Principle of Moments in Lesson 4 with confidence that students are cognitively ready. If fewer than a quarter did, begin Lesson 4 with a 5-minute",
+   "group": "G3",
+   "where": "Lesson 2, teacherReflection",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-021",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The old text said learners used the Principle of Moments in Lesson 2 (it is taught in Lesson 4) and that Lesson 4 would predict a tipping angle (it does not). Rewritten to match the actual lessons.",
+   "lesson": 3,
+   "kind": "set",
+   "value": "In Lessons 1 and 2, learners met the moment of a force (M = F × d) and saw that a jerrycan hanging beyond a leg has a large turning effect about that leg. Lesson 3 now asks: WHERE exactly does the total weight of the Jiko stool and its load act? Learners discover the centre of gravity concept, classify stable, unstable and neutral equilibrium, investigate how its height and the width of the base of support together determine the toppling condition, and build a geometric explanation for why the jerrycan-loaded stool falls. This sets up Lesson 4, where learners balance a metre rule, discover the Principle of Moments and use it to compare the toppling and restoring moments of the stool.",
+   "group": "G3",
+   "old": "In Lesson 2, learners used the principle of moments (sum of clockwise moments = sum of anticlockwise moments) to explain why a see-saw balances at a particular pivot position. Lesson 3 now advances the storyline by asking: given that turning forces matter, WHERE exactly does the total weight of the Jiko stool — and its load — act? Learners discover the centre of gravity concept, investigate how its height and the width of the base of support together determine the toppling condition, and build a precise geometric explanation for why the jerrycan-loaded stool falls. This sets up Lesson 4, which will quantify the restoring and toppling moments to predict the exact tipping angle.",
+   "new": "In Lessons 1 and 2, learners met the moment of a force (M = F × d) and saw that a jerrycan hanging beyond a leg has a large turning effect about that leg. Lesson 3 now asks: WHERE exactly does the total weight of the Jiko stool and its load act? Learners discover the centre of gravity concept, classify stable, unstable and neutral equilibrium, investigate how its height and the width of the base of support together determine the toppling condition, and build a geometric explanation for why the jerrycan-loaded stool falls. This sets up Lesson 4, where learners balance a metre rule, discover the Principle of Moments and use it to compare the toppling and restoring moments of the stool.",
+   "where": "Lesson 3, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-022",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Principle of Moments is not taught until Lesson 4, so this question now refers to the moment of a force from Lessons 1 and 2.",
+   "lesson": 3,
+   "kind": "edit",
+   "old": "'We used the PRINCIPLE OF MOMENTS in Lesson 2. How might that idea help us find this balance point today?'",
+   "new": "'In Lessons 1 and 2 we worked with the MOMENT of a force about a pivot. How might that idea help us find this balance point today?'",
+   "group": "G3",
+   "where": "Lesson 3, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-023",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: Lesson 4 compares toppling and restoring moments; it does not predict a tipping angle.",
+   "lesson": 3,
+   "kind": "edit",
+   "old": "Can we PREDICT the tipping angle? That is our next challenge.'",
+   "new": "Can we PREDICT, with numbers, whether the stool will tip? That is our next challenge in Lesson 4.'",
+   "group": "G3",
+   "where": "Lesson 3, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-024",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: matches what Lesson 4 actually does.",
+   "lesson": 3,
+   "kind": "edit",
+   "old": "'In Lesson 4, we will use moments calculations to find the EXACT tipping angle. Keep this model — you will need it.'",
+   "new": "'In Lesson 4, we will balance a metre rule and use moment calculations to compare the toppling moment with the restoring moment. Keep this model — you will need it.'",
+   "group": "G3",
+   "where": "Lesson 3, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-025",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: Lesson 5 investigates stability factors, not multiple forces; the closing question now motivates the real next lesson.",
+   "lesson": 4,
+   "kind": "edit",
+   "old": "'Next lesson we examine what happens when multiple forces act — and we will finally be able to fully explain why the wide stool never topples.'",
+   "new": "'Next lesson we test, with boxes and clay, what makes a design more stable — and we will be able to explain why the wide stool did not topple.'",
+   "group": "G3",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-026",
+   "target": "lesson",
+   "path": "framework[0].sensemakingStrategy",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: equilibrium states are taught in Lesson 3.",
+   "lesson": 5,
+   "kind": "edit",
+   "old": "centre of gravity (Lesson 3) and equilibrium states (Lesson 4)",
+   "new": "centre of gravity and equilibrium states (Lesson 3) and the Principle of Moments (Lesson 4)",
+   "group": "G3",
+   "where": "Lesson 5, Predict Phase, sensemakingStrategy",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-027",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the vertical-line toppling criterion is taught in Lesson 3.",
+   "lesson": 5,
+   "kind": "edit",
+   "old": "criterion from Lesson 4.",
+   "new": "criterion from Lesson 3.",
+   "group": "G3",
+   "where": "Lesson 5, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-028",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Principle of Moments is taught in Lesson 4.",
+   "lesson": 5,
+   "kind": "edit",
+   "old": "Reference the Principle of Moments from Lesson 2:",
+   "new": "Reference the Principle of Moments from Lesson 4:",
+   "group": "G3",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-029",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 2 did not end on a question that motivates the next lesson. The new closing question leads into the centre of gravity in Lesson 3.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "Does this explanation use evidence from our experiment today? Thumbs up or down.' [WAIT 10 seconds for thumbs.]",
+   "new": "Does this explanation use evidence from our experiment today? Thumbs up or down.' [WAIT 10 seconds for thumbs.] Close with a question that leads into Lesson 3: 'The jerrycan has a moment about the leg, but the stool's own weight has one too. Where exactly does the stool's weight act from? That is our question for Lesson 3.'",
+   "where": "Lesson 2, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-030",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    8,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "With a single mass on a rule balanced at its centre, the rule always tips down on that side (the rule cannot be 'slightly' tipped), so the recorded 'balanced / tips slightly / tips strongly' could not be observed. With a fixed 500 g reference mass at 30 cm on the other side, moments are 500 g × 30 cm = 15 000 g·cm; a 500 g mass at 10 cm or 20 cm gives 5 000 or 10 000 g·cm (right side down), at 30 cm equal (balance), at 40 or 50 cm 20 000 or 25 000 g·cm (left side down). A water bottle or packet of sugar of about 500 g is a low-cost substitute for a 500 g mass.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "one 500 g mass, and a printed data table. Task: Place the 500 g mass at 10 cm from the pivot, then 20 cm, 30 cm, 40 cm, and 50 cm from the pivot. At each position, students observe whether the rule tips and record in the table: (a) the distance from pivot in cm, (b) a qualitative observation (balanced / tips slightly / tips strongly), and (c) a sketch showing the mass position and the direction the rule tips.",
+   "new": "two 500 g masses (or two 500 ml water bottles filled with water, tied on with string), and a printed data table. Task: Hang the first 500 g mass (the reference mass) at 30 cm from the pivot on the RIGHT and leave it there. Hang the second 500 g mass on the LEFT at 10 cm from the pivot, then 20 cm, 30 cm, 40 cm, and 50 cm. At each position, students observe which side of the rule goes down and record in the table: (a) the distance of the left mass from the pivot in cm, (b) the observation (left side down / right side down / balanced), and (c) a sketch showing both masses and the direction the rule tips. Expected result: the right side goes down at 10 cm and 20 cm, the rule balances at 30 cm, and the left side goes down at 40 cm and 50 cm.",
+   "group": "G4",
+   "group_headline": "Lesson 2 metre-rule activity could not show anything: one mass on a rule pivoted at its centre always just tips. Now a reference mass on the other side lets groups see tip, balance and tip back.",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-031",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the new data do not show 'doubling', so the derivation now follows what the activity actually shows.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "Step 2 — Formula derivation: using the metre rule data, students observe that doubling the distance doubled the tipping effect → the relationship is proportional → Moment = Force × Perpendicular Distance, or M = F × d.",
+   "new": "Step 2 — Formula: using the metre rule data, students see that with the force unchanged the turning effect grew as the distance grew, and that equal forces balanced at equal distances; the simplest rule that fits (and that they met in Lesson 1) is Moment = Force × Perpendicular Distance, or M = F × d, tested with unequal masses in Lesson 4.",
+   "group": "G4",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-032",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the question matches the redesigned activity.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "'From your experiment — when you doubled the distance from 10 cm to 20 cm, what happened to the tipping effect?'",
+   "new": "'From your experiment — as the left mass moved from 10 cm to 30 cm to 50 cm, what happened to which side went down? What does that tell you about the turning effect of a force that stays the same size?'",
+   "group": "G4",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-033",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Kwame is a Ghanaian name; Kamau is a common Kenyan name, in line with the other Kenyan names used in the unit.",
+   "lesson": 2,
+   "kind": "edit",
+   "old": "Kwame, describe in your own words",
+   "new": "Kamau, describe in your own words",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-034",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Balance needs 40 kg × 30 cm = 20 kg × d, so d = 60 cm. A 1 m plank pivoted at its midpoint has only 50 cm on each side, so Child B could not sit there. A 2 m plank gives 100 cm each side. Checked: 40 × 30 = 1200; 1200 ÷ 20 = 60 cm.",
+   "lesson": 4,
+   "kind": "edit",
+   "old": "a 1-metre wooden plank balanced on a log fulcrum at its midpoint",
+   "new": "a 2-metre wooden plank balanced on a log fulcrum at its midpoint (1 m each side)",
+   "group": "G5",
+   "group_headline": "Lesson 4 bao plank problem was impossible: Child B had to sit 60 cm from the centre on a 1 m plank that has only 50 cm each side. Plank is now 2 m.",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 4, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-035",
+   "target": "lesson",
+   "path": "framework[0].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: gives the teacher the expected answer and the likely wrong answers for the plank prediction (guideline 5 and 13).",
+   "lesson": 4,
+   "kind": "edit",
+   "old": "Teacher scans written predictions and listens to pair talk. Observable indicators:",
+   "new": "Expected answer: Child B (20 kg) must sit 60 cm from the centre, because 40 kg × 30 cm = 20 kg × 60 cm = 1200 kg·cm; common wrong predictions are '30 cm, the same distance' or '15 cm'. Teacher scans written predictions and listens to pair talk. Observable indicators:",
+   "group": "G5",
+   "where": "Lesson 4, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-036",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    7,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A weight on the LEFT of the pivot turns the rule anti-clockwise and a weight on the RIGHT turns it clockwise, so the labels were swapped (and the Final Explanation uses the correct convention). The unit was also inconsistent: students record grams and centimetres, not newtons. Checked with the sign convention in OpenStax College Physics Chapter 9.",
+   "lesson": 4,
+   "kind": "edit",
+   "old": "(1) Mass left (g), Distance left from pivot (cm), Clockwise Moment = F × d (N·cm); (2) Mass right (g), Distance right from pivot (cm), Anti-clockwise Moment = F × d (N·cm);",
+   "new": "(1) Mass left (g), Distance left from pivot (cm), Anti-clockwise Moment = mass × distance (g·cm); (2) Mass right (g), Distance right from pivot (cm), Clockwise Moment = mass × distance (g·cm) (g·cm is fine for finding the pattern; convert to N·m using weight = mass × 10 N/kg when comparing with real forces);",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-037",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    1,
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old problem put the pivot at a 'central pivot point' and invented a '5 kg counterweight', so the answer could not be tied to the tipping edge, which the teacher notes themselves say to use. New numbers, checked twice: jerrycan 200 N × 0.10 m = 20 N·m; narrow stool 50 N × 0.15 m = 7.5 N·m, 20 > 7.5 so it topples; wide stool 80 N × 0.30 m = 24 N·m, 24 > 20 so it rocks back.",
+   "lesson": 4,
+   "kind": "edit",
+   "old": "(3) A Jiko stool leg acts as a pivot: if a 20-litre jerrycan (20 kg) is placed 0.25 m from the central pivot point, what restoring moment would a 5 kg counterweight at 0.5 m provide — and is it sufficient to prevent toppling?",
+   "new": "(3) The Jiko stool: take the leg at the tipping edge as the pivot. The stool has mass 5 kg (weight 50 N) and its centre of gravity is 0.15 m inside the tipping edge. The 20-litre jerrycan (20 kg) sits with its centre 0.10 m beyond the tipping edge. Calculate the toppling moment of the jerrycan and the restoring moment of the stool, and decide whether the stool topples. Then repeat for the wider four-legged stool (mass 8 kg, centre of gravity 0.30 m inside its tipping edge) with the same jerrycan in the same position.",
+   "group": "G7",
+   "group_headline": "Lesson 4 stool problem was garbled (pivot at the 'central point', unclear counterweight). It is now a clear calculation for both stools with an answer key.",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 4, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-038",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "criteria": [
+    5,
+    6,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: adds the answer key for the three problems and states the limit of the bao plank to stool analogy (guidelines 5, 6 and 13).",
+   "lesson": 4,
+   "kind": "edit",
+   "old": "(c) In problem 3, listen for learners correctly identifying the tipping edge as the pivot — this transfers learning to the phenomenon.",
+   "new": "(c) In problem 3, listen for learners correctly identifying the tipping edge as the pivot — this transfers learning to the phenomenon. Expected answers: (1) Child B sits 0.60 m from the pivot; (2) 3 kg × 0.4 m = 1.2 kg·m = m × 0.6 m, so m = 2 kg; (3) narrow stool: toppling 200 N × 0.10 m = 20 N·m is greater than restoring 50 N × 0.15 m = 7.5 N·m, so it topples; wide stool: restoring 80 N × 0.30 m = 24 N·m is greater than 20 N·m, so it rocks back. Limit of the analogy: the tipping edge acts as a pivot only while the stool starts to turn, and it changes if the stool tilts onto another leg; the bao plank pivot is fixed at the log.",
+   "group": "G7",
+   "where": "Lesson 4, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-039",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    6,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: whether the stool's moment is clockwise or anti-clockwise depends on which edge is the tipping edge, so the condition is now written in terms of restoring and toppling moments, matching the problem and the Final Explanation.",
+   "lesson": 4,
+   "kind": "edit",
+   "old": "'Stool stable IF: anti-clockwise moment > clockwise moment about tipping edge'",
+   "new": "'Stool stable IF: restoring moment (from the stool's weight) > toppling moment (from the load beyond the tipping edge)'",
+   "group": "G7",
+   "where": "Lesson 4, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-040",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The masses are 50 g to 100 g on a 30 cm ruler, so each moment is about 0.03 to 0.08 N·m; a tolerance of ±1 N·m would accept any answer. Recomputed: 100 g = 1 N, 1 N × 0.06 m = 0.06 N·m; 50 g = 0.5 N, 0.5 N × 0.12 m = 0.06 N·m.",
+   "lesson": 1,
+   "kind": "edit",
+   "old": "(b) student's beam-balance calculation shows moments within ±1 N·m on both sides for the balanced case;",
+   "new": "(b) student's beam-balance calculation shows the two moments equal within about 10% for the balanced case (e.g. 100 g at 6 cm: 1 N × 0.06 m = 0.06 N·m; 50 g at 12 cm: 0.5 N × 0.12 m = 0.06 N·m);",
+   "group": "G8",
+   "group_headline": "Lesson 1 beam-balance check allowed a difference of 1 N·m, but the moments are only about 0.06 N·m, so the check could not tell balance from no balance.",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 1, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-041",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: tells the teacher what good results look like so they can check groups quickly.",
+   "lesson": 1,
+   "kind": "edit",
+   "old": "If a group finds a balance position, ask:",
+   "new": "Expected results: 50 g at 5 cm on the left against 50 g at 10 cm on the right: the right side goes down; 50 g at 12 cm on the right balances 100 g at 6 cm on the left (600 g·cm each side). If a group finds a balance position, ask:",
+   "group": "G8",
+   "where": "Lesson 1, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-042",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The sequence had no language supports for English learners (guideline 12). The Kiswahili words are common everyday terms, but they have not been checked against the Kiswahili physics textbook used in your schools. TEACHER DECISION: please confirm or correct the Kiswahili words and supply the standard term for 'moment' and 'centre of gravity'.",
+   "lesson": 1,
+   "kind": "edit",
+   "old": "1. Write 'MOMENT = TURNING EFFECT' in large letters on the board BEFORE defining it formally.",
+   "new": "1. Write 'MOMENT = TURNING EFFECT' in large letters on the board BEFORE defining it formally. Add a small word bank beside it for English learners with Kiswahili beside each word: force (nguvu), weight (uzito), pivot (egemeo), balance (usawa), topple (kupinduka); ask learners which Kiswahili word their textbook uses for 'moment' and add it. Learners may explain an idea first in Kiswahili or with a labelled sketch before writing it in English.",
+   "group": "G9",
+   "group_headline": "Added a short Kiswahili and English-learner word bank and options to answer by sketch or in Kiswahili (no language support existed in the sequence).",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-043",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    12,
+    3
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Adds a second way to show understanding (sketch or spoken answer) and cuts the silent time from 4 to 2 minutes as part of the Lesson 6 timing trim.",
+   "lesson": 6,
+   "kind": "edit",
+   "old": "Students have 4 minutes of silent individual thinking. They then share with their partner using a Think-Pair routine.",
+   "new": "Students have 2 minutes of silent individual thinking; learners who find writing difficult, or are still building English, may answer with a labelled sketch or say their prediction to a partner who records it. They then share with their partner for 1 minute using a Think-Pair routine.",
+   "group": "G9",
+   "where": "Lesson 6, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-044",
+   "target": "lesson",
+   "path": "slo.safetyNotes",
+   "criteria": [
+    8
+   ],
+   "category": "safety",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The plumb-line activity uses pins, which were not mentioned in the safety notes.",
+   "lesson": 3,
+   "kind": "edit",
+   "old": "ensure the string is securely tied and scissors are handled safely.",
+   "new": "ensure the string is securely tied and scissors are handled safely. Pins used to hang the cut-outs are pushed only into the corkboard, counted back in at the end and never held loose or in the mouth; the teacher cuts the cardboard shapes beforehand where possible.",
+   "where": "Lesson 3, slo.safetyNotes",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-045",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the KICD wording fix: KICD outcome (a) covers regularly AND irregularly shaped objects, but the lesson only located the centre of gravity of irregular shapes.",
+   "lesson": 3,
+   "kind": "edit",
+   "old": "The intersection of the three lines is labelled 'CG'.",
+   "new": "The intersection of the three lines is labelled 'CG'. Groups also hang a rectangular piece of cardboard from two holes and check that the lines cross where the diagonals meet, the centre of a regular shape.",
+   "group": "G13",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-046",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Time added up: Predict about 5, Investigation A 10, Investigation B 8, case study 3, Explain 8 plus engineering examples, DQB about 4, Model Building about 8 = roughly 50 minutes for a 40-minute period. New plan: Predict 5 + investigations in parallel 9, swap 2, case study 3 (= 14, plus 1 for the fair-test question) + Explain 9 + DQB 3 + Model 8 = 40 minutes. A soil bag replaces clay if clay is not available (guideline 8).",
+   "lesson": 5,
+   "kind": "edit",
+   "old": "INVESTIGATION A — Centre of Gravity Height (10 minutes): Groups of 4 receive: one tall cardboard box (approx. 30 cm x 10 cm x 10 cm), two equal lumps of clay (~100 g each), a protractor, and a ruler. Step 1 — Baseline: Stand the box empty on the desk; tilt it slowly until it just topples; record the critical angle using the protractor. Step 2 — Clay at top: Fix both clay lumps inside at the top of the box with tape; repeat the tilt test; record the critical angle. Step 3 — Clay at base: Move both clay lumps to the inside base; repeat; record. Students tabulate: Configuration | Critical tipping angle | Toppled easily? (Y/N). INVESTIGATION B — Base of Support Width (8 minutes): Each group receives a second identical empty box",
+   "new": "Groups of 4 split into two pairs that run the two investigations at the same time (9 minutes) and then swap results (2 minutes). INVESTIGATION A — Centre of Gravity Height (pair 1, 9 minutes): the pair receives one tall cardboard box (approx. 30 cm x 10 cm x 10 cm), two equal lumps of clay (~100 g each; a plastic bag of damp soil is a low-cost substitute), a protractor, and a ruler. Step 1 — Baseline: Stand the box empty on the desk; tilt it slowly until it just topples; record the critical angle using the protractor. Step 2 — Clay at top: Fix both clay lumps inside at the top of the box with tape; repeat the tilt test; record the critical angle. Step 3 — Clay at base: Move both clay lumps to the inside base; repeat; record. Students tabulate: Configuration | Critical tipping angle | Toppled easily? (Y/N). INVESTIGATION B — Base of Support Width (pair 2, 9 minutes): the pair receives an identical empty box",
+   "group": "G11",
+   "group_headline": "Lesson 5 had about 50 minutes of activity for a 40-minute lesson. The two box investigations now run side by side in pairs, and the rest is trimmed to fit 40 minutes.",
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-047",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: gives the Explain phase an explicit time budget that fits the 40-minute lesson.",
+   "lesson": 5,
+   "kind": "edit",
+   "old": "Whole-class sense-making (8 minutes).",
+   "new": "Whole-class sense-making (9 minutes: diagram 4, two sentences 2, case study 3).",
+   "group": "G11",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-048",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the DQB phase is limited to about 3 minutes.",
+   "lesson": 5,
+   "kind": "edit",
+   "old": "Students write individually (2 minutes), then come up and place their note on the DQB in the section labelled Lesson 5 Evidence. Two or three notes are read aloud.",
+   "new": "Students write individually (1 minute), then come up and place their note on the DQB in the section labelled Lesson 5 Evidence (2 minutes in all). One note is read aloud.",
+   "group": "G11",
+   "where": "Lesson 5, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-049",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: gives the Model Building phase an explicit time budget.",
+   "lesson": 5,
+   "kind": "edit",
+   "old": "Working in pairs, they add two new layers:",
+   "new": "Working in pairs (8 minutes: 6 to add the layers, 2 for feedback), they add two new layers:",
+   "group": "G11",
+   "where": "Lesson 5, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-050",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    9,
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "Citi Hoppa mainly runs single-deck buses and diesel buses have no 'battery packs'; an upper deck is not narrower; 'Eldoret cereal board' is not an institution (the National Cereals and Produce Board, NCPB, has depots in Eldoret); a 'wide-brimmed pot base' is not how head-ring carrying works. TEACHER DECISION: please confirm the examples you want (for instance the bus operator and the silo location) and whether the pot-carrying example is appropriate for your learners.",
+   "lesson": 5,
+   "kind": "edit",
+   "old": "The teacher introduces three Kenya-relevant engineering examples using a mini-poster or whiteboard sketches: (1) Double-decker Citi Hoppa buses in Nairobi — heavy engine and battery packs kept low, narrow upper deck; (2) Grain storage silos at the Eldoret cereal board — wide circular base, low centre of mass; (3) Traditional Turkana water-pot carriers — wide-brimmed pot base resting on a head ring, keeping the load centred over the carrier.",
+   "new": "Three Kenya-relevant engineering examples are shown on a mini-poster that students read while they build their models (no teacher talk time): (1) Double-decker buses seen in Nairobi — heavy engine, gearbox and fuel tank kept low in the chassis, wide wheel track; (2) Grain storage silos such as those of the National Cereals and Produce Board (NCPB) in Eldoret — wide circular base, low centre of mass; (3) Water pots carried on the head using a cloth ring — the ring holds the rounded pot so that its centre of gravity stays directly above the carrier.",
+   "group": "G12",
+   "group_headline": "Corrected three Kenyan engineering examples in Lesson 5 (Citi Hoppa 'battery packs', 'Eldoret cereal board', Turkana pot carriers) and put them on a poster to save time.",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-051",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The case study card had no expected answers for the teacher (guidelines 5 and 13).",
+   "lesson": 5,
+   "kind": "edit",
+   "old": "Teacher checks data tables for correct identification of the independent variable in each investigation.",
+   "new": "Expected case-study answers: (1) the load's moment about the crane's tipping edge (load weight × radius) became larger than the opposing moment of the crane's own weight and counterweight; (2) keep the load within the rated radius, add counterweight or widen the base (outriggers), use a load-moment limiter. Teacher checks data tables for correct identification of the independent variable in each investigation.",
+   "where": "Lesson 5, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-052",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    9,
+    11
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The case-study card is titled 'Nairobi Construction Site — Tower Crane Incident, 2015' and is described as 'documented'. We could not verify that such an incident exists. Suggestion: if there is no verified local report, rename the card 'A tower-crane overturning (composite case)', or replace it with a documented incident you can cite (for example a published Kenyan investigation). The Final Explanation Part 4 and the Unit sep text also mention a Nairobi crane incident and would need the same wording.",
+   "lesson": 5,
+   "kind": "flag",
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-053",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Time added up: Predict 8 (4 silent + pair + posting), Observe 7, Explain about 16 (8 groups × 2 min presenting + consensus answer), the DQB review done twice (Explain and DQB phases), DQB phase about 10, strip + 5-question test + reflection about 20 = roughly 65 minutes. New plan: Predict 4, Observe 7, Explain 8, DQB 5, Model Building/test 13, with the DQB review done once = about 38 to 40 minutes; Questions 2 and 4 become homework or the next lesson's starter.",
+   "lesson": 6,
+   "kind": "edit",
+   "old": "Allow 3 full minutes of silent individual writing",
+   "new": "Allow 2 full minutes of silent individual writing",
+   "group": "G10",
+   "group_headline": "Lesson 6 had about 65 minutes of activity for a 40-minute lesson (long silences, 2-minute group presentations, DQB review twice, a 5-question test). Trimmed to fit 40 minutes.",
+   "where": "Lesson 6, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-054",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: 8 or more groups presenting for 2 minutes each would take 16 minutes; rotating visits cover everyone in 6.",
+   "lesson": 6,
+   "kind": "edit",
+   "old": "Each group (4 to 5 students) displays their finalised cumulative model — the annotated diagram built progressively across all six lessons. Each model should show: force arrows and moment arms (Lessons 1–2); centre of gravity marker and stability state annotations (Lesson 3); clockwise and anticlockwise moment labels with the balance condition (Lesson 4); stability factor labels and an engineering inset (Lesson 5); and now in Lesson 6 a final written explanation strip attached to the bottom of the model answering the driving question. Groups take turns (approximately 2 minutes per group) to present one chosen annotation and explain it to the class — they do not read it but explain it in their own words.",
+   "new": "Explain phase, 8 minutes in all. Each group (4 to 5 students) displays their finalised cumulative model — the annotated diagram built progressively across all six lessons. Each model should show: force arrows and moment arms (Lessons 1–2); centre of gravity marker and stability state annotations (Lesson 3); clockwise and anticlockwise moment labels with the balance condition (Lesson 4); stability factor labels and an engineering inset (Lesson 5); and now in Lesson 6 a final written explanation strip attached to the bottom of the model answering the driving question. One member of each group stays beside the model and explains one chosen annotation to visiting groups (about 1 minute per visit, two rotations of 3 minutes so the presenter changes) — they do not read it but explain it in their own words.",
+   "group": "G10",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-055",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3,
+    4
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Driving Question Board review was written twice (Explain and DQB phases); it is now done once, in the DQB phase. The Lesson 3 cut-out named here is the sufuria-lid shape students actually used (there was no Kenya map).",
+   "lesson": 6,
+   "kind": "edit",
+   "old": "the cut-out Kenya map from Lesson 3 and asks: 'Is the centre of gravity of this shape at its geometric centre? What does your experiment from Lesson 3 tell you?' (3) Defining stable equilibrium only as returning to position without mentioning the vertical line condition — teacher prompts: 'What must be true about the vertical line for that return to happen?' After all presentations teacher scribes the class consensus answer to the driving question: 'Objects topple when the vertical line through the combined centre of gravity falls outside the base of support, producing an unbalanced moment that rotates the object away from equilibrium. Stability is increased by lowering the centre of gravity and widening the base of support, as engineers deliberately design in cranes, buses, and buildings.' Teacher then reviews the Driving Question Board: reads each posted question aloud",
+   "new": "the sufuria-lid cut-out from Lesson 3 and asks: 'Is the centre of gravity of this shape at its geometric centre? What does your experiment from Lesson 3 tell you?' (3) Defining stable equilibrium only as returning to position without mentioning the vertical line condition — teacher prompts: 'What must be true about the vertical line for that return to happen?' After all presentations teacher scribes the class consensus answer to the driving question: 'Objects topple when the vertical line through the combined centre of gravity falls outside the base of support, producing an unbalanced moment that rotates the object away from equilibrium. Stability is increased by lowering the centre of gravity and widening the base of support, as engineers deliberately design in cranes, buses, and buildings.' In the Driving Question Board phase that follows, the teacher reviews the board: reads each posted question aloud",
+   "group": "G10",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-056",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    3,
+    2
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: DQB phase budget about 5 minutes. 'A-level' is not a CBE term, so the future topic is named without it.",
+   "lesson": 6,
+   "kind": "edit",
+   "old": "silent gallery walk (2 minutes) around the room to re-read all cards posted since Lesson 1. Each student places a small green dot sticker on the card whose question they feel the unit answered most completely, and a small orange dot on any card they feel is still not fully answered for them personally. The class then gathers and the teacher leads a 4-minute structured discussion: three green-dot questions are read aloud and answered collectively with evidence; any orange-dot questions are discussed — if resolvable with unit knowledge, a student volunteer answers; if genuinely beyond the sub-strand, the teacher names the future topic (e.g., torque in rotational dynamics at A-level, structural engineering in technical training). Students add one final card to the DQB: a Career Connection card. Each student writes",
+   "new": "silent gallery walk (1 minute) around the room to re-read all cards posted since Lesson 1. Each student places a small green dot sticker on the card whose question they feel the unit answered most completely, and a small orange dot on any card they feel is still not fully answered for them personally. The class then gathers and the teacher leads a 3-minute structured discussion: three green-dot questions are read aloud and answered collectively with evidence; any orange-dot questions are discussed — if resolvable with unit knowledge, a student volunteer answers; if genuinely beyond the sub-strand, the teacher names the future topic (e.g., torque and couple, or structural engineering in technical training). Students add one final card to the DQB: a Career Connection card (1 minute; set as homework if time is short). Each student writes",
+   "group": "G10",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-057",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: matches the shortened gallery walk.",
+   "lesson": 6,
+   "kind": "edit",
+   "old": "The full 2 minutes of gallery walk are silent",
+   "new": "The full 1 minute of gallery walk is silent",
+   "group": "G10",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-058",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "A 5-sentence strip, five test questions and a reflection cannot be done in the 13 minutes left. Numbers rechecked: strip example 200 N × 0.15 m = 30 N·m against 30 N × 0.15 m = 4.5 N·m (topples); Question 5 uses 200 N × 0.15 m = 30 N·m against 30 N × 0.1 m = 3 N·m (topples). The old distances of 0.3 m and 0.4 m would put the jerrycan's centre nearly a whole stool-seat beyond the leg, which cannot happen.",
+   "lesson": 6,
+   "kind": "edit",
+   "old": "(minimum 5 sentences) at the bottom of their diagram. The strip must: (1) state when an object will topple (toppling condition); (2) reference the anchoring phenomenon specifically (the Jiko stool and the jerrycan); (3) use the terms moment, centre of gravity, base of support, stable equilibrium, and perpendicular distance each at least once; (4) include one quantitative example — students calculate the moment of the 20-litre jerrycan (mass 20 kg, g = 10 N/kg, pivoting about the nearest stool leg, perpendicular distance estimated as 0.3 m) and state whether this moment is balanced or unbalanced given the counteracting moment of the stool weight (stool mass 3 kg, centre of gravity 0.15 m from the same leg). Students then complete the individual summative problem set (5 questions printed on a half-sheet). Question 1: Define moment of a force and state its SI unit. Question 2: A student pushes a school gate with a force of 40 N at 0.8 m from the hinge. Calculate the moment. Question 3: A see-saw has a child of weight 300 N sitting 1.2 m from the pivot. Where must a second child of weight 400 N sit for the see-saw to balance? Question 4: Explain why a double-decker bus is designed with a heavy lower deck and a lighter upper deck. Use the terms centre of gravity and base of support. Question 5 (the jerrycan-on-stool problem): A 20-litre jerrycan of water (weight 200 N) is placed 0.4 m from the pivot leg of a three-legged stool. The stool weighs 30 N and its centre of gravity is 0.1 m on the other side of the pivot leg. (a) Calculate the clockwise moment of the jerrycan. (b) Calculate the anticlockwise moment of the stool weight. (c) State whether the stool topples or remains stable and justify your answer using the Principle of Moments. After completing the problem set individually, students write a personal Reflection Prompt in their notebooks: 'Before this unit",
+   "new": "(minimum 3 sentences, about 4 minutes) at the bottom of their diagram. The strip must: (1) state when an object will topple (toppling condition); (2) reference the anchoring phenomenon specifically (the Jiko stool and the jerrycan); (3) use the terms moment, centre of gravity, base of support, stable equilibrium, and perpendicular distance each at least once; (4) include one quantitative example — students calculate the moment of the 20-litre jerrycan (mass 20 kg, g = 10 N/kg, pivoting about the nearest stool leg, centre of the jerrycan estimated as 0.15 m beyond the leg) and state whether this moment is balanced or unbalanced given the counteracting moment of the stool weight (stool mass 3 kg, centre of gravity 0.15 m from the same leg). Students then complete the individual summative problem set printed on a half-sheet (about 8 minutes: Questions 1, 3 and 5 are done in class; Questions 2 and 4 are homework or the next lesson's starter). Question 1: Define moment of a force and state its SI unit. Question 2: A student pushes a school gate with a force of 40 N at 0.8 m from the hinge. Calculate the moment. Question 3: A see-saw has a child of weight 300 N sitting 1.2 m from the pivot. Where must a second child of weight 400 N sit for the see-saw to balance? Question 4: Explain why a double-decker bus is designed with a heavy lower deck and a lighter upper deck. Use the terms centre of gravity and base of support. Question 5 (the jerrycan-on-stool problem): A 20-litre jerrycan of water (weight 200 N) is placed with its centre 0.15 m beyond the pivot leg of a three-legged stool. The stool weighs 30 N and its centre of gravity is 0.1 m on the other side of the pivot leg. (a) Calculate the clockwise moment of the jerrycan. (b) Calculate the anticlockwise moment of the stool weight. (c) State whether the stool topples or remains stable and justify your answer using the Principle of Moments. After completing the problem set individually, students write a personal Reflection Prompt in their notebooks (as an exit ticket, or as homework if time is short): 'Before this unit",
+   "group": "G10",
+   "where": "Lesson 6, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-059",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: matches the three in-class questions and the new time budget.",
+   "lesson": 6,
+   "kind": "edit",
+   "old": "At the 5-minute mark teacher announces: 'You should be on Question 3 or 4 by now — manage your time.'",
+   "new": "At the 8-minute mark teacher announces: 'You should be on Question 3 or 5 by now — manage your time.'",
+   "group": "G10",
+   "where": "Lesson 6, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-060",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: new numbers, plus an answer key for all questions (guideline 13). Each answer recomputed: 40 × 0.8 = 32; 300 × 1.2 = 360; 360 ÷ 400 = 0.9; 200 × 0.15 = 30; 30 × 0.1 = 3.",
+   "lesson": 6,
+   "kind": "edit",
+   "old": "Marking focus: Question 5c is the highest-order item — students must correctly compare 80 Nm (jerrycan moment: 200 x 0.4) with 3 Nm (stool countermoment: 30 x 0.1) and conclude toppling occurs because the clockwise moment is greater.",
+   "new": "Answer key: Q1 the moment is the turning effect of a force about a pivot, unit N·m; Q2 40 N × 0.8 m = 32 N·m; Q3 300 N × 1.2 m = 360 N·m, so 400 N × d = 360 N·m and d = 0.9 m; Q4 heavy parts kept low lower the centre of gravity and a wide wheelbase widens the base of support, so the vertical line stays inside the base when the bus tilts; Q5 (a) 200 N × 0.15 m = 30 N·m, (b) 30 N × 0.1 m = 3 N·m. Explanation strip example: 30 N·m against 4.5 N·m, so unbalanced. Marking focus: Question 5c is the highest-order item — students must correctly compare 30 N·m (jerrycan moment) with 3 N·m (stool countermoment) and conclude toppling occurs because the clockwise moment is greater.",
+   "group": "G10",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Lesson 6, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-061",
+   "target": "unit",
+   "path": "supportingPhenomena",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The old wording ('lowering and widening the effective centre-of-gravity system') mixed up two ideas; a centre of gravity does not have a width. A balancing pole works by letting the performer move the combined centre of gravity and by keeping it low, as in the stability condition taught in Lessons 3 and 5. Checked against the stability treatment in OpenStax College Physics Chapter 9.",
+   "kind": "edit",
+   "old": "counterintuitively, the pole makes balance easier, not harder, linking to the idea of deliberately lowering and widening the effective centre-of-gravity system to increase stability.",
+   "new": "counterintuitively, the pole makes balance easier, not harder: small movements of the pole let the acrobat shift the combined centre of gravity of body plus pole back over the wire, and holding the pole low keeps that centre of gravity low, linking to the idea of keeping the vertical line through the centre of gravity inside the base of support.",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-062",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Compared with the KICD PDF (Grade 10 Physics, Sub-Strand 1.5): KICD has six outcomes (a to f). The data had eight paraphrased outcomes (a to h, e.g. 'three states of equilibrium', 'design of cranes'). Each lesson still serves them: (a) and (b) Lesson 3, (c) Lessons 1-2, (d) Lesson 4, (f) Lessons 5-6; outcome (e) torque and couple is NOT taught (see flag).",
+   "kind": "set",
+   "value": "By the end of the sub strand the learner should be able to: a) determine the Centre of gravity of regularly and irregularly shaped objects, b) identify the states of equilibrium in bodies, c) determine moment of force about a point, d) verify the principle of moments in turning of objects, e) describe torque and couple in turning objects, f) appreciate the applications of moments and stability in day-to-day life.",
+   "group": "G13",
+   "group_headline": "Learning outcomes, key inquiry question, content, competencies, values and PCI now use the KICD March 2025 wording for Sub-Strand 1.5 (the data had its own eight outcomes a-h and different competencies).",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "By the end of the sub-strand, the learner should be able to:\na) define the moment of a force and calculate moments in given situations,\nb) state and apply the Principle of Moments to solve problems involving balanced systems,\nc) state the conditions necessary for a body to be in equilibrium under the action of parallel forces,\nd) determine the centre of gravity of regular and irregular objects experimentally,\ne) explain the three states of equilibrium (stable, unstable, and neutral) with relevant examples,\nf) investigate how the base area and position of the centre of gravity affect the stability of objects,\ng) apply the concepts of moments and equilibrium to explain real-life situations such as the design of cranes, double-decker buses, and human body mechanics,\nh) appreciate the role of moments and equilibrium in the safe design of structures and everyday objects.",
+   "new": "By the end of the sub strand the learner should be able to: a) determine the Centre of gravity of regularly and irregularly shaped objects, b) identify the states of equilibrium in bodies, c) determine moment of force about a point, d) verify the principle of moments in turning of objects, e) describe torque and couple in turning objects, f) appreciate the applications of moments and stability in day-to-day life.",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-063",
+   "target": "unit",
+   "path": "content",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Content bullets restored to the KICD list verbatim (the data list was paraphrased and added local examples). Note KICD lists 'Principle of moments' and 'Principle of moment' twice as printed.",
+   "kind": "set",
+   "value": "• C.O.G and Stability.\n• Principle of moments.\n• Moment of a force.\n• Principle of moment.\n• Moment about one point of support.\n• Torque and Couple.\n• Moment about two points of support.\n• Resolution of forces.\n• Applications of moments.",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "• Turning effect of a force (moment of a force)\n• The Principle of Moments\n• Conditions for equilibrium of a body under parallel forces\n• Centre of gravity and its determination for regular and irregular objects\n• Stability and states of equilibrium (stable, unstable, and neutral)\n• Factors affecting stability: base area and position of centre of gravity\n• Application of moments and equilibrium in everyday life (see-saws, cranes, human body posture, Maasai warriors carrying loads)",
+   "new": "• C.O.G and Stability.\n• Principle of moments.\n• Moment of a force.\n• Principle of moment.\n• Moment about one point of support.\n• Torque and Couple.\n• Moment about two points of support.\n• Resolution of forces.\n• Applications of moments.",
+   "where": "Unit overview, content",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-064",
+   "target": "unit",
+   "path": "coreCompetencies",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD names two core competencies for this sub-strand (Creativity and Imaginations, Citizenship). The data listed four different ones. Restored verbatim; the Creativity statement refers to torque and couple, which the lessons do not cover (see flag).",
+   "kind": "set",
+   "value": "• Creativity and Imaginations: The learner develops observation skills as they discover fresh ways of doing things while carrying out activities to demonstrate torque and couple.\n• Citizenship: the learner develops active community life skills as they show responsibility to the community while carrying out activities to investigate the factors that affect stability of objects.",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "• Communication and Collaboration: the learner engages in group investigations (e.g., balancing metre rules, locating centre of gravity of cut-out shapes) and presents findings to the class, practising respectful scientific discourse and shared decision-making.\n• Critical Thinking and Problem Solving: the learner analyses why the Nyayo Bus topples on a slope or why a Maasai warrior adjusts posture when carrying a load, constructing logical arguments linking centre of gravity, base area, and moment calculations.\n• Learning to Learn: the learner reflects on predictions made before experiments (predict-observe-explain cycle) and revises mental models of balance and stability as new evidence emerges across all six lessons.\n• Digital Literacy: the learner uses digital simulations or video clips (e.g., slow-motion footage of the Fundi balancing a heavy roof truss) to gather evidence that would be impractical to obtain in the classroom, interpreting digital data to support scientific explanations.",
+   "new": "• Creativity and Imaginations: The learner develops observation skills as they discover fresh ways of doing things while carrying out activities to demonstrate torque and couple.\n• Citizenship: the learner develops active community life skills as they show responsibility to the community while carrying out activities to investigate the factors that affect stability of objects.",
+   "where": "Unit overview, coreCompetencies",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-065",
+   "target": "unit",
+   "path": "values",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD values for this sub-strand are Unity and Integrity; the data listed Responsibility, Integrity, Respect and Unity. Restored verbatim.",
+   "kind": "set",
+   "value": "• Unity: as the learner shows fairness by displaying team spirit while designing and carrying out activities to determine the position of centre of gravity of regular and irregular objects.\n• Integrity: the learner practises the virtue of honesty while presenting genuine results as they design and carry out activities to determine the position of centre of gravity of regular and irregular objects.",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "• Responsibility: the learner takes assigned roles during group experiments (measurer, recorder, spokesperson) and ensures equipment is handled safely and returned in good order, reflecting personal accountability.\n• Integrity: the learner records experimental results honestly, including unexpected data, and does not alter readings to match predictions, upholding scientific honesty.\n• Respect: the learner listens to and builds on the contributions of peers from different backgrounds during class discussions on how communities in Kenya (e.g., tea pickers in Kericho, matatu touts loading cargo) intuitively apply moments in daily work.\n• Unity: the learner collaborates across gender and ability lines during practical activities, recognising that safe, balanced structures benefit the whole community.",
+   "new": "• Unity: as the learner shows fairness by displaying team spirit while designing and carrying out activities to determine the position of centre of gravity of regular and irregular objects.\n• Integrity: the learner practises the virtue of honesty while presenting genuine results as they design and carry out activities to determine the position of centre of gravity of regular and irregular objects.",
+   "where": "Unit overview, values",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-066",
+   "target": "unit",
+   "path": "pcis",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD gives one PCI for this sub-strand (road safety). The data listed four different PCIs. Restored verbatim; it is tied to Lesson 5 (stability factors, buses, loaded vehicles).",
+   "kind": "set",
+   "value": "• Socio-economic and environmental issues: the learner develops safety and security skills as they become conscious of road safety while carrying out activities to investigate the factors that affect stability of objects.",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "• Safety and Accident Prevention: learners connect the Principle of Moments to vehicle safety — exploring why overloaded matatus and top-heavy lorries on Kenyan highways are prone to rolling, reinforcing road-safety consciousness.\n• Environmental Education: learners examine how improper loading of fishing boats on Lake Victoria shifts the centre of gravity dangerously, linking physics to the real environmental and human cost of capsizing accidents.\n• Gender Disparity: learners challenge stereotypes by studying contributions of women engineers and physicists (e.g., women working in Nairobi's construction and design sector) who apply moment principles daily, broadening perceptions of who does physics.\n• Life Skills — Critical Thinking and Problem Solving: learners evaluate everyday scenarios (carrying water jerricans, stacking sacks of maize) and propose physics-informed improvements, practising decision-making skills transferable beyond the classroom.",
+   "new": "• Socio-economic and environmental issues: the learner develops safety and security skills as they become conscious of road safety while carrying out activities to investigate the factors that affect stability of objects.",
+   "where": "Unit overview, pcis",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-067",
+   "target": "unit",
+   "path": "drivingQuestion",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The key inquiry question in the KICD design for this sub-strand is 'How does the stability of bodies affect the designs of their structures?'. The two questions in the data are not KICD wording (the first is from Sub-Strand 1.1). The teachers' driving question itself is unchanged.",
+   "kind": "edit",
+   "old": "KICD KEY INQUIRY QUESTIONS:\n1. How is Physics relevant in day-to-day life?\n2. How do forces determine the stability and equilibrium of objects we encounter every day?",
+   "new": "KICD KEY INQUIRY QUESTION:\nHow does the stability of bodies affect the designs of their structures?",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "where": "Unit overview, drivingQuestion",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-068",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the lesson's key inquiry question now uses the KICD wording.",
+   "lesson": 1,
+   "kind": "set",
+   "value": "How does the stability of bodies affect the designs of their structures?",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "How do forces determine the stability and equilibrium of objects we encounter every day?",
+   "new": "How does the stability of bodies affect the designs of their structures?",
+   "where": "Lesson 1, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-069",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: KICD key inquiry question wording.",
+   "lesson": 2,
+   "kind": "set",
+   "value": "How does the stability of bodies affect the designs of their structures?",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "How do forces determine the stability and equilibrium of objects we encounter every day?",
+   "new": "How does the stability of bodies affect the designs of their structures?",
+   "where": "Lesson 2, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-070",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: KICD key inquiry question wording.",
+   "lesson": 3,
+   "kind": "set",
+   "value": "How does the stability of bodies affect the designs of their structures?",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "How do forces determine the stability and equilibrium of objects we encounter every day?",
+   "new": "How does the stability of bodies affect the designs of their structures?",
+   "where": "Lesson 3, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-071",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: KICD key inquiry question wording.",
+   "lesson": 4,
+   "kind": "set",
+   "value": "How does the stability of bodies affect the designs of their structures?",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "How do forces determine the stability and equilibrium of objects we encounter every day?",
+   "new": "How does the stability of bodies affect the designs of their structures?",
+   "where": "Lesson 4, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-072",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: KICD key inquiry question wording.",
+   "lesson": 5,
+   "kind": "set",
+   "value": "How does the stability of bodies affect the designs of their structures?",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "How do forces determine the stability and equilibrium of objects we encounter every day?",
+   "new": "How does the stability of bodies affect the designs of their structures?",
+   "where": "Lesson 5, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-073",
+   "target": "lesson",
+   "path": "slo.keyInquiry",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: KICD key inquiry question wording.",
+   "lesson": 6,
+   "kind": "set",
+   "value": "How does the stability of bodies affect the designs of their structures?",
+   "group": "G13",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 1.0 Mechanics and Thermal Physics, Sub-Strand 1.5 Moments and equilibrium",
+   "old": "How do forces determine the stability and equilibrium of objects we encounter every day? — addressed fully by synthesising moment calculations, centre of gravity location, and stability principles to explain and predict toppling of the Jiko stool and related objects.",
+   "new": "How does the stability of bodies affect the designs of their structures?",
+   "where": "Lesson 6, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-074",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "KICD GAPS. (1) The KICD design gives Sub-Strand 1.5 'Moments and equilibrium' 18 lessons; this sequence has 6 (400 minutes). (2) KICD content NOT taught anywhere in the six lessons: torque and couple (outcome e), moment about two points of support, resolution of forces. The KICD core-competency statement (Creativity and Imaginations) also names torque and couple. Lessons cannot be added in this revision; suggestion: add a short extension lesson or schemed lessons for these topics, or confirm with the curriculum owner that they are covered elsewhere. (3) Name mismatch: KICD says 'Moments and equilibrium'; the data uses 'Moments and Equilibrium' in the unit and 'Moments of Equilibrium' in the file title, lesson headers and Final Explanation. Not renamed.",
+   "kind": "flag",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-075",
+   "target": "final_explanation",
+   "path": "instructions",
+   "criteria": [
+    7,
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Guideline 7: the Final Explanation never told students to build on their Summary Tables and did not define Claim-Evidence-Reasoning (Claim = answer, Evidence = data or observations, Reasoning = the science idea linking them). The jerrycan wording now matches the corrected stool set-up.",
+   "kind": "edit",
+   "old": "was placed at one corner and nudged, while a wider, lower four-legged stool with the same jerrycan at its corner only rocked and returned upright. Use your evidence from Lessons 1 to 6, your beam-balance and metre-rule data, your centre of gravity investigations, your cumulative model and your Driving Question Board to answer each prompt below.",
+   "new": "was placed at one corner with part of its base overhanging the seat edge, and nudged, while a wider, lower four-legged stool with the same jerrycan at its corner only rocked and returned upright. Use your evidence from Lessons 1 to 6, your beam-balance and metre-rule data, your centre of gravity investigations, your Summary Tables from each lesson, your cumulative model and your Driving Question Board to answer each prompt below. Where a prompt asks you to explain, use Claim-Evidence-Reasoning: your Claim is your answer to the question; your Evidence is the data or observations you collected; your Reasoning is the science idea that links the evidence to the claim.",
+   "where": "Final Explanation, instructions",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-076",
+   "target": "final_explanation",
+   "path": "sections[2].exemplar",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Addresses the audit item on this exemplar. The audit is partly a false alarm: the exemplar's last sentence already links the stool-only argument to the combined centre of gravity. The real gap was that the two arguments (stool weight against load, and combined weight) were not shown to agree, and no numbers were given. Numbers are the Lesson 4 problem 3 values, recomputed: 200 × 0.10 = 20; 50 × 0.15 = 7.5; 80 × 0.30 = 24.",
+   "kind": "edit",
+   "old": "where its vertical line falls relative to the tipping edge decides which moment is larger.",
+   "new": "where its vertical line falls relative to the tipping edge decides which moment is larger. For example, in Lesson 4 problem 3 the jerrycan's toppling moment was 200 N × 0.10 m = 20 N·m; the narrow stool's restoring moment was only 50 N × 0.15 m = 7.5 N·m (it topples), but the wider, heavier stool's was 80 N × 0.30 m = 24 N·m (it rocks back). Using the combined weight of stool plus jerrycan, as in Part 5, gives the same result.",
+   "reference": "OpenStax, College Physics, Chapter 9 \"Statics and Torque\" (torque, conditions for equilibrium, stability and centre of gravity)",
+   "where": "Final Explanation, Part 3: The Principle of Moments, exemplar",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-077",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Guideline 10 asks for the CBE levels Exceeds, Meets, Approaches and Below Expectations. The contract allows three level fields, so the level names are now written at the start of each descriptor (Exceeds / Meets / Approaches). The descriptors themselves are unchanged.",
+   "kind": "set",
+   "value": [
+    {
+     "criterion": "Moment calculations and the Principle of Moments",
+     "excellent": "Exceeds Expectations: Correctly states M = F × d and the Principle of Moments, calculates all values with correct working and units (N·m, N), and interprets what the results mean for the stool.",
+     "proficient": "Meets Expectations: States the formulas and gets most calculations right, with minor errors in units or working, and gives limited interpretation.",
+     "developing": "Approaches Expectations: Gives incomplete or incorrect formulas, calculation errors, or missing units, with little or no interpretation."
+    },
+    {
+     "criterion": "Use of centre of gravity and base of support",
+     "excellent": "Exceeds Expectations: Accurately defines centre of gravity and states the toppling condition (vertical line outside the base of support), and applies it precisely to both stools and the crane.",
+     "proficient": "Meets Expectations: Defines the terms and states the condition mostly correctly, applying it to the stool with some gaps.",
+     "developing": "Approaches Expectations: Confuses centre of gravity with other ideas, or does not link the vertical line to the base of support."
+    },
+    {
+     "criterion": "Evidence from the investigations",
+     "excellent": "Exceeds Expectations: Refers specifically to observations from the lessons (500 g mass on the metre rule, plumb line, clay at top or base, flaps, 200 N jerrycan, crane case) to support every claim.",
+     "proficient": "Meets Expectations: Refers to some observations from the lessons but some claims are not backed by evidence.",
+     "developing": "Approaches Expectations: Makes general statements with little or no reference to what was observed."
+    },
+    {
+     "criterion": "Causal explanation of the anchoring phenomenon",
+     "excellent": "Exceeds Expectations: Gives a complete cause-and-effect chain linking moments, shift of the combined centre of gravity, the base of support and equilibrium to explain both stools, and makes a correct prediction.",
+     "proficient": "Meets Expectations: Explains the phenomenon using most key ideas but the chain of reasoning has a missing link.",
+     "developing": "Approaches Expectations: Describes what happened without explaining why, or uses ideas incorrectly."
+    },
+    {
+     "criterion": "Application and communication",
+     "excellent": "Exceeds Expectations: Gives realistic Kenyan applications with correct reasoning, uses scientific vocabulary correctly throughout, and presents clear, well-organised answers.",
+     "proficient": "Meets Expectations: Gives reasonable applications and mostly correct vocabulary, with some unclear parts.",
+     "developing": "Approaches Expectations: Applications are missing or unrealistic, vocabulary is often incorrect, and answers are hard to follow."
+    }
+   ],
+   "old": "[{\"criterion\": \"Moment calculations and the Principle of Moments\", \"excellent\": \"Correctly states M = F × d and the Principle of Moments, calculates all values with correct working and units (N·m, N), and interprets what the results mean for the stool.\", \"proficient\": \"States the formulas and gets most calculations right, with minor errors in units or working, and gives limited interpretation.\", \"developing\": \"Gives incomplete or incorrect formulas, calculation errors, or missing units, with little or no interpretation.\"}, {\"criterion\": \"Use of centre of gravity and base of support\", \"excellent\": \"Accurately defines centre of gravity and states the toppling condition (vertical line outside the base of support), and applies it precisely to both stools and the crane.\", \"proficient\": \"Defines the terms and states the condition mostly correctly, applying it to the stool with some gaps.\", \"developing\": \"Confuses centre of gravity with other ideas, or does not link the vertical line to the base of support.\"}, {\"criterion\": \"Evidence from the investigations\", \"excellent\": \"Refers specifically to observations from the lessons (500 g mass on the metre rule, plumb line, clay at top or base, flaps, 200 N jerrycan, crane case) to support every claim.\", \"proficient\": \"Refers to some observations from the lessons but some claims are not backed by evidence.\", \"developing\": \"Makes general statements with little or no reference to what was observed.\"}, {\"criterion\": \"Causal explanation of the anchoring phenomenon\", \"excellent\": \"Gives a complete cause-and-effect chain linking moments, shift of the combined centre of gravity, the base of support and equilibrium to explain both stools, and makes a correct prediction.\", \"proficient\": \"Explains the phenomenon using most key ideas but the chain of reasoning has a missing link.\", \"developing\": \"Describes what happened without explaining why, or uses ideas incorrectly.\"}, {\"criterion\": \"Application and communication\", \"excellent\": \"Gives realistic Kenyan applications with correct reasoning, uses scientific vocabulary correctly throughout, and presents clear, well-organised answers.\", \"proficient\": \"Gives reasonable applications and mostly correct vocabulary, with some unclear parts.\", \"developing\": \"Applications are missing or unrealistic, vocabulary is often incorrect, and answers are hard to follow.\"}]",
+   "new": "[{\"criterion\": \"Moment calculations and the Principle of Moments\", \"excellent\": \"Exceeds Expectations: Correctly states M = F × d and the Principle of Moments, calculates all values with correct working and units (N·m, N), and interprets what the results mean for the stool.\", \"proficient\": \"Meets Expectations: States the formulas and gets most calculations right, with minor errors in units or working, and gives limited interpretation.\", \"developing\": \"Approaches Expectations: Gives incomplete or incorrect formulas, calculation errors, or missing units, with little or no interpretation.\"}, {\"criterion\": \"Use of centre of gravity and base of support\", \"excellent\": \"Exceeds Expectations: Accurately defines centre of gravity and states the toppling condition (vertical line outside the base of support), and applies it precisely to both stools and the crane.\", \"proficient\": \"Meets Expectations: Defines the terms and states the condition mostly correctly, applying it to the stool with some gaps.\", \"developing\": \"Approaches Expectations: Confuses centre of gravity with other ideas, or does not link the vertical line to the base of support.\"}, {\"criterion\": \"Evidence from the investigations\", \"excellent\": \"Exceeds Expectations: Refers specifically to observations from the lessons (500 g mass on the metre rule, plumb line, clay at top or base, flaps, 200 N jerrycan, crane case) to support every claim.\", \"proficient\": \"Meets Expectations: Refers to some observations from the lessons but some claims are not backed by evidence.\", \"developing\": \"Approaches Expectations: Makes general statements with little or no reference to what was observed.\"}, {\"criterion\": \"Causal explanation of the anchoring phenomenon\", \"excellent\": \"Exceeds Expectations: Gives a complete cause-and-effect chain linking moments, shift of the combined centre of gravity, the base of support and equilibrium to explain both stools, and makes a correct prediction.\", \"proficient\": \"Meets Expectations: Explains the phenomenon using most key ideas but the chain of reasoning has a missing link.\", \"developing\": \"Approaches Expectations: Describes what happened without explaining why, or uses ideas incorrectly.\"}, {\"criterion\": \"Application and communication\", \"excellent\": \"Exceeds Expectations: Gives realistic Kenyan applications with correct reasoning, uses scientific vocabulary correctly throughout, and presents clear, well-organised answers.\", \"proficient\": \"Meets Expectations: Gives reasonable applications and mostly correct vocabulary, with some unclear parts.\", \"developing\": \"Approaches Expectations: Applications are missing or unrealistic, vocabulary is often incorrect, and answers are hard to follow.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-078",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The partner contract allows only three rubric level fields, so the fourth CBE level, Below Expectations, cannot be represented in the data. Suggestion: teachers add a 'Below Expectations' column by hand in the printed copy (work that needs prompting or does not reach the Approaches descriptor), or the contract is extended later.",
+   "kind": "flag",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T00:42:34"
+  },
+  {
+   "id": "phys_1_5-079",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[4].learnerExperience",
+   "old": "either a Citi Hoppa double-decker bus or a construction crane",
+   "new": "either a double-decker bus or a construction crane",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "G12",
+   "why": "Knock-on of the engineering-examples fix: the bus is no longer named as a Citi Hoppa double-decker.",
+   "where": "Lesson 5, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:42:45"
+  }
+ ]
+}

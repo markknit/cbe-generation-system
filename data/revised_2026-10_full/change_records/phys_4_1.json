@@ -1,0 +1,1572 @@
+{
+ "module": "phys_4_1",
+ "records": [
+  {
+   "id": "phys_4_1-001",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    9,
+    1
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "James Muriithi's farm is described as 'roughly 300 km' from Mount Kenya. Embu town lies on the south-eastern foothills of the mountain, about 50 km from the peaks, so the distance was wrong (and the puzzle is not that the places are far apart, but that they are different environments). Checked against the position of Embu town on a map of Mount Kenya.",
+   "lesson": 1,
+   "path": "framework[1].teacherMoves",
+   "old": "is roughly 300 km from Mount Kenya.",
+   "new": "is only about 50 km from Mount Kenya, on its lower south-eastern slopes.",
+   "group": "G1",
+   "group_headline": "Embu was described as hundreds of kilometres from Mount Kenya; it is about 50 km away on the mountain's foothills",
+   "where": "Lesson 1, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-002",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    9,
+    1
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the Embu distance correction: the phenomenon text said the farm was 'hundreds of kilometres away'.",
+   "path": "phenomenon",
+   "old": "on a farm hundreds of kilometres away",
+   "new": "on a farm in the foothills about 50 kilometres away",
+   "group": "G1",
+   "where": "Unit overview, phenomenon",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-003",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    9,
+    1
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the Embu distance correction in the Final Explanation prompt.",
+   "path": "sections[0].prompt",
+   "old": "on a farm hundreds of kilometres away",
+   "new": "on a farm about 50 kilometres away",
+   "group": "G1",
+   "where": "Final Explanation, Part 1: What the Evidence Shows, prompt",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-004",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "The paragraph students read gave glacier loss as 'over 90% of its mass since 1900', but the same unit uses 'about 85%' of area since 1934 (data strip), and Lesson 3 uses 92%. I rewrote it to match the data strip students actually handle: (1.35 - 0.20) / 1.35 = 0.85, so 'more than 85% of its area'. The 'Kenya Meteorological Department documented a 2-3 week delay' statistic could not be verified; the published research shows the March-May long rains became drier and less reliable across eastern Africa from the 1980s, mainly linked to Indian Ocean warming, with scientists still separating human and natural causes. Teachers decide whether to keep the wording or substitute a local KMD figure they hold.",
+   "lesson": 5,
+   "path": "framework[1].learnerExperience",
+   "old": "the Lewis Glacier has lost over 90% of its mass since 1900, and the Kenya Meteorological Department has documented a 2–3 week delay in the onset of the long rains since the 1980s.",
+   "new": "the Lewis Glacier has lost more than 85% of its ice area since 1934 (from about 1.35 km² to less than 0.20 km², the data strip from Lesson 1), and research shows that the March–May long rains have become drier and less reliable across parts of eastern Africa since the 1980s, linked mainly to warming of the Indian Ocean, while scientists are still working out how much comes from human greenhouse gases and how much from natural cycles such as El Niño and the Indian Ocean Dipole.",
+   "reference": "Funk et al. 2008, PNAS, 'Warming of the Indian Ocean threatens eastern and southern African food security'; Rowell et al. 2015, Journal of Climate, 'Reconciling past and future rainfall trends over East Africa'",
+   "group": "G2",
+   "group_headline": "Evidence claims overstated or inconsistent: glacier loss quoted as 85%, 90% and 92%; an unverifiable rain-delay statistic; Lake Victoria floods and long rains presented as caused by greenhouse warming alone. Each now matches the data or published science",
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-005",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7,
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: same glacier and rain-delay wording in the Summary Table prompt; made consistent with the corrected Observe-phase paragraph.",
+   "lesson": 5,
+   "path": "summaryTablePrompt.observed",
+   "old": "Lewis Glacier has lost over 90% of its mass since 1900, and that the Kenya Meteorological Department has recorded a 2–3 week delay in the onset of the long rains since the 1980s.",
+   "new": "Lewis Glacier has lost more than 85% of its ice area since 1934, and that the long rains have become drier and less reliable across parts of eastern Africa since the 1980s, linked mainly to Indian Ocean warming (human and natural causes are still being separated).",
+   "reference": "Funk et al. 2008, PNAS; Rowell et al. 2015, Journal of Climate",
+   "group": "G2",
+   "where": "Lesson 5, summaryTablePrompt.observed",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-006",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7,
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: model-checking example quoted '90% of Lewis Glacier area lost since 1900', which does not match the 1934 data strip.",
+   "lesson": 5,
+   "path": "framework[4].formativeAssessment",
+   "old": "'90% of Lewis Glacier area lost since 1900'",
+   "new": "'more than 85% of Lewis Glacier area lost since 1934'",
+   "group": "G2",
+   "where": "Lesson 5, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-007",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7,
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the model annotation said 'Lewis Glacier -92% since 1934'. From the data strip, (1.35 - 0.20)/1.35 = 85%, so 92% cannot be reproduced from the numbers students hold.",
+   "lesson": 3,
+   "path": "framework[4].learnerExperience",
+   "old": "Lewis Glacier −92% since 1934.",
+   "new": "Lewis Glacier area down by more than 85% since 1934.",
+   "group": "G2",
+   "where": "Lesson 3, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-008",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7,
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the summary stated flatly that warming 'explains' the changing long rains. Hedged to 'can alter', since East African rainfall is also driven by natural cycles (reference as above).",
+   "lesson": 3,
+   "path": "summaryTablePrompt.explained",
+   "old": "(higher surface temperatures increase evaporation rates from Lake Victoria and the Indian Ocean, altering the moisture and energy dynamics of the long-rains system, disrupting the March–May precipitation patterns that Kenyan farmers have relied on for generations)",
+   "new": "(higher surface temperatures increase evaporation from Lake Victoria and the Indian Ocean and can alter the moisture and energy of the long-rains system, which, together with natural cycles such as El Niño and the Indian Ocean Dipole, helps explain the disrupted March–May rains that Kenyan farmers have relied on for generations)",
+   "reference": "Rowell et al. 2015, Journal of Climate, 'Reconciling past and future rainfall trends over East Africa'; Funk et al. 2008, PNAS",
+   "group": "G2",
+   "where": "Lesson 3, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-009",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Teacher script said scientists link the Lake Victoria flooding to 'warmer regional temperatures'. The 2019-20 rise followed exceptionally heavy rain driven mainly by a very strong positive Indian Ocean Dipole; climate change is expected to make such extremes more likely, but a single flood is not proof of warming. Script corrected so students do not learn a false single-cause story.",
+   "lesson": 4,
+   "path": "framework[1].teacherMoves",
+   "old": "Scientists have linked it to changes in rainfall patterns over the Lake Victoria basin driven by warmer regional temperatures.",
+   "new": "Scientists link the 2019–20 flooding to exceptionally heavy rains driven mainly by a very strong positive Indian Ocean Dipole, a natural pattern of Indian Ocean temperatures; studies suggest a warmer climate makes such extreme rain more likely, so this event is one piece of the climate-change story, not proof by itself.",
+   "reference": "Wainwright et al. 2021, Weather 76(1), 'Extreme rainfall in East Africa, October 2019–January 2020 and context under future climate change'",
+   "group": "G2",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-010",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7,
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: summary said the glacier and the rains 'share a single physical cause'. Reworded to a common driver plus other factors, consistent with the corrected Lake Victoria script.",
+   "lesson": 4,
+   "path": "summaryTablePrompt.explained",
+   "old": "so both phenomena share a single physical cause: the enhanced greenhouse effect driven by rising greenhouse gas concentrations.",
+   "new": "so both phenomena share a common driver, the enhanced greenhouse effect driven by rising greenhouse gas concentrations, although natural cycles and local factors also affect Kenya's rainfall.",
+   "reference": "Funk et al. 2008, PNAS; Rowell et al. 2015, Journal of Climate",
+   "group": "G2",
+   "where": "Lesson 4, summaryTablePrompt.explained",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-011",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The supporting phenomenon described Lake Victoria's 'shrinking shoreline' and evaporation data, but Lesson 4 actually uses the record RISE of the lake and the 2020 Kisumu floods. Made the unit description match what is taught.",
+   "path": "supportingPhenomena",
+   "old": "Lake Victoria's Shrinking Shoreline and Changing Fish Catches: fishermen in Kisumu report that the lake's water levels and fish populations are shifting. Students analyse temperature and evaporation data to connect warmer air temperatures (driven by the greenhouse effect) to increased lake evaporation and disrupted aquatic ecosystems — showing that climate change reaches even inland water bodies.",
+   "new": "Lake Victoria's Record Rise and the Kisumu Floods (2019–20): the lake rose by about 1.2 metres and flooded thousands of homes and fishing communities around Kisumu. Students study the rainfall behind the rise, including the role of natural cycles, and discuss how a warming climate can make such extremes more likely — showing that climate change reaches even inland water bodies.",
+   "group": "G2",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-012",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    7,
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: exemplar quoted '90% of its mass since 1900', which no lesson data supports. Replaced by the percentage computed from the strip: (1.35 - 0.20)/1.35 = 0.85.",
+   "path": "sections[0].exemplar",
+   "old": "Second, the Lewis Glacier has lost over 90% of its mass since 1900.",
+   "new": "Second, that is a loss of more than 85% of its area, because (1.35 − 0.20) ÷ 1.35 is about 0.85.",
+   "group": "G2",
+   "where": "Final Explanation, Part 1: What the Evidence Shows, exemplar",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-013",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    10,
+    1
+   ],
+   "category": "assessment",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The prompt gave away the answer (it told students that evaporation changes and that 'one cause can explain both'). Rewritten so students must produce the reasoning, and now asks them to evaluate how far one cause explains both phenomena and name one other factor, in line with the corrected science.",
+   "path": "sections[3].prompt",
+   "old": "In your answer, (a) say what happens to evaporation when surface temperatures rise, (b) explain how this affects the water cycle and the rains over Kenya, and (c) explain why one cause can explain both the shrinking glacier and the farmer's experience.",
+   "new": "In your answer, (a) explain how a warmer atmosphere and warmer oceans could change the water cycle that supplies Kenya's rain, (b) explain how this could affect the timing and reliability of the long rains, and (c) evaluate how far one cause, the enhanced greenhouse effect, can account for both the shrinking glacier and the farmer's experience, and name one other factor that also affects Kenya's rainfall.",
+   "group": "G2",
+   "where": "Final Explanation, Part 4: Why the Rains Are Becoming Unpredictable, prompt",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-014",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    7,
+    1
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Exemplar relied on the unverifiable 'Kenya Meteorological Department recorded a 2-3 week delay' figure and said both changes come from 'the same cause'. Replaced with the published finding about the long rains and a balanced statement (major contributor, not the only factor), matching the revised prompt.",
+   "path": "sections[3].exemplar",
+   "old": "This is consistent with the delay of 2 to 3 weeks in the onset of the long rains that the Kenya Meteorological Department has recorded since the 1980s. Changes in atmospheric circulation, including the timing of the Inter-Tropical Convergence Zone, are one way scientists link warming to shifts in the seasons. The disrupted planting seasons lower maize and bean yields, as James Muriithi described. (c) Both changes come from the same cause, the enhanced greenhouse effect. Extra energy retained in the Earth system melts ice on the mountain and also disturbs the water cycle that brings rain to farms.",
+   "new": "This fits research showing that the long rains have become drier and less reliable across parts of eastern Africa since the 1980s, linked mainly to warming of the Indian Ocean. Changes in atmospheric circulation, including the timing of the Inter-Tropical Convergence Zone, are one way scientists link warming to shifts in the seasons. The disrupted planting seasons lower maize and bean yields, as James Muriithi described. (c) Both changes have a common driver: the extra energy retained by the enhanced greenhouse effect warms the mountain, so more ice melts, and it warms the oceans and air that supply Kenya's rain, disturbing the water cycle. It is not the only factor: natural cycles such as El Niño and the Indian Ocean Dipole also change the long rains from year to year, so scientists describe warming as a major contributor supported by evidence, not the single cause.",
+   "reference": "Funk et al. 2008, PNAS; Rowell et al. 2015, Journal of Climate; Wainwright et al. 2021, Weather 76(1)",
+   "group": "G2",
+   "where": "Final Explanation, Part 4: Why the Rains Are Becoming Unpredictable, exemplar",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-015",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Level 3 look-for asked only for the full chain. Added that strong answers acknowledge that natural cycles also affect Kenya's rainfall, so students are not rewarded for a single-cause claim.",
+   "lesson": 7,
+   "path": "framework[2].formativeAssessment",
+   "old": "and uses precise physical language (infrared radiation, re-radiation, energy balance).",
+   "new": "and uses precise physical language (infrared radiation, re-radiation, energy balance). A strong answer also says that natural cycles such as El Niño and the Indian Ocean Dipole affect Kenya's rainfall too, so warming is a major contributor rather than the only cause. If a student writes that greenhouse gases are the only cause of the rain changes, ask: 'What else changes the rain from one year to the next?'",
+   "reference": "Funk et al. 2008, PNAS; Rowell et al. 2015, Journal of Climate",
+   "group": "G2",
+   "where": "Lesson 7, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-016",
+   "kind": "flag",
+   "target": "lesson",
+   "criteria": [
+    1,
+    9
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The glacier data strip (about 1.35 km² in 1934, 0.37 km² in 2004, under 0.20 km² in 2023) is labelled 'Lewis Glacier area' but I could not match these figures to a published Lewis Glacier record; they look closer to the combined area of all Mount Kenya glaciers. Suggest the teacher checks the strip against Kenya's glacier-monitoring literature (e.g. the Lewis Glacier mass-balance work of Prinz and colleagues) and relabels it 'Mount Kenya glaciers' or replaces the numbers. The unit's percentages are now computed from the strip, so they will need updating together if the numbers change.",
+   "lesson": 1,
+   "path": "framework[1].learnerExperience",
+   "group": "G2",
+   "where": "Lesson 1, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-017",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 5 said Lessons 1-4 had taught 'what electromagnetic radiation is', how 'the ozone layer interacts with UV' and energy balance. The ozone layer is only distinguished briefly in Lesson 3 and taught in Lesson 6, so students had not met it when Lesson 5 assumed they had. Pointers corrected here and in the places below; lesson order is unchanged.",
+   "lesson": 5,
+   "path": "slo.purposeInStoryline",
+   "old": "Lessons 1–4 established what electromagnetic radiation is, how the greenhouse effect works naturally, how the ozone layer interacts with UV radiation, and how energy balance governs Earth's temperature.",
+   "new": "Lessons 1–4 established how the greenhouse effect works naturally (shortwave in, infrared out, absorption and re-emission), where Kenya's greenhouse gases come from, and what warming is doing in Kenya; the ozone layer was only briefly separated from the greenhouse effect in Lesson 3 and is studied fully in Lesson 6.",
+   "group": "G5",
+   "group_headline": "Lesson 5 assumed the ozone layer had already been taught, but it is only touched in Lesson 3 and taught in Lesson 6; lesson pointers corrected",
+   "where": "Lesson 5, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-018",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: Lesson 4's storyline note gave the mechanism as 'Lessons 1 and 2' (it is Lessons 1 and 3) and said ozone context came in Lesson 3.",
+   "lesson": 4,
+   "path": "slo.purposeInStoryline",
+   "old": "Students now have the physics mechanism (Lessons 1 and 2), the emission sources (Lesson 2), and the ozone context (Lesson 3).",
+   "new": "Students now have the physics mechanism (Lessons 1 and 3), the emission sources (Lesson 2) and a first distinction between ozone and the greenhouse effect (Lesson 3; ozone is studied fully in Lesson 6).",
+   "group": "G5",
+   "where": "Lesson 4, slo.purposeInStoryline",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-019",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Predict prompt asked students to draw on what they learned about 'the ozone layer' in Lessons 1-4.",
+   "lesson": 5,
+   "path": "framework[0].learnerExperience",
+   "old": "about radiation, the greenhouse effect, energy balance, and the ozone layer —",
+   "new": "about radiation, the greenhouse effect and energy balance —",
+   "group": "G5",
+   "where": "Lesson 5, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-020",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: said ozone was covered in Lesson 3; it was only touched there and is taught in Lesson 6.",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "ozone blocks UV (Lesson 3)",
+   "new": "ozone blocks UV (met briefly in Lesson 3 and studied fully in Lesson 6)",
+   "group": "G5",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-021",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the notebook model could not yet show the ozone layer, which students add in Lesson 6.",
+   "lesson": 5,
+   "path": "framework[4].learnerExperience",
+   "old": "greenhouse gases absorbing and re-emitting IR; the ozone layer filtering UV.",
+   "new": "greenhouse gases absorbing and re-emitting IR (the ozone layer is added in Lesson 6).",
+   "group": "G5",
+   "where": "Lesson 5, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-022",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: reflection question said the ozone mechanism was taught in Lesson 3.",
+   "lesson": 5,
+   "path": "teacherReflection",
+   "old": "(UV absorption, Lesson 3)",
+   "new": "(UV absorption, introduced briefly in Lesson 3 and studied in Lesson 6)",
+   "group": "G5",
+   "where": "Lesson 5, teacherReflection",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-023",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "The lesson framed Nairobi UV as 'rising', but the lesson's own dataset shows UV-B peaking in the late 1990s and then declining after the Montreal Protocol. The framing question now matches the data. Please also confirm that a Nairobi UV-B series of this shape really exists in the UNEP data students will use: I could not name a published source for it, and ozone loss near the equator was much smaller than near the poles, so the Nairobi change should be modest. Teachers decide whether to keep this dataset or substitute a verified one (for example a satellite ozone-column record for East Africa).",
+   "lesson": 6,
+   "path": "overview",
+   "old": "Why are UV levels in Nairobi rising even as we try to reduce warming?",
+   "new": "Why did UV levels in Nairobi peak in the late 1990s and then begin to fall?",
+   "reference": "WMO/UNEP Scientific Assessment of Ozone Depletion: 2022 (tropical ozone change and recovery)",
+   "group": "G6",
+   "group_headline": "Lesson 6 and the unit described Nairobi UV as rising, while the lesson's own data shows a late-1990s peak and a decline; framing now matches the data (teachers to confirm the dataset)",
+   "where": "Lesson 6, overview",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-024",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the supporting phenomenon said UV-B in Nairobi 'has measurably increased over decades' and was linked to higher rates of skin conditions; neither claim matches the lesson data or a named source.",
+   "path": "supportingPhenomena",
+   "old": "The Ozone Hole Over Antarctica and Rising UV Levels in Nairobi: students examine UNEP data showing that UV-B radiation reaching Nairobi has measurably increased over decades and is linked to higher rates of skin conditions — connecting the physics of ozone depletion to real health consequences in Kenya.",
+   "new": "The Ozone Hole Over Antarctica and UV Levels in Nairobi: students examine ozone and UV-B data for Nairobi, which show a peak in the late 1990s and a decline after the Montreal Protocol, and discuss why sun protection still matters for skin and eye health in Kenya — connecting the physics of ozone depletion to health and to a policy success.",
+   "reference": "WMO/UNEP Scientific Assessment of Ozone Depletion: 2022",
+   "group": "G6",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-025",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the purpose said students would 'evaluate how both processes interact to drive' the changes at Mount Kenya, but the lesson concludes that the greenhouse effect is the main driver and ozone is not. Reworded so the purpose matches the conclusion.",
+   "lesson": 6,
+   "path": "slo.purpose",
+   "old": "evaluate how both atmospheric processes interact to drive the changes observed at Mount Kenya and on Kenyan farms.",
+   "new": "judge how much each atmospheric process contributes to the changes observed at Mount Kenya and on Kenyan farms.",
+   "group": "G6",
+   "where": "Lesson 6, slo.purpose",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-026",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the summary called 'rising UV-B levels in Nairobi during the 1990s' real evidence of local impact; replaced with a statement that matches the dataset and notes the smaller effect near the equator.",
+   "lesson": 6,
+   "path": "summaryTablePrompt.learned",
+   "old": "and rising UV-B levels in Nairobi during the 1990s are real, measurable evidence of ozone depletion's local impact in Kenya.",
+   "new": "and the Nairobi UV-B record, which peaked in the late 1990s and then declined, links ozone depletion, the Montreal Protocol and UV exposure in Kenya (the effect near the equator is smaller than near the poles, where ozone loss was greatest).",
+   "reference": "WMO/UNEP Scientific Assessment of Ozone Depletion: 2022",
+   "group": "G6",
+   "where": "Lesson 6, summaryTablePrompt.learned",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-027",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: added an expected student answer and a look-for so the teacher can address the size of the equatorial effect, which also supports the conclusion that ozone is not the main driver at Mount Kenya.",
+   "lesson": 6,
+   "path": "framework[1].formativeAssessment",
+   "old": "What year did the Montreal Protocol begin reducing CFC production? Now look at the graph — what happens to UV-B after that lag period?'",
+   "new": "What year did the Montreal Protocol begin reducing CFC production? Now look at the graph — what happens to UV-B after that lag period?' Also ask: 'Is the change in Nairobi as big as the Antarctic ozone hole? Why not?' Expected answer: no, it is much smaller, because ozone loss was greatest near the poles and small near the equator.",
+   "reference": "WMO/UNEP Scientific Assessment of Ozone Depletion: 2022",
+   "group": "G6",
+   "where": "Lesson 6, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-028",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "The KICD outcome 'describe the mitigating factors against climate change', the Final Explanation Part 5 and Lesson 7's own learning goals all expect mitigation and adaptation, but no lesson teaches them (the unit storyline planned a mitigation lesson that does not exist in the 7 lessons). With the lessons fixed, I added a short Response Cards sort to the Lesson 7 Observe phase using examples already named in the unit. This is a minimal fix: teachers should decide whether to add a fuller mitigation lesson (see the separate flag).",
+   "lesson": 7,
+   "path": "framework[1].learnerExperience",
+   "old": "Lesson 6 — ozone layer UV-B shield and CFC data from Nairobi. Students spend 5 minutes in groups of four reviewing the timeline and answering three focus questions written on the board:",
+   "new": "Lesson 6 — ozone layer UV-B shield and CFC data from Nairobi. A seventh panel, Responses, shows four Response Cards: Olkaria geothermal power, Lake Turkana Wind Power, an energy-efficient jiko, and drought-tolerant crops with rainwater harvesting. Students spend 4 minutes in groups of four reviewing the timeline and answering three focus questions written on the board, then 3 minutes sorting the Response Cards into MITIGATION (cuts greenhouse gas emissions or removes CO₂) and ADAPTATION (helps people cope with change already happening) and noting which step of the causal chain each acts on. The questions are:",
+   "reference": "IPCC AR6 Working Group II and III glossaries (definitions of mitigation and adaptation)",
+   "group": "G7",
+   "group_headline": "Mitigation and adaptation (KICD outcome d, and Final Explanation Part 5) were never taught; a short Response Cards sort was added to Lesson 7",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-029",
+   "kind": "flag",
+   "target": "unit",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Even with the Response Cards sort, KICD outcome d (describe mitigating factors against climate change) and the KICD experience 'outline mitigating factors using reference materials or resource persons' get only about 3 minutes in the whole unit, and policy items in the original content list (Paris Agreement, Kenya's NDCs, reforestation, sustainable agriculture) are not taught. A dedicated mitigation and adaptation lesson would be needed to teach and assess this properly; lessons cannot be added in this revision.",
+   "path": "learningOutcomes",
+   "group": "G7",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-030",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Teacher script for the Response Cards sort, with expected answers and an 'if students say X' move.",
+   "lesson": 7,
+   "path": "framework[1].teacherMoves",
+   "old": "You have five minutes. I want every person in the group to speak at least once.' Circulate and listen. When you hear a group struggling with question 3 — the link between atmospheric physics and the Embu farmer — pose a probing question without answering it: 'What happens to the water cycle when surface temperatures rise? Where does Embu get its rainfall from? Think about what we learned about evaporation and shifting rainfall patterns in Lesson 4.' WAIT TIME: After posing this probe, step back and allow 8 seconds before any further support. After 5 minutes, ask one group to share their answer to question 1 and a different group to share their answer to question 3. Acknowledge both with: 'That is exactly the kind of scientific reasoning this unit has been building toward.'",
+   "new": "You have four minutes. I want every person in the group to speak at least once.' Circulate and listen. When you hear a group struggling with question 3 — the link between atmospheric physics and the Embu farmer — pose a probing question without answering it: 'What happens to the water cycle when surface temperatures rise? Where does Embu get its rainfall from? Think about what we learned about evaporation and shifting rainfall patterns in Lesson 4.' WAIT TIME: After posing this probe, step back and allow 8 seconds before any further support. After 5 minutes, ask one group to share their answer to question 1 and a different group to share their answer to question 3. Acknowledge both with: 'That is exactly the kind of scientific reasoning this unit has been building toward.' Then hand out the four Response Cards for 3 minutes and say: 'Mitigation means reducing the cause; adaptation means coping with the effect. Sort the cards, and for each one say which step of our causal chain it acts on.' Expected answers: Olkaria geothermal, Lake Turkana wind power and the efficient jiko are mitigation, acting at the first step (fewer greenhouse gases released); drought-tolerant crops with rainwater harvesting are adaptation (they do not change the greenhouse effect, they reduce harm). Tree planting, if raised, is mitigation because trees take CO₂ out of the air. If a student says tree planting is adaptation, say: 'It can be both. Which part removes CO₂, and which part helps people cope?'",
+   "group": "G7",
+   "where": "Lesson 7, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-031",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Added a look-for so the teacher can check the mitigation/adaptation sort that the Final Explanation Part 5 now builds on.",
+   "lesson": 7,
+   "path": "framework[1].formativeAssessment",
+   "old": "showing they have retained the nuance from Lesson 6.",
+   "new": "showing they have retained the nuance from Lesson 6; (4) whether groups place each Response Card at the right step of the chain and can say why tree planting is mitigation while drought-tolerant crops are adaptation.",
+   "group": "G7",
+   "where": "Lesson 7, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-032",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: Lesson 5 promised that 'Lessons 6 and 7' would address what can be done, but Lesson 6 is the ozone lesson. Pointer now names what each lesson really offers.",
+   "lesson": 5,
+   "path": "framework[3].learnerExperience",
+   "old": "those are exactly what Lessons 6 and 7 will address.",
+   "new": "Lesson 6 shows how the world acted on ozone, and Lesson 7 asks which responses fit which step of our chain.",
+   "group": "G7",
+   "where": "Lesson 5, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-033",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: same pointer in the teacher script and the label written on the board.",
+   "lesson": 5,
+   "path": "framework[3].teacherMoves",
+   "old": "write 'Lessons 6 & 7' next to it.",
+   "new": "write 'Lesson 6 (Montreal Protocol) and Lesson 7 (Response Cards)' next to it.",
+   "group": "G7",
+   "where": "Lesson 5, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-034",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: reflection called Lessons 6 and 7 'solutions-focused'; Lesson 6 is the ozone lesson.",
+   "lesson": 5,
+   "path": "teacherReflection",
+   "old": "readiness for the solutions-focused Lessons 6 and 7.",
+   "new": "readiness for the Montreal Protocol example in Lesson 6 and the response work in Lesson 7.",
+   "group": "G7",
+   "where": "Lesson 5, teacherReflection",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-035",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 4 is a 40-minute lesson but its activities add up to about 50 minutes (Predict 7, Observe 11, Explain 10 + gallery walk + discussion about 19, Driving Question Board 5, Model 8). The web is trimmed to six minutes and three required chains, with a timed gallery walk, giving Predict 7, Observe 10, Explain 12, Driving Question Board 5, Model Building 6 = 40 minutes.",
+   "lesson": 4,
+   "path": "framework[2].learnerExperience",
+   "old": "They must include at least one chain ending at Mount Kenya Lewis Glacier retreat, one ending at disrupted long rains in Embu County, one ending at Rift Valley drought, one ending at Kisumu or Lake Victoria flooding, and one ending at Kericho tea harvest disruption. Students use their prior lesson notes, the NASA handout, and the cause-chain cards. After 10 minutes of group construction, each group does a gallery walk — moving to one other groups web and adding one sticky note of a connection they think is missing, using a different colour pen.",
+   "new": "They must include at least three chains: one ending at Mount Kenya Lewis Glacier retreat, one ending at disrupted long rains in Embu County, and one ending at any of Rift Valley drought, Kisumu or Lake Victoria flooding, or Kericho tea harvest disruption (groups that finish early add the others). Students use their prior lesson notes, the NASA handout, and the cause-chain cards. After 6 minutes of group construction, each group does a 3-minute gallery walk — moving to one other groups web and adding one sticky note of a connection they think is missing, using a different colour pen.",
+   "group": "T4",
+   "group_headline": "Lesson 4 planned about 50 minutes of activity for a 40-minute period; trimmed to fit",
+   "where": "Lesson 4, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-036",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Pacing note so the teacher can keep to 40 minutes, and a safe place to drop the testimony rewrite.",
+   "lesson": 4,
+   "path": "framework[4].teacherMoves",
+   "old": "Collect two or three notebooks at the end of class to review the testimony rewrites as formative evidence.",
+   "new": "PACING (40 minutes): Predict 7, Observe 10, Explain 12, Driving Question Board 5, Model Building 6. If time runs short, set the testimony rewrite as a take-home exit task. Collect two or three notebooks at the start of Lesson 5 to review the testimony rewrites as formative evidence.",
+   "group": "T4",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-037",
+   "kind": "set",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Duration read '2 lessons (80 minutes)'. Every other lesson gives a single clear period length, and 80 minutes is the double period; made it '80 minutes'.",
+   "lesson": 5,
+   "path": "duration",
+   "value": "80 minutes",
+   "group": "T5",
+   "group_headline": "Lesson 5 planned about 105 minutes of activity for an 80-minute period (Observe alone took 50); trimmed to fit",
+   "old": "2 lessons (80 minutes)",
+   "new": "80 minutes",
+   "where": "Lesson 5, duration",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-038",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Phases added up to about 105 minutes for an 80-minute lesson (Predict 9, Observe 50, Explain 27, DQB 7, Model 11). The Observe phase is cut to 25 minutes (graphs 15, PhET recall 5, Kenya paragraph 5), since students already ran the simulation in Lesson 3; this gives roughly Predict 9, Observe 25, Explain 27, DQB 7, Model 10 = 78 minutes.",
+   "lesson": 5,
+   "path": "framework[1].learnerExperience",
+   "old": "PART A — Graph Analysis (30 minutes): In groups of three, students receive a printed or on-screen data pack containing: (1) the Keeling Curve showing atmospheric CO₂ concentration from 1958 to the present (labelled in ppm), annotated with key human milestones (post-WWII industrialisation, rapid motorisation of Nairobi 1970s–1990s, rise of Chinese manufacturing 2000s, Kenya's expanding charcoal trade); (2) NASA/NOAA global average temperature anomaly data from 1880 to present; (3) a simplified timeline of global fossil fuel extraction volumes from 1800 to present. Students complete a structured analysis worksheet: — 'Describe the trend in CO₂ concentration from 1958 to present. What was the concentration in 1958? What is it approximately today?' — 'Describe the trend in global average temperature anomaly from 1900 to present. When did the anomaly become consistently positive?' — 'Mark on both graphs the period 1950–2000. What happened to both variables during this period? What was happening in human society during the same period?' — 'What pattern do you notice between CO₂ concentration and temperature anomaly? Does correlation prove causation? What else would you need to know?' PART B — PhET / LabXchange Simulation (15 minutes): Each student (or pair if devices are limited) opens the PhET 'Greenhouse Effect' simulation.",
+   "new": "PART A — Graph Analysis (15 minutes; question 4, the 1950–2000 marking task, is an extension for fast groups): In groups of three, students receive a printed or on-screen data pack containing: (1) the Keeling Curve showing atmospheric CO₂ concentration from 1958 to the present (labelled in ppm), annotated with key human milestones (post-WWII industrialisation, rapid motorisation of Nairobi 1970s–1990s, rise of Chinese manufacturing 2000s, Kenya's expanding charcoal trade); (2) NASA/NOAA global average temperature anomaly data from 1880 to present; (3) a simplified timeline of global fossil fuel extraction volumes from 1800 to present. Students complete a structured analysis worksheet: — 'Describe the trend in CO₂ concentration from 1958 to present. What was the concentration in 1958? What is it approximately today?' — 'Describe the trend in global average temperature anomaly from 1900 to present. When did the anomaly become consistently positive?' — 'Mark on both graphs the period 1950–2000. What happened to both variables during this period? What was happening in human society during the same period?' — 'What pattern do you notice between CO₂ concentration and temperature anomaly? Does correlation prove causation? What else would you need to know?' PART B — PhET Recall (5 minutes): Students (or the teacher, on a projector, if devices are limited) re-open the PhET 'Greenhouse Effect' simulation from Lesson 3.",
+   "group": "T5",
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-039",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the shorter Part B: a 3-minute teacher demonstration replaces the independent simulation time.",
+   "lesson": 5,
+   "path": "framework[1].teacherMoves",
+   "old": "For Part B, demonstrate the PhET simulation on the projector for 90 seconds before releasing students to work independently.",
+   "new": "For Part B, run the simulation as a 3-minute teacher demonstration on the projector (students already used it in Lesson 3) while students record their sentence frame.",
+   "group": "T5",
+   "where": "Lesson 5, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-040",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 6 is an 80-minute lesson but its phases add up to about 100 minutes (Predict 9, Observe 40, Explain 26, DQB 10, Model 16). Observe is cut to 25 minutes (Source A 15, Source B 10), the T-chart to 6 + 4 minutes, giving about Predict 9, Observe 25, Explain 20, DQB 8, Model 16 = 78 minutes.",
+   "lesson": 6,
+   "path": "framework[1].learnerExperience",
+   "old": "SOURCE A (25 minutes): Working in pairs, students work through a structured excerpt of the Khan Academy lesson 'Ozone Layer and Ozone Hole' (pre-loaded on devices or printed as a guided reading sheet if internet is unavailable). As they work, they complete a structured Evidence Collection Table with four columns: 'What the ozone layer is made of,' 'What it does (what radiation does it block and where),' 'What damages it and how (the chemistry of CFC catalysis in simple terms),' and 'What has been done about it.' Students write in their own words — not copy-pasted. SOURCE B (15 minutes)",
+   "new": "SOURCE A (15 minutes): Working in pairs, students work through a structured excerpt of the Khan Academy lesson 'Ozone Layer and Ozone Hole' (pre-loaded on devices or printed as a guided reading sheet if internet is unavailable). As they work, they complete a structured Evidence Collection Table with four columns: 'What the ozone layer is made of,' 'What it does (what radiation does it block and where),' 'What damages it and how (the chemistry of CFC catalysis in simple terms),' and 'What has been done about it.' Students write in their own words — not copy-pasted. SOURCE B (10 minutes)",
+   "group": "T6",
+   "group_headline": "Lesson 6 planned about 100 minutes of activity for an 80-minute period; trimmed to fit",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-041",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: timer calls changed to match the shorter Source A and Source B.",
+   "lesson": 6,
+   "path": "framework[1].teacherMoves",
+   "old": "You have 25 minutes for Source A. Your job is NOT to copy — your job is to understand well enough to explain it to someone who wasn't here. Write in your own words. Go.' Set a 25-minute timer. Circulate every 4–5 minutes, pausing at pairs who are copying verbatim and redirecting: 'Close the screen/text for a moment — what did that section mean in your own words?' At the 20-minute mark, give a 5-minute warning: 'Five minutes — make sure all four columns have something in them.' Transition to Source B: 'Now we're looking at real data from Nairobi. Scientists at UNEP have been measuring UV-B levels in East Africa for decades. Your job: read the graph and annotate it — three observations minimum. What story does this data tell?' Allow 15 minutes. At the midpoint (7–8 minutes in)",
+   "new": "You have 15 minutes for Source A. Your job is NOT to copy — your job is to understand well enough to explain it to someone who wasn't here. Write in your own words. Go.' Set a 15-minute timer. Circulate every 4–5 minutes, pausing at pairs who are copying verbatim and redirecting: 'Close the screen/text for a moment — what did that section mean in your own words?' At the 10-minute mark, give a 5-minute warning: 'Five minutes — make sure all four columns have something in them.' Transition to Source B: 'Now we're looking at real data from Nairobi. Scientists at UNEP have been measuring UV-B levels in East Africa for decades. Your job: read the graph and annotate it — three observations minimum. What story does this data tell?' Allow 10 minutes. At the midpoint (about 5 minutes in)",
+   "group": "T6",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-042",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: T-chart working time cut from 8 + 5 to 6 + 4 minutes.",
+   "lesson": 6,
+   "path": "framework[2].learnerExperience",
+   "old": "individually (8 minutes), then discuss in groups of four to reconcile differences (5 minutes)",
+   "new": "individually (6 minutes), then discuss in groups of four to reconcile differences (4 minutes)",
+   "group": "T6",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-043",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: teacher timer calls for the shorter T-chart.",
+   "lesson": 6,
+   "path": "framework[2].teacherMoves",
+   "old": "You have 8 minutes to fill this in on your own — use your Evidence Collection Table from Phase 2 and your notes from Lessons 1–5. This is a thinking task, not a copying task.' Set an 8-minute timer. After 8 minutes: 'Now, in your group of four, compare your T-charts. Where do you disagree? Spend 5 minutes reconciling.",
+   "new": "You have 6 minutes to fill this in on your own — use your Evidence Collection Table from Phase 2 and your notes from Lessons 1–5. This is a thinking task, not a copying task.' Set a 6-minute timer. After 6 minutes: 'Now, in your group of four, compare your T-charts. Where do you disagree? Spend 4 minutes reconciling.",
+   "group": "T6",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-044",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 7 is a 40-minute lesson but its phases add up to about 52 minutes (and the Response Cards add 3). Trimmed to Predict 7, Observe 7, Explain 11, Driving Question Board 6, Model Building 9 = 40: writing 9 minutes plus 2 for peer feedback here, shorter board and presentation times below.",
+   "lesson": 7,
+   "path": "framework[2].learnerExperience",
+   "old": "Students work individually for 10 minutes, then share their written explanation with a partner for peer feedback",
+   "new": "Students work individually for 9 minutes, then share their written explanation with a partner for 2 minutes of peer feedback",
+   "group": "T7",
+   "group_headline": "Lesson 7 planned about 52 minutes of activity for a 40-minute period (before adding the Response Cards); trimmed to fit",
+   "where": "Lesson 7, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-045",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: teacher timer matches the 9-minute writing time.",
+   "lesson": 7,
+   "path": "framework[2].teacherMoves",
+   "old": "Set a timer for 10 minutes.",
+   "new": "Set a timer for 9 minutes.",
+   "group": "T7",
+   "where": "Lesson 7, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-046",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: card sorting 3 minutes and gallery walk 1 minute (about 6 minutes in total with the discussion).",
+   "lesson": 7,
+   "path": "framework[3].learnerExperience",
+   "old": "Groups spend 5 minutes categorising the original DQB questions and writing at least one red card — a new question that has emerged from their deeper understanding. Groups then post their colour-coded cards next to the original questions. The class does a brief gallery walk (2 minutes)",
+   "new": "Groups spend 3 minutes categorising the original DQB questions and writing at least one red card — a new question that has emerged from their deeper understanding. Groups then post their colour-coded cards next to the original questions. The class does a brief gallery walk (1 minute)",
+   "group": "T7",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-047",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: model-presentation phase cut to about 9 minutes (final check 1, presentations 3, consensus 2, closing sentence 3).",
+   "lesson": 7,
+   "path": "framework[4].learnerExperience",
+   "old": "Each group has 3 minutes to do a final check of their annotated cumulative model from Component A of the Final Explanation Sheet, adding any details they noticed were missing during the DQB closure phase. Then one representative from each group holds up their model and gives a 60-second verbal summary: 'Our model shows...' The class listens and after each presentation has 30 seconds to identify one thing this group included that their own model did not. After all groups have presented (approximately 6 minutes total for a class of 5 groups), the teacher facilitates a 2-minute consensus-building discussion: 'Looking at all the models together — what are the three things every model agrees on? And where do we still see honest differences between models?' The lesson closes with the teacher reading the Embu farmer testimony one final time, then asking students to write one sentence in their exercise books: 'I can now explain the farmer's experience using physics because...' Students share this sentence aloud with a partner before the bell.",
+   "new": "Each group has 1 minute to do a final check of their annotated cumulative model from Component A of the Final Explanation Sheet, adding any details they noticed were missing during the DQB closure phase. Then one representative from each group holds up their model and gives a 30-second verbal summary: 'Our model shows...' The class listens and jots down one thing each group included that their own model did not, while the next group steps up. After all groups have presented (approximately 3 minutes total for a class of 5 groups), the teacher facilitates a 2-minute consensus-building discussion: 'Looking at all the models together — what are the three things every model agrees on? And where do we still see honest differences between models?' The lesson closes with the teacher reading the Embu farmer testimony one final time, then asking students to write one sentence in their exercise books: 'I can now explain the farmer's experience using physics because...' Students share this sentence aloud with a partner before the bell.",
+   "group": "T7",
+   "where": "Lesson 7, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-048",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: teacher script times match the shorter presentations.",
+   "lesson": 7,
+   "path": "framework[4].teacherMoves",
+   "old": "Give groups 3 minutes for final model revision. Then say: 'Each group will have 60 seconds to present their model. Listeners: your job is to find one thing this group included that your group missed. Be generous — celebrate what others figured out that you did not.' Facilitate presentations briskly, keeping each group to 60 seconds.",
+   "new": "Give groups 1 minute for final model revision. Then say: 'Each group will have 30 seconds to present their model. Listeners: your job is to find one thing this group included that your group missed. Be generous — celebrate what others figured out that you did not.' Facilitate presentations briskly, keeping each group to 30 seconds.",
+   "group": "T7",
+   "where": "Lesson 7, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-049",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The unit said '7 lessons x 40 minutes = 280 minutes' but the lessons are 80, 40, 80, 40, 80, 80 and 40 minutes: 4 double periods x 80 = 320, plus 3 single periods x 40 = 120, total 440 minutes (7 hours 20 minutes). Recomputed twice: 80+40+80+40+80+80+40 = 440.",
+   "path": "totalDuration",
+   "old": "7 lessons × 40 minutes = 280 minutes total",
+   "new": "7 lessons: 4 double periods × 80 minutes + 3 single periods × 40 minutes = 440 minutes total",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-050",
+   "kind": "set",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "The unit's outcomes were six paraphrased outcomes (a-f). KICD March 2025 gives five outcomes (a-e) with different wording. Restored verbatim. Checked each against the lessons: (a) Lessons 1, 3, 4; (b) Lessons 2 and 5; (c) Lesson 6; (d) Lesson 7 only, very briefly (see flag); (e) Lesson 4. The previous outcome f (individual and collective responsibility) is not KICD wording; it remains visible in the lessons' attitudes. Teachers decide whether to keep the extra competencies, values and PCIs lines that I kept below, labelled as additions.",
+   "path": "learningOutcomes",
+   "value": "By the end of the sub strand, the learner should be able to:\na) explain the greenhouse effect and climate change in the environment,\nb) outline the factors leading to greenhouse effect in the environment,\nc) explain the effect of ozone layer on climate change,\nd) describe the mitigating factors against climate change in the environment,\ne) appreciate the impact of climate change on the environment.",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "group_headline": "Unit text did not match KICD March 2025 wording (outcomes, key inquiry questions, content, competencies, values, PCIs); KICD wording restored",
+   "old": "By the end of the sub-strand, the learner should be able to:\na) explain the greenhouse effect and how it maintains Earth's temperature,\nb) identify the major greenhouse gases and describe human activities in Kenya and globally that increase their concentrations,\nc) describe the role of the ozone layer in protecting life on Earth and explain how its depletion relates to climate change,\nd) analyse the effects of global warming and climate change on the Kenyan environment, food systems, water bodies, and communities,\ne) evaluate mitigation and adaptation strategies for addressing climate change at local, national, and global levels,\nf) appreciate the importance of individual and collective responsibility in responding to climate change.",
+   "new": "By the end of the sub strand, the learner should be able to:\na) explain the greenhouse effect and climate change in the environment,\nb) outline the factors leading to greenhouse effect in the environment,\nc) explain the effect of ozone layer on climate change,\nd) describe the mitigating factors against climate change in the environment,\ne) appreciate the impact of climate change on the environment.",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-051",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The two 'KICD key inquiry questions' listed were not KICD's. Restored the KICD wording.",
+   "path": "drivingQuestion",
+   "old": "1. How does the greenhouse effect influence global and local climates?\n2. What are the causes and effects of climate change, and what measures can be taken to address it?",
+   "new": "1. How do human actions impact climate change?\n2. How does ozone layer depletion threaten our environment?",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "where": "Unit overview, drivingQuestion",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-052",
+   "kind": "set",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question replaced by the KICD wording (question 1 for the greenhouse-effect lessons, question 2 for the ozone lesson, both for the synthesis lesson).",
+   "lesson": 1,
+   "path": "slo.keyInquiry",
+   "value": "How do human actions impact climate change?",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "How does the greenhouse effect influence global and local climates?",
+   "new": "How do human actions impact climate change?",
+   "where": "Lesson 1, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-053",
+   "kind": "set",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question replaced by the KICD wording (question 1 for the greenhouse-effect lessons, question 2 for the ozone lesson, both for the synthesis lesson).",
+   "lesson": 2,
+   "path": "slo.keyInquiry",
+   "value": "How do human actions impact climate change?",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "What are the causes and effects of climate change, and what measures can be taken to address it?",
+   "new": "How do human actions impact climate change?",
+   "where": "Lesson 2, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-054",
+   "kind": "set",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question replaced by the KICD wording (question 1 for the greenhouse-effect lessons, question 2 for the ozone lesson, both for the synthesis lesson).",
+   "lesson": 3,
+   "path": "slo.keyInquiry",
+   "value": "How do human actions impact climate change?",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "How does the greenhouse effect influence global and local climates?",
+   "new": "How do human actions impact climate change?",
+   "where": "Lesson 3, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-055",
+   "kind": "set",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question replaced by the KICD wording (question 1 for the greenhouse-effect lessons, question 2 for the ozone lesson, both for the synthesis lesson).",
+   "lesson": 4,
+   "path": "slo.keyInquiry",
+   "value": "How do human actions impact climate change?",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "How does the greenhouse effect influence global and local climates?",
+   "new": "How do human actions impact climate change?",
+   "where": "Lesson 4, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-056",
+   "kind": "set",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question replaced by the KICD wording (question 1 for the greenhouse-effect lessons, question 2 for the ozone lesson, both for the synthesis lesson).",
+   "lesson": 5,
+   "path": "slo.keyInquiry",
+   "value": "How do human actions impact climate change?",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "How do human activities increase the greenhouse effect, and how does this explain the melting of Mount Kenya's glaciers and the unpredictability of Kenyan farmers' rains?",
+   "new": "How do human actions impact climate change?",
+   "where": "Lesson 5, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-057",
+   "kind": "set",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question replaced by the KICD wording (question 1 for the greenhouse-effect lessons, question 2 for the ozone lesson, both for the synthesis lesson).",
+   "lesson": 6,
+   "path": "slo.keyInquiry",
+   "value": "How does ozone layer depletion threaten our environment?",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "How does the greenhouse effect influence global and local climates? What are the causes and effects of climate change, and what measures can be taken to address it?",
+   "new": "How does ozone layer depletion threaten our environment?",
+   "where": "Lesson 6, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-058",
+   "kind": "set",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson key inquiry question replaced by the KICD wording (question 1 for the greenhouse-effect lessons, question 2 for the ozone lesson, both for the synthesis lesson).",
+   "lesson": 7,
+   "path": "slo.keyInquiry",
+   "value": "How do human actions impact climate change? How does ozone layer depletion threaten our environment?",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "How does the greenhouse effect influence global and local climates, and what measures can be taken to address climate change — as evidenced by the retreat of Mount Kenya's glaciers and the disruption of rainfall patterns experienced by Embu farmers?",
+   "new": "How do human actions impact climate change? How does ozone layer depletion threaten our environment?",
+   "where": "Lesson 7, slo.keyInquiry",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-059",
+   "kind": "set",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The content list was a long paraphrase with extra items (Paris Agreement, NDCs, mitigation policy) that are not in KICD's content. Restored the four KICD content bullets; the Kenyan contexts remain in the lessons.",
+   "path": "content",
+   "value": "• Greenhouse effect.\n• Role of the ozone layer.\n• Global warming.\n• Climate change.",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "• The Greenhouse Effect: meaning, mechanism, and key greenhouse gases (CO₂, CH₄, N₂O, water vapour)\n• Factors leading to the Greenhouse Effect: fossil fuel combustion, deforestation, industrial emissions, agriculture\n• The Ozone Layer: structure, role in filtering UV radiation, and its relationship to climate\n• Global Warming: causes, evidence (rising temperatures, melting glaciers, sea-level rise), and effects on the Kenyan environment (drought in the Rift Valley, flooding in Kisumu, reduced rainfall in Kericho tea farms)\n• Effects of Climate Change on ecosystems, food security (maize and bean harvests), water sources (Lake Victoria, Mt. Kenya glaciers), and human health in Kenya\n• Mitigation and adaptation measures: renewable energy, reforestation, sustainable agriculture, climate policy (Paris Agreement, Kenya's NDCs)\n• Appreciating individual and community responsibility in addressing climate change",
+   "new": "• Greenhouse effect.\n• Role of the ozone layer.\n• Global warming.\n• Climate change.",
+   "where": "Unit overview, content",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-060",
+   "kind": "set",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD lists three core competencies for this sub-strand; the unit listed five with rewritten text. KICD wording restored; the two extra competencies kept as a labelled addition.",
+   "path": "coreCompetencies",
+   "value": "• Communication and collaboration: the learner develops speaking skills while discussing with peers the meaning of greenhouse effect and climate change and related terminologies.\n• Critical thinking and problem solving: the learner develops open-mindedness and creativity while exploring complex problems when researching and using reference materials, resource persons or digital materials, outline mitigating factors against climate change.\n• Digital literacy: the learner interacts with digital technology while searching, and watching videos and animations to describe the greenhouse effect, global warming, ozone layer and climate change.\nAdditional competencies developed in this unit (not KICD wording): Learning to Learn (independent inquiry across the seven lessons) and Citizenship (connecting global climate science to Kenyan contexts).",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "• Communication and Collaboration: learners work in groups to research and present findings on the causes and effects of climate change in Kenya, embracing teamwork and contributing to shared decisions during discussions and model-building activities.\n• Critical Thinking and Problem Solving: learners analyse NASA climate data, PhET simulations, and LabXchange modules to evaluate evidence for global warming, draw conclusions, and propose locally relevant mitigation strategies.\n• Learning to Learn: learners practise independent inquiry by using internet articles, UNEP data portals, and UN Climate Action resources to deepen their understanding of ozone depletion and climate mitigation, reflecting on how their understanding grows across lessons.\n• Digital Literacy: learners interact with digital tools — including PhET simulations, LabXchange modules, NASA data portals, and YouTube documentaries — to gather, interpret, and present evidence on climate change phenomena.\n• Citizenship: learners connect global climate science to local Kenyan contexts (Rift Valley droughts, Kisumu floods, Kericho tea-farming disruptions), developing a sense of civic responsibility toward environmental stewardship.",
+   "new": "• Communication and collaboration: the learner develops speaking skills while discussing with peers the meaning of greenhouse effect and climate change and related terminologies.\n• Critical thinking and problem solving: the learner develops open-mindedness and creativity while exploring complex problems when researching and using reference materials, resource persons or digital materials, outline mitigating factors against climate change.\n• Digital literacy: the learner interacts with digital technology while searching, and watching videos and animations to describe the greenhouse effect, global warming, ozone layer and climate change.\nAdditional competencies developed in this unit (not KICD wording): Learning to Learn (independent inquiry across the seven lessons) and Citizenship (connecting global climate science to Kenyan contexts).",
+   "where": "Unit overview, coreCompetencies",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-061",
+   "kind": "set",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD lists Peace and Unity for this sub-strand; the unit listed Responsibility, Respect, Unity and Social Justice. KICD wording restored; the unit's other values kept as a labelled addition.",
+   "path": "values",
+   "value": "• Peace: the learner shows respect for diverse opinions during discussions on greenhouse effect and climate change and related terminologies.\n• Unity: the learner practises cooperation as they collaborate with others, while demonstrating the effects of climate change in the immediate environment.\nAdditional values emphasised in this unit (not KICD wording): Responsibility, Respect and Social Justice (acknowledging that communities least responsible for emissions often bear the heaviest burden).",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "• Responsibility: the learner demonstrates personal and community accountability by identifying how everyday choices (energy use, waste disposal, deforestation) contribute to or reduce greenhouse gas emissions in the Kenyan context.\n• Respect: the learner demonstrates open-mindedness and appreciates diverse opinions when discussing the lived experiences of communities affected by climate change across different regions of Kenya.\n• Unity: the learner recognises that climate change is a shared challenge requiring collective action — from local farmers in the Rift Valley to international policymakers — and embraces a spirit of cooperation in designing mitigation solutions.\n• Social Justice: the learner acknowledges that the communities least responsible for greenhouse gas emissions (e.g., rural Kenyan subsistence farmers) often bear the heaviest burden of climate change impacts, fostering empathy and equity-oriented thinking.",
+   "new": "• Peace: the learner shows respect for diverse opinions during discussions on greenhouse effect and climate change and related terminologies.\n• Unity: the learner practises cooperation as they collaborate with others, while demonstrating the effects of climate change in the immediate environment.\nAdditional values emphasised in this unit (not KICD wording): Responsibility, Respect and Social Justice (acknowledging that communities least responsible for emissions often bear the heaviest burden).",
+   "where": "Unit overview, values",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-062",
+   "kind": "set",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD lists one PCI for this sub-strand: socio-economic and environmental education. Restored; the unit's other links kept as a labelled addition.",
+   "path": "pcis",
+   "value": "• Socio-economic and environmental education: The learner develops awareness on global warming as they use print and non print media to search for information that describes the greenhouse effect, global warming, ozone layer, and climate change.\nAdditional links developed in this unit (not KICD wording): Climate change education; Gender disparity (how climate change affects women and girls in Kenya); Sustainable Development Goals 13, 15 and 6.",
+   "reference": "KICD Grade 10 curriculum design, Physics, Strand 4.0 Environmental and Space Physics, Sub-Strand 4.1 Greenhouse Effect and Climate Change",
+   "group": "G9",
+   "old": "• Environmental Education: the entire sub-strand is rooted in environmental stewardship — learners directly connect the physics of the greenhouse effect to real degradation of Kenyan ecosystems, water bodies, and agricultural land, fostering pro-environmental attitudes and behaviours.\n• Climate Change Education: learners engage with current, locally relevant climate data (Kenyan NDCs, UNEP reports, NASA records) to understand the urgency of climate action and Kenya's role in global mitigation efforts.\n• Gender Disparity: learners examine how climate change disproportionately affects women and girls in Kenya (e.g., increased distances to fetch water during droughts, reduced school attendance during floods), and address misconceptions that physics and environmental science are not fields for girls.\n• Sustainable Development Goals (SDGs): learners explicitly connect their study to SDG 13 (Climate Action), SDG 15 (Life on Land), and SDG 6 (Clean Water and Sanitation), understanding physics as a tool for achieving sustainable development in Kenya.",
+   "new": "• Socio-economic and environmental education: The learner develops awareness on global warming as they use print and non print media to search for information that describes the greenhouse effect, global warming, ozone layer, and climate change.\nAdditional links developed in this unit (not KICD wording): Climate change education; Gender disparity (how climate change affects women and girls in Kenya); Sustainable Development Goals 13, 15 and 6.",
+   "where": "Unit overview, pcis",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-063",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The hot-car analogy was used without saying where it breaks down. A car (and a real greenhouse) stays hot mainly because the closed glass stops warm air escaping, whereas the atmosphere has no lid and works by absorbing and re-radiating infrared. Added the mapping (glass = greenhouse gases) and the limit of the analogy, so that students do not carry a wrong picture into Lesson 3.",
+   "lesson": 1,
+   "path": "framework[2].teacherMoves",
+   "old": "but with gases instead of glass. This is the greenhouse effect.'",
+   "new": "but with gases instead of glass. This is the greenhouse effect.' LIMIT OF THE ANALOGY: a car stays hot mainly because its closed windows stop warm air escaping, but the atmosphere has no lid; greenhouse gases absorb infrared radiation and send part of it back down, which slows the loss of energy to space. Say: 'The car is only a first picture. The real mechanism is about infrared radiation, and you will test it in Lesson 3.'",
+   "reference": "IPCC AR4 Working Group I (2007), FAQ 1.3 'What is the greenhouse effect?'",
+   "group": "G10",
+   "group_headline": "The hot-car and blanket analogies were used without stating their limits",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-064",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the 'blanket' analogy also needed its limit stated: a blanket slows heat loss by conduction, whereas greenhouse gases absorb and re-emit infrared radiation.",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "using the analogy of a blanket thickening around the Earth.",
+   "new": "using the analogy of a blanket thickening around the Earth (the limit of this analogy: a blanket slows heat loss by conduction, whereas greenhouse gases absorb infrared radiation and re-emit part of it back toward the surface, so the blanket shows 'more gas, more energy retained' but not the radiation mechanism).",
+   "reference": "IPCC AR4 Working Group I (2007), FAQ 1.3",
+   "group": "G10",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-065",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The unit has no language supports for English learners and no alternatives to writing. Added a Word Wall with Kiswahili beside the key terms and permission to talk through ideas in Kiswahili or a home language first. The Kiswahili terms are in common use (gesi chafu, ongezeko la joto duniani, mabadiliko ya tabianchi, tabaka la ozoni, mionzi, nishati, kaboni dayoksaidi) but I have not verified them with a Kiswahili teacher: please confirm or replace them.",
+   "lesson": 1,
+   "path": "framework[2].learnerExperience",
+   "old": "absorption, re-emission, and enhanced warming.",
+   "new": "absorption, re-emission, and enhanced warming. LANGUAGE SUPPORT: start a Word Wall with simple picture cues for the key terms in English with Kiswahili beside each (suggested, for teachers to confirm: greenhouse gases = gesi chafu; global warming = ongezeko la joto duniani; climate change = mabadiliko ya tabianchi; ozone layer = tabaka la ozoni; radiation = mionzi; energy = nishati; carbon dioxide = kaboni dayoksaidi). Students may first explain an idea to a partner in Kiswahili or their home language before writing it in English.",
+   "group": "G11",
+   "group_headline": "No language or access supports anywhere in the unit; Kiswahili Word Wall (teachers to confirm the terms) and alternative ways to show understanding added",
+   "where": "Lesson 1, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-066",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the 'Explain It to a Farmer' task offered only a written paragraph; added oral, voice-note and diagram options and a large-print or raised-line diagram for learners with low vision.",
+   "lesson": 3,
+   "path": "framework[2].learnerExperience",
+   "old": "and one 'grow' (something to improve).",
+   "new": "and one 'grow' (something to improve). Learners who find writing difficult or are still developing English may instead explain aloud to a partner, record a voice note, or draw an annotated flow diagram that uses the five required terms; learners with low vision receive the diagram in large print or as a raised-line copy.",
+   "group": "G11",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-067",
+   "kind": "set",
+   "target": "unit",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The storyline described a different lesson order from the one taught (it put the ozone layer in Lesson 3, mitigation in Lesson 5 and 'Whose Voices' in Lesson 6, and gave the Lake Victoria rise a role different from Lesson 4). Rewritten to describe the seven lessons as they actually run, with the same anchoring phenomenon and Driving Question Board returns, and with the Lesson 7 Response Cards.",
+   "path": "storylineThread",
+   "value": "Lesson 1 — What Is the Greenhouse Effect? (Anchoring Phenomenon Introduction, 80 minutes)\nStudents predict what could shrink the Lewis Glacier and unsettle the long rains in Embu, study the paired images, the farmer's testimony and a data strip, meet the greenhouse effect through the hot-car picture (and its limits) and a simple diagram, open the Driving Question Board and draw a first model.\n\nLesson 2 — What Human Activities in Kenya Are Increasing Greenhouse Gases? (40 minutes)\nStudents study Kenyan and global emissions data (charcoal burning, livestock, Mau Forest clearing, cement) and add an emission-sources layer to their model, asking: could our daily activities be connected to the glacier?\n\nLesson 3 — How Does the Greenhouse Effect Actually Work? (80 minutes)\nStudents use the PhET simulation to trace shortwave and infrared radiation, see which molecules absorb infrared, and explain the natural and enhanced greenhouse effect to a farmer, briefly separating it from the ozone layer.\n\nLesson 4 — How Is Global Warming Changing Kenya's Environment? (40 minutes)\nStudents analyse temperature data and the 2019–20 Lake Victoria rise, build an effects web linking the mechanism to Kenyan impacts, and rewrite the farmer's testimony in scientific language.\n\nLesson 5 — How Do Human Activities Amplify the Greenhouse Effect? (80 minutes)\nStudents read the Keeling Curve and temperature records, build a six-step causal chain from a Kenyan activity to the glacier and the farm, and add a human-amplification layer to their model.\n\nLesson 6 — The Ozone Layer: A Separate Shield (80 minutes)\nStudents compare ozone depletion with the greenhouse effect, study the Nairobi UV-B record and the Montreal Protocol, and add the ozone layer to their model, judging how much each process contributes to what is happening at Mount Kenya.\n\nLesson 7 — Final Model Building, Driving Question Board Closure, and Unit Synthesis (40 minutes)\nStudents sort Response Cards into mitigation and adaptation, close the Driving Question Board, finish and compare their models, and write a full scientific explanation of why Mount Kenya's glaciers are retreating and why Embu's rains are hard to predict, using every layer of the cumulative model.",
+   "old": "Lesson 1 — What Is the Greenhouse Effect? (Anchoring Phenomenon Introduction)\nStudents encounter the anchoring phenomenon (Mount Kenya glacier retreat + Embu farmer testimony). They make initial predictions about what could cause both changes simultaneously. Using the \"hot car in Nairobi\" supporting phenomenon as an analogy, students engage with the PhET Greenhouse Effect simulation to observe how CO₂ and other gases absorb and re-radiate infrared energy. Students begin constructing their initial conceptual model on the Driving Question Board: \"What does our atmosphere do with the sun's energy?\"\n\nLesson 2 — What Human Activities in Kenya Are Increasing Greenhouse Gases?\nStudents investigate the sources of major greenhouse gases (CO₂, CH₄, N₂O) with a specific focus on Kenya: charcoal burning for cooking ugali, livestock (cattle releasing CH₄), deforestation of Mau Forest, and industrial emissions. Using NASA climate data and LabXchange's human activities module, students analyse trends in Kenyan and global emissions. They revise their model to include emission sources, connecting back to the driving question: \"Could our daily activities — burning charcoal, clearing forests — be causing the glacier to melt?\"\n\nLesson 3 — What Is the Ozone Layer and Why Does It Matter for Kenya?\nStudents investigate the structure and function of the ozone layer using the Khan Academy resource and UNEP Ozone Data Portal. They explore how ozone depletion (caused by CFCs and other chemicals) differs from but interacts with the greenhouse effect, and examine the supporting phenomenon of rising UV-B levels in Nairobi. Students update their model to show the ozone layer as a separate but related atmospheric shield, adding nuance to their understanding of \"what the atmosphere does.\"\n\nLesson 4 — How Is Global Warming Changing Kenya's Environment?\nStudents analyse evidence of global warming's effects using NASA sea-level and temperature data, National Geographic video clips, and the Lake Victoria supporting phenomenon. They map local effects: Mt. Kenya glacier loss, Rift Valley droughts, Kisumu floods, disrupted tea harvests in Kericho. Students build an \"effects web\" — a visual model linking the greenhouse effect mechanism to cascading environmental and social consequences in Kenya — and return to the farmer's testimony from Lesson 1 to explain it with new scientific language.\n\nLesson 5 — What Can Be Done? Mitigation and Adaptation Strategies\nStudents evaluate a range of mitigation strategies using the UN Climate Action Portal and a YouTube video on renewable energy. They compare Kenya's Olkaria Geothermal expansion and Lake Turkana Wind Farm (national mitigation) with household and community actions (energy-efficient jikos, tree planting, solar panels). Students engage in structured argumentation: which strategies would be most effective and equitable for different Kenyan communities? They update their cumulative model to include feedback loops showing how mitigation actions reduce greenhouse gas concentrations.\n\nLesson 6 — Whose Voices? Appreciating the Human Impact of Climate Change\nStudents watch the LabXchange Climate Change Awareness module and YouTube testimonies from communities affected by climate change (including Kenyan pastoralists in Turkana and coastal communities in Mombasa facing sea-level rise). They analyse how climate change intersects with gender, poverty, and food security in Kenya, connecting to PCIs. Students synthesise their learning by writing a short \"letter to a Kenyan policymaker\" arguing for a specific climate action, using evidence gathered across all prior lessons.\n\nLesson 7 — Final Model Building, DQB Closure, and Unit Synthesis\nStudents complete their final cumulative model of the greenhouse effect and climate change — from solar energy input through atmospheric trapping, to global warming, to local Kenyan effects, to mitigation pathways. The Driving Question Board is revisited: which questions from Lesson 1 can now be answered? Which new questions have emerged? Student groups present their models and compare them, identifying consensus explanations and remaining uncertainties. The unit closes by returning to the anchoring phenomenon: students write a full scientific explanation of why Mount Kenya's glaciers are retreating and why Embu's farmers are struggling to predict the rains — using every layer of their cumulative model.",
+   "new": "Lesson 1 — What Is the Greenhouse Effect? (Anchoring Phenomenon Introduction, 80 minutes)\nStudents predict what could shrink the Lewis Glacier and unsettle the long rains in Embu, study the paired images, the farmer's testimony and a data strip, meet the greenhouse effect through the hot-car picture (and its limits) and a simple diagram, open the Driving Question Board and draw a first model.\n\nLesson 2 — What Human Activities in Kenya Are Increasing Greenhouse Gases? (40 minutes)\nStudents study Kenyan and global emissions data (charcoal burning, livestock, Mau Forest clearing, cement) and add an emission-sources layer to their model, asking: could our daily activities be connected to the glacier?\n\nLesson 3 — How Does the Greenhouse Effect Actually Work? (80 minutes)\nStudents use the PhET simulation to trace shortwave and infrared radiation, see which molecules absorb infrared, and explain the natural and enhanced greenhouse effect to a farmer, briefly separating it from the ozone layer.\n\nLesson 4 — How Is Global Warming Changing Kenya's Environment? (40 minutes)\nStudents analyse temperature data and the 2019–20 Lake Victoria rise, build an effects web linking the mechanism to Kenyan impacts, and rewrite the farmer's testimony in scientific language.\n\nLesson 5 — How Do Human Activities Amplify the Greenhouse Effect? (80 minutes)\nStudents read the Keeling Curve and temperature records, build a six-step causal chain from a Kenyan activity to the glacier and the farm, and add a human-amplification layer to their model.\n\nLesson 6 — The Ozone Layer: A Separate Shield (80 minutes)\nStudents compare ozone depletion with the greenhouse effect, study the Nairobi UV-B record and the Montreal Protocol, and add the ozone layer to their model, judging how much each process contributes to what is happening at Mount Kenya.\n\nLesson 7 — Final Model Building, Driving Question Board Closure, and Unit Synthesis (40 minutes)\nStudents sort Response Cards into mitigation and adaptation, close the Driving Question Board, finish and compare their models, and write a full scientific explanation of why Mount Kenya's glaciers are retreating and why Embu's rains are hard to predict, using every layer of the cumulative model.",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-068",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8,
+    3
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The stimulus card said Earth's temperature 'stays around 15 °C day and night'. 15 °C is the global average; day-night swings exist but are far smaller than on the Moon. Reworded. Checked: Moon about 127 °C by day and -173 °C at night, Earth global mean about 15 °C.",
+   "lesson": 3,
+   "path": "framework[0].learnerExperience",
+   "old": "Earth's average surface temperature stays around 15 °C day and night.",
+   "new": "Earth's average surface temperature is about 15 °C, and its day-to-night swings are much smaller.",
+   "reference": "NASA Moon Fact Sheet and NASA Earth Fact Sheet (NSSDCA)",
+   "where": "Lesson 3, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-069",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8,
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The text named 'Kirchhoff's/Stefan-Boltzmann's principle', which is not what Grade 10 students need and is loosely stated. Replaced with the idea students can use: every warm object emits radiation, and a cool surface such as Earth's emits mostly infrared.",
+   "lesson": 3,
+   "path": "framework[2].learnerExperience",
+   "old": "— this is Kirchhoff's/Stefan–Boltzmann's principle at an accessible level",
+   "new": "— every warm object emits thermal radiation, and a cool surface such as Earth's emits mostly infrared",
+   "reference": "OpenStax College Physics 2e, Chapter 14.7 'Radiation'",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-070",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Expected student answers were missing, and the cement factory image (CO₂ from limestone as well as fuel) was never debriefed. Added what a good answer sounds like and an 'if students say only smoke' move. Checked: C + O₂ → CO₂; CaCO₃ → CaO + CO₂ (balanced).",
+   "lesson": 2,
+   "path": "framework[2].formativeAssessment",
+   "old": "(c) use of precise language (infrared radiation, concentration, absorb, re-emit).",
+   "new": "(c) use of precise language (infrared radiation, concentration, absorb, re-emit). EXPECTED ANSWERS: jiko charcoal gives CO₂ because carbon combines with oxygen when it burns; cattle give CH₄, made by microbes in the stomach and released mainly by belching; clearing the Mau gives CO₂ as wood burns or rots and the trees' ability to absorb CO₂ is lost; the Athi River cement works gives CO₂ from the fuel and from heating limestone (CaCO₃ → CaO + CO₂). If a student writes only 'smoke' or 'pollution', ask: 'Which gas, and what does it do to infrared radiation?'",
+   "reference": "IPCC AR6 Working Group III, Chapter 11 (Industry: cement process emissions); FAO 'Tackling climate change through livestock' (enteric methane)",
+   "where": "Lesson 2, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-071",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    9
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The script called the Embu farmer 'Mwangi'; the unit's farmer is James Muriithi. Corrected so the lesson returns to the same anchor character.",
+   "lesson": 6,
+   "path": "framework[2].teacherMoves",
+   "old": "Mwangi the farmer in Embu",
+   "new": "James Muriithi, the farmer in Embu",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-072",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 7 listed 'Turkana droughts' as taught effects, but no lesson covers Turkana; drought in the Rift Valley is the effect used in Lesson 4.",
+   "lesson": 7,
+   "path": "slo.knowledge",
+   "old": "Lake Victoria level changes, and Turkana droughts",
+   "new": "Lake Victoria level changes, and drought in the Rift Valley",
+   "where": "Lesson 7, slo.knowledge",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-073",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    10,
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The exemplar said the Montreal Protocol shows atmospheric damage 'can be reversed'. The protocol stopped the damage and the ozone layer is projected to recover over coming decades (globally around 2040, over Antarctica around 2066), so 'begin to heal' is accurate; Lesson 6 itself says 'gradually recovering'.",
+   "path": "sections[4].exemplar",
+   "old": "atmospheric damage can be reversed, which gives hope",
+   "new": "atmospheric damage can begin to heal (the ozone layer is projected to recover over the coming decades), which gives hope",
+   "reference": "WMO/UNEP Scientific Assessment of Ozone Depletion: 2022",
+   "where": "Final Explanation, Part 5: Responding to the Problem, exemplar",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-074",
+   "kind": "set",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The rubric levels were called excellent, proficient and developing. The CBE level names are Exceeds, Meets and Approaches Expectations, so each descriptor now starts with its CBE level name (the printed headings are fixed by the template). The evidence descriptor also drops the '90% of mass' figure (see the evidence-claims group), uses 'more than 85%' computed from the data strip, and the causal-chain and response descriptors now match the revised Part 4 and the mitigation/adaptation sort.",
+   "path": "rubric",
+   "value": [
+    {
+     "criterion": "Use of evidence from the unit",
+     "excellent": "Exceeds Expectations: uses specific data from the lessons accurately, such as the glacier area of about 1.35 km² in 1934 falling to less than 0.20 km² in 2023 (a loss of more than 85%), the Embu farmer's testimony, the Keeling Curve and the PhET observations, and links each to a claim.",
+     "proficient": "Meets Expectations: uses some evidence from the unit correctly but with limited detail or a missing number, and links most evidence to claims.",
+     "developing": "Approaches Expectations: gives little evidence, or the evidence is inaccurate or not linked to a claim."
+    },
+    {
+     "criterion": "Physics of the greenhouse effect",
+     "excellent": "Exceeds Expectations: correctly traces shortwave radiation in, longwave infrared out, absorption and re-emission by greenhouse gases, and back-radiation, and clearly distinguishes the natural from the enhanced greenhouse effect.",
+     "proficient": "Meets Expectations: describes the main steps of the mechanism with minor gaps or imprecise terms, and mentions the natural and enhanced effects.",
+     "developing": "Approaches Expectations: describes warming in general terms, with missing steps or confusion between types of radiation."
+    },
+    {
+     "criterion": "Causal chain and explanation of both phenomena",
+     "excellent": "Exceeds Expectations: builds a complete connected chain from Kenyan human activity to greenhouse gas increase, to enhanced back-radiation, to warming, to glacier loss and altered rainfall, and weighs how far one cause accounts for both, naming another factor.",
+     "proficient": "Meets Expectations: builds a mostly complete chain with one step missing or weakly explained.",
+     "developing": "Approaches Expectations: gives isolated statements without a connected chain, or explains only one of the two phenomena."
+    },
+    {
+     "criterion": "Distinguishing ideas (ozone, correlation, mechanism)",
+     "excellent": "Exceeds Expectations: clearly separates ozone depletion from the greenhouse effect, and the correlation shown in data from the explanation by physics.",
+     "proficient": "Meets Expectations: separates these ideas with some imprecision.",
+     "developing": "Approaches Expectations: confuses ozone depletion with the greenhouse effect or treats correlation as the explanation."
+    },
+    {
+     "criterion": "Responses and communication",
+     "excellent": "Exceeds Expectations: places Kenyan responses at the correct step of the chain, separates mitigation from adaptation, uses the Montreal Protocol as evidence, and writes clearly with correct scientific terms and a relevant open question.",
+     "proficient": "Meets Expectations: suggests reasonable responses with limited link to the chain and mostly clear writing.",
+     "developing": "Approaches Expectations: gives vague responses or unclear writing with few scientific terms."
+    }
+   ],
+   "old": "[{\"criterion\": \"Use of evidence from the unit\", \"excellent\": \"Uses specific data from the lessons accurately, such as the glacier area of about 1.35 km² in 1934 falling to less than 0.20 km² in 2023, the loss of over 90% of its mass since 1900, the Embu farmer's testimony, the Keeling Curve and the PhET observations, and links each to a claim.\", \"proficient\": \"Uses some evidence from the unit correctly but with limited detail or missing a number, and links most evidence to claims.\", \"developing\": \"Gives little or no evidence, or evidence is inaccurate or not linked to a claim.\"}, {\"criterion\": \"Physics of the greenhouse effect\", \"excellent\": \"Correctly traces shortwave radiation in, longwave infrared out, absorption and re-emission by greenhouse gases, and back-radiation, and clearly distinguishes the natural from the enhanced greenhouse effect.\", \"proficient\": \"Describes the main steps of the mechanism with minor gaps or imprecise terms, and mentions the natural and enhanced effects.\", \"developing\": \"Describes warming in general terms, with missing steps or confusion between types of radiation.\"}, {\"criterion\": \"Causal chain and explanation of both phenomena\", \"excellent\": \"Builds a complete connected chain from Kenyan human activity to greenhouse gas increase, to enhanced back-radiation, to warming, to glacier loss and altered rainfall, and explains why one cause accounts for both.\", \"proficient\": \"Builds a mostly complete chain with one step missing or weakly explained.\", \"developing\": \"Gives isolated statements without a connected chain, or explains only one of the two phenomena.\"}, {\"criterion\": \"Distinguishing ideas (ozone, correlation, mechanism)\", \"excellent\": \"Clearly separates ozone depletion from the greenhouse effect and the correlation shown in data from the explanation by physics.\", \"proficient\": \"Separates these ideas with some imprecision.\", \"developing\": \"Confuses ozone depletion with the greenhouse effect or treats correlation as the explanation.\"}, {\"criterion\": \"Responses and communication\", \"excellent\": \"Suggests Kenyan responses placed at the correct step of the chain, uses the Montreal Protocol as evidence, and writes clearly with correct scientific terms and a relevant open question.\", \"proficient\": \"Suggests reasonable responses with limited link to the chain and mostly clear writing.\", \"developing\": \"Gives vague responses or unclear writing with few scientific terms.\"}]",
+   "new": "[{\"criterion\": \"Use of evidence from the unit\", \"excellent\": \"Exceeds Expectations: uses specific data from the lessons accurately, such as the glacier area of about 1.35 km² in 1934 falling to less than 0.20 km² in 2023 (a loss of more than 85%), the Embu farmer's testimony, the Keeling Curve and the PhET observations, and links each to a claim.\", \"proficient\": \"Meets Expectations: uses some evidence from the unit correctly but with limited detail or a missing number, and links most evidence to claims.\", \"developing\": \"Approaches Expectations: gives little evidence, or the evidence is inaccurate or not linked to a claim.\"}, {\"criterion\": \"Physics of the greenhouse effect\", \"excellent\": \"Exceeds Expectations: correctly traces shortwave radiation in, longwave infrared out, absorption and re-emission by greenhouse gases, and back-radiation, and clearly distinguishes the natural from the enhanced greenhouse effect.\", \"proficient\": \"Meets Expectations: describes the main steps of the mechanism with minor gaps or imprecise terms, and mentions the natural and enhanced effects.\", \"developing\": \"Approaches Expectations: describes warming in general terms, with missing steps or confusion between types of radiation.\"}, {\"criterion\": \"Causal chain and explanation of both phenomena\", \"excellent\": \"Exceeds Expectations: builds a complete connected chain from Kenyan human activity to greenhouse gas increase, to enhanced back-radiation, to warming, to glacier loss and altered rainfall, and weighs how far one cause accounts for both, naming another factor.\", \"proficient\": \"Meets Expectations: builds a mostly complete chain with one step missing or weakly explained.\", \"developing\": \"Approaches Expectations: gives isolated statements without a connected chain, or explains only one of the two phenomena.\"}, {\"criterion\": \"Distinguishing ideas (ozone, correlation, mechanism)\", \"excellent\": \"Exceeds Expectations: clearly separates ozone depletion from the greenhouse effect, and the correlation shown in data from the explanation by physics.\", \"proficient\": \"Meets Expectations: separates these ideas with some imprecision.\", \"developing\": \"Approaches Expectations: confuses ozone depletion with the greenhouse effect or treats correlation as the explanation.\"}, {\"criterion\": \"Responses and communication\", \"excellent\": \"Exceeds Expectations: places Kenyan responses at the correct step of the chain, separates mitigation from adaptation, uses the Montreal Protocol as evidence, and writes clearly with correct scientific terms and a relevant open question.\", \"proficient\": \"Meets Expectations: suggests reasonable responses with limited link to the chain and mostly clear writing.\", \"developing\": \"Approaches Expectations: gives vague responses or unclear writing with few scientific terms.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-075",
+   "kind": "flag",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The data contract allows only three rubric level fields, so the fourth CBE level, Below Expectations, cannot be represented. Suggest teachers add a Below Expectations descriptor by hand on printed copies (for example: gives no usable evidence and cannot yet describe how the atmosphere warms), or ask the partner to extend the contract.",
+   "path": "rubric",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-076",
+   "kind": "flag",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD March 2025 names Strand 4.0 'Environmental and Space Physics' (this unit says 'Environmental Physics') and gives the sub-strand 6 lessons (this unit has 7). The sub-strand number and name (4.1 Greenhouse Effect and Climate Change) match KICD. Not renamed or reshaped, as instructed.",
+   "path": "strand",
+   "where": "Unit overview, strand",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-077",
+   "kind": "flag",
+   "target": "lesson",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The Lesson 1 farmer quote ('My grandfather knew exactly when to plant maize. I no longer do.', James Muriithi, Embu County, 2023) and the 1934 photograph are scripted stimulus. If the testimony is a composite rather than a real interview, tell students so; presenting an invented person as a real named farmer can mislead.",
+   "lesson": 1,
+   "path": "framework[0].learnerExperience",
+   "where": "Lesson 1, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  },
+  {
+   "id": "phys_4_1-078",
+   "kind": "flag",
+   "target": "lesson",
+   "criteria": [
+    8,
+    11
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The investigation steps name PhET options ('No Atmosphere', '1750', 'Ice Age') and a 'Photon Absorption' tab. PhET has released more than one version of the Greenhouse Effect simulation and the tab and option names differ between them. Please run the version on your school devices and adjust the steps to match its exact labels.",
+   "lesson": 3,
+   "path": "framework[1].learnerExperience",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-15T00:57:00"
+  }
+ ]
+}
