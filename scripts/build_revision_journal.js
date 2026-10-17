@@ -11,7 +11,7 @@ const fs = require('fs');
 const path = require('path');
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, AlignmentType,
-  ShadingType, BorderStyle, HeadingLevel, Footer, Header, PageNumber, PageBreak, CheckBox,
+  ShadingType, BorderStyle, HeadingLevel, Footer, Header, PageNumber, PageBreak, CheckBox, Bookmark, InternalHyperlink,
 } = require('docx');
 
 const ROOT = path.resolve(__dirname, '..');
@@ -43,15 +43,23 @@ function cell(content, width, o = {}) {
   return new TableCell({ borders, width: { size: width, type: WidthType.DXA }, margins: { top: 50, bottom: 50, left: 80, right: 80 },
     shading: o.fill ? { fill: o.fill, type: ShadingType.CLEAR, color: 'auto' } : undefined, children: paras });
 }
-function table(widths, header, rows) {
+function table(widths, header, rows, keepRows = false) {
   const head = new TableRow({ tableHeader: true, cantSplit: true, children: header.map((h, i) => cell(h, widths[i], { bold: true, fill: 'D5E8F0' })) });
-  const body = rows.map((r) => new TableRow({ children: r.map((c, i) => (c && c.__cell ? cell(c.content, widths[i], c.o) : cell(c, widths[i]))) }));
+  const body = rows.map((r) => new TableRow({ cantSplit: keepRows, children: r.map((c, i) => (c && c.__cell ? cell(c.content, widths[i], c.o) : cell(c, widths[i]))) }));
   return new Table({ width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths, rows: [head, ...body] });
 }
 const paras = (s) => String(s || '').split('\n');
 const BOX = '☐';
 const moduleOf = (r) => r.id.replace(/-[^-]*$/, '');
 const IDOF = (r) => (r.group ? `${moduleOf(r)} ${r.group}` : r.id);
+
+// attention level of a journal item: 'flag' (no change made, teacher must decide), 'decision' (change proposed, teacher must confirm) or null
+const attnOf = (members) => (members.some((r) => r.kind === 'flag') ? 'flag' : members.some((r) => r.teacher_decision) ? 'decision' : null);
+const ATTN_FILL = { flag: 'F8CBAD', decision: 'FFF2CC' };
+const ATTN_BADGE = { flag: '[FLAG] NO CHANGE MADE: YOUR DECISION NEEDED', decision: '[DECISION] CHANGE PROPOSED: PLEASE CONFIRM' };
+const ATTN_COLOR = { flag: 'C00000', decision: 'C55A11' };
+const anchorOf = (r) => 'i_' + IDOF(r).replace(/[^A-Za-z0-9]/g, '_');
+const idPara = (r, extra = '') => P([new Bookmark({ id: anchorOf(r), children: [tr(IDOF(r) + extra, { bold: true })] })]);
 const SSTAG = (r) => { const mt = meta(moduleOf(r)); return `SUB-STRAND ${mt.substrand_id} ${mt.substrand_name}`.toUpperCase(); };
 
 function changeCell(r) {
@@ -86,11 +94,11 @@ const teacherCell = (id, fill) => ({ __cell: true, o: { fill }, content: [
 function recordRow(r) {
   const flagBits = [];
   if (r.severity === 'substantial') flagBits.push('SUBSTANTIAL');
-  if (r.teacher_decision) flagBits.push('TEACHER DECISION');
-  if (r.kind === 'flag') flagBits.push('FLAG');
-  const fill = r.teacher_decision || r.kind === 'flag' ? 'FFF2CC' : undefined;
+  const attn = attnOf([r]);
+  if (attn) flagBits.push(ATTN_BADGE[attn]);
+  const fill = attn ? ATTN_FILL[attn] : undefined;
   return [
-    { __cell: true, content: [P([tr(SSTAG(r), { bold: true, size: 14, color: '1F3864' })], { after: 20 }), P([tr(IDOF(r), { bold: true })]), ...flagBits.map((b) => P([tr(b, { bold: true, size: 14, color: 'C55A11' })], { after: 10 }))], o: { fill } },
+    { __cell: true, content: [P([tr(SSTAG(r), { bold: true, size: 14, color: '1F3864' })], { after: 20 }), idPara(r), ...flagBits.map((b) => P([tr(b, { bold: true, size: b.startsWith('[') ? 16 : 14, color: b.startsWith('[') ? ATTN_COLOR[attn] : 'C55A11' })], { after: 10 }))], o: { fill } },
     { __cell: true, content: [P([tr(DOC[r.target] || r.target, { bold: true })], { after: 30 }), P(r.where || '')], o: { fill } },
     { __cell: true, content: changeCell(r), o: { fill } },
     { __cell: true, content: whyCell(r), o: { fill } },
@@ -117,8 +125,9 @@ function itemRow(it) {
   if (!it.group || it.members.length === 1) return recordRow(it.root);
   const r = it.root, ms = it.members;
   const td = ms.some((x) => x.teacher_decision), sub = ms.some((x) => x.severity === 'substantial');
-  const fill = td ? 'FFF2CC' : undefined;
-  const bits = [`${ms.length} EDITS`, ...(sub ? ['SUBSTANTIAL'] : []), ...(td ? ['TEACHER DECISION'] : [])];
+  const attn = attnOf(ms);
+  const fill = attn ? ATTN_FILL[attn] : undefined;
+  const bits = [`${ms.length} EDITS`, ...(sub ? ['SUBSTANTIAL'] : []), ...(attn ? [ATTN_BADGE[attn]] : [])];
   const crit = [...new Set(ms.flatMap((x) => x.criteria || []))].sort((a, b) => a - b).map((c) => `${c}. ${CRITERIA[c] || ''}`).join('; ');
   const ref = ms.map((x) => x.reference).find(Boolean);
   const what = [P([tr(r.group_headline || r.why, { bold: true })], { after: 60 }), ...changeCell(r)];
@@ -128,7 +137,7 @@ function itemRow(it) {
     for (const x of rest) what.push(P([tr(`${x.where}: `, { bold: true, size: 15 }), tr(x.kind === 'flag' ? '(flag, no text changed) ' + clip(x.why, 140) : clip(x.new, 150), { size: 15, color: '1B6B1B' })], { after: 20 }));
   }
   return [
-    { __cell: true, content: [P([tr(SSTAG(r), { bold: true, size: 14, color: '1F3864' })], { after: 20 }), P([tr(IDOF(r) + ' (group)', { bold: true })]), ...bits.map((b) => P([tr(b, { bold: true, size: 14, color: 'C55A11' })], { after: 10 }))], o: { fill } },
+    { __cell: true, content: [P([tr(SSTAG(r), { bold: true, size: 14, color: '1F3864' })], { after: 20 }), idPara(r, ' (group)'), ...bits.map((b) => P([tr(b, { bold: true, size: b.startsWith('[') ? 16 : 14, color: b.startsWith('[') ? ATTN_COLOR[attn] : 'C55A11' })], { after: 10 }))], o: { fill } },
     { __cell: true, content: [P([tr(DOC[r.target] || r.target, { bold: true })], { after: 30 }), P(r.where || ''), P(`and ${rest.length} related place${rest.length === 1 ? '' : 's'}`, { italics: true, size: 15 })], o: { fill } },
     { __cell: true, content: what, o: { fill } },
     { __cell: true, content: [P([tr(r.why)], { after: 40 }), P([tr('Guideline: ' + crit + '  |  Type: ' + r.category, { italics: true, size: 15, color: '555555' })])], o: { fill } },
@@ -158,7 +167,7 @@ const howTo = () => [
   H2('How to read this journal'),
   P('Every change made to the Grade 10 lesson plans is listed here, grouped by sub-strand. The same change is also visible as a Word tracked change in the matching "_TRACKED.docx" file, so you can accept or reject it there.'),
   P('Each row gives: where the change is (document, lesson, phase and field), exactly what changed (BEFORE in red strike-through, AFTER in green underline), why it was changed and which of the 14 lesson-plan guidelines it serves, and for science corrections a reference that supports the fix. References are named sources, to be verified by a reviewer (page numbers are not given).'),
-  P('Rows shaded yellow need a teacher decision (a judgement call or a flag with no change made).'),
+  P([tr('Items that need YOUR attention are marked and shaded: ', { bold: true }), tr('ORANGE rows carry [FLAG]: a problem or question where no text was changed and you must decide what to do. YELLOW rows carry [DECISION]: Claude proposed a change that depends on a judgement call, please confirm it. To jump to them, press Ctrl+F and search for  [FLAG]  or  [DECISION] , or use the "Needs your attention" list at the top of each sub-strand (click an item number to jump to it).')]),
   P([tr('How to respond (every item, in the last column): ', { bold: true }), tr('click ONE box, ACCEPT or EDIT. If you choose EDIT, type the change you want in the space under it. Save the file under the same name and send it back. Every item carries its sub-strand name, and each section has the sub-strand in the page header, so please keep the items in this document.')]),
 ];
 
@@ -181,6 +190,22 @@ function volume(title, modules) {
     const items = journalItems(recs[m]);
     const kc = keyChanges(items);
     if (kc.length) { ks.push(P([tr('Key changes at a glance', { bold: true, size: 20, color: '1F3864' })], { before: 60, after: 60, keepNext: true })); ks.push(...kc); ks.push(P('', { after: 80 })); }
+    const att = items.filter((it) => attnOf(it.members));
+    if (att.length) {
+      const nf = att.filter((it) => attnOf(it.members) === 'flag').length;
+      ks.push(P([tr(`Needs your attention: ${att.length} items (${nf} [FLAG], ${att.length - nf} [DECISION])`, { bold: true, size: 20, color: 'C00000' })], { before: 60, after: 60, keepNext: true }));
+      ks.push(table([2300, 2300, 3300, 5780], ['Item (click to jump)', 'Type', 'Where', 'What'], att.map((it) => {
+        const a = attnOf(it.members); const r = it.members.find((x) => x.kind === 'flag' || x.teacher_decision) || it.root;
+        const fill = ATTN_FILL[a];
+        return [
+          { __cell: true, o: { fill }, content: [new Paragraph({ spacing: { after: 40 }, children: [new InternalHyperlink({ anchor: anchorOf(it.root), children: [tr(IDOF(it.root), { bold: true, color: '0563C1', underline: true })] })] })] },
+          { __cell: true, o: { fill }, content: [P([tr(a === 'flag' ? '[FLAG] no change made' : '[DECISION] change proposed', { bold: true, color: ATTN_COLOR[a] })])] },
+          { __cell: true, o: { fill }, content: [P(clip(it.root.where || '', 90))] },
+          { __cell: true, o: { fill }, content: [P(clip((it.root.group_headline ? it.root.group_headline + '. ' : '') + r.why, 260))] },
+        ];
+      }), true));
+      ks.push(P('', { after: 120 }));
+    }
     ks.push(table([1300, 1700, 4100, 2700, 1500, 2380], ['#', 'Where', 'What changed', 'Why', 'Reference (science)', 'Teacher response'], items.map(itemRow)));
     sections.push({ properties: PAGE,
       headers: { default: new Header({ children: [new Paragraph({ shading: { fill: 'D5E8F0', type: ShadingType.CLEAR, color: 'auto' }, children: [new TextRun({ text: tag, font: FONT, size: 20, bold: true, color: '1F3864' })] })] }) },
