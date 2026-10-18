@@ -167,7 +167,7 @@ const howTo = () => [
   H2('How to read this journal'),
   P('Every change made to the Grade 10 lesson plans is listed here, grouped by sub-strand. The same change is also visible as a Word tracked change in the matching "_TRACKED.docx" file, so you can accept or reject it there.'),
   P('Each row gives: where the change is (document, lesson, phase and field), exactly what changed (BEFORE in red strike-through, AFTER in green underline), why it was changed and which of the 14 lesson-plan guidelines it serves, and for science corrections a reference that supports the fix. References are named sources, to be verified by a reviewer (page numbers are not given).'),
-  P([tr('Items that need YOUR attention are marked and shaded: ', { bold: true }), tr('ORANGE rows carry [FLAG]: a problem or question where no text was changed and you must decide what to do. YELLOW rows carry [DECISION]: Claude proposed a change that depends on a judgement call, please confirm it. To jump to them, press Ctrl+F and search for  [FLAG]  or  [DECISION] , or use the "Needs your attention" list at the top of each sub-strand (click an item number to jump to it). A separate document, Flagged_Items_<Subject>.docx, lists ONLY these items so you can read them together; record your answer (ACCEPT or EDIT) in the journal, next to the same item number, not in the summary.')]),
+  P([tr('Items that need YOUR attention are marked and shaded: ', { bold: true }), tr('ORANGE rows carry [FLAG]: a problem or question where no text was changed and you must decide what to do. YELLOW rows carry [DECISION]: Claude proposed a change that depends on a judgement call, please confirm it. To jump to them, press Ctrl+F and search for  [FLAG]  or  [DECISION] , or use the "Needs your attention" list at the top of each sub-strand (click an item number to jump to it). A separate document, Flagged_Items_<Subject>.docx, lists ONLY these items so you can read them together, and it has the same ACCEPT / EDIT boxes: answer the [FLAG] and [DECISION] items there (or here, but not both; if you answer in both and they differ, the Flagged Items document is used). Answer every other item in this journal.')]),
   P([tr('How to respond (every item, in the last column): ', { bold: true }), tr('click ONE box, ACCEPT or EDIT. If you choose EDIT, type the change you want in the space under it. Save the file under the same name and send it back. Every item carries its sub-strand name, and each section has the sub-strand in the page header, so please keep the items in this document.')]),
 ];
 
@@ -227,7 +227,7 @@ function flaggedDoc(title, modules) {
     P('Summary of ONLY the items that need a teacher\'s attention. Prepared by Claude (AI), proposed for teacher review.', { size: 20, after: 140 }),
     P([tr('[FLAG] (orange): ', { bold: true, color: 'C00000' }), tr('a problem or question where no text was changed; you decide what should happen. ')]),
     P([tr('[DECISION] (yellow): ', { bold: true, color: 'C55A11' }), tr('Claude proposed a change that rests on a judgement call (for example local knowledge, a timetable choice, or unverified Kiswahili terms); please confirm it or ask for a different version.')]),
-    P([tr('How to answer: ', { bold: true }), tr(`open the journal (Journal_${title.replace(/ /g, '_')}.docx), find the item by the same item number, and tick ACCEPT or EDIT there (type your requested change in the box). Please do not answer in this summary.`)], { after: 120 }),
+    P([tr('How to answer: ', { bold: true }), tr(`answer HERE, in the last column of each item: click ONE box, ACCEPT or EDIT, and if you choose EDIT type your requested change in the space below. You do not need to answer these items again in the journal (Journal_${title.replace(/ /g, '_')}.docx); use the journal for all the other items. Save the file under the same name and send it back.`)], { after: 120 }),
     H2('Summary'),
     table([6000, 2400, 2400, 2880], ['Sub-strand', 'Items needing attention', '[FLAG]', '[DECISION]'],
       [...perMod.map(([m, a]) => { const mt = meta(m); const f = a.filter((it) => attnOf(it.members) === 'flag').length; return [`${mt.substrand_id} ${mt.substrand_name}`, String(a.length), String(f), String(a.length - f)]; }),
@@ -241,26 +241,41 @@ function flaggedDoc(title, modules) {
     if (!a.length) ks.push(P('No items need a teacher decision in this sub-strand.'));
     else {
       ks.push(P([tr(`${a.length} items. Journal item numbers are shown in the first column.`, { size: 18, color: '555555' })], { after: 80 }));
-      ks.push(table([1500, 1500, 2100, 4780, 3800], ['Journal item', 'Type', 'Where', 'Issue / what you are asked to decide', 'Claude\'s proposal'],
+      ks.push(table([1300, 1200, 1700, 7100, 2380], ['Journal item', 'Type', 'Where', 'Issue / what you are asked to decide, and Claude\'s proposal', 'Teacher response'],
         a.map((it) => {
           const k = attnOf(it.members); const fill = ATTN_FILL[k];
           const r = it.members.find((x) => x.kind === 'flag' || x.teacher_decision) || it.root;
           const head = it.root.group_headline ? it.root.group_headline + ' ' : '';
-          const proposal = r.kind === 'flag' ? 'No text changed. See the suggestion in the issue text.' : clip(it.root.kind === 'set' ? it.root.new : (it.root.new || r.new), 500);
+          const proposal = r.kind === 'flag' ? 'No text was changed. The suggestion, if any, is in the issue text above.' : clip(it.root.kind === 'set' ? it.root.new : (it.root.new || r.new), 700);
           return [
             { __cell: true, o: { fill }, content: [P([tr(IDOF(it.root) + (it.members.length > 1 ? ` (+${it.members.length - 1} related edits)` : ''), { bold: true })])] },
             { __cell: true, o: { fill }, content: [P([tr(k === 'flag' ? '[FLAG]' : '[DECISION]', { bold: true, color: ATTN_COLOR[k] })])] },
             { __cell: true, o: { fill }, content: [P(it.root.where || '')] },
-            { __cell: true, o: { fill }, content: [...(head ? [P([tr(head, { bold: true })])] : []), P(r.why)] },
-            { __cell: true, o: { fill }, content: [P(proposal)] },
+            { __cell: true, o: { fill }, content: [...(head ? [P([tr(head, { bold: true })])] : []), P(r.why),
+              P([tr('CLAUDE\'S PROPOSAL', { bold: true, size: 15, color: '666666' })], { before: 60, after: 20 }), P([tr(proposal, { color: r.kind === 'flag' ? '666666' : '1B6B1B', italics: r.kind === 'flag' })])] },
+            teacherCell(IDOF(it.root), fill),
           ];
-        }), true));
+        }), false));
     }
     sections.push({ properties: PAGE,
       headers: { default: new Header({ children: [new Paragraph({ shading: { fill: 'D5E8F0', type: ShadingType.CLEAR, color: 'auto' }, children: [new TextRun({ text: tag, font: FONT, size: 20, bold: true, color: '1F3864' })] })] }) },
       footers: { default: foot(tag) }, children: ks });
   }
   return new Document({ styles: { default: { document: { run: { font: FONT, size: 17 } } } }, sections });
+}
+
+
+// ---------- post-process: valid, unique bookmark ids and explicitly identified checkboxes ----------
+const JSZip = require('jszip');
+async function finalize(buf) {
+  const zip = await JSZip.loadAsync(buf);
+  let xml = await zip.file('word/document.xml').async('string');
+  let b = 0; let e = 0; let c = 0;
+  xml = xml.replace(/<w:bookmarkStart ([^>]*?)w:id="\d+"/g, (m, pre) => `<w:bookmarkStart ${pre}w:id="${++b}"`);
+  xml = xml.replace(/<w:bookmarkEnd w:id="\d+"/g, () => `<w:bookmarkEnd w:id="${++e}"`);
+  xml = xml.replace(/<w:sdtPr><w14:checkbox>/g, () => { c++; const kind = c % 2 === 1 ? 'ACCEPT' : 'EDIT'; return `<w:sdtPr><w:alias w:val="${kind}"/><w:tag w:val="cb${c}"/><w:id w:val="${700000 + c}"/><w14:checkbox>`; });
+  zip.file('word/document.xml', xml);
+  return zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE' });
 }
 
 (async () => {
@@ -271,10 +286,10 @@ function flaggedDoc(title, modules) {
   const written = [];
   for (const [name, mods] of Object.entries(bySubj)) {
     const f = path.join(jdir, `Journal_${name.replace(/ /g, '_')}.docx`);
-    fs.writeFileSync(f, await Packer.toBuffer(volume(`${name}`, mods)));
+    fs.writeFileSync(f, await finalize(await Packer.toBuffer(volume(`${name}`, mods))));
     written.push(f);
     const ff = path.join(jdir, `Flagged_Items_${name.replace(/ /g, '_')}.docx`);
-    fs.writeFileSync(ff, await Packer.toBuffer(flaggedDoc(name, mods)));
+    fs.writeFileSync(ff, await finalize(await Packer.toBuffer(flaggedDoc(name, mods))));
     written.push(ff);
   }
   // master index
