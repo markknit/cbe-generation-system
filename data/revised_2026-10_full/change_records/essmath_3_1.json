@@ -1,0 +1,543 @@
+{
+ "module": "essmath_3_1",
+ "records": [
+  {
+   "kind": "edit",
+   "target": "unit",
+   "path": "totalDuration",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons (3 single lessons × 40 minutes + 5 double lessons × 80 minutes) = 520 minutes total",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "why": "The unit total said 8 x 40 = 320 minutes, but Lessons 4 to 8 are double lessons of 80 minutes. Recomputed from the real lesson durations: Lessons 1-3 = 3 x 40 = 120; Lessons 4-8 = 5 x 80 = 400; 120 + 400 = 520 minutes (checked twice, by adding lesson by lesson: 40+40+40+80+80+80+80+80 = 520).",
+   "id": "essmath_3_1-001",
+   "teacher_decision": false,
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "unit",
+   "path": "phenomenon",
+   "old": "yet the mean, median and mode tell slightly different stories.",
+   "new": "yet the different summaries tell slightly different stories (for travel mode only the mode can be found; for number data such as siblings or race times the mean, median and mode can differ).",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "reference": "OpenStax Introductory Statistics (2e), Chapter 1 (qualitative versus quantitative data) and Chapter 2 (measures of the center apply to numerical data)",
+   "why": "The phenomenon said the mean, median and mode of the travel data tell different stories, but travel mode is categories (Walk, Matatu...), so only the mode can be found; the lessons (3, 4, 7, 8) already teach exactly this. The anchoring phenomenon and puzzle are kept; only the explanation is corrected. Teacher to decide: whether you are happy with this wording of the puzzle. Checked by confirming that no lesson computes a mean or median of travel mode.",
+   "id": "essmath_3_1-002",
+   "where": "Unit overview, phenomenon",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "set",
+   "target": "unit",
+   "path": "supportingPhenomena",
+   "value": "• An Eldoret club coach must tell a selector how fast a group of seven 800 m runners is; one slow time (130 s, a runner with a cold) pulls the mean up, so the mean, median and mode tell different stories.\n• A mandazi seller in Kisumu records daily sales for a week; a line graph shows a sharp rise on market day that the total alone hides.\n• A newspaper pie chart of how a Nairobi family spends its monthly income (rent, food, school fees, transport, savings) leads to different conclusions depending on how the slices are read.\n• The class tallies tree types in the school compound (grevillea, cypress, eucalyptus, neem) and the frequency table reveals which species dominates before anyone counts them again.",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Two supporting phenomena did not match the lessons: the athlete example (two athletes, five races, Kericho team) is not what Lesson 4 uses (one Eldoret club group of seven runners with a 130 s outlier), and the tree list named jacaranda while Lesson 2 counts grevillea, cypress, eucalyptus and neem. They now match the lessons.",
+   "id": "essmath_3_1-003",
+   "teacher_decision": false,
+   "old": "• Two Kenyan athletes have race times for five 800 m races; one has the faster mean but the other is more consistent, so which is the better pick for the Kericho county team?\n• A mandazi seller in Kisumu records daily sales for a week; a line graph shows a sharp rise on market day that the total alone hides.\n• A newspaper pie chart of how a Nairobi family spends its monthly income (rent, food, school fees, transport, savings) leads to different conclusions depending on how the slices are read.\n• The class tallies tree types in the school compound (grevillea, cypress, eucalyptus, jacaranda) and the frequency table reveals which species dominates before anyone counts them again.",
+   "new": "• An Eldoret club coach must tell a selector how fast a group of seven 800 m runners is; one slow time (130 s, a runner with a cold) pulls the mean up, so the mean, median and mode tell different stories.\n• A mandazi seller in Kisumu records daily sales for a week; a line graph shows a sharp rise on market day that the total alone hides.\n• A newspaper pie chart of how a Nairobi family spends its monthly income (rent, food, school fees, transport, savings) leads to different conclusions depending on how the slices are read.\n• The class tallies tree types in the school compound (grevillea, cypress, eucalyptus, neem) and the frequency table reveals which species dominates before anyone counts them again.",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "Mama Achieng's mandazi sold on 5 days are 40, 45, 42, 50 and 45.",
+   "new": "Mama Achieng's mandazi sold on 5 days in an earlier, quieter week are 40, 45, 42, 50 and 45.",
+   "criteria": [
+    1,
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Lessons 4, 5 and 7 give Mama Achieng's Monday to Friday sales as 40, 45, 42, 50, 65, so the Lesson 3 numbers (Friday 45) contradicted them. Saying it is a different, quieter week removes the clash without changing any answer (222 / 5 = 44.4, mode 45).",
+   "lesson": 3,
+   "id": "essmath_3_1-004",
+   "teacher_decision": false,
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "old": "'Which average should we trust?'",
+   "new": "'Which summary (mean, median or mode) should we trust?'",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "The unit insists on the word 'mean' and never 'average' (Lessons 3 and 8 teacher moves and the Final Explanation), but this Driving Question Board card used 'average'.",
+   "lesson": 8,
+   "id": "essmath_3_1-005",
+   "teacher_decision": false,
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "Final Explanation (6-8 sentences)",
+   "new": "Final Explanation (8 to 10 sentences, as in Part 5 of the Final Explanation)",
+   "criteria": [
+    7,
+    10,
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "Lesson 8 asked for a 6-8 sentence Final Explanation but the Final Explanation document (Part 5) asks for 8 to 10 sentences. Both now say 8 to 10.",
+   "lesson": 8,
+   "id": "essmath_3_1-006",
+   "teacher_decision": false,
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "duration",
+   "old": "40 minutes (1 lesson); the DQB can be continued in a short follow-on slot if needed",
+   "new": "40 minutes (1 lesson)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "group": "G2",
+   "group_headline": "Lessons 1, 2, 5 and 8 did not fit their periods (Lesson 5 needed about 95 minutes in 80); each now has a minute plan that adds up to 40 or 80 minutes",
+   "why": "Lesson 1 had no minute plan and its activities (prediction, 40 responses called out, group talk, question clustering, model drawing) clearly added up to more than 40 minutes, which is why the duration note allowed a 'follow-on slot'. Plan now: Predict 7 + Observe 11 + Explain 8 + DQB 7 + Model 7 = 40.",
+   "lesson": 1,
+   "id": "essmath_3_1-007",
+   "teacher_decision": false,
+   "where": "Lesson 1, duration",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "No totals, percentages or graphs are shown; these are developed in later lessons.",
+   "new": "No totals, percentages or graphs are shown; these are developed in later lessons. Time plan for the 40 minutes: Predict 7, Observe 11, Explain 8, Driving Question Board 7, Model Building 7; if the board work runs over, finish the question clusters at the start of Lesson 2.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Adds the minute plan for Lesson 1 (7 + 11 + 8 + 7 + 7 = 40) so a teacher can pace a large class.",
+   "lesson": 1,
+   "id": "essmath_3_1-008",
+   "teacher_decision": false,
+   "where": "Lesson 1, overview",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "duration",
+   "old": "40 minutes (one lesson; the 5 phases are done in sequence, with a short extension for the DQB and model)",
+   "new": "40 minutes (one lesson)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G2",
+   "why": "The 'short extension' note admitted Lesson 2 did not fit 40 minutes (tallying 40 responses, three claims, a 30-tree practice, DQB and model). With the tree practice taken home the lesson fits 40 minutes.",
+   "lesson": 2,
+   "id": "essmath_3_1-009",
+   "teacher_decision": false,
+   "where": "Lesson 2, duration",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "which is a question for the DQB.",
+   "new": "which is a question for the DQB. Time plan for the 40 minutes: Predict 5, Observe 14, Explain 9, Driving Question Board 5, Model Building 7; the 30-tree practice is a take-home task.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Adds the minute plan for Lesson 2 (5 + 14 + 9 + 5 + 7 = 40).",
+   "lesson": 2,
+   "id": "essmath_3_1-010",
+   "teacher_decision": false,
+   "where": "Lesson 2, overview",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "and does not teach pie charts, which come in Lesson 6.",
+   "new": "and does not teach pie charts, which come in Lesson 6. Time plan for the 80 minutes: Predict 9, Observe 35 (bar graph 18, line graph 17), Explain 14, Driving Question Board 8, Model Building 14.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Adds the minute plan for Lesson 5 (9 + 35 + 14 + 8 + 14 = 80).",
+   "lesson": 5,
+   "id": "essmath_3_1-011",
+   "teacher_decision": false,
+   "where": "Lesson 5, overview",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "Part A, bar graph (about 25 minutes)",
+   "new": "Part A, bar graph (about 18 minutes)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Observe was 25 + 25 = 50 minutes; with a 9-minute Predict, 14-minute Explain, 8-minute board and 12 to 14 minutes of model building the double lesson came to about 95 minutes. Bar graph 18 + line graph 17 = 35 brings it to 80. A bar graph with six bars shared among four learners, and a seven-point line graph, are both realistic in these times.",
+   "lesson": 5,
+   "id": "essmath_3_1-012",
+   "teacher_decision": false,
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "Part B, line graph (about 25 minutes)",
+   "new": "Part B, line graph (about 17 minutes)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G2",
+   "why": "See the Part A change: line graph reduced from 25 to 17 minutes.",
+   "lesson": 5,
+   "id": "essmath_3_1-013",
+   "teacher_decision": false,
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "complete the DQB and write the Final Explanation.",
+   "new": "complete the DQB and write the Final Explanation. Time plan for the 80 minutes: Predict 8, Observe 22, Explain 25 (writing 6, ten 90-second presentations 15, star and step feedback 4), Driving Question Board 10, Model Building 15.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Adds the minute plan for Lesson 8 (8 + 22 + 25 + 10 + 15 = 80); ten groups of four presenting for 90 seconds each is 15 minutes.",
+   "lesson": 8,
+   "id": "essmath_3_1-014",
+   "teacher_decision": false,
+   "where": "Lesson 8, overview",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "learners rebuild the evidence pack from their own Lesson 2 to 7 work. (1) Tally the raw list (Learners 1-40) into a frequency table and check the frequencies add to 40:",
+   "new": "learners assemble the evidence pack from their own Lesson 2 to 7 work, taking out the table, graphs and pie chart already made and redrawing only what is missing, so that this phase fits in about 22 minutes. (1) Use the frequency table from Lesson 2 (re-tally from the raw list only to settle a doubtful count) and check the frequencies add to 40:",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G2",
+   "why": "Re-tallying 40 responses, redrawing a bar graph and a protractor pie chart, and working three more data sets from scratch would take far more than the 22 minutes available. Learners already made these in Lessons 2 to 7, so the project now asks them to retrieve and check them.",
+   "lesson": 8,
+   "id": "essmath_3_1-015",
+   "teacher_decision": false,
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "Learners then practise on new data: the 30 trees in the Lakeview compound",
+   "new": "Learners then practise on new data as a take-home task (they begin it in class if time allows): the 30 trees in the Lakeview compound",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "group": "G3",
+   "group_headline": "Lesson 2 could not fit 40 minutes; the 30-tree practice is now a take-home task instead of an in-class activity",
+   "why": "Teacher to decide: the tree practice (6 minutes plus checking) cannot fit a 40-minute lesson that already tallies 40 responses and tests three claims, so I moved it to homework. Alternative: keep it in class and shorten the claims discussion, or carry it into Lesson 3, which is also full.",
+   "lesson": 2,
+   "id": "essmath_3_1-016",
+   "where": "Lesson 2, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "For the tree practice, supply the raw list of 30 responses and let pairs work independently for 6 minutes; cold-call 2 pairs to read their frequencies, and have the class check that the total is 30.",
+   "new": "For the tree practice, hand out the raw list of 30 responses as a take-home task; learners swap tables with a neighbour when they hand them in, check that the total is 30, and you collect them.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "group": "G3",
+   "why": "Knock-on of moving the tree practice to homework: it is checked by neighbours when handed in rather than in a 6-minute in-class slot.",
+   "lesson": 2,
+   "id": "essmath_3_1-017",
+   "teacher_decision": false,
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "Remind them to use learner numbers, not names.",
+   "new": "Remind them to use learner numbers, not names. Language support for English learners (teacher to confirm the terms with your Kiswahili department): write key words in both languages on the board, for example data = data/takwimu, table = jedwali, frequency = marudio, tally = alama za kuhesabu; let learners talk in Kiswahili first and then report in English.",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "G4",
+   "group_headline": "Added Kiswahili word supports for key statistics terms (suggested terms, to be confirmed by a Kiswahili teacher)",
+   "why": "Teacher to decide: the lessons had no language support at all (guideline 12). I suggest commonly used Kiswahili terms, but I could not verify them, so please confirm or replace them with the terms your school uses.",
+   "lesson": 2,
+   "id": "essmath_3_1-018",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "Use the word 'mean', never 'average'.",
+   "new": "Use the word 'mean', never 'average'. Language support (teacher to confirm): mean = wastani; for mode and median use the Kiswahili terms your department already teaches, and write each term with its meaning in both languages beside the formula.",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "group": "G4",
+   "why": "Continues the Kiswahili support (see Lesson 2); terms to be confirmed by a Kiswahili teacher.",
+   "lesson": 3,
+   "id": "essmath_3_1-019",
+   "teacher_decision": false,
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "angles that sum to 359 or 361 because of rounding. Say: 'If your total is not 360, find the mistake before you draw.' Remind: 'Sharp points down, please.'",
+   "new": "angles that do not sum to 360 (every angle here is a whole number, so a wrong total is a slip, not rounding). Say: 'If your total is not 360, find the mistake before you draw.' Remind: 'Sharp points down, please.' Support: if protractors are short, share one per group or use a printed circle with 40 equal tick marks (each learner is 9 degrees); give a cut-out 9-degree wedge to learners who find the protractor hard, and large-print squared paper to learners with low vision, who can also explain the finished chart aloud.",
+   "criteria": [
+    8,
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "group": "G5",
+   "group_headline": "Practical graph tasks had no fall-back for missing protractors, devices or learners who struggle; short, low-cost supports added to Lessons 5, 6 and 7",
+   "why": "Protractors are often scarce in large classes and the task had no support for learners who struggle or have low vision. Also corrected the note that totals of 359 or 361 come from rounding: with n = 40 every angle is a whole number (checked: 126+108+36+27+27+36 = 360), so a wrong total can only be a slip.",
+   "lesson": 6,
+   "id": "essmath_3_1-020",
+   "teacher_decision": false,
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "Distribute squared paper, rulers and pencils (one set per group of 4).",
+   "new": "Distribute squared paper, rulers and pencils (one set per group of 4). Support: give pre-printed axes to learners who find scales hard and large-print squared paper to learners with low vision.",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "group": "G5",
+   "why": "Adds a short accommodation for the graph-drawing task (see Lesson 6 note).",
+   "lesson": 5,
+   "id": "essmath_3_1-021",
+   "teacher_decision": false,
+   "where": "Lesson 5, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Remind them: no internet needed.",
+   "new": "Remind them: no internet needed. If no device is available, groups draw both versions on squared paper (one axis from 0, one from 2) and compare them.",
+   "criteria": [
+    8
+   ],
+   "category": "safety",
+   "severity": "minor",
+   "group": "G5",
+   "why": "Many partner schools do not have shared devices; without a paper fall-back the digital part could not be done and the 'change the axis' idea would be lost.",
+   "lesson": 7,
+   "id": "essmath_3_1-022",
+   "teacher_decision": false,
+   "where": "Lesson 7, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[0].prompt",
+   "old": "and explain what the class data can and cannot tell us about Zawadi's claim.",
+   "new": "and explain what the class data can and cannot tell us about Zawadi's claim. (d) Another group of 10 learners recorded how many books each read last term: 2, 1, 3, 2, 0, 2, 1, 3, 2, 1. Draw a frequency table (Number of books, Tally, Frequency) and check that the frequencies add up to 10.",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "group": "G6",
+   "group_headline": "Learning outcome (a), drawing a frequency table, was never assessed in the Final Explanation (the table was given); a short table-drawing task was added",
+   "why": "UNIT outcome (a) is to draw a frequency distribution table, but Part 1 supplies the finished table, so learners never draw one. New data checked by counting: 0 appears 1 time, 1 appears 3 times, 2 appears 4 times, 3 appears 2 times; 1+3+4+2 = 10.",
+   "id": "essmath_3_1-023",
+   "teacher_decision": false,
+   "where": "Final Explanation, Part 1: From a messy list to a frequency table, prompt",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[0].exemplar",
+   "old": "so the class count can neither confirm nor refute her claim.",
+   "new": "so the class count can neither confirm nor refute her claim.\n(d) Number of books 0: tally |, frequency 1; 1: |||, frequency 3; 2: ||||, frequency 4; 3: ||, frequency 2. The frequencies add up to 1 + 3 + 4 + 2 = 10.",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "group": "G6",
+   "why": "Expected answer for the new part (d).",
+   "id": "essmath_3_1-024",
+   "teacher_decision": false,
+   "where": "Final Explanation, Part 1: From a messy list to a frequency table, exemplar",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "rubric",
+   "value": [
+    {
+     "criterion": "Organising data and calculating from tables",
+     "excellent": "Exceeds Expectations: All percentages, angles, means and medians are correct, with clear working and the frequencies checked against the total.",
+     "proficient": "Meets Expectations: Most calculations are correct with some working shown; one small slip in rounding or working.",
+     "developing": "Approaches Expectations: Several calculations are incorrect or have no working; totals are not checked."
+    },
+    {
+     "criterion": "Choosing measures and graphs",
+     "excellent": "Exceeds Expectations: Chooses mean, median, mode and graph types correctly for each data type, and explains using the outlier and the categorical data.",
+     "proficient": "Meets Expectations: Chooses most measures and graphs correctly with partial reasons.",
+     "developing": "Approaches Expectations: Choices are unclear or not linked to the type of data."
+    },
+    {
+     "criterion": "Evidence-based reasoning about the claims",
+     "excellent": "Exceeds Expectations: Uses exact numbers (14 of 40, 35%; 12 of 40, 30%; 65%) to judge each claim, and correctly says the class count cannot test Zawadi's bus claim.",
+     "proficient": "Meets Expectations: Judges the claims with some numbers; the bus claim is mentioned but not fully explained.",
+     "developing": "Approaches Expectations: Gives opinions without numbers, or states the claims are right or wrong without evidence."
+    },
+    {
+     "criterion": "Critical reading of graphs",
+     "excellent": "Exceeds Expectations: Explains the truncated axis effect (12 times against a true ratio of about 4.7) and lists several correct checks for an honest graph.",
+     "proficient": "Meets Expectations: Explains that the axis can mislead and lists some checks.",
+     "developing": "Approaches Expectations: Does not recognise how a graph can mislead."
+    },
+    {
+     "criterion": "Final recommendation and communication",
+     "excellent": "Exceeds Expectations: Clear, honest report that links the steps from raw list to evidence, advises no shed, recommends whole-school data, and states the limit of one class.",
+     "proficient": "Meets Expectations: Gives a clear recommendation but misses one step or the limit of the sample.",
+     "developing": "Approaches Expectations: Recommendation is unclear or is not supported by the data."
+    }
+   ],
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "why": "The rubric used the generic words excellent / proficient / developing. The level names Exceeds / Meets / Approaches Expectations now start each descriptor so they match the CBE levels used in the lessons; the descriptors themselves are unchanged.",
+   "id": "essmath_3_1-025",
+   "teacher_decision": false,
+   "old": "[{\"criterion\": \"Organising data and calculating from tables\", \"excellent\": \"All percentages, angles, means and medians are correct, with clear working and the frequencies checked against the total.\", \"proficient\": \"Most calculations are correct with some working shown; one small slip in rounding or working.\", \"developing\": \"Several calculations are incorrect or have no working; totals are not checked.\"}, {\"criterion\": \"Choosing measures and graphs\", \"excellent\": \"Chooses mean, median, mode and graph types correctly for each data type, and explains using the outlier and the categorical data.\", \"proficient\": \"Chooses most measures and graphs correctly with partial reasons.\", \"developing\": \"Choices are unclear or not linked to the type of data.\"}, {\"criterion\": \"Evidence-based reasoning about the claims\", \"excellent\": \"Uses exact numbers (14 of 40, 35%; 12 of 40, 30%; 65%) to judge each claim, and correctly says the class count cannot test Zawadi's bus claim.\", \"proficient\": \"Judges the claims with some numbers; the bus claim is mentioned but not fully explained.\", \"developing\": \"Gives opinions without numbers, or states the claims are right or wrong without evidence.\"}, {\"criterion\": \"Critical reading of graphs\", \"excellent\": \"Explains the truncated axis effect (12 times against a true ratio of about 4.7) and lists several correct checks for an honest graph.\", \"proficient\": \"Explains that the axis can mislead and lists some checks.\", \"developing\": \"Does not recognise how a graph can mislead.\"}, {\"criterion\": \"Final recommendation and communication\", \"excellent\": \"Clear, honest report that links the steps from raw list to evidence, advises no shed, recommends whole-school data, and states the limit of one class.\", \"proficient\": \"Gives a clear recommendation but misses one step or the limit of the sample.\", \"developing\": \"Recommendation is unclear or is not supported by the data.\"}]",
+   "new": "[{\"criterion\": \"Organising data and calculating from tables\", \"excellent\": \"Exceeds Expectations: All percentages, angles, means and medians are correct, with clear working and the frequencies checked against the total.\", \"proficient\": \"Meets Expectations: Most calculations are correct with some working shown; one small slip in rounding or working.\", \"developing\": \"Approaches Expectations: Several calculations are incorrect or have no working; totals are not checked.\"}, {\"criterion\": \"Choosing measures and graphs\", \"excellent\": \"Exceeds Expectations: Chooses mean, median, mode and graph types correctly for each data type, and explains using the outlier and the categorical data.\", \"proficient\": \"Meets Expectations: Chooses most measures and graphs correctly with partial reasons.\", \"developing\": \"Approaches Expectations: Choices are unclear or not linked to the type of data.\"}, {\"criterion\": \"Evidence-based reasoning about the claims\", \"excellent\": \"Exceeds Expectations: Uses exact numbers (14 of 40, 35%; 12 of 40, 30%; 65%) to judge each claim, and correctly says the class count cannot test Zawadi's bus claim.\", \"proficient\": \"Meets Expectations: Judges the claims with some numbers; the bus claim is mentioned but not fully explained.\", \"developing\": \"Approaches Expectations: Gives opinions without numbers, or states the claims are right or wrong without evidence.\"}, {\"criterion\": \"Critical reading of graphs\", \"excellent\": \"Exceeds Expectations: Explains the truncated axis effect (12 times against a true ratio of about 4.7) and lists several correct checks for an honest graph.\", \"proficient\": \"Meets Expectations: Explains that the axis can mislead and lists some checks.\", \"developing\": \"Approaches Expectations: Does not recognise how a graph can mislead.\"}, {\"criterion\": \"Final recommendation and communication\", \"excellent\": \"Exceeds Expectations: Clear, honest report that links the steps from raw list to evidence, advises no shed, recommends whole-school data, and states the limit of one class.\", \"proficient\": \"Meets Expectations: Gives a clear recommendation but misses one step or the limit of the sample.\", \"developing\": \"Approaches Expectations: Recommendation is unclear or is not supported by the data.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "flag",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The contract allows only three rubric level fields, so the fourth CBE level, Below Expectations, cannot be represented in the Final Explanation. Suggestion: teachers treat work that does not reach Approaches Expectations as Below Expectations, or add that level by hand on the printed copy.",
+   "id": "essmath_3_1-026",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T12:20:55"
+  },
+  {
+   "kind": "flag",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "why": "No KICD source for Essential Mathematics is available (the Grade 10 Mathematics PDF is the Core Mathematics design), so KICD wording could not be restored or checked. Differences from the Core text that look suspicious: Core 3.1 has six outcomes starting with 'collect data from real life sources', but this unit's outcomes a-e start at the frequency table, even though Lesson 1 cites 'collect data from the locality' as a KICD outcome; Core lists three key inquiry questions (What is statistics? How do we represent data? How do we use statistics in day-to-day life?) but only the third appears here. Please check against the Essential Mathematics design.",
+   "id": "essmath_3_1-027",
+   "teacher_decision": false,
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-17T12:20:55"
+  }
+ ]
+}

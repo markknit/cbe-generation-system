@@ -1,0 +1,1639 @@
+{
+ "module": "gensci_1_5",
+ "records": [
+  {
+   "id": "gensci_1_5-001",
+   "kind": "edit",
+   "target": "unit",
+   "path": "totalDuration",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The overview said 8 x 40 = 320 minutes, but only Lessons 2 and 5 are 40 minutes; Lessons 1, 3, 4, 6, 7 and 8 are 80 minutes. Recomputed from each lesson duration: L1 80 + L2 40 + L3 80 + L4 80 + L5 40 + L6 80 + L7 80 + L8 80 = 560 minutes (6 x 80 = 480, 2 x 40 = 80, 480 + 80 = 560).",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons: 6 double lessons × 80 minutes + 2 single lessons × 40 minutes = 560 minutes total",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-002",
+   "kind": "edit",
+   "target": "unit",
+   "path": "phenomenon",
+   "criteria": [
+    2
+   ],
+   "category": "language",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "\"Form 4\" is the old 8-4-4 system. Under CBE this learner is in Grade 10 (or the school is simply described). Same fix in the Lesson 1 script and the Final Explanation instructions.",
+   "old": "A Form 4 student in Kisumu",
+   "new": "A Grade 10 learner in Kisumu",
+   "group": "K",
+   "group_headline": "\"Form 4 student\" replaced by \"Grade 10 learner\" everywhere (CBE language)",
+   "where": "Unit overview, phenomenon",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-003",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    2
+   ],
+   "category": "language",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Old \"Form 4\" wording replaced with CBE \"Grade 10\".",
+   "lesson": 1,
+   "old": "(a Form 4 student notices bubbling",
+   "new": "(a Grade 10 learner notices bubbling",
+   "group": "K",
+   "where": "Lesson 1, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-004",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "criteria": [
+    2
+   ],
+   "category": "language",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Old \"Form 4\" wording in the script the teacher reads aloud replaced with CBE \"Grade 10\".",
+   "lesson": 1,
+   "old": "'A Form 4 student at a school near Lake Victoria",
+   "new": "'A Grade 10 learner at a school near Lake Victoria",
+   "group": "K",
+   "where": "Lesson 1, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-005",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "instructions",
+   "criteria": [
+    2
+   ],
+   "category": "language",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Old \"Form 4\" wording in the learner instructions replaced with CBE \"Grade 10\".",
+   "old": "Achieng, a Form 4 student in Kisumu",
+   "new": "Achieng, a Grade 10 learner in Kisumu",
+   "group": "K",
+   "where": "Final Explanation, instructions",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-006",
+   "kind": "flag",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "No KICD curriculum PDF covers General Science, so the learning outcomes (a-f), key inquiry question, core competencies, values and PCIs in this unit could not be checked word for word and were left as they are; no KICD wording was invented. The Grade 10 Biology design (Gaseous Exchange and Respiration, Strand 2 for plants and Strand 3 for animals) overlaps in content (aerobic/anaerobic respiration, economic importance of anaerobic respiration, respiratory substrates and RQ, factors affecting respiration) but has different outcomes, PCIs and values, so it is not a source for this unit. Please compare with the General Science design. Note for that check: the Biology design also lists oxygen debt, which this unit touches only in one question (Lesson 4, Q2), and a fermentation project that also names silage, liquid manure and baking; this unit projects are yoghurt, uji and biogas.",
+   "reference": "KICD Grade 10 curriculum design, Biology, Sub-strands 2.3 and 3.3 (partial overlap only)",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-007",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Lesson 4 built the claim that yeast fermentation (ethanol + CO2) makes uji sour. Ethanol is not an acid and CO2 only forms a very weak carbonic acid, so this cannot lower the pH to 3-4. The sourness of uji, togwa and mala is lactic acid made by lactic acid bacteria, the same lactic acid pathway the lesson already teaches for muscles (and Lesson 7 already says this). Part A now covers the bacteria too, Part B ends by checking that the yeast equation has no acid in it. Checked: C6H12O6 -> 2C3H6O3 balances (6 C, 12 H, 6 O both sides); C6H12O6 -> 2C2H5OH + 2CO2 balances (6 C, 12 H, 6 O). The Part A/B minutes were also trimmed (12+12 to 10+10) so the lesson fits 80 minutes. TEACHER DECISION: this changes how Lesson 4 explains the sourness (substantial); please confirm you are happy with it.",
+   "lesson": 4,
+   "old": "PART A — Lactic Acid Pathway in Animals (~12 minutes): Teacher introduces the context: 'Imagine Peres Jepchirchir in the final 200 metres of the Nairobi Marathon. Her muscles are working so hard that oxygen cannot be delivered fast enough. What happens?' Learners read a short structured text (1 paragraph, provided on a resource card or projected) describing lactic acid fermentation in muscle cells. Working in pairs, learners construct the word equation in their journals, then the balanced chemical equation. They annotate each molecule: what it was before respiration started, where it comes from, and where it goes. They compare with an adjacent pair and reconcile any differences.\n\nWord equation: Glucose → Lactic acid (+ energy)\nChemical equation: C₆H₁₂O₆ → 2C₃H₆O₃ (+ small amount of ATP)\n\nLearners answer two written questions: (Q1) Why does Peres feel a burning sensation in her thighs during the sprint? (Q2) What happens to the lactic acid after she crosses the finish line and rests?\n\nPART B — Alcoholic Fermentation in Yeast/Plants (~12 minutes): Teacher connects back: 'Now — the yeast inside the thermos of uji. No oxygen. Same starting molecule — glucose. But the products are different. What does yeast make instead of lactic acid?' Learners examine the evidence from Activity 1 (CO₂ confirmed, pH drop confirmed) and use these as constraints to construct the word equation, then the balanced chemical equation.\n\nWord equation: Glucose → Ethanol + Carbon dioxide (+ energy)\nChemical equation: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ (+ small amount of ATP)\n\nLearners annotate: which product causes the bubbles in the thermos, which product causes the pH drop / sour taste, and which product has economic value.",
+   "new": "PART A — Lactic Acid Pathway in Animals and Bacteria (~10 minutes): Teacher introduces the context: 'Imagine Peres Jepchirchir in the final 200 metres of the Nairobi Marathon. Her muscles are working so hard that oxygen cannot be delivered fast enough. What happens?' Learners read a short structured text (1 paragraph, provided on a resource card or projected) describing lactic acid fermentation in muscle cells and in lactic acid bacteria (the microbes that sour milk and uji). Working in pairs, learners construct the word equation in their journals, then the balanced chemical equation. They annotate each molecule: what it was before respiration started, where it comes from, and where it goes. They compare with an adjacent pair and reconcile any differences.\n\nWord equation: Glucose → Lactic acid (+ energy)\nChemical equation: C₆H₁₂O₆ → 2C₃H₆O₃ (+ small amount of ATP)\n\nLearners answer two written questions: (Q1) Why does Peres feel a burning sensation in her thighs during the sprint? (Q2) What happens to the lactic acid after she crosses the finish line and rests? (Q3, whole-class discussion) Lactic acid bacteria live in uji and mala. If they use this same pathway, what will their lactic acid do to the pH and to the taste?\n\nPART B — Alcoholic Fermentation in Yeast/Plants (~10 minutes): Teacher connects back: 'Now — the yeast inside the thermos of uji. No oxygen. Same starting molecule — glucose. But the products are different. What does yeast make instead of lactic acid?' Learners use the CO₂ evidence (Lesson 3 Flask A and the Activity 2 flask) as the constraint to construct the word equation, then the balanced chemical equation. They then check the equation for an acid: ethanol is not an acid, so the pH drop must come from the Part A pathway, made by lactic acid bacteria living in the uji alongside the yeast.\n\nWord equation: Glucose → Ethanol + Carbon dioxide (+ energy)\nChemical equation: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ (+ small amount of ATP)\n\nLearners annotate: which product causes the bubbles in the thermos, which pathway and organism cause the pH drop and the sour taste (Part A), and which product has economic value.",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "group_headline": "The unit said yeast makes uji sour. Yeast makes CO2 (bubbles) and ethanol; the sourness is lactic acid made by lactic acid bacteria. Lessons 3, 4, 6, 8, the unit text and the Final Explanation now agree.",
+   "where": "Lesson 4, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-008",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Teacher script and expected answers updated to match the corrected explanation (lactic acid bacteria make the acid; yeast makes the CO2).",
+   "lesson": 4,
+   "old": "[Expected answer: No — this pathway is in animal muscles, not in yeast. Affirm partial understanding if learner says 'not directly' and redirect to Part B.]\n\nFor Part B, teacher says: 'Use your pH data from Activity 1 as your first constraint. Use your limewater observation as your second constraint. Build the equation that satisfies BOTH constraints.' [WAIT 3 minutes for pair work.]",
+   "new": "[Expected answer: Partly. This pathway makes no CO₂, so it cannot explain the bubbles, but lactic acid bacteria in uji and mala use it, and lactic acid would explain the sour taste and the lower pH. Affirm 'not directly' or 'only the sourness' and redirect to Part B.]\n\nFor Part B, teacher says: 'Use your limewater observation as the constraint: your equation must make CO₂. Then check it: does it make an acid?' [WAIT 3 minutes for pair work.] [Expected: No. Ethanol and CO₂ are the products and ethanol is not an acid, so the pH drop must come from the lactic acid made by the bacteria in uji and mala (Part A). Confirm: bubbles = CO₂ mainly from yeast (some bacteria release a little CO₂ too); sourness = lactic acid.]",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-009",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The expected green-note answer is now stated so the teacher knows what a correct answer sounds like.",
+   "lesson": 4,
+   "old": "'What makes uji taste sour?'",
+   "new": "'What makes uji taste sour?' (answer: lactic acid made by lactic acid bacteria)",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 4, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-010",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The model task asked learners to show ethanol and CO2 lowering the pH and to claim yeast makes the sour taste. It now shows the two causes separately, as two Claim sentences (Claim = the answer to the question).",
+   "lesson": 4,
+   "old": "2. Add a pH arrow: show that as ethanol and CO₂ accumulate, the pH of the uji drops (annotate with the approximate pH values from their Activity 1 data).\n3. Add a second panel beside the thermos: a running figure (labelled 'Nairobi sprinter's muscle cell') showing the lactic acid pathway — glucose → lactic acid + ATP — with a 'burning sensation' label.\n4. Write one 'claim sentence' at the bottom of the model: 'The sour taste in the sealed thermos is caused by [product] produced when yeast respires anaerobically, converting [substrate] into [products] without using oxygen.'",
+   "new": "2. Add a pH arrow: show that the pH of the uji drops over time (annotate with the approximate pH values from their Activity 1 data) and label its cause: lactic acid made by lactic acid bacteria (ethanol is not an acid).\n3. Add a second panel beside the thermos: a lactic acid bacterium in the uji (and a small 'sprinter's muscle cell' beside it) showing the lactic acid pathway — glucose → lactic acid + ATP — with 'sour taste' and 'burning sensation' labels.\n4. Write two 'claim sentences' at the bottom of the model: 'The bubbles in the sealed thermos are caused by [gas] produced when [organism] respires anaerobically, converting [substrate] into [products] without using oxygen.' and 'The sour taste is caused by [acid] produced when [organism] respires anaerobically.'",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 4, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-011",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Look-fors updated to the corrected claims. The old text also mapped the model task to an RQ indicator that this lesson does not teach (RQ is Lesson 5); that mapping was removed.",
+   "lesson": 4,
+   "old": "(3) Does the claim sentence name a specific product (ethanol and/or CO₂) as causal, rather than just saying 'chemicals'? These three criteria map directly to the KICD assessment rubric indicators: 'Ability to relate the respiratory quotient to the type of substrate and type of respiration' (knowledge), 'Discuss and test the properties of fermented products — acidity' (skills), and 'Appreciate the significance of respiration in living things' (attitude, evidenced by the claim sentence connecting chemistry to daily life).",
+   "new": "(3) Do the claim sentences name CO₂ as the cause of the bubbles and lactic acid (made by lactic acid bacteria) as the cause of the sourness, rather than just saying 'chemicals'? These criteria link to the unit outcomes: describe anaerobic respiration (knowledge), discuss and test the properties of fermented products - acidity (skills), and appreciate the significance of respiration in living things (attitude, evidenced by the claim sentences connecting chemistry to daily life).",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 4, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-012",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Summary Table corrected: acid from the bacteria, bubbles from the yeast.",
+   "lesson": 4,
+   "old": "The CO₂ produces the bubbles observed in the sealed thermos; the accumulation of acidic by-products lowers the pH of the uji, producing its sour taste.",
+   "new": "The CO₂ produces the bubbles observed in the thermos. Ethanol is not an acid, so it cannot make the uji sour: the sour taste comes from lactic acid made by lactic acid bacteria, which live in uji and mala and use the same lactic acid pathway as muscle cells.",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 4, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-013",
+   "kind": "set",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old text said yeast ethanol/CO2 (plus carbonic acid) lowered the pH from about 6 to 3-4, and used \"no active yeast\" to explain why fresh uji does not sour. Rewritten with the two causes: yeast makes the bubbles; lactic acid bacteria make the sourness. This is the version learners use to build the Final Explanation.",
+   "lesson": 4,
+   "value": "The bubbles and the sourness in the Kisumu student's sealed thermos of uji have two different causes. Yeast cells carry out alcoholic fermentation, an anaerobic process, using sugar from the maize porridge: glucose → ethanol + carbon dioxide. The CO₂ is the gas in the bubbles (some bacteria also release a little CO₂). Ethanol is not an acid, so it does not make the uji sour. The sourness comes from lactic acid made by lactic acid bacteria, which are also present in fermented uji and in mala: they carry out lactic acid fermentation, glucose → lactic acid, the same pathway as in muscle cells. The lactic acid lowers the pH from about 6 in fresh uji to 3–4, which the tongue detects as sourness. Freshly cooked uji wa kawaida has no active fermenting microbes, so it does not bubble or sour. In a sprinter's thigh muscles the same lactic acid pathway runs when the oxygen supply is too low, causing the burning sensation.",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "old": "The sour taste and bubbles in the Kisumu student's sealed thermos of uji are explained by yeast cells carrying out alcoholic fermentation — anaerobic respiration — using glucose in the maize porridge as a substrate. Without oxygen, yeast cannot complete aerobic respiration, so it uses a shorter pathway that produces ethanol (responsible for any alcoholic notes) and CO₂ (the bubbles). The accumulation of CO₂ dissolved as carbonic acid, plus other organic acids, lowers the pH of the uji from approximately pH 6 to pH 3–4, which the tongue detects as sourness. The same principle — an acid product from anaerobic metabolism — explains why fresh uji (unfermented, no active yeast) does not sour in the same way, and why mala (fermented milk, produced by lactic acid bacteria) is similarly sour. In animal cells like those in a Nairobi sprinter's thigh muscles, a parallel but chemically distinct pathway produces lactic acid instead of ethanol, causing the characteristic burning sensation during intense exercise.",
+   "new": "The bubbles and the sourness in the Kisumu student's sealed thermos of uji have two different causes. Yeast cells carry out alcoholic fermentation, an anaerobic process, using sugar from the maize porridge: glucose → ethanol + carbon dioxide. The CO₂ is the gas in the bubbles (some bacteria also release a little CO₂). Ethanol is not an acid, so it does not make the uji sour. The sourness comes from lactic acid made by lactic acid bacteria, which are also present in fermented uji and in mala: they carry out lactic acid fermentation, glucose → lactic acid, the same pathway as in muscle cells. The lactic acid lowers the pH from about 6 in fresh uji to 3–4, which the tongue detects as sourness. Freshly cooked uji wa kawaida has no active fermenting microbes, so it does not bubble or sour. In a sprinter's thigh muscles the same lactic acid pathway runs when the oxygen supply is too low, causing the burning sensation.",
+   "where": "Lesson 4, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-014",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Storyline purpose aligned with the corrected explanation. It also said Lesson 5 covers economic importance; Lesson 5 is substrates/RQ and economics is Lesson 7.",
+   "lesson": 4,
+   "old": "identified yeast as the agent, and collected evidence that gas (CO₂) is produced. Lesson 4 is the formal EXPLAIN lesson: learners now name both anaerobic pathways, write their equations, measure the pH drop caused by the acid products, and connect the chemistry directly to the sour taste of uji and mala — answering the student in Kisumu's original question: 'What is producing the sour taste?' This lesson also introduces the lactic acid pathway in animal muscle cells, linking to the burning thigh sensation of a Nairobi sprinter, and sets the foundation for Lesson 5's exploration of economic importance and RQ calculations.",
+   "new": "identified yeast as the agent making the gas (CO₂), and collected evidence for it. Lesson 4 is the formal EXPLAIN lesson: learners now name both anaerobic pathways, write their equations, measure the pH drop caused by the acid product, and connect the chemistry directly to the sour taste of uji and mala — answering the student in Kisumu's original question: 'What is producing the sour taste?' (lactic acid made by lactic acid bacteria, not by the yeast) This lesson also introduces the lactic acid pathway in animal muscle cells, linking to the burning thigh sensation of a Nairobi sprinter, and in lactic acid bacteria, and sets the foundation for Lesson 5 (respiratory substrates and RQ) and Lesson 6 (factors affecting the rate of respiration).",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 4, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-015",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The bridge question hinted that a single equation explains both the gas and the acid. It now invites the idea that two processes are involved, which Part A and B then resolve.",
+   "lesson": 4,
+   "old": "The yeast is in a sealed flask, there is no oxygen — and yet it is releasing CO₂ and we just showed fermented products are acidic. Which equation from your prior learning could explain both of these observations at once?",
+   "new": "The yeast is working without oxygen and releasing CO₂ — and separately we just showed that fermented uji and mala are acidic. Do you think one equation explains both observations, or might two different processes be involved?",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-016",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purpose",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 3 only tests yeast and CO2, so it cannot explain the sourness; the purpose now says so.",
+   "lesson": 3,
+   "old": "to explain the bubbles and increasing sourness observed in the anchoring phenomenon",
+   "new": "to explain the bubbles observed in the anchoring phenomenon (the sourness has a different cause, explained in Lesson 4)",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 3, slo.purpose",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-017",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.knowledge",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Yeast fermentation (ethanol + CO2) does not explain the increasing acidity; learners should not be told that it does.",
+   "lesson": 3,
+   "old": "explains both the bubbles and the increasing acidity observed in the anchoring phenomenon.",
+   "new": "explains the bubbles observed in the anchoring phenomenon; the increasing sourness has a different cause, studied in Lesson 4.",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 3, slo.knowledge",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-018",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Gives the teacher a plain answer for the bacteria question and keeps the sourness open for Lesson 4.",
+   "lesson": 3,
+   "old": "Write the complete explanation on the board. Say: 'Copy this",
+   "new": "Write the complete explanation on the board. Teacher note: uji contains yeast and lactic acid bacteria. The class explanation should name yeast and CO₂ for the bubbles; if a learner says bacteria also make bubbles, accept it (some bacteria release a little CO₂). Flask A says nothing about the sourness, so say: 'Hold the sour taste — we test it next lesson.' Say: 'Copy this",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-019",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Yeast does not make the acid; corrected to match Lesson 4.",
+   "lesson": 6,
+   "old": "confirmed that yeast produces CO₂ and acids during fermentation",
+   "new": "confirmed that yeast produces CO₂ and ethanol during fermentation while lactic acid bacteria make the lactic acid that sours uji",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 6, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-020",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    1,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A yeast-glucose flask does not make lactic or acetic acid, so the sour-smell indicator would mislead learners. The expected result is also stated honestly: yeast in sugar solution bubbles with or without air.",
+   "lesson": 6,
+   "old": "Learners observe bubble rate and smell (sourness indicator for lactic/acetic acid accumulation) at 5-minute intervals.",
+   "new": "Learners observe bubble rate and smell (a yeasty, slightly alcoholic smell is expected; yeast alone does not give the sour smell of uji) at 5-minute intervals. Expect similar bubbling in both flasks at first: yeast ferments a sugar solution with or without air, which shows that oxygen is not needed for fermentation (its role is in energy yield, not bubble rate).",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-021",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.observed",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The old expected result (slower sealed bubbling, increasing sourness) is not what yeast in glucose does; corrected to the realistic observation.",
+   "lesson": 6,
+   "old": "Sealed (anaerobic) flasks showed slower initial CO₂ output but increasing sourness over time.",
+   "new": "The sealed and open yeast flasks both bubbled at similar rates in the first 15 minutes, showing that yeast does not need oxygen to ferment sugar; neither flask smelled sour, only yeasty.",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 6, summaryTablePrompt.observed",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-022",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Corrected: the anaerobic products differ by organism, and oxygen affects the energy yield, not simply the speed.",
+   "lesson": 6,
+   "old": "(2) Oxygen availability: aerobic respiration is faster and more efficient, but anaerobic respiration proceeds when oxygen is limited, producing acids and CO₂;",
+   "new": "(2) Oxygen availability: yeast ferments sugar with or without oxygen (the bubble rate is similar), but aerobic respiration releases far more energy from each glucose, and anaerobic respiration takes over when oxygen is limited, producing CO₂ and ethanol in yeast and lactic acid in muscle cells and lactic acid bacteria;",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 6, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-023",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Yeast makes the bubbles; the bacteria make the acid. Both speed up in warm weather.",
+   "lesson": 6,
+   "old": "producing more bubbles and more lactic/acetic acid (sourness) per unit time",
+   "new": "producing more CO₂ bubbles per unit time, while the lactic acid bacteria in the same uji also work faster and make more lactic acid (the sourness)",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 6, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-024",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Old guide answer said CO2 + ethanol cause the uji sourness and that CO2 is the biogas energy; biogas fuel is methane (CO2 is the minor part).",
+   "lesson": 8,
+   "old": "(lactic acid → yoghurt sour taste; CO₂ → biogas energy; CO₂ + ethanol → uji sourness and bubbles)",
+   "new": "(lactic acid → the sour taste of yoghurt and uji; CO₂ → the bubbles in uji and the rising of dough; methane → biogas energy)",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-025",
+   "kind": "edit",
+   "target": "unit",
+   "path": "focus",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Unit text aligned: uji is fermented by both yeast and lactic acid bacteria.",
+   "old": "from yeast cells fermenting maize flour into uji",
+   "new": "from yeast cells and lactic acid bacteria fermenting maize flour into uji",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Unit overview, focus",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-026",
+   "kind": "edit",
+   "target": "unit",
+   "path": "storylineThread",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Storyline for Lesson 4 aligned with the corrected explanation.",
+   "old": "and in yeast/plants (ethanol + CO₂ pathway). Word and chemical equations are written.",
+   "new": "and in yeast/plants (ethanol + CO₂ pathway), and learners identify lactic acid bacteria as the cause of the sour taste. Word and chemical equations are written.",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-027",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[0].exemplar",
+   "criteria": [
+    1,
+    10
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Model answer aligned: yeast gives the CO2, bacteria give the lactic acid.",
+   "old": "Living microorganisms already present in the fermented uji, mainly yeast and also bacteria, are carrying out cellular respiration. They break down sugar (glucose) from the maize porridge to release energy. Without oxygen they carry out anaerobic respiration (fermentation). The bubbles are carbon dioxide gas. The sour taste comes from acidic products that build up and lower the pH of the uji.",
+   "new": "Living microorganisms already present in the fermented uji, yeast and lactic acid bacteria, are carrying out cellular respiration. They break down sugar (glucose) from the maize porridge to release energy. Without oxygen they carry out anaerobic respiration (fermentation). The bubbles are carbon dioxide gas, mainly made by the yeast. The sour taste comes from lactic acid made by the lactic acid bacteria, which lowers the pH of the uji (ethanol, the other yeast product, is not an acid).",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Final Explanation, Part 1: What is happening inside the sealed thermos?, exemplar",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-028",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[0].exemplar",
+   "criteria": [
+    1,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Both equations are needed to explain bubbles and sourness.",
+   "old": "Word equation: glucose → ethanol + carbon dioxide (+ a small amount of energy).",
+   "new": "Word equations: yeast: glucose → ethanol + carbon dioxide (+ a small amount of energy); lactic acid bacteria: glucose → lactic acid (+ a small amount of energy).",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Final Explanation, Part 1: What is happening inside the sealed thermos?, exemplar",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-029",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[2].exemplar",
+   "criteria": [
+    1,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Model answer aligned with Lesson 4: the cause of the sourness is named.",
+   "old": "Acidic by-products of anaerobic respiration lower the pH, and the tongue detects this as sourness. Mala, which is made by lactic acid bacteria, was also sour, which suggests acid from bacterial fermentation can cause sourness in the same way.",
+   "new": "Lactic acid, made by lactic acid bacteria, lowers the pH, and the tongue detects this as sourness. Ethanol and CO₂ from the yeast do not explain the low pH. Mala, which is made by lactic acid bacteria, was also sour, which suggests the same lactic acid fermentation is responsible for the sourness of the uji.",
+   "reference": "FAO Agricultural Services Bulletin 138, Fermented Cereals: A Global Perspective (1999), lactic acid fermentation of uji/togwa-type porridges; OpenStax Microbiology, Fermentation (lactic acid and alcohol fermentation)",
+   "group": "S",
+   "where": "Final Explanation, Part 3: Evidence for sourness, substrates and RQ, exemplar",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-030",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 3 said Lesson 4 would be about temperature; Lesson 4 is about the sour taste and the lactic acid pathway, and temperature is Lesson 6.",
+   "lesson": 3,
+   "old": "'Next lesson we will investigate what happens to respiration when we change temperature — and connect that to why uji ferments faster on a hot day in Kisumu than on a cold morning in Kericho.'",
+   "new": "'Next lesson we ask a new question: the yeast makes the bubbles, but what makes the uji SOUR? We will test the uji and mala, and look at what happens in our own muscles when oxygen runs short. Temperature and the Mombasa-Kericho puzzle come later, in Lesson 6.'",
+   "group": "R",
+   "group_headline": "Closing \"next lesson\" lines in Lessons 1, 3 and 4 pointed to the wrong next lesson; now they match the real sequence",
+   "where": "Lesson 3, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-031",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 2 is about aerobic respiration in the body, not about the microbes in the uji; the closing line now says so.",
+   "lesson": 1,
+   "old": "'Tomorrow we will begin to investigate what is actually living inside fermented uji — and why it needs to eat to survive.",
+   "new": "'Next lesson we first find out how living cells get energy from food, and why oxygen matters. Then we return to the flask to ask what is actually living inside fermented uji.",
+   "group": "R",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-032",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The expected yellow-note questions are about RQ (Lesson 5), temperature (Lesson 6) and industry (Lesson 7), not only Lesson 5.",
+   "lesson": 4,
+   "old": "This is an excellent new question — it will anchor Lesson 5.",
+   "new": "This is an excellent new question — we will pick it up in Lessons 5 to 7.",
+   "group": "R",
+   "where": "Lesson 4, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-033",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Closing line pointed only to Lesson 5; the look-fors now name the two claim sentences; revise and feedback time trimmed (10 to 7 and 3 to 2 minutes) so the Lesson 4 phases add up to 80 minutes (Predict 7, Observe 28, Explain 25, Driving Question Board 8, Model Building 12).",
+   "lesson": 4,
+   "old": "'You have 10 minutes to revise. I will be looking for three things: the balanced equation inside the yeast cell, the pH annotation, and the claim sentence.' [Circulate — target groups who had pH data errors in Activity 1 and verify their annotation is corrected.] After peer feedback (3 minutes), cold-call 2 learners to read their claim sentence aloud. Ask the class: 'Does this claim sentence match our evidence? Is there anything it cannot yet explain?' [WAIT 15 seconds.] Close the lesson by saying: 'Your model is still incomplete — it does not yet tell us how fast fermentation happens, or what conditions control it, or how industries use this process. Those questions — your yellow sticky notes — will drive Lesson 5.'",
+   "new": "'You have 7 minutes to revise. I will be looking for three things: the balanced equation inside the yeast cell, the pH annotation with its cause, and the two claim sentences.' [Circulate — target groups who had pH data errors in Activity 1 and verify their annotation is corrected.] After peer feedback (2 minutes), cold-call 2 learners to read their claim sentence aloud. Ask the class: 'Does this claim sentence match our evidence? Is there anything it cannot yet explain?' [WAIT 15 seconds.] Close the lesson by saying: 'Your model is still incomplete — it does not yet tell us how fast fermentation happens, or what conditions control it, or how industries use this process. Those questions — your yellow sticky notes — will drive Lessons 5 to 7.'",
+   "group": "R",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-034",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Added up from the lesson text: Predict about 7 (2 + 3 + 2), Observe about 36 (2 + 18 + 3 + 7 + 3 + 3), Explain about 29-33 (12 + 12 + 5 plus questions), Driving Question Board about 10, Model Building about 17, a total near 99 minutes against 80. Trims: the limewater demonstration becomes a 3-minute look at a flask already running, Parts A and B of Explain go from 12 + 12 to 10 + 10 minutes, model revision from 10 to 7 minutes and peer feedback from 3 to 2 minutes. New plan: 7 + 28 + 25 + 8 + 12 = 80.",
+   "lesson": 4,
+   "old": "The lesson closes with a cumulative model revision in which learners annotate their working model of the thermos to show the two anaerobic pathways at the molecular level.",
+   "new": "The lesson closes with a cumulative model revision in which learners annotate their working model of the thermos to show the two anaerobic pathways at the molecular level. Pacing for the 80 minutes: Predict 7, Observe 28, Explain 25, Driving Question Board 8, Model Building 12.",
+   "group": "T",
+   "group_headline": "Lesson 4 planned about 99 minutes of activity in an 80-minute double period; now trimmed and given a pacing guide",
+   "where": "Lesson 4, overview",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-035",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 3 already showed CO2 turning lime water milky, so repeating a live 7-minute run is not needed; a flask prepared in advance takes about 3 minutes.",
+   "lesson": 4,
+   "old": "ACTIVITY 2 — Teacher Demonstration: Limewater + Yeast-Sugar Flask (~7 minutes): Teacher shows a conical flask containing warm water, sugar (sukari), and a small amount of dry yeast (the same mixture prepared 30 minutes before class). A delivery tube leads into a test tube of limewater. Learners observe the limewater turning milky.",
+   "new": "ACTIVITY 2 — Teacher Demonstration: Limewater + Yeast-Sugar Flask (~3 minutes): Teacher shows a conical flask containing warm water, sugar (sukari), and a small amount of dry yeast set up 20–30 minutes before class so there is no waiting. A delivery tube leads into a test tube of limewater. Learners observe that the limewater has turned milky.",
+   "group": "T",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-036",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Added up: Predict about 7, Observe about 29 (3 safety demo + set-up + 15 data + 5 rotation + 2 questions), Explain about 26 (4 reports x 90 s plus questions, table, 4-minute write, pair share, 3 cold calls), Driving Question Board about 12, Model Building about 14: close to 88 minutes. Trims: reports from 90 to 60 seconds (4 x 60 s + questions, about 22 minutes for Explain) and model drawing from 6 to 5 minutes. New plan: 7 + 29 + 22 + 11 + 11 = 80.",
+   "lesson": 6,
+   "old": "The lesson closes with a DQB update and a revised annotated model of the uji thermos that now includes environmental arrows showing how external conditions regulate the rate of microbial respiration inside the flask.",
+   "new": "The lesson closes with a DQB update and a revised annotated model of the uji thermos that now includes environmental arrows showing how external conditions regulate the rate of microbial respiration inside the flask. Pacing for the 80 minutes: Predict 7, Observe 29, Explain 22, Driving Question Board 11, Model Building 11.",
+   "group": "U",
+   "group_headline": "Lesson 6 planned about 88 minutes in an 80-minute double period; presentations and model time trimmed, pacing guide added",
+   "where": "Lesson 6, overview",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-037",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Four reports at 90 seconds plus questions took too long for the period.",
+   "lesson": 6,
+   "old": "Each group prepares a 90-second verbal report",
+   "new": "Each group prepares a 60-second verbal report",
+   "group": "U",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-038",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 60-second report.",
+   "lesson": 6,
+   "old": "After each group's 90 seconds,",
+   "new": "After each group's 60 seconds,",
+   "group": "U",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-039",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "One minute saved so the phases add up to 80.",
+   "lesson": 6,
+   "old": "Working individually for 6 minutes and then sharing with their group for 3 minutes",
+   "new": "Working individually for 5 minutes and then sharing with their group for 3 minutes",
+   "group": "U",
+   "where": "Lesson 6, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-040",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Added up with about six groups: Predict about 8, gallery walk 15 + 2, presentations 6 x (4 + 1) = 30 plus 3 for synthesis, Driving Question Board about 10, Final Model 15 + 2 + 4 + discussion about 21: about 99 minutes. New plan: Predict 8, Observe 17, Explain 27 (6 x 4 + 3), Driving Question Board 10, Model Building 18 = 80. Check: 8 + 17 + 27 + 10 + 18 = 80.",
+   "lesson": 8,
+   "old": "Each group formally presents their project in a 4-minute spotlight, explicitly linking",
+   "new": "Each group (about six groups) formally presents their project in a 3-minute spotlight followed by one 1-minute question (about 24 minutes in all), explicitly linking",
+   "group": "V",
+   "group_headline": "Lesson 8 planned 90-100 minutes for 80; presentations cut from 4 to 3 minutes and the Final Model from 15 to 12, pacing guide added",
+   "where": "Lesson 8, overview",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-041",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 3-minute spotlight.",
+   "lesson": 8,
+   "old": "Each group delivers a 4-minute spotlight presentation",
+   "new": "Each group delivers a 3-minute spotlight presentation",
+   "group": "V",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-042",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 3-minute spotlight.",
+   "lesson": 8,
+   "old": "'Four minutes. Four connection points on the board",
+   "new": "'Three minutes. Four connection points on the board",
+   "group": "V",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-043",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 80-minute plan.",
+   "lesson": 8,
+   "old": "You have 15 minutes. Work in silence",
+   "new": "You have 12 minutes. Work in silence",
+   "group": "V",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-044",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    4,
+    8
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Lesson 8 expects finished yoghurt, fermented uji and a biogas bottle at gallery stations, but no earlier lesson starts them, and yoghurt, uji and especially biogas need hours to days. The launch is added to the end of Lesson 7 (a 2-minute announcement; the work is done outside class). TEACHER DECISION: the lead times (biogas 7-10 days, uji 2 days, yoghurt overnight) depend on your climate, materials and school kitchen access; please adjust them.",
+   "lesson": 7,
+   "old": "Close the lesson: 'Next lesson — Lesson 8",
+   "new": "Launch the Lesson 8 projects before learners leave. Assign each group ONE project and give the preparation timeline: Biogas model (Station C) — set up the bottle, kitchen waste and balloon (with a spoonful of cow-dung slurry as starter) at least 7–10 days before Lesson 8, because the gas collects slowly; Uji fermentation (Station B) — start the batch 2 days before; Yoghurt (Station A) — start the evening before, with warm milk and a spoonful of live mala or yoghurt as starter, kept warm. Groups prepare these outside lesson time and bring them to Lesson 8. Close the lesson: 'Next lesson — Lesson 8",
+   "group": "P",
+   "group_headline": "The Lesson 8 yoghurt, uji and biogas projects were never launched, so they could not exist on the day; a launch step with a preparation timeline is added to Lesson 7",
+   "where": "Lesson 7, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-045",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Projects are now launched in Lesson 7, so this description matches.",
+   "lesson": 8,
+   "old": "investigating factors, and designing value-addition projects.",
+   "new": "investigating factors, and preparing value-addition projects (launched at the end of Lesson 7).",
+   "group": "P",
+   "where": "Lesson 8, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-046",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    7,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Yoghurt, uji and biogas are anaerobic, so there is no oxygen used and no RQ to calculate. Learners are now asked for the substrate and its expected aerobic RQ, and why RQ is not defined here (division by zero). Checked: carbohydrate 6 CO2 / 6 O2 = 1.0; fat 102 / 145 = 0.70.",
+   "lesson": 8,
+   "old": "(B) What the RQ is for the substrate used and what it tells us;",
+   "new": "(B) What the main substrate is and what RQ it would give if it were respired aerobically (carbohydrate 1.0, fat about 0.7), and why an RQ cannot be calculated for the anaerobic step, where no oxygen is used;",
+   "reference": "OpenStax Biology 2e, Cellular Respiration and Fermentation; respiratory quotient = CO2 produced / O2 consumed (standard definition, undefined when O2 consumed = 0)",
+   "group": "P",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-047",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Biogas is mainly methane with CO2; \"CO2 via limewater\" would teach that biogas is CO2. Checked: the two major gases sum to about 100% with traces of others.",
+   "lesson": 8,
+   "old": "[WAIT 15 seconds — expect CO₂ identification via limewater test.]",
+   "new": "[WAIT 15 seconds — expect: a mixture. Limewater would confirm the CO₂ part, but biogas is mostly methane (the fuel), which limewater cannot detect. Do not ignite the gas indoors.]",
+   "reference": "Brock Biology of Microorganisms (Madigan et al.), methanogenesis and anaerobic digestion; IEA Bioenergy Task 37, Biogas Basics (typical biogas about 50-70% methane, 30-50% CO2)",
+   "group": "P",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-048",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "In a 400 m race most energy comes from anaerobic pathways, and thin air at altitude does not make sprinters collapse; the scenario would teach the wrong link between oxygen and sprinting (and Lesson 4 then uses the sprinter for lactic acid). A distance runner is limited by oxygen delivery, so aerobic respiration is the right idea for Lesson 2. Same fix in the overview, Summary Table and Final Explanation. Checked: Eldoret is about 2,100 m above sea level, Mombasa is at sea level, so air at Eldoret holds less oxygen per breath.",
+   "lesson": 2,
+   "old": "'Amina Waweru is a 400-metre sprinter training at Kasarani Stadium in Nairobi. During a race, her leg muscles need enormous amounts of energy very quickly. Her coach notices that when she runs at high altitude in Eldoret, she sometimes collapses near the finish line. Her blood oxygen levels are lower at altitude.' Teacher asks: 'Using what you just read, why would lower oxygen levels cause Amina to struggle to sustain her sprint?'",
+   "new": "'Amina Waweru is a 10-kilometre runner training at Kasarani Stadium in Nairobi. Over a long run, her leg muscles need a steady supply of energy for many minutes. Her coach notices that when she trains in Eldoret, where each breath of air contains less oxygen than in Mombasa, she has to slow down much earlier in the run.' Teacher asks: 'Using what you just read, why would less oxygen in each breath cause Amina to struggle to keep her pace?'",
+   "reference": "OpenStax Biology 2e, Cellular Respiration; Wilmore and Costill, Physiology of Sport and Exercise (energy systems: a 400 m race is largely anaerobic, endurance runs are limited by oxygen delivery)",
+   "group": "A",
+   "group_headline": "Lesson 2 used a 400 m sprinter who \"collapses from lack of oxygen\"; sprints are mostly anaerobic, so the example now uses a 10 km runner",
+   "where": "Lesson 2, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-049",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the corrected Amina scenario.",
+   "lesson": 2,
+   "old": "a Nairobi sprinter who collapses when she cannot breathe enough oxygen",
+   "new": "a Nairobi distance runner who has to slow down when each breath carries less oxygen at altitude",
+   "reference": "OpenStax Biology 2e, Cellular Respiration; Wilmore and Costill, Physiology of Sport and Exercise (energy systems: a 400 m race is largely anaerobic, endurance runs are limited by oxygen delivery)",
+   "group": "A",
+   "where": "Lesson 2, overview",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-050",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.observed",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the corrected Amina scenario.",
+   "lesson": 2,
+   "old": "Amina the Nairobi sprinter",
+   "new": "Amina the Nairobi distance runner",
+   "reference": "OpenStax Biology 2e, Cellular Respiration; Wilmore and Costill, Physiology of Sport and Exercise (energy systems: a 400 m race is largely anaerobic, endurance runs are limited by oxygen delivery)",
+   "group": "A",
+   "where": "Lesson 2, summaryTablePrompt.observed",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-051",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[1].prompt",
+   "criteria": [
+    1,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the corrected Amina scenario.",
+   "old": "Amina, a sprinter in Nairobi,",
+   "new": "Amina, a runner in Nairobi,",
+   "reference": "OpenStax Biology 2e, Cellular Respiration; Wilmore and Costill, Physiology of Sport and Exercise (energy systems: a 400 m race is largely anaerobic, endurance runs are limited by oxygen delivery)",
+   "group": "A",
+   "where": "Final Explanation, Part 2: Aerobic and anaerobic respiration compared, prompt",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-052",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Teachers had no model answer for the key question of this phase; added what a good answer sounds like and one follow-up prompt.",
+   "lesson": 2,
+   "old": "teacher waits 10 seconds and explicitly says 'I will wait — this is a thinking question, not a recall question.'",
+   "new": "teacher waits 10 seconds and explicitly says 'I will wait — this is a thinking question, not a recall question.' [Expected answer: less oxygen reaches the muscle cells, so aerobic respiration makes less ATP, the muscles cannot keep contracting at that pace and she must slow down. If a learner says only 'she cannot breathe', ask: 'What do her muscle cells need the oxygen for?']",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-053",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "criteria": [
+    5
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 2 named no misconceptions for the teacher to listen for; these three are the common ones for this topic.",
+   "lesson": 2,
+   "old": "Both are useful starting points. Let us investigate.'",
+   "new": "Both are useful starting points. Let us investigate.' Listen for these misconceptions and note them for the Explain Phase: 'respiration is just breathing', 'plants do not respire', 'the body makes energy from nothing' (energy is released from food). Do not correct yet.",
+   "where": "Lesson 2, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-054",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The unit had very little language support for English learners beyond two Kiswahili words in Lesson 1. TEACHER DECISION: please confirm or correct the Kiswahili terms for your region and school; they were suggested without a Kiswahili source to check against.",
+   "lesson": 2,
+   "old": "'Talk to the person next to you before anyone answers aloud — 90 seconds.'",
+   "new": "'Talk to the person next to you before anyone answers aloud — 90 seconds.' Language support: add each new term to the Word Wall with its Kiswahili beside it (teachers to confirm the terms your school uses): energy = nishati, oxygen = oksijeni, sugar = sukari, gas = gesi, yeast = chachu, fermentation = uchachushaji, acid = asidi. Learners may answer in Kiswahili first and then restate in English.",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-055",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Added up from the activities: Predict about 6, Observe about 12, Explain about 11, Driving Question Board about 7, Model Building about 8-10, so roughly 45 minutes against 40. A pacing guide with cuts is added: 5 + 11 + 10 + 5 + 9 = 40.",
+   "lesson": 2,
+   "old": "This productive tension drives curiosity toward Lesson 3.",
+   "new": "This productive tension drives curiosity toward Lesson 3. Pacing for the 40 minutes: Predict 5, Observe 11, Explain 10, Driving Question Board 5, Model Building 9. If time runs short, shorten the Driving Question Board gallery walk and skip the early-finisher extension.",
+   "where": "Lesson 2, overview",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-056",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    8,
+    1
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Comparing germinating and dry maize seeds changes how much water the seeds have taken up and how active their cells are; it does not change surface area, and \"more surface area for gas exchange\" is not why germinating seeds respire faster. The factor is relabelled in the outcomes, overview, model arrows, Summary Table, storyline and Final Explanation. TEACHER DECISION: if you want surface area itself as a factor, the investigation needs another set-up (for example whole versus crushed seeds or crushed yeast tablets); please decide which you prefer.",
+   "lesson": 6,
+   "old": "FACTOR D — Surface Area (Germinating vs. Dry Seeds):",
+   "new": "FACTOR D — Water Availability and Metabolic Activity (Germinating vs. Dry Seeds):",
+   "reference": "OpenStax Biology 2e, seed germination (water uptake activates seed metabolism and respiration)",
+   "group": "F",
+   "group_headline": "Lesson 6 called germinating vs dry seeds a \"surface area\" test; it tests water and metabolic activity, so it is relabelled everywhere",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-057",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purpose",
+   "criteria": [
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Factor D relabelled to what is actually tested.",
+   "lesson": 6,
+   "old": "temperature, oxygen availability, substrate concentration, and surface area affect the rate of respiration",
+   "new": "temperature, oxygen availability, substrate concentration, and water availability (metabolic activity) affect the rate of respiration",
+   "reference": "OpenStax Biology 2e, seed germination (water uptake activates seed metabolism and respiration)",
+   "group": "F",
+   "where": "Lesson 6, slo.purpose",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-058",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.knowledge",
+   "criteria": [
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Factor D relabelled to what is actually tested.",
+   "lesson": 6,
+   "old": "(temperature, oxygen availability, substrate concentration, surface area)",
+   "new": "(temperature, oxygen availability, substrate concentration, water availability and metabolic activity)",
+   "reference": "OpenStax Biology 2e, seed germination (water uptake activates seed metabolism and respiration)",
+   "group": "F",
+   "where": "Lesson 6, slo.knowledge",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-059",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Factor D relabelled to what is actually tested.",
+   "lesson": 6,
+   "old": "By systematically manipulating temperature, oxygen, substrate concentration, and surface area,",
+   "new": "By systematically manipulating temperature, oxygen, substrate concentration, and water availability,",
+   "reference": "OpenStax Biology 2e, seed germination (water uptake activates seed metabolism and respiration)",
+   "group": "F",
+   "where": "Lesson 6, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-060",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Factor D relabelled to what is actually tested.",
+   "lesson": 6,
+   "old": "(temperature, oxygen availability, substrate concentration, surface area using germinating vs. dry maize seeds)",
+   "new": "(temperature, oxygen availability, substrate concentration, and water availability and metabolic activity using germinating vs. dry maize seeds)",
+   "reference": "OpenStax Biology 2e, seed germination (water uptake activates seed metabolism and respiration)",
+   "group": "F",
+   "where": "Lesson 6, overview",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-061",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Factor D relabelled; the model arrow now matches what the class tested.",
+   "lesson": 6,
+   "old": "surface area of starch/substrate particles",
+   "new": "water available to the cells",
+   "reference": "OpenStax Biology 2e, seed germination (water uptake activates seed metabolism and respiration)",
+   "group": "F",
+   "where": "Lesson 6, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-062",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Removes the incorrect surface-area explanation.",
+   "lesson": 6,
+   "old": "(4) Surface area and metabolic activity: germinating seeds have greater metabolic activity and surface area for gas exchange, producing more CO₂ per unit time than dormant dry seeds.",
+   "new": "(4) Water availability and metabolic activity: germinating seeds have taken up water and so have greater metabolic activity, producing more CO₂ per unit time than dormant dry seeds.",
+   "reference": "OpenStax Biology 2e, seed germination (water uptake activates seed metabolism and respiration)",
+   "group": "F",
+   "where": "Lesson 6, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-063",
+   "kind": "edit",
+   "target": "unit",
+   "path": "storylineThread",
+   "criteria": [
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Storyline matches the Lesson 6 set-up (maize seeds, water availability).",
+   "old": "surface area (germinating beans vs. dry seeds)",
+   "new": "water availability and metabolic activity (germinating vs. dry maize seeds)",
+   "reference": "OpenStax Biology 2e, seed germination (water uptake activates seed metabolism and respiration)",
+   "group": "F",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-064",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].exemplar",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Model answer matches the relabelled factor.",
+   "old": "Surface area and metabolic activity: germinating maize seeds",
+   "new": "Water availability and metabolic activity: germinating maize seeds",
+   "reference": "OpenStax Biology 2e, seed germination (water uptake activates seed metabolism and respiration)",
+   "group": "F",
+   "where": "Final Explanation, Part 4: Why does uji ferment at different rates?, exemplar",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-065",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    7,
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "RQ = CO2 / O2. In a sealed flask with a little oxygen, fermentation adds CO2 without using O2, so the ratio exceeds 1. When all the oxygen is gone, the denominator is 0, so the ratio cannot be calculated. Checked: for example 13 cm3 CO2 / 10 cm3 O2 = 1.3 (above 1); with 0 cm3 O2 the division is undefined. Lesson 5 and the Final Explanation now agree.",
+   "lesson": 5,
+   "old": "(1) Label the substrate being used by the yeast — identify it as a carbohydrate (glucose from maize starch) and write its RQ value for aerobic conditions (1.0) and note that the actual uji RQ is likely above 1.0 because fermentation is anaerobic, producing extra CO2. (2) Add a small key showing the three substrates and their RQ values. (3) Write one sentence connecting the uji scenario to the driving question: 'The yeast in the sealed thermos uses glucose (a carbohydrate substrate, RQ = 1.0 aerobically) but because the flask is sealed and oxygen is limited, anaerobic fermentation raises the effective RQ above 1.0, explaining the excess CO2 bubbles we observe.'",
+   "new": "(1) Label the substrate being used by the yeast — identify it as a carbohydrate (glucose from maize starch) and write its RQ value for aerobic conditions (1.0) and note that while the flask still holds a little oxygen the RQ is above 1.0, because fermentation adds CO2 without using O2; once the oxygen has run out, no O2 is used and an RQ cannot be calculated. (2) Add a small key showing the three substrates and their RQ values. (3) Write one sentence connecting the uji scenario to the driving question: 'The yeast in the sealed thermos uses glucose (a carbohydrate substrate, RQ = 1.0 aerobically) but because the flask is sealed and oxygen runs out, fermentation takes over: CO2 is released without O2 being used, so the RQ is above 1.0 at first and cannot be calculated once no oxygen is used. This explains the CO2 bubbles we observe.'",
+   "reference": "OpenStax Biology 2e, Cellular Respiration; respiratory quotient = CO2 produced / O2 consumed (undefined when O2 consumed = 0)",
+   "group": "G3",
+   "group_headline": "Lesson 5 said the sealed thermos has an RQ above 1.0 while the Final Explanation said it cannot be calculated; both now say: above 1.0 while some oxygen remains, not calculable once oxygen is gone",
+   "where": "Lesson 5, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-066",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    7,
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the corrected RQ wording.",
+   "lesson": 5,
+   "old": "pushing the effective RQ above 1.0 and explaining why so many bubbles accumulate",
+   "new": "so the RQ rises above 1.0 (and cannot be calculated once no O2 is used), which explains why so many bubbles accumulate",
+   "reference": "OpenStax Biology 2e, Cellular Respiration",
+   "group": "G3",
+   "where": "Lesson 5, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-067",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "criteria": [
+    7,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Look-for matches the corrected RQ wording.",
+   "lesson": 5,
+   "old": "a plausible explanation for why the anaerobic uji RQ exceeds 1.0.",
+   "new": "a plausible explanation for why the RQ rises above 1.0 when fermentation adds CO2 without using O2 (and cannot be calculated once no O2 is used).",
+   "reference": "OpenStax Biology 2e, Cellular Respiration",
+   "group": "G3",
+   "where": "Lesson 5, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-068",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.safetyNotes",
+   "criteria": [
+    8
+   ],
+   "category": "safety",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "A loose stopper lets the gas escape around it instead of through the tube into the lime water, so the lime water would not turn milky and the experiment would not work. The safe set-up is a snug stopper with an open delivery tube (the tube is the vent, so pressure cannot build). The suck-back note is added because cooling flasks can draw lime water backwards.",
+   "lesson": 3,
+   "old": "(3) Yeast-glucose solutions may produce pressure in sealed containers — use the recommended loose-stopper or tubing setup only; do not seal flasks completely.",
+   "new": "(3) Gas must always have a way out: fit the stopper snugly, keep the delivery tube open with its end only just below the lime-water surface, and never block the tube or use a closed bottle, so pressure cannot build up. Lift the tube out of the lime water when the flask cools or is washed, so lime water is not sucked back.",
+   "reference": "School science practical safety (CLEAPSS-style guidance on delivery tubes and suck-back)",
+   "group": "L3S",
+   "group_headline": "Lime-water set-up asked for a loose stopper and a tube through the stopper at once: gas would leak round the stopper and the CO2 test would fail; now a snug stopper with an open tube",
+   "where": "Lesson 3, slo.safetyNotes",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-069",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    8
+   ],
+   "category": "safety",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Matches the corrected set-up: gas must go through the tube to be tested.",
+   "lesson": 3,
+   "old": "'The stopper sits loosely — we are NOT sealing the flask completely. This is a safety rule.'",
+   "new": "'The stopper fits snugly, but the tube is open to the lime water, so the flask is NOT sealed — the gas must leave through the tube. Never block the tube. This is a safety rule.'",
+   "reference": "School science practical safety (CLEAPSS-style guidance on delivery tubes and suck-back)",
+   "group": "L3S",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-070",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The practical named only glassware that many partner schools lack. TEACHER DECISION: please confirm which of these substitutes your school can really get (and whether your lime water source gives a clear solution).",
+   "lesson": 3,
+   "old": "'In Flask A we observed… In Flask B we observed… The difference between A and B tells us…'",
+   "new": "'In Flask A we observed… In Flask B we observed… The difference between A and B tells us…' Low-cost substitutes if conical flasks or one-hole stoppers are not available (the same set-up is used in Lessons 4 and 6): clean 500 mL plastic bottles with a pierced cap and a short plastic tube or drinking straw sealed round with plasticine or wax; ordinary sugar (sukari) for glucose; lime water made by stirring a spoonful of slaked lime (calcium hydroxide, from a hardware shop or school store) into water, letting it settle and pouring off the clear liquid; baker's yeast from a shop.",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-071",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 2 teaches only aerobic respiration; anaerobic respiration is first met in Lesson 3, so the old cross-reference was wrong.",
+   "lesson": 3,
+   "old": "In Lesson 2 they distinguished aerobic from anaerobic respiration conceptually and learned the word equations.",
+   "new": "In Lesson 2 they learned aerobic respiration and its word equation, and saw that a sealed flask raises the question of respiration without oxygen.",
+   "where": "Lesson 3, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-072",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.safetyNotes",
+   "criteria": [
+    8
+   ],
+   "category": "safety",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The experiment needs a 40 °C bath, but the safety note spoke of baths at 60 °C or more, which would kill the yeast and give the wrong result. Corrected to the temperature actually used, keeping the hot-water handling rule for the kettle.",
+   "lesson": 6,
+   "old": "Hot water baths (≥60 °C) must be handled with tongs or heat-resistant gloves; teacher demonstrates safe pouring.",
+   "new": "The warm water bath for Flask 3 should be about 40 °C (mix kettle water with cold water first; above about 50 °C the yeast is killed). Hot kettle water (≥60 °C) must be handled with heat-resistant gloves or a thick cloth, and the teacher demonstrates safe pouring.",
+   "where": "Lesson 6, slo.safetyNotes",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-073",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Brookside is a private company, not a cooperative, and KCC now trades as New KCC; wording corrected to be accurate.",
+   "lesson": 7,
+   "old": "Kenyan dairy cooperatives (KCC, Brookside)",
+   "new": "Kenyan dairy processors and cooperatives (for example New KCC and Brookside)",
+   "where": "Lesson 7, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-074",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The old note said mala is protein and fat \"not carbohydrate\", but milk contains lactose, a carbohydrate. The 12 foods now have an answer key, with the two genuinely mixed foods flagged as mixtures. Checked: 12 foods = 4 carbohydrate + 4 fat + 2 protein + 2 mixed.",
+   "lesson": 5,
+   "old": "Correct placement of ambiguous items (e.g., mala — protein and fat, not carbohydrate; avocado — fat) reveals depth of understanding.",
+   "new": "Expected sorting: carbohydrate — ugali, honey, maize grain, mandazi dough; fat — avocado, groundnut oil, ghee, cow milk fat; protein — fish, cow blood. Mixed foods: beans (protein and carbohydrate) and mala (protein, fat and lactose, a milk sugar) — accept any column if the group's reason names the mixture. Reasoning like this reveals depth of understanding.",
+   "reference": "FAO/INFOODS and Government of Kenya, Kenya Food Composition Tables (2018): milk contains lactose (a carbohydrate) with protein and fat; beans contain both protein and carbohydrate",
+   "group": "FD",
+   "group_headline": "Card-sorting answer key added; mala and beans are mixtures, not \"protein and fat, not carbohydrate\"",
+   "where": "Lesson 5, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-075",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[2].exemplar",
+   "criteria": [
+    5,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Beans are a mixture of protein and carbohydrate and nyama choma is fat as well as protein, so cleaner examples are given, matching the Lesson 5 answer key.",
+   "old": "proteins (RQ about 0.8), for example nyama choma or beans.",
+   "new": "proteins (RQ about 0.8), for example fish or lean meat (beans are a mixture of protein and carbohydrate).",
+   "reference": "FAO/INFOODS and Government of Kenya, Kenya Food Composition Tables (2018): milk contains lactose (a carbohydrate) with protein and fat; beans contain both protein and carbohydrate",
+   "group": "FD",
+   "where": "Final Explanation, Part 3: Evidence for sourness, substrates and RQ, exemplar",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-076",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[2].prompt",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old prompt said anaerobic respiration adds CO2 and asked what that tells you, so it contained the answer. The new prompt gives data and asks learners to calculate and interpret, and to explain why RQ is undefined with no oxygen use. Checked: RQ = 13 / 10 = 1.3.",
+   "old": "(d) The RQ is worked out for cells that are using oxygen. Explain what happens to the RQ value if anaerobic respiration is also contributing CO2 in addition to aerobic respiration, and what that tells you about the type of respiration.",
+   "new": "(d) A student measures the gases used and made by a sample of germinating seeds and finds that the seeds make 13 cm³ of CO₂ for every 10 cm³ of O₂ they use. Calculate the RQ and say what it suggests about the type of respiration. Then explain why an RQ cannot be calculated for yeast in a completely sealed flask once the oxygen has run out.",
+   "reference": "OpenStax Biology 2e, Cellular Respiration; RQ = CO2 produced / O2 consumed",
+   "group": "F3",
+   "group_headline": "Final Explanation Part 3(d) gave away its own answer; it is now a calculation with data that learners must interpret",
+   "where": "Final Explanation, Part 3: Evidence for sourness, substrates and RQ, prompt",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-077",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[2].exemplar",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Model answer matches the new prompt and the Lesson 5 wording (above 1.0 while some oxygen remains; not calculable once oxygen is gone).",
+   "old": "(d) If anaerobic respiration adds CO2 without any extra O2 being used, the ratio becomes larger, so the RQ goes above 1.0. An RQ above 1.0 shows that anaerobic respiration is contributing to energy release. In the completely sealed thermos, once oxygen has run out no O2 is consumed, so an RQ cannot be calculated there; the yeast are simply fermenting glucose, a carbohydrate, and the bubbles are the CO2 they release.",
+   "new": "(d) RQ = 13 ÷ 10 = 1.3. An RQ above 1.0 means more CO₂ is released than O₂ is used, so some of the CO₂ is coming from anaerobic respiration (fermentation) as well as aerobic respiration. In a completely sealed flask, once the oxygen has run out no O₂ is consumed, so the formula would divide by zero and an RQ cannot be calculated; the yeast are simply fermenting glucose, a carbohydrate, and the bubbles are the CO₂ they release.",
+   "reference": "OpenStax Biology 2e, Cellular Respiration",
+   "group": "F3",
+   "where": "Final Explanation, Part 3: Evidence for sourness, substrates and RQ, exemplar",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-078",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].exemplar",
+   "criteria": [
+    10,
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The old exemplar left the biogas organism and fuel unnamed and implied dough rising is sealed anaerobic respiration from the start; dough begins with some oxygen. The organisms and the products (CO2 for dough, methane for biogas) are now named. Checked against Lesson 7: same organisms and products.",
+   "old": "Example 2: Mandazi dough, where yeast produces CO2 that makes the dough rise. Other acceptable examples: Rift Valley biogas, which gives fuel from anaerobic breakdown of dairy waste; silage, where lactic acid preserves animal feed.",
+   "new": "Example 2: Yeast-leavened mandazi or bread dough, where the yeast ferments sugars, mostly without oxygen once the oxygen trapped in the dough is used up, and the CO₂ makes the dough rise (the ethanol evaporates when the dough is baked or fried). Other acceptable examples: Rift Valley biogas, where methane-producing microbes (methanogenic archaea) break down dairy waste without oxygen and make methane, which is the fuel; silage, where lactic acid bacteria make lactic acid that preserves animal feed.",
+   "reference": "OpenStax Biology 2e, Fermentation; Brock Biology of Microorganisms (Madigan et al.), methanogenesis; yeast dough fermentation (baking science texts)",
+   "where": "Final Explanation, Part 5: Using respiration to solve community problems, exemplar",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-079",
+   "kind": "set",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "criteria": [
+    14,
+    13
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "This field contained the characters backslash-n instead of line breaks, so the six reflection questions would print run together with \"\\n\" visible. Line breaks restored. Item 3 also said Lesson 5 introduces economic content; Lesson 5 is respiratory substrates and RQ (economics is Lesson 7), so that wording was corrected.",
+   "lesson": 4,
+   "value": "After the lesson, reflect on the following questions in your professional journal:\n1. EQUATIONS: Did the majority of learners independently write a balanced chemical equation for alcoholic fermentation, or did they rely on copying from the board? If copying was dominant, consider introducing a 'closed-book equation construction' task at the start of Lesson 5 as a low-stakes retrieval practice.\n2. pH DATA QUALITY: Were the pH values recorded by groups consistent with expected ranges (fermented uji pH 3–4)? If multiple groups recorded anomalous values (e.g., pH 6–7 for fermented uji), investigate whether the fermented uji sample was sufficiently mature — prepare it at least 24 hours in advance next time, and store it in a warm location (30°C) to ensure active fermentation.\n3. LACTIC ACID CONNECTION: Did learners genuinely connect the lactic acid pathway to their own embodied experience (muscle burn during exercise), or did it remain an abstract equation? If the latter, open Lesson 5 with a 30-second physical activity (jumping jacks) and ask learners to report their sensation before introducing respiratory substrates.\n4. DQB QUALITY: Were the yellow sticky notes substantive scientific questions (about variables, mechanisms, economics) or surface-level questions (about spelling, definitions)? Substantive yellow notes signal that the phenomenon is still driving curiosity — a strong indicator of storyline coherence.\n5. KICD CAUTION COMPLIANCE: Confirm that no learner consumed any fermented ethanol samples during the practical. If any group attempted to taste the Activity 1 samples beyond the teacher-controlled 'smell test', revise the safety briefing protocol before Lesson 5.\n6. GENDER AND INCLUSION: Review your cold-call log — did you achieve gender balance across all five phases? Were learners with lower prior attainment given opportunities to answer in the less high-stakes phases (Predict, DQB) rather than only in the more exposed Explain phase?",
+   "old": "After the lesson, reflect on the following questions in your professional journal:\\n1. EQUATIONS: Did the majority of learners independently write a balanced chemical equation for alcoholic fermentation, or did they rely on copying from the board? If copying was dominant, consider introducing a 'closed-book equation construction' task at the start of Lesson 5 as a low-stakes retrieval practice.\\n2. pH DATA QUALITY: Were the pH values recorded by groups consistent with expected ranges (fermented uji pH 3–4)? If multiple groups recorded anomalous values (e.g., pH 6–7 for fermented uji), investigate whether the fermented uji sample was sufficiently mature — prepare it at least 24 hours in advance next time, and store it in a warm location (30°C) to ensure active fermentation.\\n3. LACTIC ACID CONNECTION: Did learners genuinely connect the lactic acid pathway to their own embodied experience (muscle burn during exercise), or did it remain an abstract equation? If the latter, open Lesson 5 with a 30-second physical activity (jumping jacks) and ask learners to report their sensation before introducing the economic content.\\n4. DQB QUALITY: Were the yellow sticky notes substantive scientific questions (about variables, mechanisms, economics) or surface-level questions (about spelling, definitions)? Substantive yellow notes signal that the phenomenon is still driving curiosity — a strong indicator of storyline coherence.\\n5. KICD CAUTION COMPLIANCE: Confirm that no learner consumed any fermented ethanol samples during the practical. If any group attempted to taste the Activity 1 samples beyond the teacher-controlled 'smell test', revise the safety briefing protocol before Lesson 5.\\n6. GENDER AND INCLUSION: Review your cold-call log — did you achieve gender balance across all five phases? Were learners with lower prior attainment given opportunities to answer in the less high-stakes phases (Predict, DQB) rather than only in the more exposed Explain phase?",
+   "new": "After the lesson, reflect on the following questions in your professional journal:\n1. EQUATIONS: Did the majority of learners independently write a balanced chemical equation for alcoholic fermentation, or did they rely on copying from the board? If copying was dominant, consider introducing a 'closed-book equation construction' task at the start of Lesson 5 as a low-stakes retrieval practice.\n2. pH DATA QUALITY: Were the pH values recorded by groups consistent with expected ranges (fermented uji pH 3–4)? If multiple groups recorded anomalous values (e.g., pH 6–7 for fermented uji), investigate whether the fermented uji sample was sufficiently mature — prepare it at least 24 hours in advance next time, and store it in a warm location (30°C) to ensure active fermentation.\n3. LACTIC ACID CONNECTION: Did learners genuinely connect the lactic acid pathway to their own embodied experience (muscle burn during exercise), or did it remain an abstract equation? If the latter, open Lesson 5 with a 30-second physical activity (jumping jacks) and ask learners to report their sensation before introducing respiratory substrates.\n4. DQB QUALITY: Were the yellow sticky notes substantive scientific questions (about variables, mechanisms, economics) or surface-level questions (about spelling, definitions)? Substantive yellow notes signal that the phenomenon is still driving curiosity — a strong indicator of storyline coherence.\n5. KICD CAUTION COMPLIANCE: Confirm that no learner consumed any fermented ethanol samples during the practical. If any group attempted to taste the Activity 1 samples beyond the teacher-controlled 'smell test', revise the safety briefing protocol before Lesson 5.\n6. GENDER AND INCLUSION: Review your cold-call log — did you achieve gender balance across all five phases? Were learners with lower prior attainment given opportunities to answer in the less high-stakes phases (Predict, DQB) rather than only in the more exposed Explain phase?",
+   "where": "Lesson 4, teacherReflection",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-080",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The three printed levels now name the CBE levels in the descriptor text (Exceeds / Meets / Approaches Expectations), and the first row is updated so the top level asks for both causes (CO2 from yeast, lactic acid from bacteria). No change to the other criteria beyond the level names and the RQ calculation in row 3.",
+   "value": [
+    {
+     "criterion": "Explaining the anchoring phenomenon",
+     "excellent": "Exceeds Expectations: Clearly explains that yeast and lactic acid bacteria respire anaerobically in the sealed thermos, linking the bubbles to CO2 (mainly from yeast) and the sourness to lactic acid (from the bacteria), and uses both the Flask A/Flask B and the pH evidence accurately.",
+     "proficient": "Meets Expectations: Explains that microorganisms cause the bubbles and the sourness, naming CO2 and an acid product, but uses evidence from only one investigation or with small gaps.",
+     "developing": "Approaches Expectations: States that something changes in the uji but does not link it to respiration, to the two different products, or to evidence."
+    },
+    {
+     "criterion": "Aerobic and anaerobic respiration equations and comparison",
+     "excellent": "Exceeds Expectations: Writes correct word or chemical equations for aerobic respiration, alcoholic fermentation and lactic acid fermentation, and correctly compares oxygen need and ATP released.",
+     "proficient": "Meets Expectations: Writes most equations correctly and makes a basic comparison with a minor error or omission.",
+     "developing": "Approaches Expectations: Equations are missing or incorrect and the comparison is unclear."
+    },
+    {
+     "criterion": "Substrates, RQ and rate factors",
+     "excellent": "Exceeds Expectations: Correctly names substrates with Kenyan examples and RQ values, uses the RQ formula, calculates and interprets an RQ above 1.0, and explains temperature and glucose concentration effects using class data.",
+     "proficient": "Meets Expectations: Gives most substrate, RQ and factor information correctly, with limited use of data.",
+     "developing": "Approaches Expectations: Gives few correct facts about substrates, RQ or rate factors and does not use data."
+    },
+    {
+     "criterion": "Application to Kenyan economy and community",
+     "excellent": "Exceeds Expectations: Gives two accurate Kenyan applications naming organism, product and benefit, and explains the responsible-use caution on brewing.",
+     "proficient": "Meets Expectations: Gives two applications with some missing detail, or a limited explanation of the caution.",
+     "developing": "Approaches Expectations: Gives one or no application or the applications are incorrect."
+    },
+    {
+     "criterion": "Scientific communication and use of evidence",
+     "excellent": "Exceeds Expectations: Writes in clear, organised sentences, uses scientific terms correctly, and links every part back to the uji thermos.",
+     "proficient": "Meets Expectations: Writing is mostly clear with mostly correct terms and some links to the thermos.",
+     "developing": "Approaches Expectations: Writing is unclear, terms are misused and links to the thermos are missing."
+    }
+   ],
+   "old": "[{\"criterion\": \"Explaining the anchoring phenomenon\", \"excellent\": \"Clearly explains that yeast (and bacteria) respire anaerobically in the sealed thermos, linking bubbles to CO2 and sourness to acid products, and uses both the Flask A/Flask B and pH evidence accurately.\", \"proficient\": \"Explains that microorganisms cause the bubbles and sourness but uses evidence from only one investigation or with small gaps.\", \"developing\": \"States that something changes in the uji but does not link it to respiration or to evidence.\"}, {\"criterion\": \"Aerobic and anaerobic respiration equations and comparison\", \"excellent\": \"Writes correct word or chemical equations for aerobic respiration, alcoholic fermentation and lactic acid fermentation, and correctly compares oxygen need and ATP released.\", \"proficient\": \"Writes most equations correctly and makes a basic comparison with a minor error or omission.\", \"developing\": \"Equations are missing or incorrect and the comparison is unclear.\"}, {\"criterion\": \"Substrates, RQ and rate factors\", \"excellent\": \"Correctly names substrates with Kenyan examples and RQ values, uses the RQ formula, interprets RQ above 1.0, and explains temperature and glucose concentration effects using class data.\", \"proficient\": \"Gives most substrate, RQ and factor information correctly, with limited use of data.\", \"developing\": \"Gives few correct facts about substrates, RQ or rate factors and does not use data.\"}, {\"criterion\": \"Application to Kenyan economy and community\", \"excellent\": \"Gives two accurate Kenyan applications naming organism, product and benefit, and explains the responsible-use caution on brewing.\", \"proficient\": \"Gives two applications with some missing detail, or a limited explanation of the caution.\", \"developing\": \"Gives one or no application or the applications are incorrect.\"}, {\"criterion\": \"Scientific communication and use of evidence\", \"excellent\": \"Writes in clear, organised sentences, uses scientific terms correctly, and links every part back to the uji thermos.\", \"proficient\": \"Writing is mostly clear with mostly correct terms and some links to the thermos.\", \"developing\": \"Writing is unclear, terms are misused and links to the thermos are missing.\"}]",
+   "new": "[{\"criterion\": \"Explaining the anchoring phenomenon\", \"excellent\": \"Exceeds Expectations: Clearly explains that yeast and lactic acid bacteria respire anaerobically in the sealed thermos, linking the bubbles to CO2 (mainly from yeast) and the sourness to lactic acid (from the bacteria), and uses both the Flask A/Flask B and the pH evidence accurately.\", \"proficient\": \"Meets Expectations: Explains that microorganisms cause the bubbles and the sourness, naming CO2 and an acid product, but uses evidence from only one investigation or with small gaps.\", \"developing\": \"Approaches Expectations: States that something changes in the uji but does not link it to respiration, to the two different products, or to evidence.\"}, {\"criterion\": \"Aerobic and anaerobic respiration equations and comparison\", \"excellent\": \"Exceeds Expectations: Writes correct word or chemical equations for aerobic respiration, alcoholic fermentation and lactic acid fermentation, and correctly compares oxygen need and ATP released.\", \"proficient\": \"Meets Expectations: Writes most equations correctly and makes a basic comparison with a minor error or omission.\", \"developing\": \"Approaches Expectations: Equations are missing or incorrect and the comparison is unclear.\"}, {\"criterion\": \"Substrates, RQ and rate factors\", \"excellent\": \"Exceeds Expectations: Correctly names substrates with Kenyan examples and RQ values, uses the RQ formula, calculates and interprets an RQ above 1.0, and explains temperature and glucose concentration effects using class data.\", \"proficient\": \"Meets Expectations: Gives most substrate, RQ and factor information correctly, with limited use of data.\", \"developing\": \"Approaches Expectations: Gives few correct facts about substrates, RQ or rate factors and does not use data.\"}, {\"criterion\": \"Application to Kenyan economy and community\", \"excellent\": \"Exceeds Expectations: Gives two accurate Kenyan applications naming organism, product and benefit, and explains the responsible-use caution on brewing.\", \"proficient\": \"Meets Expectations: Gives two applications with some missing detail, or a limited explanation of the caution.\", \"developing\": \"Approaches Expectations: Gives one or no application or the applications are incorrect.\"}, {\"criterion\": \"Scientific communication and use of evidence\", \"excellent\": \"Exceeds Expectations: Writes in clear, organised sentences, uses scientific terms correctly, and links every part back to the uji thermos.\", \"proficient\": \"Meets Expectations: Writing is mostly clear with mostly correct terms and some links to the thermos.\", \"developing\": \"Approaches Expectations: Writing is unclear, terms are misused and links to the thermos are missing.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T17:13:05"
+  },
+  {
+   "id": "gensci_1_5-081",
+   "kind": "flag",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "CBE has four levels (Exceeds, Meets, Approaches, Below Expectations) but the data contract and printed template allow only three level fields, so Below Expectations cannot be represented in the current contract. Suggestion: add a fourth field in the partner contract and template, or teachers add a \"Below Expectations\" column by hand when marking.",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T17:13:05"
+  }
+ ]
+}

@@ -1,0 +1,1306 @@
+{
+ "module": "gensci_1_2",
+ "records": [
+  {
+   "id": "gensci_1_2-001",
+   "kind": "edit",
+   "target": "unit",
+   "path": "totalDuration",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons (3 double lessons of 80 minutes and 5 single lessons of 40 minutes) = 440 minutes total",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The lesson durations do not add up to 320. Lessons 1, 3 and 7 are 80-minute double lessons and Lessons 2, 4, 5, 6 and 8 are 40-minute lessons. Check: 3 x 80 = 240, 5 x 40 = 200, 240 + 200 = 440 minutes.",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-002",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "substrand",
+   "old": "1.2 The Cell",
+   "new": "Sub-Strand 1.2: The Cell",
+   "criteria": [
+    2,
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lessons 1 to 7 and the Unit page write 'Sub-Strand 1.2: The Cell'. Lesson 8 wrote '1.2 The Cell'. Now the same everywhere.",
+   "lesson": 8,
+   "where": "Lesson 8, substrand",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-003",
+   "kind": "edit",
+   "target": "unit",
+   "path": "careers",
+   "old": "KARI (Kenya Agricultural and Livestock Research Organization)",
+   "new": "KALRO (Kenya Agricultural and Livestock Research Organization)",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KARI was merged into KALRO in 2014; the long name given in brackets is KALRO's own name, so the abbreviation did not match it.",
+   "where": "Unit overview, careers",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-004",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "When this leaf is cut and left without water, the chloroplasts cannot complete photosynthesis — the glucose supply drops — and the cell begins to starve. That is the beginning of the wilting we saw in Lesson 1.'",
+   "new": "When this leaf is left in the sun and cut off from its roots, it loses water and cannot replace it. As the cells dry out, photosynthesis slows and the glucose supply drops, so the cell slowly starves. But the wilting you saw on Day 1 comes first, and the next card explains it.'",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old script said that stopping photosynthesis is 'the beginning of the wilting'. It is not. A leaf wilts first because its cells lose water and turgor pressure falls (taught in Lesson 4). Slower photosynthesis and starvation follow as cells dry out. The phenomenon is a leaf left IN the sun, so 'cut off from sunlight' was also wrong. Checked against the Lesson 4 chain: water loss -> shrinking vacuole -> lost turgor -> wilting; later: less glucose, less energy, cell death.",
+   "lesson": 5,
+   "reference": "OpenStax Biology 2e (2018), Chapter 30 'Plant Form and Physiology' (water potential, turgor pressure and wilting) and Chapter 5.2/5.3 (osmosis, tonicity)",
+   "group": "G1",
+   "group_headline": "The explanation of the wilting leaf blamed starvation and 'no sunlight' for what is really water loss and lost turgor; the order of causes is now correct everywhere",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-005",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "old": "This directly answers why the sukuma wiki leaf dies when cut off from sunlight and water — each organelle stops doing its job —",
+   "new": "This directly answers why the sukuma wiki leaf left in the sun wilts and dies — the vacuole loses water first, and then, as the cells dry out, the other organelles stop doing their jobs —",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the wilting-chain correction: the phenomenon is a leaf left in the sun, not one cut off from sunlight.",
+   "lesson": 5,
+   "reference": "OpenStax Biology 2e (2018), Chapter 30 'Plant Form and Physiology'",
+   "group": "G1",
+   "where": "Lesson 5, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-006",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "why a sukuma wiki cell that is cut off from sunlight and water will eventually stop functioning and die.",
+   "new": "why a sukuma wiki leaf left in the sun loses water, wilts and eventually dies, and which organelles are affected first.",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the wilting-chain correction, so the overview matches the phenomenon and the Lesson 4 explanation.",
+   "lesson": 5,
+   "reference": "OpenStax Biology 2e (2018), Chapter 30 'Plant Form and Physiology'",
+   "group": "G1",
+   "where": "Lesson 5, overview",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-007",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "when cut off from sunlight, chloroplasts cannot perform photosynthesis, glucose production stops, mitochondria have no substrate to release energy from, and the cell's entire machinery gradually shuts down — ultimately causing the leaf to dry and die.",
+   "new": "as the dried-out cells can no longer keep photosynthesis going, glucose production falls, the mitochondria have less glucose to release energy from, and the cell's machinery gradually shuts down — ultimately causing the leaf to dry and die.",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Summary Table must give the same order of causes as the lesson.",
+   "lesson": 5,
+   "reference": "OpenStax Biology 2e (2018), Chapter 30 'Plant Form and Physiology'",
+   "group": "G1",
+   "where": "Lesson 5, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-008",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].formativeAssessment",
+   "old": "If the mitochondria stop working, the cell cannot release energy from glucose, so the plant cannot carry out active transport of water, and it wilts. If the chloroplasts stop working, the plant cannot photosynthesise and will starve",
+   "new": "If the vacuole loses its water, turgor pressure falls and the cell goes limp, so the leaf wilts. If the chloroplasts stop working, the plant cannot photosynthesise and will slowly starve; if the mitochondria stop working, the cell cannot release energy from glucose and its other jobs fail",
+   "criteria": [
+    5,
+    1
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The model answer said wilting happens because mitochondria stop and 'active transport of water' fails. Water is not moved by active transport (it moves by osmosis), and wilting is caused by loss of turgor. Teachers use this answer as the standard for 'good', so it had to be right.",
+   "lesson": 7,
+   "reference": "OpenStax Biology 2e (2018), Chapter 5.2 (osmosis) and Chapter 30 (turgor pressure and wilting)",
+   "group": "G1",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-009",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].formativeAssessment",
+   "old": "because when a cell loses water from its vacuole and the mitochondria can no longer supply energy for active processes, the cell loses turgor pressure and the leaf droops — and eventually dies",
+   "new": "because when the leaf loses water from its vacuoles, the cells lose turgor pressure and the leaf droops; as the cells dry out, photosynthesis and energy release fail and the cells eventually die",
+   "criteria": [
+    5,
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same correction: in the model answer, mitochondria failing was shown as the cause of lost turgor. It is the water loss that causes lost turgor.",
+   "lesson": 7,
+   "reference": "OpenStax Biology 2e (2018), Chapter 30 'Plant Form and Physiology'",
+   "group": "G1",
+   "where": "Lesson 7, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-010",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "They articulated the causal chain: chloroplasts capture light energy → mitochondria release energy for cell processes → vacuole maintains turgor pressure → cell wall provides structural support → without these working together, the sukuma wiki leaf wilts, dries, and dies.",
+   "new": "They articulated the causal chain: in the sun the leaf loses water → the vacuole shrinks and turgor pressure falls → the cell wall alone cannot hold the leaf up, so it wilts → as the cells dry out, chloroplasts can no longer make glucose and mitochondria can no longer release energy from it → the organelles stop working and the leaf dries and dies.",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The old 'chain' listed organelle jobs one after another as if each caused the next. It did not explain why the leaf wilts. Replaced by the real order of causes.",
+   "lesson": 7,
+   "reference": "OpenStax Biology 2e (2018), Chapter 30 'Plant Form and Physiology'",
+   "group": "G1",
+   "where": "Lesson 7, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-011",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "the breakdown of chloroplasts to the failure of photosynthesis, and the cessation of mitochondrial activity to the inability of cells to release the energy needed for all life processes",
+   "new": "the drying-out of the cells to the failure of photosynthesis and of mitochondrial energy release, so that the cells can no longer carry out life processes",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The old wording said chloroplasts 'break down' first. In a leaf drying in the sun it is water loss that comes first; the organelles then fail because the cell dries out.",
+   "lesson": 8,
+   "reference": "OpenStax Biology 2e (2018), Chapter 30 'Plant Form and Physiology'",
+   "group": "G1",
+   "where": "Lesson 8, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-012",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].exemplar",
+   "old": "When the leaf is left in the sun, it loses water. The vacuole shrinks and turgor pressure falls. The cell wall alone cannot hold the leaf up, so it wilts. Without water the chloroplasts cannot carry out photosynthesis, so less glucose is made. The mitochondria then have less glucose from which to release energy, so the cell cannot power its life processes, and the organelles stop working.",
+   "new": "When the leaf is left in the sun, it loses water to the hot air and, being a cut piece, cannot replace it. The vacuole shrinks and turgor pressure falls, so the vacuole no longer pushes the cell membrane against the cell wall. The cell wall alone cannot hold the leaf up, so it wilts. This comes first. As the cells dry out further, photosynthesis in the chloroplasts slows, so less glucose is made. The mitochondria then have less glucose from which to release energy, so the cell cannot power its life processes, and the organelles stop working.",
+   "criteria": [
+    10,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "A reviewer found the cause-and-effect chain thin. The chain is now in the correct order and states the mechanism (vacuole stops pushing the membrane against the wall) and that photosynthesis and respiration fail later because the cells dry out. This is the answer teachers compare learners against.",
+   "reference": "OpenStax Biology 2e (2018), Chapter 30 'Plant Form and Physiology' (turgor pressure and wilting)",
+   "group": "G1",
+   "where": "Final Explanation, Part 4: Why the leaf wilts and dies, exemplar",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-013",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "Say: 'Let us go back to our predictions board. Which of our predictions were correct? Which surprised you?'",
+   "new": "Say: 'Let us go back to our predictions board. Which of our predictions were correct? Which surprised you?' Teacher notes on the limits of the Venn diagram (it shows what these micrographs show, and is a simplification): (1) if a learner asks whether plants have lysosomes, say plants do the same job of breaking down worn-out parts inside the vacuole, and that centrioles are found in animal cells but not in higher plants such as sukuma wiki; (2) animal cells can have small, temporary vacuoles, so it is the LARGE central vacuole that is plant-specific; (3) onion bulb cells have a cell wall and a large vacuole but NO chloroplasts (they are underground), so do not let learners record chloroplasts as present in every plant cell. Chloroplasts are shown in the sukuma wiki leaf (Image A and B).",
+   "criteria": [
+    5,
+    6,
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The Venn diagram is the class's reference for 'what plant cells have that animal cells do not', and the Final Explanation relies on it. Three statements were over-simple: lysosomes are usually described as animal-cell structures but plant vacuoles do the same breaking-down job; animal cells may have small vacuoles; and the evidence sheet and column headings said 'Sukuma Wiki / Onion', yet onion bulb cells contain no chloroplasts. The teacher note keeps the Venn diagram usable and honest.",
+   "lesson": 4,
+   "reference": "OpenStax Biology 2e (2018), Chapter 4 'Cell Structure' (4.1 Studying cells; 4.3 Eukaryotic cells; 4.4 The endomembrane system; 4.5 Cytoskeleton)",
+   "group": "G2",
+   "group_headline": "The plant/animal comparison hid three simplifications (lysosomes, centrioles, vacuoles) and the onion cells would have taught that plants always have chloroplasts",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-014",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.observed",
+   "old": "sukuma wiki leaf mesophyll cells and onion cells at two magnifications, showing:",
+   "new": "sukuma wiki leaf mesophyll cells (and, for comparison, onion cells, which have a cell wall and vacuole but no chloroplasts) at two magnifications, showing:",
+   "criteria": [
+    5,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Summary Table said both cell types showed chloroplasts. Onion bulb cells have none.",
+   "lesson": 4,
+   "reference": "OpenStax Biology 2e (2018), Chapter 4 'Cell Structure' (4.1 Studying cells; 4.3 Eukaryotic cells; 4.4 The endomembrane system; 4.5 Cytoskeleton)",
+   "group": "G2",
+   "where": "Lesson 4, summaryTablePrompt.observed",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-015",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[1].exemplar",
+   "old": "Centrioles (or lysosomes) are found in the human cheek cell but not in the plant cell as shown in our lessons.",
+   "new": "Centrioles are found in the human cheek cell but not in the cells of higher plants such as sukuma wiki. (Accept lysosomes too, as shown in our lessons, but note that plant cells break down waste inside their vacuole.)",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on for the answer key: the audit pointed out that lysosome-like jobs also happen in plant cells; centrioles are the cleaner correct answer.",
+   "reference": "OpenStax Biology 2e (2018), Chapter 4 'Cell Structure' (4.1 Studying cells; 4.3 Eukaryotic cells; 4.4 The endomembrane system; 4.5 Cytoskeleton)",
+   "group": "G2",
+   "where": "Final Explanation, Part 2: Plant and animal cells, exemplar",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-016",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "'I am the gatekeeper — like the entry barrier at a Nairobi supermarket, I decide what enters and leaves the cell' [cell membrane]; 'I am the manager's office — I hold the master blueprint for every protein the cell will ever make' [nucleus]; 'I am the jiko — I break down glucose from ugali and githeri to release ATP energy the cell can use immediately' [mitochondria]; 'I am the postal sorting office at the Kisumu GPO — I package, label, and dispatch proteins to wherever they are needed' [Golgi apparatus]; 'I am the rigid fence around the homestead — I give the sukuma wiki cell its box-like shape and prevent it from bursting when the vacuole fills with water' [cell wall]; 'I am the water tank — when I am full, I press against the fence and keep the sukuma wiki leaf stiff and upright; when I empty, the leaf wilts' [large central vacuole]; 'I am the small workshop fundi — I read the blueprint and build every protein in the cell' [ribosome]; 'I am the delivery road from the manager's office to the postal sorting office — proteins travel along my folded membranes' [rough ER]",
+   "new": "'I am the security gate at the Mombasa port — I control what enters and leaves the cell' [cell membrane]; 'I am the County Governor's office — I hold the instructions for running the cell, including the plans for every protein it will ever make' [nucleus]; 'I am the jiko — I break down glucose from ugali and githeri to release ATP energy the cell can use immediately' [mitochondria]; 'I am the Nairobi GPO — I package, label, and dispatch proteins to wherever they are needed' [Golgi apparatus]; 'I am the rigid fence around the homestead — I give the sukuma wiki cell its box-like shape and prevent it from bursting when the vacuole fills with water' [cell wall]; 'I am the water tank — when I am full, I press against the fence and keep the sukuma wiki leaf stiff and upright; when I empty, the leaf wilts' [large central vacuole]; 'I am the small workshop fundi — I read the blueprint and build every protein in the cell' [ribosome]; 'I am the road network from the fundi's workshop to the delivery point — proteins made on the ribosomes stuck to me travel along my folded membranes' [rough ER]",
+   "criteria": [
+    6,
+    14
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 3 teaches: cell membrane = Mombasa port gate, nucleus = County Governor's office, Golgi = Nairobi GPO, rough ER = road network from the fundi's workshop (ribosomes) to the delivery point. The Lesson 5 cards used a supermarket barrier, 'the manager's office' and the 'Kisumu GPO'. The rough ER card was also wrong in science: proteins do not travel from the nucleus to the Golgi along the ER; ribosomes on the rough ER make them and the ER carries them on. Using one mapping everywhere stops learners having to unlearn one version.",
+   "lesson": 5,
+   "reference": "OpenStax Biology 2e (2018), Chapter 4.4 'The endomembrane system and proteins'",
+   "group": "G3",
+   "group_headline": "The Kenyan analogies were mapped differently in Lessons 3 and 5 (nucleus, Golgi, membrane, rough ER) and their limits were never stated; both now match and limits are named",
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-017",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "it produces the instructions (rRNA) for making ribosomes.'",
+   "new": "it produces the instructions (rRNA) for making ribosomes.' For each analogy also say aloud where it breaks down: the jiko BURNS charcoal, but mitochondria do not burn food — they release its energy in many small, controlled steps and store it in ATP, and the cristae are folds that increase surface for these reactions; the governor's office has people who decide, but the nucleus only holds the instructions (DNA) that the cell reads; the GPO and the roads move parcels with vehicles, but proteins move in small membrane bubbles (vesicles); a port gate checks everything, but the cell membrane lets water and small molecules such as oxygen cross freely while controlling larger ones. Two structures on the Key have no analogy, so state their jobs directly: centrioles help organise the fibres that separate chromosomes when an animal cell divides, and smooth ER makes lipids (fats) and, in liver cells, helps remove poisons.",
+   "criteria": [
+    6,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Guideline 6 asks that each analogy's limits are stated. Only the teacher reflection mentioned one risk (that mitochondria 'burn' food). Limits are now named for each analogy. Centrioles and smooth ER are on the observation task and the Lesson 3 model colour-coding but were never given a function, so one sentence each is added.",
+   "lesson": 3,
+   "reference": "OpenStax Biology 2e (2018), Chapter 4.3-4.5 (mitochondria, endomembrane system, centrosome and centrioles)",
+   "group": "G3",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-018",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "now think about the cell.'",
+   "new": "now think about the cell.' (Limit of the analogy: a football is held firm by air pressure inside a stretchy skin, but a plant cell is held firm by water in the vacuole pressing on a rigid cell wall; it is water, and the wall, that stops the cell going limp or bursting.)",
+   "criteria": [
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The football analogy for turgor had no stated limit. It could suggest that air, not water, is inside the cell.",
+   "lesson": 4,
+   "reference": "OpenStax Biology 2e (2018), Chapter 30 'Plant Form and Physiology' (turgor pressure)",
+   "group": "G3",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-019",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Circulate and read over shoulders.",
+   "new": "Circulate and read over shoulders. Then remind learners that the cards are analogies and each has a limit: the 'water tank' vacuole also stores sugars and pigments and is wrapped in a living membrane (the tonoplast); the 'fence' cell wall lets water and small molecules pass freely, unlike a real fence; the jiko-mitochondrion releases energy in controlled steps instead of burning glucose.",
+   "criteria": [
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Limits of the Lesson 5 analogies are now stated (guideline 6).",
+   "lesson": 5,
+   "reference": "OpenStax Biology 2e (2018), Chapter 4 'Cell Structure' (4.1 Studying cells; 4.3 Eukaryotic cells; 4.4 The endomembrane system; 4.5 Cytoskeleton)",
+   "group": "G3",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-020",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Cytoplasm = 'The busaa/porridge base — everything floats and operates within it'",
+   "new": "Cytoplasm = 'The uji (porridge) in the pot — all the ingredients float and mix in it'",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Busaa is an alcoholic drink and is not suitable as a classroom example for Grade 10 learners. Uji (porridge) gives the same picture of a jelly-like fluid in which things float.",
+   "lesson": 3,
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-021",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "Learners compare the animal cell ultrastructure with the plant cell from Lesson 2, identifying similarities and differences.",
+   "new": "Learners make a first, provisional comparison of the animal cell with the sukuma wiki cell micrographs from Lessons 1 and 2 (those structures are not yet named, so this is a prediction); the full comparison is made in Lesson 4 once the plant cell has been studied.",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The audit item was correct. Plant-cell structures are taught in Lesson 4, but Lesson 3 asked learners to say which organelles were present in the plant cell and coloured them 'shared' and 'animal only'. Learners cannot do that from unnamed shapes. Lesson 3 now collects predictions, and Lesson 4 (which already has a Venn diagram and a prediction check) confirms them.",
+   "lesson": 3,
+   "group": "G4",
+   "group_headline": "Lesson 3 asked learners to compare animal cells with plant-cell organelles that are not taught until Lesson 4; the comparison is now a prediction checked in Lesson 4",
+   "where": "Lesson 3, overview",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-022",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "old": "that you also saw in the sukuma wiki plant cell.",
+   "new": "that look like structures you saw in the sukuma wiki plant cell (use the descriptive names you gave them in Lesson 1).",
+   "criteria": [
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: learners have only descriptive names for the plant cell structures at this point.",
+   "lesson": 3,
+   "group": "G4",
+   "where": "Lesson 3, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-023",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "Present in Plant Cell (✓/✗) | Present in Animal Cell (✓/✗). This directly revisits their Lesson 2 plant cell observations and begins to build SLO (c).",
+   "new": "Present in Plant Cell (predict ✓/✗ — checked in Lesson 4) | Present in Animal Cell (✓/✗). The plant column is a prediction from the Lesson 1–2 micrographs, whose structures are not yet named; it is checked against the plant cell evidence in Lesson 4. This begins to build SLO (c).",
+   "criteria": [
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the plant column cannot be completed from evidence yet, so it is labelled as a prediction.",
+   "lesson": 3,
+   "group": "G4",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-024",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "and organelles present ONLY in the animal cell (e.g., centrioles, lysosomes) in RED.",
+   "new": "and organelles present ONLY in the animal cell (e.g., centrioles, lysosomes) in RED. This colour-coding is provisional: learners check and correct it in Lesson 4, when they see the plant cell evidence.",
+   "criteria": [
+    4
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the shared/animal-only colouring depends on plant cell evidence that comes in Lesson 4.",
+   "lesson": 3,
+   "group": "G4",
+   "where": "Lesson 3, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-025",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "old": "Animal cells differ from plant cells in lacking",
+   "new": "Provisionally (to be confirmed with plant cell evidence in Lesson 4), animal cells differ from plant cells in lacking",
+   "criteria": [
+    4,
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Summary Table stated the plant/animal differences as established facts a lesson before the evidence.",
+   "lesson": 3,
+   "group": "G4",
+   "where": "Lesson 3, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-026",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "old": "Teacher updates the DQB header to show 'Lesson 3 of 8 — Animal Cell Ultrastructure COMPLETE' and draws an arrow from the animal cell evidence column to the plant cell evidence column posted in Lesson 2, saying: 'Look — we now have both sides of the comparison. Lesson 4 will put these two sides together formally.'",
+   "new": "Teacher updates the DQB header to show 'Lesson 3 of 8 — Animal Cell Ultrastructure COMPLETE' and points from the animal cell notes to the sukuma wiki notes from Lessons 1 and 2, saying: 'Look — we now know the animal cell in detail, but we have only guesses about the plant cell. Lesson 4 gives us the plant cell evidence, and then we compare the two properly.'",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the board statement said 'we now have both sides of the comparison' and pointed to plant cell evidence that did not exist yet.",
+   "lesson": 3,
+   "group": "G4",
+   "where": "Lesson 3, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-027",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "We are building the evidence to answer our driving question, piece by piece.'",
+   "new": "We are building the evidence to answer our driving question, piece by piece.' End with a question for next time: 'We have the animal cell. What do you think the sukuma wiki cell has that your cheek cell does not?'",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Guideline 1: each lesson should end on a question that leads into the next. Lesson 3 ended without one.",
+   "lesson": 3,
+   "group": "G4",
+   "where": "Lesson 3, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-028",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "old": "this reveals readiness for chloroplast instruction in Lesson 3.",
+   "new": "this reveals readiness for chloroplast instruction in Lesson 4.",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Chloroplasts are taught in Lesson 4 (plant cell). Lesson 3 is the animal cell.",
+   "lesson": 1,
+   "group": "G5",
+   "group_headline": "Several 'Lesson N' and 'strand' references pointed at the wrong lesson or at topics that this unit does not teach there",
+   "where": "Lesson 1, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-029",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "old": "By Lesson 6, you will be able to explain exactly what happened inside that dying leaf — at the level of molecules and organelles.'",
+   "new": "By Lesson 8, you will be able to explain what happened inside that dying leaf — at the level of cells and organelles.'",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 6 is about levels of organisation; the full explanation is written in Lesson 8. The unit works at the level of cells and organelles, not molecules.",
+   "lesson": 1,
+   "group": "G5",
+   "where": "Lesson 1, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-030",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "old": "'Every question on this board will be answered by the time we finish Sub-Strand 1.2.'",
+   "new": "'Many questions on this board will be answered by the time we finish Sub-Strand 1.2, and the rest we will carry forward to the next sub-strand.'",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 8 hands unanswered questions on to later sub-strands, so a promise that every question is answered would not be kept.",
+   "lesson": 1,
+   "group": "G5",
+   "where": "Lesson 1, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-031",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "'In Lesson 2 we said the green granules absorb sunlight — what process does that power?'",
+   "new": "'The green granules we saw in Lesson 1 are chloroplasts, and the chlorophyll in them absorbs sunlight — what process does that power?'",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 2 never said this. Green granules were first seen in Lesson 1 and chloroplasts are named in Lesson 4.",
+   "lesson": 4,
+   "group": "G5",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-032",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "old": "we will address that in our strand on Nutrition.",
+   "new": "we will come back to that in a later sub-strand on plants.",
+   "criteria": [
+    2,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "This unit has no 'strand on Nutrition' for plants (Sub-Strand 1.3 is Nutrition in Animals). Reworded so the promise is true.",
+   "lesson": 4,
+   "group": "G5",
+   "where": "Lesson 4, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-033",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "old": "we will come back to it in our Respiration strand.",
+   "new": "we will come back to it in Sub-Strand 1.5 Respiration.",
+   "criteria": [
+    2,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Respiration is Sub-Strand 1.5 in this strand, not a 'strand'.",
+   "lesson": 4,
+   "group": "G5",
+   "where": "Lesson 4, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-034",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "old": "the electron micrograph with labelled organelles on the right.",
+   "new": "the electron micrograph on the right (label it now with the names from Lessons 3 and 4).",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "In Lesson 1 the micrograph was shown unlabelled, so there was no labelled version to project.",
+   "lesson": 5,
+   "group": "G5",
+   "where": "Lesson 5, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-035",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "Say: 'Open your cumulative journal model from Lesson 2. You have 4 minutes to add the zoom-out layer we built today.' Project a sample completed model on the board showing the nested bracket structure. Say: 'Add the four outer brackets. Label each one with the level AND a Kenyan example from YOUR concept map — not from the board.' Circulate rapidly, checking that learners are labelling with Kenyan examples (sukuma wiki / human being) and not generic terms. At the 3-minute mark say: 'Draw a star on the organelle you argued was most important for keeping the cell alive — and write ONE sentence next to it defending your choice.' At 4 minutes, close the model work: 'Your model now shows the full picture — from the chloroplast granule that Akinyi in Kisumu saw under the microscope, all the way out to the living plant she takes home for dinner. In Lessons 7 and 8, we will look at what happens when parts of this system break down — and what that tells us about how life really works.'",
+   "new": "Say: 'Open your cumulative journal model from Lesson 1. You have 4 minutes to add the zoom-out layer we built today.' Project a sample completed model on the board showing the nested bracket structure. Say: 'Add the four outer brackets. Label each one with the level AND a Kenyan example from YOUR concept map — not from the board.' Circulate rapidly, checking that learners are labelling with Kenyan examples (sukuma wiki / human being) and not generic terms. At the 3-minute mark say: 'Draw a star on the organelle you argued was most important for keeping the cell alive — and write ONE sentence next to it defending your choice.' At 4 minutes, close the model work: 'Your model now shows the full picture — from the chloroplast granule that Akinyi in Kisumu saw under the microscope, all the way out to the living plant she takes home for dinner. In Lesson 7 you will build a 3D model of a cell, and in Lesson 8 we will use everything we have learned to explain the sukuma wiki leaf.'",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The cumulative model was started in Lesson 1, not Lesson 2. The closing line also promised a look at 'parts breaking down' in Lessons 7 and 8, which are the model project and the final synthesis.",
+   "lesson": 6,
+   "group": "G5",
+   "where": "Lesson 6, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-036",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].formativeAssessment",
+   "old": "Find the function in your notes from Lesson 4",
+   "new": "Find the function in your notes from Lessons 3 to 5",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Functions were taught in Lessons 3 (animal cell), 4 (plant-specific structures) and 5, not only Lesson 4.",
+   "lesson": 7,
+   "group": "G5",
+   "where": "Lesson 7, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-037",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "old": "connect to Sub-Strand 1.3 Nutrition in Plants;",
+   "new": "connect to a later plant sub-strand (teachers to confirm which one in your scheme of work, for example 1.4 Transport in Plants for how the sugar is moved around the plant);",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "There is no 'Sub-Strand 1.3 Nutrition in Plants' in this strand: 1.3 is Nutrition in Animals. I cannot see which later sub-strand teaches photosynthesis, so the teacher must confirm the link.",
+   "lesson": 8,
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-038",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "That is why the folded membranes — which are only a few nanometres thick — are invisible under the light microscope.'",
+   "new": "That is why the folded membranes — which are only a few nanometres thick — are invisible under the light microscope.' Be accurate with learners: chloroplasts (the green granules, about 5 micrometres) and often the large vacuole can be seen with a good light microscope. What our school slide misses is mainly (i) tiny structures (membranes about 7 nm thick, ribosomes about 25 nm) and (ii) low contrast, because a fresh unstained hand-cut section is thick and clear; mitochondria (about 1 micrometre) are close to the limit of a light microscope. The electron microscope shows all of these clearly on a thin, stained slice.",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Teachers chose this phenomenon, and it is kept. But as written it says the fluid-filled space and oval bodies are 'visible only under the electron microscope'. A light microscope can show a large plant vacuole, and mitochondria are near its resolving limit (about 200 nm); in a school slide they are missed mostly because of thickness and low contrast. Numbers checked: light microscope resolution about 200 nm; thylakoid membrane about 7 nm; ribosome about 25 nm; mitochondrion about 0.5 to 1 micrometre; chloroplast about 3 to 10 micrometres. The teacher decides how much of this nuance to give Grade 10 learners.",
+   "lesson": 2,
+   "reference": "OpenStax Biology 2e (2018), Chapter 4.1 'Studying cells' (resolution, light versus electron microscopes) and Chapter 4.3",
+   "group": "G6",
+   "group_headline": "The explanation said the big vacuole and mitochondria are invisible to the light microscope only because of resolution; the truth is size plus faint contrast, so the explanation is made accurate while keeping the teachers' phenomenon",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-039",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.knowledge",
+   "old": "additional structures (folded membranes, oval bodies, large fluid-filled spaces) visible only under an electron microscope.",
+   "new": "additional structures (folded membranes, oval bodies, large fluid-filled spaces) that the electron microscope shows far more clearly than the school light microscope.",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: 'visible only' was too strong (see the root change).",
+   "lesson": 1,
+   "reference": "OpenStax Biology 2e (2018), Chapter 4.1",
+   "group": "G6",
+   "where": "Lesson 1, slo.knowledge",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-040",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "The extra structures are too small for the light microscope to resolve.",
+   "new": "The extra structures are too small, or too faint, for the school light microscope to show clearly.",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the learner's model sentence now matches the accurate explanation.",
+   "lesson": 2,
+   "reference": "OpenStax Biology 2e (2018), Chapter 4.1",
+   "group": "G6",
+   "where": "Lesson 2, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-041",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[0].exemplar",
+   "old": "were seen only under the electron microscope, along with other internal detail such as the thylakoid membranes in the chloroplasts.",
+   "new": "were seen clearly only under the electron microscope (the school light microscope image was too coarse and too faint to show them), along with other internal detail such as the thylakoid membranes in the chloroplasts.",
+   "criteria": [
+    4,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on for the answer key (see the root change).",
+   "reference": "OpenStax Biology 2e (2018), Chapter 4.1",
+   "group": "G6",
+   "where": "Final Explanation, Part 1: Two microscopes, two pictures, exemplar",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-042",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "old": "Dr Mwangi Githeko, the Kenyan malaria researcher at KEMRI in Kisumu, started with simple models of how the malaria parasite enters a cell — and revised his models many times as he gathered more evidence.",
+   "new": "Scientists at KEMRI in Kisumu, who study malaria, work in the same way: they start with a simple model and revise it many times as new evidence comes in.",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The well-known KEMRI scientist in Kisumu is Dr Andrew Githeko, who studies climate and malaria, not how the parasite enters cells. The old sentence mixed up the name and gave him work he is not known for. Rather than guess, the sentence now says only what is safely true.",
+   "lesson": 1,
+   "group": "G7",
+   "group_headline": "Two named Kenyan scientists were described wrongly (a mixed-up name and invented work; an 'engineer' who was a biologist)",
+   "where": "Lesson 1, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-043",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].sensemakingStrategy",
+   "old": "Referencing Dr Githeko grounds model revision",
+   "new": "Referencing the work of KEMRI scientists in Kisumu grounds model revision",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the strategy note named the person.",
+   "lesson": 1,
+   "group": "G7",
+   "where": "Lesson 1, Model Building Phase, sensemakingStrategy",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-044",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "old": "or like engineer Wangari Maathai planning before she planted",
+   "new": "or like the Kenyan biologist Professor Wangari Maathai planning before she planted",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Wangari Maathai was a biologist (a professor of veterinary anatomy), not an engineer.",
+   "lesson": 7,
+   "group": "G7",
+   "where": "Lesson 7, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-045",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "every person draws and labels their own diagram — 8 minutes, silent.'",
+   "new": "every person draws and labels their own diagram — 6 minutes, silent.'",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Adding the phases: predict about 11, observe about 26, explain about 27, DQB about 9, model about 11 = about 84 minutes. Trimming two silent tasks by 2 minutes each (diagram 8 to 6, comparison table 8 to 6) brings it to about 80.",
+   "lesson": 3,
+   "group": "G8",
+   "group_headline": "Lesson 3 added up to about 84 minutes of activities in an 80-minute lesson; two silent-work periods are shortened",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-046",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "gives the comparison table task and the ugali/mitochondria prompt, sets 8 minutes, and circulates.",
+   "new": "gives the comparison table task and the ugali/mitochondria prompt, sets 6 minutes, and circulates.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Second 2-minute trim in Lesson 3 (see the root change).",
+   "lesson": 3,
+   "group": "G8",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-047",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "'Can you see any folded membrane structures inside the large oval body near the centre?'",
+   "new": "'Can you see any folded membrane structures inside the small oval bodies scattered in the cytoplasm?'",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The large oval body near the centre is the nucleus, which does not contain folded inner membranes. The folded inner membranes (cristae) are inside the mitochondria, the small oval bodies. As written, the prompt could lead learners to the wrong organelle. Checked against the second prompt, which calls the large dark oval near the centre the nucleus.",
+   "lesson": 3,
+   "reference": "OpenStax Biology 2e (2018), Chapter 4.3 (mitochondria and cristae, nucleus)",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-048",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "Set a 7-minute timer. Circulate actively, listening for misconceptions. When you hear a misconception, do NOT correct it immediately. Instead, ask: 'What evidence from the electron micrograph in Lesson 4 supports that match?' or 'Where did you observe that structure — in the plant cell, the animal cell, or both? Does the function card match that?' After 7 minutes, say: 'Now find another pair near you — groups of four. Compare your matches. Where you disagree, use your Lesson 3 and 4 notes to argue for your answer. You have 4 minutes.'",
+   "new": "Set a 6-minute timer. Circulate actively, listening for misconceptions. When you hear a misconception, do NOT correct it immediately. Instead, ask: 'What evidence from the electron micrograph in Lesson 4 supports that match?' or 'Where did you observe that structure — in the plant cell, the animal cell, or both? Does the function card match that?' After 7 minutes, say: 'Now find another pair near you — groups of four. Compare your matches. Where you disagree, use your Lesson 3 and 4 notes to argue for your answer. You have 3 minutes.'",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Adding the timed steps as written: predict about 7, card sort about 13, reveal and consolidation about 20, DQB about 7, model about 5 = about 52 minutes. Trims: card sort 7 to 6 and group check 4 to 3, consolidation 5 to 3, DQB 4 to 3, model 5 to 4. Estimated total after trimming: predict 7 + sort 11.5 + reveal 12 + DQB 5.5 + model 4 = about 40.",
+   "lesson": 5,
+   "group": "G9",
+   "group_headline": "Lesson 5 listed about 50 minutes of activities in a 40-minute lesson; the timed steps are shortened",
+   "where": "Lesson 5, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-049",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "'Work individually — 5 minutes — silent.'",
+   "new": "'Work individually — 3 minutes — silent.'",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 5 timing trim.",
+   "lesson": 5,
+   "group": "G9",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-050",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "old": "Circulate during the 5-minute consolidation question period",
+   "new": "Circulate during the 3-minute consolidation question period",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the timing trim.",
+   "lesson": 5,
+   "group": "G9",
+   "where": "Lesson 5, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-051",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "old": "You have 4 minutes.' Circulate and read new questions as they are posted. After 4 minutes, cold-call 3 learners",
+   "new": "You have 3 minutes.' Circulate and read new questions as they are posted. After 3 minutes, cold-call 3 learners",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 5 timing trim.",
+   "lesson": 5,
+   "group": "G9",
+   "where": "Lesson 5, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-052",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "old": "Set a 5-minute timer. At the 3-minute mark, say:",
+   "new": "Set a 4-minute timer. At the 2-minute mark, say:",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 5 timing trim.",
+   "lesson": 5,
+   "group": "G9",
+   "where": "Lesson 5, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-053",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "Groups spend 12 minutes filling in: (a) a specific Kenyan example at each level for both organisms (e.g., chloroplast / mitochondrion → leaf cell / muscle cell → mesophyll tissue / muscle tissue → leaf / stomach → shoot system / digestive system → sukuma wiki plant / human being), (b) a linking phrase on each arrow explaining HOW the lower level builds the higher (e.g., 'Many leaf cells with aligned chloroplasts form mesophyll tissue, which maximises light capture for photosynthesis'), and (c) one function that ONLY the higher level can perform that the lower level cannot. After group construction, the class does a 5-minute gallery walk: each group posts their map on the wall, and every learner places one green sticky-note (something scientifically correct and specific) and one yellow sticky-note (a question or suggested improvement) on two other groups' maps. Groups then return to their own map for 2 minutes to revise based on feedback. The teacher facilitates a 5-minute whole-class debrief, cold-calling groups to defend specific linking phrases.",
+   "new": "Groups spend 10 minutes filling in: (a) a specific Kenyan example at each level for both organisms (e.g., chloroplast / mitochondrion → leaf cell / muscle cell → mesophyll tissue / muscle tissue → leaf / stomach → shoot system / digestive system → sukuma wiki plant / human being), (b) a linking phrase on each arrow explaining HOW the lower level builds the higher (e.g., 'Many leaf cells with aligned chloroplasts form mesophyll tissue, which maximises light capture for photosynthesis'), and (c) one function that ONLY the higher level can perform that the lower level cannot. After group construction, the class does a 4-minute gallery walk: each group posts their map on the wall, and every learner places one green sticky-note (something scientifically correct and specific) and one yellow sticky-note (a question or suggested improvement) on two other groups' maps. Groups then return to their own map for 1 minute to revise based on feedback. The teacher facilitates a 3-minute whole-class debrief, cold-calling groups to defend specific linking phrases.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Adding the timed steps as written: predict about 7, observe about 6.5, explain 24 (12 + 5 + 2 + 5), DQB about 5.5, model 4 = about 47 minutes. The Explain phase is trimmed by 6 minutes (12 to 10, 5 to 4, 2 to 1, 5 to 3), giving about 41, which fits with the usual small overlaps.",
+   "lesson": 6,
+   "group": "G10",
+   "group_headline": "Lesson 6 listed about 47 minutes of activities in a 40-minute lesson; the concept-map, gallery walk and debrief times are shortened",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-054",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "You have 12 minutes. Every box must have a Kenyan example — not just a generic label. Every arrow must have a sentence that says HOW one level builds the next. And for each step up, name ONE thing the higher level can do that a single cell below it cannot.' Set a visible 12-minute timer.",
+   "new": "You have 10 minutes. Every box must have a Kenyan example — not just a generic label. Every arrow must have a sentence that says HOW one level builds the next. And for each step up, name ONE thing the higher level can do that a single cell below it cannot.' Set a visible 10-minute timer.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the Lesson 6 timing trim.",
+   "lesson": 6,
+   "group": "G10",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-055",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "Part 1 — Collaborative class explanation (7 minutes): Class reconvenes. Teacher projects the original anchoring phenomenon image alongside the DQB. Using a structured whole-class co-construction strategy, the teacher builds a paragraph on the board sentence by sentence, cold-calling individual learners to contribute. The paragraph answers the question: 'Why does the sukuma wiki leaf stay alive, and what happens inside its cells when it wilts and dries?' Learners must use evidence from their 7-lesson journey: organelle names and functions, plant-cell-specific structures, and at least one level of organisation. Learners copy the completed paragraph into their books. Part 2 — Individual performance task (8 minutes): Teacher distributes a printed or projected photomicrograph of a plant cell (sukuma wiki or spinach cell electron micrograph, clearly showing nucleus, chloroplasts, cell wall, vacuole, mitochondria, cell membrane, and endoplasmic reticulum). Each learner individually: (i) draws and labels the cell, identifying at least six organelles; (ii) writes a paragraph (minimum 4 sentences) explaining how the structures they have labelled work together to keep the plant cell — and therefore the whole sukuma wiki plant — alive. Teacher circulates and asks targeted probing questions to individual learners. Learners submit the performance task at the end of the lesson for teacher review.",
+   "new": "Part 1 — Collaborative class explanation (5 minutes): Class reconvenes. Teacher projects the original anchoring phenomenon image alongside the DQB. Using a structured whole-class co-construction strategy, the teacher builds a paragraph on the board sentence by sentence, cold-calling individual learners to contribute. The paragraph answers the question: 'Why does the sukuma wiki leaf stay alive, and what happens inside its cells when it wilts and dries?' Learners must use evidence from their 7-lesson journey: organelle names and functions, plant-cell-specific structures, and at least one level of organisation. Learners copy the completed paragraph into their books. Part 2 — Individual performance task (10 minutes): Teacher distributes a printed or projected photomicrograph of a plant cell (sukuma wiki or spinach cell electron micrograph, clearly showing nucleus, chloroplasts, cell wall, vacuole, mitochondria, cell membrane, and endoplasmic reticulum). Each learner individually: (i) draws and labels the cell, identifying at least six organelles; (ii) writes a paragraph (minimum 4 sentences) explaining how the structures they have labelled work together to keep the plant cell — and therefore the whole sukuma wiki plant — alive. Teacher circulates and asks targeted probing questions to individual learners. Learners submit the performance task at the end of the lesson for teacher review. Learners who find extended writing difficult may explain their diagram aloud to the teacher or a partner, or use a flow diagram with arrows and short labels instead of a paragraph; learners may note key terms in Kiswahili first and then write in English.",
+   "criteria": [
+    3,
+    12
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The individual performance task asks learners to draw and label a plant cell with six or more organelles and write a paragraph of four sentences or more in 8 minutes, which is too tight, while the co-written class paragraph took 7. Swapped to 5 and 10; the 15-minute Explain phase and the 40-minute total are unchanged. Also adds more than one way to show understanding (guideline 12).",
+   "lesson": 8,
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-056",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Notice we are writing the way scientists write — claim, evidence, reason.'",
+   "new": "Notice we are writing the way scientists write — claim, evidence, reasoning. The CLAIM is the answer to our question (for example, 'the leaf wilts because its cells lose water'). The EVIDENCE is what we observed (the fresh and wilted leaf, the micrographs, and the Observed and Learned rows of our Summary Tables from Lessons 1 to 7). The REASONING is the science idea that links them (the vacuole loses water, turgor pressure falls, and the cell wall alone cannot hold the leaf up).'",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The words 'claim, evidence, reason' were used without a definition, and the Summary Tables were never used to build the final explanation (guideline 7). Definitions follow the standard: claim = answer, evidence = data or observations, reasoning = the science idea linking them.",
+   "lesson": 8,
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-057",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "maize grains (ribosomes), bean seeds (mitochondria or nucleus)",
+   "new": "small maize grains or beads (ribosomes; larger grains or bean seeds painted green can stand for chloroplasts), bean seeds (mitochondria or nucleus)",
+   "criteria": [
+    6,
+    8
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The overview used maize grains for ribosomes, but the teacher examples in the Explain phase use green-painted maize grains for chloroplasts. Both mappings are now stated. Learners still choose their own materials and justify them.",
+   "lesson": 7,
+   "where": "Lesson 7, overview",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-058",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.safetyNotes",
+   "old": "Wash hands after handling clay.",
+   "new": "Wash hands after handling clay. If painting seeds, use water-based poster paint or markers, let them dry, and do not put any material in the mouth. If maize, beans or clay are not available, use bottle tops, pebbles, beads, paper balls, dry leaves or thread instead; the model works as long as each choice is justified.",
+   "criteria": [
+    8
+   ],
+   "category": "safety",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The lesson used paint on food items without a safety note, and gave no low-cost alternatives for schools without these materials (guideline 8).",
+   "lesson": 7,
+   "where": "Lesson 7, slo.safetyNotes",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-059",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "Demonstrate wet-mount preparation on the visualiser:",
+   "new": "If your school has no working microscope or projector, use printed A4 copies of the light and electron micrographs (on the ARES platform) and a hand lens on a torn leaf edge, and draw the electron micrograph on the board. Demonstrate wet-mount preparation on the visualiser (or at the front bench):",
+   "criteria": [
+    8
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Many partner schools have few microscopes and no projector or visualiser. A low-cost fallback is added so the lesson can still be taught.",
+   "lesson": 1,
+   "where": "Lesson 1, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-060",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "knowing the name means nothing if you do not know the job.'",
+   "new": "knowing the name means nothing if you do not know the job.' Language support: write the Kiswahili word next to each English word on the board (for example seli = cell, hadubini = microscope, kiini = nucleus, utando wa seli = cell membrane, ukuta wa seli = cell wall, saitoplazimu = cytoplasm) and invite learners to add words from their home languages. For learners with low vision give enlarged A3 prints; learners who find writing difficult can name and point to structures aloud while a partner records.",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The unit had no language support for English learners and few accommodations. The Kiswahili terms are standard biology terms as I know them, but I cannot verify them against the school's textbook, so a Kiswahili teacher must confirm them before use.",
+   "lesson": 3,
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-061",
+   "kind": "edit",
+   "target": "unit",
+   "path": "supportingPhenomena",
+   "old": "• A maize (corn) grain soaked in water overnight swells noticeably; learners observe thin cross-sections under the light microscope and see that individual cells have increased in size — this anchors inquiry into the large central vacuole of plant cells and its role in water uptake.",
+   "new": "• A wilted piece of sukuma wiki left in clean water for an hour becomes firm and crisp again — the cells have taken in water, their vacuoles have refilled and turgor pressure has returned; this anchors inquiry into the large central vacuole of plant cells and shows that wilting is reversible when the cells have not yet died.",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "A dry maize grain swells mainly by soaking up water into its stored starch and protein (imbibition); its cells do not have a large central vacuole, so the old phenomenon did not support the claim made about vacuoles. A wilted leaf recovering in water is a standard classroom demonstration of turgor, uses the same sukuma wiki leaf as the anchor, and connects directly to the anchor phenomenon. The teacher decides whether to keep this swap.",
+   "reference": "OpenStax Biology 2e (2018), Chapter 5.2 'Passive transport' (osmosis, tonicity) and Chapter 30 (turgor pressure)",
+   "group": "G11",
+   "group_headline": "One supporting phenomenon (soaked maize grain 'cells swell') was scientifically wrong and never used; replaced by a wilted leaf recovering in water, which now appears in Lesson 4",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-062",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "old": "Every structure we labelled today explains one part of what our learner in Kisumu saw.'",
+   "new": "Every structure we labelled today explains one part of what our learner in Kisumu saw.' (Optional: put a wilted leaf piece in clean water at least an hour before the lesson; if it has become firmer, show it now as evidence that the vacuoles have refilled and turgor has returned.)",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Brings the new supporting phenomenon into a lesson so it is used (guideline 1).",
+   "lesson": 4,
+   "group": "G11",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-063",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "rubric",
+   "value": [
+    {
+     "criterion": "Explaining the two microscopes",
+     "excellent": "Exceeds Expectations: Clearly links the different pictures to resolution and magnification, using the correct values or comparisons, and names two further differences correctly.",
+     "proficient": "Meets Expectations: Says the electron microscope shows more detail and gives one or two correct differences, but without clear reference to resolution.",
+     "developing": "Approaches Expectations: States that one microscope is better, with no correct scientific reason or differences."
+    },
+    {
+     "criterion": "Cell structure and diagram",
+     "excellent": "Exceeds Expectations: Accurate, neat labelled plant cell with eight or more correct labels and correct plant versus animal differences.",
+     "proficient": "Meets Expectations: Mostly accurate diagram with five to seven correct labels and at least two correct differences.",
+     "developing": "Approaches Expectations: Diagram is incomplete or has several wrong labels and the differences are mostly incorrect."
+    },
+    {
+     "criterion": "Organelle functions and interdependence",
+     "excellent": "Exceeds Expectations: Gives correct functions for five organelles and explains how at least two depend on each other, using Kenyan examples.",
+     "proficient": "Meets Expectations: Gives correct functions for most organelles and mentions a link between them.",
+     "developing": "Approaches Expectations: Gives few correct functions and does not show how organelles work together."
+    },
+    {
+     "criterion": "Explaining the phenomenon",
+     "excellent": "Exceeds Expectations: Gives a full, correctly ordered cause-and-effect chain: water loss, shrinking vacuole and lost turgor (the wilting), then slower photosynthesis and energy release as the cells dry out, then death of cells, tissues and the leaf; also explains the green colour and crispness.",
+     "proficient": "Meets Expectations: Explains wilting using water loss and turgor, with some later steps (photosynthesis, energy release, cell death) missing or out of order.",
+     "developing": "Approaches Expectations: Only says the leaf dies because it dries, with no reference to cell structures."
+    },
+    {
+     "criterion": "Levels of organisation and answering the driving question",
+     "excellent": "Exceeds Expectations: Orders all six levels correctly, gives correct examples for both organisms, and answers the driving question using evidence.",
+     "proficient": "Meets Expectations: Orders the levels with one or two errors and gives a partly complete answer.",
+     "developing": "Approaches Expectations: Levels are mostly wrongly ordered and the answer to the driving question is missing or unrelated."
+    }
+   ],
+   "criteria": [
+    10,
+    7
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The level names (Exceeds, Meets, Approaches Expectations) now appear in each descriptor, as the printed headings cannot be changed. The 'explaining the phenomenon' descriptors now follow the corrected order of causes (water loss and lost turgor first); the old 'turgor OR photosynthesis' wording let a learner who gave only photosynthesis reach 'Meets'.",
+   "old": "[{\"criterion\": \"Explaining the two microscopes\", \"excellent\": \"Clearly links the different pictures to resolution and magnification, using the correct values or comparisons, and names two further differences correctly.\", \"proficient\": \"Says the electron microscope shows more detail and gives one or two correct differences, but without clear reference to resolution.\", \"developing\": \"States that one microscope is better, with no correct scientific reason or differences.\"}, {\"criterion\": \"Cell structure and diagram\", \"excellent\": \"Accurate, neat labelled plant cell with eight or more correct labels and correct plant versus animal differences.\", \"proficient\": \"Mostly accurate diagram with five to seven correct labels and at least two correct differences.\", \"developing\": \"Diagram is incomplete or has several wrong labels and the differences are mostly incorrect.\"}, {\"criterion\": \"Organelle functions and interdependence\", \"excellent\": \"Gives correct functions for five organelles and explains how at least two depend on each other, using Kenyan examples.\", \"proficient\": \"Gives correct functions for most organelles and mentions a link between them.\", \"developing\": \"Gives few correct functions and does not show how organelles work together.\"}, {\"criterion\": \"Explaining the phenomenon\", \"excellent\": \"Gives a full, correctly ordered cause-and-effect chain from water loss and turgor to photosynthesis, mitochondria and death of cells, tissues and the leaf, and explains the green colour and crispness.\", \"proficient\": \"Explains wilting using turgor or photosynthesis, with some steps missing.\", \"developing\": \"Only says the leaf dies because it dries, with no reference to cell structures.\"}, {\"criterion\": \"Levels of organisation and answering the driving question\", \"excellent\": \"Orders all six levels correctly, gives correct examples for both organisms, and answers the driving question using evidence.\", \"proficient\": \"Orders the levels with one or two errors and gives a partly complete answer.\", \"developing\": \"Levels are mostly wrongly ordered and the answer to the driving question is missing or unrelated.\"}]",
+   "new": "[{\"criterion\": \"Explaining the two microscopes\", \"excellent\": \"Exceeds Expectations: Clearly links the different pictures to resolution and magnification, using the correct values or comparisons, and names two further differences correctly.\", \"proficient\": \"Meets Expectations: Says the electron microscope shows more detail and gives one or two correct differences, but without clear reference to resolution.\", \"developing\": \"Approaches Expectations: States that one microscope is better, with no correct scientific reason or differences.\"}, {\"criterion\": \"Cell structure and diagram\", \"excellent\": \"Exceeds Expectations: Accurate, neat labelled plant cell with eight or more correct labels and correct plant versus animal differences.\", \"proficient\": \"Meets Expectations: Mostly accurate diagram with five to seven correct labels and at least two correct differences.\", \"developing\": \"Approaches Expectations: Diagram is incomplete or has several wrong labels and the differences are mostly incorrect.\"}, {\"criterion\": \"Organelle functions and interdependence\", \"excellent\": \"Exceeds Expectations: Gives correct functions for five organelles and explains how at least two depend on each other, using Kenyan examples.\", \"proficient\": \"Meets Expectations: Gives correct functions for most organelles and mentions a link between them.\", \"developing\": \"Approaches Expectations: Gives few correct functions and does not show how organelles work together.\"}, {\"criterion\": \"Explaining the phenomenon\", \"excellent\": \"Exceeds Expectations: Gives a full, correctly ordered cause-and-effect chain: water loss, shrinking vacuole and lost turgor (the wilting), then slower photosynthesis and energy release as the cells dry out, then death of cells, tissues and the leaf; also explains the green colour and crispness.\", \"proficient\": \"Meets Expectations: Explains wilting using water loss and turgor, with some later steps (photosynthesis, energy release, cell death) missing or out of order.\", \"developing\": \"Approaches Expectations: Only says the leaf dies because it dries, with no reference to cell structures.\"}, {\"criterion\": \"Levels of organisation and answering the driving question\", \"excellent\": \"Exceeds Expectations: Orders all six levels correctly, gives correct examples for both organisms, and answers the driving question using evidence.\", \"proficient\": \"Meets Expectations: Orders the levels with one or two errors and gives a partly complete answer.\", \"developing\": \"Approaches Expectations: Levels are mostly wrongly ordered and the answer to the driving question is missing or unrelated.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-064",
+   "kind": "flag",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The CBE level 'Below Expectations' cannot be represented: the contract allows only three level fields. Suggestion: keep the descriptors as they are and let the teacher record 'Below Expectations' in the mark sheet for work that does not meet even the Approaches Expectations descriptor; confirm with the partner whether a fourth field can be added.",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T12:30:50"
+  },
+  {
+   "id": "gensci_1_2-065",
+   "kind": "flag",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "No KICD General Science curriculum PDF is available, so the learning outcomes (a to f), key inquiry question and competencies could not be checked against KICD wording and have been left unchanged. The closest KICD source is Grade 10 Biology, Strand 1.0 Cell Biology and Biodiversity, Sub-Strand 1.3 Cell Structure and Specialisation (outcomes: differentiate light and electron microscopes; prepare temporary slides and estimate cell size; describe plant and animal cells under the electron microscope; relate specialised cells to function; appreciate the cell as the basic unit of life; key inquiry questions 'Why do plant and animal cells differ?' and 'How are cells specialised?'). Differences noted: this unit has the number 1.2 and the name 'The Cell' (KICD Biology uses 1.3 and a different title); it teaches levels of organisation and a concept map (in the Biology outcomes only as a content bullet); and it does not teach slide preparation with cell-size estimation or specialised cells, which Biology includes. Teachers should confirm the General Science source wording.",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-17T12:30:50"
+  }
+ ]
+}

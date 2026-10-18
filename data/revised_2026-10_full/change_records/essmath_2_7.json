@@ -1,0 +1,585 @@
+{
+ "module": "essmath_2_7",
+ "records": [
+  {
+   "id": "essmath_2_7-001",
+   "kind": "edit",
+   "target": "unit",
+   "path": "totalDuration",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The total did not match the lessons. Lessons 1 to 7 are each 80 minutes (7 × 80 = 560) and Lesson 8 is 3 × 40 = 120 minutes, so the sub-strand needs 560 + 120 = 680 minutes, not 8 × 40 = 320.",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons (7 × 80 minutes + 1 × 120 minutes) = 680 minutes total",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-002",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "duration",
+   "criteria": [
+    3,
+    14
+   ],
+   "category": "format",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The wording 'two double lessons of 40 minutes' was confusing. It now says what every other lesson says: 80 minutes = 2 x 40.",
+   "lesson": 2,
+   "old": "80 minutes (2 double lessons of 40 minutes each, or 1 double period)",
+   "new": "80 minutes (2 x 40-minute lessons, taught as one double period)",
+   "where": "Lesson 2, duration",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-003",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The phases as written add up to about 160 minutes: Observe 40 + 15, Model Building 20 + 25 + 10, plus Predict, Explain and Driving Question Board, but the lesson has 3 x 40 = 120 minutes. New plan: 8 + 38 + 17 + 8 + 49 = 120. Presentations: about 8 groups x 4 minutes (3 + 1) = 32. Teachers may instead decide to give the lesson a fourth period; this keeps the 120 minutes already in the plan.",
+   "lesson": 8,
+   "old": "This lesson does not teach new content; it consolidates and assesses.",
+   "new": "This lesson does not teach new content; it consolidates and assesses. Time plan for the 120 minutes: Predict 8, Observe 38 (presentations 32, Kericho recalculation 6), Explain 17, Driving Question Board 8, Model Building 49 (class diagram 14, written activity 25, self-rating 10).",
+   "group": "G1",
+   "group_headline": "Lesson 8 phases added up to about 160 minutes in a 120-minute slot; trimmed so they fit (presentations 3+1 min per group, shorter Kericho recalculation, quicker class diagram)",
+   "where": "Lesson 8, overview",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-004",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: presentation and recalculation times now match the 120-minute plan (about 8 groups x (3 + 1) minutes = 32; the Kericho recalculation is done in pairs, one container each, then shared).",
+   "lesson": 8,
+   "old": "Part 1 (about 40 minutes): project presentations. Each group (a 4-minute presentation plus 1-minute questions) shows its model container from Lesson 7 (cone, pyramid or frustum), gives its measurements, the formula used, the calculated volume and capacity, the measured volume from filling with water or sand, the percentage error, and 2 causes of error such as card thickness, imperfect shape, spilled water or sand. The audience records each group's data in a class table: model, calculated capacity, measured capacity, percentage error. Part 2 (about 15 minutes)",
+   "new": "Part 1 (about 32 minutes): project presentations. Each group (a 3-minute presentation plus 1-minute questions) shows its model container from Lesson 7 (cone, pyramid or frustum), gives its measurements, the formula used, the calculated volume and capacity, the measured volume from filling with water or sand, the percentage error, and 2 causes of error such as card thickness, imperfect shape, spilled water or sand. The audience records each group's data in a class table: model, calculated capacity, measured capacity, percentage error. Part 2 (about 6 minutes)",
+   "group": "G1",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-005",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the class diagram is shortened to 14 minutes (sections are allocated to groups, so each only draws one part) so the lesson fits 120 minutes: 14 + 25 + 10 = 49 for Model Building.",
+   "lesson": 8,
+   "old": "Part 1 (about 20 minutes)",
+   "new": "Part 1 (about 14 minutes)",
+   "group": "G1",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-006",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    2,
+    3
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 5 promises that a rectangular base 'will be tested in Lesson 6 problems', and the unit content lists square and rectangular bases, but every pyramid example was square. Problem 4 uses similar rectangles (both sides halve): A1 = 600, A2 = 150, sqrt(600 x 150) = sqrt(90,000) = 300, V = 1/3 x 24 x 1,050 = 8,400 cm³ = 8.4 L. I checked it a second way: large pyramid height 48 cm gives 1/3 x 600 x 48 = 9,600; small pyramid 1/3 x 150 x 24 = 1,200; 9,600 - 1,200 = 8,400. Mass 8.4 x 0.75 = 6.3 kg.",
+   "lesson": 6,
+   "old": "divide the volume of drum A (83,160 cm³) by it to find how many cups fill the drum.",
+   "new": "divide the volume of drum A (83,160 cm³) by it to find how many cups fill the drum. Early finishers (and the whole class if time allows) do Problem 4: a maize store shaped as a frustum of a rectangular pyramid, top 30 cm by 20 cm, bottom 15 cm by 10 cm, height 24 cm; find its capacity in litres with the frustum-of-a-pyramid formula and the mass of maize it holds at 0.75 kg per litre.",
+   "reference": "KICD Grade 10 curriculum design (content list for this sub-strand as given in the unit data: frustums of pyramids with square and rectangular bases); no KICD source for Essential Mathematics was available to check against",
+   "group": "G2",
+   "group_headline": "KICD asks for frustums of pyramids with square AND rectangular bases, but no lesson or the final task used a rectangular base; added one rectangular-base problem in Lesson 6, in the Lesson 8 written activity and in the Final Explanation",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-007",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    2,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: gives teachers the worked answer and the second-method check for Problem 4.",
+   "lesson": 6,
+   "old": "(75 L, which is less than 80.52 L, so it still fits.)",
+   "new": "(75 L, which is less than 80.52 L, so it still fits.) Problem 4 answer: A1 = 600 cm², A2 = 150 cm², sqrt(A1 A2) = 300 cm², V = 1/3 x 24 x (600 + 150 + 300) = 8,400 cm³ = 8.4 L, and 8.4 x 0.75 = 6.3 kg of maize. Check by large-minus-small: large pyramid (height 48 cm) 1/3 x 600 x 48 = 9,600 cm³, small pyramid (height 24 cm) 1/3 x 150 x 24 = 1,200 cm³, and 9,600 - 1,200 = 8,400 cm³. The formula still works for a rectangular base because the top and bottom faces of a frustum are always the same shape (here both sides halve).",
+   "group": "G2",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-008",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: item (d) copied the Lesson 5 practice bin (40/20/30, 28 L, 21 kg), so it tested memory of a worked example; it now uses a new rectangular-base frustum. Check: 1,200 x 300 = 360,000, sqrt = 600; 1/3 x 30 x (1,200 + 300 + 600) = 10 x 2,100 = 21,000 cm³ = 21 L; large-minus-small: large pyramid height 60 cm 1/3 x 1,200 x 60 = 24,000, small pyramid height 30 cm 1/3 x 300 x 30 = 3,000, 24,000 - 3,000 = 21,000. Mass 21 x 0.75 = 15.75 kg.",
+   "lesson": 8,
+   "old": "(d) a frustum of a square pyramid with top side 40 cm, bottom side 20 cm and h = 30 cm: volume and capacity (1/3 x 30 x (1,600 + 400 + 800) = 28,000 cm3 = 28 L) and the mass of maize that fills it at 0.75 kg/L (21 kg);",
+   "new": "(d) a frustum of a rectangular pyramid with top 40 cm by 30 cm, bottom 20 cm by 15 cm and h = 30 cm: volume and capacity (A1 = 1,200 cm2, A2 = 300 cm2, sqrt(A1 A2) = 600 cm2; 1/3 x 30 x 2,100 = 21,000 cm3 = 21 L) and the mass of maize that fills it at 0.75 kg/L (15.75 kg);",
+   "group": "G2",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-009",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].prompt",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Final Explanation also assesses a rectangular-base frustum.",
+   "old": "Find the mass of maize the bin holds.",
+   "new": "Find the mass of maize the bin holds. (e) A grain store is a frustum of a rectangular pyramid with top 40 cm by 24 cm, bottom 20 cm by 12 cm and height 30 cm. Find its capacity in litres.",
+   "group": "G2",
+   "where": "Final Explanation, Part 4: Pyramids and Their Frustums, prompt",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-010",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].exemplar",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: model answer for new part (e), checked two ways (480 x 480 = 230,400).",
+   "old": "(d) Mass = 84 × 0.75 = 63 kg of maize.",
+   "new": "(d) Mass = 84 × 0.75 = 63 kg of maize.\n(e) A1 = 40 × 24 = 960 cm², A2 = 20 × 12 = 240 cm², sqrt(A1 A2) = sqrt(230,400) = 480 cm². V = 1/3 × 30 × (960 + 240 + 480) = 10 × 1,680 = 16,800 cm³ = 16.8 L. Check by large-minus-small: large pyramid height 60 cm, 1/3 × 960 × 60 = 19,200 cm³; small pyramid height 30 cm, 1/3 × 240 × 30 = 2,400 cm³; 19,200 - 2,400 = 16,800 cm³.",
+   "group": "G2",
+   "where": "Final Explanation, Part 4: Pyramids and Their Frustums, exemplar",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-011",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "criteria": [
+    7,
+    8
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 7, Lesson 8 and the Final Explanation presented '5-10%' as a finding although handmade cardboard models can easily be further off; teachers and learners would be marking real data against a number nobody measured. Now the class records its own range and treats 5-10% only as a typical expectation.",
+   "lesson": 7,
+   "old": "discuss why measured values differ by about 5-10%, for example",
+   "new": "discuss why measured values usually differ from calculated ones (careful card models are often within about 10%, but the class's own results decide), for example",
+   "group": "G3",
+   "group_headline": "The project lessons announced a 5-10% error before anyone had measured anything; the plan now uses the class's own results",
+   "where": "Lesson 7, overview",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-012",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    7,
+    8
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the teacher asks about the real class range.",
+   "lesson": 7,
+   "old": "Pose the key challenge: 'Our errors are mostly within 5 to 10 percent. What does that tell you about whether the formulas are trustworthy?'",
+   "new": "Pose the key challenge using the class table: 'Our errors range from ___ to ___ percent. What does that tell you about whether the formulas are trustworthy?' Careful models are often within about 10 percent; if the class range is wider, treat that as evidence to investigate, not as a failure.",
+   "group": "G3",
+   "where": "Lesson 7, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-013",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: learners record their own range instead of copying a pre-written one.",
+   "lesson": 7,
+   "old": "'Calculated vs measured: error about 5-10%, caused by card thickness, seams, spills'",
+   "new": "'Calculated vs measured: our errors were ___ % to ___ %, caused by (our own causes, for example card thickness, seams, spills)'",
+   "group": "G3",
+   "where": "Lesson 7, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-014",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: summary table completed with real class data.",
+   "lesson": 7,
+   "old": "within about 5-10%, and percentage error",
+   "new": "to within a small percentage error (our class: ___ % to ___ %), and percentage error",
+   "group": "G3",
+   "where": "Lesson 7, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-015",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.observed",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: summary table completed with real class data.",
+   "lesson": 8,
+   "old": "came within about 5-10% of the calculated ones.",
+   "new": "were close to the calculated ones (class range of percentage error: ___ % to ___ %).",
+   "group": "G3",
+   "where": "Lesson 8, summaryTablePrompt.observed",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-016",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: consistent with Lesson 7.",
+   "lesson": 8,
+   "old": "Ensure the expected error range of about 5-10% is discussed, and push groups with a larger error to propose a reason and a fix.",
+   "new": "Discuss the class's own range of percentage errors (careful card models are often within about 10%) and push groups with a larger error to propose a reason and a fix.",
+   "group": "G3",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-017",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].exemplar",
+   "criteria": [
+    7,
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the model answer does not pre-state a result learners may not have; the example 28/400 = 0.07 = 7% is checked.",
+   "old": "Our errors were about 5-10%.",
+   "new": "For example, a calculated volume of 400 cm³ and a measured volume of 372 mL give 28 ÷ 400 × 100 = 7%. (Learners quote their own model results.)",
+   "group": "G3",
+   "where": "Final Explanation, Part 5: Designing and Using Mathematics, exemplar",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-018",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Drawing and cutting nets for three models, assembling, measuring, calculating and testing, then explaining error, the Driving Question Board and the model are far more than 80 minutes for 30 learners sharing scissors. Preparing nets as homework is the most practical fix; teachers know whether learners can get card at home and may prefer to supply it.",
+   "lesson": 7,
+   "old": "each group draws nets on cereal-box cardboard and builds a cone",
+   "new": "each group brings the nets it drew and cut out at home after Lesson 6 (or draws them quickly in class on cereal-box cardboard) and builds a cone",
+   "group": "G4",
+   "group_headline": "Building, measuring, calculating and testing three models cannot fit in 80 minutes; nets are now prepared as homework after Lesson 6 and a time guide is added",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-019",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    3,
+    8,
+    12
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: a time guide that adds to 80 (8 + 38 + 14 + 8 + 12; 15 + 10 + 13 = 38); a practical tip (a card cone cannot be filled without a stand) and an inclusion option.",
+   "lesson": 7,
+   "old": "Support groups who struggle to make a frustum of a pyramid by showing four trapezium faces on a net, but do not provide the dimensions.",
+   "new": "Support groups who struggle to make a frustum of a pyramid by showing four trapezium faces on a net, but do not provide the dimensions. Time guide for the 80 minutes: Predict 8, Observe 38 (assemble 15, measure and calculate 10, fill and read 13), Explain 14, Driving Question Board 8, Model Building 12. A cone cannot stand on its point: stand it in a cup of sand or a ring of card before filling. Learners who find cutting or pouring difficult can take the measuring, calculating or photographing role, and can show understanding with an oral explanation or a labelled sketch.",
+   "group": "G4",
+   "where": "Lesson 7, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-020",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: sets the homework that Lesson 7 relies on.",
+   "lesson": 6,
+   "old": "Do not give the expected error range yet.",
+   "new": "Do not give the expected error range yet. Homework for Lesson 7: bring thin card (cereal boxes), a plastic bag and tape, and draw and cut out nets for a cone, a frustum of a cone and a frustum of a pyramid with heights of 10 to 20 cm.",
+   "group": "G4",
+   "where": "Lesson 6, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-021",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3,
+    8
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The sentence was confusing ('full-size version'): the 30 x 30 x 40 cm pyramid already holds 12 L and its cuboid 36 L, which is a lot of sand or water for every group in a large class. Smaller models give the same 3 : 1 result, so the check now says so. 30 x 30 x 40 = 36,000 cm³; 36,000 / 3 = 12,000 cm³.",
+   "lesson": 3,
+   "old": "to check it is about 12 L in the full-size version or scaled to model capacity; record the ratio.",
+   "new": "to check it is about 12 L (12,000 mL) for the 30 cm x 30 cm x 40 cm models, or one third of the cuboid's measured volume if your school has smaller models (any size works because the ratio stays 3 : 1); record the ratio.",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-022",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 4 holds measuring, similar triangles, a full algebraic derivation, a comparison table, the Driving Question Board and the class model in 80 minutes. The difference-of-cubes factorisation may be new to Essential Mathematics learners, so teachers now have a way to shorten it without losing the numerical check (1/3 x 22/7 x 60 x 931 = 58,520).",
+   "lesson": 4,
+   "old": "If learners struggle, show the pattern with numbers (441, 294, 196) before the letters.",
+   "new": "If learners struggle, show the pattern with numbers (441, 294, 196) before the letters. If learners have not yet met the difference of cubes, skip the factorising in Step 3: give the formula and verify it numerically on bucket C (both methods give 58,520 cm³); this also saves time in a full lesson.",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-023",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    4,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The small pyramid is the part that was removed, so it cannot fit 'at the top of the removed part'. In this bin the wide 60 cm side is the top, so the 30 cm pyramid (height 40 cm) fits beneath the narrow end, giving a large pyramid of height 40 + 40 = 80 cm, as the calculations in the same phase use.",
+   "lesson": 5,
+   "old": "fits at the top of the removed part.",
+   "new": "fits under the narrow 30 cm end of the frustum to complete the large pyramid (side 60 cm, height 80 cm).",
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-024",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The note called 30 x 24 = 720 a mistake, but 720 is the correct Rr term used in the answer (900 + 720 + 576 = 2,196). Checked: (30 + 24)² = 2,916, which would be the wrong total.",
+   "lesson": 6,
+   "old": "squaring incorrectly (e.g. 30 x 24 = 720 mistaken)",
+   "new": "leaving out the Rr term (30 x 24 = 720 is correct and must be included) or using (R + r)² instead of R² + Rr + r²",
+   "where": "Lesson 6, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-025",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The sub-strand had no language support for English learners. Teacher decision: please check these Kiswahili terms with a Kiswahili or mathematics teacher (I could not verify them), and add terms for capacity and frustum, which I left out because I was not certain of the standard words.",
+   "lesson": 1,
+   "old": "Ensure learners know that h is the vertical height.",
+   "new": "Ensure learners know that h is the vertical height. Language support for English learners: put key words on the word wall with a Kiswahili partner term, for example ujazo (volume), koni (cone), silinda (cylinder), piramidi (pyramid), kipenyo (diameter), nusu kipenyo (radius), urefu (height), and let learners explain an idea to a partner in Kiswahili or their home language before they write it in English.",
+   "where": "Lesson 1, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-026",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The three level descriptors now name the CBE levels (Exceeds, Meets, Approaches Expectations) so teachers see how they map to KICD levels. Wording of each descriptor is unchanged.",
+   "value": [
+    {
+     "criterion": "Mathematical accuracy and units",
+     "excellent": "Exceeds Expectations: All volumes, capacities, ratios and conversions are correct, use pi = 22/7, and include correct units with litres to 2 decimal places for the Kericho containers.",
+     "proficient": "Meets Expectations: Most calculations are correct, with one or two small slips in arithmetic or units that do not change the conclusion.",
+     "developing": "Approaches Expectations: Several calculations or conversions are incorrect, or units are missing, so the conclusions are not supported."
+    },
+    {
+     "criterion": "Use of formulas and methods",
+     "excellent": "Exceeds Expectations: Chooses the correct formula for each solid and uses the large-minus-small method and similar triangles accurately, showing the cone-cylinder and pyramid-cuboid one-third relationships.",
+     "proficient": "Meets Expectations: Uses the correct formulas in most cases but the working for similar triangles or large-minus-small is partly incomplete.",
+     "developing": "Approaches Expectations: Uses wrong formulas or cannot show how a frustum relates to a cone or pyramid."
+    },
+    {
+     "criterion": "Explaining the phenomenon",
+     "excellent": "Exceeds Expectations: Clearly explains that the containers differ in capacity because their shape differs, uses 27.72 L, 58.52 L and 83.16 L, and answers Mr. Kiprop's question with the tapering reasoning.",
+     "proficient": "Meets Expectations: Explains that shape matters and quotes the capacities, but the reasoning about tapering is general or incomplete.",
+     "developing": "Approaches Expectations: States that the containers differ without a mathematical explanation or with incorrect numbers."
+    },
+    {
+     "criterion": "Evidence, error and design reasoning",
+     "excellent": "Exceeds Expectations: Uses evidence from the pouring and model investigations, explains percentage error and its causes, and describes a clear process for designing a frustum of a required capacity.",
+     "proficient": "Meets Expectations: Mentions evidence and at least one cause of error, and gives a partial design process.",
+     "developing": "Approaches Expectations: Gives little evidence from the investigations and no clear explanation of error or design."
+    },
+    {
+     "criterion": "Communication and usefulness of volume and capacity",
+     "excellent": "Exceeds Expectations: Writes clear, well-organised steps in sensible language and gives well-chosen Kenyan examples that show why volume and capacity are useful.",
+     "proficient": "Meets Expectations: Writing is mostly clear and gives one or two examples of usefulness.",
+     "developing": "Approaches Expectations: Writing is hard to follow and gives no examples of why volume and capacity are useful."
+    }
+   ],
+   "old": "[{\"criterion\": \"Mathematical accuracy and units\", \"excellent\": \"All volumes, capacities, ratios and conversions are correct, use pi = 22/7, and include correct units with litres to 2 decimal places for the Kericho containers.\", \"proficient\": \"Most calculations are correct, with one or two small slips in arithmetic or units that do not change the conclusion.\", \"developing\": \"Several calculations or conversions are incorrect, or units are missing, so the conclusions are not supported.\"}, {\"criterion\": \"Use of formulas and methods\", \"excellent\": \"Chooses the correct formula for each solid and uses the large-minus-small method and similar triangles accurately, showing the cone-cylinder and pyramid-cuboid one-third relationships.\", \"proficient\": \"Uses the correct formulas in most cases but the working for similar triangles or large-minus-small is partly incomplete.\", \"developing\": \"Uses wrong formulas or cannot show how a frustum relates to a cone or pyramid.\"}, {\"criterion\": \"Explaining the phenomenon\", \"excellent\": \"Clearly explains that the containers differ in capacity because their shape differs, uses 27.72 L, 58.52 L and 83.16 L, and answers Mr. Kiprop's question with the tapering reasoning.\", \"proficient\": \"Explains that shape matters and quotes the capacities, but the reasoning about tapering is general or incomplete.\", \"developing\": \"States that the containers differ without a mathematical explanation or with incorrect numbers.\"}, {\"criterion\": \"Evidence, error and design reasoning\", \"excellent\": \"Uses evidence from the pouring and model investigations, explains percentage error and its causes, and describes a clear process for designing a frustum of a required capacity.\", \"proficient\": \"Mentions evidence and at least one cause of error, and gives a partial design process.\", \"developing\": \"Gives little evidence from the investigations and no clear explanation of error or design.\"}, {\"criterion\": \"Communication and usefulness of volume and capacity\", \"excellent\": \"Writes clear, well-organised steps in sensible language and gives well-chosen Kenyan examples that show why volume and capacity are useful.\", \"proficient\": \"Writing is mostly clear and gives one or two examples of usefulness.\", \"developing\": \"Writing is hard to follow and gives no examples of why volume and capacity are useful.\"}]",
+   "new": "[{\"criterion\": \"Mathematical accuracy and units\", \"excellent\": \"Exceeds Expectations: All volumes, capacities, ratios and conversions are correct, use pi = 22/7, and include correct units with litres to 2 decimal places for the Kericho containers.\", \"proficient\": \"Meets Expectations: Most calculations are correct, with one or two small slips in arithmetic or units that do not change the conclusion.\", \"developing\": \"Approaches Expectations: Several calculations or conversions are incorrect, or units are missing, so the conclusions are not supported.\"}, {\"criterion\": \"Use of formulas and methods\", \"excellent\": \"Exceeds Expectations: Chooses the correct formula for each solid and uses the large-minus-small method and similar triangles accurately, showing the cone-cylinder and pyramid-cuboid one-third relationships.\", \"proficient\": \"Meets Expectations: Uses the correct formulas in most cases but the working for similar triangles or large-minus-small is partly incomplete.\", \"developing\": \"Approaches Expectations: Uses wrong formulas or cannot show how a frustum relates to a cone or pyramid.\"}, {\"criterion\": \"Explaining the phenomenon\", \"excellent\": \"Exceeds Expectations: Clearly explains that the containers differ in capacity because their shape differs, uses 27.72 L, 58.52 L and 83.16 L, and answers Mr. Kiprop's question with the tapering reasoning.\", \"proficient\": \"Meets Expectations: Explains that shape matters and quotes the capacities, but the reasoning about tapering is general or incomplete.\", \"developing\": \"Approaches Expectations: States that the containers differ without a mathematical explanation or with incorrect numbers.\"}, {\"criterion\": \"Evidence, error and design reasoning\", \"excellent\": \"Exceeds Expectations: Uses evidence from the pouring and model investigations, explains percentage error and its causes, and describes a clear process for designing a frustum of a required capacity.\", \"proficient\": \"Meets Expectations: Mentions evidence and at least one cause of error, and gives a partial design process.\", \"developing\": \"Approaches Expectations: Gives little evidence from the investigations and no clear explanation of error or design.\"}, {\"criterion\": \"Communication and usefulness of volume and capacity\", \"excellent\": \"Exceeds Expectations: Writes clear, well-organised steps in sensible language and gives well-chosen Kenyan examples that show why volume and capacity are useful.\", \"proficient\": \"Meets Expectations: Writing is mostly clear and gives one or two examples of usefulness.\", \"developing\": \"Approaches Expectations: Writing is hard to follow and gives no examples of why volume and capacity are useful.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-027",
+   "kind": "flag",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The CBE rubric has four levels (Exceeds, Meets, Approaches, Below Expectations), but the data contract allows only three level fields, so Below Expectations cannot be printed in the Final Explanation rubric. Suggestion: teachers treat any work below the Approaches descriptor as Below Expectations, or the partner contract is extended.",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-028",
+   "kind": "flag",
+   "target": "unit",
+   "path": "supportingPhenomena",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The three supporting phenomena (mandazi cone bag versus frustum cup, Lake Turkana cistern in jerricans, Nairobi pyramid display stand filled with sand) are listed in the unit but none appears in any lesson, so they do not support the anchor visibly. Suggestion: use the display stand as the context for Lesson 3 (sand test), the cistern in Lesson 6 (litres to 20 L jerricans), and the mandazi bag as a Lesson 4 or 7 extension (same slant height does not mean the same volume), or remove them from the unit.",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-17T12:19:09"
+  },
+  {
+   "id": "essmath_2_7-029",
+   "kind": "flag",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "No KICD source for Essential Mathematics is available here: the Mathematics PDF in data/raw/curriculum_pdfs is the Core Mathematics design and has no Volume and Capacity sub-strand 2.7 (its 'Volume of Solids' sub-strand is different). KICD wording, strand and sub-strand numbering, key inquiry question, competencies and values could not be checked and were left unchanged. Teachers should compare them with the Essential Mathematics design. Content outcomes (a to e) are each taught and assessed in Lesson 8.",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-17T12:19:09"
+  }
+ ]
+}

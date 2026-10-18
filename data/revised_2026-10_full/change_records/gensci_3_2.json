@@ -1,0 +1,592 @@
+{
+ "module": "gensci_3_2",
+ "records": [
+  {
+   "id": "gensci_3_2-001",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The unit overview said 8 lessons x 40 minutes = 320 minutes, but every lesson is a double lesson of 80 minutes (2 x 40) and the minutes inside the phases add to 80 (for example Lesson 2: 10+25+25+10+10; Lesson 4: 15+30+20+8+7). Recalculated: 8 x 80 = 640 minutes.",
+   "path": "totalDuration",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons × 80 minutes (each a double lesson of 2 × 40 minutes) = 640 minutes total",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-002",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 3 asks for a 10-minute strategy, a 30-minute problem set, 9 presentations with 30 seconds of silent thinking each, a gallery walk, an exit slip, a sticky-note board and a model update, which comes to about 95 minutes. A minute plan adding to 80 (8+37+20+7+8) is added to the overview, and the presentations are shortened so that the cold-calling of at least 3 groups per problem still fits.",
+   "lesson": 3,
+   "path": "overview",
+   "old": "add a sign-convention note to the class model.",
+   "new": "add a sign-convention note to the class model. Time plan (80 min): Predict 8, Observe 37 (strategy 10, group problems 27), Explain 20, Driving Question Board 7, Model Building 8.",
+   "group": "G1",
+   "group_headline": "Lessons 1, 3 and 5 had no minute budget and their activities added up to roughly 90-95 minutes for an 80-minute period; each now has a minute plan and the two heaviest activities were trimmed",
+   "where": "Lesson 3, overview",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-003",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Nine full presentations (3 groups for each of 3 problems) do not fit in a 20-minute Explain phase. Cold-called groups now give their answer and method in about 45 seconds each; a full poster presentation is kept for the ball problem, which has the most steps. The 'at least 3 groups per problem' rule is unchanged.",
+   "lesson": 3,
+   "path": "framework[2].learnerExperience",
+   "old": "For each problem, at least 3 groups are cold-called to present, ask questions and challenge each other.",
+   "new": "For each problem, at least 3 groups are cold-called to give their answer and method in about 45 seconds each, ask questions and challenge each other (a full poster presentation only for problem (c)).",
+   "group": "G1",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-004",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 1 has five activity blocks with no minutes given and they add up to about 90 minutes (walking a real 400 m lap alone takes about 5 minutes). A plan adding to 80 (10+17+25+13+15) is added, with the lap done on a scaled corridor or imagined track.",
+   "lesson": 1,
+   "path": "overview",
+   "old": "and a first annotated sketch model.",
+   "new": "and a first annotated sketch model. Time plan (80 min): Predict 10, Observe 17, Explain 25 (walk the 400 m lap on a scaled corridor or an imagined track, at most 5 minutes), Driving Question Board 13, Model Building 15.",
+   "group": "G1",
+   "where": "Lesson 1, overview",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-005",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Five Frayer cards per learner pair is too much for the 25-minute Explain phase (the teacher reflection itself asks for less time on the vocabulary cards). Each pair now completes one term and the five cards go on a vocabulary wall, so every learner still meets all five terms.",
+   "lesson": 1,
+   "path": "framework[2].learnerExperience",
+   "old": "They fill a Frayer-style vocabulary card for each of the five terms with definition",
+   "new": "Each pair fills a Frayer-style vocabulary card for ONE of the five terms (the five cards are shared on a vocabulary wall) with definition",
+   "group": "G1",
+   "where": "Lesson 1, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-006",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 5 has no minute budget and five blocks that add up to about 90 minutes (a 20-minute calculation block, four Explain tasks, a board review and a model revision). A plan adding to 80 (8+27+25+8+12) is added; it matches the existing 'after 20 minutes' check in the Observe phase.",
+   "lesson": 5,
+   "path": "overview",
+   "old": "update the DQB and revise the class model.",
+   "new": "update the DQB and revise the class model. Time plan (80 min): Predict 8, Observe 27 (Lesson 4 recap 5, three calculations 20, cross-check 2), Explain 25, Driving Question Board 8, Model Building 12.",
+   "group": "G1",
+   "where": "Lesson 5, overview",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-007",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Lesson 6 asks every group of 4 to choose one of three topics and present, but Lesson 7 has room for 3 presentations of 3 minutes (a class of 40 has about 10 groups). Now one group per topic presents (about 12 minutes), groups with the same topic agree one presenter, and the other groups hand in their notes for a research wall. Part B (graph) is kept at about 13 minutes of the 25. The teacher must decide how to choose the presenters (volunteers, a draw, or best-prepared).",
+   "lesson": 7,
+   "path": "framework[1].learnerExperience",
+   "old": "Part A: Group presentations (3 groups x 3 minutes, plus 1-2 minutes of follow-up each).",
+   "new": "Part A (about 12 min): Group presentations, one group per topic (3 groups x 3 minutes, plus 1 minute of follow-up each). If several groups chose the same topic, they agree on one presenter and add one extra point in 30 seconds; groups that do not present hand in their notes and calculation for a research wall that everyone reads during the model-building phase.",
+   "group": "G2",
+   "group_headline": "Lesson 7 had only three presentation slots but every group had been told to present; now one group per topic presents and the others hand in their notes",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-008",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the Lesson 7 change: tells the groups in Lesson 6 how presenters will be chosen.",
+   "lesson": 6,
+   "path": "framework[2].teacherMoves",
+   "old": "3 minutes to present in Lesson 7.",
+   "new": "3 minutes to present in Lesson 7 (if several groups choose the same topic, they agree on one presenter and the other groups hand in their notes and calculation for the research wall).",
+   "group": "G2",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-009",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    3,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the Lesson 7 change: the storyline summary said each group presents.",
+   "path": "storylineThread",
+   "old": "(3 minutes per group; teacher cold-calls 2 members per group for follow-up questions)",
+   "new": "(one group per topic, 3 minutes each; other groups hand in notes for a research wall; teacher cold-calls 2 members per presenting group for follow-up questions)",
+   "group": "G2",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-010",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Gravity acts straight down; on a slope it splits into a part along the slope and a part pressing on the road, which the road pushes back. Only the along-slope part, mg sin(angle) = 0.2 mg here, accelerates the cart (a = 0.2 x 10 = 2 m/s², which matches the 2.0 m/s² used throughout; checked a second time with the 20 m drop over 100 m of road, sin = 20/100 = 0.2). Lesson 5 only said 'the road holds part of the pull', so learners could keep drawing gravity along the slope.",
+   "lesson": 5,
+   "path": "framework[2].teacherMoves",
+   "old": "the road holds part of the pull.)",
+   "new": "the road holds part of the pull.) Draw the weight arrow straight down (gravity always points down), then split it into a part along the slope and a part pressing into the road: the road pushes back against the second part, so only the part along the slope, 0.2 of the weight, speeds the cart up.",
+   "group": "G3",
+   "group_headline": "Lessons told learners to draw gravity 'along the slope', but gravity always points straight down; only the downhill part (0.2 of it) speeds the cart up",
+   "reference": "OpenStax University Physics Volume 1, Applications of Newton's Laws (inclined planes)",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-011",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 1 teacher move asked learners to explain why the gravity arrow goes 'along the slope', which would fix the wrong picture early. Now it accepts that as a first idea and says Lesson 5 will correct it.",
+   "lesson": 1,
+   "path": "framework[4].teacherMoves",
+   "old": "Where does the gravity arrow go, and why along the slope?",
+   "new": "Where does the gravity arrow go? (Accept 'down the slope' as a first idea at this stage; Lesson 5 shows that gravity pulls straight down and only its downhill part speeds the cart up.)",
+   "group": "G3",
+   "reference": "OpenStax University Physics Volume 1, Applications of Newton's Laws (inclined planes)",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-012",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the class model in Lesson 7 should show gravity straight down with the along-slope part labelled, as developed in Lesson 5.",
+   "lesson": 7,
+   "path": "framework[4].learnerExperience",
+   "old": "(2) arrows for the pull of gravity along the slope, labelled a = g x 0.2 = 2.0 m/s²;",
+   "new": "(2) an arrow for gravity straight down and the part of it that acts along the slope, labelled a = g x 0.2 = 2.0 m/s²;",
+   "group": "G3",
+   "reference": "OpenStax University Physics Volume 1, Applications of Newton's Laws (inclined planes)",
+   "where": "Lesson 7, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-013",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    10,
+    5
+   ],
+   "category": "assessment",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 8 calls the runner prediction and problem a NEW case, but the numbers (a = 4 m/s², t = 2.5 s, answers 10 m/s and 12.5 m) are exactly the Lesson 3 problem, so the consolidation task tests memory rather than transfer. New numbers a = 3 m/s², t = 3 s: v = 3 x 3 = 9 m/s and s = 1/2 x 3 x 3² = 13.5 m (checked also with s = 1/2(u+v)t = 1/2 x 9 x 3 = 13.5 m). The prediction options (5, 10 or 20 m/s) still work, as 9 m/s is closest to 10.",
+   "lesson": 8,
+   "path": "overview",
+   "old": "a Rift Valley sprinter built like the Lesson 3 runner problem",
+   "new": "a Rift Valley sprinter in a variant of the Lesson 3 runner problem with new numbers (a = 3 m/s² for 3 s)",
+   "group": "G4",
+   "group_headline": "Lesson 8's 'new' runner problem repeated the Lesson 3 numbers (4 m/s² for 2.5 s), so learners could answer from memory; it now uses new numbers (3 m/s² for 3 s)",
+   "where": "Lesson 8, overview",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-014",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    10,
+    5
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: new runner numbers in the Predict phase (v = 9 m/s).",
+   "lesson": 8,
+   "path": "framework[0].learnerExperience",
+   "old": "accelerates at 4 m/s² for 2.5 s",
+   "new": "accelerates at 3 m/s² for 3 s",
+   "group": "G4",
+   "where": "Lesson 8, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-015",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    10,
+    5
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: new runner numbers in the Predict teacher moves.",
+   "lesson": 8,
+   "path": "framework[0].teacherMoves",
+   "old": "accelerates at 4 m/s² for 2.5 s. Is her speed after 2.5 s closer",
+   "new": "accelerates at 3 m/s² for 3 s. Is her speed after 3 s closer",
+   "group": "G4",
+   "where": "Lesson 8, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-016",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    10,
+    5
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: new runner numbers and answers in the problem set.",
+   "lesson": 8,
+   "path": "framework[1].learnerExperience",
+   "old": "accelerates at 4 m/s² for 2.5 s: find v and s (10 m/s, 12.5 m)",
+   "new": "accelerates at 3 m/s² for 3 s: find v and s (9 m/s, 13.5 m)",
+   "group": "G4",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-017",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    10,
+    5
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: new expected answers in the look-fors.",
+   "lesson": 8,
+   "path": "framework[1].formativeAssessment",
+   "old": "gets 10 m/s and 12.5 m for the runner",
+   "new": "gets 9 m/s and 13.5 m for the runner",
+   "group": "G4",
+   "where": "Lesson 8, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-018",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    10,
+    5
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: learners mark their prediction against the new answer.",
+   "lesson": 8,
+   "path": "framework[4].learnerExperience",
+   "old": "(runner 10 m/s;",
+   "new": "(runner 9 m/s, closest to the 10 m/s option;",
+   "group": "G4",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-019",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    10,
+    5
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the reveal now gives the new answers.",
+   "lesson": 8,
+   "path": "framework[4].teacherMoves",
+   "old": "runner 10 m/s and 12.5 m;",
+   "new": "runner 9 m/s and 13.5 m;",
+   "group": "G4",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-020",
+   "kind": "set",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The printed rubric columns carry fixed headings, so the CBE level names are now written at the start of each descriptor (Exceeds / Meets / Approaches Expectations) so a teacher scoring a script sees the CBE level directly. Descriptor wording is otherwise unchanged.",
+   "path": "rubric",
+   "value": [
+    {
+     "criterion": "Explaining the phenomenon (claim, evidence, reasoning)",
+     "excellent": "Exceeds Expectations: Gives a clear claim that gravity acts down the slope all the time giving a constant acceleration of 2.0 m/s². Uses at least three correct cart values (such as 4 m/s at 2 s, 10 m/s at 5 s, 20 m/s at 10 s and 100 m). Explains why it starts slowly and why the crash feels sudden (s = t²), and correctly says the cart is not in free fall.",
+     "proficient": "Meets Expectations: Gives a correct claim with some correct data, and explains acceleration, but explains only one of 'starts slowly' or 'feels sudden', or does not address free fall.",
+     "developing": "Approaches Expectations: Claim is unclear or only says the cart is 'pulled' or 'pushed' without linking to constant acceleration, with little or no data used."
+    },
+    {
+     "criterion": "Using the equations of linear motion",
+     "excellent": "Exceeds Expectations: Lists the five variables with units, writes the knowns and unknown, chooses a suitable equation and justifies the choice, calculates correctly with units (20 m/s, 72 km/h, 10 s, 10 m/s at 25 m), verifies with a second equation, and correctly compares how distance and speed change between 25 m and 100 m.",
+     "proficient": "Meets Expectations: Chooses suitable equations and gets most answers correct with units, but gives little justification for the choice or does not check with a second equation.",
+     "developing": "Approaches Expectations: Equations are chosen at random or substituted incorrectly, or answers have missing or wrong units."
+    },
+    {
+     "criterion": "Free fall and the comparison with the slope",
+     "excellent": "Exceeds Expectations: Explains that mass does not change the fall time, estimates g correctly (9.8 m/s²) and explains the use of 10 m/s². Calculates 2 s and 20 m/s for the 20 m drop and explains that the slope gives only 0.2 of g, with free fall as the extreme case of a vertical slope.",
+     "proficient": "Meets Expectations: Calculates the free-fall values correctly and says the cart is slower, but the explanation of why (the slope fraction of g) is incomplete.",
+     "developing": "Approaches Expectations: Does not link results to the effect of mass or to the slope, or uses a = 10 m/s² for the cart."
+    },
+    {
+     "criterion": "Sign convention and use of scalar/vector terms",
+     "excellent": "Exceeds Expectations: Chooses a positive direction explicitly, interprets negative acceleration as opposite to the motion, correctly uses a = -10 m/s² for the upward-thrown ball including at the top, and gets the 37.5 m, 5 s and -25 m/s answers with correct signs.",
+     "proficient": "Meets Expectations: Uses signs mostly correctly and gets most answers right, but does not explain the signs or makes one sign error.",
+     "developing": "Approaches Expectations: Does not use signs consistently, or says the acceleration is zero at the top of the ball's path."
+    },
+    {
+     "criterion": "Applying the ideas to road safety",
+     "excellent": "Exceeds Expectations: Converts units correctly, calculates reaction, braking and total stopping distances (20 m, 40 m, 60 m; 80 m wet; 90 m at 30 m/s), explains the square relationship, and gives two sensible ways to reduce danger linked to Kinangop signs and NTSA rules.",
+     "proficient": "Meets Expectations: Calculates most distances correctly and gives sensible safety measures, but explanation of the square relationship is weak.",
+     "developing": "Approaches Expectations: Makes errors in unit conversion or stopping distance, or gives safety ideas that are not linked to the calculations."
+    }
+   ],
+   "old": "[{\"criterion\": \"Explaining the phenomenon (claim, evidence, reasoning)\", \"excellent\": \"Gives a clear claim that gravity acts down the slope all the time giving a constant acceleration of 2.0 m/s². Uses at least three correct cart values (such as 4 m/s at 2 s, 10 m/s at 5 s, 20 m/s at 10 s and 100 m). Explains why it starts slowly and why the crash feels sudden (s = t²), and correctly says the cart is not in free fall.\", \"proficient\": \"Gives a correct claim with some correct data, and explains acceleration, but explains only one of 'starts slowly' or 'feels sudden', or does not address free fall.\", \"developing\": \"Claim is unclear or only says the cart is 'pulled' or 'pushed' without linking to constant acceleration, with little or no data used.\"}, {\"criterion\": \"Using the equations of linear motion\", \"excellent\": \"Lists the five variables with units, writes the knowns and unknown, chooses a suitable equation and justifies the choice, calculates correctly with units (20 m/s, 72 km/h, 10 s, 10 m/s at 25 m), verifies with a second equation, and correctly compares how distance and speed change between 25 m and 100 m.\", \"proficient\": \"Chooses suitable equations and gets most answers correct with units, but gives little justification for the choice or does not check with a second equation.\", \"developing\": \"Equations are chosen at random or substituted incorrectly, or answers have missing or wrong units.\"}, {\"criterion\": \"Free fall and the comparison with the slope\", \"excellent\": \"Explains that mass does not change the fall time, estimates g correctly (9.8 m/s²) and explains the use of 10 m/s². Calculates 2 s and 20 m/s for the 20 m drop and explains that the slope gives only 0.2 of g, with free fall as the extreme case of a vertical slope.\", \"proficient\": \"Calculates the free-fall values correctly and says the cart is slower, but the explanation of why (the slope fraction of g) is incomplete.\", \"developing\": \"Does not link results to the effect of mass or to the slope, or uses a = 10 m/s² for the cart.\"}, {\"criterion\": \"Sign convention and use of scalar/vector terms\", \"excellent\": \"Chooses a positive direction explicitly, interprets negative acceleration as opposite to the motion, correctly uses a = -10 m/s² for the upward-thrown ball including at the top, and gets the 37.5 m, 5 s and -25 m/s answers with correct signs.\", \"proficient\": \"Uses signs mostly correctly and gets most answers right, but does not explain the signs or makes one sign error.\", \"developing\": \"Does not use signs consistently, or says the acceleration is zero at the top of the ball's path.\"}, {\"criterion\": \"Applying the ideas to road safety\", \"excellent\": \"Converts units correctly, calculates reaction, braking and total stopping distances (20 m, 40 m, 60 m; 80 m wet; 90 m at 30 m/s), explains the square relationship, and gives two sensible ways to reduce danger linked to Kinangop signs and NTSA rules.\", \"proficient\": \"Calculates most distances correctly and gives sensible safety measures, but explanation of the square relationship is weak.\", \"developing\": \"Makes errors in unit conversion or stopping distance, or gives safety ideas that are not linked to the calculations.\"}]",
+   "new": "[{\"criterion\": \"Explaining the phenomenon (claim, evidence, reasoning)\", \"excellent\": \"Exceeds Expectations: Gives a clear claim that gravity acts down the slope all the time giving a constant acceleration of 2.0 m/s². Uses at least three correct cart values (such as 4 m/s at 2 s, 10 m/s at 5 s, 20 m/s at 10 s and 100 m). Explains why it starts slowly and why the crash feels sudden (s = t²), and correctly says the cart is not in free fall.\", \"proficient\": \"Meets Expectations: Gives a correct claim with some correct data, and explains acceleration, but explains only one of 'starts slowly' or 'feels sudden', or does not address free fall.\", \"developing\": \"Approaches Expectations: Claim is unclear or only says the cart is 'pulled' or 'pushed' without linking to constant acceleration, with little or no data used.\"}, {\"criterion\": \"Using the equations of linear motion\", \"excellent\": \"Exceeds Expectations: Lists the five variables with units, writes the knowns and unknown, chooses a suitable equation and justifies the choice, calculates correctly with units (20 m/s, 72 km/h, 10 s, 10 m/s at 25 m), verifies with a second equation, and correctly compares how distance and speed change between 25 m and 100 m.\", \"proficient\": \"Meets Expectations: Chooses suitable equations and gets most answers correct with units, but gives little justification for the choice or does not check with a second equation.\", \"developing\": \"Approaches Expectations: Equations are chosen at random or substituted incorrectly, or answers have missing or wrong units.\"}, {\"criterion\": \"Free fall and the comparison with the slope\", \"excellent\": \"Exceeds Expectations: Explains that mass does not change the fall time, estimates g correctly (9.8 m/s²) and explains the use of 10 m/s². Calculates 2 s and 20 m/s for the 20 m drop and explains that the slope gives only 0.2 of g, with free fall as the extreme case of a vertical slope.\", \"proficient\": \"Meets Expectations: Calculates the free-fall values correctly and says the cart is slower, but the explanation of why (the slope fraction of g) is incomplete.\", \"developing\": \"Approaches Expectations: Does not link results to the effect of mass or to the slope, or uses a = 10 m/s² for the cart.\"}, {\"criterion\": \"Sign convention and use of scalar/vector terms\", \"excellent\": \"Exceeds Expectations: Chooses a positive direction explicitly, interprets negative acceleration as opposite to the motion, correctly uses a = -10 m/s² for the upward-thrown ball including at the top, and gets the 37.5 m, 5 s and -25 m/s answers with correct signs.\", \"proficient\": \"Meets Expectations: Uses signs mostly correctly and gets most answers right, but does not explain the signs or makes one sign error.\", \"developing\": \"Approaches Expectations: Does not use signs consistently, or says the acceleration is zero at the top of the ball's path.\"}, {\"criterion\": \"Applying the ideas to road safety\", \"excellent\": \"Exceeds Expectations: Converts units correctly, calculates reaction, braking and total stopping distances (20 m, 40 m, 60 m; 80 m wet; 90 m at 30 m/s), explains the square relationship, and gives two sensible ways to reduce danger linked to Kinangop signs and NTSA rules.\", \"proficient\": \"Meets Expectations: Calculates most distances correctly and gives sensible safety measures, but explanation of the square relationship is weak.\", \"developing\": \"Approaches Expectations: Makes errors in unit conversion or stopping distance, or gives safety ideas that are not linked to the calculations.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-021",
+   "kind": "flag",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The CBE rubric has four levels (Exceeds, Meets, Approaches, Below Expectations), but the data contract allows only three level fields, so 'Below Expectations' cannot be represented in this rubric. Suggestion: teachers treat any script that does not reach 'Approaches Expectations' as Below Expectations, or the template and contract are extended to a fourth field.",
+   "location": "Final Explanation, rubric",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-022",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "No lesson mentioned supports for English learners, and Kiswahili was not used anywhere. A short gloss list is added where the five key terms are taught. The Kiswahili terms are suggestions from common usage and have not been verified against the KICD Kiswahili physics vocabulary, so the teacher must confirm them (or replace them with the terms used in your school).",
+   "lesson": 1,
+   "path": "framework[2].teacherMoves",
+   "old": "Emphasise respect: 'Listen to each idea, then build on it.'",
+   "new": "Emphasise respect: 'Listen to each idea, then build on it.' Language support: write each term in English with a short Kiswahili gloss beside it on the board (for example umbali = distance, uhamisho = displacement, kasi = speed, mchapuko = acceleration; confirm these with a Kiswahili-teaching colleague), and let learners explain an idea to a partner in Kiswahili first before writing it in English.",
+   "group": "G5",
+   "group_headline": "No language or access supports existed in this sub-strand; short Kiswahili term glosses and access options were added to three lessons",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-023",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Learners with reading, writing or algebra difficulties have no alternative way to show understanding in the heaviest problem-solving lesson. Added: oral or annotated-diagram explanations and a quick-reference card.",
+   "lesson": 3,
+   "path": "framework[1].teacherMoves",
+   "old": "Do not give final answers.",
+   "new": "Do not give final answers. Support and choice: learners who find algebra or writing difficult may use the quick-reference card of the four equations and explain their solution orally or with an annotated sketch; the 'checker' role suits learners who need less writing.",
+   "group": "G5",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-024",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12,
+    8
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The free-fall practical is built around sight and movement, with no role for learners with limited mobility or low vision. Added: timer and recorder roles, and timing the landing by ear.",
+   "lesson": 4,
+   "path": "framework[1].teacherMoves",
+   "old": "Enforce safety: 'No hands or feet under the drop.'",
+   "new": "Enforce safety: 'No hands or feet under the drop.' Access: learners with limited mobility or low vision can be timer or recorder (the landing thud can be timed by ear).",
+   "group": "G5",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-025",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8
+   ],
+   "category": "safety",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Standing a learner on a bench, or the teacher on a chair, to drop a stone is a fall risk in a crowded room. A 2.0 m release height can be marked on a wall or door frame and reached from the floor by most learners; a low step with a spotter is the fallback, never a chair or desk.",
+   "lesson": 4,
+   "path": "slo.safetyNotes",
+   "old": "The dropper stands on a stable bench or the teacher stands on a stable chair or steps, with a spotter.",
+   "new": "Mark the 2.0 m release height on a wall or door frame so the dropper can hold the object level with the mark while standing on the floor; if the mark is out of reach, use a low stable step with a spotter holding the dropper's arm, never a chair, desk or bench top.",
+   "where": "Lesson 4, slo.safetyNotes",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-026",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The lesson gives the class means (0.63, 0.64, 0.65 s) as if they would always be obtained. Hand timing of a fall of about 0.6 s usually scatters more; a mean of 0.5 s gives g = 2 x 2.0 / 0.5² = 16 m/s² and 0.8 s gives 6.25 m/s², so teachers need to know what to do when their data differ. The Final Explanation prompt gives its own data, so it is unaffected.",
+   "lesson": 4,
+   "path": "framework[1].teacherMoves",
+   "old": "collect the means on the board with the reporter from each group.",
+   "new": "collect the means on the board with the reporter from each group. Use your own class's means: the values 0.63, 0.64 and 0.65 s in these notes are an example, and hand timing of a 0.6 s fall often gives means anywhere between about 0.5 s and 0.8 s (g from roughly 6 to 16 m/s²). Treat a wide spread as a lesson in measurement error and, if a phone is available, time the fall from a slow-motion video replayed frame by frame; later lessons recompute g from these example values.",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-027",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Learners ask in the DQB whether heavy lorries need longer to stop and the notes gave the teacher no answer. When braking is limited by tyre grip, deceleration (friction force / mass) does not depend on mass, so mass alone does not change the formula; heavy lorries still need longer in practice because brakes must absorb far more energy and can overheat and fade. Checked: friction force = coefficient x m x g, so a = coefficient x g for any mass.",
+   "lesson": 6,
+   "path": "framework[3].teacherMoves",
+   "old": "We need to think about whether braking is different.",
+   "new": "We need to think about whether braking is different. (Teacher note: when braking is limited by tyre grip, the deceleration is the same for a light and a heavy vehicle, so mass alone does not change the formula; heavy lorries nevertheless need longer in practice because their brakes must absorb much more energy and can overheat and fade.)",
+   "reference": "OpenStax University Physics Volume 1, Friction (Applications of Newton's Laws)",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-028",
+   "kind": "flag",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "No KICD curriculum PDF covers General Science (the PDFs are Biology, Chemistry, Physics and Mathematics; the Physics PDF has no Linear Motion sub-strand, and a search for 'linear motion' and 'free fall' found nothing in Biology, Chemistry or Physics). The learning outcomes, key inquiry questions, competencies, values and PCIs could therefore not be compared with KICD wording and were left unchanged. Teachers should check them against the General Science design if they have it. Every outcome (a-d) is taught and assessed in the lessons and Final Explanation.",
+   "location": "Unit overview, learningOutcomes and KICD alignment",
+   "where": "Unit overview, learningOutcomes and KICD alignment",
+   "applied_at": "2026-10-17T17:17:19"
+  },
+  {
+   "id": "gensci_3_2-029",
+   "kind": "flag",
+   "target": "unit",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The supporting phenomenon of drops falling from a rooftop tank pipe photographed with a 'phone stroboscope' is not used in any lesson, and a phone cannot easily make such a picture. Suggestion: either drop it from the list or turn it into an optional extension in Lesson 4 (spacing of equally timed positions grows with a constant acceleration).",
+   "location": "Unit overview, supportingPhenomena",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-17T17:17:19"
+  }
+ ]
+}

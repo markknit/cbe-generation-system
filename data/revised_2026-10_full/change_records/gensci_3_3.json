@@ -1,0 +1,1568 @@
+{
+ "module": "gensci_3_3",
+ "records": [
+  {
+   "id": "gensci_3_3-001",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The overview said 8 x 40 = 320 minutes, but only Lesson 1 is 40 minutes; Lessons 2-8 are each 80 minutes (Lessons 3-5 are written as 2 x 40). Recomputed: 40 + (7 x 80) = 40 + 560 = 600 minutes = 15 forty-minute periods.",
+   "path": "totalDuration",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons: Lesson 1 is one 40-minute period and Lessons 2 to 8 are 80-minute double periods, 40 + 7 × 80 = 600 minutes total (15 periods of 40 minutes)",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-002",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The unit storyline says Lesson 4's refraction problem uses 340 to 320 m/s, but Lesson 4 itself (overview, problem, answer key, summary) uses 340 to 360 m/s at 680 Hz. The storyline now matches the lesson (the Final Explanation uses 320 m/s as a separate practice problem, which is fine).",
+   "path": "storylineThread",
+   "old": "from 340 m/s to 320 m/s",
+   "new": "from 340 m/s to 360 m/s (frequency 680 Hz)",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-003",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    1
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The lesson told learners that the next lesson (Lesson 4, refraction) would explain how waves go around corners. That is diffraction, which is Lesson 5. Learners would expect the wrong answer next lesson.",
+   "lesson": 3,
+   "path": "framework[4].teacherMoves",
+   "old": "Next lesson: we tackle the mystery the DQB flagged — how waves go around corners.",
+   "new": "Next lesson we add refraction. The mystery the DQB flagged — how waves go around corners — we tackle in Lesson 5.",
+   "group": "XREF",
+   "group_headline": "Several 'next lesson' pointers were wrong: sound going around corners (diffraction) is Lesson 5, and Lesson 8 (not applications) follows Lesson 7",
+   "where": "Lesson 3, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-004",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same cross-reference fix: the unanswered 'sound around the headland' question is answered in Lesson 5, after refraction in Lesson 4.",
+   "lesson": 3,
+   "path": "framework[2].teacherMoves",
+   "old": "This is the productive tension that will drive Lesson 4.",
+   "new": "This is the productive tension that will drive Lessons 4 and 5.",
+   "group": "XREF",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-005",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The unanswered question in the sentence frame (why waves bend around the headland) is only answered by diffraction in Lesson 5, so Lessons 3 to 5 fill the gap.",
+   "lesson": 2,
+   "path": "framework[4].learnerExperience",
+   "old": "it anchors curiosity for Lessons 3 and 4",
+   "new": "it anchors curiosity for Lessons 3 to 5",
+   "group": "XREF",
+   "where": "Lesson 2, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-006",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same fix as above: diffraction (Lesson 5) is needed to fill the blank about bending around the headland.",
+   "lesson": 2,
+   "path": "framework[4].teacherMoves",
+   "old": "Lessons 3 and 4 will fill it.",
+   "new": "Lessons 3, 4 and 5 will fill it.",
+   "group": "XREF",
+   "where": "Lesson 2, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-007",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Applications (sonar, medical imaging) were Lesson 6. The next lesson, Lesson 8, is the consolidation and Driving Question Board closure lesson.",
+   "lesson": 7,
+   "path": "framework[4].teacherMoves",
+   "old": "Next lesson we apply wave properties to technology — mobile phones, sonar on Lake Victoria, and medical imaging. Your models today gave you the environmental foundation. Bring your journals.",
+   "new": "Next lesson (Lesson 8) we bring everything together: numerical problems, our final model, closing the Driving Question Board, and your Scientist's Statement. Bring your journals.",
+   "group": "XREF",
+   "where": "Lesson 7, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-008",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 8 does not move to applications (they were Lesson 6); it opens with the self-audit and numerical problem set.",
+   "lesson": 7,
+   "path": "teacherReflection",
+   "old": "before moving to applications",
+   "new": "before the numerical problems",
+   "group": "XREF",
+   "where": "Lesson 7, teacherReflection",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-009",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Speech sounds do not have wavelengths in centimetres or millimetres. Human speech is roughly 100 to 1000 Hz and sound travels at about 340 m/s, so λ = v/f gives about 0.3 m to 3.4 m. Learners would have wrongly compared a 'short' vowel wavelength with a 'long' water wave. Checked twice: 340/1000 = 0.34 m, 340/100 = 3.4 m, 340/300 = 1.13 m.",
+   "lesson": 1,
+   "path": "framework[2].learnerExperience",
+   "old": "(long wavelength, measured in metres) and one for a spoken Swahili vowel sound (short wavelength, measured in centimetres or millimetres)",
+   "new": "(crests about a metre or more apart, measured in metres) and one for a spoken Swahili vowel sound (a vowel sung at about 300 Hz has a wavelength of roughly 1 m, because 340 m/s ÷ 300 Hz is about 1.1 m; the teacher gives this value now and learners calculate it themselves in Lesson 2)",
+   "reference": "OpenStax College Physics 2e, Chapter 17 (Physics of Hearing: speed of sound, hearing range)",
+   "where": "Lesson 1, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-010",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 1 is a single 40-minute period but the planned activities add up to about 48 minutes (predict about 12, observe 7, explain 18, DQB 7, model 4). Trimming the Predict and Explain phases brings it back to about 40: two minutes of writing and four cold-calls here, and a shorter research and diagram time in the Explain phase.",
+   "lesson": 1,
+   "path": "framework[0].learnerExperience",
+   "old": "Learners are given a full three minutes of silent writing time before any sharing begins. After writing, six to eight learners are cold-called",
+   "new": "Learners are given a full two minutes of silent writing time before any sharing begins. After writing, four learners are cold-called",
+   "group": "TIME",
+   "group_headline": "Several lessons planned more minutes than the period allows (Lesson 1 about 48 of 40, Lesson 5 about 97 of 80, Lesson 7 about 88 of 80, Lesson 8 closure of every card); trimmed so each fits",
+   "where": "Lesson 1, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-011",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the shorter Predict phase so Lesson 1 fits 40 minutes.",
+   "lesson": 1,
+   "path": "framework[0].teacherMoves",
+   "old": "You have three minutes. Write alone. No talking yet. [WAIT TIME: 3 minutes of silent individual writing.] After writing, the teacher says: I am going to call on some of you. I want to hear YOUR thinking, not a neighbour's. [Cold-calls minimum six students, distributing across the room.]",
+   "new": "You have two minutes. Write alone. No talking yet. [WAIT TIME: 2 minutes of silent individual writing.] After writing, the teacher says: I am going to call on some of you. I want to hear YOUR thinking, not a neighbour's. [Cold-calls minimum four students, distributing across the room.]",
+   "group": "TIME",
+   "where": "Lesson 1, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-012",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Shorter research and diagram times (7 + 6 reduced to 5 + 5) so the lesson fits 40 minutes; the teacher-provided reference cards make five minutes realistic.",
+   "lesson": 1,
+   "path": "framework[2].teacherMoves",
+   "old": "You have seven minutes. [Circulates, checking progress, asking probing questions such as: How does wavelength differ from amplitude? Could a very loud sound have a short wavelength? What decides the period of a wave?] After seven minutes the teacher says: Now build your diagram. Both wave types on the same page. Label every part. Then add your Kenyan examples as annotations. You have six minutes.",
+   "new": "You have five minutes. [Circulates, checking progress, asking probing questions such as: How does wavelength differ from amplitude? Could a very loud sound have a short wavelength? What decides the period of a wave?] After seven minutes the teacher says: Now build your diagram. Both wave types on the same page. Label every part. Then add your Kenyan examples as annotations. You have five minutes.",
+   "group": "TIME",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-013",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "No language support for English learners was given anywhere in the sub-strand. A short, light-touch support is added where the new vocabulary is introduced. I have deliberately not listed unverified Kiswahili physics terms beyond two everyday words; the teacher must decide which terms to put on the board and confirm them with a Kiswahili teacher.",
+   "lesson": 1,
+   "path": "framework[2].teacherMoves",
+   "old": "how the fisherman hears thunder from behind the cliff.",
+   "new": "how the fisherman hears thunder from behind the cliff. For English learners, write each term on the class master diagram with its Kiswahili equivalent where a learner or the Kiswahili teacher confirms one (for example wimbi for wave, mwangwi for echo), and invite learners to say the term in the language they use at home.",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-014",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Classic 105 broadcasts on 105.2 MHz; 98.4 MHz belongs to another station, so the problem paired a real station name with a wrong frequency. The station is now unnamed (the arithmetic, 3.0 × 10⁸ ÷ 98.4 × 10⁶ = 3.05 m, is unchanged). A teacher may swap in a local station and its real frequency.",
+   "lesson": 2,
+   "path": "framework[2].learnerExperience",
+   "old": "'Classic 105 FM Nairobi broadcasts at 98.4 MHz.",
+   "new": "'A Nairobi FM radio station broadcasts at 98.4 MHz.",
+   "group": "STN",
+   "group_headline": "The radio problem named a real station with the wrong frequency (98.4 MHz is not Classic 105); station is now unnamed",
+   "where": "Lesson 2, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-015",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the station-name fix.",
+   "lesson": 2,
+   "path": "summaryTablePrompt.learned",
+   "old": "the wavelength of Classic 105 FM (98.4 MHz) radio waves is approximately 3.05 m",
+   "new": "the wavelength of a Nairobi FM station at 98.4 MHz is approximately 3.05 m",
+   "group": "STN",
+   "where": "Lesson 2, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-016",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "language",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "'Form 3/4' is outdated (the sub-strand is Grade 10 CBE), and the claim about 'the highest-frequency error observed' had no source.",
+   "lesson": 2,
+   "path": "framework[2].formativeAssessment",
+   "old": "This is the highest-frequency error observed in Kenyan Form 3/4 radio-wave problems.",
+   "new": "This is the most common error in radio-wave problems.",
+   "where": "Lesson 2, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-017",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    6,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "10 Hz is infrasound and cannot be heard as a 'deep rumble' (hearing starts near 20 Hz). A thunder rumble of about 50 Hz gives λ = v/f = 340 ÷ 50 = 6.8 m. Checked: 50 × 6.8 = 340.",
+   "lesson": 2,
+   "path": "framework[4].learnerExperience",
+   "old": "'λ ≈ 34 m if f = 10 Hz, v = 340 m/s'",
+   "new": "'λ ≈ 6.8 m if f = 50 Hz, v = 340 m/s'",
+   "reference": "OpenStax College Physics 2e, Chapter 17 (Physics of Hearing: speed of sound, hearing range)",
+   "where": "Lesson 2, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-018",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The phases add up to about 85 minutes (about 10 predict, 20 observe, about 38 explain including the board solutions, 6 DQB, 8 model) for an 80-minute period with large classes. Allowing two problems to move to homework removes the squeeze.",
+   "lesson": 2,
+   "path": "framework[2].learnerExperience",
+   "old": "NUMERICAL PROBLEMS (20 min): Learners work individually",
+   "new": "NUMERICAL PROBLEMS (20 min): If time is short, do Problems 1 and 3 in class and set Problems 2 and 4 as homework. Learners work individually",
+   "group": "TIME",
+   "where": "Lesson 2, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-019",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The anchoring phenomenon says he hears thunder 'long after he sees the flash', but no lesson or the Final Explanation ever explained or calculated that delay. This one question closes that loop using the same speed-of-sound idea. 340 × 3 = 1020 m, about 1 km.",
+   "lesson": 2,
+   "path": "framework[2].teacherMoves",
+   "old": "connect back to the anchoring phenomenon.",
+   "new": "connect back to the anchoring phenomenon. Also connect Problem 2 to the first thing the fisherman noticed, thunder arriving after the flash: 'He hears the thunder 3 seconds after the flash. How far away is the strike?' [Expected: 340 m/s × 3 s ≈ 1 km, because light reaches him almost instantly but sound travels much more slowly.]",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-020",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8,
+    3
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The rhythmic-clapping method only works if the round-trip time 2d/v is long enough to clap to. At 20 m it is 40 ÷ 340 = 0.118 s (about 8.5 claps per second), at 30 m 0.176 s (5.7 per second): not possible by hand. At 40 m it is 0.235 s (4.3 per second) and at 80 m 0.47 s (2.1 per second): workable. The phone-recorder option is added for schools without a long wall. Checked twice by recomputing 2d/v for each distance.",
+   "lesson": 3,
+   "path": "framework[1].learnerExperience",
+   "old": "at least 40 m of clear space in front of it). Each group is assigned one distance: Group A = 20 m, Group B = 25 m, Group C = 30 m, Group D = 35 m, Group E = 40 m (adjust for available groups).",
+   "new": "40 to 80 m of clear space in front of it). Each group is assigned one distance: Group A = 40 m, Group B = 50 m, Group C = 60 m, Group D = 70 m, Group E = 80 m (use the longest distances your field allows, but never less than 40 m: at 20 m the echo returns after only about 0.12 s, so a learner would have to clap about 8 times a second to keep in time with it, which is impossible; at 40 m it is about 4 claps a second, which is possible with practice or with two wooden blocks). If no wall is 40 m away, record the clap on a phone voice recorder and read the gap between the clap and the echo from the waveform instead.",
+   "reference": "OpenStax University Physics Vol. 1, Chapter 17 (Sound: speed of sound); standard school echo-method practical",
+   "group": "ECHO",
+   "group_headline": "The echo experiment could not work at 20-35 m (you would need to clap 6-8 times a second); distances are now 40-80 m with a phone-recorder fallback",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-021",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the new distances: the minimum is now 40 m, and a group that cannot hear the echo should not move closer (that makes the timing impossible) but should make a sharper sound and check for noise.",
+   "lesson": 3,
+   "path": "framework[1].teacherMoves",
+   "old": "Minimum distance from the wall is 15 m — Group A, you are at 20 m, that is your minimum. Any questions?' [WAIT 10 seconds.] Outside: circulate between groups during the experiment. When visiting Group A say: 'Tell me what you are hearing — describe the sound that comes back.' [WAIT 12 seconds.] When visiting Group C say: 'What direction does the echo seem to come from? Point to where you think the sound came from.' [WAIT 10 seconds.] This primes directional thinking for the ray diagram. If a group cannot detect an echo (common in windy conditions or near vegetation), prompt: 'Move 5 m closer. What changes?'",
+   "new": "Minimum distance from the wall is 40 m — Group A, you are at 40 m, that is your minimum. Any questions?' [WAIT 10 seconds.] Outside: circulate between groups during the experiment. When visiting Group A say: 'Tell me what you are hearing — describe the sound that comes back.' [WAIT 12 seconds.] When visiting Group C say: 'What direction does the echo seem to come from? Point to where you think the sound came from.' [WAIT 10 seconds.] This primes directional thinking for the ray diagram. If a group cannot detect an echo (common in windy conditions or near vegetation), prompt: 'Is anyone talking nearby? Try a sharper clap, or two wooden blocks, facing the wall. What changes?'",
+   "group": "ECHO",
+   "reference": "OpenStax University Physics Vol. 1, Chapter 17 (Sound: speed of sound); standard school echo-method practical",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-022",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8
+   ],
+   "category": "safety",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the new distances.",
+   "lesson": 3,
+   "path": "slo.safetyNotes",
+   "old": "Learners must not stand closer than 15 m to the perimeter wall during the echo experiment to allow the echo to be distinguishable from the original clap.",
+   "new": "Learners must not stand closer than 40 m to the perimeter wall during the echo experiment, so that the echo comes back slowly enough to be clapped in time with and heard as a separate sound.",
+   "group": "ECHO",
+   "where": "Lesson 3, slo.safetyNotes",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-023",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the new distances.",
+   "lesson": 3,
+   "path": "overview",
+   "old": "(20 m, 30 m, 40 m)",
+   "new": "(40 m up to 80 m)",
+   "group": "ECHO",
+   "where": "Lesson 3, overview",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-024",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the new distances.",
+   "lesson": 3,
+   "path": "summaryTablePrompt.observed",
+   "old": "(20–40 m)",
+   "new": "(40–80 m)",
+   "group": "ECHO",
+   "where": "Lesson 3, summaryTablePrompt.observed",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-025",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The law of reflection is: angle of incidence = angle of reflection (both measured from the normal). 'Reflected angle' is ambiguous. Matches the wording used in the Explain phase and the Final Explanation.",
+   "lesson": 3,
+   "path": "slo.knowledge",
+   "old": "angle of incidence = angle of reflected angle",
+   "new": "angle of incidence = angle of reflection",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 1 (Law of reflection)",
+   "where": "Lesson 3, slo.knowledge",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-026",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Every role in the echo experiment depends on hearing; no accommodation was given for learners with hearing impairment.",
+   "lesson": 3,
+   "path": "framework[1].teacherMoves",
+   "old": "Record learner-generated sources of error on the board.",
+   "new": "Record learner-generated sources of error on the board. Inclusion: a learner with a hearing impairment can take the Timer or Recorder role (watching the clapper's hands and the stopwatch, with the Listeners giving a raised-hand signal when clap and echo coincide) so that every learner contributes to the data.",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-027",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The strategy is labelled Claim-Evidence-Reasoning but the cards only asked for a statement. Defined correctly: Claim = the answer to the question; Evidence = data or observations; Reasoning = the science idea linking them.",
+   "lesson": 3,
+   "path": "framework[3].learnerExperience",
+   "old": "A CLAIM card — one sentence stating what they now know about the fisherman's puzzle because of today's lesson",
+   "new": "A CLAIM card — one sentence that answers 'Does reflection explain the fisherman's puzzle?', with the EVIDENCE (one measurement or drawing from today, such as the class echo results or the ray diagram) and the REASONING (the science idea, here the law of reflection, that links the evidence to the claim)",
+   "group": "CER",
+   "group_headline": "Claim-Evidence-Reasoning was named but not actually asked for on the Driving Question Board cards in Lessons 3 and 4; evidence and reasoning are now requested",
+   "where": "Lesson 3, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-028",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 3 plans about 86 minutes for an 80-minute period (predict about 10, observe about 33 with the walk outside, explain about 25, DQB 8, model about 10). Three minutes of writing here and five (not seven) minutes for the model update, which also fixes a contradiction in the model phase text (7 minutes, then 'After 5 minutes'), brings it close to 80.",
+   "lesson": 3,
+   "path": "framework[0].learnerExperience",
+   "old": "After 4 minutes of silent writing",
+   "new": "After 3 minutes of silent writing",
+   "group": "TIME",
+   "where": "Lesson 3, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-029",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the shorter Predict writing time.",
+   "lesson": 3,
+   "path": "framework[0].teacherMoves",
+   "old": "You have 4 minutes. Go.' [Start timer. Circulate, reading over shoulders. Do NOT correct — note 2–3 interesting or conflicting predictions to return to later.] After 4 minutes:",
+   "new": "You have 3 minutes. Go.' [Start timer. Circulate, reading over shoulders. Do NOT correct — note 2–3 interesting or conflicting predictions to return to later.] After 3 minutes:",
+   "group": "TIME",
+   "where": "Lesson 3, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-030",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The text said 7 minutes and then 'After 5 minutes, say: Swap'; made consistent at 5.",
+   "lesson": 3,
+   "path": "framework[4].teacherMoves",
+   "old": "[Allow 7 minutes for individual model update.]",
+   "new": "[Allow 5 minutes for individual model update.]",
+   "group": "TIME",
+   "where": "Lesson 3, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-031",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 1 tells the teacher to address the 'wind' misconception in Lesson 4, but Lesson 4 never mentions it. Added a short 'if students say X, do Y' move.",
+   "lesson": 4,
+   "path": "framework[1].teacherMoves",
+   "old": "Say: 'Interesting — hold that thought.'",
+   "new": "Say: 'Interesting — hold that thought.' If a learner says that wind (or wind on the lake) bends the waves, the idea from Lesson 1, ask: 'Is there any wind in the ripple tank? What is different on the shallow side?' Guide them to the answer: the wave slows down over shallow water, and that change in speed, not wind, makes it bend.",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-032",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Claim-Evidence-Reasoning: the card had a claim and a reason but no evidence. Evidence = observations from Clip A and the observation table.",
+   "lesson": 4,
+   "path": "framework[3].learnerExperience",
+   "old": "This is called refraction.' Learners also add",
+   "new": "This is called refraction.' The first sentence is their CLAIM and the sentence beginning 'When the wave slows down' is their REASONING; under it they add the EVIDENCE (what Clip A and their observation table showed: wavefronts closer together and the wave bending towards the normal on the shallow side). Learners also add",
+   "group": "CER",
+   "where": "Lesson 4, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-033",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A temperature inversion bends sound back down so it travels farther over the water, but bending toward the surface cannot carry sound around a solid headland. That is diffraction (Lesson 5) and the unit's later model assigns it correctly. This sentence contradicted the unit.",
+   "lesson": 4,
+   "path": "framework[4].learnerExperience",
+   "old": "following a curved path that reaches the fisherman around the headland",
+   "new": "following a curved path that carries the sound farther over the water towards the fisherman (refraction does not take sound around the headland; that needs diffraction in Lesson 5)",
+   "reference": "OpenStax College Physics 2e, Chapter 17 (speed of sound depends on air temperature); refraction of sound by temperature layers",
+   "where": "Lesson 4, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-034",
+   "kind": "flag",
+   "target": "lesson",
+   "criteria": [
+    11
+   ],
+   "category": "link",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 4 depends on two specific clips named by length: Clip A (ripple tank, 2 min 30 s, submerged glass plate) and Clip B (aerial Mombasa swell footage, 1 min 45 s, reef shelf near a headland). These look like descriptions of ideal clips. Please check the matcher's actual videos show deep-to-shallow bending clearly, and that Clip B does not already name or explain diffraction around a headland, which would spoil Lesson 5.",
+   "lesson": 4,
+   "path": "framework[1].learnerExperience",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-035",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    2
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Diffraction does not carry FM or mobile signals round big hills or from Nairobi to Kisumu. Wavelengths of about 0.17 m (1.8 GHz phone) to 3 m (98.4 MHz FM) are far smaller than a hill, so there is very little diffraction and a signal shadow forms (which is what the matatu passenger hears). Nairobi-to-Kisumu reception uses relay transmitters, not diffraction. The old prompts also contradicted Problem 1 in the same lesson (a 3 m wave diffracts poorly round a 200 m hill). Checked: 3.0e8/98.4e6 = 3.05 m; 3.0e8/1.8e9 = 0.167 m.",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "(2) 'My mobile phone signal still works when I walk behind a hill near Nakuru/Kericho because…' (3) 'Radio broadcasts from Nairobi can be received in Kisumu even though the Earth curves because…'",
+   "new": "(2) 'The signal on my phone or FM radio fades when I go behind a big hill near Nakuru/Kericho because the wavelength of the signal is only about ___ m, much smaller than the hill, so…' (3) 'A radio station can still be heard in a faraway town such as Kisumu, even though the Earth curves, because…' (hint: relay transmitters repeat the signal, and long-wavelength AM waves spread round obstacles and follow the Earth's curve better than FM).",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction: effect is significant only when wavelength is comparable to the obstacle or opening size)",
+   "group": "RADIO",
+   "group_headline": "The unit said diffraction carries FM/phone signals behind hills and from Nairobi to Kisumu; short waves diffract very little, so signals fade in a hill's shadow (and relay towers cover distance)",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-036",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the diffraction/radio fix.",
+   "lesson": 5,
+   "path": "slo.knowledge",
+   "old": "and why mobile/radio signals can reach behind hills.",
+   "new": "and why short-wavelength FM and mobile signals (about 0.2 to 3 m) diffract very little round a large hill, so they fade in its shadow.",
+   "group": "RADIO",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction: effect is significant only when wavelength is comparable to the obstacle or opening size)",
+   "where": "Lesson 5, slo.knowledge",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-037",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the diffraction/radio fix.",
+   "lesson": 5,
+   "path": "slo.purposeInStoryline",
+   "old": "and why mobile-phone signals still reach a caller behind a hill in the Rift Valley.",
+   "new": "and why short-wavelength mobile-phone signals fade, but do not always vanish, in the shadow of a hill in the Rift Valley.",
+   "group": "RADIO",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction: effect is significant only when wavelength is comparable to the obstacle or opening size)",
+   "where": "Lesson 5, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-038",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the diffraction/radio fix (phone 0.17 m, FM 3 m).",
+   "lesson": 5,
+   "path": "framework[4].learnerExperience",
+   "old": "'FM/mobile signal diffracts around hill (λ ≈ 0.1–1 m; hill gap > λ, so partial diffraction)'",
+   "new": "'FM/mobile signal (λ ≈ 0.2–3 m) is much smaller than the hill, so there is very little diffraction: a signal shadow forms behind the hill'",
+   "group": "RADIO",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction: effect is significant only when wavelength is comparable to the obstacle or opening size)",
+   "where": "Lesson 5, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-039",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the diffraction/radio fix (Summary Table feeds the final explanation).",
+   "lesson": 5,
+   "path": "summaryTablePrompt.learned",
+   "old": "and why mobile/FM radio signals can be detected behind hills in the Rift Valley.",
+   "new": "and why short-wavelength mobile/FM signals diffract very little round big hills, so they fade in a hill's shadow.",
+   "group": "RADIO",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction: effect is significant only when wavelength is comparable to the obstacle or opening size)",
+   "where": "Lesson 5, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-040",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the diffraction/radio fix.",
+   "path": "storylineThread",
+   "old": "Learners connect diffraction to mobile-phone signals bending around hills in the Rift Valley and to the spread of radio waves between Nairobi and Kisumu.",
+   "new": "Learners connect diffraction to why short-wavelength mobile-phone and FM signals fade in the shadow of Rift Valley hills while long-wavelength sound and AM radio spread round obstacles more easily.",
+   "group": "RADIO",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction: effect is significant only when wavelength is comparable to the obstacle or opening size)",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-041",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the diffraction/radio fix: a 0.17 m wave is tiny compared with a hill, so diffraction gives almost nothing.",
+   "lesson": 8,
+   "path": "framework[1].learnerExperience",
+   "old": "(b) A village is in a valley directly behind the hill. Using the concept of diffraction, explain in two sentences why some signal still reaches the village.",
+   "new": "(b) A village is in a valley directly behind the hill. Using the concept of diffraction and your answer to (a), explain in two sentences why the signal in the village is weak or missing, and what engineers can do to bring a signal to the village.",
+   "group": "RADIO",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction: effect is significant only when wavelength is comparable to the obstacle or opening size)",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-042",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    2
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the diffraction/radio fix.",
+   "lesson": 8,
+   "path": "framework[2].learnerExperience",
+   "old": "radio signal bending around hills (Rift Valley) uses diffraction",
+   "new": "AM radio waves spreading round hills (their long wavelength diffracts more) use diffraction",
+   "group": "RADIO",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction: effect is significant only when wavelength is comparable to the obstacle or opening size)",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-043",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the diffraction/radio fix.",
+   "lesson": 8,
+   "path": "summaryTablePrompt.explained",
+   "old": "The mobile-phone signal that fades behind a Rift Valley hill behaves the same way as the sound around the headland — microwaves DIFFRACT around the hill, though imperfectly, which is why engineers place repeater towers on hilltops to boost the diffracted signal into valleys.",
+   "new": "The mobile-phone signal that fades behind a Rift Valley hill is the other side of the same idea — microwaves have a wavelength of only about 0.17 m, much smaller than the hill, so they diffract very little and a signal shadow forms, which is why engineers place relay towers on hilltops or in the valley.",
+   "group": "RADIO",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction: effect is significant only when wavelength is comparable to the obstacle or opening size)",
+   "where": "Lesson 8, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-044",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    13,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The printed key said Q2 = 107.1 m, which was wrong for the question as written (1530 × 0.28 ÷ 2 = 214.2 m). The full key is now given for every question so a teacher can mark without recomputing.",
+   "lesson": 8,
+   "path": "framework[1].formativeAssessment",
+   "old": "(2) Q3b correct answer is λ = 2.25 m (v=0.90/f=0.40); Q4a = 85 m; Q2 = 107.1 m — teacher checks these key answers during circulation.",
+   "new": "(2) Answer key: Q1 = 3.0 × 10⁸ ÷ 98.4 × 10⁶ ≈ 3.05 m; Q2 = 1530 × 0.020 ÷ 2 = 15.3 m; Q3a = 0.40 × 3.75 = 1.5 m/s, Q3b = 0.90 ÷ 0.40 = 2.25 m (frequency stays 0.40 Hz); Q4a = 340 × 0.50 ÷ 2 = 85 m, Q4b = 340 × 0.1 ÷ 2 = 17 m; Q5a = 3.0 × 10⁸ ÷ 1.8 × 10⁹ ≈ 0.17 m, Q5b = very little diffraction because 0.17 m is far smaller than the hill, so a weak or no signal, fixed by a relay tower. Teacher checks these key answers during circulation.",
+   "reference": "OpenStax College Physics 2e, Chapter 17 (speed of sound in water about 1500 m/s; echo ranging)",
+   "group": "L8NUM",
+   "group_headline": "Lesson 8 problem set: Q2 answer key was wrong (107.1 m) and the depth was unrealistic; Q4(b) asked for a frequency when it needed a distance; the full key is now given",
+   "where": "Lesson 8, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-045",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "With 0.28 s the depth is 1530 × 0.28 ÷ 2 = 214.2 m, far deeper than any harbour channel at Mombasa. With 0.020 s the depth is 1530 × 0.020 ÷ 2 = 15.3 m, a realistic harbour depth. Recomputed twice.",
+   "lesson": 8,
+   "path": "framework[1].learnerExperience",
+   "old": "returns as an echo after 0.28 s",
+   "new": "returns as an echo after 0.020 s",
+   "reference": "OpenStax College Physics 2e, Chapter 17 (echo ranging)",
+   "group": "L8NUM",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-046",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A 0.1 s gap fixes a minimum distance (d = 340 × 0.1 ÷ 2 = 17 m), not a frequency. The original question could not be answered.",
+   "lesson": 8,
+   "path": "framework[1].learnerExperience",
+   "old": "(b) the minimum frequency a sound must have for a human ear to detect it as a distinct echo (given the ear needs at least 0.1 s between original sound and echo)",
+   "new": "(b) the minimum distance to a wall for a human ear to hear the echo as separate from the original sound (the ear needs at least 0.1 s between the original sound and the echo)",
+   "reference": "OpenStax College Physics 2e, Chapter 17 (Physics of Hearing: speed of sound, hearing range)",
+   "group": "L8NUM",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-047",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "At about 1480 m/s in fresh water, 0.12 s gives a depth of 89 m, deeper than Lake Victoria's maximum (about 84 m). 0.06 s gives 1480 × 0.06 ÷ 2 ≈ 44 m, close to the lake's average depth (about 40 m).",
+   "lesson": 6,
+   "path": "framework[0].learnerExperience",
+   "old": "0.12 s later",
+   "new": "0.06 s later",
+   "reference": "Lake Victoria Basin Commission / Lake Victoria Fisheries Organization lake statistics (maximum depth about 84 m); speed of sound in water, OpenStax College Physics 2e Ch. 17",
+   "group": "SONAR",
+   "group_headline": "Sonar depths were deeper than Lake Victoria itself (89 m and 150 m against a maximum of about 84 m); times shortened",
+   "where": "Lesson 6, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-048",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    10,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "1500 × 0.2 ÷ 2 = 150 m is deeper than Lake Victoria (maximum about 84 m). With 0.04 s: 1500 × 0.04 ÷ 2 = 30 m. Recomputed twice.",
+   "path": "sections[1].prompt",
+   "old": "returns after 0.2 s. Calculate the depth of the water.",
+   "new": "returns after 0.04 s. Calculate the depth of the water.",
+   "reference": "Lake Victoria Basin Commission / Lake Victoria Fisheries Organization lake statistics (maximum depth about 84 m)",
+   "group": "SONAR",
+   "where": "Final Explanation, Part 2: Reflection – what the echo can and cannot explain, prompt",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-049",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the sonar depth fix.",
+   "path": "sections[1].exemplar",
+   "old": "(d) d = (1500 × 0.2) / 2 = 300 / 2 = 150 m.",
+   "new": "(d) d = (1500 × 0.04) / 2 = 60 / 2 = 30 m.",
+   "reference": "OpenStax College Physics 2e, Chapter 17",
+   "group": "SONAR",
+   "where": "Final Explanation, Part 2: Reflection – what the echo can and cannot explain, exemplar",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-050",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    6
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Wave refraction, not diffraction, concentrates wave energy on headlands (wavefronts bend towards the shallower water around a headland, so the energy converges there) and spreads it in bays. The Final Explanation (Part 5b) already says this correctly. The Lesson 7 text said the opposite. Checked against the coastal-geomorphology explanation of wave refraction.",
+   "lesson": 7,
+   "path": "summaryTablePrompt.learned",
+   "old": "diffraction concentrates wave energy on unprotected shorelines;",
+   "new": "refraction concentrates wave energy on headlands (and spreads it out in bays), while diffraction carries wave energy into sheltered water;",
+   "reference": "Pidwirny, Fundamentals of Physical Geography (2nd ed.), wave refraction and coastal erosion at headlands; OpenStax University Physics Vol. 3, Ch. 1 (refraction)",
+   "group": "EROS",
+   "group_headline": "Lesson 7 said diffraction focuses wave energy on headlands and causes erosion; it is refraction that focuses it (the Final Explanation already said so)",
+   "where": "Lesson 7, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-051",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the refraction/diffraction erosion fix.",
+   "lesson": 7,
+   "path": "summaryTablePrompt.observed",
+   "old": "driven by wave diffraction and high-amplitude storm waves",
+   "new": "driven by wave refraction (energy focused on headlands) and high-amplitude storm waves",
+   "group": "EROS",
+   "reference": "Pidwirny, Fundamentals of Physical Geography (2nd ed.), wave refraction and coastal erosion at headlands; OpenStax University Physics Vol. 3, Ch. 1 (refraction)",
+   "where": "Lesson 7, summaryTablePrompt.observed",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-052",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the erosion fix. Water-surface waves move particles in circles (partly transverse, partly longitudinal), so the transverse-or-longitudinal question had no clean answer at this level.",
+   "lesson": 7,
+   "path": "framework[1].teacherMoves",
+   "old": "What type of wave carries the erosion energy — transverse or longitudinal? How does diffraction around the Mombasa headland concentrate wave energy on the seawall?",
+   "new": "Where does the erosion energy come from, and how does refraction as the waves approach the Mombasa headland concentrate wave energy there?",
+   "group": "EROS",
+   "reference": "Pidwirny, Fundamentals of Physical Geography (2nd ed.), wave refraction and coastal erosion at headlands; OpenStax University Physics Vol. 3, Ch. 1 (refraction)",
+   "where": "Lesson 7, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-053",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the erosion fix (the model-building example).",
+   "lesson": 7,
+   "path": "framework[4].learnerExperience",
+   "old": "storm waves → diffraction around headland → concentrated energy on Lamu shoreline",
+   "new": "storm waves → refraction towards the headland → concentrated energy on the Lamu shoreline",
+   "group": "EROS",
+   "reference": "Pidwirny, Fundamentals of Physical Geography (2nd ed.), wave refraction and coastal erosion at headlands; OpenStax University Physics Vol. 3, Ch. 1 (refraction)",
+   "where": "Lesson 7, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-054",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8,
+    9
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "Mangroves grow in salty coastal water, not on Lake Victoria, and 'storm surge' is a sea-level effect not applied to a lake. Shoreline reed and papyrus belts reduce wave energy on lakes. Local knowledge: the teacher should confirm what shoreline vegetation and protection Kisumu-area schools actually know of.",
+   "lesson": 8,
+   "path": "framework[2].learnerExperience",
+   "old": "'Storm surges (wave energy) damage Kisumu fishing villages → mitigation: mangrove belt restoration along the shore acts as a wave-energy buffer.'",
+   "new": "'Storm waves damage Kisumu fishing villages and landing sites → mitigation: papyrus and reed belts along the lake shore absorb wave energy (on the Indian Ocean coast, mangrove belts do the same job).'",
+   "reference": "UNEP / IUCN guidance on nature-based shoreline protection (vegetation attenuates wave energy); Lake Victoria Basin Commission papyrus and wetland buffer guidance",
+   "group": "MITIG",
+   "group_headline": "Lake Victoria examples used mangroves, storm surges and 'tsunami sonar', which do not apply to a lake; replaced with reed/papyrus belts and storm forecasts",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-055",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8,
+    9
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Tsunami warning uses seismometers and deep-sea pressure sensors, not sonar, and tsunamis are not a threat to Lake Victoria fishermen. Storm warnings are the realistic early-warning example.",
+   "lesson": 8,
+   "path": "framework[4].learnerExperience",
+   "old": "(e.g., mangrove belts, tsunami early-warning sonar, storm-surge barriers)",
+   "new": "(e.g., mangrove belts on the coast, papyrus and reed belts along the lake shore, storm warnings from the Kenya Meteorological Department)",
+   "reference": "NOAA Tsunami Program: DART buoys and seismic networks",
+   "group": "MITIG",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-056",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the mitigation fix.",
+   "lesson": 8,
+   "path": "summaryTablePrompt.learned",
+   "old": "(storm surges, coastal erosion), but that this impact can be mitigated through mangrove restoration, wave-energy barriers, and early-warning sonar systems",
+   "new": "(storm waves, coastal erosion), but that this impact can be reduced through mangrove and papyrus/reed belts, wave-energy barriers such as sea walls, and storm early-warning",
+   "reference": "NOAA Tsunami Program: DART buoys and seismic networks",
+   "group": "MITIG",
+   "where": "Lesson 8, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-057",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    9,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the mitigation fix: the exemplar's mangroves do not grow at Kisumu, and 'early-warning systems' was vague.",
+   "path": "sections[4].exemplar",
+   "old": "Sonar and early-warning systems use this to help fishermen and coastal communities stay safe. Mangroves and sea walls reduce the energy of dangerous waves reaching your village.",
+   "new": "Sonar helps fishermen find safe depths, and storm forecasts warn you before dangerous waves arrive. Papyrus and reed belts, and on the coast mangroves and sea walls, reduce the energy of waves reaching your village.",
+   "reference": "NOAA Tsunami Program: DART buoys and seismic networks",
+   "group": "MITIG",
+   "where": "Final Explanation, Part 5: Applications, environment and the Scientist's Statement, exemplar",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-058",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    10,
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the diffraction/radio fix: the lesson now teaches that short waves diffract little round big hills.",
+   "path": "sections[3].exemplar",
+   "old": "(c) The microwaves of the phone signal diffract around the hill, but only imperfectly, so the signal is weak or fades in the valley behind. Engineers place repeater towers on hilltops to boost the signal into the valleys.",
+   "new": "(c) The microwaves of the phone signal have a wavelength of only about 0.17 m, much smaller than the hill, so they diffract very little and a signal shadow forms behind the hill; the signal is weak or fades in the valley. Engineers place relay towers on hilltops or in the valley to bring the signal round the hill.",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction)",
+   "group": "RADIO",
+   "where": "Final Explanation, Part 4: Diffraction and putting the whole phenomenon together, exemplar",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-059",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The Final Explanation offered only one way of answering (long written English). Added a short statement that diagrams, oral answers and Kiswahili key terms are accepted; no specific Kiswahili words are given.",
+   "path": "instructions",
+   "old": "Write in full sentences, and label any diagram you draw.",
+   "new": "Write in full sentences, and label any diagram you draw. You may show your understanding in more than one way: a labelled diagram, a spoken explanation to your teacher, or a written answer using key terms in Kiswahili as well as English. Ask for the questions to be read aloud if you need it.",
+   "where": "Final Explanation, instructions",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-060",
+   "kind": "set",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Level names (Exceeds / Meets / Approaches Expectations) now appear in each descriptor, and the sonar value (150 m) is updated to 30 m to match the corrected Part 2(d).",
+   "path": "rubric",
+   "value": [
+    {
+     "criterion": "Use of the wave equation and calculations",
+     "excellent": "Exceeds expectations: all calculations are set out correctly with formulas, steps and units (4 Hz, 0.25 s, 30 m, 0.50 m and 0.47 m), and the inverse relationship between f and λ is clearly explained.",
+     "proficient": "Meets expectations: most calculations are correct with some units or steps missing; the f and λ relationship is stated but not fully explained.",
+     "developing": "Approaches expectations: calculations contain errors or are missing; the wave equation is stated without being applied correctly."
+    },
+    {
+     "criterion": "Explanation of reflection, refraction and diffraction",
+     "excellent": "Exceeds expectations: each behaviour is defined accurately and the mechanism is explained (angle law; speed change at a boundary with bending towards the normal and constant frequency; diffraction greatest when size is close to wavelength).",
+     "proficient": "Meets expectations: each behaviour is defined correctly but one mechanism is incomplete or imprecise.",
+     "developing": "Approaches expectations: behaviours are confused with each other or described without any mechanism."
+    },
+    {
+     "criterion": "Connection to the anchoring phenomenon",
+     "excellent": "Exceeds expectations: each of the three observations (cliff echo, bending water waves, sound in the cove) is matched to the correct wave behaviour, and the limits of reflection and refraction are explained.",
+     "proficient": "Meets expectations: observations are matched to wave behaviours with minor gaps in the reasoning.",
+     "developing": "Approaches expectations: few links are made to the fisherman at Kisumu, or the matches are incorrect."
+    },
+    {
+     "criterion": "Kenyan applications and environmental impact",
+     "excellent": "Exceeds expectations: applications, impacts and mitigation are accurate, use Kenyan contexts, and name the wave property and the physics of how it works.",
+     "proficient": "Meets expectations: applications and impacts are correct but the physics of how they work is only partly explained.",
+     "developing": "Approaches expectations: examples are vague, not linked to wave properties, or incorrect."
+    },
+    {
+     "criterion": "Scientific communication and Scientist's Statement",
+     "excellent": "Exceeds expectations: writing is clear, uses correct vocabulary, and the statement to the fisherman is accurate, plain-language and links wave science to community safety.",
+     "proficient": "Meets expectations: writing is mostly clear with some vocabulary slips; the statement is accurate but links to safety are brief.",
+     "developing": "Approaches expectations: writing is unclear or vocabulary is misused; the statement is missing or inaccurate."
+    }
+   ],
+   "old": "[{\"criterion\": \"Use of the wave equation and calculations\", \"excellent\": \"All calculations are set out correctly with formulas, steps and units (4 Hz, 0.25 s, 150 m, 0.50 m and 0.47 m), and the inverse relationship between f and λ is clearly explained.\", \"proficient\": \"Most calculations are correct with some units or steps missing; the f and λ relationship is stated but not fully explained.\", \"developing\": \"Calculations contain errors or are missing; the wave equation is stated without being applied correctly.\"}, {\"criterion\": \"Explanation of reflection, refraction and diffraction\", \"excellent\": \"Each behaviour is defined accurately and the mechanism is explained (angle law; speed change at a boundary with bending towards the normal and constant frequency; diffraction greatest when size is close to wavelength).\", \"proficient\": \"Each behaviour is defined correctly but one mechanism is incomplete or imprecise.\", \"developing\": \"Behaviours are confused with each other or described without any mechanism.\"}, {\"criterion\": \"Connection to the anchoring phenomenon\", \"excellent\": \"Each of the three observations (cliff echo, bending water waves, sound in the cove) is matched to the correct wave behaviour, and the limits of reflection and refraction are explained.\", \"proficient\": \"Observations are matched to wave behaviours with minor gaps in the reasoning.\", \"developing\": \"Few links are made to the fisherman at Kisumu, or the matches are incorrect.\"}, {\"criterion\": \"Kenyan applications and environmental impact\", \"excellent\": \"Applications, impacts and mitigation are accurate, use Kenyan contexts, and name the wave property and the physics of how it works.\", \"proficient\": \"Applications and impacts are correct but the physics of how they work is only partly explained.\", \"developing\": \"Examples are vague, not linked to wave properties, or incorrect.\"}, {\"criterion\": \"Scientific communication and Scientist's Statement\", \"excellent\": \"Writing is clear, uses correct vocabulary, and the statement to the fisherman is accurate, plain-language and links wave science to community safety.\", \"proficient\": \"Writing is mostly clear with some vocabulary slips; the statement is accurate but links to safety are brief.\", \"developing\": \"Writing is unclear or vocabulary is misused; the statement is missing or inaccurate.\"}]",
+   "new": "[{\"criterion\": \"Use of the wave equation and calculations\", \"excellent\": \"Exceeds expectations: all calculations are set out correctly with formulas, steps and units (4 Hz, 0.25 s, 30 m, 0.50 m and 0.47 m), and the inverse relationship between f and λ is clearly explained.\", \"proficient\": \"Meets expectations: most calculations are correct with some units or steps missing; the f and λ relationship is stated but not fully explained.\", \"developing\": \"Approaches expectations: calculations contain errors or are missing; the wave equation is stated without being applied correctly.\"}, {\"criterion\": \"Explanation of reflection, refraction and diffraction\", \"excellent\": \"Exceeds expectations: each behaviour is defined accurately and the mechanism is explained (angle law; speed change at a boundary with bending towards the normal and constant frequency; diffraction greatest when size is close to wavelength).\", \"proficient\": \"Meets expectations: each behaviour is defined correctly but one mechanism is incomplete or imprecise.\", \"developing\": \"Approaches expectations: behaviours are confused with each other or described without any mechanism.\"}, {\"criterion\": \"Connection to the anchoring phenomenon\", \"excellent\": \"Exceeds expectations: each of the three observations (cliff echo, bending water waves, sound in the cove) is matched to the correct wave behaviour, and the limits of reflection and refraction are explained.\", \"proficient\": \"Meets expectations: observations are matched to wave behaviours with minor gaps in the reasoning.\", \"developing\": \"Approaches expectations: few links are made to the fisherman at Kisumu, or the matches are incorrect.\"}, {\"criterion\": \"Kenyan applications and environmental impact\", \"excellent\": \"Exceeds expectations: applications, impacts and mitigation are accurate, use Kenyan contexts, and name the wave property and the physics of how it works.\", \"proficient\": \"Meets expectations: applications and impacts are correct but the physics of how they work is only partly explained.\", \"developing\": \"Approaches expectations: examples are vague, not linked to wave properties, or incorrect.\"}, {\"criterion\": \"Scientific communication and Scientist's Statement\", \"excellent\": \"Exceeds expectations: writing is clear, uses correct vocabulary, and the statement to the fisherman is accurate, plain-language and links wave science to community safety.\", \"proficient\": \"Meets expectations: writing is mostly clear with some vocabulary slips; the statement is accurate but links to safety are brief.\", \"developing\": \"Approaches expectations: writing is unclear or vocabulary is misused; the statement is missing or inaccurate.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-061",
+   "kind": "flag",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The contract allows only three rubric levels, so the fourth CBE level, Below Expectations, cannot be represented in the data or the printed rubric. Suggestion: teachers add Below Expectations by hand (no evidence of understanding, or no attempt) when marking, or the template is extended by the partner.",
+   "path": "rubric",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-062",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 5 plans about 97 minutes for an 80-minute double period: the doorway experiment alone is 25 minutes while the teacher notes allow each group 4 minutes at one doorway (8 groups x 4 = 32 minutes). Using two doorways with 2-minute turns makes Part A about 15 minutes, the simulation 8 minutes, and Problem 2 homework, which brings the lesson to about 78 minutes.",
+   "lesson": 5,
+   "path": "framework[1].learnerExperience",
+   "old": "PART A — Doorway Sound Experiment (25 minutes). The class divides into groups of 5. Each group takes a turn at the open classroom doorway; the rest observe and record. Within each group: one learner (the 'speaker') stands 0.5 m outside the doorway and claps twice or says a short phrase ('Habari za asubuhi!') at normal conversational volume; two learners (listeners L1 and L2) stand around the corner in the corridor at 1 m and 2 m from the doorway edge respectively, both out of the speaker's line of sight; one learner acts as the 'control listener' (L3) who stands in the direct line of sight of the speaker at 1 m, confirming sound is audible in the direct path; one learner records results in a class results table on the board. Each group tests three conditions: (i) doorway fully open (gap ≈ 1 m wide); (ii) doorway half-blocked with a book or bag (gap ≈ 0.5 m); (iii) doorway almost fully blocked (gap ≈ 0.1 m, leaving a narrow slit). Listeners rate audibility as 3 (clear), 2 (faint), or 1 (cannot hear). Results are compiled in a shared class table. After all groups rotate, learners write two observations in their exercise books: 'What happened to the sound around the corner?' and 'What happened as the gap got narrower?' PART B — Water-Wave Diffraction Simulation (10 minutes)",
+   "new": "PART A — Doorway Sound Experiment (15 minutes). The class divides into groups of 5. Two doorways (front and back door) are used at the same time, and each group takes a 2-minute turn at one of them; the rest observe and record. Within each group: one learner (the 'speaker') stands 0.5 m outside the doorway and claps twice or says a short phrase ('Habari za asubuhi!') at normal conversational volume; two learners (listeners L1 and L2) stand around the corner in the corridor at 1 m and 2 m from the doorway edge respectively, both out of the speaker's line of sight; one learner acts as the 'control listener' (L3) who stands in the direct line of sight of the speaker at 1 m, confirming sound is audible in the direct path; one learner records results in a class results table on the board. Each group tests three conditions: (i) doorway fully open (gap ≈ 1 m wide); (ii) doorway half-blocked with a book or bag (gap ≈ 0.5 m); (iii) doorway almost fully blocked (gap ≈ 0.1 m, leaving a narrow slit). Listeners rate audibility as 3 (clear), 2 (faint), or 1 (cannot hear). Results are compiled in a shared class table. After all groups rotate, learners write two observations in their exercise books: 'What happened to the sound around the corner?' and 'What happened as the gap got narrower?' PART B — Water-Wave Diffraction Simulation (8 minutes)",
+   "group": "TIME",
+   "where": "Lesson 5, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-063",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the shorter Part A.",
+   "lesson": 5,
+   "path": "framework[1].teacherMoves",
+   "old": "Manage the rotation so each group takes no more than 4 minutes at the doorway.",
+   "new": "Manage the rotation so each group takes no more than 2 minutes at its doorway (use the front and back doors at the same time).",
+   "group": "TIME",
+   "where": "Lesson 5, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-064",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Removes about 3 minutes of in-class calculation time.",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "Problem 2 — A sound wave has a frequency of 340 Hz",
+   "new": "Problem 2 (homework if time is short) — A sound wave has a frequency of 340 Hz",
+   "group": "TIME",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-065",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The doorway experiment is entirely listening-based; added a way for a learner with a hearing impairment to contribute evidence.",
+   "lesson": 5,
+   "path": "framework[1].teacherMoves",
+   "old": "I observed… and I wonder…'",
+   "new": "I observed… and I wonder…' Inclusion: a learner with a hearing impairment can be the control or recorder role, and can rate what they feel or see (for example a hand on the door frame, or the speaker's lips) alongside the listeners' audibility ratings.",
+   "where": "Lesson 5, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-066",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    6,
+    1
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A headland is an obstacle, not a gap; diffraction of sound happens around its edge. Water waves, in contrast, spread through the narrow cove entrance. The diagram instruction now says both so the model matches the physics.",
+   "lesson": 5,
+   "path": "framework[4].learnerExperience",
+   "old": "(1) The gap between the rocky headland and the shore as a narrow opening.",
+   "new": "(1) The narrow entrance to the cove between the headland and the shore (water waves spread through this gap) and the edge of the headland (sound spreads round this edge).",
+   "reference": "OpenStax University Physics Vol. 3, Chapter 4 (Diffraction)",
+   "where": "Lesson 5, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-067",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "Four groups of 4 to 6 is only 16 to 24 learners. In a class of 40 to 60 each group would have 10 to 15 learners and most would have nothing to do. Teachers should confirm that two or three groups per topic works with their space and resources.",
+   "lesson": 6,
+   "path": "framework[1].learnerExperience",
+   "old": "Learners move into four pre-assigned expert groups of 4–6 (Groups A, B, C, D).",
+   "new": "Learners move into pre-assigned expert groups of 4–6. There are four applications (A, B, C, D); in a class of 40 or more, make 8 to 10 groups so that two or three groups research the same application and only one of them presents, with the others adding what the presenting group missed.",
+   "group": "CLASS",
+   "group_headline": "Lessons 6 and 7 assumed a class of about 20 (four groups per task); in a class of 40+ several groups share each task and one presents",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-068",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the large-class fix.",
+   "lesson": 7,
+   "path": "framework[1].learnerExperience",
+   "old": "Learners work in four home groups of approximately 4–5, each assigned ONE research focus card",
+   "new": "Learners work in home groups of approximately 4–5 (8 to 10 groups in a class of 40 or more, so two or three groups share each research card and merge their findings into one 90-second report), each assigned ONE research focus card",
+   "group": "CLASS",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-069",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the large-class fix.",
+   "lesson": 7,
+   "path": "framework[2].learnerExperience",
+   "old": "The class is reorganised into three debate teams of approximately 6–7:",
+   "new": "The class is reorganised into three debate teams (of approximately 6–7 in a class of about 20; in a larger class run two or three debates at the same time, each with its own three teams):",
+   "group": "CLASS",
+   "where": "Lesson 7, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-070",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 7 plans about 88 minutes for an 80-minute period (predict 9, observe 28, explain 25, DQB 10, model 16). Shortening research (18 to 13 min) and consolidation (7 to 5 min) and the model draft (10 to 8 min) brings it to about 79.",
+   "lesson": 7,
+   "path": "framework[1].learnerExperience",
+   "old": "Groups have 18 minutes for research, then 7 minutes",
+   "new": "Groups have 13 minutes for research, then 5 minutes",
+   "group": "TIME",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-071",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the shorter research time.",
+   "lesson": 7,
+   "path": "framework[1].teacherMoves",
+   "old": "At 15 minutes, give a 3-minute warning: 'Wrap up research, begin your four bullet points.' At 18 minutes: 'Pens down on research — 7 minutes to prepare your 90-second group report.'",
+   "new": "At 10 minutes, give a 3-minute warning: 'Wrap up research, begin your four bullet points.' At 13 minutes: 'Pens down on research — 5 minutes to prepare your 90-second group report.'",
+   "group": "TIME",
+   "where": "Lesson 7, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-072",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Part of the Lesson 7 time trim.",
+   "lesson": 7,
+   "path": "framework[4].learnerExperience",
+   "old": "They have 10 minutes to complete a STRUCTURED MODEL DRAFT",
+   "new": "They have 8 minutes to complete a STRUCTURED MODEL DRAFT",
+   "group": "TIME",
+   "where": "Lesson 7, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-073",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the shorter model draft.",
+   "lesson": 7,
+   "path": "framework[4].teacherMoves",
+   "old": "During the 10-minute drawing time",
+   "new": "During the 8-minute drawing time",
+   "group": "TIME",
+   "where": "Lesson 7, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-074",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    9,
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "I could not verify that the 2006 Mozambique earthquake was felt in Nairobi, so the research card now names a safer, local topic. The teacher should choose a locally documented example (for example a recent Kenyan tremor) if one is known.",
+   "lesson": 7,
+   "path": "framework[1].learnerExperience",
+   "old": "(2006 Mozambique earthquake tremors felt in Nairobi, building code implications)",
+   "new": "(earthquake risk along the Kenyan Rift Valley and what building codes in Nairobi must allow for)",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-075",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3,
+    1
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Cold-calling a student on every individual card is impossible in the time (a class of 40 with two cards each has 80 cards). Grouping similar questions into themes lets the closure fit about 10 minutes and still hears at least six different students.",
+   "lesson": 8,
+   "path": "framework[3].learnerExperience",
+   "old": "every 'I wonder…' question posted on the DQB since Lesson 1. Questions were generated by learners during Lessons 1–7 and represent the full arc of the unit's inquiry. For each question, a student is cold-called",
+   "new": "the 'I wonder…' questions posted on the DQB since Lesson 1, which the teacher has already sorted into 6 to 8 themes (a class of 40 or more will have posted dozens of cards, so similar questions are grouped, for example while learners self-mark the problem set). Questions were generated by learners during Lessons 1–7 and represent the full arc of the unit's inquiry. For each theme, a student is cold-called",
+   "group": "TIME",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-076",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the themed DQB closure.",
+   "lesson": 8,
+   "path": "framework[3].teacherMoves",
+   "old": "Repeat for ALL DQB cards, ensuring",
+   "new": "Repeat for each theme card (similar questions grouped beforehand), ensuring",
+   "group": "TIME",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-077",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the themed DQB closure.",
+   "lesson": 8,
+   "path": "overview",
+   "old": "the teacher reads every 'I wonder…' card posted in Lesson 1 aloud; cold-calls",
+   "new": "the teacher reads the themed 'I wonder…' cards (similar questions grouped) aloud; cold-calls",
+   "group": "TIME",
+   "where": "Lesson 8, overview",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-078",
+   "kind": "flag",
+   "target": "lesson",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "Lesson 6 names the Kenya Meteorological Department as the monitor of earthquake (seismic) waves. I cannot confirm which Kenyan institution runs the national seismic network (University of Nairobi's geology department, State Department for Mining/Mines and Geology, KenGen for geothermal sites, and KMD may all be involved). Please confirm and use the correct name consistently in Lessons 6 and 7 and the Final Explanation.",
+   "lesson": 6,
+   "path": "slo.knowledge",
+   "where": "Lesson 6, slo.knowledge",
+   "applied_at": "2026-10-17T17:21:08"
+  },
+  {
+   "id": "gensci_3_3-079",
+   "kind": "flag",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "KICD check: no KICD curriculum PDF covers General Science (the PDFs are Biology, Chemistry, Physics and Mathematics). The nearest, Physics Grade 10 Strand 2.0 Waves and Optics, Sub-strand 2.1 Properties of Waves, has different outcomes (stationary waves, Doppler effect), so it does not map to General Science Strand 3.0 Sub-strand 3.3 Waves. No KICD wording could be verified; the learning outcomes (a-e), key inquiry questions, competencies, values and PCIs were left as written. Within the data: every outcome is taught and assessed (a terms, L1-2; b-c wave equation, L2, L4, L8; d effects of properties, L3-L7; e appreciation, L6-L8). Strand/sub-strand numbering (3.0 / 3.3) is consistent across the documents.",
+   "path": "learningOutcomes",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-17T17:21:08"
+  }
+ ]
+}

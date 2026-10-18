@@ -1,0 +1,2071 @@
+{
+ "module": "essmath_3_2",
+ "records": [
+  {
+   "id": "essmath_3_2-001",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The total said 8 × 40 = 320 minutes, but the lesson durations are 80, 40, 80, 80, 40, 40, 80, 80. Recalculated: 80+40 = 120; +80 = 200; +80 = 280; +40 = 320; +40 = 360; +80 = 440; +80 = 520 minutes (equivalently 5 × 80 + 3 × 40 = 400 + 120 = 520). The phase minutes inside each lesson are trimmed in the timing groups below so they fit these periods.",
+   "path": "totalDuration",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons: 5 double lessons × 80 minutes (Lessons 1, 3, 4, 7, 8) + 3 single lessons × 40 minutes (Lessons 2, 5, 6) = 400 + 120 = 520 minutes total",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-002",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old text said the experimental P(2 or 5) would be 'close to but not equal to' P(2) + P(5). That is wrong for the same set of rolls: every roll that shows a 2 or a 5 is counted once under 'A or B' and once under A or B, and no roll can be both, so the frequency of '2 or 5' is always exactly the frequency of 2 plus the frequency of 5. I checked with a 30-roll example: 6 twos and 4 fives give 10 rolls that were '2 or 5', so 10/30 = 6/30 + 4/30. What is only approximate is how near each value is to 1/6 and 1/3. Teachers would otherwise tell learners their correct data are 'wrong'.",
+   "lesson": 4,
+   "path": "framework[1].formativeAssessment",
+   "old": "Observable indicator 2: in the die experiment, learners record P(2 or 5) as a value close to but not equal to P(2) + P(5) due to sampling variation — check that learners interpret this as 'close to' not 'exactly,' building realistic data-literacy expectations.",
+   "new": "Observable indicator 2: in the die experiment, each pair's frequency of '2 or 5' must equal its frequency of 2 plus its frequency of 5 exactly (one roll shows one face, so no roll is counted twice). Only the comparison with the theoretical values P(2) = P(5) = 1/6 and P(2 or 5) = 1/3 is approximate, because of sampling variation. Check that learners can say which part is exact and which part is 'close to'.",
+   "group": "G2",
+   "group_headline": "Die-roll data in Lesson 4: the experimental P(2 or 5) equals P(2) + P(5) exactly in the same data (not just 'close'); wording corrected in 4 places",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules) (addition rule for mutually exclusive events)",
+   "where": "Lesson 4, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-003",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the die-roll fix: the sensemaking note also said the experiment shows P(A or B) is only approximately P(A) + P(B). Rechecked with the same 30-roll example (10/30 = 6/30 + 4/30).",
+   "lesson": 4,
+   "path": "framework[1].sensemakingStrategy",
+   "old": "The die experiment provides empirical evidence that P(A or B) ≈ P(A) + P(B) for these events,",
+   "new": "In the same set of rolls the count for 'A or B' is exactly the count for A plus the count for B (the rolls cannot overlap), and each experimental probability sits near its theoretical value of 1/6 or 1/3,",
+   "group": "G2",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 4, Observe Phase, sensemakingStrategy",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-004",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the die-roll fix: the teacher asks 'Did it hold exactly?' but gave no expected answer. Added what a good answer sounds like, consistent with the corrected indicator.",
+   "lesson": 4,
+   "path": "framework[2].teacherMoves",
+   "old": "Did it hold exactly?' Cold-call 2 learners.",
+   "new": "Did it hold exactly?' Cold-call 2 learners. Expected answer: yes, exactly, for the counts in the same set of rolls, because no single roll shows both a 2 and a 5; what is only approximate is how close each probability is to 1/6 and 1/3.",
+   "group": "G2",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-005",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the die-roll fix in the Summary Table (explained row), so the table learners fill in does not repeat the 'approximately equal' error.",
+   "lesson": 4,
+   "path": "summaryTablePrompt.explained",
+   "old": "showed P(rolling a 2 or a 5) ≈ P(rolling a 2) + P(rolling a 5) = 1/6 + 1/6 = 2/6 = 1/3.",
+   "new": "showed that the frequency of '2 or 5' equalled the frequency of 2 plus the frequency of 5 exactly, and that each experimental probability was close to its theoretical value: P(2 or 5) = P(2) + P(5) = 1/6 + 1/6 = 2/6 = 1/3.",
+   "group": "G2",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 4, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-006",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The slip used P(Win) = P(Draw) = 1/3 as if the three results of a football match were equally likely. Lesson 1 tells learners the opposite (matches involve skill and home advantage), and Lesson 5 later uses P(W) = 0.5, P(D) = 0.25, P(L) = 0.25. Added a short assumption so the numbers are clearly practice numbers. Check: 1/3 + 1/3 + 1/3 = 1, so the assumed values are at least consistent.",
+   "lesson": 4,
+   "path": "framework[0].learnerExperience",
+   "old": "The advertiser says: your chance of being right is P(Win) + P(Draw) = 1/3 + 1/3 = 2/3.",
+   "new": "The advertiser says: your chance of being right is P(Win) + P(Draw) = 1/3 + 1/3 = 2/3. (For this activity only, assume Win, Draw and Loss are equally likely; real matches are not, as we noticed in Lesson 1.)",
+   "group": "G3",
+   "group_headline": "Lesson 4 treated win/draw/loss as 1/3 each without saying it is an assumption (Lesson 1 says matches are not equally likely); assumption now stated",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules) (equally likely outcomes)",
+   "where": "Lesson 4, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-007",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the teacher now repeats the limit of the 1/3 assumption at the point where learners calculate P(Win or Draw) = 2/3.",
+   "lesson": 4,
+   "path": "framework[2].teacherMoves",
+   "old": "After 3 minutes, cold-call 3 pairs. Conclude by saying:",
+   "new": "After 3 minutes, cold-call 3 pairs. Remind learners: 'We used 1/3 for each result only to practise the rule. Real matches are not equally likely, so a real P(Win or Draw) would use different numbers, but the rule is the same.' Conclude by saying:",
+   "group": "G3",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-008",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    5,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The learning goal said gambling ads wrongly treat overlapping outcomes as certain, but the lesson's own example (Win or Draw in one match) is a correct addition that misleads by hiding P(Lose); the overlap error is taught with King/Heart. The goal now matches what is actually taught and assessed.",
+   "lesson": 4,
+   "path": "slo.knowledge",
+   "old": "(d) many gambling predictions falsely treat non-mutually-exclusive outcomes as certain, exploiting misunderstanding of the addition rule.",
+   "new": "(d) a gambling advertisement can quote a correct sum such as P(Win or Draw) while hiding the chance of losing, and adding the probabilities of events that can overlap gives a total that is too big.",
+   "group": "G4",
+   "group_headline": "Lesson 4 said ads wrongly add up overlapping events, but its own Win-or-Draw example is correct addition that hides P(Lose); goal and storyline text now match the activity",
+   "where": "Lesson 4, slo.knowledge",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-009",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    5,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: same alignment of the storyline note with the Win-or-Draw example and the King/Heart overlap contrast.",
+   "lesson": 4,
+   "path": "slo.purposeInStoryline",
+   "old": "that imply bettors can simply 'add up' their chances across multiple simultaneous selections — a mathematically flawed shortcut that costs bettors money.",
+   "new": "that quote an attractive 'Win or Draw' total while hiding the chance of losing, and that tempt bettors to 'add up' chances for selections that can overlap — a misleading shortcut that costs bettors money.",
+   "group": "G4",
+   "where": "Lesson 4, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-010",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Independence (a coin has no memory) was introduced in Lesson 1; Lessons 2 and 3 were about the formula and the range of probability. Corrected the lesson numbers.",
+   "lesson": 4,
+   "path": "framework[2].teacherMoves",
+   "old": "This is what Lessons 1–3 showed us about independence.",
+   "new": "This is what Lesson 1 showed us about independence.",
+   "group": "G5",
+   "group_headline": "'In Lesson N we did X' references pointed to the wrong lesson (independence is Lesson 1, mutually exclusive events Lesson 4, multiplication rule Lesson 6); corrected in 9 places",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-011",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same wrong cross-reference: independence was met in Lesson 1, not Lesson 3.",
+   "lesson": 4,
+   "path": "framework[2].formativeAssessment",
+   "old": "spontaneously connect back to Lesson 3 (independence)",
+   "new": "spontaneously connect back to Lesson 1 (independence)",
+   "group": "G5",
+   "where": "Lesson 4, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-012",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same wrong cross-reference in the Driving Question Board teacher script.",
+   "lesson": 4,
+   "path": "framework[3].learnerExperience",
+   "old": "'Notice how Lesson 3 told us independence means past results don't matter.",
+   "new": "'Notice how Lesson 1 told us independence means past results don't matter.",
+   "group": "G5",
+   "where": "Lesson 4, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-013",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same wrong cross-reference in the Model Building close.",
+   "lesson": 4,
+   "path": "framework[4].teacherMoves",
+   "old": "But as we proved in Lesson 3, knowing the probability",
+   "new": "But as we saw in Lesson 1, knowing the probability",
+   "group": "G5",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-014",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4,
+    7
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same wrong cross-reference in the Summary Table.",
+   "lesson": 4,
+   "path": "summaryTablePrompt.explained",
+   "old": "consistent with what Lessons 1–3 established about the independence of each match result.",
+   "new": "consistent with what Lesson 1 established about the independence of each match result.",
+   "group": "G5",
+   "where": "Lesson 4, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-015",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Independent events are taught in Lessons 6 and 7, so the model cannot show them by Lesson 5.",
+   "lesson": 1,
+   "path": "framework[4].teacherMoves",
+   "old": "By Lesson 5, your model will show the full picture of probability — including mutually exclusive and independent events.",
+   "new": "By Lesson 8, your model will show the full picture of probability — including mutually exclusive and independent events.",
+   "group": "G5",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-016",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 3 is the range of probability; mutually exclusive events are Lesson 4.",
+   "lesson": 2,
+   "path": "teacherReflection",
+   "old": "do the learners' new questions naturally lead toward mutually exclusive events (Lesson 3 content)? If so, explicitly reference one of those question cards at the start of Lesson 3 to reinforce the coherent storyline.",
+   "new": "do the learners' new questions naturally lead toward the range of probability (Lesson 3) or mutually exclusive events (Lesson 4)? If so, explicitly reference one of those question cards at the start of that lesson to reinforce the coherent storyline.",
+   "group": "G5",
+   "where": "Lesson 2, teacherReflection",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-017",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The note said Lesson 6 was about mutually exclusive events; Lesson 6 is where independent events and the multiplication rule are first taught.",
+   "lesson": 7,
+   "path": "slo.purposeInStoryline",
+   "old": "In Lesson 6 learners established mutually exclusive events and single-experiment probabilities. Lesson 7 now extends the investigation to two-experiment scenarios, directly confronting",
+   "new": "In Lessons 4 and 5 learners worked with mutually exclusive events, and in Lesson 6 they met independent events and the multiplication rule in coin-and-die and card experiments. Lesson 7 now applies that rule to two-experiment scenarios in Kenyan contexts, directly confronting",
+   "group": "G5",
+   "where": "Lesson 7, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-018",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 6 already derives the multiplication rule from data; Lesson 7 applies it, so 'discover and formalise' was a repeat that contradicted the storyline.",
+   "lesson": 7,
+   "path": "overview",
+   "old": "they discover and formalise the multiplication rule for independent events.",
+   "new": "they apply and consolidate the multiplication rule for independent events first met in Lesson 6.",
+   "group": "G5",
+   "where": "Lesson 7, overview",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-019",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The gambler's fallacy about coin tosses is surfaced in Lesson 1, not Lesson 5 (which is about the addition rule).",
+   "lesson": 7,
+   "path": "framework[3].formativeAssessment",
+   "old": "'In Lesson 5 I thought past coin tosses change future ones",
+   "new": "'In Lesson 1 I thought past coin tosses change future ones",
+   "group": "G5",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-020",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Estimated activity time in this 80-minute lesson: Predict about 8, Observe about 29 (15 + 10 + 4 for pooling), Explain about 26, Driving Question Board about 8, Model about 13, so about 84. Shortening the card sort (15 to 12 minutes), the die rolls (10 to 8 minutes) and the model annotation (8 to 6 minutes) brings the total to about 77, leaving room for transitions.",
+   "lesson": 4,
+   "path": "framework[1].learnerExperience",
+   "old": "ACTIVITY A — Event Card Sort (15 min)",
+   "new": "ACTIVITY A — Event Card Sort (12 min)",
+   "group": "G6",
+   "group_headline": "Lesson 4 activities added up to about 84 of 80 minutes; card sort, die rolls and model annotation shortened by 7 minutes in total",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-021",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Thirty rolls per pair take about 5 minutes; 8 minutes includes recording the three frequencies.",
+   "lesson": 4,
+   "path": "framework[1].learnerExperience",
+   "old": "ACTIVITY B — Die-Roll Experiment (10 min)",
+   "new": "ACTIVITY B — Die-Roll Experiment (8 min)",
+   "group": "G6",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-022",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The teacher column said 10 minutes while the learner column said 15; both now say 12.",
+   "lesson": 4,
+   "path": "framework[1].teacherMoves",
+   "old": "Give groups 10 minutes.",
+   "new": "Give groups 12 minutes.",
+   "group": "G6",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-023",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 8-minute die-roll activity.",
+   "lesson": 4,
+   "path": "framework[1].teacherMoves",
+   "old": "After 10 minutes, call table representatives",
+   "new": "After 8 minutes, call table representatives",
+   "group": "G6",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-024",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Model annotation shortened to fit the 80-minute period.",
+   "lesson": 4,
+   "path": "framework[4].teacherMoves",
+   "old": "Give learners 8 minutes to annotate.",
+   "new": "Give learners 6 minutes to annotate.",
+   "group": "G6",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-025",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 6-minute annotation time.",
+   "lesson": 4,
+   "path": "framework[4].teacherMoves",
+   "old": "After 8 minutes, say: 'Turn to your partner.",
+   "new": "After 6 minutes, say: 'Turn to your partner.",
+   "group": "G6",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-026",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Learners were asked for the probability of plain OR coconut while the contents of the bag were deliberately hidden, so no calculation was possible and the 'look for the addition rule' indicator could not be met. The prediction is now one learners can reason about (adding a second flavour can only make the chance bigger), and it sets up the experiment and calculation that follow.",
+   "lesson": 5,
+   "path": "framework[0].learnerExperience",
+   "old": "What is the probability she gets a plain OR a coconut mandazi? Write your prediction and your reasoning before the experiment.",
+   "new": "You do not yet know how many tokens of each type are in the bag. Is the chance of getting a plain OR a coconut mandazi bigger than, smaller than, or the same as the chance of getting a plain one alone? Is it more than one half? Write your prediction and your reasoning before the experiment.",
+   "group": "G7",
+   "group_headline": "Lesson 5 Predict asked for a probability while the bag contents were hidden; it now asks a bigger/smaller/same question learners can reason about",
+   "where": "Lesson 5, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-027",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the look-fors now match the reworded prediction and give the teacher the expected answer.",
+   "lesson": 5,
+   "path": "framework[0].formativeAssessment",
+   "old": "Key indicators: (1) Does the learner attempt to use P(A or B) = P(A) + P(B), suggesting retention from Lesson 4? (2) Does the learner correctly identify that plain and coconut are mutually exclusive on a single draw? (3) Are any learners simply guessing 50/50 or 'more than half' without calculation?",
+   "new": "Key indicators: (1) Does the learner say 'plain OR coconut' is MORE likely than plain alone because the two chances add (retention from Lesson 4)? Expected answer: bigger; the exact value cannot be known until the contents are revealed. (2) Does the learner correctly identify that plain and coconut are mutually exclusive on a single draw? (3) Are any learners simply guessing 50/50 without giving a reason?",
+   "group": "G7",
+   "where": "Lesson 5, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-028",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Estimated activity time in this 40-minute lesson: Predict about 5, Observe about 12, Explain about 25 (four worked examples, practice and marking), Driving Question Board about 6, Model about 6, so about 54. Cuts: draws 6 to 4 minutes (20 draws per group is about 3 minutes), and the spinner and days-of-the-week examples become homework with answers given, so the in-class Explain phase has the bag example, the die example (the one that needs the overlap check), Q3 and Q4 and marking. New total about 40.",
+   "lesson": 5,
+   "path": "framework[1].teacherMoves",
+   "old": "[Allow 6 minutes for draws.]",
+   "new": "[Allow 4 minutes for draws.]",
+   "group": "G8",
+   "group_headline": "Lesson 5 had about 54 minutes of activity in a 40-minute period; spinner and days-of-week examples and practice Q1-Q2 moved to homework (answers given), draws shortened",
+   "where": "Lesson 5, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-029",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Spinner example moved to homework with its answer written out so a teacher can check it next lesson.",
+   "lesson": 5,
+   "path": "framework[2].teacherMoves",
+   "old": "WORKED EXAMPLE 2 — Spinner (independent attempt first): Display: 'A spinner has 8 equal sectors: 3 red (Eastleigh route), 2 blue (Westlands route), 2 green (Karen route), 1 yellow (CBD route). One spin. Find P(red OR green).' Say: 'Attempt this yourself — 90 seconds, books only.' [Time.] Then cold-call: 'Amina, show us your working.' [Wait 10 seconds.] Confirm: P(red) = 3/8, P(green) = 2/8, P(red OR green) = 5/8. Ask: 'Could the spinner land on red AND green at the same time?' [Wait 5 seconds.] 'Good — that confirms mutual exclusivity.'  WORKED EXAMPLE 3 — Die (independent attempt)",
+   "new": "WORKED EXAMPLE 2 — Spinner (HOMEWORK, not done in class; check at the start of Lesson 6): 'A spinner has 8 equal sectors: 3 red (Eastleigh route), 2 blue (Westlands route), 2 green (Karen route), 1 yellow (CBD route). One spin. Find P(red OR green).' Answer: P(red) = 3/8, P(green) = 2/8, P(red OR green) = 5/8; red and green cannot both happen on one spin, so the events are mutually exclusive.  WORKED EXAMPLE 3 — Die (independent attempt)",
+   "group": "G8",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-030",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Days-of-the-week example moved to homework with its answer.",
+   "lesson": 5,
+   "path": "framework[2].teacherMoves",
+   "old": "  WORKED EXAMPLE 4 — Days of Week (independent attempt): Display: 'A school timetable coordinator randomly selects one day from the five school days (Monday–Friday) for a special assembly. Find P(Monday OR Friday).' '90 seconds.' [Time.] Cold-call: 'Nyambura.' [Wait 10 seconds.] Confirm: P(Monday) = 1/5, P(Friday) = 1/5, P(Monday OR Friday) = 2/5.",
+   "new": "  HOMEWORK EXAMPLE — Days of the Week (not done in class; check at the start of Lesson 6): 'A school timetable coordinator randomly selects one day from the five school days (Monday–Friday) for a special assembly. Find P(Monday OR Friday).' Answer: P(Monday) = 1/5, P(Friday) = 1/5, P(Monday OR Friday) = 2/5.",
+   "group": "G8",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-031",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Only Q3 and Q4 (the two that need real thinking: finding the primes, and reading probabilities given as decimals) are done in class.",
+   "lesson": 5,
+   "path": "framework[2].teacherMoves",
+   "old": "INDEPENDENT PRACTICE (4 questions — 5 minutes): Display on board/ARES. Q1: Bag has 4 red, 3 blue, 3 green beads. One draw. P(red OR blue) = ? Q2: A spinner has sectors: 5 orange, 3 purple, 2 white. One spin. P(orange OR white) = ? Q3: A card is drawn from cards numbered 1–10. P(prime OR 10) = ? Q4: A football match can end in Win (W), Draw (D), or Loss (L) for Gor Mahia, with P(W)=0.5, P(D)=0.25, P(L)=0.25. Find P(W OR D). After 5 minutes: 'Swap books",
+   "new": "INDEPENDENT PRACTICE (in class: Q3 and Q4 only, 4 minutes; Q1 and Q2 are set as homework): Display on board/ARES. Q1: Bag has 4 red, 3 blue, 3 green beads. One draw. P(red OR blue) = ? Q2: A spinner has sectors: 5 orange, 3 purple, 2 white. One spin. P(orange OR white) = ? Q3: A card is drawn from cards numbered 1–10. P(prime OR 10) = ? Q4: A football match can end in Win (W), Draw (D), or Loss (L) for Gor Mahia, with P(W)=0.5, P(D)=0.25, P(L)=0.25. Find P(W OR D). After 4 minutes: 'Swap books",
+   "group": "G8",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-032",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The practice questions had no answer key except Q3. Added answers for Q1, Q2 and Q4 (recomputed: 4+3 = 7 of 10 beads; 5+2 = 7 of 10 sectors; 0.5 + 0.25 = 0.75) so a teacher can mark homework and peer marking.",
+   "lesson": 5,
+   "path": "framework[2].teacherMoves",
+   "old": "P(prime OR 10) = 5/10 = 1/2.'",
+   "new": "P(prime OR 10) = 5/10 = 1/2.' Homework answers: Q1 P(red OR blue) = 4/10 + 3/10 = 7/10; Q2 P(orange OR white) = 5/10 + 2/10 = 7/10; Q4 P(W OR D) = 0.5 + 0.25 = 0.75 (3/4).",
+   "group": "G8",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-033",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Learner column brought in line with the shorter in-class Explain phase.",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "then works through three further examples on the board with increasing complexity — a spinner, a die, and days of the school week. For each example after the first, learners are given 90 seconds to attempt the problem independently in their books before the teacher reveals the solution. After all worked examples, learners complete a four-question independent practice set (displayed on ARES or the board), then peer-mark using a projected mark scheme.",
+   "new": "then works through one further example (a die). A spinner example and a days-of-the-week example are set as homework. For the die example, learners are given 90 seconds to attempt the problem independently in their books before the teacher reveals the solution. After the worked examples, learners complete a two-question independent practice set (Q3 and Q4, displayed on ARES or the board), then peer-mark using a projected mark scheme. Questions Q1 and Q2 are set as homework.",
+   "group": "G8",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-034",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Overview brought in line with the shorter in-class Explain phase.",
+   "lesson": 5,
+   "path": "overview",
+   "old": "The teacher then leads three worked examples in escalating complexity: a spinner divided into unequal sectors (representing matatu route colours), a standard die where the event is rolling an even number OR a 5, and selecting a school day that is Monday OR Friday from the five-day week. For each, learners first attempt the problem independently for 90 seconds before the teacher reveals the solution — a structured think-before-see routine that prevents passive copying. Learners then complete a four-question independent practice set and peer-mark using a projected mark scheme.",
+   "new": "The teacher then leads one further worked example, a standard die where the event is rolling an even number OR a 5, preceded by the learners' own 90-second attempt — a structured think-before-see routine that prevents passive copying. A spinner divided into unequal sectors (representing matatu route colours) and selecting a school day that is Monday OR Friday from the five-day week are set as homework. Learners then complete a two-question independent practice set in class and peer-mark using a projected mark scheme.",
+   "group": "G8",
+   "where": "Lesson 5, overview",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-035",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3,
+    7
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Summary Table brought in line with what is now done in class and what is homework.",
+   "lesson": 5,
+   "path": "summaryTablePrompt.learned",
+   "old": "This rule was confirmed across four different contexts: the mandazi bag, a matatu-route spinner, a standard die, and the school-week days.",
+   "new": "This rule was confirmed in class with the mandazi bag and a standard die, and was practised for homework with a matatu-route spinner and the school-week days.",
+   "group": "G8",
+   "where": "Lesson 5, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-036",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    4,
+    5,
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Evidence Card 5 asked learners to write the probability of a football match with 3 outcomes as a fraction from the sample space. That only works for equally likely outcomes (1/3 each), which would teach the exact idea Lesson 1 warns against and contradict Lesson 5, where match results have P = 0.5, 0.25, 0.25. Replaced with a bag of 10 tokens (4 red, 6 blue): P(red) = 4/10 = 2/5 = 0.4 = 40%, still an intermediate value for the number line. I recomputed 4/10 = 0.4.",
+   "lesson": 3,
+   "path": "framework[1].learnerExperience",
+   "old": "a football match with 3 outcomes (win/draw/lose)",
+   "new": "a bag of 10 tokens with 4 red and 6 blue (a football result is not used here because win, draw and lose are not equally likely, as noted in Lesson 1)",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules) (equally likely outcomes; the formula favourable divided by total only applies when outcomes are equally likely)",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-037",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The learner column gives Activity A 15 minutes but the teacher script said 12; made both 15 (the lesson still totals about 74 of 80 minutes). The teacher also called the data 'from the last two lessons', but Lesson 2 was about dice; the coin-toss table comes from Lesson 1 only.",
+   "lesson": 3,
+   "path": "framework[1].teacherMoves",
+   "old": "You have 12 minutes.' Set a visible timer. Circulate — do NOT give answers. Use prompt questions: 'How many outcomes are in the sample space?' (wait 10 seconds), 'How many of those are favourable?' (wait 10 seconds), 'What does it mean if the number of favourable outcomes equals zero?' (wait 15 seconds — this targets Cards 2 and 3 for impossible/certain recognition). After 12 minutes, call the class back. Display the accumulated coin-toss data on the board. Ask: 'Look at our data from the last two lessons.",
+   "new": "You have 15 minutes.' Set a visible timer. Circulate — do NOT give answers. Use prompt questions: 'How many outcomes are in the sample space?' (wait 10 seconds), 'How many of those are favourable?' (wait 10 seconds), 'What does it mean if the number of favourable outcomes equals zero?' (wait 15 seconds — this targets Cards 2 and 3 for impossible/certain recognition). After 15 minutes, call the class back. Display the accumulated coin-toss data on the board. Ask: 'Look at our coin-toss data from Lesson 1.",
+   "group": "G9",
+   "group_headline": "Lesson 3 Observe: student and teacher columns disagreed (15 vs 12 minutes; '200+ tosses' vs 40 per pair; data 'from the last two lessons' vs Lesson 1 only); made consistent",
+   "where": "Lesson 3, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-038",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 1 has each pair toss 40 times, so a class of about 40 learners (20 pairs) has about 800 tosses; '200+' understated it.",
+   "lesson": 3,
+   "path": "framework[1].learnerExperience",
+   "old": "(total tosses ≈ 200+ across the class)",
+   "new": "(40 tosses per pair, so several hundred tosses across the class)",
+   "group": "G9",
+   "where": "Lesson 3, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-039",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "CER was described as 'number line = claim, advertisement = evidence + reasoning', which does not match the standard definition (Claim = answer to the question; Evidence = data or observations; Reasoning = the idea linking them). Rewritten with the correct mapping for the 120% advertisement task.",
+   "lesson": 3,
+   "path": "framework[2].sensemakingStrategy",
+   "old": "Three-part explain sequence using claim-evidence-reasoning (CER): learners first build the formal number line (claim), then use the betting advertisement to construct a refutation (evidence + reasoning), then apply reasoning directly to the phenomenon (transfer).",
+   "new": "Three-part explain sequence: learners first build the formal number line, then use the betting advertisement to write a short claim-evidence-reasoning (CER) refutation (Claim: the '120% chance' cannot be true; Evidence: every probability we calculated today lies between 0 and 1; Reasoning: a probability is a part of a whole, so it can never be more than 1), then transfer the same reasoning to the phenomenon in Part C.",
+   "group": "G10",
+   "group_headline": "Claim-Evidence-Reasoning was described wrongly in Lessons 1, 3 and 7; now Claim = answer, Evidence = data, Reasoning = the idea that links them",
+   "where": "Lesson 3, Explain Phase, sensemakingStrategy",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-040",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A formula is not evidence (data or observations); it is part of the reasoning that links the data to the claim. Moved it across.",
+   "lesson": 1,
+   "path": "framework[2].sensemakingStrategy",
+   "old": "Evidence (our coin-toss data, theoretical formula) → Reasoning (each toss is independent; past outcomes don't change P).",
+   "new": "Evidence (our coin-toss data and pooled class results) → Reasoning (the formula P = favourable ÷ total and independence: each toss is independent, so past outcomes don't change P).",
+   "group": "G10",
+   "where": "Lesson 1, Explain Phase, sensemakingStrategy",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-041",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The activity was labelled CER but its three notes are Claim, Revision and Question. Made the label match the task and showed how the claim note uses CER.",
+   "lesson": 7,
+   "path": "framework[3].sensemakingStrategy",
+   "old": "Claim-Evidence-Reasoning (CER) DQB update. The three-note structure (Claim, Revision, Question) requires",
+   "new": "Claim-Revision-Question DQB update (the CLAIM note follows CER: the claim is the answer, today's calculation is the evidence, and the rule used is the reasoning). The three-note structure requires",
+   "group": "G10",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, sensemakingStrategy",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-042",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The eight Event Cards had no answer key, so a teacher could not tell what a good placement sounds like, especially for the 'near-certain' versus 'certain' distinction the lesson depends on. Checked each: coin 1/2; 20 girls in 40 = 1/2; falling upward and snow in Kisumu are impossible.",
+   "lesson": 3,
+   "path": "framework[2].teacherMoves",
+   "old": "one certain, one impossible, one middle-ground.",
+   "new": "one certain, one impossible, one middle-ground. Expected placements: (1) P = 1; (2) P = 0; (3) P = 1/2; (4) between 0 and 1 but not 1/2 (a win is neither certain nor impossible, and win, draw and lose are not equally likely); (5) between 0 and 1, accept any placement with a reason; (6) P = 20/40 = 1/2; (7) P = 0; (8) close to 1 but not 1 (rain is very likely in the April long rains but not guaranteed, so do not accept 'certain').",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-043",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 2 only teaches the formula for EQUALLY LIKELY outcomes, yet asked learners to use it on Gor Mahia's seven wins and to write that a match belongs to 'a sample space of equally likely outcomes'. Win, draw and loss are not equally likely, and Lesson 1 tells learners so. The formula cannot give a match probability, so applying it would teach the wrong idea. The task now uses the coin (where the formula works) and asks learners to say why a match is different. Checked against Lesson 5 Q4, where P(W) = 0.5, P(D) = 0.25, P(L) = 0.25.",
+   "lesson": 2,
+   "path": "framework[2].learnerExperience",
+   "old": "Learners then return to the Gor Mahia FC phenomenon: 'Using what you now know, explain in one mathematical sentence why Gor Mahia's previous 7 wins do NOT change the probability of the next match result.'",
+   "new": "Learners then return to the phenomenon: 'Using what you now know, explain in one mathematical sentence why a coin that has landed on heads 7 times in a row still has P(heads) = 1/2 on the next toss. Then say in one more sentence why a football match is NOT like a fair coin or a fair die (are win, draw and loss equally likely?).'",
+   "group": "G11",
+   "group_headline": "Lesson 2 asked learners to treat a football match as equally likely outcomes (contradicting Lesson 1); now the coin uses the formula and a match is shown to be different",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules) (equally likely outcomes)",
+   "where": "Lesson 2, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-044",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    5,
+    13
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Teacher script matched to the corrected task, with what a good answer sounds like.",
+   "lesson": 2,
+   "path": "framework[2].teacherMoves",
+   "old": "Finally say: 'Return to Gor Mahia FC. In your book, write ONE mathematical sentence connecting this formula to why their past wins do not change the next match's probability. Use the word equally likely in your sentence. You have 90 seconds.'",
+   "new": "Finally say: 'Return to our puzzle. In your book, write ONE mathematical sentence explaining why seven heads in a row do not change P(heads) on the next toss; use the words equally likely. Then write ONE more sentence saying why a Gor Mahia match is different from a fair coin: are win, draw and loss equally likely? You have 90 seconds.' Expected answer: 'Football results are not equally likely outcomes, so favourable ÷ total cannot give a match probability; the coin works because both faces are equally likely and the coin keeps no record of earlier tosses.'",
+   "group": "G11",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-045",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Look-for matched to the corrected task.",
+   "lesson": 2,
+   "path": "framework[2].formativeAssessment",
+   "old": "(4) The Gor Mahia sentence explicitly references 'equally likely outcomes' and the formula structure.",
+   "new": "(4) The coin sentence explicitly references 'equally likely outcomes' and the formula structure, and the football sentence says that win, draw and loss are not equally likely.",
+   "group": "G11",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 2, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-046",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    5,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The model sentence told learners that a match is a sample space of equally likely outcomes. Replaced with a sentence that is true and states the limit of the coin analogy.",
+   "lesson": 2,
+   "path": "framework[4].learnerExperience",
+   "old": "(3) They write one sentence connecting their model to the anchoring phenomenon: 'Each Gor Mahia match result belongs to a sample space of equally likely outcomes; the formula tells us the probability of any single result, and past results do not change the total number of equally likely outcomes in the NEXT match.'",
+   "new": "(3) They write one sentence connecting their model to the anchoring phenomenon: 'A coin toss has a sample space of two equally likely outcomes, so the formula gives P(heads) = 1/2, and earlier tosses do not change this for the NEXT toss. A football match has the sample space {win, draw, loss}, but these are not equally likely, so the formula cannot be used for a match.'",
+   "group": "G11",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 2, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-047",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Look-for matched to the corrected model sentence.",
+   "lesson": 2,
+   "path": "framework[4].formativeAssessment",
+   "old": "(3) The Gor Mahia sentence explicitly uses the words 'sample space', 'equally likely', and 'formula' (or 'P(event) =').",
+   "new": "(3) The sentence explicitly uses the words 'sample space', 'equally likely', and 'formula' (or 'P(event) ='), and separates the coin (equally likely) from the football match (not equally likely).",
+   "group": "G11",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 2, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-048",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Summary Table matched to the corrected task.",
+   "lesson": 2,
+   "path": "summaryTablePrompt.explained",
+   "old": "why Gor Mahia FC's past winning streak does not change the probability of the next match result — directly challenging",
+   "new": "why a coin's earlier results do not change the probability of the next toss, and why a football match such as Gor Mahia FC's is not a case of equally likely outcomes — directly challenging",
+   "group": "G11",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 2, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-049",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Estimated activity time in this 40-minute lesson: Predict about 5, Observe about 22 (8 minutes rolling, 3 calculating, class table, then 20 token draws), Explain about 11, Driving Question Board about 6, Model about 8, so about 52. The 20 token draws are not needed for Worked Example B (it only needs the counts 10, 8 and 2), so they are replaced by counting; die rolling is cut from 8 to 5 minutes (60 rolls at 12 per minute); and the model cold-calls are dropped. New total about 41. If time is still short, the third model addition moves to the start of Lesson 3.",
+   "lesson": 2,
+   "path": "framework[1].learnerExperience",
+   "old": "is passed to each group. Learners predict, then draw one token blindly, record its colour, replace it, and repeat 20 times, recording outcomes.",
+   "new": "is shown on a tray and each group counts the tokens of each colour (no draws today; Worked Example B uses these counts).",
+   "group": "G12",
+   "group_headline": "Lesson 2 had about 52 minutes of activity in a 40-minute period; 20 token draws replaced by counting the bag, die rolling and model sharing shortened",
+   "where": "Lesson 2, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-050",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Sixty rolls by five learners with five roles takes about 5 minutes (12 rolls a minute).",
+   "lesson": 2,
+   "path": "framework[1].teacherMoves",
+   "old": "You have 8 minutes. Begin.' [Circulate to all groups. At the 4-minute mark, announce: 'You should be at approximately 30 rolls by now",
+   "new": "You have 5 minutes. Begin.' [Circulate to all groups. At the 2-minute mark, announce: 'You should be at approximately 25 rolls by now",
+   "group": "G12",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-051",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Draws removed to fit the period; the counts are all that Worked Example B needs.",
+   "lesson": 2,
+   "path": "framework[1].teacherMoves",
+   "old": "[Pour tokens onto a tray, let groups count.] 'Now do 20 draws with replacement. Record each outcome.'",
+   "new": "[Pour tokens onto a tray; groups count each colour and write the counts for Worked Example B. No draws today.]",
+   "group": "G12",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-052",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3,
+    7
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Summary Table matched to what learners now do.",
+   "lesson": 2,
+   "path": "summaryTablePrompt.observed",
+   "old": "and drew tokens from a bag of githeri-coloured tokens (white/maize, brown/beans, green/peas), recording all outcomes in tally tables and computing experimental probabilities as fractions, decimals, and percentages.",
+   "new": "and counted the tokens in a bag of githeri-coloured tokens (white/maize, brown/beans, green/peas), recording die outcomes in tally tables and computing experimental probabilities as fractions, decimals, and percentages.",
+   "group": "G12",
+   "where": "Lesson 2, summaryTablePrompt.observed",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-053",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Cold-call sharing dropped from the Model phase to save about a minute; the peer feedback itself stays.",
+   "lesson": 2,
+   "path": "framework[4].teacherMoves",
+   "old": "[Allow 90 seconds of paired feedback.] Cold-call 2 learners to share their partner's feedback: 'Baraka, what did your partner suggest you add to your model?' [WAIT TIME: 10 seconds.] Close by",
+   "new": "[Allow 90 seconds of paired feedback.] Close by",
+   "group": "G12",
+   "where": "Lesson 2, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-054",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The reflection pointed to the token draws, which no longer take lesson time.",
+   "lesson": 2,
+   "path": "teacherReflection",
+   "old": "If time was short, consider having the token-bag observation as a homework extension or a 5-minute starter in Lesson 3.",
+   "new": "If time was short, consider finishing addition 3 (the coin-and-football sentence) as a 5-minute starter in Lesson 3.",
+   "group": "G12",
+   "where": "Lesson 2, teacherReflection",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-055",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Estimated activity time in this 40-minute lesson: Predict about 6, Observe about 24 (10 minutes for the coin-and-die, 5 for the tree, 8 for 20 card draws), Explain about 10, Driving Question Board about 7, Model about 6, so about 53. Cuts: Predict writing 90 to 60 seconds per scenario; coin-and-die 10 to 6 minutes (24 tosses take about 5); tree 5 to 4; card draws 20 to 10 (3 minutes). New total about 41.",
+   "lesson": 6,
+   "path": "framework[0].teacherMoves",
+   "old": "You have 90 seconds — go.' Allow 90 seconds of silent individual writing. After time, say: 'Now read Scenario 2. Same thing — prediction and reason. 90 more seconds.'",
+   "new": "You have 60 seconds — go.' Allow 60 seconds of silent individual writing. After time, say: 'Now read Scenario 2. Same thing — prediction and reason. 60 more seconds.'",
+   "group": "G13",
+   "group_headline": "Lesson 6 had about 53 minutes of activity in a 40-minute period; coin-and-die, tree and card draws shortened (about 12 minutes saved)",
+   "where": "Lesson 6, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-056",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Ten pairs of draws are enough to see that the second draw is not influenced by the first and fit in 3 minutes.",
+   "lesson": 6,
+   "path": "framework[1].learnerExperience",
+   "old": "repeating 20 times — recording the pair",
+   "new": "repeating 10 times — recording the pair",
+   "group": "G13",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-057",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Coin-and-die time cut from 10 to 6 minutes (24 trials).",
+   "lesson": 6,
+   "path": "framework[1].teacherMoves",
+   "old": "You have 10 minutes.' Set a visible timer. After 5 minutes, pause and circulate: check that groups are recording combined outcomes (not just coin or just die separately). If a group records them separately, say: 'We need to know BOTH results together — each row is one trial with a coin AND a die result.' After 10 minutes, say:",
+   "new": "You have 6 minutes.' Set a visible timer. After 3 minutes, pause and circulate: check that groups are recording combined outcomes (not just coin or just die separately). If a group records them separately, say: 'We need to know BOTH results together — each row is one trial with a coin AND a die result.' After 6 minutes, say:",
+   "group": "G13",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-058",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Tree time cut from 5 to 4 minutes and the card experiment from 8 to 3 minutes (10 draws).",
+   "lesson": 6,
+   "path": "framework[1].teacherMoves",
+   "old": "Allow 5 minutes. Cold-call one group to display their tree diagram and explain one branch: 'Group from the back row — Nafisa, trace the path to outcome T4 on your tree and tell us what it means.' Wait 12 seconds. Transition to Experiment 2: 'Now the card draw. Replace the card every time. Why do you think I said replace? Write a one-sentence hypothesis.' Allow 30 seconds, then say: 'We will come back to that.' Monitor that groups shuffle between draws. After 8 minutes total for Experiment 2, call time.",
+   "new": "Allow 4 minutes. Cold-call one group to display their tree diagram and explain one branch: 'Group from the back row — Nafisa, trace the path to outcome T4 on your tree and tell us what it means.' Wait 12 seconds. Transition to Experiment 2: 'Now the card draw. Replace the card every time. Why do you think I said replace? Write a one-sentence hypothesis.' Allow 30 seconds, then say: 'We will come back to that.' Monitor that groups shuffle between draws. After 3 minutes for Experiment 2 (10 draws), call time.",
+   "group": "G13",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-059",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "The lesson said each football match IS an independent event, just like a coin toss, and that a streak carries 'zero information'. That overstates it: matches depend on team strength, so a long winning streak can say something about how strong the team is. What is true, and what the gambler's fallacy gets wrong, is that a streak never makes a loss 'due'. The text now treats independence as a model for matches, states the limit of the analogy, and fixes the streak length to the seven wins in the phenomenon (it said 'five-win streak' and 'match six'). Teachers should decide how far to take this with Grade 10 learners.",
+   "lesson": 6,
+   "path": "framework[2].teacherMoves",
+   "old": "Now connect to the phenomenon: 'Back to Gor Mahia. If each football match is an independent event — just like each coin toss — what does their five-win streak tell us about the probability of winning match six?' Wait 15 seconds. Cold-call 3 learners for brief responses.",
+   "new": "Now connect to the phenomenon: 'Back to Gor Mahia. Suppose we model each match as independent, like a coin toss — what does their seven-win streak tell us about the probability of winning match eight?' Wait 15 seconds. Cold-call 3 learners for brief responses. Then state the limit of the coin analogy: 'A coin is truly independent. A real team is only roughly so: a long streak may hint that the team is strong, but it never makes a loss \"due\".'",
+   "group": "G14",
+   "group_headline": "The coin analogy was stated too strongly (matches are only roughly independent: a streak can hint at team strength, but never makes a loss 'due'); limit now stated in Lessons 6-8 and the Final Explanation; 'five-win' corrected to seven",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Ch. 3 Probability Topics (independent events); Tversky & Kahneman (1971), 'Belief in the law of small numbers', Psychological Bulletin (the gambler's fallacy)",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-060",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: Summary Table states independence of matches as a model, with the streak length matching the phenomenon (seven).",
+   "lesson": 6,
+   "path": "summaryTablePrompt.explained",
+   "old": "Each Gor Mahia football match is an independent event — just like each coin toss and each die roll. The five-win streak carries zero mathematical information about the probability of winning match six.",
+   "new": "A coin toss and a die roll are independent events, and we model each Gor Mahia match the same way as a simplification. On that model the seven-win streak carries zero mathematical information about the probability of winning match eight; a real team's form may hint at its strength, but a streak never makes a loss 'due'.",
+   "group": "G14",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 6, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-061",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: independence of matches presented as a model.",
+   "lesson": 7,
+   "path": "summaryTablePrompt.explained",
+   "old": "Because each match Gor Mahia plays is an independent event, the probability of the team winning two consecutive matches",
+   "new": "If we model each match Gor Mahia plays as an independent event, the probability of the team winning two consecutive matches",
+   "group": "G14",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 7, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-062",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: storyline note matched to the model-with-limits wording.",
+   "lesson": 8,
+   "path": "slo.purposeInStoryline",
+   "old": "each football match is an independent event, past results cannot change future probabilities (the gambler's fallacy is mathematically false),",
+   "new": "each football match can be modelled as an independent event, so past results cannot make a loss 'due' (the gambler's fallacy is mathematically false),",
+   "group": "G14",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 8, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-063",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: Summary Table separates truly independent events from the football model.",
+   "lesson": 8,
+   "path": "summaryTablePrompt.learned",
+   "old": "Each football match (and every chance event studied) is an independent event — its probability is fixed and cannot be changed by past outcomes.",
+   "new": "Each coin toss, die roll and draw with replacement is an independent event, and a football match can be modelled as one — its probability is fixed and cannot be changed by past outcomes.",
+   "group": "G14",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 8, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-064",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    1,
+    6,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: model answer for Part 4(b) states the assumption and the limit.",
+   "path": "sections[3].exemplar",
+   "old": "The fan is wrong. Each match is an independent event, just like each coin toss, so the seven-match streak carries no information about match eight. The probability of winning the eighth match is still the same fixed 1/3. The streak does not raise it or lower it.",
+   "new": "The fan is wrong. In this question each match is treated as an independent event, just like each coin toss, so the seven-match streak carries no information about match eight and the probability of winning the eighth match is still the same fixed 1/3; the streak does not raise it or lower it. (A real team's form can give some hint about its strength, but a streak never makes a loss 'due'.)",
+   "group": "G14",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Final Explanation, Part 4: Independent events, the multiplication rule and why the stall always wins, exemplar",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-065",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    1,
+    6,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: model answer for Part 5 states independence as a model.",
+   "path": "sections[4].exemplar",
+   "old": "Most importantly, each match is an independent event, so a coin or a team has no memory: the probability of the next match stays fixed no matter how long the winning streak is.",
+   "new": "Most importantly, if each match is treated as an independent event, then like a coin a team has no memory: the probability of the next match stays fixed no matter how long the winning streak is.",
+   "group": "G14",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Final Explanation, Part 5: Answering the Driving Question, exemplar",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-066",
+   "kind": "edit",
+   "target": "unit",
+   "criteria": [
+    1,
+    9
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The text claimed that real day-to-day rain in Kisumu is independent (chance unchanged by the previous day) and quoted a '~70% historic' figure. Rainfall occurrence is persistent: wet days cluster, so the real chance of two wet days in a row is higher than 0.7 × 0.7 = 0.49. I could not verify the 70% figure either. The phenomenon is kept but now says 0.7 and independence are modelling assumptions. A teacher may substitute a real Kenya Meteorological Department figure.",
+   "path": "supportingPhenomena",
+   "old": "A student notices that the probability of rain on any given day in Kisumu during April (historically ~70%) does not change based on whether it rained the day before. This real Kenyan weather context supports understanding of independent events and how probabilities are combined across two trials.",
+   "new": "A student notices that Kisumu has many rainy days in April and wonders whether rain on one day changes the chance of rain on the next. For this unit we use a simple model: the chance of rain on any April day is 0.7 and the days are independent. Real weather is not exactly independent (wet days tend to come in runs), so the model is an approximation; it supports understanding of independent events and how probabilities are combined across two trials.",
+   "group": "G15",
+   "group_headline": "Kisumu rain was presented as truly independent day to day with an unverified '~70%' figure; now stated as a modelling assumption (real rain comes in runs)",
+   "reference": "Wilks, Statistical Methods in the Atmospheric Sciences (precipitation occurrence is persistent and modelled with Markov chains); OpenStax, Introductory Statistics, Ch. 3 (independent events)",
+   "where": "Unit overview, supportingPhenomena",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-067",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    9
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Card A problem now states the independence assumption it needs. Answer unchanged: 0.7 × 0.7 = 0.49.",
+   "lesson": 7,
+   "path": "framework[0].learnerExperience",
+   "old": "'Weather in Kisumu: the probability it rains on any given day in April is 0.7. What is the probability it rains on BOTH Monday AND Tuesday?'",
+   "new": "'Weather in Kisumu: suppose the probability it rains on any given day in April is 0.7, and treat each day as independent of the day before. What is the probability it rains on BOTH Monday AND Tuesday?'",
+   "group": "G15",
+   "reference": "Wilks, Statistical Methods in the Atmospheric Sciences; OpenStax, Introductory Statistics, Ch. 3",
+   "where": "Lesson 7, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-068",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    6,
+    9
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: teacher states the limit of the rain model while learners are checking their answers.",
+   "lesson": 7,
+   "path": "framework[2].teacherMoves",
+   "old": "Independent means we MULTIPLY.'",
+   "new": "Independent means we MULTIPLY.' Then say: 'Real weather is not perfectly independent — wet days often come in runs — so 0.49 is an answer for our model, not a forecast.'",
+   "group": "G15",
+   "reference": "Wilks, Statistical Methods in the Atmospheric Sciences; OpenStax, Introductory Statistics, Ch. 3",
+   "where": "Lesson 7, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-069",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Audit item confirmed. P(A and B) = P(A) × P(B), and P(B) ≤ 1, so P(A and B) ≤ P(A); equality holds only when P(B) = 1 (or P(A) = 0). Checked with 0.7 × 1 = 0.7 (equal) and 0.7 × 0.7 = 0.49 (less). In all three scenario cards of the lesson the product is strictly less.",
+   "lesson": 7,
+   "path": "framework[3].teacherMoves",
+   "old": "(2) 'The probability of two independent events both occurring is LESS than either individual probability';",
+   "new": "(2) 'The probability of two independent events both occurring is less than or equal to either individual probability (equal only when the other event is certain, P = 1)';",
+   "group": "G16",
+   "group_headline": "'Always less than either' corrected to 'less than or equal to' (equal only if the other probability is 1)",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules) (multiplication rule for independent events)",
+   "where": "Lesson 7, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-070",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: same correction in the Summary Table.",
+   "lesson": 7,
+   "path": "summaryTablePrompt.learned",
+   "old": "The compound probability of two independent events is always less than either individual probability.",
+   "new": "The compound probability of two independent events is less than or equal to either individual probability (equal only when the other probability is 1); in all three examples today it is strictly less.",
+   "group": "G16",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Chapter 3 Probability Topics (equally likely outcomes, independent and mutually exclusive events, addition and multiplication rules)",
+   "where": "Lesson 7, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-071",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "The sub-strand content in UNIT limits independent events to 'a maximum of two experiments and two outcomes'. Lesson 8 (and the Final Explanation, Part 4a) multiplied three matches. Changed to two matches: 0.6 × 0.6 = 0.36 (recomputed). The teacher can keep three matches as an enrichment extension if preferred; Lesson 7 already offers a third branch as an early-finisher extension.",
+   "lesson": 8,
+   "path": "framework[1].learnerExperience",
+   "old": "Gor Mahia plays three consecutive matches. Assume each match is independent and P(Gor Mahia wins) = 0.6. Calculate P(wins all three). What does this tell a bettor?",
+   "new": "Gor Mahia plays two consecutive matches. Assume each match is independent and P(Gor Mahia wins) = 0.6. Calculate P(wins both). What does this tell a bettor?",
+   "group": "G17",
+   "group_headline": "Lesson 8 and the Final Explanation multiplied three matches, but the sub-strand content limits independent events to two experiments with two outcomes; now two matches (0.6 × 0.6 = 0.36)",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-072",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: 0.6 × 0.6 = 0.36.",
+   "lesson": 8,
+   "path": "framework[1].teacherMoves",
+   "old": "'What does P = 0.216 mean for a person betting on all three matches?'",
+   "new": "'What does P = 0.36 mean for a person betting on both matches?'",
+   "group": "G17",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-073",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    5,
+    13,
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on of the two-match change (0.36, 36%), and added expected answers for Scenarios 1 to 3, which had none. The old claim that a lower combined chance shows 'repeated betting is a losing strategy' was also loose: a combined bet is less likely to win, but whether gambling loses on average depends on the payout (see the stall group).",
+   "lesson": 8,
+   "path": "framework[1].formativeAssessment",
+   "old": "In Scenario 4, groups correctly compute 0.6 × 0.6 × 0.6 = 0.216 AND write a sentence explaining that even a 60% chance per match gives only a ~22% chance of winning all three, illustrating why repeated betting is a losing strategy.",
+   "new": "Expected answers: Scenario 1: P(Heads) = 1/2 on every toss including the 6th, because the coin has no memory; Scenario 2: P = 1/6, an impossible event has P = 0 (for example rolling a 7), and every probability lies from 0 to 1; Scenario 3: P = 0, so the events are mutually exclusive. In Scenario 4, groups correctly compute 0.6 × 0.6 = 0.36 AND write a sentence explaining that even a 60% chance per match gives only a 36% chance of winning both, so a bet that needs several things to go right is less likely to win than any single part of it.",
+   "group": "G17",
+   "where": "Lesson 8, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-074",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: ten games in a row went well beyond the two-experiment scope. 0.6 × 0.6 = 0.36.",
+   "lesson": 8,
+   "path": "framework[2].teacherMoves",
+   "old": "(b) 'Your probability line — where would you place P(Gor Mahia wins every match for 10 games in a row)? Calculate it.'",
+   "new": "(b) 'Your probability line — where would you place P(Gor Mahia wins two matches in a row) if P(win) = 0.6? Calculate it.'",
+   "group": "G17",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-075",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: Summary Table now says two matches.",
+   "lesson": 8,
+   "path": "summaryTablePrompt.observed",
+   "old": "and a three-match independent-event multiplication)",
+   "new": "and a two-match independent-event multiplication)",
+   "group": "G17",
+   "where": "Lesson 8, summaryTablePrompt.observed",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-076",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: Final Explanation Part 4(a) limited to two matches. Answer 1/3 × 1/3 = 1/9.",
+   "path": "sections[3].prompt",
+   "old": "Calculate the probability that Gor Mahia wins two matches in a row, and then three matches in a row. Show the rule you use.",
+   "new": "Calculate the probability that Gor Mahia wins two matches in a row. Show the rule you use.",
+   "group": "G17",
+   "where": "Final Explanation, Part 4: Independent events, the multiplication rule and why the stall always wins, prompt",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-077",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    2,
+    10
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: model answer for Part 4(a) for two matches only.",
+   "path": "sections[3].exemplar",
+   "old": "Two wins in a row: 1/3 × 1/3 = 1/9. Three wins in a row: 1/3 × 1/3 × 1/3 = 1/27. The probability of a longer streak gets smaller with each extra match.",
+   "new": "Two wins in a row: 1/3 × 1/3 = 1/9, which is smaller than the probability of one win (1/3): needing both matches to go right makes the outcome less likely.",
+   "group": "G17",
+   "where": "Final Explanation, Part 4: Independent events, the multiplication rule and why the stall always wins, exemplar",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-078",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    10
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Lesson 8 argued that gambling loses because the multiplication rule makes winning several bets in a row unlikely. That is only part of the story: a long chance of losing a combined bet does not by itself make gambling a loss, since the payout could be generous. The reason gambling loses on average is that the expected payout is below the money staked, which is exactly what Lesson 7's stall calculation shows (collects Ksh 3,600, pays out Ksh 1,800 over 180 spins; checked: 180 × 20 = 3,600; 60 wins × 30 = 1,800). The poster argument now uses both.",
+   "lesson": 8,
+   "path": "framework[2].learnerExperience",
+   "old": "(d) a mathematical argument for why gambling is a losing proposition (using the multiplication rule for independent events);",
+   "new": "(d) a mathematical argument for why gambling is a losing proposition (the multiplication rule shows a bet that needs two things to go right is less likely to win, and the Lesson 7 stall calculation shows that, on average, the stall pays out less than it collects);",
+   "group": "G18",
+   "group_headline": "Lesson 8 explained why gambling loses using only the multiplication rule; now also uses the Lesson 7 stall (average payout below money staked), which is the real reason",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Ch. 4 Discrete Random Variables (expected value of a game of chance)",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-079",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: Summary Table matched to the poster argument.",
+   "lesson": 8,
+   "path": "summaryTablePrompt.learned",
+   "old": "Gambling is a losing proposition because the multiplication rule for independent events shows that P(winning multiple consecutive bets) decreases sharply with each additional trial.",
+   "new": "Gambling is a losing proposition because the multiplication rule shows that P(winning several bets in a row) falls with each additional bet, and because, as the Lesson 7 stall showed, the average payout is less than the money staked.",
+   "group": "G18",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Ch. 4 Discrete Random Variables (expected value)",
+   "where": "Lesson 8, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-080",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    1,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: look-for matched to the poster argument.",
+   "lesson": 8,
+   "path": "framework[2].formativeAssessment",
+   "old": "AND a correct multiplication calculation showing how probability decreases across consecutive independent bets.",
+   "new": "AND a correct multiplication calculation for two consecutive independent bets, and a use of the stall's expected collection versus payout.",
+   "group": "G18",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Ch. 4 Discrete Random Variables (expected value)",
+   "where": "Lesson 8, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-081",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Estimated activity time in this 80-minute lesson: Predict about 10, Observe about 15, Explain about 30 (15 poster + 8 gallery walk + revision + vote), Driving Question Board about 10, Model about 36 (8 + 20 + 5 + transitions), so about 100. Cuts: Observe 12 to 10, poster 15 to 10, gallery walk 8 to 4, model comparison 8 to 5, written assessment 20 to 16, reflection 5 to 3, and a cap of 8 questions for dot voting. New total about 78.",
+   "lesson": 8,
+   "path": "framework[1].teacherMoves",
+   "old": "Set a visible 12-minute timer.",
+   "new": "Set a visible 10-minute timer.",
+   "group": "G19",
+   "group_headline": "Lesson 8 had about 100 minutes of activity in an 80-minute period; Evidence Pack, poster, gallery walk, model comparison, assessment and reflection shortened",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-082",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 10-minute timer.",
+   "lesson": 8,
+   "path": "framework[1].teacherMoves",
+   "old": "After 12 minutes, say: 'Complete",
+   "new": "After 10 minutes, say: 'Complete",
+   "group": "G19",
+   "where": "Lesson 8, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-083",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 10-minute timer.",
+   "lesson": 8,
+   "path": "framework[1].learnerExperience",
+   "old": "Groups work for 12 minutes, recording",
+   "new": "Groups work for 10 minutes, recording",
+   "group": "G19",
+   "where": "Lesson 8, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-084",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Poster 15 to 10 minutes and gallery walk 8 to 4 minutes.",
+   "lesson": 8,
+   "path": "framework[2].learnerExperience",
+   "old": "Groups have 15 minutes to build the poster, then conduct a Gallery Walk: posters are displayed around the room, one group member stays as 'explainer' while the other three walk. Walkers use a structured feedback card with two prompts: 'The strongest mathematical argument on this poster is ___' and 'One thing that could be more precise is ___'. After 8 minutes of walking",
+   "new": "Groups have 10 minutes to build the poster, then conduct a Gallery Walk: posters are displayed around the room, one group member stays as 'explainer' while the other three walk. Walkers use a structured feedback card with two prompts: 'The strongest mathematical argument on this poster is ___' and 'One thing that could be more precise is ___'. After 4 minutes of walking",
+   "group": "G19",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-085",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 10-minute poster time.",
+   "lesson": 8,
+   "path": "framework[2].teacherMoves",
+   "old": "Set a 15-minute timer.",
+   "new": "Set a 10-minute timer.",
+   "group": "G19",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-086",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "A board built over 8 lessons can hold 30 or more questions; dotting each one cannot fit in about 8 minutes, so the class dots a chosen 8.",
+   "lesson": 8,
+   "path": "framework[3].teacherMoves",
+   "old": "After all questions are dotted, focus on any red-dot questions.",
+   "new": "If the board holds more than 8 questions, the class first chooses the 8 that best cover Lessons 1 to 7 and only those are dotted; the rest stay on the board without dots. After the questions are dotted, focus on any red-dot questions.",
+   "group": "G19",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-087",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Shortened to fit.",
+   "lesson": 8,
+   "path": "framework[4].learnerExperience",
+   "old": "Part A — Model Comparison (8 min)",
+   "new": "Part A — Model Comparison (5 min)",
+   "group": "G19",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-088",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Five short questions at about 3 minutes each.",
+   "lesson": 8,
+   "path": "framework[4].learnerExperience",
+   "old": "Part B — Written Assessment (20 min)",
+   "new": "Part B — Written Assessment (16 min)",
+   "group": "G19",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-089",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Shortened to fit.",
+   "lesson": 8,
+   "path": "framework[4].learnerExperience",
+   "old": "Part C — Personal Reflection (5 min)",
+   "new": "Part C — Personal Reflection (3 min)",
+   "group": "G19",
+   "where": "Lesson 8, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-090",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 5-minute comparison.",
+   "lesson": 8,
+   "path": "framework[4].teacherMoves",
+   "old": "Set 8-minute timer.",
+   "new": "Set 5-minute timer.",
+   "group": "G19",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-091",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 16-minute assessment.",
+   "lesson": 8,
+   "path": "framework[4].teacherMoves",
+   "old": "You have 20 minutes. Use every probability term",
+   "new": "You have 16 minutes. Use every probability term",
+   "group": "G19",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-092",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Matches the 3-minute reflection.",
+   "lesson": 8,
+   "path": "framework[4].teacherMoves",
+   "old": "Allow 5 minutes. Close the lesson",
+   "new": "Allow 3 minutes. Close the lesson",
+   "group": "G19",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-093",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    2
+   ],
+   "category": "language",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "'Form 3' is the old 8-4-4 system; CBE language uses Grades.",
+   "lesson": 6,
+   "path": "framework[4].teacherMoves",
+   "old": "a Form 3 student who missed today's lesson",
+   "new": "a Grade 10 learner who missed today's lesson",
+   "group": "G20",
+   "group_headline": "Old school-level terms ('Form 3', 'Standard 8') replaced with CBE grades",
+   "where": "Lesson 6, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-094",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    2,
+    9
+   ],
+   "category": "language",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "'Standard 8' is the old primary system; the last primary grade under CBE is Grade 6.",
+   "lesson": 8,
+   "path": "framework[2].teacherMoves",
+   "old": "a Standard 8 pupil",
+   "new": "a Grade 6 learner",
+   "group": "G20",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-095",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "With 24 trials and P(H3) = 1/12, the number of H3 results is binomial with mean 2; I computed that only about 74% of groups will see 1 to 3 (P(0) ≈ 0.12, P(1) ≈ 0.27, P(2) ≈ 0.28, P(3) ≈ 0.19), so about a quarter of groups will look 'wrong'. Teachers need to expect this and use pooling, as in Lesson 1.",
+   "lesson": 6,
+   "path": "framework[2].teacherMoves",
+   "old": "Listen for approximate clustering around 1/12.",
+   "new": "Listen for approximate clustering around 1/12. With only 24 trials a cell such as H3 is expected about twice, so counts from 0 to 5 are normal; write every group's H3 count on the board and add them: the class total is much closer to 1/12 of all trials.",
+   "group": "G21",
+   "group_headline": "24 trials per group cannot show each of the 12 outcomes near 1/12; pooling class counts added so the comparison is realistic",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Ch. 3 and the Law of Large Numbers (relative frequency approaches probability with more trials)",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-096",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    8,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on: the Summary Table no longer claims each group saw each outcome about 1/12 of the time.",
+   "lesson": 6,
+   "path": "summaryTablePrompt.observed",
+   "old": "They found approximately 12 equally likely combined outcomes, each occurring roughly 1/12 of the time.",
+   "new": "They listed all 12 equally likely combined outcomes; with only 24 trials per group the counts varied a lot, but the pooled class counts came closer to 1/12 of the trials for each.",
+   "group": "G21",
+   "reference": "OpenStax, Introductory Statistics (2nd ed.), Ch. 3 and the Law of Large Numbers",
+   "where": "Lesson 6, summaryTablePrompt.observed",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-097",
+   "kind": "edit",
+   "target": "lesson",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The sub-strand had no Kiswahili support and no lesson-specific access ideas (guideline 12). Added one short support at the first experiment, where the key words are first used. I believe these Kiswahili terms are standard (uwezekano = probability, tukio = event, sarafu = coin, kete = die, kamari = gambling), but I cannot verify them, so a Kiswahili-speaking teacher must confirm the words before use. The Final Explanation instructions get the same offer.",
+   "lesson": 1,
+   "path": "framework[1].teacherMoves",
+   "old": "Demonstrate once. 4. Circulate during the experiment.",
+   "new": "Demonstrate once. Language and access support: write the key words on the board with Kiswahili beside them (uwezekano = probability, tukio = event, sarafu = coin, kete = die, kamari = gambling) and let learners talk in Kiswahili or their home language before answering in English; for learners with fine-motor or visual difficulty, give the Caller or Recorder role, use a large-print tally table, or let them show their results orally or by pointing to the board table. 4. Circulate during the experiment.",
+   "group": "G22",
+   "group_headline": "Added Kiswahili key words (to be confirmed by a teacher) and simple access options for learners with fine-motor or visual difficulty; the sub-strand had none",
+   "where": "Lesson 1, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-098",
+   "kind": "edit",
+   "target": "final_explanation",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Language support and a second way to show understanding for the summative task (guideline 12). Kiswahili word to be confirmed by a teacher (see the group root).",
+   "path": "instructions",
+   "old": "Where a question says 'suppose', use the numbers given for that question only.",
+   "new": "Where a question says 'suppose', use the numbers given for that question only. You may write the Kiswahili word beside an English key word (for example uwezekano for probability) if it helps you explain. If writing is a barrier, ask your teacher about explaining Part 5 aloud.",
+   "group": "G22",
+   "where": "Final Explanation, instructions",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-099",
+   "kind": "set",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The contract allows only three level fields (excellent, proficient, developing) and the printed headings are fixed. Each descriptor now begins with the CBE level it stands for (Exceeds, Meets, Approaches Expectations) so teachers can see the match. The descriptors themselves are unchanged.",
+   "path": "rubric",
+   "value": [
+    {
+     "criterion": "Correct use of probability calculations (formula, addition rule, multiplication rule)",
+     "excellent": "Exceeds Expectations: All calculations are correct and in simplest form, the correct rule is named and used each time, and working is clearly shown.",
+     "proficient": "Meets Expectations: Most calculations are correct with the correct rule used; there may be one small arithmetic slip or missing step of working.",
+     "developing": "Approaches Expectations: Several calculations are incorrect, or rules are mixed up (for example adding when events should be multiplied), or working is missing."
+    },
+    {
+     "criterion": "Understanding of independence and the gambler's fallacy",
+     "excellent": "Exceeds Expectations: Clearly explains that each independent event has a fixed probability that past results cannot change, names the gambler's fallacy, and applies it to both the coin and Gor Mahia.",
+     "proficient": "Meets Expectations: States that past outcomes do not change future probability and applies it to the coin or the football example, but the explanation is less complete.",
+     "developing": "Approaches Expectations: Does not reject the idea that a team or coin is 'due', or gives an explanation that is unclear or incorrect."
+    },
+    {
+     "criterion": "Understanding of the range of probability and mutually exclusive events",
+     "excellent": "Exceeds Expectations: Correctly explains that 0 ≤ P ≤ 1, that probabilities of all outcomes sum to 1, and when events are mutually exclusive and when the addition rule can and cannot be used.",
+     "proficient": "Meets Expectations: Shows the range and the addition rule correctly but gives limited explanation of when the rule does not apply.",
+     "developing": "Approaches Expectations: Confuses the range of probability or the meaning of mutually exclusive, or cannot say when the addition rule applies."
+    },
+    {
+     "criterion": "Connection to the Driving Question and the Kenyan context",
+     "excellent": "Exceeds Expectations: Combines all four concepts in a coherent argument, explains how independence is compatible with predicting what is likely, uses the Gor Mahia debate, betting advertisements and the stall data accurately, and ends with a thoughtful responsible decision.",
+     "proficient": "Meets Expectations: Uses most concepts and the Kenyan context correctly, and gives a reasonable conclusion about responsible decisions.",
+     "developing": "Approaches Expectations: Gives a general answer with few concepts, little or no reference to the Kenyan phenomenon, or no conclusion about decision-making."
+    },
+    {
+     "criterion": "Communication and reasoning",
+     "excellent": "Exceeds Expectations: Writing is clear, logical and uses correct mathematical vocabulary in full sentences throughout.",
+     "proficient": "Meets Expectations: Writing is mostly clear with mostly correct vocabulary.",
+     "developing": "Approaches Expectations: Writing is hard to follow or key vocabulary is missing or misused."
+    }
+   ],
+   "old": "[{\"criterion\": \"Correct use of probability calculations (formula, addition rule, multiplication rule)\", \"excellent\": \"All calculations are correct and in simplest form, the correct rule is named and used each time, and working is clearly shown.\", \"proficient\": \"Most calculations are correct with the correct rule used; there may be one small arithmetic slip or missing step of working.\", \"developing\": \"Several calculations are incorrect, or rules are mixed up (for example adding when events should be multiplied), or working is missing.\"}, {\"criterion\": \"Understanding of independence and the gambler's fallacy\", \"excellent\": \"Clearly explains that each independent event has a fixed probability that past results cannot change, names the gambler's fallacy, and applies it to both the coin and Gor Mahia.\", \"proficient\": \"States that past outcomes do not change future probability and applies it to the coin or the football example, but the explanation is less complete.\", \"developing\": \"Does not reject the idea that a team or coin is 'due', or gives an explanation that is unclear or incorrect.\"}, {\"criterion\": \"Understanding of the range of probability and mutually exclusive events\", \"excellent\": \"Correctly explains that 0 ≤ P ≤ 1, that probabilities of all outcomes sum to 1, and when events are mutually exclusive and when the addition rule can and cannot be used.\", \"proficient\": \"Shows the range and the addition rule correctly but gives limited explanation of when the rule does not apply.\", \"developing\": \"Confuses the range of probability or the meaning of mutually exclusive, or cannot say when the addition rule applies.\"}, {\"criterion\": \"Connection to the Driving Question and the Kenyan context\", \"excellent\": \"Combines all four concepts in a coherent argument, explains how independence is compatible with predicting what is likely, uses the Gor Mahia debate, betting advertisements and the stall data accurately, and ends with a thoughtful responsible decision.\", \"proficient\": \"Uses most concepts and the Kenyan context correctly, and gives a reasonable conclusion about responsible decisions.\", \"developing\": \"Gives a general answer with few concepts, little or no reference to the Kenyan phenomenon, or no conclusion about decision-making.\"}, {\"criterion\": \"Communication and reasoning\", \"excellent\": \"Writing is clear, logical and uses correct mathematical vocabulary in full sentences throughout.\", \"proficient\": \"Writing is mostly clear with mostly correct vocabulary.\", \"developing\": \"Writing is hard to follow or key vocabulary is missing or misused.\"}]",
+   "new": "[{\"criterion\": \"Correct use of probability calculations (formula, addition rule, multiplication rule)\", \"excellent\": \"Exceeds Expectations: All calculations are correct and in simplest form, the correct rule is named and used each time, and working is clearly shown.\", \"proficient\": \"Meets Expectations: Most calculations are correct with the correct rule used; there may be one small arithmetic slip or missing step of working.\", \"developing\": \"Approaches Expectations: Several calculations are incorrect, or rules are mixed up (for example adding when events should be multiplied), or working is missing.\"}, {\"criterion\": \"Understanding of independence and the gambler's fallacy\", \"excellent\": \"Exceeds Expectations: Clearly explains that each independent event has a fixed probability that past results cannot change, names the gambler's fallacy, and applies it to both the coin and Gor Mahia.\", \"proficient\": \"Meets Expectations: States that past outcomes do not change future probability and applies it to the coin or the football example, but the explanation is less complete.\", \"developing\": \"Approaches Expectations: Does not reject the idea that a team or coin is 'due', or gives an explanation that is unclear or incorrect.\"}, {\"criterion\": \"Understanding of the range of probability and mutually exclusive events\", \"excellent\": \"Exceeds Expectations: Correctly explains that 0 ≤ P ≤ 1, that probabilities of all outcomes sum to 1, and when events are mutually exclusive and when the addition rule can and cannot be used.\", \"proficient\": \"Meets Expectations: Shows the range and the addition rule correctly but gives limited explanation of when the rule does not apply.\", \"developing\": \"Approaches Expectations: Confuses the range of probability or the meaning of mutually exclusive, or cannot say when the addition rule applies.\"}, {\"criterion\": \"Connection to the Driving Question and the Kenyan context\", \"excellent\": \"Exceeds Expectations: Combines all four concepts in a coherent argument, explains how independence is compatible with predicting what is likely, uses the Gor Mahia debate, betting advertisements and the stall data accurately, and ends with a thoughtful responsible decision.\", \"proficient\": \"Meets Expectations: Uses most concepts and the Kenyan context correctly, and gives a reasonable conclusion about responsible decisions.\", \"developing\": \"Approaches Expectations: Gives a general answer with few concepts, little or no reference to the Kenyan phenomenon, or no conclusion about decision-making.\"}, {\"criterion\": \"Communication and reasoning\", \"excellent\": \"Exceeds Expectations: Writing is clear, logical and uses correct mathematical vocabulary in full sentences throughout.\", \"proficient\": \"Meets Expectations: Writing is mostly clear with mostly correct vocabulary.\", \"developing\": \"Approaches Expectations: Writing is hard to follow or key vocabulary is missing or misused.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-100",
+   "kind": "flag",
+   "target": "final_explanation",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The CBE scale has four levels (Exceeds, Meets, Approaches, Below Expectations) but the current data contract allows only three level fields, so the 'Below Expectations' level cannot be written into the rubric. Teachers can record it as work that does not reach the 'Approaches' descriptor. The contract owner would need to add a fourth field.",
+   "path": "rubric",
+   "location": "Final Explanation, rubric",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-101",
+   "kind": "flag",
+   "target": "unit",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "No KICD source for Essential Mathematics is available here: the Grade 10 Mathematics PDF in data/raw/curriculum_pdfs is the Core Mathematics design, so the learning outcomes (a to i), key inquiry question, competencies, values and PCIs could not be checked word for word and were not changed. Differences from the Core text that look worth a check against the Essential design: Core Sub-Strand 3.2 'Probability 1' has 12 lessons and 7 outcomes (this data has 8 lessons and 9 outcomes); the Core key inquiry question is 'How is probability applied in real life situations?' (the data has 'How do we apply probability in day-to-day life?'); the Core PCIs are Social Cohesion, Life Skills and Road Safety (the data has Life Skills and Financial Literacy); Core values are Responsibility and Social Justice (the data has Responsibility and Unity). Strand and sub-strand numbers (3.0 and 3.2) and names match the Core design. All nine outcomes are taught and assessed across Lessons 1 to 8 and the Final Explanation.",
+   "path": "learningOutcomes",
+   "location": "Unit overview, learning outcomes and KICD wording",
+   "where": "Unit overview, learning outcomes and KICD wording",
+   "applied_at": "2026-10-17T12:30:03"
+  },
+  {
+   "id": "essmath_3_2-102",
+   "kind": "flag",
+   "target": "unit",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The phenomenon states as fact that during the 2023 Kenyan Premier League season fans and commentators debated whether Gor Mahia's winning streak was 'bound to end soon', and Lesson 1 gives a specific 7-match streak. I cannot verify this. If it is not accurate, label the scenario as illustrative ('imagine a team on a winning streak') or replace it with a real streak the teacher can confirm. Left unchanged because the teachers chose this phenomenon.",
+   "path": "phenomenon",
+   "location": "Unit overview, phenomenon",
+   "where": "Unit overview, phenomenon",
+   "applied_at": "2026-10-17T12:30:03"
+  }
+ ]
+}

@@ -1,0 +1,1685 @@
+{
+ "module": "gensci_1_7",
+ "records": [
+  {
+   "id": "gensci_1_7-001",
+   "kind": "edit",
+   "target": "unit",
+   "path": "totalDuration",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lessons 1, 2, 7 and 8 are 40 minutes each (4 x 40 = 160) and Lessons 3, 4, 5 and 6 are 80-minute double periods (4 x 80 = 320). 160 + 320 = 480 minutes, not 320. The old figure treated all eight lessons as single periods.",
+   "old": "8 lessons × 40 minutes = 320 minutes total",
+   "new": "8 lessons (4 × 40 minutes + 4 × 80 minutes) = 480 minutes total",
+   "where": "Unit overview, totalDuration",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-002",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old analogy said a human cell would be as long as a football pitch and a virus as big as a sesame seed. Both are wrong by a factor of thousands, so students would carry away a false sense of scale. Checked twice: maize grain about 8 mm and a bacterium about 2 micrometres gives 8,000 / 2 = 4,000 times magnification; a human cell of about 20 micrometres x 4,000 = 80,000 micrometres = 8 cm (a palm); influenza virus about 100 nm = 0.1 micrometre x 4,000 = 400 micrometres = 0.4 mm (a speck of dust). A football pitch (100 m) would need a 25 mm cell and a sesame seed (about 3 mm) would be a virus 7 times too large.",
+   "lesson": 2,
+   "reference": "OpenStax Biology 2e, Chapter 4 (cell size) and Chapter 21 (viruses); CDC influenza virus structure (about 100 nanometres)",
+   "group": "G1",
+   "group_headline": "The size-scale analogy was wrong by a huge margin (a human cell is not a football pitch long, a virus is not a sesame seed); it now uses a maize grain, a hand and a speck of dust",
+   "old": "'If a single grain of dry maize were the size of a typical bacterium, then to match the size of a human cell you would need to walk the entire length of a standard football pitch — such as the ones at Kisumu Boys High School grounds. A virus is so much smaller still that on the same scale it would be a single sesame seed next to that maize grain.'",
+   "new": "'If a typical bacterium (about 2 micrometres) were magnified until it was the size of a grain of dry maize (about 8 mm), everything would be magnified about 4,000 times. On that scale a human cell would be about as wide as the palm of your hand, and an influenza virus would be a speck of dust less than half a millimetre across, much smaller than a grain of sand.'",
+   "where": "Lesson 2, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-003",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the teacher moves still named the football pitch analogy.",
+   "lesson": 2,
+   "group": "G1",
+   "old": "delivers the Kisumu football pitch size-scale analogy as a 2-minute whole-class explanation with a quick sketch on the board showing the three organisms at relative scale",
+   "new": "delivers the maize-grain size-scale analogy as a 2-minute whole-class explanation (maize grain = bacterium, a palm-wide cell, a speck of dust for the virus) with a quick sketch on the board showing the three organisms at relative scale",
+   "reference": "OpenStax Biology 2e, Chapter 4 (cell size) and Chapter 21 (viruses); CDC influenza virus structure (about 100 nanometres)",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-004",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].sensemakingStrategy",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the rationale still described the football pitch.",
+   "lesson": 2,
+   "group": "G1",
+   "old": "The size-scale analogy uses a locally familiar landmark (a Kenyan school football pitch) to make abstract magnitude concrete and memorable.",
+   "new": "The size-scale analogy uses familiar objects (a maize grain, a hand, a speck of dust) to make abstract magnitude concrete and memorable.",
+   "reference": "OpenStax Biology 2e, Chapter 4 (cell size) and Chapter 21 (viruses); CDC influenza virus structure (about 100 nanometres)",
+   "where": "Lesson 2, Observe Phase, sensemakingStrategy",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-005",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: Explain Phase revisits the analogy by its old name.",
+   "lesson": 2,
+   "group": "G1",
+   "old": "teacher revisits the football pitch analogy",
+   "new": "teacher revisits the maize-grain scale analogy",
+   "reference": "OpenStax Biology 2e, Chapter 4 (cell size) and Chapter 21 (viruses); CDC influenza virus structure (about 100 nanometres)",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-006",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: reflection question named the old analogy.",
+   "lesson": 2,
+   "group": "G1",
+   "old": "Did the Kisumu football pitch size analogy land",
+   "new": "Did the maize-grain size analogy land",
+   "reference": "OpenStax Biology 2e, Chapter 4 (cell size) and Chapter 21 (viruses); CDC influenza virus structure (about 100 nanometres)",
+   "where": "Lesson 2, teacherReflection",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-007",
+   "kind": "edit",
+   "target": "unit",
+   "path": "storylineThread",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the unit storyline repeated the wrong analogy.",
+   "group": "G1",
+   "old": "a football pitch represents a human cell",
+   "new": "a human cell would be about the width of a hand",
+   "reference": "OpenStax Biology 2e, Chapter 4 (cell size) and Chapter 21 (viruses); CDC influenza virus structure (about 100 nanometres)",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-008",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Teachers who did not write the lesson had no answer key for the comparison table that students build, so they could not check the pairs' work. The key is a short list of standard textbook values.",
+   "lesson": 2,
+   "reference": "OpenStax Microbiology, Chapters 3 (prokaryotes), 12 (fungi) and 6 (viruses)",
+   "old": "Later we will find out exactly how the spores got there.'",
+   "new": "Later we will find out exactly how the spores got there.' [Answer key for the master table, teacher only: FUNGI (mould) - eukaryote, nucleus present, cell wall of chitin, spores about 2 to 10 micrometres and the threads (hyphae) together are visible as fuzz, reproduce by spores. BACTERIA - prokaryote, no nucleus, cell wall of peptidoglycan, about 1 to 5 micrometres, reproduce by splitting in two, a single cell is not visible to the eye. VIRUSES - not cells (genetic material inside a protein coat, no nucleus or cell wall), about 20 to 300 nanometres, reproduce only inside a living host cell, seen only with an electron microscope. Likely mistakes to listen for: 'viruses are tiny bacteria', 'bacteria have a nucleus', 'all three are visible on the ugali'.]",
+   "where": "Lesson 2, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-009",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The phenomenon includes slimy areas and a sour smell. Mould makes fuzzy growth; slime and a sour smell are typical of bacteria or yeast. The chain put every sign down to mould spores, which is incomplete. The change keeps the mould explanation and adds the other organisms as an open question.",
+   "lesson": 3,
+   "reference": "OpenStax Microbiology, Chapter 12 (fungi) and Chapter 3 (bacterial growth and spoilage); USDA Food Safety and Inspection Service, 'Molds on Food: Are They Dangerous?'",
+   "group": "G3",
+   "group_headline": "The lessons attributed the slime and sour smell to mould and named three mould species as fact; the slime and sour smell point to bacteria or yeast, and colour can also be the age of one mould",
+   "old": "(5) Visible outcome — white, green, black fuzzy patches plus sour smell.",
+   "new": "(5) Visible outcome — white, green and black fuzzy mould patches (the sour smell and slimy areas point to bacteria or yeast also growing on the food; add this as a new question on the Driving Question Board).",
+   "where": "Lesson 3, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-010",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the Summary Table also put the sour smell down to mould spores.",
+   "lesson": 3,
+   "group": "G3",
+   "old": "producing the white, green, and black fuzzy patches and sour smell observed",
+   "new": "producing the white, green and black fuzzy patches (the slimy areas and sour smell suggest bacteria or yeast growing alongside) observed",
+   "reference": "OpenStax Microbiology, Chapter 12 (fungi) and Chapter 3 (bacterial growth and spoilage); USDA Food Safety and Inspection Service, 'Molds on Food: Are They Dangerous?'",
+   "where": "Lesson 3, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-011",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the storyline summary listed 'some mould types' as if they were a separate group from fungi.",
+   "lesson": 5,
+   "group": "G3",
+   "old": "(fungi, bacteria, some mould types)",
+   "new": "(mainly fungal moulds, with bacteria or yeast likely growing alongside)",
+   "reference": "OpenStax Microbiology, Chapter 12 (fungi) and Chapter 3 (bacterial growth and spoilage); USDA Food Safety and Inspection Service, 'Molds on Food: Are They Dangerous?'",
+   "where": "Lesson 5, slo.purposeInStoryline",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-012",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[0].exemplar",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "The old answer stated that three named species grew, but no lesson identified species and only a microscope or lab test could. It also said colour proves different species; colour also changes as one mould ages. The new answer says what colour can and cannot tell us and links the slime and smell to bacteria or yeast.",
+   "reference": "OpenStax Microbiology, Chapter 12 (fungi) and Chapter 3 (bacterial growth and spoilage); USDA Food Safety and Inspection Service, 'Molds on Food: Are They Dangerous?'",
+   "group": "G3",
+   "old": "(c) The different colours show that more than one kind (species) of mould grew on the same food, for example Rhizopus, Penicillium and Aspergillus. All of them arrived by the same airborne route, but each formed its own colour and texture of colony on the food surface.",
+   "new": "(c) The different colours may show that more than one kind (species) of mould grew on the same food, because different moulds make different coloured spores (common food moulds include Rhizopus, Penicillium and Aspergillus), or that one mould is at different ages: young growth is white and turns green or black when it forms spores. The slimy areas and sour smell suggest that bacteria or yeast were also growing on the food. All of these organisms could have arrived by the same airborne route.",
+   "where": "Final Explanation, Part 1: What are the patches and where did they come from?, exemplar",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-013",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    5,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: describes what the dome does (keeps flies off), so the vote is a fair test of ideas.",
+   "lesson": 5,
+   "group": "G4",
+   "old": "(B) ugali covered with a wire mesh food dome (a common Kenyan kitchen item)",
+   "new": "(B) ugali under a wire mesh food dome, which keeps flies off (a common Kenyan kitchen item)",
+   "reference": "WHO, 'Five Keys to Safer Food' (keep food at safe temperatures, protect from contamination); USDA FSIS, 'Molds on Food'; mould spore size 2 to 10 micrometres (Madigan et al., Brock Biology of Microorganisms, fungal spores)",
+   "where": "Lesson 5, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-014",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].formativeAssessment",
+   "criteria": [
+    5,
+    8
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Teachers had no expected answer for the three-photo vote. Added what a good answer sounds like and how to use a B vote.",
+   "lesson": 5,
+   "reference": "WHO, 'Five Keys to Safer Food' (keep food at safe temperatures, protect from contamination); USDA FSIS, 'Molds on Food'; mould spore size 2 to 10 micrometres (Madigan et al., Brock Biology of Microorganisms, fungal spores)",
+   "group": "G4",
+   "old": "Teacher scans notebooks during pair-share, noting learners who conflate",
+   "new": "Expected answer (teacher only): scenario C (sealed container in the fridge) should show the least growth because the cold slows growth; A and B are alike for mould, because spores pass through the mesh and the dome only keeps flies off. A learner who votes B has made a reasonable prediction: use it to ask what a mesh does and does not stop. Teacher scans notebooks during pair-share, noting learners who conflate",
+   "where": "Lesson 5, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-015",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the sentence learners copy into their books said covering stops the contact route and 'interrupts' transmission completely; it now says reduces and slows.",
+   "lesson": 5,
+   "group": "G4",
+   "old": "covering the sufuria and storing food away from warm surfaces interrupts the airborne and contact transmission routes that allowed the mould spores to settle and germinate overnight.",
+   "new": "covering the sufuria with a close-fitting lid and keeping food cool or in a fridge reduces the spores that settle on it and slows the growth of any that do, so fewer fuzzy patches form overnight.",
+   "reference": "WHO, 'Five Keys to Safer Food' (keep food at safe temperatures, protect from contamination); USDA FSIS, 'Molds on Food'; mould spore size 2 to 10 micrometres (Madigan et al., Brock Biology of Microorganisms, fungal spores)",
+   "where": "Lesson 5, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-016",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    4,
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "ROOT FIX. A wire mesh or a loose cloth was said to block spores 'physically'; it does not (holes far larger than spores), it only keeps flies off. The same paragraph also stated the three mould species as fact, which no lesson evidences (see group G3). Size check: wire mesh holes are about 1 mm = 1,000 micrometres; spores are 2 to 10 micrometres, so spores are 100 to 500 times smaller than the holes.",
+   "lesson": 5,
+   "reference": "WHO, 'Five Keys to Safer Food' (keep food at safe temperatures, protect from contamination); USDA FSIS, 'Molds on Food'; mould spore size 2 to 10 micrometres (Madigan et al., Brock Biology of Microorganisms, fungal spores)",
+   "group": "G4",
+   "group_headline": "Wire mesh domes and loose cloths do not stop mould spores (the holes are about 100 times wider than a spore); texts now recommend a close-fitting lid, say a mesh dome only keeps flies off, and say covering reduces but does not stop growth",
+   "old": "Covering the sufuria — even with a simple wire mesh dome or a clean cloth, which costs nothing — would have physically blocked the airborne transmission route and dramatically reduced microbial colonisation. Refrigeration would additionally have slowed the germination and growth of any spores that did land, by reducing the temperature below the optimum growth range of most mesophilic fungi and bacteria. The variation in patch colour (white, green, black) across the same food surface reflects colonisation by DIFFERENT species of mould (e.g., Rhizopus, Penicillium, Aspergillus), each arriving via the same airborne route but occupying slightly different microhabitats on the food substrate.",
+   "new": "Covering the sufuria with a close-fitting lid (or a clean upturned plate or bowl, which costs little or nothing) would have reduced the number of airborne spores landing on the food, although it would not stop growth from spores already on it. A wire mesh dome keeps flies off but does not stop spores, because its holes are far larger than a spore. Refrigeration would additionally have slowed the germination and growth of any spores that did land, by reducing the temperature below the optimum growth range of most mesophilic fungi and bacteria. The variation in patch colour (white, green, black) across the same food surface may reflect different mould species (common food moulds include Rhizopus, Penicillium and Aspergillus, but we cannot tell which grew without a microscope) or the same mould at different ages, as white young growth turns coloured when it forms spores; the slimy areas and sour smell point to bacteria or yeast growing alongside the mould.",
+   "where": "Lesson 5, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-017",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The two challenge questions had no expected answers. Question 1 in particular has a tempting wrong answer ('cloth stops mould'), so teachers need to know what a good response is.",
+   "lesson": 3,
+   "reference": "WHO, 'Five Keys to Safer Food' (keep food at safe temperatures, protect from contamination); USDA FSIS, 'Molds on Food'; mould spore size 2 to 10 micrometres (Madigan et al., Brock Biology of Microorganisms, fungal spores)",
+   "group": "G4",
+   "old": "Cold-call 2 different learners.",
+   "new": "Cold-call 2 different learners. [Expected answers, teacher only: Q1 - a cloth cuts the number of spores that land but does not stop them all, because spores are only a few micrometres across and pass through the gaps in woven cloth, and spores already on the food can still grow; a close-fitting lid is better and a fridge better still. Q2 - yes, a fly or other small insect can carry spores or bacteria on its body even when none is seen, but airborne spores alone are enough to explain the patches.]",
+   "where": "Lesson 3, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-018",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    1,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: 'prevents spoilage' over-claims; covering reduces new spores and refrigeration only slows growth.",
+   "lesson": 8,
+   "group": "G4",
+   "old": "covering food, refrigerating it or drying it prevents spoilage by removing conditions microorganisms need to grow",
+   "new": "covering food, refrigerating it or drying it slows or prevents spoilage by limiting the spores that land and the conditions microorganisms need to grow",
+   "reference": "WHO, 'Five Keys to Safer Food' (keep food at safe temperatures, protect from contamination); USDA FSIS, 'Molds on Food'; mould spore size 2 to 10 micrometres (Madigan et al., Brock Biology of Microorganisms, fungal spores)",
+   "where": "Lesson 8, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-019",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[2].exemplar",
+   "criteria": [
+    4,
+    8,
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the model answer repeated the mesh and cloth claim.",
+   "group": "G4",
+   "old": "Covering the sufuria blocks airborne spores from landing on the food, so it interrupts the airborne route. Refrigerating the food lowers the temperature below the range that suits most moulds and bacteria, so it slows germination and growth of any spores that did land. Drying also works because it removes the water the mould needs. (b) A clean cloth or a wire mesh dome over the food costs little or nothing and physically stops spores from settling.",
+   "new": "Covering the sufuria with a close-fitting lid reduces the airborne spores landing on the food, so it interrupts the airborne route (it does not remove spores already on the food). Refrigerating the food lowers the temperature below the range that suits most moulds and bacteria, so it slows germination and growth of any spores that did land. Drying also works because it removes the water the mould needs. (b) A close-fitting lid, or a clean upturned plate or bowl, costs little or nothing and reduces the spores settling on the food (a wire mesh dome keeps flies off but does not stop spores).",
+   "reference": "WHO, 'Five Keys to Safer Food' (keep food at safe temperatures, protect from contamination); USDA FSIS, 'Molds on Food'; mould spore size 2 to 10 micrometres (Madigan et al., Brock Biology of Microorganisms, fungal spores)",
+   "where": "Final Explanation, Part 3: Protecting our food and our health, exemplar",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-020",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].exemplar",
+   "criteria": [
+    10
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: lid instead of cloth or mesh; the hand-washing advice was removed because it does not protect food from airborne mould spores (see audit item on Part 5).",
+   "group": "G4",
+   "old": "Please cover your food with a clean cloth or wire mesh dome, and keep it cool or dry where you can. You can also eat food soon after it is cooked and wash your hands before eating.",
+   "new": "Please cover your food with a close-fitting lid, and keep it cool or dry where you can. You can also eat food soon after it is cooked.",
+   "reference": "WHO, 'Five Keys to Safer Food' (keep food at safe temperatures, protect from contamination); USDA FSIS, 'Molds on Food'; mould spore size 2 to 10 micrometres (Madigan et al., Brock Biology of Microorganisms, fungal spores)",
+   "where": "Final Explanation, Part 5: Answer the Driving Question, exemplar",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-021",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[4].prompt",
+   "criteria": [
+    10,
+    13
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The model answer has 7 sentences (counted) but the prompt asked for 5 to 6, so students would be marked against a longer example than they were asked to write. Counted again after the edit above: still 7 sentences, now within the 6 to 7 range.",
+   "old": "about 5 to 6 sentences",
+   "new": "about 6 to 7 sentences",
+   "where": "Final Explanation, Part 5: Answer the Driving Question, prompt",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-022",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "ROOT FIX. Lesson 3 teaches that 'airborne' (tiny particles that stay in the air) differs from 'droplets' (larger, fall quickly). TB is spread by the airborne route, so calling it 'airborne droplets' contradicted Lesson 3. Oral thrush was listed with no cause, though the Final Explanation asks for a route for each infection.",
+   "lesson": 4,
+   "reference": "WHO, Tuberculosis fact sheet (TB spreads through the air when people with lung TB cough, speak or sneeze); CDC, 'Candidiasis' (Candida normally lives in the mouth, gut and skin and overgrows when balance changes)",
+   "group": "G5",
+   "group_headline": "TB was labelled 'airborne droplets' although Lesson 3 teaches that airborne and droplet spread differ, and oral thrush had no cause or route; both corrected in the infection cards, checks and model answer",
+   "old": "often spread by sharing combs and towels.\n\n• Group 2 — BACTERIAL INFECTIONS: Information cards on cholera (Vibrio cholerae — contaminated Lake Victoria water supply link), typhoid (Salmonella typhi — contaminated water and food), and tuberculosis / TB (Mycobacterium tuberculosis — airborne droplets in crowded settings such as Nairobi Eastlands",
+   "new": "often spread by sharing combs and towels. The thrush card explains that Candida albicans normally lives harmlessly in the mouth and gut and overgrows when the body's balance changes (after antibiotics, with a weak immune system such as in HIV, or in young babies), so it is not usually caught from food or air.\n\n• Group 2 — BACTERIAL INFECTIONS: Information cards on cholera (Vibrio cholerae — contaminated Lake Victoria water supply link), typhoid (Salmonella typhi — contaminated water and food), and tuberculosis / TB (Mycobacterium tuberculosis — spreads through the air from a person with TB who coughs, especially in crowded, poorly ventilated places such as Nairobi Eastlands",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-023",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "criteria": [
+    4,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the answer key used 'fomites' and 'bodily fluids', which are not in the five routes taught in Lesson 3, and merged TB with influenza.",
+   "lesson": 4,
+   "group": "G5",
+   "old": "learners correctly write 'airborne droplets' for TB and influenza, 'contaminated water/food' for cholera and typhoid, 'direct skin contact / fomites' for ringworm, and 'bodily fluids' for HIV.",
+   "new": "learners correctly write 'airborne' for TB (tiny particles that stay in the air), 'respiratory droplets' for influenza, 'contaminated water/food' for cholera and typhoid, 'direct contact' (for example shared combs and towels) for ringworm, 'direct contact with body fluids' for HIV, and, for oral thrush, an overgrowth of Candida that already lives in the body.",
+   "reference": "WHO, Tuberculosis fact sheet (TB spreads through the air when people with lung TB cough, speak or sneeze); CDC, 'Candidiasis' (Candida normally lives in the mouth, gut and skin and overgrows when balance changes)",
+   "where": "Lesson 4, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-024",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: discussion question used the old wording.",
+   "lesson": 4,
+   "group": "G5",
+   "old": "'TB spreads through airborne droplets in crowded places.",
+   "new": "'TB spreads through the air in crowded, poorly ventilated places.",
+   "reference": "WHO, Tuberculosis fact sheet (TB spreads through the air when people with lung TB cough, speak or sneeze); CDC, 'Candidiasis' (Candida normally lives in the mouth, gut and skin and overgrows when balance changes)",
+   "where": "Lesson 4, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-025",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: model label used the old wording.",
+   "lesson": 4,
+   "group": "G5",
+   "old": "an arrow from the air toward the lungs for TB — 'airborne droplets'",
+   "new": "an arrow from the air toward the lungs for TB — 'airborne'",
+   "reference": "WHO, Tuberculosis fact sheet (TB spreads through the air when people with lung TB cough, speak or sneeze); CDC, 'Candidiasis' (Candida normally lives in the mouth, gut and skin and overgrows when balance changes)",
+   "where": "Lesson 4, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-026",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].exemplar",
+   "criteria": [
+    5,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: model answer now matches Lesson 4 and gives a route for oral thrush, as the prompt asks for each infection (audit item on Part 4 (a)).",
+   "reference": "WHO, Tuberculosis fact sheet (TB spreads through the air when people with lung TB cough, speak or sneeze); CDC, 'Candidiasis' (Candida normally lives in the mouth, gut and skin and overgrows when balance changes)",
+   "group": "G5",
+   "old": "ringworm (spread by direct contact) or oral thrush. Bacteria: cholera, caused by Vibrio cholerae and spread through contaminated water, as in communities near Lake Victoria, or tuberculosis, spread through the air by droplets",
+   "new": "ringworm (spread by direct contact, for example shared combs or towels) or oral thrush (caused by Candida, a fungus that normally lives in the body and overgrows, for example after antibiotics or when the body's defences are weak). Bacteria: cholera, caused by Vibrio cholerae and spread through contaminated water, as in communities near Lake Victoria, or tuberculosis, spread through the air by tiny particles from a person with TB who coughs",
+   "where": "Final Explanation, Part 4: The wider world of microorganisms, exemplar",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-027",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    2,
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The printed figure of 'over 28,000' notifications for 2022 could not be verified and looks too low for a national total (Kenya reports tens of thousands of notifications a year). A wrong statistic should not be printed on a card. The card now asks the teacher to insert the current figure from the named source. The teacher must confirm the current number.",
+   "lesson": 4,
+   "old": "Kenya reported over 28,000 TB notifications in 2022 — WHO Kenya Country Profile",
+   "new": "(teacher: insert the latest national TB figure from the WHO Global Tuberculosis Report or the Kenya National TB, Leprosy and Lung Disease Programme)",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-028",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    1,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "ROOT FIX. Rhizobium lives in nodules on legume roots (beans, peas, groundnuts); maize is a cereal and has none.",
+   "lesson": 6,
+   "reference": "OpenStax Biology 2e, Chapter 31 (soil and plant nutrition: nitrogen fixation by Rhizobium in legume root nodules)",
+   "group": "G6",
+   "group_headline": "Rhizobium was said to fix nitrogen on 'bean and maize farms'; it works in the root nodules of legumes such as beans, not maize, so maize only benefits when grown after or between beans",
+   "old": "Rhizobium in bean and maize farms in the Rift Valley",
+   "new": "Rhizobium in the root nodules of beans and other legumes on Rift Valley farms (maize grown after or between beans benefits)",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-029",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: same fact in the Summary Table.",
+   "lesson": 6,
+   "group": "G6",
+   "old": "Rhizobium fixes atmospheric nitrogen in Kenyan bean and maize farms",
+   "new": "Rhizobium fixes atmospheric nitrogen in the root nodules of beans and other legumes on Kenyan farms (which also helps maize grown after or between them)",
+   "reference": "OpenStax Biology 2e, Chapter 31 (soil and plant nutrition: nitrogen fixation by Rhizobium in legume root nodules)",
+   "where": "Lesson 6, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-030",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].exemplar",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: same fact in the Final Explanation model answer.",
+   "group": "G6",
+   "old": "Rhizobium fixes nitrogen for bean and maize farms",
+   "new": "Rhizobium fixes nitrogen in the root nodules of beans and other legumes, which also helps maize grown after or between them",
+   "reference": "OpenStax Biology 2e, Chapter 31 (soil and plant nutrition: nitrogen fixation by Rhizobium in legume root nodules)",
+   "where": "Final Explanation, Part 4: The wider world of microorganisms, exemplar",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-031",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.knowledge",
+   "criteria": [
+    1,
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "ROOT FIX. Methanogens are archaea, a separate domain from bacteria, so 'bacteria' is not accurate. Using 'microorganisms' keeps the Grade 10 vocabulary (fungi, bacteria, viruses) intact.",
+   "lesson": 6,
+   "reference": "OpenStax Microbiology, Chapter 4 (Archaea: methanogens); Madigan et al., Brock Biology of Microorganisms, methanogenesis",
+   "group": "G7",
+   "group_headline": "Biogas microbes were called 'methane-producing bacteria'; they are methanogens, which belong to the archaea, so the text now says 'methane-producing microorganisms (methanogens)'",
+   "old": "biogas generation from methane-producing bacteria",
+   "new": "biogas generation from methane-producing microorganisms (methanogens)",
+   "where": "Lesson 6, slo.knowledge",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-032",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    8
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: resource-card topic.",
+   "lesson": 6,
+   "group": "G7",
+   "old": "(E) Biogas Generation — methane-producing bacteria and biogas digesters",
+   "new": "(E) Biogas Generation — methane-producing microorganisms (methanogens) and biogas digesters",
+   "reference": "OpenStax Microbiology, Chapter 4 (Archaea: methanogens); Madigan et al., Brock Biology of Microorganisms, methanogenesis",
+   "where": "Lesson 6, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-033",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: Summary Table.",
+   "lesson": 6,
+   "group": "G7",
+   "old": "methane-producing bacteria generate biogas",
+   "new": "methane-producing microorganisms (methanogens) generate biogas",
+   "reference": "OpenStax Microbiology, Chapter 4 (Archaea: methanogens); Madigan et al., Brock Biology of Microorganisms, methanogenesis",
+   "where": "Lesson 6, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-034",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.attitudes",
+   "criteria": [
+    1,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "ROOT FIX. The mould is a fungus; Lactobacillus is a bacterium, so they are not close relatives. Yeast and Penicillium are fungi, so those are relatives.",
+   "lesson": 6,
+   "reference": "OpenStax Microbiology, Chapter 12 (fungi) and Chapter 3 (bacteria)",
+   "group": "G8",
+   "group_headline": "Lesson 6 called yoghurt, soil and bread microbes 'close relatives' of the mould; Lactobacillus is a bacterium and the mould is a fungus, so the text now names the groups and gives teachers an expected answer",
+   "old": "are close relatives of organisms that sustain Kenyan livelihoods through yoghurt production, bread-making, soil fertility, and medicine.",
+   "new": "belong to the same wider world of microorganisms as those that sustain Kenyan livelihoods through yoghurt production (Lactobacillus, a bacterium), bread-making (yeast, a fungus), soil fertility and medicine (Penicillium, a mould like those that can grow on food).",
+   "where": "Lesson 6, slo.attitudes",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-035",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].formativeAssessment",
+   "criteria": [
+    5,
+    13
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The true/false prompt is a deliberate discussion question (audit item), but teachers had no idea what a good answer sounds like. This gives one without changing the prompt.",
+   "lesson": 6,
+   "group": "G8",
+   "old": "Teacher circulates during silent writing and reads over shoulders, noting:",
+   "new": "Expected answer (teacher only): the statement is partly true. Yeast and Penicillium are fungi, like the moulds on the ugali; Lactobacillus and Rhizobium are bacteria, a different group; all of them are microorganisms. Accept 'true' from a learner who means 'all microorganisms' and 'false' from one who means 'the same kind', and ask which group each organism belongs to. Teacher circulates during silent writing and reads over shoulders, noting:",
+   "where": "Lesson 6, Predict Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-036",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    5,
+    8
+   ],
+   "category": "safety",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The Predict and DQB phases expect learners to ask this question (it is named as a likely orange note) but nothing tells the teacher how to answer. A wrong answer here is a food-safety risk. Aflatoxin in maize is a documented Kenyan health issue.",
+   "lesson": 6,
+   "reference": "WHO, Aflatoxins fact sheet; Kenya Ministry of Health aflatoxin advisories",
+   "old": "[WAIT 10 seconds before selecting next reader.]",
+   "new": "[WAIT 10 seconds before selecting next reader.] If a learner asks whether mouldy ugali can be eaten because Penicillium makes medicine: no. Penicillin is made by a selected Penicillium strain grown in clean, controlled conditions. Moulds on food may be other species, and some make toxins (for example aflatoxins in maize and groundnuts) that cooking does not destroy. Never eat or scrape mouldy food.",
+   "where": "Lesson 6, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-037",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "ROOT FIX (group). After Lesson 1 there are seven lessons, not six.",
+   "lesson": 1,
+   "group": "G9",
+   "group_headline": "Several 'Lesson N' cross-references pointed to the wrong lesson (spores were taught in Lesson 2, not 1; prevention was Lesson 5, not 7; the body diagram is not reused in Lessons 5 and 6)",
+   "old": "the engine that will drive our next six lessons",
+   "new": "the engine that will drive our next lessons",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-038",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    3
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Questions are also answered in Lesson 7 (growth conditions).",
+   "lesson": 1,
+   "group": "G9",
+   "old": "answered across Lessons 2–6",
+   "new": "answered across Lessons 2–7",
+   "where": "Lesson 1, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-039",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "criteria": [
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Spores were first named in Lesson 2, not in Lesson 1.",
+   "lesson": 3,
+   "group": "G9",
+   "old": "We met this in Lesson 1.'",
+   "new": "We met this in Lesson 2.'",
+   "where": "Lesson 3, Explain Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-040",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lessons 5 and 6 build on the cumulative ugali model, not on this body outline, and no lesson teaches the immune response. The instruction pointed to work that never happens.",
+   "lesson": 4,
+   "group": "G9",
+   "old": "This is a cumulative model — learners are told to use the same body outline in Lessons 5 and 6, where they will add prevention strategies and immune response details respectively.",
+   "new": "This body outline is the infection section of the final model: learners keep it safe and use it in Lesson 8 for box 4 of the Model Revision Sheet.",
+   "where": "Lesson 4, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-041",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same cross-reference as above.",
+   "lesson": 4,
+   "group": "G9",
+   "old": "You will add to it in every lesson until Lesson 8 — by then it will be your complete model of microorganisms and human health.",
+   "new": "In Lesson 8 you will use it in your final model of the ugali and chapati phenomenon.",
+   "where": "Lesson 4, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-042",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Prevention and control was taught in Lesson 5; Lesson 7 is the mould-growth investigation.",
+   "lesson": 6,
+   "group": "G9",
+   "old": "Circle orange notes that relate to prevention/control and write 'L7' next to them",
+   "new": "Circle orange notes that ask how or why mould grows, or how to keep food safe, and write 'L7' next to them",
+   "where": "Lesson 6, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-043",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "teacherReflection",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same cross-reference: Lesson 7 does not introduce prevention and control.",
+   "lesson": 6,
+   "group": "G9",
+   "old": "pointing toward prevention/control (Lesson 7) or toward deeper conceptual questions about microbial life? Do any orange notes reveal persistent misconceptions that must be explicitly addressed?\n4. KENYAN CONTEXT RESONANCE: Which Kenyan context generated the most engagement — yoghurt/uji, mandazi leavening, biogas digesters, Rift Valley nitrogen fixation, or crop diseases? Use this to prioritise contexts in Lesson 7 and Lesson 8.\n5. LESSON 7 READINESS: Based on exit ticket data and notebook checks, identify by name any learners who cannot yet distinguish beneficial from harmful microorganism roles. Plan a 5-minute targeted review at the start of Lesson 7 for this group before introducing prevention and control methods.",
+   "new": "pointing toward how mould grows and how to keep food safe (Lesson 7) or toward deeper conceptual questions about microbial life? Do any orange notes reveal persistent misconceptions that must be explicitly addressed?\n4. KENYAN CONTEXT RESONANCE: Which Kenyan context generated the most engagement — yoghurt/uji, mandazi leavening, biogas digesters, Rift Valley nitrogen fixation, or crop diseases? Use this to prioritise contexts in Lesson 7 and Lesson 8.\n5. LESSON 7 READINESS: Based on exit ticket data and notebook checks, identify by name any learners who cannot yet distinguish beneficial from harmful microorganism roles. Plan a 5-minute targeted review at the start of Lesson 7 for this group before the mould-growth investigation.",
+   "where": "Lesson 6, teacherReflection",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-044",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "criteria": [
+    1,
+    3
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Same cross-reference.",
+   "lesson": 6,
+   "group": "G9",
+   "old": "identified open questions about prevention and control to be addressed in Lesson 7.",
+   "new": "identified open questions about how mould grows and how to keep food safe, to be addressed in Lesson 7.",
+   "where": "Lesson 6, summaryTablePrompt.explained",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-045",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].formativeAssessment",
+   "criteria": [
+    3
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 2 did not classify mould types by colour; it classified the patches as fungal mould.",
+   "lesson": 7,
+   "group": "G9",
+   "old": "These colour distinctions map back to Lesson 2 where students classified mould types.",
+   "new": "These colour distinctions map back to the white, green and black patches in the Lesson 1 photographs.",
+   "where": "Lesson 7, Observe Phase, formativeAssessment",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-046",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3,
+    5
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Lesson 7 does not test where the mould comes from (a covered container can still grow mould from spores already on the food), so it cannot answer the 'from inside the ugali' idea; Lesson 3 does. Cooking at about 100 C kills most mould, which supports the new wording.",
+   "lesson": 8,
+   "reference": "USDA FSIS, 'Molds on Food: Are They Dangerous?'",
+   "group": "G9",
+   "old": "What does our Lesson 7 investigation evidence tell us about that? [WAIT TIME: 5 seconds.]",
+   "new": "What does our Lesson 3 evidence about airborne spores tell us about that? Remember that cooking heat kills most moulds, so the spores most likely landed after the ugali was cooked. [WAIT TIME: 5 seconds.]",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-047",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    4,
+    3,
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": true,
+   "why": "ROOT FIX (audit item: confounded design). Old set: A ugali/uncovered/moist/warm, B ugali/covered/moist/cool, C bread/uncovered/moist/warm, D bread/covered/dry/cool, E and F biscuit. A and B differed in cover AND temperature, C and D in cover, moisture AND temperature, so no conclusion about any single condition was possible, and the lesson itself asks 'the one thing we are changing between A and B'. Fresh containers would also show no visible growth in one lesson. New set (checked): A bread moist warm uncovered (baseline); B same but covered (cover only); C same but cool (temperature only); D bread dried (moisture only); E ugali moist warm uncovered (food only); F dry maize biscuit (compare with E: both maize). Every comparison with A changes exactly one condition. The teacher must decide whether this equipment and incubation time suit their school.",
+   "lesson": 7,
+   "reference": "Fair-test (controlled variable) design as in KICD Grade 10 Biology practical investigations; USDA FSIS, 'Molds on Food' (mould needs moisture, warmth and a food source; spores are already on most foods)",
+   "group": "G2",
+   "group_headline": "The mould investigation changed several conditions at once and expected growth in samples set up the same day; it now has six containers, each differing from a baseline in one condition, all prepared 3 to 4 days ahead",
+   "old": "Students examine a labelled diagram on the board showing eight sample containers set up across six conditions: Container A — ugali, uncovered, moist, warm; Container B — ugali, covered, moist, cool; Container C — bread, uncovered, moist, warm; Container D — bread, covered, dry, cool; Container E — dry maize biscuit, uncovered, warm; Container F — dry maize biscuit, covered, cool; plus two teacher pre-incubated versions of A and C labelled Pre-A and Pre-C for immediate observation. In their notebooks students write their predictions for each container using the sentence frame: I predict Container ___ will show the most mould because ___. They also identify the independent variable (the condition being changed), the dependent variable (amount and type of mould growth) and state two controlled variables (same amount of food, same room, same time period)",
+   "new": "Students examine a labelled diagram on the board showing six sample containers that the teacher set up 3 to 4 days earlier, each with the same amount of food: Container A — bread, uncovered, moist, warm (the baseline); Container B — bread, covered with a lid, moist, warm (only the cover is different from A); Container C — bread, uncovered, moist, cool (only the temperature is different); Container D — bread dried in the sun, uncovered, warm (only the moisture is different); Container E — ugali, uncovered, moist, warm (only the food is different); Container F — dry maize biscuit, uncovered, warm. In their notebooks students write their predictions for each container using the sentence frame: I predict Container ___ will show the most mould because ___. They also identify the independent variable (the condition being changed), the dependent variable (amount and type of mould growth) and state two controlled variables (same amount of food, same kind of container, same number of days)",
+   "where": "Lesson 7, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-048",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3,
+    4,
+    8
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Knock-on edit: all six containers are now pre-incubated (fresh ones would show nothing in one lesson), and a shared set replaces one set of six containers per group, which most schools could not supply (36 containers for six groups).",
+   "lesson": 7,
+   "group": "G2",
+   "old": "Each group receives: (1) a set of freshly prepared labelled sample containers set up at the start of the day or the previous day by the teacher showing conditions A through F, and (2) two sealed transparent pre-incubated containers Pre-A and Pre-C prepared 2 to 3 days earlier showing visible mould growth on warm uncovered moist ugali and warm uncovered moist bread respectively.",
+   "new": "The six sealed transparent containers A to F (prepared 3 to 4 days earlier and sealed before the lesson) are placed on a central table, one set for the class or one set for two groups if material allows; groups take turns to examine each container.",
+   "reference": "Fair-test (controlled variable) design as in KICD Grade 10 Biology practical investigations; USDA FSIS, 'Molds on Food' (mould needs moisture, warmth and a food source; spores are already on most foods)",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-049",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: wording follows the six-container set.",
+   "lesson": 7,
+   "group": "G2",
+   "old": "photograph the pre-incubated samples",
+   "new": "photograph the containers",
+   "reference": "Fair-test (controlled variable) design as in KICD Grade 10 Biology practical investigations; USDA FSIS, 'Molds on Food' (mould needs moisture, warmth and a food source; spores are already on most foods)",
+   "where": "Lesson 7, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-050",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    8,
+    3
+   ],
+   "category": "safety",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The original did not say how to make the samples or what to use if a fridge or incubator is not available (guideline 8). Added short preparation notes with low-cost substitutes and sealing before the lesson (safety notes already require sealed containers).",
+   "lesson": 7,
+   "group": "G2",
+   "old": "Teacher distributes materials and says: You are now scientists",
+   "new": "[Teacher preparation, 3 to 4 days before the lesson, with low-cost substitutes: use one loaf cut into equal slices, equal portions of cooked ugali and one dry maize biscuit; clear plastic containers or zip-lock bags (cut-off clear bottles with a lid or cling film also work); slightly moisten the bread and ugali with the same few drops of water; dry slice D in the sun for a day; keep A, B, D, E and F in a warm place (about 25 to 30 degrees Celsius, for example a sunny windowsill) and C in a fridge or the coolest shaded spot you have, noting the temperature if you have a thermometer; leave A, C, D, E and F open to the room air while incubating, keep B closed from the start, and seal and label every container before the lesson.] Teacher distributes materials and says: You are now scientists",
+   "where": "Lesson 7, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-051",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].sensemakingStrategy",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the no-growth container 'dry biscuit, cool, covered' no longer exists in the new set.",
+   "lesson": 7,
+   "group": "G2",
+   "old": "The deliberate inclusion of a no-growth result (dry maize biscuit, cool, covered) teaches",
+   "new": "The deliberate inclusion of dry samples (D and F), which are expected to show little or no growth, teaches",
+   "reference": "Fair-test (controlled variable) design as in KICD Grade 10 Biology practical investigations; USDA FSIS, 'Molds on Food' (mould needs moisture, warmth and a food source; spores are already on most foods)",
+   "where": "Lesson 7, Observe Phase, sensemakingStrategy",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-052",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    4,
+    3
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the analysis now compares one condition at a time, and the claim that students already know how fungi feed from Lesson 2 is corrected (Lesson 2 teaches structure and chitin, not feeding).",
+   "lesson": 7,
+   "group": "G2",
+   "old": "Step 1 — Pattern identification: Students compare the moist warm uncovered containers (Pre-A, Pre-C) with the dry cool covered containers and articulate the pattern in one sentence. Step 2 — Cause and effect reasoning: Teacher poses the question: Why does moisture help mould grow? Students draw on their knowledge from Lesson 2 that fungal hyphae absorb nutrients from the substrate through enzymatic digestion, which requires water as a solvent.",
+   "new": "Step 1 — Pattern identification: Students compare baseline container A with B, C, D and E one at a time (each differs from A in one condition only) and say in one sentence what changed and what the growth showed. Step 2 — Cause and effect reasoning: Teacher poses the question: Why does moisture help mould grow? The teacher explains briefly (this has not been taught before) that fungal hyphae release enzymes that digest the food and then absorb the nutrients, and that this needs water as a solvent.",
+   "reference": "Fair-test (controlled variable) design as in KICD Grade 10 Biology practical investigations; USDA FSIS, 'Molds on Food' (mould needs moisture, warmth and a food source; spores are already on most foods)",
+   "where": "Lesson 7, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-053",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    5,
+    13,
+    1
+   ],
+   "category": "pedagogy",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Added the expected pattern (including the honest result for the covered container) so that teachers know what 'good' looks like, and linked the unit's fish supporting phenomenon to the temperature comparison. Also corrected the pointer to Lesson 2.",
+   "lesson": 7,
+   "group": "G2",
+   "old": "what we said in Lesson 2 about how fungi feed. [WAIT TIME: 20 seconds — this is a higher-order link.] After student response, teacher confirms: Exactly — enzymes work faster at warmer temperatures, and the hyphae absorb digested nutrients faster. Now — the big reconnection. [Teacher displays phenomenon photograph.] Was the ugali in Kisumu warm? Was it moist? Was it covered? [WAIT TIME: 10 seconds after each question.] That is your explanation. Write your conclusion paragraph now — 4 minutes silent writing. [WAIT TIME: 4 minutes.] Teacher then says: One more idea. Think about salted dried fish — omena — or dried maize. Why do those last longer without a fridge? [WAIT TIME: 15 seconds.] Teacher introduces the water availability principle simply: Less water available in the food means moulds cannot grow. Drying and salting are ancient Kenyan preservation techniques that our ancestors understood through experience — today you understand the science behind them.",
+   "new": "what I just said about how fungi digest and absorb their food. [WAIT TIME: 20 seconds — this is a higher-order link.] After student response, teacher confirms: Exactly — enzymes work faster at warmer temperatures, and the hyphae absorb digested nutrients faster. Now — the big reconnection. [Teacher displays phenomenon photograph.] Was the ugali in Kisumu warm? Was it moist? Was it covered? [WAIT TIME: 10 seconds after each question.] That is your explanation. Write your conclusion paragraph now — 4 minutes silent writing. [WAIT TIME: 4 minutes.] Teacher then says: One more idea. Think about salted dried fish — omena — or dried maize. Why do those last longer without a fridge? [WAIT TIME: 15 seconds.] Teacher introduces the water availability principle simply: Less water available in the food means moulds cannot grow. Drying and salting are ancient Kenyan preservation techniques that our ancestors understood through experience — today you understand the science behind them. [Expected pattern, teacher only; always mark against what your containers actually show: A and E grew the most mould; C (cool) and D (dried) grew less; F (dry biscuit) little or none; B (covered) still grew some mould because spores were already on the bread, so do not treat that as a failed test, a lid only stops more spores landing. E and F are both maize, so the water in the ugali, not the maize, lets mould grow. Link to the Mombasa fish in the unit: fish kept on ice spoil more slowly, the same 'cool' condition as container C.]",
+   "where": "Lesson 7, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-054",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].learnerExperience",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Covering and cooling do not give 'no growth': spores already on the food can still grow, and cold only slows growth. 'Less growth' matches what the containers show.",
+   "lesson": 7,
+   "reference": "Fair-test (controlled variable) design as in KICD Grade 10 Biology practical investigations; USDA FSIS, 'Molds on Food' (mould needs moisture, warmth and a food source; spores are already on most foods)",
+   "group": "G2",
+   "old": "(2) a crossed-out symbol or note showing what would have prevented growth (label: covered plus cool equals no growth)",
+   "new": "(2) a crossed-out symbol or note showing what would have slowed or reduced growth (label: drier, cooler and covered means less growth)",
+   "where": "Lesson 7, Model Building Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-055",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: same wording change.",
+   "lesson": 7,
+   "group": "G2",
+   "old": "Second, show what would have stopped it.",
+   "new": "Second, show what would have slowed it.",
+   "reference": "Fair-test (controlled variable) design as in KICD Grade 10 Biology practical investigations; USDA FSIS, 'Molds on Food' (mould needs moisture, warmth and a food source; spores are already on most foods)",
+   "where": "Lesson 7, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-056",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.observed",
+   "criteria": [
+    3,
+    4
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: Summary Table matches the new container set.",
+   "lesson": 7,
+   "group": "G2",
+   "old": "Students observed that pre-incubated mould samples on warm moist uncovered ugali and bread showed extensive white, green and black fuzzy growth, while dry cool covered samples showed little or no visible growth. They recorded colour, texture, estimated coverage and smell across six container conditions and noted that the dry maize biscuit showed the least growth under all conditions.",
+   "new": "Students compared six sealed containers (A to F), each different from baseline container A in one condition, and recorded colour, texture, estimated coverage and smell. The expected pattern: the warm, moist samples (A and E) showed the most white, green and black fuzzy growth; the cooler (C), dried (D) and dry biscuit (F) samples showed little; covered bread (B) still grew some mould.",
+   "reference": "Fair-test (controlled variable) design as in KICD Grade 10 Biology practical investigations; USDA FSIS, 'Molds on Food' (mould needs moisture, warmth and a food source; spores are already on most foods)",
+   "where": "Lesson 7, summaryTablePrompt.observed",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-057",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "criteria": [
+    4,
+    7
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the summary over-claimed that reducing any one condition 'prevents' spoilage.",
+   "lesson": 7,
+   "group": "G2",
+   "old": "exposure to air (which allows airborne spores to settle and germinate on the food surface). Reducing any one of these conditions slows or prevents spoilage, which is why covering food, refrigerating it, or drying it are effective preservation strategies.",
+   "new": "exposure to air (which lets more airborne spores settle on the food; covering reduces new spores but does not stop mould growing from spores already on the food). Reducing moisture or temperature clearly slows spoilage, which is why refrigerating, drying and covering food all help as preservation strategies.",
+   "reference": "Fair-test (controlled variable) design as in KICD Grade 10 Biology practical investigations; USDA FSIS, 'Molds on Food' (mould needs moisture, warmth and a food source; spores are already on most foods)",
+   "where": "Lesson 7, summaryTablePrompt.learned",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-058",
+   "kind": "edit",
+   "target": "unit",
+   "path": "storylineThread",
+   "criteria": [
+    3,
+    4
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the unit storyline described the old investigation design.",
+   "group": "G2",
+   "old": "Students set up an investigation placing small samples of ugali, bread, and a dry maize biscuit in labelled containers under different conditions (covered/uncovered, moist/dry, warm/cool). Variables are identified and controlled. Students record initial observations and predictions. Where real-time growth is not yet visible, teacher provides pre-prepared samples incubated over 2–3 days.",
+   "new": "Students compare six labelled containers of bread, ugali and a dry maize biscuit that the teacher prepared 3–4 days earlier, each differing from a baseline container in one condition (covered/uncovered, moist/dry, warm/cool, or food type). Variables are identified and controlled. Students record predictions and observations.",
+   "where": "Unit overview, storylineThread",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-059",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "sections[1].prompt",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: prompt matches the new investigation (audit item on Part 2 (c): the old comparison confounded food type with moisture).",
+   "group": "G2",
+   "value": "In Lesson 7 you compared mould growth in six containers of bread, ugali and dry maize biscuit, changing one condition at a time (covered or uncovered, moist or dry, warm or cool). (a) Which conditions made mould grow faster or slower, and what did containers A to F show? (b) Use these conditions to explain why the Kisumu ugali and chapati spoiled so quickly. (c) Why is it useful to compare the moist ugali with the dry maize biscuit?",
+   "old": "In Lesson 7 you compared mould growth on ugali, bread and dry maize biscuit under different conditions (covered or uncovered, moist or dry, warm or cool). (a) Which three conditions favoured mould growth, and what did the pre-incubated samples show about them? (b) Use these conditions to explain why the Kisumu ugali and chapati spoiled so quickly. (c) Why is the dry maize biscuit useful as a comparison?",
+   "new": "In Lesson 7 you compared mould growth in six containers of bread, ugali and dry maize biscuit, changing one condition at a time (covered or uncovered, moist or dry, warm or cool). (a) Which conditions made mould grow faster or slower, and what did containers A to F show? (b) Use these conditions to explain why the Kisumu ugali and chapati spoiled so quickly. (c) Why is it useful to compare the moist ugali with the dry maize biscuit?",
+   "where": "Final Explanation, Part 2: Why did it happen overnight?, prompt",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-060",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "sections[1].exemplar",
+   "criteria": [
+    10,
+    4
+   ],
+   "category": "science",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Knock-on edit: the old part (c) said the biscuit showed the least growth 'under all conditions', so food type and moisture were mixed up (audit item). The new answer compares moist ugali with the dry biscuit, which are both maize, so moisture is isolated.",
+   "group": "G2",
+   "value": "(a) The warm, moist samples (A bread and E ugali) showed the most white, green and black fuzzy growth. The cooler bread (C) and the dried bread (D) showed less, and the dry maize biscuit (F) showed little or none. The covered bread (B) still grew some mould because spores were already on the bread, although a lid stops more spores landing. (Mark against what your class's containers actually showed.) (b) The kitchen was warm and the ugali and chapati were moist, so the spores that landed could germinate and grow quickly. Warmth speeds up fungal enzyme activity and growth, and water lets the fungus digest the food and absorb nutrients. The food was uncovered, so more spores could settle on it. All of these conditions were present at the same time, so visible colonies formed by morning. (c) Ugali and the biscuit are both made from maize, but the moist ugali grew mould and the dry biscuit hardly did. So it is the water in the food, not the maize itself, that lets mould grow even when spores and air are present.",
+   "reference": "Fair-test (controlled variable) design as in KICD Grade 10 Biology practical investigations; USDA FSIS, 'Molds on Food' (mould needs moisture, warmth and a food source; spores are already on most foods)",
+   "old": "(a) Mould growth is favoured by warmth, moisture and exposure to air. The warm, moist, uncovered ugali and bread samples showed extensive white, green and black fuzzy growth. The dry, cool, covered samples showed little or no visible growth. (b) The kitchen was warm and the ugali and chapati were moist, so the spores that landed could germinate and grow quickly. Warmth speeds up fungal enzyme activity and growth, and water lets the fungus digest the food and absorb nutrients. The food was uncovered, so spores could settle on it. All three conditions were present at the same time, so visible colonies formed by morning. (c) The dry maize biscuit showed the least growth under all conditions because it has little water. This shows that moisture is needed for mould to grow, even when spores and air are present.",
+   "new": "(a) The warm, moist samples (A bread and E ugali) showed the most white, green and black fuzzy growth. The cooler bread (C) and the dried bread (D) showed less, and the dry maize biscuit (F) showed little or none. The covered bread (B) still grew some mould because spores were already on the bread, although a lid stops more spores landing. (Mark against what your class's containers actually showed.) (b) The kitchen was warm and the ugali and chapati were moist, so the spores that landed could germinate and grow quickly. Warmth speeds up fungal enzyme activity and growth, and water lets the fungus digest the food and absorb nutrients. The food was uncovered, so more spores could settle on it. All of these conditions were present at the same time, so visible colonies formed by morning. (c) Ugali and the biscuit are both made from maize, but the moist ugali grew mould and the dry biscuit hardly did. So it is the water in the food, not the maize itself, that lets mould grow even when spores and air are present.",
+   "where": "Final Explanation, Part 2: Why did it happen overnight?, exemplar",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-061",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "ROOT FIX. Sum of the times written in the lesson: Predict 3 + 2 + 2 (cold call) = 7; Observe 15 + 2 (warning) + 1 (regroup) + 12 = 30; Explain 3 x 3 (presentations) + 3 x 1.5 (table fill) + 10 (discussion) + 4 (writing) = 27.5; DQB 8 or 7 (text disagrees) + 3 (gallery) = 11; Model 8 + 3 (sharing) = 11. Total about 86 minutes. After the trims: Observe 12 + 1 + 10 = 23; Explain 3 x 2 + 4.5 + 10 + 4 = 24.5; DQB 7 + 3 = 10 to 11. New total: 7 + 23 + 24.5 + 11 + 11 = 76.5 minutes, leaving a few minutes for moving between groups.",
+   "lesson": 4,
+   "group": "G10",
+   "group_headline": "Lesson 4 added up to about 86 minutes in an 80-minute period; the group reading, jigsaw teaching and presentation times are trimmed to about 77 minutes",
+   "old": "Each Expert Group spends 15 minutes reading and discussing their cards.",
+   "new": "Each Expert Group spends 12 minutes reading and discussing their cards.",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-062",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: same trim in the teacher moves.",
+   "lesson": 4,
+   "group": "G10",
+   "old": "You have 15 minutes. Use the four-column Evidence Table on your worksheet.' Circulate to each group at least twice. At Group 2, prompt: 'Look at the cholera card — what does it say about the water source? How does that connect to what we learned about waterborne transmission in Lesson 3?' WAIT 10 seconds for a learner response before offering a hint. At Group 1, challenge the ringworm-is-a-worm misconception if it surfaces: 'What kingdom does the causative organism belong to? Is that the same kingdom as the mould on the ugali?' At Group 3, prompt sensitivity: 'How should we talk about HIV respectfully in our community?' After 15 minutes, give a 2-minute warning. Then reshuffle learners into Jigsaw Teaching Groups of 3 (one expert from each original group per new group) — approximately 11–12 new groups. Jigsaw Teaching Groups spend 12 minutes:",
+   "new": "You have 12 minutes. Use the four-column Evidence Table on your worksheet.' Circulate to each group at least twice. At Group 2, prompt: 'Look at the cholera card — what does it say about the water source? How does that connect to what we learned about waterborne transmission in Lesson 3?' WAIT 10 seconds for a learner response before offering a hint. At Group 1, challenge the ringworm-is-a-worm misconception if it surfaces: 'What kingdom does the causative organism belong to? Is that the same kingdom as the mould on the ugali?' At Group 3, prompt sensitivity: 'How should we talk about HIV respectfully in our community?' At 10 minutes, give a 2-minute warning. Then reshuffle learners into Jigsaw Teaching Groups of 3 (one expert from each original group per new group) — approximately 11–12 new groups. Jigsaw Teaching Groups spend 10 minutes:",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-063",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: presentations trimmed from 3 to 2 minutes each.",
+   "lesson": 4,
+   "group": "G10",
+   "old": "presents their category's findings in 3 minutes each",
+   "new": "presents their category's findings in 2 minutes each",
+   "where": "Lesson 4, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-064",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: same trim.",
+   "lesson": 4,
+   "group": "G10",
+   "old": "Group 1, you have 3 minutes",
+   "new": "Group 1, you have 2 minutes",
+   "where": "Lesson 4, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-065",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The learner text said 8 minutes and the teacher moves said a 7-minute timer; both now say 7.",
+   "lesson": 4,
+   "group": "G10",
+   "old": "two tasks over 8 minutes",
+   "new": "two tasks over 7 minutes",
+   "where": "Lesson 4, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-066",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "ROOT FIX. Sum of the times implied in the lesson for a class of about 35 (9 groups of 4): Predict about 9.5 (3 write, 1.5 pair, about 2 for four cold-calls, about 3 for photo vote); Observe 12 + about 8 for sharing = 20; Explain 12 (design) + 9 posters x (1.5 pitch + 1 peer question) = 22.5 + about 8 (equity discussion) = 42.5, which is the main problem; DQB about 10; Model about 9. Total about 91 to 94 minutes. After trims: Predict 9.5; Observe 12 + 4 = 16; Explain 10 + 9 x 1.5 + 3 peer questions x 1 + 6 = 32.5; DQB 10; Model 9. Total about 77 minutes.",
+   "lesson": 5,
+   "group": "G11",
+   "group_headline": "Lesson 5 added up to about 94 minutes in an 80-minute period; poster design, peer questions and the equity discussion are trimmed to about 78 minutes",
+   "old": "You have 12 minutes to design, then 90 seconds each to present.' Circulate during design time. At the 6-minute mark, prompt groups not yet including the ugali connection: SAY: 'I do not yet see the ugali and chapati on your poster. How does YOUR infection category connect to what happened in that Kisumu kitchen overnight?' During presentations, enforce the 90-second limit with a visible timer. After each presentation, invite one peer question",
+   "new": "You have 10 minutes to design, then 90 seconds each to present.' Circulate during design time. At the 5-minute mark, prompt groups not yet including the ugali connection: SAY: 'I do not yet see the ugali and chapati on your poster. How does YOUR infection category connect to what happened in that Kisumu kitchen overnight?' During presentations, enforce the 90-second limit with a visible timer. After every third presentation, invite one peer question",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-067",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: gives the sharing step a time limit so it does not overrun.",
+   "lesson": 5,
+   "group": "G11",
+   "old": "Cold-call THREE groups to share ONE row of their table each",
+   "new": "Cold-call THREE groups to share ONE row of their table each (about 4 minutes in total)",
+   "where": "Lesson 5, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-068",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: time limit for the equity discussion.",
+   "lesson": 5,
+   "group": "G11",
+   "old": "Let us be honest scientists AND honest citizens.",
+   "new": "Let us be honest scientists AND honest citizens. (Allow about 6 minutes for this discussion.)",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-069",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "ROOT FIX. Sum of the times written in the lesson: Predict 3 (LE) or 2 + 2 (TM) = about 6; Observe 10; Explain 3 x (2 + 0.5) = 7.5 + 4 (consolidation) + 1 (consensus) + 4 (messages) = 16.5; DQB voting on every card at 5 s each (30 or more cards = 5+ minutes) + 1 + 1 = about 8; closing 5. Total about 46 minutes. After trims: Predict about 4; Observe 10; Explain 3 x 1.5 + 1 (one sticky-note round) + 3 + 1 + 4 = 13.5; DQB 4 (four cluster cards and about six chosen cards) + 1 + 1 = 6; closing 5. New total about 38.5 minutes.",
+   "lesson": 8,
+   "group": "G12",
+   "group_headline": "Lesson 8 added up to about 46 minutes in a 40-minute period; the opening, presentations and DQB closing are trimmed to about 38 minutes",
+   "old": "Working individually for 3 minutes",
+   "new": "Working individually for 2 minutes",
+   "where": "Lesson 8, Predict Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-070",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[0].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: shorter pair share; the learner text and the teacher moves also disagreed (3 and 2 minutes).",
+   "lesson": 8,
+   "group": "G12",
+   "old": "You have 1 minute each. [WAIT TIME: 2 minutes of paired sharing.]",
+   "new": "You have 30 seconds each. [WAIT TIME: 1 minute of paired sharing.]",
+   "where": "Lesson 8, Predict Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-071",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: shorter presentations, one round of sticky notes, shorter consolidation.",
+   "lesson": 8,
+   "group": "G12",
+   "old": "a maximum of 2 minutes to walk the class through their six boxes using their A3 sheet held up or taped to the board. The presenting group points to each box in sequence and gives one sentence per box. After all three presentations, the class participates in a structured gallery critique: each group writes one strength and one question on a sticky note and passes it to the presenting group. Teacher then leads a 4-minute whole-class consolidation",
+   "new": "a maximum of 90 seconds to walk the class through their six boxes using their A3 sheet held up or taped to the board. The presenting group points to each box in sequence and gives one sentence per box. After all three presentations, the class participates in a structured gallery critique: after all three presentations each group writes one strength and one question on a sticky note for each presenting group. Teacher then leads a 3-minute whole-class consolidation",
+   "where": "Lesson 8, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-072",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: matches the shorter format.",
+   "lesson": 8,
+   "group": "G12",
+   "old": "Each group has 2 minutes. Walk us through your model box by box. Speak to the class, not to the paper. I will time you. [WAIT TIME: 2 minutes per group, teacher keeps time firmly.] After each presentation, teacher says: Write your sticky note now — one strength, one question — and hand it to that group. [WAIT TIME: 30 seconds for sticky notes after each presentation.] After all three presentations, teacher says:",
+   "new": "Each group has 90 seconds. Walk us through your model box by box. Speak to the class, not to the paper. I will time you. [WAIT TIME: 90 seconds per group, teacher keeps time firmly.] After all three presentations, teacher says: Write one sticky note for each presenting group — one strength, one question — and hand it over. [WAIT TIME: 1 minute for sticky notes.] Then teacher says:",
+   "where": "Lesson 8, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-073",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].learnerExperience",
+   "criteria": [
+    3,
+    1
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: voting on every card would take 5 minutes or more.",
+   "lesson": 8,
+   "group": "G12",
+   "old": "The teacher reads out each original question and prediction in sequence. For each one, the class votes",
+   "new": "The teacher reads out the four question clusters from Lesson 1 and up to six cards chosen from the board. For each one, the class votes",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-074",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[3].teacherMoves",
+   "criteria": [
+    3,
+    1
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: same trim in the teacher moves.",
+   "lesson": 8,
+   "group": "G12",
+   "old": "I will read each card. You vote with your hands.",
+   "new": "I will read the four cluster headings and six cards I have picked. You vote with your hands.",
+   "where": "Lesson 8, Driving Question Board (DQB) Creation, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-075",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The lessons had no Kiswahili supports although the guidelines ask for them where they help. I have not verified regional usage, so the teacher must confirm the terms (for example ukungu also means fog).",
+   "lesson": 2,
+   "group": "G13",
+   "group_headline": "Added short Kiswahili term supports (kuvu, ukungu, bakteria, virusi, vijidudu; kipindupindu, kifua kikuu, maambukizi) for English learners; teachers should confirm local usage",
+   "old": "Why might that difference matter for how we treat a fungal infection?'",
+   "new": "Why might that difference matter for how we treat a fungal infection?' [Language support, to confirm with your Kiswahili colleagues: kuvu = fungus, ukungu = mould (the same word also means fog), bakteria = bacteria, virusi = virus, vijidudu = germs or microbes. Invite learners to say the term in the language they think in first, then in English.]",
+   "where": "Lesson 2, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-076",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Knock-on edit: disease terms for the infection jigsaw, same confirmation needed.",
+   "lesson": 4,
+   "group": "G13",
+   "old": "rather than giving answers.",
+   "new": "rather than giving answers. [Kiswahili support, to confirm: kipindupindu = cholera, homa ya matumbo = typhoid, kifua kikuu = TB, maambukizi = infection.]",
+   "where": "Lesson 4, Observe Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-077",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "criteria": [
+    4,
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Protozoa are not taught anywhere in the sub-strand (fungi, bacteria and viruses only), so a poster category on protozoal infections asks students to use content they have not met.",
+   "lesson": 5,
+   "old": "or waterborne protozoal/bacterial infections)",
+   "new": "or waterborne bacterial infections such as cholera and typhoid)",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-078",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].teacherMoves",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The discussion went straight to what low-income households lack. Starting from what families already do avoids deficit framing (guideline 9) and gives students accurate local examples.",
+   "lesson": 5,
+   "old": "For the equity analysis discussion, SAY:",
+   "new": "Begin the equity discussion with strengths: ask 'What does Mama Adhiambo's family already do well to keep food safe (for example cooking only what is needed, eating soon after cooking, reheating until steaming hot, keeping food in a clean covered container)?' Only then ask about what is missing. For the equity analysis discussion, SAY:",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-079",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[4].teacherMoves",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The closing statement linked cholera to 'uncovered food' (Lesson 4 teaches contaminated water and food) and claimed vendors lose income 'daily' in 2025 without a source. Both claims are removed or softened. The teacher should confirm the 2023 outbreak statement for their county, using the Ministry of Health situation reports.",
+   "lesson": 8,
+   "old": "In 2023, cholera outbreaks linked to contaminated water and uncovered food affected communities around Lake Victoria. In 2025, food vendors in Kisumu still lose income daily to mould spoilage.",
+   "new": "In 2023, cholera outbreaks linked to contaminated water affected communities around Lake Victoria. Food vendors in Kisumu lose income whenever food spoils.",
+   "where": "Lesson 8, Model Building Phase, teacherMoves",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-080",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "instructions",
+   "criteria": [
+    12
+   ],
+   "category": "inclusion",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "The Final Explanation offered one way to respond (long written answers). This adds more than one way to show understanding and a language option.",
+   "old": "say what you observed or learned in class.",
+   "new": "say what you observed or learned in class. You may add a labelled drawing to any answer, and your teacher may let you answer aloud or write in Kiswahili if that helps you show what you know.",
+   "where": "Final Explanation, instructions",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-081",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10,
+    12
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Level names (Exceeds, Meets, Approaches Expectations) now appear in each descriptor, as the contract allows only three level fields. Criteria 1 and 2 are updated to match the corrected colour explanation and the one-condition-at-a-time investigation (no longer 'different species' stated as the only explanation).",
+   "value": [
+    {
+     "criterion": "Explanation of the phenomenon (what and where from)",
+     "excellent": "Exceeds expectations: clearly identifies the patches as living fungal mould colonies, explains airborne spores as the source and route, explains that colour can show different species or different ages of one mould, and notes that slime and sour smell suggest bacteria or yeast.",
+     "proficient": "Meets expectations: identifies the patches as fungal mould and says the spores came from the air, with limited explanation of the colour variation.",
+     "developing": "Approaches expectations: says the patches are germs or dirt, or does not explain how the organisms reached the food."
+    },
+    {
+     "criterion": "Use of evidence on growth conditions",
+     "excellent": "Exceeds expectations: names warmth, moisture and exposure to air (cover), uses the Lesson 7 comparisons of containers A to F one condition at a time, and links all of them to the overnight spoilage in Kisumu.",
+     "proficient": "Meets expectations: names the conditions and links most of them to the phenomenon, with limited use of the investigation evidence.",
+     "developing": "Approaches expectations: names one condition or gives a vague link to the phenomenon, with no evidence."
+    },
+    {
+     "criterion": "Prevention and control reasoning",
+     "excellent": "Exceeds expectations: matches each control measure to the route or condition it interrupts, says what it does not do (for example a mesh dome keeps flies off but not spores) and suggests accessible, low-cost options for Kenyan households.",
+     "proficient": "Meets expectations: gives suitable control measures with some explanation of how they work.",
+     "developing": "Approaches expectations: lists measures without explaining why they work."
+    },
+    {
+     "criterion": "Scientific knowledge of microorganisms",
+     "excellent": "Exceeds expectations: accurately describes infections, transmission routes and beneficial and harmful roles, and shows how the same group can be both.",
+     "proficient": "Meets expectations: mostly accurate examples with minor gaps in transmission or the dual role.",
+     "developing": "Approaches expectations: few or inaccurate examples."
+    },
+    {
+     "criterion": "Communication and Kenyan context",
+     "excellent": "Exceeds expectations: clear, well-organised message for the community that uses accurate scientific terms and local examples.",
+     "proficient": "Meets expectations: clear message with some scientific terms and some local context.",
+     "developing": "Approaches expectations: message is unclear or lacks scientific terms and local context."
+    }
+   ],
+   "old": "[{\"criterion\": \"Explanation of the phenomenon (what and where from)\", \"excellent\": \"Clearly identifies the patches as living fungal mould colonies, explains airborne spores as the source and route, and explains the colour variation as different species.\", \"proficient\": \"Identifies the patches as fungal mould and says spores came from the air, but gives limited explanation of the colour variation.\", \"developing\": \"Says the patches are germs or dirt, or does not explain how the organisms reached the food.\"}, {\"criterion\": \"Use of evidence on growth conditions\", \"excellent\": \"Names warmth, moisture and air exposure, uses the Lesson 7 observations, and links all three to the overnight spoilage in Kisumu.\", \"proficient\": \"Names the conditions and links most of them to the phenomenon, with limited use of investigation evidence.\", \"developing\": \"Names one condition or gives a vague link to the phenomenon, with no evidence.\"}, {\"criterion\": \"Prevention and control reasoning\", \"excellent\": \"Matches each control measure to the route or condition it interrupts and suggests accessible, low-cost options for Kenyan households.\", \"proficient\": \"Gives suitable control measures with some explanation of how they work.\", \"developing\": \"Lists measures without explaining why they work.\"}, {\"criterion\": \"Scientific knowledge of microorganisms\", \"excellent\": \"Accurately describes infections, transmission routes and beneficial and harmful roles, and shows how the same group can be both.\", \"proficient\": \"Mostly accurate examples with minor gaps in transmission or the dual role.\", \"developing\": \"Few or inaccurate examples.\"}, {\"criterion\": \"Communication and Kenyan context\", \"excellent\": \"Clear, well-organised message for the community that uses accurate scientific terms and local examples.\", \"proficient\": \"Clear message with some scientific terms and some local context.\", \"developing\": \"Message is unclear or lacks scientific terms and local context.\"}]",
+   "new": "[{\"criterion\": \"Explanation of the phenomenon (what and where from)\", \"excellent\": \"Exceeds expectations: clearly identifies the patches as living fungal mould colonies, explains airborne spores as the source and route, explains that colour can show different species or different ages of one mould, and notes that slime and sour smell suggest bacteria or yeast.\", \"proficient\": \"Meets expectations: identifies the patches as fungal mould and says the spores came from the air, with limited explanation of the colour variation.\", \"developing\": \"Approaches expectations: says the patches are germs or dirt, or does not explain how the organisms reached the food.\"}, {\"criterion\": \"Use of evidence on growth conditions\", \"excellent\": \"Exceeds expectations: names warmth, moisture and exposure to air (cover), uses the Lesson 7 comparisons of containers A to F one condition at a time, and links all of them to the overnight spoilage in Kisumu.\", \"proficient\": \"Meets expectations: names the conditions and links most of them to the phenomenon, with limited use of the investigation evidence.\", \"developing\": \"Approaches expectations: names one condition or gives a vague link to the phenomenon, with no evidence.\"}, {\"criterion\": \"Prevention and control reasoning\", \"excellent\": \"Exceeds expectations: matches each control measure to the route or condition it interrupts, says what it does not do (for example a mesh dome keeps flies off but not spores) and suggests accessible, low-cost options for Kenyan households.\", \"proficient\": \"Meets expectations: gives suitable control measures with some explanation of how they work.\", \"developing\": \"Approaches expectations: lists measures without explaining why they work.\"}, {\"criterion\": \"Scientific knowledge of microorganisms\", \"excellent\": \"Exceeds expectations: accurately describes infections, transmission routes and beneficial and harmful roles, and shows how the same group can be both.\", \"proficient\": \"Meets expectations: mostly accurate examples with minor gaps in transmission or the dual role.\", \"developing\": \"Approaches expectations: few or inaccurate examples.\"}, {\"criterion\": \"Communication and Kenyan context\", \"excellent\": \"Exceeds expectations: clear, well-organised message for the community that uses accurate scientific terms and local examples.\", \"proficient\": \"Meets expectations: clear message with some scientific terms and some local context.\", \"developing\": \"Approaches expectations: message is unclear or lacks scientific terms and local context.\"}]",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-082",
+   "kind": "flag",
+   "target": "final_explanation",
+   "path": "rubric",
+   "criteria": [
+    10
+   ],
+   "category": "assessment",
+   "severity": "minor",
+   "teacher_decision": true,
+   "why": "The CBE level 'Below Expectations' cannot be represented: the data contract allows only three level fields (excellent, proficient, developing). Teachers may wish to treat work that does not reach 'Approaches' as Below Expectations when marking. Suggestion: have the partner add a fourth field in a future contract version.",
+   "where": "Final Explanation, rubric",
+   "applied_at": "2026-10-17T17:11:18"
+  },
+  {
+   "id": "gensci_1_7-083",
+   "kind": "flag",
+   "target": "unit",
+   "path": "learningOutcomes",
+   "criteria": [
+    2
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "No KICD curriculum PDF covers General Science (the PDFs are Biology, Chemistry, Physics and Mathematics; the Biology PDF has no sub-strand on microorganisms), so the learning outcomes (a to f), content bullets, key inquiry question, competencies, values and PCIs could not be checked against KICD wording, and the 'KICD project requirement' for the mould investigation could not be confirmed. Nothing was changed. All six outcomes are taught (a: Lesson 2, b: Lesson 3, c: Lesson 4, d: Lesson 5, e: Lesson 6, f: Lessons 1, 4, 6 and 8) and assessed in the Final Explanation. Please check the wording against the General Science design if a copy is available.",
+   "where": "Unit overview, learningOutcomes",
+   "applied_at": "2026-10-17T17:11:18"
+  }
+ ]
+}
