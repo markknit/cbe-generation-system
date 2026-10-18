@@ -9,8 +9,8 @@ REM
 REM  Usage:
 REM      scripts\sync_to_drive.bat            actually sync
 REM      scripts\sync_to_drive.bat preview    dry run, writes nothing (/L)
-REM      scripts\sync_to_drive.bat refresh-journals
-REM                                           also OVERWRITE journals already on Drive (see job 4)
+REM      scripts\sync_to_drive.bat keep-journals
+REM                                           do NOT overwrite journals already on Drive (see job 4)
 REM      (the two words can be combined, in any order)
 REM
 REM  Four independent jobs (1-2 are the released corpus, 3-4 are the Grade 10
@@ -39,12 +39,17 @@ REM       the main tree. Not yet signed off by teachers: kept in its own Drive
 REM       folder so it cannot be confused with the released CBE Outputs.
 REM
 REM    4. journals  ->  G:\My Drive\CBE Revised 2026-10\Journals   /E  (no purge)
-REM       Journal_<Subject>.docx + Journal_00_Master_Index.docx from
-REM       data\revised_2026-10_full\journal. Teachers tick ACCEPT/EDIT in these
-REM       files. By DEFAULT this job only copies journals that are NOT yet on
-REM       Drive (/XC /XN /XO), so a re-run can never overwrite a teacher's
-REM       marked-up copy. To publish a regenerated journal, delete the old one
-REM       on Drive, or run with "refresh-journals" (overwrites ALL journals).
+REM       Journal_<Subject>.docx, Flagged_Items_<Subject>.docx and
+REM       Journal_00_Master_Index.docx from data\revised_2026-10_full\journal.
+REM       By DEFAULT this job publishes the LATEST versions: any journal that is
+REM       new or has changed in the repo overwrites the copy on Drive (15 files
+REM       in the current set). These Drive copies are the MASTER copies handed to
+REM       teachers; teachers should download or copy them and return their
+REM       marked-up files to Mark, NOT edit them in place on Drive, because the
+REM       next sync would overwrite an in-place edit. If marked-up copies ARE
+REM       being kept in this Drive folder, run with "keep-journals": that copies
+REM       only files not yet on Drive and never overwrites an existing one (so a
+REM       regenerated journal is then NOT published until the old one is moved).
 REM
 REM  Path handling that matters:
 REM    - job 1 excludes the PDF subdirectory (/XD), or it walks into the PDF
@@ -91,13 +96,13 @@ set "COMMON=/FFT /R:2 /W:5 /NP /TEE"
 
 REM --- Arguments -----------------------------------------------------------
 set "DRYRUN="
-set "JOURNAL_MODE=/XC /XN /XO"
-set "JOURNAL_NOTE=new files only, existing journals on Drive are never overwritten"
+set "JOURNAL_MODE="
+set "JOURNAL_NOTE=publishes the LATEST journals (new or changed files overwrite the Drive copies)"
 for %%A in (%*) do (
     if /i "%%~A"=="preview" set "DRYRUN=/L"
-    if /i "%%~A"=="refresh-journals" (
-        set "JOURNAL_MODE="
-        set "JOURNAL_NOTE=OVERWRITES journals already on Drive (teacher mark-ups lost)"
+    if /i "%%~A"=="keep-journals" (
+        set "JOURNAL_MODE=/XC /XN /XO"
+        set "JOURNAL_NOTE=keep-journals: new files only, existing journals on Drive are never overwritten"
     )
 )
 if defined DRYRUN (
@@ -144,6 +149,8 @@ if not exist "%SRC_REV_JOURNAL%\" (
     set "DO_REV="
 )
 
+set "NJ=0"
+if defined DO_REV for /f %%N in ('dir /b "%SRC_REV_JOURNAL%\*.docx" 2^>nul ^| find /c /v ""') do set "NJ=%%N"
 echo.
 echo Repo:      %REPO%
 echo Log:       %LOG%
@@ -193,6 +200,7 @@ echo.
 echo ============================================================
 echo  JOB 4/4  journals  ^-^>  %DEST_REV_JOURNAL%
 echo  mode: %JOURNAL_NOTE%
+echo  journal files in this repo: %NJ%
 echo ============================================================
 robocopy "%SRC_REV_JOURNAL%" "%DEST_REV_JOURNAL%" *.docx %JOURNAL_MODE% %COMMON% %DRYRUN% /LOG+:"%LOG%"
 set "RC4=%ERRORLEVEL%"
