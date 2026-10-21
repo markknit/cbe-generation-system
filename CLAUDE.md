@@ -64,6 +64,8 @@ checked out in its own git worktree at
 in `/home/markk/ares/cbe-generation-system`. Never switch branches inside
 either folder: each folder stays on its own branch.
 
+- **Design spec:** `docs/presentations/BUILD_MANUAL.md` is the teachers' build manual for decks; `docs/presentations/OVERRIDES.md` lists where this policy overrides it. Where they conflict, this policy and the overrides win.
+
 **Status files**
 - On `main`: `STATUS.md`, as always. It keeps one Active Threads row for
   presentations, pointing to the branch's status file. Update that row only
@@ -102,6 +104,8 @@ just once at the end. A milestone is a piece of work teachers have approved
    (`scripts/run_lesson3_checks.sh`).
 3. Mark approves the merge.
 4. After the merge, update the presentations row in `STATUS.md` on `main`.
+
+**Design Spes: refer to 'SeaVuria_Science_Lesson_PPT_Build_Manual.md' (or 'SeaVuria_Science_Lesson_PPT_Build_Manual.doc') as the main reference for design process, rules, and specifications. Make sure it is 
 
 **Generated outputs: decision pending (Mark).** One deck plus its PDF is
 about 0.4–0.5 MB, so a full grade is roughly 1 GB, and every regeneration
