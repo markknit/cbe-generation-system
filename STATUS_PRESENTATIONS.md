@@ -58,3 +58,8 @@ The status file for the `presentations` branch (worktree
 - Mark's claude.ai project instructions were still the original draft (stray header, three-file fetch list). Corrected text saved as `docs/presentations/PROJECT_INSTRUCTIONS_claude_ai.md` (fetch list now six files incl. HANDOFF, OVERRIDES, BUILD_MANUAL; standing rules match today's decisions). Mark to paste it into the project instructions; claude.ai skills already updated by Mark.
 - Still open: Mark pastes the new instructions; logos; lesson-length source; Drive destination for decks.
 
+## Updates — 2026-10-21 (fifth entry) — setup closed out
+- Mark updated the claude.ai skills and project instructions; toolkit repo skills verified identical to the repo's. Setup (branch, design spec, overrides, HANDOFF, output policy, tooling sync) is complete; generator build not started.
+- Next session: `/restart`, `git merge main`, then HANDOFF Phase 0 (logos, lesson-length source, HANDOFF review).
+- Still open: logos (Mark); Drive destination for decks; Maths/Core Maths/Gen Sci/Ess Maths guidance.
+
