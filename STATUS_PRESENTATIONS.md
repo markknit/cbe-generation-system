@@ -12,11 +12,11 @@ The status file for the `presentations` branch (worktree
 | Thread | Status | Notes |
 |---|---|---|
 | Branch + worktree setup | Done 2026-10-20 | Created from `main` at `805f9738`, pushed to `origin/presentations`; symlinks + `npm install` done; Step 0 passes in the worktree. Each session: `/restart`, then `git merge main`. |
-| Teacher review of example decks | Blocked: waiting on teaching staff | 4 examples in `handoff_bundle_2026-09-29/presentation_examples_deferred/` (Bio L2, Chem L4, Maths L4, Physics L2). Generator design waits on this feedback. |
-| Presentation HANDOFF + initiation prompt | Not started | To be written once the review feedback is in. |
+| Teacher review of example decks | In progress; no longer gates the generator build (Mark 2026-10-21) | 4 examples in `handoff_bundle_2026-09-29/presentation_examples_deferred/` (Bio L2, Chem L4, Maths L4, Physics L2). Generator design waits on this feedback. |
+| Presentation HANDOFF + initiation prompt | **Drafted 2026-10-21** (`HANDOFF_presentations_2026-10-21.md`); Mark to review | Locked decisions, open questions (logos, lesson-length source, Drive destination), phased plan (Phase 0 preconditions to Phase 4 distribution). First build session starts at Phase 0. |
 | SeaVuria Build Manual in repo | Committed 2026-10-20 (design input only; not signed off) | `docs/presentations/BUILD_MANUAL.md` (+ `.docx` source) and `OVERRIDES.md` (draft; where the manual conflicts with CLAUDE.md Branch Policy, the overrides win). Science manual is current (Mark, 2026-10-21); the Biology-only "Cells" manual may be used for that one lesson only. `main`'s CLAUDE.md points here. |
 | Manual vs branch-rule conflicts | **Decided 2026-10-21 (Mark); recorded in OVERRIDES.md** | Footer: `config/attribution.yaml` is the guide (`slide_footer` added on `main` 2026-10-21; YAML now says "ARES Education"). ARES links: on the slide as a clickable icon, not a visible URL. Science errors: flag in the build log, fix only on `main`. Maths: processed last, probably no separate process. Still open: icon design, `slide_footer`, teacher review. |
-| Output commit policy | Decision pending (Mark) | ~1 GB per grade if committed; precedent: revised corpus is gitignored and shared via Drive. |
+| Output commit policy | **Decided 2026-10-21 (Mark):** decks/PDFs gitignored, shared via Drive; only `data/outputs/presentations/_samples/` committed | Applied on `main` (`75b4fad2`: CLAUDE.md, `.gitignore`, WORKFLOW.md). Drive destination for decks still to be decided and added on `main`. |
 
 ## Known Issues / Lessons Learned
 
@@ -49,3 +49,7 @@ The status file for the `presentations` branch (worktree
 ## Updates — 2026-10-21 (second entry) — answers from Mark
 - Icon design: any icon for now, refined during testing. Teacher review of the 4 example decks does not gate work for now. Copyright wording "SeaVuria and ARES Education" agreed by Mark.
 - Still open: presentation HANDOFF; output commit policy.
+
+## Updates — 2026-10-21 (third entry) — output policy adopted, HANDOFF drafted
+- Output policy adopted on `main` (`75b4fad2`); merged here. Final HANDOFF drafted: `HANDOFF_presentations_2026-10-21.md` (needs Mark's review).
+- Still open: logos (Mark to supply); lesson-length source check; Drive destination for decks (WORKFLOW.md on `main`); Mark's review of the HANDOFF; Maths/Core Maths/Gen Sci/Ess Maths guidance.
