@@ -15,7 +15,7 @@ The status file for the `presentations` branch (worktree
 | Teacher review of example decks | Blocked: waiting on teaching staff | 4 examples in `handoff_bundle_2026-09-29/presentation_examples_deferred/` (Bio L2, Chem L4, Maths L4, Physics L2). Generator design waits on this feedback. |
 | Presentation HANDOFF + initiation prompt | Not started | To be written once the review feedback is in. |
 | SeaVuria Build Manual in repo | Committed 2026-10-20 (design input only; not signed off) | `docs/presentations/BUILD_MANUAL.md` (+ `.docx` source) and `OVERRIDES.md` (draft; where the manual conflicts with CLAUDE.md Branch Policy, the overrides win). Science manual is current (Mark, 2026-10-21); the Biology-only "Cells" manual may be used for that one lesson only. `main`'s CLAUDE.md points here. |
-| Manual vs branch-rule conflicts | **Decided 2026-10-21 (Mark); recorded in OVERRIDES.md** | Footer: `config/attribution.yaml` is the guide (a short per-slide `slide_footer` key may need adding on `main`). ARES links: on the slide as a clickable icon, not a visible URL. Science errors: flag in the build log, fix only on `main`. Maths: processed last, probably no separate process. Still open: icon design, `slide_footer`, teacher review. |
+| Manual vs branch-rule conflicts | **Decided 2026-10-21 (Mark); recorded in OVERRIDES.md** | Footer: `config/attribution.yaml` is the guide (`slide_footer` added on `main` 2026-10-21; YAML now says "ARES Education"). ARES links: on the slide as a clickable icon, not a visible URL. Science errors: flag in the build log, fix only on `main`. Maths: processed last, probably no separate process. Still open: icon design, `slide_footer`, teacher review. |
 | Output commit policy | Decision pending (Mark) | ~1 GB per grade if committed; precedent: revised corpus is gitignored and shared via Drive. |
 
 ## Known Issues / Lessons Learned
@@ -44,4 +44,4 @@ The status file for the `presentations` branch (worktree
 
 ## Updates — 2026-10-21 — OVERRIDES decisions recorded
 - Mark's decisions applied to `docs/presentations/OVERRIDES.md` rows 1, 2, 4, 6 (see Active Threads). Footer comparison done: manual vs YAML differ in year, "ARES Education" wording, URL, KICD line, AI credit.
-- Still open: `slide_footer` YAML key (on `main`, needs Mark's OK); icon design; teacher review of the 4 example decks; HANDOFF; output commit policy.
+- `slide_footer` added on `main` (`attribution.yaml`); "ARES Education" now in all three YAML lines. Generator must read the key (not built yet). Still open: icon design; teacher review of the 4 example decks; HANDOFF; output commit policy.
