@@ -2072,3 +2072,8 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - `config/attribution.yaml` (`d3d2b875`): "ARES Education" in the copyright line and `lesson_footer`; new `slide_footer` key for decks. `generators/lib/attribution.js` does not read it yet (presentation generator will). Existing lesson plans/PDFs/revised corpus intentionally keep the old wording until the next regeneration (Known Issues, `206afb4f`).
 - Verified at end: `main` `206afb4f` == origin; `presentations` `7d51773c` == origin, 0 behind `main`; both clean.
 - Still open: Mark's review of icon design; teacher review of the 4 example decks; presentations HANDOFF; output commit policy; ARES agreement to copyright wording; toolkit-repo copy and claude.ai skill upload (Mark); earlier Grade 10 revision items above.
+
+## Updates — 2026-10-21 (second entry) — Mark's answers on open presentation items
+- Icon design: any icon is fine for now; it will be refined during testing. Teacher review of the 4 example decks no longer gates anything for now (it will still happen). Copyright wording ("SeaVuria and ARES Education") agreed by Mark. Grade 10 teacher reviews (journals/Flagged Items) are in process.
+- Checked: public GitHub `markknit/claude-continuity-toolkit` has only its 2026-08-18 initial commit; its `/restart` and `/update` are the OLD versions (no branch-awareness). So README section 3 is NOT done (the claude.ai upload could not be checked from here).
+- Still open: presentations HANDOFF; output commit policy (Mark); toolkit repo update; claude.ai skills check; Grade 10 teacher review results.
