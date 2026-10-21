@@ -103,6 +103,8 @@ just once at the end. A milestone is a piece of work teachers have approved
 3. Mark approves the merge.
 4. After the merge, update the presentations row in `STATUS.md` on `main`.
 
+**Design Spes: refer to 'SeaVuria_Science_Lesson_PPT_Build_Manual.md' (or 'SeaVuria_Science_Lesson_PPT_Build_Manual.doc') as the main reference for design process, rules, and specifications. Make sure it is 
+
 **Generated outputs: decision pending (Mark).** One deck plus its PDF is
 about 0.4–0.5 MB, so a full grade is roughly 1 GB, and every regeneration
 adds another copy to git history. Until Mark decides, don't commit
