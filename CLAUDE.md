@@ -56,6 +56,61 @@ here or elsewhere conflicts with that table, the table wins — run
 
 ---
 
+## Branch Policy — `presentations`
+
+Presentation generation is built on a long-running branch, `presentations`,
+checked out in its own git worktree at
+`/home/markk/ares/cbe-presentations`. Lesson-plan work continues on `main`
+in `/home/markk/ares/cbe-generation-system`. Never switch branches inside
+either folder: each folder stays on its own branch.
+
+**Status files**
+- On `main`: `STATUS.md`, as always. It keeps one Active Threads row for
+  presentations, pointing to the branch's status file. Update that row only
+  from `main`.
+- On `presentations`: **`STATUS_PRESENTATIONS.md`** is this branch's status
+  file. `/update` writes there, and `/restart` reads it along with `main`'s
+  `STATUS.md`.
+
+**Control documents are edited only on `main`.** `CLAUDE.md`, `WORKFLOW.md`,
+`STATUS.md`, `config/attribution.yaml` and `ares-contract.schema.json` are
+never edited on `presentations`. If the branch needs one changed, make the
+change on `main` and merge `main` in. Keeping edits one-way is what stops
+merges from conflicting.
+
+**Branch hygiene**
+- At the start of every session on `presentations`: `git merge main`. The
+  branch builds on `main`'s current lesson data (`_data.json`, resource
+  links, quiz JSON), never on a stale copy.
+- Lesson-plan content is never edited or regenerated on `presentations`.
+  The branch reads lesson data; it doesn't write it.
+- The presentation code must not change shared pipeline files
+  (`generate_substrand.py`, `build_docs.js`, `generate.js`, the schema)
+  without a note in `STATUS_PRESENTATIONS.md` and Mark's approval, because
+  those changes reach `main` at the next merge.
+- Generated presentations go to `data/outputs/presentations/`. See the
+  outputs rule below before committing any.
+- Nothing from `presentations` is synced to teacher Drive folders until
+  Mark has approved it.
+
+**Merging back to `main`** happens at milestones, not continuously and not
+just once at the end. A milestone is a piece of work teachers have approved
+(e.g. the generator plus one subject's decks). Before each merge:
+1. `git merge main` on the branch, so the merge back is a fast, small one.
+2. The `main` gates pass on the branch: `scripts/check_resource_links.py`,
+   `scripts/validate_corpus.js`, and the partner test suite
+   (`scripts/run_lesson3_checks.sh`).
+3. Mark approves the merge.
+4. After the merge, update the presentations row in `STATUS.md` on `main`.
+
+**Generated outputs: decision pending (Mark).** One deck plus its PDF is
+about 0.4–0.5 MB, so a full grade is roughly 1 GB, and every regeneration
+adds another copy to git history. Until Mark decides, don't commit
+generated decks or PDFs, apart from a small sample set. The precedent is
+the revised corpus, which is gitignored and shared through Drive.
+
+---
+
 ## Current Status
 
 **Do not read a snapshot here** — status changes every session and a

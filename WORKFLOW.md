@@ -1,5 +1,31 @@
 # Operational Workflow Guide
 
+---
+
+## Step 0 — Verify live state before any task touching git, paths, or sync
+
+Run this block in the working folder you're about to use, and compare the
+output with the **Environment Reference** table at the bottom of this file.
+If anything doesn't match, fix the table (or the code) **now**, before doing
+the task, and log it in STATUS.md's Known Issues. Don't defer it.
+
+```bash
+pwd                                             # which worktree am I in?
+git branch --show-current                       # must match the table's branch for this folder
+git log --oneline -3
+git status
+git fetch --quiet && git status -sb             # ahead/behind origin
+git rev-list --count HEAD..main                 # presentations only: main commits not yet merged
+grep -h "outputDir" generators/data/*.js | sort -u
+ls data/ares_index/ares_content.db              # resource DB present (a symlink in the worktree)
+which soffice                                   # LibreOffice for PDF builds
+```
+
+Other documents point here rather than restating these values. The /restart
+skill runs this block automatically.
+
+---
+
 ## Standard Workflow: Generating a New Subject/Sub-Strand
 
 ### Step 1 — Environment setup
@@ -459,7 +485,9 @@ just the contingency margin.
 | Python venv | `source venv/bin/activate` |
 | Node version | v22.x |
 | API model | `claude-sonnet-5-5` — every call (lessons: `src/generate_substrand.py` `MODEL`; quizzes: `config/quiz_generation.yaml`) |
-| Git branch | `main` |
+| Git branch — lesson plans | `main`, in `/home/markk/ares/cbe-generation-system` |
+| Git branch — presentations | `presentations`, git worktree in `/home/markk/ares/cbe-presentations`; merges `main` in every session; status file `STATUS_PRESENTATIONS.md` (see CLAUDE.md "Branch Policy") |
+| Presentation outputs | `data/outputs/presentations/<Grade>/<Subject>/<SubStrand>/` (on the branch; commit policy pending, see CLAUDE.md) |
 | GitHub remote | `https://github.com/markknit/cbe-generation-system.git` |
 | ARES content DB | `data/ares_index/ares_content.db` (630MB, jhm-spark only, gitignored) |
 | Curriculum PDFs | `data/raw/curriculum_pdfs/` |
