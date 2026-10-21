@@ -45,3 +45,7 @@ The status file for the `presentations` branch (worktree
 ## Updates — 2026-10-21 — OVERRIDES decisions recorded
 - Mark's decisions applied to `docs/presentations/OVERRIDES.md` rows 1, 2, 4, 6 (see Active Threads). Footer comparison done: manual vs YAML differ in year, "ARES Education" wording, URL, KICD line, AI credit.
 - `slide_footer` added on `main` (`attribution.yaml`); "ARES Education" now in all three YAML lines. Generator must read the key (not built yet). Still open: icon design; teacher review of the 4 example decks; HANDOFF; output commit policy.
+
+## Updates — 2026-10-21 (second entry) — answers from Mark
+- Icon design: any icon for now, refined during testing. Teacher review of the 4 example decks does not gate work for now. Copyright wording "SeaVuria and ARES Education" agreed by Mark.
+- Still open: presentation HANDOFF; output commit policy.
