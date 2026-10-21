@@ -112,6 +112,11 @@ When `/restart` is typed in a claude.ai conversation for the project:
 1. Re-fetch `STATUS.md` and `CLAUDE.md` (and `WORKFLOW.md` if the task
    depends on it) from GitHub `main`, even if they were already fetched in
    this conversation. A fetched copy can lag behind the most recent push.
+   If `CLAUDE.md` names a branch status file (e.g. `STATUS_<NAME>.md` on a
+   long-running branch) and the work in this conversation is about that
+   branch, fetch that file too, from that branch (not `main`), along with
+   any handoff or overrides document that `CLAUDE.md` or the status file
+   names as binding.
 2. Compare them against anything assumed earlier in the chat, and report any
    drift, as in steps 3–4.
 3. Say explicitly that the live checks (branch, log, status, paths) need
