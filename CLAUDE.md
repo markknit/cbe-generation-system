@@ -105,11 +105,13 @@ just once at the end. A milestone is a piece of work teachers have approved
 3. Mark approves the merge.
 4. After the merge, update the presentations row in `STATUS.md` on `main`.
 
-**Generated outputs: decision pending (Mark).** One deck plus its PDF is
+**Generated outputs: decided 2026-10-21 (Mark).** One deck plus its PDF is
 about 0.4–0.5 MB, so a full grade is roughly 1 GB, and every regeneration
-adds another copy to git history. Until Mark decides, don't commit
-generated decks or PDFs, apart from a small sample set. The precedent is
-the revised corpus, which is gitignored and shared through Drive.
+would add another copy to git history. Generated decks and PDFs are
+therefore **gitignored and shared through Drive**, the same as the revised
+corpus. Only a small sample set may be committed, in
+`data/outputs/presentations/_samples/` (the `.gitignore` rules allow only
+that folder). Never `git add -f` decks outside `_samples/`.
 
 ---
 

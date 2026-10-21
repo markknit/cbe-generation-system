@@ -487,7 +487,7 @@ just the contingency margin.
 | API model | `claude-sonnet-5-5` — every call (lessons: `src/generate_substrand.py` `MODEL`; quizzes: `config/quiz_generation.yaml`) |
 | Git branch — lesson plans | `main`, in `/home/markk/ares/cbe-generation-system` |
 | Git branch — presentations | `presentations`, git worktree in `/home/markk/ares/cbe-presentations`; merges `main` in every session; status file `STATUS_PRESENTATIONS.md` (see CLAUDE.md "Branch Policy") |
-| Presentation outputs | `data/outputs/presentations/<Grade>/<Subject>/<SubStrand>/` (on the branch; commit policy pending, see CLAUDE.md) |
+| Presentation outputs | `data/outputs/presentations/<Grade>/<Subject>/<SubStrand>/` (on the branch; gitignored, shared via Drive; only `_samples/` committed, see CLAUDE.md) |
 | GitHub remote | `https://github.com/markknit/cbe-generation-system.git` |
 | ARES content DB | `data/ares_index/ares_content.db` (630MB, jhm-spark only, gitignored) |
 | Curriculum PDFs | `data/raw/curriculum_pdfs/` |
