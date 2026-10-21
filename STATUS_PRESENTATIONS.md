@@ -53,3 +53,8 @@ The status file for the `presentations` branch (worktree
 ## Updates — 2026-10-21 (third entry) — output policy adopted, HANDOFF drafted
 - Output policy adopted on `main` (`75b4fad2`); merged here. Final HANDOFF drafted: `HANDOFF_presentations_2026-10-21.md` (needs Mark's review).
 - Still open: logos (Mark to supply); lesson-length source check; Drive destination for decks (WORKFLOW.md on `main`); Mark's review of the HANDOFF; Maths/Core Maths/Gen Sci/Ess Maths guidance.
+
+## Updates — 2026-10-21 (fourth entry) — claude.ai project instructions refreshed
+- Mark's claude.ai project instructions were still the original draft (stray header, three-file fetch list). Corrected text saved as `docs/presentations/PROJECT_INSTRUCTIONS_claude_ai.md` (fetch list now six files incl. HANDOFF, OVERRIDES, BUILD_MANUAL; standing rules match today's decisions). Mark to paste it into the project instructions; claude.ai skills already updated by Mark.
+- Still open: Mark pastes the new instructions; logos; lesson-length source; Drive destination for decks.
+
