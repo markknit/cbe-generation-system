@@ -64,6 +64,8 @@ checked out in its own git worktree at
 in `/home/markk/ares/cbe-generation-system`. Never switch branches inside
 either folder: each folder stays on its own branch.
 
+- **Design spec:** `docs/presentations/BUILD_MANUAL.md` is the teachers' build manual for decks; `docs/presentations/OVERRIDES.md` lists where this policy overrides it. Where they conflict, this policy and the overrides win.
+
 **Status files**
 - On `main`: `STATUS.md`, as always. It keeps one Active Threads row for
   presentations, pointing to the branch's status file. Update that row only
