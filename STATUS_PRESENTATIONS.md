@@ -15,7 +15,7 @@ The status file for the `presentations` branch (worktree
 | Teacher review of example decks | Blocked: waiting on teaching staff | 4 examples in `handoff_bundle_2026-09-29/presentation_examples_deferred/` (Bio L2, Chem L4, Maths L4, Physics L2). Generator design waits on this feedback. |
 | Presentation HANDOFF + initiation prompt | Not started | To be written once the review feedback is in. |
 | SeaVuria Build Manual in repo | Committed 2026-10-20 (design input only; not signed off) | `docs/presentations/BUILD_MANUAL.md` (+ `.docx` source) and `OVERRIDES.md` (draft; where the manual conflicts with CLAUDE.md Branch Policy, the overrides win). Science manual is current (Mark, 2026-10-21); the Biology-only "Cells" manual may be used for that one lesson only. `main`'s CLAUDE.md points here. |
-| Manual vs branch-rule conflicts | Decision pending (Mark) | Footer attribution (must come from `config/attribution.yaml`); ARES links on hidden slide vs clickable while projecting; deck-level science fixes vs "never edit lesson content"; scope beyond Grade 10 science. See OVERRIDES.md. CLAUDE.md design-spec wording reconciled 2026-10-21 (one statement, repo paths, `fe186afb`). |
+| Manual vs branch-rule conflicts | **Decided 2026-10-21 (Mark); recorded in OVERRIDES.md** | Footer: `config/attribution.yaml` is the guide (a short per-slide `slide_footer` key may need adding on `main`). ARES links: on the slide as a clickable icon, not a visible URL. Science errors: flag in the build log, fix only on `main`. Maths: processed last, probably no separate process. Still open: icon design, `slide_footer`, teacher review. |
 | Output commit policy | Decision pending (Mark) | ~1 GB per grade if committed; precedent: revised corpus is gitignored and shared via Drive. |
 
 ## Known Issues / Lessons Learned
@@ -41,3 +41,7 @@ The status file for the `presentations` branch (worktree
 - Mark's loose copies in `docs/` (`SeaVuria_..._Manual.docx` identical to the committed one; `.md` a rougher conversion) deleted; `docs/presentations/BUILD_MANUAL.md` is the single markdown copy.
 - CLAUDE.md on `main` now has one design-spec statement naming the repo paths (`fe186afb`); merged here.
 - Still open: Mark's decisions on OVERRIDES.md (footer attribution, link placement); teacher review of the 4 example decks; HANDOFF; output commit policy.
+
+## Updates — 2026-10-21 — OVERRIDES decisions recorded
+- Mark's decisions applied to `docs/presentations/OVERRIDES.md` rows 1, 2, 4, 6 (see Active Threads). Footer comparison done: manual vs YAML differ in year, "ARES Education" wording, URL, KICD line, AI credit.
+- Still open: `slide_footer` YAML key (on `main`, needs Mark's OK); icon design; teacher review of the 4 example decks; HANDOFF; output commit policy.
