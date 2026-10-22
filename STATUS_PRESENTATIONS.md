@@ -1,6 +1,6 @@
 # STATUS — Presentations branch
 
-*Last updated: 2026-10-20*
+*Last updated: 2026-10-22*
 
 The status file for the `presentations` branch (worktree
 `/home/markk/ares/cbe-presentations`). For lesson-plan state, see
@@ -63,3 +63,11 @@ The status file for the `presentations` branch (worktree
 - Next session: `/restart`, `git merge main`, then HANDOFF Phase 0 (logos, lesson-length source, HANDOFF review).
 - Still open: logos (Mark); Drive destination for decks; Maths/Core Maths/Gen Sci/Ess Maths guidance.
 
+
+## Updates — 2026-10-22 — Phase 0: lesson-length source checked; header fixed
+- Header date corrected (was 2026-10-20). `/restart` passed first: 0 behind `main`, clean, control docs identical to `main`.
+- **Lesson-length source (HANDOFF open question 2): found, usable with a rule.** Each lesson has `LESSONS[n].duration` (required by `ares-contract.schema.json`, type string). Surveyed all Bio/Chem/Phys `generators/data/*_data.js` (28 modules, 258 lessons): 168 are plain "40 minutes" (57) / "80 minutes" (111); every one of the 258 leads with 40 or 80 minutes (0 unparsable), but 66 carry free-text qualifiers (e.g. "80 minutes (2 x 40-minute periods)", "2 lessons (80 minutes)", "40 minutes (… double period of 80 if the practical is done in full)").
+  - **Ambiguous: 24 lessons** say 40 minutes but allow an 80-minute double period as an option (phys_2_1, phys_3_2, phys_3_3, phys_3_4, phys_1_4, chem_1_1, chem_1_3, bio_1_2 L2). Proposed rule (Mark to confirm): the leading figure is the deck's length; the option goes in the build log. One lesson, chem_1_3 L4, also gives per-phase minutes inside the string.
+  - Note "2 lessons (80 minutes)" (bio_3_2 L7–10, phys_4_1 L5, phys_4_2 L5) leads with "2 lessons", so the parser must read the minutes figure, not the first number.
+- **`UNIT.totalDuration` is NOT reliable** (11 of 28 modules, e.g. bio_1_1: lessons sum 840 min, totalDuration says 480; phys_1_2: 400 vs 240). It assumes 40 minutes per lesson. Don't use it; use per-lesson `duration`.
+- Nothing committed or changed apart from this file. Still open: logos (Mark); confirm the 40/80 rule above; HANDOFF review; Drive destination; Maths guidance. For `main` (not edited here): CLAUDE.md lines 258–259 still say presentations are deferred/"don't build it", contradicting the Branch Policy.
