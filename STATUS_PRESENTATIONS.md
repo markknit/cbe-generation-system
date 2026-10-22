@@ -71,3 +71,7 @@ The status file for the `presentations` branch (worktree
   - Note "2 lessons (80 minutes)" (bio_3_2 L7–10, phys_4_1 L5, phys_4_2 L5) leads with "2 lessons", so the parser must read the minutes figure, not the first number.
 - **`UNIT.totalDuration` is NOT reliable** (11 of 28 modules, e.g. bio_1_1: lessons sum 840 min, totalDuration says 480; phys_1_2: 400 vs 240). It assumes 40 minutes per lesson. Don't use it; use per-lesson `duration`.
 - Nothing committed or changed apart from this file. Still open: logos (Mark); confirm the 40/80 rule above; HANDOFF review; Drive destination; Maths guidance. For `main` (not edited here): CLAUDE.md lines 258–259 still say presentations are deferred/"don't build it", contradicting the Branch Policy.
+
+## Updates — 2026-10-22 (second entry) — Mark's decision: lesson-length rule
+- **Decided (Mark):** the leading 40/80 figure in each lesson's `duration` string is the deck length; optional double-period extensions (24 lessons) are noted in the build log only. HANDOFF §3 and open question 2 updated to match.
+- Phase 0 still open: logos (Mark); HANDOFF review; Drive destination; Maths guidance.

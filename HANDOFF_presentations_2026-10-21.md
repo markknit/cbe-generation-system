@@ -33,7 +33,7 @@ Generate one teacher-ready `.pptx` per lesson (16:9, Calibri) from the signed-of
 
 - **Lesson data** (per sub-strand, per lesson): `UNIT` (anchor phenomenon, driving question, titles, totalDuration), `LESSONS[n].framework` phases (`Predict Phase`, `Observe Phase`, `Explain Phase`, `Driving Question Board (DQB) Creation`, `Model Building Phase`: the contract enum), learner experience, teacher moves, sensemaking, formative assessment, `resourceLinks` (a slot may be `null`: see `docs/SCHEMA.md`), `SUMMARY_TABLE`, `FINAL_EXPLANATION`. Field documentation: `generators/data/SCHEMA.md`.
 - **Quizzes** (`*_quiz.json`) carry `phase` + `placement`; the manual does not use them, so decks do not include quizzes unless Mark decides otherwise.
-- **Lesson length:** the manual uses 40 min (single) or 80 min (double). Take it from the lesson data; if it is not explicit, flag it in the build log rather than guess.
+- **Lesson length (decided Mark 2026-10-22):** the manual uses 40 min (single) or 80 min (double). Take it from each lesson's `duration` string in the lesson data: **the leading 40 or 80 minutes figure is the deck length**; read the minutes figure, not the first number ("2 lessons (80 minutes)" = 80). Any optional extension in the qualifier (e.g. "extend to 80 minutes if the practical is done in full") goes in the build log, not the deck. Do not use `UNIT.totalDuration` (unreliable). If `duration` has no leading 40/80, flag it and stop.
 - **Phase colours** (Manual Section 4): Predict 47C6E4, Observe D7DF23, Explain CF128C, Driving Question Board FCBA63, Model Building E44145. Slides write "Driving Question Board" in full; the data label stays exactly as in the contract.
 - **Logos** (SeaVuria, ARES): not in the repo yet. **Mark must supply them** before the first real build.
 - **Reference prototypes (not to build from):** `handoff_bundle_2026-09-29/presentation_examples_deferred/` (4 example decks/builders, pptxgenjs-based). `pptxgenjs` is already in `package.json`; reuse the approach, not the content.
@@ -41,7 +41,7 @@ Generate one teacher-ready `.pptx` per lesson (16:9, Calibri) from the signed-of
 ## 4. Open questions (Mark / teachers; none block starting)
 
 1. **Logos:** supply the two logo files and their allowed sizes.
-2. **Lesson length source** in the data for 40 vs 80 minutes (verify; see §3).
+2. ~~**Lesson length source**~~ Answered 2026-10-22: per-lesson `duration`, leading 40/80 figure (see §3).
 3. **Safety slide, glance slide and practical detail:** the manual requires per-group materials, quantities and fallbacks. The lesson plans may not contain all of them. Policy proposed: take what exists, flag every gap in the build log, and **never invent** content (consistent with the manual's "do not invent an assessment").
 4. **Formative-check placeholders:** allowed ("Formative check to be added" slide) but each is listed in the build log.
 5. **General Science, Essential Mathematics, Core Mathematics, Mathematics:** no design guidance yet (Maths "has its own separate guidance", per the manual). Last in the queue.
