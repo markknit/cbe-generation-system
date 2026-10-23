@@ -1,0 +1,405 @@
+{
+ "lesson": 7,
+ "usage": [
+  {
+   "step": "author-A",
+   "input_tokens": 254,
+   "output_tokens": 42283,
+   "cache_read_input_tokens": 15400,
+   "cache_creation_input_tokens": 19491
+  },
+  {
+   "step": "author-B",
+   "input_tokens": 19917,
+   "output_tokens": 8057,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 34724
+  },
+  {
+   "step": "author-A",
+   "input_tokens": 15929,
+   "output_tokens": 21244,
+   "cache_read_input_tokens": 15400,
+   "cache_creation_input_tokens": 19491
+  },
+  {
+   "step": "author-B",
+   "input_tokens": 18799,
+   "output_tokens": 8125,
+   "cache_read_input_tokens": 15233,
+   "cache_creation_input_tokens": 19491
+  },
+  {
+   "step": "review1",
+   "input_tokens": 41032,
+   "output_tokens": 6376,
+   "cache_read_input_tokens": 1328,
+   "cache_creation_input_tokens": 0
+  },
+  {
+   "step": "author-A",
+   "input_tokens": 16131,
+   "output_tokens": 21023,
+   "cache_read_input_tokens": 34891,
+   "cache_creation_input_tokens": 0
+  },
+  {
+   "step": "author-B",
+   "input_tokens": 20478,
+   "output_tokens": 10991,
+   "cache_read_input_tokens": 34724,
+   "cache_creation_input_tokens": 0
+  },
+  {
+   "step": "review2",
+   "input_tokens": 43184,
+   "output_tokens": 6491,
+   "cache_read_input_tokens": 1328,
+   "cache_creation_input_tokens": 0
+  }
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "problems": [
+    "content does not fit: needs 5.66 in, has 4.71 in at the minimum legible sizes (shorten the slide or split it)"
+   ],
+   "review": null
+  },
+  {
+   "round": 1,
+   "problems": [],
+   "review": {
+    "findings": [
+     {
+      "slide": "Evidence Harvest: our T-chart",
+      "severity": "major",
+      "category": "science",
+      "problem": "The answer key says the ONLY IN ANIMAL CELL column may include 'the cell membrane they labelled'. A cell membrane is present in onion (plant) cells too, so it belongs in PRESENT IN BOTH. The notes would lead the teacher to accept or reinforce a wrong classification. The build_log flags the membrane inconsistency only on the Compare slide, and the deck itself adds this expectation on the T-chart.",
+      "fix": "In the T-chart key, put cell membrane under PRESENT IN BOTH. Add a teacher line: 'The membrane is in the onion cell too; we just did not label it in Lesson 6.' Make the Compare key say the same. Extend the build_log flag to this slide."
+     },
+     {
+      "slide": "Check your Prediction Cards / Model: link and explain / Model Update Statement",
+      "severity": "minor",
+      "category": "invented_content",
+      "problem": "Three student tasks are not in the SoW and are not logged as added_fact. They are the tick/cross marking of Prediction Cards in a different colour pen (a 2-minute slide), the stem 'This model is based on evidence from…', and the sentence 'Next lesson I predict…'. There is also a hand-count vote on 'fully/partly/not yet', and 'use a NEW colour' is added. The SoW only says to return to the card and to ask whether the question can be answered fully or partially.",
+      "fix": "Log each as an added_fact or builder choice, or remove them. Remove the 'Next lesson I predict' and 'This model is based on evidence from' lines, or mark them optional."
+     },
+     {
+      "slide": "What does our evidence tell us? / Evidence Harvest: our T-chart",
+      "severity": "minor",
+      "category": "timing",
+      "problem": "The DQB debrief is cut from 5 to 3 minutes (40%). The T-chart is cut from 6–7 to 5 minutes. Meanwhile about 2 minutes go to a slide the SoW does not contain (marking Prediction Cards), and several unlisted-time slides are given generous time. The trim was not spread fairly.",
+      "fix": "Shorten the invented Prediction Card slide to about 1 minute, or merge it into the Observe-to-Explain transition. Give the freed minute to the DQB debrief and the T-chart."
+     },
+     {
+      "slide": "Safety first",
+      "severity": "minor",
+      "category": "safety",
+      "problem": "The notes say to 'Name the learners with an open sore or oral infection', then 'give them the data recorder role in private'. This contradicts itself and could expose learners in front of the class. The build_log says the arrangement is kept private.",
+      "fix": "Reword to: 'Quietly speak to the learners with an open sore or oral infection before the class starts and give them the data recorder role. Do not name them aloud.'"
+     },
+     {
+      "slide": "Compare: onion cell and cheek cell",
+      "severity": "minor",
+      "category": "student_text",
+      "problem": "The student instruction uses ✓ for 'in both cells' and ★ for 'in one cell only'. Cell membrane appears in the cheek column but is not listed for the onion cell. Students following the key literally would star it, which is wrong. The key also does not say how to handle membrane.",
+      "fix": "Add a teacher note: 'Cell membrane is in both cells even if it was not labelled in Lesson 6; tick it.' Tell the SoW owner to label the membrane in Lesson 6 or reword the task."
+     },
+     {
+      "slide": "Lesson at a glance",
+      "severity": "minor",
+      "category": "resource",
+      "problem": "The fallback says to use 'an ARES video only as a last resort'. Every video is marked do_not_use or preview_first. The only video that might fit is the cell membrane overview, and it is not an exact match.",
+      "fix": "Name the one video that may be used (dqb.video, after previewing) and say when, or remove the sentence."
+     },
+     {
+      "slide": "Link to the healing cut",
+      "severity": "minor",
+      "category": "other",
+      "problem": "This is for the SoW owner. The SoW calls platelets 'tiny, irregular animal cells that extend pseudopods'. Platelets are cell fragments without a nucleus. The slide also pairs the name 'Aisha' with the existing illustration of Amina. The deck follows the SoW and logs both points, which is correct.",
+      "fix": "No deck change. The SoW owner should correct the platelet wording and choose one character name."
+     }
+    ],
+    "verdict": "needs_repair"
+   }
+  },
+  {
+   "round": 2,
+   "problems": [],
+   "review": {
+    "findings": [
+     {
+      "slide": "Safety first (opening group in the glance table)",
+      "severity": "minor",
+      "category": "fidelity_to_sow",
+      "problem": "The SoW puts the safety and technique briefing in the Observe phase, just before learners touch equipment. The deck puts it in the opening block, before the Predict phase. The Predict SAY line 'Before we touch any equipment' then comes after a briefing given with swabs, stain and bin in view. The 3 + 4 minute split of the SoW's single 4-minute briefing is logged, but the move is not.",
+      "fix": "Place the Safety slide immediately before the Demonstration slide, after the BEFORE slide, and keep its 3 minutes. Alternatively, log the reorder in the build_log."
+     },
+     {
+      "slide": "Model: link and explain",
+      "severity": "minor",
+      "category": "invented_content",
+      "problem": "The deck adds a student line 'This model is based on evidence from…', which the SoW does not have. It is not logged as an addition. The 'Use a NEW colour' instruction on the two model slides is also added, and the Check your Prediction Cards slide adds a different-colour-pen tick and cross marking step.",
+      "fix": "Log these small additions in the build_log, or remove the evidence line and the new-colour instruction. Keep the Prediction Card marking step only if it is logged as a builder addition."
+     },
+     {
+      "slide": "What does our evidence tell us?",
+      "severity": "minor",
+      "category": "timing",
+      "problem": "The SoW's 5-minute debrief is cut to 3 minutes, a 40% loss for that activity. In 3 minutes the teacher must cold-call 3 learners, collect new questions, point to the driving question and run a hands-up vote, with waits of about 8 seconds each. This is tight. Other slides with no SoW time (Write your explanation 5, Model Update Statement 5) took more time.",
+      "fix": "Move 1 minute from another slide, for example Write your explanation or Model Update Statement, to the debrief, or drop the vote to a quick show of hands."
+     },
+     {
+      "slide": "Evidence Harvest: our T-chart",
+      "severity": "minor",
+      "category": "timing",
+      "problem": "The T-chart is cut from the SoW's 6 to 7 minutes to 5 minutes. In a class of about 40, each of 20 pairs gets about 15 seconds for one observation plus placement on the chart. The lost time is not made up elsewhere in the Explain phase.",
+      "fix": "Give the T-chart 6 minutes, taking 1 minute from the Check your Prediction Cards slide or the Link to the healing cut slide. Tell the teacher to take two or three pairs per column if the chart is full."
+     },
+     {
+      "slide": "Prediction Card: onion cell and your cheek cell",
+      "severity": "minor",
+      "category": "notes_quality",
+      "problem": "The SAY line 'I am about to look at a cell from the inside of my own cheek' is the learners' written stem, read out in the teacher's voice, so it sounds odd. The SoW line is 'You are about to look at YOUR OWN cell'.",
+      "fix": "Replace it with: 'You are about to look at a cell from the inside of your own cheek. Write what you predict you will see.'"
+     },
+     {
+      "slide": "Write your explanation",
+      "severity": "minor",
+      "category": "notes_quality",
+      "problem": "The SAY line lists the words 'cell membrane, cytoplasm, nucleus, cell wall and flexible' before learners write. This hands over 'flexible', the exact quality marker the teacher is checking for. The SoW has these terms only as look-for markers, not as something to say to the class.",
+      "fix": "Say 'Use the correct names for the structures you saw'. Keep 'flexible' as a look-for marker only, and use the prompt card for learners who do not reach it."
+     },
+     {
+      "slide": "whole lesson (SoW issues, for the SoW owner)",
+      "severity": "minor",
+      "category": "other",
+      "problem": "The deck follows the SoW, which has several flagged problems. The Lesson 6 onion labels omit the cell membrane, so the ONLY IN ANIMAL column is likely to be empty. Platelets are called 'animal cells' with 'pseudopods'. Chloroplasts are listed as onion-cell structures. 'Aisha' and 'Amina' are used for the same character. 'Form 1' appears. The sub-strand is numbered 1.1 and 1.3. The build_log flags these, so the deck is faithful.",
+      "fix": "For the SoW owner: fix the membrane label in Lesson 6, correct the platelet and chloroplast wording, choose one name, replace 'Form 1', and align the sub-strand number. No deck change is needed."
+     }
+    ],
+    "verdict": "pass"
+   }
+  }
+ ],
+ "final_problems": [],
+ "review_final": {
+  "findings": [
+   {
+    "slide": "Safety first (opening group in the glance table)",
+    "severity": "minor",
+    "category": "fidelity_to_sow",
+    "problem": "The SoW puts the safety and technique briefing in the Observe phase, just before learners touch equipment. The deck puts it in the opening block, before the Predict phase. The Predict SAY line 'Before we touch any equipment' then comes after a briefing given with swabs, stain and bin in view. The 3 + 4 minute split of the SoW's single 4-minute briefing is logged, but the move is not.",
+    "fix": "Place the Safety slide immediately before the Demonstration slide, after the BEFORE slide, and keep its 3 minutes. Alternatively, log the reorder in the build_log."
+   },
+   {
+    "slide": "Model: link and explain",
+    "severity": "minor",
+    "category": "invented_content",
+    "problem": "The deck adds a student line 'This model is based on evidence from…', which the SoW does not have. It is not logged as an addition. The 'Use a NEW colour' instruction on the two model slides is also added, and the Check your Prediction Cards slide adds a different-colour-pen tick and cross marking step.",
+    "fix": "Log these small additions in the build_log, or remove the evidence line and the new-colour instruction. Keep the Prediction Card marking step only if it is logged as a builder addition."
+   },
+   {
+    "slide": "What does our evidence tell us?",
+    "severity": "minor",
+    "category": "timing",
+    "problem": "The SoW's 5-minute debrief is cut to 3 minutes, a 40% loss for that activity. In 3 minutes the teacher must cold-call 3 learners, collect new questions, point to the driving question and run a hands-up vote, with waits of about 8 seconds each. This is tight. Other slides with no SoW time (Write your explanation 5, Model Update Statement 5) took more time.",
+    "fix": "Move 1 minute from another slide, for example Write your explanation or Model Update Statement, to the debrief, or drop the vote to a quick show of hands."
+   },
+   {
+    "slide": "Evidence Harvest: our T-chart",
+    "severity": "minor",
+    "category": "timing",
+    "problem": "The T-chart is cut from the SoW's 6 to 7 minutes to 5 minutes. In a class of about 40, each of 20 pairs gets about 15 seconds for one observation plus placement on the chart. The lost time is not made up elsewhere in the Explain phase.",
+    "fix": "Give the T-chart 6 minutes, taking 1 minute from the Check your Prediction Cards slide or the Link to the healing cut slide. Tell the teacher to take two or three pairs per column if the chart is full."
+   },
+   {
+    "slide": "Prediction Card: onion cell and your cheek cell",
+    "severity": "minor",
+    "category": "notes_quality",
+    "problem": "The SAY line 'I am about to look at a cell from the inside of my own cheek' is the learners' written stem, read out in the teacher's voice, so it sounds odd. The SoW line is 'You are about to look at YOUR OWN cell'.",
+    "fix": "Replace it with: 'You are about to look at a cell from the inside of your own cheek. Write what you predict you will see.'"
+   },
+   {
+    "slide": "Write your explanation",
+    "severity": "minor",
+    "category": "notes_quality",
+    "problem": "The SAY line lists the words 'cell membrane, cytoplasm, nucleus, cell wall and flexible' before learners write. This hands over 'flexible', the exact quality marker the teacher is checking for. The SoW has these terms only as look-for markers, not as something to say to the class.",
+    "fix": "Say 'Use the correct names for the structures you saw'. Keep 'flexible' as a look-for marker only, and use the prompt card for learners who do not reach it."
+   },
+   {
+    "slide": "whole lesson (SoW issues, for the SoW owner)",
+    "severity": "minor",
+    "category": "other",
+    "problem": "The deck follows the SoW, which has several flagged problems. The Lesson 6 onion labels omit the cell membrane, so the ONLY IN ANIMAL column is likely to be empty. Platelets are called 'animal cells' with 'pseudopods'. Chloroplasts are listed as onion-cell structures. 'Aisha' and 'Amina' are used for the same character. 'Form 1' appears. The sub-strand is numbered 1.1 and 1.3. The build_log flags these, so the deck is faithful.",
+    "fix": "For the SoW owner: fix the membrane label in Lesson 6, correct the platelet and chloroplast wording, choose one name, replace 'Form 1', and align the sub-strand number. No deck change is needed."
+   }
+  ],
+  "verdict": "pass"
+ },
+ "build_log": [
+  {
+   "slide": "Evidence Harvest: our T-chart",
+   "type": "inconsistency",
+   "sow_says": "T-chart: PRESENT IN BOTH | ONLY IN PLANT CELL (onion) | ONLY IN ANIMAL CELL (cheek); learners label 'cell membrane, cytoplasm, and nucleus' on the cheek cell and 'cell wall, vacuole, and nucleus' on the onion cell (Lesson 6).",
+   "deck_does": "Puts cell membrane, nucleus and cytoplasm under PRESENT IN BOTH in the answer key and adds a teacher line that the membrane is in the onion cell too and was not labelled in Lesson 6. The ONLY IN ANIMAL CELL column is expected to be empty or very short.",
+   "why": "A cell membrane is present in onion cells too. The Lesson 6 onion drawing does not label it, so a learner's tables could place it as animal-only. The SoW owner should add the cell membrane to the Lesson 6 onion drawing labels or explain this."
+  },
+  {
+   "slide": "Compare: onion cell and cheek cell",
+   "type": "inconsistency",
+   "sow_says": "List every structure under each column, marking shared structures with a tick and unique structures with a star; cheek cell labels: cell membrane, cytoplasm, nucleus; onion cell labels in Lesson 6: cell wall, vacuole, nucleus.",
+   "deck_does": "The answer key gives the cell membrane a tick in both columns and tells the teacher to say so. The ONION CELL answer notes that the membrane sits inside the wall and was not labelled in Lesson 6.",
+   "why": "Same issue as the T-chart. The key must match so the teacher does not mark the membrane as a cheek-only structure."
+  },
+  {
+   "slide": "Your turn: prepare, focus and draw",
+   "type": "science_flag",
+   "sow_says": "Learners label every structure they can positively identify, including 'cell membrane' on the cheek cell drawing.",
+   "deck_does": "Keeps the cell membrane as a required label on the slide and in the notes, as the SoW says.",
+   "why": "With a school light microscope the membrane is very thin and is not seen as a separate structure; learners see only the cell edge. Teacher to check whether the membrane should be a required label."
+  },
+  {
+   "slide": "Link to the healing cut",
+   "type": "science_flag",
+   "sow_says": "'Remember Aisha's platelets — tiny, irregular animal cells that flatten and extend pseudopods to patch the wound.'",
+   "deck_does": "Uses the SoW words unchanged in the SAY line and on the slide.",
+   "why": "Platelets are cell fragments without a nucleus, not whole cells, so they are not 'animal cells' in the same way as cheek cells. Platelet 'pseudopods' is also an odd term. Teacher to check."
+  },
+  {
+   "slide": "What do the differences mean?",
+   "type": "science_flag",
+   "sow_says": "'Guide toward the answer that plant-specific structures (cell wall, large vacuole, chloroplasts) are all related to the plant's fixed, non-moving lifestyle.'",
+   "deck_does": "Keeps this as the expected answer in the answer key.",
+   "why": "Chloroplasts and the vacuole relate to making food and storing water, not directly to being fixed in place. The claim is over-simple. Teacher to check."
+  },
+  {
+   "slide": "Link to the healing cut",
+   "type": "inconsistency",
+   "sow_says": "'Aisha's cut finger' and 'Aisha's platelets' (Lesson 7); the unit phenomenon and Lesson 2 use 'Amina'.",
+   "deck_does": "Uses 'Aisha' on slides and in notes as in Lesson 7. The illustration id amina_healing_finger is reused for the same girl.",
+   "why": "Two names for the same character across lessons. SoW owner to choose one."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "term_flag",
+   "sow_says": "Unit phenomenon: 'A Form 1 student in Nairobi'; this lesson is labelled 'Sub-Strand 1.1: Cell Structure' while the unit text says 'Sub-Strand 1.3: Cell Structure and Specialisation'.",
+   "deck_does": "Does not use 'Form 1' on any slide. Uses 'Cell Structure' and 'Grade 10'.",
+   "why": "'Form 1' is an outdated term in CBE. The sub-strand numbers 1.1 and 1.3 do not match. SoW owner to correct."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "trimmed_time",
+   "sow_says": "Observe: 4-minute briefing and demonstration, 25 minutes for slide preparation, focusing and drawing; Explain: Evidence Harvest 10 minutes (T-chart 6 to 7 minutes); DQB: 3 minutes writing, 2 minutes gallery walk, 5 minutes debrief; Model: 8 minutes drawing and annotation.",
+   "deck_does": "Practical 25 to 20 minutes, T-chart 5 minutes, DQB debrief 5 to 3 minutes, model drawing 8 to 6 minutes. Slides with no SoW time (comparison table, explanation writing, prediction card marking) are given 2 to 5 minutes. All activities are kept; the lesson adds to 80 minutes with Safety 3, Unit map 1, Goals 1, Summary 2.",
+   "why": "The SoW activities with their times overrun 80 minutes. Times were trimmed without cutting any activity, and no phase lost more than about a quarter of its SoW time."
+  },
+  {
+   "slide": "Demonstration: make a cheek cell slide",
+   "type": "missing_detail",
+   "sow_says": "'Deliver a 4-minute safety and technique briefing' and 'Demonstrate the cheek smear and staining technique live'; no separate time for the demonstration.",
+   "deck_does": "Gives the demonstration 4 minutes on its own slide; the safety briefing sits on the Safety slide (3 minutes).",
+   "why": "The SoW's 4 minutes cover safety and technique together. The split into 3 and 4 minutes is the builder's choice to fit 80 minutes."
+  },
+  {
+   "slide": "Your turn: prepare, focus and draw",
+   "type": "missing_detail",
+   "sow_says": "'Learners work in pairs at bench stations... step-by-step printed protocol card'; methylene blue stain, microscope, cover slips.",
+   "deck_does": "Writes only what the SoW states. Gives no quantities, stain concentration or number of microscopes per station.",
+   "why": "The SoW gives no quantities, stain concentration or microscope numbers. Part B glance slide should list only what exists. Teacher to confirm the amounts and the fallback if microscopes are short."
+  },
+  {
+   "slide": "Your turn: prepare, focus and draw",
+   "type": "safety_flag",
+   "sow_says": "Learners scrape their own cheek cells with a cotton swab; used swabs go into a closed bin with 1% bleach solution; methylene blue is a mild irritant.",
+   "deck_does": "Does not change the practical. Repeats the SoW's roles and bin rule in the notes.",
+   "why": "Practical uses learners' own cells and a bleach solution. Teacher checker to confirm this is right for the school setting and that learners with sores or infection are given the recorder role."
+  },
+  {
+   "slide": "Your turn: prepare, focus and draw",
+   "type": "missing_detail",
+   "sow_says": "'Annotate their drawing with the magnification used and the date.'",
+   "deck_does": "Answer key uses ×400 as an example only (eyepiece ×10 times objective ×40).",
+   "why": "The SoW does not give the eyepiece power. The example is a worked calculation for teachers and depends on the school's microscopes. Teacher to verify."
+  },
+  {
+   "slide": "BEFORE — Our Predictions",
+   "type": "missing_detail",
+   "sow_says": "'Cold-call exactly 4 pairs using the class register (rows 1, 3, 5, 7).'",
+   "deck_does": "Uses the rows as given and 2 minutes for the slide.",
+   "why": "The SoW gives no time for cold-calling. Rows 1, 3, 5 and 7 may not exist in every classroom layout; teacher to adapt."
+  },
+  {
+   "slide": "Write your explanation",
+   "type": "missing_detail",
+   "sow_says": "Learners write a 3-sentence explanation and finish a phenomenon stem; formative marker: the word 'flexible' or equivalent.",
+   "deck_does": "Uses the SoW stem and markers. The model answers in the answer key were written by the builder from the lesson's own observations.",
+   "why": "The SoW gives no model answers. Teacher to check the answer key wording."
+  },
+  {
+   "slide": "What does our evidence tell us?",
+   "type": "missing_detail",
+   "sow_says": "No formal vote is described; the manual requires a class vote at the Driving Question Board.",
+   "deck_does": "Adds a hands-up vote on whether the driving question can be answered fully, partly or not yet, based on the SoW's own prompt ('Can we answer it yet — fully? Partially?').",
+   "why": "Manual section 6 asks for a class vote. The SoW's own question was turned into a vote without adding new content."
+  },
+  {
+   "slide": "Model Update Statement",
+   "type": "missing_detail",
+   "sow_says": "Close with 'Next lesson, we ask: if all these cells started the same way, how did they end up so different?'",
+   "deck_does": "Adds a one-sentence 'Next lesson I predict…' line for learners, as the manual asks.",
+   "why": "The SoW has no learner prediction at the end of Model Building. The manual requires one. Teacher to confirm."
+  },
+  {
+   "slide": "Model: link and explain",
+   "type": "missing_detail",
+   "sow_says": "Write one sentence next to each structure that is ABSENT in the animal cell, explaining what function that missing structure serves in the plant cell.",
+   "deck_does": "Answer key lists cell wall, chloroplast and large central vacuole with one-line functions.",
+   "why": "The SoW gives no answers. The functions come from Lessons 4 and 5. Teacher to check."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "resource_note",
+   "sow_says": "ARES keywords listed; no specific resource named in this lesson.",
+   "deck_does": "Puts no ARES resource on the phase slides.",
+   "why": "No listed resource fits a moment without spoiling the discovery or going beyond the SoW activity. Part B handles the match notes."
+  },
+  {
+   "slide": "Summary Table",
+   "type": "science_flag",
+   "sow_says": "'Animal cells ... lack a cell wall, chloroplasts, and a large central vacuole — structures present in the plant (onion) cells observed in Lesson 6.'",
+   "deck_does": "Keeps the SoW wording in the model answer for the learned question.",
+   "why": "Onion epidermal cells have no chloroplasts, which Lesson 6 itself notes. So chloroplasts were not seen in the onion cells. The SoW owner should reword this."
+  },
+  {
+   "slide": "Lesson at a glance",
+   "type": "missing_detail",
+   "sow_says": "One clean swab per learner; 1% bleach solution; 'ONE drop of methylene blue stain'; pairs at bench stations. No quantities for slides, cover slips, stain, tissue or microscopes, and no fallback for missing equipment.",
+   "deck_does": "Lists materials only as the SoW gives them, with no invented quantities. The fallback (pairs share a microscope in turns; teacher demonstration) follows the manual and uses no resource.",
+   "why": "The SoW does not give the number of microscopes, stain concentration or a fallback. Teacher checker to confirm amounts and the fallback for local schools."
+  },
+  {
+   "slide": "Lesson at a glance",
+   "type": "resource_note",
+   "sow_says": "ARES keywords only; no named resource.",
+   "deck_does": "Gives a match note for all eight resource keys. Marks predict.video, predict.reading, explain.video, dqb.reading, model.video and model.reading as do_not_use. Marks explain.reading and dqb.video as preview_first. No resource is placed on a slide.",
+   "why": "The titles suggest plant versus animal comparisons would spoil the discovery, and the membrane and organelle resources go beyond today's evidence. Judged from titles only; teacher to preview before any use."
+  },
+  {
+   "slide": "Teacher reflection",
+   "type": "other",
+   "sow_says": "Six teacher reflection questions, including a separate question about equity and inclusion.",
+   "deck_does": "Uses five reflection questions. The equity question is merged into the safety question.",
+   "why": "The manual allows 3 to 5 reflection questions."
+  },
+  {
+   "slide": "Unit map",
+   "type": "other",
+   "sow_says": "Lesson 7 title: 'Microscopy Practical 2 — Human Cheek Cells: Observing Animal Cell Structure'.",
+   "deck_does": "Unit map titles are shortened using only words from each lesson's SoW title; Lessons 6 and 7 read 'Practical 1: Onion Epidermal Cells' and 'Practical 2: Human Cheek Cells'.",
+   "why": "The map must fit all 12 lessons on one slide with titles of at most six words."
+  }
+ ],
+ "total_usd_est": 1.854
+}

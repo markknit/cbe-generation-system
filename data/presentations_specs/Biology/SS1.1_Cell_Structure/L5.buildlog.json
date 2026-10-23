@@ -1,0 +1,451 @@
+{
+ "lesson": 5,
+ "usage": [
+  {
+   "step": "author-A",
+   "input_tokens": 254,
+   "output_tokens": 47512,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 33522
+  },
+  {
+   "step": "author-B",
+   "input_tokens": 20964,
+   "output_tokens": 8513,
+   "cache_read_input_tokens": 15233,
+   "cache_creation_input_tokens": 18122
+  },
+  {
+   "step": "review0",
+   "input_tokens": 42016,
+   "output_tokens": 9688,
+   "cache_read_input_tokens": 1328,
+   "cache_creation_input_tokens": 0
+  },
+  {
+   "step": "author-A",
+   "input_tokens": 17872,
+   "output_tokens": 25404,
+   "cache_read_input_tokens": 15400,
+   "cache_creation_input_tokens": 18122
+  },
+  {
+   "step": "author-B",
+   "input_tokens": 20326,
+   "output_tokens": 8013,
+   "cache_read_input_tokens": 15233,
+   "cache_creation_input_tokens": 18122
+  },
+  {
+   "step": "author-A",
+   "input_tokens": 17256,
+   "output_tokens": 21621,
+   "cache_read_input_tokens": 33522,
+   "cache_creation_input_tokens": 0
+  },
+  {
+   "step": "author-B",
+   "input_tokens": 20741,
+   "output_tokens": 8398,
+   "cache_read_input_tokens": 33355,
+   "cache_creation_input_tokens": 0
+  },
+  {
+   "step": "review2",
+   "input_tokens": 41743,
+   "output_tokens": 6843,
+   "cache_read_input_tokens": 1328,
+   "cache_creation_input_tokens": 0
+  }
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "problems": [],
+   "review": {
+    "findings": [
+     {
+      "slide": "Present your annotated animal cell",
+      "severity": "major",
+      "category": "timing",
+      "problem": "The SoW gives every group exactly 2 minutes plus WWW/EBI feedback, with 2 peer feedback givers per group. The deck allows 8 minutes in total. That fits only 4 groups at 2 minutes each, with no time left for the feedback readings. Notes that tell the teacher to enforce 2 minutes and cold-call 2 givers per group cannot be followed in 8 minutes. In a class of 40 (about 10 groups) the SoW needs 20 minutes or more, so this phase has lost well over a quarter of its time. The deck spends minutes on activities the SoW does not have: the 1-minute 'Back to our predictions' slide and the 3-minute 'Share your cut finger sentence' slide, which adds a written prediction.",
+      "fix": "Take the time from the added content. Cut the next-lesson prediction sentence and merge the marking of predictions into another slide. Give the presentations about 12 minutes. Set a rule in the notes, such as 4 to 5 groups each presenting a different unique organelle with 1 EBI reading per group. Keep the 'cover every unique organelle' rule."
+     },
+     {
+      "slide": "Explain: Back to our predictions",
+      "severity": "minor",
+      "category": "fidelity_to_sow",
+      "problem": "The SoW says the Prediction Wall is revisited at the end of the lesson. The deck adds a new 1-minute self-marking activity at the start of Explain, before students have seen the full explanation. The SoW has no such activity. It is logged in build_log, but it moves and rewrites a SoW activity.",
+      "fix": "Put the revisit of the wall and predictions at the end of the lesson, as the SoW says, or keep the slide only if time allows. Do not cut SoW activities to pay for it."
+     },
+     {
+      "slide": "Share your cut finger sentence",
+      "severity": "minor",
+      "category": "invented_content",
+      "problem": "The written prediction 'Next lesson, I predict we will…' is not in the SoW. Students are not told what the next lesson is, so they cannot predict meaningfully. The model answer ('how cells are different') does not match the next lesson in the unit, which is onion microscopy.",
+      "fix": "Remove this written prediction, or reduce it to the SoW closing remark. If kept, say what Lesson 6 is about."
+     },
+     {
+      "slide": "Explain: Back to our predictions",
+      "severity": "minor",
+      "category": "notes_quality",
+      "problem": "The answer key marks 'Cell wall ✗ (I did not draw one: right)' and 'Large vacuole ✗ (I was unsure...)'. The slide says tick the right ideas and cross the wrong ones. Here ✗ is used for correct predictions, so the key contradicts the student instruction.",
+      "fix": "Rewrite the model marking in words, for example 'Cell wall: I did not draw one, so my idea was right (tick)'."
+     },
+     {
+      "slide": "Observe: Today's animal cell",
+      "severity": "minor",
+      "category": "resource",
+      "problem": "The on-screen animal cell template has no vacuole label. The red-flag prompts ('How big are the vacuoles?') and the later 'large vacuole' explanation rely on the small numerous vacuoles shown only on the printed handout. Without the handout, groups cannot check this misconception from the projected slide.",
+      "fix": "Add a note on the Compare and vacuole slides that the printed handout is required. Add a fallback if the handout is missing, such as the teacher drawing small vacuoles on the board."
+     },
+     {
+      "slide": "Lesson at a glance / Safety",
+      "severity": "minor",
+      "category": "safety",
+      "problem": "The SoW safety notes say to remind learners to wash hands after handling printed or physical materials and to supervise group seating to prevent overcrowding around shared diagrams. The deck drops the hand-washing reminder and the seating supervision, and gives no safety note at all.",
+      "fix": "Add a short teacher-only line on seating around shared diagrams to the Observe notes or the glance slide. The scissors line can stay out because there is no cutting activity."
+     },
+     {
+      "slide": "BEFORE — Our Predictions",
+      "severity": "minor",
+      "category": "timing",
+      "problem": "The slide has 3 minutes for 4 cold-calls with 12-second waits, every pair writing and posting two sticky notes, photographing the wall and counting pairs. This is tight for a large class.",
+      "fix": "Allow 4 minutes here, taking the time from the added marking slide, or tell the teacher to have pairs post notes while the cold-calls happen."
+     },
+     {
+      "slide": "Does the evidence support the claim?",
+      "severity": "minor",
+      "category": "other",
+      "problem": "For the SoW owner: the student slide says 'why a platelet has no nucleus', following the SoW wording. Platelets are cell fragments, not complete cells, and the SoW also points to a Lesson 6 that is not the specialisation lesson. The deck follows the SoW and logs both points in build_log.",
+      "fix": "The SoW owner should reword the platelet line and correct the lesson number. No change to the deck is needed."
+     }
+    ],
+    "verdict": "needs_repair"
+   }
+  },
+  {
+   "round": 1,
+   "problems": [
+    "content does not fit: needs 4.73 in, has 4.71 in at the minimum legible sizes (shorten the slide or split it)"
+   ],
+   "review": {
+    "findings": [
+     {
+      "slide": "Present your annotated animal cell",
+      "severity": "major",
+      "category": "timing",
+      "problem": "The SoW gives every group exactly 2 minutes plus WWW/EBI feedback, with 2 peer feedback givers per group. The deck allows 8 minutes in total. That fits only 4 groups at 2 minutes each, with no time left for the feedback readings. Notes that tell the teacher to enforce 2 minutes and cold-call 2 givers per group cannot be followed in 8 minutes. In a class of 40 (about 10 groups) the SoW needs 20 minutes or more, so this phase has lost well over a quarter of its time. The deck spends minutes on activities the SoW does not have: the 1-minute 'Back to our predictions' slide and the 3-minute 'Share your cut finger sentence' slide, which adds a written prediction.",
+      "fix": "Take the time from the added content. Cut the next-lesson prediction sentence and merge the marking of predictions into another slide. Give the presentations about 12 minutes. Set a rule in the notes, such as 4 to 5 groups each presenting a different unique organelle with 1 EBI reading per group. Keep the 'cover every unique organelle' rule."
+     },
+     {
+      "slide": "Explain: Back to our predictions",
+      "severity": "minor",
+      "category": "fidelity_to_sow",
+      "problem": "The SoW says the Prediction Wall is revisited at the end of the lesson. The deck adds a new 1-minute self-marking activity at the start of Explain, before students have seen the full explanation. The SoW has no such activity. It is logged in build_log, but it moves and rewrites a SoW activity.",
+      "fix": "Put the revisit of the wall and predictions at the end of the lesson, as the SoW says, or keep the slide only if time allows. Do not cut SoW activities to pay for it."
+     },
+     {
+      "slide": "Share your cut finger sentence",
+      "severity": "minor",
+      "category": "invented_content",
+      "problem": "The written prediction 'Next lesson, I predict we will…' is not in the SoW. Students are not told what the next lesson is, so they cannot predict meaningfully. The model answer ('how cells are different') does not match the next lesson in the unit, which is onion microscopy.",
+      "fix": "Remove this written prediction, or reduce it to the SoW closing remark. If kept, say what Lesson 6 is about."
+     },
+     {
+      "slide": "Explain: Back to our predictions",
+      "severity": "minor",
+      "category": "notes_quality",
+      "problem": "The answer key marks 'Cell wall ✗ (I did not draw one: right)' and 'Large vacuole ✗ (I was unsure...)'. The slide says tick the right ideas and cross the wrong ones. Here ✗ is used for correct predictions, so the key contradicts the student instruction.",
+      "fix": "Rewrite the model marking in words, for example 'Cell wall: I did not draw one, so my idea was right (tick)'."
+     },
+     {
+      "slide": "Observe: Today's animal cell",
+      "severity": "minor",
+      "category": "resource",
+      "problem": "The on-screen animal cell template has no vacuole label. The red-flag prompts ('How big are the vacuoles?') and the later 'large vacuole' explanation rely on the small numerous vacuoles shown only on the printed handout. Without the handout, groups cannot check this misconception from the projected slide.",
+      "fix": "Add a note on the Compare and vacuole slides that the printed handout is required. Add a fallback if the handout is missing, such as the teacher drawing small vacuoles on the board."
+     },
+     {
+      "slide": "Lesson at a glance / Safety",
+      "severity": "minor",
+      "category": "safety",
+      "problem": "The SoW safety notes say to remind learners to wash hands after handling printed or physical materials and to supervise group seating to prevent overcrowding around shared diagrams. The deck drops the hand-washing reminder and the seating supervision, and gives no safety note at all.",
+      "fix": "Add a short teacher-only line on seating around shared diagrams to the Observe notes or the glance slide. The scissors line can stay out because there is no cutting activity."
+     },
+     {
+      "slide": "BEFORE — Our Predictions",
+      "severity": "minor",
+      "category": "timing",
+      "problem": "The slide has 3 minutes for 4 cold-calls with 12-second waits, every pair writing and posting two sticky notes, photographing the wall and counting pairs. This is tight for a large class.",
+      "fix": "Allow 4 minutes here, taking the time from the added marking slide, or tell the teacher to have pairs post notes while the cold-calls happen."
+     },
+     {
+      "slide": "Does the evidence support the claim?",
+      "severity": "minor",
+      "category": "other",
+      "problem": "For the SoW owner: the student slide says 'why a platelet has no nucleus', following the SoW wording. Platelets are cell fragments, not complete cells, and the SoW also points to a Lesson 6 that is not the specialisation lesson. The deck follows the SoW and logs both points in build_log.",
+      "fix": "The SoW owner should reword the platelet line and correct the lesson number. No change to the deck is needed."
+     }
+    ],
+    "verdict": "needs_repair"
+   }
+  },
+  {
+   "round": 2,
+   "problems": [],
+   "review": {
+    "findings": [
+     {
+      "slide": "Mark your predictions. Then: who digests bacteria?",
+      "severity": "minor",
+      "category": "fidelity_to_sow",
+      "problem": "The SoW says the Prediction Wall is revisited at the end of the lesson to check and celebrate growth. The deck never returns to the wall. It adds a tick/cross marking step on each student's own first drawing instead. That step is not in the SoW, and the notes also add 'do not rub anything out'.",
+      "fix": "Keep the marking step only if the teacher wants it, and log it as added. Add a short return to the Prediction Wall near the end, for example in the DQB or model phase. Logging this deviation in the build_log would be enough."
+     },
+     {
+      "slide": "Does the evidence support the claim?",
+      "severity": "minor",
+      "category": "invented_content",
+      "problem": "The SoW has cold-calls on 3 learners and the class question 'Does anyone disagree or want to add evidence?'. The deck adds a hands-up vote ('supports / not yet'), a 'We can now explain / We still wonder' columns block, and the phrase 'see or measure today' (nothing was measured). None of this is logged.",
+      "fix": "Drop the vote or log it as an addition. Change 'measure' to 'see'. Keep the SoW's disagree/add-evidence question as the main prompt."
+     },
+     {
+      "slide": "Present your annotated animal cell",
+      "severity": "minor",
+      "category": "timing",
+      "problem": "The notes plan 4 groups at about 2 minutes plus under 1 minute of feedback each, plus a cold-call for each. That is about 12 minutes or more, and the slide has 11. The SoW has all groups present, and the deck caps this at 4 (logged). The notes also add that non-presenting groups hand their cards to the presenters, which is not in the SoW.",
+      "fix": "Allow about 12 minutes, or shorten the feedback reading. Remove the card hand-in or log it. Tell the teacher in the notes what to do if there are more than 4 groups."
+     },
+     {
+      "slide": "Observe: Today's animal cell",
+      "severity": "minor",
+      "category": "resource",
+      "problem": "The projected animal_cell template has no vacuole label. The notes and the Observe red flag ask students to compare the size of the animal cell vacuoles with the plant cell vacuole, so the common misconception cannot be checked from the slide. The plant slide says just 'vacuole', not 'large central vacuole'.",
+      "fix": "Add a note that the comparison needs the printed handout, which shows small, numerous vacuoles. Make sure the handout is prepared. Do not rely on the projected template for this check."
+     },
+     {
+      "slide": "whole lesson",
+      "severity": "minor",
+      "category": "safety",
+      "problem": "The SoW safety notes (handle scissors safely if used, wash hands after handling materials, supervise group seating) appear nowhere in the deck. The safety slide is empty and the notes do not mention them.",
+      "fix": "Add a one-line safety reminder to the before-class list or the glance notes. Note that no hazardous materials are used."
+     },
+     {
+      "slide": "Build Version 3: Plant and animal side by side",
+      "severity": "minor",
+      "category": "other",
+      "problem": "For the SoW owner: the SoW line 'In Lesson 6, we begin asking how cells become so specialised' contradicts the unit map, where Lesson 6 is the onion practical and specialisation starts in Lesson 8. The SoW purposeInStoryline also cites onion and elodea evidence from Lessons 1–4. The deck keeps the SoW wording and logs both problems.",
+      "fix": "No change to the deck. The SoW owner should correct the lesson number and the earlier-evidence line."
+     }
+    ],
+    "verdict": "pass"
+   }
+  }
+ ],
+ "final_problems": [],
+ "review_final": {
+  "findings": [
+   {
+    "slide": "Mark your predictions. Then: who digests bacteria?",
+    "severity": "minor",
+    "category": "fidelity_to_sow",
+    "problem": "The SoW says the Prediction Wall is revisited at the end of the lesson to check and celebrate growth. The deck never returns to the wall. It adds a tick/cross marking step on each student's own first drawing instead. That step is not in the SoW, and the notes also add 'do not rub anything out'.",
+    "fix": "Keep the marking step only if the teacher wants it, and log it as added. Add a short return to the Prediction Wall near the end, for example in the DQB or model phase. Logging this deviation in the build_log would be enough."
+   },
+   {
+    "slide": "Does the evidence support the claim?",
+    "severity": "minor",
+    "category": "invented_content",
+    "problem": "The SoW has cold-calls on 3 learners and the class question 'Does anyone disagree or want to add evidence?'. The deck adds a hands-up vote ('supports / not yet'), a 'We can now explain / We still wonder' columns block, and the phrase 'see or measure today' (nothing was measured). None of this is logged.",
+    "fix": "Drop the vote or log it as an addition. Change 'measure' to 'see'. Keep the SoW's disagree/add-evidence question as the main prompt."
+   },
+   {
+    "slide": "Present your annotated animal cell",
+    "severity": "minor",
+    "category": "timing",
+    "problem": "The notes plan 4 groups at about 2 minutes plus under 1 minute of feedback each, plus a cold-call for each. That is about 12 minutes or more, and the slide has 11. The SoW has all groups present, and the deck caps this at 4 (logged). The notes also add that non-presenting groups hand their cards to the presenters, which is not in the SoW.",
+    "fix": "Allow about 12 minutes, or shorten the feedback reading. Remove the card hand-in or log it. Tell the teacher in the notes what to do if there are more than 4 groups."
+   },
+   {
+    "slide": "Observe: Today's animal cell",
+    "severity": "minor",
+    "category": "resource",
+    "problem": "The projected animal_cell template has no vacuole label. The notes and the Observe red flag ask students to compare the size of the animal cell vacuoles with the plant cell vacuole, so the common misconception cannot be checked from the slide. The plant slide says just 'vacuole', not 'large central vacuole'.",
+    "fix": "Add a note that the comparison needs the printed handout, which shows small, numerous vacuoles. Make sure the handout is prepared. Do not rely on the projected template for this check."
+   },
+   {
+    "slide": "whole lesson",
+    "severity": "minor",
+    "category": "safety",
+    "problem": "The SoW safety notes (handle scissors safely if used, wash hands after handling materials, supervise group seating) appear nowhere in the deck. The safety slide is empty and the notes do not mention them.",
+    "fix": "Add a one-line safety reminder to the before-class list or the glance notes. Note that no hazardous materials are used."
+   },
+   {
+    "slide": "Build Version 3: Plant and animal side by side",
+    "severity": "minor",
+    "category": "other",
+    "problem": "For the SoW owner: the SoW line 'In Lesson 6, we begin asking how cells become so specialised' contradicts the unit map, where Lesson 6 is the onion practical and specialisation starts in Lesson 8. The SoW purposeInStoryline also cites onion and elodea evidence from Lessons 1–4. The deck keeps the SoW wording and logs both problems.",
+    "fix": "No change to the deck. The SoW owner should correct the lesson number and the earlier-evidence line."
+   }
+  ],
+  "verdict": "pass"
+ },
+ "build_log": [
+  {
+   "slide": "whole lesson",
+   "type": "trimmed_time",
+   "sow_says": "Predict: 4 min drawing + 2 min pair talk + cold-call 4 pairs + Prediction Wall. Observe: 15 min table + 60 s hands-up + 3 cold-calls. Explain: 12 min guided explanation + 5 min writing + 5 min group consolidation. DQB: 2-min presentations + 3 min writing + 4 min discussion. Model: 15 min + 3 min + 3 cold-calls.",
+   "deck_does": "Predict 9 min (4+2+3); Observe 16 min (1+1+12+2); Explain 18 min (2+2+2+2+1+5+4); Driving Question Board 18 min (11+3+4); Model Building 15 min (10+3+2). Unit map 1, goals 1, summary 2. Total 80 min. Table task cut from 15 to 12 min, guided explanation from 12 to 9 min, model building from 15 to 13 min, and group consolidation from 5 to 4 min. No activity was cut.",
+   "why": "The SoW timings add up to more than 80 minutes, so every phase was trimmed by a similar share."
+  },
+  {
+   "slide": "Compare the plant cell and the animal cell",
+   "type": "added_fact",
+   "sow_says": "The table lists 12 organelles. The overview names only 11: nucleus, mitochondria, ribosomes, endoplasmic reticulum, Golgi apparatus, cell membrane, lysosomes, centrioles, chloroplasts, cell wall, large central vacuole.",
+   "deck_does": "Adds cytoplasm as the 12th organelle card. Answer: present in both plant and animal cells; the jelly where cell reactions happen.",
+   "why": "The set had to be completed to 12 so the activity can run from the slide. A teacher should check this choice."
+  },
+  {
+   "slide": "Compare the plant cell and the animal cell",
+   "type": "added_fact",
+   "sow_says": "Groups write a one-sentence function for each organelle marked present. The SoW gives functions only for lysosomes, centrioles, chloroplasts, cell wall and large vacuole.",
+   "deck_does": "The answer key adds standard textbook functions for the shared organelles: cell membrane controls what enters and leaves; cytoplasm is where reactions happen; nucleus holds DNA; mitochondria release energy by respiration; ribosomes make proteins; ER helps make and move proteins; Golgi packages and sends out proteins.",
+   "why": "The answer key needs these facts and the SoW does not state them. A teacher should verify them."
+  },
+  {
+   "slide": "Compare the plant cell and the animal cell",
+   "type": "missing_detail",
+   "sow_says": "Groups complete a three-column Comparison Table listing 12 organelles, with a blank table and both diagrams distributed.",
+   "deck_does": "The slide shows the column headings and the 12 organelle names. It says the printed handouts (blank Comparison Table, blank animal outline, labelled animal diagram) must be prepared. The deck shows labelled drawings from its templates.",
+   "why": "The SoW gives no handout file or quantities per group. The teacher must prepare printed copies or copy the table from the slide."
+  },
+  {
+   "slide": "Present your annotated animal cell",
+   "type": "missing_detail",
+   "sow_says": "Groups deliver 2-minute presentations of their annotated animal cell diagrams.",
+   "deck_does": "Plans 4 groups presenting in 11 minutes. The notes tell the teacher to choose groups so that all five unique organelles are covered.",
+   "why": "The SoW gives no number of groups. 4 groups at 2 minutes plus feedback is what fits the lesson length."
+  },
+  {
+   "slide": "Predict: What is inside an animal cell?",
+   "type": "missing_detail",
+   "sow_says": "Learners receive a blank outline silhouette of an animal cell, and a Prediction Wall with green and orange sticky notes.",
+   "deck_does": "Lists the blank outline, sticky notes and a timer in the teacher notes only. The glance slide and Part B must list materials.",
+   "why": "The SoW gives no quantities per group or concentrations. No quantities were invented."
+  },
+  {
+   "slide": "Build Version 3: Plant and animal side by side",
+   "type": "sow_problem",
+   "sow_says": "In Lesson 6, we begin asking: how do these cells become so specialised — and what controls that process?",
+   "deck_does": "Keeps the SoW teacher line as written in the notes of 'Share your cut finger sentence'.",
+   "why": "Lesson 6 is the onion microscopy practical, and cell specialisation starts in Lesson 8. The SoW owner should correct the lesson number or the teaser. The SoW also says the unanswered specialisation notes are 'coming' without naming a lesson."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "sow_problem",
+   "sow_says": "In Lessons 1–4, learners established what a cell is, examined plant cell structure, and used the onion and elodea as evidence.",
+   "deck_does": "Does not use onion or elodea evidence anywhere in the deck.",
+   "why": "In the unit sequence the onion practical is Lesson 6 and elodea is not in any lesson. This is a sequence inconsistency for the SoW owner."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "inconsistency",
+   "sow_says": "Unit substrand: 'Sub-Strand 1.3: Cell Structure and Specialisation'. Lesson substrand: 'Sub-Strand 1.1: Cell Structure'.",
+   "deck_does": "Uses Sub-Strand 1.1, Cell Structure, as in the meta and the lesson.",
+   "why": "The sub-strand number in the unit text does not match the lesson text. The SoW owner should check it."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "term_flag",
+   "sow_says": "A Form 1 student in Nairobi cuts their finger while slicing onions (unit phenomenon).",
+   "deck_does": "Does not use the word Form on any slide. Slides use 'Amina', as the lesson plan does.",
+   "why": "Form 1 is an outdated term and should be Grade 10 in the SoW. The phenomenon text is not shown on student slides in this lesson."
+  },
+  {
+   "slide": "Mark your predictions. Then: who digests bacteria?",
+   "type": "inconsistency",
+   "sow_says": "'When Amina cut her finger in Nairobi...' (Lesson 5 teacher moves). The unit phenomenon text describes an unnamed student.",
+   "deck_does": "Uses Amina, as Lesson 5 and Lesson 2 do.",
+   "why": "The phenomenon text never names Amina. The SoW owner could add the name to the phenomenon text."
+  },
+  {
+   "slide": "Mark your predictions. Then: who digests bacteria?",
+   "type": "science_flag",
+   "sow_says": "'Lysosomes — membrane-bound sacs packed with digestive enzymes. Only animal cells have them in abundance.'",
+   "deck_does": "Keeps the SoW wording in the notes, and the slide table marks lysosomes as animal-only (✗ for plant).",
+   "why": "Lysosome-like organelles (lytic vacuoles) occur in plant cells. 'In abundance' is hedged, but marking plant ✗ in the table could be too simple. The teacher checker should confirm."
+  },
+  {
+   "slide": "How do skin cells divide to close a cut?",
+   "type": "science_flag",
+   "sow_says": "'Centrioles organised the spindle fibres. Plant cells use a different mechanism — no centrioles.'",
+   "deck_does": "Keeps the SoW wording.",
+   "why": "Higher plants do lack centrioles, but some plant groups (for example mosses and ferns with flagellated sperm) have them. Centrioles are also not strictly needed for spindle formation in all animal cells. The teacher checker should confirm the level of detail."
+  },
+  {
+   "slide": "Compare the plant cell and the animal cell",
+   "type": "science_flag",
+   "sow_says": "Animal cell diagram shows 'vacuoles — small and numerous'. Chloroplasts, cell wall and large central vacuole are plant-only.",
+   "deck_does": "Marks a large central vacuole as plant-only in the answer key and notes that animal cells have only small vacuoles.",
+   "why": "Not an error, but the printed handout and the template drawing may differ (the animal cell template has no vacuole label). The teacher should check that the handout matches the SoW."
+  },
+  {
+   "slide": "Mark your predictions. Then: who digests bacteria?",
+   "type": "resource_note",
+   "sow_says": "No ARES resource is named in the lesson plan.",
+   "deck_does": "Puts the resource key explain.video on this slide and model.reading on the Version 3 model slide. Part B should assign the match notes. Teachers must preview both, because they are not exact matches.",
+   "why": "Resources come from the supplied list. The Khan Academy video is US curriculum and may show the labelled comparison, so it fits only after Observe."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "missing_detail",
+   "sow_says": "Formative checks: Prediction Wall, Comparison Table spot-check, Functional Justification, DQB sticky notes, Model journals.",
+   "deck_does": "Marks checks on the Predict sharing slide, Comparison Table, Share slide, Functional Justification, Driving Question Board slides and both Model Building writing slides. No placeholder slides are needed.",
+   "why": "The SoW has a check at each moment the manual requires."
+  },
+  {
+   "slide": "Lesson lesson at a glance",
+   "type": "missing_detail",
+   "sow_says": "Learners receive a blank outline silhouette; groups of 4 receive diagrams and a blank Comparison Table; pairs post sticky notes; WWW / EBI cards.",
+   "deck_does": "Lists materials by group (per student, per group of 4) with no quantities beyond that. No numbers of copies, sticky notes or cards are given.",
+   "why": "The SoW gives no quantities per group. None were invented. The teacher should add numbers for their class size."
+  },
+  {
+   "slide": "Lesson at a glance",
+   "type": "resource_note",
+   "sow_says": "No ARES resource is named in the lesson plan.",
+   "deck_does": "predict.video (also explain.video) is preview_first and used only on the Explain slide; model.reading is preview_first on the Version 3 slide. predict.reading, observe.video, explain.reading, dqb.reading and model.video are do_not_use, with reasons in the glance notes.",
+   "why": "predict.reading and observe.video would show the comparison before students record their table. The others cover plant cells only (Lesson 4) or prokaryotes (Lesson 3), so they do not fit this lesson. A teacher should preview all of them."
+  },
+  {
+   "slide": "Goals and key words",
+   "type": "other",
+   "sow_says": "Knowledge goal names lysosomes and centrioles as organelles unique to animal cells.",
+   "deck_does": "Goals and key words do not name lysosomes, centrioles, cell wall, chloroplasts or the large vacuole. Key words are organelle, ultrastructure, function and model.",
+   "why": "These slides come before Predict. Naming the unique organelles would give away the answer to the Predict question. They are introduced in Observe and Explain."
+  },
+  {
+   "slide": "Summary Table",
+   "type": "sow_problem",
+   "sow_says": "In Lesson 6, we begin asking: how do these cells become so specialised — and what controls that process?",
+   "deck_does": "The Next lesson teaser says students will use a microscope to look at real plant cells, which matches the Lesson 6 title. The SoW line is kept only in the notes of the Version 3 sharing slide.",
+   "why": "Lesson 6 is the onion microscopy practical and cell specialisation begins in Lesson 8. The SoW owner should correct the teacher line or the teaser."
+  },
+  {
+   "slide": "Unit map",
+   "type": "other",
+   "sow_says": "Lesson titles in the SoW are long, for example 'Microscopy Practical 1 — Observing Onion Epidermal Cells'.",
+   "deck_does": "Shortens each title to at most 6 words using only words from that lesson's own title.",
+   "why": "The unit map layout needs short titles. No new names were invented."
+  },
+  {
+   "slide": "Driving Question Board: What can you now explain?",
+   "type": "inconsistency",
+   "sow_says": "Phase name: 'Driving Question Board (DQB) Creation'.",
+   "deck_does": "Treats the phase as an update of the board that began in Lesson 1, as the manual requires.",
+   "why": "The board already exists from Lesson 1, so 'Creation' does not match. The SoW owner could rename it 'Update'."
+  }
+ ],
+ "total_usd_est": 1.965
+}

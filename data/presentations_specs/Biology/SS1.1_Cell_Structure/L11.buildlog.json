@@ -1,0 +1,419 @@
+{
+ "lesson": 11,
+ "usage": [
+  {
+   "step": "author-A",
+   "input_tokens": 254,
+   "output_tokens": 34282,
+   "cache_read_input_tokens": 15400,
+   "cache_creation_input_tokens": 19077
+  },
+  {
+   "step": "author-B",
+   "input_tokens": 16422,
+   "output_tokens": 7657,
+   "cache_read_input_tokens": 15233,
+   "cache_creation_input_tokens": 19077
+  },
+  {
+   "step": "review0",
+   "input_tokens": 38518,
+   "output_tokens": 6509,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 1328
+  },
+  {
+   "step": "author-B",
+   "input_tokens": 18220,
+   "output_tokens": 7247,
+   "cache_read_input_tokens": 15233,
+   "cache_creation_input_tokens": 19077
+  },
+  {
+   "step": "review1",
+   "input_tokens": 39355,
+   "output_tokens": 6655,
+   "cache_read_input_tokens": 1328,
+   "cache_creation_input_tokens": 0
+  }
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "problems": [],
+   "review": {
+    "findings": [
+     {
+      "slide": "Whole lesson (Predict, Observe and Driving Question Board phases)",
+      "severity": "major",
+      "category": "timing",
+      "problem": "Time is trimmed unevenly. By the deck's own estimates, Predict goes from about 8 to 5 minutes (-37%), Observe from about 5 to 3 (-40%) and the Driving Question Board phase from about 10 to 6 (-40%), while Explain loses only 25%. The Driving Question Board phase is the worst case. It holds 1 minute of feedback reading, 3 minutes to read, discuss, vote on and relabel every Lesson 1 wonder question, and 2 minutes for four cold-calls building the driving-question answer. A teacher cannot do that ceremonially with a large class. Meanwhile the fixed slides (unit map, goals, summary) take 4 minutes.",
+      "fix": "Spread the trim more evenly and use the fixed slides as the buffer. Make the unit map and goals about 1.5 minutes together, and set the Summary Table as homework or 1 minute. Give the freed 2 minutes to the Driving Question Board voting and cold-call slides, so that phase loses about 20% instead of 40%. Keep every activity in place, as the SoW requires. Keep the existing flag asking the SoW owner whether this should be an 80-minute double lesson."
+     },
+     {
+      "slide": "THEN and NOW",
+      "severity": "minor",
+      "category": "timing",
+      "problem": "The slide has 1 minute for a 5-second wait, cold-calling three learners who read their sentences aloud, and the teacher writing contrasting words in two columns on the board. This is unrealistic for a large class.",
+      "fix": "Give this slide 2 minutes by taking 1 minute from the 'In Lesson 1 I thought…' writing slide (writing time stays at 1:00 to 1:30), or tell the teacher to call only two learners if time is short."
+     },
+     {
+      "slide": "Build your poster: Zone C",
+      "severity": "minor",
+      "category": "notes_quality",
+      "problem": "The teacher is told to ask what having no nucleus lets the red blood cell do, and to wait 7 seconds. The answer key has no answer for this, so the teacher has nothing to check the response against. Red blood cells are also not one of the three wound-healing cells listed in the key.",
+      "fix": "Add a line to the answer key, for example: 'No nucleus leaves more room for haemoglobin, so the red blood cell can carry more oxygen.'"
+     },
+     {
+      "slide": "Gallery walk: one glow, one grow",
+      "severity": "minor",
+      "category": "notes_quality",
+      "problem": "One SAY line is a fixed script about a note saying 'the axon on the nerve cell should be longer'. This is not natural speech and assumes a particular poster and note. The nerve cell is not one of the wound-healing cells in Zone C. The cold-calling of five different learners is also very tight inside a 4-minute rotation that includes writing sticky notes.",
+      "fix": "Turn the line into a template, for example: 'I can see this note names the organelle and its job. That is a strong scientific observation.' Say that cold-calls can continue while groups return to their posters if the 4 minutes run out."
+     },
+     {
+      "slide": "Build your poster: Zones A and B",
+      "severity": "minor",
+      "category": "fidelity_to_sow",
+      "problem": "The student task says 'Note two structures absent from the plant cell. Explain why their absence matters.' The answer key gives lysosomes and centrioles (present in animal cells only), but also cell wall and chloroplasts. The phrase 'their absence' fits the second pair, and a learner could be confused. The deck correctly keeps the SoW wording and logs the ambiguity.",
+      "fix": "Keep the SoW wording, but make the teacher notes say which reading the class is following. Accept either pair of structures in the 'look for' line so learners are not marked wrong."
+     },
+     {
+      "slide": "Whole lesson (for the SoW owner)",
+      "severity": "minor",
+      "category": "other",
+      "problem": "The SoW has several problems that the deck follows as written and logs. They are: Version 4 of the model (already used in Lesson 10); 'Lesson 10 language' where Lesson 1 and Lesson 11 are meant; Lesson 1 predictions that are said to be both sticky notes and notebook entries; a gallery walk in the framework versus group presentations in the overview; a 52-minute plan for a 40-minute lesson; the same DQB closure in Lessons 11 and 12; and the unit label 'Sub-Strand 1.3' for sub-strand 1.1. These are not deck errors.",
+      "fix": "No deck change. Pass these to the SoW owner. Keep the build_log entries as they are."
+     }
+    ],
+    "verdict": "needs_repair"
+   }
+  },
+  {
+   "round": 1,
+   "problems": [],
+   "review": {
+    "findings": [
+     {
+      "slide": "Build your poster: Zone C",
+      "severity": "minor",
+      "category": "notes_quality",
+      "problem": "The notes tell the teacher to ask a group why a red blood cell having no nucleus helps it. The answer key does not give that answer (more room for haemoglobin, so more oxygen carried). The key lists only platelet, neutrophil and fibroblast.",
+      "fix": "Add a line to the answer key: no nucleus leaves more space for haemoglobin, so the red blood cell can carry more oxygen. Mark it as an added fact in the build log."
+     },
+     {
+      "slide": "Build your poster: Zone C",
+      "severity": "minor",
+      "category": "science",
+      "problem": "The build log flags that platelets are cell fragments, not whole cells, but the slide's science_note is empty. A teacher reading the slide would not see the flag. The deck keeps the SoW wording, which is correct.",
+      "fix": "Put a short note in science_note: platelets are cell fragments from megakaryocytes. Keep the SoW wording. Do not correct it on the student slide."
+     },
+     {
+      "slide": "Build your poster: Zone D",
+      "severity": "minor",
+      "category": "resource",
+      "problem": "The slide carries the 'Organization in the human body' video, but the teacher is told not to stop the timer. A video cannot be watched while groups are building under a 4-minute timer. The note also says 'plain URL ... see the ARES resource list', which is not a usable link.",
+      "fix": "Make the video a teacher-only optional preview, or drop it from the slide. Give the real URL, or say clearly that there is no link."
+     },
+     {
+      "slide": "Build your poster: Zones A and B",
+      "severity": "minor",
+      "category": "resource",
+      "problem": "The CK-12 plant cell reading is attached to this slide. It would show labelled plant cell diagrams during the poster build. The do_not_show list says not to hand out labelled diagrams before groups have built their own zones. The reading covers plant cells only, not animal cells.",
+      "fix": "Keep it as a teacher-held reference for stuck groups only, or remove it from the slide. State that it is not to be given out until groups have drawn their own labels."
+     },
+     {
+      "slide": "Driving Question Board: how far have we come?",
+      "severity": "minor",
+      "category": "timing",
+      "problem": "Reading, discussing and voting on every Lesson 1 wonder question takes 3 minutes. The notes also ask for a 5-second wait after each response and a sticky note for each question. This cannot fit a class with more than a handful of questions. The build log flags the problem, but the slide gives the teacher no way to cope.",
+      "fix": "Add a teacher instruction to pre-select about 6 to 8 representative questions, and to batch the rest by colour. For the SoW owner: confirm whether this lesson should be 80 minutes."
+     },
+     {
+      "slide": "THEN and NOW",
+      "severity": "minor",
+      "category": "timing",
+      "problem": "One minute is allowed for three cold-calls, a 5-second wait before each, and writing contrasting phrases on the board. This is unrealistic.",
+      "fix": "Allow 2 minutes by taking 1 minute from another slide, or cold-call two learners and write only key words."
+     },
+     {
+      "slide": "whole lesson",
+      "severity": "minor",
+      "category": "other",
+      "problem": "The Predict (8 to 5 min), Observe (5 to 3) and DQB (10 to 6) phases each lose more than a quarter of their SoW time. The gallery walk keeps its full 4 minutes, and fixed slides take only 4 minutes. The loss comes from the SoW overrunning 40 minutes, not from the deck. The trim is spread roughly evenly.",
+      "fix": "For the SoW owner: the lesson is about 52 minutes of content in a 40-minute slot, so consider 80 minutes. Keep the logged trims."
+     },
+     {
+      "slide": "Predict slides",
+      "severity": "minor",
+      "category": "other",
+      "problem": "The SoW sensemaking text refers to 'Lesson 10 language' and to 'Lesson 1 sticky-note predictions'. The SoW's own overview and framework disagree about whether predictions are in notebooks or on sticky notes. The deck follows the framework, and the build log flags this.",
+      "fix": "For the SoW owner: correct the wording. No deck change is needed."
+     }
+    ],
+    "verdict": "pass"
+   }
+  }
+ ],
+ "final_problems": [],
+ "review_final": {
+  "findings": [
+   {
+    "slide": "Build your poster: Zone C",
+    "severity": "minor",
+    "category": "notes_quality",
+    "problem": "The notes tell the teacher to ask a group why a red blood cell having no nucleus helps it. The answer key does not give that answer (more room for haemoglobin, so more oxygen carried). The key lists only platelet, neutrophil and fibroblast.",
+    "fix": "Add a line to the answer key: no nucleus leaves more space for haemoglobin, so the red blood cell can carry more oxygen. Mark it as an added fact in the build log."
+   },
+   {
+    "slide": "Build your poster: Zone C",
+    "severity": "minor",
+    "category": "science",
+    "problem": "The build log flags that platelets are cell fragments, not whole cells, but the slide's science_note is empty. A teacher reading the slide would not see the flag. The deck keeps the SoW wording, which is correct.",
+    "fix": "Put a short note in science_note: platelets are cell fragments from megakaryocytes. Keep the SoW wording. Do not correct it on the student slide."
+   },
+   {
+    "slide": "Build your poster: Zone D",
+    "severity": "minor",
+    "category": "resource",
+    "problem": "The slide carries the 'Organization in the human body' video, but the teacher is told not to stop the timer. A video cannot be watched while groups are building under a 4-minute timer. The note also says 'plain URL ... see the ARES resource list', which is not a usable link.",
+    "fix": "Make the video a teacher-only optional preview, or drop it from the slide. Give the real URL, or say clearly that there is no link."
+   },
+   {
+    "slide": "Build your poster: Zones A and B",
+    "severity": "minor",
+    "category": "resource",
+    "problem": "The CK-12 plant cell reading is attached to this slide. It would show labelled plant cell diagrams during the poster build. The do_not_show list says not to hand out labelled diagrams before groups have built their own zones. The reading covers plant cells only, not animal cells.",
+    "fix": "Keep it as a teacher-held reference for stuck groups only, or remove it from the slide. State that it is not to be given out until groups have drawn their own labels."
+   },
+   {
+    "slide": "Driving Question Board: how far have we come?",
+    "severity": "minor",
+    "category": "timing",
+    "problem": "Reading, discussing and voting on every Lesson 1 wonder question takes 3 minutes. The notes also ask for a 5-second wait after each response and a sticky note for each question. This cannot fit a class with more than a handful of questions. The build log flags the problem, but the slide gives the teacher no way to cope.",
+    "fix": "Add a teacher instruction to pre-select about 6 to 8 representative questions, and to batch the rest by colour. For the SoW owner: confirm whether this lesson should be 80 minutes."
+   },
+   {
+    "slide": "THEN and NOW",
+    "severity": "minor",
+    "category": "timing",
+    "problem": "One minute is allowed for three cold-calls, a 5-second wait before each, and writing contrasting phrases on the board. This is unrealistic.",
+    "fix": "Allow 2 minutes by taking 1 minute from another slide, or cold-call two learners and write only key words."
+   },
+   {
+    "slide": "whole lesson",
+    "severity": "minor",
+    "category": "other",
+    "problem": "The Predict (8 to 5 min), Observe (5 to 3) and DQB (10 to 6) phases each lose more than a quarter of their SoW time. The gallery walk keeps its full 4 minutes, and fixed slides take only 4 minutes. The loss comes from the SoW overrunning 40 minutes, not from the deck. The trim is spread roughly evenly.",
+    "fix": "For the SoW owner: the lesson is about 52 minutes of content in a 40-minute slot, so consider 80 minutes. Keep the logged trims."
+   },
+   {
+    "slide": "Predict slides",
+    "severity": "minor",
+    "category": "other",
+    "problem": "The SoW sensemaking text refers to 'Lesson 10 language' and to 'Lesson 1 sticky-note predictions'. The SoW's own overview and framework disagree about whether predictions are in notebooks or on sticky notes. The deck follows the framework, and the build log flags this.",
+    "fix": "For the SoW owner: correct the wording. No deck change is needed."
+   }
+  ],
+  "verdict": "pass"
+ },
+ "build_log": [
+  {
+   "slide": "whole lesson",
+   "type": "trimmed_time",
+   "sow_says": "Stated times: re-reading ninety seconds, writing two minutes, planning scan three minutes, poster construction approximately twenty minutes, gallery walk four minutes, reading feedback two minutes plus one minute revising, individual writing three minutes in the final five minutes. Teacher talk, DQB voting and cold-calls have no stated times.",
+   "deck_does": "Fits 40 minutes: unit map 1, goals 1, Predict 5, Observe 3, Explain 18, Driving Question Board 6, Model Building 4, summary 2. No activity is cut. Estimated SoW phase times about 8, 5, 24, 10 and 5 minutes (about 52 in all), trimmed to the new times.",
+   "why": "The SoW activities plus teacher talk cannot fit 40 minutes. Some phases lost more than a quarter because the lesson overruns (Predict, Observe and DQB lose more). Please check the SoW times."
+  },
+  {
+   "slide": "Several slides: Read your own words from Lesson 1; In Lesson 1 I thought… but now I know…; Silent planning scan; Build your poster: Zones A and B; Read your feedback; My cell model: Version 4",
+   "type": "trimmed_time",
+   "sow_says": "Re-reading 90 seconds; writing 2 minutes; planning scan 3 minutes; construction about 20 minutes; reading feedback 2 minutes then revision 1 minute; individual writing 3 minutes; gallery walk 4 minutes.",
+   "deck_does": "Timers: re-reading 1:00; writing 1:30; scan 2:00; building 14:00 (shown as 14:00, 9:00 and 4:00 across three slides); reading and revising 1:00 together; writing 2:30. Gallery walk stays at 4:00.",
+   "why": "Timers have to fit inside the trimmed slide minutes."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "sow_problem",
+   "sow_says": "DQB phase: each original wonder question is read, voted on and relabelled with a coloured note, and at least four learners build an answer to the driving question.",
+   "deck_does": "Allows 3 minutes for the voting and 2 minutes for the combined answer, with a brisk pace noted for the teacher. No question or activity is cut.",
+   "why": "The number of questions on the DQB is not known. Even a short list of questions plus four cold-calls is unlikely to fit 5 minutes. SoW owner to confirm whether this lesson should be an 80-minute double lesson."
+  },
+  {
+   "slide": "Observe and Explain slides",
+   "type": "inconsistency",
+   "sow_says": "Observe teacher moves: 'sets a visible timer for twenty minutes of construction time'. Explain learner experience: 'Groups spend approximately twenty minutes constructing their posters.'",
+   "deck_does": "Puts the construction timer on the first Explain slide (Build your poster: Zones A and B), after the planning scan in Observe.",
+   "why": "The same 20 minutes is placed in two phases in the SoW, so it is counted once. The construction is a model-building activity, which fits with the Explain phase as the SoW itself places it."
+  },
+  {
+   "slide": "My cell model: Version 4",
+   "type": "inconsistency",
+   "sow_says": "My cell model started in Lesson 1 as a simple sketch. Today, Version 4 of my model shows…",
+   "deck_does": "Keeps 'Version 4' as written.",
+   "why": "The storyline calls the Lesson 10 model Version 4, so the Lesson 11 revision would be a later version. Check numbering with the SoW owner."
+  },
+  {
+   "slide": "Read your own words from Lesson 1",
+   "type": "inconsistency",
+   "sow_says": "Overview: 'revisiting their Lesson 1 sticky-note predictions, held on the Driving Question Board'. Framework: learners find their Lesson 1 prediction in their science notebooks.",
+   "deck_does": "Learners re-read their notebook prediction. The Driving Question Board wonder questions are read aloud by the teacher.",
+   "why": "The Lesson 1 predictions were written in notebooks, and sticky notes on the board were notice and wonder notes. The overview and framework do not agree."
+  },
+  {
+   "slide": "Build your poster: Zones A and B",
+   "type": "inconsistency",
+   "sow_says": "Zone B requires a fully labelled animal cell with at least six organelles, 'noting two structures absent from the plant cell and explaining why their absence matters'.",
+   "deck_does": "Slide uses the SoW wording. Answer key gives lysosomes and centrioles as animal-only structures, and also notes that animal cells lack a cell wall and chloroplasts.",
+   "why": "It is unclear whether 'absent from the plant cell' means structures only in animal cells (lysosomes, centrioles) or structures the animal cell lacks (for example cell wall, chloroplasts). 'Their absence' suggests the second. Teacher checker to decide."
+  },
+  {
+   "slide": "Build your poster: Zone C",
+   "type": "science_flag",
+   "sow_says": "platelets (small, no nucleus, packed with clotting proteins — able to aggregate rapidly)",
+   "deck_does": "Keeps the SoW wording in the answer key; platelets are not named on the student slide.",
+   "why": "Platelets are fragments of larger cells (megakaryocytes), not whole cells. Calling them specialised cells may need a note."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "term_flag",
+   "sow_says": "Unit phenomenon: 'A Form 1 student in Nairobi cuts their finger'.",
+   "deck_does": "Does not use 'Form 1' on any slide. Refers to the cut finger or the wound-healing phenomenon.",
+   "why": "CBE uses Grade 10 and the manual forbids Form 1. Also note the unit label 'Sub-Strand 1.3: Cell Structure and Specialisation' does not match sub-strand 1.1 Cell Structure."
+  },
+  {
+   "slide": "Build your poster: Zones A and B",
+   "type": "added_fact",
+   "sow_says": "Zone A requires a fully labelled plant cell with at least eight organelles and a one-phrase function note beside each label.",
+   "deck_does": "Answer key gives functions: cell wall (support, shape), cell membrane (controls what enters and leaves), nucleus (controls the cell, holds DNA), chloroplast (photosynthesis), large central vacuole (stores water, keeps cell firm), mitochondrion (releases energy), endoplasmic reticulum (moves and makes materials), ribosomes (make proteins), Golgi apparatus (packages and sends out proteins). Also, in Zone D answer key, one-sentence 'what is gained' lines for each level.",
+   "why": "The SoW lists the organelles but not their functions, and gives no sentences for the levels. Teacher to verify these textbook facts."
+  },
+  {
+   "slide": "Build your poster: Zones A and B",
+   "type": "missing_detail",
+   "sow_says": "teacher distributes materials — A2 poster paper, coloured markers, rulers",
+   "deck_does": "Notes list these materials per group of four. No quantities or fallback are stated.",
+   "why": "The SoW gives no quantities, and safetyNotes mention scissors for card-sorting although this lesson has no card-sorting. Part B (glance and safety) should handle this."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "missing_detail",
+   "sow_says": "Predict: learners write silently, then selected learners share. Model Building ends with the teacher linking forward to Lesson 12. No pair talk, Claim-Evidence-Reasoning or student prediction for the next lesson is stated.",
+   "deck_does": "Follows the SoW: no pair talk, no CER task, and no written next-lesson prediction. The THEN and NOW slide replaces 'BEFORE — Our Predictions'.",
+   "why": "Adding them would be new activities. The manual asks for them, so they are listed here for the SoW owner."
+  },
+  {
+   "slide": "Gallery walk: one glow, one grow",
+   "type": "missing_detail",
+   "sow_says": "Overview: 'Groups present their posters in a gallery-walk format.' Framework: 'four-minute gallery walk: ... the group rotates clockwise to view the next group's poster.'",
+   "deck_does": "One four-minute rotation to the next group's poster. No oral presentations.",
+   "why": "The overview and framework differ. The framework gives one rotation only."
+  },
+  {
+   "slide": "Driving Question Board: how far have we come?",
+   "type": "other",
+   "sow_says": "Relabel with a green (ANSWERED), yellow (PARTIALLY ANSWERED) or blue (BEYOND THIS UNIT) sticky note.",
+   "deck_does": "Uses the SoW's three-colour system and show-of-hands vote.",
+   "why": "The manual describes two colours (evidence and questions). This lesson is a closure, so the SoW's system is used."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "other",
+   "sow_says": "Zone A: a fully labelled plant cell. Zone B: a fully labelled animal cell.",
+   "deck_does": "No cell diagram slides are shown. Learners draw and label cells from their own models.",
+   "why": "Showing labelled templates would give away the poster task. Learners already used diagrams in Lessons 4 to 7."
+  },
+  {
+   "slide": "Build your poster: Zones A and B; Build your poster: Zone D",
+   "type": "resource_note",
+   "sow_says": "No resources are named in the SoW.",
+   "deck_does": "Adds ARES icon explain.reading (CK-12 Plant Cell Structures) on Zone A and B slide, and observe.video (Organization in the human body) on Zone D slide, both as preview first. No others are on slides.",
+   "why": "Both fit as optional reference, but neither is an exact match and neither covers the wound-healing context. The video should be previewed offline first."
+  },
+  {
+   "slide": "whole lesson",
+   "type": "missing_detail",
+   "sow_says": "teacher distributes materials — A2 poster paper, coloured markers, rulers",
+   "deck_does": "Glance lists A2 paper, markers and rulers per group with no quantities. Other items (feedback cards, sticky notes, notebooks, clipboard) come from the SoW text.",
+   "why": "The SoW gives no quantities per group and no fallback if materials are short. The fallback in the glance (flipchart sheets, joined A4 sheets, sharing markers) is only a substitute suggestion. Teacher to confirm."
+  },
+  {
+   "slide": "Safety (not shown)",
+   "type": "safety_flag",
+   "sow_says": "No hazardous materials are used in this lesson. Learners handle poster paper, markers, and scissors where used for card-sorting.",
+   "deck_does": "No safety slide (is_practical false). Scissors are not on the glance.",
+   "why": "No card-sorting is in the lesson, so scissors are not used. Teacher checker to confirm that no safety slide is needed."
+  },
+  {
+   "slide": "Driving Question Board slides",
+   "type": "sow_problem",
+   "sow_says": "Lesson 11: all original wonder questions are classified ANSWERED, PARTIALLY ANSWERED or BEYOND THIS UNIT. Storyline Lesson 12: 'Final DQB update: questions are marked ANSWERED, PARTIALLY ANSWERED, or BEYOND THIS UNIT.'",
+   "deck_does": "Follows the Lesson 11 plan. Part A notes that disagreed questions are kept for Lesson 12.",
+   "why": "Both lessons do the same closure. The SoW owner should decide which lesson does the formal classification and which does the review."
+  },
+  {
+   "slide": "Summary Table",
+   "type": "other",
+   "sow_says": "In this lesson I observed that learners could integrate their cumulative cell knowledge into a four-zone poster model…",
+   "deck_does": "Rewrites the summaryTablePrompt as first-person model answers from the learner's view.",
+   "why": "The SoW text is written from the teacher's view, but the Summary Table slide faces students."
+  },
+  {
+   "slide": "Unit map",
+   "type": "other",
+   "sow_says": "Lesson 12 title: 'Consolidation, DQB Closure, and Final Explanation — The Healing Cut Fully Explained'",
+   "deck_does": "Unit map titles use only words from each SoW lesson title and are shortened to 6 words or fewer, for example 'Final Explanation'.",
+   "why": "To keep the unit map short. The unit label in the input says Sub-Strand 1.3 while this is sub-strand 1.1, as already logged."
+  },
+  {
+   "slide": "Predict slides",
+   "type": "inconsistency",
+   "sow_says": "Teacher reads questions from the 'original DQB poster' and learners write a THEN and NOW comparison. The Predict reflection text refers to 'Lesson 10 language' while comparing with Lesson 1.",
+   "deck_does": "Compares Lesson 1 words with today's words, as the Predict slides in Part A do.",
+   "why": "The comparison is between Lesson 1 and today (Lesson 11), not Lesson 10. SoW owner to correct the wording."
+  },
+  {
+   "slide": "Lesson at a glance",
+   "type": "resource_note",
+   "sow_says": "No resources are named in the SoW.",
+   "deck_does": "Gives a match note for all seven ARES keys. Only explain.reading and observe.video are on slides (preview first). The rest are not used.",
+   "why": "None of the resources is an exact match for the poster-building task. The respiratory system reading is off topic."
+  },
+  {
+   "slide": "Lesson at a glance",
+   "type": "missing_detail",
+   "sow_says": "No fallback is given if equipment or materials are short.",
+   "deck_does": "The fallback suggests flipchart sheets, joined A4 sheets, shared markers, and torn paper pieces in place of sticky notes.",
+   "why": "These are substitutes only. The SoW does not name them. Teacher checker to confirm they suit schools."
+  },
+  {
+   "slide": "Summary Table",
+   "type": "missing_detail",
+   "sow_says": "The framework has no Summary Table step. summaryTablePrompt gives three teacher-view statements.",
+   "deck_does": "Gives the Summary Table 2 minutes at the end or as homework. Prompts and model answers use the summaryTablePrompt ideas, written for the learner.",
+   "why": "The lesson has no spare time for it. Teacher to decide whether it is done in class or at home."
+  },
+  {
+   "slide": "Lesson at a glance",
+   "type": "resource_note",
+   "sow_says": "No resources are named in the SoW.",
+   "deck_does": "Marks predict.video, predict.reading, explain.video, dqb.reading and model.reading as do_not_use.",
+   "why": "They repeat earlier lessons, would replace learners' own recall, or are off topic. Teacher checker to confirm."
+  },
+  {
+   "slide": "Unit map",
+   "type": "other",
+   "sow_says": "Lesson 6 title: 'Microscopy Practical 1 — Observing Onion Epidermal Cells'; Lesson 7: 'Microscopy Practical 2 — Human Cheek Cells: Observing Animal Cell Structure'",
+   "deck_does": "Unit map shows 'Observing Onion Epidermal Cells' and 'Human Cheek Cells'.",
+   "why": "Shortened to 6 words or fewer, using only words from each SoW title."
+  },
+  {
+   "slide": "Goals and key words",
+   "type": "other",
+   "sow_says": "SoW has no key word list for this lesson.",
+   "deck_does": "Uses six key words: model, evidence, structure, function, specialised cell, hierarchy. They come from the lesson's goals and poster task.",
+   "why": "The words do not answer any prediction or give away a later lesson. Teacher to check the plain definitions."
+  }
+ ],
+ "total_usd_est": 1.005
+}
