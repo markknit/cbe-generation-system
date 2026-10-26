@@ -45,83 +45,13 @@ const lessonData = newLesson.lesson || newLesson;
 // This gate is the chokepoint: repair_stubs.py and the manual Quick Start
 // workflow both write lessons through here.
 
-const SLO_KEYS = ['purpose', 'knowledge', 'skills', 'attitudes',
-                  'keyInquiry', 'purposeInStoryline', 'safetyNotes'];
-const TOP_KEYS  = ['number', 'title', 'duration', 'substrand', 'slo', 'overview',
-                   'framework', 'teacherReflection', 'summaryTablePrompt'];
-const STP_KEYS  = ['observed', 'learned', 'explained'];
-const PHASES    = ['Predict Phase', 'Observe Phase', 'Explain Phase',
-                   'Driving Question Board (DQB) Creation', 'Model Building Phase'];
-const PHASE_KEYS = ['phase', 'learnerExperience', 'teacherMoves',
-                    'sensemakingStrategy', 'formativeAssessment'];
+const { checkLesson } = require('../generators/lib/lesson_contract');
 
+// The shared contract plus the one check only a single-lesson patch can make.
 function validateLesson(l, expectedNum) {
-  const errs = [];
-  const nonEmpty = v => typeof v === 'string' && v.trim().length > 0;
-
-  for (const k of TOP_KEYS) if (!(k in l)) errs.push(`missing top-level "${k}"`);
-  if (l.number !== expectedNum) {
+  const errs = checkLesson(l);
+  if (l && typeof l === 'object' && l.number !== expectedNum) {
     errs.push(`lesson.number is ${JSON.stringify(l.number)}, expected ${expectedNum}`);
-  }
-  for (const k of ['title', 'duration', 'substrand', 'overview', 'teacherReflection']) {
-    if (k in l && !nonEmpty(l[k])) errs.push(`"${k}" is empty`);
-  }
-
-  // slo: exact key set. Catches the safety<N>otes corruption and any other
-  // placeholder damage to key names.
-  const slo = l.slo;
-  if (typeof slo !== 'object' || slo === null) {
-    errs.push('"slo" is not an object');
-  } else {
-    for (const k of SLO_KEYS) {
-      if (!(k in slo)) errs.push(`slo missing "${k}"`);
-      else if (!nonEmpty(slo[k])) errs.push(`slo."${k}" is empty`);
-    }
-    for (const k of Object.keys(slo)) {
-      if (!SLO_KEYS.includes(k)) {
-        errs.push(`slo has unexpected key "${k}"`
-          + (/^safety\d+otes$/.test(k)
-              ? ' — placeholder-replacement corruption of "safetyNotes"' : ''));
-      }
-    }
-  }
-
-  // summaryTablePrompt: all three cells required and non-empty.
-  const stp = l.summaryTablePrompt;
-  if (typeof stp !== 'object' || stp === null) {
-    errs.push('"summaryTablePrompt" is not an object');
-  } else {
-    for (const k of STP_KEYS) {
-      if (!(k in stp)) errs.push(`summaryTablePrompt missing "${k}"`);
-      else if (!nonEmpty(stp[k])) errs.push(`summaryTablePrompt."${k}" is empty`);
-    }
-    for (const k of Object.keys(stp)) {
-      if (!STP_KEYS.includes(k)) errs.push(`summaryTablePrompt has unexpected key "${k}"`);
-    }
-  }
-
-  // framework: exactly the 5 canonical phases, in order. sections.js keys ARES
-  // resource-category matching and row shading off these exact strings, both
-  // with silent fallbacks — a wrong label mis-buckets resources without erroring.
-  const fw = l.framework;
-  if (!Array.isArray(fw)) {
-    errs.push('"framework" is not an array');
-  } else if (fw.length !== PHASES.length) {
-    errs.push(`framework has ${fw.length} entries, expected ${PHASES.length}`);
-  } else {
-    fw.forEach((p, i) => {
-      if (typeof p !== 'object' || p === null) {
-        errs.push(`framework[${i}] is not an object`);
-        return;
-      }
-      if (p.phase !== PHASES[i]) {
-        errs.push(`framework[${i}].phase is ${JSON.stringify(p.phase)}, `
-                + `expected ${JSON.stringify(PHASES[i])}`);
-      }
-      for (const k of PHASE_KEYS.slice(1)) {
-        if (!nonEmpty(p[k])) errs.push(`framework[${i}]."${k}" is missing or empty`);
-      }
-    });
   }
   return errs;
 }
