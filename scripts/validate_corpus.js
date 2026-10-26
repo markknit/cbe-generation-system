@@ -16,14 +16,19 @@
  *   3. summaryTablePrompt has observed + learned + explained, all non-empty
  *   4. framework is the 5 canonical phases, in order, all cells non-empty
  *      (sections.js keys ARES resource buckets and row shading off these exact
- *       strings, with silent fallbacks)
+ *       strings)
  *   5. lesson.number matches its array position sequence
- *   6. META.subject === UNIT.subject; FINAL_EXPLANATION / SUMMARY_TABLE present
- *   7. no stub lessons (overview suspiciously short)
+ *   6. no stub lessons (overview suspiciously short)
+ * and per module: every META / UNIT / FINAL_EXPLANATION / SUMMARY_TABLE field
+ * the renderers print, META.subject === UNIT.subject, one Summary Table row per
+ * lesson, and (stricter than rendering) FINAL_EXPLANATION / SUMMARY_TABLE must exist. All of it lives in generators/lib/lesson_contract.js checkModule(),
+ * which build_docs.js run() also calls: a module that fails here won't render.
  *
  * Usage:
  *   node scripts/validate_corpus.js            # all files
  *   node scripts/validate_corpus.js gensci_    # only files matching a prefix
+ *   CBE_DATA_DIR=data/revised_2026-10_full/modules node scripts/validate_corpus.js
+ *                                              # another data dir (same variable as generate.js)
  *
  * Exit 0 = clean, 1 = at least one ERROR. Warnings never fail the run.
  */
@@ -31,22 +36,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const DATA_DIR = path.join(__dirname, '..', 'generators', 'data');
+const DATA_DIR = process.env.CBE_DATA_DIR
+  ? path.resolve(process.env.CBE_DATA_DIR)
+  : path.join(__dirname, '..', 'generators', 'data');
 const filter = process.argv[2] || '';
 
-// Checks 1-4 and 7 are the shared lesson contract (also enforced by patch_lesson.js).
-const { nonEmpty, checkLesson: contractErrors } = require('../generators/lib/lesson_contract');
-
-function checkLesson(l, i, errors, warnings, where) {
-  const at = `L${l && l.number !== undefined ? l.number : `@${i}`}`;
-  const err = m => errors.push(`${where} ${at}: ${m}`);
-  const warn = m => warnings.push(`${where} ${at}: ${m}`);
-
-  contractErrors(l).forEach(err);
-  if (typeof l !== 'object' || l === null) return;
-
-  if (!nonEmpty(l.aresKeywords)) warn('aresKeywords missing or empty (no ARES resource lookup)');
-}
+// All errors come from the shared contract, the same check build_docs.js run()
+// makes before rendering and patch_lesson.js makes before writing a lesson.
+const { nonEmpty, checkModule } = require('../generators/lib/lesson_contract');
 
 function checkFile(file) {
   const errors = [], warnings = [];
@@ -58,30 +55,16 @@ function checkFile(file) {
     return { name, errors: [`${name}: failed to load — ${e.message}`], warnings, lessons: 0 };
   }
 
-  if (!Array.isArray(mod.LESSONS) || mod.LESSONS.length === 0) {
-    errors.push(`${name}: LESSONS missing or empty`);
-    return { name, errors, warnings, lessons: 0 };
-  }
-  if (!mod.FINAL_EXPLANATION) errors.push(`${name}: FINAL_EXPLANATION is null/missing`);
-  if (!mod.SUMMARY_TABLE)     errors.push(`${name}: SUMMARY_TABLE is null/missing`);
+  for (const e of checkModule(mod, { requireDocs: true })) errors.push(`${name} ${e}`);
 
-  const ms = mod.META && mod.META.subject, us = mod.UNIT && mod.UNIT.subject;
-  if (ms && us && ms !== us) {
-    errors.push(`${name}: META.subject (${ms}) !== UNIT.subject (${us}) `
-              + '— UNIT.subject feeds the "Subject:" row in the Lesson Sequence docx');
-  }
-  if (!mod.META || !nonEmpty(mod.META.outputDir)) {
-    warnings.push(`${name}: META.outputDir missing`);
-  }
-
-  mod.LESSONS.forEach((l, i) => checkLesson(l, i, errors, warnings, name));
-
-  const nums = mod.LESSONS.map(l => l && l.number);
-  const expected = nums.map((_, i) => i + 1);
-  if (JSON.stringify(nums) !== JSON.stringify(expected)) {
-    errors.push(`${name}: lesson numbers are [${nums}], expected [${expected}]`);
-  }
-  return { name, errors, warnings, lessons: mod.LESSONS.length };
+  const lessons = Array.isArray(mod.LESSONS) ? mod.LESSONS : [];
+  lessons.forEach((l, i) => {
+    if (l && typeof l === 'object' && !nonEmpty(l.aresKeywords)) {
+      warnings.push(`${name} L${l.number !== undefined ? l.number : `@${i}`}: `
+                  + 'aresKeywords missing or empty (falls back to the title for the ARES lookup)');
+    }
+  });
+  return { name, errors, warnings, lessons: lessons.length };
 }
 
 const files = fs.readdirSync(DATA_DIR)

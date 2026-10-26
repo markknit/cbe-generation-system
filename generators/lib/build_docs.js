@@ -29,6 +29,7 @@ const { Document, Packer, PageOrientation } = require('docx');
 const { W, C, SZ, SZ_H, SPACE, PAGE_BREAK, para, cell, richCell, fullHeader, labelRow, makeTable } = require('./docx_kit');
 const { TableRow } = require('docx');
 const { takeDiagnostics } = require('../aresResources');
+const { checkModule } = require('./lesson_contract');
 const { substrandHeaderParas, lessonFooterParas } = require('./attribution');
 const {
   titleBlock, subStrandOverview,
@@ -50,7 +51,7 @@ function pageProps() {
 
 async function buildSoW(META, UNIT, LESSONS) {
   const sectionCConfig = {
-    subject:   META.subject   || 'Biology',
+    subject:   META.subject,
     col3Label: META.col3Label || 'Teacher Moves',
     col5Label: META.col5Label || 'Formative Assessment Strategy',
   };
@@ -142,13 +143,13 @@ async function buildFinalExplanation(META, FE, mode = 'student') {
   }
 
   // Sections
-  for (const sec of (FE.sections || [])) {
+  for (const sec of FE.sections) {
     if (isTeacher) {
       body.push(makeTable([
         fullHeader(sec.title, C.darkBlue, 'FFFFFF', SZ_H, 2, true),
         new TableRow({ children: [
-          richCell(sec.prompt  || '', { fill: C.lightTeal,  bold: true, w: FLW, size: SZ }),
-          richCell(sec.exemplar || '', { fill: C.white,      w: FCW, size: SZ }),
+          richCell(sec.prompt,   { fill: C.lightTeal,  bold: true, w: FLW, size: SZ }),
+          richCell(sec.exemplar, { fill: C.white,      w: FCW, size: SZ }),
         ]}),
       ], [FLW, FCW]));
     } else {
@@ -156,7 +157,7 @@ async function buildFinalExplanation(META, FE, mode = 'student') {
       body.push(makeTable([
         fullHeader(sec.title, C.darkBlue, 'FFFFFF', SZ_H, 1, true),
         new TableRow({ children: [
-          richCell(sec.prompt || '', { fill: C.lightTeal, bold: true, w: W, size: SZ, keepNext: true }),
+          richCell(sec.prompt, { fill: C.lightTeal, bold: true, w: W, size: SZ, keepNext: true }),
         ]}),
         new TableRow({ height: { value: 4200, rule: 'atLeast' }, children: [
           cell('Write your answer here:', { fill: C.white, w: W, size: SZ, italic: true, color: '808080' }),
@@ -207,7 +208,7 @@ async function buildSummaryTable(META, ST) {
   const body = [
     ...titleBlock(
       `SUMMARY TABLE: ${META.subject.toUpperCase()} GRADE ${META.grade}`,
-      `${ST.subStrand || ''} — Teacher Reference (Pre-filled)`,
+      `${ST.subStrand} — Teacher Reference (Pre-filled)`,
     ),
     SPACE(),
   ];
@@ -215,8 +216,8 @@ async function buildSummaryTable(META, ST) {
   // Header info
   body.push(makeTable([
     fullHeader(`SUMMARY TABLE: ${META.subject.toUpperCase()} GRADE ${META.grade}`, C.darkBlue, 'FFFFFF', SZ_H, 2),
-    labelRow('Sub-Strand',       ST.subStrand    || '', SLW),
-    labelRow('Driving Question', ST.drivingQuestion || '', SLW),
+    labelRow('Sub-Strand',       ST.subStrand,       SLW),
+    labelRow('Driving Question', ST.drivingQuestion, SLW),
   ], [SLW, W - SLW]));
 
   body.push(SPACE());
@@ -244,11 +245,11 @@ async function buildSummaryTable(META, ST) {
       cell('What did I learn?',                         { fill: C.teal,     bold: true, color: 'FFFFFF', w: SC3,  size: SZ }),
       cell('How does this explain the phenomenon?',     { fill: C.medBlue,  bold: true, color: 'FFFFFF', w: SC3r, size: SZ }),
     ]}),
-    ...(ST.lessons || []).map(l => new TableRow({ children: [
+    ...ST.lessons.map(l => new TableRow({ children: [
       cell(`Lesson ${l.number}\n${l.title}`, { fill: C.lightBlue,   bold: true, w: SLW,  size: SZ }),
-      cell(l.observed  || '',                { fill: C.white,                   w: SC3,  size: SZ }),
-      cell(l.learned   || '',                { fill: C.grey,                    w: SC3,  size: SZ }),
-      cell(l.explained || '',                { fill: C.white,                   w: SC3r, size: SZ }),
+      cell(l.observed,                       { fill: C.white,                   w: SC3,  size: SZ }),
+      cell(l.learned,                        { fill: C.grey,                    w: SC3,  size: SZ }),
+      cell(l.explained,                      { fill: C.white,                   w: SC3r, size: SZ }),
     ]})),
   ];
 
@@ -264,6 +265,15 @@ async function buildSummaryTable(META, ST) {
 
 async function run(dataModule) {
   const { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE } = dataModule;
+
+  // Fail loudly, before writing anything: a missing or misnamed field used to
+  // render as a silently empty cell (2026-10-26). Same contract as
+  // scripts/validate_corpus.js and scripts/patch_lesson.js.
+  const contractErrors = checkModule(dataModule);
+  if (contractErrors.length) {
+    throw new Error(`data module breaks the contract (${contractErrors.length} problem(s)); nothing rendered:\n`
+                    + contractErrors.map(e => `    - ${e}`).join('\n'));
+  }
 
   // CBE_OUTPUT_ROOT redirects all output (used for the revised-corpus build, which must never touch data/outputs)
   const outRoot = process.env.CBE_OUTPUT_ROOT || path.join(__dirname, '..', '..', 'data', 'outputs');
@@ -292,6 +302,7 @@ async function run(dataModule) {
 
   // 2. Final Explanation: student version (blank answer space) and teacher
   //    key (exemplars). Same data, so the two cannot drift apart.
+  //    The contract allows null ("not authored yet"): then no FE document, said out loud.
   if (FINAL_EXPLANATION) {
     for (const [mode, suffix] of [['student', 'FinalExplanation'], ['teacher', 'FinalExplanation_TeacherKey']]) {
       const feDoc  = await buildFinalExplanation(META, FINAL_EXPLANATION, mode);
@@ -300,15 +311,19 @@ async function run(dataModule) {
       files.push(fePath);
       console.log(`    Saved: ${fePath}  (${Math.round(fs.statSync(fePath).size / 1024)} KB)`);
     }
+  } else {
+    console.warn('    FINAL_EXPLANATION is null: Final Explanation documents NOT produced');
   }
 
-  // 3. Summary Table
+  // 3. Summary Table (same rule)
   if (SUMMARY_TABLE) {
     const stDoc  = await buildSummaryTable(META, SUMMARY_TABLE);
     const stPath = path.join(outBase, `${META.filePrefix}_SummaryTable.docx`);
     await Packer.toBuffer(stDoc).then(buf => fs.writeFileSync(stPath, buf));
     files.push(stPath);
     console.log(`    Saved: ${stPath}  (${Math.round(fs.statSync(stPath).size / 1024)} KB)`);
+  } else {
+    console.warn('    SUMMARY_TABLE is null: Summary Table document NOT produced');
   }
 
   // 4. JSON export — canonical structured data for downstream tools

@@ -137,7 +137,8 @@ generators/generate_teacher_index.js    - Builds v2/PDF/index.html (teacher-faci
 generators/aresResources.js             - ARES resource injection (docx paragraph building)
 generators/build_quiz.js                - Quick Check .pptx + Answer Key .html/.docx from *_quiz.json
 generators/lib/attribution.js           - Renders config/attribution.yaml (licence/credit text)
-generators/lib/lesson_contract.js       - Per-lesson contract rules, shared by validate_corpus.js + patch_lesson.js
+generators/lib/lesson_contract.js       - Data contract (lesson + module); run() refuses to render a module that fails it;
+                                          shared with validate_corpus.js + patch_lesson.js
 config/attribution.yaml                 - Attribution text — the ONLY place it lives; never hardcode
 config/link_matching.yaml               - Link matcher rules (exclusions, synonyms, relevance gate)
 config/quiz_generation.yaml             - Quiz model, effort, question counts
