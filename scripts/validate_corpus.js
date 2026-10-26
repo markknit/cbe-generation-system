@@ -34,9 +34,8 @@ const path = require('path');
 const DATA_DIR = path.join(__dirname, '..', 'generators', 'data');
 const filter = process.argv[2] || '';
 
-// Checks 1-4 are the shared lesson contract (also enforced by patch_lesson.js).
+// Checks 1-4 and 7 are the shared lesson contract (also enforced by patch_lesson.js).
 const { nonEmpty, checkLesson: contractErrors } = require('../generators/lib/lesson_contract');
-const STUB_OVERVIEW_CHARS = 50;
 
 function checkLesson(l, i, errors, warnings, where) {
   const at = `L${l && l.number !== undefined ? l.number : `@${i}`}`;
@@ -46,9 +45,6 @@ function checkLesson(l, i, errors, warnings, where) {
   contractErrors(l).forEach(err);
   if (typeof l !== 'object' || l === null) return;
 
-  if (nonEmpty(l.overview) && l.overview.trim().length < STUB_OVERVIEW_CHARS) {
-    err(`stub lesson — overview only ${l.overview.trim().length} chars`);
-  }
   if (!nonEmpty(l.aresKeywords)) warn('aresKeywords missing or empty (no ARES resource lookup)');
 }
 

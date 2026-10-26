@@ -27,6 +27,7 @@ const PHASES    = ['Predict Phase', 'Observe Phase', 'Explain Phase',
                    'Driving Question Board (DQB) Creation', 'Model Building Phase'];
 const CELL_KEYS = ['learnerExperience', 'teacherMoves',
                    'sensemakingStrategy', 'formativeAssessment'];
+const STUB_OVERVIEW_CHARS = 50;
 
 const nonEmpty = v => typeof v === 'string' && v.trim().length > 0;
 
@@ -38,6 +39,10 @@ function checkLesson(l) {
   for (const k of TOP_KEYS) if (!(k in l)) errs.push(`missing top-level "${k}"`);
   for (const k of TEXT_KEYS) {
     if (k in l && !nonEmpty(l[k])) errs.push(`"${k}" is empty`);
+  }
+  // Stub check is shared so patch_lesson.js --force can't write a stub either.
+  if (nonEmpty(l.overview) && l.overview.trim().length < STUB_OVERVIEW_CHARS) {
+    errs.push(`stub lesson — overview only ${l.overview.trim().length} chars`);
   }
 
   // slo: exact key set. Catches the safety<N>otes corruption and any other
@@ -97,4 +102,5 @@ function checkLesson(l) {
 }
 
 module.exports = { SLO_KEYS, TOP_KEYS, TEXT_KEYS, STP_KEYS, PHASES, CELL_KEYS,
+                   STUB_OVERVIEW_CHARS,
                    nonEmpty, checkLesson };
