@@ -256,8 +256,8 @@ data/outputs/v2/<Subject>/<SubStrand>/
   quiz/<Subject>_G<g>_SS<id>_<Name>_L<n>_QuickCheck.pptx / _AnswerKey.html / _AnswerKey.docx
 ```
 Every document carries the attribution block (from `config/attribution.yaml`).
-Presentations (`build_pptx.js`) are **deferred** pending teacher review; the examples in
-`handoff_bundle_2026-09-29/presentation_examples_deferred/` are reference only, so don't build it.
+Presentations are built only on the `presentations` branch (see "Branch Policy" above), never
+on `main`. The examples in `handoff_bundle_2026-09-29/presentation_examples_deferred/` are reference only.
 
 PDF distribution copies (generated from the docx above, for teachers —
 not `.docx` or `data/outputs/docx/`, which is an archived, stale tree):
