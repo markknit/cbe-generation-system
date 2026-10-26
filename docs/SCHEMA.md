@@ -48,6 +48,16 @@ Current contract version: **1.0.0**, declared per file via the top-level `schema
 
 Required fields (everything else is optional):
 
+> **This project is stricter than the partner contract below.** Since
+> 2026-10-26 `build_docs.js` `run()` refuses to render a module if any field it
+> prints into a cell is missing or empty, and writes nothing for it.
+> The rules are in `generators/lib/lesson_contract.js` (`checkModule`), shared
+> with `scripts/validate_corpus.js` and `scripts/patch_lesson.js`. Parts the
+> contract lets be absent, and that the renderer then omits whole, stay
+> optional: `FINAL_EXPLANATION`/`SUMMARY_TABLE` may be `null` (that document is
+> not produced, with a warning), and `FE.instructions` and `FE.rubric` may be
+> absent. If present they must be complete.
+
 - **Top-level:** `schemaVersion`, `META`, `UNIT`, `LESSONS`, `FINAL_EXPLANATION`, `SUMMARY_TABLE` — the last two may be `null`.
 - **META:** `subject`, `grade`, `substrand_id`, `substrand_name`, `titleDoc`.
 - **UNIT:** `gradeLevel`, `subject`, `strand`, `substrand`, `totalDuration`, `content`, `learningOutcomes`, `coreCompetencies`.
@@ -110,7 +120,7 @@ Each element of the `LESSONS` array:
 | Overview | string | `overview` | 2–3 paragraph prose |
 | Framework | array | `framework` | See Framework fields below |
 | Teacher reflection | string | `teacherReflection` | |
-| Summary table | object | `summaryTablePrompt` | Optional; pre-filled student prompts |
+| Summary table | object | `summaryTablePrompt` | Required by this project's checks since 2026-08-02 (`observed`, `learned`, `explained`, all non-empty); pre-filled student prompts |
 
 ### SLO fields (inside `slo`)
 
@@ -154,7 +164,7 @@ Each element of the `LESSONS` array:
 |---|---|---|
 | Title | `title` | e.g. `'SECTION 1: ...'` |
 | Prompt | `prompt` | Question prompt |
-| Exemplar | `exemplar` | Optional; model answer / teacher reference |
+| Exemplar | `exemplar` | Model answer / teacher reference. Optional in the partner contract, but required here: the teacher key prints it (renderer refuses an empty one since 2026-10-26) |
 
 ### Rubric row fields (each element of `rubric`)
 

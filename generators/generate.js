@@ -20,6 +20,10 @@
  * (answer/exam material, wrong-subject matches, dead links, contract shape).
  * A hard failure makes the run exit non-zero. LINK_CHECK=warn reports
  * failures without failing the run (for diagnosis only — never for shipping).
+ *
+ * Before any of that, build_docs.js run() refuses to render a data module that
+ * breaks the contract (generators/lib/lesson_contract.js). With --all, the
+ * other modules still render and the run exits non-zero at the end.
  */
 'use strict';
 
@@ -36,6 +40,7 @@ const CHECK_PYTHON = fs.existsSync(path.join(ROOT, 'venv', 'bin', 'python3'))
   ? path.join(ROOT, 'venv', 'bin', 'python3') : 'python3';
 const linkFailures = [];
 const consistencyFailures = [];
+const renderFailures = [];
 
 async function main() {
   const args = process.argv.slice(2);
@@ -57,12 +62,21 @@ async function main() {
     console.log(`Generating ${files.length} sub-strands...`);
     for (const name of files) {
       console.log(`\n─── ${name} ───`);
-      await generateOne(dataDir, name);
+      try {
+        await generateOne(dataDir, name);
+      } catch (e) {
+        console.error(`  RENDER FAILED: ${e.message}`);
+        renderFailures.push(name);
+      }
     }
   } else {
     await generateOne(dataDir, args[0]);
   }
 
+  if (renderFailures.length) {
+    console.error(`\nRender FAILED (contract) for ${renderFailures.length} sub-strand(s): ${renderFailures.join(', ')}`);
+    process.exitCode = 1;
+  }
   if (linkFailures.length) {
     console.error(`\nResource-link check FAILED for ${linkFailures.length} sub-strand(s): ${linkFailures.join(', ')}`);
     if (process.env.LINK_CHECK !== 'warn') process.exit(1);
