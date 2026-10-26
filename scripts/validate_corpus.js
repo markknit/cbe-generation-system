@@ -34,83 +34,22 @@ const path = require('path');
 const DATA_DIR = path.join(__dirname, '..', 'generators', 'data');
 const filter = process.argv[2] || '';
 
-const SLO_KEYS = ['purpose', 'knowledge', 'skills', 'attitudes',
-                  'keyInquiry', 'purposeInStoryline', 'safetyNotes'];
-const TOP_KEYS = ['number', 'title', 'duration', 'substrand', 'slo', 'overview',
-                  'framework', 'teacherReflection', 'summaryTablePrompt'];
-const STP_KEYS = ['observed', 'learned', 'explained'];
-const PHASES   = ['Predict Phase', 'Observe Phase', 'Explain Phase',
-                  'Driving Question Board (DQB) Creation', 'Model Building Phase'];
-const CELL_KEYS = ['learnerExperience', 'teacherMoves',
-                   'sensemakingStrategy', 'formativeAssessment'];
+// Checks 1-4 are the shared lesson contract (also enforced by patch_lesson.js).
+const { nonEmpty, checkLesson: contractErrors } = require('../generators/lib/lesson_contract');
 const STUB_OVERVIEW_CHARS = 50;
-
-const nonEmpty = v => typeof v === 'string' && v.trim().length > 0;
 
 function checkLesson(l, i, errors, warnings, where) {
   const at = `L${l && l.number !== undefined ? l.number : `@${i}`}`;
   const err = m => errors.push(`${where} ${at}: ${m}`);
   const warn = m => warnings.push(`${where} ${at}: ${m}`);
 
-  if (typeof l !== 'object' || l === null) { err('lesson is not an object'); return; }
+  contractErrors(l).forEach(err);
+  if (typeof l !== 'object' || l === null) return;
 
-  for (const k of TOP_KEYS) if (!(k in l)) err(`missing top-level "${k}"`);
-  for (const k of ['title', 'duration', 'substrand', 'overview', 'teacherReflection']) {
-    if (k in l && !nonEmpty(l[k])) err(`"${k}" is empty`);
-  }
   if (nonEmpty(l.overview) && l.overview.trim().length < STUB_OVERVIEW_CHARS) {
     err(`stub lesson — overview only ${l.overview.trim().length} chars`);
   }
   if (!nonEmpty(l.aresKeywords)) warn('aresKeywords missing or empty (no ARES resource lookup)');
-
-  const slo = l.slo;
-  if (typeof slo !== 'object' || slo === null) {
-    err('"slo" is not an object');
-  } else {
-    for (const k of SLO_KEYS) {
-      if (!(k in slo)) err(`slo missing "${k}"`);
-      else if (!nonEmpty(slo[k])) err(`slo."${k}" is empty`);
-    }
-    for (const k of Object.keys(slo)) {
-      if (!SLO_KEYS.includes(k)) {
-        err(`slo has unexpected key "${k}"`
-          + (/^safety\d+otes$/.test(k)
-              ? ' — placeholder-replacement corruption of "safetyNotes"'
-                + ' (see scripts/repair_stubs.py LESSON_SCHEMA)' : ''));
-      }
-    }
-  }
-
-  const stp = l.summaryTablePrompt;
-  if (typeof stp !== 'object' || stp === null) {
-    err('"summaryTablePrompt" is not an object');
-  } else {
-    for (const k of STP_KEYS) {
-      if (!(k in stp)) err(`summaryTablePrompt missing "${k}" — Summary Table cell renders blank`);
-      else if (!nonEmpty(stp[k])) err(`summaryTablePrompt."${k}" is empty`);
-    }
-    for (const k of Object.keys(stp)) {
-      if (!STP_KEYS.includes(k)) err(`summaryTablePrompt has unexpected key "${k}"`);
-    }
-  }
-
-  const fw = l.framework;
-  if (!Array.isArray(fw)) {
-    err('"framework" is not an array');
-  } else if (fw.length !== PHASES.length) {
-    err(`framework has ${fw.length} entries, expected ${PHASES.length}`);
-  } else {
-    fw.forEach((p, j) => {
-      if (typeof p !== 'object' || p === null) { err(`framework[${j}] is not an object`); return; }
-      if (p.phase !== PHASES[j]) {
-        err(`framework[${j}].phase is ${JSON.stringify(p.phase)}, expected `
-          + `${JSON.stringify(PHASES[j])} — wrong ARES resource bucket + default grey shading`);
-      }
-      for (const k of CELL_KEYS) {
-        if (!nonEmpty(p[k])) err(`framework[${j}]."${k}" is missing or empty`);
-      }
-    });
-  }
 }
 
 function checkFile(file) {
