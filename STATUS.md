@@ -1,6 +1,6 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: 2026-10-21*
+*Last updated: 2026-11-08*
 
 ---
 
@@ -90,12 +90,12 @@ right now" checkable in one place, not reconstructed from memory.
 
 ## Summary
 
-**Refreshed 2026-08-02 from disk**, not from memory. Every number below is
+**Refreshed 2026-11-08 from disk**, not from memory (Grade 10 numbers unchanged since 2026-08-02; Grade 11 Biology added). Every number below is
 derived from `generators/data/*_data.js` (the source of truth) cross-checked
 against the files actually present under `data/outputs/v2/`. Regenerate with:
 
 ```bash
-node scripts/validate_corpus.js    # contract check, 85 files / 728 lessons
+node scripts/validate_corpus.js    # contract check, 95 files / 806 lessons (85 / 728 Grade 10 + 10 / 78 Grade 11 Biology)
 grep -h '"outputDir"' generators/data/*.js | sort -u | wc -l    # sub-strand count
 ```
 
@@ -108,9 +108,11 @@ grep -h '"outputDir"' generators/data/*.js | sort -u | wc -l    # sub-strand cou
 | General Science | 16 | 128 | `v2/General_Science/` | complete |
 | Core Mathematics | 14 | 112 | `v2/Core_Mathematics/` | complete |
 | Essential Mathematics | 13 | 104 | `v2/Essential_Mathematics/` | complete |
-| **Total** | **85** | **728** | 7 subjects | **340 files + 255 PDFs** |
+| **Total, Grade 10** | **85** | **728** | 7 subjects | **340 files + 255 PDFs** (counted 2026-08-02; not re-counted since the 2026-10-03 FE teacher keys and quizzes) |
+| Grade 11 Biology | 10 | 78 | `v2/Grade11/Biology/` | 3 docx + `_data.json` + `_quiz.json` per sub-strand, quiz decks/keys, 186 PDFs (see Active Threads) |
+| **Total, all grades** | **95** | **806** | 8 grade/subject sets | matches `validate_corpus.js` |
 
-**All 85 sub-strands are complete.** Each produces 4 files (Lesson Sequence,
+**All 85 Grade 10 sub-strands are complete** (Grade 11 Biology's 10 are also generated; the other Grade 11 subjects are not started). Each produces 4 files (Lesson Sequence,
 Final Explanation, Summary Table, `_data.json`) plus 3 PDFs — verified present,
 no gaps, no partial sets. Totals: **340 output files + 255 PDFs + 1 index.html**.
 
@@ -2111,3 +2113,8 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - **Change:** `checkModule()` added to `generators/lib/lesson_contract.js` (every field the renderers print into a cell: META, UNIT, lessons, FE sections/rubric rows, ST rows + row count, META/UNIT subject match). `build_docs.js` `run()` calls it first and throws with the full list; nothing is written for that module. `generate.js --all` continues past a failed module and exits non-zero at the end. Silent fallbacks removed in `build_docs.js` / `sections.js` (unknown phase label now throws). `validate_corpus.js` uses the same `checkModule()` (plus `requireDocs`), and now reads `CBE_DATA_DIR` so the revised corpus can be checked.
 - **Kept optional on purpose (partner contract, `docs/SCHEMA.md`):** `FINAL_EXPLANATION`/`SUMMARY_TABLE` may be `null` (the renderer now warns "NOT produced"; the consistency gate still fails such a module), `FE.instructions` and `FE.rubric` may be absent; if present they must be complete. `exemplar` is required here although the partner contract allows it absent (the teacher key prints it). `docs/SCHEMA.md` updated, including its stale "summaryTablePrompt optional" note.
 - **Verified:** all 95 live + 85 revised modules pass; renders of bio_1_1, g11_bio_2_2, coremath_2_9, phys_1_2 to the scratchpad (`CBE_OUTPUT_ROOT`) are identical to the pre-change renders apart from the docx library's random hyperlink ids (24 files); 6 broken test modules each refused with a clear message and no files; `--all` carried on past them and exited 1; `patch_lesson.js` results unchanged. `data/outputs` not touched; nothing re-rendered.
+
+## Updates — 2026-11-08 (triggered by `/restart`) — stale headers and Summary tables fixed
+- `/restart` passed: `main` `fea35eb6` == origin, clean; `presentations` 0 behind `main`, == origin; resource DB and `soffice` present. Worktree untracked paths match the presentations row, plus `logs/deck_runs/` and `logs/deck_usage.jsonl` (not named there).
+- Drift fixed: `STATUS.md` header (was 2026-10-21); Summary table (was 85 / 728, Grade 10 only; now shows Grade 10 85 / 728 + Grade 11 Biology 10 / 78 = 95 / 806, derived from `META.grade`/`META.subject` in `generators/data/*_data.js` and matching `validate_corpus.js` PASS). Per-subject Grade 10 tables unchanged (still correct). File/PDF counts for Grade 10 are still the 2026-08-02 figures, flagged as not re-counted.
+- `CLAUDE.md`: header date (was 2026-07-31); graph claim "183 code files / 52 `.md`" replaced by the re-counted 585 / 245 (`git ls-files`), and "All 85 `*_data.js`" by 95. The directory list under "What the graph covers" was not re-checked against 585 files and may be incomplete.

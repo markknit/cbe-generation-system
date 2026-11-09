@@ -1,8 +1,9 @@
 # CLAUDE.md — Kenya CBE Lesson Plan Generation System
 
-> **Last updated: 2026-07-31** (the "MCP Tools: code-review-graph" section
-> at the bottom was appended by an installer, then scoped by hand the same
-> day — see `STATUS.md` Known Issues for what the installer got wrong)
+> **Last updated: 2026-11-08** (2026-10-26: presentations no longer "deferred";
+> 2026-11-08: graph/file counts re-derived. The "MCP Tools: code-review-graph"
+> section at the bottom was appended by an installer, then scoped by hand on
+> 2026-07-31 — see `STATUS.md` Known Issues for what the installer got wrong)
 > (an earlier version was corrupted as UTF-16 —
 > re-saved as UTF-8; if this file ever displays garbled again, check
 > encoding before assuming content is wrong)
@@ -445,7 +446,7 @@ Grep/Glob/Read.** It is faster, cheaper, and gives structural context
 
 ### What the graph covers
 
-Exactly the 183 tracked `.js` / `.py` / `.sh` files: `generators/`,
+Exactly the 585 tracked `.js` / `.py` / `.sh` files (re-counted 2026-11-08; `git ls-files | grep -E '\.(js|py|sh)$' | wc -l`): `generators/`,
 `generators/lib/`, `src/`, `scripts/`. This is where it earns its keep.
 
 - **Exploring code**: `semantic_search_nodes_tool` or `query_graph_tool` instead of Grep
@@ -456,12 +457,12 @@ Exactly the 183 tracked `.js` / `.py` / `.sh` files: `generators/`,
 
 ### What the graph does not cover — read these files directly
 
-- **All 52 tracked `.md` files — zero are indexed.** Indexed languages are
+- **All 245 tracked `.md` files — zero are indexed** (re-counted 2026-11-08). Indexed languages are
   python, bash, javascript only. `STATUS.md`, `CLAUDE.md`, `WORKFLOW.md`,
   and everything in `docs/` are invisible to the graph. **The mandatory
   first action in this project — reading `STATUS.md`'s Active Threads —
   is a plain `Read`, and no graph tool substitutes for it.**
-- **`generators/data/*_data.js` content.** All 85 are indexed, but each is
+- **`generators/data/*_data.js` content.** All 95 are indexed, but each is
   a bare `File` node: they export object literals, so there are no
   functions, calls, or imports to graph. The graph can tell you a data
   file exists; it cannot tell you anything about lesson content, phase
