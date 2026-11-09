@@ -2152,3 +2152,7 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - Re-verified at this update: `node scripts/validate_corpus.js` PASS (95 files); `CBE_DATA_DIR=data/revised_2026-10_full/modules node scripts/validate_corpus.js` PASS; 85 revised modules; ~769 uncommitted paths (revised workspace, `generators/data`, schema, docs).
 - Lesson for the pitfalls list: `CBE_REVISED_DIR` must be set in the same shell command as `revise_apply.py` / `revise_build.py`, or they silently use the old `data/revised_2026-10` workspace; use `venv/bin/python`.
 - Still open: Mark's A/B answer; teacher read-through of the model-drafted Below descriptors (407) and the 21 new split lessons; bio_1_3 retire/merge; Grade 11 Bio regeneration (hold); `revise_build.py --all` + journal rebuild; promotion/regeneration/commit/push/Drive sync (all need Mark); General Science and Essential Math journals; `math_*` display labels.
+
+## Updates — 2026-11-09 (sixth entry, `/update` re-run) — no change
+- `/update` was run again straight after the fifth entry. Nothing changed in between: no new work, no new decisions, `main` is 1 commit ahead of `origin/main` (`0fa84020`, STATUS.md only), and the other uncommitted paths are unchanged.
+- Still open: unchanged from the fifth entry. Waiting on Mark's A/B answer on Mathematics vs Core Mathematics.
