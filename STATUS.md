@@ -1,6 +1,6 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: 2026-11-09 (seventh entry)*
+*Last updated: 2026-11-09 (eighth entry)*
 
 ---
 
@@ -2161,3 +2161,9 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - **Decision (Mark):** the Round 2 decisions stay on the `coremath_*` modules, since they were made before the naming discrepancy was found and match `coremath_*` content. `math_*` is untouched and waits for its own Round 2 journal. Nothing was re-applied, reverted or ported.
 - `HANDOFF_ROUND2.md` line 13 updated to say this. Correction to the sixth entry: `main` was 2 commits ahead of `origin/main` at `dec55bbc` (not 1). Nothing pushed.
 - Still open: teacher read-through of the 407 model-drafted Below descriptors and 21 new split lessons; bio_1_3 retire/merge; Grade 11 Bio regeneration (hold); `revise_build.py --all` + journal rebuild; promotion/regeneration/commit/push/Drive sync (need Mark); Mathematics (`math_*`), General Science, Essential Math Round 2 journals and `math_*` display labels; whether to split `coremath_1_2`, `2_1`, `2_7`.
+
+## Updates — 2026-11-09 (eighth entry) — `revise_build.py --all` and journals rebuilt (Mark approved)
+- `CBE_REVISED_DIR=data/revised_2026-10_full venv/bin/python scripts/revise_build.py --all`: 85 modules, 4 tracked-change documents each, **0 problems** (Accept All == revised, Reject All == baseline, links and consistency validators). Log was in the session scratchpad.
+- `node scripts/build_revision_journal.js`: all 15 files in `data/revised_2026-10-full/journal/` regenerated (7 Journal_, 7 Flagged_Items_, master index). They now include the Round 2 records: e.g. Core Maths journal has 122 `r2-rub` rubric items, Biology 92, Mathematics 130; split items show as `coremath_2_6-split-NNN` (group R2-SPLIT). Rebuilt the Round 1 journals teachers already marked: the previous versions are in git and a copy is in the session scratchpad (`journal_before_rebuild`). These rebuilt files are for the NEXT teacher review round; do not send them over a marked-up copy.
+- The `journal/` folder, `outputs/`, `tracked/` and `baseline_outputs/` under the revised workspace are rebuilt and uncommitted. Nothing promoted, committed (beyond STATUS.md), pushed or synced.
+- Still open: unchanged from the seventh entry (minus the build and journal rebuild).
