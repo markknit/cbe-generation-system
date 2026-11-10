@@ -1,6 +1,6 @@
 # Generation Status — Kenya CBE Grade 10 Lesson Plans
 
-*Last updated: 2026-11-09 (ninth entry)*
+*Last updated: 2026-11-09 (tenth entry)*
 
 ---
 
@@ -2174,3 +2174,10 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - **Verified:** `revise_build.py --all`: 70 modules, 0 problems; `CBE_DATA_DIR=... validate_corpus.js` PASS (70 files / 615 lessons); journals rebuilt (13 files; Math and Bio carry the new records); no `Core_Mathematics` renders left.
 - **Promotion notes:** replacing `generators/data` `math_*`/`bio_1_3` must first archive `generators/data` `coremath_*` (same content as the new Maths baseline) and `bio_1_1`, so real Core Maths and KICD 1.1 can be built later. The Maths folder numbering changes (old `SS1.4_Congruence` etc. -> KICD numbers), so Drive folders change at promotion.
 - **Open:** a teacher's rubric note says "Refer to KICD Core Maths Curriculum design" (item in the Maths journal): our only Maths KICD PDF is `Grade10_Mathematics_Curriculum.pdf`; Mark to confirm that is the right source. Other open items unchanged (teacher read-through of drafted Below descriptors and split lessons, Round 2 journals for General Science and Essential Maths, promotion/regeneration/commit/push/Drive sync).
+
+## Updates — 2026-11-09 (tenth entry) — Maths rubrics replaced by the KICD rubric (Mark: Maths curriculum is the source)
+- Mark: the teacher's "KICD Core Maths Curriculum design" note is a mix-up; use the Mathematics curriculum (`Grade10_Mathematics_Curriculum.pdf`). 20 teacher items asked for the KICD rubric.
+- The KICD "Suggested Assessment Rubric" tables (3 tables, 38 indicators, 4 levels each) were transcribed from the PDF page images by a subagent into the session scratchpad, then checked here against the PDF text: 38 rows, no empty cells, every word matches the rubric pages (one degree-sign spacing glitch fixed). Rubric rows per module match what the teachers listed (Real Numbers 3, Quadratics 4, Vectors 2, Linear Motion 3).
+- Applied to all 14 `math_*` modules (record `math_<x>-r2-kicd-001`, group R2-KICD-RUBRIC, replaces the whole FE rubric: 38 rows in total); KICD wording verbatim (incl. KICD's own typo "leaner"), with the level name prefixed as in other modules. Builds for the 14 modules OK (4 tracked docs each); `validate_corpus.js` on the revised modules PASS (70 files); Maths journal rebuilt (14 items).
+- Caveats for teachers: the Final Explanation tasks were not rewritten, so check they let learners show each KICD indicator; the earlier teacher-written criteria are gone.
+- Still open: as before (teacher read-through of drafted Below descriptors and split lessons; General Science / Essential Maths journals; promotion, regeneration, commit, push, Drive sync).
