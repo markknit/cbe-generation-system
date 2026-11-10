@@ -2242,3 +2242,7 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - Judgement-call and science edits (24) moved to their own items (R2-LES-CLOSE-n, teacher_decision=true).
 - **New teacher document:** `journal/Round2_Lesson_Check_Review.docx` (`node scripts/build_revision_journal.js --round2`): instructions; PART A = closest review (38 items, journal format, ACCEPT/EDIT boxes, yellow [DECISION]); PART B = optional list of the 151 verified fixes (before/after/why, a column for disagreement). Standard journals and Flagged_Items rebuilt. Build 70 no PROBLEMS, validate_corpus PASS.
 - Spend this step about $14 (triage/finalise/propose ~2.5, lesson loop 6.7, FE 5.3). Nothing promoted/pushed/synced.
+
+## Updates — 2026-11-10 (twentieth entry) — pushed to GitHub for the Drive sync (Mark: "Drive sync", scope "Review doc only")
+- Committed `data/revised_2026-10_full/journal/Round2_Lesson_Check_Review.docx` and pushed `main` (6a7835da..11fa49fc; the 17 earlier local Round 2 commits went with it: 1185 files changed, mostly the revised workspace relabel/moves and tooling; `generators/data` untouched). Nothing was copied to Drive from here: `sync_to_drive.bat` is Windows-only.
+- **To finish (Mark, on Windows):** `git pull`, then `scripts\sync_to_drive.bat preview`, then `scripts\sync_to_drive.bat keep-journals` (keeps teachers' existing journals; the new doc goes to `G:\My Drive\CBE Revised 2026-10\Journals`). Not run, not verified.
