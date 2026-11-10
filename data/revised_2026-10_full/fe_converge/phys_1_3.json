@@ -1,0 +1,112 @@
+{
+ "module": "phys_1_3",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 3,
+   "verified": 3,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "This is consistent with the lessons, so it is not an error. However, the Section 4(d) exemplar says 'the volume increases as the temperature falls' for the whole 4 to 0 °C range while describing the p",
+     "reason": "Consistent with Lesson 4 (min volume near 4 °C, tiny expansion to 0 °C, about 9% on freezing); no defect."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Water in a sealed bottle cannot freeze at exactly 0 °C without heat loss, but this is minor. Not a real defect.",
+     "reason": "Water freezing at 0 °C in the freezer matches Lessons 1, 2 and 4; the objection is a trivial quibble, not an error."
+    },
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "The lessons frame the cable problem as a hot-afternoon expansion issue; the cold-morning contraction scenario is physically valid but is not in the lessons. Minor and not a real contradiction.",
+     "reason": "The cold-morning contraction scenario is physically correct and follows from ΔL = αL₀ΔT (Lesson 3/5); extra detail the lessons allow, not a contradiction."
+    }
+   ],
+   "dropped_by_code": []
+  },
+  {
+   "round": 2,
+   "raw": 3,
+   "verified": 3,
+   "confirmed_fixable": 1,
+   "lesson_conflicts": 0,
+   "fixed": 2,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "Not a contradiction in itself; the FE is consistent with Lesson 2. Reported only if the 'Station B' reference conflicts, and it does not.",
+     "reason": "Consistent with Lesson 2: the clinical thermometer cannot read below 35 °C and Station B covers it, so there is no contradiction."
+    },
+    {
+     "type": "SELF_CONTRADICTION",
+     "problem": "Section 5(d) says water expands slightly between 4 °C and 0 °C. Section 1(c) says that the crack happened because the volume increased when the water froze, and Section 4(d) says the freezing change i",
+     "reason": "Lessons 4 and 6 teach both the small 4 to 0 °C expansion and the 9% freezing expansion as a phase change, so the FE is consistent with them and not self-contradictory."
+    }
+   ],
+   "dropped_by_code": [],
+   "apply": "phys_1_3: 2 applied, 0 rejected"
+  },
+  {
+   "round": 3,
+   "raw": 3,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Not a clear error; the prompt asks about a cold morning, and the exemplar answers it consistently. No defect.",
+     "reason": "The FE's cold-morning answer is consistent with the lessons: Lesson 5 teaches that cables sag to allow for expansion, and contraction of a taut cable producing tension is correct physics. No defect."
+    },
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "Lesson 5 says a 10 m beam expanding 1.65 mm in total needs a gap of about 0.83 mm at each end, then adds '(1.65 mm in all)'. Elsewhere it treats the gap as the full expansion. This is inconsistent wit",
+     "reason": "The FE's 1.65 mm calculation matches Lesson 5. The FE never states a gap-per-end figure, so the Lesson 3/5 wording difference does not affect it; Lesson 5 also says 1.65 mm in all."
+    }
+   ],
+   "dropped_by_code": []
+  },
+  {
+   "round": 4,
+   "raw": 4,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "This is not a contradiction: Lesson 5 does name the Nairobi-Thika copper cables. No defect.",
+     "reason": "Lesson 5 names Kenya Power copper cables between Nairobi and Thika and the sag explanation, so the FE matches the lesson."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "500/0.917 = 545.2 cm³, so this is correct. No defect.",
+     "reason": "500/0.917 = 545.2 cm³, which matches the 545 ml figure used in Lessons 4 and 6; the calculation is correct."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "This is correct, so no error. Checked: 18+273=291, -18+273=255."
+    },
+    {
+     "type": "LESSON_CONFLICT",
+     "why": "quote not found",
+     "problem": "Lessons 2 and 4 present freezing at 255 K / 'water lattice forms as freezer cools to 0 °C' consistently, but Lesson 4 Observe states expected rise of 0.013% whi"
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

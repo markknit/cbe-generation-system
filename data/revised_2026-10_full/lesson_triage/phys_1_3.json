@@ -1,0 +1,49 @@
+{
+ "module": "phys_1_3",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 3, purposeInStoryline vs Lesson 1",
+    "problem": "Lesson 3 says the Lesson 2 model showed 'particle vibration in solids', but Lesson 2's model revision never includes solid vibration; it adds temperature labels and particle insets for water.",
+    "quote_a": "In Lesson 1, learners observed that the frozen water bottle cracked — evidence that water expanded on cooling. In Lesson 2, they learned how temperature is measured",
+    "quote_b": "Learners then sketch a baseline particle model",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Change Lesson 3's description of the Lesson 2 model to match what Lesson 2 actually adds.",
+   "reason": "Lesson 2's model revision adds temperature labels, thermometer and water particle insets, with no solid vibration; Lesson 3 misdescribes it.",
+   "decision": "FIX",
+   "lesson": 3,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 3,
+    "path": "framework[4].learnerExperience",
+    "old": "extended in Lesson 2 (showing particle vibration in solids)",
+    "new": "extended in Lesson 2 (showing temperature labels and particle insets for liquid water and ice)"
+   },
+   "reference": "Internal consistency with Lesson 2 framework[4] model revision text.",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "SCIENCE",
+    "where": "Lesson 4, Observe Phase Part A and DQB zone B causal chain",
+    "problem": "Lesson 4 Observe summary claims a flask-and-capillary experiment shows a U-shaped curve with volume rising visibly between 4 and 0 °C, while the lesson itself admits the rise is only ~0.01% and may not be visible; the summary overstates.",
+    "quote_a": "Water cools to 4 °C (smallest volume), then freezes at 0 °C → expands by about 9%",
+    "quote_b": "",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Reword the summary to say the 4 to 0 °C rise is tiny (about 0.01%) and may be seen only by pooling class data or by video or teacher demo, and keep the 9% freezing step separate in the causal chain.",
+   "reason": "The quoted causal chain is acceptable science, but the summary's claim of a visible U-shaped curve conflicts with the lesson's own caveat. How strongly to claim an observed result depends on what the teacher's apparatus produces, so a teacher must decide.",
+   "decision": "HUMAN",
+   "lesson": 4,
+   "color": "WHITE",
+   "why_orange": "needs a human choice",
+   "final": "fixed by the finalise pass"
+  }
+ ],
+ "applied": "  rejected phys_1_3-r2-les-tri-006: science change without a reference | "
+}

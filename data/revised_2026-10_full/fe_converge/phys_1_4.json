@@ -1,0 +1,54 @@
+{
+ "module": "phys_1_4",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 2,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "The wording is fine, but the prompt describes the pulley system as 'one fixed pulley and one movable pulley, with 2 rope sections'. This matches the lesson 6 model, and the lessons do not conflict wit",
+     "reason": "The exemplar matches Lesson 8: a single fixed pulley has VR = 1 and only changes direction, and the child pulls down using body weight. Lesson 6 uses one fixed and one movable pulley with 2 rope secti"
+    },
+    {
+     "type": "SELF_CONTRADICTION",
+     "problem": "The prompt asks 'why can a child still use it', and the exemplar answer is fine. However, the Part 4 prompt describes the system as having 2 rope sections with one fixed and one movable pulley, and Pa",
+     "reason": "No contradiction. The exemplar is consistent with the Part 4 prompt (2 rope sections, ideal effort 100 N) and with Lesson 8 on the single fixed pulley."
+    }
+   ],
+   "dropped_by_code": []
+  },
+  {
+   "round": 2,
+   "raw": 2,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "The Lesson 8 plan holds that a single fixed pulley has VR = 1 and an ideal effort of 200 N. The 125 N effort in the plan is for the real two-pulley system, so the exemplar is consistent. The claim 'ef",
+     "reason": "Lesson 8 says a single fixed pulley has VR = 1, ideal effort 200 N, and only changes direction; Lesson 6 uses a fixed plus a movable pulley for the 125 N effort. The exemplar matches both."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "LESSON_CONFLICT",
+     "why": "quote not found",
+     "problem": "Lesson 8 says a child pulls down on a fixed pulley using body weight, but a 30 kg child (300 N) pulling 125 N is fine; however a single fixed pulley effort is 2"
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

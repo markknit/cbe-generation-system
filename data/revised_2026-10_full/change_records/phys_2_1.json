@@ -1584,7 +1584,7 @@
    ],
    "category": "consistency",
    "severity": "minor",
-   "teacher_decision": true,
+   "teacher_decision": false,
    "group": "R2-FE-REVIEW",
    "kind": "edit",
    "target": "final_explanation",
@@ -1592,7 +1592,7 @@
    "group_headline": "Round 2 review pass: final-explanation consistency fixes",
    "old": "Explain why, using the ideas of spreading out in all directions and absorption.",
    "new": "Explain why, using the information in the Echo Table and the Surface Table.",
-   "why": "Reviewer: Part 3(c) names the ideas the answer needs. Checked: real; the prompt listed exactly the exemplar's two ideas. Removed the hint; the exemplar still answers it.",
+   "why": "Reviewer: Part 3(c) names the ideas the answer needs. Checked: real; the prompt listed exactly the exemplar's two ideas. Removed the hint; the exemplar still answers it. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
    "where": "Final Explanation, Part 3: Strong echoes and weak echoes (Reasoning), prompt",
    "applied_at": "2026-11-09T17:32:34"
   },
@@ -1603,14 +1603,14 @@
    ],
    "category": "consistency",
    "severity": "minor",
-   "teacher_decision": true,
+   "teacher_decision": false,
    "group": "R2-FE-REVIEW",
    "kind": "edit",
    "target": "final_explanation",
    "path": "sections[3].exemplar",
    "old": "The light bends towards the normal, so it slows down in water.",
    "new": "Because r (32 degrees) is smaller than i (45 degrees), the light bends towards the normal, and this is the sign that it slows down in water (sin 45 / sin 32 = 1.33, the ratio of its speed in air to its speed in water).",
-   "why": "Reviewer: the reasoning is reversed. Checked: partly. Bending towards the normal is the evidence of slowing (Snell's law, sin i / sin r = v1 / v2), and the exemplar read as if bending were the cause of slowing. Reworded so the angles are the evidence; 3.0e8 / 1.33 = 2.26e8 m/s matches the speed already quoted.",
+   "why": "Reviewer: the reasoning is reversed. Checked: partly. Bending towards the normal is the evidence of slowing (Snell's law, sin i / sin r = v1 / v2), and the exemplar read as if bending were the cause of slowing. Reworded so the angles are the evidence; 3.0e8 / 1.33 = 2.26e8 m/s matches the speed already quoted. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
    "where": "Final Explanation, Part 4: Other wave behaviours and their applications, exemplar",
    "applied_at": "2026-11-09T17:32:34"
   },
@@ -1628,12 +1628,150 @@
    "category": "science",
    "severity": "minor",
    "teacher_decision": false,
-   "group": "R2-LES-AUTO",
-   "why": "Automatic lesson check (round 1), SCIENCE: Grass reflects 10% (absorbs 90%), so saying it absorbs 10% reflection is garbled and contradicts the surface table. Confirmed by a second reviewer; correction is unambiguous.",
+   "group": "R2-LES-CLOSE-1",
+   "why": "Automatic lesson check (round 1), SCIENCE: Grass reflects 10% (absorbs 90%), so saying it absorbs 10% reflection is garbled and contradicts the surface table. Confirmed by a second reviewer; correction is unambiguous. Please look closely: this one involves a judgement call or a science statement. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
    "reference": "Surface table in Lessons 4 and 12: thick grass or foam reflects about 10% of sound, so it absorbs about 90%.",
-   "group_headline": "Lesson text corrected by the automatic consistency check",
+   "group_headline": "Automatic fix to look at closely (science correction)",
    "where": "Lesson 4, Explain Phase, learnerExperience",
    "applied_at": "2026-11-09T20:59:54"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 12,
+   "path": "framework[4].learnerExperience",
+   "old": "(the printed Final Explanation, Parts 1 to 5, extends this task; this paragraph is the first draft of its Part 5)",
+   "new": "(this is the summative Final Explanation, marked with the four-level CBE rubric in the formative assessment for this phase)",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-FINAL",
+   "why": "Automatic lesson check (CROSS_REFERENCE): No printed Final Explanation with Parts 1 to 5 exists in the lessons. Fix applied: Remove the dangling reference to a non-existent printed document and point to the in-lesson four-level rubric. Verified by two independent checks: consistent with the teachers' responses, with KICD, and scientifically correct; processed as final.",
+   "id": "phys_2_1-r2-les-fin-001",
+   "group_headline": "Lesson inconsistencies fixed by the automatic check and verified twice",
+   "where": "Lesson 12, Model Building Phase, learnerExperience",
+   "applied_at": "2026-11-09T23:30:09"
+  },
+  {
+   "id": "phys_2_1-r2-les-prop-001",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 12,
+   "path": "framework[4].learnerExperience",
+   "old": "(this is the summative Final Explanation, marked with the four-level CBE rubric in the formative assessment for this phase)",
+   "new": "(this individual written task is the summative Final Explanation; it is assessed with the four-level CBE rubric given in the formative assessment for this phase, and the partner swap that follows serves as the partner contract: the partner records one strength and one improvement)",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-PROPOSED-1",
+   "why": "Automatic lesson check (CROSS_REFERENCE): No printed Final Explanation with Parts 1 to 5 exists in the lesson plan. Recommendation: Same edit as item 0: it is one duplicated defect, so apply the replacement once. Reason: The quoted text refers to a non-existent printed document and was newly added by Round 2. Origin: INTRODUCED_BY_REVISION. Not changed: touches a teacher decision, learning outcome, KICD content or safety. PROPOSED ANSWER, now built into the lesson (keep it, or edit it in place): Lesson 12's Model Building text refers to a 'summative Final Explanation... marked with the four-level CBE rubric' as if a printed Parts 1 to 5 document existed, and no such document exists. Fix it once by saying plainly that the Final Explanation is the learner's individual written task in this phase, assessed with the four-level rubric in the formative assessment. Also name the partner contract as the peer-swap step. Make the rubric record each of the four levels in its own field (Exceeds, Meets, Approaches, Below), so all four CBE levels are shown consistently. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
+   "group_headline": "Proposed answer built in (please review, keep or edit): No printed Final Explanation with Parts 1 to 5 exists in the lesson plan. Recommendation: Same edit as item 0: it is one duplicate",
+   "where": "Lesson 12, Model Building Phase, learnerExperience",
+   "applied_at": "2026-11-10T00:23:10"
+  },
+  {
+   "id": "phys_2_1-r2-les-prop-002",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 12,
+   "path": "framework[4].formativeAssessment",
+   "old": "Use a rubric with the four CBE levels. Exceeds Expectations (Level 4):",
+   "new": "Use the four-level CBE rubric and record each learner's performance in the matching level field (Exceeds Expectations, Meets Expectations, Approaches Expectations, Below Expectations). Exceeds Expectations (Level 4):",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-PROPOSED-1",
+   "why": "Automatic lesson check (CROSS_REFERENCE): No printed Final Explanation with Parts 1 to 5 exists in the lesson plan. Recommendation: Same edit as item 0: it is one duplicated defect, so apply the replacement once. Reason: The quoted text refers to a non-existent printed document and was newly added by Round 2. Origin: INTRODUCED_BY_REVISION. Not changed: touches a teacher decision, learning outcome, KICD content or safety. PROPOSED ANSWER, now built into the lesson (keep it, or edit it in place): Lesson 12's Model Building text refers to a 'summative Final Explanation... marked with the four-level CBE rubric' as if a printed Parts 1 to 5 document existed, and no such document exists. Fix it once by saying plainly that the Final Explanation is the learner's individual written task in this phase, assessed with the four-level rubric in the formative assessment. Also name the partner contract as the peer-swap step. Make the rubric record each of the four levels in its own field (Exceeds, Meets, Approaches, Below), so all four CBE levels are shown consistently. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
+   "where": "Lesson 12, Model Building Phase, formativeAssessment",
+   "applied_at": "2026-11-10T00:23:10"
+  },
+  {
+   "id": "phys_2_1-r2-les-prop-003",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "duration",
+   "old": "40 minutes (single lesson); the school-ground shouting activity can be done in the first 10 minutes outside",
+   "new": "40 minutes (single lesson: Predict 6, Observe 14 [Part A shouting outside 8, Part B Echo Table 6], Explain 7, Driving Question Board 5, Model Building 8)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-LES-PROPOSED-2",
+   "why": "Automatic lesson check (TIMING): Lesson 1 Observe phase alone is described as Part A 8 min + Part B 7 min, and other phases (predict, explain, DQB, model) have multiple minutes of activity (e.g., 4 min talk, 2 min writing, 3 min); no timings sum clearly, and the claim that shouting occurs in the first 10 minutes conflicts with the  Recommendation (not applied): Replace the duration with a phase-by-phase timing and place the outdoor shouting inside the Observe phase. PROPOSED ANSWER, now built into the lesson (keep it, or edit it in place): Replace the vague duration with a phase-by-phase timing that totals 40 minutes, and put the outdoor shouting inside the Observe phase so it does not conflict with the Predict phase. Timings: Predict 6, Observe 14 (Part A shouting 8, Part B table 6), Explain 7, DQB 5, Model 8 = 40. This keeps the lesson at 40 minutes and matches the activities described.",
+   "where": "Lesson 1, duration",
+   "applied_at": "2026-11-10T00:23:10",
+   "group_headline": "Proposed answer built in (please review, keep or edit): Lesson 1 Observe phase alone is described as Part A 8 min + Part B 7 min, and other phases (predict, explain, DQB, model) have mul"
+  },
+  {
+   "id": "phys_2_1-r2-les-prop-004",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[1].learnerExperience",
+   "old": "Part B (about 7 minutes)",
+   "new": "Part B (about 6 minutes)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-LES-PROPOSED-2",
+   "why": "Automatic lesson check (TIMING): Lesson 1 Observe phase alone is described as Part A 8 min + Part B 7 min, and other phases (predict, explain, DQB, model) have multiple minutes of activity (e.g., 4 min talk, 2 min writing, 3 min); no timings sum clearly, and the claim that shouting occurs in the first 10 minutes conflicts with the  Recommendation (not applied): Replace the duration with a phase-by-phase timing and place the outdoor shouting inside the Observe phase. PROPOSED ANSWER, now built into the lesson (keep it, or edit it in place): Replace the vague duration with a phase-by-phase timing that totals 40 minutes, and put the outdoor shouting inside the Observe phase so it does not conflict with the Predict phase. Timings: Predict 6, Observe 14 (Part A shouting 8, Part B table 6), Explain 7, DQB 5, Model 8 = 40. This keeps the lesson at 40 minutes and matches the activities described.",
+   "where": "Lesson 1, Observe Phase, learnerExperience",
+   "applied_at": "2026-11-10T00:23:10"
+  },
+  {
+   "id": "phys_2_1-r2-les-prop-005",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[2].teacherMoves",
+   "old": "Allow 4 minutes of talk.",
+   "new": "Allow 3 minutes of talk.",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-LES-PROPOSED-2",
+   "why": "Automatic lesson check (TIMING): Lesson 1 Observe phase alone is described as Part A 8 min + Part B 7 min, and other phases (predict, explain, DQB, model) have multiple minutes of activity (e.g., 4 min talk, 2 min writing, 3 min); no timings sum clearly, and the claim that shouting occurs in the first 10 minutes conflicts with the  Recommendation (not applied): Replace the duration with a phase-by-phase timing and place the outdoor shouting inside the Observe phase. PROPOSED ANSWER, now built into the lesson (keep it, or edit it in place): Replace the vague duration with a phase-by-phase timing that totals 40 minutes, and put the outdoor shouting inside the Observe phase so it does not conflict with the Predict phase. Timings: Predict 6, Observe 14 (Part A shouting 8, Part B table 6), Explain 7, DQB 5, Model 8 = 40. This keeps the lesson at 40 minutes and matches the activities described.",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-11-10T00:23:10"
+  },
+  {
+   "id": "phys_2_1-r2-les-auto-002",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[1].teacherMoves",
+   "old": "if the pool in Kericho is 1.33 m deep",
+   "new": "if the Lake Victoria pool is 1.33 m deep",
+   "criteria": [
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-CLOSE-2",
+   "why": "Automatic lesson check (round 1), SCIENCE: Lesson 5 elsewhere describes the pool as a Lake Victoria shallow pool; Kericho is inland and not on Lake Victoria (minor location inconsistency). Confirmed by a second reviewer; correction is unambiguous. Please look closely: this one involves a judgement call or a science statement. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
+   "reference": "Lake Victoria borders Kisumu, while Kericho is inland, so the setting is inconsistent within Lesson 5.",
+   "group_headline": "Automatic fix to look at closely (science correction)",
+   "where": "Lesson 5, Observe Phase, teacherMoves",
+   "applied_at": "2026-11-10T00:24:56"
   },
   {
    "id": "phys_2_1-r2-les-tri-001",
@@ -1643,87 +1781,17 @@
    "category": "consistency",
    "group": "R2-LES-TRIAGE",
    "group_headline": "Lesson inconsistencies found by the automatic check, with a recommendation",
-   "kind": "flag",
-   "target": "lesson",
-   "lesson": 12,
-   "path": "title",
-   "severity": "minor",
-   "teacher_decision": true,
-   "why": "Automatic lesson check (CROSS_REFERENCE): No printed Final Explanation with Parts 1 to 5 exists in the lessons. Recommendation: Remove the dangling reference to a non-existent printed document and point to the in-lesson four-level rubric. Reason: Round 2 added a reference to a printed Final Explanation (Parts 1 to 5) that does not exist in the lessons. Origin: INTRODUCED_BY_REVISION. Not changed: touches a teacher decision, learning outcome, KICD content or safety.",
-   "where": "Lesson 12, title",
-   "applied_at": "2026-11-09T22:31:59"
-  },
-  {
-   "id": "phys_2_1-r2-les-tri-002",
-   "criteria": [
-    3
-   ],
-   "category": "timing",
-   "group": "R2-LES-TRIAGE",
    "kind": "edit",
    "target": "lesson",
-   "lesson": 1,
-   "path": "duration",
-   "old": "40 minutes (single lesson); the school-ground shouting activity can be done in the first 10 minutes outside",
-   "new": "40 minutes (single lesson: Predict 7, Observe 15 [shouting outside 8, Echo Table 7], Explain 8, Driving Question Board 5, Model Building 5); the shouting activity is done in the Observe phase, after the Predict phase",
-   "severity": "minor",
-   "teacher_decision": true,
-   "why": "Automatic lesson check (TIMING): Lesson 1 Observe phase alone is described as Part A 8 min + Part B 7 min, and other phases (predict, explain, DQB, model) have multiple minutes of activity (e.g., 4 min talk, 2 min writing, 3 min); no timings sum clearly, and the claim that shouting occurs in the first 10 minutes conflicts with the  Recommendation: Replace the duration with a phase-by-phase timing and place the outdoor shouting inside the Observe phase. Reason: The 'first 10 minutes' claim contradicts the Predict-first structure; the Observe parts of 8 + 7 min are stated in the plan and the remaining phases fit the 40-minute total. Origin: PRE_EXISTING.",
-   "where": "Lesson 1, duration",
-   "applied_at": "2026-11-09T22:31:59"
-  },
-  {
-   "id": "phys_2_1-r2-les-tri-004",
-   "criteria": [
-    14
-   ],
-   "category": "consistency",
-   "group": "R2-LES-TRIAGE",
-   "kind": "flag",
-   "target": "lesson",
-   "lesson": 12,
-   "path": "title",
-   "severity": "minor",
-   "teacher_decision": true,
-   "why": "Automatic lesson check (CROSS_REFERENCE): No printed Final Explanation with Parts 1 to 5 exists in the lesson plan. Recommendation: Same edit as item 0: it is one duplicated defect, so apply the replacement once. Reason: The quoted text refers to a non-existent printed document and was newly added by Round 2. Origin: INTRODUCED_BY_REVISION. Not changed: touches a teacher decision, learning outcome, KICD content or safety.",
-   "where": "Lesson 12, title",
-   "applied_at": "2026-11-09T22:31:59"
-  },
-  {
-   "id": "phys_2_1-r2-les-tri-005",
-   "kind": "edit",
-   "target": "lesson",
-   "lesson": 1,
-   "path": "duration",
-   "old": "40 minutes (single lesson: Predict 7, Observe 15 [shouting outside 8, Echo Table 7], Explain 8, Driving Question Board 5, Model Building 5); the shouting activity is done in the Observe phase, after the Predict phase",
-   "new": "40 minutes (single lesson); the school-ground shouting activity can be done in the first 10 minutes outside",
-   "criteria": [
-    3
-   ],
-   "category": "timing",
+   "lesson": 9,
+   "path": "framework[4].learnerExperience",
+   "old": "connecting resonance and reverberation will be refined in Lesson 12",
+   "new": "the link between resonance and reverberation is only touched on briefly in Lesson 12",
    "severity": "minor",
    "teacher_decision": false,
-   "group": "R2-LES-TRIAGE",
-   "why": "Reverses the automatic triage edit above: on review it goes beyond a safe automatic fix (it rewrites data, a duration or an observation, or leaves a related passage inconsistent). Returned to a teacher as a flag.",
-   "where": "Lesson 1, duration",
-   "applied_at": "2026-11-09T22:32:53"
-  },
-  {
-   "id": "phys_2_1-r2-les-tri-006",
-   "kind": "flag",
-   "target": "lesson",
-   "lesson": 1,
-   "path": "title",
-   "criteria": [
-    3
-   ],
-   "category": "timing",
-   "severity": "minor",
-   "teacher_decision": true,
-   "group": "R2-LES-TRIAGE",
-   "why": "Automatic lesson check (TIMING): Lesson 1 Observe phase alone is described as Part A 8 min + Part B 7 min, and other phases (predict, explain, DQB, model) have multiple minutes of activity (e.g., 4 min talk, 2 min writing, 3 min); no timings sum clearly, and the claim that shouting occurs in the first 10 minutes conflicts with the  Recommendation (not applied): Replace the duration with a phase-by-phase timing and place the outdoor shouting inside the Observe phase.",
-   "where": "Lesson 1, title",
-   "applied_at": "2026-11-09T22:32:53"
+   "why": "Automatic lesson check (CROSS_REFERENCE): Lesson 12 does not refine resonance and reverberation as a stationary-wave idea; it only mentions resonance in two sentences. Recommendation: Reword the Lesson 9 promise so it matches Lesson 12, which only links resonance to the hall in two sentences. Reason: Lesson 12 Explain gives resonance a two-sentence mention and never refines it with stationary waves, so 'will be refined' overpromises. Origin: PRE_EXISTING. Verified by two independent checks: consistent with the teachers' responses, with KICD, and scientifically correct; processed as final.",
+   "where": "Lesson 9, Model Building Phase, learnerExperience",
+   "applied_at": "2026-11-10T00:26:18"
   }
  ]
 }

@@ -1,0 +1,91 @@
+{
+ "module": "bio_2_1",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 4, Observe learnerExperience vs teacherMoves",
+    "problem": "The learner experience says groups follow the whole method, including boiling and ethanol decolourisation. The teacher moves have the teacher pre-boil and pre-decolourise leaves for groups.",
+    "quote_a": "The teacher demonstrates Steps 1-2 on one leaf (watch the leaf soften and the ethanol turn green), and each group then uses its own pre-decolourised leaf for Steps 3-5.",
+    "quote_b": "Groups of 3 to 4 follow a step-by-step method card.",
+    "correct_value": ""
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Rewrite the Observe learnerExperience so Steps 1-2 are a teacher demonstration plus one pre-prepared decolourised leaf per group, and groups do Steps 3-5; keep the safety wording on ethanol.",
+   "reason": "The learner steps describe groups doing the whole method, but the teacher moves have the teacher pre-boil and pre-decolourise leaves, so the plan contradicts itself; the lesson design and the hot-ethanol safety handling need a teacher's choice.",
+   "decision": "HUMAN",
+   "lesson": 4,
+   "color": "WHITE",
+   "why_orange": "needs a human choice",
+   "final": "fixed by the finalise pass"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 4, Observe learnerExperience vs teacherMoves",
+    "problem": "Learner steps have groups boiling and decolourising leaves in ethanol (Steps 1-2) while the same text says the teacher demonstrates Steps 1-2 and groups only do Steps 3-5.",
+    "quote_a": "each group then uses its own pre-decolourised leaf for Steps 3-5",
+    "quote_b": "Transfer the leaf using tongs into a tube of ethanol placed in a hot water bath",
+    "correct_value": ""
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Settle this with item 0: reword Steps 1-2 as the teacher demonstration and make Steps 3-5 the group steps, with a single consistent safety instruction.",
+   "reason": "Same contradiction as item 0: Steps 1-2 are written as group tasks but also as a demonstration, and the plan cannot settle which version the teacher intends.",
+   "decision": "HUMAN",
+   "lesson": 4,
+   "color": "WHITE",
+   "why_orange": "needs a human choice",
+   "final": "fixed by the finalise pass"
+  },
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 1, Observe teacherMoves",
+    "problem": "Lesson 3 is about raw materials; fine, but Lesson 1 Observe learnerExperience says the misconception 'is a known misconception to address in Lesson 3' while the teacher reflection says to address it in Lessons 3 and 5; Lesson 5 does not address it.",
+    "quote_a": "Lesson 3 returns to what the plant takes in, and Lesson 9 to what the soil supplies",
+    "quote_b": "",
+    "correct_value": ""
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Make the Lesson 1 cross-references consistent by naming Lesson 3 for what the plant takes in and Lesson 9 for what the soil supplies, and by removing the claim that Lesson 5 addresses the misconception.",
+   "reason": "Lesson 5 does not address the 'plants eat soil' misconception, while Lesson 3 and Lesson 9 do cover what the plant takes in and what the soil supplies.",
+   "decision": "FIX",
+   "lesson": 1,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 1,
+    "path": "teacherReflection",
+    "old": "Plan to address these explicitly in Lessons 3 and 5.",
+    "new": "Plan to address these explicitly in Lessons 3 and 5, and in Lesson 9 for what the soil supplies."
+   },
+   "reference": "",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 5, Phase 5 teacherMoves / Lesson 6 Model Building",
+    "problem": "Lesson 5 says the model began in Lesson 1 (starting model) while others say it was started in Lesson 3; inconsistent origin of the cumulative model.",
+    "quote_a": "Get out your photosynthesis model from Lesson 3.",
+    "quote_b": "Learners open their personal photosynthesis model (started in Lesson 3 and revised in Lessons 4–5).",
+    "correct_value": ""
+   },
+   "origin": "UNCLEAR",
+   "recommendation": "Use the Lesson 1 starting model as the origin of the cumulative model, and give Lesson 6 matching wording.",
+   "reason": "Lesson 1 builds the starting model and Lesson 3 labels its model Version 1, so the model's origin is described inconsistently across lessons.",
+   "decision": "FIX",
+   "lesson": 5,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 5,
+    "path": "framework[4].teacherMoves",
+    "old": "Get out your photosynthesis model from Lesson 3.",
+    "new": "Get out your photosynthesis model (started in Lesson 1 and revised in Lessons 3 and 4)."
+   },
+   "reference": "",
+   "final": "completed (3 criteria met)"
+  }
+ ],
+ "applied": "bio_2_1: 4 applied, 0 rejected"
+}

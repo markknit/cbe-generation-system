@@ -1,0 +1,53 @@
+{
+ "module": "phys_3_3",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 2,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "The FE states silicon is about 1.4 x 10^11 times more resistive, which is correct; but the parenthetical '(about 10^11 times)' is consistent. Only the arithmetic is checked: 2.3e3/1.7e-8 = 1.35e11, so",
+     "reason": "The arithmetic is correct (2.3e3/1.7e-8 ≈ 1.35e11 ≈ 1.4e11), matching Lessons 2 and 4. The reviewer's own note says there is no defect."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "The FE reports correct physics, but the lessons' temperature data (silicon 2300 to 600 to 180 ohm metre) and the 1N4007 diode warming demonstration are semiconductor-level simplifications. The actual ",
+     "reason": "The FE statement that copper's resistance rises slightly when warmed matches Lessons 3 and 6. The reviewer admits nothing in the FE needs changing, and the issue it raises is about Lesson 3, not the F"
+    }
+   ],
+   "dropped_by_code": []
+  },
+  {
+   "round": 2,
+   "raw": 2,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "Lessons give 2.3e3/1.7e-8 = 1.35e11, about 1.4 x 10^11. The calculation is correct, so this is not an arithmetic error; the parenthetical 'about 10^11' is a rough restatement only.",
+     "reason": "2.3e3/1.7e-8 = 1.35e11, about 1.4 x 10^11 as Lessons 2 and 3 state; the parenthetical 'about 10^11' is a harmless rough restatement (Lesson 4 also says about 10^11)."
+    },
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "Lesson 3 contradicts itself over whether copper's resistivity or conductivity is the one that rises or falls. The statement about resistivity rising and conductivity falling is consistent, but the les",
+     "reason": "No contradiction: Lesson 3 says copper's resistivity rises slightly, so its conductivity falls slightly, and the FE's 'resistance rises slightly' matches Lessons 3 and 6."
+    }
+   ],
+   "dropped_by_code": []
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

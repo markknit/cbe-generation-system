@@ -1,0 +1,64 @@
+{
+ "module": "math_2_3",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 8,
+   "verified": 7,
+   "confirmed": 1,
+   "autofix": 0,
+   "to_teachers": 1,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Rotating (0,5) by 270° anticlockwise (= 90° clockwise) gives (5,0), which is the 3 o'clock (12:15) position, so this is correct. However the lesson's rule list states 270° anticlockwise as (x,y)→(y,−x",
+     "reason": "Lesson 4 correctly gives 270° ACW = (x,y)→(y,−x) and Lesson 8 correctly gives 270° CW = (−y,x); the two are consistent and the claimed contradiction does not exist."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Consistent with 270° CW = 90° ACW, this is fine; but the Explain Part A states 12:45 as '270° clockwise = 90° anticlockwise', fine. No error here.",
+     "reason": "The candidate itself says there is no error; 270° CW = 90° ACW = (−y,x) is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Minute hand moving from 12 to 4 on a clock face is 4×30° = 120° clockwise; correct. No error.",
+     "reason": "The candidate itself says there is no error; 12 to 4 on a clock face is 120° clockwise."
+    },
+    {
+     "type": "TIMING",
+     "problem": "Observe phase teacherMoves allocate about 1.5+2+4+4 minutes of construction plus demonstration and the Step 1 setup, and the Explain phase uses 5 + 2 minutes plus cold-calls; the Observe steps leave a",
+     "reason": "The candidate admits it is not a clear error; the phase timings plausibly fit within the stated pacing."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "270° anticlockwise equals 90° clockwise, so the rule (x, y) → (y, −x) is correct. The lesson 4 summary then claims the tip at (0,5) maps to (5,0) after 270° anticlockwise (the 12:15 position), which i",
+     "reason": "The candidate's own analysis finds the Lesson 4 rules and clock-position claims consistent; there is no error."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Consistent with itself, but the summary's 'explained' states 'for 270° clockwise, (x,y)→(−y,x)', which is correct. However, the 'learned' line in Lesson 4 conflicts: 270° anticlockwise equals (y,−x), ",
+     "reason": "The candidate itself says there is no error; Lesson 4 and Lesson 8 are consistent."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Sum is correct, but the Model Building phase teacherMoves allows 6 minutes of individual work while the Explain phase teacherMoves allows 6 minutes of group wor"
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 3, Predict teacherMoves vs Explain",
+   "problem": "Lesson 3 Explain refers to 'three constructions' and 'three centre-position examples' though only two practice examples (A and B) plus the Observe-phase quadrilateral exist; the Observe quadrilateral is described as centre inside, consistent. Minor; but the Explain says 'Collect the three constructions' while the pairs complete two.",
+   "quote_a": "Imagine it turning the opposite way, anticlockwise, from 12 to 9, which is the turn in the question on your sheet.",
+   "quote_b": "Example A — equilateral triangle, centre outside, rotated 270° anticlockwise",
+   "correct_value": ""
+  }
+ ]
+}

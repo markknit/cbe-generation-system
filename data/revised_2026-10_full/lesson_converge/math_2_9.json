@@ -1,0 +1,90 @@
+{
+ "module": "math_2_9",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 16,
+   "verified": 12,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "The worked example's own numbers are inconsistent: 2.5 km/h = 0.694 m/s, and the Predict-phase check says 600 m at an average 5.9 m/s takes about 102 s, so these are consistent. The error is in the Pr",
+     "reason": "The candidate itself finds no error; 0.694/100 ≈ 0.0069 and 1.67/720 ≈ 0.0023 are both correct."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "From the table, Runner B is furthest ahead at about km 30 (2 min ahead at minute 92-94), not minute 73. At minute 73 B is at km 25 and A is about km 23.1 (a gap of about 1.9 km), but the gap in time i",
+     "reason": "At minute 73 B is at km 25 and A at about km 23.1, so the gap is about 1.9 km. 'About 1.8 km' is a rounded value, and the crossing near minute 107, km 34 is consistent with interpolation, so there is "
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "The question gives 60 km in 1 h, a 10-minute stop, then 90 km in 1.5 h, so the total time is 2 h 40 min = 2.667 h and the distance is 150 km. 150 / 2.667 = 56.25, which is correct. But the stated grap",
+     "reason": "150 km ÷ 2.667 h = 56.25 km/h and the graph points are consistent; no error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "The summary says 160 km/h is 'more than five times the 30 km/h closing speed'. 160/30 = 5.33, which is correct. No error.",
+     "reason": "160/30 ≈ 5.3, so 'more than five times' is correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Runner A's total time is 132 min = 2.2 h, and 42/2.2 = 19.09 km/h. This is correct, so this is not an error. However, Lesson 2 says 19 km/h is about 5.3 m/s, which is correct, so no issue is reported ",
+     "reason": "42/2.2 = 19.09 km/h is correct."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "The midpoints of the 35–40 km segment (about 37.5 km) and the 40–42 km segment (41 km) are about 3.5 km apart at about 16.5 km/h, i.e. about 12.7 min. So 12 min is roughly consistent, and this is not ",
+     "reason": "The 12 min gap is roughly consistent with the segment midpoints; no real error."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "No contradiction here. The overview says 'about 19', which is consistent.",
+     "reason": "The overview and the framework data agree; no contradiction."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "From the table, Runner A's 5 km splits are 16, 15, 16, 16, 16, 15, 16, 16. The 15-minute splits are km 5-10 and km 25-30 (79 to 94). The 40-42 km segment is 6 min for 2 km, i.e. 20 km/h, also fast. Th",
+     "reason": "The 15-minute splits are km 5-10 and km 25-30, as the table shows, so the statement is consistent."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Gradient as velocity was introduced in Lesson 5 (informally) and Lesson 6 (formally), with Lesson 7 consolidating it. The reference is acceptable, so this is not a real defect.",
+     "reason": "The Lesson 9 cross-reference to Lesson 7 is acceptable, since Lesson 7 consolidated gradient as velocity."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "The lesson later reuses the 80 km/h figure for a head-on collision of two vehicles each at 80 km/h. This is consistent, so there is no contradiction.",
+     "reason": "The 80 km/h figure is used consistently; no contradiction."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Time to meet: 3/190 h = 0.01579 h = 56.8 s, which is correct. However, the 60 s needed to close a 0.5 km gap is only the time to draw level, and the matatu is also 0.5 km behind, so the verdict is con",
+     "reason": "3/190 h ≈ 57 s is correct and the verdict is consistent."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "At minute 73 Runner B is at 25 km and Runner A at 79 min is at 25 km, so A reaches km 25 at 79 min. At minute 73, A has covered about 22.7 km (79 min for 25 km, i.e. 73/79 of 25 km = 23.1 km), so B's ",
+     "reason": "The figures are roughly consistent: the 1.8 km lead at minute 73 is within rounding of the table, and the 2.7 km gain over 55 min is correct."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Pacing figures sum to 5+13+9+4+9 = 40, which is fine. No error."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The Observe teacherMoves run to minute 16 (video 5-8, writing 8-10, table reading 10-15, transition 15-16), which is 11 minutes after minute 5, consistent. But "
+    }
+   ]
+  }
+ ],
+ "for_teachers": []
+}

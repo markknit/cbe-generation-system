@@ -1,0 +1,70 @@
+{
+ "module": "phys_1_2",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 10,
+   "verified": 4,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "TIMING",
+     "problem": "The phase minutes sum to 40, but wait: 7+11+9+5+8 = 40, so this is fine. The stated sum is not a defect.",
+     "reason": "7+11+9+5+8 = 40, so the timing is correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "½ × 2 × 0.05 = 0.05 J is right, and ½ × 2 × 0.08 = 0.08 J is right. But the data card gives k = 40 N/m with x = 0.05 m, which implies F = 2 N. For the old rope, k = 25 N/m with x = 0.08 m gives F = 2 ",
+     "reason": "Both calculations are correct, and k, x and F are consistent with the 2 N test force."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "The arithmetic is correct, so this is not a defect.",
+     "reason": "25/20 = 1.25 m is correct, and the lesson already prompts a sense-check of the magnitude."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "The load of the 80 kg sack is given as 800 N (g=10) in Lessons 4 and 5 but 784 N in Lesson 6. This is a minor difference, and Lesson 5 acknowledges both values.",
+     "reason": "The 800 N (g=10) and 784 N (g=9.8) values are different roundings of the same 80 kg load, and Lesson 5 states both. Lesson 4 uses g=10 consistently and Lesson 6 uses g=9.8 consistently, so there is no"
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "0.5 × 210 × 2.1² = 463.05 J, so this is correct. The related statement for rope A is also fine."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 80? 8+30+26+6+10 = 80. Fine, but Observe steps sum 5+10+5+10=30 OK. (No issue)"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "With k and x given, F = kx = 2 N for the new rope (40×0.05) and 2 N for the old (25×0.08), so the data are consistent. The energy is 0.5×2×0.05 = 0.05 J and 0.0"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The arithmetic is correct. No error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "With k = 18000 N/m, a load of 5400 N gives a compression of 0.30 m, so 18000×0.30 = 5400 is consistent. No error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Ep = 0.5×850×0.92² = 359.7 J, so 360 J is correct. No error."
+    }
+   ]
+  }
+ ],
+ "for_teachers": []
+}

@@ -1,0 +1,24 @@
+[
+ {
+  "id": "math_1_1-137",
+  "answer": "Keep Lesson 6 as written, but make the dependence on the school's tables explicit so it does not silently assume a layout. Tell the teacher to check the five values against the edition in use before teaching, and to rewrite the reading instructions if the layout differs. Standard Kenyan reciprocal tables give 4 s.f. values, and some print a 'mean difference' column, so the Observe step should allow that. The values themselves are exact roundings, so no invented table data is introduced.",
+  "edits": [
+   {
+    "target": "lesson",
+    "lesson": 6,
+    "path": "framework[1].teacherMoves",
+    "old": "Teacher check: confirm the values against the edition of tables your school uses before the lesson.",
+    "new": "Teacher check BEFORE the lesson: open your school's edition of the tables and confirm 2.5, 4.5, 8, 3.2 and 4.8 against 0.4, 0.2222, 0.125, 0.3125 and 0.2083. If the layout differs (for example a mean-difference column for the 4th digit, or rows starting at 1.0), adjust the reading instructions and expected values to match your edition. Last-digit differences are due to rounding."
+   },
+   {
+    "target": "lesson",
+    "lesson": 6,
+    "path": "framework[1].learnerExperience",
+    "old": "(the number is read down the left and across the top, and the answer is read in the body, to 4 significant figures)",
+    "new": "(typically the first two digits are read down the left, the third digit across the top, and the answer in the body, to 4 significant figures; some editions add a mean-difference column for the fourth digit, so follow your own book's layout)"
+   }
+  ],
+  "alternative": "Replace the five specific expected values with a worksheet the teacher fills in from their own tables before the lesson.",
+  "knock_on": "Lesson 8 and the FE Part 3(c) use the table value 1/4.5 = 0.2222 for 45; they stay valid if the school tables agree, otherwise the same check applies."
+ }
+]

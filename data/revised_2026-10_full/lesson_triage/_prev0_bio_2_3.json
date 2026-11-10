@@ -1,0 +1,111 @@
+{
+ "module": "bio_2_3",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 1, Model Building Phase teacherMoves",
+    "problem": "Lesson 1 closes by promising the model will be completely different by Lesson 6, but the final model finalisation and unit synthesis happen in Lessons 8 and 12.",
+    "quote_a": "By Lesson 6, your model will be completely different",
+    "quote_b": "",
+    "correct_value": "Lesson 12 (or Lesson 8)"
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Change the promise to Lesson 12, where the model is finalised.",
+   "reason": "Lesson 12 is the final model finalisation and the Lesson 1 vs Lesson 12 comparison, so it is the right reference.",
+   "decision": "FIX",
+   "lesson": 1,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 1,
+    "path": "framework[4].teacherMoves",
+    "old": "By Lesson 6, your model will be completely different",
+    "new": "By Lesson 12, your model will be completely different"
+   },
+   "reference": "",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "TIMING",
+    "where": "Lesson 6, Observe phase vs Observe teacherMoves",
+    "problem": "The Observe phase is labelled as 6–26 minutes (20 minutes), but data collection ends at 20 minutes and then 2 minutes of graphing follow. The learner experience says 15 minutes of data collection plus 2 minutes plotting; these are inconsistent.",
+    "quote_a": "(6–26 minutes) Groups of four are pre-assigned",
+    "quote_b": "Teacher signals the end of data collection at 20 minutes",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Extend the Observe label to 22 minutes (6–28) so collection and graphing fit, and shift later phases' timings.",
+   "reason": "The Observe phase includes 15–20 minutes of collection plus 2 minutes of graphing, which overruns the 20-minute label.",
+   "decision": "FIX",
+   "lesson": 6,
+   "color": "ORANGE",
+   "reference": "",
+   "why_orange": "demoted by me: edit too large/risky to apply automatically",
+   "final": "orange kept: Lesson 6 is a fixed 40-minute lesson with every phase already timed. Fixing the Observe timing means rebalancing the phase boundaries (6–26, 26–34, 34–37, 37–40"
+  },
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 2, Explain phase teacherMoves",
+    "problem": "Lesson 2 says stomata opening is covered in Lessons 3 and 4 but Lesson 4 is about aerobic/anaerobic respiration, not stomata mechanics or the gases moving through stomata.",
+    "quote_a": "we will test ideas about temperature in Lesson 6",
+    "quote_b": "Lessons 3 and 4, where we will investigate how and when stomata open and close, and what gases actually move through them",
+    "correct_value": ""
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Reword so Lesson 3 covers stomatal mechanics and Lesson 4 covers respiration and CO₂.",
+   "reason": "Lesson 4 is about respiration, not stomatal mechanics, so the original wording is inaccurate.",
+   "decision": "FIX",
+   "lesson": 2,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 2,
+    "path": "framework[3].teacherMoves",
+    "old": "Lessons 3 and 4, where we will investigate how and when stomata open and close, and what gases actually move through them",
+    "new": "Lesson 3, where we will investigate how stomata open and close, and Lesson 4, where we will investigate respiration and the CO₂ that cells release"
+   },
+   "reference": "",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 9, Model Building phase",
+    "problem": "The pitch length is stated as 60 seconds in the learner experience and teacher moves but as 90 seconds in the sensemaking strategy and overview.",
+    "quote_a": "each group delivers a 60-second planning pitch to a neighbouring group",
+    "quote_b": "The 90-second pitch forces concision and public accountability",
+    "correct_value": "60 seconds",
+    "note": "fixer could not make an exact small edit: The overview of Lesson 9 does not mention a 90-second pitch; the only other 90-second mention is in the Model Building phase teacherMoves? No: only the sensemakingStrategy needed editing."
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Make all mentions of the pitch 60 seconds, including the overview and any other 90-second reference.",
+   "reason": "The learner experience and teacher moves say 60 seconds, and the plan's timing supports it.",
+   "decision": "FIX",
+   "lesson": 9,
+   "color": "ORANGE",
+   "why_orange": "edit text not unique or outside size limits",
+   "final": "orange kept: Wording consistency fix; the 60-second pitch is stated in both the learner experience and the teacher moves, so it is the majority value.  No science is involve"
+  },
+  {
+   "item": {
+    "type": "TIMING",
+    "where": "Lesson 6, Observe phase teacherMoves vs learnerExperience",
+    "problem": "The Observe phase is allotted (6–26 min) = 20 min. The learner text says 15 min of data collection plus 2 min of graphing. The teacher moves say the end of collection is at 20 minutes, then 2 more minutes of graphing, which gives 22 min and also overruns the 26-minute boundary once the jigsaw sharing is added. The two sources disagree.",
+    "quote_a": "Teacher signals the end of data collection at 20 minutes: 'Pause your counting. Make sure your table is complete and your graph axes are labelled with units. You have 2 minutes to finish your graph",
+    "quote_b": "After 15 minutes of data collection, each group spends 2 minutes plotting a simple line graph",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Set one timeline: 15 min collection, 2 min graph, 2 min jigsaw sharing, and adjust the Observe boundary and later phases; this needs a teacher to rebalance the 40 minutes.",
+   "reason": "Lesson 6 is only 40 minutes, so fixing the overrun means choosing which activities to cut or shorten.",
+   "decision": "HUMAN",
+   "lesson": 6,
+   "color": "ORANGE",
+   "why_orange": "needs a human choice",
+   "final": "orange kept: Same timing conflict as item 1: 15 minutes of collection in the learner text against 20 minutes in the teacher moves, with graphing and jigsaw sharing still to "
+  }
+ ],
+ "applied": "bio_2_3: 5 applied, 0 rejected"
+}

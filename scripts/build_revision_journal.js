@@ -163,17 +163,17 @@ const stats = (rs) => ({
   decide: rs.filter((r) => r.teacher_decision || r.kind === 'flag').length,
 });
 
-const howTo = () => [
+const howTo = (opts) => [
   H2('How to read this journal'),
-  P('Every change made to the Grade 10 lesson plans is listed here, grouped by sub-strand. The same change is also visible as a Word tracked change in the matching "_TRACKED.docx" file, so you can accept or reject it there.'),
+  P((opts && opts.intro) || 'Every change made to the Grade 10 lesson plans is listed here, grouped by sub-strand. The same change is also visible as a Word tracked change in the matching "_TRACKED.docx" file, so you can accept or reject it there.'),
   P('Each row gives: where the change is (document, lesson, phase and field), exactly what changed (BEFORE in red strike-through, AFTER in green underline), why it was changed and which of the 14 lesson-plan guidelines it serves, and for science corrections a reference that supports the fix. References are named sources, to be verified by a reviewer (page numbers are not given).'),
   P([tr('Items that need YOUR attention are marked and shaded: ', { bold: true }), tr('ORANGE rows carry [FLAG]: a problem or question where no text was changed and you must decide what to do. YELLOW rows carry [DECISION]: Claude proposed a change that depends on a judgement call, please confirm it. To jump to them, press Ctrl+F and search for  [FLAG]  or  [DECISION] , or use the "Needs your attention" list at the top of each sub-strand (click an item number to jump to it). A separate document, Flagged_Items_<Subject>.docx, lists ONLY these items so you can read them together, and it has the same ACCEPT / EDIT boxes: answer the [FLAG] and [DECISION] items there (or here, but not both; if you answer in both and they differ, the Flagged Items document is used). Answer every other item in this journal.')]),
   P([tr('How to respond (every item, in the last column): ', { bold: true }), tr('click ONE box, ACCEPT or EDIT. If you choose EDIT, type the change you want in the space under it. Save the file under the same name and send it back. Every item carries its sub-strand name, and each section has the sub-strand in the page header, so please keep the items in this document.')]),
 ];
 
-function volume(title, modules) {
+function volume(title, modules, opts) {
   const kids = [P([new TextRun({ text: title, font: FONT, size: 40, bold: true, color: '1F3864' })], { after: 60 }),
-    P('Revision journal. Grade 10, 14 October 2026 revision. Prepared by Claude (AI), proposed for teacher review.', { size: 20, after: 140 }), ...howTo()];
+    P((opts && opts.sub) || 'Revision journal. Grade 10. First revision 14 October 2026; rebuilt 10 November 2026 with all Round 2 changes. This is the complete record (including items teachers already answered). Prepared by Claude (AI), proposed for teacher review.', { size: 20, after: 140 }), ...howTo(opts)];
   const srows = modules.map((m) => { const s = stats(recs[m]); const mt = meta(m); const its = journalItems(recs[m]); return [`${mt.substrand_id} ${mt.substrand_name}`, String(s.edits), String(its.length), String(s.science), String(s.substantial), String(its.filter(needsDecision).length)]; });
   const tot = stats(modules.flatMap((m) => recs[m]));
   const allIts = modules.flatMap((m) => journalItems(recs[m]));
@@ -281,7 +281,7 @@ async function finalize(buf) {
 
 // ---------- Round 2 teacher summary: PART A (closest review, journal format) + PART B (optional list of verified fixes) ----------
 const isA = (r) => /^R2-LES-(PROPOSED|CLOSE)-/.test(r.group || '');
-const isB = (r) => /^R2-LES-(AUTO|TRIAGE|FINAL)$/.test(r.group || '') || r.group === 'R2-FE-AUTO';
+const isB = (r) => /^R2-LES-(AUTO|TRIAGE|FINAL)$/.test(r.group || '') || r.group === 'R2-FE-AUTO' || r.group === 'R2-VERIFY-FIX';
 function round2Doc() {
   const PAGE = { page: { size: { width: 12240, height: 15840, orientation: 'landscape' }, margin: { top: 1100, bottom: 900, left: 1080, right: 1080 } } };
   const foot = (label) => new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: `${label}  |  page `, font: FONT, size: 16, color: '666666' }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 16, color: '666666' })] })] });
@@ -334,6 +334,34 @@ function round2Doc() {
 }
 
 (async () => {
+  if (process.argv.includes('--r2journal')) {
+    // Round 2 journal: per subject, only the changes teachers have NOT yet seen or answered (Round 2 lesson/FE changes, proposed answers,
+    // verification fixes, and Round 2 flags). Excludes the Round 1 items, the Round 2 applications of earlier teacher answers (numeric ids)
+    // and the mechanical four-level rubric records.
+    const PIPE = new Set(JSON.parse(fs.readFileSync(path.join(REV, 'round2', 'pipeline_flags.json'), 'utf8')).ids);
+    const keep = (r) => r.kind === 'flag' ? ((r.applied_at || '') >= '2026-11-09' && !PIPE.has(r.id)) : (/-r2-/.test(r.id) && !/-r2-rub-/.test(r.id) && !/-r2-\d+$/.test(r.id));
+    const jdir = path.join(REV, 'journal'); fs.mkdirSync(jdir, { recursive: true });
+    const OPEN = process.argv.includes('--open-only');
+    for (const m of Object.keys(recs)) {
+      recs[m] = recs[m].filter(keep);
+      if (OPEN) { // keep only items (groups or single records) that are ORANGE (flag) or YELLOW (teacher_decision)
+        const gk = (r) => r.group || r.id;
+        const att = new Set(recs[m].filter((r) => r.kind === 'flag' || r.teacher_decision).map(gk));
+        recs[m] = recs[m].filter((r) => att.has(gk(r)));
+      }
+    }
+    const bySubj = {};
+    for (const m of Object.keys(recs).sort(natural)) { const s = subjOf(m); if (s && ['bio', 'chem', 'phys', 'math'].includes(s[0]) && recs[m].length) (bySubj[s[1]] = bySubj[s[1]] || []).push(m); }
+    const opts = OPEN ? { sub: 'Round 2 OPEN ITEMS, 10 November 2026. Only the ORANGE [FLAG] and YELLOW [DECISION] items from Round 2 that need a teacher answer. Routine changes (white) are not listed here; they remain in the Round 2 journal. Prepared by Claude (AI), proposed for teacher review.',
+      intro: 'This document lists ONLY the open items from Round 2. ORANGE [FLAG] items: a problem or question where no text was changed. Each carries a PROPOSED ANSWER from Claude; please ACCEPT it or EDIT it. YELLOW [DECISION] items: Claude already made a change that depends on a judgement call; please confirm or edit it. Ordinary changes are not listed.' } : { sub: 'Round 2 journal, updated 10 November 2026. Only the changes made since the teachers last reviewed (items you have already answered are not repeated). Prepared by Claude (AI), proposed for teacher review.',
+      intro: 'This journal lists only the NEW changes from Round 2: automatic lesson-check fixes, the answers built in for earlier open questions, Final Explanation changes, and the small corrections from the final three-part check (teacher request, KICD, science). Each is grouped by sub-strand. The same changes are visible as Word tracked changes in the matching "_TRACKED.docx" file. The full history of all changes is in the Journal_<Subject>.docx file.' };
+    for (const [name, mods] of Object.entries(bySubj)) {
+      const f = path.join(jdir, `${OPEN ? 'Round2_OpenItems_' : 'Round2_Journal_'}${name.replace(/ /g, '_')}.docx`);
+      fs.writeFileSync(f, await finalize(await Packer.toBuffer(volume(name + (OPEN ? ': Round 2 open items' : ': Round 2'), mods, opts))));
+      console.log(path.basename(f), mods.reduce((n, m) => n + journalItems(recs[m]).length, 0), 'items;', mods.reduce((n, m) => n + journalItems(recs[m]).filter(needsDecision).length, 0), 'orange/yellow');
+    }
+    return;
+  }
   if (process.argv.includes('--round2')) {
     const jdir = path.join(REV, 'journal'); fs.mkdirSync(jdir, { recursive: true });
     const f = path.join(jdir, 'Round2_Lesson_Check_Review.docx');
@@ -356,7 +384,7 @@ function round2Doc() {
   // master index
   const all = Object.values(recs).flat();
   const kids = [P([new TextRun({ text: 'Revision journal: master index', font: FONT, size: 40, bold: true, color: '1F3864' })], { after: 60 }),
-    P('Grade 10 lesson plans, 14 October 2026 revision. One journal per subject; this page totals them and lists the items needing a teacher decision.', { size: 20, after: 140 }), ...howTo()];
+    P('Grade 10 lesson plans, first revision 14 October 2026, rebuilt 10 November 2026 with Round 2. One journal per subject; this page totals them and lists the items needing a teacher decision.', { size: 20, after: 140 }), ...howTo()];
   kids.push(H2('Totals by subject'));
   const rows = Object.entries(bySubj).map(([n, mods]) => { const s = stats(mods.flatMap((m) => recs[m])); return [n, String(mods.length), String(s.edits), String(s.science), String(s.substantial), String(s.decide)]; });
   const t = stats(all);

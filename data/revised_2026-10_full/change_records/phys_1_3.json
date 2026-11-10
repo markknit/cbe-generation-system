@@ -3199,22 +3199,6 @@
    "applied_at": "2026-11-09T09:22:20"
   },
   {
-   "id": "phys_1_3-201",
-   "kind": "flag",
-   "target": "unit",
-   "path": "supportingPhenomena",
-   "criteria": [
-    9,
-    8
-   ],
-   "category": "local",
-   "severity": "minor",
-   "teacher_decision": true,
-   "why": "Teacher (phys_1_3-045): a railway example may return only after confirmation from Kenya Railways or a qualified engineer. All SGR/railway references were replaced with a generic steel bridge girder (same numbers); no railway example is currently in the sequence. The remaining Application Card (Lesson 5) still describes a bridge joint generically; the Kenya Power cable and Nairobi Expressway slab wording were not part of the request. Please confirm whether to restore a railway example once verified.",
-   "where": "Unit overview, supportingPhenomena",
-   "applied_at": "2026-11-09T09:22:20"
-  },
-  {
    "id": "phys_1_3-r2-rub-001",
    "kind": "set",
    "target": "final_explanation",
@@ -3336,7 +3320,7 @@
    ],
    "category": "consistency",
    "severity": "minor",
-   "teacher_decision": true,
+   "teacher_decision": false,
    "group": "R2-FE-REVIEW",
    "kind": "edit",
    "target": "final_explanation",
@@ -3344,7 +3328,7 @@
    "group_headline": "Round 2 review pass: final-explanation consistency fixes",
    "old": "Then explain why the clinical thermometer you used at Station B would not be a suitable choice for measuring the freezer temperature.",
    "new": "Then decide whether the clinical thermometer you used at Station B would be a suitable choice for measuring the freezer temperature, and explain your decision.",
-   "why": "Reviewer: the prompt states its own answer ('would not be a suitable choice'). Checked: real. Reworded so the student decides.",
+   "why": "Reviewer: the prompt states its own answer ('would not be a suitable choice'). Checked: real. Reworded so the student decides. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
    "where": "Final Explanation, Section 2: Temperature and How We Measure It, prompt",
    "applied_at": "2026-11-09T17:32:34"
   },
@@ -3355,32 +3339,15 @@
    ],
    "category": "consistency",
    "severity": "minor",
-   "teacher_decision": true,
+   "teacher_decision": false,
    "group": "R2-FE-REVIEW",
    "kind": "edit",
    "target": "final_explanation",
    "path": "sections[1].exemplar",
    "old": "This is designed for holding a body-temperature reading, so it is not suited to following a freezer temperature at -18 °C.",
    "new": "This is designed for holding a body-temperature reading, and its scale does not go below about 35 °C (Lesson 2), so it cannot read -18 °C and is not suitable for the freezer.",
-   "why": "Reviewer: the exemplar blames the constriction, but the real reason is the thermometer's range. Checked: real; Lesson 2 records that a clinical thermometer cannot read below 35 C. Added the range reason and kept the constriction remark.",
+   "why": "Reviewer: the exemplar blames the constriction, but the real reason is the thermometer's range. Checked: real; Lesson 2 records that a clinical thermometer cannot read below 35 C. Added the range reason and kept the constriction remark. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
    "where": "Final Explanation, Section 2: Temperature and How We Measure It, exemplar",
-   "applied_at": "2026-11-09T17:32:34"
-  },
-  {
-   "id": "phys_1_3-r2-fe-003",
-   "criteria": [
-    14
-   ],
-   "category": "consistency",
-   "severity": "minor",
-   "teacher_decision": true,
-   "group": "R2-FE-REVIEW",
-   "kind": "flag",
-   "target": "lesson",
-   "lesson": 5,
-   "path": "title",
-   "why": "Reviewer: Lesson 5 and Lesson 3 give different cable problems. Lesson 3 uses an aluminium cable near Kisumu (25.3 cm over 200 m, 55 C rise, alpha 23e-6); Lesson 5 uses a copper cable near Nairobi (8.5 cm over 200 m, 25 C rise, alpha 17e-6). Both are internally consistent, but a copper/aluminium and Kisumu/Nairobi mismatch could confuse learners; teachers may accept two examples. The FE (Section 5b) says copper cables between Nairobi and Thika, matching Lesson 5; no FE edit.",
-   "where": "Lesson 5, title",
    "applied_at": "2026-11-09T17:32:34"
   },
   {
@@ -3402,6 +3369,732 @@
    "why": "Automatic lesson check (INTERNAL_CONTRADICTION): Concrete α is given as 12 × 10⁻⁶ in Lesson 4 and approximately 10 × 10⁻⁶ in Lesson 5; the lessons disagree on the value for concrete. Recommendation: Change Lesson 4 to α = 10 × 10⁻⁶ K⁻¹ and update the expected answer in the same field to ΔA = 20 × 10⁻⁶ × 48 × 30 ≈ 0.029 m². Reason: Concrete is given as 12 × 10⁻⁶ in Lesson 4 but about 10 × 10⁻⁶ in Lesson 5, and both fall within the accepted range. Lesson 5's value is chosen because it is stated as 'approximately' and keeps the nu Origin: UNCLEAR.",
    "where": "Lesson 4, Observe Phase, learnerExperience",
    "applied_at": "2026-11-09T22:31:52"
+  },
+  {
+   "id": "phys_1_3-r2-les-fin-001",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[1].learnerExperience",
+   "old": "ΔA = 24 × 10⁻⁶ × 48 m² × 30 K ≈ 0.035 m²",
+   "new": "ΔA = 20 × 10⁻⁶ × 48 m² × 30 K ≈ 0.029 m²",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-FINAL",
+   "group_headline": "Concrete expansion value made consistent (10 × 10⁻⁶ per K) with its worked answer",
+   "why": "Completes the earlier concrete-expansion fix: with alpha = 10 × 10⁻⁶ per K, beta = 2 alpha = 20 × 10⁻⁶ per K, so dA = beta × A0 × dT = 20e-6 × 48 × 30 = 0.0288, about 0.029 m². Matches Lesson 5; no teacher decision or KICD content touched.",
+   "where": "Lesson 4, Observe Phase, learnerExperience",
+   "applied_at": "2026-11-09T23:30:19"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-001",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[1].sensemakingStrategy",
+   "old": "The Kenyan context bridge (Eldoret clay pots, Aberdare radiator pipes)",
+   "new": "The Kenyan context bridge (Aberdares, Mount Kenya and Nyandarua; pipes, buckets and clay pots)",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 1), INTERNAL_CONTRADICTION: The sensemaking note refers to Eldoret clay pots and Aberdare radiator pipes, which are not in the read-aloud passage (it mentions Aberdares, Mount Kenya, Nyandarua; pipe, bucket, clay pot; no Eldoret or radiators). Confirmed by a second reviewer; correction is unambiguous.",
+   "group_headline": "Lesson text corrected by the automatic consistency check",
+   "where": "Lesson 1, Observe Phase, sensemakingStrategy",
+   "applied_at": "2026-11-09T23:31:39"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-002",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "overview",
+   "old": "exposed to a 15 degree C maximum temperature rise",
+   "new": "exposed to a 17 degree C maximum temperature rise",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 2), ARITHMETIC: The calculation is correct (1.65 mm). The statement of the gap is also consistent with that. However, the Kisumu temperature range 18 to 35 °C is 17 °C, not the 15 °C stated as the maximum rise. Confirmed by a second reviewer; correction is unambiguous.",
+   "group_headline": "Lesson text corrected by the automatic consistency check",
+   "where": "Lesson 5, overview",
+   "applied_at": "2026-11-09T23:32:17"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-003",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "giving a maximum temperature rise of 15 degrees C",
+   "new": "giving a maximum temperature rise of 17 degrees C",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 2), ARITHMETIC: The calculation is correct (1.65 mm). The statement of the gap is also consistent with that. However, the Kisumu temperature range 18 to 35 °C is 17 °C, not the 15 °C stated as the maximum rise. Confirmed by a second reviewer; correction is unambiguous.",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-11-09T23:32:17"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-004",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "x 10 x 15 = 1.65 x 10 to the power of minus 3 m = 1.65 mm",
+   "new": "x 10 x 17 = 1.87 x 10 to the power of minus 3 m = 1.87 mm",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 2), ARITHMETIC: The calculation is correct (1.65 mm). The statement of the gap is also consistent with that. However, the Kisumu temperature range 18 to 35 °C is 17 °C, not the 15 °C stated as the maximum rise. Confirmed by a second reviewer; correction is unambiguous.",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-11-09T23:32:17"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-005",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "the beam lengthens by 1.65 mm in total, so if it is free to expand at both ends the engineer must leave a gap of at least about 0.83 mm at each end (1.65 mm in all)",
+   "new": "the beam lengthens by 1.87 mm in total, so if it is free to expand at both ends the engineer must leave a gap of at least about 0.94 mm at each end (1.87 mm in all)",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 2), ARITHMETIC: The calculation is correct (1.65 mm). The statement of the gap is also consistent with that. However, the Kisumu temperature range 18 to 35 °C is 17 °C, not the 15 °C stated as the maximum rise. Confirmed by a second reviewer; correction is unambiguous.",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-11-09T23:32:17"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-006",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[2].teacherMoves",
+   "old": "1.65 mm might sound tiny",
+   "new": "1.87 mm might sound tiny",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 2), ARITHMETIC: The calculation is correct (1.65 mm). The statement of the gap is also consistent with that. However, the Kisumu temperature range 18 to 35 °C is 17 °C, not the 15 °C stated as the maximum rise. Confirmed by a second reviewer; correction is unambiguous.",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-11-09T23:32:17"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-007",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "summaryTablePrompt.observed",
+   "old": "expands by 1.65 mm in total, so it needs a gap of at least about 0.83 mm at each end (1.65 mm in all) to safely accommodate a 15 degree C temperature rise",
+   "new": "expands by 1.87 mm in total, so it needs a gap of at least about 0.94 mm at each end (1.87 mm in all) to safely accommodate a 17 degree C temperature rise",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 2), ARITHMETIC: The calculation is correct (1.65 mm). The statement of the gap is also consistent with that. However, the Kisumu temperature range 18 to 35 °C is 17 °C, not the 15 °C stated as the maximum rise. Confirmed by a second reviewer; correction is unambiguous.",
+   "where": "Lesson 5, summaryTablePrompt.observed",
+   "applied_at": "2026-11-09T23:32:17"
+  },
+  {
+   "id": "phys_1_3-r2-les-tri-004",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "group": "R2-LES-TRIAGE",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "The seasonal temperature in Kisumu ranges from 18 degrees C to 35 degrees C, giving a maximum temperature rise of 17 degrees C.",
+   "new": "The maximum temperature in Kisumu is 35 degrees C, giving a maximum temperature rise of 15 degrees C above the installation temperature.",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Automatic lesson check (INTERNAL_CONTRADICTION): The worked example says the beam is installed at 20 °C and 'the seasonal temperature in Kisumu ranges from 18 degrees C to 35 degrees C, giving a maximum temperature rise of 17 degrees C'. A rise from 18 to 35 is 17, but the installation temperature is 20 °C, so the rise from installation would be 1 Recommendation: Change the rise to 15 °C and update every downstream figure: ΔL = 1.65 mm, 0.83 mm per end, the learnerExperience arithmetic, the Lesson 5 overview and the summaryTablePrompt. Reason: A 20 °C installation temperature to a 35 °C maximum is a 15 °C rise, not 17 °C. The 18–35 range only gives 17 °C if the beam was installed at 18 °C. The fix touches several places in the lesson, so a  Origin: INTRODUCED_BY_REVISION. Completed: follow-up edit made and verified (consistent with teacher responses, KICD, science).",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-11-09T23:34:15"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-008",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "(11 x 10 to the power of minus 6) x 10 x 17 = 1.87 x 10 to the power of minus 3 m = 1.87 mm",
+   "new": "(11 x 10 to the power of minus 6) x 10 x 15 = 1.65 x 10 to the power of minus 3 m = 1.65 mm",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 1), ARITHMETIC: The stated rise is 15 °C (35−20), but the calculation uses 17 °C. With 15 °C, ΔL = 1.65 mm. The overview, key numbers and summary also use 17 °C, so the lesson contradicts itself. Confirmed by a second reviewer; correction is unambiguous.",
+   "group_headline": "Lesson text corrected by the automatic consistency check",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-11-09T23:35:56"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-009",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[2].learnerExperience",
+   "old": "the beam lengthens by 1.87 mm in total, so if it is free to expand at both ends the engineer must leave a gap of at least about 0.94 mm at each end (1.87 mm in all)",
+   "new": "the beam lengthens by 1.65 mm in total, so if it is free to expand at both ends the engineer must leave a gap of at least about 0.83 mm at each end (1.65 mm in all)",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 1), ARITHMETIC: The stated rise is 15 °C (35−20), but the calculation uses 17 °C. With 15 °C, ΔL = 1.65 mm. The overview, key numbers and summary also use 17 °C, so the lesson contradicts itself. Confirmed by a second reviewer; correction is unambiguous.",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-11-09T23:35:56"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-010",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "framework[2].teacherMoves",
+   "old": "1.87 mm might sound tiny",
+   "new": "1.65 mm might sound tiny",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 1), ARITHMETIC: The stated rise is 15 °C (35−20), but the calculation uses 17 °C. With 15 °C, ΔL = 1.65 mm. The overview, key numbers and summary also use 17 °C, so the lesson contradicts itself. Confirmed by a second reviewer; correction is unambiguous.",
+   "where": "Lesson 5, Explain Phase, teacherMoves",
+   "applied_at": "2026-11-09T23:35:56"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-011",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "overview",
+   "old": "exposed to a 17 degree C maximum temperature rise",
+   "new": "exposed to a 15 degree C maximum temperature rise",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 1), ARITHMETIC: The stated rise is 15 °C (35−20), but the calculation uses 17 °C. With 15 °C, ΔL = 1.65 mm. The overview, key numbers and summary also use 17 °C, so the lesson contradicts itself. Confirmed by a second reviewer; correction is unambiguous.",
+   "where": "Lesson 5, overview",
+   "applied_at": "2026-11-09T23:35:56"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-012",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "summaryTablePrompt.observed",
+   "old": "expands by 1.87 mm in total, so it needs a gap of at least about 0.94 mm at each end (1.87 mm in all) to safely accommodate a 17 degree C temperature rise",
+   "new": "expands by 1.65 mm in total, so it needs a gap of at least about 0.83 mm at each end (1.65 mm in all) to safely accommodate a 15 degree C temperature rise",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 1), ARITHMETIC: The stated rise is 15 °C (35−20), but the calculation uses 17 °C. With 15 °C, ΔL = 1.65 mm. The overview, key numbers and summary also use 17 °C, so the lesson contradicts itself. Confirmed by a second reviewer; correction is unambiguous.",
+   "where": "Lesson 5, summaryTablePrompt.observed",
+   "applied_at": "2026-11-09T23:35:56"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-013",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "framework[2].learnerExperience",
+   "old": "(highest capillary column minimum)",
+   "new": "(lowest capillary column)",
+   "criteria": [
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-CLOSE-1",
+   "why": "Automatic lesson check (round 1), SCIENCE: The wording 'highest capillary column minimum' is contradictory, since the smallest volume corresponds to the lowest capillary column, not the highest. Confirmed by a second reviewer; correction is unambiguous. Please look closely: this one involves a judgement call or a science statement. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
+   "reference": "Water has its minimum volume (maximum density) at about 4 °C, so the capillary column is at its lowest there.",
+   "where": "Lesson 4, Explain Phase, learnerExperience",
+   "applied_at": "2026-11-09T23:35:56",
+   "group_headline": "Automatic fix to look at closely (science correction)"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-014",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 5,
+   "path": "slo.purposeInStoryline",
+   "old": "Having established in Lessons 2 to 4 that materials expand",
+   "new": "Having established in Lessons 3 to 4 that materials expand",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 2), INTERNAL_CONTRADICTION: Linear expansion of solids is taught in Lesson 3 and volumetric in Lesson 4; Lesson 2 covers thermometers and temperature scales, not expansion. Confirmed by a second reviewer; correction is unambiguous.",
+   "group_headline": "Lesson text corrected by the automatic consistency check",
+   "where": "Lesson 5, slo.purposeInStoryline",
+   "applied_at": "2026-11-09T23:36:19"
+  },
+  {
+   "id": "phys_1_3-r2-fe-auto-001",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "sections[1].prompt",
+   "value": "(a) Explain what temperature tells us about the particles in a substance. (b) Water in the bottle began at about 18 °C and the freezer was at -18 °C. Convert both temperatures, and the freezing point of water, to kelvin. State the conversion you used. (c) Describe how a liquid-in-glass thermometer works and name its thermometric property. Then decide whether the clinical thermometer you examined at Station B would be a suitable choice for measuring the freezer temperature, and explain your decision. (d) Explain what happens to the kinetic energy of the water molecules as the freezer cools them, and link this to the cracked bottle.",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-FE-AUTO",
+   "why": "Automatic Final Explanation check (round 2): the lessons are the authority and the FE did not follow them. Findings (FE_CONTRADICTS_LESSONS), each confirmed by a second reviewer: FE_CONTRADICTS_LESSONS: Lesson 2 describes learners only examining a clinical thermometer and recording its resting reading, not using it to measure anything.",
+   "group_headline": "Final Explanation brought in line with the lessons by the automatic consistency check",
+   "old": "(a) Explain what temperature tells us about the particles in a substance. (b) Water in the bottle began at about 18 °C and the freezer was at -18 °C. Convert both temperatures, and the freezing point of water, to kelvin. State the conversion you used. (c) Describe how a liquid-in-glass thermometer works and name its thermometric property. Then decide whether the clinical thermometer you used at Station B would be a suitable choice for measuring the freezer temperature, and explain your decision. (d) Explain what happens to the kinetic energy of the water molecules as the freezer cools them, and link this to the cracked bottle.",
+   "new": "(a) Explain what temperature tells us about the particles in a substance. (b) Water in the bottle began at about 18 °C and the freezer was at -18 °C. Convert both temperatures, and the freezing point of water, to kelvin. State the conversion you used. (c) Describe how a liquid-in-glass thermometer works and name its thermometric property. Then decide whether the clinical thermometer you examined at Station B would be a suitable choice for measuring the freezer temperature, and explain your decision. (d) Explain what happens to the kinetic energy of the water molecules as the freezer cools them, and link this to the cracked bottle.",
+   "where": "Final Explanation, Section 2: Temperature and How We Measure It, prompt",
+   "applied_at": "2026-11-09T23:37:42"
+  },
+  {
+   "id": "phys_1_3-r2-les-tri-005",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "group": "R2-LES-TRIAGE",
+   "group_headline": "Lesson inconsistencies found by the automatic check, with a recommendation",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 3,
+   "path": "framework[4].learnerExperience",
+   "old": "extended in Lesson 2 (showing particle vibration in solids)",
+   "new": "extended in Lesson 2 (showing temperature labels and particle insets for liquid water and ice)",
+   "severity": "minor",
+   "teacher_decision": false,
+   "why": "Automatic lesson check (INTERNAL_CONTRADICTION): Lesson 3 says the Lesson 2 model showed 'particle vibration in solids', but Lesson 2's model revision never includes solid vibration; it adds temperature labels and particle insets for water. Recommendation: Change Lesson 3's description of the Lesson 2 model to match what Lesson 2 actually adds. Reason: Lesson 2's model revision adds temperature labels, thermometer and water particle insets, with no solid vibration; Lesson 3 misdescribes it. Origin: PRE_EXISTING. Verified by two independent checks: consistent with the teachers' responses, with KICD, and scientifically correct; processed as final.",
+   "where": "Lesson 3, Model Building Phase, learnerExperience",
+   "applied_at": "2026-11-09T23:54:52"
+  },
+  {
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "summaryTablePrompt.observed",
+   "old": "They observed that the capillary column — and therefore the water volume — decreased as temperature dropped from 20 °C to 4 °C, then increased again as temperature dropped further from 4 °C to 0 °C, forming a distinctive U-shaped curve with a minimum at approximately 4 °C.",
+   "new": "They observed the capillary column — and therefore the water volume — decrease as temperature dropped from 20 °C towards 4 °C. Below 4 °C the rise in volume is tiny (about 0.01%), so it was seen only by pooling class data, or in the video or teacher demonstration, as a flat or slightly rising curve near 4 °C.",
+   "criteria": [
+    6
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-LES-CLOSE-2",
+   "why": "Automatic lesson check (SCIENCE): Lesson 4 Observe summary claims a flask-and-capillary experiment shows a U-shaped curve with volume rising visibly between 4 and 0 °C, while the lesson itself admits the rise is only ~0.01% and may not be visible; the summary overstates. Fix applied: Reword the summary to say the 4 to 0 °C rise is tiny (about 0.01%) and may be seen only by pooling class data or by video or teacher demo, and keep the 9% freezing step separate in the causal chain. Verified by two independent checks: consistent with the teachers' responses, with KICD, and scientifically correct; processed as final. Please look closely: this one involves a judgement call or a science statement.",
+   "reference": "Water has maximum density near 4 °C; volume rises only about 0.01% between 4 and 0 °C, and freezing at 0 °C adds about 9% (density of ice 0.917 g/cm³).",
+   "id": "phys_1_3-r2-les-fin-002",
+   "group_headline": "Automatic fix to look at closely (science correction)",
+   "where": "Lesson 4, summaryTablePrompt.observed",
+   "applied_at": "2026-11-09T23:55:03"
+  },
+  {
+   "id": "phys_1_3-r2-les-prop-001",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[4].teacherMoves",
+   "old": "MODEL BRIEF (73–76 min)",
+   "new": "MODEL BRIEF (73–75 min)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-PROPOSED-1",
+   "why": "Automatic lesson check (TIMING): The model-building phase runs through minute 80 including a 30-second closing commit, but the DQB phase ends at 73 min and the model brief starts at 73 min; the 4-minute construction window (76–80) plus a closing commit at minute 80 leaves no time, so the phases do not fit consistently. Additionally Recommendation: Rebuild the Lesson 1 timeline so each phase ends before the next begins and the model-building phase finishes by minute 80. This needs activity cuts, e.g. shorten the Predict share-out, the Observe debrief or the DQB clustering. Reason: The overlaps are real: Observe runs 18–35 with a 10-minute wait inside 20–28 plus the 28–30 bridge, and DQB ends 73 while the closing commit sits at 80, so the block is over-packed. Fixing it means ch Origin: PRE_EXISTING. Not changed: needs a human choice. PROPOSED ANSWER, now built into the lesson (keep it, or edit it in place): Keep the five phase blocks (Predict 0–18, Observe 18–35, Explain 35–58, DQB 58–73, Model Building 73–80) and re-time inside the last block so the closing commit falls within the 80 minutes. Model brief becomes 73–75, silent construction 75–79 (the 4-minute wait is unchanged), and the 30-second closing commit and collection 79–80. Also shorten the Observe silent-work window to 8 minutes (20–28) so it no longer overlaps the 28–30 Kenyan context bridge. Total lesson time stays 80 minutes. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
+   "group_headline": "Proposed answer built in (please review, keep or edit): The model-building phase runs through minute 80 including a 30-second closing commit, but the DQB phase ends at 73 min and the mod",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-11-10T00:23:09"
+  },
+  {
+   "id": "phys_1_3-r2-les-prop-002",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[4].teacherMoves",
+   "old": "INDIVIDUAL CONSTRUCTION (76–80 min)",
+   "new": "INDIVIDUAL CONSTRUCTION (75–79 min)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-PROPOSED-1",
+   "why": "Automatic lesson check (TIMING): The model-building phase runs through minute 80 including a 30-second closing commit, but the DQB phase ends at 73 min and the model brief starts at 73 min; the 4-minute construction window (76–80) plus a closing commit at minute 80 leaves no time, so the phases do not fit consistently. Additionally Recommendation: Rebuild the Lesson 1 timeline so each phase ends before the next begins and the model-building phase finishes by minute 80. This needs activity cuts, e.g. shorten the Predict share-out, the Observe debrief or the DQB clustering. Reason: The overlaps are real: Observe runs 18–35 with a 10-minute wait inside 20–28 plus the 28–30 bridge, and DQB ends 73 while the closing commit sits at 80, so the block is over-packed. Fixing it means ch Origin: PRE_EXISTING. Not changed: needs a human choice. PROPOSED ANSWER, now built into the lesson (keep it, or edit it in place): Keep the five phase blocks (Predict 0–18, Observe 18–35, Explain 35–58, DQB 58–73, Model Building 73–80) and re-time inside the last block so the closing commit falls within the 80 minutes. Model brief becomes 73–75, silent construction 75–79 (the 4-minute wait is unchanged), and the 30-second closing commit and collection 79–80. Also shorten the Observe silent-work window to 8 minutes (20–28) so it no longer overlaps the 28–30 Kenyan context bridge. Total lesson time stays 80 minutes. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-11-10T00:23:09"
+  },
+  {
+   "id": "phys_1_3-r2-les-prop-003",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[4].teacherMoves",
+   "old": "CLOSING COMMIT (80 min)",
+   "new": "CLOSING COMMIT (79–80 min)",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-PROPOSED-1",
+   "why": "Automatic lesson check (TIMING): The model-building phase runs through minute 80 including a 30-second closing commit, but the DQB phase ends at 73 min and the model brief starts at 73 min; the 4-minute construction window (76–80) plus a closing commit at minute 80 leaves no time, so the phases do not fit consistently. Additionally Recommendation: Rebuild the Lesson 1 timeline so each phase ends before the next begins and the model-building phase finishes by minute 80. This needs activity cuts, e.g. shorten the Predict share-out, the Observe debrief or the DQB clustering. Reason: The overlaps are real: Observe runs 18–35 with a 10-minute wait inside 20–28 plus the 28–30 bridge, and DQB ends 73 while the closing commit sits at 80, so the block is over-packed. Fixing it means ch Origin: PRE_EXISTING. Not changed: needs a human choice. PROPOSED ANSWER, now built into the lesson (keep it, or edit it in place): Keep the five phase blocks (Predict 0–18, Observe 18–35, Explain 35–58, DQB 58–73, Model Building 73–80) and re-time inside the last block so the closing commit falls within the 80 minutes. Model brief becomes 73–75, silent construction 75–79 (the 4-minute wait is unchanged), and the 30-second closing commit and collection 79–80. Also shorten the Observe silent-work window to 8 minutes (20–28) so it no longer overlaps the 28–30 Kenyan context bridge. Total lesson time stays 80 minutes. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
+   "where": "Lesson 1, Model Building Phase, teacherMoves",
+   "applied_at": "2026-11-10T00:23:09"
+  },
+  {
+   "id": "phys_1_3-r2-les-prop-004",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[1].teacherMoves",
+   "old": "WAIT 10 minutes with timer visible.",
+   "new": "WAIT 8 minutes with timer visible (20–28 min).",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-PROPOSED-1",
+   "why": "Automatic lesson check (TIMING): The model-building phase runs through minute 80 including a 30-second closing commit, but the DQB phase ends at 73 min and the model brief starts at 73 min; the 4-minute construction window (76–80) plus a closing commit at minute 80 leaves no time, so the phases do not fit consistently. Additionally Recommendation: Rebuild the Lesson 1 timeline so each phase ends before the next begins and the model-building phase finishes by minute 80. This needs activity cuts, e.g. shorten the Predict share-out, the Observe debrief or the DQB clustering. Reason: The overlaps are real: Observe runs 18–35 with a 10-minute wait inside 20–28 plus the 28–30 bridge, and DQB ends 73 while the closing commit sits at 80, so the block is over-packed. Fixing it means ch Origin: PRE_EXISTING. Not changed: needs a human choice. PROPOSED ANSWER, now built into the lesson (keep it, or edit it in place): Keep the five phase blocks (Predict 0–18, Observe 18–35, Explain 35–58, DQB 58–73, Model Building 73–80) and re-time inside the last block so the closing commit falls within the 80 minutes. Model brief becomes 73–75, silent construction 75–79 (the 4-minute wait is unchanged), and the 30-second closing commit and collection 79–80. Also shorten the Observe silent-work window to 8 minutes (20–28) so it no longer overlaps the 28–30 Kenyan context bridge. Total lesson time stays 80 minutes. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
+   "where": "Lesson 1, Observe Phase, teacherMoves",
+   "applied_at": "2026-11-10T00:23:09"
+  },
+  {
+   "id": "phys_1_3-r2-les-prop-005",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[1].learnerExperience",
+   "old": "Pairs spend 10 minutes completing the Observation Record in silence",
+   "new": "Pairs spend 8 minutes completing the Observation Record in silence",
+   "criteria": [
+    3
+   ],
+   "category": "timing",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-PROPOSED-1",
+   "why": "Automatic lesson check (TIMING): The model-building phase runs through minute 80 including a 30-second closing commit, but the DQB phase ends at 73 min and the model brief starts at 73 min; the 4-minute construction window (76–80) plus a closing commit at minute 80 leaves no time, so the phases do not fit consistently. Additionally Recommendation: Rebuild the Lesson 1 timeline so each phase ends before the next begins and the model-building phase finishes by minute 80. This needs activity cuts, e.g. shorten the Predict share-out, the Observe debrief or the DQB clustering. Reason: The overlaps are real: Observe runs 18–35 with a 10-minute wait inside 20–28 plus the 28–30 bridge, and DQB ends 73 while the closing commit sits at 80, so the block is over-packed. Fixing it means ch Origin: PRE_EXISTING. Not changed: needs a human choice. PROPOSED ANSWER, now built into the lesson (keep it, or edit it in place): Keep the five phase blocks (Predict 0–18, Observe 18–35, Explain 35–58, DQB 58–73, Model Building 73–80) and re-time inside the last block so the closing commit falls within the 80 minutes. Model brief becomes 73–75, silent construction 75–79 (the 4-minute wait is unchanged), and the 30-second closing commit and collection 79–80. Also shorten the Observe silent-work window to 8 minutes (20–28) so it no longer overlaps the 28–30 Kenyan context bridge. Total lesson time stays 80 minutes. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
+   "where": "Lesson 1, Observe Phase, learnerExperience",
+   "applied_at": "2026-11-10T00:23:09"
+  },
+  {
+   "id": "phys_1_3-r2-les-auto-015",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 1,
+   "path": "framework[2].teacherMoves",
+   "old": "that is what the next four lessons will do",
+   "new": "that is what the next five lessons will do",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-LES-AUTO",
+   "why": "Automatic lesson check (round 1), CROSS_REFERENCE: After Lesson 1 there are five further lessons (2-6), not four. The statement 'next four lessons' does not match the sequence. Confirmed by a second reviewer; correction is unambiguous.",
+   "group_headline": "Lesson text corrected by the automatic consistency check",
+   "where": "Lesson 1, Explain Phase, teacherMoves",
+   "applied_at": "2026-11-10T00:24:31"
+  },
+  {
+   "id": "phys_1_3-r2-vfix2-001",
+   "kind": "edit",
+   "target": "lesson",
+   "lesson": 4,
+   "path": "summaryTablePrompt.observed",
+   "old": "Below 4 °C the rise in volume is tiny (about 0.01%), so it was seen only by pooling class data, or in the video or teacher demonstration, as a flat or slightly rising curve near 4 °C.",
+   "new": "Below 4 °C the column rose again slightly, giving a minimum near 4 °C; the rise is tiny (about 0.01%), so groups may need to pool class data or use the video or teacher demonstration to see it clearly.",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-VERIFY-FIX",
+   "why": "Second three-criteria check: the earlier wording said the rise below 4 °C was seen only by pooling data or demonstration, but the Lesson 4 Explain phase and the Final Explanation both treat it as the learners' own graph result. The summary now agrees with both, and still says the rise is tiny. A teacher should confirm that groups can see the rise with their equipment.",
+   "where": "Lesson 4, summaryTablePrompt.observed",
+   "applied_at": "2026-11-10T11:25:23"
+  },
+  {
+   "id": "phys_1_3-r2-prop2-001",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "Learners then independently solve a parallel problem: A Kenya Power overhead copper conductor cable",
+   "new": "Learners then independently solve a parallel problem. This is a different cable from the aluminium one in Lesson 3, so expect a different alpha and answer: A Kenya Power overhead copper conductor cable",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Reviewer: Lesson 5 and Lesson 3 give different cable problems. Lesson 3 uses an aluminium cable near Kisumu (25.3 cm over 200 m, 55 C rise, alpha 23e-6); Lesson 5 uses a copper cable near Nairobi (8.5 cm over 200 m, 25 C rise, alpha 17e-6). Both are internally consistent, but a copper/aluminium and Kisumu/Nairobi mismatch could confuse learners; teachers may accept two examples. The FE (Section 5b) says copper cables between Nairobi and Thika, matching Lesson 5; no FE edit. PROPOSED ANSWER, now built in (keep it, or edit it in place): Keep both cable problems, since each is correct and gives practice with a different material and temperature rise. Add one short sentence to Lesson 5 stating that this is a second, different cable example (copper, Nairobi-Thika) from the Lesson 3 aluminium Kisumu one, so learners expect a different alpha and answer. The FE already follows Lesson 5 (copper, Nairobi-Thika), so it needs no change. Alternative: Change the Lesson 5 problem to the aluminium Kisumu cable of Lesson 3 and update its numbers, the summary table and the FE Section 5b to match.",
+   "lesson": 5,
+   "group_headline": "Open question settled with a proposed answer built in (keep or edit)",
+   "where": "Lesson 5, Explain Phase, learnerExperience",
+   "applied_at": "2026-11-10T11:46:08"
+  },
+  {
+   "id": "phys_1_3-r2-prop2-002",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "substrand",
+   "old": "Sub-Strand 1.3: Temperature and Thermal Expansion",
+   "new": "Sub-Strand 1.4: Temperature and Thermal Expansion",
+   "criteria": [
+    9,
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Teacher (phys_1_3-045): a railway example may return only after confirmation from Kenya Railways or a qualified engineer. All SGR/railway references were replaced with a generic steel bridge girder (same numbers); no railway example is currently in the sequence. The remaining Application Card (Lesson 5) still describes a bridge joint generically; the Kenya Power cable and Nairobi Expressway slab wording were not part of the request. Please confirm whether to restore a railway example once verified. PROPOSED ANSWER, now built in (keep it, or edit it in place): Do not restore a railway example. The teacher decision allows one only after confirmation from Kenya Railways or a qualified engineer, and no confirmation is on record. Keep bridge expansion joints as the main Kenyan application, as Lessons 3 and 5 already do, and note that a railway example can be added later once verified. The one change needed is to apply the binding sub-strand numbering correction (1.4) in the places that still say 1.3, such as Lesson 1's substrand field. Internal file identifiers stay as they are. Alternative: Add a railway expansion-gap example now, clearly labelled as a general (non-Kenyan) illustration, until Kenya Railways confirms details. Also affects: Unit overview, supportingPhenomena and assessment contract documents (not shown here) must also use 1.4 and the four CBE performance levels. The FE rubric already has all four levels.",
+   "lesson": 1,
+   "group_headline": "Open question settled with a proposed answer built in (keep or edit)",
+   "where": "Lesson 1, substrand",
+   "applied_at": "2026-11-10T12:22:10"
+  },
+  {
+   "id": "phys_1_3-r2-prop2-003",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.purposeInStoryline",
+   "old": "all lessons in Sub-Strand 1.3.",
+   "new": "all lessons in Sub-Strand 1.4.",
+   "criteria": [
+    9,
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Teacher (phys_1_3-045): a railway example may return only after confirmation from Kenya Railways or a qualified engineer. All SGR/railway references were replaced with a generic steel bridge girder (same numbers); no railway example is currently in the sequence. The remaining Application Card (Lesson 5) still describes a bridge joint generically; the Kenya Power cable and Nairobi Expressway slab wording were not part of the request. Please confirm whether to restore a railway example once verified. PROPOSED ANSWER, now built in (keep it, or edit it in place): Do not restore a railway example. The teacher decision allows one only after confirmation from Kenya Railways or a qualified engineer, and no confirmation is on record. Keep bridge expansion joints as the main Kenyan application, as Lessons 3 and 5 already do, and note that a railway example can be added later once verified. The one change needed is to apply the binding sub-strand numbering correction (1.4) in the places that still say 1.3, such as Lesson 1's substrand field. Internal file identifiers stay as they are. Alternative: Add a railway expansion-gap example now, clearly labelled as a general (non-Kenyan) illustration, until Kenya Railways confirms details. Also affects: Unit overview, supportingPhenomena and assessment contract documents (not shown here) must also use 1.4 and the four CBE performance levels. The FE rubric already has all four levels.",
+   "lesson": 1,
+   "where": "Lesson 1, slo.purposeInStoryline",
+   "applied_at": "2026-11-10T12:22:10"
+  },
+  {
+   "id": "phys_1_3-r2-prop2-004",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "substrand",
+   "old": "Sub-Strand 1.3: Temperature and Thermal Expansion",
+   "new": "Sub-Strand 1.4: Temperature and Thermal Expansion",
+   "criteria": [
+    9,
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Teacher (phys_1_3-045): a railway example may return only after confirmation from Kenya Railways or a qualified engineer. All SGR/railway references were replaced with a generic steel bridge girder (same numbers); no railway example is currently in the sequence. The remaining Application Card (Lesson 5) still describes a bridge joint generically; the Kenya Power cable and Nairobi Expressway slab wording were not part of the request. Please confirm whether to restore a railway example once verified. PROPOSED ANSWER, now built in (keep it, or edit it in place): Do not restore a railway example. The teacher decision allows one only after confirmation from Kenya Railways or a qualified engineer, and no confirmation is on record. Keep bridge expansion joints as the main Kenyan application, as Lessons 3 and 5 already do, and note that a railway example can be added later once verified. The one change needed is to apply the binding sub-strand numbering correction (1.4) in the places that still say 1.3, such as Lesson 1's substrand field. Internal file identifiers stay as they are. Alternative: Add a railway expansion-gap example now, clearly labelled as a general (non-Kenyan) illustration, until Kenya Railways confirms details. Also affects: Unit overview, supportingPhenomena and assessment contract documents (not shown here) must also use 1.4 and the four CBE performance levels. The FE rubric already has all four levels.",
+   "lesson": 2,
+   "where": "Lesson 2, substrand",
+   "applied_at": "2026-11-10T12:22:10"
+  },
+  {
+   "id": "phys_1_3-r2-prop2-005",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "substrand",
+   "old": "Sub-Strand 1.3: Temperature and Thermal Expansion",
+   "new": "Sub-Strand 1.4: Temperature and Thermal Expansion",
+   "criteria": [
+    9,
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Teacher (phys_1_3-045): a railway example may return only after confirmation from Kenya Railways or a qualified engineer. All SGR/railway references were replaced with a generic steel bridge girder (same numbers); no railway example is currently in the sequence. The remaining Application Card (Lesson 5) still describes a bridge joint generically; the Kenya Power cable and Nairobi Expressway slab wording were not part of the request. Please confirm whether to restore a railway example once verified. PROPOSED ANSWER, now built in (keep it, or edit it in place): Do not restore a railway example. The teacher decision allows one only after confirmation from Kenya Railways or a qualified engineer, and no confirmation is on record. Keep bridge expansion joints as the main Kenyan application, as Lessons 3 and 5 already do, and note that a railway example can be added later once verified. The one change needed is to apply the binding sub-strand numbering correction (1.4) in the places that still say 1.3, such as Lesson 1's substrand field. Internal file identifiers stay as they are. Alternative: Add a railway expansion-gap example now, clearly labelled as a general (non-Kenyan) illustration, until Kenya Railways confirms details. Also affects: Unit overview, supportingPhenomena and assessment contract documents (not shown here) must also use 1.4 and the four CBE performance levels. The FE rubric already has all four levels.",
+   "lesson": 3,
+   "where": "Lesson 3, substrand",
+   "applied_at": "2026-11-10T12:22:10"
+  },
+  {
+   "id": "phys_1_3-r2-prop2-006",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "substrand",
+   "old": "Sub-Strand 1.3: Temperature and Thermal Expansion",
+   "new": "Sub-Strand 1.4: Temperature and Thermal Expansion",
+   "criteria": [
+    9,
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Teacher (phys_1_3-045): a railway example may return only after confirmation from Kenya Railways or a qualified engineer. All SGR/railway references were replaced with a generic steel bridge girder (same numbers); no railway example is currently in the sequence. The remaining Application Card (Lesson 5) still describes a bridge joint generically; the Kenya Power cable and Nairobi Expressway slab wording were not part of the request. Please confirm whether to restore a railway example once verified. PROPOSED ANSWER, now built in (keep it, or edit it in place): Do not restore a railway example. The teacher decision allows one only after confirmation from Kenya Railways or a qualified engineer, and no confirmation is on record. Keep bridge expansion joints as the main Kenyan application, as Lessons 3 and 5 already do, and note that a railway example can be added later once verified. The one change needed is to apply the binding sub-strand numbering correction (1.4) in the places that still say 1.3, such as Lesson 1's substrand field. Internal file identifiers stay as they are. Alternative: Add a railway expansion-gap example now, clearly labelled as a general (non-Kenyan) illustration, until Kenya Railways confirms details. Also affects: Unit overview, supportingPhenomena and assessment contract documents (not shown here) must also use 1.4 and the four CBE performance levels. The FE rubric already has all four levels.",
+   "lesson": 4,
+   "where": "Lesson 4, substrand",
+   "applied_at": "2026-11-10T12:22:10"
+  },
+  {
+   "id": "phys_1_3-r2-prop2-007",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "substrand",
+   "old": "1.3 Temperature and Thermal Expansion",
+   "new": "1.4 Temperature and Thermal Expansion",
+   "criteria": [
+    9,
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Teacher (phys_1_3-045): a railway example may return only after confirmation from Kenya Railways or a qualified engineer. All SGR/railway references were replaced with a generic steel bridge girder (same numbers); no railway example is currently in the sequence. The remaining Application Card (Lesson 5) still describes a bridge joint generically; the Kenya Power cable and Nairobi Expressway slab wording were not part of the request. Please confirm whether to restore a railway example once verified. PROPOSED ANSWER, now built in (keep it, or edit it in place): Do not restore a railway example. The teacher decision allows one only after confirmation from Kenya Railways or a qualified engineer, and no confirmation is on record. Keep bridge expansion joints as the main Kenyan application, as Lessons 3 and 5 already do, and note that a railway example can be added later once verified. The one change needed is to apply the binding sub-strand numbering correction (1.4) in the places that still say 1.3, such as Lesson 1's substrand field. Internal file identifiers stay as they are. Alternative: Add a railway expansion-gap example now, clearly labelled as a general (non-Kenyan) illustration, until Kenya Railways confirms details. Also affects: Unit overview, supportingPhenomena and assessment contract documents (not shown here) must also use 1.4 and the four CBE performance levels. The FE rubric already has all four levels.",
+   "lesson": 5,
+   "where": "Lesson 5, substrand",
+   "applied_at": "2026-11-10T12:22:10"
+  },
+  {
+   "id": "phys_1_3-r2-prop2-008",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "substrand",
+   "old": "Sub-Strand 1.3: Temperature and Thermal Expansion",
+   "new": "Sub-Strand 1.4: Temperature and Thermal Expansion",
+   "criteria": [
+    9,
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Teacher (phys_1_3-045): a railway example may return only after confirmation from Kenya Railways or a qualified engineer. All SGR/railway references were replaced with a generic steel bridge girder (same numbers); no railway example is currently in the sequence. The remaining Application Card (Lesson 5) still describes a bridge joint generically; the Kenya Power cable and Nairobi Expressway slab wording were not part of the request. Please confirm whether to restore a railway example once verified. PROPOSED ANSWER, now built in (keep it, or edit it in place): Do not restore a railway example. The teacher decision allows one only after confirmation from Kenya Railways or a qualified engineer, and no confirmation is on record. Keep bridge expansion joints as the main Kenyan application, as Lessons 3 and 5 already do, and note that a railway example can be added later once verified. The one change needed is to apply the binding sub-strand numbering correction (1.4) in the places that still say 1.3, such as Lesson 1's substrand field. Internal file identifiers stay as they are. Alternative: Add a railway expansion-gap example now, clearly labelled as a general (non-Kenyan) illustration, until Kenya Railways confirms details. Also affects: Unit overview, supportingPhenomena and assessment contract documents (not shown here) must also use 1.4 and the four CBE performance levels. The FE rubric already has all four levels.",
+   "lesson": 6,
+   "where": "Lesson 6, substrand",
+   "applied_at": "2026-11-10T12:22:10"
+  },
+  {
+   "id": "phys_1_3-r2-prop2-009",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "subjectLabel",
+   "old": "Sub-strand 1.3 Temperature and Thermal Expansion",
+   "new": "Sub-strand 1.4 Temperature and Thermal Expansion",
+   "criteria": [
+    9,
+    8
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Teacher (phys_1_3-045): a railway example may return only after confirmation from Kenya Railways or a qualified engineer. All SGR/railway references were replaced with a generic steel bridge girder (same numbers); no railway example is currently in the sequence. The remaining Application Card (Lesson 5) still describes a bridge joint generically; the Kenya Power cable and Nairobi Expressway slab wording were not part of the request. Please confirm whether to restore a railway example once verified. PROPOSED ANSWER, now built in (keep it, or edit it in place): Do not restore a railway example. The teacher decision allows one only after confirmation from Kenya Railways or a qualified engineer, and no confirmation is on record. Keep bridge expansion joints as the main Kenyan application, as Lessons 3 and 5 already do, and note that a railway example can be added later once verified. The one change needed is to apply the binding sub-strand numbering correction (1.4) in the places that still say 1.3, such as Lesson 1's substrand field. Internal file identifiers stay as they are. Alternative: Add a railway expansion-gap example now, clearly labelled as a general (non-Kenyan) illustration, until Kenya Railways confirms details. Also affects: Unit overview, supportingPhenomena and assessment contract documents (not shown here) must also use 1.4 and the four CBE performance levels. The FE rubric already has all four levels.",
+   "where": "Final Explanation, subjectLabel",
+   "applied_at": "2026-11-10T12:22:10"
+  },
+  {
+   "id": "phys_1_3-r2-fe-auto-002",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "sections[3].prompt",
+   "value": "In Lesson 4 you cooled water in a flask with a capillary tube and recorded how the water column changed with temperature. (a) Describe the shape of the temperature-volume curve for water cooling from 20 °C to 0 °C, using your pooled class data or the demonstration or video if your own readings did not show it clearly, and say what it shows about the volume at about 4 °C. (b) State the temperature at which water has its greatest density, and say how this differs from most substances. (c) Liquid water has a density of about 1.00 g/cm³ and ice at 0 °C about 0.917 g/cm³. Taking 500 ml of liquid water to have a mass of 500 g, calculate the volume of the ice and the increase in volume in ml, and give this as a percentage of 500 ml. (d) Explain why the formula ΔV = γV₀ΔT does not by itself describe this freezing change.",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-FE-AUTO",
+   "why": "Automatic Final Explanation check (round 2): the lessons are the authority and the FE did not follow them. Findings (SCIENCE), each confirmed by a second reviewer: SCIENCE: Lesson 4 says the rise below 4 °C is only about 0.01% and that some groups will see no rise at all (a flat, noisy curve is expected). The exemplar presents a cl",
+   "group_headline": "Final Explanation brought in line with the lessons by the automatic consistency check",
+   "old": "In Lesson 4 you cooled water in a flask with a capillary tube and plotted a temperature-volume graph. (a) Describe the shape of your graph as the water cooled from 20 °C to 0 °C and say what it shows about the volume at about 4 °C. (b) State the temperature at which water has its greatest density, and say how this differs from most substances. (c) Liquid water has a density of about 1.00 g/cm³ and ice at 0 °C about 0.917 g/cm³. Taking 500 ml of liquid water to have a mass of 500 g, calculate the volume of the ice and the increase in volume in ml, and give this as a percentage of 500 ml. (d) Explain why the formula ΔV = γV₀ΔT does not by itself describe this freezing change.",
+   "new": "In Lesson 4 you cooled water in a flask with a capillary tube and recorded how the water column changed with temperature. (a) Describe the shape of the temperature-volume curve for water cooling from 20 °C to 0 °C, using your pooled class data or the demonstration or video if your own readings did not show it clearly, and say what it shows about the volume at about 4 °C. (b) State the temperature at which water has its greatest density, and say how this differs from most substances. (c) Liquid water has a density of about 1.00 g/cm³ and ice at 0 °C about 0.917 g/cm³. Taking 500 ml of liquid water to have a mass of 500 g, calculate the volume of the ice and the increase in volume in ml, and give this as a percentage of 500 ml. (d) Explain why the formula ΔV = γV₀ΔT does not by itself describe this freezing change.",
+   "where": "Final Explanation, Section 4: Water Is Different: Evidence and Calculation, prompt",
+   "applied_at": "2026-11-10T12:42:46"
+  },
+  {
+   "id": "phys_1_3-r2-fe-auto-003",
+   "kind": "set",
+   "target": "final_explanation",
+   "path": "sections[3].exemplar",
+   "value": "(a) The curve is U-shaped. As water cooled from 20 °C the capillary column fell, so the volume decreased, until about 4 °C where the volume was at a minimum. Below 4 °C the volume rises again as the water cools toward 0 °C, but this rise is tiny (only about 0.01%), so it may be seen clearly only in pooled class data, the video or the teacher demonstration, and a single group's curve may look flat and noisy near 4 °C. (b) Water has its greatest density at 4 °C, because its volume is smallest there. Most substances keep getting denser and smaller as they cool, so water is anomalous. (c) Volume of ice = mass ÷ density = 500 g ÷ 0.917 g/cm³ = about 545 cm³ (545 ml). Increase = 545 - 500 = about 45 ml. Percentage = 45 ÷ 500 × 100 = about 9%. (d) ΔV = γV₀ΔT describes ordinary expansion where volume increases as temperature rises in a single phase. Here the volume increases as the temperature falls and the water changes state from liquid to a hexagonal ice lattice. This is a phase-change effect that goes beyond the formula. In the sealed bottle, a 9% increase of about 45 ml had nowhere to go, so the pressure on the glass rose until the glass cracked.",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-FE-AUTO",
+   "why": "Automatic Final Explanation check (round 2): the lessons are the authority and the FE did not follow them. Findings (SCIENCE), each confirmed by a second reviewer: SCIENCE: Lesson 4 says the rise below 4 °C is only about 0.01% and that some groups will see no rise at all (a flat, noisy curve is expected). The exemplar presents a cl",
+   "old": "(a) The graph is U-shaped. As water cooled from 20 °C the capillary column fell, so the volume decreased, until about 4 °C where the volume was at a minimum. Below 4 °C the column rose again, so the volume increased as the water cooled toward 0 °C. (b) Water has its greatest density at 4 °C, because its volume is smallest there. Most substances keep getting denser and smaller as they cool, so water is anomalous. (c) Volume of ice = mass ÷ density = 500 g ÷ 0.917 g/cm³ = about 545 cm³ (545 ml). Increase = 545 - 500 = about 45 ml. Percentage = 45 ÷ 500 × 100 = about 9%. (d) ΔV = γV₀ΔT describes ordinary expansion where volume increases as temperature rises in a single phase. Here the volume increases as the temperature falls and the water changes state from liquid to a hexagonal ice lattice. This is a phase-change effect that goes beyond the formula. In the sealed bottle, a 9% increase of about 45 ml had nowhere to go, so the pressure on the glass rose until the glass cracked.",
+   "new": "(a) The curve is U-shaped. As water cooled from 20 °C the capillary column fell, so the volume decreased, until about 4 °C where the volume was at a minimum. Below 4 °C the volume rises again as the water cools toward 0 °C, but this rise is tiny (only about 0.01%), so it may be seen clearly only in pooled class data, the video or the teacher demonstration, and a single group's curve may look flat and noisy near 4 °C. (b) Water has its greatest density at 4 °C, because its volume is smallest there. Most substances keep getting denser and smaller as they cool, so water is anomalous. (c) Volume of ice = mass ÷ density = 500 g ÷ 0.917 g/cm³ = about 545 cm³ (545 ml). Increase = 545 - 500 = about 45 ml. Percentage = 45 ÷ 500 × 100 = about 9%. (d) ΔV = γV₀ΔT describes ordinary expansion where volume increases as temperature rises in a single phase. Here the volume increases as the temperature falls and the water changes state from liquid to a hexagonal ice lattice. This is a phase-change effect that goes beyond the formula. In the sealed bottle, a 9% increase of about 45 ml had nowhere to go, so the pressure on the glass rose until the glass cracked.",
+   "where": "Final Explanation, Section 4: Water Is Different: Evidence and Calculation, exemplar",
+   "applied_at": "2026-11-10T12:42:46"
   }
  ]
 }

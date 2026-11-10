@@ -4429,21 +4429,6 @@
    "applied_at": "2026-11-09T09:20:44"
   },
   {
-   "id": "bio_3_2-224",
-   "kind": "flag",
-   "target": "final_explanation",
-   "criteria": [
-    10
-   ],
-   "category": "assessment",
-   "severity": "minor",
-   "teacher_decision": true,
-   "why": "Journal item bio_3_2-148 (teacher: 'Match with KICD', EDIT): the teacher wants the Final Explanation rubric to match KICD. KICD's own assessment rubrics use four levels (Exceeds, Meets, Approaches, Below Expectations) but the partner contract has only three level fields, so no structure change is made. Deferred: rubric, pending the partner. Please confirm that 'match KICD' means the four-level rubric only, or whether specific KICD descriptor wording is wanted.",
-   "location": "Final Explanation, rubric",
-   "where": "Final Explanation, rubric",
-   "applied_at": "2026-11-09T09:20:44"
-  },
-  {
    "id": "bio_3_2-r2-rub-001",
    "kind": "set",
    "target": "final_explanation",
@@ -4587,8 +4572,8 @@
     6
    ],
    "category": "science",
-   "group": "R2-LES-TRIAGE",
-   "group_headline": "Lesson inconsistencies found by the automatic check, with a recommendation",
+   "group": "R2-LES-CLOSE-1",
+   "group_headline": "Automatic fix to look at closely (science correction)",
    "kind": "edit",
    "target": "lesson",
    "lesson": 12,
@@ -4597,7 +4582,7 @@
    "new": "his muscles could not receive enough oxygen to sustain aerobic effort, because a low-pressure open system cannot direct oxygen-carrying fluid to working muscles on demand",
    "severity": "minor",
    "teacher_decision": true,
-   "why": "Automatic lesson check (SCIENCE): Overstated and inconsistent with the lesson's own point that insects are small and the grasshopper's haemolymph does not carry oxygen; also 'delivering 20+ litres of oxygenated blood per minute' conflates blood with oxygen; cardiac output in elite athletes is about 30-40 L/min so figure is fine, but Recommendation: Replace the unsupported 'fail within seconds' claim with a mechanistic statement consistent with Lesson 3. Reason: The 'within seconds' claim is unsupported by the plan; the lesson's own evidence is about oxygen delivery capacity, not timing. Origin: PRE_EXISTING.",
+   "why": "Automatic lesson check (SCIENCE): Overstated and inconsistent with the lesson's own point that insects are small and the grasshopper's haemolymph does not carry oxygen; also 'delivering 20+ litres of oxygenated blood per minute' conflates blood with oxygen; cardiac output in elite athletes is about 30-40 L/min so figure is fine, but Recommendation: Replace the unsupported 'fail within seconds' claim with a mechanistic statement consistent with Lesson 3. Reason: The 'within seconds' claim is unsupported by the plan; the lesson's own evidence is about oxygen delivery capacity, not timing. Origin: PRE_EXISTING. Verified by two independent checks: consistent with the teachers' responses, with KICD, and scientifically correct; processed as final. Please look closely: this one involves a judgement call or a science statement.",
    "reference": "Insects use tracheae for gas exchange; haemolymph does not carry O2 (Lesson 3); closed circulation delivers O2 via haemoglobin-rich blood.",
    "where": "Lesson 12, summaryTablePrompt.explained",
    "applied_at": "2026-11-09T22:31:25"
@@ -4617,9 +4602,30 @@
    "new": "a grasshopper panel with all 4 required labelled structures and annotations (dorsal vessel, ostia, haemocoel, haemolymph; ostia may be labelled from the diagram if not seen in dissection)",
    "severity": "minor",
    "teacher_decision": false,
-   "why": "Automatic lesson check (INTERNAL_CONTRADICTION): Lesson 3 Model Building asks learners to label 4 structures including ostia, though the observe phase says ostia often cannot be seen; also the model section says 'all 4 required labelled structures' but lists five annotations. Recommendation: Name the four structures in the check and allow ostia to be labelled from the diagram, consistent with the Observe phase. Reason: The four structures are named in the SLO; the fifth annotation is only the comparison arrow, so the count is consistent once clarified, and the Observe phase already allows diagram use for ostia. Origin: PRE_EXISTING.",
+   "why": "Automatic lesson check (INTERNAL_CONTRADICTION): Lesson 3 Model Building asks learners to label 4 structures including ostia, though the observe phase says ostia often cannot be seen; also the model section says 'all 4 required labelled structures' but lists five annotations. Recommendation: Name the four structures in the check and allow ostia to be labelled from the diagram, consistent with the Observe phase. Reason: The four structures are named in the SLO; the fifth annotation is only the comparison arrow, so the count is consistent once clarified, and the Observe phase already allows diagram use for ostia. Origin: PRE_EXISTING. Verified by two independent checks: consistent with the teachers' responses, with KICD, and scientifically correct; processed as final.",
    "where": "Lesson 3, Model Building Phase, formativeAssessment",
    "applied_at": "2026-11-09T22:31:25"
+  },
+  {
+   "id": "bio_3_2-r2-vfix-001",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "because a low-pressure open system cannot direct oxygen-carrying fluid to working muscles on demand",
+   "new": "because a low-pressure open system cannot move fluid quickly enough to working muscles on demand",
+   "criteria": [
+    14
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-VERIFY-FIX",
+   "why": "Three-criteria check (2026-11-10): The grasshopper's haemolymph does not carry oxygen (the same paragraph says so), so 'oxygen-carrying fluid' was wrong for an open system.",
+   "lesson": 12,
+   "reference": "Grade 10 Biology: insects' tracheae deliver oxygen directly to cells; haemolymph does not carry oxygen (KICD Biology 3.2).",
+   "where": "Lesson 12, summaryTablePrompt.explained",
+   "applied_at": "2026-11-10T09:38:47",
+   "group_headline": "Three-criteria check: small corrections to Round 2 changes (Final Explanation and lesson wording)."
   }
  ]
 }

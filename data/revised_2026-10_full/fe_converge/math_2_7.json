@@ -1,0 +1,65 @@
+{
+ "module": "math_2_7",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 3,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "The box and drum heights (129 cm and 105 cm) are as taught, so this is consistent. However, Lesson 1 says both containers 'stand about 1 m tall', while 129 cm versus 105 cm are given. That is a lesson",
+     "reason": "The FE's 129 cm vs 105 cm heights and the 24 cm difference match Lessons 1, 6 and 8; the 'about 1 m tall' wording is a lesson-level approximation, not an FE defect."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The drum's cross-section is 3,850 cm2 and the box's is 2,500 cm2, so the difference is 1,350 cm2. This is correct, so there is no defect here. The 24 cm height "
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "From 4 x 22/7 x r^2 = 30,800, r^2 = 2,450, so r = sqrt(2450) ≈ 49.5 cm. The sphere volume is then 4/3 x 22/7 x 49.5^3, which is about 508,000 cm3 = 508 litres. "
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "raw": 3,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "Sphere SA = 4*(22/7)*r^2 = 30,800 gives r^2 = 2,450, so r = sqrt(2450) ≈ 49.5 cm. Volume = 4/3*(22/7)*49.5^3 ≈ 508,000 cm3, so this is consistent. No defect.",
+     "reason": "Lesson 8 states r² = 2,450, r ≈ 49.5 cm and about 508 litres; the FE matches it and the arithmetic checks out, so there is no defect."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "3,850 - 2,500 = 1,350, which is correct. However the FE says the box's cross-section is 50 x 50 = 2,500 cm2 and the drum's base is larger, so the claim 'drum's "
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The arithmetic is correct, but the reasoning is not. The sphere's radius check in the same exemplar is fine, but the claim that a circle encloses more area than"
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

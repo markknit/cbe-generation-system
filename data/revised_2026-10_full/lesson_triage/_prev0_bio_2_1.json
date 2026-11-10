@@ -1,0 +1,127 @@
+{
+ "module": "bio_2_1",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 3 teacherMoves vs Lesson 1 teacherMoves (Lesson 1 Observe) / Lesson 3 Explain",
+    "problem": "Lesson 1 says Lesson 3 returns to the plants-eat-soil misconception (van Helmont), but Lesson 3 never addresses it. Lesson 1 also refers to a 'third image' twice: the Predict phase already has a third image (mango shade) and the Observe phase calls the mushroom/maize photograph a third image.",
+    "quote_a": "Say: Next lesson we will use iodine solution and ethanol to test a real leaf",
+    "quote_b": "Note the ideas and leave them open; Lessons 3 and 9 return to this.",
+    "correct_value": ""
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Reword Lesson 1 so the cross-references match what Lessons 3 and 9 actually do; the duplicate 'third image' wording is cosmetic.",
+   "reason": "Lesson 3 covers CO2 and water as raw materials and Lesson 9 covers minerals, but neither mentions van Helmont, so the promise is overstated.",
+   "decision": "FIX",
+   "lesson": 1,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 1,
+    "path": "framework[1].teacherMoves",
+    "old": "Note the ideas and leave them open; Lessons 3 and 9 return to this.",
+    "new": "Note the ideas and leave them open; Lesson 3 returns to what the plant takes in, and Lesson 9 to what the soil supplies."
+   },
+   "reference": "Van Helmont willow experiment; plant mass comes mainly from CO2 and water (photosynthesis)",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 3, Model Building teacherMoves",
+    "problem": "The Lesson 4 starch-test practical is skipped in the tagging, and other placements are consistent, but Lesson 4's own DQB says the question about what chlorophyll does with light is for Lesson 5 while Lesson 5 opens with the Elodea card rather than chlorophyll absorption; minor. The key mismatch: Lesson 3's Explain phase says stomatal dilemma will 'resurface in Lesson 5', but Lesson 5 does not discuss it.",
+    "quote_a": "Tag the oxygen question to Lesson 5, the glucose question to Lesson 6, the mineral question to Lesson 9.",
+    "quote_b": "Next lesson we will use iodine solution and ethanol to test a real leaf",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "No change.",
+   "reason": "The tags (oxygen to L5, glucose to L6, minerals to L9) are consistent, and 'next lesson' is the L4 starch test, which is correct; the stomatal-dilemma mismatch is a separate minor point.",
+   "decision": "NOT_REAL",
+   "lesson": 0,
+   "color": "WHITE"
+  },
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 7, purposeInStoryline",
+    "problem": "Lesson 6 covers the Calvin cycle; the raw materials were established in Lesson 3 and the light/chlorophyll evidence in Lesson 4.",
+    "quote_a": "In Lesson 6, learners established that light is a raw material/energy source for photosynthesis and began to explain why the shaded sukuma wiki turned pale.",
+    "quote_b": "Lesson 6 is the EXPLAIN phase for the light-independent reactions.",
+    "correct_value": "Lessons 3 and 4"
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Change the lesson reference to Lessons 3 and 4.",
+   "reason": "Light as a requirement was established in Lessons 3 and 4, not in Lesson 6, which covers the Calvin cycle.",
+   "decision": "FIX",
+   "lesson": 7,
+   "color": "ORANGE",
+   "why_orange": "edit path invalid",
+   "final": "orange kept: Light and chlorophyll were established in Lessons 3 and 4, not 6, so the cross-reference is fixed. The new wording also stops calling light a raw material, whic"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 8, Observe learnerExperience",
+    "problem": "Dataset B at 25 °C and 0.04% CO₂ gives rate 22, but Dataset A at 25 °C and 0.04% CO₂ gives 12; the same conditions give different rates.",
+    "quote_a": "Temperature (5 °C, 10 °C, 15 °C, 20 °C, 25 °C, 30 °C, 35 °C, 40 °C, 45 °C) vs. relative rate of photosynthesis at constant light and 0.04% CO₂ — values 2, 4, 9, 15, 22, 28, 30, 22, 6",
+    "quote_b": "Dataset A: CO₂ concentration (0.01%, 0.04%, 0.08%, 0.16%, 0.32%) vs. relative rate of photosynthesis (measured in units of O₂ released per minute) at constant light and 25 °C — values 4, 12, 20, 26, 28",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Change the temperature values so 25 °C gives 12, matching Dataset A, while keeping the rise, peak near 35 °C and sharp fall.",
+   "reason": "The same conditions (25 °C, 0.04% CO2) currently give 12 in one dataset and 22 in the other.",
+   "decision": "FIX",
+   "lesson": 8,
+   "color": "WHITE",
+   "reference": "Illustrative data must be self-consistent: same conditions give same rate; enzyme rate peaks near the optimum then falls",
+   "why_orange": "demoted by me: edit too large/risky to apply automatically",
+   "final": "fixed by the finalise pass"
+  },
+  {
+   "item": {
+    "type": "TIMING",
+    "where": "Lesson 4, framework Observe teacherMoves",
+    "problem": "The listed phase times plus transitions come to 40 only if the 1-minute change-of-activity allowance is counted, but the Observe phase's own steps (2 min boiling, 5-7 min ethanol, rinse, 1-2 min iodine, recording, 1 min comparison) plus the demonstration do not fit in 17 minutes. The stated sum is also inconsistent with the Explain phase content.",
+    "quote_a": "TIME BUDGET (40 minutes): Predict 5, Observe 17, Explain 8, DQB 4, Model Building 5 (about 1 minute for changes of activity).",
+    "quote_b": "",
+    "correct_value": "5+17+8+4+5 = 39",
+    "note": "fixer could not make an exact small edit: The 40-minute lesson cannot be balanced with small find-and-replace edits. The Observe phase needs 25 or more minutes for a demonstration, 2 min boiling, 5-7 min ethanol, rinse, 1-2 min iodine, recording and 1 min comparison, but only 17 are allotted. Fixing this means cutting or restructuring Predict, Explain, DQB and Model Building content (or extending the lesson), which goes beyond exact small edits and would change the teaching and structure."
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Pre-boil and pre-decolourise leaves so the Observe phase fits, or move the ethanol step to a demonstration or the previous lesson.",
+   "reason": "The practical steps (2 min boil, 5 min ethanol, rinse, iodine, recording, demo) cannot fit in 17 minutes, and the stated 5+17+8+4+5 sums to 39; fixing this needs a teacher's choice about which activities to cut.",
+   "decision": "HUMAN",
+   "lesson": 4,
+   "color": "ORANGE",
+   "why_orange": "needs a human choice",
+   "final": "orange kept: The teacher text is edited to name the pre-preparation that makes the timing work, but this is a judgement call that changes how the practical runs. Whether to "
+  },
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 1, Observe teacherMoves",
+    "problem": "Lesson 9 is about minerals, and the van Helmont idea (the plant's mass comes from air and water) is not revisited there. Lesson 3 does not return to it either.",
+    "quote_a": "Note the ideas and leave them open; Lessons 3 and 9 return to this.",
+    "quote_b": "",
+    "correct_value": ""
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Apply the same single edit as item 0, since it is the same sentence.",
+   "reason": "It duplicates item 0: neither Lesson 3 nor Lesson 9 revisits van Helmont.",
+   "decision": "FIX",
+   "lesson": 1,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 1,
+    "path": "framework[1].teacherMoves",
+    "old": "Note the ideas and leave them open; Lessons 3 and 9 return to this.",
+    "new": "Note the ideas and leave them open; Lesson 3 returns to what the plant takes in, and Lesson 9 to what the soil supplies."
+   },
+   "reference": "Van Helmont willow experiment; plant mass comes mainly from CO2 and water (photosynthesis)",
+   "final": "completed (same passage as another verified edit)"
+  }
+ ],
+ "applied": "  rejected bio_2_1-r2-les-tri-006: old text occurs 0 times (need exactly 1) | "
+}

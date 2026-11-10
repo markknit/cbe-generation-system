@@ -1,0 +1,55 @@
+{
+ "module": "math_1_3",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 2,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "The L-shape left after cutting a 4 cm square from a 10 cm square has arms 6 wide, so the pieces would be 10 by 6 and 6 by 4 (total 60+24=84). That works, so this is consistent; however the joined rect",
+     "reason": "The candidate itself admits no conflict. Lesson 3's 10×6 and 4×6 pieces total 84 cm² and join into a 14×6 rectangle, and the FE's 52² − 48² = 400 matches Lesson 3."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "LESSON_CONFLICT",
+     "why": "quote not found",
+     "problem": "Lessons conflict about the maximum: Lesson 1 states 10 m gives the largest area, 100 m², and Lesson 3 uses it, but Lessons 7 and 8 say the maximum is not taught"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "raw": 2,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "The exemplar claims the area is symmetric about x = 10, which is true. The lessons teach this, so there is no defect here. The other check is Part 3(a): (x − 10)² = x² − 20x + 100 is also correct.",
+     "reason": "The candidate itself says the claim is correct. Symmetry about x = 10 is taught in Lessons 1, 6 and 8, and (x − 10)² = x² − 20x + 100 is correct by the Lesson 2 identity, so there is no defect."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The check is wrong for t = 3: 20×3 − 5×9 = 60 − 45 = 15, so the statement is right. No arithmetic error, but the FE exemplar says the ball is 15 m high 'once on"
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "module": "math_2_8",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 2,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "The vector from B to O is −OB = −(−1; 2) = (1; −2). This is correct, so there is no defect here.",
+     "reason": "The candidate itself says the result is correct: OB = (−1; 2), so −OB = (1; −2), and OB + (−OB) = (0; 0). This matches the Lesson 4 negative-vector rule and the Lesson 5 position vectors, so there is "
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The midpoint x-coordinate is correct, so this is a false alarm; no error. (Retracted.)"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "raw": 2,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Nothing is wrong here. The Part 4(b) prompt is fine. No defect applies.",
+     "reason": "The candidate itself says nothing is wrong. Lesson 4 gives 3d=(6,3) and −d=(−2,−1) for d=(2,1), which matches the FE."
+    },
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "Lesson 1 labels both routes exactly 8 km, but Lessons 5 and 6 give column vectors of magnitude √61 ≈ 7.8 km. The lessons reconcile this as an approximation, so it is minor, but it is an inconsistency ",
+     "reason": "Lessons 5 and 6 explicitly present √61≈7.8 km as the approximate '8 km' on the map. The FE says the same, so this is an acknowledged approximation, not an FE defect."
+    }
+   ],
+   "dropped_by_code": []
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

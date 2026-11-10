@@ -1,0 +1,75 @@
+{
+ "module": "math_1_2",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 4,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "Lesson 1 states that 1,024 plants together produce 8,192 g. Its own phenomenon card gives 2³ = 8 g per plant, which makes the total 8 × 1,024 = 8,192 g. This agrees with 2¹³, but the Lesson 1 question",
+     "reason": "The FE correctly says each plant gives 2³ g and the estate has 2¹⁰ plants, which gives a total of 2¹³ = 8,192 g, consistent with Lessons 1, 2 and 6. The wording muddle is inside Lesson 1, not in the F"
+    },
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "Lesson 4 gives log 0.064 = 2̄.8062, but log 0.064 = −1.1938 = 2̄.8062 is correct only if the characteristic is −2. In fact 0.064 is 6.4 × 10⁻², so its characteristic is −2 and the bar form is 2̄.8062.",
+     "reason": "The candidate's own text admits no real conflict. The FE's statement that characteristic 3 gives 4 digits before the decimal point matches Lesson 4's rule that the characteristic is one less than the "
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The arithmetic 50,000 × 1.695 = 84,750 is correct. Rounding 84,750 to the nearest hundred gives 84,800, which is also correct, so no error is present."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The FE gives about 8,190 g and says the difference from 8,192 comes from rounding. Lesson 6 gives 8185 + 7 = 8192, which matches 2¹³. The table answer is theref"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "raw": 4,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "The FE links the reciprocal to a negative index, which is fine after Lesson 3. This is not a defect in itself, and Lesson 3 derives 2^(−n). The FE is consistent with the lessons.",
+     "reason": "Lesson 1 only defers linking reciprocals to negative exponents until Lesson 3, which derives a^(−n) = 1/a^n. A final explanation written after Lesson 8 may use that link, so the FE does not contradict"
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The FE gives about 8,190 g, while Lesson 6 gives 8192. This is a minor rounding difference rather than a real defect."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "Lesson 6 gives antilog(3.9134) ≈ 8192 using row .91 col 3 plus mean difference (8185+7). The FE gives 8,190 and calls it a rounding difference, which is consist"
+    },
+    {
+     "type": "LESSON_CONFLICT",
+     "why": "quote not found",
+     "problem": "Lesson 5 claims antilog(7.2304) = 17,000,000, but 10^0.2304 ≈ 1.699, so the mean difference gives 1.700 only approximately; also log(17,000,000) is 7.2304 corre"
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

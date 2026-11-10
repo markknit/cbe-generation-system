@@ -1,0 +1,72 @@
+{
+ "module": "chem_1_2",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 10,
+   "verified": 5,
+   "confirmed": 2,
+   "autofix": 0,
+   "to_teachers": 2,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Energy of a 589 nm photon = hc/λ = 6.626e-34×3.0e8/589e-9 ≈ 3.38 × 10⁻¹⁹ J, so this is essentially correct; no issue. However, Lesson 6 says the transition gives energy 'when it falls back from an exc",
+     "reason": "The candidate itself concedes the calculation is correct: hc/λ for 589 nm is about 3.37 × 10⁻¹⁹ J."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "The lesson says Shell 2 max 8 and describes shell capacities '2, 8, 8…'. It also says Bohr's model explains that 'Sodium's energy level spacing corresponds to yellow light'. This is fine, but the Less",
+     "reason": "The candidate itself finds no error in the quoted text."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "The formative assessment says correctness 'for at least 4 of the 5 isotopes listed (C-12, C-14, ¹H, ²H, ³⁵Cl)' while the summary lists seven isotopes in the table, an inconsistency in the dataset.",
+     "reason": "The formative check of 4 out of 5 listed isotopes is a sampled threshold, not a contradiction with the seven isotopes in the summary."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The suggested phase timings sum to 40, but the detailed teacher moves and learner activities cannot fit these allocations: Predict phase has 2 min writing + 60 "
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "The Lesson 3 overview gives shell capacities as '2, 8, 8…' while Lesson 3 also treats the sodium atom as having 1 electron in Shell 3 and later the Lesson 4 chl"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The suggested phase timings add up to 40 minutes only if 5+15+8+7+5 = 40; this does hold, but the Model Building teacherMoves allows 4 minutes of drawing plus c"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase times sum to 80, but the Predict phase teacherMoves require 3 min writing + 1 min pair + 3 cold-calls with waits, and the listed Explain components are fi"
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "SCIENCE",
+   "where": "Lesson 4, Explain Phase teacherMoves",
+   "problem": "Lesson 4 Predict phase and Explain phase use Cl-35/Cl-37 in a flame test; chlorine does not give a characteristic flame colour (the lesson itself concedes this). Using chlorine isotopes as the flame-colour test is scientifically misleading, as the Cl isotopes have no flame colour for the students to compare.",
+   "quote_a": "if students want to test it, use Na-23 and Na-24 or K-39 and K-41 as the thought experiment",
+   "quote_b": "",
+   "correct_value": "Use sodium or potassium isotopes for flame-colour reasoning"
+  },
+  {
+   "type": "CROSS_REFERENCE",
+   "where": "Lesson 8, teacherMoves (Model Building)",
+   "problem": "The sodium atom diagram was drawn in Lesson 3 (Bohr model) and Lesson 6/7 (orbital model); in Lesson 4 learners drew isotopes of sodium, potassium or chlorine by choice, and in Lesson 5 chlorine. A sodium diagram from Lesson 4 is not guaranteed.",
+   "quote_a": "Open your model-building booklet to your sodium diagram from Lesson 4.",
+   "quote_b": "",
+   "correct_value": "sodium diagram from Lesson 7 (or Lesson 6)"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "module": "chem_1_5",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 2,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "Not a real defect: the phenolphthalein observation appears in Lesson 1, so it is consistent. Retracted.",
+     "reason": "Lesson 1 Observe phase states the sodium solution turned phenolphthalein pink, so the FE exemplar matches the lessons; the reviewer retracted it too."
+    }
+   ],
+   "dropped_by_code": []
+  },
+  {
+   "round": 2,
+   "raw": 3,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "The arithmetic is right (3 × 496 = 1488 and 1521 is slightly more), so this is not an arithmetic defect. Not a real issue.",
+     "reason": "3 × 496 = 1488 and 1521 is slightly above it, so 'about three times' is correct (Lesson 5 gives Ar 1521 vs Na 496)."
+    },
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "Lesson 1 only says argon is shown as a photograph or video. Lesson 5 says the officer stored sodium in argon. The lessons do conflict with the Lesson 1 safety note that sodium is stored under mineral ",
+     "reason": "Lessons 5 and 7 state the officer transported sodium in sealed argon as an inert shield, so the FE matches them; the mineral-oil note in Lessons 1 and 2 is a lesson-level matter, not an FE error."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The ratio 1521/496 is about 3.07, so 'about three times' and the 3 × 496 = 1488 check are correct. No error here."
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

@@ -1,0 +1,129 @@
+{
+ "module": "phys_1_3",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 10,
+   "verified": 7,
+   "confirmed": 1,
+   "autofix": 1,
+   "to_teachers": 0,
+   "fixed": 1,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "TIMING",
+     "problem": "Lesson 1 phase timings end at 80 minutes, but the Observe phase begins at 18 min after the Predict phase (0-18). That is consistent. However the Observe debrief runs 30-35 min while the Explain phase ",
+     "reason": "Phase timings are contiguous and sum to 80 minutes; the candidate itself finds no problem."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Drop from Nairobi 18 °C (291 K) to freezer -18 °C (255 K) is 36 K. This is correct, so no error.",
+     "reason": "291 K to 255 K is 36 K, so ΔT = −36 K is correct."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "This is consistent (12.4 mm). No issue.",
+     "reason": "12.4 mm matches 'about 12 mm'; the figures are consistent."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Lesson 1 teacher asserts that most learners drawing particles converging all the way through freezing is 'correct for most substances', and that anomalous behaviour begins below 4 °C; however the Less",
+     "reason": "No concrete error is identified; the Lesson 1 wording is a loose simplification, not a defect."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "A bimetallic strip bends toward the metal with the smaller expansion, so brass is on the outside. This is correct, so no error.",
+     "reason": "The brass–iron strip bends toward the iron side, with brass on the outside of the curve. This is correct for a bimetallic strip."
+    },
+    {
+     "type": "TIMING",
+     "problem": "Model Building runs 73–80 min but earlier phases use different splits; more importantly Predict Phase cold-call ends at 18 min and Observe starts at 18 min, yet Explain phase runs 35–58 while Observe ",
+     "reason": "Lesson 1 timings are consecutive and end at 80 minutes; the candidate itself finds no error."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Nairobi 18 °C (291 K) to freezer -18 °C (255 K) is a 36 K drop, which is correct; however the summary says water was ~18 °C/291 K, consistent. No error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "69e-6 × 2000 × 80 = 11.04 ml, which is correct; no error."
+    }
+   ],
+   "apply": "phys_1_3: 1 applied, 0 rejected"
+  },
+  {
+   "round": 2,
+   "raw": 11,
+   "verified": 8,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "TIMING",
+     "problem": "Lesson 1 teacher moves run on a continuous clock, but the Predict phase runs to 18 min while the Observe phase starts at 18 min, and the Observe phase runs to 35 min while Explain starts at 35 min. Th",
+     "reason": "Phases join consistently (0-18, 18-35, 35-58, 58-73, 73-80); the 18-20 min handout step is a normal sub-step, not a gap."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Lesson 4 Observe phase and summary say the capillary column was seen to decrease from 20 °C toward 4 °C, which is consistent; no error. The Explain phase says the 9% expansion is from a phase change, ",
+     "reason": "The candidate itself states there is no error; the anomaly wording is consistent across lessons."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Lesson 1 says the anomalous behaviour will be explained in Lesson 4 and elsewhere says 'the next five lessons will do' this explanation, which is acceptable; however Lesson 1 also says 'the next five ",
+     "reason": "Lesson 4 is among the next five lessons that build the explanation, so there is no real contradiction."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Consistent in physics (bends toward the low-expansion metal). No contradiction.",
+     "reason": "Both quotes are physically consistent: the strip bends toward the lower-expansion metal."
+    },
+    {
+     "type": "TIMING",
+     "problem": "Lesson 1 phases are scheduled 0–58 (Predict/Observe/Explain), then DQB 58–73, then model 73–80. Observe phase starts at 18 min but the Predict phase teacher moves end at 18; fine. However the Explain ",
+     "reason": "The phase timings are continuous and add up to 80 minutes, so there is no gap."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Nairobi 18 °C to freezer −18 °C is a drop of 36 K, which is consistent; however the Kelvin value 291 for 18 °C is correct. No error here. (Retracted.)",
+     "reason": "The candidate is retracted, and the 36 K drop and 291 K value are correct."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Retracted as unreliable.",
+     "reason": "The candidate is retracted and identifies no checkable defect."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Consistent with physics (the higher-expansion metal is on the outside of the curve). Retracted.",
+     "reason": "The candidate is retracted, and the physics is correct: the strip bends toward the lower-expansion invar."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "20e-6 × 48 × 30 = 0.0288 m², which rounds to 0.029, so this is fine; but the slab's expansivity: area expansion uses β=2α=20e-6, which is correct. No error here"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "20e-6 × 48 × 30 = 0.0288 m², which is ≈0.029 m², so this is correct. Retracted."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "11e-6×10×15 = 1.65e-3 m, correct. Retracted."
+    }
+   ]
+  }
+ ],
+ "for_teachers": []
+}

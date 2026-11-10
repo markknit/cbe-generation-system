@@ -1,0 +1,55 @@
+{
+ "module": "bio_3_2",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "SCIENCE",
+    "where": "Lesson 12, summaryTablePrompt explained",
+    "problem": "Overstated and inconsistent with the lesson's own point that insects are small and the grasshopper's haemolymph does not carry oxygen; also 'delivering 20+ litres of oxygenated blood per minute' conflates blood with oxygen; cardiac output in elite athletes is about 30-40 L/min so figure is fine, but claim that muscles fail within seconds due to the circulatory system is unsupported.",
+    "quote_a": "his muscles would fail within seconds of any intense effort",
+    "quote_b": "",
+    "correct_value": "Muscles could not receive enough oxygen via diffusion/haemolymph to sustain aerobic effort"
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Replace the unsupported 'fail within seconds' claim with a mechanistic statement consistent with Lesson 3.",
+   "reason": "The 'within seconds' claim is unsupported by the plan; the lesson's own evidence is about oxygen delivery capacity, not timing.",
+   "decision": "FIX",
+   "lesson": 12,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 12,
+    "path": "summaryTablePrompt.explained",
+    "old": "his muscles would fail within seconds of any intense effort",
+    "new": "his muscles could not receive enough oxygen to sustain aerobic effort, because a low-pressure open system cannot direct oxygen-carrying fluid to working muscles on demand"
+   },
+   "reference": "Insects use tracheae for gas exchange; haemolymph does not carry O2 (Lesson 3); closed circulation delivers O2 via haemoglobin-rich blood.",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 3, Observe Phase vs summary",
+    "problem": "Lesson 3 Model Building asks learners to label 4 structures including ostia, though the observe phase says ostia often cannot be seen; also the model section says 'all 4 required labelled structures' but lists five annotations.",
+    "quote_a": "(2) Look for the ostia (tiny paired slits along the dorsal vessel) with a hand lens; they are very small and often cannot be seen in a school dissection",
+    "quote_b": "Ostia — 'Entry points for haemolymph; no equivalent in closed systems'",
+    "correct_value": "Five annotations listed"
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Name the four structures in the check and allow ostia to be labelled from the diagram, consistent with the Observe phase.",
+   "reason": "The four structures are named in the SLO; the fifth annotation is only the comparison arrow, so the count is consistent once clarified, and the Observe phase already allows diagram use for ostia.",
+   "decision": "FIX",
+   "lesson": 3,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 3,
+    "path": "framework[4].formativeAssessment",
+    "old": "a grasshopper panel with all 4 required labelled structures and annotations",
+    "new": "a grasshopper panel with all 4 required labelled structures and annotations (dorsal vessel, ostia, haemocoel, haemolymph; ostia may be labelled from the diagram if not seen in dissection)"
+   },
+   "reference": "Insect open circulation: dorsal vessel, ostia, haemocoel, haemolymph (standard KICD/biology texts).",
+   "final": "completed (3 criteria met)"
+  }
+ ],
+ "applied": "bio_3_2: 2 applied, 0 rejected"
+}

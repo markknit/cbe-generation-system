@@ -3459,33 +3459,16 @@
    ],
    "category": "consistency",
    "severity": "minor",
-   "teacher_decision": true,
+   "teacher_decision": false,
    "group": "R2-FE-REVIEW",
    "kind": "edit",
    "target": "final_explanation",
    "path": "sections[3].exemplar",
    "old": "Space missions such as Sputnik 1, the Hubble Space Telescope and the James Webb Space Telescope (JWST) provided further instrument-based evidence.",
    "new": "Space missions give further instrument-based evidence: Sputnik 1 (1957) proved that an object could be put in orbit above the atmosphere, Hubble deep-field images show galaxies from the early universe, and the James Webb Space Telescope (JWST) images, in infrared, galaxies from only 300 million years after the Big Bang.",
-   "why": "Review pass: Part 4(a) asks what each instrument tells us but the exemplar only named Sputnik 1, Hubble and JWST. Checked: true. Added what each tells us, using the Lesson 8 wording.",
+   "why": "Review pass: Part 4(a) asks what each instrument tells us but the exemplar only named Sputnik 1, Hubble and JWST. Checked: true. Added what each tells us, using the Lesson 8 wording. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
    "group_headline": "Round-2 review of the Final Explanation against the revised lessons",
    "where": "Final Explanation, Part 4: Gathering evidence without going there, exemplar",
-   "applied_at": "2026-11-09T17:33:09"
-  },
-  {
-   "id": "phys_4_2-r2-fe-002",
-   "criteria": [
-    14
-   ],
-   "category": "consistency",
-   "severity": "minor",
-   "teacher_decision": true,
-   "group": "R2-FE-REVIEW",
-   "kind": "flag",
-   "target": "lesson",
-   "lesson": 5,
-   "path": "title",
-   "why": "Review pass: Lesson 5 ends by saying the constant T^2/r^3 ratio shows 'a single underlying force, yet to be fully explained', but Lesson 4 already attributes the orbits to the Sun's gravity and Lesson 6 names Newton's law. Suggested teacher fix: reword the Lesson 5 closing to 'a single force, which Lesson 6 names as gravity'. No FE edit (the FE already names gravity in Part 3(c)).",
-   "where": "Lesson 5, title",
    "applied_at": "2026-11-09T17:33:09"
   },
   {
@@ -3546,6 +3529,26 @@
    "group_headline": "Lesson text corrected by the automatic consistency check",
    "where": "Lesson 1, overview",
    "applied_at": "2026-11-09T19:17:10"
+  },
+  {
+   "id": "phys_4_2-r2-prop2-001",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.explained",
+   "old": "is evidence that a single underlying force — yet to be fully explained — governs all planetary orbits.",
+   "new": "is evidence that a single force, which Lesson 6 names as gravity, governs all planetary orbits.",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Review pass: Lesson 5 ends by saying the constant T^2/r^3 ratio shows 'a single underlying force, yet to be fully explained', but Lesson 4 already attributes the orbits to the Sun's gravity and Lesson 6 names Newton's law. Suggested teacher fix: reword the Lesson 5 closing to 'a single force, which Lesson 6 names as gravity'. No FE edit (the FE already names gravity in Part 3(c)). PROPOSED ANSWER, now built in (keep it, or edit it in place): Reword the closing of Lesson 5's 'explained' summary so it no longer says the force is 'yet to be fully explained'. Lesson 4 already attributes orbits to the Sun's gravity and Lesson 6 states Newton's law, so Lesson 5 should say the single force is named as gravity in Lesson 6. The same idea appears in Lesson 5's model-building prompt ('what force governs these orbits') and DQB notes, but those are framed as questions for learners and remain consistent. No FE edit is needed because Part 3(c) already names gravity. Alternative: Say instead that the constant ratio shows the Sun's gravity (introduced in Lesson 4) governs all orbits, with Lesson 6 supplying the mathematical law.",
+   "lesson": 5,
+   "group_headline": "Open question settled with a proposed answer built in (keep or edit)",
+   "where": "Lesson 5, summaryTablePrompt.explained",
+   "applied_at": "2026-11-10T12:31:28"
   }
  ]
 }

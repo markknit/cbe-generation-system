@@ -1,0 +1,85 @@
+{
+ "module": "math_2_1",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 13,
+   "verified": 8,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "5 cm ÷ 1000 cm = 1/200 is correct, but under a 1:200 scale a 10 m building (1000 cm) appears as 5 cm. This is consistent, so not an error.",
+     "reason": "5 cm ÷ 1000 cm = 1/200 is correct and matches the 1:200 plan."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Triangle with base 3, height 4 has area 6. With LSF 3, base 9 and height 12, area = 54. This is correct, so no error.",
+     "reason": "Triangle areas 6 cm² and 54 cm² are correct (9×12/2 = 54)."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "A 100 m × 60 m pitch at 1:200 is 50 cm × 30 cm, which is correct. 1500 cm² = 0.15 m², and 6000/0.15 = 40000. This is correct.",
+     "reason": "The pitch figures are correct: 1500 cm² = 0.15 m², and 6000 ÷ 0.15 = 40 000."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "The staffroom at (5, 8) with 1 grid unit = 2 m gives 10 m and 16 m, which is consistent. Not an error.",
+     "reason": "5×2 = 10 m and 8×2 = 16 m are consistent with the stated grid scale."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Minor: the overview lists maize seed packets, but the materials listed are matchboxes and maize cobs. Not a clear defect.",
+     "reason": "Overview lists typical objects while the bag lists specific pairs; this is not a real contradiction."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "3 cm × 200 = 600 cm = 6 m and 2 cm × 200 = 400 cm = 4 m, so volume is 144 m³ = 144 000 L, which gives 7 200 jerricans. This is correct.",
+     "reason": "6×6×4 = 144 m³ = 144 000 L = 7 200 jerricans of 20 L; correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "0.15 × 27000 = 4050 L = 4.05 m³, which is correct.",
+     "reason": "0.15 × 27 000 = 4 050 L = 4.05 m³; correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "0.45 × 200 = 90 cm = 0.9 m, which is correct.",
+     "reason": "0.45 × 200 = 90 cm = 0.9 m; correct."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "At 1:200, a 10 m (1000 cm) width would appear as 5 cm. This is actually correct, so no issue here."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Triangle base 3, height 4 has area 6 cm². The image with L.S.F 3 has base 9 and height 12, so its area is 54 cm². This is correct. However the L.S.F ½ row: a 6×"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "Not a real contradiction; ignore."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "quote not found",
+     "problem": "Conversion is correct at 2 m per unit (5×2=10, 8×2=16), so no error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "375 × 40000 = 15,000,000 cm² = 1500 m². This is correct (50 m × 30 m = 1500 m²)."
+    }
+   ]
+  }
+ ],
+ "for_teachers": []
+}

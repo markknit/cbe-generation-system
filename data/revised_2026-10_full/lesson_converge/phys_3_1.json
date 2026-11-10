@@ -1,0 +1,102 @@
+{
+ "module": "phys_3_1",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 17,
+   "verified": 12,
+   "confirmed": 2,
+   "autofix": 0,
+   "to_teachers": 2,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Alpha decay lowers both Z and N by 2, so it moves the nucleus down and to the left on an N vs Z plot, not diagonally 'toward the belt' in a way described as net toward stability. The statement also sa",
+     "reason": "Beta arrow description is correct; alpha direction is stated correctly (-2,-2); the 'toward stability' framing is a simplification, not a checkable error."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "9 × 10^13 J divided by 100 W is 9 × 10^11 s, which is about 28 000 years (9e11/3.156e7 ≈ 28 500). This is correct, so no error. Separately, the Lesson 6 teacherMoves says the missing mass 'became the ",
+     "reason": "The 28,000-year figure is correct; the 'alpha particle and gamma ray' remark is a loose simplification."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "This is correct (Earth ~4.5 Gyr, U-238 half-life 4.47 Gyr), so not an error.",
+     "reason": "Correct: Earth is about one U-238 half-life old."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Carbon-14 has Z=6, N=8, so N:Z = 8/6 = 1.33. The figure itself is right, but the lesson's own tables conflict with Lesson 2's framing that uranium-238 decay moves toward the belt; not an error on its ",
+     "reason": "8/6 = 1.33 is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "This is consistent, but the statement that U-238 'decays by emitting alpha particles... moving toward a more stable configuration' conflicts with the later beta-only claim for the film. It is minor an",
+     "reason": "Not a clear contradiction; the beta and gamma explanation for the film is consistent."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Minor. Also the Lesson 3 teacherMoves has the correct statement; no real error.",
+     "reason": "The cloud chamber track descriptions are acceptable."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Lesson 5 says 'In Lessons 1–4... Now in Lesson 5 — the fifth evidence-gathering lesson', while Lesson 6 says 'Lesson 6 of 7 in the radioactivity evidence-gathering sequence'. Lesson 3 calls itself the",
+     "reason": "The candidate itself says the lesson numbering is consistent."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Minor note only; not a defect.",
+     "reason": "A correct note about the simulation, not a defect."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Lesson 7 does teach safety and ALARA, but the dose-to-safety-threshold link is not really developed there. Doubtful, so low weight.",
+     "reason": "Lesson 7 covers safety and ALARA, so the cross-reference is supportable."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Correct (1.25 billion years). No error.",
+     "reason": "The K-40 half-life of 1.25 billion years is correct."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Seven half-lives leave (1/2)^7 = 0.78%, which is below 1%; 7 × 8 = 56 is correct. No error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "ln2/ln(1.2) = 0.6931/0.1823 = 3.80. This is correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "I-131 half-life is 8 days; 7×8 = 56 days is correct, and (1/2)^7 = 0.78%, which is under 1%. No error."
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 2, summaryTablePrompt explained vs Lesson 5 learned",
+   "problem": "Lesson 2 presents the first alpha step as clearly moving toward the belt of stability, while Lesson 5 says that step does not clearly change N/Z.",
+   "quote_a": "spontaneously emit alpha particles to reduce their mass and proton number, moving toward a more stable nuclear configuration",
+   "quote_b": "one single step, such as the first alpha step from uranium-238 to thorium-234, does not clearly change the neutron-to-proton ratio",
+   "correct_value": ""
+  },
+  {
+   "type": "SCIENCE",
+   "where": "Lesson 2, Explain Phase learnerExperience",
+   "problem": "Alpha decay moves the nucleus -2 in Z and -2 in N, but the lesson claims every alpha step moves toward the belt. For U-238 to Th-234, N:Z goes from 146/92 (1.587) to 144/90 (1.60), slightly away from the belt. Lesson 5 itself admits one step does not clearly change the ratio.",
+   "quote_a": "a red arrow for each alpha decay (moving the nucleus -2 on the Z axis and -2 on the N axis, net diagonal toward stability)",
+   "quote_b": "",
+   "correct_value": "A single alpha step need not move the nucleus closer to the belt; only the whole chain ends at stable Pb-206."
+  }
+ ]
+}

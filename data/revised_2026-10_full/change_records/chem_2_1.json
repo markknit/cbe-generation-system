@@ -2636,24 +2636,6 @@
    "applied_at": "2026-11-09T09:21:15"
   },
   {
-   "id": "chem_2_1-132",
-   "kind": "flag",
-   "target": "lesson",
-   "lesson": 6,
-   "path": "framework[2].learnerExperience",
-   "criteria": [
-    1,
-    9
-   ],
-   "category": "science",
-   "severity": "minor",
-   "teacher_decision": true,
-   "reference": "Standard chemistry: silica gel is amorphous silicon dioxide (SiO2), not a salt; calcium chloride is a drying agent, not a moisture test.",
-   "why": "Item chem_2_1-091 (teacher text: 'Bata Kenya ... silica gel packets, a porous salt made from sodium silicate' | 'NCPB-Grain storage uses anhydrous calcium chloride to test for moisture in maize'). Two concerns, so these parts were left out: (1) silica gel is a form of silicon dioxide made from sodium silicate, not a salt; it is a porous solid that adsorbs water. Is 'porous solid made from sodium silicate' acceptable wording? (2) Anhydrous CaCl2 absorbs moisture; it is not normally used to test moisture in maize (a moisture meter or oven drying is). Did the teacher mean CaCl2 used to keep stored grain dry, or a test where it gains mass? Also the NCPB use itself could not be checked here.",
-   "where": "Lesson 6, Explain Phase, learnerExperience",
-   "applied_at": "2026-11-09T09:21:15"
-  },
-  {
    "id": "chem_2_1-r2-rub-001",
    "kind": "set",
    "target": "final_explanation",
@@ -2777,9 +2759,9 @@
    ],
    "category": "consistency",
    "severity": "minor",
-   "teacher_decision": true,
+   "teacher_decision": false,
    "group": "R2-FE-REVIEW",
-   "why": "Reviewer: the Part 3(d) exemplar explains excess solid as general, but acid + alkali (NaOH, Lesson 4) uses no excess and an indicator finds the end-point. Confirmed against Lesson 4. Added that exception.",
+   "why": "Reviewer: the Part 3(d) exemplar explains excess solid as general, but acid + alkali (NaOH, Lesson 4) uses no excess and an indicator finds the end-point. Confirmed against Lesson 4. Added that exception. Closed 2026-11-10: passed two independent three-criteria checks (teacher request, KICD, science), not material, no teacher decision altered.",
    "group_headline": "Part 3(d) exemplar notes that neutralisation by an alkali uses an indicator, not excess solid",
    "path": "sections[2].exemplar",
    "old": "The unreacted solid is removed by filtration, leaving a clear salt solution.",
@@ -2788,21 +2770,67 @@
    "applied_at": "2026-11-09T17:33:32"
   },
   {
-   "id": "chem_2_1-r2-fe-002",
-   "kind": "flag",
+   "id": "chem_2_1-r2-prop2-001",
+   "kind": "edit",
    "target": "lesson",
+   "path": "framework[1].teacherMoves",
+   "old": "If your balance reads only to 0.1 g, use 5 g samples.",
+   "new": "If your balance reads only to 0.1 g, use 5 g samples. Optional Sample D: if CAN fertiliser granules are available, set out a fourth pre-weighed watch glass (same mass as the others) and record it alongside A-C, also in the 24 h set. Trial it beforehand and do not tell learners the result. Ask them to compare D with A: CAN is the real fertiliser and CaCl₂ is only our model, and CAN also contains limestone, so it may change more slowly.",
    "criteria": [
     14
    ],
    "category": "consistency",
    "severity": "minor",
    "teacher_decision": true,
-   "group": "R2-FE-REVIEW",
-   "why": "Reviewer: the lessons never test CAN or ammonium nitrate directly; Lesson 6 uses CaCl2 as a proxy for deliquescence. Lesson 6 states the proxy openly (and says CAN gains water more slowly because of its limestone), so this is a known limitation, not a contradiction. Teachers may want to decide whether a CAN or NH4NO3 sample should be added.",
-   "path": "title",
+   "group": "R2-PROPOSED2",
+   "why": "Reviewer: the lessons never test CAN or ammonium nitrate directly; Lesson 6 uses CaCl2 as a proxy for deliquescence. Lesson 6 states the proxy openly (and says CAN gains water more slowly because of its limestone), so this is a known limitation, not a contradiction. Teachers may want to decide whether a CAN or NH4NO3 sample should be added. PROPOSED ANSWER, now built in (keep it, or edit it in place): Keep CaCl₂ as the main deliquescence sample, because it gives a clear mass gain within the 20-25 minute lesson. Add an optional fourth watch glass of real CAN granules (about 2 g) so learners can test the actual fertiliser and compare it with the CaCl₂ proxy. Do not state expected CAN numbers in advance, because the teacher should trial it first. This answers the reviewer without lengthening the core experiment. Alternative: Keep CaCl₂ as the only proxy and add a one-line teacher demonstration of a few CAN granules on a watch glass left open for the 24 h set only. Also affects: none (the Final Explanation Part 4 already calls CaCl₂ the model for CAN, so no change is required).",
    "lesson": 6,
-   "where": "Lesson 6, title",
-   "applied_at": "2026-11-09T17:33:32"
+   "group_headline": "Open question settled with a proposed answer built in (keep or edit)",
+   "where": "Lesson 6, Observe Phase, teacherMoves",
+   "applied_at": "2026-11-10T11:46:06"
+  },
+  {
+   "id": "chem_2_1-r2-prop2-002",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "(silica gel is not deliquescent; it holds water on its surface, but it is used for the same drying purpose)",
+   "new": "(silica gel is a porous solid made from sodium silicate; it is a form of silicon dioxide, not a salt. It is not deliquescent; it holds water on its surface, but it is used for the same drying purpose)",
+   "criteria": [
+    1,
+    9
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Item chem_2_1-091 (teacher text: 'Bata Kenya ... silica gel packets, a porous salt made from sodium silicate' | 'NCPB-Grain storage uses anhydrous calcium chloride to test for moisture in maize'). Two concerns, so these parts were left out: (1) silica gel is a form of silicon dioxide made from sodium silicate, not a salt; it is a porous solid that adsorbs water. Is 'porous solid made from sodium silicate' acceptable wording? (2) Anhydrous CaCl2 absorbs moisture; it is not normally used to test moisture in maize (a moisture meter or oven drying is). Did the teacher mean CaCl2 used to keep stored grain dry, or a test where it gains mass? Also the NCPB use itself could not be checked here. PROPOSED ANSWER, now built in (keep it, or edit it in place): Accept 'porous solid made from sodium silicate' (silica gel is a form of silicon dioxide, not a salt), so Lesson 6 should not call it a salt. Do not add the NCPB claim that anhydrous CaCl2 tests maize moisture, because maize moisture is measured with a moisture meter or oven drying and the NCPB practice cannot be verified here. Keep the Bata sentence, correct the silica gel wording, and add only a general, true statement that anhydrous calcium chloride is used as a drying agent that takes up water, which the Lesson 6 watch-glass mass gain shows. Alternative: Drop the NCPB example altogether and keep only the Bata and pharmaceutical silica gel examples.",
+   "lesson": 6,
+   "reference": "Standard chemistry: silica gel is amorphous silicon dioxide (SiO2), not a salt; calcium chloride is a drying agent, not a moisture test.",
+   "group_headline": "Open question settled with a proposed answer built in (keep or edit)",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-11-10T12:22:08"
+  },
+  {
+   "id": "chem_2_1-r2-prop2-003",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].learnerExperience",
+   "old": "pharmaceutical companies in Nairobi's Industrial Area use silica gel in their packing boxes;",
+   "new": "pharmaceutical companies in Nairobi's Industrial Area use silica gel in their packing boxes; anhydrous calcium chloride is also used as a drying agent to keep stored goods dry because it takes up water, as our mass-gain data showed (teacher note: it is not a method for measuring maize moisture, which uses a moisture meter or oven drying);",
+   "criteria": [
+    1,
+    9
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Item chem_2_1-091 (teacher text: 'Bata Kenya ... silica gel packets, a porous salt made from sodium silicate' | 'NCPB-Grain storage uses anhydrous calcium chloride to test for moisture in maize'). Two concerns, so these parts were left out: (1) silica gel is a form of silicon dioxide made from sodium silicate, not a salt; it is a porous solid that adsorbs water. Is 'porous solid made from sodium silicate' acceptable wording? (2) Anhydrous CaCl2 absorbs moisture; it is not normally used to test moisture in maize (a moisture meter or oven drying is). Did the teacher mean CaCl2 used to keep stored grain dry, or a test where it gains mass? Also the NCPB use itself could not be checked here. PROPOSED ANSWER, now built in (keep it, or edit it in place): Accept 'porous solid made from sodium silicate' (silica gel is a form of silicon dioxide, not a salt), so Lesson 6 should not call it a salt. Do not add the NCPB claim that anhydrous CaCl2 tests maize moisture, because maize moisture is measured with a moisture meter or oven drying and the NCPB practice cannot be verified here. Keep the Bata sentence, correct the silica gel wording, and add only a general, true statement that anhydrous calcium chloride is used as a drying agent that takes up water, which the Lesson 6 watch-glass mass gain shows. Alternative: Drop the NCPB example altogether and keep only the Bata and pharmaceutical silica gel examples.",
+   "lesson": 6,
+   "reference": "Standard chemistry: silica gel is amorphous silicon dioxide (SiO2), not a salt; calcium chloride is a drying agent, not a moisture test.",
+   "where": "Lesson 6, Explain Phase, learnerExperience",
+   "applied_at": "2026-11-10T12:22:08"
   }
  ]
 }

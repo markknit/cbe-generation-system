@@ -1,0 +1,248 @@
+{
+ "module": "phys_1_1",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 26,
+   "verified": 10,
+   "confirmed": 1,
+   "autofix": 1,
+   "to_teachers": 0,
+   "fixed": 1,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "Not an error; skip",
+     "reason": "Not a defect: 0.1 mm vs 1 mm gives 10 times less area and 10 times more pressure, which is correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Camel 4,000 N vs person 600 N gives 6.7 times, but the Predict phase says 'about 6 times heavier' and uses a 400 kg vs 60 kg comparison. Consistent ratio 6.67, so fine; however the camel pressure 20 k",
+     "reason": "4,000/600 = 6.7 is correct and 'about 6 times' is a loose approximation; no real error."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "The gauge reading is a pressure difference reported as a water column height. At 10 cm depth, the water-column equivalent for pure water would be 10 cm, which is consistent, but the pressure of salt w",
+     "reason": "U-tube heights 10.3/10.0/9.2 cm match the 1,030/1,000/920 Pa values at 10 cm depth; consistent."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Lesson 1 says Lesson 2 handles the knife difference and area, but Lesson 1's teacherMoves says 'Lessons 2 and 3 will help them test their ideas'. Minor; not a real contradiction.",
+     "reason": "No contradiction; Lesson 1 refers to Lessons 2 and 3 together, which is consistent."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "The lessons are not tied to separate days (Lesson 6 and 9 are double lessons); 'tomorrow' is unsupported but not a defect in lesson content.",
+     "reason": "'Tomorrow' is a teaching phrasing, not a checkable defect."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Lesson 1 Observe phase takes 8 minutes in the overview but includes a full demonstration, hand-lens group rotation of 20 seconds each, tables and a Same/Different chart. Pedagogy, not reportable.",
+     "reason": "Pedagogical pacing concern, not a verifiable error."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Arithmetic and physics are correct; no issue.",
+     "reason": "89 + 100 = 189 kPa is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Acceptable simplification.",
+     "reason": "Acceptable simplification, and it is required by the teacher decision on weather and climate content in Lesson 7."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Lesson 1 says same 5 cm contact length; not contradictory. (Low confidence)",
+     "reason": "No contradiction; the figures are consistent across lessons."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 40, but Lesson 1 teacherMoves in Model Building says 6 minutes drawing plus other tasks; no inconsistency with sum. The sum is correct, so "
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase times sum to 80, which matches. No issue."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Lesson 9 phases are 10 + 25 + 24 + 8 + 13 = 80 minutes, which matches the duration. No issue."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Lesson 8 phase times are about 6 + 12 + 15 + 3 + 4 = 40, which matches the duration of 40 minutes."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Sums to 40, which matches. No issue."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Lesson 3 phases are 7 + 13 + 10 + 5 + 5 = 40 minutes, which matches the duration."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Medium face 20 cm x 5 cm = 100 cm2 = 0.01 m2 and small face 10x5=50 cm2 is fine; but the brick is 20x10x5 so this is consistent. No error here."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 80? 8+25+22+10+15=80. Correct, no defect."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase times 10 + 25 + 24 + 8 + 13 = 80; consistent."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase times: Predict 6, Observe 12, Explain 15, DQB 3, Model 4 = 40; consistent."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "4+14+14+5+3=40; fine. However Explain steps are 5+5+4=14, fine."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phases are 7+13+10+5+5 = 40; consistent."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Sums to 40; consistent. DQB teacherMoves gives 3 minutes silent writing within 8; fine."
+    }
+   ],
+   "apply": "phys_1_1: 1 applied, 0 rejected"
+  },
+  {
+   "round": 2,
+   "raw": 12,
+   "verified": 7,
+   "confirmed": 3,
+   "autofix": 3,
+   "to_teachers": 0,
+   "fixed": 5,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Not an error; consistent with the calculations.",
+     "reason": "Calculations support the 10x ratio; not a defect."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "The overview says learners sort their questions against the KICD key inquiry questions in Lesson 1, but the DQB phase says these questions are hidden and not revealed until later lessons.",
+     "reason": "Overview says questions are sorted with the KICD key inquiry questions, but the DQB phase explains the teacher only quietly matches them; this is a teaching choice, not a contradiction."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Lesson 4 gives pressures of 500, 1,000 and 1,500 Pa at 5, 10 and 15 cm, which are not realistic figures to link to the jets; separately, Lesson 4 states the pressure values before Lesson 6 derivation ",
+     "reason": "Lesson 4 and Lesson 5 statements about jets are consistent and the pressure values are correct; the candidate's argument is incoherent."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Using P = ρgh with ρ = 1,000 kg/m3 and g = 10 N/kg, depths of 5, 10 and 15 cm (0.05, 0.10, 0.15 m) give 500, 1,000 and 1,500 Pa, so these values are correct. Not an error.",
+     "reason": "Values 500, 1000 and 1500 Pa are correct by P=ρgh."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phase times add up to 40, but Lesson 1's teacherMoves give Model Building 6 minutes of drawing plus other activity; however the stated sum is fine. Not an i"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase times in Lesson 3 are 7, 13, 10, 5 and 5 minutes, which total 40, so that is fine. Lesson 9 phases are 10, 25, 24, 8 and 13 minutes, totalling 80, so that"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phase times add to 40, but the Model Building teacherMoves allow 6 minutes of drawing plus star and wish, a gallery share and a summary table in only 10 min"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The overview's phase times sum to 40, but the Explain phase describes steps of 5+5+4=14 min and the DQB phase adds a 2-minute link task plus weather, climate an"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phases are given as Predict 10, Observe 25, Explain 24, DQB 8, Model 13 = 80, matching the duration, but the Observe phase has 3 stations of 7 minutes (21) plus"
+    }
+   ],
+   "apply": "phys_1_1: 5 applied, 0 rejected"
+  },
+  {
+   "round": 3,
+   "raw": 9,
+   "verified": 4,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Master piston force 200 N and wheel piston force 1,000 N is a 5 times ratio, which is correct. No error.",
+     "reason": "200 N on 2 cm2 gives 1 MPa; 1 MPa on 10 cm2 gives 1,000 N, a 5x ratio, and the pedal moves 5x farther. All correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Not an error in itself; no scientific defect.",
+     "reason": "No defect; the ears-popping context from Mombasa to Nairobi or Kericho is scientifically fine."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Arithmetic is right (89+100=189). No defect.",
+     "reason": "89 + 100 = 189 kPa is correct arithmetic, and the Kisumu air pressure matches the Lesson 7 data."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Consistent with P=ρgh. No defect.",
+     "reason": "P=ρgh gives 500, 1,000 and 1,500 Pa at 5, 10 and 15 cm, and 100 and 300 kPa at 10 and 30 m. The values are consistent."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Camel weight 4,000 N and person 600 N give a ratio of 6.67, but the lesson says a 400 kg camel vs 60 kg person; this ratio is correct. However, the knife area r"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "Lesson 1 says the knife-area question is taken up in Lesson 3, but Lesson 2 (brick on flour) is where the force/area idea is first tested and Lesson 1 teacherMo"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "A 400 kg camel is 400/60 ≈ 6.7 times heavier than a 60 kg person, which matches the lesson. This is correct, so it is not an error. However, the camel's total f"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "Lesson 1's storyline says Lesson 3 takes up the DQB question about what differs between the knives, while Lesson 2 (brick on flour) is where the idea of area fi"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase times are Predict 10, Observe 25, Explain 24, DQB 8, Model 13 = 80, which matches. No defect."
+    }
+   ]
+  }
+ ],
+ "for_teachers": []
+}

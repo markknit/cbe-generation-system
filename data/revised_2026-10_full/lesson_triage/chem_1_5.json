@@ -1,0 +1,47 @@
+{
+ "module": "chem_1_5",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 2, summaryTablePrompt explained vs Lesson 1/5 phenomenon",
+    "problem": "Lesson 2 says sodium is stored under oil in the sealed vial, and elsewhere it is stored in argon; the sodium is described as stored under oil in the same lessons.",
+    "quote_a": "the Kisumu water officer stored sodium in argon gas",
+    "quote_b": "Sodium metal is stored under mineral oil because it reacts violently with moisture in the air.",
+    "correct_value": "Consistent storage description"
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Make Lesson 2 say sodium is stored under oil, matching Lessons 1 and 2 safety and teacherMoves.",
+   "reason": "Lesson 2 safety and Lesson 1 safety notes say sodium is stored under oil; the summary's argon claim conflicts with them.",
+   "decision": "FIX",
+   "lesson": 2,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 2,
+    "path": "summaryTablePrompt.explained",
+    "old": "This also explains why the Kisumu water officer stored sodium in argon gas — the sodium outer electron is easily lost even to trace moisture in air, so a completely inert atmosphere is required.",
+    "new": "This also explains why the Kisumu water officer stored sodium under oil — the sodium outer electron is easily lost even to trace moisture in air, so the metal must be kept away from air and water."
+   },
+   "reference": "Standard school practice: Group I metals (Li, Na, K) are stored under paraffin or mineral oil (CLEAPSS Hazcard; KICD Grade 10 Chemistry).",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 2, summaryTablePrompt explained vs Lesson 1/5",
+    "problem": "Lesson 2 claims sodium is stored in argon because of trace moisture, while Lesson 1 and Lesson 2 teacherMoves say it is stored under oil. Lesson 2 also says 'stored sodium under oil in that sealed container', contradicting the argon storage.",
+    "quote_a": "This also explains why the Kisumu water officer stored sodium in argon gas",
+    "quote_b": "Store unused sodium under mineral oil; never touch with bare hands.",
+    "correct_value": "Consistent storage description (under oil, or in argon)"
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "No separate change; the Lesson 2 summary fix in item 0 resolves the contradiction.",
+   "reason": "Duplicate of item 0: the same sentence in Lesson 2 summaryTablePrompt.explained. The 'sealed container' wording in teacherMoves is consistent with oil storage.",
+   "decision": "NOT_REAL",
+   "lesson": 0,
+   "color": "WHITE"
+  }
+ ],
+ "applied": "chem_1_5: 1 applied, 0 rejected"
+}

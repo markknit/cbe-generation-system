@@ -1,0 +1,218 @@
+{
+ "module": "phys_2_1",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 16,
+   "verified": 10,
+   "confirmed": 2,
+   "autofix": 1,
+   "to_teachers": 1,
+   "fixed": 1,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Statement is correct (smaller r means more bending); not an error.",
+     "reason": "Smaller refraction angle means more bending toward the normal; the statement is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Correct physics; no defect.",
+     "reason": "Apparent depth = real depth/n = 1.33/1.33 = 1.00 m, and the ray direction is correct."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Consistent with Lesson 5; no defect.",
+     "reason": "Lesson 5 does cover a wave entering a second medium, so the reference is correct."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Lesson 4 gives the Nairobi delay as 1.76 s (600/340 = 1.76), consistent. No defect.",
+     "reason": "600/340 = 1.76 s is consistent, and 'no echo heard' agrees with 'too faint'."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Consistent; 340 x 0.294 / 2 = 49.98. No defect.",
+     "reason": "340 x 0.294 / 2 = 49.98 m, which is correct and consistent."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Not an error. However, Lesson 2 says light is about 880 000 times faster than sound, then calls it roughly 10^6; 3.0e8/340 = 882,353, acceptable. No issue.",
+     "reason": "No error: 3.0e8/340 is about 8.8e5, which is roughly 10^6 as stated."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Consistent with refraction rules (faster medium bends away). Not an error.",
+     "reason": "Waves bend away from the normal when entering a faster medium, so this is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Correct value is 85/3e8 = 2.83e-7 s; fine.",
+     "reason": "85/3e8 = 2.83e-7 s is correct."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 40, but Lesson 1 Observe Part A is described elsewhere as 8 and Part B 6, fine; however the sum 6+14+7+5+8 = 40 is correct. No defect."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 80; consistent. (no defect)"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Lesson 5 phase times are 8 (Predict), 14 (Observe), 10 (Explain), 4 (DQB), 4 (Model) = 40; consistent."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 40 only if Predict 6 + Observe 14 + Explain 7 + DQB 5 + Model 8 = 40; this is correct, so no issue. (Checked.)"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 40 (5+8+15+4+8=40); fine. However Lesson 11 duration phases sum to 80, fine. Lesson 8: 8+25+22+8+17=80 ok."
+    }
+   ],
+   "apply": "phys_2_1: 1 applied, 0 rejected"
+  },
+  {
+   "round": 2,
+   "raw": 23,
+   "verified": 8,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Not a calculation error, but Lesson 6 Predict teacherMoves claims 'Kiprono says glass should bend light the most because it is hardest'; this is a student misconception, so no error. However, the Expl",
+     "reason": "No defect; the candidate itself says there is no error and the text is consistent with Snell's law."
+    },
+    {
+     "type": "IMPOSSIBLE_FIGURE",
+     "problem": "None substantive.",
+     "reason": "No defect; the 50 m measurement is fine and the candidate itself says nothing substantive is wrong."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "None; consistent.",
+     "reason": "No defect; Lesson 7 does cover diffraction, so the reference is correct."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "The phase minutes sum to 80 only if each is added correctly; 7+22+20+9+22 = 80. No error.",
+     "reason": "Phases sum to 80 (7+22+20+9+22), so there is no error."
+    },
+    {
+     "type": "TIMING",
+     "problem": "Three 8-minute stations take 24 minutes plus a 3-minute briefing, giving 27 against the 28 minutes allotted, so this is acceptable. Not an issue.",
+     "reason": "3x8 = 24 min plus a 3 min briefing = 27, which fits within the 28 min Observe phase; no defect."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Consistent with sound speeding up and bending away from the normal. Correct, no error.",
+     "reason": "Sound speeding up from air into water bends away from the normal; this is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Apparent depth = real/n = 1.33/1.33 = 1.00, which is correct. No error.",
+     "reason": "Apparent depth = 1.33/1.33 = 1.00 m, which is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Correct: a smaller refraction angle means more bending. No error.",
+     "reason": "A smaller refraction angle (28 degrees) means more bending, so glass bends more than water; this is correct."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "3.0e8/340 = 882,353, so 'about 880 000' is correct, but 'roughly 10^6' is acceptable; no error."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes 6+14+7+5+8 = 40, which matches; but Lesson 1 Observe learnerExperience says Part A about 8 and Part B about 6, consistent. No error."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phases sum to 80 so it is fine; however Lesson 5 duration is 40 minutes but phase times are Predict 8, Observe 14, Explain 10, DQB 4, Model 4 which sums to 40. "
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "None substantive."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "5+8+15+4+8 = 40, which matches; no error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "600/340 = 1.76 s, which is correct; no error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "3.0e8/340 is about 882,353, which matches the stated 880 000. The time for light over 85 m is 85/3e8 = 2.8e-7 s, which is also correct. No error."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Sub-parts add to 47, and the total 8+47+10+5+10 = 80. No error."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phases are labelled 8, 14, 10, 4 and 4 minutes, which total 40, so this is consistent. Not an issue."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Sum is 10+20+25+10+15 = 80. Consistent."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phases sum to 5+8+15+4+8 = 40. Consistent."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Sum is 6+12+10+5+7 = 40, which matches the stated duration. Consistent."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Stations 5+4+3 = 12, consistent with the 12 min Observe phase. No error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "600/340 = 1.76, which is correct. No error."
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "CROSS_REFERENCE",
+   "where": "Lesson 9, Model Building / purposeInStoryline",
+   "problem": "Lesson 12 does not refine resonance and reverberation as a stationary-wave idea; it only mentions resonance in two sentences.",
+   "quote_a": "connecting resonance and reverberation will be refined in Lesson 12",
+   "quote_b": "",
+   "correct_value": ""
+  }
+ ]
+}

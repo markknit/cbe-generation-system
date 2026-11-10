@@ -1,0 +1,75 @@
+{
+ "module": "math_2_3",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 4,
+   "verified": 3,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "The FE's 270° clockwise rule, (x, y) → (−y, x), is mathematically correct. It conflicts with Lesson 4's statement that 270° anticlockwise equals 90° clockwise, and Lesson 4's own 270° anticlockwise ru",
+     "reason": "The FE's 270° clockwise rule (x,y)→(−y,x) is correct and matches Lesson 8; any labelling inconsistency is within Lesson 4, not an FE defect."
+    },
+    {
+     "type": "RUBRIC_GAP",
+     "problem": "The rubric covers solids, and Part 4(d) does ask about a triangular prism. This is not a real gap, so it is withdrawn.",
+     "reason": "No gap: Part 4(d) asks about the triangular prism, which covers solids as Lessons 6 and 8 teach."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "This is correct, since 270° clockwise equals 90° anticlockwise, which maps (x, y) to (−y, x). Lesson 4 states that '270° anticlockwise (= 90° clockwise)' maps to (y, −x), so the FE agrees with the mat",
+     "reason": "270° clockwise = 90° anticlockwise = (−y, x) is correct and matches Lesson 8."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "LESSON_CONFLICT",
+     "why": "quote not found",
+     "problem": "Lesson 4 says (5,0) is reached after 270° anticlockwise at 12:15, which is wrong. A 90° clockwise turn, which is 270° anticlockwise, gives (5,0), so the geometr"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "raw": 4,
+   "verified": 3,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "The FE's rules are mathematically correct (270° clockwise = 90° anticlockwise gives (−y, x)), and they agree with Lesson 8. Lesson 4 is the problem: its summary table states 270° anticlockwise = 90° c",
+     "reason": "The FE's 270° clockwise = 90° anticlockwise rule (x,y)→(−y,x) is correct and matches Lesson 8; the Lesson 4 wording issue is a lesson conflict, not an FE defect."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "The FE gives (x, y) → (−y, x) for 270° clockwise, which is 90° anticlockwise. That rule is correct as stated, so the 270° clockwise line in this part is fine. The table values are wrong, though. At 12",
+     "reason": "The candidate itself finds no error; the FE's rules and table values are correct (A at 12:15 (5,0), 12:30 (0,−5), 12:45 (−5,0))."
+    },
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "Lesson 4 states that 270° anticlockwise equals 90° clockwise, (x, y) → (y, −x). Lesson 4's summary then says the tip (0, 5) maps to (5, 0) after 270° anticlockwise (12:15), and to (−5, 0) after 90° an",
+     "reason": "The mismatch is real but not usable as written. Lesson 4's rule list calls 270° ACW = 90° CW (y,−x), which is correct. Its summary (270° ACW → (5,0), 90° ACW → (−5,0)) is consistent with that rule, an"
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "LESSON_CONFLICT",
+     "why": "quote not found",
+     "problem": "Lesson 4 treats 270° anticlockwise as the same as 90° clockwise, which is correct. But its summary says (0,5) maps to (−5,0) after 90° anticlockwise and (5,0) a"
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

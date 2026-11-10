@@ -1,0 +1,55 @@
+{
+ "module": "phys_3_3",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 7,
+   "verified": 4,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "2.3e3 / 1.7e-8 = 1.35e11, which rounds to about 1.4e11, so it is correct. Retracted: no issue.",
+     "reason": "2.3e3/1.7e-8 = 1.35e11, which rounds to about 1.4e11; the lessons are correct and the candidate was retracted."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Copper resistivity rises with temperature in the dataset, so its conductivity falls, which is consistent. Retracted: no issue.",
+     "reason": "Copper resistivity rises with temperature, so its conductivity falls; this is consistent and the candidate was retracted."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Resistivity ordering uses germanium 0.46 and silicon 2.3e3, which is consistent. Retracted.",
+     "reason": "The energy gaps and resistivity ordering are consistent and standard; the candidate was retracted."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Consistent. However the copper dataset shows resistivity roughly 1.7 to 2.0 x 10^-8 from 300 K to 340 K, a rise of about 18%, which is plausible. No error.",
+     "reason": "The copper trend is consistent (resistivity up, conductivity down) and the roughly 18% rise over 300-340 K is plausible; no defect."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phase minutes sum to 80, which matches the claimed duration, but the Predict teacherMoves allot 3+3 minutes plus cold-calls; this is not a clear defect. Ret"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "Lesson 6 states YBCO Tc is about 92 K and that 77 K is below it, which is consistent. Retracted."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 80 (12+22+16+12+18 = 80)... Checking: they do sum to 80, so no issue. (Retracted.)"
+    }
+   ]
+  }
+ ],
+ "for_teachers": []
+}

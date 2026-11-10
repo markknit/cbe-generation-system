@@ -1,0 +1,25 @@
+{
+ "module": "math_2_1",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 6, Observe Phase teacherMoves vs data",
+    "problem": "Predict phase says the large sufuria has diameter 3 times the small one (LSF = 3), but the Observe data card for the sufuria pair gives LSF = 2.",
+    "quote_a": "different shapes, different LSF values: 2, 2, 3",
+    "quote_b": "(A) two cylindrical sufuria — small: diameter 20 cm, height 15 cm; large: diameter 40 cm, height 30 cm",
+    "correct_value": "LSF 2 for the data card sufuria vs LSF 3 in the Predict phase"
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Either change the Predict phase to say the large sufuria is 2 times the small one (diameter 40 cm vs 20 cm), or change the Data Card to a 3x pair (60 cm x 45 cm) and update the VSF values and all downstream numbers.",
+   "reason": "The Predict phase (LSF = 3, answer 27) and Data Card Pair A (LSF = 2, VSF 8) contradict each other. The fix touches several linked numbers: the 8, 8, 27 checks, the LSF list '2, 2, 3' and the summary. Teachers should pick one value, so a single find-and-replace is not safe.",
+   "decision": "HUMAN",
+   "lesson": 6,
+   "color": "WHITE",
+   "why_orange": "needs a human choice",
+   "final": "fixed by the finalise pass"
+  }
+ ],
+ "applied": "math_2_1: 1 applied, 0 rejected"
+}

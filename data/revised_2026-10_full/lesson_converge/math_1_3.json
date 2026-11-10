@@ -1,0 +1,56 @@
+{
+ "module": "math_1_3",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 5,
+   "verified": 4,
+   "confirmed": 2,
+   "autofix": 1,
+   "to_teachers": 1,
+   "fixed": 1,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "Expanding (12 + 2w)(8 + 2w) gives 96 + 24w + 16w + 4w² = 96 + 40w + 4w². Setting this equal to 140 gives 4w² + 40w − 44 = 0, which is correct. The check here is that 12 × 2w = 24w and 8 × 2w = 16w, so",
+     "reason": "Expansion and simplification are correct: 96+40w+4w²=140 gives 4w²+40w−44=0."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "The equation is stated correctly, but the lesson says the ball's maximum is 20 m at t = 2. That is right. Nothing wrong here, but the lesson also uses the maximum height, which sits oddly with the dec",
+     "reason": "Maths is correct: t²−4t+5=0 has no real roots and the ball's maximum is 20 m. Ball height is not the dropped maximum-area concept, so this is not a defect."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phase minutes add to 40, so there is no timing error."
+    }
+   ],
+   "apply": "math_1_3: 1 applied, 0 rejected"
+  },
+  {
+   "round": 2,
+   "raw": 0,
+   "verified": 0,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [],
+   "dropped_by_code": []
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 8, Observe Phase vs Model Building Phase / Final Explanation",
+   "problem": "The lesson says the maximum area is not taught, but the Final Explanation relies on symmetry about x = 10, which is the location of the maximum. Lesson 8's keyInquiry also asks 'explain why the area has a maximum', which contradicts the teacher decision. Lesson 1 also asks learners to identify the maximum 100 m² at 10.",
+   "quote_a": "the area is symmetric about x = 10",
+   "quote_b": "The idea of a maximum area is not taught at this stage.",
+   "correct_value": ""
+  }
+ ]
+}

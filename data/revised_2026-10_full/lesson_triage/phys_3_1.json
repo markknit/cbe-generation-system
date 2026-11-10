@@ -1,0 +1,55 @@
+{
+ "module": "phys_3_1",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 2, summaryTablePrompt explained vs Lesson 5 learned",
+    "problem": "Lesson 2 presents the first alpha step as clearly moving toward the belt of stability, while Lesson 5 says that step does not clearly change N/Z.",
+    "quote_a": "spontaneously emit alpha particles to reduce their mass and proton number, moving toward a more stable nuclear configuration",
+    "quote_b": "one single step, such as the first alpha step from uranium-238 to thorium-234, does not clearly change the neutron-to-proton ratio",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Reword the Lesson 2 summary so the chain, not each single alpha step, is what moves toward stability, consistent with Lesson 5.",
+   "reason": "Lesson 5 correctly says one alpha step does not clearly change N/Z, so the Lesson 2 claim contradicts it and the science.",
+   "decision": "FIX",
+   "lesson": 2,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 2,
+    "path": "summaryTablePrompt.explained",
+    "old": "spontaneously emit alpha particles to reduce their mass and proton number, moving toward a more stable nuclear configuration",
+    "new": "spontaneously emit alpha particles to reduce their mass and proton number; this is the first step of a decay chain that ends at stable lead-206 (a single step need not clearly change the N:Z ratio)"
+   },
+   "reference": "U-238 decay series ends at stable Pb-206 (8 alpha, 6 beta); N/Z of U-238 = 146/92 = 1.587 vs Th-234 = 144/90 = 1.60.",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "SCIENCE",
+    "where": "Lesson 2, Explain Phase learnerExperience",
+    "problem": "Alpha decay moves the nucleus -2 in Z and -2 in N, but the lesson claims every alpha step moves toward the belt. For U-238 to Th-234, N:Z goes from 146/92 (1.587) to 144/90 (1.60), slightly away from the belt. Lesson 5 itself admits one step does not clearly change the ratio.",
+    "quote_a": "a red arrow for each alpha decay (moving the nucleus -2 on the Z axis and -2 on the N axis, net diagonal toward stability)",
+    "quote_b": "",
+    "correct_value": "A single alpha step need not move the nucleus closer to the belt; only the whole chain ends at stable Pb-206."
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Reword the arrow description to say the chain, not each alpha step, leads to stability.",
+   "reason": "A single alpha step from U-238 slightly raises N:Z, so 'toward stability' is inaccurate for one step.",
+   "decision": "FIX",
+   "lesson": 2,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 2,
+    "path": "framework[2].learnerExperience",
+    "old": "a red arrow for each alpha decay (moving the nucleus -2 on the Z axis and -2 on the N axis, net diagonal toward stability)",
+    "new": "a red arrow for each alpha decay (moving the nucleus -2 on the Z axis and -2 on the N axis, a diagonal step down and to the left; a single step need not move it closer to the belt, but the whole chain ends at stable Pb-206)"
+   },
+   "reference": "U-238 to Th-234: N/Z rises from 1.587 to 1.60; the decay series ends at stable Pb-206.",
+   "final": "completed (3 criteria met)"
+  }
+ ],
+ "applied": "phys_3_1: 2 applied, 0 rejected"
+}

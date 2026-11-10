@@ -1,0 +1,87 @@
+{
+ "module": "math_3_1",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 2,
+   "verified": 2,
+   "confirmed_fixable": 1,
+   "lesson_conflicts": 0,
+   "fixed": 3,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "RUBRIC_GAP",
+     "problem": "The learner never draws a histogram or a frequency polygon in any prompt. 3(a) only asks for a verbal description of a histogram. 3(c) only asks for an explanation of polygons the learner is not given",
+     "reason": "Duplicate of candidate 0. It is the same rubric gap, so it is not reported as a separate defect."
+    }
+   ],
+   "dropped_by_code": [],
+   "apply": "math_3_1: 3 applied, 0 rejected"
+  },
+  {
+   "round": 2,
+   "raw": 4,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "The prompt says the estimated mean is above 400 m and the class 400 to <600 is empty, but the estimated mean of 440 m lies in 400 to <600, which has no values. 'Almost no' is slightly off but not wron",
+     "reason": "The exemplar says the mean can fall where there are almost no actual values; this is correct, since 440 m lies in the empty class 400 to <600 (Lessons 7 and 12). 'Almost no' is only a harmless hedge."
+    },
+    {
+     "type": "RUBRIC_GAP",
+     "problem": "Learners never draw a grouped frequency table in the FE, because the grouped table is supplied. They also never compute the ungrouped mean from the table, and never find the ungrouped median or mode t",
+     "reason": "The criterion is a general KICD outcome and the FE does cover its parts: ungrouped table (1d), grouped mean and median (2c, 2e), mean via 8,000/20 (1a). Supplying the grouped table, and quoting the me"
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The check sum is wrong: 3+2+4+3+2+6 = 20 is true numerically, but the '6' lumps the six frequency-1 rows, which is correct (3+2+4+3+2=14, +6=20). This is fine, "
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The check is wrong. The six 1-frequency rows contribute 6, but 3+2+4+3+2+6 = 20 is only correct by coincidence of wording; the five-row sum is 14 and the six si"
+    }
+   ]
+  },
+  {
+   "round": 3,
+   "raw": 4,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "No lesson says how the gap lengths were obtained. Lesson 3 calls them a 'raw gap list' and says the 'survey team recorded' them. Lesson 1 lists measuring with a trundle wheel as an example of observat",
+     "reason": "Lesson 1 lists measuring distances between crossing points with a trundle wheel or tape as observation, and Lesson 3 has the class 'measure the 20 gaps' and calls the safety-note data 'recorded'; sayi"
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "The exemplar calls the 0 to <200 bar 'tall' with frequency 5, and the earlier explanation says the 'mean can fall in a place where there are almost no actual values', while section 2(d) says the empty",
+     "reason": "Calling a frequency-5 bar 'tall' relative to the small bars is harmless wording; the candidate itself concedes it is not a real defect and nothing in the lessons contradicts it."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "The check sum is 3+2+4+3+2+6 = 20, which is correct, but the check lumps the six long gaps as 6, which is fine. No error."
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

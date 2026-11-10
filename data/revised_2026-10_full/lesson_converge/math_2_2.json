@@ -1,0 +1,87 @@
+{
+ "module": "math_2_2",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 6,
+   "verified": 6,
+   "confirmed": 2,
+   "autofix": 1,
+   "to_teachers": 1,
+   "fixed": 1,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "1+7+4+2 = 14 is fine, but the Predict phase says 2 minutes writing + 1 minute pairs while pacing allots 5 min; not a defect. The Lesson 1 pacing, however, sums 7+12+8+6+7 = 40 while the Observe activi",
+     "reason": "Lesson 2 Observe: 1+7+4+2=14 is consistent, and the Lesson 1 claim is a false alarm (the 8-minute hands-on fits within the 12-minute Observe)."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "The mirror line for P(2,1), P'(6,5) must be perpendicular to PP' (gradient 1), so gradient -1, through midpoint (4,3): y = -x + 7. This is correct, but the Lesson 5 Observe-phase hint and the verifica",
+     "reason": "The candidate itself says there is no error; the calculations are correct (y=−x+7, and y=x+1 for the second example)."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Not a real contradiction.",
+     "reason": "No contradiction: not evaluating predictions is consistent with accepting without confirming."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Consistent; not an issue.",
+     "reason": "Consistent: Lesson 3 defers the blank to Lesson 4, and Lesson 4 fills it."
+    }
+   ],
+   "dropped_by_code": [],
+   "apply": "math_2_2: 1 applied, 0 rejected"
+  },
+  {
+   "round": 2,
+   "raw": 6,
+   "verified": 3,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Mirror line for A(−1,4)→A′(3,0): midpoint (1,2), gradient of AA′ = −1, so mirror gradient = 1 and y − 2 = x − 1 gives y = x + 1. That is consistent. However the first example: P(2,1)→P′(6,5) gives gra",
+     "reason": "The candidate itself concedes both mirror-line calculations are correct (y = x + 1 and y = −x + 7); there is no defect."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "By the cosine rule, 5 cm and 7 cm with included angle 96° give a third side of about 9.2 cm, so it is approximately consistent, but the cosine of 96° makes it slightly above 9 cm. The statement 'about",
+     "reason": "By the cosine rule the third side is about 9.2 cm, which is consistent with 'about 9 cm', so this is an acceptable approximation rather than a contradiction."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Lesson 4 Model Building says to fill the blank in the 'Lesson 3 model', but Lesson 4 describes no learner-written blank in the main text other than the teacherMoves. This is acceptable. Not a real def",
+     "reason": "Lesson 4's Model Building teacherMoves does tell learners to fill the Lesson 3 blank with 'congruent', so the cross-reference holds."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Pacing sums to 40, which matches. But the Lesson 4 Observe phase has five steps with sight-line construction for two points plus measurements, which is not an a"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "Lesson 3's Model phase tells learners to fill the blank with 'congruent' in Lesson 4, but Lesson 4 Model phase says to fill the blank in the Lesson 3 model sent"
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "SCIENCE",
+   "where": "Lesson 3, Model Building Phase, teacherMoves",
+   "problem": "Lesson 3 reflections use the mirror line x=k correctly, but the claim of 'lateral flip' conflicts with the phenomenon where right headlight stays on right side; minor. Main issue: the text claims the coordinate rule explains lateral inversion, while the phenomenon states no left-right swap for the lorry directly behind.",
+   "quote_a": "a flat rear-view mirror is best modelled as a vertical line (x = k for some constant k), which maps (a, b) → (2k − a, b), preserving the y-coordinate (height) and reflecting the x-coordinate",
+   "quote_b": "",
+   "correct_value": ""
+  }
+ ]
+}

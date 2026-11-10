@@ -1,0 +1,292 @@
+{
+ "module": "math_1_2",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 13,
+   "verified": 6,
+   "confirmed": 1,
+   "autofix": 1,
+   "to_teachers": 0,
+   "fixed": 1,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "log(1024)+log(8)=3.0103+0.9031=3.9134, but the Lesson 6 Observe phase has log(1024×8) which is 8192; consistent. (Not an issue)",
+     "reason": "Candidate itself says no issue; 10^3.9134 ≈ 8192 is correct."
+    },
+    {
+     "type": "TIMING",
+     "problem": "Observe phase is 13 min: 3 demo + 8 work + 2 peer-check =13, consistent. DQB 9 includes 3+1+5 =9, ok. (Not an issue)",
+     "reason": "Observe 3+8+2=13 is consistent; no defect."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Using the stated logs: log2.374=0.3755, 3×1̄.9119=1̄.7357, sum=0.1112; minus half of 1.7381 (0.86905) gives 1̄.2422 → antilog ≈ 0.1746. Correct. However Lesson 8 halving example is wrong: 1̄.8281 = 2̄",
+     "reason": "Calculation checks out: result ≈ 0.1746; the bar-number halving is valid."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Each plant produces 1/1024 of the total, which is the reciprocal of 2¹⁰. The claim is correct, but the Lesson 1 summary also says this. Left as a note, no error here.",
+     "reason": "1/1024 is correct; no error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "antilog(0.2304) is about 1.70, which is correct. However the antilog row .23 column 0 reads 1698, and the mean difference 2 gives 1700. The result is plausible, so the finding stands only as a minor c",
+     "reason": "antilog(0.2304) ≈ 1.700, so 1700 is correct."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "quote not found",
+     "problem": "Each plant produces 8 grams of 8,192 total, so one plant's fraction is 8/8192 = 1/1024 — fine; no error here, but the phenomenon's total is consistent. (Not an "
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 40 only if Model Building is 6; 5+8+18+3+6=40. Correct. However the Observe phase text is 8 min while the Model Building phase text says 6 "
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Later the text says 'How does 1.696 compare?' and 50,000 × 1.695 = 84,750 rounds to 84,800; but 1.045^12 = 1.6959 so inconsistent 1.695 vs 1.696 minor. Also log"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "10^0.5922 is about 3.91, so the value is 39,100. This is correct. Problem D: 10^0.8751 is about 7.50, so 750. Both correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "50,000 × 1.045^12 is about 84,806, not 84,794."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The key logs give 0.3755 + 3×(−0.0881) − 0.8691 = −0.7579, so the answer is about 0.175. Working from the stated logs: 1̄.9119 cubed is 1̄.7357, and 0.3755 + 1̄"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Actual value of B is about 4.85e-5 only if the key is consistent. The result is 1.5756 + 2×3̄.4649 − 0.9054 − 0.5×1̄.8281 = 1.5756 + 6̄.9298 − 0.9054 − 1̄.9140 "
+    }
+   ],
+   "apply": "math_1_2: 1 applied, 0 rejected"
+  },
+  {
+   "round": 2,
+   "raw": 27,
+   "verified": 19,
+   "confirmed": 6,
+   "autofix": 6,
+   "to_teachers": 0,
+   "fixed": 4,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "Each plant produces 2³ = 8 g, so 1024 plants produce 8192 g. The fraction one plant produces is 1/1024 which is consistent, so this is fine; however Lesson 1 Predict card says 8 × 1024 is long multipl",
+     "reason": "Calculation is consistent; no defect."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "log 0.064 = −1.1938 = 2̄.8062 (−2+0.8062). That is correct. But 0.064 has leading zero so characteristic is −2: correct. No error.",
+     "reason": "log 0.064 = 2̄.8062 is correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Direct calculation: 2.374 × 0.8163³ ÷ √54.72 = 2.374×0.5440/7.397 ≈ 0.1746. Consistent with the stated key; but the key logs sum gives 0.3755+3×(−0.0881)−0.8691 = −0.758, i.e. 1̄.242, which is 0.1746.",
+     "reason": "Key is consistent with the computed value."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Check: 3240 × 47.6 = 154,224. Correct.",
+     "reason": "3,240 × 47.6 = 154,224 is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Lemon juice [H⁺] is given as 0.01 mol/L for pH 2, which is correct; clean water 10⁻⁷ is correct; bleach 10⁻¹² is correct. No error.",
+     "reason": "The pH and concentration values are correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "The multiplication is 50,000 × 1.695 = 84,750, correct. The Predict phase times: 2 minutes individual work is stated in the predict teacherMoves, while formative assessment says '3-minute individual w",
+     "reason": "50,000 × 1.695 = 84,750 is correct; the timing point is a separate candidate (7/15)."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Lesson 3 Model Building teacherMoves says 'Open your Index Laws Model from Lesson 1' while the Predict mentions model begun as 'Index Toolbox'; minor. Not reportable.",
+     "reason": "No real defect."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "C = k^(3/2): for k=16, C=64 correct. For C=27, k = 27^(2/3) = 9, correct. Not an error.",
+     "reason": "C = 64 and k = 9 are correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "log 3142 ≈ 3.4972 is correct. But the lesson says 3,142 is 'π × 1,000', while π × 1000 = 3141.6, fine.",
+     "reason": "log 3142 = 3.4972 is correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "log(8192)=3.9134 is correct, but the Predict phase says 'long multiplication of 2¹⁰ × 8 = 1024 × 8'; fine. No error.",
+     "reason": "log 8192 = 3.9134 is correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "10^2.7482 = about 560.0 (log 560 = 2.7482), correct.",
+     "reason": "antilog 2.7482 = 560 is correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Half of 2̄ + 1.8281 = -1 + 0.91405 = 1̄.9140, correct. But the earlier cube: 3 × 1̄.9119 = −3 + 2.7357 = −0.2643, which is correct.",
+     "reason": "The bar-number arithmetic is correct."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Consistent; no error.",
+     "reason": "The two statements are consistent."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "SCIENCE",
+     "why": "quote not found",
+     "problem": "Lesson 4 says 'Row 31, column 4 gives 0.4969' for 3,142 and log 3,142 = 3.4972. Real log 3142 = 3.4972. Fine."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 40, fine; but Observe actual content (6-minute practice plus demonstration) is fine. No error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "quote not found",
+     "problem": "10^0.5922 ≈ 3.91, so the result is 39,100, which is correct. However, the earlier worked example for antilog(7.2304) uses 17,000,000 whereas 10^0.2304 ≈ 1.70 so"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 40, so this is consistent; no error."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "why": "quote not found",
+     "problem": "Power rule station A actually uses expansion, not the quotient rule; minor."
+    }
+   ],
+   "apply": "math_1_2: 4 applied, 0 rejected"
+  },
+  {
+   "round": 3,
+   "raw": 15,
+   "verified": 8,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "One plant produces 8 grams of 8 192, i.e. 1/1024 of the total; this is correct. No error.",
+     "reason": "8192/1024 = 8, so 1/1024 is correct; no defect."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "−2 + 0.8062 = −1.1938 is correct, but 0.064 has log −1.1938, characteristic is −2: correct. However the lesson states log₁₀ 3,142 = 3.4972 with mantissa 0.4969 + 3 mean difference; actual log 3142 = 3",
+     "reason": "The log 0.064 and log 3142 arithmetic checks out; no defect."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "10^0.5922 ≈ 3.910 is correct. No defect.",
+     "reason": "10^0.5922 ≈ 3.910, so the answer 39,100 is correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Check: 2480×52=128,960; ×118=15,217,280. Correct. No defect.",
+     "reason": "2480×52×118 = 15,217,280, so the figure is correct."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "Using the listed logs: 0.3755 + 3×1̄.9119 − ½×1.7381 = 0.3755 − 0.2643 − 0.86905 = −0.75785 = 1̄.2422, antilog ≈ 0.1745. Consistent. However Problem B: 1.5756 + 2×(3̄.4649) − 0.9054 − ½(1̄.8281) = 1.5",
+     "reason": "The listed logs give 1̄.2422 and antilog ≈ 0.1745; Problem B is also consistent, so no defect."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "1̄.8281 means −1+0.8281; rewriting as 2̄ + 1.8281 is correct (−2+1.8281). Half is 1̄.9140. Correct. No defect.",
+     "reason": "Rewriting 1̄.8281 as 2̄+1.8281 and halving to 1̄.9140 is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Values are consistent (10⁻⁷, 10⁻¹²). Lemon juice pH 2 → 0.01 correct. No defect.",
+     "reason": "The pH values and concentrations are consistent (10⁻², 10⁻⁷, 10⁻¹²)."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Lesson 4 plan consistent with later lessons. No defect.",
+     "reason": "Lessons 5 and 6 do fill in the antilog/product boxes, so the reference is correct."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 40 but the Observe phase internal breakdown is 12 minutes of group work plus 3 minutes of presentation (15); this is consistent. However Ex"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "10^0.2304 = 1.6982, so the table gives about 1.698 (1698 + 2 = 1700 is a sloppy figure but the real value 17,000,000 has log 7.2304; 10^0.2304 = 1.6982, not 1.7"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Correct value of (2.374 × 0.8163^3) ÷ sqrt(54.72) is about 0.2; the stated logs give 0.3755+1̄.7357−0.8691 = 1̄.2421 → 0.175 is wrong: 10^-0.7579=0.175. Actual "
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "log 0.064 = -1.1938 = 2̄.8062 is correct (−2+0.8062=−1.1938). No error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "10^0.5922 = 3.909, consistent. No error."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "quote not found",
+     "problem": "This is arithmetically consistent, but the reciprocal of 2¹⁰ is used as a fraction of total, fine. No defect."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phases sum to 4+13+7+9+7 = 40; consistent. However Lesson 8 Observe says 3-min demo + 8 min work + 2 min peer-check = 13. Fine."
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 6, Predict Phase",
+   "problem": "The partner share is stated as 1 minute (60 seconds) elsewhere in the same phase, but the assessment text says 90 seconds.",
+   "quote_a": "Each learner independently writes in their exercise book (3 minutes)",
+   "quote_b": "Teacher scans books during the 90-second partner share",
+   "correct_value": "60 seconds",
+   "note": "fixer could not make an exact small edit: Duplicate of defect 1; the 90-second partner share text in Lesson 6 is already corrected by that edit."
+  },
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 7, Predict Phase",
+   "problem": "Individual work is 2 minutes in the learner experience and teacher moves, but 3 minutes in the formative assessment.",
+   "quote_a": "Working individually for 2 minutes",
+   "quote_b": "Teacher circulates during the 3-minute individual work",
+   "correct_value": "2 minutes",
+   "note": "fixer could not make an exact small edit: Duplicate of defect 0; the 3-minute text in Lesson 7 is already corrected by that edit."
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "module": "chem_1_5",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 16,
+   "verified": 9,
+   "confirmed": 2,
+   "autofix": 0,
+   "to_teachers": 2,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Calcium hydroxide is sparingly soluble, but this is a minor simplification; more important is that the Mg steam equation is stated as MgO with H2 balanced, fine. No clear error.",
+     "reason": "Ca(OH)2(aq) is an accepted school-level simplification, and the candidate itself finds no clear error."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Minor: the DQB claims chlorine's 'highest electron affinity' explains reactivity, fine. No definite error.",
+     "reason": "The candidate itself finds no definite error, and the statements are consistent with the lesson content."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Lesson 5 says it completes the survey of four families by adding Group VIII, but Lesson 5 data comparing Ar ionisation energy of 1521 'more than three times that of sodium (496)' is wrong arithmetic: ",
+     "reason": "1521/496 is about 3.07, so 'more than three times' is correct. There is no defect."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Sodium with water was demonstrated in Lesson 1 and Lesson 2; fine. However Lesson 6 refers to ionisation energy values of Si as 786 plotted in Lesson 5 and Lesson 5 data for Si is not shown; minor.",
+     "reason": "Sodium was demonstrated in both Lessons 1 and 2, so the cross-reference holds. The candidate names no actual error."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Lesson 4 Explain phase says to write balanced equations for four reactions, but then lists five reactions in the teacher moves ('Learners individually write balanced equations for: (1)...(4)' plus a f",
+     "reason": "The equations practice does list four numbered equations plus the stated H2 + Cl2 reaction. The '5 minutes' matches the PART C timing, so there is no real contradiction."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Not an error in itself, but the lesson 5 Predict/Explain claims that Al's 'Al's outer electron is in a 3p sub-shell ... Mg's 3s²' while the Lesson 6 text says Al 'single 3p electron'. Consistent. No i",
+     "reason": "Lessons 5 and 6 agree on the 3p electron in Al, and the delocalised electron counts are correct. No defect."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Potassium [2,8,8,1] has 18 inner electrons, correct; but sodium's 'shielded by 10 inner electrons' is fine. However the claim 'Group VIII elements ... zero tendency to ... share' is fine. The actual e",
+     "reason": "Mg has 12 protons and 10 inner electrons, and K has 18 inner electrons. All of this is correct, and the candidate finds no error."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The listed phase minutes do not sum to the 80-minute lesson duration."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phase minutes add up to 40 only if the transitions are counted, but the Explain phase learnerExperience splits into 5+3+4=12 and the Model Building text say"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "Safety notes and the lesson skills say students carry out the experiment with Li and Na, but the Observe phase makes all three teacher demos (even a 'structured"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phase minutes add up to 40 only if transitions are included, but the Model Building phase text says 'In the final 4 minutes', which conflicts with the 5 min"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The listed phases sum to 80 only when transitions are included, yet the Observe phase's own components total 8+6+5+7 = 26 minutes, not 31."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "Ca(OH)2 is only sparingly soluble and is normally written as (s) or as a suspension (limewater), so (aq) is questionable; Lesson 3 also writes Mg(OH)2 as (s), w"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "Lesson 5 says sodium was stored inside an argon ampoule, while Lesson 1 says sodium must be stored under mineral oil and the argon ampoule is shown separately; "
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 2, summaryTablePrompt explained vs Lesson 1/5 phenomenon",
+   "problem": "Lesson 2 says sodium is stored under oil in the sealed vial, and elsewhere it is stored in argon; the sodium is described as stored under oil in the same lessons.",
+   "quote_a": "the Kisumu water officer stored sodium in argon gas",
+   "quote_b": "Sodium metal is stored under mineral oil because it reacts violently with moisture in the air.",
+   "correct_value": "Consistent storage description"
+  },
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 2, summaryTablePrompt explained vs Lesson 1/5",
+   "problem": "Lesson 2 claims sodium is stored in argon because of trace moisture, while Lesson 1 and Lesson 2 teacherMoves say it is stored under oil. Lesson 2 also says 'stored sodium under oil in that sealed container', contradicting the argon storage.",
+   "quote_a": "This also explains why the Kisumu water officer stored sodium in argon gas",
+   "quote_b": "Store unused sodium under mineral oil; never touch with bare hands.",
+   "correct_value": "Consistent storage description (under oil, or in argon)"
+  }
+ ]
+}

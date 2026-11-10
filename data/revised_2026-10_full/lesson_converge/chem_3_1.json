@@ -1,0 +1,104 @@
+{
+ "module": "chem_3_1",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 8,
+   "verified": 6,
+   "confirmed": 1,
+   "autofix": 1,
+   "to_teachers": 0,
+   "fixed": 1,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "In Lesson 1, 5% vinegar is used as a given pH-meter reading and is later read as pH 3 on the indicator chart, which is acceptable. However, Lesson 8 treats 0.1 M ethanoic acid as pH 3 and also describ",
+     "reason": "The candidate itself says the values are consistent; no defect."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Slight inconsistency with the claim that magnesium hydroxide 'ionises weakly'; however the more notable error is Lesson 8's statement that pharmacists prefer it because of the pH cap. This is acceptab",
+     "reason": "Mg(OH)2 saturated solution is about pH 10, and the text is consistent with this; the quoted passages do not contradict each other."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "With the stated values, 1 x 10^-2 / 1.6 x 10^-3 = 6.25, which matches 'about 6'. No contradiction.",
+     "reason": "1e-2 / 1.6e-3 = 6.25, which supports 'about 6' and agrees with the 10^0.8 ≈ 6.3 calculation; no contradiction."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Consistent (pH 10 gives pOH 4); not an error.",
+     "reason": "pH 10.0 gives pOH 4 and OH- of 1e-4 mol/L; correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Internal inconsistency with the expected results: baking soda (pH 8.3) gives blue and soap (pH 10) blue-green in the same plan; it is acceptable. Not an error.",
+     "reason": "Red cabbage gives blue to blue-green in weak bases; consistent with the expected results in the plan."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phase minutes sum to 40, but only after counting 5+10+10+7+8 = 40, so this is consistent and not an error; however the sum is stated correctly. (Checked and"
+    }
+   ],
+   "apply": "chem_3_1: 1 applied, 0 rejected"
+  },
+  {
+   "round": 2,
+   "raw": 9,
+   "verified": 5,
+   "confirmed": 0,
+   "autofix": 0,
+   "to_teachers": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "10^-2 / 1.6x10^-3 = 6.3, so this is fine. But the ethanoic acid is said to be 5% vinegar at pH 2.8 while in Lesson 8 the 0.1 M ethanoic acid is pH 3; consistent enough. No error.",
+     "reason": "10^-2 / 1.6x10^-3 = 6.25, so 'about 6 times' is correct; the candidate itself says there is no error."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Lesson 5 slo says baking soda is only weakly basic, but Lesson 5 Explain defines base vs alkali inconsistently: 'Base: substance that neutralises acids' is fine. However, Lesson 6 calls baking soda 'c",
+     "reason": "The candidate was withdrawn and names no real defect; the soap-as-salt explanation is scientifically acceptable."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Universal indicator for pH 10 is purple/violet-blue; the value is acceptable. But Lesson 3 says red cabbage soap is blue-green while pH 10 soap should give green; minor, not a clear error.",
+     "reason": "The candidate admits the colours are acceptable and describes no clear error."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "This is correct (Lesson 8). However the same lesson says preservation is 'introduced further in Lesson 9', which is correct too; no defect.",
+     "reason": "Lesson 8 does cover strength versus concentration, so the cross-reference is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Acceptable; however Lesson 7 Observe states the starting indicator for 0.1 M HCl as pH about 1 while stomach acid is 1.5-2, a modelling choice, not an error.",
+     "reason": "0.1 M HCl at pH 1 as a model of stomach acid (pH 1.5-2) is a modelling choice, not an error."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phase minutes sum to 80, but the Observe station timing does not fit: four 6-minute stations plus 4 minutes of moving gives 28, yet the Observe teacherMoves"
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phase minutes sum to 80, but the Observe phase is also described as four 6-minute stations with about 4 minutes of moving, which is 28; that part is fine. Howev"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Difference between soap 10.0 and baking soda 8.3 is 1.7, correct. No error."
+    }
+   ]
+  }
+ ],
+ "for_teachers": []
+}

@@ -1679,23 +1679,6 @@
    "applied_at": "2026-11-09T09:24:23"
   },
   {
-   "id": "phys_3_2-086",
-   "kind": "flag",
-   "target": "lesson",
-   "lesson": 10,
-   "path": "slo.knowledge",
-   "criteria": [
-    9
-   ],
-   "category": "local",
-   "severity": "minor",
-   "teacher_decision": true,
-   "group": "R2-052",
-   "why": "Teacher asked for the tariff to be verified against the current Kenya Power / EPRA domestic tariff before printing. This could not be verified from the sources available here, so the KSh 25 per kWh figure is kept and labelled as an assumed teaching figure. If a real tariff is confirmed, Lessons 10 and 12 and Final Explanation Part 4 (0.72 kWh = KSh 18; KSh 7.50; KSh 1.13; KSh 4.50) must be recalculated.",
-   "where": "Lesson 10, slo.knowledge",
-   "applied_at": "2026-11-09T09:24:23"
-  },
-  {
    "id": "phys_3_2-r2-rub-001",
    "kind": "set",
    "target": "final_explanation",
@@ -1811,24 +1794,6 @@
    "applied_at": "2026-11-09T10:34:17"
   },
   {
-   "id": "phys_3_2-r2-fe-001",
-   "criteria": [
-    14
-   ],
-   "category": "consistency",
-   "severity": "minor",
-   "teacher_decision": true,
-   "group": "R2-FE-REVIEW",
-   "kind": "flag",
-   "target": "lesson",
-   "lesson": 5,
-   "path": "title",
-   "why": "Review pass found the bulb is used as a constant 30 ohm in Lessons 5, 7, 8, 9 and 12 while Lesson 6 says a hot filament has higher resistance. The lessons themselves already say this is a simplification (Lessons 5, 8, 9), and the FE exemplar uses the same simplified 30 ohm and asks about the non-ohmic bulb. Residual tension: Lesson 5 says a real bulb at 3.0 V may pass about 0.15 A yet the data uses 0.10 A. Suggested teacher decision: keep the simplification and state it once in the FE instructions, or leave as is. No FE edit.",
-   "group_headline": "Round-2 review of the Final Explanation against the revised lessons",
-   "where": "Lesson 5, title",
-   "applied_at": "2026-11-09T17:32:52"
-  },
-  {
    "id": "phys_3_2-r2-les-tri-001",
    "criteria": [
     3
@@ -1844,9 +1809,65 @@
    "new": "Give 6 minutes. Circulate",
    "severity": "minor",
    "teacher_decision": false,
-   "why": "Automatic lesson check (TIMING): The phase minutes (5+15+10+4+6) sum to 40, which matches the duration. However, the Model Building teacherMoves says 'Give 8 minutes' while the pacing allots 6 min for Model Building, so the phase times do not fit the stated pacing. Recommendation: Change Model Building time from 8 to 6 minutes to match the 40-minute pacing note (5+15+10+4+6). Reason: The pacing sums to 40 with Model Building at 6 min, so the 8-minute instruction overruns the single period. Origin: UNCLEAR.",
+   "why": "Automatic lesson check (TIMING): The phase minutes (5+15+10+4+6) sum to 40, which matches the duration. However, the Model Building teacherMoves says 'Give 8 minutes' while the pacing allots 6 min for Model Building, so the phase times do not fit the stated pacing. Recommendation: Change Model Building time from 8 to 6 minutes to match the 40-minute pacing note (5+15+10+4+6). Reason: The pacing sums to 40 with Model Building at 6 min, so the 8-minute instruction overruns the single period. Origin: UNCLEAR. Verified by two independent checks: consistent with the teachers' responses, with KICD, and scientifically correct; processed as final.",
    "where": "Lesson 4, Model Building Phase, teacherMoves",
    "applied_at": "2026-11-09T22:31:59"
+  },
+  {
+   "id": "phys_3_2-r2-prop2-001",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "sections[3].exemplar",
+   "old": "Cost = 0.72 x KSh 25 = KSh 18.",
+   "new": "Cost = 0.72 x KSh 25 = KSh 18 (KSh 25/kWh is an assumed teaching figure, not an actual tariff).",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Teacher asked for the tariff to be verified against the current Kenya Power / EPRA domestic tariff before printing. This could not be verified from the sources available here, so the KSh 25 per kWh figure is kept and labelled as an assumed teaching figure. If a real tariff is confirmed, Lessons 10 and 12 and Final Explanation Part 4 (0.72 kWh = KSh 18; KSh 7.50; KSh 1.13; KSh 4.50) must be recalculated. PROPOSED ANSWER, now built in (keep it, or edit it in place): Keep KSh 25 per kWh, since it cannot be verified here, but label it consistently as an assumed teaching figure, not an actual Kenya Power or EPRA tariff. Lesson 10's knowledge field and its overview already say this. Add the label where the figure appears in Lesson 12 and in Final Explanation Part 4, and add a note to check the current tariff before printing. If a real tariff is confirmed, recalculate KSh 18, 7.50, 1.13 and 4.50 in Lessons 10 and 12 and in FE Part 4. Alternative: Replace KSh 25 with a verified Kenya Power domestic tariff and recalculate every cost example. Also affects: Lesson 10 (overview, Explain, DQB and exit ticket) and Lesson 12 would need recalculation if the tariff is changed.",
+   "group_headline": "Open question settled with a proposed answer built in (keep or edit)",
+   "where": "Final Explanation, Part 4: Energy, cost and safe design, exemplar",
+   "applied_at": "2026-11-10T12:31:26"
+  },
+  {
+   "id": "phys_3_2-r2-prop2-002",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "slo.knowledge",
+   "old": "144 W for 5 h = 0.72 kWh = KSh 18 at an assumed teaching tariff of KSh 25/kWh.",
+   "new": "144 W for 5 h = 0.72 kWh = KSh 18 at an assumed teaching tariff of KSh 25/kWh (not an actual Kenya Power or EPRA tariff; verify before printing).",
+   "criteria": [
+    9
+   ],
+   "category": "local",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Teacher asked for the tariff to be verified against the current Kenya Power / EPRA domestic tariff before printing. This could not be verified from the sources available here, so the KSh 25 per kWh figure is kept and labelled as an assumed teaching figure. If a real tariff is confirmed, Lessons 10 and 12 and Final Explanation Part 4 (0.72 kWh = KSh 18; KSh 7.50; KSh 1.13; KSh 4.50) must be recalculated. PROPOSED ANSWER, now built in (keep it, or edit it in place): Keep KSh 25 per kWh, since it cannot be verified here, but label it consistently as an assumed teaching figure, not an actual Kenya Power or EPRA tariff. Lesson 10's knowledge field and its overview already say this. Add the label where the figure appears in Lesson 12 and in Final Explanation Part 4, and add a note to check the current tariff before printing. If a real tariff is confirmed, recalculate KSh 18, 7.50, 1.13 and 4.50 in Lessons 10 and 12 and in FE Part 4. Alternative: Replace KSh 25 with a verified Kenya Power domestic tariff and recalculate every cost example. Also affects: Lesson 10 (overview, Explain, DQB and exit ticket) and Lesson 12 would need recalculation if the tariff is changed.",
+   "lesson": 12,
+   "where": "Lesson 12, slo.knowledge",
+   "applied_at": "2026-11-10T12:31:26"
+  },
+  {
+   "id": "phys_3_2-r2-prop2-003",
+   "kind": "edit",
+   "target": "final_explanation",
+   "path": "instructions",
+   "old": "Show every calculation step with units.",
+   "new": "Show every calculation step with units. Treat each bulb as a constant 30 ohm resistor (a simplification: a real filament's resistance rises as it heats).",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-PROPOSED2",
+   "why": "Review pass found the bulb is used as a constant 30 ohm in Lessons 5, 7, 8, 9 and 12 while Lesson 6 says a hot filament has higher resistance. The lessons themselves already say this is a simplification (Lessons 5, 8, 9), and the FE exemplar uses the same simplified 30 ohm and asks about the non-ohmic bulb. Residual tension: Lesson 5 says a real bulb at 3.0 V may pass about 0.15 A yet the data uses 0.10 A. Suggested teacher decision: keep the simplification and state it once in the FE instructions, or leave as is. No FE edit. PROPOSED ANSWER, now built in (keep it, or edit it in place): Keep the 30 ohm simplification. State it once in the FE instructions so learners know the bulb is treated as a constant 30 ohm, while the extension question on the non-ohmic bulb stays. The lessons already flag this, so no lesson changes are needed. Alternative: Change the Lesson 5 data to a real bulb reading of about 0.15 A and recalculate the later lessons.",
+   "where": "Final Explanation, instructions",
+   "applied_at": "2026-11-10T12:31:26"
   }
  ]
 }
