@@ -2227,3 +2227,8 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - **Loop:** re-audit of touched modules found 14 new items (some caused by my own phys_1_2 L5 rewrite); triaged and finalised the same way. phys_1_3 keeps surfacing issues (timing to 80 min in L1) and should be read by a person.
 - **Orange left (17 flags):** bio_2_3 3, chem_1_4 3, bio_1_3 2, bio_2_1 2, math_1_2 2, phys_1_3 2, phys_2_1 2, math_2_6 1 (+ newest lesson_converge residuals not yet triaged: bio_1_3 1, chem_1_4 1, phys_1_3 3). Three of the math_1_2/math_2_6 ones are small wording fixes that only failed the exact-match code check (could be retried).
 - FE re-converged on every touched module: all CONVERGED. Build 70 modules no PROBLEMS; validate_corpus PASS. API spend this step about $23. Nothing promoted/pushed.
+
+## Updates — 2026-11-10 (seventeenth entry) — small wording fixes retried, newest findings triaged
+- The 3 "small wording" orange flags (math_1_2 x2, math_2_6 x1) were already resolved by earlier lesson edits (current text checked); flags removed.
+- Newest lesson findings (bio_1_3, chem_1_4, phys_1_3) triaged and finalised: 3 completed/fixed. FE re-converged on those 3: CONVERGED. Build 70 no PROBLEMS; validate_corpus PASS.
+- **Orange left: 14 flags** (bio_2_3 3, chem_1_4 3, bio_1_3 2, bio_2_1 2, phys_1_3 2, phys_2_1 2). A last lesson audit still shows residual items on bio_1_3 (1) and chem_1_4 (1) that are not yet triaged (the loop keeps finding new small ones; stop and read these by hand). API spend this step about $5.5. Nothing promoted/pushed.
