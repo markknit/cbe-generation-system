@@ -278,7 +278,68 @@ async function finalize(buf) {
   return zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE' });
 }
 
+
+// ---------- Round 2 teacher summary: PART A (closest review, journal format) + PART B (optional list of verified fixes) ----------
+const isA = (r) => /^R2-LES-(PROPOSED|CLOSE)-/.test(r.group || '');
+const isB = (r) => /^R2-LES-(AUTO|TRIAGE|FINAL)$/.test(r.group || '') || r.group === 'R2-FE-AUTO';
+function round2Doc() {
+  const PAGE = { page: { size: { width: 12240, height: 15840, orientation: 'landscape' }, margin: { top: 1100, bottom: 900, left: 1080, right: 1080 } } };
+  const foot = (label) => new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: `${label}  |  page `, font: FONT, size: 16, color: '666666' }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 16, color: '666666' })] })] });
+  const mods = Object.keys(recs).sort(natural).filter((m) => subjOf(m) && ['bio', 'chem', 'phys', 'math'].includes(subjOf(m)[0]));
+  const A = Object.fromEntries(mods.map((m) => [m, recs[m].filter(isA)]));
+  const B = Object.fromEntries(mods.map((m) => [m, recs[m].filter((r) => isB(r) && !isA(r))]));
+  const aItems = Object.fromEntries(mods.map((m) => [m, journalItems(A[m])]));
+  const nA = mods.reduce((n, m) => n + aItems[m].length, 0);
+  const nB = mods.reduce((n, m) => n + B[m].length, 0);
+  const kids = [
+    P([new TextRun({ text: 'Round 2 lesson check: summary for teacher review', font: FONT, size: 40, bold: true, color: '1F3864' })], { after: 60 }),
+    P('Grade 10 Biology, Chemistry, Physics and Mathematics. Prepared by Claude (AI), proposed for teacher review.', { size: 20, after: 140 }),
+    H2('What this document is'),
+    P('After your journal responses were applied, Claude checked every lesson against the other lessons in its sub-strand (cross-references, numbers, timings, names, science) and then checked that each Final Explanation still agrees with its lessons. Problems were fixed automatically only when the fix agreed with your earlier responses, with KICD, and was scientifically correct, and a second, independent check agreed. A few problems needed a real choice: for each of those Claude wrote a proposed answer and has already built it into the lesson, so you can keep it or edit it in place.'),
+    H2('What you are asked to do'),
+    P([tr('PART A: please review closely (' + nA + ' items). ', { bold: true, color: 'C00000' }), tr('These are the items where a teacher\'s judgement matters most: (1) proposed answers to choices Claude could not settle alone, such as phase timings, version numbering, how a model or dataset is used, and cross-lesson wording; (2) automatic fixes that involve a judgement call on timing or wording; (3) fixes that state a science fact. They appear in the same format as the journal, shaded YELLOW with [DECISION]. For each, click ONE box: ACCEPT (keep what is built in) or EDIT (and type the change you want). If you skip an item it stays as written.')]),
+    P([tr('PART B: read only if you wish (' + nB + ' edits). ', { bold: true, color: '1F3864' }), tr('Small fixes that passed all three tests (agree with your earlier responses, agree with KICD, scientifically correct) and a second independent check. Examples: a lesson reference that pointed to the wrong lesson, two lessons giving different numbers for the same thing, a Final Explanation number that did not match the lesson. They are already made and need no answer. They are listed so you can spot-check a few. If you disagree with one, write its item number and what you want in the last column.')]),
+    P([tr('How to send it back: ', { bold: true }), tr('save the file under the same name and return it. Every item carries its sub-strand name and its item number, so Claude can read your answers back and apply them.')], { after: 120 }),
+    H2('Where the items are'),
+    table([5200, 2200, 2200, 2380], ['Sub-strand', 'PART A items (closest review)', 'PART B edits (optional)', 'Where'],
+      mods.filter((m) => aItems[m].length || B[m].length).map((m) => { const mt = meta(m); return [`${mt.substrand_id} ${mt.substrand_name} (${m})`, String(aItems[m].length), String(B[m].length), aItems[m].length ? 'PART A, then B' : 'PART B only']; })
+        .concat([['Total', String(nA), String(nB), '']])),
+  ];
+  const sections = [{ properties: PAGE, footers: { default: foot('Round 2 lesson check: summary') }, children: kids }];
+  const hdr = (tag) => ({ default: new Header({ children: [new Paragraph({ shading: { fill: 'D5E8F0', type: ShadingType.CLEAR, color: 'auto' }, children: [new TextRun({ text: tag, font: FONT, size: 20, bold: true, color: '1F3864' })] })] }) });
+  sections.push({ properties: PAGE, footers: { default: foot('PART A') }, children: [H1('PART A: please review closely'), P('Yellow rows. Tick ACCEPT or EDIT in the last column; if EDIT, type what you want. The proposed answer is already in the lesson (AFTER, green). The alternative Claude suggested, if any, is in the Why column.')] });
+  for (const m of mods) {
+    const its = aItems[m]; if (!its.length) continue;
+    const mt = meta(m); const tag = `SUB-STRAND ${mt.substrand_id} ${mt.substrand_name} (${m})`;
+    const ks = [H2(`${mt.substrand_id} ${mt.substrand_name}   (${m})   PART A`), P([tr(`${its.length} items to review closely.`, { bold: true, size: 20, color: 'C00000' })], { after: 80 })];
+    ks.push(table([1300, 1700, 4100, 2700, 1500, 2380], ['#', 'Where', 'What changed', 'Why (and the alternative)', 'Reference (science)', 'Teacher response'], its.map(itemRow)));
+    sections.push({ properties: PAGE, headers: hdr(tag), footers: { default: foot(tag) }, children: ks });
+  }
+  const bKids = [H1('PART B: verified fixes, read only if you wish'), P('Already made. No answer needed. If you disagree with one, write the item number and what you want in the last column.')];
+  for (const m of mods) {
+    const rs = B[m]; if (!rs.length) continue;
+    const mt = meta(m);
+    bKids.push(H2(`${mt.substrand_id} ${mt.substrand_name}   (${m})   PART B`));
+    bKids.push(table([1900, 1900, 3700, 3700, 2480], ['Item', 'Where', 'Before', 'After', 'If you disagree'],
+      rs.map((r) => [
+        { __cell: true, content: [P([tr(r.id, { bold: true, size: 15 })], { after: 20 }), P([tr(r.kind === 'set' ? 'Final Explanation (follows the lesson)' : (r.category || ''), { size: 14, color: '666666' })])] },
+        r.where || (r.target === 'lesson' ? `Lesson ${r.lesson}, ${r.path}` : `${r.target}, ${r.path || ''}`),
+        { __cell: true, content: [P([tr(clip(r.kind === 'set' ? JSON.stringify(r.old === undefined ? '' : r.old) : r.old, 320), { color: 'C00000', size: 15 })])] },
+        { __cell: true, content: [P([tr(clip(r.kind === 'set' ? JSON.stringify(r.new === undefined ? r.value : r.new) : r.new, 320), { color: '1B6B1B', size: 15 })], { after: 30 }), P([tr('Why: ' + clip(r.why, 200), { size: 14, color: '555555', italics: true })])] },
+        { __cell: true, content: [P(' ', { after: 300 })] },
+      ]), false));
+  }
+  sections.push({ properties: PAGE, footers: { default: foot('PART B') }, children: bKids });
+  return new Document({ styles: { default: { document: { run: { font: FONT, size: 17 } } } }, sections });
+}
+
 (async () => {
+  if (process.argv.includes('--round2')) {
+    const jdir = path.join(REV, 'journal'); fs.mkdirSync(jdir, { recursive: true });
+    const f = path.join(jdir, 'Round2_Lesson_Check_Review.docx');
+    fs.writeFileSync(f, await finalize(await Packer.toBuffer(round2Doc())));
+    console.log(path.basename(f)); return;
+  }
   const jdir = path.join(REV, 'journal');
   fs.mkdirSync(jdir, { recursive: true });
   const bySubj = {};
