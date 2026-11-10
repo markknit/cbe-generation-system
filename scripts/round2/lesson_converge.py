@@ -141,6 +141,14 @@ def adjudicate(g, prefix, issues, dec):
         if v.get("confirmed"):
             x["autofix_ok"] = bool(v.get("autofix_ok")) and (x["type"] != "SCIENCE" or bool((v.get("reference") or "").strip()))
             x["reference"] = (v.get("reference") or "").strip()
+            if x["type"] == "TIMING" and x["autofix_ok"]:
+                # mechanical gate: only gaps of 5 minutes or less may be auto-fixed; anything else goes to teachers
+                try:
+                    gap = abs(float(eval(x["calc_expr"], {"__builtins__": {}}, {})) if re.fullmatch(r"[0-9+\-*/().\s]*", x["calc_expr"]) else float("nan") - float(re.sub(r"[^0-9.\-]", "", x["calc_stated"])))
+                except Exception:
+                    gap = None
+                if gap is None or gap != gap or gap > 5:
+                    x["autofix_ok"] = False
             conf.append(x)
         else:
             rej.append({"type": x["type"], "problem": x["problem"][:200], "reason": (v.get("reason") or "")[:200]})

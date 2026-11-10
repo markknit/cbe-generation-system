@@ -2206,3 +2206,9 @@ has been extracted to `handoff_bundle_2026-09-29/` in the repo root. The partner
 - **45 items for teachers** (lesson-vs-lesson problems the tool would not change on its own) are in `lesson_converge/*.json` (`for_teachers`); not yet turned into journal flags.
 - **Verified locally after the edits (free):** `revise_build.py --all` 70 modules no PROBLEMS, journals rebuilt, `validate_corpus.js` PASS revised (70 files) and main (95 files), `validate_consistency.py` only the 28 older FE-UNVERIFIED flags.
 - **STILL TO DO (needs API credit, Mark topping up):** (1) finish the lesson loop on the 12 modules above; (2) RE-RUN `fe_converge.py` on every module whose lessons changed (the 19 above plus any from step 1): the Final Explanations were last converged BEFORE these lesson edits, so they may now be stale against the edited lessons; (3) rebuild everything and re-validate; (4) decide what to do with the 45 teacher items and the judgement-call edits. Nothing promoted, committed (beyond STATUS.md and tooling), pushed or synced.
+
+## Updates — 2026-11-10 (fourteenth entry) — lesson loop finished, FE re-converged
+- **Lesson loop on the 12 unfinished modules:** all CONVERGED (~$8.84). 10 more small edits (phys_1_1 6, math_2_6 3, phys_2_1 1); 13 more items for teachers. Timing autofix now gated in code (gap <= 5 min, else teachers) in `lesson_converge.py`.
+- **FE re-converge on the 21 lesson-edited modules:** all CONVERGED (~$10.23); only math_3_1 needed fixes (3 fields). The earlier worry that FEs were stale after lesson edits is cleared, to the limit of a two-clean-audit check (not proof).
+- **Verified:** `revise_build.py --all` no PROBLEMS; `validate_corpus.js` PASS; consistency validator: only the 26 older FE-UNVERIFIED flags.
+- **Not done:** 58 teacher items unreviewed; spot-check of judgement-call edits; promotion/regeneration/push/Drive; GS/EM/Core Maths on hold.
