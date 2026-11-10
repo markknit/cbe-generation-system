@@ -344,4 +344,5 @@ def main():
     print(f"estimated spend this session: ${g._estimate_cost():.2f}")
 
 
-main()
+if __name__ == "__main__":
+    main()
