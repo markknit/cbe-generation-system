@@ -35,6 +35,7 @@ and run scripts/validate_consistency.py.
 """
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -42,6 +43,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# CBE_FE_ISSUES_DIR: revised workspace keeps its own issue logs (ids relabelled 2026-11-09)
+FE_ISSUES = Path(os.environ["CBE_FE_ISSUES_DIR"]) if os.environ.get("CBE_FE_ISSUES_DIR") else ROOT / "logs" / "final_explanation_issues"
 DATA = ROOT / "generators" / "data"
 sys.path.insert(0, str(ROOT / "src"))
 
@@ -128,7 +131,7 @@ def do_final_explanations(files: list[Path], dry: bool, workers: int, max_spend:
         return job, fe
 
     failed = 0
-    issues_dir = ROOT / "logs" / "final_explanation_issues"
+    issues_dir = FE_ISSUES
     with ThreadPoolExecutor(max_workers=workers) as ex:
         for fut in as_completed([ex.submit(work, j) for j in jobs]):
             (f, m, a), fe = fut.result()
@@ -156,7 +159,7 @@ def do_final_explanations(files: list[Path], dry: bool, workers: int, max_spend:
 
 
 def do_apply_held() -> int:
-    d = ROOT / "logs" / "final_explanation_issues"
+    d = FE_ISSUES
     n = 0
     for cand in sorted(d.glob("*_candidate.json")):
         name = cand.name.removesuffix("_candidate.json")
@@ -177,7 +180,7 @@ def do_apply_held() -> int:
 
 def do_clear(name: str, by: str | None, note: str) -> int:
     import datetime
-    log = ROOT / "logs" / "final_explanation_issues" / f"{name}.json"
+    log = FE_ISSUES / f"{name}.json"
     if not log.exists():
         sys.exit(f"no review flag for {name}")
     if not by:
