@@ -675,31 +675,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Scientific accuracy of photosynthesis (reactants, light and chlorophyll, equations, two stages)",
       "excellent": "Correctly distinguishes the reactants from light energy and chlorophyll, gives both equations, and accurately describes where each stage occurs, the key steps and how ATP and NADPH link the stages.",
       "proficient": "States most requirements and equations correctly and describes both stages with minor omissions or errors.",
-      "developing": "Names some requirements or an equation but confuses the stages or leaves out key steps."
+      "developing": "Names some requirements or an equation but confuses the stages or leaves out key steps.",
+      "belowExpectations": "Names almost no requirements or equations correctly and does not describe the two stages."
     },
     {
       "criterion": "Explaining wilting using leaf structure and water movement",
       "excellent": "Clearly links stomata, transpiration, xylem supply rate and loss of turgor, explains why wet soil does not prevent wilting, and explains overnight recovery.",
       "proficient": "Explains wilting through water loss and turgor but is less clear about rate of loss versus supply or about recovery.",
-      "developing": "Says the plant lacks water or is hot without linking stomata, transpiration and turgor."
+      "developing": "Says the plant lacks water or is hot without linking stomata, transpiration and turgor.",
+      "belowExpectations": "Does not link wilting to leaf structure or water movement, or gives an incorrect reason."
     },
     {
       "criterion": "Use of evidence and limiting factors",
       "excellent": "Accurately uses the starch test, the light-intensity graph shape, the temperature curve and the definition of a limiting factor to justify claims, and correctly applies them to the Naivasha and Kericho examples.",
       "proficient": "Uses some evidence and defines a limiting factor, with partial application to the farm examples.",
-      "developing": "States facts without evidence, or the limiting factor idea is missing or incorrect."
+      "developing": "States facts without evidence, or the limiting factor idea is missing or incorrect.",
+      "belowExpectations": "Gives no evidence, and the idea of a limiting factor is absent."
     },
     {
       "criterion": "Integration of minerals and the complete causal chain for the pallor",
       "excellent": "Builds a clear, sequenced chain from low light to less ATP and NADPH to less glucose to slow growth and less chlorophyll maintained, and explains the role of nitrogen and magnesium in chlorophyll.",
       "proficient": "Gives a mostly complete chain but one step or the link to chlorophyll or minerals is missing or unclear.",
-      "developing": "Gives a brief statement that shade means less food, without a causal chain."
+      "developing": "Gives a brief statement that shade means less food, without a causal chain.",
+      "belowExpectations": "Gives no causal chain from shade to slow growth or pale leaves, or gives an incorrect one."
     },
     {
       "criterion": "Communication and Kenyan application",
       "excellent": "Uses precise scientific vocabulary, organises answers clearly, and gives a sensible, evidence-based farming recommendation.",
       "proficient": "Mostly clear writing with some correct terms and a reasonable but general recommendation.",
-      "developing": "Writing is unclear or uses few scientific terms, and the recommendation is missing or not linked to the evidence."
+      "developing": "Writing is unclear or uses few scientific terms, and the recommendation is missing or not linked to the evidence.",
+      "belowExpectations": "Writing is very unclear, with almost no scientific terms and no recommendation."
     }
   ]
 };
@@ -781,6 +786,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

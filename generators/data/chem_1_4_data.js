@@ -855,31 +855,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of valence electrons and bond types",
       "excellent": "Accurately explains how valence electrons and the octet rule lead to ionic, covalent and metallic bonding, with correct examples such as NaCl and CH4.",
       "proficient": "Identifies valence electrons and the three bond types with mostly correct examples but limited explanation of why each forms.",
-      "developing": "Confuses bond types or valence electrons, or gives examples without explanation."
+      "developing": "Confuses bond types or valence electrons, or gives examples without explanation.",
+      "belowExpectations": "Cannot name the bond types or say what valence electrons are, and gives no examples or incorrect ones."
     },
     {
       "criterion": "Explanation of diamond and graphite",
       "excellent": "Clearly links number of bonds, geometry, delocalised electrons and Van der Waals forces to conductivity and hardness of both substances.",
       "proficient": "Explains most differences between diamond and graphite but misses one link, such as the weak forces between layers.",
-      "developing": "States that the properties differ without linking them to the bonding or structure."
+      "developing": "States that the properties differ without linking them to the bonding or structure.",
+      "belowExpectations": "Cannot say how diamond and graphite differ, or gives properties with no link to bonding or structure."
     },
     {
       "criterion": "Use of evidence and data",
       "excellent": "Uses the table and lesson observations accurately to support every claim, including the graphite anomaly.",
       "proficient": "Uses some evidence correctly but some claims are unsupported.",
-      "developing": "Gives little or incorrect evidence."
+      "developing": "Gives little or incorrect evidence.",
+      "belowExpectations": "Gives no evidence from the table or lessons, and claims are made without support."
     },
     {
       "criterion": "Structure-property-use reasoning",
       "excellent": "Connects bond type to structure, properties and a real Kenyan use, and applies the ideas to a new situation.",
       "proficient": "Connects structure to properties and uses, with limited application to a new situation.",
-      "developing": "Lists uses with no reasoning from structure."
+      "developing": "Lists uses with no reasoning from structure.",
+      "belowExpectations": "Cannot connect bond type to structure, properties or use, and does not give a Kenyan use."
     },
     {
       "criterion": "Scientific language and communication",
       "excellent": "Uses correct terms precisely and organises answers in clear Claim, Evidence, Reasoning form.",
       "proficient": "Uses mostly correct terms with generally clear organisation.",
-      "developing": "Uses few scientific terms or the answers are unclear."
+      "developing": "Uses few scientific terms or the answers are unclear.",
+      "belowExpectations": "Uses almost no scientific terms, and answers are unclear and do not follow Claim, Evidence, Reasoning form."
     }
   ]
 };
@@ -982,6 +987,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

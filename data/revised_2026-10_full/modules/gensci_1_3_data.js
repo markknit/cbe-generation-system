@@ -555,31 +555,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Mechanical and chemical digestion",
       "excellent": "Exceeds Expectations: clearly distinguishes the two types with correct examples and uses the Ugali Moment evidence to explain amylase action on starch.",
       "proficient": "Meets Expectations: distinguishes the two types with correct examples but gives only a weak link to the Ugali Moment evidence.",
-      "developing": "Approaches Expectations: mixes up the two types or gives no examples or evidence."
+      "developing": "Approaches Expectations: mixes up the two types or gives no examples or evidence.",
+      "belowExpectations": "Below Expectations: cannot tell mechanical digestion from chemical digestion, gives no example of either, and does not mention what happened to the ugali in the mouth."
     },
     {
       "criterion": "Enzymes, specificity and food tests",
       "excellent": "Exceeds Expectations: matches each enzyme to its substrate and region accurately, explains specificity and what triggers release, and uses named food tests with correct colours as evidence.",
       "proficient": "Meets Expectations: matches most enzymes to substrates and regions and mentions some food tests.",
-      "developing": "Approaches Expectations: names few enzymes correctly or does not link enzymes to substrates or tests."
+      "developing": "Approaches Expectations: names few enzymes correctly or does not link enzymes to substrates or tests.",
+      "belowExpectations": "Below Expectations: names no enzyme with its food or place in the canal, and does not mention any food test or colour change."
     },
     {
       "criterion": "Structural adaptations and self-protection",
       "excellent": "Exceeds Expectations: explains villi and microvilli, mucus and pepsinogen, and both sphincters accurately, linking each structure to its function in the meal.",
       "proficient": "Meets Expectations: explains most structures and functions with minor gaps.",
-      "developing": "Approaches Expectations: names structures without explaining their functions, or confuses them."
+      "developing": "Approaches Expectations: names structures without explaining their functions, or confuses them.",
+      "belowExpectations": "Below Expectations: names almost no part of the digestive system that helps absorption or protects the stomach, or names them with the wrong job."
     },
     {
       "criterion": "Connected explanation of the driving question",
       "excellent": "Exceeds Expectations: gives a sequenced explanation of the meal through the canal and a reasoned prediction of what happens when an adaptation fails.",
       "proficient": "Meets Expectations: gives a mostly sequenced explanation and a simple prediction.",
-      "developing": "Approaches Expectations: gives a list of facts without sequence or without a prediction."
+      "developing": "Approaches Expectations: gives a list of facts without sequence or without a prediction.",
+      "belowExpectations": "Below Expectations: does not follow the meal through the alimentary canal, lists a few separate facts, and makes no prediction about what happens when an adaptation fails."
     },
     {
       "criterion": "Use of evidence and Kenyan context",
       "excellent": "Exceeds Expectations: consistently uses the ugali, sukuma wiki and nyama choma meal and practical observations to support claims, with correct scientific vocabulary.",
       "proficient": "Meets Expectations: uses the meal and some observations, with mostly correct vocabulary.",
-      "developing": "Approaches Expectations: makes general claims with little reference to the meal or evidence."
+      "developing": "Approaches Expectations: makes general claims with little reference to the meal or evidence.",
+      "belowExpectations": "Below Expectations: makes statements with no mention of the ugali, sukuma wiki and nyama choma meal or any test or observation, and uses almost no scientific words correctly."
     }
   ]
 };
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

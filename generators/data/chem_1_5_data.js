@@ -495,31 +495,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of electron configuration and position",
       "excellent": "Correctly writes electron configurations and clearly links group and period to outer electrons and shells in every part.",
       "proficient": "Writes mostly correct configurations and links position to electrons in most parts, with minor gaps.",
-      "developing": "Configurations are missing or incorrect, and position is not clearly linked to electrons."
+      "developing": "Configurations are missing or incorrect, and position is not clearly linked to electrons.",
+      "belowExpectations": "Configurations are missing or mostly incorrect, and group and period are not linked to electrons or shells."
     },
     {
       "criterion": "Explanation of trends using nuclear charge, shielding and ionisation energy",
       "excellent": "Accurately explains the Group I, Period 3 and Group VII trends, using all three ideas and showing why Group I and Group VII trends are opposite.",
       "proficient": "Explains most trends with two of the key ideas, with some imprecision.",
-      "developing": "Describes trends without a causal explanation, or uses ideas incorrectly."
+      "developing": "Describes trends without a causal explanation, or uses ideas incorrectly.",
+      "belowExpectations": "Does not describe the trends, or gives reasons that are mostly incorrect, with no use of nuclear charge, shielding or ionisation energy."
     },
     {
       "criterion": "Use of evidence and data",
       "excellent": "Cites specific observations and values (such as 496, 738 and 1521 kJ/mol, lilac flame, kanga bleaching) accurately and consistently.",
       "proficient": "Cites some evidence accurately, though not always specifically.",
-      "developing": "Little or no evidence cited, or the evidence is inaccurate."
+      "developing": "Little or no evidence cited, or the evidence is inaccurate.",
+      "belowExpectations": "Cites no observations or values, or cites ones that are incorrect, even with prompting."
     },
     {
       "criterion": "Equations and chemical accuracy",
       "excellent": "Balanced equations with correct state symbols, correct products and correct tests.",
       "proficient": "Equations mostly correct, with minor errors in balancing or state symbols.",
-      "developing": "Equations incorrect or missing."
+      "developing": "Equations incorrect or missing.",
+      "belowExpectations": "Equations are missing or mostly incorrect, with wrong products, no balancing or no state symbols."
     },
     {
       "criterion": "Application, prediction and connection to the phenomenon",
       "excellent": "Gives a justified prediction and a Kenyan application, and returns to the Kisumu phenomenon to answer the driving question completely.",
       "proficient": "Gives a reasonable prediction and application with a partial link to the phenomenon.",
-      "developing": "Prediction or application is missing or unjustified, with no clear link back to the phenomenon."
+      "developing": "Prediction or application is missing or unjustified, with no clear link back to the phenomenon.",
+      "belowExpectations": "Makes no prediction or application, or one with no reason, and does not return to the Kisumu phenomenon."
     }
   ]
 };
@@ -580,6 +585,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

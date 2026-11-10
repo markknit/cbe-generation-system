@@ -638,8 +638,10 @@ FE_TOOL_SCHEMA = {
         "rubric": {"type": "array", "items": {
             "type": "object", "additionalProperties": False,
             "properties": {"criterion": _s(), "excellent": _s(),
-                           "proficient": _s(), "developing": _s()},
-            "required": ["criterion", "excellent", "proficient", "developing"]}},
+                           "proficient": _s(), "developing": _s(),
+                           "belowExpectations": _s()},
+            "required": ["criterion", "excellent", "proficient", "developing",
+                         "belowExpectations"]}},
     },
     "required": ["subjectLabel", "instructions", "sections"],
 }
@@ -1126,7 +1128,7 @@ Driving question: {unit.get('drivingQuestion', '')}
 (The lesson sequence as actually taught, and the fact sheet, are given above; the Final Explanation must agree with them.)
 {fe_template_section}{template_fe_context(lesson_template)}
 {FE_RULES}{fix}
-Fields: "instructions" are given to the students (they will write in a blank space under each prompt, so do not say the answers are printed). "sections": 4-5 sections, each with a "prompt" (student-facing, no answers) and an "exemplar" (the model answer). "rubric": 4-5 criteria.
+Fields: "instructions" are given to the students (they will write in a blank space under each prompt, so do not say the answers are printed). "sections": 4-5 sections, each with a "prompt" (student-facing, no answers) and an "exemplar" (the model answer). "rubric": 4-5 criteria, each with four CBE levels: "excellent" (Exceeds Expectations, 4), "proficient" (Meets Expectations, 3), "developing" (Approaches Expectations, 2) and "belowExpectations" (Below Expectations, 1; what a learner at this level typically shows, stated without blame).
 """
 
 
@@ -1252,7 +1254,7 @@ def derive_summary_table(unit: dict, lessons: list, substrand_id: str, substrand
 # ── Data file writer ──────────────────────────────────────────────────────────
 
 # Version of ares-contract.schema.json that generated files declare conformance to.
-SCHEMA_VERSION = '1.0.0'
+SCHEMA_VERSION = '1.1.0'   # contract revision R1, see CONTRACT_CHANGELOG.md
 
 
 def write_data_file(output_name: str, meta: dict, unit: dict,

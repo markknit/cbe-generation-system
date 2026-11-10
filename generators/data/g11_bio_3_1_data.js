@@ -496,31 +496,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Comparing fertilisation strategies",
       "excellent": "Correctly names external and internal fertilisation and oviparous, viviparous and ovoviviparous types, and explains the number of offspring using the site of fertilisation, losses and parental care, with frog, hen and cow evidence.",
       "proficient": "Names the types of fertilisation and gives a reasonable explanation of why frogs have more eggs than cows, with limited use of evidence.",
-      "developing": "Mixes up the types or gives only a statement that frogs lay more eggs, without a reason."
+      "developing": "Mixes up the types or gives only a statement that frogs lay more eggs, without a reason.",
+      "belowExpectations": "Below Expectations: Does not name the types of fertilisation or the offspring types correctly, and gives no reason for the number of eggs or offspring."
     },
     {
       "criterion": "Structure and function",
       "excellent": "Accurately links reproductive organs and the structures of sperm and ovum (tail, mitochondria, acrosome, protective layers, food reserves) to their functions and to the protection of few offspring.",
       "proficient": "Names most structures and gives correct functions for some of them.",
-      "developing": "Lists some structures without functions or with several errors."
+      "developing": "Lists some structures without functions or with several errors.",
+      "belowExpectations": "Below Expectations: Names almost no structures, or links structures to wrong functions."
     },
     {
       "criterion": "Hormonal control",
       "excellent": "Accurately describes the changes in FSH, LH, oestrogen and progesterone, explains single ovulation through feedback, and explains hCG, the placenta, oxytocin and prolactin in pregnancy and birth.",
       "proficient": "Describes the main hormone changes and their roles with minor gaps in feedback or pregnancy hormones.",
-      "developing": "Names a few hormones with unclear or incorrect roles."
+      "developing": "Names a few hormones with unclear or incorrect roles.",
+      "belowExpectations": "Below Expectations: Names no hormones correctly, or gives roles that are wrong or missing."
     },
     {
       "criterion": "Reproductive biotechnology and ethics",
       "excellent": "Explains that the baby does not grow wholly in a test tube, matches technologies to specific causes of infertility, and discusses ethical issues and shared decisions clearly.",
       "proficient": "Explains IVF, surrogacy or sperm banking correctly and mentions an ethical issue.",
-      "developing": "Describes the technologies vaguely or believes the baby grows wholly in a test tube."
+      "developing": "Describes the technologies vaguely or believes the baby grows wholly in a test tube.",
+      "belowExpectations": "Below Expectations: Gives no correct description of the technologies, and believes the baby grows wholly in a test tube with no ethical issue mentioned."
     },
     {
       "criterion": "Quality of the Final Explanation",
       "excellent": "A connected, well-organised explanation that answers the driving question, uses lesson evidence and scientific terms, and reflects on how the thinking has changed.",
       "proficient": "A mostly complete explanation using some evidence and terms, with limited reflection.",
-      "developing": "Disconnected or incomplete statements that do not answer the driving question."
+      "developing": "Disconnected or incomplete statements that do not answer the driving question.",
+      "belowExpectations": "Below Expectations: Gives separate statements that do not answer the driving question, with almost no evidence or scientific terms."
     }
   ]
 };
@@ -581,6 +586,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

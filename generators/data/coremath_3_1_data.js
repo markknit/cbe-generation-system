@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Calculations and use of data",
       "excellent": "All calculations (mean, estimated mean, frequency density, percentages) are correct, show clear working and include units (m) and the 20-gap sample.",
       "proficient": "Most calculations are correct with some working shown; occasional missing units or small slips.",
-      "developing": "Several calculation errors or no working shown; units often missing."
+      "developing": "Several calculation errors or no working shown; units often missing.",
+      "belowExpectations": "Frequency table and calculations are mostly incorrect or missing, with no working shown and no units."
     },
     {
       "criterion": "Understanding of mean, median, mode and grouped data",
       "excellent": "Explains clearly why the mean of 400 m is true but incomplete, using median 250 m, mode 200 m, and why grouped results are estimates.",
       "proficient": "States that the mean is true but incomplete and compares with median or mode, with limited explanation of grouping.",
-      "developing": "Only restates the mean or confuses mean, median and mode."
+      "developing": "Only restates the mean or confuses mean, median and mode.",
+      "belowExpectations": "Does not distinguish mean, median and mode, and cannot say why the mean of 400 m does not tell the whole story."
     },
     {
       "criterion": "Interpreting graphs and tables",
       "excellent": "Accurately describes the histogram, frequency density and polygons, and links shape to where the long gaps are and why similar means hide different shapes.",
       "proficient": "Describes the main features of the graphs but gives limited comparison of Thika Road and Mombasa Road.",
-      "developing": "Graph descriptions are incomplete or inaccurate; frequency density is not understood."
+      "developing": "Graph descriptions are incomplete or inaccurate; frequency density is not understood.",
+      "belowExpectations": "Cannot describe the histogram or polygons, and does not understand frequency density."
     },
     {
       "criterion": "Claim, evidence and reasoning",
       "excellent": "Gives a clear claim supported by specific data (77%, 75%, G9-G14, 5,250 m) and reasoning that answers the driving question.",
       "proficient": "Gives a claim with some correct evidence, but the reasoning is incomplete.",
-      "developing": "Claim is unclear or lacks data evidence."
+      "developing": "Claim is unclear or lacks data evidence.",
+      "belowExpectations": "Gives no claim, or a claim with no data evidence and no reasoning."
     },
     {
       "criterion": "Recommendations and communication",
       "excellent": "Makes data-based recommendations, states the one-morning limitation and links statistics to daily life with correct terms.",
       "proficient": "Makes reasonable recommendations with some data support; limited mention of limits.",
-      "developing": "Recommendations are not linked to data or are missing."
+      "developing": "Recommendations are not linked to data or are missing.",
+      "belowExpectations": "Makes no recommendation, or one with no link to the data, and does not mention the limits of the data."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

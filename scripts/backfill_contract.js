@@ -16,7 +16,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SCHEMA_VERSION = '1.0.0';
+const SCHEMA_VERSION = '1.1.0';   // R1 (CONTRACT_CHANGELOG.md). NOTE: this legacy script only stamps the version; it does not add rubric belowExpectations
 const DATA_DIR = path.join(__dirname, '..', 'generators', 'data');
 
 // Faithful sub-strand content, derived from each file's own lessons + KICD scope.

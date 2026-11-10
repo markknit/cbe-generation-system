@@ -532,7 +532,7 @@ const FINAL_EXPLANATION = {
     },
     {
       "title": "Part 2: Sodium, chlorine and safe salt, and chlorine in Mombasa water",
-      "prompt": "Mama Wanjiru asks why chlorine in her tap water is safe when chlorine as a gas is poisonous, and why the sodium that is dangerous alone is in the salt she puts in her food. (a) Which chemical family is chlorine in, and how many outer electrons does it have? Write its electron arrangement. (b) Write the balanced equation for sodium reacting with chlorine. (c) Use the idea of outer electrons and what you know about the dose to explain to Mama Wanjiru why the tap water is safe. (d) Use outer electrons to explain why table salt is safe to eat even though sodium alone is dangerous.",
+      "prompt": "Mama Wanjiru asks why chlorine in her tap water is safe when chlorine as a gas is poisonous, and why the sodium that is dangerous alone is in the salt she puts in her food. (a) Which chemical family is chlorine in, and how many outer electrons does it have? Write its electron arrangement. (b) Write the balanced equation for sodium reacting with chlorine. (c) Use the idea of outer electrons and the chlorine data to explain to Mama Wanjiru why the tap water is safe. (d) Use outer electrons to explain why table salt is safe to eat even though sodium alone is dangerous.",
       "exemplar": "(a) Chlorine is a halogen (Group 17). It has 7 outer electrons. Its electron arrangement is 2,8,7. It is a reactive non-metal. (b) 2Na + Cl2 -> 2NaCl. (c) Claim: the water is safe because only a tiny dose is used. Evidence: chlorine is added at about 0.5 mg/L at the Mombasa water works, which means only 10 mg in 20 L of water, and at this dose it kills the bacteria that cause cholera and typhoid. Reasoning: a chlorine atom has 7 outer electrons and needs just one more, so it reacts readily, which is why it is good at killing microbes. Because it is so reactive it is toxic in large amounts, so only a small safe dose is used. (d) Sodium has 1 outer electron that it loses very easily, and chlorine needs one more outer electron to have 8. When they react, the outer electron of sodium is taken up by chlorine and they form the compound sodium chloride (NaCl), which is stable and has completely different properties from its elements. Sodium no longer has its easily lost outer electron to react violently with water, and chlorine is no longer a reactive poisonous gas, because both are combined in the stable compound, so the salt is safe to eat."
     },
     {
@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of outer electrons and periodic table position",
       "excellent": "Exceeds expectations: Correctly links group, outer electrons, electron arrangements and reactivity for Na, Mg, Cl and noble gases, including the trend down Group 1.",
       "proficient": "Meets expectations: Gives correct outer electron numbers and links most to reactivity, with minor gaps in the reasoning.",
-      "developing": "Approaches expectations: Gives few outer electron facts or does not link them to behaviour or position."
+      "developing": "Approaches expectations: Gives few outer electron facts or does not link them to behaviour or position.",
+      "belowExpectations": "Below expectations: gives few or no correct outer electron numbers and does not link them to group, position or reactivity."
     },
     {
       "criterion": "Use of evidence from the lessons",
       "excellent": "Exceeds expectations: Uses accurate observations and data (sodium demo, Mg tests, 0.5 mg/L, densities and melting points) to support every claim.",
       "proficient": "Meets expectations: Uses some accurate evidence but misses some data or gives it loosely.",
-      "developing": "Approaches expectations: Gives little evidence, or the data is inaccurate."
+      "developing": "Approaches expectations: Gives little evidence, or the data is inaccurate.",
+      "belowExpectations": "Below expectations: gives almost no evidence from the lessons, or the data used is mostly wrong."
     },
     {
       "criterion": "Chemical equations and terms",
       "excellent": "Exceeds expectations: All equations are balanced and correct; element, compound, group and chemical family are used correctly.",
       "proficient": "Meets expectations: Most equations are correct with one small error; terms mostly correct.",
-      "developing": "Approaches expectations: Equations are unbalanced or missing; terms are confused."
+      "developing": "Approaches expectations: Equations are unbalanced or missing; terms are confused.",
+      "belowExpectations": "Below expectations: writes no balanced equations or only unbalanced ones; element, compound and group are mixed up throughout."
     },
     {
       "criterion": "Matching element to job and trade-offs",
       "excellent": "Exceeds expectations: Explains each job by properties and gives a justified recommendation weighing safety, cost and availability, including lead's toxicity.",
       "proficient": "Meets expectations: Matches properties to jobs but gives limited discussion of trade-offs.",
-      "developing": "Approaches expectations: States uses without linking them to properties."
+      "developing": "Approaches expectations: States uses without linking them to properties.",
+      "belowExpectations": "Below expectations: names uses without matching them to properties, and gives no thought to safety, cost or availability."
     },
     {
       "criterion": "Claim-evidence-reasoning and explaining the puzzle",
       "excellent": "Exceeds expectations: Gives a clear claim, evidence and reasoning that fully explains why sodium is dangerous alone but safe as salt, and why chlorine is safe at a tiny dose.",
       "proficient": "Meets expectations: Explains most of the puzzle, with some reasoning missing.",
-      "developing": "Approaches expectations: Gives a partial or unclear explanation of the puzzle."
+      "developing": "Approaches expectations: Gives a partial or unclear explanation of the puzzle.",
+      "belowExpectations": "Below expectations: gives no clear claim, or an explanation that does not address why sodium is dangerous alone but safe as salt."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

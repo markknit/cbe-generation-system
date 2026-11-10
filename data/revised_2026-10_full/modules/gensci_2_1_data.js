@@ -527,7 +527,7 @@ const FINAL_EXPLANATION = {
   "sections": [
     {
       "title": "Part 1: How the periodic table is organised",
-      "prompt": "A learner in Kericho says: 'The periodic table is just a list of elements. It has nothing to do with the fertiliser on our tea farm.' Use calcium (found in CAN) and nitrogen (found in CAN and DAP) to show that she is wrong. In your answer: (a) explain what the periodic law is and how you discovered it when you sorted the 20 element cards; (b) explain what the periods and the groups of the periodic table tell you about an atom's electron arrangement; (c) state which group calcium and nitrogen are in (use the group numbers 1 to 8 for the main groups, as in Lessons 4 and 5) and give the reason for each.",
+      "prompt": "A learner in Kericho says: 'The periodic table is just a list of elements. It has nothing to do with the fertiliser on our tea farm.' Use calcium (found in CAN) and nitrogen (found in CAN and DAP) to show that she is wrong. In your answer: (a) explain what the periodic law is and how you discovered it when you sorted the 20 element cards; (b) explain what the periods and the groups of the periodic table tell you about an atom's electron arrangement; (c) state which group calcium and nitrogen are in (use the group numbers 1 to 8 for the main groups, as in Lessons 2 to 5) and give the reason for each.",
       "exemplar": "(a) When we sorted the 20 element cards in order of atomic number and looked at the number of electrons in the outermost shell (valence electrons), the numbers repeated in a pattern: 1, 2, 3 and so on up to 8 (the noble gases), and then the pattern started again. This repeating pattern is the periodic law. (b) Rows are called periods, and the period number tells us how many electron shells are occupied. Columns are called groups, and for the main groups numbered 1 to 8 the group number tells us the number of valence electrons, so elements in the same group have similar outer-shell arrangements. (c) Calcium (electron arrangement 2,8,8,2) has 2 valence electrons, so it is in Group 2. Nitrogen (2,5) has 5 valence electrons, so it is in Group 5. The periodic table therefore organises elements by the same electron arrangement that decides how they combine, so it is connected to the formulae on the CAN and DAP bags."
     },
     {
@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Linking atomic structure to the periodic table",
       "excellent": "Exceeds Expectations: clearly explains the periodic law, periods and groups, and correctly links calcium and nitrogen to their groups through their valence electrons.",
       "proficient": "Meets Expectations: explains most ideas about periods, groups and valence electrons, with one small gap or error in placing calcium or nitrogen.",
-      "developing": "Approaches Expectations: describes the periodic table only as a list, or does not connect groups to valence electrons."
+      "developing": "Approaches Expectations: describes the periodic table only as a list, or does not connect groups to valence electrons.",
+      "belowExpectations": "Below Expectations: gives few correct ideas about periods, groups or valence electrons, or places calcium and nitrogen in the wrong groups without help."
     },
     {
       "criterion": "Explaining ion formation",
       "excellent": "Exceeds Expectations: correctly shows electron loss or gain for Ca and N, gives Ca²⁺ and N³⁻, and explains the noble-gas stability reason, including why the charge is fixed, and uses electron affinity correctly.",
       "proficient": "Meets Expectations: gives correct ions and electron changes but the reasoning about stability, fixed charge or electron affinity is incomplete.",
-      "developing": "Approaches Expectations: states ions without explaining the electron changes, or confuses cations and anions."
+      "developing": "Approaches Expectations: states ions without explaining the electron changes, or confuses cations and anions.",
+      "belowExpectations": "Below Expectations: does not show electron loss or gain for Ca and N, or gives ions with the wrong charges and no reason for them."
     },
     {
       "criterion": "Writing and checking formulae",
       "excellent": "Exceeds Expectations: applies the criss-cross rule accurately, uses brackets correctly for radicals, and verifies charge balance with numbers for Ca(NO₃)₂, NH₄NO₃ and (NH₄)₂HPO₄.",
       "proficient": "Meets Expectations: writes correct formulae with the criss-cross rule but gives limited checking of charge balance or explanation of brackets.",
-      "developing": "Approaches Expectations: writes formulae incorrectly or without the steps, and does not check that charges balance."
+      "developing": "Approaches Expectations: writes formulae incorrectly or without the steps, and does not check that charges balance.",
+      "belowExpectations": "Below Expectations: writes few correct formulae, does not use the criss-cross rule, and does not check charge balance even when prompted."
     },
     {
       "criterion": "Connecting the whole explanation to the phenomenon",
       "excellent": "Exceeds Expectations: builds a complete, ordered causal chain from electron arrangement to valency to formula on the CAN and DAP bags, uses a balanced equation correctly to show conservation of atoms and why only coefficients change, and refers throughout to the Kericho learner.",
       "proficient": "Meets Expectations: gives a mostly correct chain with one link missing or weakly explained, and refers to the fertiliser bags.",
-      "developing": "Approaches Expectations: gives disconnected statements and does not link atomic structure to the formulae on the bags."
+      "developing": "Approaches Expectations: gives disconnected statements and does not link atomic structure to the formulae on the bags.",
+      "belowExpectations": "Below Expectations: gives separate statements with no chain from electrons to valency to formula, and does not refer to the fertiliser bags or the equation."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

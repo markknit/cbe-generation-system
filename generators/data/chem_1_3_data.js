@@ -676,31 +676,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Ordering and history of the periodic table",
       "excellent": "Correctly explains Mendeleev (mass, gaps) and Moseley (atomic number), and uses the Ar and K data to justify ordering by atomic number.",
       "proficient": "Describes both scientists correctly but gives limited use of the Ar and K evidence.",
-      "developing": "Mixes up the scientists or the basis of order, or gives no evidence."
+      "developing": "Mixes up the scientists or the basis of order, or gives no evidence.",
+      "belowExpectations": "Cannot say who ordered the periodic table or on what basis, and gives no evidence."
     },
     {
       "criterion": "Electron arrangement, group and period",
       "excellent": "Writes correct arrangements in both forms and applies the group and period rules accurately (including the He exception) to explain why Li, Na and K are alike and Na and Mg differ.",
       "proficient": "Writes mostly correct arrangements and states the rules, with small errors in applying them.",
-      "developing": "Arrangements or rules are incorrect or not linked to group and period."
+      "developing": "Arrangements or rules are incorrect or not linked to group and period.",
+      "belowExpectations": "Cannot write electron arrangements, or writes them incorrectly, with no link to group and period."
     },
     {
       "criterion": "Stability and reactivity reasoning",
       "excellent": "Uses full outer levels, losing and gaining electrons, and specific evidence (water reactions, Ne, Ar, Cl) in a clear claim-evidence-reasoning explanation.",
       "proficient": "Explains stability and reactivity with some evidence but reasoning is incomplete.",
-      "developing": "Describes observations without linking them to electron arrangement."
+      "developing": "Describes observations without linking them to electron arrangement.",
+      "belowExpectations": "Does not link any observation to electron arrangement, stability or reactivity, and gives no evidence."
     },
     {
       "criterion": "Predicting ions, valency and formulae",
       "excellent": "Correctly gives ions with their arrangements, oxidation numbers, formulae, a balanced equation with state symbols, and explains the limits for iron and copper and the prediction for strontium.",
       "proficient": "Mostly correct predictions with minor errors in charges, formulae or balancing.",
-      "developing": "Many incorrect ions, formulae or an unbalanced equation."
+      "developing": "Many incorrect ions, formulae or an unbalanced equation.",
+      "belowExpectations": "Gives ions, formulae or an equation that are mostly incorrect, or does not attempt them."
     },
     {
       "criterion": "Scientific communication",
       "excellent": "Complete sentences, accurate vocabulary and Kenyan examples, and a coherent final explanation that answers the driving question.",
       "proficient": "Mostly clear with correct vocabulary but some gaps in the final explanation.",
-      "developing": "Unclear writing, vocabulary misused, final explanation missing key ideas."
+      "developing": "Unclear writing, vocabulary misused, final explanation missing key ideas.",
+      "belowExpectations": "Writing is unclear or very short, vocabulary is missing or wrong, and the final explanation does not answer the driving question."
     }
   ]
 };
@@ -782,6 +787,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

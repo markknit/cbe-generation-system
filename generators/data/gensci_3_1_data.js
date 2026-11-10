@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of M = F × d and the Principle of Moments",
       "excellent": "Calculates every moment correctly with units, converts masses to weights using g = 10 N/kg, identifies clockwise and anticlockwise moments, and states the Principle of Moments accurately.",
       "proficient": "Calculates most moments correctly with units and states the Principle of Moments with minor gaps, such as a missing direction or unit.",
-      "developing": "Makes frequent calculation errors, omits units or directions, or cannot state the Principle of Moments."
+      "developing": "Makes frequent calculation errors, omits units or directions, or cannot state the Principle of Moments.",
+      "belowExpectations": "Calculates few moments correctly, usually without units or directions, and cannot state the Principle of Moments."
     },
     {
       "criterion": "Explaining the Jembe Handle Puzzle",
       "excellent": "Identifies the blade-soil contact as the pivot and explains that the longer handle (90 cm against 30 cm) gives a larger perpendicular distance and so a larger moment for the same force, rejecting the idea that a bigger force is needed.",
       "proficient": "Explains that a longer handle makes digging easier and refers to distance and moment, but the pivot or the same-force reasoning is incomplete.",
-      "developing": "Says only that a longer handle is easier or gives vague reasons, without linking to moment, pivot or perpendicular distance."
+      "developing": "Says only that a longer handle is easier or gives vague reasons, without linking to moment, pivot or perpendicular distance.",
+      "belowExpectations": "Gives no reason for the longer handle, or says a bigger force is needed, with no mention of pivot, distance or moment."
     },
     {
       "criterion": "Understanding of couples and net moment",
       "excellent": "Defines a couple correctly, explains zero net force with pure rotation, uses F × d between the forces, and explains a real couple such as the two-handed steering wheel grip. Uses the perpendicular distance, not the arrow length.",
       "proficient": "Defines a couple and gives F × d, with small gaps in explaining net force or the steering wheel example.",
-      "developing": "Confuses a couple with a single force, or does not explain why the object turns."
+      "developing": "Confuses a couple with a single force, or does not explain why the object turns.",
+      "belowExpectations": "Does not say what a couple is, or treats it as a single force, and gives no calculation of its moment."
     },
     {
       "criterion": "Connecting to Kenyan contexts and the driving question",
       "excellent": "Gives a coherent answer to the driving question with at least two correct Kenyan examples, each with pivot and design reason, and clearly shows how thinking changed since Lesson 1.",
       "proficient": "Gives a mostly complete answer with two examples, where the pivot or design reasoning is partly missing.",
-      "developing": "Gives one example or none, with little link to the driving question or to the change in thinking."
+      "developing": "Gives one example or none, with little link to the driving question or to the change in thinking.",
+      "belowExpectations": "Gives no Kenyan example with a pivot, and little or no answer to the driving question or change in thinking."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

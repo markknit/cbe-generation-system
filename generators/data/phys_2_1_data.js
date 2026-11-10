@@ -796,31 +796,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim: describing reflection and the laws of reflection",
       "excellent": "Clearly states that sound is a mechanical wave that travels as a ray, reflects at the surface and returns; states both laws of reflection correctly with angles measured from the normal; the ray diagram is fully labelled and accurate.",
       "proficient": "States that sound reflects and returns and gives at least one law of reflection correctly; the diagram has most labels but may miss the normal or one angle.",
-      "developing": "Says sound bounces back but does not state the laws, or measures angles from the surface; the diagram is missing or unclear."
+      "developing": "Says sound bounces back but does not state the laws, or measures angles from the surface; the diagram is missing or unclear.",
+      "belowExpectations": "Does not describe reflection or state the laws, and no diagram is given or it shows no incident or reflected ray."
     },
     {
       "criterion": "Evidence: calculations with d = vt/2 and the 17 m condition",
       "excellent": "All delays (0.50 s, 1.00 s, 0.07 s, 1.76 s), the 17 m minimum distance and the 50 m field distance are correct, with working and units shown.",
       "proficient": "Most calculations are correct with the right formula, but there are small slips in arithmetic or missing units.",
-      "developing": "Uses the formula incorrectly (for example forgetting to halve or double) or gives several wrong values."
+      "developing": "Uses the formula incorrectly (for example forgetting to halve or double) or gives several wrong values.",
+      "belowExpectations": "Does not use d = vt/2, or the values given are mostly wrong or missing, and the 17 m condition is not used."
     },
     {
       "criterion": "Reasoning: explaining the four sites using surfaces, reverberation, spreading and absorption",
       "excellent": "Explains all four sites correctly, linking distance, delay, surface reflection percentages, reverberation and interference in the hall, and spreading and absorption on the grounds.",
       "proficient": "Explains most sites correctly but leaves out one idea, such as absorption or the overlapping reflections.",
-      "developing": "Gives only descriptions of what was heard, or explains with ideas not supported by the data."
+      "developing": "Gives only descriptions of what was heard, or explains with ideas not supported by the data.",
+      "belowExpectations": "Does not explain the four sites, or gives only guesses that are not linked to the data."
     },
     {
       "criterion": "Connecting other wave behaviours and applications",
       "excellent": "Correctly separates reflection from refraction, explains bending using speed change, uses wavelengths to explain diffraction, and calculates the ultrasound echo time of 100 microseconds.",
       "proficient": "Gets most of the distinctions right and does most of the wavelength or ultrasound working correctly.",
-      "developing": "Confuses reflection with refraction or does not use wavelength to explain diffraction."
+      "developing": "Confuses reflection with refraction or does not use wavelength to explain diffraction.",
+      "belowExpectations": "Does not connect other wave behaviours or applications, or confuses most of them with reflection."
     },
     {
       "criterion": "Communication using Claim, Evidence and Reasoning",
       "excellent": "The Final Explanation has a clear claim, uses at least three numbers from the tables as evidence, covers all four sites, and uses scientific terms correctly and consistently.",
       "proficient": "Has a claim and some evidence, covers three or four sites, and mostly uses correct terms.",
-      "developing": "Claim, evidence and reasoning are mixed together or missing, and few data are used."
+      "developing": "Claim, evidence and reasoning are mixed together or missing, and few data are used.",
+      "belowExpectations": "Claim, evidence and reasoning are not separated, and almost no data are used."
     }
   ]
 };
@@ -916,6 +921,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

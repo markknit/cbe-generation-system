@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Testing and describing similarity",
       "excellent": "Calculates all ratios correctly, states that corresponding angles are equal and all sides are in a constant ratio, and explains clearly why rectangle C is not similar to A.",
       "proficient": "Calculates most ratios correctly and states the constant-ratio idea, with a small gap in explaining why C is not similar.",
-      "developing": "Relies on shape looking the same or on equal angles only, and does not use a constant ratio of sides."
+      "developing": "Relies on shape looking the same or on equal angles only, and does not use a constant ratio of sides.",
+      "belowExpectations": "Judges similarity only by how the shapes look, and does not calculate ratios of sides or mention equal angles."
     },
     {
       "criterion": "Scale factor and enlargement",
       "excellent": "Finds k from lengths and from OA'/OA, finds the centre O by joining corresponding points, and handles both k = 2 and k = 0.5 correctly.",
       "proficient": "Finds k correctly and applies it to lengths, with minor errors in describing the centre or the reduction.",
-      "developing": "Confuses k with the difference between lengths or cannot find the image lengths from k."
+      "developing": "Confuses k with the difference between lengths or cannot find the image lengths from k.",
+      "belowExpectations": "Does not find the scale factor, or uses the difference between lengths, and cannot find image lengths or the centre."
     },
     {
       "criterion": "Calculating area and volume",
       "excellent": "Uses A = 2 pi r h + pi r^2 and V = pi r^2 h with pi = 3.14 accurately, gets all ratios (4 and 8), and finds servings and costs correctly with units.",
       "proficient": "Uses the formulas correctly with one or two arithmetic or unit slips.",
-      "developing": "Uses the wrong formulas or cannot connect the calculated figures to the ratios."
+      "developing": "Uses the wrong formulas or cannot connect the calculated figures to the ratios.",
+      "belowExpectations": "Uses the wrong formulas or none, and the calculated figures are mostly incorrect or missing so no ratios can be found."
     },
     {
       "criterion": "Explaining k, k^2 and k^3",
       "excellent": "Explains that quantities depend on one, two or three lengths, so they multiply by k, k^2 or k^3, and uses the cube, rectangle and cylinder evidence. Works backwards from an area factor to k.",
       "proficient": "States k^2 and k^3 correctly with some evidence but a limited explanation of why.",
-      "developing": "Says area and volume simply double when lengths double."
+      "developing": "Says area and volume simply double when lengths double.",
+      "belowExpectations": "Gives no explanation of why area and volume change differently from length, or says all quantities change in the same way as length."
     },
     {
       "criterion": "Final Explanation of the phenomenon",
       "excellent": "Links capacity (8 times, about 48 servings against 6), paint (4 times, about KSh 80 against KSh 20) and price (KSh 120 = 2 x 60) to the scale factor, and explains the bargain per serving.",
       "proficient": "Explains capacity and paint with the correct factors but only partly explains the price or the bargain.",
-      "developing": "Gives a general answer without the factors or without using Mama Achieng's data."
+      "developing": "Gives a general answer without the factors or without using Mama Achieng's data.",
+      "belowExpectations": "Gives little or no explanation of the sufuria puzzle, with no factors and no use of Mama Achieng's data."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

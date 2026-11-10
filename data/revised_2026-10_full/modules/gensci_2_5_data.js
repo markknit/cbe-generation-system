@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim, evidence and reasoning for the anchor phenomenon",
       "excellent": "Exceeds Expectations: Gives a clear claim, uses exact data (35 s, 270 s, 7.7 times, rates 28.6 and 3.7 x10^-3 s^-1) and links more kinetic energy, more frequent and energetic collisions, and activation energy to more effective collisions per second.",
       "proficient": "Meets Expectations: Gives a claim and uses most of the data, with reasoning that mentions collisions and energy but may leave out activation energy or effective collisions.",
-      "developing": "Approaches Expectations: Claim is vague or reasoning says only that particles move faster or that the reaction is hotter; little or no data is used."
+      "developing": "Approaches Expectations: Claim is vague or reasoning says only that particles move faster or that the reaction is hotter; little or no data is used.",
+      "belowExpectations": "Below Expectations: gives no clear claim, uses no data, and gives no explanation involving collisions or energy."
     },
     {
       "criterion": "Fair testing and use of rate = 1/t",
       "excellent": "Exceeds Expectations: Names independent, dependent and control variables correctly, explains why changing several things is unfair, and correctly explains rate = 1/t.",
       "proficient": "Meets Expectations: Names most variables and gives a basic reason for fairness; rate = 1/t is used correctly with small gaps in the explanation.",
-      "developing": "Approaches Expectations: Confuses variables or does not show why the plan is unfair; rate and time are mixed up."
+      "developing": "Approaches Expectations: Confuses variables or does not show why the plan is unfair; rate and time are mixed up.",
+      "belowExpectations": "Below Expectations: does not name the variables correctly, cannot say why the plan is unfair, and does not use rate = 1/t."
     },
     {
       "criterion": "Interpreting data tables",
       "excellent": "Exceeds Expectations: Describes trends accurately with numbers, checks that 35 s fits between 52 s and 26 s, and shows rate roughly proportional to concentration (about 60).",
       "proficient": "Meets Expectations: Describes trends correctly but with few numbers or without testing proportionality or the 35 s link.",
-      "developing": "Approaches Expectations: Misreads the tables or states trends without evidence."
+      "developing": "Approaches Expectations: Misreads the tables or states trends without evidence.",
+      "belowExpectations": "Below Expectations: cannot read the tables correctly and gives no trends or numbers."
     },
     {
       "criterion": "Understanding of surface area, catalysts and light",
       "excellent": "Exceeds Expectations: Explains surface area, catalysts (lower activation energy, not used up, enzyme) and light correctly, and states that factors change speed, not the final amount when the amounts of reactants are the same.",
       "proficient": "Meets Expectations: Explains most factors correctly with small gaps, such as missing activation energy or the final amount.",
-      "developing": "Approaches Expectations: Mixes up catalysts and light or gives no particle explanation."
+      "developing": "Approaches Expectations: Mixes up catalysts and light or gives no particle explanation.",
+      "belowExpectations": "Below Expectations: does not explain surface area, catalysts or light with particles, and confuses what each one does."
     },
     {
       "criterion": "Applying the model to Kenyan contexts and reflecting",
       "excellent": "Exceeds Expectations: Chooses suitable factors for the fish and compost problems, explains them with collision theory, links to optimum conditions for enzymes, and clearly compares the model with Lesson 1.",
       "proficient": "Meets Expectations: Suggests suitable actions with partial particle explanations and a general reflection.",
-      "developing": "Approaches Expectations: Gives actions without reasons, or no reflection on how the model changed."
+      "developing": "Approaches Expectations: Gives actions without reasons, or no reflection on how the model changed.",
+      "belowExpectations": "Below Expectations: gives no suitable actions for the fish and compost problems, or gives no reasons, and does not reflect on the model."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

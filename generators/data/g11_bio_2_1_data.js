@@ -555,31 +555,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim and use of the phenomenon",
       "excellent": "Gives a clear, accurate claim that answers the driving question for both cassava-type and pawpaw/avocado-type plants, using Kenyan examples from the unit.",
       "proficient": "Gives a mostly accurate claim that covers both cases, with limited use of examples.",
-      "developing": "Claim is unclear, covers only one case, or contains misconceptions, for example that flowers alone guarantee fruit."
+      "developing": "Claim is unclear, covers only one case, or contains misconceptions, for example that flowers alone guarantee fruit.",
+      "belowExpectations": "Below Expectations: Claim is missing or contains major misconceptions, for example that flowers alone guarantee fruit, and does not answer the driving question."
     },
     {
       "criterion": "Evidence from investigations",
       "excellent": "Uses at least two specific observations from dissections, stations, animations, fruit sections or case cards, accurately and with detail.",
       "proficient": "Uses one or two observations, with some detail missing.",
-      "developing": "Gives little or no evidence, or evidence that is vague or not from our lessons."
+      "developing": "Gives little or no evidence, or evidence that is vague or not from our lessons.",
+      "belowExpectations": "Below Expectations: Gives no observations from the investigations, or only statements that are not from our lessons."
     },
     {
       "criterion": "Scientific reasoning and terminology",
       "excellent": "Correctly links mitosis and cloning, barriers to self-pollination, pollination versus fertilisation, double fertilisation (zygote and triploid endosperm), and ovule-to-seed and ovary-to-fruit development.",
       "proficient": "Links most ideas correctly, with minor errors or missing links.",
-      "developing": "Reasoning is incomplete, or confuses pollination with fertilisation or the products of the two fusions."
+      "developing": "Reasoning is incomplete, or confuses pollination with fertilisation or the products of the two fusions.",
+      "belowExpectations": "Below Expectations: Gives no correct link between the ideas, and confuses pollination with fertilisation and the products of fertilisation."
     },
     {
       "criterion": "Comparison of sexual and asexual reproduction",
       "excellent": "Explains advantages and disadvantages of both strategies, including variation and disease risk, and why the best choice depends on the environment.",
       "proficient": "Names advantages and disadvantages of both strategies with limited explanation.",
-      "developing": "Describes only one strategy or lists points without explanation."
+      "developing": "Describes only one strategy or lists points without explanation.",
+      "belowExpectations": "Below Expectations: Does not describe either strategy correctly, or names a strategy with no advantage or disadvantage."
     },
     {
       "criterion": "Annotated diagram and presentation",
       "excellent": "The diagram is neat and accurate, with all key structures and processes labelled for both pathways, and the written reflection is clear.",
       "proficient": "The diagram has most labels correct, with a few omissions, and the reflection is brief.",
-      "developing": "The diagram is missing labels or has errors, or the reflection is missing."
+      "developing": "The diagram is missing labels or has errors, or the reflection is missing.",
+      "belowExpectations": "Below Expectations: The diagram is missing or has few correct labels, and there is no written reflection."
     }
   ]
 };
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

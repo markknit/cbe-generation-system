@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Understanding of similarity and scale",
       "excellent": "States both conditions for similar figures and correctly calculates the plan width and L.S.F of 1/200, explaining clearly why proportions are preserved.",
       "proficient": "States both conditions and calculates the L.S.F correctly, with a partly complete explanation of proportion.",
-      "developing": "States only one condition or makes errors in converting units or finding the L.S.F."
+      "developing": "States only one condition or makes errors in converting units or finding the L.S.F.",
+      "belowExpectations": "Cannot state the conditions for similar figures, and makes errors in converting units and in finding the L.S.F."
     },
     {
       "criterion": "Enlargement and centre of enlargement",
       "excellent": "Explains how to find the centre using ray lines, describes positive and negative k accurately, and calculates image coordinates correctly.",
       "proficient": "Describes the centre and the effect of k with minor gaps, and gets most coordinates correct.",
-      "developing": "Cannot describe how to find the centre or confuses positive and negative k."
+      "developing": "Cannot describe how to find the centre or confuses positive and negative k.",
+      "belowExpectations": "Cannot describe how to find the centre of enlargement, and cannot find image coordinates or say what positive and negative k do."
     },
     {
       "criterion": "Area and volume scale factors",
       "excellent": "Correctly applies A.S.F = (L.S.F)² and V.S.F = (L.S.F)³ in all calculations and explains why each rule works.",
       "proficient": "Applies both rules correctly in most calculations with a limited explanation.",
-      "developing": "Treats area or volume as scaling by k, or makes frequent calculation errors."
+      "developing": "Treats area or volume as scaling by k, or makes frequent calculation errors.",
+      "belowExpectations": "Cannot apply A.S.F or V.S.F, or scales area and volume by k in nearly every calculation."
     },
     {
       "criterion": "Explanation and use of evidence",
       "excellent": "Connects the school plan and water tanks to the scale factor rules with clear, complete reasoning and accurate use of terms.",
       "proficient": "Connects the phenomenon to the rules with generally accurate terms but some reasoning left implicit.",
-      "developing": "Gives statements with little reasoning or little link to the phenomenon."
+      "developing": "Gives statements with little reasoning or little link to the phenomenon.",
+      "belowExpectations": "Gives statements with no reasoning, or does not link the school plan or water tanks to the scale factor rules."
     },
     {
       "criterion": "Real-life application and reflection",
       "excellent": "Gives a new, realistic Kenyan example with a correct calculation and a clear 'used to think / now I know' reflection.",
       "proficient": "Gives a suitable example with a mostly correct calculation and a brief reflection.",
-      "developing": "Example is unsuitable or the calculation is incorrect, and the reflection is missing or vague."
+      "developing": "Example is unsuitable or the calculation is incorrect, and the reflection is missing or vague.",
+      "belowExpectations": "Gives no example, or an unsuitable one with an incorrect calculation, and the reflection is missing."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

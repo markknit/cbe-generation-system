@@ -615,31 +615,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence from the lessons",
       "excellent": "Uses specific evidence from several lessons, such as the flame test colours, gold foil results, Bohr diagrams, orbital configurations and the chlorine data, and links each piece to the explanation.",
       "proficient": "Uses some evidence from the lessons, but the link to the explanation is sometimes missing or general.",
-      "developing": "Gives little or no evidence, or states facts without any link to the lessons."
+      "developing": "Gives little or no evidence, or states facts without any link to the lessons.",
+      "belowExpectations": "Gives no evidence from the lessons, or states facts that are not connected to the explanation."
     },
     {
       "criterion": "Explanation of electron energy transitions",
       "excellent": "Correctly sequences absorption of energy, jump to the excited state, fall to a lower level and emission of a photon, and explains that the colour depends on the energy gap, which is unique to each element.",
       "proficient": "Describes the jump and the release of light but is vague about why the colour is specific to the element.",
-      "developing": "Describes the flame colour without a correct explanation of electron jumps or energy release."
+      "developing": "Describes the flame colour without a correct explanation of electron jumps or energy release.",
+      "belowExpectations": "Names the flame colour only, with no mention of electrons jumping or light being released."
     },
     {
       "criterion": "Electron arrangement and configuration",
       "excellent": "Writes correct configurations for sodium and potassium, applies Aufbau, Pauli and Hund rules, and explains how 3s¹ versus 4s¹ leads to different colours.",
       "proficient": "Writes mostly correct configurations and states the rules, with limited link to the colours.",
-      "developing": "Configurations are incorrect or missing, and the rules are confused."
+      "developing": "Configurations are incorrect or missing, and the rules are confused.",
+      "belowExpectations": "Cannot write an electron configuration, or writes one that is mostly incorrect, and does not use the rules."
     },
     {
       "criterion": "Isotopes and relative atomic mass",
       "excellent": "Calculates 35.5 correctly with a reasonableness check and explains that isotopes share electron arrangement and so the same flame colour.",
       "proficient": "Calculates correctly but gives an incomplete explanation of the flame colour of isotopes.",
-      "developing": "Calculation is incorrect or the idea of isotopes is confused."
+      "developing": "Calculation is incorrect or the idea of isotopes is confused.",
+      "belowExpectations": "Does not attempt the calculation or gets it wrong, and does not link isotopes to electron arrangement."
     },
     {
       "criterion": "Scientific communication",
       "excellent": "Uses precise vocabulary (nucleus, shell, orbital, excited state, photon), a logical order and the Kenyan context throughout.",
       "proficient": "Uses mostly correct vocabulary and a clear order, with minor errors.",
-      "developing": "Uses little scientific vocabulary and the ideas are hard to follow."
+      "developing": "Uses little scientific vocabulary and the ideas are hard to follow.",
+      "belowExpectations": "Uses almost no scientific vocabulary, and the ideas are not in a clear order and cannot be followed without prompting."
     }
   ]
 };
@@ -714,6 +719,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Classifying real numbers",
       "excellent": "Correctly classifies all numbers as rational or irrational, with the p/q test and decimal behaviour (terminating, repeating, non-terminating non-repeating) explained accurately.",
       "proficient": "Classifies most numbers correctly and mentions either the p/q test or the decimal behaviour.",
-      "developing": "Classifies some numbers correctly but gives little or no reason, or confuses recurring decimals with irrational numbers."
+      "developing": "Classifies some numbers correctly but gives little or no reason, or confuses recurring decimals with irrational numbers.",
+      "belowExpectations": "Classifies few or no numbers correctly, gives no reasons, and does not distinguish rational from irrational numbers."
     },
     {
       "criterion": "Explaining the phenomenon",
       "excellent": "Clearly explains that 28π is irrational because it is a rational multiplied by the irrational π, and links this to the endless decimal and the gap or overlap in the string.",
       "proficient": "States that π is irrational and links it to the endless digits, with a partial explanation of the product.",
-      "developing": "Describes the calculator result but does not link it to irrationality."
+      "developing": "Describes the calculator result but does not link it to irrationality.",
+      "belowExpectations": "Does not explain the calculator result, or gives an incorrect explanation with no mention of irrationality or the endless decimal."
     },
     {
       "criterion": "Accuracy and approximation",
       "excellent": "Explains the effect of rounding or using 22/7, shows 28 × 22/7 = 88, and gives the strategy of carrying exact values and rounding only at the end.",
       "proficient": "Explains the approximation idea and gets most calculations correct, but the rounding strategy is not fully explained.",
-      "developing": "Calculations are incomplete or incorrect, and rounding is not explained."
+      "developing": "Calculations are incomplete or incorrect, and rounding is not explained.",
+      "belowExpectations": "Calculations are mostly missing or incorrect, and the effect of rounding or using 22/7 is not recognised."
     },
     {
       "criterion": "Absolute value and error",
       "excellent": "Correctly calculates |88 − 28π| ≈ 0.035 cm, states it is irrational with a reason, and explains why absolute value suits error measurement.",
       "proficient": "Calculates the error correctly but gives an incomplete reason for its type or for the use of absolute value.",
-      "developing": "Does not use absolute value correctly, or the error calculation is incorrect."
+      "developing": "Does not use absolute value correctly, or the error calculation is incorrect.",
+      "belowExpectations": "Does not attempt the error calculation, or does it with no absolute value and an incorrect result, with no reason given."
     },
     {
       "criterion": "Final explanation and use of evidence",
       "excellent": "Gives a coherent explanation of the driving question using at least four lesson ideas and Kenyan contexts, with accurate mathematical vocabulary.",
       "proficient": "Gives a mostly clear explanation using two or three ideas from the lessons.",
-      "developing": "Gives a general or incomplete answer with few ideas from the lessons or little use of Kenyan contexts."
+      "developing": "Gives a general or incomplete answer with few ideas from the lessons or little use of Kenyan contexts.",
+      "belowExpectations": "Gives a very brief or unrelated answer that uses no ideas from the lessons and no Kenyan contexts."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

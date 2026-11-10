@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Labelling and choosing the correct ratio",
       "excellent": "Draws accurate, fully labelled triangles with opposite, adjacent and hypotenuse correct relative to the given angle, and justifies every ratio choice using SOH-CAH-TOA.",
       "proficient": "Labels triangles mostly correctly and chooses the right ratio, but the justification is brief or incomplete.",
-      "developing": "Labels sides incorrectly or does not give a reason for choosing the ratio."
+      "developing": "Labels sides incorrectly or does not give a reason for choosing the ratio.",
+      "belowExpectations": "Cannot draw or label the triangles, mixes up opposite, adjacent and hypotenuse, and chooses ratios without any reason."
     },
     {
       "criterion": "Calculation and use of tables, calculator or exact values",
       "excellent": "Sets up and rearranges equations correctly, calculates accurately (mast about 47.7 m, ramp about 6.13 m, exact special-angle values) with units and sensible rounding.",
       "proficient": "Sets up equations correctly with minor arithmetic, rounding or unit errors.",
-      "developing": "Equations are set up incorrectly or the calculation is mostly incorrect or incomplete."
+      "developing": "Equations are set up incorrectly or the calculation is mostly incorrect or incomplete.",
+      "belowExpectations": "Cannot set up the equations, and calculations are incorrect or not attempted, with units missing."
     },
     {
       "criterion": "Explaining relationships between ratios",
       "excellent": "Clearly explains sin θ = cos(90° − θ) using opposite/adjacent swapping and proves tan θ = sin θ ÷ cos θ from the definitions.",
       "proficient": "States the relationships correctly but explanation or proof is partial.",
-      "developing": "States the relationships without explanation or with errors."
+      "developing": "States the relationships without explanation or with errors.",
+      "belowExpectations": "Cannot state the relationships between the ratios, or states them with errors and no explanation."
     },
     {
       "criterion": "Elevation, depression and connection to the phenomenon",
       "excellent": "Correctly distinguishes elevation from depression, explains why they are equal, and clearly links all work to how the Nakuru mast height is found without climbing.",
       "proficient": "Defines elevation and depression correctly with a weak link to the phenomenon.",
-      "developing": "Confuses elevation and depression or does not connect the work to the mast."
+      "developing": "Confuses elevation and depression or does not connect the work to the mast.",
+      "belowExpectations": "Mixes up elevation and depression, and does not link the work to finding the Nakuru mast height."
     },
     {
       "criterion": "Real-life reasoning and communication",
       "excellent": "Gives a clear general method and relevant Kenyan examples, with well-organised working and full-sentence conclusions.",
       "proficient": "Gives a reasonable method and examples, with some gaps in organisation.",
-      "developing": "Gives little or unclear reference to real-life use and working is disorganised."
+      "developing": "Gives little or unclear reference to real-life use and working is disorganised.",
+      "belowExpectations": "Gives no clear real-life use of trigonometric ratios, and working is missing or too disorganised to follow."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

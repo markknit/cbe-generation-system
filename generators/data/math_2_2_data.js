@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining the limitation of ½ × base × height",
       "excellent": "Clearly explains that a perpendicular height is needed, that it cannot be measured on the shamba, and links this to the need for new methods.",
       "proficient": "States that the height is needed and cannot be measured but gives little link to the new methods.",
-      "developing": "Gives a vague or incorrect reason, such as confusing the height with a side length."
+      "developing": "Gives a vague or incorrect reason, such as confusing the height with a side length.",
+      "belowExpectations": "Gives no reason why ½ × base × height is not enough for the plot, or gives a reason that is not about the shape."
     },
     {
       "criterion": "Selecting and applying formulas correctly",
       "excellent": "Chooses the correct formula for each triangle with a justification based on the data, calculates correctly with units and sensible rounding.",
       "proficient": "Chooses the correct formulas and calculates mostly correctly, with a small slip in working, units or justification.",
-      "developing": "Chooses the wrong formula or makes major calculation errors."
+      "developing": "Chooses the wrong formula or makes major calculation errors.",
+      "belowExpectations": "The learner partially determines the area of quadrilaterals, heptagons, octagons or irregular polygons."
     },
     {
       "criterion": "Decomposing polygons",
       "excellent": "States the (n − 2) rule, names the diagonals and triangles for the shamba, and explains summing the areas.",
       "proficient": "Gives the number of triangles and the summing idea but omits some detail, such as the diagonals or the rule.",
-      "developing": "Does not decompose the polygon, or gives an incorrect number of triangles."
+      "developing": "Does not decompose the polygon, or gives an incorrect number of triangles.",
+      "belowExpectations": "Does not break the polygon into triangles, or the pieces given do not cover the polygon."
     },
     {
       "criterion": "Scientific explanation of the driving question",
       "excellent": "Gives a complete, logical explanation connecting all steps, the toolkit, unit conversion and personal growth in understanding.",
       "proficient": "Explains most steps and tools but leaves out unit conversion or reflection.",
-      "developing": "Gives a list of formulas with no connection to the surveyor's problem."
+      "developing": "Gives a list of formulas with no connection to the surveyor's problem.",
+      "belowExpectations": "Does not link any formula to the surveyor's problem, or the answer is missing."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

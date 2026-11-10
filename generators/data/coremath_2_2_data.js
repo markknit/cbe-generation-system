@@ -555,25 +555,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining the phenomenon with properties of reflection",
       "excellent": "Correctly explains equal distance, equal size and lateral inversion, linking each to the matatu mirror and the lorry, with a fully labelled diagram showing perpendicular connectors.",
       "proficient": "Explains at least two of the three observations correctly using the properties of reflection; the diagram is mostly labelled.",
-      "developing": "Describes what is seen but does not link it to properties of reflection, or the diagram is missing or unclear."
+      "developing": "Describes what is seen but does not link it to properties of reflection, or the diagram is missing or unclear.",
+      "belowExpectations": "Describes the matatu mirror or lorry without using properties of reflection, and the diagram is missing or cannot be understood."
     },
     {
       "criterion": "Coordinate rules and mirror-line equation",
       "excellent": "States (a, b) to (-a, b) correctly and finds y = -x + 7 with all steps shown (midpoint, gradient, negative reciprocal, equation) and a reason for each.",
       "proficient": "Finds the correct equation with minor slips in working or missing reasons, or states the rule correctly with a small error in the equation.",
-      "developing": "Cannot state the rule or find the midpoint and gradient correctly, and does not reach the equation."
+      "developing": "Cannot state the rule or find the midpoint and gradient correctly, and does not reach the equation.",
+      "belowExpectations": "Cannot state the coordinate rule or find the midpoint or gradient, and does not attempt the mirror-line equation."
     },
     {
       "criterion": "Congruence reasoning (SSS and opposite congruence)",
       "excellent": "Explains that reflection preserves distances, names SSS with a correct congruence statement, and explains why six elements are not needed and why the congruence is opposite.",
       "proficient": "Names SSS and gives a correct statement but the explanation of why distances are preserved or why the congruence is opposite is incomplete.",
-      "developing": "Does not name a valid congruence test or confuses congruence with orientation."
+      "developing": "Does not name a valid congruence test or confuses congruence with orientation.",
+      "belowExpectations": "Does not name any congruence test, gives no reasoning about distances, and does not recognise that the congruence is opposite."
     },
     {
       "criterion": "Resolving the driving question and using Kenyan contexts",
       "excellent": "Clearly distinguishes size/shape from orientation, answers the driving question in a connected argument, and gives accurate Kenyan examples and a thoughtful model revision.",
       "proficient": "Answers the driving question with some links between ideas; examples and model revision are accurate but brief.",
-      "developing": "Gives separate, unconnected statements; examples are missing or inaccurate and there is little model revision."
+      "developing": "Gives separate, unconnected statements; examples are missing or inaccurate and there is little model revision.",
+      "belowExpectations": "Gives no answer to the driving question or only separate statements, with no Kenyan examples and no model revision."
     }
   ]
 };
@@ -641,6 +645,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

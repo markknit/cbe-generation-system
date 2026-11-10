@@ -106,8 +106,8 @@ async function buildFinalExplanation(META, FE, mode = 'student') {
   }
   const FLW = 3000;
   const FCW = W - FLW;
-  const RW3 = Math.floor(FCW / 3);
-  const RW3r = FCW - RW3 * 2;
+  const RW3 = Math.floor(FCW / 4);        // four rubric level columns (contract revision R1)
+  const RW3r = FCW - RW3 * 3;
 
   const body = [
     ...titleBlock(
@@ -173,18 +173,20 @@ async function buildFinalExplanation(META, FE, mode = 'student') {
       fullHeader('RUBRIC', C.darkBlue, 'FFFFFF', SZ_H, 4),
       new TableRow({ children: [
         cell('Criterion',      { fill: C.medBlue, bold: true, color: 'FFFFFF', w: FLW,  size: SZ }),
-        cell('Excellent (4)',  { fill: C.teal,    bold: true, color: 'FFFFFF', w: RW3,  size: SZ }),
-        cell('Proficient (3)', { fill: C.medBlue, bold: true, color: 'FFFFFF', w: RW3,  size: SZ }),
-        cell('Developing (1–2)', { fill: C.teal,  bold: true, color: 'FFFFFF', w: RW3r, size: SZ }),
+        cell('Exceeds Expectations (4)',   { fill: C.teal,    bold: true, color: 'FFFFFF', w: RW3,  size: SZ }),
+        cell('Meets Expectations (3)',     { fill: C.medBlue, bold: true, color: 'FFFFFF', w: RW3,  size: SZ }),
+        cell('Approaches Expectations (2)',{ fill: C.teal,    bold: true, color: 'FFFFFF', w: RW3,  size: SZ }),
+        cell('Below Expectations (1)',     { fill: C.medBlue, bold: true, color: 'FFFFFF', w: RW3r, size: SZ }),
       ]}),
       ...FE.rubric.map(r => new TableRow({ children: [
         cell(r.criterion,  { fill: C.lightBlue,  w: FLW,  size: SZ }),
         cell(r.excellent,  { fill: C.white,      w: RW3,  size: SZ }),
         cell(r.proficient, { fill: C.grey,       w: RW3,  size: SZ }),
-        cell(r.developing, { fill: C.white,      w: RW3r, size: SZ }),
+        cell(r.developing, { fill: C.white,      w: RW3,  size: SZ }),
+        cell(r.belowExpectations || '', { fill: C.grey, w: RW3r, size: SZ }),   // '' only possible under CBE_LEGACY_RUBRIC=1 (baseline render)
       ]})),
     ];
-    body.push(makeTable(rubricRows, [FLW, RW3, RW3, RW3r]));
+    body.push(makeTable(rubricRows, [FLW, RW3, RW3, RW3, RW3r]));
   }
 
   // Attribution at the end of the document (Mark, 2026-10-01).

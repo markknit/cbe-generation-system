@@ -435,31 +435,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Understanding of mechanical properties",
       "excellent": "Defines elastic, plastic, elastic limit, spring constant, stress, strain and Young's Modulus accurately, and links them to a particle-level explanation of bonds.",
       "proficient": "Defines most terms correctly with a minor gap or imprecision in the particle-level explanation.",
-      "developing": "Definitions are incomplete or confused, for example mixing up elastic limit and breaking point, and there is little or no particle-level explanation."
+      "developing": "Definitions are incomplete or confused, for example mixing up elastic limit and breaking point, and there is little or no particle-level explanation.",
+      "belowExpectations": "Definitions are missing or mostly wrong, and there is no particle-level explanation of elastic limit, breaking point, stiffness or strength."
     },
     {
       "criterion": "Use of evidence",
       "excellent": "Uses specific data from the lessons accurately (the 100–500 g stretching results, k values of 850 and 210 N/m, extensions of 0.92 m and 3.73 m, elastic limit 2.1 m).",
       "proficient": "Uses some specific lesson evidence, with a few missing or inexact values.",
-      "developing": "Uses general statements with little or no specific data from the investigations."
+      "developing": "Uses general statements with little or no specific data from the investigations.",
+      "belowExpectations": "Gives no data from the investigations, only opinions about the rope."
     },
     {
       "criterion": "Scientific reasoning and calculations",
       "excellent": "Calculations (weight, safe working load, Ep) are correct, with steps and units shown, and the reasoning links the load to the elastic limit to the failure.",
       "proficient": "Calculations are mostly correct with small errors in units or steps, and the reasoning is mostly complete.",
-      "developing": "Calculations have major errors or are missing, and the reasoning is a list of facts that does not explain why the rope snapped."
+      "developing": "Calculations have major errors or are missing, and the reasoning is a list of facts that does not explain why the rope snapped.",
+      "belowExpectations": "Calculations are missing or wrong throughout, and the reasoning does not link to why the rope snapped."
     },
     {
       "criterion": "Application to Kenyan contexts",
       "excellent": "Gives a clear, practical recommendation to the farmer and explains a second Kenyan application (matatu suspension spring or bungee cord) correctly.",
       "proficient": "Gives a reasonable recommendation and mentions a second application with limited explanation.",
-      "developing": "Recommendation is vague or unsupported, and there is no clear second application."
+      "developing": "Recommendation is vague or unsupported, and there is no clear second application.",
+      "belowExpectations": "Gives no recommendation, or the recommendation is unrelated to the properties studied and no second application is given."
     },
     {
       "criterion": "Communication and growth",
       "excellent": "Writing is clear, organised and uses correct vocabulary and labelled diagrams, and shows a clear journey from the Lesson 1 prediction to evidence-based explanation.",
       "proficient": "Writing is mostly clear and organised, with some growth from Lesson 1 described.",
-      "developing": "Writing is hard to follow, with little vocabulary use and no description of how understanding changed."
+      "developing": "Writing is hard to follow, with little vocabulary use and no description of how understanding changed.",
+      "belowExpectations": "The writing is very hard to follow, scientific words are not used, and nothing is said about how understanding changed."
     }
   ]
 };
@@ -513,6 +518,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

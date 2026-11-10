@@ -20,8 +20,8 @@ const META = {
 const UNIT = {
   "gradeLevel": "10",
   "subject": "Biology",
-  "strand": "Strand 3.0: Animal Nutrition, Transport, and Gaseous Exchange",
-  "substrand": "Sub-Strand 3.1: Animal Nutrition",
+  "strand": "Strand 3.0: Anatomy and Physiology of Animals",
+  "substrand": "Sub-Strand 3.1: Nutrition",
   "totalDuration": "10 lessons: 6 double lessons of 80 minutes (Lessons 1, 3, 5, 6, 7, 10) and 4 single lessons of 40 minutes (Lessons 2, 4, 8, 9) = 640 minutes total (16 periods of 40 minutes)",
   "content": "• Introduction to animal nutrition — types of nutrition (autotrophic vs heterotrophic)\n• Mouthparts of insects: chewing and biting (e.g., grasshopper, termite)\n• Mouthparts of insects: piercing and sucking (e.g., mosquito, aphid, tsetse fly)\n• Mouthparts of birds: crushing and tearing (e.g., eagle, vulture, hornbill)\n• Mouthparts of birds: probing and filtering (e.g., flamingo at Lake Nakuru, sunbird, ibis)\n• Dentition in mammals — types of teeth and their functions\n• Dental formulae of herbivores, carnivores, and omnivores (using Kenyan wildlife examples)\n• Human digestive system — structure and function of organs\n• Enzymes in digestion — types, sites of action, and products\n• Absorption and assimilation of digested food; malnutrition and deficiency diseases in Kenya",
   "learningOutcomes": "By the end of the sub-strand, the learner should be able to:\na) relate the structure of mouthparts of insects to their functions,\nb) illustrate mouthparts in different insects,\nc) relate the structure of beaks of birds to their functions,\nd) appreciate diversity in feeding modes of insects and birds.\n\nAdditional outcomes taught in this unit (extension beyond the KICD Grade 10 outcomes for this sub-strand):\ne) explain the types of nutrition in animals and their significance in everyday life,\nf) describe the types of teeth and dental formulae of herbivores, carnivores, and omnivores using Kenyan animal examples,\ng) describe the structure and functions of the organs of the human digestive system,\nh) explain the role of enzymes in the digestion of carbohydrates, proteins, and lipids,\ni) describe the processes of absorption and assimilation of digested food products,\nj) relate malnutrition and dietary deficiency diseases to feeding habits observed in Kenyan communities,\nk) appreciate the importance of proper nutrition and balanced diet for healthy living.",
@@ -42,7 +42,7 @@ const LESSONS = [
     "number": 1,
     "title": "What Is Animal Nutrition and Why Does It Matter? — Launching the Anchoring Phenomenon",
     "duration": "80 minutes (2 × 40-minute lessons)",
-    "substrand": "Sub-Strand 3.1: Animal Nutrition",
+    "substrand": "Sub-Strand 3.1: Nutrition",
     "slo": {
       "purpose": "To introduce the concept of animal nutrition by anchoring learning in a real-world phenomenon — the strikingly different feeding structures of a mosquito, grasshopper, aphid, flamingo, and fish eagle — and to launch the Driving Question Board that will guide the entire sub-strand.",
       "knowledge": "Learners will know that: (1) animal nutrition is the process by which animals obtain and use food for energy, growth, and repair; (2) different animals possess structurally different feeding apparatus adapted to their specific diets; (3) the anchoring phenomenon (mosquito vs. grasshopper vs. aphid at a Kakamega maize farm; flamingo vs. fish eagle at Lake Nakuru) provides the investigable question that drives the sub-strand.",
@@ -102,7 +102,7 @@ const LESSONS = [
     "number": 2,
     "title": "Chewing and Biting Mouthparts: How Mandibles Enable Mechanical Breakdown of Solid Food",
     "duration": "40 minutes",
-    "substrand": "3.1 Animal Nutrition",
+    "substrand": "3.1 Nutrition",
     "aresKeywords": "mandibles, chewing mouthparts, mechanical digestion, structural adaptation, labrum, labium, maxillae, grasshopper, termite, maize farm, plant tissue",
     "slo": {
       "purpose": "By the end of this lesson, learners will be able to describe the structure and function of chewing and biting insect mouthparts and explain how mandibles enable mechanical breakdown of solid plant tissue, connecting this directly to the ragged-leaf damage observed on the Kakamega maize farm in the anchoring phenomenon.",
@@ -162,7 +162,7 @@ const LESSONS = [
     "number": 3,
     "title": "Piercing and Sucking Mouthparts: How Does a Mosquito Drink Blood but a Grasshopper Cannot?",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 3.1: Animal Nutrition",
+    "substrand": "Sub-Strand 3.1: Nutrition",
     "aresKeywords": "piercing-sucking mouthparts, stylet, proboscis, phloem, mosquito, aphid, tsetse fly, plant wilting, Kakamega, insect feeding",
     "slo": {
       "purpose": "To investigate how piercing-sucking mouthparts in insects such as mosquitoes, aphids, and tsetse flies are structurally adapted to access liquid food sources — plant sap or blood — without chewing, and to connect this structural specialisation to the broader driving question about how mouthpart shape determines the nutrients an animal can obtain.",
@@ -222,7 +222,7 @@ const LESSONS = [
     "number": 4,
     "title": "Crushing and Tearing Bird Beaks: How Does a Fish Eagle Eat What a Hornbill Cannot?",
     "duration": "40 minutes",
-    "substrand": "3.1 Animal Nutrition",
+    "substrand": "3.1 Nutrition",
     "aresKeywords": "beak morphology, hooked beak, crushing beak, tearing, carnivore, omnivore, adaptation, feeding structure, fish eagle, vulture, hornbill, Kenya wildlife",
     "slo": {
       "purpose": "Learners will analyse how the beak structures of Kenyan birds — specifically the fish eagle, vulture, and hornbill — are adapted for tearing and crushing, and will connect beak morphology to diet and feeding behaviour as new evidence in the cumulative feeding-structures model.",
@@ -244,10 +244,10 @@ const LESSONS = [
       },
       {
         "phase": "Observe Phase",
-        "learnerExperience": "Each learner receives a one-page resource sheet containing: (A) four labelled beak diagrams — fish eagle (sharply hooked, strong base, pointed tip), white-backed vulture (hooked but with wider gape for reaching into carcasses, serrated tomia), African grey hornbill (large casque, curved but blunter tip, wide gape for tossing fruit), and pied crow (straight, general-purpose, slight hook at tip); (B) a 200-word structured reading titled 'Beak Shape and Feeding Action in Kenyan Birds' that introduces three beak features: tip sharpness (for piercing or tearing flesh), curvature (for hooking and gripping prey), and gape width (for swallowing whole items or reaching into carcasses). Learners read silently, then complete a three-column observation table in their books: Bird | Beak features I observe | Feeding action those features would allow. They work individually for 4 minutes, then compare tables with a partner.",
-        "teacherMoves": "Distribute the resource sheet. Say: 'You have two tasks on this sheet — first read the short passage, then fill in the observation table in your book. I want you to use the words from the diagrams and the reading — do not just say the beak looks big or small, describe the specific feature: is the tip hooked, pointed, blunt, serrated? You have 4 minutes.' [WAIT TIME: 4 minutes of individual silent work.] Circulate and look at tables. If a learner writes only general descriptions (e.g., 'curved'), prompt quietly: 'Can you add where it is curved — at the tip or the base? And how does that help the bird grip a slippery tilapia at Lake Victoria?' After 5 minutes, say: 'Compare your table with your partner. Did you notice any beak feature they missed?' [WAIT TIME: 2 minutes of pair comparison.] Bring the class together and build a shared version of the table on the board, calling on different pairs for each row. Ask: 'Did anyone change their observation table after talking with their partner? What did you add?' Validate revisions as good scientific practice.",
+        "learnerExperience": "Each learner receives a one-page resource sheet containing: (A) four labelled beak diagrams — fish eagle (sharply hooked, strong base, pointed tip), white-backed vulture (strongly hooked, with sharp cutting edges to the bill, and a long bare neck that helps it reach into carcasses), African grey hornbill (large casque, curved but blunter tip, wide gape for tossing fruit), and pied crow (straight, general-purpose, slight hook at tip); (B) a 200-word structured reading titled 'Beak Shape and Feeding Action in Kenyan Birds' that introduces three beak features: tip sharpness (for piercing or tearing flesh), curvature (for hooking and gripping prey), and gape width (for swallowing whole items or reaching into carcasses). Learners read silently, then complete a three-column observation table in their books: Bird | Beak features I observe | Feeding action those features would allow. They work individually for 4 minutes, then compare tables with a partner.",
+        "teacherMoves": "Distribute the resource sheet. Say: 'You have two tasks on this sheet — first read the short passage, then fill in the observation table in your book. I want you to use the words from the diagrams and the reading — do not just say the beak looks big or small, describe the specific feature: is the tip hooked, pointed, blunt, sharp-edged? You have 4 minutes.' [WAIT TIME: 4 minutes of individual silent work.] Circulate and look at tables. If a learner writes only general descriptions (e.g., 'curved'), prompt quietly: 'Can you add where it is curved — at the tip or the base? And how does that help the bird grip a slippery tilapia at Lake Victoria?' After 5 minutes, say: 'Compare your table with your partner. Did you notice any beak feature they missed?' [WAIT TIME: 2 minutes of pair comparison.] Bring the class together and build a shared version of the table on the board, calling on different pairs for each row. Ask: 'Did anyone change their observation table after talking with their partner? What did you add?' Validate revisions as good scientific practice.",
         "sensemakingStrategy": "The structured observation table scaffolds analytical reading by requiring learners to move from raw feature description to functional inference — the same logic they used for mandibles (Lesson 2) and stylets (Lesson 3). Including a generalist crow allows learners to see a middle-ground case, reinforcing that adaptation is a spectrum.",
-        "formativeAssessment": "Check whether learners distinguish between the vulture and fish eagle beaks, which are both hooked but differ in gape and serration. A common misconception is that all hooked beaks are identical. Use the shared class table to surface this: 'The fish eagle and the vulture both have hooked beaks — so why are there differences between them?' Listen for reasoning that connects gape width to feeding on carcass interiors versus gripping live fish."
+        "formativeAssessment": "Check whether learners distinguish between the vulture and fish eagle beaks, which are both hooked but differ in gape and in the sharpness of the cutting edges. A common misconception is that all hooked beaks are identical. Use the shared class table to surface this: 'The fish eagle and the vulture both have hooked beaks — so why are there differences between them?' Listen for reasoning that connects gape width to feeding on carcass interiors versus gripping live fish."
       },
       {
         "phase": "Explain Phase",
@@ -273,7 +273,7 @@ const LESSONS = [
     ],
     "teacherReflection": "After the lesson, consider: (1) Did learners transfer the structure-function logic from insect mouthparts to bird beaks independently, or did they need explicit prompting? If most needed prompting, plan a brief 3-minute review of the Lesson 2 and 3 structure-function pattern at the start of Lesson 5. (2) Were the CER statements specific enough — did learners name beak features, or describe birds generally? If vague, use an anonymous example from today to model improvement in Lesson 5. (3) Did the beak-swap thought experiment generate genuine reasoning about adaptation, or did learners treat it as a trivial question? If trivial, plan a more challenging scenario for Lesson 5 (e.g., what if a flamingo had a fish eagle beak at Lake Nakuru?). (4) What new questions appeared on the DQB? Scan these tonight and flag any that relate to digestive processes — these learners are already thinking ahead to Lessons 7 and 8 and their curiosity should be acknowledged publicly at the start of Lesson 5.",
     "summaryTablePrompt": {
-      "observed": "Photographs and labelled diagrams of the fish eagle, white-backed vulture, African grey hornbill, and pied crow beaks, showing differences in tip sharpness, curvature, gape width, and serration of the tomia (inner beak edge)",
+      "observed": "Photographs and labelled diagrams of the fish eagle, white-backed vulture, African grey hornbill, and pied crow beaks, showing differences in tip sharpness, curvature, gape width, and sharpness of the cutting edges",
       "learned": "Beak morphology in Kenyan birds directly reflects diet: the fish eagle has a sharply hooked, pointed beak for gripping and tearing fish flesh; the vulture has a hooked beak with wide gape for reaching into carcasses; the hornbill has a large, blunter curved beak for crushing and tossing hard fruits and invertebrates; all three represent adaptations in which structure determines the food an animal can access",
       "explained": "Using CER statements, learners explained that the specific structural features of each beak — curvature, tip sharpness, gape width — enable specific feeding actions (tearing, gripping, crushing), and that these adaptations are as functionally necessary as an aphid stylet or a grasshopper mandible, advancing the driving question evidence that feeding structures across all animals reflect the food source the animal relies on for nutrients"
     }
@@ -282,7 +282,7 @@ const LESSONS = [
     "number": 5,
     "title": "Probing and Filtering Bird Beaks: How Beak Morphology Reveals Diet and Habitat",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 3.1: Animal Nutrition",
+    "substrand": "Sub-Strand 3.1: Nutrition",
     "slo": {
       "purpose": "To investigate how bird beak morphology — specifically the flamingo's filter-feeding beak and the sunbird's probing beak — is a direct structural adaptation to food source and habitat, and to connect these adaptations to the anchoring phenomenon of why different animals have radically different feeding tools.",
       "knowledge": "Learners will be able to: (a) describe the structural features of the flamingo's lamellae-lined, bent beak and the sunbird's long, curved beak; (b) explain how each beak structure is matched to its specific food source (algae/crustaceans in alkaline lake water vs. nectar in flowers); (c) relate beak morphology to the concept of structural adaptation as a solution to the problem of obtaining nutrients.",
@@ -342,7 +342,7 @@ const LESSONS = [
     "number": 6,
     "title": "Dentition in Mammals: Tooth Shape, Diet, and the Structure-Function Connection",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 3.1: Animal Nutrition",
+    "substrand": "Sub-Strand 3.1: Nutrition",
     "slo": {
       "purpose": "To enable learners to compare the dentition of herbivores, carnivores, and omnivores, calculate and interpret dental formulae, and relate tooth structure to diet and nutrient acquisition.",
       "knowledge": "Learners will know the types of teeth (incisors, canines, premolars, molars), their functions, and how to read and calculate a dental formula. They will understand how tooth morphology in lions, cows, and humans reflects diet.",
@@ -402,7 +402,7 @@ const LESSONS = [
     "number": 7,
     "title": "The Human Digestive System: Tracing a Meal of Ugali and Sukuma Wiki",
     "duration": "80 minutes (2 lessons × 40 min)",
-    "substrand": "Sub-Strand 3.1: Animal Nutrition",
+    "substrand": "Sub-Strand 3.1: Nutrition",
     "slo": {
       "purpose": "To build a physical model of the human digestive system and trace the journey of food from ingestion to absorption, connecting internal digestive structures to the external feeding adaptations studied in previous lessons.",
       "knowledge": "By the end of the lesson, the learner should be able to: (a) identify and describe the organs of the human digestive system and their functions; (b) explain the processes of mechanical and chemical digestion along the alimentary canal; (c) describe how nutrients from a meal of ugali and sukuma wiki are absorbed into the bloodstream.",
@@ -462,7 +462,7 @@ const LESSONS = [
     "number": 8,
     "title": "Enzymes in Digestion: How Ugali and Sukuma Wiki Are Chemically Broken Down",
     "duration": "40 minutes",
-    "substrand": "3.1 Animal Nutrition",
+    "substrand": "3.1 Nutrition",
     "aresKeywords": "enzyme, amylase, pepsin, lipase, substrate, product, Benedict's test, iodine test, biuret test, chemical digestion, carbohydrate, protein, fat, catalyst, starch, glucose, active site",
     "slo": {
       "purpose": "Learners explain how digestive enzymes chemically break down food molecules at specific sites in the human digestive system, providing direct evidence that structure and function are linked at the molecular level — advancing the storyline from organ-level digestion (Lesson 7) to chemical-level digestion.",
@@ -522,7 +522,7 @@ const LESSONS = [
     "number": 9,
     "title": "Absorption, Assimilation, and Malnutrition: From Villi to Village Health",
     "duration": "40 minutes",
-    "substrand": "3.1 Animal Nutrition",
+    "substrand": "3.1 Nutrition",
     "aresKeywords": "absorption, assimilation, villi, microvilli, ileum, lacteals, capillaries, malnutrition, kwashiorkor, anaemia, nutrients, bloodstream",
     "slo": {
       "purpose": "Learners explain how digested nutrients cross the wall of the small intestine into the bloodstream and are used by body cells, and analyse what happens when nutrient intake is inadequate.",
@@ -582,7 +582,7 @@ const LESSONS = [
     "number": 10,
     "title": "Synthesis and Model Finalisation: From Aphid Stylets to Human Villi — One Purpose, Many Structures",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 3.1: Animal Nutrition",
+    "substrand": "Sub-Strand 3.1: Nutrition",
     "slo": {
       "purpose": "To synthesise all learning across Sub-Strand 3.1 by finalising cumulative models, completing the Driving Question Board, and connecting animal feeding structures to the universal purpose of nutrient acquisition — anchored throughout in the Kakamega maize farm and Lake Nakuru phenomena.",
       "knowledge": "Learners demonstrate integrated understanding that: (a) mouthpart and beak structures across animals (aphid stylet, grasshopper mandibles, mosquito proboscis, flamingo lamellae, fish eagle beak, human dentition) are structural adaptations directly linked to diet and feeding strategy; (b) the human digestive system — mouth, oesophagus, stomach, small intestine (with villi), large intestine — performs mechanical and chemical digestion to absorb nutrients into the bloodstream; (c) all these diverse structures serve the same ultimate biological purpose: extracting nutrients (carbohydrates, proteins, fats, vitamins, minerals) required for survival, growth, and energy.",
@@ -641,7 +641,7 @@ const LESSONS = [
 ];
 
 const FINAL_EXPLANATION = {
-  "subjectLabel": "Biology Grade 10 – Sub-strand 3.1 Animal Nutrition: Final Explanation",
+  "subjectLabel": "Biology Grade 10 – Sub-strand 3.1 Nutrition: Final Explanation",
   "instructions": "Driving Question: How do the structures animals use to get food — from an aphid's needle-like mouthparts to a flamingo's filter beak to your own teeth and digestive system — explain how each animal gets the nutrients it needs to survive? Use the Claim–Evidence–Reasoning (CER) approach in each section: the Claim is your answer to the question; the Evidence is what we observed or measured in the lessons; the Reasoning is the science idea that links your evidence to your claim. Write your answers in the space under each prompt. Use evidence from the lessons: the Kakamega maize farm (grasshopper, aphid), the mosquito, Lake Nakuru (flamingo, fish eagle), the Maasai Mara (lion, cow), your ugali and sukuma wiki model, and your food tests on chewed ugali. Name specific structures and say what each one does. Aim for clear, complete sentences. Do not just list facts: explain how and why.",
   "sections": [
     {
@@ -675,31 +675,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim and use of structure–function–food reasoning",
       "excellent": "Exceeds Expectations: Gives a clear, accurate claim in every section and consistently links a named structure to its function and to the food or nutrient it allows access to, explaining why other structures could not do the same job.",
       "proficient": "Meets Expectations: Gives mostly clear claims and links structure to function, but the link to food or nutrients is sometimes missing or incomplete.",
-      "developing": "Approaches Expectations: Claims are vague or missing; structures are named without explaining what they do or why they suit the food."
+      "developing": "Approaches Expectations: Claims are vague or missing; structures are named without explaining what they do or why they suit the food.",
+      "belowExpectations": "Below Expectations: Claims are missing or incorrect, and structures are not named or linked to function or food, even with prompting."
     },
     {
       "criterion": "Use of evidence from the lessons",
       "excellent": "Exceeds Expectations: Uses specific, accurate evidence from several lessons (Kakamega insects, Lake Nakuru birds, Maasai Mara mammals, food-test results, villus diagram) including at least one external and one internal structure.",
       "proficient": "Meets Expectations: Uses accurate evidence from some lessons but may rely on one or two examples or give evidence without detail.",
-      "developing": "Approaches Expectations: Evidence is general, inaccurate or not drawn from the lessons."
+      "developing": "Approaches Expectations: Evidence is general, inaccurate or not drawn from the lessons.",
+      "belowExpectations": "Below Expectations: Gives no evidence from the lessons, or evidence that is incorrect."
     },
     {
       "criterion": "Accuracy of digestion and absorption science",
       "excellent": "Exceeds Expectations: Correctly explains amylase action with food-test results, the roles of pepsin and lipase, villus adaptations, the two absorption routes, and absorption versus assimilation.",
       "proficient": "Meets Expectations: Mostly accurate but with minor gaps, such as a missing enzyme role or one absorption route.",
-      "developing": "Approaches Expectations: Contains major errors or confuses digestion, absorption and assimilation."
+      "developing": "Approaches Expectations: Contains major errors or confuses digestion, absorption and assimilation.",
+      "belowExpectations": "Below Expectations: Contains major errors throughout, with no clear idea of digestion, absorption or assimilation."
     },
     {
       "criterion": "Connecting external feeding structures to internal digestion",
       "excellent": "Exceeds Expectations: Explains clearly why a mosquito's liquid food and a human's mixed diet need different amounts of processing (chewing skipped, chemical digestion still needed), and ties all parts into one unifying explanation.",
       "proficient": "Meets Expectations: Makes a connection between external and internal structures but does not fully explain the difference in processing.",
-      "developing": "Approaches Expectations: Treats external and internal structures as unrelated topics."
+      "developing": "Approaches Expectations: Treats external and internal structures as unrelated topics.",
+      "belowExpectations": "Below Expectations: Does not connect external feeding structures to internal digestion, and gives no explanation of the difference."
     },
     {
       "criterion": "Scientific communication and Kenyan context",
       "excellent": "Exceeds Expectations: Writes in organised, precise sentences with correct terms (adaptation, mechanical digestion, enzyme, villi, assimilation) and applies the biology sensibly to Kenyan food and health examples.",
       "proficient": "Meets Expectations: Writing is mostly clear with some correct terms; Kenyan examples are used but with limited explanation.",
-      "developing": "Approaches Expectations: Writing is hard to follow, terms are misused, and Kenyan examples are absent or unconnected to the biology."
+      "developing": "Approaches Expectations: Writing is hard to follow, terms are misused, and Kenyan examples are absent or unconnected to the biology.",
+      "belowExpectations": "Below Expectations: Writing is very hard to follow, with key terms missing or misused and no link to Kenyan food or health."
     }
   ]
 };
@@ -732,7 +737,7 @@ const SUMMARY_TABLE = {
     {
       "number": 4,
       "title": "Crushing and Tearing Bird Beaks: How Does a Fish Eagle Eat What a Hornbill Cannot?",
-      "observed": "Photographs and labelled diagrams of the fish eagle, white-backed vulture, African grey hornbill, and pied crow beaks, showing differences in tip sharpness, curvature, gape width, and serration of the tomia (inner beak edge)",
+      "observed": "Photographs and labelled diagrams of the fish eagle, white-backed vulture, African grey hornbill, and pied crow beaks, showing differences in tip sharpness, curvature, gape width, and sharpness of the cutting edges",
       "learned": "Beak morphology in Kenyan birds directly reflects diet: the fish eagle has a sharply hooked, pointed beak for gripping and tearing fish flesh; the vulture has a hooked beak with wide gape for reaching into carcasses; the hornbill has a large, blunter curved beak for crushing and tossing hard fruits and invertebrates; all three represent adaptations in which structure determines the food an animal can access",
       "explained": "Using CER statements, learners explained that the specific structural features of each beak — curvature, tip sharpness, gape width — enable specific feeding actions (tearing, gripping, crushing), and that these adaptations are as functionally necessary as an aphid stylet or a grasshopper mandible, advancing the driving question evidence that feeding structures across all animals reflect the food source the animal relies on for nutrients"
     },
@@ -781,6 +786,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

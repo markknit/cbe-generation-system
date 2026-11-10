@@ -555,31 +555,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining reflection as the rule the water follows",
       "excellent": "Clearly states that every point and its image are the same perpendicular distance from the line of reflection, links this to the same size of the image, and gives correct coordinate rules.",
       "proficient": "States the equal-distance idea and gives the rule for the x-axis, but the link to the same size is not fully explained.",
-      "developing": "Says the image looks the same but gives no rule or no mention of equal perpendicular distance."
+      "developing": "Says the image looks the same but gives no rule or no mention of equal perpendicular distance.",
+      "belowExpectations": "Does not state a rule for the reflection, and gives no mention of the mirror line or equal perpendicular distance."
     },
     {
       "criterion": "Accuracy of reflection calculations and the mirror line equation",
       "excellent": "All images are correct for every mirror line and the mirror line is found correctly as a perpendicular bisector, with working shown.",
       "proficient": "Most images are correct, and the mirror line is found with small errors in working.",
-      "developing": "Several images are wrong or the mirror line is not found."
+      "developing": "Several images are wrong or the mirror line is not found.",
+      "belowExpectations": "The learner partially draws an image given an object and a mirror line on the plane surface or the Cartesian plane or determines the equation of the mirror line."
     },
     {
       "criterion": "Congruence proof",
       "excellent": "Names SSS, lists all three pairs of equal sides, writes the congruence statement in correct vertex order, and names the other four conditions.",
       "proficient": "Names the condition and writes the statement but leaves out a step or a condition.",
-      "developing": "Does not name a correct condition or does not give a congruence statement."
+      "developing": "Does not name a correct condition or does not give a congruence statement.",
+      "belowExpectations": "Gives no condition for congruence and cannot write a congruence statement."
     },
     {
       "criterion": "Use of evidence and mathematical vocabulary",
       "excellent": "Uses line of reflection, perpendicular distance, image, congruence and y = mx + c correctly, and supports claims with values from class work.",
       "proficient": "Uses most of the terms correctly, with some claims given without evidence.",
-      "developing": "Uses few terms or uses them incorrectly, with little evidence."
+      "developing": "Uses few terms or uses them incorrectly, with little evidence.",
+      "belowExpectations": "Uses almost no mathematical terms, or uses them wrongly, and gives no evidence."
     },
     {
       "criterion": "Connecting to the phenomenon and real life",
       "excellent": "Gives a complete explanation of the Lake Victoria mirror image and a correct Kenyan application with clear reasoning.",
       "proficient": "Explains the mirror image and gives an application, but the reasoning is incomplete.",
-      "developing": "Gives a partial explanation, or an application with no reasoning."
+      "developing": "Gives a partial explanation, or an application with no reasoning.",
+      "belowExpectations": "Gives no link between the mathematics and the phenomenon or real life, or only repeats the question."
     }
   ]
 };
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

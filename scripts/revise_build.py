@@ -26,9 +26,11 @@ PY = sys.executable
 DOCS = ("CBE_LessonSequence", "FinalExplanation", "FinalExplanation_TeacherKey", "SummaryTable")
 
 
-def render(modules_dir: Path, out_root: Path, module: str) -> list:
+def render(modules_dir: Path, out_root: Path, module: str, legacy_rubric: bool = False) -> list:
     env = {**os.environ, "CBE_DATA_DIR": str(modules_dir), "CBE_OUTPUT_ROOT": str(out_root),
            "CONSISTENCY_CHECK": "warn", "LINK_CHECK": "warn"}
+    if legacy_rubric:      # the baseline is the pre-R1 module (three rubric levels): see CONTRACT_CHANGELOG.md
+        env["CBE_LEGACY_RUBRIC"] = "1"
     r = subprocess.run(["node", str(ROOT / "generators/generate.js"), module], capture_output=True, text=True, env=env)
     if r.returncode != 0 and "Done!" not in r.stdout:
         raise RuntimeError(f"render failed for {module}:\n{r.stdout[-800:]}\n{r.stderr[-800:]}")
@@ -41,7 +43,7 @@ def build(module: str) -> dict:
         if not (d / f"{module}_data.js").exists():
             raise SystemExit(f"{d}/{module}_data.js missing (run revise_apply.py init)")
     # baseline once; revised every time
-    base_files = render(base, REV / "baseline_outputs", module)
+    base_files = render(base, REV / "baseline_outputs", module, legacy_rubric=True)
     new_files = render(mods, REV / "outputs", module)
     rep = {"module": module, "tracked": [], "problems": []}
     for nf in new_files:

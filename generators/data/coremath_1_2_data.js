@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of index laws and notation",
       "excellent": "Correctly states and applies the product, quotient, zero, power, negative and fractional index laws with the tea-farm data, and explains why each law works by expanding repeated multiplication.",
       "proficient": "Applies most index laws correctly to the tea-farm numbers, with brief or partial explanation of why they work.",
-      "developing": "States some laws but makes errors in applying them, or gives answers without reasons or without reference to the tea farm."
+      "developing": "States some laws but makes errors in applying them, or gives answers without reasons or without reference to the tea farm.",
+      "belowExpectations": "Gives few or no correct index laws, or makes errors in almost every application, and does not use or refer to the tea-farm numbers."
     },
     {
       "criterion": "Understanding of logarithms and antilogarithms",
       "excellent": "Defines the common logarithm as an exponent of 10, correctly identifies characteristic and mantissa, and accurately describes the four-step antilog procedure and why the antilog is the inverse of the log.",
       "proficient": "Gives the definition and handles characteristic and mantissa correctly, with minor gaps in explaining the antilog procedure.",
-      "developing": "Confuses logarithms with ordinary numbers, or cannot separate characteristic from mantissa, or cannot describe how the antilog works."
+      "developing": "Confuses logarithms with ordinary numbers, or cannot separate characteristic from mantissa, or cannot describe how the antilog works.",
+      "belowExpectations": "Cannot say what a logarithm is, treats it as an ordinary number, and cannot describe characteristic, mantissa or the antilog procedure even with prompting."
     },
     {
       "criterion": "Explaining why log laws work and using them in calculations",
       "excellent": "Derives the product, quotient and power laws from the index laws, completes the calculations accurately with every step and law named, and the answers match the model values to the accuracy of the four-figure tables.",
       "proficient": "Completes the calculations with mostly correct steps and answers, with the derivation of the log laws partly explained.",
-      "developing": "Calculation steps are missing or incorrect, or the log laws are stated without any connection to the index laws."
+      "developing": "Calculation steps are missing or incorrect, or the log laws are stated without any connection to the index laws.",
+      "belowExpectations": "Calculation steps are mostly missing or incorrect, and the log laws are not stated or are not linked to the index laws."
     },
     {
       "criterion": "Answering the driving question with Kenyan context",
       "excellent": "Gives a coherent, connected final answer that links index notation, the log laws and the four-figure tables, and uses the Kericho tea-farm data and at least one other Kenyan context accurately.",
       "proficient": "Gives a clear answer that uses the tea-farm data and at least one index law and one log law, with some connections missing.",
-      "developing": "Gives a general or incomplete answer that does not use the tea-farm data or fails to link indices to logarithms."
+      "developing": "Gives a general or incomplete answer that does not use the tea-farm data or fails to link indices to logarithms.",
+      "belowExpectations": "Gives a very short or unrelated answer that does not use the tea-farm data and does not link indices to logarithms."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

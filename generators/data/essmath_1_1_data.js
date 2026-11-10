@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Classification of numbers (rational vs irrational)",
       "excellent": "Defines rational and irrational numbers accurately, writes every health-centre number as p/q correctly, and places numbers in ℕ, ℤ, ℚ and ℝ with correct reasons.",
       "proficient": "Defines the terms mostly correctly and writes most numbers as p/q, with minor errors in set placement or reasons.",
-      "developing": "Definitions are incomplete or incorrect, or learner cannot write numbers as p/q or place them in number sets."
+      "developing": "Definitions are incomplete or incorrect, or learner cannot write numbers as p/q or place them in number sets.",
+      "belowExpectations": "Gives little or no accurate definition of rational or irrational numbers, and cannot write the health-centre numbers as p/q or place them in number sets without prompting."
     },
     {
       "criterion": "Use of closure and operations on rational numbers",
       "excellent": "Calculates 37.1 correctly with clear steps and uses closure under addition and division to justify why the result is rational.",
       "proficient": "Calculates the average correctly and mentions closure, but the justification is incomplete.",
-      "developing": "Calculation contains errors or the learner gives no reason for why the result ends neatly."
+      "developing": "Calculation contains errors or the learner gives no reason for why the result ends neatly.",
+      "belowExpectations": "Does not calculate the average, or the working shows major errors, and gives no reason or an incorrect reason for why the result ends neatly."
     },
     {
       "criterion": "Explaining irrational numbers and calculator use",
       "excellent": "Explains why √2 is irrational, why a truncated display does not prove a decimal terminates, and distinguishes 22/7 from π accurately.",
       "proficient": "Identifies √2 as irrational and notes the calculator limitation, but the reasoning or the 22/7 versus π distinction is partly unclear.",
-      "developing": "Treats the calculator display as exact or cannot explain why √2 differs from the average temperature."
+      "developing": "Treats the calculator display as exact or cannot explain why √2 differs from the average temperature.",
+      "belowExpectations": "Says the calculator display shows the exact number and gives no explanation of why the tile diagonal differs from the average temperature."
     },
     {
       "criterion": "Reciprocals and mathematical reasoning",
       "excellent": "Defines reciprocals, finds 10/371 correctly, gives a correct proof by contradiction for 1/√2, and states that zero has no reciprocal.",
       "proficient": "Finds correct reciprocals and states 1/√2 is irrational with a partial argument.",
-      "developing": "Reciprocal definition or calculations are incorrect and no reasoning is offered."
+      "developing": "Reciprocal definition or calculations are incorrect and no reasoning is offered.",
+      "belowExpectations": "Does not define a reciprocal or finds no correct reciprocal, and offers no reasoning about 1/√2 or about zero."
     },
     {
       "criterion": "Final explanation linked to Kenyan context and decisions",
       "excellent": "Gives a coherent answer to the driving question using Sister Wanjiku's data and a realistic decision example.",
       "proficient": "Answers the driving question using the data, with a weak or general decision example.",
-      "developing": "Answer is vague, not linked to the data, or gives no decision example."
+      "developing": "Answer is vague, not linked to the data, or gives no decision example.",
+      "belowExpectations": "Gives little or no answer to the driving question, with no use of Sister Wanjiku's data and no decision example."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

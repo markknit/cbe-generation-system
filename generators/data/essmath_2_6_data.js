@@ -551,31 +551,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Correct use of surface area formulae",
       "excellent": "Chooses and states the correct formula for every solid (cone, pyramid, sphere, hemisphere, frustum), and correctly distinguishes open from closed shapes and slant height from perpendicular height.",
       "proficient": "Uses mostly correct formulae with one or two small slips, such as forgetting a base or confusing open and closed.",
-      "developing": "Uses wrong or missing formulae, or confuses slant height with perpendicular height."
+      "developing": "Uses wrong or missing formulae, or confuses slant height with perpendicular height.",
+      "belowExpectations": "Does not state a correct formula for most solids, and confuses open and closed shapes or slant and perpendicular height."
     },
     {
       "criterion": "Accurate calculation and units",
       "excellent": "All calculations are correct and clearly laid out, with correct rounding and units (cm², m²).",
       "proficient": "Method is correct but there are minor arithmetic or rounding errors, or a unit is missing.",
-      "developing": "Method is unclear or contains major errors, and units are missing."
+      "developing": "Method is unclear or contains major errors, and units are missing.",
+      "belowExpectations": "Calculations are mostly missing or incorrect, the method is unclear, and units are missing."
     },
     {
       "criterion": "Explaining formulae from nets and derivations",
       "excellent": "Clearly explains where πrl, π(R + r)l, 4πr² and 3πr² come from using sectors, annular sectors, cone differences or the orange-peel evidence.",
       "proficient": "Gives a partly correct explanation of the origin of the formulae, with some steps missing.",
-      "developing": "States formulae without explaining where they come from."
+      "developing": "States formulae without explaining where they come from.",
+      "belowExpectations": "Gives no explanation of where the formulae come from, or gives an explanation that is incorrect."
     },
     {
       "criterion": "Using evidence to judge the shopkeeper's claim",
       "excellent": "Uses the Lesson 8 comparison to conclude that equal volume does not mean equal surface area, explains that the result depends on the dimensions, and does not overgeneralise.",
       "proficient": "Reaches the correct conclusion but gives limited evidence or does not note that it depends on the dimensions.",
-      "developing": "Accepts or rejects the claim without evidence from calculation."
+      "developing": "Accepts or rejects the claim without evidence from calculation.",
+      "belowExpectations": "Does not reach a conclusion about the claim, or gives one with no calculation or evidence, needing prompting throughout."
     },
     {
       "criterion": "Connecting to Kenyan real-life contexts",
       "excellent": "Links the mathematics to real Kenyan uses (buckets, tanks, silos, tents) and gives sensible reasons why shape choice balances cost, stacking and strength.",
       "proficient": "Gives a Kenyan example with a simple reason.",
-      "developing": "Gives no real-life link or an irrelevant one."
+      "developing": "Gives no real-life link or an irrelevant one.",
+      "belowExpectations": "Gives no real-life link, or does not explain why a shape might be chosen."
     }
   ]
 };
@@ -643,6 +648,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -12,7 +12,7 @@ const META = {
   "outputDir": "v2/Chemistry/SS2.1_Introduction_to_Salts",
   "filePrefix": "Chemistry_Introduction_to_Salts",
   "titleDoc": "CHEMISTRY GRADE 10: INTRODUCTION TO SALTS",
-  "subtitleDoc": "CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 2.1 (8 Lessons)",
+  "subtitleDoc": "CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 2.2 (8 Lessons)",
   "col3Label": "Teacher Moves",
   "col5Label": "Formative Assessment Strategy"
 };
@@ -21,7 +21,7 @@ const UNIT = {
   "gradeLevel": "10",
   "subject": "Chemistry",
   "strand": "Strand 2.0: Physical Chemistry",
-  "substrand": "Sub-Strand 2.2: Introduction to Salts",
+  "substrand": "Sub-Strand 2.2: Introduction to Salts (condensed unit: 8 of the 30 KICD lessons)",
   "totalDuration": "8 lessons: 1 × 40 minutes (Lesson 2) + 7 × 80 minutes (Lessons 1, 3, 4, 5, 6, 7, 8) = 600 minutes total (10 hours)",
   "content": "• Types of salts (normal, acidic, basic and double)\n• Solubility of salts (chlorides, carbonates, nitrates and sulphates)\n• Methods of preparation (direct synthesis, reactions between; acids and metals, acids and bases, acids and carbonates/hydrogen carbonates, precipitation reaction)\n• Behaviour of salts in air (hygroscopic, deliquescent and efflorescent salts)\n• Uses of salts (Agriculture, food industry, medicine, paper industry, paints industry, glass industry, laundry among others)\n\nKICD learning experience also covered: writing balanced chemical equations for reactions involved in the preparation of salts (ionic equations limited to precipitation reactions).",
   "learningOutcomes": "By the end of the sub-strand, the learner should be able to:\na) classify different salts based on their properties,\nb) prepare salts using appropriate methods in the laboratory,\nc) describe the behaviour of salts when exposed to air,\nd) outline applications of salts in day-to-day life,\ne) appreciate the applications of salts in day-to-day life.",
@@ -42,7 +42,7 @@ const LESSONS = [
     "number": 1,
     "title": "What Is a Salt? Classification and Types",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Introduction to Salts",
+    "substrand": "Sub-Strand 2.2: Introduction to Salts (condensed unit: 8 of the 30 KICD lessons)",
     "slo": {
       "purpose": "To introduce the anchoring phenomenon and establish foundational understanding of what salts are and how they are classified into normal, acidic, basic and double salts.",
       "knowledge": "A salt is a substance formed when a hydrogen atom in an acid is fully or partially replaced by a positive ion. Salts are classified as normal salts (all hydrogen replaced), acidic salts (hydrogen partially replaced), basic salts (contain OH⁻ or O²⁻ in addition to the anion), and double salts (contain two different cations or anions).",
@@ -102,7 +102,7 @@ const LESSONS = [
     "number": 2,
     "title": "Solubility of Salts — Experiment 1",
     "duration": "40 minutes",
-    "substrand": "Sub-Strand 2.1: Introduction to Salts",
+    "substrand": "Sub-Strand 2.2: Introduction to Salts (condensed unit: 8 of the 30 KICD lessons)",
     "aresKeywords": "solubility, chlorides, carbonates, nitrates, sulphates, soluble, insoluble, solubility rules, reference chart, phenomenon",
     "slo": {
       "purpose": "Learners carry out a structured solubility experiment, classify salts as soluble or insoluble, and use their findings to begin explaining why table salt dissolves in cooking water while other salts do not — advancing the unit investigation into the contrasting behaviour of fertiliser, washing soda and table salt.",
@@ -162,7 +162,7 @@ const LESSONS = [
     "number": 3,
     "title": "Preparing Soluble Salts I — Acid + Metal and Acid + Metal Oxide (Experiment 2a)",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Introduction to Salts",
+    "substrand": "Sub-Strand 2.2: Introduction to Salts (condensed unit: 8 of the 30 KICD lessons)",
     "slo": {
       "purpose": "Learners prepare zinc sulphate (ZnSO₄) by reacting zinc metal with dilute sulphuric acid, and copper sulphate (CuSO₄) by reacting copper(II) oxide with dilute sulphuric acid. They collect and test the hydrogen gas produced in the acid-metal reaction, write balanced chemical equations for both reactions, and connect their laboratory observations to the anchoring phenomenon — finding out how the ammonium nitrate in CAN fertiliser is made (an acid + base reaction) and testing whether knowing how a salt is made explains why it takes in water from the air.",
       "knowledge": "a) A salt is formed when a hydrogen atom in an acid is fully or partially replaced by a positive ion (metal ion or ammonium ion). b) Dilute sulphuric acid reacts with zinc metal to produce zinc sulphate and hydrogen gas: Zn(s) + H₂SO₄(aq) → ZnSO₄(aq) + H₂(g). c) Dilute sulphuric acid reacts with copper(II) oxide to produce copper sulphate and water: CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l). d) Hydrogen gas is identified by the 'pop' test using a burning splint. e) The preparation method chosen depends on the solubility of the salt — soluble salts such as ZnSO₄ and CuSO₄ are prepared by acid + metal or acid + metal oxide routes.",
@@ -197,10 +197,10 @@ const LESSONS = [
       },
       {
         "phase": "Driving Question Board (DQB) Creation",
-        "learnerExperience": "Each group receives two DQB sticky note colours (provided on ARES as digital cards): BLUE = 'New evidence we gathered today' and GREEN = 'New questions this raises'. Groups collaboratively compose: (1) ONE blue card summarising the key mechanism evidence from today: e.g., 'Soluble salts like ZnSO₄ and CuSO₄ can be prepared by reacting an acid with a metal or metal oxide — the acid's hydrogen is replaced by a metal ion to form a salt.' (2) ONE green card raising a new question prompted by today's evidence: e.g., 'If CAN fertiliser was made using an acid reaction, what was the acid and what was the metal/base that reacted?' or 'What happens to ZnSO₄ and CuSO₄ if we leave them in the Kenyan humidity overnight — will they also clump like CAN?' Groups post their cards on the class DQB (physical or ARES digital board). The teacher reads two blue cards and two green cards aloud, connecting them explicitly to the driving question displayed at the top of the DQB: 'Why did the fertiliser granules get wet and clump together…?'",
-        "teacherMoves": "Teacher transitions: 'Time to update our board. Remember — this board is tracking our growing understanding of the big question about the fertiliser storeroom.' [Point to or display the driving question.] 'Your group has 3 minutes to write your blue card — one sentence capturing the most important new evidence from today's experiments.' [Timer. Walk room, prompt groups who are stuck: 'What did you prove about HOW the salt was formed? What happened to the acid's hydrogen?'] After 3 minutes: 'Now your green card — one question that today's evidence raised for you. It must connect to the driving question. 2 minutes.' [Timer.] After posting: 'Let me read some of these out.' [Read 2 blue cards.] 'Notice — both of these blue cards say the salt is formed when a metal ion REPLACES hydrogen in the acid. That is our mechanism. That is new knowledge.' [Read 2 green cards.] 'These green questions are exactly what the rest of our lesson sequence will answer. Keep them here. We will come back to them.' Close: 'By the end of the 8 lessons, every green card on this board should be answered by a blue card. That is how science builds.'",
-        "sensemakingStrategy": "DQB as Cumulative Evidence Tracker (Argumentation and Evidence Mapping Strategy): The two-colour DQB card system (blue = evidence, green = new questions) makes the progressive structure of scientific knowledge-building visible and tangible. Requiring groups to write in complete sentences — not just keywords — forces learners to articulate the causal mechanism (acid + metal/metal oxide → salt) rather than simply naming the reaction type. Connecting every card to the driving question prevents the DQB from becoming a passive display and keeps the phenomenon as the unit's organising thread.",
-        "formativeAssessment": "Blue card quality check — Observable indicator of mastery: the card explicitly names the mechanism (H in acid replaced by metal ion) rather than merely describing the observation ('zinc dissolved'). If groups write only observational statements, teacher prompts: 'What CHEMICALLY caused the zinc to dissolve? What was happening to the acid's hydrogen atoms?' Green card quality check — indicator of productive curiosity: the question is answerable by further chemistry investigation (not a trivial observation question). Teacher notes any green questions that reveal misconceptions (e.g., 'Did we make CAN fertiliser today?') to address in the next lesson."
+        "learnerExperience": "Each group receives two DQB sticky note colours (the colours may be swapped for whatever coloured paper or cards the school has, as long as the same colour keeps the same meaning in every lesson) (provided on ARES as digital cards): BLUE = 'New evidence we gathered today' and ORANGE = 'New questions this raises'. Groups collaboratively compose: (1) ONE blue card summarising the key mechanism evidence from today: e.g., 'Soluble salts like ZnSO₄ and CuSO₄ can be prepared by reacting an acid with a metal or metal oxide — the acid's hydrogen is replaced by a metal ion to form a salt.' (2) ONE orange card raising a new question prompted by today's evidence: e.g., 'If CAN fertiliser was made using an acid reaction, what was the acid and what was the metal/base that reacted?' or 'What happens to ZnSO₄ and CuSO₄ if we leave them in the Kenyan humidity overnight — will they also clump like CAN?' Groups post their cards on the class DQB (physical or ARES digital board). The teacher reads two blue cards and two orange cards aloud, connecting them explicitly to the driving question displayed at the top of the DQB: 'Why did the fertiliser granules get wet and clump together…?'",
+        "teacherMoves": "Teacher transitions: 'Time to update our board. Remember — this board is tracking our growing understanding of the big question about the fertiliser storeroom.' [Point to or display the driving question.] 'Your group has 3 minutes to write your blue card — one sentence capturing the most important new evidence from today's experiments.' [Timer. Walk room, prompt groups who are stuck: 'What did you prove about HOW the salt was formed? What happened to the acid's hydrogen?'] After 3 minutes: 'Now your orange card — one question that today's evidence raised for you. It must connect to the driving question. 2 minutes.' [Timer.] After posting: 'Let me read some of these out.' [Read 2 blue cards.] 'Notice — both of these blue cards say the salt is formed when a metal ion REPLACES hydrogen in the acid. That is our mechanism. That is new knowledge.' [Read 2 orange cards.] 'These orange questions are exactly what the rest of our lesson sequence will answer. Keep them here. We will come back to them.' Close: 'By the end of the 8 lessons, every orange card on this board should be answered by a blue card. That is how science builds.'",
+        "sensemakingStrategy": "DQB as Cumulative Evidence Tracker (Argumentation and Evidence Mapping Strategy): The two-colour DQB card system (blue = evidence, orange = new questions) makes the progressive structure of scientific knowledge-building visible and tangible. Requiring groups to write in complete sentences — not just keywords — forces learners to articulate the causal mechanism (acid + metal/metal oxide → salt) rather than simply naming the reaction type. Connecting every card to the driving question prevents the DQB from becoming a passive display and keeps the phenomenon as the unit's organising thread.",
+        "formativeAssessment": "Blue card quality check — Observable indicator of mastery: the card explicitly names the mechanism (H in acid replaced by metal ion) rather than merely describing the observation ('zinc dissolved'). If groups write only observational statements, teacher prompts: 'What CHEMICALLY caused the zinc to dissolve? What was happening to the acid's hydrogen atoms?' Orange card quality check — indicator of productive curiosity: the question is answerable by further chemistry investigation (not a trivial observation question). Teacher notes any orange questions that reveal misconceptions (e.g., 'Did we make CAN fertiliser today?') to address in the next lesson."
       },
       {
         "phase": "Model Building Phase",
@@ -222,7 +222,7 @@ const LESSONS = [
     "number": 4,
     "title": "Preparing Soluble Salts II — Acid + Base and Acid + Carbonate/Hydrogen Carbonate",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Introduction to Salts",
+    "substrand": "Sub-Strand 2.2: Introduction to Salts (condensed unit: 8 of the 30 KICD lessons)",
     "slo": {
       "purpose": "Learners prepare sodium chloride via neutralisation (HCl + NaOH) and calcium chloride via acid + carbonate reaction (HCl + CaCO₃), collect and test CO₂ gas, write full balanced equations, and compare all four soluble salt preparation methods using a summary flow chart.",
       "knowledge": "a) Salts can be prepared by reacting an acid with a base (neutralisation) or with a carbonate/hydrogen carbonate; b) The acid + carbonate/hydrogen carbonate reaction produces CO₂ gas, water, and a salt; c) Balanced chemical equations represent conservation of mass in salt preparation reactions; d) The choice of preparation method depends on the solubility and reactivity of the salt being formed.",
@@ -232,7 +232,7 @@ const LESSONS = [
       "purposeInStoryline": "In Lesson 3, learners prepared soluble salts via acid + metal and acid + metal oxide reactions (Experiment 2a). Today (Experiment 2b), learners advance the investigation by using two more preparation routes — neutralisation (acid + base) and acid + carbonate — producing NaCl and CaCl₂ respectively. The CO₂ gas produced in the carbonate reaction directly echoes the fizzing observed when baking soda (sodium hydrogen carbonate) is added to mandazi batter, connecting chemistry to a beloved Kenyan snack. By completing a four-method summary flow chart, learners now have the full toolkit of soluble salt preparation methods needed to later explain why CAN fertiliser absorbs moisture from the air and why understanding salt preparation matters for safe, effective use in Kenyan agriculture.",
       "safetyNotes": "Environmental issues (safety in the laboratory — PCI): HCl and NaOH are corrosive — learners must wear safety goggles and gloves at all times. No mouth pipetting. Acid must be added to water, never the reverse. NaOH pellets/solution must not contact skin; wash immediately with water if contact occurs. Limewater (Ca(OH)₂) is an irritant — avoid skin contact. All waste solutions must be neutralised before disposal down the sink with excess water. Broken glassware must be reported to the teacher and disposed of in the designated sharps bin, not the general waste bin. Learners with asthma should be positioned away from CO₂ gas collection. Teacher must inspect all apparatus for cracks before the experiment begins."
     },
-    "overview": "This is Lesson 4 of 8 in the evidence-gathering sequence for Sub-Strand 2.1: Introduction to Salts. Building directly on Lesson 3 (acid + metal and acid + metal oxide), learners now carry out Experiment 2b — two new soluble salt preparation routes. In Part A, they prepare sodium chloride (NaCl) by neutralising hydrochloric acid with sodium hydroxide solution, using universal indicator to identify the endpoint. In Part B, they prepare calcium chloride (CaCl₂) by reacting hydrochloric acid with calcium carbonate (marble chips/limestone — abundant in Kenya's Coast and Central regions), collecting the CO₂ gas produced and testing it with limewater. The CO₂ observation is linked to the mandazi supporting phenomenon (baking soda fizzing in dough) and, as a contrast, to the washing soda crust in the anchoring phenomenon, which involves no gas (it is efflorescence, studied in Lesson 6). Learners write and balance full chemical equations for both reactions. The lesson culminates in the construction of a four-method summary flow chart comparing all soluble salt preparation routes studied so far (acid + metal, acid + metal oxide, acid + base, acid + carbonate/hydrogen carbonate). This flow chart is added to the Driving Question Board as a growing evidence artefact. The lesson addresses KICD Core Competencies: Communication and Collaboration (group experiment and discussion) Learning to learn (sharing results) and Creativity and imagination (careful observation). PCI addressed: Socio-Economic and Environmental Issues (waste management: neutralising and disposing of waste solutions).",
+    "overview": "This is Lesson 4 of 8 in the evidence-gathering sequence for Sub-Strand 2.2: Introduction to Salts (this unit condenses part of the 30 KICD lessons). Building directly on Lesson 3 (acid + metal and acid + metal oxide), learners now carry out Experiment 2b — two new soluble salt preparation routes. In Part A, they prepare sodium chloride (NaCl) by neutralising hydrochloric acid with sodium hydroxide solution, using universal indicator to identify the endpoint. In Part B, they prepare calcium chloride (CaCl₂) by reacting hydrochloric acid with calcium carbonate (marble chips/limestone — abundant in Kenya's Coast and Central regions), collecting the CO₂ gas produced and testing it with limewater. The CO₂ observation is linked to the mandazi supporting phenomenon (baking soda fizzing in dough) and, as a contrast, to the washing soda crust in the anchoring phenomenon, which involves no gas (it is efflorescence, studied in Lesson 6). Learners write and balance full chemical equations for both reactions. The lesson culminates in the construction of a four-method summary flow chart comparing all soluble salt preparation routes studied so far (acid + metal, acid + metal oxide, acid + base, acid + carbonate/hydrogen carbonate). This flow chart is added to the Driving Question Board as a growing evidence artefact. The lesson addresses KICD Core Competencies: Communication and Collaboration (group experiment and discussion) Learning to learn (sharing results) and Creativity and imagination (careful observation). PCI addressed: Socio-Economic and Environmental Issues (waste management: neutralising and disposing of waste solutions).",
     "framework": [
       {
         "phase": "Predict Phase",
@@ -282,7 +282,7 @@ const LESSONS = [
     "number": 5,
     "title": "Preparing Insoluble Salts — Double Decomposition and Precipitation",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Introduction to Salts",
+    "substrand": "Sub-Strand 2.2: Introduction to Salts (condensed unit: 8 of the 30 KICD lessons)",
     "slo": {
       "purpose": "To prepare an insoluble salt by double decomposition (precipitation) and compare this method to direct synthesis, linking preparation method choice to salt solubility.",
       "knowledge": "Learners explain that insoluble salts cannot be prepared by dissolving methods and must be prepared by mixing two aqueous solutions of soluble salts (double decomposition/precipitation); they write full and ionic equations for precipitation reactions (e.g. BaSO₄ and PbI₂); they state the solubility rules for sulphates, chlorides, carbonates, and nitrates.",
@@ -342,7 +342,7 @@ const LESSONS = [
     "number": 6,
     "title": "Behaviour of Salts in Air: Hygroscopic, Deliquescent and Efflorescent Salts",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Introduction to Salts",
+    "substrand": "Sub-Strand 2.2: Introduction to Salts (condensed unit: 8 of the 30 KICD lessons)",
     "slo": {
       "purpose": "Learners investigate how different salts behave when exposed to air, gathering direct experimental evidence to fully explain the anchoring phenomenon (CAN fertiliser clumping, washing soda crusting, table salt unchanged) and provide the first complete answer to the unit driving question.",
       "knowledge": "Learners will be able to: (c) describe the behaviour of salts when exposed to air, distinguishing between hygroscopic, deliquescent, and efflorescent salts using experimental evidence and mass-change data.",
@@ -370,7 +370,7 @@ const LESSONS = [
       },
       {
         "phase": "Explain Phase",
-        "learnerExperience": "Using their experimental data and the class aggregation table, learners construct scientific explanations for each sample's behaviour. The teacher introduces the three terms — hygroscopic, deliquescent, efflorescent — using a Frayer Model graphic organiser (definition, characteristics, examples, non-examples) that learners complete collaboratively in pairs, with Kiswahili support written on the board: unyevu (moisture), mvuke wa maji (water vapour), fuwele (crystals), kunyonya (to absorb). Learners then write individual scientific explanations (minimum 3 sentences each) for: (a) why CaCl₂ gained mass (deliquescent — absorbs water vapour from air until it dissolves in the water it absorbs; a hygroscopic salt absorbs water but does not dissolve), (b) why Na₂CO₃·10H₂O lost mass (efflorescent — loses water of crystallisation to the air, forming a white powder of the monohydrate: Na₂CO₃·10H₂O → Na₂CO₃·H₂O + 9H₂O), and (c) why NaCl showed no significant mass change (it takes up water only when the air is very humid, above about 75% relative humidity, so it is unchanged at everyday classroom humidity). Learners write the balanced equation for efflorescence with state symbols on their worksheet: Na₂CO₃·10H₂O(s) → Na₂CO₃·H₂O(s) + 9H₂O(g). Groups then match each experimental sample explicitly to the anchoring phenomenon: 'Sample A = CAN fertiliser because...' (calcium chloride is our model for the ammonium nitrate in CAN; it is not in CAN, and CAN also contains limestone that does not take up water, so CAN gains water more slowly than CaCl₂), 'Sample B = washing soda because...', 'Sample C = table salt because...'. A class discussion consolidates the three definitions. Learners add a 'Uses' column to their notes: deliquescent salts such as CaCl₂ used as drying agents in school laboratories and in the moisture-absorber tubs sold for damp rooms and wardrobes; efflorescent salts (washing soda) must be stored in sealed containers; stable salts (NaCl) ideal for food preservation.",
+        "learnerExperience": "Using their experimental data and the class aggregation table, learners construct scientific explanations for each sample's behaviour. The teacher introduces the three terms — hygroscopic, deliquescent, efflorescent — using a Frayer Model graphic organiser (definition, characteristics, examples, non-examples) that learners complete collaboratively in pairs, with Kiswahili support written on the board: unyevu (moisture), mvuke wa maji (water vapour), fuwele (crystals), kunyonya (to absorb). Learners then write individual scientific explanations (minimum 3 sentences each) for: (a) why CaCl₂ gained mass (deliquescent — absorbs water vapour from air until it dissolves in the water it absorbs; a hygroscopic salt absorbs water but does not dissolve), (b) why Na₂CO₃·10H₂O lost mass (efflorescent — loses water of crystallisation to the air, forming a white powder of the monohydrate: Na₂CO₃·10H₂O → Na₂CO₃·H₂O + 9H₂O), and (c) why NaCl showed no significant mass change (it takes up water only when the air is very humid, above about 75% relative humidity, so it is unchanged at everyday classroom humidity). Learners write the balanced equation for efflorescence with state symbols on their worksheet: Na₂CO₃·10H₂O(s) → Na₂CO₃·H₂O(s) + 9H₂O(g). Groups then match each experimental sample explicitly to the anchoring phenomenon: 'Sample A = CAN fertiliser because...' (calcium chloride is our model for the ammonium nitrate in CAN; it is not in CAN, and CAN also contains limestone that does not take up water, so CAN gains water more slowly than CaCl₂), 'Sample B = washing soda because...', 'Sample C = table salt because...'. A class discussion consolidates the three definitions. Learners add a 'Uses' column to their notes: deliquescent salts such as CaCl₂ used as drying agents in school laboratories and in the moisture-absorber tubs sold for damp rooms and wardrobes. Local examples of drying agents: the Bata Kenya factory in Limuru puts silica gel packets in its shoe packaging, where the silica gel adsorbs moisture inside the box during storage in the warehouse and during transport to shops (silica gel is not deliquescent; it holds water on its surface, but it is used for the same drying purpose); pharmaceutical companies in Nairobi's Industrial Area use silica gel in their packing boxes; efflorescent salts (washing soda) must be stored in sealed containers; stable salts (NaCl) ideal for food preservation.",
         "teacherMoves": "Distribute the Frayer Model organiser. Say: 'I am going to give you three new vocabulary words. Your job — with your partner — is to build the meaning of each word using your experimental data. Do NOT copy from a textbook. Use your OWN data as your evidence.' Allow 5 minutes for pairs to complete Frayer Models. Circulate; if a pair cannot define 'deliquescent', prompt: 'Which sample dissolved in the water it absorbed? What does that tell you about how strongly it attracts water?' After 5 minutes, cold-call 3 pairs to share their definition of one term each. Write the class-agreed definitions on the board. Then say: 'Now write your own explanation — alone, no partner — for why each sample behaved the way it did. Use the word because and refer to your data.' Allow 4 minutes. Cold-call 4 individual learners to read their explanation for one sample. After each reading, ask the class: 'Do you agree? What would you add or change?' WAIT TIME 10 seconds. Introduce the balanced equation for efflorescence: write Na₂CO₃·10H₂O → Na₂CO₃·H₂O + 9H₂O on the board and ask: 'What type of change is this — physical or chemical? How do you know?' WAIT TIME 12 seconds, cold-call 3 learners. Then say: 'Now make the connection. Complete this sentence in your notebook: The CAN fertiliser clumped because..., the washing soda crusted because..., and the table salt was unchanged because...' Allow 3 minutes, then cold-call 3 learners to share complete sentences. Then give this explanation in your own words (about 2 minutes), because learners will ask why the same kind of air made the fertiliser gain water but the washing soda lose water: 'Air always holds some water vapour. Each salt has its own balance with it. Calcium chloride and the ammonium nitrate in CAN pull water vapour in even from moderately humid air. Washing soda crystals hold their water loosely, so when the air holds less water vapour than the crystals give off, water leaves them. Table salt only pulls water in when the air is very humid (above about 75% relative humidity), which can happen at the coast on rainy days. So the result depends on the salt AND on the humidity of the air that day.'",
         "sensemakingStrategy": "Frayer Model Vocabulary Building + Evidence-Anchored Explanation Writing: The Frayer Model forces learners to build definitions from their own experimental evidence rather than rote memorisation, while the individual written explanation (using 'because' + data reference) requires each learner to make the causal link explicit — a hallmark of scientific reasoning and NGSS Practice 6 (Constructing Explanations).",
         "formativeAssessment": "Observable indicators: (1) Frayer Model contains a learner-generated example from the experiment (not just a textbook example). (2) Individual written explanation explicitly references a data value (e.g., 'CaCl₂ gained 0.4 g, which shows it absorbed water from the air'). (3) Balanced efflorescence equation is correctly written with correct coefficients. (4) The phenomenon-matching sentences correctly and specifically link all three salts to the three anchoring phenomenon observations. Teacher collects 6 written explanations (one per table group) to review before Lesson 7."
@@ -402,7 +402,7 @@ const LESSONS = [
     "number": 7,
     "title": "Applications of Salts in Daily Life in Kenya",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Introduction to Salts",
+    "substrand": "Sub-Strand 2.2: Introduction to Salts (condensed unit: 8 of the 30 KICD lessons)",
     "slo": {
       "purpose": "To enable learners to outline and appreciate the applications of salts in day-to-day life in Kenya, connecting each application to the specific salt properties investigated in earlier lessons.",
       "knowledge": "Learners will be able to: (i) identify specific salts used in agriculture, food industry, medicine, paper, paint, glass, and laundry industries; (ii) link the choice of a salt for a specific application to its type, solubility, and physical/chemical properties; (iii) connect the hygroscopic behaviour of CAN fertiliser and the efflorescence of washing soda — observed in the anchoring phenomenon — to their agricultural and industrial significance.",
@@ -462,7 +462,7 @@ const LESSONS = [
     "number": 8,
     "title": "Unit Synthesis, Model Revision and Summative Assessment",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Introduction to Salts",
+    "substrand": "Sub-Strand 2.2: Introduction to Salts (condensed unit: 8 of the 30 KICD lessons)",
     "slo": {
       "purpose": "To consolidate and synthesise all learning from the Introduction to Salts unit by revising cumulative explanatory models, completing the Driving Question Board, and demonstrating understanding through a summative assessment task.",
       "knowledge": "Learners will be able to: (a) classify different salts based on their properties; (b) describe the behaviour of salts when exposed to air; (c) outline methods of preparation appropriate to solubility; (d) outline applications of salts in day-to-day life in Kenya.",
@@ -521,7 +521,7 @@ const LESSONS = [
 ];
 
 const FINAL_EXPLANATION = {
-  "subjectLabel": "Chemistry Grade 10 – Sub-strand 2.1: Introduction to Salts – Final Explanation",
+  "subjectLabel": "Chemistry Grade 10 – Sub-strand 2.2: Introduction to Salts – Final Explanation",
   "instructions": "This is your Final Explanation for the unit. Use everything you learned in Lessons 1 to 8 to answer the driving question: Why did the fertiliser granules get wet and clump together overnight, the washing soda crystals shrink and form a white crust, but the table salt stay completely the same, and what does understanding salts tell us about how to prepare and use them safely in Kenya? Write your answers in the space under each prompt. Use evidence from the experiments you did, such as the solubility test, the preparation of salts and the watch-glass experiment. Write chemical formulae and balanced equations with state symbols where asked. Write in full sentences and use the scientific words you learned. Link each answer back to the storeroom and laboratory phenomenon. You may add labelled diagrams, and you may explain any part aloud to your teacher instead of writing it. Key Kiswahili words: chumvi (salt), unyevu (moisture), mvuke wa maji (water vapour).",
   "sections": [
     {
@@ -537,7 +537,7 @@ const FINAL_EXPLANATION = {
     {
       "title": "Part 3: How salts are prepared and why the method depends on solubility",
       "prompt": "(a) Write a balanced equation with state symbols for preparing zinc sulphate from zinc and dilute sulphuric acid, and say how you identified the gas produced. (b) Write a balanced equation with state symbols for preparing calcium chloride from hydrochloric acid and calcium carbonate, and say how you identified the gas. (c) Which method would you use to prepare barium sulphate, and why can you not use the methods in (a) and (b)? Write the net ionic equation. (d) Why do we add the solid in excess when preparing a soluble salt, and how is the excess removed?",
-      "exemplar": "(a) Zn(s) + H₂SO₄(aq) → ZnSO₄(aq) + H₂(g). Hydrogen was identified by the 'pop' test: a burning splint makes a pop sound. (b) 2HCl(aq) + CaCO₃(s) → CaCl₂(aq) + CO₂(g) + H₂O(l). Carbon dioxide turns limewater milky or cloudy. (c) Barium sulphate is insoluble, so it is made by double decomposition (precipitation). Barium chloride solution and sodium sulphate solution are mixed, and a dense white precipitate forms immediately, which is filtered, washed with distilled water and dried. Net ionic equation: Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄(s). Na⁺ and Cl⁻ are spectator ions. The methods in (a) and (b) only work for soluble salts, because the product must stay dissolved in solution so that the leftover solid can be filtered out. An insoluble salt would stay mixed with the excess solid. (d) The solid is added in excess to make sure all the acid is used up, so the salt solution is pure and not contaminated with acid. The unreacted solid is removed by filtration, leaving a clear salt solution."
+      "exemplar": "(a) Zn(s) + H₂SO₄(aq) → ZnSO₄(aq) + H₂(g). Hydrogen was identified by the 'pop' test: a burning splint makes a pop sound. (b) 2HCl(aq) + CaCO₃(s) → CaCl₂(aq) + CO₂(g) + H₂O(l). Carbon dioxide turns limewater milky or cloudy. (c) Barium sulphate is insoluble, so it is made by double decomposition (precipitation). Barium chloride solution and sodium sulphate solution are mixed, and a dense white precipitate forms immediately, which is filtered, washed with distilled water and dried. Net ionic equation: Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄(s). Na⁺ and Cl⁻ are spectator ions. The methods in (a) and (b) only work for soluble salts, because the product must stay dissolved in solution so that the leftover solid can be filtered out. An insoluble salt would stay mixed with the excess solid. (d) The solid is added in excess to make sure all the acid is used up, so the salt solution is pure and not contaminated with acid. The unreacted solid is removed by filtration, leaving a clear salt solution. (When an acid is neutralised by an alkali such as NaOH, no solid is added in excess; an indicator is used to find the end-point instead.)"
     },
     {
       "title": "Part 4: Explaining the phenomenon using behaviour of salts in air",
@@ -555,37 +555,42 @@ const FINAL_EXPLANATION = {
       "criterion": "Scientific accuracy of salt definitions, classification and solubility rules",
       "excellent": "Exceeds Expectations: All definitions, the four salt types with correct examples and the solubility rules (including the exceptions) are correct and complete.",
       "proficient": "Meets Expectations: Most definitions, types and rules are correct, with minor omissions or one wrong example.",
-      "developing": "Approaches Expectations: Definitions or rules are missing, incorrect or confused."
+      "developing": "Approaches Expectations: Definitions or rules are missing, incorrect or confused.",
+      "belowExpectations": "Below Expectations: Definitions, salt types and solubility rules are mostly missing or incorrect."
     },
     {
       "criterion": "Preparation methods and chemical equations",
       "excellent": "Exceeds Expectations: Balanced equations with correct state symbols, correct gas tests, a correct net ionic equation, and a clear reason why the method depends on solubility.",
       "proficient": "Meets Expectations: Equations are mostly correct but have minor errors in balancing or state symbols, or the reason for the method is only partly explained.",
-      "developing": "Approaches Expectations: Equations are incorrect or missing, or methods are mixed up."
+      "developing": "Approaches Expectations: Equations are incorrect or missing, or methods are mixed up.",
+      "belowExpectations": "Below Expectations: Equations are missing or mostly incorrect, no gas tests are given, and the method is not linked to solubility."
     },
     {
       "criterion": "Explanation of the phenomenon (air behaviour)",
       "excellent": "Exceeds Expectations: Correctly explains all three substances using deliquescent, efflorescent and stable behaviour, with evidence from the watch-glass experiment and the washing soda equation, and says that the result depends on both the salt and the humidity of the air.",
       "proficient": "Meets Expectations: Explains all three substances correctly with some evidence from the experiment.",
-      "developing": "Approaches Expectations: Explains one or two substances correctly, gives descriptions only, or uses the terms incorrectly."
+      "developing": "Approaches Expectations: Explains one or two substances correctly, gives descriptions only, or uses the terms incorrectly.",
+      "belowExpectations": "Below Expectations: Cannot explain what happens to any of the three substances in air, or uses the terms deliquescent and efflorescent incorrectly."
     },
     {
       "criterion": "Link to safe use in Kenya",
       "excellent": "Exceeds Expectations: Gives specific, accurate storage advice and links at least one other Kenyan application to the property of the salt.",
       "proficient": "Meets Expectations: Gives correct advice but the link to properties is general.",
-      "developing": "Approaches Expectations: Advice is vague or not linked to the properties of salts."
+      "developing": "Approaches Expectations: Advice is vague or not linked to the properties of salts.",
+      "belowExpectations": "Below Expectations: Gives no storage advice, or advice that has no link to the properties of salts."
     },
     {
       "criterion": "Use of evidence and scientific communication",
       "excellent": "Exceeds Expectations: Cites evidence from the lessons, uses scientific vocabulary correctly and writes clearly in full sentences (or explains clearly aloud or with labelled diagrams).",
       "proficient": "Meets Expectations: Uses some evidence and mostly correct vocabulary.",
-      "developing": "Approaches Expectations: Little evidence is used and the vocabulary is often incorrect."
+      "developing": "Approaches Expectations: Little evidence is used and the vocabulary is often incorrect.",
+      "belowExpectations": "Below Expectations: Uses no evidence from the lessons, vocabulary is mostly incorrect, and the explanation is too short to follow."
     }
   ]
 };
 
 const SUMMARY_TABLE = {
-  "subStrand": "Sub-Strand 2.1: Introduction to Salts",
+  "subStrand": "Sub-Strand 2.2: Introduction to Salts",
   "drivingQuestion": "DRIVING QUESTION: Why did the fertiliser granules get wet and clump together overnight, the washing soda crystals shrink and form a white crust, but the table salt stay completely the same — and what does understanding salts tell us about how to prepare and use them safely in Kenya?",
   "lessons": [
     {
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -795,31 +795,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Scientific accuracy of the origin and evolution of the universe",
       "excellent": "Correctly describes the Big Bang as expansion of space from a singularity about 13.8 billion years ago, orders the cosmic events correctly and uses the given times accurately.",
       "proficient": "Describes the Big Bang and most events in the correct order, with minor errors in times or terms.",
-      "developing": "Describes the Big Bang as an ordinary explosion in space or places several events in the wrong order."
+      "developing": "Describes the Big Bang as an ordinary explosion in space or places several events in the wrong order.",
+      "belowExpectations": "Gives an account of the Big Bang and the universe that is mostly incorrect, with events largely out of order."
     },
     {
       "criterion": "Use of evidence (CMB, expansion, Kepler's Laws, gravity, telescopes and missions)",
       "excellent": "Uses several specific pieces of evidence from the unit and explains clearly what each one shows.",
       "proficient": "Uses some evidence from the unit but explains what it shows only partly.",
-      "developing": "Gives few or no pieces of evidence, or only states facts without linking them to a claim."
+      "developing": "Gives few or no pieces of evidence, or only states facts without linking them to a claim.",
+      "belowExpectations": "Gives no evidence from the unit, or only unrelated statements, with no link to a claim."
     },
     {
       "criterion": "Reasoning about indirect observation",
       "excellent": "Clearly explains that light travel time lets telescopes look back in time and that instruments extend human senses, and links this to the driving question.",
       "proficient": "Explains that instruments gather evidence from far away but is unclear about looking back in time.",
-      "developing": "Does not explain how scientists learn about places they cannot visit."
+      "developing": "Does not explain how scientists learn about places they cannot visit.",
+      "belowExpectations": "Does not mention how scientists learn about places they cannot visit."
     },
     {
       "criterion": "Connections to the anchoring phenomenon and Kenya",
       "excellent": "Repeatedly links ideas to the Nairobi night sky and gives accurate Kenyan or African examples such as Mombasa tides, Lake Victoria, 1KUNS-PF or the SKA.",
       "proficient": "Links to the Nairobi night sky and gives at least one accurate Kenyan or African example.",
-      "developing": "Gives little connection to the phenomenon or Kenyan examples."
+      "developing": "Gives little connection to the phenomenon or Kenyan examples.",
+      "belowExpectations": "Gives no connection to the phenomenon or to Kenyan examples."
     },
     {
       "criterion": "Communication and Claim-Evidence-Reasoning structure",
       "excellent": "Writes a clear, well-organised answer with a claim, evidence and reasoning, using correct science vocabulary and a clear reflection on how thinking has changed.",
       "proficient": "Writes a mostly clear answer with a claim and some evidence and reasoning, and a short reflection.",
-      "developing": "Writes an unclear or incomplete answer that lacks a claim or reasoning."
+      "developing": "Writes an unclear or incomplete answer that lacks a claim or reasoning.",
+      "belowExpectations": "The answer is very unclear, with no claim and no reasoning."
     }
   ]
 };
@@ -915,6 +920,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

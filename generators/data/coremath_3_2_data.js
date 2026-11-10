@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Experimental probability and use of data",
       "excellent": "Correctly counts 8 full trips from the tally, gets 8/20 = 0.4, and clearly links more trials to a more reliable estimate.",
       "proficient": "Gets 0.4 correctly but gives only a brief explanation of why more trials matter.",
-      "developing": "Miscounts the data or does not use the relative-frequency definition."
+      "developing": "Miscounts the data or does not use the relative-frequency definition.",
+      "belowExpectations": "Cannot count the trips from the tally or use relative frequency, and gives no reason why more trials matter."
     },
     {
       "criterion": "Sample space, probability scale and the Addition Law",
       "excellent": "Lists {TT, TE, ET, EE} correctly, explains why 0 ≤ P ≤ 1, and correctly applies the Addition Law with a justification of mutual exclusivity.",
       "proficient": "Gets the sample space and the answer of 1/2 but gives a weak justification for the scale or mutual exclusivity.",
-      "developing": "Omits outcomes, gives a probability outside 0 to 1, or adds probabilities without checking the events."
+      "developing": "Omits outcomes, gives a probability outside 0 to 1, or adds probabilities without checking the events.",
+      "belowExpectations": "Cannot list the sample space, gives probabilities outside 0 to 1, and adds probabilities without checking the events."
     },
     {
       "criterion": "Independent events, Multiplication Law and tree diagram",
       "excellent": "Defines independence accurately, completes all four branches with correct products (0.16, 0.24, 0.24, 0.36), finds 0.16 and 0.48, and uses the sum-to-1 check.",
       "proficient": "Gets most branch probabilities and the main answers right but misses the check or explains independence loosely.",
-      "developing": "Adds instead of multiplies along branches, or leaves out outcomes."
+      "developing": "Adds instead of multiplies along branches, or leaves out outcomes.",
+      "belowExpectations": "Cannot define independent events, and cannot complete the tree diagram branches, adding instead of multiplying."
     },
     {
       "criterion": "Reasoning, model critique and communication",
       "excellent": "Writes a clear report with numbers, explains why the independent-seats model fails, and links probability to fair or safe decisions in Kenyan contexts.",
       "proficient": "Gives usable advice with numbers but only a partial explanation of the model mismatch.",
-      "developing": "Gives vague advice with no numbers or no link to the data."
+      "developing": "Gives vague advice with no numbers or no link to the data.",
+      "belowExpectations": "Gives no advice or advice with no numbers and no link to the data, and does not see why the independent-seats model fails."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

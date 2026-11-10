@@ -795,31 +795,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence from the class data",
       "excellent": "Accurately uses the Lesson 1 numbers (e.g. 14 to 28 breaths per minute, 72 to over 120 beats per minute) and links them to the explanation throughout.",
       "proficient": "Mentions that both rates rose, with some correct numbers, but rarely links them to the later explanation.",
-      "developing": "Gives vague or incorrect data, or no data."
+      "developing": "Gives vague or incorrect data, or no data.",
+      "belowExpectations": "Gives no data from the class results, or only incorrect data, and does not use it in the explanation."
     },
     {
       "criterion": "Explaining gas exchange and transport",
       "excellent": "Explains breathing mechanics with pressure changes, the four alveolar features and the full oxygen pathway including haemoglobin and the heart, with correct diffusion reasoning.",
       "proficient": "Describes most of the mechanics, features and pathway but with a missing step or limited reasoning.",
-      "developing": "Lists some structures with little explanation, or has errors in the pathway."
+      "developing": "Lists some structures with little explanation, or has errors in the pathway.",
+      "belowExpectations": "Names almost no structures correctly, and the pathway of oxygen is missing or mostly incorrect."
     },
     {
       "criterion": "Explaining cellular respiration and lactic acid",
       "excellent": "Gives both equations correctly, places respiration in the mitochondria, and explains lactic acid, burning legs and oxygen debt as cause and effect.",
       "proficient": "Gives the equations and a mostly correct explanation of lactic acid with minor gaps.",
-      "developing": "Equations are incomplete or incorrect, or the burning sensation is not explained."
+      "developing": "Equations are incomplete or incorrect, or the burning sensation is not explained.",
+      "belowExpectations": "Gives no correct equations, does not place respiration in the mitochondria, and cannot explain lactic acid or the burning sensation."
     },
     {
       "criterion": "Transfer to the Akinyi scenario",
       "excellent": "Applies the whole chain of ideas to the new situation, including oxygen debt and heat, using correct vocabulary.",
       "proficient": "Applies most ideas to the swimming scenario with some omissions.",
-      "developing": "Repeats facts without applying them to Akinyi."
+      "developing": "Repeats facts without applying them to Akinyi.",
+      "belowExpectations": "Does not apply any ideas to Akinyi, or gives only incorrect statements about her."
     },
     {
       "criterion": "Scientific vocabulary and clarity",
       "excellent": "Uses unit terms accurately and writes in clear, connected sentences.",
       "proficient": "Uses most terms correctly with generally clear writing.",
-      "developing": "Uses few scientific terms or uses them incorrectly."
+      "developing": "Uses few scientific terms or uses them incorrectly.",
+      "belowExpectations": "Uses almost no scientific terms, and the writing is too unclear to follow."
     }
   ]
 };
@@ -915,6 +920,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

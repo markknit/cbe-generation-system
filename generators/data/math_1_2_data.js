@@ -555,25 +555,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Understanding of index notation and the laws of indices",
       "excellent": "Explains clearly WHY each law works using expanded factors (e.g. 2³ × 2⁴ = 2⁷), covers the Product, Quotient, Power, Zero and Negative Index laws correctly, and uses notation accurately throughout.",
       "proficient": "States and applies most laws correctly with some reasoning from repeated factors; minor notation slips or one law only stated, not explained.",
-      "developing": "Lists rules with little or no explanation of why they work, or makes errors such as multiplying instead of adding indices."
+      "developing": "Lists rules with little or no explanation of why they work, or makes errors such as multiplying instead of adding indices.",
+      "belowExpectations": "The learner has challenges deriving and applying laws of indices."
     },
     {
       "criterion": "Understanding of logarithms and their link to indices",
       "excellent": "Defines a logarithm as the index, converts accurately between index form and log form, and explains why logarithms are needed where the index laws stop (e.g. 2ˣ = 500,000), including the Richter scale idea.",
       "proficient": "Converts between index and log form correctly and gives a basic reason why logarithms are needed; connection to the real-world scale is partial.",
-      "developing": "Treats logarithms as a separate unrelated topic, or makes conversion errors."
+      "developing": "Treats logarithms as a separate unrelated topic, or makes conversion errors.",
+      "belowExpectations": "Cannot say what a logarithm is or convert between index form and log form, and does not link logarithms to indices."
     },
     {
       "criterion": "Accuracy of calculation with logarithm tables",
       "excellent": "Correctly identifies characteristics and mantissas, adds logarithms, finds the antilog, gives an answer close to 1,530,000, and explains the link to the Product Law and why the method is efficient.",
       "proficient": "Follows the correct method with a small arithmetic or table-reading slip, or gives a weaker explanation of why the method works.",
-      "developing": "Method is incomplete or incorrect, e.g. multiplies the logarithms instead of adding them, or no working shown."
+      "developing": "Method is incomplete or incorrect, e.g. multiplies the logarithms instead of adding them, or no working shown.",
+      "belowExpectations": "The learner has challenges applying common logarithms in multiplication, division, powers and roots of numbers."
     },
     {
       "criterion": "Use of evidence and connection to the driving question",
       "excellent": "Uses at least three specific pieces of evidence from the unit (Kitale maize numbers, E. coli, Richter scale, etc.) with correct data, and builds a connected argument that answers the driving question and reflects on growth since the Day-1 model.",
       "proficient": "Uses two pieces of evidence accurately and addresses the driving question, with limited connection between ideas.",
-      "developing": "Little or no evidence from the unit, or evidence is inaccurate or not linked to the driving question."
+      "developing": "Little or no evidence from the unit, or evidence is inaccurate or not linked to the driving question.",
+      "belowExpectations": "Gives no evidence from the unit, or the answer is not connected to the driving question."
     }
   ]
 };
@@ -641,6 +645,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -555,31 +555,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Scientific accuracy of salt definitions, classification and solubility rules",
       "excellent": "All definitions, the four salt types with correct examples and the solubility rules are correct and complete.",
       "proficient": "Most definitions, types and rules are correct, with minor omissions or one wrong example.",
-      "developing": "Definitions or rules are missing, incorrect or confused."
+      "developing": "Definitions or rules are missing, incorrect or confused.",
+      "belowExpectations": "Definitions, salt types and solubility rules are mostly missing or incorrect."
     },
     {
       "criterion": "Preparation methods and chemical equations",
       "excellent": "Balanced equations with correct state symbols, correct gas tests, a correct net ionic equation, and a clear reason why the method depends on solubility.",
       "proficient": "Equations are mostly correct but have minor errors in balancing or state symbols, or the reason for the method is only partly explained.",
-      "developing": "Equations are incorrect or missing, or methods are mixed up."
+      "developing": "Equations are incorrect or missing, or methods are mixed up.",
+      "belowExpectations": "Equations are missing or mostly incorrect, no gas tests are given, and the method is not linked to solubility."
     },
     {
       "criterion": "Explanation of the phenomenon (air behaviour)",
       "excellent": "Correctly explains all three substances using deliquescent, efflorescent and stable behaviour, with evidence from the watch-glass experiment and the washing soda equation.",
       "proficient": "Explains two or three substances correctly but gives limited evidence or reasoning.",
-      "developing": "Gives descriptions only, or uses the terms incorrectly."
+      "developing": "Gives descriptions only, or uses the terms incorrectly.",
+      "belowExpectations": "Cannot explain what happens to any of the three substances in air, or uses the terms deliquescent and efflorescent incorrectly."
     },
     {
       "criterion": "Link to safe use in Kenya",
       "excellent": "Gives specific, accurate storage advice and links at least one other Kenyan application to the property of the salt.",
       "proficient": "Gives correct advice but the link to properties is general.",
-      "developing": "Advice is vague or not linked to the properties of salts."
+      "developing": "Advice is vague or not linked to the properties of salts.",
+      "belowExpectations": "Gives no storage advice, or advice that has no link to the properties of salts."
     },
     {
       "criterion": "Use of evidence and scientific communication",
       "excellent": "Cites evidence from the lessons, uses scientific vocabulary correctly and writes clearly in full sentences.",
       "proficient": "Uses some evidence and mostly correct vocabulary.",
-      "developing": "Little evidence is used and the vocabulary is often incorrect."
+      "developing": "Little evidence is used and the vocabulary is often incorrect.",
+      "belowExpectations": "Uses no evidence from the lessons, vocabulary is mostly incorrect, and the explanation is too short to follow."
     }
   ]
 };
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

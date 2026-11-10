@@ -796,31 +796,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence and data",
       "excellent": "Uses the exact values from the demos and classroom (90 Ω, 10 Ω, 0.10 A, 0.30 A, 3.0 V, 9.0 V, 0.30 W, 2.7 W, 0.15 A, 0.60 A, 0.45 A) accurately and links them to claims.",
       "proficient": "Uses most of the correct values but some are missing or not linked clearly to the claim.",
-      "developing": "Uses few or incorrect values, or gives claims without evidence."
+      "developing": "Uses few or incorrect values, or gives claims without evidence.",
+      "belowExpectations": "Uses few or no correct values, and the claims are not supported by evidence."
     },
     {
       "criterion": "Scientific reasoning about series and parallel circuits",
       "excellent": "Clearly explains that series bulbs share the p.d. and a single current through 90 Ω, while parallel branches each get the full p.d. and independent current, and links this to why one blown tube does not affect the others.",
       "proficient": "Explains the series and parallel difference correctly but with limited reasoning about p.d., current or resistance.",
-      "developing": "Describes what happens without a correct reason, or shows misconceptions such as bulbs using up current."
+      "developing": "Describes what happens without a correct reason, or shows misconceptions such as bulbs using up current.",
+      "belowExpectations": "Does not explain series and parallel circuits, or says that current is used up with no other reason given."
     },
     {
       "criterion": "Calculations and units",
       "excellent": "All calculations (V = IR, resistance in series and parallel, P = IV, E = Pt, cost) are set out step by step with correct units and answers.",
       "proficient": "Calculations mostly correct with minor errors in units or steps.",
-      "developing": "Calculations incomplete or incorrect, or missing units."
+      "developing": "Calculations incomplete or incorrect, or missing units.",
+      "belowExpectations": "Calculations are missing or mostly wrong, and units are not given."
     },
     {
       "criterion": "Application and safety",
       "excellent": "Correctly explains the fuse blowing at 20.8 A against 13 A, the roles of the fuse or breaker and earthing, and the cost saving of an LED, in Kenyan contexts.",
       "proficient": "Explains most safety and cost ideas correctly with some gaps.",
-      "developing": "Safety and cost ideas are unclear or missing."
+      "developing": "Safety and cost ideas are unclear or missing.",
+      "belowExpectations": "Does not explain safety or cost ideas, or the ideas given are unrelated to circuits."
     },
     {
       "criterion": "Model revision and communication",
       "excellent": "Compares the first model with the final model, names a specific change, links to both KICD questions, and uses scientific terms (in series, in parallel, p.d., e.m.f.) correctly.",
       "proficient": "Describes a change in the model and uses most terms correctly.",
-      "developing": "Does not describe a model change or uses terms incorrectly."
+      "developing": "Does not describe a model change or uses terms incorrectly.",
+      "belowExpectations": "Does not mention any change to the model, and the writing is hard to follow with terms used incorrectly."
     }
   ]
 };
@@ -916,6 +921,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

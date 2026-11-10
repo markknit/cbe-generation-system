@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Properties of rotation and link to the phenomenon",
       "excellent": "Correctly names the centre, angle, direction and preserved distances and shape, and clearly links each to the Nairobi clock and to the construction steps.",
       "proficient": "States most properties correctly with some link to the clock; minor gaps in explaining why.",
-      "developing": "Names rotation but confuses it with translation or reflection, or lists properties without reasons."
+      "developing": "Names rotation but confuses it with translation or reflection, or lists properties without reasons.",
+      "belowExpectations": "Does not identify the properties of rotation, or describes a different transformation, with no link to the clock."
     },
     {
       "criterion": "Applying coordinate rules",
       "excellent": "Uses all rules correctly to complete the table, verifies distance preservation with calculation, and explains the 360° return.",
       "proficient": "Completes most of the table correctly; minor sign errors or incomplete distance check.",
-      "developing": "Uses wrong rules or direction, or cannot calculate image coordinates."
+      "developing": "Uses wrong rules or direction, or cannot calculate image coordinates.",
+      "belowExpectations": "Cannot complete the coordinate table, uses wrong rules or direction throughout, and does not check distances."
     },
     {
       "criterion": "Finding centre and angle of rotation",
       "excellent": "Gives an accurate perpendicular bisector construction, finds the correct centre, justifies why the centre is equidistant, and verifies the angle.",
       "proficient": "Describes the method and finds the centre with minor errors in reasoning or verification.",
-      "developing": "Cannot locate the centre or does not use perpendicular bisectors."
+      "developing": "Cannot locate the centre or does not use perpendicular bisectors.",
+      "belowExpectations": "Cannot locate the centre of rotation, and does not use perpendicular bisectors."
     },
     {
       "criterion": "Rotational symmetry",
       "excellent": "Gives correct orders and angles for all figures and the solid, with the 360° ÷ n reasoning.",
       "proficient": "Most orders correct; reasoning is partial.",
-      "developing": "Orders incorrect or no use of 360° ÷ n."
+      "developing": "Orders incorrect or no use of 360° ÷ n.",
+      "belowExpectations": "Gives incorrect orders of rotational symmetry and does not use 360° ÷ n."
     },
     {
       "criterion": "Synthesis and real-life application",
       "excellent": "Writes a coherent, evidence-based answer covering all four points, gives a valid Kenyan example, and reflects on how their thinking changed.",
       "proficient": "Answer covers most points with a reasonable example; reflection is brief.",
-      "developing": "Answer is incomplete or lacks evidence, example or reflection."
+      "developing": "Answer is incomplete or lacks evidence, example or reflection.",
+      "belowExpectations": "Gives an answer that is very short or off the point, with no evidence, no Kenyan example and no reflection."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

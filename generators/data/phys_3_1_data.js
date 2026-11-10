@@ -495,31 +495,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining why the nucleus is unstable",
       "excellent": "Accurately explains nucleons, isotopes and the belt of stability, and clearly links the neutron-to-proton ratio of uranium-238 to spontaneous decay as a nuclear, not chemical, process.",
       "proficient": "Explains isotopes and instability correctly but the link to the belt of stability or to the nuclear nature of decay is incomplete.",
-      "developing": "Describes radioactivity without explaining nuclear instability or confuses isotopes with other ideas."
+      "developing": "Describes radioactivity without explaining nuclear instability or confuses isotopes with other ideas.",
+      "belowExpectations": "Does not explain why the nucleus is unstable, or confuses isotopes and radioactivity with other ideas."
     },
     {
       "criterion": "Radiation types and nuclear equations",
       "excellent": "Correctly compares alpha, beta and gamma, writes balanced equations with conserved A and Z, and explains decay arrows on the N vs Z plot.",
       "proficient": "Compares radiation types correctly and writes mostly correct equations with minor errors in balancing or in explaining movement on the plot.",
-      "developing": "Lists some properties but equations are unbalanced or missing, and no link to stability is made."
+      "developing": "Lists some properties but equations are unbalanced or missing, and no link to stability is made.",
+      "belowExpectations": "Does not give properties of the radiation types, and nuclear equations are missing or wrong."
     },
     {
       "criterion": "Detection, background radiation and half-life",
       "excellent": "Explains the GM tube process, background correction and half-life using the dice evidence, and correctly calculates the fraction remaining.",
       "proficient": "Explains most of detection and half-life correctly; the calculation or the use of simulation evidence has small gaps.",
-      "developing": "Gives vague statements about detection or half-life; calculation is missing or incorrect."
+      "developing": "Gives vague statements about detection or half-life; calculation is missing or incorrect.",
+      "belowExpectations": "Gives no correct idea about detection, background radiation or half-life, and no calculation is attempted."
     },
     {
       "criterion": "Energy source, applications and safety",
       "excellent": "Links mass defect and E = mc² to the rock's energy, distinguishes fission from fusion, and gives Kenyan applications and ALARA measures with correct reasoning.",
       "proficient": "Gives correct applications and safety measures, with only partial explanation of mass defect or of fission versus fusion.",
-      "developing": "Names applications or safety ideas without explanation, or with errors."
+      "developing": "Names applications or safety ideas without explanation, or with errors.",
+      "belowExpectations": "Names no application or safety idea, or those given are unrelated to radioactivity."
     },
     {
       "criterion": "Communication and connection to the phenomenon",
       "excellent": "Writes clearly in logical order, uses scientific vocabulary precisely, and consistently ties each idea back to the pitchblende rock and Kenyan contexts.",
       "proficient": "Writing is mostly clear and uses key terms; links to the phenomenon are present but not consistent.",
-      "developing": "Writing is hard to follow, with little scientific vocabulary or connection to the rock."
+      "developing": "Writing is hard to follow, with little scientific vocabulary or connection to the rock.",
+      "belowExpectations": "Writing is very hard to follow, scientific vocabulary is not used, and there is no link to the rock."
     }
   ]
 };
@@ -580,6 +585,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

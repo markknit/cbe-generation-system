@@ -555,31 +555,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Shared cell features and cell types",
       "excellent": "Names all four universal features (membrane, cytoplasm, DNA, ribosomes), correctly distinguishes prokaryotes from eukaryotes and uses a full CER with evidence and reasoning.",
       "proficient": "Names most universal features and states that bacteria are cells, but evidence or reasoning is incomplete.",
-      "developing": "Names few shared features or confuses what makes something a cell."
+      "developing": "Names few shared features or confuses what makes something a cell.",
+      "belowExpectations": "Names almost no shared features, or cannot say what makes something a cell, and confuses prokaryotes and eukaryotes."
     },
     {
       "criterion": "Plant versus animal cell structures",
       "excellent": "Correctly names cell wall, chloroplasts and central vacuole, explains the function of each and links them to the shape and colour of the sukuma wiki cell.",
       "proficient": "Names the plant structures with some functions, with limited links to the observed cells.",
-      "developing": "Lists structures without functions or mixes up plant and animal features."
+      "developing": "Lists structures without functions or mixes up plant and animal features.",
+      "belowExpectations": "Names almost no plant structures, or gives incorrect functions and mixes up plant and animal features throughout."
     },
     {
       "criterion": "Structure-function reasoning in specialised cells",
       "excellent": "Explains clearly how the structure of the red blood cell, white blood cell and another specialised cell suits its job, including the trade-off of losing the nucleus.",
       "proficient": "Links structure to function correctly for most examples but with limited detail.",
-      "developing": "States structures or functions separately without linking them."
+      "developing": "States structures or functions separately without linking them.",
+      "belowExpectations": "Does not link structure to function for any specialised cell, or the links given are incorrect."
     },
     {
       "criterion": "Use of evidence and Kenyan context",
       "excellent": "Draws consistently on the blood smear, sukuma wiki, practicals and sickle cell example, accurately and in the same way as taught.",
       "proficient": "Uses some evidence and examples from the lessons.",
-      "developing": "Uses little or no evidence from the lessons, or inaccurate examples."
+      "developing": "Uses little or no evidence from the lessons, or inaccurate examples.",
+      "belowExpectations": "Uses no evidence from the lessons, or only incorrect examples, even with prompting."
     },
     {
       "criterion": "Communication of the final explanation",
       "excellent": "Answer to the driving question is organised, complete (all four required parts), and uses scientific vocabulary accurately.",
       "proficient": "Answer covers most required parts with mostly correct vocabulary.",
-      "developing": "Answer is incomplete or unclear, with frequent vocabulary errors."
+      "developing": "Answer is incomplete or unclear, with frequent vocabulary errors.",
+      "belowExpectations": "Answer to the driving question is mostly missing or too unclear to follow, with few correct scientific terms."
     }
   ]
 };
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

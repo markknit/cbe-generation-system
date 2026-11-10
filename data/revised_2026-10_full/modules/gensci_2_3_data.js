@@ -533,17 +533,17 @@ const FINAL_EXPLANATION = {
     {
       "title": "Part 2: Aluminium (Giant Metallic Structure)",
       "prompt": "The aluminium wire from the sufuria handle was shiny, bent without breaking, and conducted electricity immediately as a solid. It melts at 660 °C (from the data card), while salt melts at 801 °C. (a) Describe the bonding and structure inside aluminium. (b) Explain why aluminium conducts when solid, while solid NaCl does not. (c) Explain why aluminium bends instead of shattering. (d) Both aluminium and salt are giant lattices with strong bonding. Using the two melting points, what can you say about comparing the strength of the two kinds of bonding, and why is it not enough just to say a bond is 'strong'?",
-      "exemplar": "(a) Aluminium has metallic bonding in a giant metallic lattice. Al³⁺ cations sit in a regular lattice surrounded by a 'sea' of delocalised electrons that are free to move. The attraction between the cations and the electron sea holds the metal together.\n(b) In solid aluminium the delocalised electrons can move freely through the lattice, so they carry charge as soon as the circuit is connected. In solid NaCl the charged particles (ions) are locked in place and there are no free electrons, so no charge can flow.\n(c) The layers of cations can slide over each other while the electron sea keeps them bonded. Like charges are not forced together, so there is no repulsion that splits the metal. The metal is therefore malleable and ductile and bends without breaking.\n(d) Both structures are giant lattices with strong bonding, but the forces differ. Aluminium's melting point of 660 °C is lower than NaCl's, which is over 800 °C. So the bond type and structure decide the melting point, and we must compare the particular forces, not just say 'strong' or 'weak'. Here the ionic attractions in NaCl need more energy to overcome than the metallic bonding in aluminium."
+      "exemplar": "(a) Aluminium has metallic bonding in a giant metallic lattice. Al³⁺ cations sit in a regular lattice surrounded by a 'sea' of delocalised electrons that are free to move. The attraction between the cations and the electron sea holds the metal together.\n(b) In solid aluminium the delocalised electrons can move freely through the lattice, so they carry charge as soon as the circuit is connected. In solid NaCl the charged particles (ions) are locked in place and there are no free electrons, so no charge can flow.\n(c) The layers of cations can slide over each other while the electron sea keeps them bonded. Like charges are not forced together, so there is no repulsion that splits the metal. The metal is therefore malleable and ductile and bends without breaking.\n(d) Both structures are giant lattices with strong bonding, but the forces differ. Aluminium's melting point of 660 °C is lower than NaCl's, which is over 800 °C. So the bond type and structure decide the melting point, and we must compare the particular forces, not just say 'strong' or 'weak'. For these two substances the ionic attractions in NaCl need more energy to overcome than the metallic bonding in aluminium, but this is not a general rule because metallic bonding varies in strength from metal to metal."
     },
     {
       "title": "Part 3: Graphite (Giant Atomic / Layered Covalent Structure)",
       "prompt": "The graphite rod from the AA battery is a non-metal made only of carbon, yet it conducts electricity as a solid. It is dull grey, snaps instead of bending, and leaves marks on paper. (a) Describe the bonding within a graphite layer and between layers. (b) Explain why graphite conducts even though carbon is a non-metal. (c) Explain why graphite leaves a mark on paper and why the graphite rod snaps instead of bending. (d) A classmate says 'only metals conduct electricity'. Use the evidence from our tests to respond.",
-      "exemplar": "(a) Within each layer, carbon atoms are covalently bonded in flat hexagons. Each carbon uses three of its four valence electrons in bonding. Between layers there are only weak Van der Waals forces.\n(b) Each carbon has one electron left over that is delocalised along the layer. These electrons are free to move and carry charge, so graphite conducts even though carbon is a non-metal.\n(c) The forces between layers are weak, so the layers slide apart easily. When a pencil is rubbed on paper, layers of graphite flake off and stay on the paper as a mark. A graphite rod cannot bend like a metal: the strong covalent bonds inside each layer are rigid and there is no sea of electrons holding layers together, so when the rod is bent it splits and snaps between the weakly held layers.\n(d) The rule 'only metals conduct' is not correct. Our tests showed that graphite, a non-metal, lit the bulb as a solid, while dry NaCl, which contains a metal, did not. Conduction depends on whether there are freely moving charged particles (delocalised electrons or mobile ions), not on whether the substance is a metal."
+      "exemplar": "(a) Within each layer, carbon atoms are covalently bonded in flat hexagons. Each carbon uses three of its four valence electrons in bonding. Between layers there are only weak Van der Waals forces.\n(b) Each carbon has one electron left over that is delocalised along the layer. These electrons are free to move and carry charge, so graphite conducts even though carbon is a non-metal.\n(c) The forces between layers are weak, so the layers slide apart easily. When a pencil is rubbed on paper, layers of graphite flake off and stay on the paper as a mark. A graphite rod cannot bend like a metal: the strong covalent bonds inside each layer are rigid and there is no sea of electrons holding layers together, so when the rod is bent it cannot flow into a new shape and it snaps.\n(d) The rule 'only metals conduct' is not correct. Our tests showed that graphite, a non-metal, lit the bulb as a solid, while dry NaCl did not, even though it contains a metal element, because its ions are locked in place. Conduction depends on whether there are freely moving charged particles (delocalised electrons or mobile ions), not on whether the substance is a metal."
     },
     {
       "title": "Part 4: Comparing Structures and Predicting New Substances",
       "prompt": "(a) Complete this table in your answer by writing the structure type, the particles that are free to move (if any) in the solid, and one reason for each substance's melting point or mechanical behaviour: NaCl, aluminium, graphite. (b) In Lesson 7 you predicted the properties of two new substances: iodine crystals (I₂, the solid from which the antiseptic iodine solution sold in Nairobi pharmacies is made) and iron in a Jua Kali welding rod. Choose ONE and predict its conductivity, melting point and mechanical behaviour, giving a reason from its structure.",
-      "exemplar": "(a)\n| Substance | Structure type | Free to move in the solid | Reason for melting point or mechanical behaviour |\n|---|---|---|---|\n| NaCl | Giant ionic | Nothing (ions are fixed) | Strong electrostatic forces throughout the lattice give a very high melting point (over 800 °C); shifting layers causes repulsion so it is brittle |\n| Aluminium | Giant metallic | Delocalised electrons | Cation layers slide over the electron sea so it is malleable; melts at 660 °C |\n| Graphite | Giant atomic (layered covalent) | One delocalised electron per carbon, along each layer | Weak Van der Waals forces between layers let them slide, so graphite flakes and marks paper |\n\n(b) Iodine: Iodine is a simple molecular structure. Discrete I₂ molecules are held together by weak Van der Waals forces. It has no ions and no free electrons, so it does not conduct. It has a low melting point because little energy is needed to overcome the weak forces between molecules, and it is soft and easily broken.\n(If a learner chooses iron instead, a good answer is:) Iron is a giant metallic structure with a sea of delocalised electrons. It conducts electricity as a solid, and its cation layers can slide so it is malleable and ductile. It has a high melting point because of strong metallic bonding."
+      "exemplar": "(a)\n| Substance | Structure type | Free to move in the solid | Reason for melting point or mechanical behaviour |\n|---|---|---|---|\n| NaCl | Giant ionic | Nothing (ions are fixed) | Strong electrostatic forces throughout the lattice give a very high melting point (over 800 °C); shifting layers causes repulsion so it is brittle |\n| Aluminium | Giant metallic | Delocalised electrons | Cation layers slide over the electron sea so it is malleable; melts at 660 °C |\n| Graphite | Giant atomic (layered covalent) | One delocalised electron per carbon, along each layer | Weak Van der Waals forces between layers let them slide, so graphite flakes and marks paper |\n\n(b) Iodine: Iodine is a simple molecular structure. Discrete I₂ molecules are held together by weak Van der Waals forces. It has no ions and no free electrons, so it does not conduct. It has a low melting point because little energy is needed to overcome the weak forces between molecules, and it is soft and easily broken.\n(If a learner chooses iron instead, a good answer is:) Iron is a giant metallic structure with a sea of delocalised electrons. It conducts electricity as a solid, and its cation layers can slide so it is malleable and ductile. It has a high melting point (about 1540 °C) because of strong metallic bonding."
     },
     {
       "title": "Part 5: The Complete Story and Revising Your Thinking",
@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Linking bond type and structure to properties",
       "excellent": "Exceeds Expectations: Correctly identifies ionic, metallic and layered covalent bonding for all three substances and clearly links each structure to conductivity, melting point and mechanical behaviour.",
       "proficient": "Meets Expectations: Identifies the bond type for all three substances and links most properties to structure, with one or two gaps.",
-      "developing": "Approaches Expectations: Names some bond types but describes properties without linking them to structure, or mixes up the substances."
+      "developing": "Approaches Expectations: Names some bond types but describes properties without linking them to structure, or mixes up the substances.",
+      "belowExpectations": "Below Expectations: names few bond types correctly and does not link structure to properties, or mixes up the three substances."
     },
     {
       "criterion": "Particle-level reasoning about conductivity",
       "excellent": "Exceeds Expectations: Explains conduction in terms of freely moving ions or delocalised electrons and states why they are free or fixed in each substance, including graphite and dry versus dissolved salt.",
       "proficient": "Meets Expectations: Explains conduction using mobile ions or electrons for most substances, but with minor omissions.",
-      "developing": "Approaches Expectations: Relies on rules such as 'metals conduct' or 'ionic does not conduct' without describing particles."
+      "developing": "Approaches Expectations: Relies on rules such as 'metals conduct' or 'ionic does not conduct' without describing particles.",
+      "belowExpectations": "Below Expectations: does not describe moving ions or electrons, or gives wrong reasons for conductivity."
     },
     {
       "criterion": "Use of evidence (CER)",
       "excellent": "Exceeds Expectations: Supports every claim with specific evidence from our tests and the data card (for example the bulb lighting, brittle versus bends, 660 °C and 801 °C from the data card) and clear reasoning.",
       "proficient": "Meets Expectations: Gives claims with some evidence from the tests, with reasoning that is sometimes incomplete.",
-      "developing": "Approaches Expectations: Gives claims with little or no evidence, or evidence without reasoning."
+      "developing": "Approaches Expectations: Gives claims with little or no evidence, or evidence without reasoning.",
+      "belowExpectations": "Below Expectations: gives claims with no evidence from the tests or data card, or the evidence is wrong."
     },
     {
       "criterion": "Applying ideas to new substances and real life",
       "excellent": "Exceeds Expectations: Accurately predicts the properties of iodine or iron from its structure and gives a sound Kenyan real-life reason for a material choice.",
       "proficient": "Meets Expectations: Makes a mostly correct prediction with partial justification and a simple real-life link.",
-      "developing": "Approaches Expectations: Prediction is incorrect or has no reasoning, and the real-life link is missing or unclear."
+      "developing": "Approaches Expectations: Prediction is incorrect or has no reasoning, and the real-life link is missing or unclear.",
+      "belowExpectations": "Below Expectations: makes no prediction for a new substance, or the prediction is wrong with no reasoning, and gives no real-life link."
     },
     {
       "criterion": "Scientific vocabulary and reflection",
       "excellent": "Exceeds Expectations: Uses terms such as lattice, electrostatic, delocalised and Van der Waals precisely, and reflects clearly on how thinking changed since Lesson 1.",
       "proficient": "Meets Expectations: Uses most terms correctly and gives a brief reflection on how thinking changed.",
-      "developing": "Approaches Expectations: Uses few scientific terms correctly and gives little or no reflection."
+      "developing": "Approaches Expectations: Uses few scientific terms correctly and gives little or no reflection.",
+      "belowExpectations": "Below Expectations: uses almost no scientific terms correctly and does not reflect on how thinking changed."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

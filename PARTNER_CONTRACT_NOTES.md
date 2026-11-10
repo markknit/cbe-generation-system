@@ -1,5 +1,9 @@
 # Partner Contract Notes: Bounded Project v2 (2026-09-29 → 2026-09-30)
 
+> **Contract changes after this note are listed, newest first, in `CONTRACT_CHANGELOG.md`.
+> R1 (2026-11-09): rubric rows gain a required `belowExpectations` field. The "contract is
+> unchanged" statement below is true only for the 2026-09-29/30 release it describes.**
+
 For the team maintaining the Lesson3 teacher lesson-plan editor, which
 validates our `*_data.json` against `ares-contract.schema.json`.
 

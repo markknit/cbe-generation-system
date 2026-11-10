@@ -13,7 +13,7 @@ const META = {
   "outputDir": "v2/Biology/SS1.2_Chemicals_of_Life",
   "filePrefix": "Biology_Chemicals_of_Life",
   "titleDoc": "BIOLOGY GRADE 10: CHEMICALS OF LIFE",
-  "subtitleDoc": "CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 1.2 (6 Lessons)",
+  "subtitleDoc": "CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 1.4 (6 Lessons)",
   "col3Label": "Teacher Moves",
   "col5Label": "Formative Assessment Strategy"
 };
@@ -22,7 +22,7 @@ const UNIT = {
   "gradeLevel": "10",
   "subject": "Biology",
   "strand": "Strand 1.0: Cell Biology and Biodiversity",
-  "substrand": "Sub-Strand 1.2: Chemicals of Life",
+  "substrand": "Sub-Strand 1.4: Chemicals of Life",
   "totalDuration": "6 lessons × 80 minutes (six double lessons) = 480 minutes total",
   "content": "• Composition, properties and functions of chemical of life (Carbohydrates, Lipids, Proteins and Vitamins)\n• Enzymes (meaning, factors affecting enzymes activity)\n• Functions of water and mineral salts\n\nAdded by this lesson sequence (not in the KICD content list): elements and compounds found in living organisms; organic and inorganic compounds; food tests on common Kenyan foods; release of energy from food molecules in cells and regulation of blood glucose.",
   "learningOutcomes": "By the end of the sub strand, the learner should be able to:\na) describe the composition, properties and functions of the chemicals of life in organisms,\nb) investigate the presence of carbohydrates, lipids, proteins and vitamin C in food substances,\nc) investigate the presence of enzymes in living tissues,\nd) determine factors affecting enzymatic reactions in cells,\ne) appreciate the importance of chemical components in cells.",
@@ -43,7 +43,7 @@ const LESSONS = [
     "number": 1,
     "title": "The Blood Glucose Puzzle: Why Does Glucose Rise and Fall After Eating Ugali?",
     "duration": "80 minutes (double lesson: 2 x 40 minutes)",
-    "substrand": "Sub-Strand 1.2: Chemicals of Life",
+    "substrand": "Sub-Strand 1.4: Chemicals of Life",
     "aresKeywords": "blood glucose concentration, mmol/L, graph, peak, fasting, rise, fall, prediction, Driving Question Board, model, carbohydrate, protein, lipid, enzyme",
     "slo": {
       "purpose": "Learners launch the anchoring phenomenon by reading the blood glucose graph of Wanjiru, a Grade 10 learner in Nairobi, after a meal of ugali, sukuma wiki and beans. They make predictions, describe the spike-then-fall pattern with numbers, and ask testable questions about which chemicals in food and which processes cause it.",
@@ -103,7 +103,7 @@ const LESSONS = [
     "number": 2,
     "title": "Elements and Compounds of Life: What Is Wanjiru's Lunch Made Of?",
     "duration": "80 minutes (double lesson: 2 x 40 minutes)",
-    "substrand": "Sub-Strand 1.2: Chemicals of Life",
+    "substrand": "Sub-Strand 1.4: Chemicals of Life",
     "aresKeywords": "elements, compounds, organic, inorganic, carbon, hydrogen, oxygen, nitrogen, carbohydrates, proteins, lipids, vitamins, water, mineral salts, classification",
     "slo": {
       "purpose": "Learners identify the elements that make up living things and foods, and classify the nutrients in Kenyan foods (ugali, beans, sukuma wiki, milk, nyama choma) as organic or inorganic compounds, so that they can say which chemicals might be responsible for the rise and fall of Wanjiru's blood glucose.",
@@ -163,7 +163,7 @@ const LESSONS = [
     "number": 3,
     "title": "Carbohydrates: Starch and Sugars",
     "duration": "80 minutes (double lesson)",
-    "substrand": "Sub-Strand 1.2: Chemicals of Life",
+    "substrand": "Sub-Strand 1.4: Chemicals of Life",
     "aresKeywords": "carbohydrate, starch, reducing sugar, glucose, monosaccharide, iodine test, Benedict's test, ugali, maize flour, blood glucose concentration",
     "slo": {
       "purpose": "Learners test foods for starch and reducing sugars, then use their evidence to link the starch in ugali to the rise in Wanjiru's blood glucose concentration from 4.5 to 8.0 mmol/L.",
@@ -223,7 +223,7 @@ const LESSONS = [
     "number": 4,
     "title": "Proteins and Lipids: Do They Cause the Glucose Spike?",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 1.2: Chemicals of Life",
+    "substrand": "Sub-Strand 1.4: Chemicals of Life",
     "aresKeywords": "protein, amino acids, biuret test, lipid, fatty acids, glycerol, grease-spot test, emulsion test, organic compounds, blood glucose",
     "slo": {
       "purpose": "Learners investigate proteins and lipids in beans, groundnuts, milk, nyama choma and mandazi, and compare them with carbohydrates to decide whether they cause the glucose spike in Wanjiru's graph.",
@@ -283,7 +283,7 @@ const LESSONS = [
     "number": 5,
     "title": "Water, Mineral Salts and Enzymes in Digestion",
     "duration": "80 minutes (double lesson)",
-    "substrand": "Sub-Strand 1.2: Chemicals of Life",
+    "substrand": "Sub-Strand 1.4: Chemicals of Life",
     "aresKeywords": "enzyme, amylase, catalyst, digestion, starch, maltose, reducing sugar, denatured, control, water, mineral salts, 37 degrees C",
     "slo": {
       "purpose": "To investigate how saliva (salivary amylase) digests starch to reducing sugar, and how water, mineral salts and temperature affect enzyme action, so that learners can explain how the starch in Wanjiru's ugali becomes the glucose that causes her blood glucose to rise from 4.5 to 8.0 mmol/L.",
@@ -343,7 +343,7 @@ const LESSONS = [
     "number": 6,
     "title": "Absorption, Respiration and Regulation: Explaining the Fall Back to 4.5 mmol/L",
     "duration": "80 minutes (double lesson)",
-    "substrand": "Sub-Strand 1.2: Chemicals of Life",
+    "substrand": "Sub-Strand 1.4: Chemicals of Life",
     "aresKeywords": "absorption, blood glucose concentration, insulin, pancreas, respiration, ATP, glycogen, liver, muscles, regulation, final explanation, model",
     "slo": {
       "purpose": "To help learners complete the explanation of Wanjiru's blood glucose graph by showing what happens to glucose after digestion: it is absorbed into the blood, taken up by cells under the influence of insulin, used in respiration to release energy and stored as glycogen in the liver and muscles. Learners then finalise and present the class model that answers the driving question.",
@@ -412,7 +412,7 @@ const FINAL_EXPLANATION = {
     },
     {
       "title": "Part 2: Food tests as evidence",
-      "prompt": "(a) Describe the iodine test and Benedict's test: what each one detects and what colour results show a positive result. (b) Describe the biuret test and the grease-spot and emulsion tests in the same way. (c) Give the results you recorded for ugali in all of these tests. (d) Ugali gave no change with Benedict's solution before digestion. What does this result, together with what you know about ugali and the glucose in Wanjiru's blood, tell you about what must happen to the starch before glucose can enter the blood?",
+      "prompt": "(a) Describe the iodine test and Benedict's test: what each one detects and what colour results show a positive result. (b) Describe the biuret test and the grease-spot and emulsion tests in the same way. (c) Give the results you recorded for ugali in all of these tests. (d) Use your results for ugali in (c), together with what you know about ugali and the glucose in Wanjiru's blood, to explain what must happen to the starch before glucose can enter the blood.",
       "exemplar": "(a) Iodine detects starch; blue-black means starch is present. Benedict's solution (heated) detects reducing sugars; it goes from blue to green to yellow to orange to brick-red as more reducing sugar is present. Ripe banana gave brick-red/orange and glucose solution gave brick-red. (b) Biuret detects protein; the colour changes from blue to violet/purple (beans, milk and nyama choma were positive). A lipid gives a translucent grease spot on paper, or a cloudy white layer in the emulsion test (groundnuts were positive for both; mandazi gave a translucent spot). (c) Ugali: iodine blue-black (starch present); Benedict's stayed blue (no reducing sugar before digestion); biuret pale blue (negative or weak); lipid tests negative. (d) Ugali contains starch, a large carbohydrate made of many glucose units, but not free reducing sugar. So the starch must be broken down into smaller sugar units before glucose can enter the blood. This links the starch in ugali to the glucose in the blood but shows that a process is needed in between."
     },
     {
@@ -436,37 +436,42 @@ const FINAL_EXPLANATION = {
       "criterion": "Chemicals of life (composition, classification and functions)",
       "excellent": "Exceeds Expectations: Correctly names all the food chemical groups, classifies them as organic or inorganic using the carbon-bonded-to-hydrogen rule, names the building blocks, links them to the meal amounts, and states the functions of each group including water and mineral salts.",
       "proficient": "Meets Expectations: Names most chemical groups and classifies them correctly, with some building blocks, functions or meal amounts missing.",
-      "developing": "Approaches Expectations: Names few groups, or confuses organic and inorganic, with little reference to the meal."
+      "developing": "Approaches Expectations: Names few groups, or confuses organic and inorganic, with little reference to the meal.",
+      "belowExpectations": "Below Expectations: Names very few food chemical groups, or gives incorrect classes and functions, with no link to the meal."
     },
     {
       "criterion": "Use of evidence from investigations",
       "excellent": "Exceeds Expectations: Uses specific test results (colours, foods, times, mmol/L values) accurately from several lessons to support claims, including the ugali Benedict's result.",
       "proficient": "Meets Expectations: Uses some specific results accurately but misses some or states them in general terms.",
-      "developing": "Approaches Expectations: Uses little evidence, or the results are vague or incorrect."
+      "developing": "Approaches Expectations: Uses little evidence, or the results are vague or incorrect.",
+      "belowExpectations": "Below Expectations: Gives no test results, or results that are mostly incorrect."
     },
     {
       "criterion": "Enzymes and digestion",
       "excellent": "Exceeds Expectations: Explains amylase as a protein catalyst digesting starch to maltose then glucose, uses the saliva results and the boiled-saliva control, explains the effect of temperature (37 degrees C, denaturation, inactive at 0 degrees C), and says what water and mineral salts do.",
       "proficient": "Meets Expectations: Explains the role of amylase and the main results, with incomplete reasoning about temperature, the control, or water and mineral salts.",
-      "developing": "Approaches Expectations: Mentions enzymes but does not explain how they digest starch or how temperature affects them."
+      "developing": "Approaches Expectations: Mentions enzymes but does not explain how they digest starch or how temperature affects them.",
+      "belowExpectations": "Below Expectations: Does not explain what enzymes do, or gives an incorrect idea of amylase and temperature."
     },
     {
       "criterion": "Explaining the phenomenon (rise and fall)",
       "excellent": "Exceeds Expectations: Gives a complete sequence: digestion, absorption, rise to 8.0 mmol/L at 60 min, insulin, uptake, respiration and glycogen storage, fall to 4.5 mmol/L at 180 min, with correct calculations.",
       "proficient": "Meets Expectations: Explains both the rise and the fall with minor gaps in the sequence or calculations.",
-      "developing": "Approaches Expectations: Explains only the rise or only the fall, or has major gaps or calculation errors."
+      "developing": "Approaches Expectations: Explains only the rise or only the fall, or has major gaps or calculation errors.",
+      "belowExpectations": "Below Expectations: Does not explain the rise or the fall in blood sugar, or the explanation is mostly incorrect."
     },
     {
       "criterion": "Scientific reasoning",
       "excellent": "Exceeds Expectations: Links claims to evidence and gives reasons why carbohydrates, not proteins or lipids, are the main cause of the spike; writes clearly using the correct terms.",
       "proficient": "Meets Expectations: Gives some reasoning linking evidence to claims, with some unsupported statements.",
-      "developing": "Approaches Expectations: Mostly lists facts without reasoning or evidence."
+      "developing": "Approaches Expectations: Mostly lists facts without reasoning or evidence.",
+      "belowExpectations": "Below Expectations: Gives a few unconnected facts with no claims linked to evidence."
     }
   ]
 };
 
 const SUMMARY_TABLE = {
-  "subStrand": "Sub-Strand 1.2: Chemicals of Life",
+  "subStrand": "Sub-Strand 1.4: Chemicals of Life",
   "drivingQuestion": "DRIVING QUESTION: What chemicals are in the food we eat, and what happens to them in our bodies?",
   "lessons": [
     {
@@ -514,6 +519,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

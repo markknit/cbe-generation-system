@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Meaning of index notation",
       "excellent": "Correctly names base and index, expands powers as repeated multiplication with correct values, and clearly explains why Card B is more compact and less error-prone than Card A.",
       "proficient": "Names base and index and expands correctly, with only a brief or partial explanation of why index form is compact.",
-      "developing": "Confuses base and index, or expands incorrectly, or gives no explanation of the compact form."
+      "developing": "Confuses base and index, or expands incorrectly, or gives no explanation of the compact form.",
+      "belowExpectations": "Does not name the base and index correctly, cannot expand a power as repeated multiplication, and gives no explanation of why index form is compact."
     },
     {
       "criterion": "Applying the four laws accurately",
       "excellent": "Applies the product, quotient, zero-index and power-of-a-power laws correctly in every part, including the multi-step problems, with the right order of steps and correct final values.",
       "proficient": "Applies most laws correctly with minor slips in the multi-step problems or in evaluating.",
-      "developing": "Applies laws incorrectly, for example multiplying indices in the product law, or cannot combine laws in a sequence."
+      "developing": "Applies laws incorrectly, for example multiplying indices in the product law, or cannot combine laws in a sequence.",
+      "belowExpectations": "Applies few or none of the four laws correctly, and cannot carry out the multi-step problems even with prompting."
     },
     {
       "criterion": "Reasoning from repeated multiplication",
       "excellent": "Justifies each law by expanding and counting or cancelling factors, and explains why a⁰ = 1 using both the quotient law and arithmetic.",
       "proficient": "Justifies some laws by expansion but states others without a reason.",
-      "developing": "States the laws as rules to memorise with no justification, or believes a⁰ = 0."
+      "developing": "States the laws as rules to memorise with no justification, or believes a⁰ = 0.",
+      "belowExpectations": "Gives no justification for the laws, or relies on incorrect ideas such as adding or multiplying the wrong quantities, and cannot show why a⁰ = 1."
     },
     {
       "criterion": "Communication and Kenyan context",
       "excellent": "Writes clearly, shows each line of working, names the law used at each step, and links the ideas accurately to the Census figure and at least one other Kenyan application.",
       "proficient": "Working is mostly clear and the laws are named, with a general or partly developed Kenyan link.",
-      "developing": "Working is missing or hard to follow, laws are not named, and there is no relevant Kenyan link."
+      "developing": "Working is missing or hard to follow, laws are not named, and there is no relevant Kenyan link.",
+      "belowExpectations": "Working is largely missing, laws are not named, and there is no link to the Census figure or to any Kenyan application."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

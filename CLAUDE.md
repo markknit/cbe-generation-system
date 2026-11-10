@@ -162,6 +162,7 @@ scripts/check_resource_links.py         - Link gate, run by generate.js; non-zer
 scripts/validate_quiz.py                - Quiz validator (gates generation and rendering)
 scripts/validate_corpus.js              - Lesson contract check, all data files
 ares-contract.schema.json               - Partner contract (strict) for *_data.json
+CONTRACT_CHANGELOG.md                   - EVERY change to that contract, newest first, with where-in-repo + what the partner must do
 PARTNER_CONTRACT_NOTES.md               - What changed for the partner, and what didn't
 scripts/patch_lesson.js                 - Repair stub lessons
 scripts/patch_fe.js                     - Repair missing Final Explanations

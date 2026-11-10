@@ -676,25 +676,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence from the lessons",
       "excellent": "Uses the table values and the Kisumu tank data accurately and refers to them in every answer, including correct differences and costs.",
       "proficient": "Uses most of the table values correctly, with minor slips in differences or costs.",
-      "developing": "Uses little of the data or quotes values incorrectly."
+      "developing": "Uses little of the data or quotes values incorrectly.",
+      "belowExpectations": "Uses none of the data from the lessons, or the values quoted do not match the data."
     },
     {
       "criterion": "Understanding that surface area and volume are independent",
       "excellent": "Clearly explains with the two tanks and the cone and cylinder comparison that equal volume can come with different surface areas, and that shape affects each quantity differently.",
       "proficient": "States that surface area and volume are independent and supports it with one example.",
-      "developing": "Confuses surface area with volume or says a larger volume always means a larger surface area."
+      "developing": "Confuses surface area with volume or says a larger volume always means a larger surface area.",
+      "belowExpectations": "Does not separate surface area from volume, and cannot explain how a shape could change in one but not the other."
     },
     {
       "criterion": "Mathematical reasoning with formulae and strategies",
       "excellent": "Correctly identifies each term in the frustum formula, describes the three-step composite solid strategy including hidden faces, and links these to the result.",
       "proficient": "Identifies most terms and steps, with small gaps in explaining hidden faces or slant height.",
-      "developing": "Names formulae or steps incompletely or incorrectly."
+      "developing": "Names formulae or steps incompletely or incorrectly.",
+      "belowExpectations": "Cannot name or use the formulae or the steps, and shows little or no working."
     },
     {
       "criterion": "Justified recommendation and Kenyan applications",
       "excellent": "Gives a clear recommendation supported by at least two pieces of evidence, and gives accurate, relevant Kenyan examples and a career link.",
       "proficient": "Gives a recommendation with some evidence and at least one suitable Kenyan example.",
-      "developing": "Gives a recommendation without evidence or gives examples that are unclear or unrelated."
+      "developing": "Gives a recommendation without evidence or gives examples that are unclear or unrelated.",
+      "belowExpectations": "Makes no recommendation, or gives one with no evidence and no Kenyan example."
     }
   ]
 };
@@ -776,6 +780,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

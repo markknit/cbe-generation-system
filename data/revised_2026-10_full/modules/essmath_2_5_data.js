@@ -533,7 +533,7 @@ const FINAL_EXPLANATION = {
     {
       "title": "Part 2: Building the sector area formula",
       "prompt": "Your class built a formula for the area of a sector by treating a sector as a fraction of a whole circle.\n(a) Explain in your own words how you can write the fraction of the circle that a sector with central angle θ takes up. Mention what four 90° sectors do when you put them together. \n(b) Use your idea to write a formula for the area of a sector in terms of θ and r. \n(c) A wedge is cut from a watermelon with radius 7 cm and has a central angle of 120°. Use your formula to find its area. \n(d) Another watermelon is twice as wide in radius as the first one (r = 14 cm), and the same 120° wedge is cut. By what factor does the area of the wedge change? Explain why without needing the whole calculation.",
-      "exemplar": "(a) A full turn at the centre of a circle is 360°. A sector with central angle θ is therefore θ/360 of the whole circle. For example, four 90° sectors fit together to make the full circle, so each 90° sector is 90/360 = 1/4 of the circle.\n(b) Area of sector = (θ/360) × πr², where θ is the central angle in degrees and r is the radius.\n(c) A = (120/360) × 22/7 × 7 × 7 = 1/3 × 154 = 51.33 cm² (about 51.3 cm²).\n(d) The area becomes 4 times as large. Since area depends on r², doubling the radius multiplies πr² by 2 × 2 = 4, while the fraction θ/360 stays the same. Check: for r = 14 cm, 1/3 × 22/7 × 14 × 14 = 205.33 cm², which is 4 × 51.33 cm²."
+      "exemplar": "(a) A full turn at the centre of a circle is 360°. A sector with central angle θ is therefore θ/360 of the whole circle. For example, four 90° sectors fit together to make the full circle, so each 90° sector is 90/360 = 1/4 of the circle.\n(b) Area of sector = (θ/360) × πr², where θ is the central angle in degrees and r is the radius.\n(c) A = (120/360) × 22/7 × 7 × 7 = 1/3 × 154 = 51.33 cm² (about 51.3 cm²).\n(d) The area becomes 4 times as large. Since area depends on r², doubling the radius multiplies πr² by 2 × 2 = 4, while the fraction θ/360 stays the same. Check: for r = 14 cm, using the π button as the instructions require, 1/3 × π × 14 × 14 = 205.25 cm², which is about 4 times 51.3 cm² (the tiny difference is because 22/7 was used for r = 7 cm)."
     },
     {
       "title": "Part 3: From a wedge to a curved slice (segment)",
@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Understanding of how angle and radius control area",
       "excellent": "Exceeds Expectations: Clearly explains that sector area is proportional to the central angle and to r², using correct comparisons from the data (such as 30° versus 180°) and the anchoring watermelon context.",
       "proficient": "Meets Expectations: States that angle and radius both affect area and gives a mostly correct comparison, but explanation of proportionality or the r² effect is incomplete.",
-      "developing": "Approaches Expectations: Says only that bigger pieces have bigger area, or relies on the look of the pieces without mentioning angle and radius."
+      "developing": "Approaches Expectations: Says only that bigger pieces have bigger area, or relies on the look of the pieces without mentioning angle and radius.",
+      "belowExpectations": "Below Expectations: gives no reason why the pieces differ in area, or says only that they look different, with no mention of angle or radius."
     },
     {
       "criterion": "Correct use of the sector and segment formulas",
       "excellent": "Exceeds Expectations: Writes both formulas correctly, explains where each part comes from (fraction θ/360 of the circle; sector minus triangle), and substitutes accurately with units.",
       "proficient": "Meets Expectations: Uses both formulas with only minor slips in substitution, rounding or units, and gives partial reasoning for where they come from.",
-      "developing": "Approaches Expectations: Confuses sector and segment, omits the triangle subtraction, or makes major errors in substitution."
+      "developing": "Approaches Expectations: Confuses sector and segment, omits the triangle subtraction, or makes major errors in substitution.",
+      "belowExpectations": "Below Expectations: does not write the sector or segment formula correctly, and does not substitute values or show where the formulas come from."
     },
     {
       "criterion": "Accuracy of calculations and presentation of data",
       "excellent": "Exceeds Expectations: All sector, triangle and segment areas are correct, set out in a clear table with working and units, and the largest and smallest pieces are identified correctly.",
       "proficient": "Meets Expectations: Most calculations are correct and clearly set out, with one or two small errors that do not change the conclusions.",
-      "developing": "Approaches Expectations: Several calculation errors, missing working or units, or a table that is incomplete or inconsistent."
+      "developing": "Approaches Expectations: Several calculation errors, missing working or units, or a table that is incomplete or inconsistent.",
+      "belowExpectations": "Below Expectations: has few correct calculations, with no table or working, and cannot identify the largest and smallest pieces."
     },
     {
       "criterion": "Fair-share verdict and real-life application",
       "excellent": "Exceeds Expectations: Gives a clear, evidence-based recommendation to Mama Wanjiku using the calculated areas, and applies the formulas correctly to another Kenyan context such as irrigation.",
       "proficient": "Meets Expectations: Gives a reasonable recommendation and a correct real-life example, though links to the calculated evidence are limited.",
-      "developing": "Approaches Expectations: Recommendation is vague or not supported by calculations, and the real-life example is missing or incorrect."
+      "developing": "Approaches Expectations: Recommendation is vague or not supported by calculations, and the real-life example is missing or incorrect.",
+      "belowExpectations": "Below Expectations: gives no recommendation to Mama Wanjiku, or one with no evidence, and gives no real-life application."
     },
     {
       "criterion": "Reflection on model revision",
       "excellent": "Exceeds Expectations: Describes specific changes from the Lesson 1 model to the final model, naming at least two new ideas and linking them to the driving question.",
       "proficient": "Meets Expectations: Mentions at least one idea added to the model with some link to the driving question.",
-      "developing": "Approaches Expectations: Gives a general statement of learning without naming specific changes to the model."
+      "developing": "Approaches Expectations: Gives a general statement of learning without naming specific changes to the model.",
+      "belowExpectations": "Below Expectations: does not say what changed in the model, or leaves this question unanswered."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

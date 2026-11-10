@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of outer electrons and periodic table position",
       "excellent": "Correctly links group, outer electrons, electron arrangements and reactivity for Na, Mg, Cl and noble gases, including the trend down Group 1.",
       "proficient": "Gives correct outer electron numbers and links most to reactivity, with minor gaps in the reasoning.",
-      "developing": "Gives few outer electron facts or does not link them to behaviour or position."
+      "developing": "Gives few outer electron facts or does not link them to behaviour or position.",
+      "belowExpectations": "Gives few or no correct outer electron numbers and does not link them to group, position or reactivity."
     },
     {
       "criterion": "Use of evidence from the lessons",
       "excellent": "Uses accurate observations and data (sodium demo, Mg tests, 0.5 mg/L, densities and melting points) to support every claim.",
       "proficient": "Uses some accurate evidence but misses some data or gives it loosely.",
-      "developing": "Gives little evidence, or the data is inaccurate."
+      "developing": "Gives little evidence, or the data is inaccurate.",
+      "belowExpectations": "Gives almost no evidence from the lessons, or the data used is mostly wrong."
     },
     {
       "criterion": "Chemical equations and terms",
       "excellent": "All equations are balanced and correct; element, compound, group and chemical family are used correctly.",
       "proficient": "Most equations are correct with one small error; terms mostly correct.",
-      "developing": "Equations are unbalanced or missing; terms are confused."
+      "developing": "Equations are unbalanced or missing; terms are confused.",
+      "belowExpectations": "Writes no balanced equations or only unbalanced ones; element, compound and group are mixed up throughout."
     },
     {
       "criterion": "Matching element to job and trade-offs",
       "excellent": "Explains each job by properties and gives a justified recommendation weighing safety, cost and availability, including lead's toxicity.",
       "proficient": "Matches properties to jobs but gives limited discussion of trade-offs.",
-      "developing": "States uses without linking them to properties."
+      "developing": "States uses without linking them to properties.",
+      "belowExpectations": "Names uses without matching them to properties, and gives no thought to safety, cost or availability."
     },
     {
       "criterion": "Claim-evidence-reasoning and explaining the puzzle",
       "excellent": "Gives a clear claim, evidence and reasoning that fully explains why sodium is dangerous alone but safe as salt, and why chlorine is safe at a tiny dose.",
       "proficient": "Explains most of the puzzle, with some reasoning missing.",
-      "developing": "Gives a partial or unclear explanation of the puzzle."
+      "developing": "Gives a partial or unclear explanation of the puzzle.",
+      "belowExpectations": "Gives no clear claim, or an explanation that does not address why sodium is dangerous alone but safe as salt."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

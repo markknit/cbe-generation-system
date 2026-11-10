@@ -20,8 +20,8 @@ const META = {
 const UNIT = {
   "gradeLevel": "10",
   "subject": "Biology",
-  "strand": "Strand 2.0: Physiology of Plants and Animals",
-  "substrand": "Sub-Strand 2.1: Plant Nutrition",
+  "strand": "Strand 2.0: Anatomy and Physiology of Plants",
+  "substrand": "Sub-Strand 2.1: Nutrition",
   "totalDuration": "10 lessons: 4 single lessons × 40 minutes + 6 double lessons × 80 minutes = 160 + 480 = 640 minutes total",
   "content": "• Types of nutrition in plants (Autotrophic and Heterotrophic - parasitic, saprophytic, symbiotic and insectivorous modes in plants)\n• Structure of chloroplast\n• Process of photosynthesis\n\nExtension content taught in this sequence beyond the KICD list:\n• Structure and function of the leaf as an organ of photosynthesis\n• Raw materials for photosynthesis: carbon dioxide, water, light energy, chlorophyll\n• Factors affecting the rate of photosynthesis: light intensity, carbon dioxide concentration, temperature\n• Experiments: the starch test on a variegated or partly covered leaf; oxygen bubble counting in Elodea/aquatic plants\n• Mineral nutrition in plants: macronutrients and micronutrients, deficiency symptoms\n• Importance of photosynthesis to ecosystems and food chains (producer role)\n• Applications of plant nutrition: greenhouse farming and fertiliser use in Kenyan agriculture",
   "learningOutcomes": "By the end of the sub strand, the learner should be able to:\na) describe types of nutrition in plants,\nb) relate the structure of the chloroplast to its function in plant cells,\nc) illustrate the light and dark stages of photosynthesis in plants,\nd) appreciate the significance of photosynthesis in nature.\n\nFurther outcomes taught in this sequence (added by the teachers, beyond the KICD list):\ne) relate the structure of the leaf to its role in photosynthesis and water loss,\nf) investigate and explain the factors that affect the rate of photosynthesis,\ng) describe the role of mineral nutrients in plant growth and identify deficiency symptoms.",
@@ -42,7 +42,7 @@ const LESSONS = [
     "number": 1,
     "title": "Why Does Our Sukuma Wiki Wilt? Anchoring the Phenomenon and Opening Our Questions",
     "duration": "40 minutes",
-    "substrand": "2.1 Plant Nutrition",
+    "substrand": "2.1 Nutrition",
     "aresKeywords": "autotrophic nutrition, heterotrophic nutrition, photosynthesis, wilting, chlorophyll, phenomenon, prediction",
     "slo": {
       "purpose": "To anchor learners in a puzzling, familiar Kenyan agricultural phenomenon that will drive inquiry across the entire sub-strand on plant nutrition",
@@ -65,7 +65,7 @@ const LESSONS = [
       {
         "phase": "Observe Phase",
         "learnerExperience": "Learners share their predictions first in pairs for 2 minutes, then the teacher takes 4-5 predictions from different pairs and writes them verbatim on the board under the heading 'Our Current Thinking.' The teacher does not evaluate any prediction as right or wrong. Predictions might include: 'The sun heats the water and it dries up,' 'The plant uses water faster than the roots can take it in,' 'Shade is cold so the plant cannot make food,' or 'The plant needs sunlight to stay green.' After recording predictions, the teacher displays a third image: a photograph of a mushroom growing on a log next to a photograph of a succulent green maize plant growing in a Rift Valley farm. The teacher asks learners to observe and discuss in pairs: 'What is the most important difference between how a mushroom gets its food and how a maize plant gets its food?' Pairs share responses. The teacher collects the key idea that the maize plant makes its own food while the mushroom depends on other organic matter, but does not yet formally define the terms.",
-        "teacherMoves": "After pairs have discussed, the teacher asks: 'Who heard something from their partner that was different from their own prediction — something that made you think?' Teacher calls on 3 learners to share. Then the teacher says: 'Look at these two organisms. Both are alive. Both need energy. But notice — the maize is out in the open sun, making something for itself. The mushroom is tucked under a log, getting energy from something that was once alive. What does that difference tell us about how they survive?' WAIT TIME: After posing the maize-mushroom question, wait 30 seconds in silence before taking responses. Allow learners to sit with the question. Do not rephrase or simplify it. Expected answers: the maize makes its own food using sunlight; the mushroom takes ready-made food from dead matter. If a learner says plants 'eat the soil' or 'drink their food', ask: 'A willow tree grown in a pot gained about 75 kg in five years while the soil lost only a few grams (van Helmont's experiment). So what does the tree's new material come from?' Note the ideas and leave them open; Lessons 3 and 9 return to this.",
+        "teacherMoves": "After pairs have discussed, the teacher asks: 'Who heard something from their partner that was different from their own prediction — something that made you think?' Teacher calls on 3 learners to share. Then the teacher says: 'Look at these two organisms. Both are alive. Both need energy. But notice — the maize is out in the open sun, making something for itself. The mushroom is tucked under a log, getting energy from something that was once alive. What does that difference tell us about how they survive?' WAIT TIME: After posing the maize-mushroom question, wait 30 seconds in silence before taking responses. Allow learners to sit with the question. Do not rephrase or simplify it. Expected answers: the maize makes its own food using sunlight; the mushroom takes ready-made food from dead matter. If a learner says plants 'eat the soil' or 'drink their food', ask: 'A willow tree grown in a pot gained about 75 kg in five years while the soil lost only a few grams (van Helmont's experiment). So what does the tree's new material come from?' Note the ideas and leave them open; Lesson 3 returns to what the plant takes in, and Lesson 9 to what the soil supplies.",
         "sensemakingStrategy": "Paired discussion lowers the affective barrier to sharing ideas publicly. The maize-mushroom contrast is a locally recognisable juxtaposition that sets up the autotroph-heterotroph distinction without using the terms yet, allowing learners to construct the concept before receiving the vocabulary.",
         "formativeAssessment": "Listen to pair discussions: can learners articulate that the green plant uses sunlight to make food while the mushroom cannot? This reveals whether learners hold a naive view that plants eat from the soil the way animals eat food, which is a known misconception to address in Lesson 3."
       },
@@ -102,7 +102,7 @@ const LESSONS = [
     "number": 2,
     "title": "Leaf Structure: The Architecture of a Photosynthetic Machine",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Plant Nutrition",
+    "substrand": "Sub-Strand 2.1: Nutrition",
     "slo": {
       "purpose": "To examine the internal and external structure of a dicot leaf and link each structural feature to its function in photosynthesis and water movement, advancing the class explanation of the sukuma wiki wilting phenomenon.",
       "knowledge": "By the end of the lesson, the learner should be able to: (a) identify and label the structural features of a dicot leaf (epidermis, cuticle, palisade mesophyll, spongy mesophyll, stomata, guard cells, vascular bundles); (b) explain how each feature is adapted to its function in gas exchange, water transport, and light capture; (c) relate leaf structural features to the wilting and recovery pattern of the sukuma wiki plant.",
@@ -162,7 +162,7 @@ const LESSONS = [
     "number": 3,
     "title": "Raw Materials for Photosynthesis: What Does a Plant Actually Need?",
     "duration": "40 minutes",
-    "substrand": "2.1 Plant Nutrition",
+    "substrand": "2.1 Nutrition",
     "aresKeywords": "photosynthesis, raw materials, carbon dioxide, water, light energy, chlorophyll, word equation, chemical equation, limiting factor, autotrophic nutrition",
     "slo": {
       "purpose": "Learners identify the four raw materials required for photosynthesis, write the word and chemical equations, and use those raw materials to begin explaining why the sukuma wiki wilts at midday and turns pale in shade.",
@@ -222,7 +222,7 @@ const LESSONS = [
     "number": 4,
     "title": "Starch Test Practical: Finding Evidence That Chlorophyll and Light Are Both Needed for Photosynthesis",
     "duration": "40 minutes",
-    "substrand": "2.1 Plant Nutrition",
+    "substrand": "2.1 Nutrition",
     "aresKeywords": "photosynthesis, starch test, iodine solution, ethanol decolourisation, variegated leaf, chlorophyll, light requirement, evidence, limiting factor",
     "slo": {
       "purpose": "Learners carry out the standard starch test on a variegated or partially shaded leaf to generate direct observational evidence that both chlorophyll and light are required for photosynthesis to produce starch.",
@@ -282,7 +282,7 @@ const LESSONS = [
     "number": 5,
     "title": "Light-Dependent Reactions: Where the Sun's Energy Enters the Plant",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Plant Nutrition",
+    "substrand": "Sub-Strand 2.1: Nutrition",
     "slo": {
       "purpose": "To trace the light-dependent reactions of photosynthesis — including light absorption by chlorophyll, photolysis of water, production of ATP and NADPH, and release of oxygen — and connect these molecular events to the wilting, recovery, and pallor observed in the sukuma wiki phenomenon.",
       "knowledge": "By the end of this lesson, learners should be able to: (a) describe the structure of the thylakoid membrane as the site of light-dependent reactions; (b) explain the absorption of light energy by chlorophyll pigments; (c) describe the photolysis of water and identify its products; (d) explain the production of ATP (via photophosphorylation) and NADPH; (e) state that oxygen released during photolysis is the source of atmospheric O₂.",
@@ -342,14 +342,14 @@ const LESSONS = [
     "number": 6,
     "title": "Light-Independent Reactions: How the Calvin Cycle Builds Glucose from CO₂",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Plant Nutrition",
+    "substrand": "Sub-Strand 2.1: Nutrition",
     "slo": {
       "purpose": "To enable learners to explain the light-independent reactions (Calvin cycle) of photosynthesis, including the fixation of CO₂ and the role of ATP and NADPH in producing glucose (G3P), and to connect both stages of photosynthesis in a unified flow diagram.",
       "knowledge": "Learners will know that: (1) the light-independent reactions (Calvin cycle) occur in the stroma of the chloroplast; (2) CO₂ from the air is fixed by the enzyme RuBisCO onto a 5-carbon acceptor molecule (RuBP); (3) ATP and NADPH produced in the light-dependent stage are used to reduce the 3-carbon intermediate (3-PGA) to glyceraldehyde-3-phosphate (G3P); (4) G3P is used to synthesise glucose and to regenerate RuBP; (5) without sufficient light, less ATP and NADPH are available, slowing G3P and glucose production.",
       "skills": "Learners will be able to: (1) construct a simplified flow diagram linking the light-dependent and light-independent reactions; (2) use evidence from the diagram to explain why shaded sukuma wiki grows more slowly; (3) interpret and annotate diagrams showing inputs and outputs of the Calvin cycle; (4) apply the concept of limiting factors to predict outcomes when ATP/NADPH supply is reduced.",
       "attitudes": "Learners will appreciate the elegance of how a plant converts simple inorganic molecules — CO₂, water, and light energy — into the organic matter that feeds nearly all life, including the sukuma wiki on Kenyan dinner tables. Learners will value evidence-based reasoning when revising their earlier predictions about shade and plant growth.",
       "keyInquiry": "How do plants obtain food? (KICD key inquiry question) Added by this sequence: What factors affect the rate at which plants make food?",
-      "purposeInStoryline": "Lesson 6 is the EXPLAIN phase for the light-independent reactions. Having established in Lessons 4–5 that light drives the splitting of water and the production of ATP and NADPH, learners now discover what the plant does with those energy carriers. They trace the journey of a CO₂ molecule from the air through RuBP fixation to G3P and finally to glucose. By constructing a two-stage flow diagram they can, for the first time, give a complete biochemical explanation for why shaded sukuma wiki in the family's kitchen garden — though protected from wilting — gradually turns pale and grows slowly: less light → less ATP and NADPH → Calvin cycle slows → less glucose → slower growth and eventual chlorophyll breakdown.",
+      "purposeInStoryline": "Lesson 6 is the EXPLAIN phase for the light-independent reactions. Having established in Lesson 5 that light drives the splitting of water and the production of ATP and NADPH, learners now discover what the plant does with those energy carriers. They trace the journey of a CO₂ molecule from the air through RuBP fixation to G3P and finally to glucose. By constructing a two-stage flow diagram they can, for the first time, give a complete biochemical explanation for why shaded sukuma wiki in the family's kitchen garden — though protected from wilting — gradually turns pale and grows slowly: less light → less ATP and NADPH → Calvin cycle slows → less glucose → slower growth and eventual chlorophyll breakdown.",
       "safetyNotes": "No hazardous chemicals or equipment are used in this lesson. If printed card-sort materials are laminated, ensure scissors (if used to cut un-laminated sets) are handled safely. Learners should remain seated during model-building to avoid crowding. If the lesson is conducted in a laboratory, standard lab rules apply: no eating or drinking, bags stored under benches."
     },
     "overview": "In Lesson 6, learners shift from the light-dependent reactions (covered in Lesson 5) to the light-independent reactions — the Calvin cycle. The lesson opens with a Predict phase in which learners hypothesise what happens to the ATP and NADPH produced in the light stage, grounding their thinking in the sukuma wiki phenomenon. The Observe phase uses an annotated diagram walkthrough combined with a structured card-sort activity in which learners physically sequence the steps of the Calvin cycle using locally labelled cards (CO₂ from Nairobi air, RuBP, 3-PGA, G3P, glucose → ugali/sukuma wiki biomass). The Explain phase uses a Think-Pair-Share and guided Socratic questioning to build a two-stage flow diagram on the board collaboratively. In the DQB phase, learners revisit their posted questions and answer at least two with new evidence. The Model-Building phase asks learners to revise their personal photosynthesis models to include both stages, with arrows showing how reduced light supply in shade throttles the whole system. Formative assessment is embedded throughout via cold-calling, whiteboards, and an exit card.",
@@ -402,7 +402,7 @@ const LESSONS = [
     "number": 7,
     "title": "Factors Affecting the Rate of Photosynthesis — Planning & Carrying Out an Investigation",
     "duration": "80 minutes (double lesson)",
-    "substrand": "Sub-Strand 2.1: Plant Nutrition",
+    "substrand": "Sub-Strand 2.1: Nutrition",
     "slo": {
       "purpose": "To plan and carry out a quantitative investigation into how light intensity affects the rate of photosynthesis, using oxygen bubble production as a measurable indicator.",
       "knowledge": "Learners will know that: (1) the rate of photosynthesis can be measured indirectly by counting oxygen bubbles produced per unit time; (2) light intensity is a limiting factor — increasing it increases the rate up to a maximum; (3) other factors (CO₂ concentration, temperature) can also limit the rate; (4) a limiting factor is the factor present at the lowest/most restrictive level that controls the overall rate of a process.",
@@ -462,7 +462,7 @@ const LESSONS = [
     "number": 8,
     "title": "Factors Affecting Photosynthesis Rate — Data Analysis & Explain",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Plant Nutrition",
+    "substrand": "Sub-Strand 2.1: Nutrition",
     "slo": {
       "purpose": "To analyse experimental data and apply the concept of limiting factors to explain how CO₂ concentration and temperature affect the rate of photosynthesis, and to connect these factors to real agricultural decisions in Kenya.",
       "knowledge": "Learners will know that the rate of photosynthesis is controlled by limiting factors (light intensity, CO₂ concentration, temperature), and that at any moment the factor in shortest supply determines the overall rate.",
@@ -522,7 +522,7 @@ const LESSONS = [
     "number": 9,
     "title": "Mineral Nutrition: What Does the Soil Give the Plant?",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.1: Plant Nutrition",
+    "substrand": "Sub-Strand 2.1: Nutrition",
     "slo": {
       "purpose": "To enable learners to identify essential mineral nutrients required by plants, describe their roles in plant growth and metabolism, and match observable deficiency symptoms to specific mineral deficiencies using KALRO secondary data and photographic evidence.",
       "knowledge": "Learners will identify macronutrients (nitrogen, phosphorus, potassium, calcium, magnesium, sulfur) and micronutrients (iron, manganese, zinc, copper, boron, molybdenum), state the specific physiological roles of each mineral in plant growth, and describe the deficiency symptoms associated with key minerals including chlorosis, necrosis, stunted growth, and purpling of leaves.",
@@ -582,7 +582,7 @@ const LESSONS = [
     "number": 10,
     "title": "Model Building, Synthesis and DQB Resolution: Putting the Sukuma Wiki Story Together",
     "duration": "40 minutes",
-    "substrand": "2.1 Plant Nutrition",
+    "substrand": "2.1 Nutrition",
     "aresKeywords": "photosynthesis, leaf structure, light-dependent reactions, Calvin cycle, limiting factors, mineral nutrition, chlorophyll, stomata, transpiration, autotrophic nutrition, model building, synthesis",
     "slo": {
       "purpose": "To consolidate all learning from the sub-strand by constructing an integrated annotated model that fully explains why sukuma wiki wilts at midday and turns pale in shade, and to connect plant nutrition science to Kenyan food security.",
@@ -657,17 +657,17 @@ const FINAL_EXPLANATION = {
     {
       "title": "Part 3: Evidence from the starch test and the two stages of photosynthesis",
       "prompt": "(a) In the starch test on a variegated or partly covered leaf, describe the iodine result in each of the three regions: white region, covered green region, and uncovered green region. What does each result tell you? (b) Describe what happens in the light-dependent reactions and in the light-independent reactions (Calvin cycle), including where each takes place and how the two stages are linked. Draw a labelled sketch of a chloroplast (outer membranes, grana made of thylakoids, stroma) and show where each stage happens. (c) Use both stages to build a cause-and-effect chain that explains why the sukuma wiki in the shade of the mango tree grows slowly and turns pale.",
-      "exemplar": "(a) White region (no chlorophyll): it stayed brown-orange, so no starch was made, showing chlorophyll is needed. Covered green region (chlorophyll but no light): it stayed brown-orange, so no starch was made, showing light is needed. Uncovered green region (chlorophyll and light): it turned blue-black, so starch was present. Both chlorophyll and light must be present together for photosynthesis. (b) The light-dependent reactions take place in the thylakoid membranes of the chloroplast. Chlorophyll in Photosystems II and I absorbs light and excites electrons, which pass along the electron transport chain. Water is split (photolysis: 2H2O → 4H+ + 4e- + O2), releasing oxygen and supplying electrons. ATP is made by photophosphorylation, and NADP+ is reduced to NADPH. The light-independent reactions (Calvin cycle) take place in the stroma. CO2 is fixed onto RuBP by the enzyme RuBisCO to form 3-PGA. The 3-PGA is reduced to G3P using the ATP and NADPH from the light stage. Some G3P is used to make glucose and some regenerates RuBP. The ATP and NADPH link the two stages. Sketch: a chloroplast with a double outer membrane, stacks of thylakoids (grana) joined by lamellae, and the fluid stroma around them; the thylakoid membranes hold chlorophyll and make ATP and NADPH in light (large surface area for light capture), and the stroma holds the enzymes of the Calvin cycle. (c) Less light under the mango tree means fewer electrons are excited in the thylakoids, so less ATP and NADPH are produced. The Calvin cycle then cannot reduce 3-PGA to G3P efficiently, so less glucose is made. With less glucose for energy and building materials, cell division and growth are slow. The plant also has less energy and fewer building materials available to make and maintain chlorophyll, so the leaves gradually lose their green pigment and become pale yellowish-green over several weeks."
+      "exemplar": "(a) White region (no chlorophyll): it stayed brown-orange, so no starch was made, showing chlorophyll is needed. Covered green region (chlorophyll but no light): it stayed brown-orange, so no starch was made, showing light is needed. Uncovered green region (chlorophyll and light): it turned blue-black, so starch was present. Both chlorophyll and light must be present together for photosynthesis. (b) The light-dependent reactions take place in the thylakoid membranes of the chloroplast. Chlorophyll in Photosystems II and I absorbs light and excites electrons, which pass along the electron transport chain. Water is split (photolysis: 2H2O → 4H+ + 4e- + O2), releasing oxygen and supplying electrons. ATP is made by photophosphorylation, and NADP+ is reduced to NADPH. The light-independent reactions (Calvin cycle) take place in the stroma. CO2 is fixed onto RuBP by the enzyme RuBisCO to form 3-PGA. The 3-PGA is reduced to G3P using the ATP and NADPH from the light stage. Some G3P is used to make glucose and some regenerates RuBP. The ATP and NADPH link the two stages. Sketch: a chloroplast with a double outer membrane, stacks of thylakoids (grana), and the fluid stroma around them; the thylakoid membranes hold chlorophyll and make ATP and NADPH in light (large surface area for light capture), and the stroma holds the enzymes of the Calvin cycle. (c) Less light under the mango tree means fewer electrons are excited in the thylakoids, so less ATP and NADPH are produced. The Calvin cycle then cannot reduce 3-PGA to G3P efficiently, so less glucose is made. With less glucose for energy and building materials, cell division and growth are slow. The plant also has less energy and fewer building materials available to make and maintain chlorophyll, so the leaves gradually lose their green pigment and become pale yellowish-green over several weeks."
     },
     {
       "title": "Part 4: Limiting factors and Kenyan farming",
-      "prompt": "(a) In the Lesson 7 investigation you counted (or were given) oxygen bubble data at lamp distances of 5, 10, 20, 30 and 40 cm. Describe the shape of the graph of rate of photosynthesis against light intensity, and explain why the line flattens at high light intensity. What is a limiting factor? (b) Name the other factors you studied that affect the rate of photosynthesis, and describe how temperature changes the rate. (c) Greenhouse tomato farmers in Naivasha add CO2, but adding CO2 to the tea farms in Kericho would not help much. Explain why using the idea of limiting factors.",
-      "exemplar": "(a) The rate of photosynthesis (bubbles per minute) increases as light intensity increases (a lamp closer to the plant means higher intensity), but only up to a point. Then the curve flattens, because another factor, such as CO2 concentration or temperature, has become the limiting factor and extra light cannot increase the rate further. A limiting factor is the factor present at the lowest level, which controls the rate of the process. (b) The other factors are CO2 concentration and temperature. As temperature rises the rate increases because enzymes work faster, until an optimum is reached. Above about 40 °C the enzymes denature and the rate falls, giving a bell-shaped curve. (c) In well-lit, warm Naivasha greenhouses, light and temperature are already favourable, so CO2 is the limiting factor. Adding CO2 raises the rate of photosynthesis and the tomato yield. In Kericho, temperature, not CO2, is the limiting factor. Adding CO2 will not significantly increase the rate, because the factor in shortest supply still controls the rate."
+      "prompt": "(a) In the Lesson 7 investigation you counted (or were given) oxygen bubble data at lamp distances of 5, 10, 20, 30 and 40 cm. Describe the shape of the graph of rate of photosynthesis against light intensity, and explain why the line flattens at high light intensity. What is a limiting factor? (b) Name the other factors you studied that affect the rate of photosynthesis, and describe how temperature changes the rate. (c) Greenhouse tomato farmers in Naivasha add CO2, but adding CO2 to cool, misty tea farms in Kericho (low temperature, moderate light, normal CO2) would not help much. Explain why using the idea of limiting factors.",
+      "exemplar": "(a) The rate of photosynthesis (bubbles per minute) increases as light intensity increases (a lamp closer to the plant means higher intensity), but only up to a point. Then the curve flattens, because another factor, such as CO2 concentration or temperature, has become the limiting factor and extra light cannot increase the rate further. A limiting factor is the factor present at the lowest level, which controls the rate of the process. (b) The other factors are CO2 concentration and temperature. As temperature rises the rate increases because enzymes work faster, until an optimum is reached. Above about 40 °C the enzymes denature and the rate falls, giving a bell-shaped curve. (c) In well-lit, warm Naivasha greenhouses, light and temperature are already favourable, so CO2 is the limiting factor. Adding CO2 raises the rate of photosynthesis and the tomato yield. In cool, misty Kericho conditions with low temperature, temperature, not CO2, is the limiting factor. Adding CO2 will not significantly increase the rate, because the factor in shortest supply still controls the rate."
     },
     {
       "title": "Part 5: Minerals and the complete explanation for Amina",
       "prompt": "(a) Name two mineral nutrients taken up from the soil, say how roots absorb them, and describe what each is needed for and what deficiency symptom you would expect. (b) Write a complete explanation answering the driving question: why does the sukuma wiki wilt at midday even when the soil is wet, and what does a plant actually need to stay green, grow, and make its own food? Your answer must explain both the wilting and the pallor in the shade. (c) Give one practical piece of advice, based on your explanation, that a Kenyan smallholder farmer could use to improve sukuma wiki yield, and say why photosynthesis matters for all living things, not only for the garden.",
-      "exemplar": "(a) Nitrogen is needed to make proteins and chlorophyll; a deficiency causes chlorosis (pale yellow leaves) and stunted growth. Magnesium is needed to make chlorophyll; a deficiency causes yellowing of leaves. (Phosphorus, potassium and others are also acceptable with correct functions and symptoms.) Minerals dissolved in soil water are absorbed through the root hair cells by active transport. (b) Wilting: in the strong midday sun the stomata are open for CO2 to enter for photosynthesis, and water vapour is lost by transpiration. When water leaves through the stomata faster than the xylem can deliver it from the roots, the leaf cells lose turgor and the plant wilts, even though the soil is moist. Overnight the stomata close, transpiration slows, the xylem catches up, turgor is restored, and the plant recovers. Pallor in the shade: less light under the mango tree reduces the light-dependent reactions, so less ATP and NADPH are made and the Calvin cycle produces less glucose. The plant has less food for growth, so it grows slowly, and it has less energy and fewer building materials to make and maintain chlorophyll, so the leaves turn pale. Low light is the limiting factor. Minerals matter too: nitrogen and magnesium are needed to build chlorophyll, so the soil must supply them for the leaves to stay green. To stay green, grow and make its own food, the plant needs light, chlorophyll, water and CO2, plus minerals such as nitrogen and magnesium from the soil, and when any one is limiting, photosynthesis slows. (c) For example: water the sukuma wiki in the early morning or evening and not at midday, so that water supply keeps up with loss; plant it in a place with enough sunlight rather than deep shade; and apply a fertiliser or manure containing nitrogen so the leaves can make chlorophyll and stay green. Photosynthesis matters to all living things because green plants are the producers: they make the food that starts every food chain and release the oxygen that animals and people breathe."
+      "exemplar": "(a) Nitrogen is needed to make proteins and chlorophyll; a deficiency causes chlorosis (pale yellow leaves) and stunted growth. Magnesium is needed to make chlorophyll; a deficiency causes yellowing between the veins (interveinal chlorosis), starting on the older leaves. (Phosphorus, potassium and others are also acceptable with correct functions and symptoms.) Minerals dissolved in soil water are absorbed through the root hair cells by active transport. (b) Wilting: in the strong midday sun the stomata are open for CO2 to enter for photosynthesis, and water vapour is lost by transpiration. When water leaves through the stomata faster than the xylem can deliver it from the roots, the leaf cells lose turgor and the plant wilts, even though the soil is moist. Overnight the stomata close, transpiration slows, the xylem catches up, turgor is restored, and the plant recovers. Pallor in the shade: less light under the mango tree reduces the light-dependent reactions, so less ATP and NADPH are made and the Calvin cycle produces less glucose. The plant has less food for growth, so it grows slowly, and it has less energy and fewer building materials to make and maintain chlorophyll, so the leaves turn pale. Low light is the limiting factor. Minerals matter too: nitrogen and magnesium are needed to build chlorophyll, so the soil must supply them for the leaves to stay green. To stay green, grow and make its own food, the plant needs light, chlorophyll, water and CO2, plus minerals such as nitrogen and magnesium from the soil, and when any one is limiting, photosynthesis slows. (c) For example: water the sukuma wiki in the early morning or evening and not at midday, so that less water is lost to evaporation and the leaves are not short of water in the hot hours; plant it in a place with enough sunlight rather than deep shade; and apply a fertiliser or manure containing nitrogen so the leaves can make chlorophyll and stay green. Photosynthesis matters to all living things because green plants are the producers: they make the food that starts every food chain and release the oxygen that animals and people breathe."
     }
   ],
   "rubric": [
@@ -675,31 +675,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Scientific accuracy of photosynthesis (reactants, light and chlorophyll, equations, two stages)",
       "excellent": "Exceeds Expectations: Correctly distinguishes the reactants from light energy and chlorophyll, gives both equations, and accurately describes where each stage occurs, the key steps and how ATP and NADPH link the stages.",
       "proficient": "Meets Expectations: States most requirements and equations correctly and describes both stages with minor omissions or errors.",
-      "developing": "Approaches Expectations: Names some requirements or an equation but confuses the stages or leaves out key steps."
+      "developing": "Approaches Expectations: Names some requirements or an equation but confuses the stages or leaves out key steps.",
+      "belowExpectations": "Below Expectations: Names almost no requirements or equations correctly and does not describe the two stages."
     },
     {
       "criterion": "Explaining wilting using leaf structure and water movement",
       "excellent": "Exceeds Expectations: Clearly links stomata, transpiration, xylem supply rate and loss of turgor, explains why wet soil does not prevent wilting, and explains overnight recovery.",
       "proficient": "Meets Expectations: Explains wilting through water loss and turgor but is less clear about rate of loss versus supply or about recovery.",
-      "developing": "Approaches Expectations: Says the plant lacks water or is hot without linking stomata, transpiration and turgor."
+      "developing": "Approaches Expectations: Says the plant lacks water or is hot without linking stomata, transpiration and turgor.",
+      "belowExpectations": "Below Expectations: Does not link wilting to leaf structure or water movement, or gives an incorrect reason."
     },
     {
       "criterion": "Use of evidence and limiting factors",
       "excellent": "Exceeds Expectations: Accurately uses the starch test, the light-intensity graph shape, the temperature curve and the definition of a limiting factor to justify claims, and correctly applies them to the Naivasha and Kericho examples.",
       "proficient": "Meets Expectations: Uses some evidence and defines a limiting factor, with partial application to the farm examples.",
-      "developing": "Approaches Expectations: States facts without evidence, or the limiting factor idea is missing or incorrect."
+      "developing": "Approaches Expectations: States facts without evidence, or the limiting factor idea is missing or incorrect.",
+      "belowExpectations": "Below Expectations: Gives no evidence, and the idea of a limiting factor is absent."
     },
     {
       "criterion": "Integration of minerals and the complete causal chain for the pallor",
       "excellent": "Exceeds Expectations: Builds a clear, sequenced chain from low light to less ATP and NADPH to less glucose to slow growth and less chlorophyll maintained, and explains the role of nitrogen and magnesium in chlorophyll.",
       "proficient": "Meets Expectations: Gives a mostly complete chain but one step or the link to chlorophyll or minerals is missing or unclear.",
-      "developing": "Approaches Expectations: Gives a brief statement that shade means less food, without a causal chain."
+      "developing": "Approaches Expectations: Gives a brief statement that shade means less food, without a causal chain.",
+      "belowExpectations": "Below Expectations: Gives no causal chain from shade to slow growth or pale leaves, or gives an incorrect one."
     },
     {
       "criterion": "Communication and Kenyan application",
       "excellent": "Exceeds Expectations: Uses precise scientific vocabulary, organises answers clearly, and gives a sensible, evidence-based farming recommendation.",
       "proficient": "Meets Expectations: Mostly clear writing with some correct terms and a reasonable but general recommendation.",
-      "developing": "Approaches Expectations: Writing is unclear or uses few scientific terms, and the recommendation is missing or not linked to the evidence."
+      "developing": "Approaches Expectations: Writing is unclear or uses few scientific terms, and the recommendation is missing or not linked to the evidence.",
+      "belowExpectations": "Below Expectations: Writing is very unclear, with almost no scientific terms and no recommendation."
     }
   ]
 };
@@ -781,6 +786,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

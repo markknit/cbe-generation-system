@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Understanding of how angle and radius control area",
       "excellent": "Clearly explains that sector area is proportional to the central angle and to r², using correct comparisons from the data (such as 30° versus 180°) and the anchoring watermelon context.",
       "proficient": "States that angle and radius both affect area and gives a mostly correct comparison, but explanation of proportionality or the r² effect is incomplete.",
-      "developing": "Says only that bigger pieces have bigger area, or relies on the look of the pieces without mentioning angle and radius."
+      "developing": "Says only that bigger pieces have bigger area, or relies on the look of the pieces without mentioning angle and radius.",
+      "belowExpectations": "Gives no reason why the pieces differ in area, or says only that they look different, with no mention of angle or radius."
     },
     {
       "criterion": "Correct use of the sector and segment formulas",
       "excellent": "Writes both formulas correctly, explains where each part comes from (fraction θ/360 of the circle; sector minus triangle), and substitutes accurately with units.",
       "proficient": "Uses both formulas with only minor slips in substitution, rounding or units, and gives partial reasoning for where they come from.",
-      "developing": "Confuses sector and segment, omits the triangle subtraction, or makes major errors in substitution."
+      "developing": "Confuses sector and segment, omits the triangle subtraction, or makes major errors in substitution.",
+      "belowExpectations": "Does not write the sector or segment formula correctly, and does not substitute values or show where the formulas come from."
     },
     {
       "criterion": "Accuracy of calculations and presentation of data",
       "excellent": "All sector, triangle and segment areas are correct, set out in a clear table with working and units, and the largest and smallest pieces are identified correctly.",
       "proficient": "Most calculations are correct and clearly set out, with one or two small errors that do not change the conclusions.",
-      "developing": "Several calculation errors, missing working or units, or a table that is incomplete or inconsistent."
+      "developing": "Several calculation errors, missing working or units, or a table that is incomplete or inconsistent.",
+      "belowExpectations": "Has few correct calculations, with no table or working, and cannot identify the largest and smallest pieces."
     },
     {
       "criterion": "Fair-share verdict and real-life application",
       "excellent": "Gives a clear, evidence-based recommendation to Mama Wanjiku using the calculated areas, and applies the formulas correctly to another Kenyan context such as irrigation.",
       "proficient": "Gives a reasonable recommendation and a correct real-life example, though links to the calculated evidence are limited.",
-      "developing": "Recommendation is vague or not supported by calculations, and the real-life example is missing or incorrect."
+      "developing": "Recommendation is vague or not supported by calculations, and the real-life example is missing or incorrect.",
+      "belowExpectations": "Gives no recommendation to Mama Wanjiku, or one with no evidence, and gives no real-life application."
     },
     {
       "criterion": "Reflection on model revision",
       "excellent": "Describes specific changes from the Lesson 1 model to the final model, naming at least two new ideas and linking them to the driving question.",
       "proficient": "Mentions at least one idea added to the model with some link to the driving question.",
-      "developing": "Gives a general statement of learning without naming specific changes to the model."
+      "developing": "Gives a general statement of learning without naming specific changes to the model.",
+      "belowExpectations": "Does not say what changed in the model, or leaves this question unanswered."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

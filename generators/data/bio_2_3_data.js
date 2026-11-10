@@ -795,31 +795,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Structures and mechanism of gas exchange",
       "excellent": "Names stomata, guard cells and the other sites correctly and explains opening and closing using osmosis, turgor and K+ or starch-sugar, linked to the bubble spots.",
       "proficient": "Names stomata and most sites and gives a basic account of guard cell opening, with small gaps in the mechanism.",
-      "developing": "Names few sites or says bubbles come from the whole leaf; no mechanism for how pores open."
+      "developing": "Names few sites or says bubbles come from the whole leaf; no mechanism for how pores open.",
+      "belowExpectations": "Names almost no sites of gas exchange correctly and gives no mechanism for how stomata open and close, even with prompting."
     },
     {
       "criterion": "Cellular respiration content",
       "excellent": "Gives correct equations, location of each stage, ATP yields (36 to 38 versus 2) and compares aerobic and anaerobic products accurately.",
       "proficient": "Gives correct equations and some locations or ATP figures, with minor errors.",
-      "developing": "Confuses the products or conditions of aerobic and anaerobic respiration, or omits equations."
+      "developing": "Confuses the products or conditions of aerobic and anaerobic respiration, or omits equations.",
+      "belowExpectations": "Gives little accurate content on respiration, with products, conditions and locations mixed up and no equations given."
     },
     {
       "criterion": "Use of evidence and enzyme reasoning for temperature",
       "excellent": "Uses data from the sukuma wiki and yeast investigations, matches each investigation to what it actually tested, is honest about what was not tested, and explains the temperature effect through enzyme kinetic energy and collisions.",
       "proficient": "States that warmth speeds up reactions and cites some evidence, with limited reasoning.",
-      "developing": "States the temperature effect without evidence or reasoning."
+      "developing": "States the temperature effect without evidence or reasoning.",
+      "belowExpectations": "Gives no evidence for the temperature effect, or gives no enzyme reasoning at all."
     },
     {
       "criterion": "Linking photosynthesis, respiration and gas exchange",
       "excellent": "Clearly shows the two-way flow of CO2, water, O2 and glucose, corrects the misconception, and links the cell level to the whole leaf.",
       "proficient": "Describes the link between the processes, with the cell-to-leaf connection only partly explained.",
-      "developing": "Treats processes as separate or keeps the misconception that plants do not respire."
+      "developing": "Treats processes as separate or keeps the misconception that plants do not respire.",
+      "belowExpectations": "Treats the processes as unrelated and holds the misconception that plants do not respire, with no link from cell to leaf."
     },
     {
       "criterion": "Scientific communication and Kenyan context",
       "excellent": "Writes a clear, well-organised, accurate narrative using correct terms and Kenyan examples.",
       "proficient": "Writes clearly with mostly correct terms and some local examples.",
-      "developing": "Writing is unclear or disorganised, with incorrect terms and no examples."
+      "developing": "Writing is unclear or disorganised, with incorrect terms and no examples.",
+      "belowExpectations": "Writing is very unclear or disorganised, with almost no correct terms and no examples."
     }
   ]
 };
@@ -915,6 +920,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

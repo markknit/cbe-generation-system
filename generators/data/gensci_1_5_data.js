@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining the anchoring phenomenon",
       "excellent": "Clearly explains that yeast (and bacteria) respire anaerobically in the sealed thermos, linking bubbles to CO2 and sourness to acid products, and uses both the Flask A/Flask B and pH evidence accurately.",
       "proficient": "Explains that microorganisms cause the bubbles and sourness but uses evidence from only one investigation or with small gaps.",
-      "developing": "States that something changes in the uji but does not link it to respiration or to evidence."
+      "developing": "States that something changes in the uji but does not link it to respiration or to evidence.",
+      "belowExpectations": "Says nothing about why the uji bubbled or turned sour, or only says it went bad, and does not mention yeast, bacteria, CO2 or lactic acid even when prompted."
     },
     {
       "criterion": "Aerobic and anaerobic respiration equations and comparison",
       "excellent": "Writes correct word or chemical equations for aerobic respiration, alcoholic fermentation and lactic acid fermentation, and correctly compares oxygen need and ATP released.",
       "proficient": "Writes most equations correctly and makes a basic comparison with a minor error or omission.",
-      "developing": "Equations are missing or incorrect and the comparison is unclear."
+      "developing": "Equations are missing or incorrect and the comparison is unclear.",
+      "belowExpectations": "Cannot write any correct equation for aerobic respiration or fermentation, or writes only fragments such as 'glucose' with no products, and does not compare oxygen need or energy released."
     },
     {
       "criterion": "Substrates, RQ and rate factors",
       "excellent": "Correctly names substrates with Kenyan examples and RQ values, uses the RQ formula, interprets RQ above 1.0, and explains temperature and glucose concentration effects using class data.",
       "proficient": "Gives most substrate, RQ and factor information correctly, with limited use of data.",
-      "developing": "Gives few correct facts about substrates, RQ or rate factors and does not use data."
+      "developing": "Gives few correct facts about substrates, RQ or rate factors and does not use data.",
+      "belowExpectations": "Names no correct substrate or RQ idea, or gives only a loose fact such as 'warm is faster' without using the class data on temperature or glucose."
     },
     {
       "criterion": "Application to Kenyan economy and community",
       "excellent": "Gives two accurate Kenyan applications naming organism, product and benefit, and explains the responsible-use caution on brewing.",
       "proficient": "Gives two applications with some missing detail, or a limited explanation of the caution.",
-      "developing": "Gives one or no application or the applications are incorrect."
+      "developing": "Gives one or no application or the applications are incorrect.",
+      "belowExpectations": "Names no Kenyan use of fermentation, or names one that does not match an organism and product, and says nothing about responsible use of brewing."
     },
     {
       "criterion": "Scientific communication and use of evidence",
       "excellent": "Writes in clear, organised sentences, uses scientific terms correctly, and links every part back to the uji thermos.",
       "proficient": "Writing is mostly clear with mostly correct terms and some links to the thermos.",
-      "developing": "Writing is unclear, terms are misused and links to the thermos are missing."
+      "developing": "Writing is unclear, terms are misused and links to the thermos are missing.",
+      "belowExpectations": "Writing is missing or too jumbled to follow, scientific terms are not used or are wrong, and nothing is linked back to the uji thermos."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

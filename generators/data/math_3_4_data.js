@@ -676,31 +676,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Velocity and acceleration methods (KICD Questions 1 and 2)",
       "excellent": "States velocity = displacement/time and a = (v - u)/t, explains the vector nature and sign of velocity, converts units correctly and calculates A's +20 m/s, the lorry's -20 m/s, B's 2 m/s^2 and the matatu's -2 m/s^2 with units.",
       "proficient": "Uses both formulas correctly with minor slips in units or in explaining the sign, and gets most values right.",
-      "developing": "Confuses speed with velocity or omits conversion, the sign or units, and gets several values wrong."
+      "developing": "Confuses speed with velocity or omits conversion, the sign or units, and gets several values wrong.",
+      "belowExpectations": "Uses neither formula correctly, mixes up speed and velocity, omits units and signs, and most values are wrong or missing."
     },
     {
       "criterion": "Graphs: gradient and area",
       "excellent": "Sketches correct labelled velocity-time graphs for A and B, links gradient to acceleration, and finds B 200 m (125 + 75) and A 150 m from areas, checking against the table.",
       "proficient": "Draws mostly correct graphs and finds the distances with a small error or without checking against the table.",
-      "developing": "Graphs are missing labels or shapes are wrong, and the gradient or area is not linked to acceleration or distance."
+      "developing": "Graphs are missing labels or shapes are wrong, and the gradient or area is not linked to acceleration or distance.",
+      "belowExpectations": "Graphs are missing or incorrect, and gradient and area are not used to find acceleration or distance."
     },
     {
       "criterion": "Relative speed and viewpoint",
       "excellent": "Subtracts for the same direction (10 m/s, 36 km/h) and adds for opposite directions (50 m/s, 180 km/h), states the viewpoint, notes 0 at t = 0 and explains why A looks slow from B.",
       "proficient": "Calculates relative speeds correctly but gives limited explanation or omits the viewpoint or the starting value.",
-      "developing": "Adds or subtracts incorrectly, or cannot explain why A looks slow."
+      "developing": "Adds or subtracts incorrectly, or cannot explain why A looks slow.",
+      "belowExpectations": "The learner partially solves problems involving relative speed."
     },
     {
       "criterion": "Safety decision and use of data",
       "excellent": "Correctly finds the lorry's 150 m, the 350 m of road used, the 150 m (3.0 s) margin and the unsafe 50 m (1.0 s) case, and uses table values accurately.",
       "proficient": "Reaches the correct decision with one calculation error or a missing unit or time conversion.",
-      "developing": "Decision is not supported by calculations or the numbers are inconsistent with the data."
+      "developing": "Decision is not supported by calculations or the numbers are inconsistent with the data.",
+      "belowExpectations": "Gives no safety decision, or a decision with no calculations."
     },
     {
       "criterion": "Final Explanation answering the driving question",
       "excellent": "Connects velocity, acceleration, graphs, relative speed and safety in a clear, logical explanation that uses the Naivasha evidence and answers both KICD questions.",
       "proficient": "Answers the driving question using most ideas but with some links missing.",
-      "developing": "Lists facts without linking them to the overtake or the driving question."
+      "developing": "Lists facts without linking them to the overtake or the driving question.",
+      "belowExpectations": "Gives few facts and does not answer the driving question about the overtake."
     }
   ]
 };
@@ -782,6 +787,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence from the investigations",
       "excellent": "Exceeds Expectations: cites specific results from the lessons (pH ranges, Mg + HCl observations, petri dish results, nitrate case study) for every claim.",
       "proficient": "Meets Expectations: cites some specific evidence but some claims rely on general statements.",
-      "developing": "Approaches Expectations: gives little or no evidence from the investigations, or evidence is inaccurate."
+      "developing": "Approaches Expectations: gives little or no evidence from the investigations, or evidence is inaccurate.",
+      "belowExpectations": "Below Expectations: gives no specific evidence from the investigations, or states results that are wrong."
     },
     {
       "criterion": "Particle-level reasoning (ions)",
       "excellent": "Exceeds Expectations: consistently explains phenomena using H⁺, OH⁻, Na⁺, Cl⁻ and ion–water attraction, accurately linked to pH, reactions and salt behaviour.",
       "proficient": "Meets Expectations: uses ions in most explanations, with minor gaps or errors.",
-      "developing": "Approaches Expectations: describes only what is seen, with little or incorrect use of ions."
+      "developing": "Approaches Expectations: describes only what is seen, with little or incorrect use of ions.",
+      "belowExpectations": "Below Expectations: does not use ions in explanations, or uses them wrongly, and describes little beyond what was seen."
     },
     {
       "criterion": "Chemical vocabulary and equations",
       "excellent": "Exceeds Expectations: uses terms such as hygroscopic, deliquescent, efflorescent, neutralisation and water of crystallisation correctly, and writes accurate word equations.",
       "proficient": "Meets Expectations: uses most terms correctly; word equations are mostly correct.",
-      "developing": "Approaches Expectations: terms are missing or misused; equations are missing or incorrect."
+      "developing": "Approaches Expectations: terms are missing or misused; equations are missing or incorrect.",
+      "belowExpectations": "Below Expectations: uses few terms correctly and gives no word equations, or only incorrect ones."
     },
     {
       "criterion": "Connection to Kenyan contexts and the anchoring phenomenon",
       "excellent": "Exceeds Expectations: fully explains both Lake Magadi and the sufuria, and links salt applications and Lake Victoria impacts to the driving question.",
       "proficient": "Meets Expectations: explains both images, with limited links to applications or the environment.",
-      "developing": "Approaches Expectations: explains only one image or gives disconnected examples."
+      "developing": "Approaches Expectations: explains only one image or gives disconnected examples.",
+      "belowExpectations": "Below Expectations: does not explain either Lake Magadi or the sufuria correctly, and gives no link to the driving question."
     },
     {
       "criterion": "Reflection and model revision",
       "excellent": "Exceeds Expectations: clearly identifies a changed idea, the evidence that changed it, and gives an accurate labelled particle sketch and a coherent answer to the driving question.",
       "proficient": "Meets Expectations: identifies a changed idea with some evidence; sketch and final answer are mostly accurate.",
-      "developing": "Approaches Expectations: reflection is vague; sketch or final answer is missing or incorrect."
+      "developing": "Approaches Expectations: reflection is vague; sketch or final answer is missing or incorrect.",
+      "belowExpectations": "Below Expectations: does not identify a changed idea; the sketch and final answer are missing or wrong."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

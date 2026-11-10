@@ -13,7 +13,7 @@ const META = {
   "outputDir": "v2/Physics/SS1.4_Energy,_Work,_Power_and_Machines",
   "filePrefix": "Physics_Energy,_Work,_Power_and_Machines",
   "titleDoc": "PHYSICS GRADE 10: ENERGY, WORK, POWER AND MACHINES",
-  "subtitleDoc": "CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 1.4 (8 Lessons)",
+  "subtitleDoc": "CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 1.6 (8 Lessons)",
   "col3Label": "Teacher Moves",
   "col5Label": "Formative Assessment Strategy"
 };
@@ -22,7 +22,7 @@ const UNIT = {
   "gradeLevel": "10",
   "subject": "Physics",
   "strand": "Strand 1.0: Mechanics and Thermal Physics",
-  "substrand": "Sub-Strand 1.4: Energy, Work, Power and Machines",
+  "substrand": "Sub-Strand 1.6: Energy, Work, Power and Machines",
   "totalDuration": "8 lessons = 600 minutes in total (Lesson 1: 40 minutes; Lessons 2 to 8: 80 minutes each, 7 x 80 = 560; 40 + 560 = 600 minutes, or 15 periods of 40 minutes)",
   "content": "• Kinetic energy, potential energy (elastic and gravitational potential energy) and law of conservation of energy\n• Work and power\n• Machines (levers, inclined plane, pulleys, wheel and axle, gears, hydraulic lift, pulley belt, the screw)\n• Applications of machines; also include treadmill, elevators, escalators, excavator",
   "learningOutcomes": "By the end of the sub-strand, the learner should be able to:\na) explain the meaning of energy, work and power in relation to machines,\nb) demonstrate the transformation of mechanical energy using simple apparatus,\nc) describe applications of simple machines in making work easier,\nd) appreciate the applications of machines in day-to-day life.",
@@ -31,7 +31,7 @@ const UNIT = {
   "sep": "• Asking questions and defining problems: learners generate questions about why a pulley or ramp makes work easier and add them to the Driving Question Board.\n• Developing and using models: learners build and revise an energy-flow model from the well, ramp, lever and roller coaster scenarios.\n• Planning and carrying out investigations: learners measure effort, load and distance for pulleys and ramps.\n• Analyzing and interpreting data: learners compare input and output work to calculate efficiency.\n• Using mathematics and computational thinking: learners apply W = Fd, P = W/t, KE = ½mv² and PE = mgh.\n• Constructing explanations: learners use evidence to explain how energy is conserved and transferred.",
   "pcis": "• Life skills and values education - Socio-Economic and Environmental Education: the learner appreciates environment and technology while performing experiments to demonstrate mechanical energy transformations and forms of potential energy.\n• General history of Africa: as the learner appreciates the development of machines from simple to complex machines / evolution of machines from archaic to modern (e.g. steam engine to electric engines).\n• Safety and security: learners practise safe lifting and use of tools such as crowbars, scissors and pulleys.",
   "careers": "• Mechanical engineer: designs machines and improves their efficiency.\n• Civil and construction engineer: uses pulleys, cranes and ramps to lift and move heavy loads.\n• Agricultural engineer: designs water-lifting systems, irrigation pumps and farm tools.\n• Automotive technician (Jua kali mechanic): repairs engines, levers and gear systems.\n• Electrical engineer: designs motors and fans that convert electrical energy to mechanical work.\n• Sports scientist: analyses the work and power of Kenyan athletes and cyclists.",
-  "focus": "This unit uses everyday Kenyan experiences, such as lifting water from a well with a pulley, to build understanding of energy, work, power and machines. Learners predict, investigate with hands-on activities and simulations, explain using evidence and mathematics, and continuously revise a model that shows how machines change the effort needed while energy is conserved.",
+  "focus": "This unit uses everyday Kenyan experiences, such as lifting water from a well with a pulley, to build understanding of energy, work, power and machines. Learners predict, investigate with hands-on activities and simulations, explain using evidence and mathematics, and continuously revise a model that shows how machines change the effort needed while energy is conserved. Content not fully covered within these eight lessons, for follow-up teaching: the working principles and calculations for the wheel and axle, gears, hydraulic lift, pulley belt and screw (only introduced through the Lesson 8 research tasks), the applications (treadmill, elevators, escalators, excavator) beyond those tasks, and any garage visit that cannot be arranged.",
   "phenomenon": "At a rural homestead in Kitui County, a family draws water from a deep well. When a woman lifts a full 20 kg bucket of water straight up by hand, it is exhausting and she can barely raise it. When the same bucket is hung from a two-pulley system (a rope over a fixed pulley above the well and under a movable pulley on the bucket), she lifts it with less effort, and a child can even do it. Yet the bucket still rises the same height and gains the same amount of energy. Learners are puzzled: if the bucket gains the same energy, why does it feel so much easier with the pulley, where does the energy come from, and is any energy lost along the way? Using a pulley system makes lifting heavy buckets easier.",
   "supportingPhenomena": "• Opening a door with a handle: a door moves easily when pushed at the handle but is much harder to open near the hinge.\n• Using a ramp to load heavy objects: rolling a box (or a sack of maize) up a ramp onto a lorry in Nairobi requires less effort than lifting it vertically.\n• Stretching a spring (Hooke's Law): stretching a spring stores energy that can do work when released.\n• Cycling uphill vs. flat road: a boda boda rider or cyclist in the Rift Valley works much harder going uphill than on flat ground.\n• Using scissors or a crowbar: cutting or prying requires less effort with simple tools.\n• Energy transformation in a roller coaster: a coaster converts potential energy at the top into kinetic energy on the track.\n• Electric fan or motor work: electrical energy is converted into mechanical work to rotate the fan.",
   "drivingQuestion": "DRIVING QUESTION: How do pulleys reduce the effort needed to lift water, and how does energy transfer in the process?\n\nKICD KEY INQUIRY QUESTION:\nHow do machines make work easier?\n\nCLASS QUESTION (added by the writers, not from KICD):\nHow do we use energy in our day-to-day life?",
@@ -43,7 +43,7 @@ const LESSONS = [
     "number": 1,
     "title": "Kinetic and Potential Energy: The Bucket in the Well",
     "duration": "40 minutes (one lesson; the five phases are timed within it)",
-    "substrand": "Sub-Strand 1.4: Energy, Work, Power and Machines",
+    "substrand": "Sub-Strand 1.6: Energy, Work, Power and Machines",
     "aresKeywords": "energy, potential energy, kinetic energy, position, motion, pulley system, effort, Driving Question Board, model, Kitui, Energy Skate Park",
     "slo": {
       "purpose": "To launch the Kitui well phenomenon, introduce energy as something stored by position (potential) or present because of motion (kinetic), and open the Driving Question Board and an initial qualitative model.",
@@ -103,7 +103,7 @@ const LESSONS = [
     "number": 2,
     "title": "Energy Transformations and the Formulas KE = ½mv² and PE = mgh",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 1.4: Energy, Work, Power and Machines",
+    "substrand": "Sub-Strand 1.6: Energy, Work, Power and Machines",
     "aresKeywords": "kinetic energy, potential energy, energy transformation, joule, pendulum, roller coaster, mass, height, speed, Kitui well bucket",
     "slo": {
       "purpose": "Learners calculate gravitational potential energy (PE = mgh) and kinetic energy (KE = ½mv²) and trace how energy changes between PE and KE in a pendulum and a roller coaster. They then use the same ideas to explain how the energy of the 20 kg bucket in the Kitui well changes with height.",
@@ -163,7 +163,7 @@ const LESSONS = [
     "number": 3,
     "title": "Conservation of Energy: Does the Total Stay the Same? Pendulum and the Falling Bucket",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 1.4: Energy, Work, Power and Machines",
+    "substrand": "Sub-Strand 1.6: Energy, Work, Power and Machines",
     "aresKeywords": "conservation of energy, total energy, kinetic energy, potential energy, pendulum, free fall, energy transformation, ideal system, Kitui well, pulley system",
     "slo": {
       "purpose": "Learners test whether the total energy (KE + PE) of a pendulum and of a freely falling bucket stays constant in an ideal system, and use this principle to revise the class model of the Kitui bucket.",
@@ -193,7 +193,7 @@ const LESSONS = [
       {
         "phase": "Explain Phase",
         "learnerExperience": "Learners meet in their groups with their tables and graphs and write a CER paragraph (Claim, Evidence, Reasoning) answering: 'In an ideal system with no friction, what happens to the total energy (KE + PE) as an object falls or swings?' Claim: the total stays constant. Evidence: they cite specific numbers (1600 J at every height for the bucket; 1 J for the pendulum). Reasoning: energy changes form from PE to KE (and back for the pendulum) but is not created or destroyed. Then they take part in a whole-class discussion, comparing their Predict-phase ideas with the data, and revising any incorrect ideas. Finally they apply the idea to the Kitui phenomenon in a short talk: 'Mama Kavata or Mwende lifts the bucket 8 m. The bucket gains 1600 J of PE. If energy cannot be created, where did that 1600 J come from?' Learners suggest answers (the chemical energy in her body from ugali and githeri), and they then discuss whether the pulley could 'make' extra energy (no). They note an open question: if the pulley makes it easier, is something else different, and is any energy wasted? (to be developed in Lessons 4 to 8).",
-        "teacherMoves": "Say: 'Look at your data, then complete: In an ideal system, the total energy ... because ...' WAIT TIME 10-15 seconds before calling on anyone. Cold-call 3 groups to read their claim and evidence; ask the others: 'Do you agree? Which number supports it?' Introduce the term for the pattern: 'This is the principle of conservation of energy: energy is never created or destroyed, only transformed or transferred.' Revisit the Prediction Wall: 'Whose prediction was supported? Whose idea changed?' Probe misconceptions: 'Some of you said energy is used up when the bucket falls. Where does the PE go?' (it becomes KE). Then link to Kitui: 'Mwende pulls the rope and the bucket gains 1600 J. Where does that energy come from?' Cold-call 2 learners. If someone says 'the pulley', ask: 'Can a rope and a wheel make energy? What does your data say about creating energy?' Say clearly that the word 'ideal' means no friction, and that real systems are the focus of Lesson 4. Do not calculate the pulley effort or work today (Lessons 5, 6 and 8).",
+        "teacherMoves": "Say: 'Look at your data, then complete: In an ideal system, the total energy ... because ...' WAIT TIME 10-15 seconds before calling on anyone. Cold-call 3 groups to read their claim and evidence; ask the others: 'Do you agree? Which number supports it?' Introduce the term for the pattern: 'This is the principle of conservation of energy: energy is never created or destroyed, only transformed or transferred.' Revisit the Prediction Wall: 'Whose prediction was supported? Whose idea changed?' Probe misconceptions: 'Some of you said energy is used up when the bucket falls. Where does the PE go?' (it becomes KE). Then link to Kitui: 'Mwende pulls the rope and the bucket gains 1600 J. Where does that energy come from?' Cold-call 2 learners. If someone says 'the pulley', ask: 'Can a rope and a wheel make energy? What does your data say about creating energy?' Say clearly that the word 'ideal' means no friction, and that real systems are the focus of Lesson 4. Do not calculate the pulley effort or work today (Lessons 5, 6 and 8). Elastic potential energy (about 3 minutes, taken from the Explain time, no extra lesson): stretch a rubber band (or show a bow-and-arrow picture) and release it to launch a small paper ball away from faces. Ask: 'Where was the energy stored before release? Where did it go?' Learners state that a stretched or compressed object (rubber band, spring, bow) stores elastic potential energy, which becomes kinetic energy on release, following the same conservation idea. No elastic PE formula is needed here.",
         "sensemakingStrategy": "Claim-Evidence-Reasoning (CER) with Argument from Evidence: learners must connect numerical evidence to a general principle, and defend it against peers. Applying the principle to the Kitui bucket (a transfer task) builds understanding that the principle explains the phenomenon, rather than being just a result from two lab systems.",
         "formativeAssessment": "Collect CER paragraphs. Indicators: (1) the claim states that total energy stays constant in an ideal system; (2) evidence uses at least two specific values (e.g. 1600 J at 8 m and at 0 m); (3) reasoning mentions transformation of PE into KE rather than energy being used up or created; (4) learner identifies that the energy for lifting the bucket comes from the person's body (chemical energy from food), not from the pulley. Use a 3-level check: Not yet (claim only), Developing (claim and number), Secure (claim, number and reasoning)."
       },
@@ -223,7 +223,7 @@ const LESSONS = [
     "number": 4,
     "title": "Conservation of Energy in Applications: Where Does the Bucket's Energy Go in a Real Fall?",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 1.4: Energy, Work, Power and Machines",
+    "substrand": "Sub-Strand 1.6: Energy, Work, Power and Machines",
     "aresKeywords": "conservation of energy, falling object, sliding object, kinetic energy, potential energy, energy loss, heat, sound, friction, ideal versus real system, Kitui bucket",
     "slo": {
       "purpose": "Learners apply conservation of energy to solve problems on falling and sliding objects, and compare an ideal fall with a real fall of the 20 kg bucket to account for energy transferred as heat and sound.",
@@ -283,7 +283,7 @@ const LESSONS = [
     "number": 5,
     "title": "Work: W = Fd – What Does Mama Kavata's Lift Really Do?",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 1.4: Energy, Work, Power and Machines",
+    "substrand": "Sub-Strand 1.6: Energy, Work, Power and Machines",
     "aresKeywords": "work, force, distance, joule, W = Fd, positive work, negative work, net work, bucket, well, Kitui",
     "slo": {
       "purpose": "Learners define work as force times distance moved in the direction of the force, calculate the work done in lifting the 20 kg bucket 8 m from the well, and tell positive work from negative work using lifting and lowering examples.",
@@ -343,7 +343,7 @@ const LESSONS = [
     "number": 6,
     "title": "Work and Energy: Hand Lift versus Pulley System at the Kitui Well",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 1.4: Energy, Work, Power and Machines",
+    "substrand": "Sub-Strand 1.6: Energy, Work, Power and Machines",
     "aresKeywords": "work, energy, work-energy principle, pulley system, effort, load, distance, friction, heat, conservation of energy, input, output, joule",
     "slo": {
       "purpose": "To help learners connect work done to change in energy, compare the work done by hand and with the pulley system when lifting the 20 kg bucket 8 m at Mama Kavata's well in Kitui, and refine the Driving Question Board (DQB) with new questions.",
@@ -403,7 +403,7 @@ const LESSONS = [
     "number": 7,
     "title": "Work Against Friction and Power: Dragging the Maize Sack and Lifting Water",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 1.4: Energy, Work, Power and Machines",
+    "substrand": "Sub-Strand 1.6: Energy, Work, Power and Machines",
     "aresKeywords": "friction, negative work, work against friction, power, watt, P = W/t, rate of doing work, heat, energy transfer, Kitui well, pulley system",
     "slo": {
       "purpose": "Learners gather evidence that friction does negative work that must be overcome (work = friction x distance) and that power P = W/t measures how fast work is done, so they can explain why the pulley system needs more input energy than the PE gained and compare the power of hand lifting and pulley lifting.",
@@ -463,7 +463,7 @@ const LESSONS = [
     "number": 8,
     "title": "Simple Machines, MA, VR, Efficiency and the Final Model: Why the Pulley Makes the Bucket Feel Light",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 1.4: Energy, Work, Power and Machines",
+    "substrand": "Sub-Strand 1.6: Energy, Work, Power and Machines",
     "aresKeywords": "mechanical advantage, velocity ratio, efficiency, pulley system, lever, ramp, load, effort, conservation of energy, work input, useful work output, heat",
     "slo": {
       "purpose": "To let learners calculate mechanical advantage, velocity ratio and efficiency for pulleys, levers and ramps, and use this evidence to write the Final Explanation of how the pulley system reduces effort at the Kitui well while energy is conserved.",
@@ -499,8 +499,8 @@ const LESSONS = [
       },
       {
         "phase": "Driving Question Board (DQB) Creation",
-        "learnerExperience": "Learners (10 minutes) return to the class DQB started in Lesson 1 and sort every question into three groups: 'Answered with evidence', 'Partly answered', and 'New questions'. In groups they choose two questions, write a short evidence-based answer on a sticky note (e.g. 'Why does it feel easier? Because the effort is 125 N instead of 200 N over a longer rope, VR = 2'; 'Is energy lost? 400 J goes to heat by friction; energy is conserved'), and attach it next to the question. Each learner writes one new question that remains, such as 'How could we raise the efficiency above 80%?' or 'How does a bicycle gear work as a machine?'",
-        "teacherMoves": "Say: 'Our board began with Mama Kavata's tired arms. Let us see what we can now answer.' Read aloud three questions and ask: 'What evidence from this unit answers it?' WAIT TIME of 10-15 seconds. Cold-call 4 groups to place a sticky note and justify it. Prompt: 'Which lesson gave us this evidence?' (use only: Lesson 4 energy losses, Lesson 6 hand vs pulley, Lesson 7 power.) Ask: 'Which questions are still open and how might we investigate them?' Point out that scientists keep new questions. Photograph the final DQB for the record.",
+        "learnerExperience": "Learners (10 minutes) return to the class DQB started in Lesson 1 and sort every question into three groups: 'Answered with evidence', 'Partly answered', and 'New questions'. In groups they choose two questions, write a short evidence-based answer on a sticky note (e.g. 'Why does it feel easier? Because the effort is 125 N instead of 200 N over a longer rope, VR = 2'; 'Is energy lost? 400 J goes to heat by friction; energy is conserved'), and attach it next to the question. Each learner writes one new question that remains, such as 'How could we raise the efficiency above 80%?' or 'How does a bicycle gear work as a machine?' Follow-up tasks (done outside the timed 80 minutes, as research or homework, no extra lesson): (a) in groups, research and discuss one of the wheel and axle, gears, hydraulic lift, pulley belt or screw: what it looks like, how it makes work easier, and where it is used, with Kenyan examples such as elevators and escalators in Nairobi buildings, excavators on construction sites, treadmills in gyms, bicycle gears and a hydraulic lift at a garage; (b) design or construct a simple machine from locally available materials (for example a lever from a ruler and a stone, a ramp from a plank, a pulley from a thread reel and string) and explain how it reduces the effort; (c) a garage or workshop visit where practicable, or a suitable alternative such as a video or a classroom investigation of a bicycle (wheel and axle, gears, chain); (d) General history of Africa: find one historical example of African innovation or machine use (for example the shaduf, a lever used to lift water along the Nile, or hand bellows used in traditional iron working) and describe how machines developed from simple to complex.",
+        "teacherMoves": "Say: 'Our board began with Mama Kavata's tired arms. Let us see what we can now answer.' Read aloud three questions and ask: 'What evidence from this unit answers it?' WAIT TIME of 10-15 seconds. Cold-call 4 groups to place a sticky note and justify it. Prompt: 'Which lesson gave us this evidence?' (use only: Lesson 4 energy losses, Lesson 6 hand vs pulley, Lesson 7 power.) Ask: 'Which questions are still open and how might we investigate them?' Point out that scientists keep new questions. Photograph the final DQB for the record. Set the follow-up tasks (research or discussion on wheel and axle, gears, hydraulic lift, pulley belt and screw; a simple machine built from local materials; garage visit or alternative; African history example) as outside-class work and arrange for groups to report back briefly in the next lesson of the unit sequence or in follow-up teaching. Check that history examples chosen by learners are accurate before they are shared.",
         "sensemakingStrategy": "Driving Question Board revisiting. Sorting questions by whether they are answered makes progress visible, links evidence to questions across the unit, and shows learners that science generates new questions, sustaining curiosity.",
         "formativeAssessment": "Check that each sticky note cites specific evidence (a number or a lesson result) rather than a bare statement. Observable target: every group moves at least 2 questions to 'Answered', and every learner writes one new question. Note questions that still show confusion about work versus energy for re-teaching in revision."
       },
@@ -522,7 +522,7 @@ const LESSONS = [
 ];
 
 const FINAL_EXPLANATION = {
-  "subjectLabel": "Physics Grade 10: 1.4 Energy, Work, Power and Machines",
+  "subjectLabel": "Physics Grade 10: 1.6 Energy, Work, Power and Machines",
   "instructions": "Final Explanation: How do pulleys reduce the effort needed to lift water, and how does energy transfer in the process? Imagine you are explaining to a friend in Kitui County why Mwende, who is 10 years old, can lift the bucket with the pulley system while her mother, Mama Kavata Mutua, finds the direct lift exhausting. Use what you observed and learned in Lessons 1 to 8. Use g = 10 N/kg everywhere. Show every calculation step, with units, and write full sentences for your explanations. Use the data given in each section. Use your Summary Tables from Lessons 1 to 8 to help you. Write your answers in the space under each prompt; if writing is hard for you, you may add a labelled diagram or explain part of your answer aloud to your teacher.",
   "sections": [
     {
@@ -556,37 +556,42 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of data and calculations",
       "excellent": "Exceeds Expectations: all calculations (PE, work, power, KE, MA, VR, efficiency) are correct, use g = 10 N/kg, show every step and give correct units.",
       "proficient": "Meets Expectations: most calculations are correct with steps; one or two small slips in units or arithmetic.",
-      "developing": "Approaches Expectations: several calculations are missing, incorrect or have no units or working."
+      "developing": "Approaches Expectations: several calculations are missing, incorrect or have no units or working.",
+      "belowExpectations": "Below Expectations: calculations are missing, or almost all are wrong, with no units or working."
     },
     {
       "criterion": "Explaining why the pulley feels easier",
       "excellent": "Exceeds Expectations: clearly states a smaller force (125 N vs 200 N) over a longer distance (16 m vs 8 m) and that the work needed is not reduced.",
       "proficient": "Meets Expectations: states the smaller force and longer distance but is unclear about the work.",
-      "developing": "Approaches Expectations: says the pulley makes lifting easier without describing force and distance, or claims the pulley reduces work or gives energy."
+      "developing": "Approaches Expectations: says the pulley makes lifting easier without describing force and distance, or claims the pulley reduces work or gives energy.",
+      "belowExpectations": "Below Expectations: does not explain why the pulley feels easier, or says the pulley does the lifting by itself without mentioning force or distance."
     },
     {
       "criterion": "Energy source, transfer and conservation",
       "excellent": "Exceeds Expectations: identifies the chemical energy from food as the source, accounts for 2000 J = 1600 J PE + 400 J heat, and states that energy is conserved and not destroyed.",
       "proficient": "Meets Expectations: identifies the energy source and the 400 J as heat, but conservation is incompletely stated.",
-      "developing": "Approaches Expectations: does not identify the source, or says the energy is lost or destroyed."
+      "developing": "Approaches Expectations: does not identify the source, or says the energy is lost or destroyed.",
+      "belowExpectations": "Below Expectations: does not name an energy source or any energy transfer."
     },
     {
       "criterion": "Machine terms and efficiency",
       "excellent": "Exceeds Expectations: correctly defines and calculates MA, VR and efficiency, and compares the machines and the fixed pulley accurately.",
       "proficient": "Meets Expectations: calculates most of MA, VR and efficiency correctly with minor errors in comparison.",
-      "developing": "Approaches Expectations: confuses MA, VR and efficiency or cannot calculate them."
+      "developing": "Approaches Expectations: confuses MA, VR and efficiency or cannot calculate them.",
+      "belowExpectations": "Below Expectations: does not use MA, VR or efficiency correctly, or leaves them out."
     },
     {
       "criterion": "Scientific communication",
       "excellent": "Exceeds Expectations: the explanation is organised, uses scientific terms accurately and refers to the Kitui well data throughout.",
       "proficient": "Meets Expectations: the explanation is mostly clear with some terms used loosely.",
-      "developing": "Approaches Expectations: the explanation is disorganised or uses few scientific terms."
+      "developing": "Approaches Expectations: the explanation is disorganised or uses few scientific terms.",
+      "belowExpectations": "Below Expectations: the explanation is very disorganised and uses almost no scientific terms."
     }
   ]
 };
 
 const SUMMARY_TABLE = {
-  "subStrand": "Sub-Strand 1.4: Energy, Work, Power and Machines",
+  "subStrand": "Sub-Strand 1.6: Energy, Work, Power and Machines",
   "drivingQuestion": "DRIVING QUESTION: How do pulleys reduce the effort needed to lift water, and how does energy transfer in the process?",
   "lessons": [
     {
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

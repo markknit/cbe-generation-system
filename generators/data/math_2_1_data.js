@@ -796,31 +796,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim, evidence and reasoning",
       "excellent": "States a clear claim, supports it with exact data (7:9 vs 1:1, about 42.5° vs about 53°, k = 1/4 and 5 vs 9/28 and 1/4) and links the evidence to the idea of similarity.",
       "proficient": "States a correct claim and uses some correct data, but the reasoning linking the data to similarity is incomplete.",
-      "developing": "Claim is unclear or missing, or uses little or incorrect evidence."
+      "developing": "Claim is unclear or missing, or uses little or incorrect evidence.",
+      "belowExpectations": "No claim is made, or the claim has no evidence from the trial print or the measurements."
     },
     {
       "criterion": "Scale factor calculations",
       "excellent": "Calculates every k as image ÷ object, names the object and the image, and correctly identifies enlargement or reduction. Compares the unequal factors of the trial print.",
       "proficient": "Calculates most scale factors correctly but sometimes omits the object and image or the enlargement/reduction label.",
-      "developing": "Calculations are mostly incorrect or the object and image are mixed up."
+      "developing": "Calculations are mostly incorrect or the object and image are mixed up.",
+      "belowExpectations": "The learner partially determines the centre of enlargement or linear scale factor from similar figures."
     },
     {
       "criterion": "Area and volume factors",
       "excellent": "Correctly uses k² and k³ with Wanjiru's prints and the cartons, and explains why doubling lengths does not double the area.",
       "proficient": "Uses k² and k³ correctly in most cases but explanations are brief.",
-      "developing": "Treats area or volume as changing by k, or makes errors in the calculations."
+      "developing": "Treats area or volume as changing by k, or makes errors in the calculations.",
+      "belowExpectations": "The learner determines linear or area scale factors."
     },
     {
       "criterion": "Enlargement, applications and mathematical language",
       "excellent": "Finds images and the centre correctly, solves the map, sign cost and shadow problems accurately, and uses ~, corresponding sides and corresponding angles, units and width-first order correctly.",
       "proficient": "Solves most application problems correctly with minor errors in units, notation or the order of width and height.",
-      "developing": "Has many errors in the applications, or little correct use of terms and units."
+      "developing": "Has many errors in the applications, or little correct use of terms and units.",
+      "belowExpectations": "Cannot carry out the enlargements or applications, and uses few terms or units correctly."
     },
     {
       "criterion": "Answering the driving question",
       "excellent": "Gives a complete explanation that size can change but shape is kept only if one scale factor is applied to all lengths. Connects to the Key Inquiry Questions with real examples.",
       "proficient": "Gives a correct answer to the driving question but with limited links to everyday examples.",
-      "developing": "Answer is incomplete or does not explain why the trial print is distorted."
+      "developing": "Answer is incomplete or does not explain why the trial print is distorted.",
+      "belowExpectations": "Does not answer the driving question or explain why the trial print is distorted."
     }
   ]
 };
@@ -916,6 +921,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

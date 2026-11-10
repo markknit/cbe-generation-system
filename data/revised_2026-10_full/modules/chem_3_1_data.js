@@ -13,7 +13,7 @@ const META = {
   "outputDir": "v2/Chemistry/SS3.1_Acids_and_Bases",
   "filePrefix": "Chemistry_Acids_and_Bases",
   "titleDoc": "CHEMISTRY GRADE 10: ACIDS AND BASES",
-  "subtitleDoc": "CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 3.1 (10 Lessons)",
+  "subtitleDoc": "CBE Phenomenon-Driven Lesson Sequence — Sub-Strand 2.1 (10 Lessons)",
   "col3Label": "Teacher Moves",
   "col5Label": "Formative Assessment Strategy"
 };
@@ -21,8 +21,8 @@ const META = {
 const UNIT = {
   "gradeLevel": "10",
   "subject": "Chemistry",
-  "strand": "Strand 3.0: Chemical Reactions and Mixtures",
-  "substrand": "Sub-Strand 3.1: Acids and Bases",
+  "strand": "Strand 2.0: Physical Chemistry",
+  "substrand": "Sub-Strand 2.1: Acids and Bases",
   "totalDuration": "2 single lessons × 40 minutes (Lessons 1 and 4) + 8 double lessons × 80 minutes (Lessons 2, 3, 5, 6, 7, 8, 9, 10) = 720 minutes total (18 periods of 40 minutes)",
   "content": "• Properties of acids and bases\n• Reactions of acids with metals, carbonates, hydrogen carbonates, metal oxides and hydroxides.\n• Indicators\n• Universal indicator and pH scale.\n• Weak and strong acids and bases; pH scale and electrical conductivity, (use aqueous solutions of; sulphuric (VI) acid, hydrochloric acid, ethanoic acid, sodium hydroxide, sodium carbonate and ammonia of the same concentration to illustrate)\n• Applications of acids and bases",
   "learningOutcomes": "By the end of the sub strand, the learner should be able to:\na) explain the characteristics of acids and bases in aqueous solutions\nb) describe the chemical properties of acids and bases\nc) investigate the strength of acids and bases using the acid-base indicator\nd) outline the uses of acids and bases in day to day life\ne) appreciate the uses of acids and bases in day to day activities",
@@ -43,7 +43,7 @@ const LESSONS = [
     "number": 1,
     "title": "Phenomenon: Why Do Lemon Juice, Vinegar, Baking Soda and Soap Behave So Differently?",
     "duration": "40 minutes (1 lesson)",
-    "substrand": "Sub-Strand 3.1: Acids and Bases",
+    "substrand": "Sub-Strand 2.1: Acids and Bases",
     "aresKeywords": "acid, base, alkali, pH, pH scale, neutral, sour, slippery, hypothesis, hyperacidity, antacid, Driving Question Board",
     "slo": {
       "purpose": "To launch the unit by confronting learners with the puzzling phenomenon that four similar-looking household products differ sharply in taste, feel, pH and safety, and to open the Driving Question Board (DQB).",
@@ -103,7 +103,7 @@ const LESSONS = [
     "number": 2,
     "title": "Sorting the Kitchen: Classifying Household Substances as Acids or Bases with Litmus and Red Cabbage",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 3.1: Acids and Bases",
+    "substrand": "Sub-Strand 2.1: Acids and Bases",
     "aresKeywords": "acid, base, alkali, indicator, litmus, red cabbage extract, classification, pH, neutral, hypothesis",
     "slo": {
       "purpose": "Learners classify lemon juice, vinegar, baking soda solution and bar soap solution as acids or bases using the colour changes of litmus and red cabbage extract, and use this evidence to check the hypotheses they made in Lesson 1.",
@@ -163,7 +163,7 @@ const LESSONS = [
     "number": 3,
     "title": "Natural and Laboratory Indicators: Building a Classification Table",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 3.1: Acids and Bases",
+    "substrand": "Sub-Strand 2.1: Acids and Bases",
     "aresKeywords": "indicator, natural indicator, laboratory indicator, universal indicator, red cabbage extract, litmus, phenolphthalein, pH, acid, base, neutral, classification table, hypothesis",
     "slo": {
       "purpose": "Learners compare natural and laboratory indicators using the four household products and water, and build a classification table (acid, neutral, base) that lets them check and revise their Lesson 1 hypotheses against the pH values.",
@@ -223,7 +223,7 @@ const LESSONS = [
     "number": 4,
     "title": "Why is Lemon Juice Sour? Acids Release H⁺ Ions in Water (Arrhenius Definition)",
     "duration": "40 minutes (one lesson)",
-    "substrand": "Sub-Strand 3.1: Acids and Bases",
+    "substrand": "Sub-Strand 2.1: Acids and Bases",
     "aresKeywords": "acid, Arrhenius definition, H+ (aq) ion, ionisation, pH, hydrogen ion concentration, sour taste, lemon juice, vinegar, ethanoic acid (acetic acid), citric acid, particle model",
     "slo": {
       "purpose": "To help learners use particle models and a simulation to show that acids release H+ (aq) ions when dissolved in water, and to use this idea to explain why lemon juice and vinegar are sour, have low pH and turn blue litmus red.",
@@ -283,7 +283,7 @@ const LESSONS = [
     "number": 5,
     "title": "Arrhenius Definition (Bases and Alkalis): Why Does Soap Feel Slippery?",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 3.1: Acids and Bases",
+    "substrand": "Sub-Strand 2.1: Acids and Bases",
     "aresKeywords": "base, alkali, hydroxide ion, OH- (aq), Arrhenius definition, slippery, pH, soap, baking soda, particle model",
     "slo": {
       "purpose": "Learners use evidence from the pH data, indicator results and soap's slippery feel to show that alkalis release OH- (aq) ions in water, to distinguish a base from an alkali, and to extend their particle model from H+ (aq) in acids to OH- (aq) in bases.",
@@ -343,7 +343,7 @@ const LESSONS = [
     "number": 6,
     "title": "Chemical Properties I: How Acids React with Metals and Carbonates",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 3.1: Acids and Bases",
+    "substrand": "Sub-Strand 2.1: Acids and Bases",
     "aresKeywords": "acid, metal, carbonate, hydrogen, carbon dioxide, limewater, squeaky pop, effervescence, magnesium, hydrochloric acid, vinegar, baking soda",
     "slo": {
       "purpose": "Learners investigate how acids react with a reactive metal and with carbonates, and use gas tests to identify the gases produced. This helps explain why vinegar fizzes with baking soda in the Kisumu kitchen and how the H+ (aq) ions in acids behave in chemical reactions.",
@@ -403,7 +403,7 @@ const LESSONS = [
     "number": 7,
     "title": "Chemical Properties II: Neutralisation and Antacids",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 3.1: Acids and Bases",
+    "substrand": "Sub-Strand 2.1: Acids and Bases",
     "aresKeywords": "neutralisation, salt, water, hyperacidity, antacid, magnesium hydroxide, hydrochloric acid, H+ (aq), OH- (aq), pH",
     "slo": {
       "purpose": "Learners investigate what happens when an acid meets a base, and use the evidence to explain how antacids relieve hyperacidity and why alkalinity determines the use of a substance.",
@@ -412,7 +412,7 @@ const LESSONS = [
       "attitudes": "Curiosity about how medicines work, care and responsibility when handling chemicals and medicines, respect for evidence, and cooperation in group work.",
       "keyInquiry": "What common household substances are acidic and/or basic in nature? (KICD Key Inquiry Question) Lesson focus: what happens when an acid meets a base, and how do antacids work?",
       "purposeInStoryline": "Lessons 4-6 gave us the H+ ion model for acids, the OH- ion model for alkalis (Lesson 5) and the reactions of acids with metals and carbonates (Lesson 6). Lesson 7 shows what happens when H+ meets OH-. This is the key evidence needed to answer the second part of the driving question: why patients with hyperacidity are given antacids. Lesson 8 will then ask how strength affects the pH change.",
-      "safetyNotes": "Wear goggles. Never taste any laboratory chemical or the tablets used in the investigation; the antacid tablet is used as a lab material only. Use only very dilute (0.1 M) hydrochloric acid and limewater/magnesium hydroxide suspension, handled by the teacher where possible. Wash spills with plenty of water. Wash hands after the practical. In real life, medicines are taken only as directed by a nurse or pharmacist."
+      "safetyNotes": "Wear goggles. Never taste any laboratory chemical or the tablets used in the investigation; the antacid tablet is used as a lab material only. Use only very dilute (0.1 M) hydrochloric acid and limewater/magnesium hydroxide suspension, handled by the teacher where possible. The copper(II) oxide and dilute sulphuric (VI) acid demonstration is done by the teacher only, with goggles, and the copper(II) sulphate solution is not tasted or poured down a drain in large amounts. Wash spills with plenty of water. Wash hands after the practical. In real life, medicines are taken only as directed by a nurse or pharmacist."
     },
     "overview": "Mwalimu Achieng at a school in Kisumu reminds learners of the four products from the pH graph: lemon juice (pH 2.0), vinegar (pH 2.8), baking soda solution (pH 8.3) and soap solution (pH 10.0), with water at 7.0. Learners now meet a new puzzle: after eating spicy nyama choma in Nairobi, a patient has hyperacidity and the pharmacist gives a magnesium hydroxide antacid. Learners predict what happens to the pH when a base is added to an acid. They then observe a neutralisation investigation using dilute hydrochloric acid (as a model of stomach acid), universal indicator and magnesium hydroxide / baking soda, and watch the colour move from red-orange towards green as the pH rises. They explain the change with H+ and OH- particles forming water, write the word equation for the reaction, and connect the stomach pH change (about 1.5 to 2 rising to about 3.5 to 5) to relief from hyperacidity. They then add to the Driving Question Board and revise their particle models.",
     "framework": [
@@ -425,8 +425,8 @@ const LESSONS = [
       },
       {
         "phase": "Observe Phase",
-        "learnerExperience": "In groups of 4, learners carry out a neutralisation investigation. Model stomach acid: 20 mL of 0.1 M hydrochloric acid in a beaker with 5 drops of universal indicator (red, pH about 1). Step 1: add magnesium hydroxide suspension (or a crushed antacid tablet) a little at a time with stirring. Learners record the colour after each addition: red, orange, yellow and finally green or blue-green as the pH rises. Step 2 (comparison): repeat with baking soda solution (pH 8.3) added to the acid, noting the fizzing as CO2 forms (Lesson 6) and the colour change. Step 3 (control): add the same volume of water to the acid and note that the colour changes very little. Learners record results in a table of added amount, colour and estimated pH, and then plot a simple graph of pH against amount of base added. Teacher also shows the data: stomach pH about 1.5 to 2 before antacid and about 3.5 to 5 after.",
-        "teacherMoves": "Before starting say: 'Goggles on. We do not taste anything in the lab.' Demonstrate how to add base slowly and stir. Circulate and ask each group: 'What colour is the indicator now, and what pH does the chart say?' and 'What is different between adding water and adding the base?' Give WAIT TIME of 10-15 seconds after each question. Stop the class after Step 3 and cold-call 3 groups to report the colour sequence. Ask Wanjiru's group to explain what the fizzing with baking soda tells us (carbon dioxide from a carbonate-type base, Lesson 6). Show the stomach pH data on the board: 'Before antacid pH 1.5-2; after antacid pH 3.5-5. Compare this with our beaker.' Ask: 'Did the pH go all the way to 14? Why might that matter for a real stomach?'",
+        "learnerExperience": "In groups of 4, learners carry out a neutralisation investigation. Model stomach acid: 20 mL of 0.1 M hydrochloric acid in a beaker with 5 drops of universal indicator (red, pH about 1). Step 1: add magnesium hydroxide suspension (or a crushed antacid tablet) a little at a time with stirring. Learners record the colour after each addition: red, orange, yellow and finally green or blue-green as the pH rises. Step 2 (comparison): repeat with baking soda solution (pH 8.3) added to the acid, noting the fizzing as CO2 forms (Lesson 6) and the colour change. Step 3 (control): add the same volume of water to the acid and note that the colour changes very little. Learners record results in a table of added amount, colour and estimated pH, and then plot a simple graph of pH against amount of base added. Teacher also shows the data: stomach pH about 1.5 to 2 before antacid and about 3.5 to 5 after. Teacher demonstration (about 5 minutes, after Step 3): the teacher warms about 10 mL of dilute (0.5 M) sulphuric (VI) acid gently in a water bath and adds a small amount of black copper(II) oxide powder, stirring. Learners observe that the black solid dissolves and the solution turns blue, then write the word equation: copper(II) oxide + sulphuric (VI) acid gives copper(II) sulphate + water. They note that a metal oxide reacts with an acid like a base: acid + metal oxide gives salt + water.",
+        "teacherMoves": "Before starting say: 'Goggles on. We do not taste anything in the lab.' Demonstrate how to add base slowly and stir. Circulate and ask each group: 'What colour is the indicator now, and what pH does the chart say?' and 'What is different between adding water and adding the base?' Give WAIT TIME of 10-15 seconds after each question. Stop the class after Step 3 and cold-call 3 groups to report the colour sequence. Ask Wanjiru's group to explain what the fizzing with baking soda tells us (carbon dioxide from a carbonate-type base, Lesson 6). Show the stomach pH data on the board: 'Before antacid pH 1.5-2; after antacid pH 3.5-5. Compare this with our beaker.' Then do the metal-oxide demonstration yourself (goggles on, no learner handles the copper compound): warm dilute sulphuric (VI) acid in a water bath, add a small spatula of black copper(II) oxide, stir, and ask: 'What do you see? What does the blue colour tell us has formed?' Keep it to about 5 minutes and wash all spills with plenty of water. Ask: 'Did the pH go all the way to 14? Why might that matter for a real stomach?'",
         "sensemakingStrategy": "Data table and graph analysis (pattern finding). Recording colour and pH after each addition lets learners see a pattern: the more base added, the higher the pH. Comparing with the water control shows that the change is caused by the base and not just dilution.",
         "formativeAssessment": "Check the data tables for accurate colour-to-pH matching using the universal indicator chart, a control comparison and a graph with labelled axes. Indicators of success: learners report that the pH rose from about 1 towards 7 as the base was added and that water alone changed it very little; learners identify the fizzing as CO2 with baking soda. Ask 3 learners to say what stayed the same and what changed. Note any group that misreads the colour chart and re-teach with the chart."
       },
@@ -463,7 +463,7 @@ const LESSONS = [
     "number": 8,
     "title": "Strength of Acids and Bases and the pH Scale",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 3.1: Acids and Bases",
+    "substrand": "Sub-Strand 2.1: Acids and Bases",
     "aresKeywords": "strong acid, weak acid, strong base, weak base, degree of ionisation, pH scale, universal indicator, concentration, H+ (aq), OH- (aq), hyperacidity, antacid",
     "slo": {
       "purpose": "To help learners use universal indicator and the pH scale to compare strong and weak acids and bases, and to explain that strength depends on how much a substance ionises in water, which is different from how much is dissolved (concentration).",
@@ -523,7 +523,7 @@ const LESSONS = [
     "number": 9,
     "title": "Uses of Acids and Bases and Safety: Why Vinegar Pickles, Soap Cleans, Lime Heals Soil and Antacids Soothe",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 3.1: Acids and Bases",
+    "substrand": "Sub-Strand 2.1: Acids and Bases",
     "aresKeywords": "uses of acids, uses of bases, food preservation, pickling, cleaning, lime, acidic soil, antacid, hyperacidity, neutralisation, safety precautions, pH",
     "slo": {
       "purpose": "Learners evaluate how the chemical properties of acids and bases (pH, H+ (aq) or OH- (aq) ions, reactions and strength) lead to their uses in food preservation, cleaning, baking, farming and medicine, and decide which safety precautions each use requires. This advances the driving question: Does the alkalinity of a substance determine its uses in day to day life?",
@@ -534,7 +534,7 @@ const LESSONS = [
       "purposeInStoryline": "Lessons 1-8 gave learners the classification of the four products (litmus, red cabbage, universal indicator), the Arrhenius ideas of H+ (aq) and OH- (aq), reactions of acids with metals and carbonates, neutralisation and antacids, and strength versus concentration. Lesson 9 asks the 'so what?' question: do these properties actually decide how each product is used, and what precautions follow? It collects the use-evidence learners need for Lesson 10, where they will write the final evidence-based claim answering the driving question.",
       "safetyNotes": "Never taste any laboratory chemical or any household product used in the activity; the sour/slippery observations from Lesson 1 are discussed from the teacher's earlier demonstration only. Wear goggles and keep hands away from the eyes. Use only dilute, household-strength materials (vinegar, lemon juice, baking soda solution, soap solution, small amounts of garden lime in a closed bag). Lime (calcium hydroxide/calcium oxide) irritates skin and eyes: the teacher handles it and learners use only the pH data cards. Keep soap, lime and antacid tablets away from young children. Never mix household cleaners. Wash hands after the lesson and clean spills with plenty of water."
     },
-    "overview": "Mrs Achieng returns to the four products on display in the Kisumu classroom: lemon juice (pH 2.0), vinegar (pH 2.8), baking soda solution (pH 8.3) and soap solution (pH 10.0), with water (pH 7.0) as the reference line. Learners already know which are acids and which are bases, and why. Now they ask: do these properties decide how each product is used? In a Predict phase, learners guess which product would be best for five jobs: preserving kachumbari onions, cleaning greasy sufuria, raising mandazi, fixing acidic soil and relieving hyperacidity. Timing guide for the 80 minutes: Predict 8, Observe 28 (four 6-minute stations plus moving), Explain 20, Driving Question Board 7, Model Building 15. In the Observe phase they rotate through four evidence stations (Mama mboga's pickling, soap cleaning, Mr Kamau's lime in Kericho, and the nurse/pharmacist in Nairobi giving antacids after spicy nyama choma) and record data in a use-property-safety table. In the Explain phase they build claim-evidence-reasoning statements linking property to use and then evaluate safety precautions, including why soap is harmful if swallowed even though it is useful. They add new questions and answers to the DQB, and revise their particle model of H+ and OH- ions to show what each ion does in the use (for example OH- (aq) from lime reacting with H+ (aq) in soil). Lesson 10 will then bring everything together into the final answer.",
+    "overview": "Mrs Achieng returns to the four products on display in the Kisumu classroom: lemon juice (pH 2.0), vinegar (pH 2.8), baking soda solution (pH 8.3) and soap solution (pH 10.0), with water (pH 7.0) as the reference line. Learners already know which are acids and which are bases, and why. Now they ask: do these properties decide how each product is used? In a Predict phase, learners guess which product would be best for five jobs: preserving kachumbari onions, cleaning greasy sufuria, raising mandazi, fixing acidic soil and relieving hyperacidity. Timing guide for the 80 minutes: Predict 8, Observe 28 (four 6-minute stations plus moving), Explain 20, Driving Question Board 7, Model Building 17. In the Observe phase they rotate through four evidence stations (Mama mboga's pickling, soap cleaning, Mr Kamau's lime in Kericho, and the nurse/pharmacist in Nairobi giving antacids after spicy nyama choma) and record data in a use-property-safety table. In the Explain phase they build claim-evidence-reasoning statements linking property to use and then evaluate safety precautions, including why soap is harmful if swallowed even though it is useful. They add new questions and answers to the DQB, and revise their particle model of H+ and OH- ions to show what each ion does in the use (for example OH- (aq) from lime reacting with H+ (aq) in soil). Lesson 10 will then bring everything together into the final answer.",
     "framework": [
       {
         "phase": "Predict Phase",
@@ -583,7 +583,7 @@ const LESSONS = [
     "number": 10,
     "title": "Consolidation: Answering the Driving Question – Alkalinity, Uses and Antacids",
     "duration": "80 minutes (2 x 40-minute periods)",
-    "substrand": "Sub-Strand 3.1: Acids and Bases",
+    "substrand": "Sub-Strand 2.1: Acids and Bases",
     "aresKeywords": "claim, evidence, reasoning, final explanation, alkalinity, pH, H+ (aq), OH- (aq), neutralisation, antacid, hyperacidity, strength, lime, Driving Question Board, final model",
     "slo": {
       "purpose": "To consolidate the whole unit by constructing an evidence-based final explanation that answers the driving question: does the alkalinity of a substance determine its uses in day to day life, and why are patients with hyperacidity given antacid medications?",
@@ -642,7 +642,7 @@ const LESSONS = [
 ];
 
 const FINAL_EXPLANATION = {
-  "subjectLabel": "Chemistry Grade 10: Acids and Bases (Sub-strand 3.1)",
+  "subjectLabel": "Chemistry Grade 10: Acids and Bases (Sub-strand 2.1)",
   "instructions": "In this Final Explanation you answer the driving question: Does the alkalinity of a substance determine its uses in day to day life? Why are patients with hyperacidity issues given antacid medications? Use the evidence you collected in Lessons 1 to 10 and your final particle model (H+ (aq) and OH- (aq) ions). Write in full sentences in the space under each prompt. In every answer, give a claim, evidence (use numbers and observations) and reasoning (use particles and ions). Use the pH data below. Refer to the Kisumu products, Mr Kamau in Kericho and the pharmacist in Nairobi where you can.\n\nData table (pH measured with a pH meter at 25 °C):\n\n| Substance | pH |\n|---|---|\n| Lemon juice (Kisumu market) | 2.0 |\n| Vinegar (5% ethanoic acid) | 2.8 |\n| Pure water | 7.0 |\n| Baking soda solution (as used for mandazi) | 8.3 |\n| Bar soap solution | 10.0 |",
   "sections": [
     {
@@ -662,8 +662,8 @@ const FINAL_EXPLANATION = {
     },
     {
       "title": "Part 4: Strength, safety and uses",
-      "prompt": "Otieno asked: if both are acids, why is lemon juice lower on the graph than vinegar? Use the data for 0.1 M hydrochloric acid (pH 1), 0.1 M ethanoic acid (pH 3), 0.1 M sodium hydroxide (pH 13) and 0.1 M ammonia solution (pH 11) to explain the difference between strength and concentration. Then explain why a mild, only slightly soluble base such as magnesium hydroxide is a safer antacid than a strong base, and why soap is useful for cleaning but harmful if swallowed.",
-      "exemplar": "Claim: Strength depends on how much an acid or base ionises, not on how much is dissolved, and strength affects safety and uses. Evidence: At the same concentration of 0.1 M, hydrochloric acid has pH 1 but ethanoic acid has pH 3, and sodium hydroxide has pH 13 but ammonia has pH 11. Reasoning: Hydrochloric acid and sodium hydroxide are strong because they ionise almost completely, giving many H+ (aq) or OH- (aq) ions. Ethanoic acid and ammonia are weak because they ionise only partly, giving fewer ions even though the same amount is dissolved. Concentration is how much is dissolved; strength is how much ionises. A strong base would add a lot of OH- (aq) and could be harmful in the body, so a mild base that dissolves only slightly, such as magnesium hydroxide, is a safer antacid (only a little dissolves, so the pH stays near 10). Soap (pH 10.0) has OH- (aq) that helps remove grease, which makes it useful for cleaning, but the same alkalinity is harmful if swallowed, so it needs safety precautions. In the laboratory we never taste chemicals and we wear goggles."
+      "prompt": "Otieno asked: if both are acids, why is lemon juice lower on the graph than vinegar? Use the data for 0.1 M hydrochloric acid (pH 1), 0.1 M ethanoic acid (pH 3), 0.1 M sodium hydroxide (pH 13) and 0.1 M ammonia solution (pH 11) to explain the difference between strength and concentration. Then explain why magnesium hydroxide is a safer antacid than a strong base such as sodium hydroxide, and why soap is useful for cleaning but harmful if swallowed.",
+      "exemplar": "Claim: Strength depends on how much an acid or base ionises, not on how much is dissolved, and strength affects safety and uses. Evidence: At the same concentration of 0.1 M, hydrochloric acid has pH 1 but ethanoic acid has pH 3, and sodium hydroxide has pH 13 but ammonia has pH 11. Reasoning: Hydrochloric acid and sodium hydroxide are strong because they ionise almost completely, giving many H+ (aq) or OH- (aq) ions. Ethanoic acid and ammonia are weak because they ionise only partly, giving fewer ions even though the same amount is dissolved. Concentration is how much is dissolved; strength is how much ionises. A strong base would add a lot of OH- (aq) and could be harmful in the body, so a mild base that dissolves only slightly, such as magnesium hydroxide, is a safer antacid (only a little dissolves, so few OH- (aq) ions are free and it raises the stomach pH only to about 3.5 to 5). Soap (pH 10.0) has OH- (aq) that helps remove grease, which makes it useful for cleaning, but the same alkalinity is harmful if swallowed, so it needs safety precautions. In the laboratory we never taste chemicals and we wear goggles."
     },
     {
       "title": "Part 5: Answering the driving question",
@@ -676,37 +676,42 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim answers the driving question",
       "excellent": "Exceeds Expectations: Gives a clear claim that alkalinity, with strength and safety, largely determines uses, and states why antacids are given for hyperacidity.",
       "proficient": "Meets Expectations: Gives a correct claim about uses and why antacids are given, but leaves out strength or safety.",
-      "developing": "Approaches Expectations: Claim is partly correct, unclear or does not address both parts of the question."
+      "developing": "Approaches Expectations: Claim is partly correct, unclear or does not address both parts of the question.",
+      "belowExpectations": "Below Expectations: Gives no claim, or a claim that is incorrect and does not address the driving question."
     },
     {
       "criterion": "Use of evidence and data",
       "excellent": "Exceeds Expectations: Uses exact pH values, concentrations, indicator colours, reaction tests and stomach/soil pH changes correctly in every part.",
       "proficient": "Meets Expectations: Uses most data correctly, with one or two missing or small errors.",
-      "developing": "Approaches Expectations: Uses little data, or data is incorrect or not linked to the claim."
+      "developing": "Approaches Expectations: Uses little data, or data is incorrect or not linked to the claim.",
+      "belowExpectations": "Below Expectations: Uses no data, or uses data that is incorrect and not linked to any claim."
     },
     {
       "criterion": "Particle-level reasoning",
       "excellent": "Exceeds Expectations: Explains using H+ (aq) and OH- (aq), the Arrhenius definitions, the 10-fold pH change and H+ (aq) + OH- (aq) gives H2O (l) accurately.",
       "proficient": "Meets Expectations: Mentions H+ and OH- ions correctly but explanations are incomplete.",
-      "developing": "Approaches Expectations: Uses ions only partly or confuses acids and bases."
+      "developing": "Approaches Expectations: Uses ions only partly or confuses acids and bases.",
+      "belowExpectations": "Below Expectations: Does not use ions in the explanation, or confuses acids and bases throughout."
     },
     {
       "criterion": "Strength, concentration and safety",
       "excellent": "Exceeds Expectations: Clearly separates strength from concentration using the HCl, ethanoic acid, NaOH and ammonia data, and links this to safe antacid and soap use.",
       "proficient": "Meets Expectations: Describes strength correctly but does not link to safety clearly.",
-      "developing": "Approaches Expectations: Sometimes confuses strength with concentration or omits safety."
+      "developing": "Approaches Expectations: Sometimes confuses strength with concentration or omits safety.",
+      "belowExpectations": "Below Expectations: Treats strength and concentration as the same, and says nothing about safety."
     },
     {
       "criterion": "Kenyan context and communication",
       "excellent": "Exceeds Expectations: Links to Kisumu products, Kericho lime and the Nairobi pharmacist; uses correct terms in clear, organised sentences.",
       "proficient": "Meets Expectations: Uses some contexts and mostly correct terms.",
-      "developing": "Approaches Expectations: Little context; terms are sometimes misused or writing is hard to follow."
+      "developing": "Approaches Expectations: Little context; terms are sometimes misused or writing is hard to follow.",
+      "belowExpectations": "Below Expectations: Gives no Kenyan context, uses terms incorrectly, and the writing is hard to follow."
     }
   ]
 };
 
 const SUMMARY_TABLE = {
-  "subStrand": "Sub-Strand 3.1: Acids and Bases",
+  "subStrand": "Sub-Strand 2.1: Acids and Bases",
   "drivingQuestion": "DRIVING QUESTION: Does the alkalinity of a substance determine its uses in day to day life? Why are patients with hyperacidity issues given antacid medications?",
   "lessons": [
     {
@@ -782,6 +787,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -676,31 +676,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Scientific accuracy",
       "excellent": "All terms (germination, emergence, dormancy, viable, primary growth, hypogeal, epigeal, hormones) are used correctly, with no errors, and the maize/bean differences are right.",
       "proficient": "Most terms and ideas are correct, with one or two small errors that do not change the meaning.",
-      "developing": "Several ideas are wrong or terms are mixed up, for example confusing germination with emergence or saying maize makes wood."
+      "developing": "Several ideas are wrong or terms are mixed up, for example confusing germination with emergence or saying maize makes wood.",
+      "belowExpectations": "Below Expectations: Most terms are mixed up or wrong (for example germination with emergence), and the maize and bean differences are not correct."
     },
     {
       "criterion": "Use of evidence",
       "excellent": "Uses exact data from Mr. Wafula's farm in every section, such as 88 and 80 germinated, 8 dormant beans with 7 germinating, the jar results, heights and branches.",
       "proficient": "Uses some data from the unit, but misses a part or quotes a number loosely.",
-      "developing": "Gives few or no numbers from the unit, or the numbers do not match the data."
+      "developing": "Gives few or no numbers from the unit, or the numbers do not match the data.",
+      "belowExpectations": "Below Expectations: Gives no numbers from the unit, or numbers that do not match the data."
     },
     {
       "criterion": "Reasoning",
       "excellent": "Clearly links each piece of evidence to a biological idea, explaining why it supports the claim, such as water and enzymes, oxygen and respiration, and auxin and lateral buds.",
       "proficient": "Links most evidence to ideas, but some links are brief or incomplete.",
-      "developing": "Lists facts without explaining how they support the claim."
+      "developing": "Lists facts without explaining how they support the claim.",
+      "belowExpectations": "Below Expectations: States facts or a claim with no link to a biological idea that explains it."
     },
     {
       "criterion": "Connection to the driving question and model revision",
       "excellent": "Gives a complete answer to the driving question covering seed structure, seed condition, environment and hormones, and says two clear changes from the Day 1 model.",
       "proficient": "Answers the driving question with most causes and gives at least one change from the Day 1 model.",
-      "developing": "The answer covers only one cause or does not say how the model changed."
+      "developing": "The answer covers only one cause or does not say how the model changed.",
+      "belowExpectations": "Below Expectations: Does not answer the driving question, or names no cause of germination or growth and no change from the Day 1 model."
     },
     {
       "criterion": "Clarity of communication",
       "excellent": "Well organised Claim, Evidence and Reasoning in clear sentences, with data read correctly from the tables.",
       "proficient": "Mostly clear and organised, with a few unclear sentences.",
-      "developing": "Hard to follow, with the Claim, Evidence or Reasoning missing."
+      "developing": "Hard to follow, with the Claim, Evidence or Reasoning missing.",
+      "belowExpectations": "Below Expectations: Very hard to follow, with the Claim, Evidence and Reasoning missing and data not read from the tables."
     }
   ]
 };
@@ -782,6 +787,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

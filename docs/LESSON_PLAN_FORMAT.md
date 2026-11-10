@@ -76,7 +76,7 @@ Student assessment document. Landscape US Letter.
 - 4–5 content sections, each with:
   - Section prompt (what to explain)
   - Exemplar answer (model response with Kenyan contexts)
-- Assessment rubric (4 criteria × 3 levels: Excellent/Proficient/Developing)
+- Assessment rubric (4 criteria × 4 levels: Exceeds/Meets/Approaches/Below Expectations (contract revision R1, 2026-11-09))
 
 ---
 

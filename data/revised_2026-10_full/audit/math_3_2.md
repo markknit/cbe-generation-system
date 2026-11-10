@@ -1,10 +1,10 @@
 # Known audit items: math_3_2
 
 ## Lesson-sequence items (teacher review list)
-- none
+- **[structural]** L4 uses 'the Lesson 1 dice-rolling experiment results'; L1 only had a coin-toss experiment — No lesson in the module runs a two-dice rolling experiment (L1 coins, L3 dice grid only), so there is no lesson to repoint the reference to; L4 Task 1 needs rewording or a dice experiment added.
 
 ## Final Explanation reviewer findings (unverified; some are false alarms)
-- **Section 3(a) prompt**: The prompt tells the learner that the first two bisectors (PP' and QQ') can be compared and then asks for a third, which gives away the answer. It also asks 'Can you find the centre from these two?', and the exemplar answers that question directly. This leaks the key insight that two coinciding bisectors are not enough.
+- none
 
 ## Other
 - none
