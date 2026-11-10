@@ -74,7 +74,12 @@ def triage_module(g, m, a):
     mod = fc.load(REV / "modules" / f"{m}_data.js")
     hay = fc.norm(" ".join(fc.strings(fc.strip(mod["LESSONS"]))))
     base = baseline_text(m)
-    items = [x for x in src.get("for_teachers", []) if fc.norm(x["quote_a"])[:60] in hay]   # skip items already gone
+    done = OUT / f"_round1_{m}.json"
+    seen = set()
+    for fz in [OUT / f"{m}.json", *OUT.glob(f"_*{m}.json")]:
+        if fz.exists():
+            seen |= {fc.norm(r["item"]["quote_a"])[:60] for r in json.loads(fz.read_text()).get("items", [])}
+    items = [x for x in src.get("for_teachers", []) if fc.norm(x["quote_a"])[:60] in hay and fc.norm(x["quote_a"])[:60] not in seen]   # skip items already gone or already triaged
     if not items:
         return {"module": m, "status": "NOTHING", "items": []}
     if g._estimate_cost() > a.max_spend:
@@ -177,8 +182,10 @@ def main():
         mods = [m for m in mods if m in a.only.split(",")]
     import generate_substrand as g
     OUT.mkdir(exist_ok=True)
-    if not a.dry_run:      # never apply the same module twice
-        mods = [m for m in mods if not (OUT / f"{m}.json").exists() or json.loads((OUT / f"{m}.json").read_text()).get("status") != "ok" or not json.loads((OUT / f"{m}.json").read_text()).get("applied")]
+    for m in mods:         # keep earlier results; only items not triaged before are processed now
+        f1 = OUT / f"{m}.json"
+        if f1.exists() and not a.dry_run:
+            f1.rename(OUT / f"_prev{len(list(OUT.glob(f'_*{m}.json')))}_{m}.json")
     tally = {"WHITE": 0, "YELLOW": 0, "ORANGE": 0}
     with ThreadPoolExecutor(max_workers=a.workers) as ex:
         futs = {ex.submit(triage_module, g, m, a): m for m in mods}
