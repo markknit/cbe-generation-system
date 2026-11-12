@@ -44,6 +44,11 @@ from a fetched copy rather than the file on disk (for example
 
 ## 3. Update the Active Threads table
 
+- When recording a commit or push, reconcile every affected active row and
+  current handoff headline with the actual git state, including counts and
+  completed options. Keep historical session entries as snapshots and point
+  readers to the latest correction; do not leave old headlines as current.
+
 - **Done** only when verified. Write the evidence, not "should be done":
   the command that confirmed it, the commit hash, the count it produced.
   Never record something as done, built, committed, or tested unless you

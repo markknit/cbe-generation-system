@@ -1,5 +1,7 @@
 # Round 2 handoff: applying teacher journal decisions (written 2026-11-09)
 
+> **Current-state correction, 2026-11-12:** The ledger and session notes below are historical snapshots; later decisions and results in `STATUS.md` supersede their unresolved rubric, numbering, lesson-split and commit statements. Round 2 workspace updates and the review package were committed in `77837f7c` and are on `origin/main`. `Finished.zip` and the extracted returned journals were included in that commit. Promotion and teacher sign-off remain open; Drive state has not been verified here. The latest recorded open-item count is 67 (Bio 16, Chem 8, Maths 20, Physics 23). See the latest `STATUS.md` session entries before acting.
+
 ## RELABEL 2026-11-09 (Mark) — READ FIRST: module ids changed
 - **Maths:** the journal labelled "Core Mathematics" (ids `coremath_*`) was really the main **Mathematics** journal. The 14 edited `coremath_*` modules are now **`math_*`** (subject "Mathematics", folder `v2/Maths/SSx_Name`, prefix `Mathematics_Name`). The previous `math_*` modules and their renders are in `backup_alternates/math_original/`. **There is no Core Mathematics work in this workspace and no Core Mathematics journal**: the real Core Mathematics (`coremath_*`) starts later, from scratch, with no teacher reviews to use. Everything below that says `coremath_*` now means `math_*`.
 - **Bio:** the teacher-template sequence filed as Biology 1.1 (content = KICD 1.3 'Cell Structure and Specialisation') is now **`bio_1_3`**; the generated 'Cell Biology' module that was `bio_1_3` is in `backup_alternates/bio_1_3_generated/`. `bio_1_1` is unused (KICD 1.1 Introduction to Biology is not built). New `bio_1_3` has the KICD four-level rubric row (`bio_1_3-r2-kicd-001`) and a re-review flag (`bio_1_3-r2-flag-002`).
@@ -12,12 +14,12 @@
 - Promotion note (not done): at promotion `generators/data` `math_*` and `bio_1_3` are replaced; `generators/data` `coremath_*` (the original generated Core Maths, same content as the new Maths baseline) and `bio_1_1` (the old teacher-template copy) must be archived first so the real Core Maths and KICD 1.1 can be built later.
 
 
-**Read this, then `STATUS.md` Active Threads, then run `/restart`.** Rigor Level 3 (partner contract, validators, pause-and-report). Nothing here is committed, pushed, promoted to `generators/data`, or synced to Drive. Everything below is in the *revised workspace* `data/revised_2026-10_full/` only (set `export CBE_REVISED_DIR=$PWD/data/revised_2026-10_full`).
+**Read this, then `STATUS.md` Active Threads, then run `/restart`.** Rigor Level 3 (partner contract, validators, pause-and-report). The revised workspace has not been promoted to `generators/data` (set `export CBE_REVISED_DIR=$PWD/data/revised_2026-10_full`). See the current-state correction above for commit and sync status.
 
 ## What this task is
 Mark's request: teachers reviewed the Round 1 revision journals (Biology, Chemistry, Physics, Core Mathematics; Grade 10). Use their responses to change the lesson plans and regenerate the final documents in the same format as before. Marking convention: white/unmarked items = accepted; orange/yellow items marked Accept or Edit; Edit text typed in the same cell; where boxes could not be ticked, red highlight = accepted, red label text = edit.
 
-Source files: `Finished.zip` (repo root, untracked, do NOT commit; teacher documents). Files: `Journal_Biology.docx`, `Journal_Chemistry.docx` (the later one), `Journal_Core_Mathematics.docx`, `Flagged_Items_Physics.docx` (Physics source = flagged items only; non-flagged Physics items count as accepted, per Mark).
+Source files: `Finished.zip` (repo root; committed in `77837f7c`, teacher documents). Files: `Journal_Biology.docx`, `Journal_Chemistry.docx` (the later one), `Journal_Core_Mathematics.docx`, `Flagged_Items_Physics.docx` (Physics source = flagged items only; non-flagged Physics items count as accepted, per Mark).
 
 ## Decisions already made by Mark (binding)
 - Autonomy: fix and report at the end for same-kind issues; new-kind scope/cost/risk, pushes, first API spend still need confirmation (CLAUDE.md).
@@ -103,7 +105,7 @@ R = four-level rubric deferred (every module has one).
 - **schemaVersion bump to 1.1.0 everywhere + 4 levels on `main`:** done; see `CONTRACT_CHANGELOG.md` ('schemaVersion 1.0.0 -> 1.1.0: where and why').
 - **Grade 11:** HOLD (Mark). The Grade 11 Biology data modules have four levels and version 1.1.0, but their docx/PDF/JSON outputs are NOT regenerated.
 
-## Cross-cutting open decisions (for Mark)
+## Historical cross-cutting decisions (see current-state correction above)
 1. **Rubric:** wait for the partner (4th level). Several teachers also ask for KICD rubric TABLES by sub-strand (criteria + 4 levels); the tables are in the Mathematics PDF.
 2. **KICD numbering/names ("Align to KICD"):** Round 2 changed text inside UNIT/lesson `substrand`/FE `subjectLabel` only. `revise_apply` cannot edit `META` (substrand_id, substrand_name, titleDoc, subtitleDoc, outputDir, filePrefix), so documents are mixed (e.g. bio_1_1 headers say 1.3, title says 1.1). Choose: (a) rename META + folders + files (touches partner contract keys, Drive links, index), or (b) edit only `META.subtitleDoc`/Summary label and keep ids and paths (teachers said "retain internal identifiers"). `SUMMARY_TABLE.subStrand` was also not re-derived in several modules.
 3. **Lesson counts vs KICD** (bio_1_2 6 vs 24, bio_2_2 8 vs 22, chem_1_3 10 vs 30, chem_1_5 12 vs 34, etc.): all kept; teachers mostly confirm they are condensed units. Decide whether any should be expanded (large new content).
@@ -112,8 +114,8 @@ R = four-level rubric deferred (every module has one).
 6. **Human verification tasks:** PhET controls (phys_3_3, phys_4_1), ARES offline modules (phys_3_1, bio_1_1 card set 10), Kiswahili terms (all subjects), tariff, photo sources, matcher picks (chem_1_3).
 7. **Missing journals:** General Science, Essential Mathematics, and Core Mathematics (none will exist for Core Mathematics); non-flagged Physics items. Mathematics (`math_*`) is DONE, its journal was the one mislabelled 'Core Mathematics'.
 
-## Next steps (in order)
-1. `/restart`. Check `git status` (all Round 2 work is uncommitted in `data/revised_2026-10_full/` plus `scripts/round2/`).
+## Historical next steps (superseded where later STATUS.md entries record completion)
+1. `/restart`. Check `git status` and the current `STATUS.md` entries.
 2. ~~Finish the 4 interrupted Core Maths modules~~ DONE session 2 (2026-11-09). Remaining 80-minute modules `coremath_2_6` (L5-L8) and `coremath_3_1` wait for Mark's lesson-split decision.
 3. Corpus validator PASS 2026-11-09 (85 / 728). Still to do: `python3 scripts/revise_build.py --all` and `python3 scripts/revise_build.py --all` (read REVIEWER_BRIEF.md for the journal/index rebuild: `build_revision_journal.js`).
 4. Ask Mark the cross-cutting decisions above (1, 2, 4 first).
