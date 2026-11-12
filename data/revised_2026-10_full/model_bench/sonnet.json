@@ -1,0 +1,419 @@
+{
+ "model": "claude-sonnet-5-5",
+ "total_cost": 1.111,
+ "results": [
+  {
+   "module": "math_1_2",
+   "task": "fe",
+   "label": "FE rounding vs lesson",
+   "reverted": [
+    "math_1_2-r2-vfix-001",
+    "math_1_2-r2-vfix-002"
+   ],
+   "cost": 0.158,
+   "secs": 6,
+   "n_issues": 2,
+   "issues": [
+    {
+     "type": "ARITHMETIC",
+     "where": "Part 5 exemplar (a), amount owed",
+     "fe_quote": "Amount owed ≈ 50,000 × 1.695 = 84,750, which is about Ksh 85,000 to the nearest thousand shillings (the exact value is about Ksh 84,800)",
+     "problem": "The FE's value of 84,750 rounds to Ksh 85,000, but the lesson gives Ksh 84,800 to the nearest hundred and an exact value of Ksh 84,794. To the nearest thousand this is Ksh 85,000, so the rounding is correct. This is not a defect.",
+     "suggested_fix": "",
+     "calc_expr": "50000*1.045**12",
+     "calc_stated": "84800"
+    },
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "where": "Part 1 exemplar (c)",
+     "fe_quote": "Using the negative index rule a⁻ⁿ = 1/aⁿ, this is 2⁻¹⁰.",
+     "lesson_quote": "Do not link reciprocals to negative exponents today; that comes in Lesson 3.",
+     "problem": "Lesson 3 does teach negative indices, so the FE is allowed to use them. However, Lesson 1 only has learners find 1/2¹⁰ as a reciprocal, so there is no real conflict. This is not a defect.",
+     "suggested_fix": ""
+    }
+   ]
+  },
+  {
+   "module": "bio_3_2",
+   "task": "lesson",
+   "label": "open circulation 'oxygen-carrying fluid'",
+   "reverted": [
+    "bio_3_2-r2-vfix-001"
+   ],
+   "cost": 0.221,
+   "secs": 12,
+   "n_issues": 9,
+   "issues": [
+    {
+     "type": "ARITHMETIC",
+     "where": "Lesson 1, framework Predict Phase learnerExperience vs Lesson 1 anchoring phenomenon",
+     "quote_a": "Curve B is labelled 'Average healthy teenager after jogging 400 m' and shows heart rate dropping from 165 bpm to 88 bpm over 15 minutes.",
+     "quote_b": "His heart rate was still at 90 bpm fifteen minutes later.",
+     "problem": "Lesson 1 gives two different values for the student's heart rate at 15 minutes (88 bpm on the curve vs 90 bpm in the narrative).",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 4, Observe Phase learnerExperience",
+     "quote_a": "Because blood passes through TWO sets of capillaries (gills then body) before returning to the heart, pressure drops significantly",
+     "quote_b": "two-chambered heart (sinus venosus, atrium, ventricle, bulbus arteriosus — labelled)",
+     "problem": "The Lesson 4 diagram lists four structures including sinus venosus and bulbus arteriosus, but the lesson says the heart is 'two-chambered'. This is a standard simplification, so it is not clearly an error. A more serious problem is the claim that the tilapia diagram shows 'ventral aorta' blood being oxygenated before the dorsal aorta, which is correct. No definite error here.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "ARITHMETIC",
+     "where": "Lesson 2, Explain Phase teacherMoves",
+     "quote_a": "at about 2 minutes 52 seconds per kilometre (2 hours 1 minute for 42.2 km)",
+     "quote_b": "",
+     "problem": "2:52 per km over 42.2 km gives about 2:01:08, so 2 hours 1 minute is consistent. Not an error.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "IMPOSSIBLE_FIGURE",
+     "where": "Lesson 12, summaryTablePrompt explained",
+     "quote_a": "capable of delivering 20+ litres of oxygenated blood per minute under race conditions",
+     "quote_b": "",
+     "problem": "The figure is not impossible. Elite athletes' cardiac output reaches 30-40 L/min. Not an error.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "where": "Lesson 5, Predict Phase and Explain/DQB phases",
+     "quote_a": "Some of them — you will answer by Lesson 9.",
+     "quote_b": "",
+     "problem": "Lesson 9 covers the immune system and clotting, not heart or circulation questions. The DQB wonder-questions at Lesson 5 concern heart structure, answered in Lessons 6 and 7. Low confidence.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "where": "Lesson 1, DQB Creation teacherMoves",
+     "quote_a": "This question — why does the grasshopper not have a pump like ours — we will answer in Lesson 3. This one — what makes Kipchoge's heart so efficient — we will answer in Lesson 7. This one — can a person survive with a hole in their heart — that is a question that connects to Lesson 6.",
+     "quote_b": "",
+     "problem": "Lesson 6 is the heart dissection with fully separated chambers; a hole in the heart connects better to Lesson 5 (partial septum), but this is a mild mapping and not clearly wrong.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 3, Observe Phase and purposeInStoryline vs Lesson 3 overview",
+     "quote_a": "they discover it has NO heart in the Kipchoge sense",
+     "quote_b": "the dorsal vessel acts as a simple pulsatile pump",
+     "problem": "The lesson itself describes a tube-like pump, so this is just phrasing. Not a real contradiction.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "ARITHMETIC",
+     "where": "Lesson 7, Explain Phase learnerExperience",
+     "quote_a": "Atrial Systole (0.1 s) → Ventricular Systole (0.3 s) → Diastole (0.4 s) = 0.8 s per beat = 75 BPM at rest.",
+     "quote_b": "",
+     "problem": "0.1+0.3+0.4 = 0.8 s and 60/0.8 = 75 BPM, so this is consistent. Not an error.",
+     "correct_value": "",
+     "calc_expr": "60/0.8",
+     "calc_stated": "75"
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 7, Explain Phase and summaryTablePrompt",
+     "quote_a": "the first sound — lub — is the closing of the bicuspid and tricuspid valves at the START of ventricular systole",
+     "quote_b": "",
+     "problem": "This is standard textbook content and is correct. Not an error.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    }
+   ]
+  },
+  {
+   "module": "phys_1_3",
+   "task": "fe",
+   "label": "FE <4C rise vs lesson",
+   "reverted": [
+    "phys_1_3-r2-fe-auto-002",
+    "phys_1_3-r2-fe-auto-003"
+   ],
+   "cost": 0.127,
+   "secs": 3,
+   "n_issues": 1,
+   "issues": [
+    {
+     "type": "SCIENCE",
+     "where": "Section 1(c) exemplar / Section 2(d) exemplar",
+     "fe_quote": "As the freezer cooled the water to 0 °C, it froze and its volume increased.",
+     "problem": "Minor; consistent with lessons. No defect.",
+     "suggested_fix": ""
+    }
+   ]
+  },
+  {
+   "module": "chem_1_5",
+   "task": "fe",
+   "label": "FE 'more electron shells' cause",
+   "reverted": [
+    "chem_1_5-r2-vfix-001"
+   ],
+   "cost": 0.144,
+   "secs": 4,
+   "n_issues": 1,
+   "issues": [
+    {
+     "type": "ARITHMETIC",
+     "where": "Part 4(a) exemplar",
+     "fe_quote": "is about three times larger than sodium's (496 kJ/mol), since 3 × 496 = 1488, and 1521 is slightly more than that.",
+     "problem": "The arithmetic is correct (3×496=1488), so this is not a defect. The question 'how many times larger' is answered correctly as about 3.",
+     "suggested_fix": "",
+     "calc_expr": "1521/496",
+     "calc_stated": "3"
+    }
+   ]
+  },
+  {
+   "module": "phys_3_1",
+   "task": "lesson",
+   "label": "decay chain parenthetical",
+   "reverted": [
+    "phys_3_1-r2-vfix-001"
+   ],
+   "cost": 0.158,
+   "secs": 8,
+   "n_issues": 5,
+   "issues": [
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 7, Observe Phase learnerExperience (Station 4)",
+     "quote_a": "the Homo habilis fossil discovered at Koobi Fora, Lake Turkana, Kenya",
+     "quote_b": "",
+     "problem": "Homo habilis is not a Koobi Fora Lake Turkana discovery in the 1.8 Ma sense claimed here; teacherMoves cite a 1.8-million-year-old fossil, but the unit elsewhere treats Olorgesailie as about a million years old. Weak; also the I-131 waste calculation states 7 half-lives for below 1%, which is correct (1/128 = 0.78%).",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 4, Observe Phase learnerExperience vs summaryTablePrompt",
+     "quote_a": "all groups get approximately the same value (around 3.8 rolls",
+     "quote_b": "approximately 3 to 4 rolls",
+     "problem": "Minor; but the theoretical half-life for p=1/6 decay is ln2/ln(6/5)=3.8, consistent. No real conflict.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 2, Explain Phase learnerExperience",
+     "quote_a": "a blue arrow for each beta decay (moving the nucleus +1 on Z, -1 on N — a diagonal step down and to the right toward the belt)",
+     "quote_b": "alpha decay arrows must point diagonally toward the belt (−2N, −2Z)",
+     "problem": "The Lesson 2 formative text claims each alpha arrow points toward the belt, but the same lesson says a single alpha step need not move closer; contradictory claim.",
+     "correct_value": "A single alpha step does not necessarily move toward the belt; the chain ends at Pb-206.",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 2 summaryTablePrompt explained vs Lesson 5 explained",
+     "quote_a": "the exposure must have been caused by the beta particles and gamma rays from uranium-238 and its daughters",
+     "quote_b": "the later steps of the chain (beta particles and gamma rays from the daughter nuclei) carry enough energy to penetrate the dark container",
+     "problem": "Consistent; no issue.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 4, Explain Phase learnerExperience",
+     "quote_a": "enough to keep a 100 W bulb lit for about 28 000 years",
+     "quote_b": "E = 0.001 × 9 × 10¹⁶ = 9 × 10¹³ joules",
+     "problem": "9e13 J / 100 W = 9e11 s, which is about 28 500 years: correct. No issue.",
+     "correct_value": "",
+     "calc_expr": "9e13/100/3.15e7",
+     "calc_stated": "28000"
+    }
+   ]
+  },
+  {
+   "module": "phys_1_3",
+   "task": "lesson",
+   "label": "L4 <4C column wording",
+   "reverted": [
+    "phys_1_3-r2-vfix2-001"
+   ],
+   "cost": 0.148,
+   "secs": 17,
+   "n_issues": 15,
+   "issues": [
+    {
+     "type": "TIMING",
+     "where": "Lesson 1, framework teacherMoves (Predict phase) and Observe phase",
+     "quote_a": "COLD-CALL SHARE-OUT (10–18 min)",
+     "quote_b": "DISTRIBUTE DIAGRAM AND RECORD SHEET (18–20 min)",
+     "problem": "The Predict phase runs 0–18 min, but the Observe phase runs 18–35 min and the Explain phase starts at 35 and runs to 58. The Model Building phase ends at 80 min, while the DQB phase ends at 73 min, leaving the schedule consistent only up to the DQB. This is not an error in itself, but the Model Building schedule (73–80) is fine. However, the sum of the phases is acceptable, so this item is not a real defect.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 2, Observe phase learnerExperience and summaryTablePrompt",
+     "quote_a": "for a brass–iron strip, the strip bends toward the iron side, so the brass on the outside of the curve expands more",
+     "problem": "Brass expands more than iron, so when heated the brass side becomes the longer, outer side of the curve and the strip bends toward the iron (the less-expanding metal). That is correct, so no defect here.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "ARITHMETIC",
+     "where": "Lesson 5, Explain phase learnerExperience",
+     "quote_a": "the engineer must leave a gap of at least about 0.83 mm at each end (1.65 mm in all)",
+     "problem": "The statement is consistent: 1.65/2 = 0.825 mm per end. No error.",
+     "correct_value": "",
+     "calc_expr": "1.65/2",
+     "calc_stated": "0.83"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 4, slo knowledge vs Lesson 6 knowledge and Lesson 4 Explain phase",
+     "quote_a": "water behaves anomalously — it expands as it cools below 4 °C, reaching maximum density at 4 °C",
+     "quote_b": "As the water cooled below 4 °C it began to expand",
+     "problem": "Lesson 4's Observe summary says the capillary column decreased from 20 °C towards 4 °C. Lesson 4 Predict targets 70% agreement, while Lesson 1 says 'You predicted cooling makes water shrink'. These are not contradictory, so no real defect.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "where": "Lesson 1, Explain phase formativeAssessment and teacherMoves",
+     "quote_a": "This is the key misconception to be addressed in Lesson 4.",
+     "quote_b": "that is what the next five lessons will do",
+     "problem": "Lesson 1 states that the anomalous behaviour will be explained in Lesson 4, which is correct. Lesson 1 also says 'the next five lessons' which is also consistent, so no real defect.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 3, purposeInStoryline vs Lesson 1",
+     "quote_a": "In Lesson 1, learners observed that the frozen water bottle cracked — evidence that water expanded on cooling.",
+     "quote_b": "Learners will appreciate that puzzling everyday observations",
+     "problem": "No real contradiction.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "ARITHMETIC",
+     "where": "Lesson 2, Explain phase teacherMoves/formativeAssessment",
+     "quote_a": "cooling by 36 K lowers their average kinetic energy",
+     "problem": "Nairobi 18 °C to freezer −18 °C is a 36 K drop; correct. Not a defect.",
+     "correct_value": "",
+     "calc_expr": "18+18",
+     "calc_stated": "36"
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 4, Observe phase learnerExperience, Part A problem (ii)",
+     "quote_a": "ΔV = 69 × 10⁻⁶ × 2000 ml × 80 K ≈ 11 ml",
+     "problem": "The correct value is 69e-6 × 2000 × 80 = 11.04 ml, so it is correct. Not a defect.",
+     "correct_value": "",
+     "calc_expr": "69e-6*2000*80",
+     "calc_stated": "11"
+    },
+    {
+     "type": "ARITHMETIC",
+     "where": "Lesson 4, Observe phase, slab problem",
+     "quote_a": "ΔA = 20 × 10⁻⁶ × 48 m² × 30 K ≈ 0.029 m²",
+     "problem": "20e-6 × 48 × 30 = 0.0288, which is about 0.029. Correct.",
+     "correct_value": "",
+     "calc_expr": "20e-6*48*30",
+     "calc_stated": "0.029"
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 4, Explain phase/Lesson 6",
+     "quote_a": "hexagonal ice crystal lattice",
+     "problem": "No error.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 1 vs Lesson 2 safety/sub-strand",
+     "quote_a": "Sub-Strand 1.4: Temperature and Thermal Expansion",
+     "quote_b": "Sub-Strand 1.3: Temperature and Thermal Expansion",
+     "problem": "This is covered by the teacher decision on numbering, so it is not reported.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 6, summaryTablePrompt explained",
+     "quote_a": "As the temperature dropped from 4°C (the point of maximum density) to 0°C, the liquid water expanded slightly; then, on freezing at 0°C, water molecules formed hydrogen bonds that locked them into a rigid hexagonal lattice",
+     "problem": "Hydrogen bonds exist in liquid water as well; freezing does not newly form them but arranges them into an open lattice. Minor simplification, so not clear enough to report.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "TIMING",
+     "where": "Lesson 6, overview pacing guide",
+     "quote_a": "Predict 10 min, Observe 18, Explain 22, Driving Question Board 14, Model Building 14, plus 2 to settle",
+     "problem": "The pacing sums to 10+18+22+14+14+2 = 80, which is correct. However, the Observe teacherMoves gallery walk is 6 stations × (2 min + 0.5 min) = 15 min, plus the report-out, so it is acceptable.",
+     "correct_value": "",
+     "calc_expr": "10+18+22+14+14+2",
+     "calc_stated": "80"
+    },
+    {
+     "type": "TIMING",
+     "where": "Lesson 5, overview pacing guide",
+     "quote_a": "Predict 4 min, Observe 10, Explain 15, Driving Question Board 5, Model Building 6",
+     "problem": "The sum is 4+10+15+5+6 = 40, which matches the duration. However, the Observe phase teacherMoves give 5 min of group work plus four presentations, which is tight but not contradictory.",
+     "correct_value": "",
+     "calc_expr": "4+10+15+5+6",
+     "calc_stated": "40"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 4, overview pacing vs Observe phase",
+     "quote_a": "Predict 10 min, Observe Part A 10 and Part B 22, Explain 17, Driving Question Board 10, Model Building 11",
+     "problem": "Sum = 10+10+22+17+10+11 = 80, which matches. No defect.",
+     "correct_value": "",
+     "calc_expr": "10+10+22+17+10+11",
+     "calc_stated": "80"
+    }
+   ]
+  },
+  {
+   "module": "chem_1_2",
+   "task": "fe",
+   "label": "FE Bohr / flame colours",
+   "reverted": [
+    "chem_1_2-r2-vfix-001"
+   ],
+   "cost": 0.156,
+   "secs": 4,
+   "n_issues": 1,
+   "issues": [
+    {
+     "type": "SCIENCE",
+     "where": "Part 2 exemplar, Bohr shell capacities",
+     "fe_quote": "a maximum of 2 electrons in shell 1, 8 in shell 2 and 8 in shell 3 (for the first 20 elements)",
+     "problem": "The lessons only taught shell 3 holding 8 electrons for the first 20 elements (2, 8, 8, ...), so this is consistent; however, the exemplar says Bohr's model gives potassium arrangement 2, 8, 8, 1. That is also consistent with the lessons. No real defect here.",
+     "suggested_fix": ""
+    }
+   ]
+  }
+ ]
+}

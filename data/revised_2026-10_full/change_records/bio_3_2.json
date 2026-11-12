@@ -4626,6 +4626,140 @@
    "where": "Lesson 12, summaryTablePrompt.explained",
    "applied_at": "2026-11-10T09:38:47",
    "group_headline": "Three-criteria check: small corrections to Round 2 changes (Final Explanation and lesson wording)."
+  },
+  {
+   "id": "bio_3_2-r2-bench-001",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].sensemakingStrategy",
+   "old": "compare it to Kipchoge's published data displayed on the board",
+   "new": "compare it to Kipchoge's illustrative curve displayed on the board",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-BENCH-FIX",
+   "why": "Lesson 1 states the Kipchoge curve is illustrative and not a published measurement; Lesson 2 called it published data.",
+   "where": "Lesson 2, Observe Phase, sensemakingStrategy",
+   "lesson": 2,
+   "group_headline": "Found by the stronger-model reviewer test (2026-11-12): wording corrected",
+   "applied_at": "2026-11-12T00:55:01"
+  },
+  {
+   "id": "bio_3_2-r2-bench-002",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "old": "haemolymph is pumped by the dorsal vessel through ostia and floods the haemocoel",
+   "new": "haemolymph enters the dorsal vessel through the ostia, is pumped forward and floods the haemocoel",
+   "criteria": [
+    14
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-BENCH-FIX",
+   "why": "Ostia are the inlets through which haemolymph enters the dorsal vessel; it leaves by the open front end. The lesson's own vocabulary card says ostia are entry points.",
+   "where": "Lesson 3, summaryTablePrompt.learned",
+   "lesson": 3,
+   "reference": "Grade 10 Biology: open circulatory system of insects (dorsal vessel with ostia as inlets).",
+   "applied_at": "2026-11-12T00:55:01"
+  },
+  {
+   "id": "bio_3_2-r2-bench-003",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[2].formativeAssessment",
+   "old": "use as a teaching point in the next lesson (gaseous exchange)",
+   "new": "use as a teaching point when gaseous exchange is studied later",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-BENCH-FIX",
+   "why": "The next lesson (Lesson 4) is about fish circulation, not gaseous exchange.",
+   "where": "Lesson 3, Explain Phase, formativeAssessment",
+   "lesson": 3,
+   "applied_at": "2026-11-12T00:55:01"
+  },
+  {
+   "id": "bio_3_2-r2-bench-004",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "overview",
+   "old": "recalling the contrast between Kipchoge's double circulatory system (Lessons 1–2)",
+   "new": "recalling the contrast between Kipchoge's high-demand circulation (Lessons 1–2)",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-BENCH-FIX",
+   "why": "Double circulation is not taught until Lesson 6, so Lesson 4 cannot ask learners to recall it from Lessons 1-2.",
+   "where": "Lesson 4, overview",
+   "lesson": 4,
+   "applied_at": "2026-11-12T00:55:01"
+  },
+  {
+   "id": "bio_3_2-r2-bench-005",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "summaryTablePrompt.learned",
+   "old": "deoxygenated blood (from body tissues and the skin)",
+   "new": "deoxygenated blood (from body tissues)",
+   "criteria": [
+    14
+   ],
+   "category": "science",
+   "severity": "minor",
+   "teacher_decision": false,
+   "group": "R2-BENCH-FIX",
+   "why": "In a frog the skin is a gas-exchange surface, so blood returning from it is oxygenated, not deoxygenated.",
+   "where": "Lesson 5, summaryTablePrompt.learned",
+   "lesson": 5,
+   "reference": "Grade 10 Biology: amphibian circulation with cutaneous gas exchange.",
+   "applied_at": "2026-11-12T00:55:01"
+  },
+  {
+   "id": "bio_3_2-r2-bench-006",
+   "kind": "edit",
+   "target": "lesson",
+   "path": "framework[1].learnerExperience",
+   "old": "There are 20 cards per group covering all five animal groups across five categories",
+   "new": "There are 25 cards per group, one for each of the five animal groups in each of the five categories",
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "minor",
+   "teacher_decision": true,
+   "group": "R2-BENCH-CHECK",
+   "why": "Five animal groups in each of five categories is 25 cards, not 20. Please confirm the size of the card set you will prepare.",
+   "where": "Lesson 11, Observe Phase, learnerExperience",
+   "lesson": 11,
+   "group_headline": "Found by the stronger-model reviewer test: a count to confirm",
+   "applied_at": "2026-11-12T00:55:01"
+  },
+  {
+   "id": "bio_3_2-r2-bench-007",
+   "kind": "flag",
+   "target": "lesson",
+   "lesson": 5,
+   "criteria": [
+    14
+   ],
+   "category": "consistency",
+   "severity": "substantial",
+   "teacher_decision": false,
+   "why": "Found by the stronger-model reviewer test. The Efficiency Meter scores in Lesson 5 (Fish ~80, Frog ~65, Lizard ~75, Kipchoge ~98) put the two-chambered fish above the three-chambered frog, but the Model Explanation Sentence says oxygen delivery efficiency increases as the heart becomes more chambered. PROPOSED ANSWER (for the teacher to approve or edit): change the fish score to about 55 (single circuit, pressure drops after the gills) everywhere the scores appear in Lessons 5 and 12 and in the Final Explanation, so the scores rise with the number of chambers. Alternative: keep the scores and reword the sentence to say that separation of oxygenated and deoxygenated blood, not chamber number alone, drives efficiency.",
+   "where": "Lesson 5, ",
+   "group": "R2-BENCH-FLAG-7",
+   "applied_at": "2026-11-12T00:55:01"
   }
  ]
 }

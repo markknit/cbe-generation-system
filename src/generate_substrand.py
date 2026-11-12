@@ -525,6 +525,16 @@ def extract_template_docx(docx_path: str) -> dict:
 # ── System prompt ─────────────────────────────────────────────────────────────
 
 def build_system_prompt(grade: int) -> str:
+    return _base_system_prompt(grade) + _extra_system()
+
+
+def _extra_system() -> str:
+    """Optional authoring checklist appended to every call (CBE_EXTRA_SYSTEM_FILE; pilot 2026-11)."""
+    f = os.environ.get('CBE_EXTRA_SYSTEM_FILE')
+    return ("\n" + Path(f).read_text(encoding='utf-8')) if f else ""
+
+
+def _base_system_prompt(grade: int) -> str:
     return f"""You are an expert curriculum designer for Kenya's Grade {grade} CBE (Competency-Based Curriculum).
 You generate structured lesson plan content for the ARES Education offline learning platform.
 
@@ -1260,7 +1270,9 @@ SCHEMA_VERSION = '1.1.0'   # contract revision R1, see CONTRACT_CHANGELOG.md
 def write_data_file(output_name: str, meta: dict, unit: dict,
                     lessons: list, fe: dict | None, st: dict | None):
     """Write the assembled data file to generators/data/."""
-    output_path = PROJECT_ROOT / 'generators' / 'data' / f'{output_name}_data.js'
+    _od = Path(os.environ['CBE_GEN_OUT_DIR']) if os.environ.get('CBE_GEN_OUT_DIR') else PROJECT_ROOT / 'generators' / 'data'
+    _od.mkdir(parents=True, exist_ok=True)   # CBE_GEN_OUT_DIR: write somewhere other than the source of truth (pilot runs)
+    output_path = _od / f'{output_name}_data.js'
 
     # ── Normalise to ares-contract canonical shape (defensive: covers model
     #    wobble and applies to both sync and batch-collect callers) ──────────
@@ -1741,7 +1753,8 @@ def determine_lesson_count(curriculum_text: str, lesson_template: dict,
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def _checkpoint_path(output_name: str) -> Path:
-    return PROJECT_ROOT / 'generators' / 'data' / f'.{output_name}_checkpoint.json'
+    _od = Path(os.environ['CBE_GEN_OUT_DIR']) if os.environ.get('CBE_GEN_OUT_DIR') else PROJECT_ROOT / 'generators' / 'data'
+    return _od / f'.{output_name}_checkpoint.json'
 
 def _save_checkpoint(output_name: str, lessons: list):
     path = _checkpoint_path(output_name)
@@ -2125,7 +2138,10 @@ def main():
     # ── Extract source content + templates ───────────────────────────────────
 
     print("\n1. Extracting source content...")
-    if args.subject in CURRICULUM_TEXT_MAP.get(args.grade, {}):
+    if os.environ.get('CBE_CURRICULUM_TEXT_FILE'):
+        # a hand-cut section of the KICD text (pilot 2026-11): avoids sending the whole 70k-character curriculum on every call
+        curriculum_text = Path(os.environ['CBE_CURRICULUM_TEXT_FILE']).read_text(encoding='utf-8', errors='replace')
+    elif args.subject in CURRICULUM_TEXT_MAP.get(args.grade, {}):
         curriculum_text = (PROJECT_ROOT / CURRICULUM_TEXT_MAP[args.grade][args.subject]).read_text(
             encoding='utf-8', errors='replace')
         # Grade 11+: send only this sub-strand's section (the whole Grade 11

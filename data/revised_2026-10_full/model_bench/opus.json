@@ -1,0 +1,261 @@
+{
+ "model": "claude-opus-5-5",
+ "total_cost": 2.619,
+ "results": [
+  {
+   "module": "math_1_2",
+   "task": "fe",
+   "label": "FE rounding vs lesson",
+   "reverted": [
+    "math_1_2-r2-vfix-001",
+    "math_1_2-r2-vfix-002"
+   ],
+   "cost": 0.338,
+   "secs": 15,
+   "n_issues": 0,
+   "issues": []
+  },
+  {
+   "module": "bio_3_2",
+   "task": "lesson",
+   "label": "open circulation 'oxygen-carrying fluid'",
+   "reverted": [
+    "bio_3_2-r2-vfix-001"
+   ],
+   "cost": 0.562,
+   "secs": 66,
+   "n_issues": 8,
+   "issues": [
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 1, framework Observe Phase learnerExperience",
+     "quote_a": "His heart rate was still at 90 bpm fifteen minutes later.",
+     "quote_b": "shows heart rate dropping from 165 bpm to 88 bpm over 15 minutes",
+     "problem": "Omondi's narrated heart rate after 15 minutes (90 bpm) does not match the Curve B value on the data sheet for the same time (88 bpm).",
+     "correct_value": "Use one value (e.g. 88 bpm) in both places",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 2, framework Observe Phase sensemakingStrategy",
+     "quote_a": "immediately compare it to Kipchoge's published data displayed on the board",
+     "quote_b": "these numbers form an illustrative curve based on typical recovery in trained endurance runners; they are not a published measurement of Kipchoge.",
+     "problem": "Lesson 2 calls the Kipchoge curve 'published data', but Lesson 1 and the unit phenomenon state it is illustrative and not a published measurement.",
+     "correct_value": "Kipchoge's illustrative recovery curve",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 3, summaryTablePrompt learned",
+     "quote_a": "haemolymph is pumped by the dorsal vessel through ostia and floods the haemocoel",
+     "quote_b": "Ostia — 'Entry points for haemolymph; no equivalent in closed systems'",
+     "problem": "Ostia are inlets through which haemolymph enters the dorsal vessel from the haemocoel. Haemolymph is not pumped out through them. It leaves through the open anterior end (the aorta).",
+     "correct_value": "Haemolymph enters the dorsal vessel through the ostia and is pumped forward, out of the anterior end, into the haemocoel.",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "where": "Lesson 3, Explain Phase formativeAssessment",
+     "quote_a": "use as a teaching point in the next lesson (gaseous exchange)",
+     "quote_b": "Transport in Fish — The Single Circulatory System of the Tilapia",
+     "problem": "The next lesson (Lesson 4) is about fish circulation, not gaseous exchange. Gaseous exchange is Sub-Strand 3.3.",
+     "correct_value": "Sub-Strand 3.3 (Gaseous Exchange)",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "where": "Lesson 4, overview",
+     "quote_a": "recalling the contrast between Kipchoge's double circulatory system (Lessons 1–2)",
+     "quote_b": "They have not yet studied the mammalian heart (Lesson 6), so in this lesson the teacher gives a short fact card about it.",
+     "problem": "Double circulation was not taught in Lessons 1–2. Lesson 4's own storyline says the mammalian heart is studied only in Lesson 6.",
+     "correct_value": "Mammalian double circulation is introduced via a teacher fact card in Lesson 4 and studied in Lesson 6",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Lesson 5, summaryTablePrompt learned",
+     "quote_a": "oxygenated blood (from the lungs) and deoxygenated blood (from body tissues and the skin) mix partly in the single ventricle",
+     "quote_b": "",
+     "problem": "Blood returning from the frog's moist skin has been oxygenated by cutaneous gas exchange, so it is not deoxygenated. It returns to the right atrium, where it mixes with deoxygenated blood from the body.",
+     "correct_value": "Deoxygenated blood from the body mixes in the right atrium with oxygenated blood returning from the skin. This blood then mixes in the ventricle with oxygenated blood from the lungs.",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 5, Model Building Phase learnerExperience / formativeAssessment",
+     "quote_a": "Fish (~80), Frog (~65), Lizard (~75) and, for comparison, Kipchoge (~98)",
+     "quote_b": "does the sentence correctly state the direction of change (increases)",
+     "problem": "The lesson's own scores show the two-chambered fish (80) above the three-chambered frog (65) and the lizard (75). This contradicts the expected claim that efficiency increases as the heart becomes more chambered.",
+     "correct_value": "",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "ARITHMETIC",
+     "where": "Lesson 11, Observe Phase learnerExperience",
+     "quote_a": "There are 20 cards per group covering all five animal groups across five categories",
+     "quote_b": "",
+     "problem": "Covering each of five animal groups in each of five categories needs 25 cards, not 20.",
+     "correct_value": "25",
+     "calc_expr": "5*5",
+     "calc_stated": "20"
+    }
+   ]
+  },
+  {
+   "module": "phys_1_3",
+   "task": "fe",
+   "label": "FE <4C rise vs lesson",
+   "reverted": [
+    "phys_1_3-r2-fe-auto-002",
+    "phys_1_3-r2-fe-auto-003"
+   ],
+   "cost": 0.29,
+   "secs": 17,
+   "n_issues": 0,
+   "issues": []
+  },
+  {
+   "module": "chem_1_5",
+   "task": "fe",
+   "label": "FE 'more electron shells' cause",
+   "reverted": [
+    "chem_1_5-r2-vfix-001"
+   ],
+   "cost": 0.323,
+   "secs": 18,
+   "n_issues": 2,
+   "issues": [
+    {
+     "type": "LESSON_CONFLICT",
+     "where": "Part 4 prompt (argon ampoule storage of sodium)",
+     "fe_quote": "The officer transported the sodium in a sealed ampoule of argon gas.",
+     "lesson_quote": "Lesson 2: 'This is why the Kisumu officer stored sodium under oil in that sealed container.' / 'the Kisumu water officer stored sodium under oil'; Lesson 5: 'The water purification officer stored the sodium inside a sealed ampoule of argon gas before the Lake Victoria demonstration.'",
+     "problem": "The lessons disagree on how the officer stored the sodium. Lesson 2 says it was kept under oil; Lesson 5 says it was kept in an argon ampoule. The FE follows the Lesson 5 version. Learners who remember Lesson 2 may be confused by Part 4.",
+     "suggested_fix": ""
+    },
+    {
+     "type": "SCIENCE",
+     "where": "Part 1 exemplar (c)",
+     "fe_quote": "The hydrogen gas ignites, which gives the orange flame.",
+     "lesson_quote": "",
+     "problem": "The hydrogen does ignite, but the orange colour of the flame comes from sodium, not hydrogen. Hydrogen burns with a nearly colourless or pale blue flame. The familiar orange-yellow sodium emission (used in sodium street lamps, Lesson 7) is what colours the flame.",
+     "suggested_fix": "Change to: 'The hydrogen gas ignites, and sodium colours the flame orange.'"
+    }
+   ]
+  },
+  {
+   "module": "phys_3_1",
+   "task": "lesson",
+   "label": "decay chain parenthetical",
+   "reverted": [
+    "phys_3_1-r2-vfix-001"
+   ],
+   "cost": 0.422,
+   "secs": 54,
+   "n_issues": 5,
+   "issues": [
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 2, framework Explain Phase formativeAssessment",
+     "quote_a": "a single step need not move it closer to the belt, but the whole chain ends at stable Pb-206",
+     "quote_b": "alpha decay arrows must point diagonally toward the belt (−2N, −2Z)",
+     "problem": "Part B tells learners that a single alpha step need not move the nucleus closer to the belt. The success criterion then requires every alpha arrow to point toward the belt, and the learned summary repeats that claim.",
+     "correct_value": "An alpha arrow goes down-left (−2N, −2Z). It need not point toward the belt for a single step; it is the whole chain that ends in the belt (Pb-206).",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 5, slo.knowledge vs summaryTablePrompt.learned",
+     "quote_a": "(5) each decay moves the daughter nucleus closer to the belt of stability on the N vs Z plot.",
+     "quote_b": "although one single step, such as the first alpha step from uranium-238 to thorium-234, does not clearly change the neutron-to-proton ratio",
+     "problem": "The knowledge outcome, and the model statement for U-238 → Th-234, say that each decay moves the nucleus closer to the belt. The lesson summary says a single step such as U-238 → Th-234 does not clearly do so.",
+     "correct_value": "The decay chain as a whole leads to the belt of stability (Pb-206). An individual step need not move the nucleus closer to it.",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "IMPOSSIBLE_FIGURE",
+     "where": "Lesson 6, framework Explain Phase formativeAssessment",
+     "quote_a": "If more than 3 of the 3 cold-called learners answer incorrectly, the teacher re-teaches",
+     "problem": "Only 3 learners are cold-called, so more than 3 of them can never answer incorrectly. The re-teach trigger can never fire.",
+     "correct_value": "A threshold that can be reached, e.g. 'if 2 or more of the 3 cold-called learners answer incorrectly'.",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "TIMING",
+     "where": "Lesson 6, framework Explain Phase Part C",
+     "quote_a": "PART C — Kenya Nuclear Debate: Structured Academic Controversy (12 minutes)",
+     "quote_b": "Each group has 4 minutes to build their argument ... present their strongest argument in 90 seconds each. After all four presentations, the teacher facilitates a 3-minute 'synthesis'",
+     "problem": "The sub-steps take 4 min of preparation, 4 × 1.5 min of presentations and 3 min of synthesis, which is 13 minutes. Part C is allotted only 12 minutes.",
+     "correct_value": "13 minutes",
+     "calc_expr": "4+4*1.5+3",
+     "calc_stated": "12"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 6, slo.attitudes",
+     "quote_a": "first hinted at by the glowing pitchblende rock",
+     "quote_b": "No light, no heat, no sound. Yet the rock has left its mark.",
+     "problem": "The anchoring phenomenon stresses that the rock emits no light; the film was exposed in complete darkness. Lesson 6 describes the pitchblende rock as 'glowing'.",
+     "correct_value": "The pitchblende rock does not visibly glow; it emits invisible ionising radiation.",
+     "calc_expr": "",
+     "calc_stated": ""
+    }
+   ]
+  },
+  {
+   "module": "phys_1_3",
+   "task": "lesson",
+   "label": "L4 <4C column wording",
+   "reverted": [
+    "phys_1_3-r2-vfix2-001"
+   ],
+   "cost": 0.341,
+   "secs": 42,
+   "n_issues": 2,
+   "issues": [
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 6, framework Explain Phase learnerExperience (also summaryTablePrompt.learned)",
+     "quote_a": "why water supply pipes in cold highland areas of Mount Kenya or Kericho sometimes burst in cold seasons",
+     "quote_b": "Kericho (early morning: 9 °C)",
+     "problem": "Lesson 2 gives Kericho's early-morning temperature as 9 °C, which is about the coldest part of the day and well above freezing. Lesson 6 then uses Kericho as a place where pipes burst because the water in them freezes. Lesson 6's summary repeats this ('burst water pipes in the Kericho and Nyandarua highlands'). The two lessons disagree, and freezing pipes in Kericho is not realistic. Lesson 1 names the Aberdares, Mount Kenya and Nyandarua as the freezing highlands.",
+     "correct_value": "Use a frost-prone highland such as Nyandarua, the Aberdares or the slopes of Mount Kenya instead of Kericho.",
+     "calc_expr": "",
+     "calc_stated": ""
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 3, framework Observe Phase learnerExperience",
+     "quote_a": "known length L₀ recorded to 0.1 mm using a vernier calliper before heating",
+     "quote_b": "a vernier calliper cannot measure a 50 cm rod to 0.1 mm, so measure L₀ with a metre rule to the nearest millimetre",
+     "problem": "The apparatus list and procedure tell learners to measure the 50 cm rod to 0.1 mm with a vernier calliper. The equipment note in the same field says this cannot be done and tells them to use a metre rule to the nearest millimetre instead.",
+     "correct_value": "Measure L₀ with a metre rule to the nearest millimetre.",
+     "calc_expr": "",
+     "calc_stated": ""
+    }
+   ]
+  },
+  {
+   "module": "chem_1_2",
+   "task": "fe",
+   "label": "FE Bohr / flame colours",
+   "reverted": [
+    "chem_1_2-r2-vfix-001"
+   ],
+   "cost": 0.344,
+   "secs": 23,
+   "n_issues": 0,
+   "issues": []
+  }
+ ]
+}
