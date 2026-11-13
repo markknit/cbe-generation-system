@@ -1,6 +1,6 @@
 # OpenAI-only lesson-authoring evaluation
 
-Started 2026-11-12; status: three draft sub-strands built; internal and automated checks underway; fresh independent review pending.
+Started 2026-11-12; status: **PAUSED by Mark for server update/reboot.** Draft build committed as `4e433620`; independent review has not started. See [RESUME.md](RESUME.md) after `/restart`. The ZIP and REPORT.md remain the build snapshot; current lifecycle instructions are here and in STATUS.md.
 
 Scope: fresh General Science 2.4 Acids, Bases and Salts; Essential Mathematics 2.8 Commercial Arithmetic 1; Core Mathematics 2.5 Area of Polygons. Essential/General Science match the earlier pilot; Core 2.5 replaces the unreadable 2.4 source selection and has an existing corpus version for comparison; no earlier lesson prose is a source for the new manuscripts. Existing serializers/renderers and validators may be reused.
 
