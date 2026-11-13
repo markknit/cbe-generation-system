@@ -1,6 +1,7 @@
 # CLAUDE.md — Kenya CBE Lesson Plan Generation System
 
-> **Last updated: 2026-11-08** (2026-10-26: presentations no longer "deferred";
+> **Last updated: 2026-11-12** (weekly usage clean-stop policy added;
+> 2026-10-26: presentations no longer "deferred";
 > 2026-11-08: graph/file counts re-derived. The "MCP Tools: code-review-graph"
 > section at the bottom was appended by an installer, then scoped by hand on
 > 2026-07-31 — see `STATUS.md` Known Issues for what the installer got wrong)
@@ -44,6 +45,18 @@ in the whole project.
 ---
 
 ## Project Identity
+
+**Codex usage checkpoints:** before authoring a module or starting a reviewer
+batch, run `python3 scripts/check_codex_usage.py`; repeat during long active
+work as specified in WORKFLOW.md. The threshold and stop policy are in
+`config/codex_usage_guard.json`. Exit 10 means stop launching work, save at
+the next small clean boundary, perform the project's `/update` workflow,
+commit a precise handoff locally, report paused and end the turn. Exit 20
+means usage is unknown: do not start more authoring/reviewers until verified.
+`/restart` uses `--read-only`; it verifies state and does not resume generation.
+After explicit user resume, use `--resume` to clear an old pause latch only
+when the live allowance permits it. Do not automatically switch accounts,
+consume resets or buy credits. See WORKFLOW.md for the full handoff protocol.
 
 **Goal:** Generate ~2,000 Kenya CBE lesson plans as `.docx` files (Grade 10 Biology, Chemistry, Physics, Mathematics).
 **Server:** `jhm-spark` | **User:** `markk` | **Root:** `/home/markk/ares/cbe-generation-system`

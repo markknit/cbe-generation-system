@@ -1,0 +1,12 @@
+{
+  "weekly_remaining_threshold_percent": 10,
+  "limit_id": "codex",
+  "weekly_window_minutes": 10080,
+  "request_timeout_seconds": 20,
+  "state_file": "data/codex_usage_guard/state.json",
+  "check_before": ["module", "reviewer_batch", "additional_lesson_or_review_after_long_work"],
+  "maximum_active_check_interval_minutes": 5,
+  "on_threshold": "Stop new work; reach the next small clean stopping point; apply .claude/skills/update/SKILL.md; save an exact handoff; commit locally; report paused and end the turn.",
+  "on_unavailable": "Do not start more authoring or reviewers without a fresh verified usage reading.",
+  "resume": "Run /restart with a read-only usage check, then resume only on explicit user instruction and a fresh allowance above the threshold. Never switch accounts, buy credits or consume resets automatically."
+}

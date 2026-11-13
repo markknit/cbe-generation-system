@@ -28,6 +28,49 @@ skill runs this block automatically.
 
 ## Standard Workflow: Generating a New Subject/Sub-Strand
 
+### Codex weekly usage and clean handoff (Mark, 2026-11-12)
+
+The machine-readable policy is `config/codex_usage_guard.json`. Run
+`python3 scripts/check_codex_usage.py` before each module and reviewer batch,
+after each completed unit, and at least every five minutes during active long
+work (also between lesson writes when practical). Read the actual weekly
+window by duration, including accounts where it is the primary window.
+These are explicit active-work checks, not an installed background watcher.
+
+- Exit 0: a fresh reading is above the configured threshold, with no pending
+  pause. Continue the already authorized work.
+- Exit 10: the weekly allowance is at/below the threshold or an earlier pause
+  is still pending. Start no new lessons, modules, reviewer batches or optional
+  work. Reach the next small clean boundary: save the current atomic edit or
+  checkpoint unfinished work; do not finish a large module merely to call it
+  clean. Ask running reviewers to save their work and stop at a clean boundary.
+- Then apply `.claude/skills/update/SKILL.md` directly (the `/update` workflow;
+  a literal UI slash-command submission is unnecessary). Reconcile the active
+  status row; record completed/pending work, filenames, reviewer states,
+  validation results and blockers; write the exact next action and reproducible
+  commands in the active handoff. Commit locally, report paused, and end the
+  turn. No push/publication is added by this policy.
+- Exit 20: the meter is unavailable or invalid; do not treat missing telemetry
+  as unlimited quota. Save work and obtain a verified reading before launching
+  more authoring/reviewers.
+
+The account-specific snapshot and pause latch are gitignored under
+`data/codex_usage_guard/`. No credentials are read or printed by the helper;
+the normal Codex account interface supplies percentages and reset times.
+The helper performs no model turn and no paid API generation. The agent is
+responsible for the semantic clean boundary and `/update`, rather than a
+background script committing concurrently edited files.
+
+**Takeover:** the next user opens this same checkout (or an explicitly shared
+copy of its checkpoint), uses their own authorized sign-in, and runs `/restart`.
+Use `python3 scripts/check_codex_usage.py --read-only` during that verification.
+`/restart` alone never starts generation. After an explicit resume instruction,
+run the usage helper with `--resume`; it clears an earlier latch only if a fresh
+weekly reading is above the threshold. Do not share credentials or switch
+accounts automatically. Save incrementally because interruptions can occur
+between checks. If the next user uses another machine, the local commit and
+handoff must first be transferred through a separately authorized sync.
+
 ### Step 1 — Environment setup
 ```bash
 cd /home/markk/ares/cbe-generation-system
