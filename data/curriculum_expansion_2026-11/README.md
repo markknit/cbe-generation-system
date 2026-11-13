@@ -1,12 +1,12 @@
 # Remaining curricula: preparation and operating guide
 
-Updated 2026-11-13. **Paused at 10% weekly allowance:49 new content-accepted lessons;35 artifact-reviewed, 14 pending a final Core PDF check.** See `BATCH_02_STATUS.md` and the root handoff. `BATCH_01_STATUS.md`/archive are the frozen first milestone; preparation below remains the operating guide.
+Updated2026-11-13 after explicit resume with97%allowance. **58new lessons content/artifact-reviewed,including9new Essential1.3 lessons.** Batch02's interrupted Core PDF check is closed and its22lesson teacher package is saved. See `BATCH_02_STATUS.md`, `BATCH_03_STATUS.md`, `inventory/progress.json` and the root handoff;Batch01 archive stays frozen.
 
 The reviewed pilot remains frozen at `../codex_pilot_2026-11/`. The reusable compiler was exercised on isolated copies under `/tmp/cbe-preparation-fixture`; those copies are regression evidence, not new curriculum deliverables. No production modules, partner files or Drive documents were changed.
 
 ## Readiness and source authority
 
-`inventory/source_inventory.json` inventories all 43 existing unit IDs: three reviewed pilots and 40 remaining units. Of the remaining units, 33 have current-PDF crops; six have accepted transcriptions:the three reviewed units plus next GS1.2/Essential1.2/Core2.7. The other27 need visual transcription verification just before their authoring batch. Seven Core units are blocked by unreadable/repeated contents-page captures: 1.1–1.3 and 2.1–2.4. Do not use old OCR or old lesson prose to fill these requirements.
+`inventory/source_inventory.json` inventories all 43 existing unit IDs: three reviewed pilots and 40 remaining units. Of the remaining units, 33 have current-PDF crops; nine have accepted transcriptions:the six authored expansion units plus GS1.2/Core2.8/GS1.3. The other24 need visual transcription verification just before their authoring batch. Seven Core units are blocked by unreadable/repeated contents-page captures: 1.1–1.3 and 2.1–2.4. Do not use old OCR or old lesson prose to fill these requirements.
 
 The local July 2025 PDFs are single physical pages containing tall page captures. Crop coordinates and printed page numbers are recorded separately. The old OCR disagrees with missing regions in the current Core PDF; the current pixels are authoritative. OCR files in this workspace are explicitly unaccepted candidates. The official [KICD Grade Ten page](https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-ten/) links a Core file, but its owner disables download. No restricted-download workaround was attempted. A readable, permitted authoritative replacement is still needed for the seven blocked units.
 

@@ -1,0 +1,693 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "Essential Mathematics",
+    "grade": 10,
+    "substrand_id": "1.3",
+    "substrand_name": "Quadratic Equations I",
+    "outputDir": "v2/Essential_Mathematics/SS1.3_Quadratic_Equations_I",
+    "filePrefix": "Codex_Essential_Mathematics_Quadratic_Equations_I",
+    "titleDoc": "ESSENTIAL MATHEMATICS GRADE 10: QUADRATIC EQUATIONS I",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 1.3 • 9 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "1.0 Numbers and Algebra",
+    "substrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+    "sep": "Define variables and restrictions, build a model, factor, solve and test the interpretation.",
+    "careers": "Illustrative design, display planning and area estimation; no employment or professional competence claim.",
+    "focus": "Form quadratic expressions/equations and solve factorable examples, retaining every algebraic root before applying contextual restrictions.",
+    "phenomenon": "Two sign designs satisfy the same area equation on paper, but one answer assigns negative side lengths.",
+    "supportingPhenomena": "Labelled rectangles, row arrays, inverse expansion checks and lost-zero-root audits.",
+    "drivingQuestion": "Which algebraic answers describe a possible design? KICD: How are quadratic equations applied in real life?",
+    "storylineThread": "Variables → model equations → factors → signed pairs → non-monic grouping → zero product → feasible roots → audit → independent model.",
+    "coreCompetencies": "Communication and collaboration: the learner collaborates with peers as they discuss with peers and work out factors of quadratic expressions.\nCritical thinking and Problem solving: the learner develops open-mindedness, discusses with peers and works out factors of quadratic expressions.",
+    "values": "Respect: the learner displays humility by listening to others opinions while discussing areas where quadratic equations are used in real life situations.",
+    "pcis": "Online safety: the learner observes online safety procedures and guidelines while searching on the application of quadratic equations using digital resources.",
+    "content": "Formation of quadratic expressions; Factorisation and solve quadratic equations; Applications of quadratic equation",
+    "gradeLevel": "10",
+    "subject": "Essential Mathematics",
+    "totalDuration": "9 lessons × 40 minutes = 360 minutes",
+    "learningOutcomes": "form algebraic expressions from different situations,\nform quadratic expressions and equations from real life situations,\nfactorise quadratic expressions in different situations,\nsolve quadratic equations by factorisation,\nrecognise use of quadratic expressions in real life situations."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "What does the letter measure?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+      "aresKeywords": "Quadratic Equations I",
+      "slo": {
+        "purpose": "Represent stated dimensions and counts with meaningful algebraic expressions.",
+        "knowledge": "Perimeter adds lengths; area and row arrays use products. Units and restrictions give a variable meaning.",
+        "skills": "Label, translate, expand and substitute.",
+        "attitudes": "Listen to a partner's interpretation and correct an unsupported model.",
+        "keyInquiry": "Why does an area model contain x²?",
+        "purposeInStoryline": "The design team defines its quantities before looking for an answer.",
+        "safetyNotes": "Paper-only fictional data; use no personal measurements and keep devices on approved resources."
+      },
+      "overview": "Paper rectangles distinguish area, perimeter and chair-count models.\nMaterials: QE1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether x+(x+3) can represent the sign area in QE1.",
+          "teacherMoves": "4 minutes. Ask for the meaning and unit of each term before accepting a formula.",
+          "sensemakingStrategy": "Commit an initial labelled sketch.",
+          "formativeAssessment": "Each prediction states a quantity and a unit."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Draw and complete QE1 individually, then compare with a partner.",
+          "teacherMoves": "16 minutes. Provide squared paper; spend8 minutes on sign expressions,4 on substitution and4 on the row array.",
+          "sensemakingStrategy": "Compare the count of squares with lengths round the boundary.",
+          "formativeAssessment": "Look for4x+6, x²+3x,22cm,28cm² and n²+2n."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why the area/array expression is quadratic and the perimeter is linear.",
+          "teacherMoves": "10 minutes. Expand x(x+3) distributively; distinguish x² from2x without introducing an equation to solve.",
+          "sensemakingStrategy": "Link operations to the stated geometry.",
+          "formativeAssessment": "A learner explains the product and labels squared units."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Post a question about how a known area changes the task.",
+          "teacherMoves": "4 minutes. Keep expression-versus-equation questions for Lesson2.",
+          "sensemakingStrategy": "Sort questions by what is known and unknown.",
+          "formativeAssessment": "Question identifies a missing equality or condition."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Build a model checklist: variable, restriction, quantity, operation and units.",
+          "teacherMoves": "6 minutes. Collect one independent area-versus-perimeter explanation.",
+          "sensemakingStrategy": "Revise the first sketch with a reason.",
+          "formativeAssessment": "Exit distinguishes an expression from an equation."
+        }
+      ],
+      "teacherReflection": "Check individual diagrams and units. Reteach multiplication/distribution if an area is added rather than multiplied; do not infer mastery from a partner's sheet.",
+      "summaryTablePrompt": {
+        "observed": "Side labels lead to different operations for area and perimeter.",
+        "learned": "Multiplying two linear dimensions can form a quadratic expression.",
+        "explained": "A variable definition and units make an expression interpretable."
+      }
+    },
+    {
+      "number": 2,
+      "title": "Which condition makes an equation?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+      "aresKeywords": "Quadratic Equations I",
+      "slo": {
+        "purpose": "Form equivalent quadratic equations from area and array conditions.",
+        "knowledge": "An equation asserts the model equals a known quantity; moving every term to one side preserves equality.",
+        "skills": "Translate conditions, expand and rearrange to zero.",
+        "attitudes": "State assumptions explicitly and check another person's reading fairly.",
+        "keyInquiry": "What information turns a model into a solvable equation?",
+        "purposeInStoryline": "The design brief now specifies an area or a total count.",
+        "safetyNotes": "Use paper diagrams rather than moving furniture or arranging learners physically."
+      },
+      "overview": "Build two equations without guessing or solving their roots.\nMaterials: QE2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict what must equal36 in the first QE2 model.",
+          "teacherMoves": "4 minutes. Accept an unsimplified product when it models the condition correctly.",
+          "sensemakingStrategy": "Separate the given condition from a guessed answer.",
+          "formativeAssessment": "Learner writes x(x+5)=36 rather than a perimeter equation."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete both QE2 models, expansions and restrictions.",
+          "teacherMoves": "16 minutes. Allow8 minutes per context; ask partners to check definitions only after individual attempts.",
+          "sensemakingStrategy": "Trace each term to a side or a count.",
+          "formativeAssessment": "Equations x²+5x−36=0 and n²+n−72=0; restrictions positive length/positive integer rows."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why subtracting the given total from both sides is legitimate.",
+          "teacherMoves": "10 minutes. Compare equivalent product, expanded equality and zero forms; no root method yet.",
+          "sensemakingStrategy": "Use an equality-preserving chain.",
+          "formativeAssessment": "Every transformation retains the original meaning."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how a product expression might reveal a missing dimension.",
+          "teacherMoves": "4 minutes. Retain factorisation questions without announcing the roots.",
+          "sensemakingStrategy": "Connect new questions to earlier expansion.",
+          "formativeAssessment": "Question identifies reversing multiplication."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add known total and zero form to the model checklist.",
+          "teacherMoves": "6 minutes. Collect one original model plus a restriction before the next lesson.",
+          "sensemakingStrategy": "Check representation before calculation.",
+          "formativeAssessment": "Exit explains why row counts require integers."
+        }
+      ],
+      "teacherReflection": "If algebra is accurate but the condition is wrong, return to the labelled model; an expansion check cannot validate an incorrect starting model.",
+      "summaryTablePrompt": {
+        "observed": "The same side model can be equated to a specified total.",
+        "learned": "Equivalent quadratic equations can be written with zero on one side.",
+        "explained": "A contextual restriction is part of a model, not a later guess."
+      }
+    },
+    {
+      "number": 3,
+      "title": "Can multiplication be undone?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+      "aresKeywords": "Quadratic Equations I",
+      "slo": {
+        "purpose": "Factor common-factor and difference-of-squares expressions and verify identities.",
+        "knowledge": "A factorisation must expand to the entire original expression; a sum of squares is not a difference of squares.",
+        "skills": "Extract common factors, recognise a square difference and expand to verify.",
+        "attitudes": "Use a counterexample to challenge a claim respectfully.",
+        "keyInquiry": "How can we know a proposed factorisation is correct for every x?",
+        "purposeInStoryline": "An unverified formula sheet introduces an extra middle term.",
+        "safetyNotes": "Use paper and pencil; printed symbols have no physical measurement meaning unless stated."
+      },
+      "overview": "Audit identities and factor two fresh expressions on QE3.\nMaterials: QE3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether all three QE3 identities are true.",
+          "teacherMoves": "4 minutes. Record confidence without marking correctness yet.",
+          "sensemakingStrategy": "Make a falsifiable algebraic claim.",
+          "formativeAssessment": "Each learner selects a proposed identity to test."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Expand the three products and factor the two new expressions.",
+          "teacherMoves": "16 minutes. Allow10 minutes for expansions and6 for factorisation; supply distribution prompts only after an attempt.",
+          "sensemakingStrategy": "Compare coefficients term by term.",
+          "formativeAssessment": "Identifies the unwanted10x and obtains4y(y−3),(3t−4)(3t+4)."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain common factors and a²−b²=(a−b)(a+b).",
+          "teacherMoves": "10 minutes. Show cancellation of opposite middle terms; note x²+25 has no real linear factorisation.",
+          "sensemakingStrategy": "Justify an identity by distribution, not a single numerical trial.",
+          "formativeAssessment": "Learner distinguishes an all-value identity from an equation with roots."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Add a question about expressions with both an x term and a constant.",
+          "teacherMoves": "4 minutes. Keep sign/product questions for Lesson4.",
+          "sensemakingStrategy": "Identify what a known factor pattern cannot yet handle.",
+          "formativeAssessment": "Question focuses on the middle coefficient."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Revise the factor checklist with an expansion test.",
+          "teacherMoves": "6 minutes. Collect one explanation of why the sum-of-squares proposal fails.",
+          "sensemakingStrategy": "Retain and correct the original claim.",
+          "formativeAssessment": "Exit names the coefficient that disproves the proposal."
+        }
+      ],
+      "teacherReflection": "Check whether errors arise from signs or distribution. Provide a short expansion repair before introducing trinomial pair selection.",
+      "summaryTablePrompt": {
+        "observed": "A proposed product can insert an unintended middle term.",
+        "learned": "Common factors and square differences have verifiable product forms.",
+        "explained": "Expansion checks the full identity; evaluating one input cannot prove it."
+      }
+    },
+    {
+      "number": 4,
+      "title": "Which pair has both the right sum and product?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+      "aresKeywords": "Quadratic Equations I",
+      "slo": {
+        "purpose": "Factor monic quadratic trinomials with positive and negative terms.",
+        "knowledge": "In(x+p)(x+q),p+q is the middle coefficient and pq is the constant.",
+        "skills": "List signed factor pairs, choose both conditions and verify.",
+        "attitudes": "Value a checked method over a quick unverified guess.",
+        "keyInquiry": "Why is the right product alone insufficient?",
+        "purposeInStoryline": "Two plausible pairs give the same constant but different middle terms.",
+        "safetyNotes": "Fictional symbolic problems use paper only."
+      },
+      "overview": "Three QE4 expressions isolate the roles of product, sum and signs.\nMaterials: QE4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether6 and2 will factor x²+7x+12.",
+          "teacherMoves": "4 minutes. Ask for separate sum and product predictions.",
+          "sensemakingStrategy": "Test the proposed pair against two conditions.",
+          "formativeAssessment": "Both numerical checks recorded."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Factor all three QE4 expressions, listing the signed pairs and expanding.",
+          "teacherMoves": "16 minutes. Use8 minutes for the first two,4 for the third and4 for a partner coefficient check.",
+          "sensemakingStrategy": "Compare sign patterns while holding the constant magnitude fixed.",
+          "formativeAssessment": "Products(x+3)(x+4),(x−4)(x+3),(x−3)(x−4)."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain the sum/product rule by expanding a general pair.",
+          "teacherMoves": "10 minutes. Link x·q+p·x to(p+q)x; avoid introducing the rule without distribution.",
+          "sensemakingStrategy": "Generalise from structural evidence.",
+          "formativeAssessment": "Learner explains why a positive constant can accompany two negative factors."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask what changes when the x² coefficient is2 or3.",
+          "teacherMoves": "4 minutes. Keep leading-coefficient questions for Lesson5.",
+          "sensemakingStrategy": "Mark the current rule's assumptions.",
+          "formativeAssessment": "Question identifies the monic condition."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Build a signed-pair decision table and keep its expansion check.",
+          "teacherMoves": "6 minutes. Collect the repair of the6,2 proposal individually.",
+          "sensemakingStrategy": "Use the discrepancy to refine the method.",
+          "formativeAssessment": "Exit identifies8x in place of7x."
+        }
+      ],
+      "teacherReflection": "If signs are unreliable, rehearse integer sum/product pairs before the non-monic example; reduce repetition instead of removing the check.",
+      "summaryTablePrompt": {
+        "observed": "Signed pairs must satisfy two constraints simultaneously.",
+        "learned": "A monic trinomial factors using the middle-term sum and constant product.",
+        "explained": "Expansion links pair selection to all three coefficients."
+      }
+    },
+    {
+      "number": 5,
+      "title": "How does a non-unit leading coefficient change factoring?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+      "aresKeywords": "Quadratic Equations I",
+      "slo": {
+        "purpose": "Factor simple non-monic quadratics by middle-term splitting and grouping.",
+        "knowledge": "Split coefficients sum to b and multiply to ac; grouping exposes a shared binomial.",
+        "skills": "Split, group, extract and expand.",
+        "attitudes": "Explain a checked sequence so a partner can inspect it.",
+        "keyInquiry": "Why must the split pair multiply to6 rather than3?",
+        "purposeInStoryline": "The design audit encounters a leading coefficient of2.",
+        "safetyNotes": "Use labelled working on paper; no unrelated digital search is needed."
+      },
+      "overview": "Two QE5 expressions practise grouping, followed by an incorrect-product audit.\nMaterials: QE5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the middle term of(2x+3)(x+1).",
+          "teacherMoves": "4 minutes. Collect individual expansions before displaying a method.",
+          "sensemakingStrategy": "Compare a claim with the actual product.",
+          "formativeAssessment": "Learner obtains5x, not7x."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Use QE5 to split and group both expressions, then multiply the factors back.",
+          "teacherMoves": "16 minutes. Model the grouping structure of the first after an attempt; reserve8 minutes for independent work on the second.",
+          "sensemakingStrategy": "Track equality at every line.",
+          "formativeAssessment": "Factors(2x+1)(x+3) and(3x+1)(x−1); complete expansion checks."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain the sum7/product6 choice and the repeated binomial.",
+          "teacherMoves": "10 minutes. Connect ac to the cross-term products; accept another correct factoring method with verification.",
+          "sensemakingStrategy": "Give a reason for each operation.",
+          "formativeAssessment": "Learner can identify the shared binomial before multiplying it out."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Post a question about when a product implies a zero factor.",
+          "teacherMoves": "4 minutes. Defer roots to Lesson6 so identities and equations remain distinct.",
+          "sensemakingStrategy": "Identify the additional equality needed for solving.",
+          "formativeAssessment": "Question explicitly mentions a product equal to zero."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add non-monic grouping to the method sheet.",
+          "teacherMoves": "6 minutes. Collect a corrected product and one independently verified factorisation.",
+          "sensemakingStrategy": "Revise the original guess with coefficient evidence.",
+          "formativeAssessment": "Exit retains all coefficients, not just the constant."
+        }
+      ],
+      "teacherReflection": "Use extra worked distribution support if grouping is new. Confirm prerequisites and actual pacing before assigning further non-monic practice.",
+      "summaryTablePrompt": {
+        "observed": "A non-unit leading coefficient changes cross-term products.",
+        "learned": "Middle-term splitting and grouping can reveal two linear factors.",
+        "explained": "The product expansion checks the split, factors and signs."
+      }
+    },
+    {
+      "number": 6,
+      "title": "Which roots does zero product permit?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+      "aresKeywords": "Quadratic Equations I",
+      "slo": {
+        "purpose": "Solve factorable equations while retaining zero and repeated roots correctly.",
+        "knowledge": "A real product equals zero only if at least one factor is zero; division by a variable can exclude zero.",
+        "skills": "Rearrange, factor, branch and substitute.",
+        "attitudes": "Check every proposed root rather than assuming a familiar result is complete.",
+        "keyInquiry": "How can a correct-looking division lose a solution?",
+        "purposeInStoryline": "The audit finds a method that drops the root zero.",
+        "safetyNotes": "Symbolic paper work; calculator checks do not replace factorisation."
+      },
+      "overview": "QE6 supplies monic, non-monic, common-factor and repeated-root equations.\nMaterials: QE6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether dividing x²=5x by x preserves every solution.",
+          "teacherMoves": "4 minutes. Record the initial solution set before giving a hint.",
+          "sensemakingStrategy": "Make an explicit completeness claim.",
+          "formativeAssessment": "Look for a stated assumption about x=0."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Solve the four QE6 equations and substitute all real roots.",
+          "teacherMoves": "16 minutes. Allow4 minutes per equation; partners compare only after individual root sets are recorded.",
+          "sensemakingStrategy": "Use substitution as a test and factors as a completeness argument.",
+          "formativeAssessment": "Roots−3,−4;−1/2,−3;0,5;3 as one distinct repeated root."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain the zero-product condition and the lost-root division.",
+          "teacherMoves": "10 minutes. Contrast product0 with product12; do not set factors to zero before rearranging.",
+          "sensemakingStrategy": "State the condition under which the method is valid.",
+          "formativeAssessment": "Learner distinguishes a repeated root from two different roots."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask whether every algebraic root describes a physical design.",
+          "teacherMoves": "4 minutes. Retain the difference between substitution validity and context feasibility.",
+          "sensemakingStrategy": "Identify a model restriction to test next.",
+          "formativeAssessment": "Question refers to positive dimensions or integer counts."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Build a solve-and-check chain with both branches.",
+          "teacherMoves": "6 minutes. Collect an individual explanation of the missing zero root.",
+          "sensemakingStrategy": "Refine the model with a domain statement.",
+          "formativeAssessment": "Exit explains why x(x+2)=12 is not already a zero product."
+        }
+      ],
+      "teacherReflection": "Separate factoring mistakes from zero-product misuse. Provide one targeted repair of the actual error before contextual root rejection.",
+      "summaryTablePrompt": {
+        "observed": "Division by x removes the valid case x=0.",
+        "learned": "Zero-product solving requires zero on one side and all factor branches.",
+        "explained": "Substitution checks roots, while the factor branches support a complete set."
+      }
+    },
+    {
+      "number": 7,
+      "title": "Which algebraic roots describe possible designs?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+      "aresKeywords": "Quadratic Equations I",
+      "slo": {
+        "purpose": "Solve area and array models and justify feasible contextual conclusions.",
+        "knowledge": "An algebraically valid root may violate positive lengths or positive integer counts.",
+        "skills": "Define, model, factor, solve, test and interpret with units.",
+        "attitudes": "Explain why an answer is rejected instead of concealing it.",
+        "keyInquiry": "Can a root satisfy the equation but fail the design brief?",
+        "purposeInStoryline": "The team revisits the original negative-length controversy.",
+        "safetyNotes": "Use paper models; do not dig beds or move furniture."
+      },
+      "overview": "QE7 applies factorisation to two complete fictional contexts.\nMaterials: QE7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a negative root should be erased before substitution.",
+          "teacherMoves": "4 minutes. Ask for a distinction between algebra and physical feasibility.",
+          "sensemakingStrategy": "Commit a conditional claim.",
+          "formativeAssessment": "Prediction names a positive-length requirement."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Solve both QE7 models and test every root in the original equation.",
+          "teacherMoves": "16 minutes. Allow8 minutes per problem; require a labelled sketch and restrictions before factors.",
+          "sensemakingStrategy": "Compare algebraic truth with contextual admissibility.",
+          "formativeAssessment": "Garden roots6,−9 with sides6m,9m; display roots8,−9 with8 rows of9."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why negative algebraic roots satisfy each product yet fail the context.",
+          "teacherMoves": "10 minutes. Preserve both roots in the working; check units and integer requirements separately.",
+          "sensemakingStrategy": "Justify decisions with the original brief.",
+          "formativeAssessment": "Learner rejects a root for an explicit contextual reason."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask where such models help and where they need extra information.",
+          "teacherMoves": "4 minutes. Accept limitations such as clearance, actual material sizes or unstated counts without turning them into extra required calculations.",
+          "sensemakingStrategy": "Bound a claim to its assumptions.",
+          "formativeAssessment": "Question identifies an assumption outside the simplified model."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Revise the full model checklist with contextual interpretation.",
+          "teacherMoves": "6 minutes. Collect an individual final sentence with dimensions and verification.",
+          "sensemakingStrategy": "Connect the answer back to the driving question.",
+          "formativeAssessment": "Exit states a useful application and a limitation."
+        }
+      ],
+      "teacherReflection": "Check root rejection reasons individually. Do not accept 'negative is always wrong' as a general algebra rule.",
+      "summaryTablePrompt": {
+        "observed": "Both algebraic roots can satisfy a product equation.",
+        "learned": "Positive dimensions and integer counts restrict the feasible solutions.",
+        "explained": "A complete answer preserves the algebraic roots and justifies its contextual choice."
+      }
+    },
+    {
+      "number": 8,
+      "title": "Can another team reproduce our model audit?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+      "aresKeywords": "Quadratic Equations I",
+      "slo": {
+        "purpose": "Audit flawed models and explain a checked quadratic application respectfully.",
+        "knowledge": "A model, factorisation, solution set and interpretation each need their own check.",
+        "skills": "Diagnose, repair, verify and communicate a short application.",
+        "attitudes": "Listen fairly and give reasons when correcting a peer's claim.",
+        "keyInquiry": "Which check would reveal each kind of error?",
+        "purposeInStoryline": "A peer review tests whether the team can defend its method sheet.",
+        "safetyNotes": "Use teacher-approved references, no personal data, downloads or account sign-ins; print reference is an equal alternative."
+      },
+      "overview": "Four short claim audits precede one paired paper application and a source note.\nMaterials: QE8. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose the claim in QE8 that seems most plausible and predict its test.",
+          "teacherMoves": "4 minutes. Assign individual claims before pairing.",
+          "sensemakingStrategy": "Name a check rather than guess an answer.",
+          "formativeAssessment": "Prediction selects expansion, substitution or contextual restriction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Audit four claims, then make and exchange one small factorable application in pairs.",
+          "teacherMoves": "16 minutes. Allocate8 minutes for audits and8 for one application; use manageable integer dimensions and a supplied print reference if devices are unavailable.",
+          "sensemakingStrategy": "Keep original claims beside corrections and checks.",
+          "formativeAssessment": "Corrects the negative length,missing2x,missing zero and confirms roots2,−5."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain a repaired claim and name the precise assumption or operation that failed.",
+          "teacherMoves": "10 minutes. Require each learner to speak or write a reason; record an actual reference title/page or approved URL only if consulted.",
+          "sensemakingStrategy": "Peer critique targets claims with evidence.",
+          "formativeAssessment": "Individual reasoning visible; source note never invents a search or action."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Review the question board and identify one unresolved modelling limitation.",
+          "teacherMoves": "4 minutes. Leave authentic limits open; do not introduce the final numbers or worked tasks.",
+          "sensemakingStrategy": "Distinguish answered questions from claims requiring more information.",
+          "formativeAssessment": "Each learner names a useful application and a check."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Complete the method sheet and close it before the next lesson.",
+          "teacherMoves": "6 minutes. Use one individual diagnostic to plan access support for the final; keep QE9 and final prompts unreleased.",
+          "sensemakingStrategy": "Consolidate a method without rehearsing the final data.",
+          "formativeAssessment": "Exit explains how expansion and substitution check different steps."
+        }
+      ],
+      "teacherReflection": "Record who can diagnose each error individually. Note actual source/device actions and any prerequisite gaps; a group application is not proof of individual mastery.",
+      "summaryTablePrompt": {
+        "observed": "Different flaws survive different kinds of checking.",
+        "learned": "The whole modelling chain needs mathematical and contextual checks.",
+        "explained": "A respectful audit makes its correction and its evidence reproducible."
+      }
+    },
+    {
+      "number": 9,
+      "title": "Independent quadratic design audit",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+      "aresKeywords": "Quadratic Equations I",
+      "slo": {
+        "purpose": "Demonstrate model formation,factorisation,solution checking and practical interpretation independently.",
+        "knowledge": "The same model and zero-product conditions apply to unfamiliar numbers.",
+        "skills": "Write expressions and equations, factor, solve and justify feasible roots.",
+        "attitudes": "Show original working honestly and identify a specific use or limitation.",
+        "keyInquiry": "Can I defend a complete design decision without a shared sheet?",
+        "purposeInStoryline": "A new sign brief provides individual evidence of the whole modelling chain.",
+        "safetyNotes": "Provide accessible printed notation and procedural support only; no worked examples or teaching cards during assessment."
+      },
+      "overview": "Independent assessment uses only QE9 and the separate final prompts.\nMaterials: QE9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 14 min, Driving Question Board (DQB) Creation 4 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read the independent instructions and QE9.",
+          "teacherMoves": "4 minutes. Allow4 minutes for procedure and access questions without teaching a solution.",
+          "sensemakingStrategy": "Individual work only; no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Teaching materials and answer keys are unavailable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete sections1–2 individually.",
+          "teacherMoves": "14 minutes. Allow14 minutes for representation,factorisation and root checks; clarify procedure only.",
+          "sensemakingStrategy": "Individual work only; no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Collected working shows expressions,factors and all requested roots."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Complete section3 modelling and interpretation individually.",
+          "teacherMoves": "14 minutes. Allow14 minutes; calculator may check completed arithmetic but not replace the required method.",
+          "sensemakingStrategy": "Individual work only; no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Both algebraic roots,context decision and units recorded."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Write section4's private application/limitation reflection.",
+          "teacherMoves": "4 minutes. Allow4 minutes; no shared question-board discussion before collection.",
+          "sensemakingStrategy": "Individual work only; no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "A concrete claim is linked to the assessed design."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Check labels and working, then submit every sheet.",
+          "teacherMoves": "4 minutes. Allow4 minutes and collect all work before any feedback discussion.",
+          "sensemakingStrategy": "Individual work only; no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Teacher retains independent evidence for criterion feedback."
+        }
+      ],
+      "teacherReflection": "Assess collected individual work with the linked criteria. Record access/pacing issues separately from mathematical attainment; do not infer lasting attitudes from one written reflection.",
+      "summaryTablePrompt": {
+        "observed": "New data reveal each learner's modelling and solving choices.",
+        "learned": "Teacher records demonstrated strengths and specific errors from collected work.",
+        "explained": "Feedback distinguishes equation,factorisation,root and context errors."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "QUADRATIC EQUATIONS (I)",
+    "instructions": "Lesson9,40 minutes:4 procedure,14 sections1–2,14 section3,4 section4 and4 checking/collection. Work independently with QE9 only; no teaching cards,peer help or worked examples. Show model definitions,factorisation and substitution checks. Calculator may check completed arithmetic. All roots requested are real; contextual restrictions must be stated separately.",
+    "sections": [
+      {
+        "title": "1. Form and interpret an expression",
+        "prompt": "For the QE9 token array define n and state its restrictions. Form and expand the total-token expression,then evaluate it for n=3. Explain why n+(n+2) does not represent the total.",
+        "exemplar": "n is a positive integer number of rows;each contains n+2 tokens. Total n(n+2)=n²+2n,which at3 gives15 tokens. Adding rows to tokens per row does not count each token;the count requires the product."
+      },
+      {
+        "title": "2. Factor and solve",
+        "prompt": "Factor3t²+10t+3 and use it to solve3t²+10t+3=0. Also solve y²=4y by factorisation. State every real root,substitute each into its original equation and explain how division by y could lose one root.",
+        "exemplar": "3t²+9t+t+3=(3t+1)(t+3),so t=−1/3 or−3. Substitutions give1/3−10/3+3=0 and27−30+3=0. y²−4y=y(y−4)=0 gives y=0 or4,with0=0 and16=16 in the original. Dividing by y assumes y≠0 and removes the valid zero case."
+      },
+      {
+        "title": "3. Decide which design is feasible",
+        "prompt": "For the QE9 sign define x and its restriction. Form the area equation,expand and rearrange to zero. Factor,find every algebraic root and test each in the original product equation. State feasible width,length,area and perimeter with units,and explain why any algebraic root is excluded by this context.",
+        "exemplar": "x>0 is width in cm. x(x+4)=77 gives x²+4x−77=0=(x+11)(x−7). Roots−11,7 satisfy(−11)(−7)=77 and7·11=77. Negative lengths are infeasible;choose width7cm,length11cm,area77cm²,perimeter36cm. Root−11 is algebraically valid but violates x>0."
+      },
+      {
+        "title": "4. Use and limits",
+        "prompt": "Explain one concrete way a quadratic model helped the sign decision. Identify one limitation or extra piece of real design information that this simplified model does not supply. Give a mathematical check that supports your decision.",
+        "exemplar": "The area and side relationship determine candidate dimensions rather than requiring trial alone. The model does not supply frame allowance,material thickness or clearance;accept another relevant specific limitation. Area7·11=77 and the positive-dimension condition support the selected design. A written reason is evidence of recognising a use,not proof of an enduring attitude or practical construction competence."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Form meaningful expressions and equations",
+        "excellent": "Correctly defines both variables and restrictions,forms and expands both models,evaluates the count and explains why addition fails.",
+        "proficient": "Correctly represents the array and sign conditions,with usable variable definitions,restrictions and expanded forms.",
+        "developing": "A meaningful model is present but a definition,restriction,operation,expansion or count needs correction.",
+        "belowExpectations": "Needs guided support to connect the stated dimensions/counts with a product model."
+      },
+      {
+        "criterion": "Factor and solve with complete checked roots",
+        "excellent": "All factorisations and real roots are correct;each requested substitution is explicit and the lost-zero explanation is precise.",
+        "proficient": "Correctly factors and solves the equations,records all roots and verifies them with a valid zero-root explanation.",
+        "developing": "Some factors or roots are correct but a sign,root branch,verification or division condition is incomplete.",
+        "belowExpectations": "Needs guided factorisation or zero-product support to obtain a justified solution set."
+      },
+      {
+        "criterion": "Interpret and evaluate a quadratic application",
+        "excellent": "Correct dimensions,area and perimeter with units;clearly separates algebraic validity from feasibility and explains a specific use,limitation and check.",
+        "proficient": "Chooses the feasible dimensions with valid contextual reasoning and units,and explains a relevant use,limitation and mathematical check.",
+        "developing": "Some interpretation is sensible but a dimension,unit,root-rejection reason,use,limitation or check is incomplete.",
+        "belowExpectations": "Needs prompts to connect an algebraic result to feasible dimensions and the purpose of the model."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand 1.3: Quadratic Equations (I)",
+    "drivingQuestion": "Which algebraic answers describe a possible design? KICD: How are quadratic equations applied in real life?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "What does the letter measure?",
+        "observed": "Side labels lead to different operations for area and perimeter.",
+        "learned": "Multiplying two linear dimensions can form a quadratic expression.",
+        "explained": "A variable definition and units make an expression interpretable."
+      },
+      {
+        "number": 2,
+        "title": "Which condition makes an equation?",
+        "observed": "The same side model can be equated to a specified total.",
+        "learned": "Equivalent quadratic equations can be written with zero on one side.",
+        "explained": "A contextual restriction is part of a model, not a later guess."
+      },
+      {
+        "number": 3,
+        "title": "Can multiplication be undone?",
+        "observed": "A proposed product can insert an unintended middle term.",
+        "learned": "Common factors and square differences have verifiable product forms.",
+        "explained": "Expansion checks the full identity; evaluating one input cannot prove it."
+      },
+      {
+        "number": 4,
+        "title": "Which pair has both the right sum and product?",
+        "observed": "Signed pairs must satisfy two constraints simultaneously.",
+        "learned": "A monic trinomial factors using the middle-term sum and constant product.",
+        "explained": "Expansion links pair selection to all three coefficients."
+      },
+      {
+        "number": 5,
+        "title": "How does a non-unit leading coefficient change factoring?",
+        "observed": "A non-unit leading coefficient changes cross-term products.",
+        "learned": "Middle-term splitting and grouping can reveal two linear factors.",
+        "explained": "The product expansion checks the split, factors and signs."
+      },
+      {
+        "number": 6,
+        "title": "Which roots does zero product permit?",
+        "observed": "Division by x removes the valid case x=0.",
+        "learned": "Zero-product solving requires zero on one side and all factor branches.",
+        "explained": "Substitution checks roots, while the factor branches support a complete set."
+      },
+      {
+        "number": 7,
+        "title": "Which algebraic roots describe possible designs?",
+        "observed": "Both algebraic roots can satisfy a product equation.",
+        "learned": "Positive dimensions and integer counts restrict the feasible solutions.",
+        "explained": "A complete answer preserves the algebraic roots and justifies its contextual choice."
+      },
+      {
+        "number": 8,
+        "title": "Can another team reproduce our model audit?",
+        "observed": "Different flaws survive different kinds of checking.",
+        "learned": "The whole modelling chain needs mathematical and contextual checks.",
+        "explained": "A respectful audit makes its correction and its evidence reproducible."
+      },
+      {
+        "number": 9,
+        "title": "Independent quadratic design audit",
+        "observed": "New data reveal each learner's modelling and solving choices.",
+        "learned": "Teacher records demonstrated strengths and specific errors from collected work.",
+        "explained": "Feedback distinguishes equation,factorisation,root and context errors."
+      }
+    ]
+  }
+};
