@@ -86,9 +86,9 @@ module.exports = {
       ],
       "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
       "summaryTablePrompt": {
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "Indicator strips give chart-based pH estimates; class repeats or the illustrative G2 values are recorded separately.",
         "learned": "Universal-indicator colour and a chart estimate aqueous pH; for these samples pH below 7 is acidic and above 7 basic.",
-        "explained": "Begin the shared chart with a separate pH classification column."
+        "explained": "For the named aqueous samples near room temperature, below 7 is acidic and above 7 is basic; pH does not establish identity or safety."
       }
     },
     {
@@ -146,9 +146,9 @@ module.exports = {
       ],
       "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
       "summaryTablePrompt": {
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "G3 supplies distinct evidence cards for digestion, dissolved carbon dioxide, antacid neutralisation and hypochlorite bleaching.",
         "learned": "An aqueous ion model helps explain acidity and neutralisation; bleaching also involves oxidation.",
-        "explained": "Add a cause column that distinguishes pH from a specific chemical action."
+        "explained": "Acidity helps explain digestion and neutralisation; bleaching also needs a substance-specific oxidation explanation, basicity alone does not imply bleaching action."
       }
     },
     {
@@ -206,9 +206,9 @@ module.exports = {
       ],
       "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
       "summaryTablePrompt": {
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "The class records pH rising as alkali is added, or labels the G4 fallback values as illustrative.",
         "learned": "For the named acid and hydroxide, neutralisation produces a salt and water.",
-        "explained": "Add a reaction branch: acid+hydroxide base→salt+water."
+        "explained": "Hydrochloric acid and sodium hydroxide form sodium chloride and water; excess hydroxide makes the resulting solution basic."
       }
     },
     {
@@ -266,9 +266,9 @@ module.exports = {
       ],
       "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
       "summaryTablePrompt": {
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "The approved vinegar/bicarbonate trial or supplied card shows bubbling.",
         "learned": "An acid with a carbonate or hydrogen carbonate can produce salt, water and carbon dioxide.",
-        "explained": "Add a carbonate branch and separate observation from established reaction knowledge."
+        "explained": "The named acid and carbonate model predicts salt, water and carbon dioxide; bubbles alone do not identify the gas."
       }
     },
     {
@@ -326,9 +326,9 @@ module.exports = {
       ],
       "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
       "summaryTablePrompt": {
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "The teacher demonstration or observation card shows magnesium getting smaller while bubbles form.",
         "learned": "Magnesium with dilute hydrochloric acid produces magnesium chloride and hydrogen.",
-        "explained": "Add a separate acid–metal branch; no flame test is needed."
+        "explained": "Magnesium and hydrochloric acid form magnesium chloride and hydrogen; this gas identity follows from the named reaction, not bubbling alone."
       }
     },
     {
@@ -386,9 +386,9 @@ module.exports = {
       ],
       "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
       "summaryTablePrompt": {
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "G7 changes are+0.30 g,+1.20 g and−0.80 g; B forms a solution and hydrated C becomes powdery.",
         "learned": "Hygroscopic salts take up moisture; deliquescent salts take up enough to dissolve; efflorescent hydrated salts lose water of crystallisation.",
-        "explained": "Add a water-exchange branch distinct from the acid/base reaction branches."
+        "explained": "Under the water-only assumption A is hygroscopic, B deliquescent and C efflorescent; deliquescence is water uptake sufficient to form solution."
       }
     },
     {
@@ -446,9 +446,9 @@ module.exports = {
       ],
       "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
       "summaryTablePrompt": {
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "Exposed and covered samples or the proposed comparison record time and air conditions; no change is a valid possible result.",
         "learned": "Humidity, temperature, exposure and controls affect evidence of water exchange.",
-        "explained": "Add storage conditions and an evidence limitation to the water-exchange model."
+        "explained": "A fair comparison controls conditions; humidity and temperature affect water exchange, so a visible transformation within 40 minutes is not guaranteed."
       }
     },
     {
@@ -466,7 +466,7 @@ module.exports = {
         "purposeInStoryline": "Read G9 application cards and make a use–benefit–risk–action table for three applications.",
         "safetyNotes": "Reading and discussion only. No eating, tasting, fertiliser handling or medical advice."
       },
-      "overview": "Read G9 application cards and make a use–benefit–risk–action table for three applications.\nMaterials: G9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "overview": "Read G9 application cards and make a use–benefit–risk–action table for three applications.\nMaterials: G9; G11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
       "framework": [
         {
           "phase": "Predict Phase",
@@ -506,9 +506,9 @@ module.exports = {
       ],
       "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
       "summaryTablePrompt": {
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "G9 and the supplied G11 print reference link salt applications with a benefit, concern and action.",
         "learned": "Salts have varied uses; proper use depends on identity, quantity and environmental context.",
-        "explained": "Extend the shared chart with benefits and responsible-use actions."
+        "explained": "Salt use depends on identity, amount and context; food salt is not evidence that all salts are edible, and runoff can harm water ecosystems."
       }
     },
     {
@@ -526,7 +526,7 @@ module.exports = {
         "purposeInStoryline": "Create the G9 poster and apply the shared chart to the fictional G1 store case. Exchange posters for checking.",
         "safetyNotes": "Classroom poster only; teacher checks before any public sharing.No chemical mixtures or dietary prescriptions."
       },
-      "overview": "Create the G9 poster and apply the shared chart to the fictional G1 store case. Exchange posters for checking.\nMaterials: G1; G9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "overview": "Create the G9 poster and apply the shared chart to the fictional G1 store case. Exchange posters for checking.\nMaterials: G1; G9; G11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
       "framework": [
         {
           "phase": "Predict Phase",
@@ -566,9 +566,9 @@ module.exports = {
       ],
       "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
       "summaryTablePrompt": {
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "A checked poster cites a supplied source or class observation and applies the chart to the fictional store.",
         "learned": "A complete explanation may need separate pH, reaction and water-exchange models.",
-        "explained": "Complete the Substance–evidence–explanation–safe use chart with limits visible."
+        "explained": "Separate pH, reaction and water-exchange models explain different observations; one pH label cannot explain every cupboard change."
       }
     },
     {
@@ -578,57 +578,57 @@ module.exports = {
       "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
       "aresKeywords": "Acids Bases and Salts",
       "slo": {
-        "purpose": "Demonstrate the six outcomes using new evidence.",
+        "purpose": "Demonstrate the six outcomes independently using supplied evidence.",
         "knowledge": "Classify, explain and apply the unit’s chemical and water-exchange models.",
         "skills": "Separate observation, inference and safe-use reasoning.",
-        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "attitudes": "Work independently, record reasoning honestly, and check the stated assumptions.",
         "keyInquiry": "Which model is justified by the evidence?",
-        "purposeInStoryline": "Learners independently interpret a fresh evidence card and answer the five assessment sections.",
+        "purposeInStoryline": "Learners independently apply taught models to the supplied assessment card. Reaction identities are recall/application checks; changed salt masses provide limited numerical variation, not a broad unfamiliar-context transfer test.",
         "safetyNotes": "Paper assessment only; no tasting, chemical handling or personal health advice."
       },
-      "overview": "Learners independently interpret a fresh evidence card and answer the five assessment sections.\nMaterials: G10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 30 min, Explain 2 min, Driving Question Board (DQB) Creation 1 min, Model Building 3 min.",
+      "overview": "Learners independently apply taught models to the supplied assessment card. Reaction identities are recall/application checks; changed salt masses provide limited numerical variation, not a broad unfamiliar-context transfer test.\nMaterials: G10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 30 min, Explain 2 min, Driving Question Board (DQB) Creation 1 min, Model Building 3 min.",
       "framework": [
         {
           "phase": "Predict Phase",
           "learnerExperience": "Read G10 and the student assessment.",
           "teacherMoves": "4 minutes. Allow 4 minutes to clarify words and access needs without supplying explanations.",
-          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "sensemakingStrategy": "Read and interpret the task individually; clarify wording without discussing methods or answers.",
           "formativeAssessment": "Check all learners can read the pH and mass values."
         },
         {
           "phase": "Observe Phase",
           "learnerExperience": "Complete the assessment independently.",
-          "teacherMoves": "30 minutes. Allow 30 minutes.No live practical.No teacher key is supplied.",
-          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "teacherMoves": "30 minutes. Allow 30 minutes.No live practical.No teacher key is supplied. Do not open optional ARES resources or search links until original assessment work is collected.",
+          "sensemakingStrategy": "Independent written working: no peer comparison, group solution or teacher exemplars before original work is collected.",
           "formativeAssessment": "Collect original answers and mark by outcome."
         },
         {
           "phase": "Explain Phase",
           "learnerExperience": "Write a private reflection about one inference.",
           "teacherMoves": "2 minutes. Use 2 minutes; discuss full solutions in a later feedback session.",
-          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "sensemakingStrategy": "Private reflection after collection; keep original responses unchanged and defer worked feedback.",
           "formativeAssessment": "Record whether evidence and inference are distinguished."
         },
         {
           "phase": "Driving Question Board (DQB) Creation",
           "learnerExperience": "Submit one question for teacher feedback.",
           "teacherMoves": "1 minutes. Use 1 minute to collect questions.",
-          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "sensemakingStrategy": "Submit an individual question for later feedback without discussing assessment solutions.",
           "formativeAssessment": "Identify a topic needing reteaching."
         },
         {
           "phase": "Model Building Phase",
           "learnerExperience": "Write one responsible-use action with a reason.",
           "teacherMoves": "3 minutes. Allow 3 minutes for transfer reflection.",
-          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "sensemakingStrategy": "Write an individual transfer statement using the assessed model; no shared revision during assessment.",
           "formativeAssessment": "Use this and G9 as evidence for outcome f."
         }
       ],
       "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
       "summaryTablePrompt": {
-        "observed": "Independent responses apply the models to unfamiliar data.",
+        "observed": "Individual written responses classify the supplied pH data and calculate+0.80 g and−0.50 g mass changes.",
         "learned": "pH, reaction products and salt-air behaviour require different evidence.",
-        "explained": "Responsible use combines an explanation with an appropriate action."
+        "explained": "Named reaction products and water-exchange classifications use different evidence; responsible-use explanations link a stated concern with an action."
       }
     }
   ],
@@ -700,72 +700,72 @@ module.exports = {
       {
         "number": 1,
         "title": "Classify safe aqueous samples",
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "Indicator strips give chart-based pH estimates; class repeats or the illustrative G2 values are recorded separately.",
         "learned": "Universal-indicator colour and a chart estimate aqueous pH; for these samples pH below 7 is acidic and above 7 basic.",
-        "explained": "Begin the shared chart with a separate pH classification column."
+        "explained": "For the named aqueous samples near room temperature, below 7 is acidic and above 7 is basic; pH does not establish identity or safety."
       },
       {
         "number": 2,
         "title": "Acids and bases in familiar processes",
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "G3 supplies distinct evidence cards for digestion, dissolved carbon dioxide, antacid neutralisation and hypochlorite bleaching.",
         "learned": "An aqueous ion model helps explain acidity and neutralisation; bleaching also involves oxidation.",
-        "explained": "Add a cause column that distinguishes pH from a specific chemical action."
+        "explained": "Acidity helps explain digestion and neutralisation; bleaching also needs a substance-specific oxidation explanation, basicity alone does not imply bleaching action."
       },
       {
         "number": 3,
         "title": "Observe neutralisation",
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "The class records pH rising as alkali is added, or labels the G4 fallback values as illustrative.",
         "learned": "For the named acid and hydroxide, neutralisation produces a salt and water.",
-        "explained": "Add a reaction branch: acid+hydroxide base→salt+water."
+        "explained": "Hydrochloric acid and sodium hydroxide form sodium chloride and water; excess hydroxide makes the resulting solution basic."
       },
       {
         "number": 4,
         "title": "Explain bubbling with a carbonate",
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "The approved vinegar/bicarbonate trial or supplied card shows bubbling.",
         "learned": "An acid with a carbonate or hydrogen carbonate can produce salt, water and carbon dioxide.",
-        "explained": "Add a carbonate branch and separate observation from established reaction knowledge."
+        "explained": "The named acid and carbonate model predicts salt, water and carbon dioxide; bubbles alone do not identify the gas."
       },
       {
         "number": 5,
         "title": "Explain an acid–metal reaction",
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "The teacher demonstration or observation card shows magnesium getting smaller while bubbles form.",
         "learned": "Magnesium with dilute hydrochloric acid produces magnesium chloride and hydrogen.",
-        "explained": "Add a separate acid–metal branch; no flame test is needed."
+        "explained": "Magnesium and hydrochloric acid form magnesium chloride and hydrogen; this gas identity follows from the named reaction, not bubbling alone."
       },
       {
         "number": 6,
         "title": "Classify water gain and loss",
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "G7 changes are+0.30 g,+1.20 g and−0.80 g; B forms a solution and hydrated C becomes powdery.",
         "learned": "Hygroscopic salts take up moisture; deliquescent salts take up enough to dissolve; efflorescent hydrated salts lose water of crystallisation.",
-        "explained": "Add a water-exchange branch distinct from the acid/base reaction branches."
+        "explained": "Under the water-only assumption A is hygroscopic, B deliquescent and C efflorescent; deliquescence is water uptake sufficient to form solution."
       },
       {
         "number": 7,
         "title": "Plan a fair salt-exposure comparison",
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "Exposed and covered samples or the proposed comparison record time and air conditions; no change is a valid possible result.",
         "learned": "Humidity, temperature, exposure and controls affect evidence of water exchange.",
-        "explained": "Add storage conditions and an evidence limitation to the water-exchange model."
+        "explained": "A fair comparison controls conditions; humidity and temperature affect water exchange, so a visible transformation within 40 minutes is not guaranteed."
       },
       {
         "number": 8,
         "title": "Use salts without ignoring consequences",
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "G9 and the supplied G11 print reference link salt applications with a benefit, concern and action.",
         "learned": "Salts have varied uses; proper use depends on identity, quantity and environmental context.",
-        "explained": "Extend the shared chart with benefits and responsible-use actions."
+        "explained": "Salt use depends on identity, amount and context; food salt is not evidence that all salts are edible, and runoff can harm water ecosystems."
       },
       {
         "number": 9,
         "title": "Explain the cupboard and communicate safely",
-        "observed": "The named card or class practical provides the evidence.",
+        "observed": "A checked poster cites a supplied source or class observation and applies the chart to the fictional store.",
         "learned": "A complete explanation may need separate pH, reaction and water-exchange models.",
-        "explained": "Complete the Substance–evidence–explanation–safe use chart with limits visible."
+        "explained": "Separate pH, reaction and water-exchange models explain different observations; one pH label cannot explain every cupboard change."
       },
       {
         "number": 10,
         "title": "Independent evidence-based explanation",
-        "observed": "Independent responses apply the models to unfamiliar data.",
+        "observed": "Individual written responses classify the supplied pH data and calculate+0.80 g and−0.50 g mass changes.",
         "learned": "pH, reaction products and salt-air behaviour require different evidence.",
-        "explained": "Responsible use combines an explanation with an appropriate action."
+        "explained": "Named reaction products and water-exchange classifications use different evidence; responsible-use explanations link a stated concern with an action."
       }
     ]
   }

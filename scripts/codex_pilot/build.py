@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build/check the OpenAI-only pilot from authored records; never calls a model API."""
 import ast, hashlib, json, math, operator, re, subprocess
+import yaml
 from pathlib import Path
 from docx import Document
 from docx.shared import Inches, Pt
@@ -11,6 +12,17 @@ BASE=ROOT/'data/codex_pilot_2026-11'
 PHASES=['Predict Phase','Observe Phase','Explain Phase','Driving Question Board (DQB) Creation','Model Building Phase']
 OPS={ast.Add:operator.add,ast.Sub:operator.sub,ast.Mult:operator.mul,ast.Div:operator.truediv,ast.Pow:operator.pow}
 FUNCS={'sqrt':math.sqrt,'sin_deg':lambda x:math.sin(math.radians(x)),'cos_deg':lambda x:math.cos(math.radians(x)),'tan_deg':lambda x:math.tan(math.radians(x)),'atan_deg':lambda x:math.degrees(math.atan(x))}
+def attribution_footer(document):
+ """Read the pilot attribution override for companion documents as well."""
+ config=yaml.safe_load((BASE/'attribution.yaml').read_text())
+ from datetime import date
+ year=str(date.today().year) if config['year']=='auto' else str(config['year'])
+ text=config['lesson_footer'].replace('{YEAR}',year)
+ paragraph=document.sections[0].footer.paragraphs[0]
+ paragraph.text=text
+ for run in paragraph.runs:
+  run.font.name='Arial';run.font.size=Pt(7)
+ document.sections[0].footer_distance=Inches(.15)
 def calc(expr):
  def walk(n):
   if isinstance(n,ast.Constant) and type(n.value) in (int,float):return n.value
@@ -21,6 +33,7 @@ def calc(expr):
  return walk(ast.parse(expr,mode='eval').body)
 def write_doc(path,title,items,teacher=False):
  d=Document(); sec=d.sections[0];sec.top_margin=sec.bottom_margin=Inches(.65)
+ attribution_footer(d)
  style=d.styles['Normal'];style.font.name='Arial';style.font.size=Pt(11)
  d.add_heading(title,0);d.add_paragraph('Grade 10 • OpenAI-only pilot • teacher review copy')
  for item in items:
@@ -33,6 +46,7 @@ def write_doc(path,title,items,teacher=False):
 def write_guide(path,module):
  d=Document();s=d.sections[0];s.orientation=WD_ORIENT.LANDSCAPE;s.page_width=Inches(11);s.page_height=Inches(8.5)
  s.top_margin=s.bottom_margin=Inches(.45);s.left_margin=s.right_margin=Inches(.5)
+ attribution_footer(d)
  normal=d.styles['Normal'];normal.font.name='Arial';normal.font.size=Pt(9);normal.paragraph_format.space_after=Pt(3)
  d.add_heading(module['META']['titleDoc'],0)
  d.add_paragraph('Compact teacher guide • OpenAI-only pilot • teacher review copy')
@@ -52,6 +66,23 @@ def write_guide(path,module):
    cells=table.add_row().cells
    for c,t in zip(cells,[phase['phase'],phase['learnerExperience'],phase['teacherMoves'],phase['sensemakingStrategy'],phase['formativeAssessment']]):c.text=t
   d.add_paragraph('Reflection: '+l['teacherReflection'])
+ d.save(path)
+def write_student_summary(path,module):
+ """Supply the blank student counterpart promised by the standard summary."""
+ d=Document();s=d.sections[0]
+ s.orientation=WD_ORIENT.LANDSCAPE;s.page_width=Inches(11);s.page_height=Inches(8.5)
+ s.top_margin=s.bottom_margin=Inches(.65)
+ s.left_margin=s.right_margin=Inches(.65)
+ attribution_footer(d)
+ normal=d.styles['Normal'];normal.font.name='Arial';normal.font.size=Pt(10)
+ d.add_heading(module['META']['titleDoc']+' — Student Summary Table',0)
+ d.add_paragraph('Complete the three evidence columns after each lesson. Use your own observations, learning and explanation. Teacher exemplars are supplied separately.')
+ table=d.add_table(rows=1,cols=4);table.style='Table Grid'
+ for c,t in zip(table.rows[0].cells,['Lesson','What I observed','What I learned','What I can explain']):c.text=t
+ table.rows[0]._tr.get_or_add_trPr().append(OxmlElement('w:tblHeader'))
+ for l in module['LESSONS']:
+  row=table.add_row();row.cells[0].text=f'{l["number"]}. {l["title"]}'
+  row.height=Inches(.45)
  d.save(path)
 def build(name):
  m=json.loads((BASE/'manuscripts'/f'{name}.json').read_text())
@@ -107,7 +138,9 @@ def build(name):
  outdir=BASE/'outputs'/meta['outputDir'];outdir.mkdir(parents=True,exist_ok=True)
  write_doc(outdir/(m['prefix']+'_StudentMaterials.docx'),m['topic']+' — Student Materials',bank['items'])
  write_doc(outdir/(m['prefix']+'_MaterialsTeacherKey.docx'),m['topic']+' — Materials Teacher Key',bank['items'],True)
+ write_doc(outdir/(m['prefix']+'_AssessmentMaterials.docx'),m['topic']+' — Independent Assessment Materials',[cards[c] for c in m['lessons'][-1]['materials']])
  write_guide(outdir/(m['prefix']+'_CompactTeacherGuide.docx'),module)
+ write_student_summary(outdir/(m['prefix']+'_StudentSummaryTable.docx'),module)
  return report
 if __name__=='__main__':
  import sys

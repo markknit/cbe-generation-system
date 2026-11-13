@@ -1,8 +1,10 @@
-# Resume after the server reboot
+# Reviewed pilot checkpoint
 
-**Paused at Mark’s request on 2026-11-12. Do not launch reviews until he resumes the task.**
+**Independent review and corrections completed on 2026-11-12 after Mark explicitly resumed the task.** Read [INDEPENDENT_REPORT.md](INDEPENDENT_REPORT.md) for the current results and [Review_Package_Reviewed.zip](Review_Package_Reviewed.zip) for corrected artifacts. Three complete initial reviews remain unchanged; separate focused rechecks confirm all 18 original finding instances plus two minor Science follow-ups were addressed. Teacher/classroom confirmation, partner R1 ingestion support and usage/correction-cost measurement remain open.
 
-The three-subject draft pilot is committed as `4e433620`. This checkpoint changes continuity records only. No independent reviewer agents have been started. The estimate previously given was 30–45 minutes for parallel reviews plus corrections/rebuilds; it is an estimate, not a deadline.
+A second server restart interrupted the first three reviewer attempts before they saved reports. Three fresh subject reviewers then completed the task using progressive on-disk checkpoints. Do not rerun those reviews simply because the session is new. The reviewed deliverables are 27 DOCX and 27 PDF across 31 lessons; the original 21/21 ZIP is a pre-review snapshot. Changes are local/unpushed; derive the current commit/ahead state from git.
+
+The following is the **historical reboot resumption plan, now completed**. Wider generation, promotion and publication require the next user decision; they are not implied by resuming this checkpoint.
 
 After reboot:
 

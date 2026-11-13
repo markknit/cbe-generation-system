@@ -6,9 +6,12 @@ def save(area,name,data):
  (BASE/area/(name+'.json')).write_text(json.dumps(data,ensure_ascii=False,indent=2))
 def item(i,title,student,teacher):return dict(id=i,title=title,student=student,teacher=teacher)
 def check(i,expression,expected,tol=1e-8):return dict(id=i,expression=expression,expected=expected,absolute_tolerance=tol)
-def lesson(n,title,outcomes,materials,purpose,knowledge,skills,inquiry,overview,phases,summary,safety='Use paper tasks and calculators; keep walkways clear.',minutes=None):
+def lesson(n,title,outcomes,materials,purpose,knowledge,skills,inquiry,overview,phases,summary,safety='Use paper tasks and calculators; keep walkways clear.',minutes=None,independent=False):
  strategies=['Individual prediction, then paired comparison: keep the initial claim visible.','Evidence-first group work: record working or observations before comparing explanations.','Claim–evidence–reasoning: connect the result to a rule and state its limits.','Question sorting: mark an inquiry answered only when evidence supports it.','Revise a shared model: preserve the earlier version and annotate what changed.']
- return dict(number=n,title=title,outcomes=outcomes,materials=materials,purpose=purpose,knowledge=knowledge,skills=skills,attitudes='Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.',inquiry=inquiry,story=overview,safety=safety,overview=overview,minutes=minutes or [4,16,10,4,6],phases=[[p[0],p[1],strategies[i],p[2]] for i,p in enumerate(phases)],summary=dict(zip(['observed','learned','explained'],summary)),reflection='Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.')
+ if independent:
+  strategies=['Read and interpret the task individually; clarify wording without discussing methods or answers.','Independent written working: no peer comparison, group solution or teacher exemplars before original work is collected.','Private reflection after collection; keep original responses unchanged and defer worked feedback.','Submit an individual question for later feedback without discussing assessment solutions.','Write an individual transfer statement using the assessed model; no shared revision during assessment.']
+ attitudes='Work independently, record reasoning honestly, and check the stated assumptions.' if independent else 'Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.'
+ return dict(number=n,title=title,outcomes=outcomes,materials=materials,purpose=purpose,knowledge=knowledge,skills=skills,attitudes=attitudes,inquiry=inquiry,story=overview,safety=safety,overview=overview,minutes=minutes or [4,16,10,4,6],phases=[[p[0],p[1],strategies[i],p[2]] for i,p in enumerate(phases)],summary=dict(zip(['observed','learned','explained'],summary)),reflection='Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.')
 def rubric(criteria):
  return [dict(criterion=c,excellent='Gives a correct, complete explanation and independently checks the result or its limits.',proficient='Meets the stated criterion with correct reasoning and an appropriate conclusion.',developing='Shows relevant understanding but needs support to correct a significant error or omission.',belowExpectations='Does not yet demonstrate the criterion; needs guided work with a concrete example.') for c in criteria]
 def publish(name,m,items,checks,reason,assessment_map):
@@ -19,9 +22,13 @@ def publish(name,m,items,checks,reason,assessment_map):
  import re
  def clean(x):
   if isinstance(x,str):
-   x=re.sub(r'(?<=[a-z])(?=\d)|(?<=\d)(?=[A-Za-z])',' ',x)
-   x=re.sub(r'\b(KES|USD)(?=\d)',r'\1 ',x)
-   return re.sub(r'([,;:])(?=[A-Za-z0-9])',r'\1 ',x)
+   # Preserve printed URLs, including percent-encoded digit/letter sequences.
+   parts=re.split(r'(https?://[^\s]+)',x)
+   for i in range(0,len(parts),2):
+    t=re.sub(r'(?<=[a-z])(?=\d)|(?<=\d)(?=[A-Za-z])',' ',parts[i])
+    t=re.sub(r'\b(KES|USD)(?=\d)',r'\1 ',t)
+    parts[i]=re.sub(r'([,;:])(?=[A-Za-z0-9])',r'\1 ',t)
+   return ''.join(parts)
   if isinstance(x,list):return [clean(v) for v in x]
   if isinstance(x,dict):return {k:clean(v) for k,v in x.items()}
   return x

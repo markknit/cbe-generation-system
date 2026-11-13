@@ -20,9 +20,11 @@ venv/bin/python scripts/codex_pilot/author_science.py
 venv/bin/python scripts/codex_pilot/diagrams.py
 venv/bin/python scripts/codex_pilot/build.py essmath_2_8 coremath_2_5 gensci_2_4
 CBE_DATA_DIR="$PWD/data/codex_pilot_2026-11/modules" node scripts/validate_corpus.js
-CBE_DATA_DIR="$PWD/data/codex_pilot_2026-11/modules" CBE_OUTPUT_ROOT="$PWD/data/codex_pilot_2026-11/outputs" CBE_FE_ISSUES_DIR="$PWD/data/codex_pilot_2026-11/reviews/fe_issues" node generators/generate.js --all
+ARES_RECOMMENDER_SCRIPT="$PWD/scripts/codex_pilot/resource_recommender.py" ATTRIBUTION_YAML="$PWD/data/codex_pilot_2026-11/attribution.yaml" CBE_DATA_DIR="$PWD/data/codex_pilot_2026-11/modules" CBE_OUTPUT_ROOT="$PWD/data/codex_pilot_2026-11/outputs" CBE_FE_ISSUES_DIR="$PWD/data/codex_pilot_2026-11/reviews/fe_issues" node generators/generate.js --all
 venv/bin/python scripts/codex_pilot/render_pdfs.py
 ```
+
+Use the pilot-only `ATTRIBUTION_YAML` override so this Codex-authored evaluation does not inherit Claude/Anthropic drafting credit. Companion documents read the same pilot configuration. The pilot resource wrapper applies `resource_policy.json`: no selected recommendations during independent assessment, and no out-of-scope carboxylic-acid naming suggestions. Contract-required search fallbacks remain for later teacher preparation; do not use them during assessment.
 
 `CBE_DATA_DIR` must be absolute for the renderer’s require(). The pilot FE issue directory avoids inheriting findings attached to older content with the same curriculum identifiers. Its use does not certify the new content: the separate review record states which reviews have actually occurred. Do not clear or delete original review logs.
 
@@ -44,3 +46,9 @@ Use at most two correction passes before recording unresolved judgement calls fo
 - Pilot report distinguishes actual evidence from estimates and missing evidence.
 
 Bulk generation, promotion, Drive publication and partner delivery require the later pilot checkpoint. The original API pilot is a separate experiment and its 7.65 USD ledger is not this pilot’s cost. Subscription usage and human review time are real costs; exact plan-credit consumption is not exposed to this session. No claim of zero total cost or numeric 43-module cost saving is justified yet.
+
+## Reviewed-pilot checks and packaging
+
+Run `venv/bin/python scripts/codex_pilot/audit_outputs.py` after rendering to verify the full nine-type document inventory, student blanks, attribution and final-resource policy and refresh artifact hashes. `render_pdfs.py` accepts optional module names (for example `gensci_2_4`) to limit conversions after a focused correction. Initial and correction review records remain separate; the correction limit is two passes.
+
+`Review_Package_Reviewed.zip` is the corrected teacher-review snapshot. The original `Review_Package.zip`, extracted copy and `REPORT.md` preserve the initial draft. Current conclusions are in `INDEPENDENT_REPORT.md`.

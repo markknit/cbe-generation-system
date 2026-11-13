@@ -1,6 +1,6 @@
 # OpenAI-only lesson-authoring evaluation
 
-Started 2026-11-12; status: **PAUSED by Mark for server update/reboot.** Draft build committed as `4e433620`; independent review has not started. See [RESUME.md](RESUME.md) after `/restart`. The ZIP and REPORT.md remain the build snapshot; current lifecycle instructions are here and in STATUS.md.
+Started 2026-11-12; status: **INDEPENDENT REVIEW AND CORRECTIONS COMPLETE; ready for teacher evaluation.** Three initial reviews and focused rechecks are saved under `reviews/independent/`. All 18 reported pilot finding instances and two small follow-ups are addressed within the desk-review scope. See [INDEPENDENT_REPORT.md](INDEPENDENT_REPORT.md) and [Review_Package_Reviewed.zip](Review_Package_Reviewed.zip). The original ZIP and REPORT.md remain the pre-review build snapshot; current lifecycle state is here and in STATUS.md.
 
 Scope: fresh General Science 2.4 Acids, Bases and Salts; Essential Mathematics 2.8 Commercial Arithmetic 1; Core Mathematics 2.5 Area of Polygons. Essential/General Science match the earlier pilot; Core 2.5 replaces the unreadable 2.4 source selection and has an existing corpus version for comparison; no earlier lesson prose is a source for the new manuscripts. Existing serializers/renderers and validators may be reused.
 
@@ -11,3 +11,5 @@ Process: verified PDF requirements -> outcome/assessment/lesson map -> checked m
 Completion: all three modules authored and rendered; calculations, coverage mappings and partner contract checked; curriculum and practical limitations disclosed; reviewer findings and corrections recorded; report compares new and existing artifacts without claiming a statistically valid superiority result from three examples. Human teacher review is a separate acceptance step. Stop at the pilot report before wider generation.
 
 The delivered lesson counts are design decisions justified in each blueprint, not claims about official allocations unless a source page explicitly states one. Existing content and published outputs remain separate.
+
+Reviewed inventory: 3 modules /31 lessons, 27 DOCX+27 PDF, 47 registered calculations. Nine document types per subject include a blank StudentSummaryTable and an isolated AssessmentMaterials handout. Partner rendering passes; ingestion remains blocked by the installed R0 schema. Classroom acceptance and actual subscription/correction costs remain unmeasured. No promotion, wider generation, push or Drive publication has occurred.

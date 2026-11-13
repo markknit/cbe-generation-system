@@ -28,7 +28,7 @@ module.exports = {
     "gradeLevel": "10",
     "subject": "Essential Mathematics",
     "totalDuration": "9 lessons × 40 minutes = 360 minutes",
-    "learningOutcomes": "prepare budget to for use in clubs or societies,\ncalculate discount and percentage discounts in different situations,\ndetermine commission and percentage commissions in the different situations\ndetermine percentage profit and loss made in the sale of goods,\nconvert currencies using exchange rates tables,\nrecognise the role of commercial arithmetic in day-to-day life."
+    "learningOutcomes": "prepare budget to for use in clubs or societies,\ncalculate discount and percentage discounts in different situations,\ndetermine commission and percentage commissions in different situations\ndetermine percentage profit and loss made in the sale of goods,\nconvert currencies using exchange rates tables,\nrecognise the role of commercial arithmetic in day-to-day life."
   },
   "LESSONS": [
     {
@@ -171,7 +171,7 @@ module.exports = {
         {
           "phase": "Predict Phase",
           "learnerExperience": "Identify who receives the payment in E3.",
-          "teacherMoves": "4 minutes. Use salesperson, employer and buyer role cards; no money changes hands.",
+          "teacherMoves": "4 minutes. Write salesperson, employer and buyer on three paper slips before class, or assign these roles orally; no money changes hands.",
           "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
           "formativeAssessment": "Each pair names the payer and recipient."
         },
@@ -291,7 +291,7 @@ module.exports = {
         {
           "phase": "Predict Phase",
           "learnerExperience": "Select a rate for each E5 case without computing.",
-          "teacherMoves": "4 minutes. Let one learner play dealer and one visitor, using paper currency labels.",
+          "teacherMoves": "4 minutes. Before class, write USD and KES on paper slips; let one learner play dealer and one visitor using these slips, or label the directions on the board.",
           "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
           "formativeAssessment": "Every learner states what the dealer receives."
         },
@@ -521,7 +521,7 @@ module.exports = {
         "purpose": "Demonstrate the six outcomes independently.",
         "knowledge": "Apply the unit’s financial rules to a fresh illustrative case.",
         "skills": "Select methods, calculate accurately and justify a choice.",
-        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "attitudes": "Work independently, record reasoning honestly, and check the stated assumptions.",
         "keyInquiry": "Can another person reproduce my decision?",
         "purposeInStoryline": "Learners apply the established methods independently. The teacher records evidence before any feedback.",
         "safetyNotes": "Use paper tasks and calculators; keep walkways clear."
@@ -532,35 +532,35 @@ module.exports = {
           "phase": "Predict Phase",
           "learnerExperience": "Read the task and identify required outputs.",
           "teacherMoves": "4 minutes. Give E9 and the student Final Explanation only; allow questions about wording.",
-          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "sensemakingStrategy": "Read and interpret the task individually; clarify wording without discussing methods or answers.",
           "formativeAssessment": "Confirm that learners can see the data and know rounding rules."
         },
         {
           "phase": "Observe Phase",
           "learnerExperience": "Complete all five assessment sections independently.",
-          "teacherMoves": "30 minutes. Allow 30 minutes; provide a basic calculator, no worked answers. Read wording aloud as an access adjustment without choosing methods.",
-          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "teacherMoves": "30 minutes. Allow 30 minutes; provide a basic calculator, no worked answers. Do not open optional ARES resources or search links until original assessment work is collected. Read wording aloud as an access adjustment without choosing methods.",
+          "sensemakingStrategy": "Independent written working: no peer comparison, group solution or teacher exemplars before original work is collected.",
           "formativeAssessment": "Collect original work for outcome-by-outcome marking."
         },
         {
           "phase": "Explain Phase",
           "learnerExperience": "Write one sentence about the check used, without changing collected work.",
           "teacherMoves": "2 minutes. Give 2 minutes private reflection; postpone worked solutions until marking.",
-          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "sensemakingStrategy": "Private reflection after collection; keep original responses unchanged and defer worked feedback.",
           "formativeAssessment": "Record a checking strategy separately from correctness."
         },
         {
           "phase": "Driving Question Board (DQB) Creation",
           "learnerExperience": "Submit one question for later feedback.",
           "teacherMoves": "1 minutes. Use 1 minute to collect questions.",
-          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "sensemakingStrategy": "Submit an individual question for later feedback without discussing assessment solutions.",
           "formativeAssessment": "Identify which methods need reteaching."
         },
         {
           "phase": "Model Building Phase",
           "learnerExperience": "State one everyday decision the unit helps explain.",
           "teacherMoves": "3 minutes. Use 3 minutes for individual transfer reflections; no public scores.",
-          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "sensemakingStrategy": "Write an individual transfer statement using the assessed model; no shared revision during assessment.",
           "formativeAssessment": "Outcome f is supported by the final reflection and E8."
         }
       ],
@@ -604,14 +604,14 @@ module.exports = {
     ],
     "rubric": [
       {
-        "criterion": "Prepare a usable budget and compare discounted costs",
+        "criterion": "Prepare a usable budget and calculate discounted costs",
         "excellent": "Gives a correct, complete explanation and independently checks the result or its limits.",
         "proficient": "Meets the stated criterion with correct reasoning and an appropriate conclusion.",
         "developing": "Shows relevant understanding but needs support to correct a significant error or omission.",
         "belowExpectations": "Does not yet demonstrate the criterion; needs guided work with a concrete example."
       },
       {
-        "criterion": "Calculate commission and percentage profit/loss using the correct base",
+        "criterion": "Calculate commission and percentage profit using the correct base",
         "excellent": "Gives a correct, complete explanation and independently checks the result or its limits.",
         "proficient": "Meets the stated criterion with correct reasoning and an appropriate conclusion.",
         "developing": "Shows relevant understanding but needs support to correct a significant error or omission.",
