@@ -52,7 +52,7 @@ def write_guide(path,module):
  d.add_paragraph('Compact teacher guide • OpenAI-only curriculum draft • teacher review copy')
  u=module['UNIT']
  for label,key in [('Duration','totalDuration'),('Driving question','drivingQuestion'),('Source learning outcomes','learningOutcomes')]:d.add_heading(label,2);d.add_paragraph(u[key])
- d.add_heading('Preparation and evidence',2);d.add_paragraph('Use the companion Student Materials and Materials Teacher Key. Card identifiers are local references,not web links. Practical demonstrations require the teacher’s local risk assessment. The standard CBE export and structured JSON are supplied separately. Consult the unit review record for independent review and classroom confirmation status.')
+ d.add_heading('Preparation and evidence',2);d.add_paragraph('Use the companion Student Materials and Materials Teacher Key. Card identifiers are local references,not web links. Practical demonstrations require the teacher’s local risk assessment. Standard CBE documents and structured JSON are supplied with the accepted unit after content review. Consult the unit review record for independent review and classroom confirmation status.')
  for l in module['LESSONS']:
   d.add_page_break();d.add_heading(f'Lesson {l["number"]}: {l["title"]}',1)
   d.add_paragraph('40 minutes • '+l['slo']['purpose'])
@@ -138,7 +138,12 @@ def build(name):
  (BASE/'evidence'/f'{name}_checks.json').write_text(json.dumps(report,indent=2))
  if errors:raise ValueError(errors)
  outdir=BASE/'outputs'/meta['outputDir'];outdir.mkdir(parents=True,exist_ok=True)
- write_doc(outdir/(m['prefix']+'_StudentMaterials.docx'),m['topic']+' — Student Materials',bank['items'])
+ student_items=bank['items']
+ if bp.get('isolate_final_materials'):
+  teaching_ids={card for lesson in m['lessons'][:-1] for card in lesson['materials']}
+  final_only=set(m['lessons'][-1]['materials'])-teaching_ids
+  student_items=[card for card in bank['items'] if card['id'] not in final_only]
+ write_doc(outdir/(m['prefix']+'_StudentMaterials.docx'),m['topic']+' — Student Materials',student_items)
  write_doc(outdir/(m['prefix']+'_MaterialsTeacherKey.docx'),m['topic']+' — Materials Teacher Key',bank['items'],True)
  write_doc(outdir/(m['prefix']+'_AssessmentMaterials.docx'),m['topic']+' — Independent Assessment Materials',[cards[c] for c in m['lessons'][-1]['materials']])
  write_guide(outdir/(m['prefix']+'_CompactTeacherGuide.docx'),module)

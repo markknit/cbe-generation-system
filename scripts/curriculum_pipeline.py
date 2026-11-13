@@ -57,7 +57,7 @@ def content_signature(base, name):
 
 
 def standard_signature(base, name):
-    code = list((ROOT / 'generators/lib').glob('*.js')) + [ROOT / 'generators/aresResources.js', ROOT / 'generators/generate.js', ROOT / 'src/ares_recommender.py', ROOT / 'config/link_matching.yaml', ROOT / 'scripts/curriculum/resource_recommender.py', Path(__file__)]
+    code = list((ROOT / 'generators/lib').glob('*.js')) + [ROOT / 'generators/aresResources.js', ROOT / 'generators/generate.js', ROOT / 'src/ares_recommender.py', ROOT / 'config/link_matching.yaml', ROOT / 'scripts/curriculum/resource_recommender.py', ROOT / 'scripts/curriculum/resource_policy.py', Path(__file__)]
     db = ROOT / 'data/ares_index/ares_content.db'
     db_version = str((db.stat().st_size, db.stat().st_mtime_ns))
     return signature([base / 'attribution.yaml', base / 'resource_policy.json'] + code, content_fingerprint(base, name) + db_version)
@@ -132,7 +132,7 @@ def render(base, names, fixture):
             print(name, 'standard documents unchanged; skipped')
             continue
         manuscript = load(base / 'manuscripts' / (name + '.json'))
-        environment = {**os.environ, 'CBE_WORKSPACE': str(base), 'CBE_DATA_DIR': str(base / 'modules'),
+        environment = {**os.environ, 'CBE_WORKSPACE': str(base), 'CBE_MODULE_NAME': name, 'CBE_DATA_DIR': str(base / 'modules'),
                        'CBE_OUTPUT_ROOT': str(base / 'outputs'), 'CBE_FE_ISSUES_DIR': str(base / 'reviews/fe_issues'),
                        'ATTRIBUTION_YAML': str(base / 'attribution.yaml'),
                        'ARES_RECOMMENDER_SCRIPT': str(ROOT / 'scripts/curriculum/resource_recommender.py'),
@@ -199,6 +199,13 @@ def audit(base, names, fixture=False):
         errors = list(validator.iter_errors(data))
         if errors:
             raise ValueError(name + ': R1 schema errors: ' + '; '.join(e.message for e in errors))
+        allowed = load(base / 'resource_policy.json').get('module_allowed_titles', {}).get(name)
+        if allowed is not None:
+            for lesson in data['LESSONS']:
+                for resources in lesson['resourceLinks'].values():
+                    for kind in ('video', 'reading'):
+                        if resources[kind] is not None and resources[kind]['title'] not in allowed:
+                            raise ValueError(name + ': selected resource has not been independently vetted')
         for suffix in SUFFIXES:
             docx = data_path.parent / (prefix + '_' + suffix + '.docx')
             pdf_path = base / 'outputs/PDF' / (prefix + '_' + suffix + '.pdf')

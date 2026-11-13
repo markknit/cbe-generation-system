@@ -116,6 +116,37 @@ class PipelineTests(unittest.TestCase):
         p.write_text('changed');self.assertFalse(cached(state,'stage','input1',self.base))
         p.unlink();self.assertFalse(cached(state,'stage','input1',self.base))
 
+    def test_final_only_data_is_withheld_from_teaching_pack(self):
+        from curriculum import compiler
+        import zipfile
+        self.change('blueprints', lambda d: d.__setitem__('isolate_final_materials', True))
+        shutil.copyfile(self.reference/'attribution.yaml', self.base/'attribution.yaml')
+        previous = compiler.BASE
+        try:
+            compiler.BASE = self.base
+            compiler.build(NAME)
+        finally:
+            compiler.BASE = previous
+        manuscript=json.loads((self.base/'manuscripts'/f'{NAME}.json').read_text())
+        bank=json.loads((self.base/'materials'/f'{NAME}.json').read_text())
+        final_id=manuscript['lessons'][-1]['materials'][0]
+        title=next(c['title'] for c in bank['items'] if c['id']==final_id)
+        def body(suffix):
+            path=next((self.base/'outputs').rglob(manuscript['prefix']+'_'+suffix+'.docx'))
+            with zipfile.ZipFile(path) as archive:
+                return archive.read('word/document.xml').decode()
+        self.assertNotIn(title, body('StudentMaterials'))
+        self.assertIn(title, body('AssessmentMaterials'))
+        self.assertIn(title, body('MaterialsTeacherKey'))
+
+    def test_resource_curation_is_scoped_and_final_stays_independent(self):
+        from curriculum.resource_policy import exclusion_reason
+        policy={'module_allowed_titles': {'gensci_1_1': []}, 'excluded_title_phrases':['carboxylic acid naming']}
+        self.assertIsNotNone(exclusion_reason(policy,'gensci_1_1','Power series intro'))
+        self.assertIsNone(exclusion_reason(policy,'coremath_2_6','Area of a sector'))
+        self.assertIsNotNone(exclusion_reason(policy,'coremath_2_6','Area of a sector',True))
+        self.assertIsNotNone(exclusion_reason(policy,'gensci_2_4','Carboxylic acid naming'))
+
 
 if __name__ == '__main__':
     unittest.main()

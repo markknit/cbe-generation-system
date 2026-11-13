@@ -1,6 +1,11 @@
 {
-  "scope": "Pilot only; used through ARES_RECOMMENDER_SCRIPT, never the production default.",
+  "scope": "Isolated curriculum expansion only; used via workspace wrapper, never production default.",
   "independent_title_prefix": "independent",
-  "excluded_title_phrases": ["carboxylic acid naming"],
-  "reason": "Independent assessments use only their supplied assessment card and student assessment. Carboxylic-acid naming is outside this introductory science unit. Null slots retain the contract-required fallback URL for later teacher preparation, not assessment use."
+  "excluded_title_phrases": [
+    "carboxylic acid naming"
+  ],
+  "reason": "Independent final tasks use supplied assessment data only. Introductory GS1.1 has no vetted local ARES matches; supplied printed official-source/evidence cards support the lessons. Empty per-module allowlist suppresses irrelevant search hits; contract fallback URLs remain teacher-preparation pointers, not selected recommendations.",
+  "module_allowed_titles": {
+    "gensci_1_1": []
+  }
 }

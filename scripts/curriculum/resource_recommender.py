@@ -1,8 +1,9 @@
-"""Pilot-only curation over the existing local ARES matcher; no model calls."""
+"""Workspace-only curation over the existing local ARES matcher; no model calls."""
 import json, os
 from pathlib import Path
 import subprocess
 import sys
+from resource_policy import exclusion_reason
 
 ROOT=Path(__file__).resolve().parents[2]
 POLICY=json.loads((Path(os.environ['CBE_WORKSPACE'])/'resource_policy.json').read_text())
@@ -19,9 +20,9 @@ phases={k:v for k,v in data.items() if k!='_diagnostics'} if '--all-phases' in a
 for phase,resources in phases.items():
  for kind in ('video','reading'):
   resource=resources.get(kind)
-  excluded=resource and any(term in resource['title'].lower() for term in POLICY['excluded_title_phrases'])
-  if independent or excluded:
+  reason=exclusion_reason(POLICY,os.environ.get('CBE_MODULE_NAME',''),resource['title'] if resource else '',independent)
+  if reason:
    resources[kind]=None
    slot=diag.setdefault('slots',{}).setdefault(f'{phase}.{kind}',{})
-   slot.update(picked=None,fit=None,pilot_curation_reason='independent assessment' if independent else 'out-of-scope title')
+   slot.update(picked=None,fit=None,pilot_curation_reason=reason)
 print(json.dumps(data))
