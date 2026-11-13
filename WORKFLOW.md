@@ -72,6 +72,17 @@ between checks. If the next user uses another machine, the local commit and
 handoff must first be transferred through a separately authorized sync.
 
 ### Step 1 — Environment setup
+
+**Isolated OpenAI-only expansion (2026-11-12):** General Science, Essential
+Mathematics and Core Mathematics use the canonical-JSON workflow in
+`data/curriculum_expansion_2026-11/README.md`, with policy in
+`config/curriculum_expansion_plan.json`. Its preparation report and root
+`HANDOFF_remaining_curricula_2026-11-12.md` define the next three-unit trial
+and source blockers. Do not send this route through the separately billed
+API submission steps below. Content review precedes standard rendering;
+the reviewed pilot and production modules remain separate. Complete the
+trial checkpoint before scaling. The weekly usage policy above applies.
+
 ```bash
 cd /home/markk/ares/cbe-generation-system
 source venv/bin/activate

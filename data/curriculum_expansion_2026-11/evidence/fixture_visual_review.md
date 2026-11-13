@@ -1,0 +1,5 @@
+# Fixture layout sample — 2026-11-12
+
+Viewed rendered page 1 of Core compact guide, Essential isolated assessment materials and Science student materials at 100 dpi, combined in `fixture_layout_sample.png`. All three sampled pages show complete headings/body/footer text within the page; no clipping or overlaps observed. The changed curriculum-draft label and unit-review reference fit in the Core guide. Attribution is visible. This is a limited regression sample, not a new independent review of all pilot pages.
+
+All 27 fixture PDF page counts equal their frozen reviewed counterparts (`fixture_pdf_pages.json`). All 27 Word body texts equal reviewed references after the two documented administrative wording normalisations (`fixture_document_equivalence.json`). Compiled lesson objects are exactly equal for all three units (`fixture_equivalence.json`). No new content was authored. The original 157 tracked pilot files remain byte-identical to HEAD (`frozen_pilot_integrity.json`). Future newly authored content needs its own independent content and final layout review.
