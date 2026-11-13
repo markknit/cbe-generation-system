@@ -2,6 +2,8 @@
 
 **State: PAUSED, awaiting Mark's decision on the next step and cap. Option 2 is complete; total spend $7.65 of the $10 cap. Pilot files and code were committed in `77837f7c` and are on `origin/main`. Nothing from the pilot has been promoted to `generators/data`; Drive sync has not been verified.**
 
+> **Next approach chosen, 2026-11-12:** Mark approved a separate OpenAI-only evaluation. See `data/codex_pilot_2026-11/REPORT.md`. This API experiment and its spend remain a historical baseline; resuming it is not the current next step.
+
 ## Why
 Mark's question: the Round 2 process (generate, then several audit/repair rounds, then reconcile the Final Explanation) cost about $3.50-4 per
 module on top of generation. For the 43 remaining Grade 10 STEM modules (General Science 16, Essential Maths 13, Core Maths 14), and later

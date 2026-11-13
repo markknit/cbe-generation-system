@@ -1,0 +1,772 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "General Science",
+    "grade": 10,
+    "substrand_id": "2.4",
+    "substrand_name": "Acids Bases and Salts",
+    "outputDir": "v2/General_Science/SS2.4_Acids_Bases_and_Salts",
+    "filePrefix": "Codex_General_Science_Acids_Bases_and_Salts",
+    "titleDoc": "GENERAL SCIENCE GRADE 10: ACIDS BASES AND SALTS",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 2.4 • 10 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "2.0 Matter and Chemical Reactions",
+    "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+    "content": "Acids and bases; Reactions of acids and bases; Salts.",
+    "coreCompetencies": "Communication and collaboration: as the learner sensitises the community on the acidity and basicity of substances used in day-to-day life such as bleaching agents, vinegar, salts, soda, juices, water, wood ash, antacids, lemons among others.\nSelf-efficacy: as the learner creates awareness on the importance of putting required amounts of salt on food to avoid cases of high blood pressure.\nDigital literacy: as the learner uses digital devices to research on the applications of salts in day-to-day life.",
+    "values": "Responsibility: as the learner carefully uses digital devices to research on the applications of salts in day-to-day life.\nRespect: as the learner respects each other’s opinion while discussing with peers the meaning of acids, bases and salts.",
+    "pcis": "Socio-economic and environmental education: as the learner discusses the effect of salts on the environment.\nSafety and security: as the learner carries out experiments and presents findings on chemical properties of dilute acids and bases.\nLearner support programme (peer education): as the learner discusses with peers the functions of acids and bases in biological and chemical processes (digestion, respiration, bleaching action).",
+    "sep": "Planning comparisons, observing, using simple models and arguing from evidence.",
+    "careers": "Laboratory support, agriculture, food processing and environmental monitoring.",
+    "focus": "Explain aqueous acidity, selected reactions and salt-air behaviour with distinct models and safe-use evidence.",
+    "phenomenon": "A fictional school store contains acidic vinegar, a mildly basic bicarbonate solution, a salt that becomes wet and washing-soda crystals that become powdery. Can one explanation account for all of them?",
+    "supportingPhenomena": "Microscale indicator/carbonate activities, teacher-controlled acid/base and acid/metal demonstrations, and labelled illustrative salt-exposure data.",
+    "drivingQuestion": "Which evidence helps us explain and use these substances responsibly? KICD: Why are salts important in day-to-day life? How do salts behave when exposed to air?",
+    "storylineThread": "pH classification -> biological/chemical roles -> neutralisation -> carbonate -> metal -> salt-water exchange -> fair comparison -> uses/risks -> communication -> assessment.",
+    "gradeLevel": "10",
+    "subject": "General Science",
+    "totalDuration": "10 lessons × 40 minutes = 400 minutes",
+    "learningOutcomes": "distinguish between acids and bases using the universal indicator and pH chart,\nexplain the role of acids and bases in biological and chemical processes,\nidentify products of chemical reactions of acids and bases,\nclassify salts according to their behaviour when exposed to air,\noutline applications of salts in real-life situations,\npromote proper use of salts in day-to-day life."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "Classify safe aqueous samples",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+      "aresKeywords": "Acids Bases and Salts",
+      "slo": {
+        "purpose": "Use observations and a stated model to explain a substance’s behaviour.",
+        "knowledge": "Universal-indicator colour and a chart estimate aqueous pH; for these samples pH below 7 is acidic and above 7 basic.",
+        "skills": "Record evidence, distinguish an observation from an inference, and justify a classification.",
+        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "keyInquiry": "How can evidence distinguish a chemical reaction from water exchange with air?",
+        "purposeInStoryline": "Carry out G2 with the teacher-prepared safe samples or analyse its labelled illustrative results. Record actual colours, pH estimates and a repeat.",
+        "safetyNotes": "Teacher checks local risk assessment and reagent labels before any practical. Use splash goggles, small quantities, labelled equipment and a stable tray; wash hands. No tasting, skin testing or direct smelling. Keep bleach out of all practical work. Never mix cleaners. If safe equipment is unavailable use the labelled evidence cards and record practical skill as not observed."
+      },
+      "overview": "Carry out G2 with the teacher-prepared safe samples or analyse its labelled illustrative results. Record actual colours, pH estimates and a repeat.\nMaterials: G1; G2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read G1 and make an individual prediction with a reason.",
+          "teacherMoves": "4 minutes. Allow quiet thinking, then a paired comparison; record disagreements before giving the explanation.",
+          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "formativeAssessment": "Every learner makes a testable or evidence-linked prediction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Carry out G2 with the teacher-prepared safe samples or analyse its labelled illustrative results. Record actual colours, pH estimates and a repeat.",
+          "teacherMoves": "16 minutes. Use the named companion card and its preparation/safety conditions. Assign observer, recorder, materials monitor and reporter. If a practical is replaced by data, write “data interpretation” on the record.",
+          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "formativeAssessment": "Each learner gives a chart-based classification for all three samples."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Compare the evidence with initial cupboard predictions; classification is not proof of safety or chemical identity.",
+          "teacherMoves": "10 minutes. Ask “What did you observe, and what are you inferring?” Check two individual explanations before recording the model.",
+          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "formativeAssessment": "Each learner gives a chart-based classification for all three samples."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Revisit the school-store questions and mark what the evidence answers.",
+          "teacherMoves": "4 minutes. Require a card or class-observation reference; leave unsupported claims open.",
+          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "formativeAssessment": "Learners distinguish a supported conclusion from a remaining question."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Begin the shared chart with a separate pH classification column.",
+          "teacherMoves": "6 minutes. Annotate the shared Substance–evidence–explanation–safe use chart without erasing the initial prediction.",
+          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "formativeAssessment": "Collect a short claim with evidence and a stated limit."
+        }
+      ],
+      "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
+      "summaryTablePrompt": {
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "Universal-indicator colour and a chart estimate aqueous pH; for these samples pH below 7 is acidic and above 7 basic.",
+        "explained": "Begin the shared chart with a separate pH classification column."
+      }
+    },
+    {
+      "number": 2,
+      "title": "Acids and bases in familiar processes",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+      "aresKeywords": "Acids Bases and Salts",
+      "slo": {
+        "purpose": "Use observations and a stated model to explain a substance’s behaviour.",
+        "knowledge": "An aqueous ion model helps explain acidity and neutralisation; bleaching also involves oxidation.",
+        "skills": "Record evidence, distinguish an observation from an inference, and justify a classification.",
+        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "keyInquiry": "How can evidence distinguish a chemical reaction from water exchange with air?",
+        "purposeInStoryline": "Read G3 and sort the roles in digestion, respiration, antacid neutralisation and bleaching.",
+        "safetyNotes": "Reading only. No medicines are taken, no bodily fluids used, and no bleach is present. Never mix household cleaners."
+      },
+      "overview": "Read G3 and sort the roles in digestion, respiration, antacid neutralisation and bleaching.\nMaterials: G3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read G3 and make an individual prediction with a reason.",
+          "teacherMoves": "4 minutes. Allow quiet thinking, then a paired comparison; record disagreements before giving the explanation.",
+          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "formativeAssessment": "Every learner makes a testable or evidence-linked prediction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read G3 and sort the roles in digestion, respiration, antacid neutralisation and bleaching.",
+          "teacherMoves": "16 minutes. Use the named companion card and its preparation/safety conditions. Assign observer, recorder, materials monitor and reporter. If a practical is replaced by data, write “data interpretation” on the record.",
+          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "formativeAssessment": "Each learner correctly explains two biological/chemical roles and rejects “all bases bleach”."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain H+ andOH− at an introductory level, then identify where a pH-only explanation is insufficient.",
+          "teacherMoves": "10 minutes. Ask “What did you observe, and what are you inferring?” Check two individual explanations before recording the model.",
+          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "formativeAssessment": "Each learner correctly explains two biological/chemical roles and rejects “all bases bleach”."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Revisit the school-store questions and mark what the evidence answers.",
+          "teacherMoves": "4 minutes. Require a card or class-observation reference; leave unsupported claims open.",
+          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "formativeAssessment": "Learners distinguish a supported conclusion from a remaining question."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add a cause column that distinguishes pH from a specific chemical action.",
+          "teacherMoves": "6 minutes. Annotate the shared Substance–evidence–explanation–safe use chart without erasing the initial prediction.",
+          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "formativeAssessment": "Collect a short claim with evidence and a stated limit."
+        }
+      ],
+      "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
+      "summaryTablePrompt": {
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "An aqueous ion model helps explain acidity and neutralisation; bleaching also involves oxidation.",
+        "explained": "Add a cause column that distinguishes pH from a specific chemical action."
+      }
+    },
+    {
+      "number": 3,
+      "title": "Observe neutralisation",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+      "aresKeywords": "Acids Bases and Salts",
+      "slo": {
+        "purpose": "Use observations and a stated model to explain a substance’s behaviour.",
+        "knowledge": "For the named acid and hydroxide, neutralisation produces a salt and water.",
+        "skills": "Record evidence, distinguish an observation from an inference, and justify a classification.",
+        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "keyInquiry": "How can evidence distinguish a chemical reaction from water exchange with air?",
+        "purposeInStoryline": "Observe the teacher’s G4 demonstration; record pH direction before, near and beyond the endpoint. Use evidence data if laboratory conditions are unavailable.",
+        "safetyNotes": "Teacher checks local risk assessment and reagent labels before any practical. Use splash goggles, small quantities, labelled equipment and a stable tray; wash hands. No tasting, skin testing or direct smelling. Keep bleach out of all practical work. Never mix cleaners. If safe equipment is unavailable use the labelled evidence cards and record practical skill as not observed."
+      },
+      "overview": "Observe the teacher’s G4 demonstration; record pH direction before, near and beyond the endpoint. Use evidence data if laboratory conditions are unavailable.\nMaterials: G4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read G4 and make an individual prediction with a reason.",
+          "teacherMoves": "4 minutes. Allow quiet thinking, then a paired comparison; record disagreements before giving the explanation.",
+          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "formativeAssessment": "Every learner makes a testable or evidence-linked prediction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Observe the teacher’s G4 demonstration; record pH direction before, near and beyond the endpoint. Use evidence data if laboratory conditions are unavailable.",
+          "teacherMoves": "16 minutes. Use the named companion card and its preparation/safety conditions. Assign observer, recorder, materials monitor and reporter. If a practical is replaced by data, write “data interpretation” on the record.",
+          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "formativeAssessment": "Each learner names sodium chloride and water and predicts the direction after excess alkali."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Write the named word equation and explain the 1: 1 aqueous model without generalising equal volumes.",
+          "teacherMoves": "10 minutes. Ask “What did you observe, and what are you inferring?” Check two individual explanations before recording the model.",
+          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "formativeAssessment": "Each learner names sodium chloride and water and predicts the direction after excess alkali."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Revisit the school-store questions and mark what the evidence answers.",
+          "teacherMoves": "4 minutes. Require a card or class-observation reference; leave unsupported claims open.",
+          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "formativeAssessment": "Learners distinguish a supported conclusion from a remaining question."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add a reaction branch: acid+hydroxide base→salt+water.",
+          "teacherMoves": "6 minutes. Annotate the shared Substance–evidence–explanation–safe use chart without erasing the initial prediction.",
+          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "formativeAssessment": "Collect a short claim with evidence and a stated limit."
+        }
+      ],
+      "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
+      "summaryTablePrompt": {
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "For the named acid and hydroxide, neutralisation produces a salt and water.",
+        "explained": "Add a reaction branch: acid+hydroxide base→salt+water."
+      }
+    },
+    {
+      "number": 4,
+      "title": "Explain bubbling with a carbonate",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+      "aresKeywords": "Acids Bases and Salts",
+      "slo": {
+        "purpose": "Use observations and a stated model to explain a substance’s behaviour.",
+        "knowledge": "An acid with a carbonate or hydrogen carbonate can produce salt, water and carbon dioxide.",
+        "skills": "Record evidence, distinguish an observation from an inference, and justify a classification.",
+        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "keyInquiry": "How can evidence distinguish a chemical reaction from water exchange with air?",
+        "purposeInStoryline": "Complete the approved G5 microscale activity, including setup, observation and cleanup; otherwise interpret its observation card.",
+        "safetyNotes": "Teacher checks local risk assessment and reagent labels before any practical. Use splash goggles, small quantities, labelled equipment and a stable tray; wash hands. No tasting, skin testing or direct smelling. Keep bleach out of all practical work. Never mix cleaners. If safe equipment is unavailable use the labelled evidence cards and record practical skill as not observed."
+      },
+      "overview": "Complete the approved G5 microscale activity, including setup, observation and cleanup; otherwise interpret its observation card.\nMaterials: G5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read G5 and make an individual prediction with a reason.",
+          "teacherMoves": "4 minutes. Allow quiet thinking, then a paired comparison; record disagreements before giving the explanation.",
+          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "formativeAssessment": "Every learner makes a testable or evidence-linked prediction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete the approved G5 microscale activity, including setup, observation and cleanup; otherwise interpret its observation card.",
+          "teacherMoves": "16 minutes. Use the named companion card and its preparation/safety conditions. Assign observer, recorder, materials monitor and reporter. If a practical is replaced by data, write “data interpretation” on the record.",
+          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "formativeAssessment": "Each learner names three products for the named paper carbonate example."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Distinguish bicarbonate from carbonate and explain why gas identity needs more than bubbles alone.",
+          "teacherMoves": "10 minutes. Ask “What did you observe, and what are you inferring?” Check two individual explanations before recording the model.",
+          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "formativeAssessment": "Each learner names three products for the named paper carbonate example."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Revisit the school-store questions and mark what the evidence answers.",
+          "teacherMoves": "4 minutes. Require a card or class-observation reference; leave unsupported claims open.",
+          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "formativeAssessment": "Learners distinguish a supported conclusion from a remaining question."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add a carbonate branch and separate observation from established reaction knowledge.",
+          "teacherMoves": "6 minutes. Annotate the shared Substance–evidence–explanation–safe use chart without erasing the initial prediction.",
+          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "formativeAssessment": "Collect a short claim with evidence and a stated limit."
+        }
+      ],
+      "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
+      "summaryTablePrompt": {
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "An acid with a carbonate or hydrogen carbonate can produce salt, water and carbon dioxide.",
+        "explained": "Add a carbonate branch and separate observation from established reaction knowledge."
+      }
+    },
+    {
+      "number": 5,
+      "title": "Explain an acid–metal reaction",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+      "aresKeywords": "Acids Bases and Salts",
+      "slo": {
+        "purpose": "Use observations and a stated model to explain a substance’s behaviour.",
+        "knowledge": "Magnesium with dilute hydrochloric acid produces magnesium chloride and hydrogen.",
+        "skills": "Record evidence, distinguish an observation from an inference, and justify a classification.",
+        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "keyInquiry": "How can evidence distinguish a chemical reaction from water exchange with air?",
+        "purposeInStoryline": "Observe the teacher-only G6 demonstration or use its recorded observation card; do not handle reagents as learners.",
+        "safetyNotes": "Teacher checks local risk assessment and reagent labels before any practical. Use splash goggles, small quantities, labelled equipment and a stable tray; wash hands. No tasting, skin testing or direct smelling. Keep bleach out of all practical work. Never mix cleaners. If safe equipment is unavailable use the labelled evidence cards and record practical skill as not observed."
+      },
+      "overview": "Observe the teacher-only G6 demonstration or use its recorded observation card; do not handle reagents as learners.\nMaterials: G6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read G6 and make an individual prediction with a reason.",
+          "teacherMoves": "4 minutes. Allow quiet thinking, then a paired comparison; record disagreements before giving the explanation.",
+          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "formativeAssessment": "Every learner makes a testable or evidence-linked prediction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Observe the teacher-only G6 demonstration or use its recorded observation card; do not handle reagents as learners.",
+          "teacherMoves": "16 minutes. Use the named companion card and its preparation/safety conditions. Assign observer, recorder, materials monitor and reporter. If a practical is replaced by data, write “data interpretation” on the record.",
+          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "formativeAssessment": "Each learner distinguishes hydrogen here from carbon dioxide in G5."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Name reactants and products and compare the gas with the carbonate reaction.",
+          "teacherMoves": "10 minutes. Ask “What did you observe, and what are you inferring?” Check two individual explanations before recording the model.",
+          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "formativeAssessment": "Each learner distinguishes hydrogen here from carbon dioxide in G5."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Revisit the school-store questions and mark what the evidence answers.",
+          "teacherMoves": "4 minutes. Require a card or class-observation reference; leave unsupported claims open.",
+          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "formativeAssessment": "Learners distinguish a supported conclusion from a remaining question."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add a separate acid–metal branch; no flame test is needed.",
+          "teacherMoves": "6 minutes. Annotate the shared Substance–evidence–explanation–safe use chart without erasing the initial prediction.",
+          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "formativeAssessment": "Collect a short claim with evidence and a stated limit."
+        }
+      ],
+      "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
+      "summaryTablePrompt": {
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "Magnesium with dilute hydrochloric acid produces magnesium chloride and hydrogen.",
+        "explained": "Add a separate acid–metal branch; no flame test is needed."
+      }
+    },
+    {
+      "number": 6,
+      "title": "Classify water gain and loss",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+      "aresKeywords": "Acids Bases and Salts",
+      "slo": {
+        "purpose": "Use observations and a stated model to explain a substance’s behaviour.",
+        "knowledge": "Hygroscopic salts take up moisture; deliquescent salts take up enough to dissolve; efflorescent hydrated salts lose water of crystallisation.",
+        "skills": "Record evidence, distinguish an observation from an inference, and justify a classification.",
+        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "keyInquiry": "How can evidence distinguish a chemical reaction from water exchange with air?",
+        "purposeInStoryline": "Calculate and classify the three G7 cases; label data as illustrative and state the water-only assumption.",
+        "safetyNotes": "Paper data only; do not handle or taste unknown powders."
+      },
+      "overview": "Calculate and classify the three G7 cases; label data as illustrative and state the water-only assumption.\nMaterials: G7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read G7 and make an individual prediction with a reason.",
+          "teacherMoves": "4 minutes. Allow quiet thinking, then a paired comparison; record disagreements before giving the explanation.",
+          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "formativeAssessment": "Every learner makes a testable or evidence-linked prediction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Calculate and classify the three G7 cases; label data as illustrative and state the water-only assumption.",
+          "teacherMoves": "16 minutes. Use the named companion card and its preparation/safety conditions. Assign observer, recorder, materials monitor and reporter. If a practical is replaced by data, write “data interpretation” on the record.",
+          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "formativeAssessment": "A:+0.30 g, hygroscopic; B:+1.20 g, deliquescent; C:−0.80 g, efflorescent under the stated conditions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain that deliquescence is a hygroscopic behaviour, and a negative mass change does not itself prove water of crystallisation without the stated model.",
+          "teacherMoves": "10 minutes. Ask “What did you observe, and what are you inferring?” Check two individual explanations before recording the model.",
+          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "formativeAssessment": "A:+0.30 g, hygroscopic; B:+1.20 g, deliquescent; C:−0.80 g, efflorescent under the stated conditions."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Revisit the school-store questions and mark what the evidence answers.",
+          "teacherMoves": "4 minutes. Require a card or class-observation reference; leave unsupported claims open.",
+          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "formativeAssessment": "Learners distinguish a supported conclusion from a remaining question."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add a water-exchange branch distinct from the acid/base reaction branches.",
+          "teacherMoves": "6 minutes. Annotate the shared Substance–evidence–explanation–safe use chart without erasing the initial prediction.",
+          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "formativeAssessment": "Collect a short claim with evidence and a stated limit."
+        }
+      ],
+      "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
+      "summaryTablePrompt": {
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "Hygroscopic salts take up moisture; deliquescent salts take up enough to dissolve; efflorescent hydrated salts lose water of crystallisation.",
+        "explained": "Add a water-exchange branch distinct from the acid/base reaction branches."
+      }
+    },
+    {
+      "number": 7,
+      "title": "Plan a fair salt-exposure comparison",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+      "aresKeywords": "Acids Bases and Salts",
+      "slo": {
+        "purpose": "Use observations and a stated model to explain a substance’s behaviour.",
+        "knowledge": "Humidity, temperature, exposure and controls affect evidence of water exchange.",
+        "skills": "Record evidence, distinguish an observation from an inference, and justify a classification.",
+        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "keyInquiry": "How can evidence distinguish a chemical reaction from water exchange with air?",
+        "purposeInStoryline": "Inspect prepared G8 observations if available; design an exposed-versus-covered comparison and identify controlled variables.",
+        "safetyNotes": "Teacher checks local risk assessment and reagent labels before any practical. Use splash goggles, small quantities, labelled equipment and a stable tray; wash hands. No tasting, skin testing or direct smelling. Keep bleach out of all practical work. Never mix cleaners. If safe equipment is unavailable use the labelled evidence cards and record practical skill as not observed."
+      },
+      "overview": "Inspect prepared G8 observations if available; design an exposed-versus-covered comparison and identify controlled variables.\nMaterials: G7; G8. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read G7 and make an individual prediction with a reason.",
+          "teacherMoves": "4 minutes. Allow quiet thinking, then a paired comparison; record disagreements before giving the explanation.",
+          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "formativeAssessment": "Every learner makes a testable or evidence-linked prediction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Inspect prepared G8 observations if available; design an exposed-versus-covered comparison and identify controlled variables.",
+          "teacherMoves": "16 minutes. Use the named companion card and its preparation/safety conditions. Assign observer, recorder, materials monitor and reporter. If a practical is replaced by data, write “data interpretation” on the record.",
+          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "formativeAssessment": "Each learner identifies a control and one limitation; do not award hands-on credit for card analysis."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why a 40-minute lesson may not show a change and why unchanged material is still a legitimate observation.",
+          "teacherMoves": "10 minutes. Ask “What did you observe, and what are you inferring?” Check two individual explanations before recording the model.",
+          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "formativeAssessment": "Each learner identifies a control and one limitation; do not award hands-on credit for card analysis."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Revisit the school-store questions and mark what the evidence answers.",
+          "teacherMoves": "4 minutes. Require a card or class-observation reference; leave unsupported claims open.",
+          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "formativeAssessment": "Learners distinguish a supported conclusion from a remaining question."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add storage conditions and an evidence limitation to the water-exchange model.",
+          "teacherMoves": "6 minutes. Annotate the shared Substance–evidence–explanation–safe use chart without erasing the initial prediction.",
+          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "formativeAssessment": "Collect a short claim with evidence and a stated limit."
+        }
+      ],
+      "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
+      "summaryTablePrompt": {
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "Humidity, temperature, exposure and controls affect evidence of water exchange.",
+        "explained": "Add storage conditions and an evidence limitation to the water-exchange model."
+      }
+    },
+    {
+      "number": 8,
+      "title": "Use salts without ignoring consequences",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+      "aresKeywords": "Acids Bases and Salts",
+      "slo": {
+        "purpose": "Use observations and a stated model to explain a substance’s behaviour.",
+        "knowledge": "Salts have varied uses; proper use depends on identity, quantity and environmental context.",
+        "skills": "Record evidence, distinguish an observation from an inference, and justify a classification.",
+        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "keyInquiry": "How can evidence distinguish a chemical reaction from water exchange with air?",
+        "purposeInStoryline": "Read G9 application cards and make a use–benefit–risk–action table for three applications.",
+        "safetyNotes": "Reading and discussion only. No eating, tasting, fertiliser handling or medical advice."
+      },
+      "overview": "Read G9 application cards and make a use–benefit–risk–action table for three applications.\nMaterials: G9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read G9 and make an individual prediction with a reason.",
+          "teacherMoves": "4 minutes. Allow quiet thinking, then a paired comparison; record disagreements before giving the explanation.",
+          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "formativeAssessment": "Every learner makes a testable or evidence-linked prediction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read G9 application cards and make a use–benefit–risk–action table for three applications.",
+          "teacherMoves": "16 minutes. Use the named companion card and its preparation/safety conditions. Assign observer, recorder, materials monitor and reporter. If a practical is replaced by data, write “data interpretation” on the record.",
+          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "formativeAssessment": "Each learner gives a correct application and a justified risk-reduction action."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain the nutrient/runoff example and the distinction between a useful food salt and all salts being safe to eat.",
+          "teacherMoves": "10 minutes. Ask “What did you observe, and what are you inferring?” Check two individual explanations before recording the model.",
+          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "formativeAssessment": "Each learner gives a correct application and a justified risk-reduction action."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Revisit the school-store questions and mark what the evidence answers.",
+          "teacherMoves": "4 minutes. Require a card or class-observation reference; leave unsupported claims open.",
+          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "formativeAssessment": "Learners distinguish a supported conclusion from a remaining question."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Extend the shared chart with benefits and responsible-use actions.",
+          "teacherMoves": "6 minutes. Annotate the shared Substance–evidence–explanation–safe use chart without erasing the initial prediction.",
+          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "formativeAssessment": "Collect a short claim with evidence and a stated limit."
+        }
+      ],
+      "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
+      "summaryTablePrompt": {
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "Salts have varied uses; proper use depends on identity, quantity and environmental context.",
+        "explained": "Extend the shared chart with benefits and responsible-use actions."
+      }
+    },
+    {
+      "number": 9,
+      "title": "Explain the cupboard and communicate safely",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+      "aresKeywords": "Acids Bases and Salts",
+      "slo": {
+        "purpose": "Use observations and a stated model to explain a substance’s behaviour.",
+        "knowledge": "A complete explanation may need separate pH, reaction and water-exchange models.",
+        "skills": "Record evidence, distinguish an observation from an inference, and justify a classification.",
+        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "keyInquiry": "How can evidence distinguish a chemical reaction from water exchange with air?",
+        "purposeInStoryline": "Create the G9 poster and apply the shared chart to the fictional G1 store case. Exchange posters for checking.",
+        "safetyNotes": "Classroom poster only; teacher checks before any public sharing.No chemical mixtures or dietary prescriptions."
+      },
+      "overview": "Create the G9 poster and apply the shared chart to the fictional G1 store case. Exchange posters for checking.\nMaterials: G1; G9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read G1 and make an individual prediction with a reason.",
+          "teacherMoves": "4 minutes. Allow quiet thinking, then a paired comparison; record disagreements before giving the explanation.",
+          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "formativeAssessment": "Every learner makes a testable or evidence-linked prediction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Create the G9 poster and apply the shared chart to the fictional G1 store case. Exchange posters for checking.",
+          "teacherMoves": "16 minutes. Use the named companion card and its preparation/safety conditions. Assign observer, recorder, materials monitor and reporter. If a practical is replaced by data, write “data interpretation” on the record.",
+          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "formativeAssessment": "Peer checker can trace each claim to a card or observation; teacher checks safety/health wording."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why one claim such as “it is basic” cannot account for every change in the case.",
+          "teacherMoves": "10 minutes. Ask “What did you observe, and what are you inferring?” Check two individual explanations before recording the model.",
+          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "formativeAssessment": "Peer checker can trace each claim to a card or observation; teacher checks safety/health wording."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Revisit the school-store questions and mark what the evidence answers.",
+          "teacherMoves": "4 minutes. Require a card or class-observation reference; leave unsupported claims open.",
+          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "formativeAssessment": "Learners distinguish a supported conclusion from a remaining question."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Complete the Substance–evidence–explanation–safe use chart with limits visible.",
+          "teacherMoves": "6 minutes. Annotate the shared Substance–evidence–explanation–safe use chart without erasing the initial prediction.",
+          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "formativeAssessment": "Collect a short claim with evidence and a stated limit."
+        }
+      ],
+      "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
+      "summaryTablePrompt": {
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "A complete explanation may need separate pH, reaction and water-exchange models.",
+        "explained": "Complete the Substance–evidence–explanation–safe use chart with limits visible."
+      }
+    },
+    {
+      "number": 10,
+      "title": "Independent evidence-based explanation",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+      "aresKeywords": "Acids Bases and Salts",
+      "slo": {
+        "purpose": "Demonstrate the six outcomes using new evidence.",
+        "knowledge": "Classify, explain and apply the unit’s chemical and water-exchange models.",
+        "skills": "Separate observation, inference and safe-use reasoning.",
+        "attitudes": "Listen to alternative reasoning, record evidence honestly, and revise a claim when evidence warrants it.",
+        "keyInquiry": "Which model is justified by the evidence?",
+        "purposeInStoryline": "Learners independently interpret a fresh evidence card and answer the five assessment sections.",
+        "safetyNotes": "Paper assessment only; no tasting, chemical handling or personal health advice."
+      },
+      "overview": "Learners independently interpret a fresh evidence card and answer the five assessment sections.\nMaterials: G10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 30 min, Explain 2 min, Driving Question Board (DQB) Creation 1 min, Model Building 3 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read G10 and the student assessment.",
+          "teacherMoves": "4 minutes. Allow 4 minutes to clarify words and access needs without supplying explanations.",
+          "sensemakingStrategy": "Individual prediction, then paired comparison: keep the initial claim visible.",
+          "formativeAssessment": "Check all learners can read the pH and mass values."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete the assessment independently.",
+          "teacherMoves": "30 minutes. Allow 30 minutes.No live practical.No teacher key is supplied.",
+          "sensemakingStrategy": "Evidence-first group work: record working or observations before comparing explanations.",
+          "formativeAssessment": "Collect original answers and mark by outcome."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Write a private reflection about one inference.",
+          "teacherMoves": "2 minutes. Use 2 minutes; discuss full solutions in a later feedback session.",
+          "sensemakingStrategy": "Claim–evidence–reasoning: connect the result to a rule and state its limits.",
+          "formativeAssessment": "Record whether evidence and inference are distinguished."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Submit one question for teacher feedback.",
+          "teacherMoves": "1 minutes. Use 1 minute to collect questions.",
+          "sensemakingStrategy": "Question sorting: mark an inquiry answered only when evidence supports it.",
+          "formativeAssessment": "Identify a topic needing reteaching."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Write one responsible-use action with a reason.",
+          "teacherMoves": "3 minutes. Allow 3 minutes for transfer reflection.",
+          "sensemakingStrategy": "Revise a shared model: preserve the earlier version and annotate what changed.",
+          "formativeAssessment": "Use this and G9 as evidence for outcome f."
+        }
+      ],
+      "teacherReflection": "Which learner work shows the intended outcome? Record one unresolved misconception and the adjustment needed before the next lesson.",
+      "summaryTablePrompt": {
+        "observed": "Independent responses apply the models to unfamiliar data.",
+        "learned": "pH, reaction products and salt-air behaviour require different evidence.",
+        "explained": "Responsible use combines an explanation with an appropriate action."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "ACIDS, BASES AND SALTS",
+    "instructions": "Time: 30 minutes within Lesson 10.Use G10.Work independently; give evidence for each explanation.No experiments are performed.All numerical data are illustrative.",
+    "sections": [
+      {
+        "title": "1. Classify and explain an indicator result",
+        "prompt": "Classify P, Q andR in G10.State one limitation of using this result to decide whether a substance is safe.",
+        "exemplar": "P acidic, Q basic, R approximately neutral for these aqueous samples near room temperature. pH does not identify a substance or establish its safety; neutral substances can still be harmful."
+      },
+      {
+        "title": "2. A role and a limit",
+        "prompt": "Explain one role of acid in digestion and why “all bases bleach” is not a justified rule.",
+        "exemplar": "Stomach acid supports digestion, including providing acidic conditions for relevant digestive processes. Bleaching by hypochlorite involves oxidation of coloured substances; being a base does not by itself confer bleaching action. No medicine-use instruction is implied."
+      },
+      {
+        "title": "3. Identify reaction products",
+        "prompt": "For each named reaction in G10, give the products. Also state the products of hydrochloric acid reacting with sodium hydroxide. Explain why bubbles alone are insufficient to identify a gas.",
+        "exemplar": "HCl+magnesium→magnesium chloride+hydrogen. HCl+calcium carbonate→calcium chloride+water+carbon dioxide. HCl+sodium hydroxide→sodium chloride+water. Gas identity follows from the named reaction and supporting chemical knowledge; different gases can cause bubbles."
+      },
+      {
+        "title": "4. Explain salt-air behaviour",
+        "prompt": "Calculate both mass changes in G10.Classify each behaviour under the stated assumptions.Explain the relation between deliquescence and hygroscopy.",
+        "exemplar": "First change=5.80−5.00=+0.80 g; water uptake with solution formation is deliquescence.Second=4.50−5.00=−0.50 g; loss of water of crystallisation from the stated hydrate is efflorescence.Deliquescence is a hygroscopic behaviour with sufficient uptake to form solution; not every observed water uptake reaches that state."
+      },
+      {
+        "title": "5. Responsible application",
+        "prompt": "Describe one useful salt application, one related health or environmental concern, and one justified action.Include one safe rule about household cleaners.",
+        "exemplar": "Example: fertiliser salts provide crop nutrients; runoff can contribute to eutrophication; use appropriate quantities and prevent runoff into water.Accept another correct application with a linked concern/action.Never mix cleaners, especially bleach with acids.No personal medical prescription is required."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Classify aqueous samples using indicator evidence",
+        "excellent": "Gives a correct, complete explanation and independently checks the result or its limits.",
+        "proficient": "Meets the stated criterion with correct reasoning and an appropriate conclusion.",
+        "developing": "Shows relevant understanding but needs support to correct a significant error or omission.",
+        "belowExpectations": "Does not yet demonstrate the criterion; needs guided work with a concrete example."
+      },
+      {
+        "criterion": "Explain roles and identify products of the named reactions",
+        "excellent": "Gives a correct, complete explanation and independently checks the result or its limits.",
+        "proficient": "Meets the stated criterion with correct reasoning and an appropriate conclusion.",
+        "developing": "Shows relevant understanding but needs support to correct a significant error or omission.",
+        "belowExpectations": "Does not yet demonstrate the criterion; needs guided work with a concrete example."
+      },
+      {
+        "criterion": "Classify salt-air behaviour using mass and state evidence",
+        "excellent": "Gives a correct, complete explanation and independently checks the result or its limits.",
+        "proficient": "Meets the stated criterion with correct reasoning and an appropriate conclusion.",
+        "developing": "Shows relevant understanding but needs support to correct a significant error or omission.",
+        "belowExpectations": "Does not yet demonstrate the criterion; needs guided work with a concrete example."
+      },
+      {
+        "criterion": "Explain an application and communicate responsible use",
+        "excellent": "Gives a correct, complete explanation and independently checks the result or its limits.",
+        "proficient": "Meets the stated criterion with correct reasoning and an appropriate conclusion.",
+        "developing": "Shows relevant understanding but needs support to correct a significant error or omission.",
+        "belowExpectations": "Does not yet demonstrate the criterion; needs guided work with a concrete example."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand 2.4: Acids, Bases and Salts",
+    "drivingQuestion": "Which evidence helps us explain and use these substances responsibly? KICD: Why are salts important in day-to-day life? How do salts behave when exposed to air?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "Classify safe aqueous samples",
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "Universal-indicator colour and a chart estimate aqueous pH; for these samples pH below 7 is acidic and above 7 basic.",
+        "explained": "Begin the shared chart with a separate pH classification column."
+      },
+      {
+        "number": 2,
+        "title": "Acids and bases in familiar processes",
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "An aqueous ion model helps explain acidity and neutralisation; bleaching also involves oxidation.",
+        "explained": "Add a cause column that distinguishes pH from a specific chemical action."
+      },
+      {
+        "number": 3,
+        "title": "Observe neutralisation",
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "For the named acid and hydroxide, neutralisation produces a salt and water.",
+        "explained": "Add a reaction branch: acid+hydroxide base→salt+water."
+      },
+      {
+        "number": 4,
+        "title": "Explain bubbling with a carbonate",
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "An acid with a carbonate or hydrogen carbonate can produce salt, water and carbon dioxide.",
+        "explained": "Add a carbonate branch and separate observation from established reaction knowledge."
+      },
+      {
+        "number": 5,
+        "title": "Explain an acid–metal reaction",
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "Magnesium with dilute hydrochloric acid produces magnesium chloride and hydrogen.",
+        "explained": "Add a separate acid–metal branch; no flame test is needed."
+      },
+      {
+        "number": 6,
+        "title": "Classify water gain and loss",
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "Hygroscopic salts take up moisture; deliquescent salts take up enough to dissolve; efflorescent hydrated salts lose water of crystallisation.",
+        "explained": "Add a water-exchange branch distinct from the acid/base reaction branches."
+      },
+      {
+        "number": 7,
+        "title": "Plan a fair salt-exposure comparison",
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "Humidity, temperature, exposure and controls affect evidence of water exchange.",
+        "explained": "Add storage conditions and an evidence limitation to the water-exchange model."
+      },
+      {
+        "number": 8,
+        "title": "Use salts without ignoring consequences",
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "Salts have varied uses; proper use depends on identity, quantity and environmental context.",
+        "explained": "Extend the shared chart with benefits and responsible-use actions."
+      },
+      {
+        "number": 9,
+        "title": "Explain the cupboard and communicate safely",
+        "observed": "The named card or class practical provides the evidence.",
+        "learned": "A complete explanation may need separate pH, reaction and water-exchange models.",
+        "explained": "Complete the Substance–evidence–explanation–safe use chart with limits visible."
+      },
+      {
+        "number": 10,
+        "title": "Independent evidence-based explanation",
+        "observed": "Independent responses apply the models to unfamiliar data.",
+        "learned": "pH, reaction products and salt-air behaviour require different evidence.",
+        "explained": "Responsible use combines an explanation with an appropriate action."
+      }
+    ]
+  }
+};

@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+"""Convert only pilot documents using an isolated LibreOffice profile."""
+import json,subprocess,tempfile
+from pathlib import Path
+B=Path(__file__).resolve().parents[2]/'data/codex_pilot_2026-11'
+files=sorted((B/'outputs/v2').glob('*/*/*.docx'))
+out=B/'outputs/PDF';out.mkdir(exist_ok=True)
+with tempfile.TemporaryDirectory(prefix='codex-pilot-lo-') as profile:
+ cmd=['soffice','-env:UserInstallation='+Path(profile).as_uri(),'--headless','--convert-to','pdf','--outdir',str(out),*[str(p) for p in files]]
+ r=subprocess.run(cmd,text=True,capture_output=True,timeout=240)
+ print(r.stdout);print(r.stderr)
+ if r.returncode:raise SystemExit(r.returncode)
+ missing=[p.name for p in files if not (out/(p.stem+'.pdf')).exists()]
+ if missing:raise SystemExit('Missing PDFs: '+str(missing))
+ print('Verified',len(files),'PDFs')

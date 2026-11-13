@@ -1,0 +1,180 @@
+{
+  "items": [
+    {
+      "id": "E1",
+      "title": "A club needs a workable budget",
+      "student": "Illustrative school-club case. Funds available: 30 members contribute KES 200 each. Planned costs: venue KES 1200; 30 notebooks at KES 80 each; transport KES 1800; reserve KES 600. Compute income, each cost and the total. Is the plan affordable? Suggest one justified adjustment if needed.",
+      "teacher": "Income 6000; notebooks 2400; costs 6000 including reserve, so balanced. Reserve is planned money kept available, not a fee already spent. Distinguish a budget from a record of actual spending. Use mixed-attainment pairs and large-print copies as needed."
+    },
+    {
+      "id": "E2",
+      "title": "Discount offers",
+      "student": "Illustrative quotations for identical notebooks, with equal quality and no delivery charges: Vendor P lists KES 80 each and offers 10% off; Vendor Q lists KES 75 each and offers 5% off. Find the saving and net price per notebook for each; compare the cost of 30. Extension: why is the larger percentage discount not enough to choose a vendor?",
+      "teacher": "P saving 8, net 72, total 2160. Q saving 3.75, net 71.25, total {{Q:.2f}}; Q cheaper by 22.50. Percentage base is the marked price. Do not round 3.75 to whole shillings before multiplying."
+    },
+    {
+      "id": "E3",
+      "title": "Commission and percentage commission",
+      "student": "Illustrative sales agreement: a salesperson earns 4% of KES 15000 in sales. Calculate commission. A second salesperson earns KES 450 on sales of KES 18000. Find the rate. For this exercise there is no salary, tax or other payment. Explain what changes if sales double and the rate stays fixed.",
+      "teacher": "600; second rate 450/18000 × 100 = 2.5%. Double sales doubles commission under this explicitly proportional agreement. Commission is remuneration paid to the salesperson, not automatically a discount for the buyer."
+    },
+    {
+      "id": "E4",
+      "title": "Profit and loss use cost as the base",
+      "student": "Illustrative stall records: Batch A costs KES 2400 altogether and sells for KES 3000; Batch B costs KES 2000 and sells for KES 1700. Calculate profit or loss and its percentage of cost for each. The stated cost includes all costs for this task. Explain why dividing A profit by selling price answers a different question.",
+      "teacher": "A profit 600, profit percentage 25%; B loss 300, loss percentage 15%. 600/3000 = 20% is profit as a fraction of revenue (margin), not percentage profit on cost. Margin is a contrast to prevent a denominator error, not an extra assessed outcome."
+    },
+    {
+      "id": "E5",
+      "title": "Read a currency board from the dealer’s perspective",
+      "student": "Illustrative rates, NOT current rates. Currency USD; dealer buys at KES 128 per USD; dealer sells at KES 132 per USD. No extra fees. (a) A visitor gives the dealer USD 50: how many KES? (b) A customer wants to buy USD 50: how many KES must they pay? Write the direction of each exchange before calculating.",
+      "teacher": "(a) Dealer buys USD: 50×128=6400 KES. (b) Dealer sells USD: 50×132=6600 KES. Buying and selling labels always refer here to the dealer, not the learner."
+    },
+    {
+      "id": "E6",
+      "title": "Two-way conversion and checking units",
+      "student": "Use the E5 board, with no fees. (a) Convert KES 6600 into USD. (b) Convert KES 6400 received from selling USD 50 back into USD. Round a final currency amount to 2 decimal places. Is a round trip free? Show one unit check.",
+      "teacher": "(a) 6600/132=50 USD. (b) 6400/132=48.4848… USD ≈48.48, loss ≈1.52 USD. Keep unrounded intermediate values. KES divided by KES/USD yields USD. The spread causes this loss; do not count it twice."
+    },
+    {
+      "id": "E7",
+      "title": "Revise the club’s purchasing plan",
+      "student": "Return to E1. Choose the cheaper E2 quotation for 30 notebooks. Replace only the notebook cost; keep venue 1200, transport 1800 and reserve 600. Compute revised total planned allocation and unallocated funds. A salesperson’s employer separately pays the E3 commission: should the club subtract it from its funds? Explain.",
+      "teacher": "Total 1200+{{Q:.2f}}+1800+600={{newbudget:.2f}}; unallocated {{remaining:.2f}}. Commission paid by the employer is not an additional club expense in this scenario. Reserve of 600 is already inside the total; unallocated money is additional. Do not invent a tax or fee absent from the task."
+    },
+    {
+      "id": "E8",
+      "title": "A fair quotation and consumer information card",
+      "student": "In groups of four, prepare a one-page quotation for a fictional school club: include marked price, discount, quantity, all charges, final total, rate assumptions and expiry/date if relevant. Exchange cards with another group for checking. Write two sentences explaining why arithmetic and transparent assumptions help people make everyday decisions. No real buying, fundraising or posting is required.",
+      "teacher": "Accept varied fictional quotations only if reproducible from the stated numbers. Check percentage bases, fees and disclosure of imaginary rates. Ethical communication and willingness to correct an error are observable evidence for outcome f; do not grade patriotism from a learner’s personal views."
+    },
+    {
+      "id": "E9",
+      "title": "Final independent assessment data",
+      "student": "All figures are illustrative. A club has KES 4000. It plans 20 books marked KES 120 each, with a 15% discount, plus transport KES 500 and reserve KES 300. Separate sales agreement: 3% commission on KES 8000 sales. A stall buys stock for KES 1600 and sells it for KES 2000. Dealer buys USD at KES 125 and sells USD at KES 130; no fees.",
+      "teacher": "Assessment key appears in FinalExplanation_TeacherKey. Do not distribute this teacher version to learners during assessment. Expected: books 2040, allocation 2840, unallocated 1160; commission 240; profit 400=25%; sell USD 20 yields 2500 KES; buying USD 20 costs 2600 KES. Assessment has no current market-rate claim."
+    }
+  ],
+  "calculations": [
+    {
+      "id": "income",
+      "expression": "30*200",
+      "expected": 6000,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "budget",
+      "expression": "1200+30*80+1800+600",
+      "expected": 6000,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "P",
+      "expression": "30*80*(1-10/100)",
+      "expected": 2160,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "Q",
+      "expression": "30*75*(1-5/100)",
+      "expected": 2137.5,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "commission",
+      "expression": "15000*4/100",
+      "expected": 600,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "rate",
+      "expression": "450/18000*100",
+      "expected": 2.5,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "profit",
+      "expression": "(3000-2400)/2400*100",
+      "expected": 25,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "loss",
+      "expression": "(2000-1700)/2000*100",
+      "expected": 15,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "sell",
+      "expression": "50*128",
+      "expected": 6400,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "buy",
+      "expression": "50*132",
+      "expected": 6600,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "roundtrip",
+      "expression": "6400/132",
+      "expected": 48.4848484848,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "newbudget",
+      "expression": "1200+2137.5+1800+600",
+      "expected": 5737.5,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "remaining",
+      "expression": "6000-5737.5",
+      "expected": 262.5,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "assessbooks",
+      "expression": "20*120*(1-15/100)",
+      "expected": 2040,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "assessbudget",
+      "expression": "2040+500+300",
+      "expected": 2840,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "assessleft",
+      "expression": "4000-2840",
+      "expected": 1160,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "assesscommission",
+      "expression": "8000*3/100",
+      "expected": 240,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "assessprofit",
+      "expression": "(2000-1600)/1600*100",
+      "expected": 25,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "assesssell",
+      "expression": "20*125",
+      "expected": 2500,
+      "absolute_tolerance": 1e-08
+    },
+    {
+      "id": "assessbuy",
+      "expression": "20*130",
+      "expected": 2600,
+      "absolute_tolerance": 1e-08
+    }
+  ]
+}
