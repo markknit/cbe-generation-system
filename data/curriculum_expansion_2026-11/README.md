@@ -1,6 +1,6 @@
 # Remaining curricula: preparation and operating guide
 
-Updated 2026-11-13. **First three units independently reviewed/built:27 lessons and27 Word/PDF pairs.** See `BATCH_01_STATUS.md`; preparation below remains the operating guide.
+Updated 2026-11-13. **Paused at 10% weekly allowance:49 new content-accepted lessons;35 artifact-reviewed, 14 pending a final Core PDF check.** See `BATCH_02_STATUS.md` and the root handoff. `BATCH_01_STATUS.md`/archive are the frozen first milestone; preparation below remains the operating guide.
 
 The reviewed pilot remains frozen at `../codex_pilot_2026-11/`. The reusable compiler was exercised on isolated copies under `/tmp/cbe-preparation-fixture`; those copies are regression evidence, not new curriculum deliverables. No production modules, partner files or Drive documents were changed.
 
