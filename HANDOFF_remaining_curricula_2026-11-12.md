@@ -1,6 +1,6 @@
 # Remaining three curricula: working checkpoint and takeover
 
-2026-11-13, resumed at23:13UTC after explicit user instruction. Fresh allowance97% cleared the prior10% pause. **Full remaining-generation authorisation active:108new expansion lessons content/artifact-reviewed;139including frozenpilot.29units still have no new lesson drafts;Cell12drafts are under full independent review.** Quota is not currently paused. The separate usage guard remains in force.
+2026-11-13local/14NovemberUTC. **Full remaining-generation authorisation active:147new expansion lessons artifact-reviewed,178including frozenpilot;183new authored,214including pilot;24units without new drafts.** Quota not paused;10%guardactive.
 
 ## Locked decisions
 
@@ -64,6 +64,14 @@ Batch04all38lessons complete and individually packaged;Core2.9additional12comple
 Three reviewers exist:/root/core27_pdf_completion just completedCore2.9;/root/science_review completedNutrition;/root/essential_source_review doingCIF-1codefocusedrecheck. Use followup_task to start completed agents;send_message alone only queues. Earlier Nutrition dispatch was corrected before finalverdict/package. All pipeline mutation commands serialised to avoid sharedbuildstate overwrite. Source surveys completed all12remainingGSand9Essentialpacks(no allocations);22still need root exact transcription,7Coregaps remain. Cell imageblocker resolved by licensed primary examples with visibility/tissue limits;no lesson acceptance yet. Partner10exports/108lessons render10PASS,R0ingest0/10/47drift,Indicesfidelity3/7FAIL;no partner edits. Latestroot65%03:17UTC,no pause;continue allauthorisedwork until complete/source blocked or10%guard. User seven-Core source-link/path reply remains pending.
 
 
-## Live checkpoint — 2026-11-14 03:32UTC
+## Live checkpoint — 2026-11-14 03:27UTC
 
 Cell12lesson manuscript/blueprint built with2registered calculations;full source/materials/everytask/5Word independent review running on /root/science_review.120authored expansion lessons/11units;108reviewed/10;with31frozenpilot139reviewed/151authored.29units no drafts. CIF-1code recheck CLOSED(reportSHA3a4bf0163ce14a08666b0bc4572d29ff04933311efd4ada9d96e87cdf934a00d),caption-only exacthashbridge saved separately. All4newpackage receipt hashes verified. Root63%03:24UTC;continue availableunits under standingauthorisation;no whole-workspace frozen-output rebuild. Next transcribe source for Essential2.2Reflection and Core3.1StatisticsI;science review may return while authoring. No author self-review before independent review. Commit excludes unrelated historicalpilotReview_Package.
+
+## Live checkpoint — 2026-11-14 03:46UTC
+
+Cell12/Reflection11content+artifactPASS/ZIPreceipts/manifests. CoreStatistics16contentPASS and finalreview /root/core27_pdf_completion running;all9pairs/audit saved. PlantTransport12fullcontentreview /root/science_review running. EssentialTrig12fullcontentreview /root/essential_source_review running. Root next authorCoreProbabilityI12officiallessons from viewedprinted48–49;sourceJSON/materialsnotwrittenyet. Full actualproject/performance evidence distinctions required;never countwrittenfictionaldataasperformedactions. Root52%03:45UTC,checkbeforeunits/reviewers/5min.171authoredexpansion/15units,131reviewed/12;25nodrafts,15verifiedsources/18locatedroottranscriptions/7Coreblocked. Allpipeline subprocess sessions completed;serialmutation rulecontinues. Local checkpoint51005f1a is previouscommit;thisnewworknotyetcommitted. SourceHTML/durableextraction whitespace retained as exactevidence;code/JSON/Markdown diffcheck clean. Do not endauthorisedwork at milestone;continueuntilallavailabledoneor10%guard.
+
+## Live checkpoint — 2026-11-14 03:52UTC
+
+Cell12/Reflection11/CoreStats16finalPASS+packages. Transport12/science_review andTrig12/essential_source_review contentPASS/finalreviewsrunning. CoreProbabilityI12/core27_pdf_completion fullcontentreviewrunning. Allpipeline mutation subprocess sessions complete;serialrulesremain.183authoredexpansion/16units,147reviewed/13;24nodrafts,16verifiedsource/17locatedtranscriptions/7Coregaps. Root47%03:51UTC. NextauthorGSRespiration:rootviewedprinted9–10fullsource;sourceJSONnotwrittenyet. PrimaryWSUprotocolPDF accessible viaOSU https://extension.oregonstate.edu/sites/default/files/documents/8836/fs173emakingyogurt.pdf ; sourceprojectNOALCOHOLBREWING,yeastactivityadaptationmustexplicit;safeapprovedlacticprojectacrosslessonswithteacheroutsideperiodlogging,neverfood/tastingclaim. RQCO2/O2undefinedzeroO2,substrateestimatesassumptionbound;sourceIntegritysays aerobicverbatim,butteachcorrectfermentation. Continueuntilallavailabledoneor10%guard;notjustcheckpoint.

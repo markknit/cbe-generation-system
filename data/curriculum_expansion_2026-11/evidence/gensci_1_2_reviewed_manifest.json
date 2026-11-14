@@ -1,0 +1,996 @@
+{
+  "module": "gensci_1_2",
+  "lessons": 12,
+  "created_utc": "2026-11-14T03:45:03.537481+00:00",
+  "content_fingerprint": "cfaba9c99aeff0ab48ea5772dbf643a05f16527043eb93ca96c4b55d831c0418",
+  "content_verdict": "accepted",
+  "artifact_verdict": "scoped_review_pass",
+  "teacher_acceptance": "pending",
+  "partner_ingestion": "R1supportpending",
+  "files": [
+    {
+      "path": "attribution.yaml",
+      "sha256": "6e36e0385330fc38b2f6433b85bb053afcd784c33d43b15075ca3d6a2003d916"
+    },
+    {
+      "path": "blueprints/gensci_1_2.json",
+      "sha256": "ce6ea9ce94fa04e26dd37071f2975ee5e95bcd91900c2205f611d698ebc4cc53"
+    },
+    {
+      "path": "evidence/batch_05_gensci_1_2_artifact_audit.json",
+      "sha256": "3618030f2958c818303dbcd18e28f161b302fb2e1574e507b307df38e5ab1bc5"
+    },
+    {
+      "path": "evidence/cell_caption_spacing_bridge.json",
+      "sha256": "303e035ad5614220023278002529aa85ef13d88cdcf5b0bf7bb0eba6adbd4d0b"
+    },
+    {
+      "path": "evidence/cell_document_view_policy.md",
+      "sha256": "813dd77cc1f71996ea37326660b8fd436488870f7ddd95c9a585c2245a13a126"
+    },
+    {
+      "path": "evidence/gensci_1_2_checks.json",
+      "sha256": "35a731acf91a247279eafa55b9ebf3b69c290c73cf35f872e728dbce02814979"
+    },
+    {
+      "path": "evidence/gensci_1_2_render.log",
+      "sha256": "61d4232416bec0d9e4a8592a0176de383e3207d1be2636ebd7a3368e3e684a48"
+    },
+    {
+      "path": "evidence/gensci_1_2_resource_policy_snapshot.json",
+      "sha256": "ae40d1d20f515778d016d455d87534ea3582b3c8aefc261d015786ba76997d60"
+    },
+    {
+      "path": "evidence/gensci_1_2_source_verification.md",
+      "sha256": "9d7f16cd683cde37b4a39db1920412257e69696c4228658129527e9b2d1b97c3"
+    },
+    {
+      "path": "manuscripts/gensci_1_2.json",
+      "sha256": "18da1c8d9f7f05cbc5c8c76aaaf2cbbd0b0a44ed918b8206c70c67f3b9aafd0e"
+    },
+    {
+      "path": "materials/gensci_1_2.json",
+      "sha256": "bf6effa86416d7543cd7513218bd839fec8ba8bd1aa6a8db7f9770c84b417ab0"
+    },
+    {
+      "path": "materials/microscopy/CIL12594.jpg",
+      "sha256": "8cec9a5649ddff6bd2ea1ae207f076e9c54c1784f720e2063ad1f6a304d874bc"
+    },
+    {
+      "path": "materials/microscopy/CIL39755.jpg",
+      "sha256": "9c879cf7402de95e51a4a9286f0447d06e6287e724de7b6bfb1aa17798d2a784"
+    },
+    {
+      "path": "materials/microscopy/CIL43552.jpg",
+      "sha256": "453f2c454f4cc303423c50468ea2ba2d44922f6bfb8f79e313ece84785ead486"
+    },
+    {
+      "path": "materials/microscopy/Hsu2026_Fig1.png",
+      "sha256": "2e4c296ff8532e42bb1cc6959f5cf55bcd6024ee0029da4a47fbb3a927efc2dc"
+    },
+    {
+      "path": "materials/microscopy/Hsu2026_Fig3.png",
+      "sha256": "1001ef35df120d781231777b2e51ec7228e9f0583b970fba313287d41b536b98"
+    },
+    {
+      "path": "materials/microscopy/source_manifest.json",
+      "sha256": "666828b87480a1bfc85f191460b61341561180f29b9a3bf99e0aa3ef222716a8"
+    },
+    {
+      "path": "outputs/PDF/Codex_General_Science_The_Cell_AssessmentMaterials.pdf",
+      "sha256": "eb5b758cbc1c217de2714fd2d61c5dcaf0bb914eede2ef319d836dc890f20827"
+    },
+    {
+      "path": "outputs/PDF/Codex_General_Science_The_Cell_CBE_LessonSequence.pdf",
+      "sha256": "fb8f3eee81f00a14fde1d24eac9021fda1939995b999fc015e28b40e6da54e24"
+    },
+    {
+      "path": "outputs/PDF/Codex_General_Science_The_Cell_CompactTeacherGuide.pdf",
+      "sha256": "e9ac1ba213d09b936729ae10a45ea875e2c76f59566e016ee11a00545b0b64f0"
+    },
+    {
+      "path": "outputs/PDF/Codex_General_Science_The_Cell_FinalExplanation.pdf",
+      "sha256": "2ec020b73bf266d0324270da26f6c034e9cbc77bee4026289ff51f0a6b2eda0b"
+    },
+    {
+      "path": "outputs/PDF/Codex_General_Science_The_Cell_FinalExplanation_TeacherKey.pdf",
+      "sha256": "ca3c715cd4e3f241e80eb8a271261193db95cee58cda92a65d0c29ae78757bd5"
+    },
+    {
+      "path": "outputs/PDF/Codex_General_Science_The_Cell_MaterialsTeacherKey.pdf",
+      "sha256": "e60bb482969925d0472059b771a23cb22a704b8e8a44b6c81627b456381bbcb4"
+    },
+    {
+      "path": "outputs/PDF/Codex_General_Science_The_Cell_StudentMaterials.pdf",
+      "sha256": "f4c119329bb454fe8856c94cc1404825cfef31e5b101936bb789e71c01faf5d0"
+    },
+    {
+      "path": "outputs/PDF/Codex_General_Science_The_Cell_StudentSummaryTable.pdf",
+      "sha256": "4d77898a5bc98229cab5b73814be7154a0f7fae1b3b83e520dc1e1380fffb99f"
+    },
+    {
+      "path": "outputs/PDF/Codex_General_Science_The_Cell_SummaryTable.pdf",
+      "sha256": "d5abd556f3a9f9e6f3475d4fddbfd6fbb4d4e2daccda0ad7096813f06c5d1b6b"
+    },
+    {
+      "path": "outputs/v2/General_Science/SS1.2_The_Cell/Codex_General_Science_The_Cell_AssessmentMaterials.docx",
+      "sha256": "c530a87b818ab4c363eee16acf950398912cd01aa6327d24306e1d554c35f399"
+    },
+    {
+      "path": "outputs/v2/General_Science/SS1.2_The_Cell/Codex_General_Science_The_Cell_CBE_LessonSequence.docx",
+      "sha256": "2749e450e5be60c7407b7a877ff25ddc51ee0f5d9c8b4f522cb691ef6847b473"
+    },
+    {
+      "path": "outputs/v2/General_Science/SS1.2_The_Cell/Codex_General_Science_The_Cell_CompactTeacherGuide.docx",
+      "sha256": "7f3a620d43225ff267819fe6e23cbb60becb5f7ba1788607761f9d1dc3ef10ba"
+    },
+    {
+      "path": "outputs/v2/General_Science/SS1.2_The_Cell/Codex_General_Science_The_Cell_FinalExplanation.docx",
+      "sha256": "f78ab4b5fc86e7b9c70b15d8d5268743b90fc5defc848b8ce38a0b01b1a07f6b"
+    },
+    {
+      "path": "outputs/v2/General_Science/SS1.2_The_Cell/Codex_General_Science_The_Cell_FinalExplanation_TeacherKey.docx",
+      "sha256": "fd84e96220cf889240c79605f71c472b63b88dced728cbfa2c36d1b4e2c3afa2"
+    },
+    {
+      "path": "outputs/v2/General_Science/SS1.2_The_Cell/Codex_General_Science_The_Cell_MaterialsTeacherKey.docx",
+      "sha256": "de9854e70dc835e6032b7607131b86f29d5257e813c0f61a6fc29abb4af6a9ae"
+    },
+    {
+      "path": "outputs/v2/General_Science/SS1.2_The_Cell/Codex_General_Science_The_Cell_StudentMaterials.docx",
+      "sha256": "7d269715504c0ec5c49e244accad600edbc8da3016075c8732ab476060ade4ed"
+    },
+    {
+      "path": "outputs/v2/General_Science/SS1.2_The_Cell/Codex_General_Science_The_Cell_StudentSummaryTable.docx",
+      "sha256": "41bb6cf40a5ca3b9eb2c7d12eabc4ebce5864627c22677dc8c3019cce39a9972"
+    },
+    {
+      "path": "outputs/v2/General_Science/SS1.2_The_Cell/Codex_General_Science_The_Cell_SummaryTable.docx",
+      "sha256": "573e8bb5de6e736602ed2c06803f017bbfd547ef7b7d8f14da65489d4b910829"
+    },
+    {
+      "path": "outputs/v2/General_Science/SS1.2_The_Cell/Codex_General_Science_The_Cell_data.json",
+      "sha256": "88bc840498e47693709be8422a792de1c92b0b659d8e46005d18f7866a9b1728"
+    },
+    {
+      "path": "reviews/batch_04/cell_asset_suitability_review.md",
+      "sha256": "b27d01496c84f7f0b38f509ba6d59987286aff2e16c4b9415e9f5eef4817145a"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/CIL12594.html",
+      "sha256": "3d2205d4998d3a6416c460fb26e0fae51783fc97414446ef2c65e8945105cdf2"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/CIL12594.jpg",
+      "sha256": "8cec9a5649ddff6bd2ea1ae207f076e9c54c1784f720e2063ad1f6a304d874bc"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/CIL39755.html",
+      "sha256": "2efb4f12ab1d939d9b5ba3a325c2fec1a8740122736cd47e237c9040d71b01ad"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/CIL39755.jpg",
+      "sha256": "9c879cf7402de95e51a4a9286f0447d06e6287e724de7b6bfb1aa17798d2a784"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/CIL43552.html",
+      "sha256": "34f1a51646d9f25a4891cb70977f76986b9d2e4c2fbe084f74c5218e90409ca4"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/CIL43552.jpg",
+      "sha256": "453f2c454f4cc303423c50468ea2ba2d44922f6bfb8f79e313ece84785ead486"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/Hsu2026_Fig1.png",
+      "sha256": "2e4c296ff8532e42bb1cc6959f5cf55bcd6024ee0029da4a47fbb3a927efc2dc"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/Hsu2026_Fig3.png",
+      "sha256": "1001ef35df120d781231777b2e51ec7228e9f0583b970fba313287d41b536b98"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/Hsu2026_article.html",
+      "sha256": "ddd0b3e32c10226cf49bc3f374691aee6d07b0973dc6cb879090c0cf9ef4f8ca"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/Hsu2026_figure1.html",
+      "sha256": "ab582af0acfa4173298b84c9946398ccbe0bd23daed3513d025a08f94e07460f"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/Hsu2026_figure3.html",
+      "sha256": "6bf70987d62eb201d527002c094d9e12b913c6bcb27c860ed613dacb5eea7663"
+    },
+    {
+      "path": "reviews/batch_04/evidence/cell_assets/download_manifest.json",
+      "sha256": "666828b87480a1bfc85f191460b61341561180f29b9a3bf99e0aa3ef222716a8"
+    },
+    {
+      "path": "reviews/batch_05/cell_image_frame_code_recheck.md",
+      "sha256": "3a4bf0163ce14a08666b0bc4572d29ff04933311efd4ada9d96e87cdf934a00d"
+    },
+    {
+      "path": "reviews/batch_05/cell_image_frame_code_review.md",
+      "sha256": "7f555024c1330e4964c7590ba92d46ee63ae7121c99a4d58ad1b8c80e8b7564e"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_AssessmentMaterials_overview_1.jpg",
+      "sha256": "aaf5ffd56abd74a5dcfa801ca41638baab5d100ab286d80cb8db80a1837d3a85"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_AssessmentMaterials_readable_1.png",
+      "sha256": "dc4c22683b2c4bb84818d6053f0195e2a5f670067797d1db54ca7e7c65ace57c"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_AssessmentMaterials_readable_2.png",
+      "sha256": "37c9524520fcb087826098eee305d91badef217d5d7ccdc5f93de6d0155f5143"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_AssessmentMaterials_readable_3.png",
+      "sha256": "a22aeddf25a62569148eb4630852b8a4c0798580108e6b7fc6aa1556393d26b6"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_AssessmentMaterials_review_text.txt",
+      "sha256": "5aa279d333fe60d05c354b1ee8b09b046bbe8174365d79dcb4b90792b0974ab3"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_overview_1.jpg",
+      "sha256": "62df4a38ba0d70d7828d23b52d183220a0aef97276052b26676febfa361b5b5b"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_overview_13.jpg",
+      "sha256": "c6468692485896caf8fe20d038b40c5489a1cf4a52d96b63723b2fcbd784f289"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_overview_25.jpg",
+      "sha256": "57d2d75e0a4d77b492e077bdb80fea80cea37f0c367ed0b862980643bbe70089"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_overview_37.jpg",
+      "sha256": "e7ec7ab9951321e6df0cfefe11279f97491b8c0e2fba31d668119ca61ed4e7ab"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_overview_49.jpg",
+      "sha256": "d59f581496c93d6d459d3a0f407ba0d173f49c221c5226319155af3a60ebe4fd"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_1.png",
+      "sha256": "2650f2a1640dec6bc4615a9d3fc1858bdd791f35424ffa99a1ff49c16abfbbbc"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_17.png",
+      "sha256": "44813d8a22ae02e20bbe745d64ac0a0467e21dcef5b16fbbbe7c5f13f162448c"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_2.png",
+      "sha256": "d33e07e9833b5e123e161d9d18166a7e8e452448fa4a4b927700c93ebe9945f3"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_21.png",
+      "sha256": "bda20a00df1a996d0847e0f3fe7da38a05d6ca1978ce0c689d162aea22a626ba"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_25.png",
+      "sha256": "b70f0d958c4fa2f14a517c79937abaa204be25c067ecc992420d093ef5258cf5"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_29.png",
+      "sha256": "972ca7b577287f3acaf7be35810d98232b47a037cb0ba456a6cf9d7815261f2f"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_3.png",
+      "sha256": "afad44ac879449750584a1511f810c7bf5f5b4118fc9fcaccd2970705cdf33ba"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_33.png",
+      "sha256": "21a5a88f32ff015c75a3da7f11fb7c954cc10e8baf471bebc44480479a1ee4b4"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_34.png",
+      "sha256": "24caf5e1114cce194e7bc5c6a5dc5d0dd6cd1a8da5285a05a0f218e2247f8175"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_37.png",
+      "sha256": "674dce06f0157356379579f11fc53e8d5d22246e6fa923330b1a1e9602b1fade"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_38.png",
+      "sha256": "996c32fabae486311981c0c1c7ae9e4989d26c69fe1ebfe4482b5b0d6b1cca75"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_4.png",
+      "sha256": "f983a37da027bb045d816e0f277f9eef877e306cf5c1e9e31bdfacad63c28b7a"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_41.png",
+      "sha256": "20c4e9ae905e10fed52cc84f3117bf1cf4008147d5cd4962fb3b2c85971a6bdb"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_45.png",
+      "sha256": "ee1678321836e59ff09ead8fd57758163403264cc4fb5e0f3e6a9d6d642802e6"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_46.png",
+      "sha256": "efb4ff63979415d96617773320b2c6a86a26cfa7c0ec0ca7b1ee356f31d1b09c"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_47.png",
+      "sha256": "6fddae446bf5e54ede373f5ee9c5b1a2b8a570e18fffff968f680dac6e0c8465"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_48.png",
+      "sha256": "31af0b2d41471ac7a72c0f50d892ad618c307f5831b8d3216aa15e98e372dcfb"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_49.png",
+      "sha256": "d22339627ff5e3ba66c94c4c64a15b146f7a14e481c00d70d9dc11caa0389dd2"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_50.png",
+      "sha256": "38e99281754dafca8e107ba184fe4ac1db50addb9b3782326e858f4bc6b6f8f2"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_51.png",
+      "sha256": "308e471648ce759ad48a2dee23d4e761b98c01317f52b35724028315381deb1b"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_6.png",
+      "sha256": "1035defc5e1f2b08e64db6f41ed49daa59b371232d25b8356550459fc29377ae"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_7.png",
+      "sha256": "8c02fc9c9b83a3a93b2c1017c68cb30db159a34212db4f95e54fc8dd21804b69"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CBE_LessonSequence_readable_8.png",
+      "sha256": "306d1a64492eef8878ba80d2fc760f4eae8ea36f4f94444a28440bc7b36ca46b"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_overview_1.jpg",
+      "sha256": "b8292ac8c1879fd559ef0304a4ddb46275b8d58a8f4bc31a990d913679abf0a7"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_overview_13.jpg",
+      "sha256": "b8ca3d3d240b20f0b294274968f9add161dd2aac4aa26b66f39b01384dcc1155"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_1.png",
+      "sha256": "abc89f4ba72e49069ed15e263429384c3f4c9c4a01618e6f0de3f64128040a5e"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_10.png",
+      "sha256": "479467c40b9bde4acbc45768e5ad3f0990789cad69d4e4ce79e03220a8217afe"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_11.png",
+      "sha256": "5b347b91a89072cfa6ee024bb813492ad24ac29c9647b995be8882eeb2d5f8ca"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_12.png",
+      "sha256": "f94d467629ca21136c8fe6e08417365734531ec51f56ad7920436f95c2710932"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_13.png",
+      "sha256": "9a66ce17e7889e18d2f8fdd5217345bde059fb58d4865bf652d939ec273829b4"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_2.png",
+      "sha256": "a6f558e3e45c33077e9fa8227b52190a3526f4f74c01db3482e0dfea9dbd6f93"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_5.png",
+      "sha256": "b0092ea7063b3e4056d01832de93bba58b4caac72fcb9a1ad87189a12aabe686"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_6.png",
+      "sha256": "6bb93b0c7991164c94204e705b6deb55d7b7d5d327865033c3024b98730ae387"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_7.png",
+      "sha256": "48d9f3343e3c2f7e2ab9e93ea23f3f2a5489f4de41e23d1558507c47395dd375"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_8.png",
+      "sha256": "9d1c2caa5a4061eb899d9da93e4b13ecb0b6b849e79bf8f5db1ebfe091866236"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_readable_9.png",
+      "sha256": "018783c98fd72fa5c4292f7f4910dee3a0748d8bdf1f77dd4bd6d0aec443327f"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_CompactTeacherGuide_review_text.txt",
+      "sha256": "6c88fe87f576c83ed120673860ae59cc4ef608e77a0022fcc6561f16e54e7381"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_TeacherKey_overview_1.jpg",
+      "sha256": "d4aaefde817d81df80379b38ccb6ffd47d6ddf9be7464377318b12a22dd21672"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_TeacherKey_readable_1.png",
+      "sha256": "12b615ac382c8d33a650bc9abde215ff108ca6f2993f18ee2541f838fac643d6"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_TeacherKey_readable_2.png",
+      "sha256": "9bda071482711fd3def627947c6317fbd9ed736733dc90015a733f60187d5a3f"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_TeacherKey_readable_3.png",
+      "sha256": "6374f29a39fb0ec3c85e69d052d598650c80285789bd20711dc8ca3502146b5e"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_overview_1.jpg",
+      "sha256": "e6deef8e05dc4c9ed330afd49dac73b1d49169715b76272fe8af13b124d2e215"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_readable_1.png",
+      "sha256": "e16c41a5d051a058dfe4808c1a8f31fe39900c09064e00ec8e8bba60c63d73da"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_readable_2.png",
+      "sha256": "4621245196e0f2296b09406f4ce70ac174335a239cce68cf33e1f154bcd548d7"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_readable_3.png",
+      "sha256": "82b8fb9ae819174fe4b9344f372446507b2e69757bb06e0eafdeb664d377a5cc"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_readable_4.png",
+      "sha256": "89f71c604d932f3b130eb286df1392681e228265c1a3dfdba9687ba49751fd19"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_readable_5.png",
+      "sha256": "ed56aee02fef248da85c1e0f075ff258e6bc3aea6eb9dd66be07a4ce7a8087a5"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_FinalExplanation_readable_6.png",
+      "sha256": "02228e7f3aa9d46557ad61062803ae4064162b9443eda9cb5da2270d7cd4b3f6"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_overview_1.jpg",
+      "sha256": "0ff5c74e45a63079a957548b25086e9659ad35c7d99bf3295d730c6b47967b1b"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_readable_1.png",
+      "sha256": "d5b08b13c489885c97c7de3694ab47ae7f9ff0e9e733cbca4cee4035d7592084"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_readable_10.png",
+      "sha256": "1a7d82c156a14a77ab6d20c5ab4344ac168ba99f7835e6a49b1df2e217abd4dd"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_readable_2.png",
+      "sha256": "c7d5f0e44a2a161a54c68b84f3cccf2384b27774e57fa02260b1b59159485a05"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_readable_3.png",
+      "sha256": "f5c792c9d2d9353a191bd89f97fa646f9f18d73460e7b0964c638b927268012b"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_readable_4.png",
+      "sha256": "15b37f7224f1f95821d422f4f33e1136a97a6e36940e5ec022371d43fb27ab05"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_readable_5.png",
+      "sha256": "e3686df7725d7dc7ecff5c2552bdd0b1fa057240ae563f32d075a654b519d2b9"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_readable_6.png",
+      "sha256": "ae5d781f6a3c1e82d8f62957cdb701a97f692e1f512b8a71e99f950f20e804d0"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_readable_7.png",
+      "sha256": "a0919609189ec8cb8141d87e225190d95c9ff05d38a5ad9556df93b36b3fa4d7"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_readable_8.png",
+      "sha256": "7d05fb0fbe5aa25dd64ca1d17eb88fabc642e4b239c050a6e0b150e996a648f1"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_readable_9.png",
+      "sha256": "a5ceecffbc6bb5eba0444d7f671fca8e1ab6914e3089527b6b612e321ea85bb9"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_MaterialsTeacherKey_review_text.txt",
+      "sha256": "2b4281d03ed49ed86946b7167e875e5adc5330a9263222607f682b56802b813c"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentMaterials_overview_1.jpg",
+      "sha256": "8d60459810c4476d21d208ef0844dfa704bb7e594b601ee24eeb16de0d062ab1"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentMaterials_readable_1.png",
+      "sha256": "45dd14b8998c64f3d91e139f3c2873b15edd048e4a4ba9073ca52ff1702b9643"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentMaterials_readable_2.png",
+      "sha256": "c4c782b99dc0e0b4edda38c76088a577d09f3c4f04ce775a8681493f00afd122"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentMaterials_readable_3.png",
+      "sha256": "e8855365459ac29dd87ea31a7e1ff0c35292e2ac1b6ab92ee842764770506c35"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentMaterials_readable_4.png",
+      "sha256": "37e07795577b46544f3a895b3dc746717e4d3a780d1a68d9c13fdab756c4382c"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentMaterials_readable_5.png",
+      "sha256": "cf65efbc35035d59df191db8fc3f9068e044f823b80642e58fa5d5b25447edfb"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentMaterials_readable_6.png",
+      "sha256": "8e16733e3c4b22d06ebd5032d657d9f83a732e41bc5c81d74471ac9ec7b8349a"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentMaterials_review_text.txt",
+      "sha256": "7e37e0ff9396242db07067ef1ed2990b096dbcd606d4721708806f662eb5b746"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentSummaryTable_overview_1.jpg",
+      "sha256": "083fa878b4da0e73aedcc17631d2257c07f05df6ba295ceb4ea32ffbab22dd60"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentSummaryTable_readable_1.png",
+      "sha256": "6cd12745def80c6b6cc4eb49802e895c1c7ac5bbbcd88167ed890a1364a8fe19"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_StudentSummaryTable_review_text.txt",
+      "sha256": "10dd44833b6e4d0222876bb7964bcb2941ab53f64e4df2b594ec0b6ea4cd6448"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_SummaryTable_overview_1.jpg",
+      "sha256": "ff52a9bbe97380524334d73245b32e13a168459ff99b807c4b890c86a23e856b"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_SummaryTable_readable_1.png",
+      "sha256": "df93f791af18c01ccf498097fc7993aa354169af96d196ba9ebf87c801d3764f"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_SummaryTable_readable_2.png",
+      "sha256": "ae304e8e355ba1f834c41844828afb7878ef171f64a199fa23ba2eed314cdb7f"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_artifact_review_check.json",
+      "sha256": "7f73caae65bbfbe2a836c3c76c5a98c90c1406d7fc2b5e88dc0be31ff9d5ad88"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_artifact_review_check.py",
+      "sha256": "704be19ff663a13c33150a1079ff4263686d2dbce191433d2b09801ef588d3ac"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_export_image_check.json",
+      "sha256": "b40986195f32c9bd77f3c051786159207ae8735bf2225e218a4410905288559e"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_export_image_check.py",
+      "sha256": "1ced563bd3d4a7f8568d372191bf7d619eea88954d57f4f16f652337fec592c4"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_initial_check.json",
+      "sha256": "668b6c62e94320083aae1df59bc14326cc5957254c56b3f3cd75ecd40f4e7330"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_initial_check.py",
+      "sha256": "d043fee4415fbd9bcfc6b77118e91df325f9d6960cae3b27cec9305f5c8d32ce"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/AssessmentMaterials-1.jpg",
+      "sha256": "51cb0eeb2607a9c73457fdceef39e174649bcacf5804ee879af918860846dfc5"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/AssessmentMaterials-2.jpg",
+      "sha256": "27c73a1c81cd36416d40e66aa9d5a5519593bd35d163a58d9d36c55bbd65384d"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/AssessmentMaterials-3.jpg",
+      "sha256": "57bffaee427df406c1ed65543d90b6506039f1b6fdc02263e915d8cb05efc6b2"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-01.jpg",
+      "sha256": "ff1089af13c0972ad80cfa0e584b10617edc9465e457e99701a28e7f85ef7e45"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-02.jpg",
+      "sha256": "b099adb7132e06f716ad840d1583be1d3dcf24e265a09754a76578bcb08b37bf"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-03.jpg",
+      "sha256": "583016ab92f0d1af38cf3ddc2570a348368b726d72d8c2c0fc5698256828b717"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-04.jpg",
+      "sha256": "e6180d9cca8cfe4a35ddec6d5fc4fa94c23bb1c6a7940bd77c47e0d0d38970c0"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-05.jpg",
+      "sha256": "07a51dd05c9a2a3049a4f6dcdf817bc4242682005a6c7416efaaa2e674dfe990"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-06.jpg",
+      "sha256": "051222a40d3cef44cb0ccc61f1f39ff19c6ce97cde639c34b0f68944a39ed74d"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-07.jpg",
+      "sha256": "bdbc82ee6fc9faa80958dcdabdba851ac9a1885668205f26abd2f096b6f8f1c1"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-08.jpg",
+      "sha256": "3056f00fbd24dd6a885e58b3bdd06de437cfef650e1f3a1e7efaf89ab3f8c92f"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-09.jpg",
+      "sha256": "59b3330f918e3912c4bba7a0335fc519dc30dbb0065e15989e0f4cfe9fb37964"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-10.jpg",
+      "sha256": "fb5e3fe284fafeaf5a6ad38626d530c4b846249cf168dc4d16dc307a0da28a17"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-11.jpg",
+      "sha256": "5f6828fd82fa8a5424b592bad2f09270e3e48fdd3ce56462dd9378b61471b09c"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-12.jpg",
+      "sha256": "0a71213bf8301ae42c60f0183a75b0084e0cf44187c4d4bd459a265b59d578e4"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-13.jpg",
+      "sha256": "febe6040365c29ea4a85dfc6de577c6d9e64bbf0d94b9272596d3bd0ca6294d1"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-14.jpg",
+      "sha256": "738991eb9bd4aa33a4d738c92d2289b50357aa89f0c1053de3edb6268b6c68d8"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-15.jpg",
+      "sha256": "a18ce2c69808499c313b2155145925ff7bbd7da0e2abc1c9402de3ade20cb0fe"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-16.jpg",
+      "sha256": "cf8ec71f24f9c15edba1bf7b98de992d5bf59b21bcd267f49a963023ed0f02d8"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-17.jpg",
+      "sha256": "dc8ecceccfb8bebebb7050f6ce0732b328e7b5825bab6b066570032705de1ce0"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-18.jpg",
+      "sha256": "4332d0d26d55342efcbed976a43e5cb129a5a80e7f14cdbc6f9197f751e3c20c"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-19.jpg",
+      "sha256": "45e137dbee5fdf5d79776241518d10429c5914b10d8827cd42eb25b5379f9b33"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-20.jpg",
+      "sha256": "3f48f6b194911c315bd5da1cef95e3a466bc050f143e93c595787a4a9194a0ae"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-21.jpg",
+      "sha256": "15b8f4d375aca0892eb960979bd58b4d9823aa8b959e9b9fdb99e5f4f2ba47d4"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-22.jpg",
+      "sha256": "d9a498e5950410936682c599908a4f65d9109ee5f1ea397686e84c8949931396"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-23.jpg",
+      "sha256": "467facb6b8f1e51e4ece2c4970dd05767df2f697c78288197732a19a79016f06"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-24.jpg",
+      "sha256": "96ef6f2069d5dd58cbae5d17764385cbc0a271888c11d33fbd196b9e6f043588"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-25.jpg",
+      "sha256": "3db8d48ccaab48241f789cb08bae9b3600af4467474b2f579483569de8ab4f32"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-26.jpg",
+      "sha256": "64ebdace70ec4de07993a715024ccdcb91f3435241dc7a8c3f0127629bacff52"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-27.jpg",
+      "sha256": "eadc21d5d841d7ffa9096a698191e49902b9f4acbc0ddb42e47be87b19ffb8d9"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-28.jpg",
+      "sha256": "50bc5fb0251eef88a4092343fcfd9e39dce47d2d9277c9f599cc1a94175aad82"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-29.jpg",
+      "sha256": "4da2f7c9a538aa382e3aa781b1d5397cc9e5a82b32f1e27c2c602f20b7bc722e"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-30.jpg",
+      "sha256": "9287a1d992b34a949712ac340a2a69f6056cc695f01f426bd0fe83dcf4def719"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-31.jpg",
+      "sha256": "4103109377fb22843b102c37c67f70aa2e676dd1694d729ee50f5d19bbc0d463"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-32.jpg",
+      "sha256": "08cff994837c4d5199fb2f8975ae22f3fb9b5dd0ca904b6d1d04e4e5a82c91b5"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-33.jpg",
+      "sha256": "75bd3f1540fb4ad0e457267d2769cc7498ef160729fb18d49e57b66337ea492c"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-34.jpg",
+      "sha256": "ef5bf6f3b88a44933dd98bffbb49c09a5d40282f84543dbd023d2309ecb0ff33"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-35.jpg",
+      "sha256": "68e1c70cf70c0a8de8697dc20a951612d4df80da0784b0f46f8d5676a9bd1836"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-36.jpg",
+      "sha256": "e3926062af74c1996ee302b162cebedc85e186639250c33f045c25ec480a6ab8"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-37.jpg",
+      "sha256": "0b968c6186a88dc76d601c7d505f714cc12fdb4a699c165c5af8bcb7d7e76b3b"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-38.jpg",
+      "sha256": "5d3b8937c9dea14bb739f663fb2f27be0247d2581f5a2a95580311f3eae6e6b1"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-39.jpg",
+      "sha256": "6cfa125e929f46d975946939a759d4a0c3b93c920462c0e397102db90ff39cd2"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-40.jpg",
+      "sha256": "47b4da01d66f78b4a2e95f466b6de3be457191d24c5c56209f1d5e3d7242d090"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-41.jpg",
+      "sha256": "c3a18a1df0fd57a44307e457a8bb305e01fa63e2f701683376d5ea740406cb54"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-42.jpg",
+      "sha256": "de1878a5852db76cd3f61084647730fb402898d62c562fb673811a35c07a5c9c"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-43.jpg",
+      "sha256": "798a12f64964beabc56fa0aabb3b736d06fd6f9b04aca6d281ac3966ed6a0c05"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-44.jpg",
+      "sha256": "1833395bd00fa5edb91fb62a7b864987a7d98e9333c62c490ff2eeba733b9299"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-45.jpg",
+      "sha256": "07b2d3253334a517075d1a45e733e79fa3ec0d99b6213da8fe8e6516fffc0974"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-46.jpg",
+      "sha256": "af28147e1ffcfbedeebb0e11a5e4afdda0883baeb520b61fa3b3656bdd263719"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-47.jpg",
+      "sha256": "5adf091ed0c40afb1c82de424c57b317454ad70626d09626692079a80d364e98"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-48.jpg",
+      "sha256": "d8b54cc7ad01e9d84522fed8dc8fbb4ad4d91e52887209e726ab62112cceddf9"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-49.jpg",
+      "sha256": "38292afbc39fc7d31cece42d35d8f7e914895219d865585e0c4afcb7ddbe9b1a"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-50.jpg",
+      "sha256": "6bad55009373260eb564256a4f6b05bff0f275ad4b7efb559976a726c8de8860"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CBE_LessonSequence-51.jpg",
+      "sha256": "2163645afb973b19b78cd5699974dabd7717e4d45c33c6aafb4977ceeb7c899e"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-01.jpg",
+      "sha256": "f2770abd7760e337c09cd2c013f3b9b5fb35bae3a386a9818cacff6888302c04"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-02.jpg",
+      "sha256": "c4c1bf398c6c92155d6e6f82a9d2358b806d3f1152e852b0a62835b536886bbe"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-03.jpg",
+      "sha256": "2ba2e3d3d8947c36ac31adc022f9d7a1b828dd6e4760afee691a6a985ef538cc"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-04.jpg",
+      "sha256": "e196715a8e2b38e92761fd1bb11d98b4f2bde715a8d3763e429cb9da993dc412"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-05.jpg",
+      "sha256": "ad2e460dc15db100f5741b6b5ba4f997d16b18ebccfaa56080228f94a776614c"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-06.jpg",
+      "sha256": "03b3f3822e0dcffd70371490a7f9facda4665ab02b946bc19894e5472f2c2e42"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-07.jpg",
+      "sha256": "d4f4f8fdc24de550db3f395dee58802cc63c2e40be8aff8577315aae3bed2547"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-08.jpg",
+      "sha256": "17a6d17cda5b8a32cd305f3e0a2d8bfb0da1c8cc186a1620460a37a9822d1fa5"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-09.jpg",
+      "sha256": "97e86a43680d27e1405e6b10cd674b32d45b99a01490ed1bbe4cebc1f73527f1"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-10.jpg",
+      "sha256": "575aeee6217e259c4bed3afe863b85b253c8ebc64d856f02dddedfe347471132"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-11.jpg",
+      "sha256": "2cc5d3bea2936aa3d085a7ded2a2298bda39368a4d7ffe4ddaaaeb301a93e829"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-12.jpg",
+      "sha256": "37a72dbe0d0c240db8fc375949f95810b457e13f892b2e86fd24e9b392e341e6"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/CompactTeacherGuide-13.jpg",
+      "sha256": "48253c06014deb6c2f7b2f60bf9e0fb08a8d2ec685dc57b39156a21b88e2f26b"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/FinalExplanation-1.jpg",
+      "sha256": "2d28e8ace1cb68cbad79bfb0467385850787b1a3708d64df40d3b34d9b865306"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/FinalExplanation-2.jpg",
+      "sha256": "deae9df2174521b1a5251707cbe2e9e407d762c3208cbaac0bc178a21bfd2948"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/FinalExplanation-3.jpg",
+      "sha256": "4854e25ec552c03667a35c6d0da7ca13a62b138a4f12af1b46ea4394b4725736"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/FinalExplanation-4.jpg",
+      "sha256": "2df4bfb0a1515c24ad0438bcaa055ab13319f6e642131392004710c48f30eff6"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/FinalExplanation-5.jpg",
+      "sha256": "7345a7ec0a1554597ef49e4024e890fbe86a182c142dcf3d7b3273fca4f97560"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/FinalExplanation-6.jpg",
+      "sha256": "6011ab07e410487720562264a858857bb516704d58fb1daac6cfcfb1f21249d8"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/FinalExplanation_TeacherKey-1.jpg",
+      "sha256": "af0127b1e74433a4a5213c10bd0fd543b07e0d7ee15af999129016a8c212609e"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/FinalExplanation_TeacherKey-2.jpg",
+      "sha256": "7c7dafb93b52868cec674463aedf56c5bc438ae9aa55bc4205b19ac0508509bc"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/FinalExplanation_TeacherKey-3.jpg",
+      "sha256": "8088348c1556374dd3df2c99ca66d95bd50770949b17c842e64be8670216b115"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/MaterialsTeacherKey-01.jpg",
+      "sha256": "2e46ac825ace82da5ab4bbf56e2fda8c692cd4519eeff61ab337c838095e67a8"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/MaterialsTeacherKey-02.jpg",
+      "sha256": "3800856a6ac62e6a3185655fc613616d6a4e74dff503f3264275a85cad5224a3"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/MaterialsTeacherKey-03.jpg",
+      "sha256": "fe3581813e80ba7ac8586ee19f2da424fe25ac878106d7587ee73d256cf1719a"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/MaterialsTeacherKey-04.jpg",
+      "sha256": "1acf41d2a3a4941fcdd913aacf8b96ce2fb02c81cfe9a0f1355c925a90d6df38"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/MaterialsTeacherKey-05.jpg",
+      "sha256": "579d8311695e301d3714e975cca1d7fc1234188084b25ce23a83922526d7c6b6"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/MaterialsTeacherKey-06.jpg",
+      "sha256": "dfd476fe3bd79036438e52ef831b94be221cc28f34e5b18b5860a2fb5312536a"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/MaterialsTeacherKey-07.jpg",
+      "sha256": "8c791589871d9d9e8a74be57e81abcf7e37664511f97122982c03e3dffcb5043"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/MaterialsTeacherKey-08.jpg",
+      "sha256": "99e5ec4537f3b918e9f684c22d4e38ffd967bf24cd0a1c1023c17bce2de6e03d"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/MaterialsTeacherKey-09.jpg",
+      "sha256": "45c90b5a50c4b0bf08a50d112082463b5d5312b0115c80a17cbf83aa26aba876"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/MaterialsTeacherKey-10.jpg",
+      "sha256": "ddae8b84f90cc08e2db0232547770de29e112c0c4803c210ebc1df463d0db1bd"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/StudentMaterials-1.jpg",
+      "sha256": "9994476a491fe692ca3e40f10a607af2dae7c8b25607cf4f0fccace0ffef2390"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/StudentMaterials-2.jpg",
+      "sha256": "32c20976c1343d8761be9c241c5abfe331432eb3718de99ba4c69d5b591eb238"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/StudentMaterials-3.jpg",
+      "sha256": "afd0adb0b888ca4c30405893055add9a900d23b558308540da37ca43d6614b9f"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/StudentMaterials-4.jpg",
+      "sha256": "fa1d32a2454e12437d803f6d26c5f058b1ef76b7e71d14cbf3420b601d350c15"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/StudentMaterials-5.jpg",
+      "sha256": "0f20ca7559202ae2765a9dafe6d42da0fe63394b044fe886a8db9637c331a308"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/StudentMaterials-6.jpg",
+      "sha256": "c1fe160f8fc3c0eac84bdc2e0fe0a5e6a668cb7ca7a9d4ee3cf79a7159525ed9"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/StudentSummaryTable-1.jpg",
+      "sha256": "6a5c5c5584ee4c14f6b4dbcdc571f3443286c143c064ed457d74f032f32d0bd5"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/SummaryTable-1.jpg",
+      "sha256": "fa8659510dcddf5f12599e2301e4486a8b1c5d952bc4325ce379b1b6e85e85eb"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_pages/SummaryTable-2.jpg",
+      "sha256": "dc9438781da59ad5455bb919c2d0b379401e42e9e3c6ab30cac929ff89df188b"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_visual_check.py",
+      "sha256": "80081edbe0eea6d02424bd28ef8f1e99f64e23e88ce6b17668dcc94f52aeb4e3"
+    },
+    {
+      "path": "reviews/batch_05/evidence/gensci_1_2_visual_manifest.json",
+      "sha256": "e85421f3eafb593bb57dd45488a65dd8cda860587f8a06eee825586cb5116496"
+    },
+    {
+      "path": "reviews/batch_05/gensci_1_2_initial.md",
+      "sha256": "881bd4487531fecf84996414c60c22b88e4cdc74b39fc4c3b550e20bd0bd7551"
+    },
+    {
+      "path": "reviews/batch_05/gensci_1_2_layout_review.md",
+      "sha256": "8675ab446efba45551f34d2a62e176d75c6df4205364636e136f07d898977cd1"
+    },
+    {
+      "path": "reviews/gensci_1_2/artifact_acceptance.json",
+      "sha256": "b040072804ebe2f9ff034c11eba60e4977a5f9c33420f73b28bb08ac5b702baa"
+    },
+    {
+      "path": "reviews/gensci_1_2/content_acceptance.json",
+      "sha256": "222fcc926a76ece491f390535d6431f92b0cfd81be79e6f5b9ce7b40fb29f352"
+    },
+    {
+      "path": "sources/gensci_1_2.json",
+      "sha256": "621957aa4be17cbf130a87eb36fd98823ec5c7b2e96141283c6ea3a700f48d6c"
+    },
+    {
+      "path": "sources/gensci_1_2.verification.json",
+      "sha256": "8e6b2734f5bf9d6fa7c3a6c3abf25bbe729d20d1f6995f3882b1276372d98ed5"
+    },
+    {
+      "path": "sources/gensci_1_2_ocr.txt",
+      "sha256": "738cc95041b45b1eb96220f90b63e598d1759fa45e9c91995941e03d3f7ca8f3"
+    },
+    {
+      "path": "sources/gensci_1_2_source.png",
+      "sha256": "564dde5369a39a12698d711bf5509b74bd437356f356b345f46589d8ccb4b1fd"
+    }
+  ]
+}

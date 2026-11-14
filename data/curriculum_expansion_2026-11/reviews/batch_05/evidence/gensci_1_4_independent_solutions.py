@@ -1,0 +1,14 @@
+from pathlib import Path
+from fractions import Fraction as F
+import json,hashlib
+B=Path('data/curriculum_expansion_2026-11');E=B/'reviews/batch_05/evidence';M=json.loads((B/'materials/gensci_1_4.json').read_text());S=json.loads((B/'sources/gensci_1_4.json').read_text());V=json.loads((B/'sources/gensci_1_4.verification.json').read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+# Independent raw data, not evaluation of the author's registered expression strings.
+def runs(values,bg):return [F(v)-F(bg) for v in values]
+def avg(values):return sum(values)/len(values)
+a=runs(['.20','.22','.18'],'.02');b=runs(['.35','.37','.36'],'.02');c=runs(['.16','.18','.17'],'.01');d=runs(['.28','.30','.29'],'.01')
+solutions={'still_loss':avg(a),'still_rate':avg(a)/10,'fan_loss':avg(b),'fan_rate':avg(b)/10,'area40rate':F('.20')/10/40,'area20rate':F('.10')/10/20,'final_still':avg(c),'final_fan':avg(d),'final_stillrate':avg(c)/10,'final_fanrate':avg(d)/10,'final_difference':avg(d)/10-avg(c)/10}
+checks=[{'id':r['id'],'independent_exact':str(solutions[r['id']]),'independent_decimal':float(solutions[r['id']]),'registered_expression':r['expression'],'registered_expected':r['expected'],'pass':solutions[r['id']]==F(str(r['expected']))} for r in M['calculations']]
+sourceproof={'source_record_matches_verification':sha(B/'sources/gensci_1_4.json')==V['source_record_sha256'],'source_crop_matches_verification':sha(B/'sources/gensci_1_4_source.png')==V['crop_sha256'],'source_pdf_matches_record':sha(Path(S['pdf']))==S['pdf_sha256'],'verification_evidence_matches':sha(Path(V['evidence']))==V['evidence_sha256']}
+R={'source_proof':sourceproof,'registry_checks':checks,'all11pass':all(r['pass'] for r in checks),'corrected_raw_values':{'PT9_still':list(map(float,a)),'PT9_airflow':list(map(float,b)),'PT12_still':list(map(float,c)),'PT12_airflow':list(map(float,d))},'unregistered_structural_total_rates_g_min':[.02,.01],'structural_per_area_equal':solutions['area40rate']==solutions['area20rate'],'primary_access_notes':{'SAPS':'Fresh accessible main page supports mass-loss/uptake distinction,one-factor comparison,technician assembly. Low-risk plastic mass design is independently specified,not falsely described as the exact tested SAPS apparatus.','eLife':'Publisher DOI page challenged;fresh PubMed abstract plus PMC4946904 introduction/results(method overview) accessible and independently support narrow pressure/flow/anatomical-resistance summary and morning-glory context. No paper figure or numerical result reproduced.','OpenStax':'Fresh accessible background checked;canonical qualifications avoid universal active-ion/loading,xylem-direction/stomatal response claims.'}}
+(E/'gensci_1_4_independent_solutions.json').write_text(json.dumps(R,indent=2)+'\n');print(json.dumps(R,indent=2))
+if not all(sourceproof.values()) or not R['all11pass']:raise SystemExit(1)
