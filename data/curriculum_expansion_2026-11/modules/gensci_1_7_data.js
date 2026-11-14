@@ -25,10 +25,6 @@ module.exports = {
     "coreCompetencies": "Digital literacy: as the learner uses digital devices to research on infections caused by microorganisms as well as their control and prevention mechanisms.\nCommunication and collaboration: as the learner shares information gathered on types of microorganism infections, control and prevention.",
     "values": "Respect is promoted as the learner becomes considerate of others’ opinion while discussing methods of controlling and preventing microorganism infections.",
     "pcis": "Socio-economic issues (poverty eradication); as the learner sensitises the community on the significance of food preservation and the economic importance of microorganisms.",
-    "keyInquiryQuestions": [
-      "How are micro-organisms important in day-to-day life?"
-    ],
-    "teacherConfirmationRequired": "Teacher approval of public-health examples, any sealed sample, allergies and disposal; no learner opening/handling/sniffing/tasting of mould; actual digital/research/community actions recorded separately.",
     "gradeLevel": "10",
     "subject": "General Science",
     "totalDuration": "12 lessons × 40 minutes = 480 minutes",
@@ -707,45 +703,45 @@ module.exports = {
         "skills": "Classify, explain, match an action to a route and qualify an economic/daily-life claim.",
         "attitudes": "Use respectful, evidence-based conclusions.",
         "keyInquiry": "What evidence supports a useful conclusion about microorganisms in daily life?",
-        "purposeInStoryline": "A fictional food-service case mixes a transmission claim, a preservation choice and an unsupported local cost estimate.",
+        "purposeInStoryline": "A fictional food-service record separates transmission claims,preservation evidence and unknown economic amounts.",
         "safetyNotes": "Fictional record only; no diagnosis, personal disclosure, actual experiment or community delivery is inferred."
       },
-      "overview": "Learners complete the independent assessment and justify claims using the supplied case record.\nMaterials: MI12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Learners complete the independent assessment and justify claims using the supplied case record.\nMaterials: MI12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 5 min, Observe 10 min, Explain 10 min, Driving Question Board (DQB) Creation 10 min, Model Building 5 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Predict which parts of the case need evidence checks.",
-          "teacherMoves": "4 minutes. Elicit a plan without confirming answers.",
-          "sensemakingStrategy": "Record an individual plan.",
-          "formativeAssessment": "Plan covers group, route and impact."
+          "learnerExperience": "Read MI12 and final instructions independently.",
+          "teacherMoves": "5 minutes. Distribute only final-only case/prompts;clarify procedure without content hints.",
+          "sensemakingStrategy": "Identify given facts and questions individually.",
+          "formativeAssessment": "No teaching cards/keys or answer guidance."
         },
         {
           "phase": "Observe Phase",
-          "learnerExperience": "Read MI12 fictional record and identify facts.",
-          "teacherMoves": "8 minutes. Remind students that supplied cases are not actual observations.",
-          "sensemakingStrategy": "Mark evidence and missing information.",
-          "formativeAssessment": "Facts and assumptions are separated."
+          "learnerExperience": "Complete Section1 classification and possible route.",
+          "teacherMoves": "10 minutes. Supervise without confirming answers or eliciting a shared plan.",
+          "sensemakingStrategy": "Use supplied facts/source and state an evidence limit.",
+          "formativeAssessment": "Individual group/category,route and limit recorded."
         },
         {
           "phase": "Explain Phase",
-          "learnerExperience": "Complete all three independent assessment sections.",
-          "teacherMoves": "18 minutes. Provide no hints; collect independent work.",
-          "sensemakingStrategy": "Classify, explain route/control and assess impact.",
-          "formativeAssessment": "Answers follow the record and stated sources."
+          "learnerExperience": "Complete Section2 two route-matched measures and limits.",
+          "teacherMoves": "10 minutes. Provide procedural access support only;no answer hints.",
+          "sensemakingStrategy": "Explain each measure and its own limitation.",
+          "formativeAssessment": "Two distinct measures with matching limits."
         },
         {
           "phase": "Driving Question Board (DQB) Creation",
-          "learnerExperience": "Review one conclusion and one limitation.",
-          "teacherMoves": "6 minutes. Ask students to identify a source or measurement needed next.",
-          "sensemakingStrategy": "Qualify the conclusion.",
-          "formativeAssessment": "Limitation is specific."
+          "learnerExperience": "Complete Section3 preservation,economic effect and evidence scope.",
+          "teacherMoves": "10 minutes. Keep responses independent;do not guide a conclusion or discuss answers.",
+          "sensemakingStrategy": "Use given food/conditions and source summary.",
+          "formativeAssessment": "Supported choice,effect and limit recorded."
         },
         {
           "phase": "Model Building Phase",
-          "learnerExperience": "Submit individual work and reflect on one daily-life application.",
-          "teacherMoves": "4 minutes. Collect the assessment and retain evidence origin.",
-          "sensemakingStrategy": "Name a further question.",
-          "formativeAssessment": "No unobserved performance is claimed."
+          "learnerExperience": "Check all sections and submit individual work.",
+          "teacherMoves": "5 minutes. Collect before any feedback,discussion or teaching.",
+          "sensemakingStrategy": "Verify source references and distinguish supplied from actual actions.",
+          "formativeAssessment": "Complete independent response and honest evidence origin."
         }
       ],
       "teacherReflection": "Written assessment cannot certify the actual sealed investigation, digital search, food-preservation practice or community activity.",
@@ -758,25 +754,22 @@ module.exports = {
   ],
   "FINAL_EXPLANATION": {
     "subjectLabel": "Microorganisms",
-    "instructions": "Use only the fictional information and teacher-approved source excerpts supplied. Do not infer a diagnosis, an unobserved experiment or a real community action.",
+    "instructions": "Independent written assessment,40minutes:5minutes read MI12,10minutes Section1,10minutes Section2,10minutes Section3,5minutes check. Use only the standalone final-only MI12 case and its printed source summaries. For each section cite the supporting source/fact and state an evidence limit. No access to teacher keys or teaching task cards. No diagnosis or unobserved performance claim.",
     "sections": [
       {
         "title": "1. Classify and explain a route",
-        "prompt": "The supplied fictional record states that microorganism A is a bacterium and that the relevant source lists contaminated water as a possible transmission route. Identify the microorganism group and infection category stated in the record, explain the possible route and name one fact still needed before claiming what caused any real illness.",
-        "exemplar": "The supplied record identifies A as a bacterium and the infection category as bacterial; contaminated water is a possible route in this fictional case. The record alone does not diagnose a person or prove a real cause. A verified exposure/source and qualified investigation would be needed.",
-        "marks": 4
+        "prompt": "Using MI12, identify the named microorganism group and infection category, explain the possible route, cite the supporting source and name one fact still needed before claiming what caused any real illness.",
+        "exemplar": "I1: V.cholerae=bacterium; cholera=bacterial; possible ingestion via contaminated water/food, supported by WHO summary; real exposure/contamination/cause still needs qualified investigation. "
       },
       {
         "title": "2. Match prevention and control",
-        "prompt": "For the fictional water-route case, recommend two general prevention/control measures that address the stated route. Explain one limit of each and identify when current public-health guidance is needed.",
-        "exemplar": "Use teacher-approved safe water and food-handling measures that reduce contamination and follow local public-health guidance. The fictional record does not establish a real source or individual treatment; no single measure guarantees prevention in every circumstance.",
-        "marks": 4
+        "prompt": "For MI12 recommend two distinct general prevention/control measures matched to the water route. Explain a limit of EACH, cite the supporting supplied fact/source and identify when current public-health guidance is needed.",
+        "exemplar": "Use an authority-verified safe supply to reduce ingestion exposure; its verification and continuing safe handling are required. Use clean covered storage and utensils to reduce recontamination; this does not treat already contaminated water. These follow MI12/WHO water-safety reasoning; current authority instructions are needed for the suspect supply, and no actual cause is proven."
       },
       {
         "title": "3. Explain a daily-life and economic effect",
-        "prompt": "Use the supplied evidence about food spoilage and preservation to explain one possible economic effect and recommend one preservation approach under its stated conditions. State one evidence limit and do not claim that a classroom sample was eaten, tested or made safe.",
-        "exemplar": "Spoilage can lead to food loss and economic cost; an evidence-supported preservation method can reduce loss under appropriate conditions. The chosen method depends on the food and storage conditions and does not establish that a particular sample is safe. No actual classroom test or community action is claimed.",
-        "marks": 4
+        "prompt": "Using MI12 and its CDC source summary, explain one possible economic effect of spoilage and select a preservation/storage approach suitable for the stated food and conditions. Explain why the evidence supports that choice, give one precise limit, and distinguish supplied business facts from measured local results.",
+        "exemplar": "Monitored refrigeration is supported for fresh cut melon by the supplied CDC summary and reliable refrigeration in the fictional case. Slower microbial growth may reduce unsaleable stock and replacement costs. Cooling does not sterilise or certify this batch safe; no exact savings can be calculated without quantities/prices. The vendor record is fictional, not measured local evidence."
       }
     ],
     "rubric": [

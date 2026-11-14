@@ -1,0 +1,7 @@
+# GS2.1 independent review — progressive checkpoint
+
+Provisional HOLD. All source pixels18–20,15task cards/keys,15lessons,blueprint and final/rubric read. No fixed chemistry/key error found so far. Exact current Word/fingerprint binding and full fixed-task evidence are being completed. No author self-review consulted, no author-file/build/render/acceptance edits.
+
+Confirmed unsupported formative claims: L7/F7 d/e although PT7 assigns oxidation numbers to already-given formulae and distinguishes valency, without asking for actual ion-formation descriptions or construction of a new compound formula; L11/F11 e although skeleton formulae explicitly remain fixed while balancing/counting; L14/F14 b although its five audits/structural-importance explanation never require a specific group-and-period classification. Exact locations include manuscript lesson outcomes and corresponding blueprint lesson_map/assessment_tasks/assessment_map. Correct claims or add genuinely assessed tasks, retaining existing substantive coverage elsewhere.
+
+Chemistry scope already checked: correct first20shell populations/K-Ca fourth shells, He/H qualifications, energy-based affinity vs vacancies, ionic/covalent/first20 exceptions, formal oxidation vs real charge,7polyatomic groups, supplied compound formulae and reaction coefficients. Actual five-model/chart/digital evidence remains separate from written final.

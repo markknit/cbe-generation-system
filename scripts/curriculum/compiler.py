@@ -164,9 +164,15 @@ def build(name):
  for x in bp['lesson_map']:
   if x['outcomes']!=m['lessons'][x['lesson']-1]['outcomes']:errors.append('Blueprint outcome mismatch')
  meta=dict(subject=m['subject'],grade=10,substrand_id=m['substrand_id'],substrand_name=m['topic'],outputDir=f'v2/{m["folder"]}/SS{m["substrand_id"]}_{m["topic"].replace(" ","_").replace(",","")}',filePrefix=m['prefix'],titleDoc=f'{m["subject"].upper()} GRADE 10: {m["topic"].upper()}',subtitleDoc=f'OpenAI-only evaluation • Sub-Strand {m["substrand_id"]} • {len(lessons)} lessons • teacher review copy')
- unit={**m['unit'],'gradeLevel':'10','subject':m['subject'],'totalDuration':f'{len(lessons)} lessons × 40 minutes = {len(lessons)*40} minutes','learningOutcomes':'\n'.join(x['text'] for x in requirements['outcomes'])}
+ # These named authoring notes remain in the fingerprinted canonical records.
+ # They are not fields in the strict R1 export contract. Other unknown keys
+ # deliberately remain visible to the normal contract gate rather than being
+ # silently discarded by a broad allowlist.
+ unit_notes={'keyInquiryQuestions','teacherConfirmationRequired'}
+ unit={**{k:v for k,v in m['unit'].items() if k not in unit_notes},'gradeLevel':'10','subject':m['subject'],'totalDuration':f'{len(lessons)} lessons × 40 minutes = {len(lessons)*40} minutes','learningOutcomes':'\n'.join(x['text'] for x in requirements['outcomes'])}
  st=dict(subStrand=unit['substrand'],drivingQuestion=unit['drivingQuestion'],lessons=[dict(number=l['number'],title=l['title'],**l['summaryTablePrompt']) for l in lessons])
- module=dict(schemaVersion='1.1.0',META=meta,UNIT=unit,LESSONS=lessons,FINAL_EXPLANATION=m['assessment'],SUMMARY_TABLE=st)
+ assessment={**m['assessment'],'sections':[{k:v for k,v in section.items() if k!='marks'} for section in m['assessment']['sections']]}
+ module=dict(schemaVersion='1.1.0',META=meta,UNIT=unit,LESSONS=lessons,FINAL_EXPLANATION=assessment,SUMMARY_TABLE=st)
  if errors:raise ValueError(errors)
  out=BASE/'modules'/f'{name}_data.js';out.parent.mkdir(parents=True,exist_ok=True);out.write_text("'use strict';\nmodule.exports = "+json.dumps(module,ensure_ascii=False,indent=2)+';\n')
  report={'module':name,'lessons':len(lessons),'minutes':len(lessons)*40,'calculations':checks,'covered_outcomes':sorted(taught),'assessment_outcomes':sorted(assessed),'errors':errors,'scope':'Arithmetic of registered checks, record coverage and structure only; does not prove factual or pedagogical correctness.'}

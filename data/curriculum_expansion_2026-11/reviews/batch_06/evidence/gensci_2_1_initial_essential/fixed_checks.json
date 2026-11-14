@@ -1,0 +1,510 @@
+{
+  "registered_arithmetic": [
+    {
+      "id": "PT_NA_N",
+      "expression": "23-11",
+      "expected": 12,
+      "evaluated": 12,
+      "independently_derived": 12,
+      "pass": true
+    },
+    {
+      "id": "PT_O_N",
+      "expression": "16-8",
+      "expected": 8,
+      "evaluated": 8,
+      "independently_derived": 8,
+      "pass": true
+    },
+    {
+      "id": "PT_CA_N",
+      "expression": "40-20",
+      "expected": 20,
+      "evaluated": 20,
+      "independently_derived": 20,
+      "pass": true
+    },
+    {
+      "id": "PT_MGF_CHARGE",
+      "expression": "2+2*(-1)",
+      "expected": 0,
+      "evaluated": 0,
+      "independently_derived": 0,
+      "pass": true
+    },
+    {
+      "id": "PT_CA_PHOS_CHARGE",
+      "expression": "3*2+2*(-3)",
+      "expected": 0,
+      "evaluated": 0,
+      "independently_derived": 0,
+      "pass": true
+    },
+    {
+      "id": "PT_AL_SULPH_CHARGE",
+      "expression": "2*3+3*(-2)",
+      "expected": 0,
+      "evaluated": 0,
+      "independently_derived": 0,
+      "pass": true
+    },
+    {
+      "id": "PT_FINAL_MG_N",
+      "expression": "24-12",
+      "expected": 12,
+      "evaluated": 12,
+      "independently_derived": 12,
+      "pass": true
+    },
+    {
+      "id": "PT_FINAL_F_N",
+      "expression": "19-9",
+      "expected": 10,
+      "evaluated": 10,
+      "independently_derived": 10,
+      "pass": true
+    },
+    {
+      "id": "PT_FINAL_AR_N",
+      "expression": "40-18",
+      "expected": 22,
+      "evaluated": 22,
+      "independently_derived": 22,
+      "pass": true
+    },
+    {
+      "id": "PT_FINAL_PHOS_CHARGE",
+      "expression": "3*1-3",
+      "expected": 0,
+      "evaluated": 0,
+      "independently_derived": 0,
+      "pass": true
+    },
+    {
+      "id": "PT_FINAL_NH3_H",
+      "expression": "4*3-6*2",
+      "expected": 0,
+      "evaluated": 0,
+      "independently_derived": 0,
+      "pass": true
+    },
+    {
+      "id": "PT_FINAL_NH3_O",
+      "expression": "3*2-6*1",
+      "expected": 0,
+      "evaluated": 0,
+      "independently_derived": 0,
+      "pass": true
+    }
+  ],
+  "independently_balanced_equations": [
+    {
+      "task": "PT10_Mg",
+      "left": [
+        [
+          2,
+          "Mg"
+        ],
+        [
+          1,
+          "O2"
+        ]
+      ],
+      "right": [
+        [
+          2,
+          "MgO"
+        ]
+      ],
+      "left_atoms": {
+        "Mg": 2,
+        "O": 2
+      },
+      "right_atoms": {
+        "Mg": 2,
+        "O": 2
+      },
+      "balanced": true,
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "PT10_water",
+      "left": [
+        [
+          2,
+          "H2"
+        ],
+        [
+          1,
+          "O2"
+        ]
+      ],
+      "right": [
+        [
+          2,
+          "H2O"
+        ]
+      ],
+      "left_atoms": {
+        "H": 4,
+        "O": 2
+      },
+      "right_atoms": {
+        "H": 4,
+        "O": 2
+      },
+      "balanced": true,
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "PT10_salt",
+      "left": [
+        [
+          2,
+          "Na"
+        ],
+        [
+          1,
+          "Cl2"
+        ]
+      ],
+      "right": [
+        [
+          2,
+          "NaCl"
+        ]
+      ],
+      "left_atoms": {
+        "Na": 2,
+        "Cl": 2
+      },
+      "right_atoms": {
+        "Na": 2,
+        "Cl": 2
+      },
+      "balanced": true,
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "PT10_ammonia",
+      "left": [
+        [
+          1,
+          "N2"
+        ],
+        [
+          3,
+          "H2"
+        ]
+      ],
+      "right": [
+        [
+          2,
+          "NH3"
+        ]
+      ],
+      "left_atoms": {
+        "N": 2,
+        "H": 6
+      },
+      "right_atoms": {
+        "N": 2,
+        "H": 6
+      },
+      "balanced": true,
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "PT11_carbonate",
+      "left": [
+        [
+          1,
+          "CaCO3"
+        ]
+      ],
+      "right": [
+        [
+          1,
+          "CaO"
+        ],
+        [
+          1,
+          "CO2"
+        ]
+      ],
+      "left_atoms": {
+        "Ca": 1,
+        "C": 1,
+        "O": 3
+      },
+      "right_atoms": {
+        "Ca": 1,
+        "O": 3,
+        "C": 1
+      },
+      "balanced": true,
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "PT11_neutralisation",
+      "left": [
+        [
+          1,
+          "HCl"
+        ],
+        [
+          1,
+          "NaOH"
+        ]
+      ],
+      "right": [
+        [
+          1,
+          "NaCl"
+        ],
+        [
+          1,
+          "H2O"
+        ]
+      ],
+      "left_atoms": {
+        "H": 2,
+        "Cl": 1,
+        "Na": 1,
+        "O": 1
+      },
+      "right_atoms": {
+        "Na": 1,
+        "Cl": 1,
+        "H": 2,
+        "O": 1
+      },
+      "balanced": true,
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "PT11_alumina",
+      "left": [
+        [
+          4,
+          "Al"
+        ],
+        [
+          3,
+          "O2"
+        ]
+      ],
+      "right": [
+        [
+          2,
+          "Al2O3"
+        ]
+      ],
+      "left_atoms": {
+        "Al": 4,
+        "O": 6
+      },
+      "right_atoms": {
+        "Al": 4,
+        "O": 6
+      },
+      "balanced": true,
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "PT11_hydroxide",
+      "left": [
+        [
+          1,
+          "Ca(OH)2"
+        ],
+        [
+          2,
+          "HCl"
+        ]
+      ],
+      "right": [
+        [
+          1,
+          "CaCl2"
+        ],
+        [
+          2,
+          "H2O"
+        ]
+      ],
+      "left_atoms": {
+        "Ca": 1,
+        "O": 2,
+        "H": 4,
+        "Cl": 2
+      },
+      "right_atoms": {
+        "Ca": 1,
+        "Cl": 2,
+        "H": 4,
+        "O": 2
+      },
+      "balanced": true,
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "final_Ca",
+      "left": [
+        [
+          2,
+          "Ca"
+        ],
+        [
+          1,
+          "O2"
+        ]
+      ],
+      "right": [
+        [
+          2,
+          "CaO"
+        ]
+      ],
+      "left_atoms": {
+        "Ca": 2,
+        "O": 2
+      },
+      "right_atoms": {
+        "Ca": 2,
+        "O": 2
+      },
+      "balanced": true,
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "final_ammonia",
+      "left": [
+        [
+          4,
+          "NH3"
+        ],
+        [
+          3,
+          "O2"
+        ]
+      ],
+      "right": [
+        [
+          2,
+          "N2"
+        ],
+        [
+          6,
+          "H2O"
+        ]
+      ],
+      "left_atoms": {
+        "N": 4,
+        "H": 12,
+        "O": 6
+      },
+      "right_atoms": {
+        "N": 4,
+        "H": 12,
+        "O": 6
+      },
+      "balanced": true,
+      "coefficient_gcd": 1
+    }
+  ],
+  "ion_electron_conservation": [
+    {
+      "symbol": "Na",
+      "protons": 11,
+      "charge": 1,
+      "electrons": 10,
+      "electron_change": -1,
+      "shells": [
+        2,
+        8
+      ]
+    },
+    {
+      "symbol": "Mg",
+      "protons": 12,
+      "charge": 2,
+      "electrons": 10,
+      "electron_change": -2,
+      "shells": [
+        2,
+        8
+      ]
+    },
+    {
+      "symbol": "Al",
+      "protons": 13,
+      "charge": 3,
+      "electrons": 10,
+      "electron_change": -3,
+      "shells": [
+        2,
+        8
+      ]
+    },
+    {
+      "symbol": "F",
+      "protons": 9,
+      "charge": -1,
+      "electrons": 10,
+      "electron_change": 1,
+      "shells": [
+        2,
+        8
+      ]
+    },
+    {
+      "symbol": "O",
+      "protons": 8,
+      "charge": -2,
+      "electrons": 10,
+      "electron_change": 2,
+      "shells": [
+        2,
+        8
+      ]
+    },
+    {
+      "symbol": "Cl",
+      "protons": 17,
+      "charge": -1,
+      "electrons": 18,
+      "electron_change": 1,
+      "shells": [
+        2,
+        8,
+        8
+      ]
+    },
+    {
+      "symbol": "K",
+      "protons": 19,
+      "charge": 1,
+      "electrons": 18,
+      "electron_change": -1,
+      "shells": [
+        2,
+        8,
+        8
+      ]
+    },
+    {
+      "symbol": "Ca",
+      "protons": 20,
+      "charge": 2,
+      "electrons": 18,
+      "electron_change": -2,
+      "shells": [
+        2,
+        8,
+        8
+      ]
+    }
+  ],
+  "all_pass": true
+}
