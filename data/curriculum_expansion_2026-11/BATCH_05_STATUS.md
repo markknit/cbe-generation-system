@@ -10,3 +10,6 @@ Root will continue Cell and remaining units without routine reauthorisation.29un
 Live03:46UTC:Cell12andReflection11finalPASS/packaged;CoreStatistics16contentPASS/finalreviewrunning;Transport12andTrig12fullcontentreviewsrunning.171expansionauthored/131reviewed,plus31frozenpilot;25nodrafts;15verifiedsources/18locatedtranscriptions/7Coregaps. Root52%03:45UTC,noquota pause. Continueallavailablework.
 
 Live04:30UTC:263expansionauthored/228reviewed;plus31pilot294/259.17nodrafts. Surface/VolumefinalreviewsandStatscontentreviewactive;rootnextEssentialProbability. Root17%04:28UTC,no pause;10%guardactive. Currentreceipts/manifestsareauthority;olderparagraphsabovehistoricalcheckpoints.
+
+
+QUOTA STOP2026-11-14 04:35UTC:remaining10/exit10/pause_requestedtrue.273expansionauthored/263finalPASS;21packages240lessons;Volume12+Stats11finalPASSpackagepending. Probability10draftunbuilt/unreviewed. Withfrozenpilot304authored/294reviewed.16nodrafts(7Coreblocked+9GS).24verifiedsources/9locatedpending. Allreviewerscompleted/stopped;no newworkuntilpermittedexplicitresume. Rootfinalhandoff/evidence/quota_pause_2026-11-14.jsonoverridehistoricaltotalsabove.

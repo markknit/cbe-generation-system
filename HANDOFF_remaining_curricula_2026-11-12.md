@@ -1,6 +1,6 @@
 # Remaining three curricula: working checkpoint and takeover
 
-2026-11-13local/14NovemberUTC. **Full scope active:228new expansion lessons artifact-reviewed,259including frozenpilot;263new authored,294including pilot;17units without drafts.** Quota not paused;10%guardactive.
+2026-11-13local/14NovemberUTC. **QUOTA-PAUSED at10%:273new authored/263new final-reviewed;304authored/294reviewed including frozenpilot.** 16unitswithoutdrafts. EssentialProbability10draftsaved/unbuilt;Volume12+EssentialStats11finalPASS/unpackaged. No resume without explicit user instruction and fresh permitted allowance.
 
 ## Locked decisions
 
@@ -79,3 +79,39 @@ Cell12/Reflection11/CoreStats16finalPASS+packages. Transport12/science_review an
 ## Live checkpoint — 2026-11-14 04:30UTC
 
 263authoredexpansion/23units;228reviewed/20;17nodrafts(7Coreblocked+9GS+EssentialProbability).23verifiedsources/10locatedpending. NewlypackagedResp/Polygon/Circle/Growth;Surfacefinalreviewessential_source_review,Volumefinalreviewscience_review,EssentialStatscontentreviewcore27_pdf_completion. Allpipeline subprocesssessionscomplete;fail-fastserial rule. Root17%04:28UTC,no pause. NextrootEssentialProbability:sourceviewed32–35,printed4.2/internal3.2remainexplicit,maximumtwoexperiments/twooutcomes;designonlytwo binarycomponentexperiments,atmosttwo pertrial,declareinterpretationandteacherconfirmation;six-faced-diesuggestionnotfollowed. SourceJSON/materials/manuscriptnotwrittesyet. Do not inferprintedidcorrectionorofficialallocation. Preserveverbatimoutcomesa–i,performedA/Bsinglechanceandpairedindepactionsseparatefromwrittenfinal. Pauseat<=10,noseparatelybilledAPI/nopush/publication;savecurrentreviewstatesandsmallboundary.
+
+## FINAL LIVE HANDOFF — 2026-11-14 04:35UTC quota stop
+
+Guardexit10/remaining10/pause_requestedtrue. Fullgenerationrequestisnotcompleteandwasnotuser-cancelled. Allthreeagentscompletedfinalreportsandreceivedstopinstructions. Workcommit06b840e4;previous0e75ff0fcheckpointhasseven(notnine)newreviewedunits. No newauthoring/reviews/render/tests/packagesafterthreshold;onlysave/continuity/commits.
+
+Diskderived24expansionunits273authoredlessons;23units263finalPASS;21packages240lessons. Plus3frozenpilotunits31lessons =>304authored/294reviewed. Volume12+EssentialStats11finalPASSNOTyetartifact_acceptance/ZIP.23R1exports263lessons exist;24sourcesverified/9GSlocatedroottranscriptionspending/7Coreblocked.16unitsnodrafts. Exactmachinehandoff:evidence/quota_pause_2026-11-14.json and evidence/package_pending_at_quota.json.
+
+Next permitted resume:
+1. Apply .claude/skills/restart/SKILL.md withread-onlyusage/livechecks. Onlyexplicituserresume+freshallowance>10permits scripts/check_codex_usage.py --resume.
+2. PackagealreadyreviewedVolume/EssentialStats with durable evidence/procedures/package_reviewed_unit.py,args module reportfilename expectedsha scopestring. Volume reportessmath_2_7_layout_review.md SHA037876ba53abc2608baff5347e121dbc37af39654adf66e994fc6ca3be51c742;Stats reportessmath_3_1_layout_review.md SHA9657e6998ed117537ae72d67da428e0e3bfa957b256f448416f2c9db37492a82. Helperwritesartifact_acceptance/manifest/ZIP/receipt/ledgerfromcurrent18files/scopedaudit. Donotrerenderfrozenfilesjustbecauseglobalresourcesignaturechanged.
+3. EssentialProbabilityessmath_3_2has10canonicaldraftlessons/9registeredchecks,source/materials/blueprint/manuscript. BuildguardREFUSEDbeforepreflight/compiler;module/checks/5Wordabsent. Runbuild,thenfullindependentsource/materials/contentreviewBEFOREauthorselfreview,max2correctionpasses. Printed4.2/internal3.2bothretained;sourcecapinterpretedatmosttwo binarycomponentspertrial,twoprimitiveoutcomeseach,fourjointdescriptionsnotfourstages. Thisrequiresindependentscrutiny/teacher-sourceconfirmation;nosix-faced-dieprimitive. Actualperformancea/e/g needsF2/F3singlechanceandF6pairedrawrecords/namedactions;writtenfinalnotperformed.
+4. Continue9GSunitsbelow,eachneedsrootexacttranscriptionoflocatedpixelpackbeforeauthoring. SevenCoregapsstillawaitreadableofficialJuly2025regularrequirements;userpath/linkquestionpending. No old/PIeditionreplacement/restricteddownloadbypass.
+
+Finalunpackagedbindings:Volumecontent e9fcdf7816426c08c64bde9b549488efd31c4e784aea4da1e2e5b1d99361f54f,845checks eachformat+392export,83pages42readable,cm³/mL/min2dpandL5dpverified. Statscontent be0af1e5f35e26a210fa42266307e95fc52556ab8b1dab109a0b2555b1ee240f,788eachformat+125binding,87pages30readable,all12plotembeddingsfrom6assetsverified. Actualteacheractions/classpacingnotcertified.
+
+Latestprethresholdpartnercheck:22exports252lessons atours0e75ff0f/partner0364df5;22renderPASS,R0conform0/22/107drift,Indicesfidelity3/7PASS(4fail),exit1. Current23exports263includeslaterStatsnotcoveredby22-filecheck. evidence/batch_05_latest_partner_verdict.json/logsretainexactscope. R1support/attribution-rubricfidelitygapopen;no partneredits. Do notrunnewcheckduringquota pause.
+
+Allpipeline mutationsserial/fail-fastbeforeauditcopy;checkmoduleIDs/currenthashes. Respirationexact3stringtechnicalfixindependentlyrechecked;wrongphase-columnno-opcaught/correctedwithpass1;transientwrongCoreauditcopyinvalidatedthenfreshResp auditverified. PrimaryWSUPDFindependentlysavedafterrooturllibfailed,historyhonest. Cellnativecropnotredaction;entireheldFigure1absentteachingpack. Originalassets/codeproof/currentcaption/content/finalreviewseparatelybound. Existingunrelated data/codex_pilot_2026-11/Review_Package excludedfromcommits. No APIbilling/push/productionpromotion/Drivepublication/messages.
+
+Remaining units without drafts:
+- coremath_1_1: Real Numbers — blocked_pdf_capture.
+- coremath_1_2: Indices and Logarithms — blocked_pdf_capture.
+- coremath_1_3: Quadratic Expressions and Equations — blocked_pdf_capture.
+- coremath_2_1: Similarity and Enlargement — blocked_pdf_capture.
+- coremath_2_2: Reflection and Congruence — blocked_pdf_capture.
+- coremath_2_3: Rotation — blocked_pdf_capture.
+- coremath_2_4: Trigonometry 1 — blocked_pdf_capture.
+- gensci_1_7: Microorganisms — located_requires_transcription_check.
+- gensci_2_1: The Periodic Table — located_requires_transcription_check.
+- gensci_2_2: Chemical Families — located_requires_transcription_check.
+- gensci_2_3: Chemical Bonding — located_requires_transcription_check.
+- gensci_2_5: Rates of Reactions — located_requires_transcription_check.
+- gensci_3_1: Turning Effect of Force — located_requires_transcription_check.
+- gensci_3_2: Linear Motion — located_requires_transcription_check.
+- gensci_3_3: Waves — located_requires_transcription_check.
+- gensci_3_4: Magnetism and Electromagnetic Induction — located_requires_transcription_check.
