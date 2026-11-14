@@ -31,6 +31,43 @@ def calc(expr):
   if isinstance(n,ast.Call) and isinstance(n.func,ast.Name) and n.func.id in FUNCS and not n.keywords:return FUNCS[n.func.id](*[walk(a) for a in n.args])
   raise ValueError('Unsupported expression')
  return walk(ast.parse(expr,mode='eval').body)
+def image_spec(base,item):
+ """Resolve a declared source image and optional pixel crop without editing it."""
+ from PIL import Image
+ from docx.image.image import Image as WordImage
+ from docx.image.exceptions import InvalidImageStreamError,UnexpectedEndOfFileError,UnrecognizedImageError
+ materials=(base/'materials').resolve()
+ explicit=item.get('diagram')
+ if explicit and explicit not in item.get('assets',[]):
+  raise ValueError('diagram must be listed in assets for fingerprint binding')
+ path=(materials/explicit if explicit else materials/'diagrams'/(item['id']+'.png')).resolve()
+ if not path.is_relative_to(materials):raise ValueError('diagram must remain inside materials')
+ if not path.is_file():
+  if explicit or item.get('diagram_crop') is not None:raise ValueError('diagram file missing')
+  return None
+ with Image.open(path) as source:w,h=source.size
+ try:WordImage.from_file(str(path))
+ except (InvalidImageStreamError,UnexpectedEndOfFileError,UnrecognizedImageError) as exc:
+  raise ValueError('diagram format is not supported by the Word renderer') from exc
+ box=item.get('diagram_crop',[0,0,w,h])
+ if (not isinstance(box,(list,tuple)) or len(box)!=4 or
+     any(type(v) is not int for v in box) or
+     not (0<=box[0]<box[2]<=w and 0<=box[1]<box[3]<=h)):
+  raise ValueError('diagram crop must be a nonempty in-bounds integer pixel box')
+ return path,(w,h),tuple(box)
+def add_material_image(document,item):
+ """Use a Word crop frame; preserve original micrograph bytes and scale bars."""
+ spec=image_spec(BASE,item)
+ if spec is None:return
+ path,(w,h),(left,top,right,bottom)=spec
+ effective_w,effective_h=right-left,bottom-top
+ width=min(6.3,6.5*effective_w/effective_h)
+ shape=document.add_picture(str(path),width=Inches(width),height=Inches(width*effective_h/effective_w))
+ if (left,top,right,bottom)!=(0,0,w,h):
+  rect=OxmlElement('a:srcRect')
+  for key,value in [('l',left/w),('t',top/h),('r',(w-right)/w),('b',(h-bottom)/h)]:
+   rect.set(key,str(round(value*100000)))
+  shape._inline.xpath('.//pic:blipFill')[0].insert(1,rect)
 def write_doc(path,title,items,teacher=False):
  d=Document(); sec=d.sections[0];sec.top_margin=sec.bottom_margin=Inches(.65)
  attribution_footer(d)
@@ -39,8 +76,7 @@ def write_doc(path,title,items,teacher=False):
  for item in items:
   d.add_heading(item['id']+' — '+item['title'],1)
   d.add_paragraph(item['student'])
-  diagram=BASE/'materials'/'diagrams'/(item['id']+'.png')
-  if diagram.exists():d.add_picture(str(diagram),width=Inches(6.3))
+  add_material_image(d,item)
   if teacher:d.add_heading('Teacher key and preparation',2);d.add_paragraph(item['teacher'])
  d.save(path)
 def write_guide(path,module):

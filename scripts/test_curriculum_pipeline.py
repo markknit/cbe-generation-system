@@ -58,6 +58,65 @@ class PipelineTests(unittest.TestCase):
         self.change('materials', lambda d: d['items'][0].__setitem__('assets', ['missing_figure.png']))
         self.assertIn('missing asset', self.errors())
 
+    def test_source_image_crop_requires_hash_bound_asset(self):
+        from PIL import Image
+        Image.new('RGB',(100,200),'white').save(self.base/'materials'/'source.png')
+        self.change('materials',lambda d:d['items'][0].update(diagram='source.png',diagram_crop=[20,30,80,90]))
+        self.assertIn('unbound diagram/crop',self.errors())
+        self.change('materials',lambda d:d['items'][0].update(assets=['source.png']))
+        self.assertEqual(self.errors(),'')
+        self.change('materials',lambda d:d['items'][0].update(diagram_crop=[20,30,120,90]))
+        self.assertIn('invalid or unbound diagram/crop',self.errors())
+
+    def test_word_crop_preserves_source_bytes_and_visible_aspect(self):
+        from PIL import Image
+        from docx import Document
+        from curriculum import compiler
+        from lxml import etree
+        import zipfile
+        image_path=self.base/'materials'/'source.png'
+        Image.new('RGB',(100,200),'#345678').save(image_path)
+        original=image_path.read_bytes();document=Document();previous=compiler.BASE
+        try:
+            compiler.BASE=self.base
+            compiler.add_material_image(document,dict(id='X1',diagram='source.png',assets=['source.png'],diagram_crop=[20,30,80,90]))
+        finally:
+            compiler.BASE=previous
+        path=self.base/'cropped.docx';document.save(path)
+        with zipfile.ZipFile(path) as archive:
+            media=[archive.read(n) for n in archive.namelist() if n.startswith('word/media/')]
+            self.assertEqual(media,[original])
+            tree=etree.fromstring(archive.read('word/document.xml'))
+        ns={'a':'http://schemas.openxmlformats.org/drawingml/2006/main','wp':'http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing'}
+        crop=tree.find('.//a:srcRect',ns)
+        self.assertEqual(dict(crop.attrib),dict(l='20000',t='15000',r='20000',b='55000'))
+        extent=tree.find('.//wp:extent',ns)
+        self.assertEqual(extent.get('cx'),extent.get('cy'))
+
+    def test_portrait_source_image_fits_page_without_pixel_resampling(self):
+        from PIL import Image
+        from docx import Document
+        from curriculum import compiler
+        from docx.shared import Inches
+        Image.new('RGB',(100,400),'white').save(self.base/'materials'/'portrait.png')
+        document=Document();previous=compiler.BASE
+        try:
+            compiler.BASE=self.base
+            compiler.add_material_image(document,dict(id='X1',diagram='portrait.png',assets=['portrait.png']))
+        finally:
+            compiler.BASE=previous
+        shape=document.inline_shapes[0]
+        self.assertLessEqual(shape.height,Inches(6.5))
+        self.assertAlmostEqual(shape.width/shape.height,1/4)
+
+    def test_pillow_readable_format_unsupported_by_word_is_rejected_early(self):
+        from PIL import Image,features
+        if not features.check('webp'):
+            self.skipTest('WebP codec unavailable in this Pillow build')
+        Image.new('RGB',(100,200),'white').save(self.base/'materials'/'source.webp')
+        self.change('materials',lambda d:d['items'][0].update(diagram='source.webp',assets=['source.webp']))
+        self.assertIn('invalid or unbound diagram/crop',self.errors())
+
     def test_independent_assessment_group_work_is_rejected(self):
         self.change('manuscripts', lambda d: d['lessons'][-1]['phases'][1].__setitem__(2, 'Evidence-first group work'))
         self.assertIn('collaborative strategies', self.errors())

@@ -1,0 +1,901 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "Core Mathematics",
+    "grade": 10,
+    "substrand_id": "2.9",
+    "substrand_name": "Linear Motion",
+    "outputDir": "v2/Core_Mathematics/SS2.9_Linear_Motion",
+    "filePrefix": "Codex_Core_Mathematics_Linear_Motion",
+    "titleDoc": "CORE MATHEMATICS GRADE 10: LINEAR MOTION",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 2.9 • 12 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "2.0 Measurements and Geometry",
+    "substrand": "Sub-Strand2.9: Linear Motion",
+    "sep": "Define signed quantities,construct graphs,interpret slopes/areas and bound conclusions by measured data/model assumptions.",
+    "careers": "Illustrative timing,transport-data and motion-model analysis;no driving,road-safety clearance or professional navigation certification.",
+    "focus": "Distance/displacement,speed/velocity,acceleration,displacement-time and velocity-time graphs,relative speed and honest measured-versus-supplied evidence.",
+    "phenomenon": "A fictional journey report reads graph height as speed,infers acceleration from one finish time and turns an ideal passing calculation into a safety claim.",
+    "supportingPhenomena": "Returning paths,unit conversions,timed safe motion,signed graph areas,closing/separating models and a passing-alignment diagram.",
+    "drivingQuestion": "What can a motion record actually establish about a journey? KICD: What is speed? How do we use displacement-time graphs in real life? How do we use velocity-time graphs?",
+    "storylineThread": "Path/change → units/averages → actual timing limits → displacement graph → interpretation → acceleration → velocity graph → signed areas → relative motion → passing limits → audit → independent evidence.",
+    "coreCompetencies": "Communication and Collaboration: the learner discusses different displacement-time graphs.\nSelf-Efficacy: the learner participates in a race of a specified distance, record time taken by a learner and work out the velocity and acceleration.\nCritical Thinking and Problem Solving: the learner observes two bodies in motion such as cars when overtaking or moving in opposite directions and works out the relative speed of the two bodies in motion.",
+    "values": "Responsibility: as the learner uses objects in motion such as thrown objects and many others to explain distance, displacement, speed, velocity and acceleration.\nIntegrity: as the learner participates in a race of a specified distance, records time taken by each learner and accurately works out the velocity and acceleration of different learners\nUnity: as the learner participates and collaborates in a race to record time taken by each learner and work out the velocity and acceleration of different learners.",
+    "pcis": "Learner Support Programmes (Sports and Games): the learner participates in a race of a specified distance, records time taken by each learner and works out the velocity and acceleration,\nSocio-Economic and Environmental Issues (Safety and Security): the learner observes the two bodies in motion such as cars when overtaking or moving in opposite directions and works out the relative speed of these two bodies in motion.\nRoad safety: as the learner observes two vehicles when one is overtaking, discusses and works out the relative speed of the two vehicles. Also discusses the dangers of careless overtaking.",
+    "content": "Distance, displacement, speed, velocity, and acceleration; Velocity and acceleration; Displacement time graph; Interpretation of displacement-time graph; Velocity time graph; Interpretation of velocity-time graph; Relative speed",
+    "gradeLevel": "10",
+    "subject": "Core Mathematics",
+    "totalDuration": "12 lessons × 40 minutes = 480 minutes",
+    "learningOutcomes": "explain the terms distance, displacement, speed, velocity and acceleration in real-life situations,\ndetermine velocity and acceleration in different situations,\ndraw a displacement-time graph of different situations,\ninterpret displacement-time graph in different situations,\ndraw a velocity-time graph from given tables in different situations,\ninterpret velocity-time graph in different situations,\ndetermine relative speed of two moving bodies in different situations,\nappreciate use of linear motion in real-life situations."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "Can a return journey have positive distance but small displacement?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion displacement time graph speed velocity",
+      "slo": {
+        "purpose": "Distinguish path length,signed displacement and average speed/velocity.",
+        "knowledge": "Distance accumulates path lengths;displacement is final minus initial position in a declared direction.",
+        "skills": "Draw,calculate and interpret units/signs.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Why do distance/time and displacement/time give different averages?",
+        "purposeInStoryline": "The journey report confuses a travelled path with its net change.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "Use a fictional paper path,not traffic or a physical race.\nMaterials: LM1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict distance and displacement for LM1.",
+          "teacherMoves": "4 minutes. Ask learners to declare the positive direction first.",
+          "sensemakingStrategy": "Commit a path-versus-change claim.",
+          "formativeAssessment": "Prediction distinguishes total path from final position."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Draw the route and compute four requested quantities.",
+          "teacherMoves": "16 minutes. Allow8minutes path/changes and8averages;retain units at each step.",
+          "sensemakingStrategy": "Compare geometric and arithmetic evidence.",
+          "formativeAssessment": "Distance10m,displacement+2m,speed2m/s,velocity+0.4m/s."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why the averages differ and acceleration remains unknown.",
+          "teacherMoves": "10 minutes. Do not infer final velocity or acceleration from the finish time.",
+          "sensemakingStrategy": "Bound the conclusion to the given observations.",
+          "formativeAssessment": "Learner identifies missing velocity-change evidence."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how units can change a numerical comparison.",
+          "teacherMoves": "4 minutes. Retain seconds/minutes/km questions for Lesson2.",
+          "sensemakingStrategy": "Identify a representation issue before calculation.",
+          "formativeAssessment": "Question names the quantity and units."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Build a quantity/direction/units checklist.",
+          "teacherMoves": "6 minutes. Collect an individual path/change explanation.",
+          "sensemakingStrategy": "Revise the initial report using evidence.",
+          "formativeAssessment": "Exit separates average velocity from final velocity."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "Returning motion adds distance while reducing net change.",
+        "learned": "Average speed and velocity use different numerators.",
+        "explained": "One travel time does not establish acceleration."
+      }
+    },
+    {
+      "number": 2,
+      "title": "Which units belong in a velocity calculation?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion displacement time graph speed velocity",
+      "slo": {
+        "purpose": "Convert units and calculate signed average velocity accurately.",
+        "knowledge": "Consistent length/time units are needed;an average does not specify instantaneous motion.",
+        "skills": "Convert with dimensional reasoning and state inference limits.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Where does the3.6conversion factor come from?",
+        "purposeInStoryline": "The report compares rates expressed in different units.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "LM2 supplies explicit fictional quantities and a negative displacement.\nMaterials: LM2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether36km/hisfaster than12m/s.",
+          "teacherMoves": "4 minutes. Require unit reasoning rather than comparing bare numbers.",
+          "sensemakingStrategy": "Commit a comparable-rate prediction.",
+          "formativeAssessment": "Learner recognises that units differ."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete all LM2 conversions and average calculations.",
+          "teacherMoves": "16 minutes. Allocate8minutes conversions and8time/sign interpretation.",
+          "sensemakingStrategy": "Track quantities through unit cancellation.",
+          "formativeAssessment": "10m/s,43.2km/h,36km/h=10m/s,and−4m/s."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain the conversion ratio and what the negative average cannot reveal.",
+          "teacherMoves": "10 minutes. Contrast m/swithm/s²and avoid treating average speed as final speed.",
+          "sensemakingStrategy": "Connect arithmetic to quantity meaning.",
+          "formativeAssessment": "Learner states distance and final velocity remain unknown in the signed case."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask what a real timing activity could supply.",
+          "teacherMoves": "4 minutes. Keep measurement/repeat questions for Lesson3.",
+          "sensemakingStrategy": "Identify additional evidence rather than invent it.",
+          "formativeAssessment": "Question names a measurable position/time or velocity."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add a conversion check to the report.",
+          "teacherMoves": "6 minutes. Collect one individual unit-labelled explanation.",
+          "sensemakingStrategy": "Use magnitude/sign checks to detect a wrong factor.",
+          "formativeAssessment": "Exit derives rather than memorises divide/multiply3.6."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "Rates need common units before comparison.",
+        "learned": "Signed averages and instantaneous values are different claims.",
+        "explained": "Unit cancellation supports a justified conversion."
+      }
+    },
+    {
+      "number": 3,
+      "title": "What can a safe timed activity measure?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion displacement time graph speed velocity",
+      "slo": {
+        "purpose": "Collect authentic position/time data and distinguish it from unmeasured acceleration.",
+        "knowledge": "Endpoint displacement/time gives an interval average;acceleration needs velocity-change information or a justified model.",
+        "skills": "Measure,repeat,record uncertainty and state evidence gaps.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Does a finish time reveal how velocity changed during the activity?",
+        "purposeInStoryline": "The source timing aim becomes an inclusive controlled school activity.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "Use a teacher-approved comfortable walk/tabletop alternative with anonymous records;no speed competition or road exposure.\nMaterials: LM3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 20 min, Explain 6 min, Driving Question Board (DQB) Creation 3 min, Model Building 7 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which quantities LM3 can establish.",
+          "teacherMoves": "4 minutes. Confirm clear route,access,stopping space,roles and safe supervision.",
+          "sensemakingStrategy": "Commit a measurable claim.",
+          "formativeAssessment": "Learner distinguishes an average from acceleration."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Carry out approved timing/repeats or explicitly labelled supplied-data work.",
+          "teacherMoves": "20 minutes. Allow20minutes;record actual mover/timer/recorder actions and no public learner ranking.",
+          "sensemakingStrategy": "Separate measurements from model assumptions.",
+          "formativeAssessment": "Named roles,positions,times,repeats and uncertainty are retained honestly."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain an average and the missing acceleration evidence.",
+          "teacherMoves": "6 minutes. For fictional2m/4saccept+0.5m/saverage only;do not invent initial/final velocities.",
+          "sensemakingStrategy": "Bound conclusions to observations.",
+          "formativeAssessment": "Learner names two velocity observations/time interval needed for acceleration."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record an uncertainty or access issue.",
+          "teacherMoves": "3 minutes. Mark practical actions not observed when data-only work is used.",
+          "sensemakingStrategy": "Identify what remains unestablished.",
+          "formativeAssessment": "Question concerns real timing/position evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Restore the area and complete individual logs.",
+          "teacherMoves": "7 minutes. Allow7minutes cleanup and a short evidence-limit exit.",
+          "sensemakingStrategy": "Close the measurement record responsibly.",
+          "formativeAssessment": "Exit separates actual measurements from fictional or assumed motion."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "Actual timed data contain uncertainty and action limits.",
+        "learned": "Average motion can be calculated without claiming unmeasured acceleration.",
+        "explained": "A source activity suggestion does not make missing velocity data available."
+      }
+    },
+    {
+      "number": 4,
+      "title": "How does a displacement-time table become a graph?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion displacement time graph speed velocity",
+      "slo": {
+        "purpose": "Draw a labelled displacement-time graph and interpret interval slopes.",
+        "knowledge": "Slope gives signed velocity;graph height is displacement from the declared origin.",
+        "skills": "Plot,calculate slopes and distinguish distance from net change.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "What does a horizontal displacement segment mean?",
+        "purposeInStoryline": "The report needs a reproducible graph rather than a picture of a road.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "Straight interpolation is explicitly supplied as a piecewise model.\nMaterials: LM4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict where LM4 shows rest or reversal.",
+          "teacherMoves": "4 minutes. Ask for table-based evidence before plotting.",
+          "sensemakingStrategy": "Commit an interval interpretation.",
+          "formativeAssessment": "Prediction names time intervals,not graph height alone."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Plot LM4 and calculate slopes,path length and averages.",
+          "teacherMoves": "16 minutes. Allow8minutes graph and8slope/distance checks;use labelled scale/units.",
+          "sensemakingStrategy": "Compare table,graph and route meanings.",
+          "formativeAssessment": "Slopes+2,0,−2,−2;distance12m,net−4m."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain height versus slope and ideal sharp corners.",
+          "teacherMoves": "10 minutes. State that real transitions are not measured by instantaneous graph corners.",
+          "sensemakingStrategy": "Separate a model from detailed physical evidence.",
+          "formativeAssessment": "Learner gives average speed1.5andvelocity−0.5m/s."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask whether a positive graph height can accompany negative velocity.",
+          "teacherMoves": "4 minutes. Retain initial-origin questions for Lesson5.",
+          "sensemakingStrategy": "Identify a common graph-reading misconception.",
+          "formativeAssessment": "Question separates location from change rate."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add graph labels and interval checks to the report.",
+          "teacherMoves": "6 minutes. Collect one individual slope/units explanation.",
+          "sensemakingStrategy": "Use a second representation to detect error.",
+          "formativeAssessment": "Exit correctly interprets horizontal2–4s."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "A flat displacement graph represents no position change.",
+        "learned": "Signed slopes give velocities in the stated model.",
+        "explained": "Distance and net displacement require different accumulation rules."
+      }
+    },
+    {
+      "number": 5,
+      "title": "Is graph height the journey's displacement?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion displacement time graph speed velocity",
+      "slo": {
+        "purpose": "Interpret a supplied displacement graph with a nonzero initial position.",
+        "knowledge": "Change in displacement is final minus initial ordinate;positive position can have negative velocity.",
+        "skills": "Read axes,subtract positions and explain slopes.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Why is ending at−2mnot a journey change of−2mhere?",
+        "purposeInStoryline": "The report overlooks where its graph begins.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "The actual supplied graph is an observation for interpretation,not a graph to memorise.\nMaterials: LM5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict net change from the LM5 graph.",
+          "teacherMoves": "4 minutes. Ask learners to locate time0before accepting an answer.",
+          "sensemakingStrategy": "Commit an origin-aware claim.",
+          "formativeAssessment": "Initial reading records+2m."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read positions,slopes,total distance and the flat section.",
+          "teacherMoves": "16 minutes. Allocate8minutes graph readings and8derived quantities;show units.",
+          "sensemakingStrategy": "Compare ordinate differences with path lengths.",
+          "formativeAssessment": "Final−2m,net−4m,distance12m;flat interval is rest."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why positive height can have a descending slope.",
+          "teacherMoves": "10 minutes. Compare xfromOwithchange since start;do not rename height as speed.",
+          "sensemakingStrategy": "Distinguish a value from its rate of change.",
+          "formativeAssessment": "Learner supports a negative velocity with a positive-position interval."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how velocity changes can be measured on another graph.",
+          "teacherMoves": "4 minutes. Keep acceleration questions for Lesson6.",
+          "sensemakingStrategy": "Connect two levels of rate information.",
+          "formativeAssessment": "Question names a change in velocity over time."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Correct the report's height-based claim.",
+          "teacherMoves": "6 minutes. Collect one independent position-versus-change explanation.",
+          "sensemakingStrategy": "Use the starting condition as evidence.",
+          "formativeAssessment": "Exit subtracts initial position explicitly."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "The graph starts away from the chosen origin.",
+        "learned": "Journey displacement is an ordinate difference.",
+        "explained": "Height and slope encode different physical quantities."
+      }
+    },
+    {
+      "number": 6,
+      "title": "Does negative acceleration always mean slowing?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion velocity time graph acceleration",
+      "slo": {
+        "purpose": "Calculate signed average acceleration and interpret speed changes carefully.",
+        "knowledge": "Acceleration is velocity change/time;speed is velocity magnitude.",
+        "skills": "Subtract signed values,check units and state within-interval assumptions.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Can positive acceleration accompany decreasing speed?",
+        "purposeInStoryline": "A sign-based slogan fails for motion in the negative direction.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "LM6 uses explicit endpoint velocities and constant-change assumptions where needed.\nMaterials: LM6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the acceleration sign for−6to−2m/s.",
+          "teacherMoves": "4 minutes. Ask separately whether speed increases or decreases.",
+          "sensemakingStrategy": "Commit a signed-rate claim.",
+          "formativeAssessment": "Prediction distinguishes velocity sign from speed magnitude."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Compute all LM6 accelerations and sketch assumed velocity histories.",
+          "teacherMoves": "16 minutes. Allow10minutes arithmetic and6interpretation;show ΔvandΔtseparately.",
+          "sensemakingStrategy": "Compare endpoint rates with magnitude changes.",
+          "formativeAssessment": "A+2,B+2,C−2m/s²;Bslows,Ccrosseszero under uniform change."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why acceleration direction is not a universal slowing rule.",
+          "teacherMoves": "10 minutes. State that endpoint average acceleration alone does not fix the entire history.",
+          "sensemakingStrategy": "Bound the inference by the supplied model.",
+          "formativeAssessment": "Learner gives a valid counterexample to negative-always-slows."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how a velocity-time graph records these changes.",
+          "teacherMoves": "4 minutes. Retain slope/height questions for Lesson7.",
+          "sensemakingStrategy": "Connect rate arithmetic to a graph.",
+          "formativeAssessment": "Question identifies which axis quantity changes."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Revise the report's sign rule.",
+          "teacherMoves": "6 minutes. Collect an individual signed-subtraction and speed explanation.",
+          "sensemakingStrategy": "Use a counterexample to improve a model.",
+          "formativeAssessment": "Exit includes m/s²and a direction interpretation."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "Positive acceleration can reduce a negative velocity's magnitude.",
+        "learned": "Acceleration concerns signed velocity,not speed alone.",
+        "explained": "Within-interval claims need an explicit motion assumption."
+      }
+    },
+    {
+      "number": 7,
+      "title": "What do slope and area mean on a velocity graph?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion velocity time graph acceleration",
+      "slo": {
+        "purpose": "Draw velocity-time graphs and interpret slope/area with units.",
+        "knowledge": "Slope gives acceleration;area gives signed displacement.",
+        "skills": "Plot,find gradients and decompose triangle/rectangle areas.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Why is a flat nonzero velocity graph not rest?",
+        "purposeInStoryline": "The report transfers the wrong meaning of a horizontal line.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "The table includes explicit straight-segment model assumptions.\nMaterials: LM7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict what the horizontal LM7 segment represents.",
+          "teacherMoves": "4 minutes. Ask learners to identify the yquantity before applying a rule.",
+          "sensemakingStrategy": "Commit a graph-specific interpretation.",
+          "formativeAssessment": "Prediction distinguishes displacement graph from velocity graph."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Plot LM7,calculate interval accelerations and areas.",
+          "teacherMoves": "16 minutes. Use8minutes graph and8gradient/area work;label all units.",
+          "sensemakingStrategy": "Compare numerical and geometric rates/accumulation.",
+          "formativeAssessment": "Accelerations+2,0,−2;areas4+8+4=16m."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why distance equals displacement magnitude in this dataset.",
+          "teacherMoves": "10 minutes. Use nonnegative velocity throughout;do not generalise to crossing-zero graphs.",
+          "sensemakingStrategy": "State a condition for an accumulation rule.",
+          "formativeAssessment": "Learner distinguishes flatv4fromrestv0."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask what area below the velocity axis means.",
+          "teacherMoves": "4 minutes. Keep signed-area questions for Lesson8.",
+          "sensemakingStrategy": "Identify a missing negative-direction case.",
+          "formativeAssessment": "Question concerns displacement versus distance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add separate height/slope/area meanings to the report.",
+          "teacherMoves": "6 minutes. Collect one individual units-based explanation.",
+          "sensemakingStrategy": "Use dimensions to check an interpretation.",
+          "formativeAssessment": "Exit links(m/s)×stometres."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "Velocity-graph area has displacement units.",
+        "learned": "Height,slope and area have distinct meanings.",
+        "explained": "Distance equals net displacement magnitude here because velocity never reverses."
+      }
+    },
+    {
+      "number": 8,
+      "title": "How do we count area when velocity crosses zero?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion velocity time graph acceleration",
+      "slo": {
+        "purpose": "Interpret a signed velocity graph,including a zero crossing.",
+        "knowledge": "Signed areas sum displacement;area magnitudes sum distance,split at the zero crossing.",
+        "skills": "Read,interpolate under a stated model and calculate triangular areas.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Why must the2–4sregion be split for distance?",
+        "purposeInStoryline": "The report loses a short reversed segment.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "The supplied graph provides actual labelled data for interpretation.\nMaterials: LM8. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether net displacement equals total distance in LM8.",
+          "teacherMoves": "4 minutes. Ask where direction changes before computing an area.",
+          "sensemakingStrategy": "Commit a sign-aware claim.",
+          "formativeAssessment": "Prediction identifies a zero crossing."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Find accelerations,crossing time and signed/magnitude areas.",
+          "teacherMoves": "16 minutes. Allocate8minutes crossing/gradients and8areas;require labelled subregions.",
+          "sensemakingStrategy": "Compare signed accumulation with path accumulation.",
+          "formativeAssessment": "Zero3.5s;net6m,distance10.5m;accelerations0,−2,0."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain the negative-acceleration speed-increase interval.",
+          "teacherMoves": "10 minutes. Trace3.5–4swhere negative velocity grows in magnitude;flatnegativevelocityhaszeroacceleration.",
+          "sensemakingStrategy": "Connect signs to direction and magnitude.",
+          "formativeAssessment": "Learner names the correct interval and its model assumption."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how two objects' rates combine.",
+          "teacherMoves": "4 minutes. Retain closing/separating questions for Lesson9.",
+          "sensemakingStrategy": "Extend signed-rate reasoning to relative motion.",
+          "formativeAssessment": "Question includes positions or direction,not just two speeds."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Repair the report's lost-distance result.",
+          "teacherMoves": "6 minutes. Collect one independent split-area explanation.",
+          "sensemakingStrategy": "Use a diagram to verify arithmetic.",
+          "formativeAssessment": "Exit adds below-axis magnitude for distance but subtracts it for displacement."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "A short reversed interval contributes negative displacement but positive distance.",
+        "learned": "Distance needs area splitting where velocity changes sign.",
+        "explained": "Negative acceleration can increase speed after reversal."
+      }
+    },
+    {
+      "number": 9,
+      "title": "Are the objects closing or separating?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion relative speed",
+      "slo": {
+        "purpose": "Calculate relative rates with explicit positions/directions.",
+        "knowledge": "The magnitude of a velocity difference gives relative speed;closing requires a shrinking separation.",
+        "skills": "Draw signed motion models and solve constant-rate gap problems.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Does adding opposite-direction speeds always mean approach?",
+        "purposeInStoryline": "A rate calculation is correct but its closing interpretation is not.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "All examples are fictional paper scenarios,not live-road tasks.\nMaterials: LM9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether each LM9 separation shrinks.",
+          "teacherMoves": "4 minutes. Require starting positions and signed directions before a rate rule.",
+          "sensemakingStrategy": "Commit a relative-motion claim.",
+          "formativeAssessment": "Prediction distinguishes approach from recession."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Solve both closing cases and the receding comparison.",
+          "teacherMoves": "16 minutes. Allow8minutes same-direction and8opposite-direction checks.",
+          "sensemakingStrategy": "Compare position histories with gap-rate arithmetic.",
+          "formativeAssessment": "5m/sand20s;summed18m/sand5s,meetingx50m."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why the receding case uses the same magnitude but opposite separation change.",
+          "teacherMoves": "10 minutes. State constant velocities,same line and unchanged directions as assumptions.",
+          "sensemakingStrategy": "Bound a rate calculation to its model.",
+          "formativeAssessment": "Learner does not call a growing gap closing."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how vehicle lengths affect a passing calculation.",
+          "teacherMoves": "4 minutes. Keep alignment/safety gaps for Lesson10.",
+          "sensemakingStrategy": "Identify omitted geometry.",
+          "formativeAssessment": "Question names front/rear positions or required relative distance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add a separation-direction check to the report.",
+          "teacherMoves": "6 minutes. Collect an individual annotated relative-motion diagram.",
+          "sensemakingStrategy": "Use positions to check a memorised speed rule.",
+          "formativeAssessment": "Exit states why two bare speeds are insufficient to infer closing."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "Opposite directions can produce approach or separation.",
+        "learned": "Relative-speed magnitude and closing interpretation are different questions.",
+        "explained": "Starting positions/directions determine how the gap changes."
+      }
+    },
+    {
+      "number": 10,
+      "title": "What does an ideal passing time leave out?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion relative speed",
+      "slo": {
+        "purpose": "Apply relative speed with explicit vehicle geometry and limits.",
+        "knowledge": "Complete passing depends on defined alignments/lengths;ideal time is not a road-safety permission.",
+        "skills": "Draw front/rear alignments,calculate and state missing real-world information.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Which point must clear which other point?",
+        "purposeInStoryline": "The report overstates a classroom passing result.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "Use paper or a vetted recording only;no roadside observation or driving action.\nMaterials: LM10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether only the leading vehicle's length matters.",
+          "teacherMoves": "4 minutes. Ask learners to mark both start/end alignments.",
+          "sensemakingStrategy": "Commit a relative-distance claim.",
+          "formativeAssessment": "Prediction names A'srearandB'sfront."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Draw LM10 alignments and compute relative gain/time.",
+          "teacherMoves": "16 minutes. Use8minutes diagram and8calculation/model-limit list.",
+          "sensemakingStrategy": "Connect geometry to relative rate.",
+          "formativeAssessment": "Gain12m,relative5m/s,time2.4s."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why safety gaps and other traffic facts remain missing.",
+          "teacherMoves": "10 minutes. Reject use of the result as sufficient permission to overtake.",
+          "sensemakingStrategy": "Bound a mathematical conclusion honestly.",
+          "formativeAssessment": "Learner names specific missing visibility/access/response information."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how a graph or recording could test a model assumption.",
+          "teacherMoves": "4 minutes. Keep evidence-origin questions for the audit.",
+          "sensemakingStrategy": "Identify additional observation needed.",
+          "formativeAssessment": "Question concerns actual motion rather than an invented road rule."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Revise the report's claim with assumptions and limits.",
+          "teacherMoves": "6 minutes. Collect one individual practical-use explanation.",
+          "sensemakingStrategy": "Support a useful calculation without overclaiming.",
+          "formativeAssessment": "Exit distinguishes ideal time from a safe real decision."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "Vehicle geometry changes the required relative distance.",
+        "learned": "An ideal passing model has explicit alignments and assumptions.",
+        "explained": "A numerical result does not establish road safety or permission."
+      }
+    },
+    {
+      "number": 11,
+      "title": "Can another learner reproduce our graph audit?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion displacement time graph speed velocity",
+      "slo": {
+        "purpose": "Audit motion claims and distinguish actual,data-only and digital evidence.",
+        "knowledge": "Graph meaning depends on axes;data origin and model assumptions limit conclusions.",
+        "skills": "Diagnose,sketch,check a tool output and explain an application.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Which graph rule fails when the yaxis changes?",
+        "purposeInStoryline": "The report undergoes a peer evidence audit.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "Optional approved graphing supplements self-contained paper tasks.\nMaterials: LM11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose a LM11 claim and predict a revealing example.",
+          "teacherMoves": "4 minutes. Collect an individual initial reason.",
+          "sensemakingStrategy": "Name an evidence test.",
+          "formativeAssessment": "Prediction identifies the graph's axes."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Audit five claims and optionally plot one supplied table digitally.",
+          "teacherMoves": "16 minutes. Use10minutes claims/sketches and6tool comparison;prepare approved access/no personal data.",
+          "sensemakingStrategy": "Compare independent representations and evidence origins.",
+          "formativeAssessment": "A/Etruewithconditions;B/C/Dfalsewith specific counterexamples."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain one correction individually and check a plotted output.",
+          "teacherMoves": "10 minutes. Keep actual timed-activity records separate from fictional graphs;mark unobserved digital steps.",
+          "sensemakingStrategy": "Connect a claim to an authentic record.",
+          "formativeAssessment": "Learner does not infer acceleration from a finish time."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Review the question board and remaining assumptions.",
+          "teacherMoves": "4 minutes. Keep LM12/final prompts unreleased.",
+          "sensemakingStrategy": "Distinguish established methods from missing physical facts.",
+          "formativeAssessment": "Question names a real model/evidence limit."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Close shared sheets and complete a personal diagnostic.",
+          "teacherMoves": "6 minutes. Plan procedural/access support only for the final,not answer rehearsal.",
+          "sensemakingStrategy": "Consolidate a reproducible method.",
+          "formativeAssessment": "Exit chooses the correct height/slope/area meaning."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "Similar-looking lines can encode different motion quantities.",
+        "learned": "A graph audit must identify axes,units,data origin and assumptions.",
+        "explained": "Actual and supplied evidence must not be conflated."
+      }
+    },
+    {
+      "number": 12,
+      "title": "Independent linear-motion evidence audit",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.9: Linear Motion",
+      "aresKeywords": "linear motion displacement time graph speed velocity",
+      "slo": {
+        "purpose": "Construct/interpret motion graphs and relative rates independently.",
+        "knowledge": "Signed quantities,model assumptions and evidence limits apply to fresh datasets.",
+        "skills": "Plot,calculate,interpret and justify a bounded application.",
+        "attitudes": "Report actual measurements honestly,collaborate respectfully and revise a claim when evidence contradicts it.",
+        "keyInquiry": "Can I support the journey report without a shared graph?",
+        "purposeInStoryline": "Fresh tables test individual graph and motion reasoning.",
+        "safetyNotes": "Paper/teacher-approved school motion only;no roadside observation,unsafe racing,thrown objects or driving action. Clear accessible level route/stopping space and safe tabletop alternatives;anonymous timing records,no public ranking/personal data. Approved optional digital tools only."
+      },
+      "overview": "Written final uses only LM12 and blank squared paper;no traffic activity.\nMaterials: LM12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 12 min, Driving Question Board (DQB) Creation 4 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read independent procedure and datasets.",
+          "teacherMoves": "4 minutes. Allow4minutes for notation/access/procedure without a worked solution.",
+          "sensemakingStrategy": "Individual work only;no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Teaching cards,graphs and keys remain unavailable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete sections1–2 independently.",
+          "teacherMoves": "16 minutes. Allow16minutes for definitions and displacement-graph construction/interpretation.",
+          "sensemakingStrategy": "Individual work only;no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Original plots,units and signed working collected."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Complete section3 velocity-graph tasks independently.",
+          "teacherMoves": "12 minutes. Allow12minutes;calculator checks a shown setup only.",
+          "sensemakingStrategy": "Individual work only;no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Slope,zero-crossing and split-area evidence visible."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Complete section4 relative-motion/use-limit explanation privately.",
+          "teacherMoves": "4 minutes. Allow4minutes;no shared question-board discussion.",
+          "sensemakingStrategy": "Individual work only;no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Relative rate and bounded conclusion recorded."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Check labels,units and working;submit all sheets.",
+          "teacherMoves": "4 minutes. Allow4minutes and collect before feedback.",
+          "sensemakingStrategy": "Individual work only;no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Teacher retains individual mathematical evidence."
+        }
+      ],
+      "teacherReflection": "Inspect individual units,signs,axes,slopes/areas and stated assumptions. Record a specific misconception and targeted next support;keep actual timed/digital actions separate from fictional datasets and do not infer unmeasured acceleration or road safety.",
+      "summaryTablePrompt": {
+        "observed": "Fresh data reveal individual sign,graph and rate choices.",
+        "learned": "Teacher records demonstrated strengths and specific misconceptions.",
+        "explained": "Feedback separates a model error from unmeasured physical information."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "LINEAR MOTION",
+    "instructions": "Lesson12,40minutes:4procedure,16sections1–2,12section3,4section4,4checking/collection. Work independently with LM12 and blank squared paper only. East is positive. Show labelled axes/units,slopes and signed versus magnitude areas. Straight interpolation is a supplied model assumption,not an observation of detailed real motion. No teaching cards,hints or peer discussion before collection.",
+    "sections": [
+      {
+        "title": "1. Quantities and missing evidence",
+        "prompt": "Distinguish distance/displacement and average speed/velocity using a returning path example. Define acceleration with units. Explain why a separate timed activity giving only distance and total time cannot establish its acceleration without additional evidence or a justified model.",
+        "exemplar": "Distance sums path lengths;displacement is signed final-minus-initial position. A return can have nonzero distance and zero net change;average speed uses distance/time,velocity uses displacement/time. Acceleration is change in velocity/time,m/s². Distance/time alone gives an average rate,not initial/final velocity or how it changed;additional velocity observations/model needed."
+      },
+      {
+        "title": "2. Displacement-time construction and interpretation",
+        "prompt": "Draw datasetSwith labelled axes and the supplied interpolation. Find velocity on each interval,rest interval,total distance,net displacement,average speed and average velocity over6s. Explain why graph height is not speed.",
+        "exemplar": "Plot(0,0),(2,6),(4,6),(6,2). Slopes+3,0,−2m/s;rest2–4s. Distance6+0+4=10m,net+2m;averagespeed5/3m/s,averagevelocity1/3m/s. Height is displacement fromO;its time gradient is signed velocity."
+      },
+      {
+        "title": "3. Velocity-time construction and interpretation",
+        "prompt": "Draw datasetVand find acceleration on each interval. Locate the zero crossing and calculate net displacement and total distance,showing how below-axis area is treated. Explain the horizontal nonzero segment.",
+        "exemplar": "Plot(0,−2),(2,2),(4,2),(6,0). Slopes+2,0,−1m/s²;zeroatt1s. First negative/positive triangles each1m cancel for net0butadd2mfor distance;remaining areas4+2m. Net+6m,distance8m. Horizontalv2means constant eastward velocity,not rest."
+      },
+      {
+        "title": "4. Relative motion,use and limits",
+        "prompt": "For the LM12following objects,find closing speed and ideal catch-up time. State the direction/constant-speed assumptions. Give one concrete benefit of a checked graph/relative-rate result and one missing real-world fact that prevents treating it as a safe-overtaking permission.",
+        "exemplar": "Closing10−6=4m/s,time24/4=6s;AbehindB,same straight direction and constant speeds. A model can estimate a gap/meeting time or identify rest/reversal;link to a checked result. Vehicle lengths,gaps,visibility,oncoming traffic,response or route restrictions are not supplied;the mathematical result is not road permission or proof of practical driving competence."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Distinguish quantities and evidence limits",
+        "excellent": "Clear correct path/change and average distinctions,acceleration definition/units and precise explanation of the missing velocity evidence.",
+        "proficient": "Correctly distinguishes the quantities and states why distance/time alone does not establish acceleration.",
+        "developing": "Some correct definitions but a direction,average,unit or evidence-limit distinction needs correction.",
+        "belowExpectations": "Needs guided examples to connect path,position change,velocity and acceleration."
+      },
+      {
+        "criterion": "Construct and interpret displacement-time graphs",
+        "excellent": "Accurate labelled plot,all slopes/rest/distance/net/averages and a clear height-versus-gradient explanation.",
+        "proficient": "Correctly plots and interpretsSwith appropriate units and distance/displacement distinction.",
+        "developing": "A meaningful graph is present but a plot,slope,rest interval,accumulation or average needs correction.",
+        "belowExpectations": "Needs guided axes/plot/slope support to interpret displacement-time information."
+      },
+      {
+        "criterion": "Construct and interpret velocity-time graphs",
+        "excellent": "Accurate plot/gradients/zero crossing,correct signed and magnitude area partitions and a precise horizontal-segment explanation.",
+        "proficient": "Correctly plots and interpretsV,including accelerations and distinct displacement/distance totals.",
+        "developing": "Some graph/area reasoning is correct but a sign,crossing,gradient or accumulation is incomplete.",
+        "belowExpectations": "Needs guided slope/area comparisons to interpret velocity-time information."
+      },
+      {
+        "criterion": "Apply relative motion with justified limits",
+        "excellent": "Correct closing/time calculations with explicit position/direction assumptions,specific supported benefit and meaningful real-world safety limit.",
+        "proficient": "Correctly solves the relative-rate problem and explains a relevant use/assumption/limit.",
+        "developing": "A useful rate model is present but direction,time,assumption or limit needs correction.",
+        "belowExpectations": "Needs prompts to relate velocities,starting gap and a bounded practical conclusion."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand2.9: Linear Motion",
+    "drivingQuestion": "What can a motion record actually establish about a journey? KICD: What is speed? How do we use displacement-time graphs in real life? How do we use velocity-time graphs?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "Can a return journey have positive distance but small displacement?",
+        "observed": "Returning motion adds distance while reducing net change.",
+        "learned": "Average speed and velocity use different numerators.",
+        "explained": "One travel time does not establish acceleration."
+      },
+      {
+        "number": 2,
+        "title": "Which units belong in a velocity calculation?",
+        "observed": "Rates need common units before comparison.",
+        "learned": "Signed averages and instantaneous values are different claims.",
+        "explained": "Unit cancellation supports a justified conversion."
+      },
+      {
+        "number": 3,
+        "title": "What can a safe timed activity measure?",
+        "observed": "Actual timed data contain uncertainty and action limits.",
+        "learned": "Average motion can be calculated without claiming unmeasured acceleration.",
+        "explained": "A source activity suggestion does not make missing velocity data available."
+      },
+      {
+        "number": 4,
+        "title": "How does a displacement-time table become a graph?",
+        "observed": "A flat displacement graph represents no position change.",
+        "learned": "Signed slopes give velocities in the stated model.",
+        "explained": "Distance and net displacement require different accumulation rules."
+      },
+      {
+        "number": 5,
+        "title": "Is graph height the journey's displacement?",
+        "observed": "The graph starts away from the chosen origin.",
+        "learned": "Journey displacement is an ordinate difference.",
+        "explained": "Height and slope encode different physical quantities."
+      },
+      {
+        "number": 6,
+        "title": "Does negative acceleration always mean slowing?",
+        "observed": "Positive acceleration can reduce a negative velocity's magnitude.",
+        "learned": "Acceleration concerns signed velocity,not speed alone.",
+        "explained": "Within-interval claims need an explicit motion assumption."
+      },
+      {
+        "number": 7,
+        "title": "What do slope and area mean on a velocity graph?",
+        "observed": "Velocity-graph area has displacement units.",
+        "learned": "Height,slope and area have distinct meanings.",
+        "explained": "Distance equals net displacement magnitude here because velocity never reverses."
+      },
+      {
+        "number": 8,
+        "title": "How do we count area when velocity crosses zero?",
+        "observed": "A short reversed interval contributes negative displacement but positive distance.",
+        "learned": "Distance needs area splitting where velocity changes sign.",
+        "explained": "Negative acceleration can increase speed after reversal."
+      },
+      {
+        "number": 9,
+        "title": "Are the objects closing or separating?",
+        "observed": "Opposite directions can produce approach or separation.",
+        "learned": "Relative-speed magnitude and closing interpretation are different questions.",
+        "explained": "Starting positions/directions determine how the gap changes."
+      },
+      {
+        "number": 10,
+        "title": "What does an ideal passing time leave out?",
+        "observed": "Vehicle geometry changes the required relative distance.",
+        "learned": "An ideal passing model has explicit alignments and assumptions.",
+        "explained": "A numerical result does not establish road safety or permission."
+      },
+      {
+        "number": 11,
+        "title": "Can another learner reproduce our graph audit?",
+        "observed": "Similar-looking lines can encode different motion quantities.",
+        "learned": "A graph audit must identify axes,units,data origin and assumptions.",
+        "explained": "Actual and supplied evidence must not be conflated."
+      },
+      {
+        "number": 12,
+        "title": "Independent linear-motion evidence audit",
+        "observed": "Fresh data reveal individual sign,graph and rate choices.",
+        "learned": "Teacher records demonstrated strengths and specific misconceptions.",
+        "explained": "Feedback separates a model error from unmeasured physical information."
+      }
+    ]
+  }
+};

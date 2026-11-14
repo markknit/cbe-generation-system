@@ -85,6 +85,12 @@ def validate(base, name, fixture=False):
         for relative in card.get('assets', []):
             if not (base / 'materials' / relative).is_file():
                 errors.append(f'{card_id}: missing asset {relative}')
+        if card.get('diagram') or card.get('diagram_crop') is not None:
+            from .compiler import image_spec
+            try:
+                image_spec(base, card)
+            except (OSError, ValueError, TypeError):
+                errors.append(f'{card_id}: invalid or unbound diagram/crop')
         if re.search(r'(?i)(Teacher key and preparation|Exemplar answer\s*:)', card.get('student', '')):
             errors.append(f'{card_id}: teacher-key marker in student material')
     prefixes = {re.match(r'([A-Za-z]+)\d+$', k)[1] for k in cards if isinstance(k, str) and re.match(r'([A-Za-z]+)\d+$', k)}

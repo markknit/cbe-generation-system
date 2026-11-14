@@ -1,0 +1,968 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "General Science",
+    "grade": 10,
+    "substrand_id": "1.3",
+    "substrand_name": "Nutrition in Animals",
+    "outputDir": "v2/General_Science/SS1.3_Nutrition_in_Animals",
+    "filePrefix": "Codex_General_Science_Nutrition_in_Animals",
+    "titleDoc": "GENERAL SCIENCE GRADE 10: NUTRITION IN ANIMALS",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 1.3 • 13 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "1.0 Life Science",
+    "substrand": "Sub-Strand1.3: Nutrition in Animals",
+    "sep": "Trace mechanisms,link structure to function,control an investigation and distinguish observed evidence from supplied data.",
+    "careers": "Illustrative food-laboratory and biological modelling practices;no clinical diagnosis,nutrition prescription or occupational qualification.",
+    "focus": "Human chemical/mechanical digestion,organ adaptations and controlled qualitative food tests with honest practical/digital evidence.",
+    "phenomenon": "A fictional food report claims a negative sugar test means no carbohydrate and routes food through the pancreas;both conclusions need checking.",
+    "supportingPhenomena": "Food/secretion flow models,enzyme pathways,villus explanations,positive/negative controls and a failed lipid blank.",
+    "drivingQuestion": "How do digestive structures and controlled tests support claims about food? KICD: How is the human digestive system adapted to its functions?",
+    "storylineThread": "Tube and secretions → starch → protein → fat/absorption → controlled-test plan → starch → reducing sugar → protein → cold lipid demonstration → model → digital claim → audit → independent explanation.",
+    "coreCompetencies": "Digital literacy: as the learner retrieves and saves information from non-print sources on the enzymes used to break down each type of food at different regions of the digestive system and shares the information with peers using digital presentation modes.\nCreativity and Imagination: as the learner uses locally available materials to make a model of the human digestive system.",
+    "values": "Respect: as the learner considers others’ opinions while discussing the adaptations of the human digestive system.\nUnity: as the learner works harmoniously when carrying out experiments on food tests.",
+    "pcis": "Safety and security: as the learner observes safety precautions as they carry out experiments on food tests.",
+    "content": "Chemical and mechanical digestion of foods; Adaptations of parts of the human digestive system,; Food tests",
+    "gradeLevel": "10",
+    "subject": "General Science",
+    "totalDuration": "13 lessons × 40 minutes = 520 minutes",
+    "learningOutcomes": "describe the digestion of different types of food in each region of the digestive system,\nexplain the adaptations of parts of the human digestive system,\nperform experiments to determine presence of different nutrients in food,\nappreciate the role played by different parts of the digestive system."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "Where does food travel and where do secretions enter?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system enzymes absorption",
+      "slo": {
+        "purpose": "Distinguish the alimentary route from accessory secretions and nutrient use.",
+        "knowledge": "Food passes through a tube;accessory organs release substances into it. Digestion,absorption and assimilation are distinct.",
+        "skills": "Sequence,label and justify different arrow types.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "Does a food arrow ever enter the pancreas?",
+        "purposeInStoryline": "The team audits a misleading digestive-route poster.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "Build an explanatory flow model without tasting or simulating human swallowing.\nMaterials: DG1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether food travels through liver and pancreas.",
+          "teacherMoves": "4 minutes. Record an individual route before showing a corrected model.",
+          "sensemakingStrategy": "Commit a checkable pathway claim.",
+          "formativeAssessment": "Prediction distinguishes tube organs from nearby organs."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete DG1 with two arrow styles and trace a fictional mixed meal.",
+          "teacherMoves": "16 minutes. Supply organ labels/card;allow10minutes route and6for process definitions.",
+          "sensemakingStrategy": "Compare material movement with secretion inputs.",
+          "formativeAssessment": "Food follows mouth to anus;accessory arrows enter mouth/duodenum."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain ingestion,digestion,absorption,assimilation and egestion.",
+          "teacherMoves": "10 minutes. Contrast gut-residue egestion with urinary excretion without collecting body samples.",
+          "sensemakingStrategy": "Connect each term to a specific boundary or action.",
+          "formativeAssessment": "Learner correctly explains why pancreas is not a food stop."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how food molecules change in different regions.",
+          "teacherMoves": "4 minutes. Retain substrate/enzyme/site questions for the next lessons.",
+          "sensemakingStrategy": "Sort unanswered mechanism questions.",
+          "formativeAssessment": "Question names a food class or region."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Revise the poster and retain the original claim.",
+          "teacherMoves": "6 minutes. Collect an individual labelled route and one secretion explanation.",
+          "sensemakingStrategy": "Use evidence to revise a model.",
+          "formativeAssessment": "Exit separates absorption from assimilation."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "Food and secretions follow different routes.",
+        "learned": "Accessory organs contribute without carrying the meal through themselves.",
+        "explained": "Process terms describe different events,not interchangeable names."
+      }
+    },
+    {
+      "number": 2,
+      "title": "Does breaking food into pieces change its molecules?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system enzymes absorption",
+      "slo": {
+        "purpose": "Distinguish mechanical processing,transport and carbohydrate digestion.",
+        "knowledge": "Chewing changes piece size;amylase acts on starch and later intestinal processes complete absorbable sugar formation.",
+        "skills": "Classify mechanisms and build a site/substrate/product chain.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "Why cannot a chewing model prove glucose production?",
+        "purposeInStoryline": "The poster confuses visible fragments with chemical products.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "Use supplied evidence cards rather than saliva or food experiments.\nMaterials: DG2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether smaller pieces imply new molecules.",
+          "teacherMoves": "4 minutes. Ask what observation could distinguish the claims.",
+          "sensemakingStrategy": "State a mechanistic prediction.",
+          "formativeAssessment": "Learner distinguishes size from molecular identity."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Sort DG2 evidence and construct the starch chain with sites.",
+          "teacherMoves": "16 minutes. Use8minutes sorting and8pathway drawing;no saliva collection or tasting.",
+          "sensemakingStrategy": "Compare physical and chemical models.",
+          "formativeAssessment": "Separates chewing/peristalsis from enzyme action;locates later intestinal digestion."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why mouth starch digestion is not complete digestion of all nutrients.",
+          "teacherMoves": "10 minutes. Link pancreatic amylase and intestinal enzymes to the continuation;avoid claiming direct glucose from chewing.",
+          "sensemakingStrategy": "Connect mechanism to evidence and limits.",
+          "formativeAssessment": "Each learner explains one valid substrate/site relation."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how proteins follow a different sequence.",
+          "teacherMoves": "4 minutes. Retain stomach-condition questions for Lesson3.",
+          "sensemakingStrategy": "Identify what a starch model does not establish.",
+          "formativeAssessment": "Question concerns specificity or conditions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add a mechanical-versus-chemical key to the route model.",
+          "teacherMoves": "6 minutes. Collect an individual correction of the chewing claim.",
+          "sensemakingStrategy": "Refine a representation without overstating it.",
+          "formativeAssessment": "Exit identifies one model limitation."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "Smaller fragments do not by themselves show a chemical reaction.",
+        "learned": "Carbohydrate digestion involves several sites and enzymes.",
+        "explained": "Mechanical processing can support digestion without being an enzyme reaction."
+      }
+    },
+    {
+      "number": 3,
+      "title": "Is the stomach the end of protein digestion?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system enzymes absorption",
+      "slo": {
+        "purpose": "Explain sequential protein digestion and stomach adaptations.",
+        "knowledge": "Stomach protease works in an acidic environment;further intestinal enzymes continue breakdown to amino acids.",
+        "skills": "Audit claims and link muscular/protective structures to functions.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "Why are acid,churning and protease different contributions?",
+        "purposeInStoryline": "A second poster claims one organ finishes every food class.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "DG3 supplies contrasting claims and a protein pathway.\nMaterials: DG3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose which DG3 claim is supported and predict why.",
+          "teacherMoves": "4 minutes. Collect an individual mechanism distinction.",
+          "sensemakingStrategy": "Commit a causal explanation.",
+          "formativeAssessment": "Prediction does not call churning an enzyme."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Correct the claims and draw protein→peptides→amino-acids with sites.",
+          "teacherMoves": "16 minutes. Provide labelled paper pieces;no acid/body/enzyme simulation.",
+          "sensemakingStrategy": "Compare claims against the supplied evidence.",
+          "formativeAssessment": "Separates mechanical mixing,acid environment and protease action."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain muscular wall and protective lining adaptations.",
+          "teacherMoves": "10 minutes. Link structure to a function;do not infer protection from a cardboard demonstration.",
+          "sensemakingStrategy": "Use a structure→mechanism→benefit chain.",
+          "formativeAssessment": "Learner connects protection and continued intestinal digestion."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask what supports fat digestion and nutrient absorption.",
+          "teacherMoves": "4 minutes. Retain bile-versus-enzyme questions.",
+          "sensemakingStrategy": "Identify an unanswered food-class pathway.",
+          "formativeAssessment": "Question names a mechanism rather than a slogan."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Revise the organ role panel.",
+          "teacherMoves": "6 minutes. Collect an individual correction of the all-protein-to-amino-acids-in-stomach claim.",
+          "sensemakingStrategy": "Check the completeness of a pathway.",
+          "formativeAssessment": "Exit locates a later protein-digestion stage."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "One region contributes to a sequence rather than completing all digestion.",
+        "learned": "Protein digestion involves proteases in stomach and small intestine.",
+        "explained": "Muscle,chemical conditions and protection have different functions."
+      }
+    },
+    {
+      "number": 4,
+      "title": "How do emulsification and absorption differ from digestion?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system enzymes absorption",
+      "slo": {
+        "purpose": "Explain fat digestion,small-intestinal adaptations and blood/lymph routes.",
+        "knowledge": "Bile disperses droplets;lipase breaks molecules. Villi support absorption;water absorption is not confined to colon.",
+        "skills": "Compare mechanisms and link adaptations to transport.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "Can a mixing arrow stand for both digestion and absorption?",
+        "purposeInStoryline": "The route model needs a closer view of the small intestine.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "A duodenum/villus model distinguishes processes without a body experiment.\nMaterials: DG4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether bile is an enzyme and all absorbed nutrients enter blood directly.",
+          "teacherMoves": "4 minutes. Record separate reasons for each claim.",
+          "sensemakingStrategy": "Commit two testable distinctions.",
+          "formativeAssessment": "Prediction separates droplet size from molecule breakdown."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Build DG4 duodenum inputs and compare a villus with a smooth thick wall.",
+          "teacherMoves": "16 minutes. Allocate8minutes secretion roles and8adaptation comparison.",
+          "sensemakingStrategy": "Compare structure,mechanism and consequence.",
+          "formativeAssessment": "Bile/lipase roles separated;thin large-area lining,blood and lacteal identified."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain absorption into blood or lymph and water uptake in both intestines.",
+          "teacherMoves": "10 minutes. Use the teacher key's lipid-product nuance;do not label bile as hydrolysis or all fats as direct-to-blood.",
+          "sensemakingStrategy": "Connect mechanisms without merging them.",
+          "formativeAssessment": "Learner explains one adaptation with a causal benefit."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how evidence could establish food nutrients outside a body.",
+          "teacherMoves": "4 minutes. Retain test/control questions for practical planning.",
+          "sensemakingStrategy": "Distinguish physiological explanation from a chemical assay.",
+          "formativeAssessment": "Question identifies the need for a comparison/control."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Add a labelled villus close-up and model limits.",
+          "teacherMoves": "6 minutes. Collect one individual structure-function explanation.",
+          "sensemakingStrategy": "Bound what the physical representation can show.",
+          "formativeAssessment": "Exit distinguishes digestion from absorption."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "Fat dispersal,enzyme action and uptake are distinct steps.",
+        "learned": "Adaptations support absorption into blood or lymph.",
+        "explained": "A model's arrows need specific mechanisms and limits."
+      }
+    },
+    {
+      "number": 5,
+      "title": "When is a food-test inference trustworthy?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system food tests nutrients",
+      "slo": {
+        "purpose": "Plan valid controlled food tests and practical evidence records.",
+        "knowledge": "Positive and negative/process controls are needed;negative detection is conditional and practical performance must be observed.",
+        "skills": "Plan,label,identify hazards and design a blank evidence table.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "What if the control gives the wrong result?",
+        "purposeInStoryline": "The laboratory team designs an audit trail before any reagents.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "This is a planning lesson;no practical skill is certified from a written plan.\nMaterials: DG5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a sample colour alone justifies a nutrient claim.",
+          "teacherMoves": "4 minutes. Ask what comparison could make the claim credible.",
+          "sensemakingStrategy": "Commit an evidence requirement.",
+          "formativeAssessment": "Learner requests controls rather than taste."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete DG5 test plans,blank record and hazard/stop-condition list.",
+          "teacherMoves": "16 minutes. Check actual facilities/reagent guidance before approving any later practical;assign roles but require individual evidence.",
+          "sensemakingStrategy": "Connect a method to the inference it can support.",
+          "formativeAssessment": "Plans include positive/blank/unknown/repeat and separate portions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain contamination,failed controls and detection limits.",
+          "teacherMoves": "10 minutes. Separate proposed procedure from performed action;define the observed/not-observed log.",
+          "sensemakingStrategy": "State how a claim could fail.",
+          "formativeAssessment": "Learner withholds inference when a blank is positive."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask which tests need heat and which must remain cold.",
+          "teacherMoves": "4 minutes. Keep ethanol and the heated bath in separate lessons/areas.",
+          "sensemakingStrategy": "Sort questions by hazard and method.",
+          "formativeAssessment": "Question recognises a specific unsafe combination."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Finalise a teacher-approved procedure and record template.",
+          "teacherMoves": "6 minutes. If safe facilities are absent,plan labelled supplied-data work and leave performance pending.",
+          "sensemakingStrategy": "Preserve honest evidence boundaries.",
+          "formativeAssessment": "Exit states that a paper plan does not prove outcome c performed."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "An unknown result needs functioning controls.",
+        "learned": "Safe procedure and honest action records precede interpretation.",
+        "explained": "Failed controls prevent a supported nutrient inference."
+      }
+    },
+    {
+      "number": 6,
+      "title": "What does the controlled iodine test show?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system food tests nutrients",
+      "slo": {
+        "purpose": "Perform and record a supervised controlled starch test when facilities permit.",
+        "knowledge": "The inference depends on observed change and valid blank/positive controls.",
+        "skills": "Label,use separate droppers,record actual colours and justify an inference.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "How could contamination produce a misleading result?",
+        "purposeInStoryline": "The first practical checks an unknown with authentic observations.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "Individual safe actions are recorded;data-only work is explicitly labelled.\nMaterials: DG5; DG6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 20 min, Explain 6 min, Driving Question Board (DQB) Creation 3 min, Model Building 7 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the evidence needed without predicting an unknown food's result.",
+          "teacherMoves": "4 minutes. Verify readiness,PPE and stop procedures;release reagent only after approval.",
+          "sensemakingStrategy": "Commit a control-based prediction.",
+          "formativeAssessment": "Each learner identifies blank and positive control."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Carry out DG6 in approved groups and keep individual records.",
+          "teacherMoves": "20 minutes. Allow20minutes;ensure every learner prepares/records an authorised sample action and controls,not merely watches a partner.",
+          "sensemakingStrategy": "Observe before explaining;separate result from expectation.",
+          "formativeAssessment": "Teacher logs named actions,colours,control validity and any not-observed action."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain only inferences supported by functioning controls.",
+          "teacherMoves": "6 minutes. If control fails,repeat or mark inconclusive;do not manufacture expected results.",
+          "sensemakingStrategy": "Use actual observations as evidence.",
+          "formativeAssessment": "Learner distinguishes detected from proved absolutely absent."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record one uncertainty or necessary repeat.",
+          "teacherMoves": "3 minutes. Keep discussion away from unlabelled samples.",
+          "sensemakingStrategy": "Identify a limit in the evidence.",
+          "formativeAssessment": "Question refers to an actual control or observation."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Clean up and revise the test record.",
+          "teacherMoves": "7 minutes. Allow7minutes for teacher-controlled waste/handwashing and an individual exit check.",
+          "sensemakingStrategy": "Complete an honest procedural audit.",
+          "formativeAssessment": "Exit records performed/observed/data-only status explicitly."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "Learners record actual changes and controls when performed.",
+        "learned": "A starch inference requires a valid controlled comparison.",
+        "explained": "Inconclusive evidence calls for a repeat,not an invented positive."
+      }
+    },
+    {
+      "number": 7,
+      "title": "Does a negative Benedict test mean no sugar?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system food tests nutrients",
+      "slo": {
+        "purpose": "Prepare and interpret a reducing-sugar test with teacher-controlled heating.",
+        "knowledge": "This assay detects reducing sugars under its conditions;heating hazards and control failures constrain the work.",
+        "skills": "Label,measure approved portions,observe safely and qualify a conclusion.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "Which sugars or concentrations could a negative result miss?",
+        "purposeInStoryline": "The report's no-carbohydrate claim is tested against a narrower assay.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "Teacher handles the hot bath and cooled tubes;individual learner actions are logged.\nMaterials: DG5; DG7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 20 min, Explain 6 min, Driving Question Board (DQB) Creation 3 min, Model Building 7 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether the test covers every carbohydrate.",
+          "teacherMoves": "4 minutes. Confirm tube capacity,bath supervision,PPE and absence of ethanol/flames.",
+          "sensemakingStrategy": "Commit a limited assay claim.",
+          "formativeAssessment": "Learner identifies the reducing-sugar target."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Prepare DG7 records/approved mixtures and observe the teacher-managed bath/cooling.",
+          "teacherMoves": "20 minutes. Preheat before class;allow20minutes including10heating;use stations only within safe rack capacity and record actual roles.",
+          "sensemakingStrategy": "Separate preparation,heating and interpretation evidence.",
+          "formativeAssessment": "Teacher logs individual measured/labelled/recorded actions and unobserved steps."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Interpret controls and actual appearance after safe cooling.",
+          "teacherMoves": "6 minutes. Do not assign concentration from an uncontrolled food colour or conclude no sucrose from a negative.",
+          "sensemakingStrategy": "Match inference strength to method.",
+          "formativeAssessment": "Learner states no reducing sugar detected under these conditions when justified."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record control or detection-limit questions.",
+          "teacherMoves": "3 minutes. Mark any missing safe practical capacity as pending,not completed by writing.",
+          "sensemakingStrategy": "Identify what remains unestablished.",
+          "formativeAssessment": "Question is linked to an observed limit."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Complete waste collection,handwashing and the individual record.",
+          "teacherMoves": "7 minutes. Teacher controls copper-containing waste and hot equipment;allow7minutes cleanup.",
+          "sensemakingStrategy": "Audit safety and evidence honestly.",
+          "formativeAssessment": "Exit distinguishes own action from teacher heating or supplied data."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "A controlled heated assay gives evidence about reducing sugars.",
+        "learned": "A negative result does not exclude every sugar or carbohydrate.",
+        "explained": "Teacher heating and learner preparation are recorded as different actions."
+      }
+    },
+    {
+      "number": 8,
+      "title": "Which controls support a protein inference?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system food tests nutrients",
+      "slo": {
+        "purpose": "Carry out an approved room-temperature protein assay and interpret controls.",
+        "knowledge": "Prepared biuret reagent requires careful handling;valid controls support a qualitative protein inference.",
+        "skills": "Prepare labelled portions,mix as authorised and record/control an inference.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "Could a coloured or cloudy food make a result uncertain?",
+        "purposeInStoryline": "A second nutrient assay tests whether the evidence method transfers.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "No strong-alkali stock preparation or heating is required.\nMaterials: DG5; DG8. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 20 min, Explain 6 min, Driving Question Board (DQB) Creation 3 min, Model Building 7 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict what evidence would make a protein claim credible.",
+          "teacherMoves": "4 minutes. Check actual SDS/local dispensing rules and ready-prepared reagent.",
+          "sensemakingStrategy": "Commit a controlled comparison.",
+          "formativeAssessment": "Learner identifies blank and protein standard."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete DG8 with separate portions and an individual action record.",
+          "teacherMoves": "20 minutes. Allow20minutes;teacher dispenses if required and observes each learner's permitted action.",
+          "sensemakingStrategy": "Record evidence before comparing inferences.",
+          "formativeAssessment": "Named records show actual sample labelling,observations and control validity."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain an inference or inconclusive result from actual controls.",
+          "teacherMoves": "6 minutes. Address masking by sample colour;do not treat reagent as edible or invent observations.",
+          "sensemakingStrategy": "Relate the result to a conditional claim.",
+          "formativeAssessment": "Learner distinguishes a performed test from a teacher-only demonstration."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record one uncertainty or repeat decision.",
+          "teacherMoves": "3 minutes. Link it to control/visibility evidence.",
+          "sensemakingStrategy": "Identify a method limitation.",
+          "formativeAssessment": "Question names a specific source of uncertainty."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Clean up and complete the practical evidence log.",
+          "teacherMoves": "7 minutes. Use teacher waste/spill instructions and handwashing;allow7minutes.",
+          "sensemakingStrategy": "Close the evidence chain safely.",
+          "formativeAssessment": "Exit explains why a positive control matters."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "A room-temperature test still needs safe handling and controls.",
+        "learned": "A protein inference is supported by valid comparative observations.",
+        "explained": "Practical evidence belongs to actions actually observed."
+      }
+    },
+    {
+      "number": 9,
+      "title": "When is a cloudy lipid result inconclusive?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system food tests nutrients",
+      "slo": {
+        "purpose": "Interpret a safely separated cold lipid demonstration with process controls.",
+        "knowledge": "The process blank distinguishes an emulsion inference from background cloudiness.",
+        "skills": "Observe,record,judge control validity and distinguish demonstration from own performance.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "What does a milky process blank do to the unknown's inference?",
+        "purposeInStoryline": "A superficially convincing result fails its control audit.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "Default teacher demonstration;no heat,bath,flame or spark is present.\nMaterials: DG5; DG9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether every cloudy liquid proves lipid.",
+          "teacherMoves": "4 minutes. Confirm cold separate area,small ethanol quantities,ventilation,PPE and stock control.",
+          "sensemakingStrategy": "Commit a control-based claim.",
+          "formativeAssessment": "Learner requests an ethanol-water process blank."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Observe DG9 and record actual blank,oil standard and unknown.",
+          "teacherMoves": "16 minutes. Teacher performs the default demonstration;use approved supervised handling only if explicitly permitted locally.",
+          "sensemakingStrategy": "Separate observable appearance from its explanation.",
+          "formativeAssessment": "Records label demonstration observed or the exact authorised own action."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain valid versus failed-control cases.",
+          "teacherMoves": "10 minutes. Discuss settling/clarity and process contamination;do not equate a cloudy unknown with proof when blank fails.",
+          "sensemakingStrategy": "Bound inference by comparison evidence.",
+          "formativeAssessment": "Learner withholds conclusion for a cloudy process blank."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask which earlier tests supplied individual performance evidence.",
+          "teacherMoves": "4 minutes. Keep observation and action logs distinct.",
+          "sensemakingStrategy": "Review evidence coverage honestly.",
+          "formativeAssessment": "Question identifies an unobserved skill requiring later demonstration."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Update the four-test comparison and cleanup record.",
+          "teacherMoves": "6 minutes. Teacher collects ethanol waste and secures stock;no heating is introduced.",
+          "sensemakingStrategy": "Consolidate without overclaiming hands-on work.",
+          "formativeAssessment": "Exit states this demonstration alone cannot certify learner lipid-test performance."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "Cloudiness needs a functioning process blank.",
+        "learned": "A demonstration can support interpretation without proving individual handling skill.",
+        "explained": "Control failure blocks the nutrient claim."
+      }
+    },
+    {
+      "number": 10,
+      "title": "Can a constructed model explain an adaptation?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system enzymes absorption",
+      "slo": {
+        "purpose": "Construct a physical digestive model and explain organ roles and limits.",
+        "knowledge": "Correct pathway/secretions and structure-function links matter more than decorative likeness.",
+        "skills": "Construct,label,explain and identify a representation's limits.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "What can card,string and arrows actually show?",
+        "purposeInStoryline": "The team replaces the misleading poster with a checked model.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "Use prepared clean reused materials and one adaptation close-up.\nMaterials: DG1; DG4; DG10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 20 min, Explain 8 min, Driving Question Board (DQB) Creation 3 min, Model Building 5 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict one likely model error and a way to check it.",
+          "teacherMoves": "4 minutes. Supply precut safe pieces and an ordered role plan.",
+          "sensemakingStrategy": "Commit a construction criterion.",
+          "formativeAssessment": "Learner identifies a food/secretion or adaptation distinction."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Construct the DG10 model with a labelled adaptation close-up.",
+          "teacherMoves": "20 minutes. Allow20minutes building;assign fair material sharing and require each learner's contribution to be recorded.",
+          "sensemakingStrategy": "Make mechanisms visible in a limited representation.",
+          "formativeAssessment": "Actual model has ordered tube,accessory arrows and a causal adaptation label."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain an organ role and a model limitation individually.",
+          "teacherMoves": "8 minutes. Use8minutes for short pair explanations and teacher sampling;record unsampled evidence as not observed.",
+          "sensemakingStrategy": "Link structure to mechanism and benefit.",
+          "formativeAssessment": "Learner explains more than an organ's name or decoration."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Post one missing process the model cannot perform.",
+          "teacherMoves": "3 minutes. Keep realistic limits instead of pretending arrows cause digestion.",
+          "sensemakingStrategy": "Bound an analogy.",
+          "formativeAssessment": "Question names enzyme action,peristalsis,scale or uptake."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Finish labels and manage clean waste/reused materials.",
+          "teacherMoves": "5 minutes. Allow5minutes cleanup and individual model-role reflection.",
+          "sensemakingStrategy": "Revise from peer evidence respectfully.",
+          "formativeAssessment": "Exit identifies an actual contribution and justified improvement."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "A made model can reveal route and structure-function errors.",
+        "learned": "Representations need labelled mechanisms and explicit limits.",
+        "explained": "An organ's contribution is supported by a causal explanation."
+      }
+    },
+    {
+      "number": 11,
+      "title": "Can we retrieve,save and share a checked enzyme claim?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system enzymes absorption",
+      "slo": {
+        "purpose": "Use an approved non-print source to retrieve,save and digitally share a specific digestion claim when access permits.",
+        "knowledge": "A source note identifies an actual consulted claim;print alternatives do not establish digital action.",
+        "skills": "Retrieve,save,credit,cross-check and share a short evidence panel.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "What evidence shows that retrieval and sharing actually happened?",
+        "purposeInStoryline": "The model's enzyme panel needs a reproducible source trail.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "Teacher prepares approved access;no accounts,personal health data or unknown downloads.\nMaterials: DG2; DG3; DG4; DG10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict how to check one enzyme/site/substrate/product claim.",
+          "teacherMoves": "4 minutes. Release approved page/offline copy and clarify permitted save/share method.",
+          "sensemakingStrategy": "Specify a verifiable evidence trail.",
+          "formativeAssessment": "Learner selects one precise claim,not a whole copied page."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Retrieve and save the DG10 source note and a short original digital panel.",
+          "teacherMoves": "16 minutes. Allow16minutes;observe individual retrieval/save actions through stations within actual device capacity.",
+          "sensemakingStrategy": "Compare a source claim with supplied mechanism cards.",
+          "formativeAssessment": "Record actual title,URL/date,claim and saved artifact;unobserved actions remain unobserved."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Share a short digital display and explain the cross-check.",
+          "teacherMoves": "10 minutes. Use10minutes for paired/station sharing;do not claim every pupil presented publicly if only a sample did.",
+          "sensemakingStrategy": "Connect evidence and credit to a communicated explanation.",
+          "formativeAssessment": "Teacher notes actual sharing action and the learner's reason."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Identify an unresolved wording or access issue.",
+          "teacherMoves": "4 minutes. Use a printed evidence panel if needed,but mark digital retrieval/sharing not observed.",
+          "sensemakingStrategy": "Separate content understanding from tool performance.",
+          "formativeAssessment": "Question concerns actual source meaning or access."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Save final work and close approved resources.",
+          "teacherMoves": "6 minutes. Collect a source/evidence log without personal accounts or medical information.",
+          "sensemakingStrategy": "Complete a reproducible record.",
+          "formativeAssessment": "Exit states what was retrieved,saved and shared or remains pending."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "A saved source trail makes a claim inspectable.",
+        "learned": "Digital skill requires actual observed retrieval/save/share actions.",
+        "explained": "Print support can develop content while digital evidence remains pending."
+      }
+    },
+    {
+      "number": 12,
+      "title": "Which conclusions survive a control-and-mechanism audit?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system food tests nutrients",
+      "slo": {
+        "purpose": "Audit food-test inferences and physiological claims using evidence limits.",
+        "knowledge": "A correct-looking unknown cannot rescue a failed control;organ roles and mechanisms must remain distinct.",
+        "skills": "Diagnose,correct and justify a limited conclusion.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "Which error is in the result and which is in the inference?",
+        "purposeInStoryline": "The team reviews its original misleading report.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "All DG11 observations are explicitly fictional interpretation data.\nMaterials: DG11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose the strongest-looking DG11 nutrient claim and predict its validity.",
+          "teacherMoves": "4 minutes. Ask for the control evidence before marking correctness.",
+          "sensemakingStrategy": "Commit a claim with a test.",
+          "formativeAssessment": "Prediction identifies the blank and positive comparison."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Audit four records and correct five physiology claims.",
+          "teacherMoves": "16 minutes. Allocate8minutes control audit and8mechanism repairs;keep original claims visible.",
+          "sensemakingStrategy": "Compare each conclusion with its actual evidence.",
+          "formativeAssessment": "A/Dinvalid,Bconditionalnegative,Cprotein detected;mechanism corrections accurate."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain one test and one organ-role correction individually.",
+          "teacherMoves": "10 minutes. Use earlier actual performance/model logs separately;written audit is not a replacement experiment.",
+          "sensemakingStrategy": "Link a claim to evidence and a stated limit.",
+          "formativeAssessment": "Learner distinguishes emulsion,hydrolysis,absorption and tube routing."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Review the question board and remaining practical/digital evidence gaps.",
+          "teacherMoves": "4 minutes. Keep final DG12/prompts unreleased.",
+          "sensemakingStrategy": "Distinguish answered content from unobserved action.",
+          "formativeAssessment": "Question identifies a real remaining gap rather than inventing completion."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Close teaching cards and prepare for independent explanation.",
+          "teacherMoves": "6 minutes. Collect an individual role-and-benefit reason;plan procedural/access support only.",
+          "sensemakingStrategy": "Consolidate a checked model.",
+          "formativeAssessment": "Exit states a specific organ contribution without inferring lasting attitude."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "Strong visual impressions can fail control or mechanism checks.",
+        "learned": "Supported conclusions remain conditional on evidence quality.",
+        "explained": "Written reasoning and observed performance answer different assessment questions."
+      }
+    },
+    {
+      "number": 13,
+      "title": "Independent digestive-system evidence audit",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Nutrition in Animals",
+      "aresKeywords": "digestion human digestive system enzymes absorption",
+      "slo": {
+        "purpose": "Explain mechanisms/adaptations and interpret fresh controlled-test data independently.",
+        "knowledge": "This written final assesses explanation and interpretation;performed-experiment/digital/model evidence comes from separate observed tasks.",
+        "skills": "Trace,explain,evaluate controls and justify an organ-role benefit.",
+        "attitudes": "Share resources fairly,listen respectfully,report actual observations honestly and acknowledge unobserved actions.",
+        "keyInquiry": "Can I support the report's conclusions without a shared model?",
+        "purposeInStoryline": "Fresh data test individual reasoning about food and digestive structures.",
+        "safetyNotes": "No tasting,body-fluid sampling or personal health data. Teacher approves actual reagents/SDS/risk assessment and supervises PPE,dispensing,waste and spills. Heated-bath work and cold ethanol demonstration are separate. Use approved device access and clean safe model materials only."
+      },
+      "overview": "No reagents or practical handling in the written independent final.\nMaterials: DG12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 12 min, Driving Question Board (DQB) Creation 4 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read the independent procedure and DG12 data.",
+          "teacherMoves": "4 minutes. Allow4minutes;clarify access/procedure without working a result.",
+          "sensemakingStrategy": "Individual work only;no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Teaching cards,models and keys remain unavailable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete sections1–2 independently.",
+          "teacherMoves": "16 minutes. Allow16minutes for route/mechanism and adaptation explanations.",
+          "sensemakingStrategy": "Individual work only;no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Individual labelled explanations are collected."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Complete section3 controls/inferences independently.",
+          "teacherMoves": "12 minutes. Allow12minutes;do not demonstrate a test or supply colour interpretations.",
+          "sensemakingStrategy": "Individual work only;no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Learner records conditional conclusions and valid repeat decisions."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Write section4's private organ-role benefit and evidence limit.",
+          "teacherMoves": "4 minutes. Allow4minutes;no shared question-board discussion.",
+          "sensemakingStrategy": "Individual work only;no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "A specific reason is supported without claiming performed practical work."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Check labels and submit all sheets.",
+          "teacherMoves": "4 minutes. Allow4minutes and collect before feedback;keep practical/digital logs separate.",
+          "sensemakingStrategy": "Individual work only;no comparison,hints or answer discussion before collection.",
+          "formativeAssessment": "Teacher retains independent written evidence and separate performance records."
+        }
+      ],
+      "teacherReflection": "Check named individual explanations/actions,controls and safety records. Record performed,observed,data-only or not-observed evidence accurately;arrange missing practical/digital opportunities without inferring competence from writing or a group model.",
+      "summaryTablePrompt": {
+        "observed": "Fresh data reveal individual mechanism and evidence choices.",
+        "learned": "Teacher records actual demonstrated explanations and action evidence separately.",
+        "explained": "Feedback distinguishes a content error from an unobserved practical skill."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "NUTRITION IN ANIMALS",
+    "instructions": "Lesson13,40minutes:4procedure,16sections1–2,12section3,4section4,4checking/collection. Work independently with DG12 only. No reagents,teaching cards,models,hints or peer discussion. Supplied data are fictional;do not present them as your own experimental observations. This written final does not certify outcome c's performed experiment or digital/model actions;teacher uses separately observed lesson evidence for those.",
+    "sections": [
+      {
+        "title": "1. Route and mechanisms",
+        "prompt": "Draw a labelled flow model for the DG12 mixed meal through mouth,oesophagus,stomach,small intestine,large intestine,rectum and anus. Add accessory secretion arrows from salivary glands,liver/gallbladder and pancreas. Explain mechanical versus chemical digestion,and trace one starch,protein and fat pathway with relevant sites. Explain why food does not enter pancreas and why bile is not an enzyme.",
+        "exemplar": "Food follows the alimentary tube;secretions join it. Chewing/mixing alters physical form;enzymes hydrolyse molecules. Starch digestion begins with salivary amylase and continues via pancreatic/intestinal enzymes to absorbable sugars. Stomach protease begins protein breakdown;intestinal proteases/peptidases complete amino acids. Bile from liver/gallbladder disperses fat;pancreatic lipase breaks fat molecules into absorbable products. Food itself does not pass through pancreas. Accept pharynx/duodenum and additional correctly placed detail."
+      },
+      {
+        "title": "2. Adaptation and absorption",
+        "prompt": "Explain how two small-intestine adaptations support absorption,including a blood/lymph distinction. Explain one stomach adaptation and its function. Distinguish absorption from assimilation and correct the claim that all water absorption happens in colon.",
+        "exemplar": "Villi/microvilli provide large area;thin lining shortens crossing distance;blood capillaries/lacteals transport absorbed materials away. Simple sugars/amino acids mainly enter blood;much lipid enters lymph via lacteals. Stomach muscles mix food or protective lining reduces damage;accept a correctly explained adaptation. Absorption crosses gut lining;assimilation uses absorbed material in cells. Both small and large intestines absorb water."
+      },
+      {
+        "title": "3. Controlled food-test claims",
+        "prompt": "For DG12 sample X,state a justified conclusion for each of its three tests and explain why a negative Benedict result cannot establish no carbohydrate/no sugar. For Y,decide whether lipid can be concluded and justify a repeat/change. Describe one contamination control and one safety precaution relevant to these tests. State whether interpreting this fictional record proves you performed an experiment.",
+        "exemplar": "Xstarch detected and protein detected with functioning controls;no reducing sugar detected under stated conditions. This does not exclude non-reducing sugars,other carbohydrates or concentrations below detection. Ylipid inference is invalid because the process blank is milky;repeat with clean apparatus/clear blank and positive control. Separate fresh portions/clean droppers reduce contamination. Accept specific valid safety action such as eye protection,teacher-managed hot bath or ethanol separated from heat/flames. Interpretation alone does not prove practical performance."
+      },
+      {
+        "title": "4. Organ contribution and evidence limit",
+        "prompt": "Choose one organ and explain a specific way it contributes to the digestion/absorption of the meal. State a limitation of your drawn model and name one separate observation a teacher would need to confirm your practical or digital skill.",
+        "exemplar": "For example pancreas supplies enzymes/bicarbonate to the small intestine,or small intestine supports digestion/absorption;accept another accurate organ-role benefit. Drawn arrows cannot demonstrate actual peristalsis,hydrolysis or uptake. Teacher must observe a specified real action such as safe sample labelling/dispensing/recording with controls,or retrieving/saving/sharing a source claim. A written value statement does not establish lasting appreciation."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Explain route and digestive mechanisms",
+        "excellent": "Accurate complete food/secretion routes and all three nutrient pathways,with clear mechanical/chemical and bile/enzyme distinctions.",
+        "proficient": "Correctly traces routes and explains the relevant carbohydrate,protein and fat mechanisms without the identified misconceptions.",
+        "developing": "Some correct routes/mechanisms,but an organ,site,product or process distinction needs correction.",
+        "belowExpectations": "Needs guided support to distinguish the alimentary route,secretions and digestive mechanisms."
+      },
+      {
+        "criterion": "Link adaptations to absorption/protection",
+        "excellent": "Explains two intestinal adaptations and a stomach adaptation causally,with correct blood/lymph,absorption/assimilation and water-uptake distinctions.",
+        "proficient": "Gives accurate structure-function explanations and the requested absorption/transport distinctions.",
+        "developing": "Names relevant structures but a causal link or transport/process distinction is incomplete.",
+        "belowExpectations": "Needs prompts to connect a digestive structure to a specific function."
+      },
+      {
+        "criterion": "Interpret controlled-test evidence and limits",
+        "excellent": "All conclusions/control judgements correct,with precise negative-test limits,contamination/safety actions and explicit separation from performed skill.",
+        "proficient": "Correctly interprets X/Y,qualifies the negative result and explains a valid control/safety action without claiming fictional data as own performance.",
+        "developing": "Some interpretations are supported but a control,negative-test limit,safety action or evidence distinction needs correction.",
+        "belowExpectations": "Needs guided comparisons to determine whether the observations support a nutrient inference."
+      },
+      {
+        "criterion": "Explain an organ's contribution and model/evidence limits",
+        "excellent": "Specific accurate role-and-benefit explanation with a clear model limitation and observable practical/digital action needed for confirmation.",
+        "proficient": "Explains a valid organ contribution,a model limitation and a relevant separate action observation.",
+        "developing": "Gives a plausible role but its benefit,model limit or separate evidence requirement is vague.",
+        "belowExpectations": "Needs prompts to relate an organ's role to the meal and distinguish a model from actual performance."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand1.3: Nutrition in Animals",
+    "drivingQuestion": "How do digestive structures and controlled tests support claims about food? KICD: How is the human digestive system adapted to its functions?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "Where does food travel and where do secretions enter?",
+        "observed": "Food and secretions follow different routes.",
+        "learned": "Accessory organs contribute without carrying the meal through themselves.",
+        "explained": "Process terms describe different events,not interchangeable names."
+      },
+      {
+        "number": 2,
+        "title": "Does breaking food into pieces change its molecules?",
+        "observed": "Smaller fragments do not by themselves show a chemical reaction.",
+        "learned": "Carbohydrate digestion involves several sites and enzymes.",
+        "explained": "Mechanical processing can support digestion without being an enzyme reaction."
+      },
+      {
+        "number": 3,
+        "title": "Is the stomach the end of protein digestion?",
+        "observed": "One region contributes to a sequence rather than completing all digestion.",
+        "learned": "Protein digestion involves proteases in stomach and small intestine.",
+        "explained": "Muscle,chemical conditions and protection have different functions."
+      },
+      {
+        "number": 4,
+        "title": "How do emulsification and absorption differ from digestion?",
+        "observed": "Fat dispersal,enzyme action and uptake are distinct steps.",
+        "learned": "Adaptations support absorption into blood or lymph.",
+        "explained": "A model's arrows need specific mechanisms and limits."
+      },
+      {
+        "number": 5,
+        "title": "When is a food-test inference trustworthy?",
+        "observed": "An unknown result needs functioning controls.",
+        "learned": "Safe procedure and honest action records precede interpretation.",
+        "explained": "Failed controls prevent a supported nutrient inference."
+      },
+      {
+        "number": 6,
+        "title": "What does the controlled iodine test show?",
+        "observed": "Learners record actual changes and controls when performed.",
+        "learned": "A starch inference requires a valid controlled comparison.",
+        "explained": "Inconclusive evidence calls for a repeat,not an invented positive."
+      },
+      {
+        "number": 7,
+        "title": "Does a negative Benedict test mean no sugar?",
+        "observed": "A controlled heated assay gives evidence about reducing sugars.",
+        "learned": "A negative result does not exclude every sugar or carbohydrate.",
+        "explained": "Teacher heating and learner preparation are recorded as different actions."
+      },
+      {
+        "number": 8,
+        "title": "Which controls support a protein inference?",
+        "observed": "A room-temperature test still needs safe handling and controls.",
+        "learned": "A protein inference is supported by valid comparative observations.",
+        "explained": "Practical evidence belongs to actions actually observed."
+      },
+      {
+        "number": 9,
+        "title": "When is a cloudy lipid result inconclusive?",
+        "observed": "Cloudiness needs a functioning process blank.",
+        "learned": "A demonstration can support interpretation without proving individual handling skill.",
+        "explained": "Control failure blocks the nutrient claim."
+      },
+      {
+        "number": 10,
+        "title": "Can a constructed model explain an adaptation?",
+        "observed": "A made model can reveal route and structure-function errors.",
+        "learned": "Representations need labelled mechanisms and explicit limits.",
+        "explained": "An organ's contribution is supported by a causal explanation."
+      },
+      {
+        "number": 11,
+        "title": "Can we retrieve,save and share a checked enzyme claim?",
+        "observed": "A saved source trail makes a claim inspectable.",
+        "learned": "Digital skill requires actual observed retrieval/save/share actions.",
+        "explained": "Print support can develop content while digital evidence remains pending."
+      },
+      {
+        "number": 12,
+        "title": "Which conclusions survive a control-and-mechanism audit?",
+        "observed": "Strong visual impressions can fail control or mechanism checks.",
+        "learned": "Supported conclusions remain conditional on evidence quality.",
+        "explained": "Written reasoning and observed performance answer different assessment questions."
+      },
+      {
+        "number": 13,
+        "title": "Independent digestive-system evidence audit",
+        "observed": "Fresh data reveal individual mechanism and evidence choices.",
+        "learned": "Teacher records actual demonstrated explanations and action evidence separately.",
+        "explained": "Feedback distinguishes a content error from an unobserved practical skill."
+      }
+    ]
+  }
+};
