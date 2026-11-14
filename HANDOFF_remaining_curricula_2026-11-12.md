@@ -1,10 +1,14 @@
 # Remaining three curricula: working checkpoint and takeover
 
-2026-11-13local/14NovemberUTC. **QUOTA-PAUSED at10%:273new authored/263new final-reviewed;304authored/294reviewed including frozenpilot.** 16unitswithoutdrafts. EssentialProbability10draftsaved/unbuilt;Volume12+EssentialStats11finalPASS/unpackaged. No resume without explicit user instruction and fresh permitted allowance.
+## Current threshold update — 2026-11-14
+
+Mark changed the clean-stop threshold from10%to2% and explicitly resumed work. The live read-only meter at18:08UTC showed8%remaining with the old pause latch set; after changing the machine-readable threshold, `--resume` may clear that latch only if a fresh reading remains above2%. At2%or lower, stop and hand off; Mark will perform the full reset. This overrides the10%threshold recorded in the original pause below.
+
+2026-11-13local/14NovemberUTC. **Original pause snapshot at10%:273new authored/263new final-reviewed;304authored/294reviewed including frozenpilot.** 16unitswithoutdrafts. EssentialProbability10draftsaved/unbuilt;Volume12+EssentialStats11finalPASS/unpackaged. Explicit resume and threshold change are recorded above; live policy is2%.
 
 ## Locked decisions
 
-- Weekly stop threshold: **10% remaining or lower**, stored in `config/codex_usage_guard.json`.
+- Weekly stop threshold: **2% remaining or lower**, stored in `config/codex_usage_guard.json` (updated by Mark on 2026-11-14; supersedes original10%pause record below).
 - Check before each module/reviewer batch, after a completed unit, and at least every five minutes during active long work. Use `python3 scripts/check_codex_usage.py`.
 - At the threshold, launch no new lesson/module/reviewer work. Reach the next small clean stopping point, checkpoint unfinished work, and perform `.claude/skills/update/SKILL.md` directly. This is the `/update` workflow; no literal UI command submission is necessary. Interpret a user-typed `?/update` as the same update request.
 - Save exact completed/pending items, paths, reviewer states, checks, blockers and next action in STATUS.md and this handoff. Commit locally, report paused, then end the turn. Do not push/publish without authorization.
@@ -15,7 +19,7 @@
 
 The next user needs this same checkout and work files, using their own authorized sign-in. They run `/restart` to verify branch, git state, control documents and this handoff. The Codex usage check in `/restart` is `python3 scripts/check_codex_usage.py --read-only`; it does not mutate the pause latch or resume generation.
 
-After the next user explicitly asks to resume, run `python3 scripts/check_codex_usage.py --resume`, verify exit 0 and continue the exact recorded next action. Never restart completed modules merely because the account/session changed. No credentials are stored in this handoff. A different machine/checkout requires an explicitly authorized transfer of the local commit and working files first; nothing is automatically pushed.
+After the next user explicitly asks to resume, run `python3 scripts/check_codex_usage.py --resume`, verify exit 0 and continue the exact recorded next action. Stop at2%or lower; Mark will perform the full reset. Never restart completed modules merely because the account/session changed. No credentials are stored in this handoff. A different machine/checkout requires an explicitly authorized transfer of the local commit and working files first; nothing is automatically pushed.
 
 This is an active-work checkpoint policy, not an installed idle-time watcher. Save each lesson/review incrementally because server resets or quota depletion can still interrupt work between checks. Running reviewers should write their own findings progressively and save at the next clean boundary when asked to stop.
 
@@ -87,7 +91,7 @@ Guardexit10/remaining10/pause_requestedtrue. Fullgenerationrequestisnotcompletea
 Diskderived24expansionunits273authoredlessons;23units263finalPASS;21packages240lessons. Plus3frozenpilotunits31lessons =>304authored/294reviewed. Volume12+EssentialStats11finalPASSNOTyetartifact_acceptance/ZIP.23R1exports263lessons exist;24sourcesverified/9GSlocatedroottranscriptionspending/7Coreblocked.16unitsnodrafts. Exactmachinehandoff:evidence/quota_pause_2026-11-14.json and evidence/package_pending_at_quota.json.
 
 Next permitted resume:
-1. Apply .claude/skills/restart/SKILL.md withread-onlyusage/livechecks. Onlyexplicituserresume+freshallowance>10permits scripts/check_codex_usage.py --resume.
+1. Apply .claude/skills/restart/SKILL.md withread-onlyusage/livechecks. Onlyexplicituserresume+freshallowance>2permits scripts/check_codex_usage.py --resume. Current resume was verified at8%remaining, threshold2%.
 2. PackagealreadyreviewedVolume/EssentialStats with durable evidence/procedures/package_reviewed_unit.py,args module reportfilename expectedsha scopestring. Volume reportessmath_2_7_layout_review.md SHA037876ba53abc2608baff5347e121dbc37af39654adf66e994fc6ca3be51c742;Stats reportessmath_3_1_layout_review.md SHA9657e6998ed117537ae72d67da428e0e3bfa957b256f448416f2c9db37492a82. Helperwritesartifact_acceptance/manifest/ZIP/receipt/ledgerfromcurrent18files/scopedaudit. Donotrerenderfrozenfilesjustbecauseglobalresourcesignaturechanged.
 3. EssentialProbabilityessmath_3_2has10canonicaldraftlessons/9registeredchecks,source/materials/blueprint/manuscript. BuildguardREFUSEDbeforepreflight/compiler;module/checks/5Wordabsent. Runbuild,thenfullindependentsource/materials/contentreviewBEFOREauthorselfreview,max2correctionpasses. Printed4.2/internal3.2bothretained;sourcecapinterpretedatmosttwo binarycomponentspertrial,twoprimitiveoutcomeseach,fourjointdescriptionsnotfourstages. Thisrequiresindependentscrutiny/teacher-sourceconfirmation;nosix-faced-dieprimitive. Actualperformancea/e/g needsF2/F3singlechanceandF6pairedrawrecords/namedactions;writtenfinalnotperformed.
 4. Continue9GSunitsbelow,eachneedsrootexacttranscriptionoflocatedpixelpackbeforeauthoring. SevenCoregapsstillawaitreadableofficialJuly2025regularrequirements;userpath/linkquestionpending. No old/PIeditionreplacement/restricteddownloadbypass.
