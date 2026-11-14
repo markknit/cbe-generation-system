@@ -1,0 +1,5 @@
+# Root acceptance — Chemical Bonding
+
+Accepted fingerprint `6681e48003343a90c25909f2875b7128385a022aaf1051f9c4374906d3216014`. Two complete independent content reviews found no confirmed defect. All14cards/keys,14lessons,sourcepixels23–25,diagram/electron/charge solutions,structure/property/selection tasks,final/rubric andactualfiveWord checked. Root read both reports and inspected the model/force distinctions and actual-performance caps;preflight/build pass.
+
+Bonding versus intermolecular attractions,elemental examples versus compounds,NH4+formedbond equivalence and carrier distinctions are explicit. Carbon high-melting qualitative language requires pressure/sublimation qualification if extended numerically;no molten-carbon practical or transition temperature is asserted. Actual property tests,models,virtual-lab navigation and community activity remain unperformed unless separately approved/observed. Product-manufacturer guidance/access/pacing remain teacher judgments. Written content accepted for finalrender,not actual classroom certification.

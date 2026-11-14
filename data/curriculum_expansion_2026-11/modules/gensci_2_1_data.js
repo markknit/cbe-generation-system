@@ -424,10 +424,10 @@ module.exports = {
         },
         {
           "phase": "Explain Phase",
-          "learnerExperience": "Determine oxidation numbers in all five compounds and O2.",
+          "learnerExperience": "Determine oxidation numbers in all five compounds and O2;then formulate NaCl and MgO from the supplied valencies with simplest ratios.",
           "teacherMoves": "18 minutes. Ask for equation checks,not memorised signs alone.",
           "sensemakingStrategy": "Use ordinary H/O rules and total0.",
-          "formativeAssessment": "All specified atoms correctly assigned."
+          "formativeAssessment": "Oxidation assignments and two independently constructed formulae/ratios are correct."
         },
         {
           "phase": "Driving Question Board (DQB) Creation",

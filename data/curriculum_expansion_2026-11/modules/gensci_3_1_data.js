@@ -1,0 +1,901 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "General Science",
+    "grade": 10,
+    "substrand_id": "3.1",
+    "substrand_name": "Turning Effect of Force",
+    "outputDir": "v2/General_Science/SS3.1_Turning_Effect_of_Force",
+    "filePrefix": "Codex_General_Science_Turning_Effect_of_Force",
+    "titleDoc": "GENERAL SCIENCE GRADE 10: TURNING EFFECT OF FORCE",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 3.1 • 12 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "3.0 Natural Physical Science",
+    "substrand": "Sub-Strand3.1: Turning Effect of Force",
+    "sep": "Model force geometry,calculate signed moments,compare pivots and record actual versus supplied evidence.",
+    "careers": "Illustrative mechanical design,maintenance and scientific measurement roles.",
+    "focus": "Moments of a force at a point; Moments of anti-parallel forces; Applications of the turning effect of force in real life.",
+    "phenomenon": "A fictional tool poster claims every force creates a moment and every equal opposite force pair is fully balanced.",
+    "supportingPhenomena": "Explicit force-position records,conditional metre-rule balancing,couple/unequal-pair comparisons and safe application observations.",
+    "drivingQuestion": "How is the turning effect of force used in our daily life?",
+    "storylineThread": "Leverarm→units→sense→balance→actualdemonstration→uncertainty→couple→unequalpair→applications→schoolexamples→audit→independent evidence.",
+    "content": "Moments of a force at a point; Moments of anti-parallel forces; Applications of the turning effect of force in real life.",
+    "coreCompetencies": "Critical thinking and problem solving: as the learner solves numerical problems involving both moments of a force and moments of anti-parallel forces and identifies areas where moments of a force is used in day-to-day life.\nDigital literacy: as the learner interacts with digital technology when researching on moments of a force at a point and moments of anti-parallel forces.",
+    "values": "Integrity: the learner displays honesty while using digital devices to search for information on moments of a force at a point and moments of anti-parallel forces.\nRespect: the learner respects others’ opinions while discussing with peers on the examples involving turning effect of force in daily life.",
+    "pcis": "Life skills (self-awareness): as the learner demonstrates the principle of moments of force by balancing a metre rule.",
+    "gradeLevel": "10",
+    "subject": "General Science",
+    "totalDuration": "12 lessons × 40 minutes = 480 minutes",
+    "learningOutcomes": "determine moments of a force at a point,\ncalculate the moments of anti-parallel forces,\napply the turning effect of force in real-life situations,\nappreciate the importance of the turning effect of force in everyday life."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "Which distance gives a moment?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple which distance gives a moment?",
+      "slo": {
+        "purpose": "Determine moments using perpendicular line-of-action distance.",
+        "knowledge": "Moment magnitude is force times perpendicular pivot-to-force-line distance;turning sense needs direction.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "Why can a force act without a moment about a chosen point?",
+        "purposeInStoryline": "A diagram uses full handle length for a slant force.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Determine moments using perpendicular line-of-action distance. Use complete named records;actual actions need observed evidence.\nMaterials: TF1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which TF1 force has zero moment.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read TF1 and draw each pivot,force line and perpendicular segment.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate all three magnitudes and assign only the supported turning sense.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain why the slant direction remains unknown and correct the distance shortcut.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a moment with units and a relevant diagram limit.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Determine moments using perpendicular line-of-action distance.",
+        "learned": "Moment magnitude is force times perpendicular pivot-to-force-line distance;turning sense needs direction.",
+        "explained": "Why can a force act without a moment about a chosen point? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 2,
+      "title": "How do units and unknown forces connect?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple how do units and unknown forces connect?",
+      "slo": {
+        "purpose": "Convert distances and rearrange the moment relation.",
+        "knowledge": "N cm and N m differ;the appropriate perpendicular distance must retain units.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "Can the same numerical product mean different moments?",
+        "purposeInStoryline": "A paper answer treats25cm as25m.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Convert distances and rearrange the moment relation. Use complete named records;actual actions need observed evidence.\nMaterials: TF2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the conversion needed for TF2 caseA.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read three force/moment/arm records and identify unknowns.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate A,B,C with metre conversions and units.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain300N cm versus3N m and ideal-model limits.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one rearranged relation and a conversion check.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Convert distances and rearrange the moment relation.",
+        "learned": "N cm and N m differ;the appropriate perpendicular distance must retain units.",
+        "explained": "Can the same numerical product mean different moments? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 3,
+      "title": "How do force direction and position set turning sense?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple how do force direction and position set turning sense?",
+      "slo": {
+        "purpose": "Draw and calculate signed moments about one common pivot.",
+        "knowledge": "Clockwise/anticlockwise sense depends on pivot,force position and direction.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "Does every downward force turn clockwise?",
+        "purposeInStoryline": "A four-arrow diagram assigns signs from up/down alone.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Draw and calculate signed moments about one common pivot. Use complete named records;actual actions need observed evidence.\nMaterials: TF3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict signs for two downward forces on opposite sides.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read TF3 plane axes and anticlockwise-positive convention.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Draw all four arrows,calculate signed moments and add A+B+C.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain why moment balance alone is not full static equilibrium.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one signed calculation with geometric reasoning.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Draw and calculate signed moments about one common pivot.",
+        "learned": "Clockwise/anticlockwise sense depends on pivot,force position and direction.",
+        "explained": "Does every downward force turn clockwise? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 4,
+      "title": "What conditions balance an ideal bar?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple what conditions balance an ideal bar?",
+      "slo": {
+        "purpose": "Apply moment and force balance with explicit bar-weight assumptions.",
+        "knowledge": "A pivot reaction can have zero moment while contributing to force balance;bar weight matters off the pivot.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "What changes if the bar is not weightless?",
+        "purposeInStoryline": "An ideal-bar solution ignores weight acting away from the pivot.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Apply moment and force balance with explicit bar-weight assumptions. Use complete named records;actual actions need observed evidence.\nMaterials: TF4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which force has zero moment about the support.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read TF4 initial weightless record and draw all forces.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Solve unknown force and reaction;repeat with stated off-centre weight.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Compare the two cases and explain the changed moments and reactions.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one full force diagram and both balance conditions.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Apply moment and force balance with explicit bar-weight assumptions.",
+        "learned": "A pivot reaction can have zero moment while contributing to force balance;bar weight matters off the pivot.",
+        "explained": "What changes if the bar is not weightless? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 5,
+      "title": "Can an actual metre rule demonstrate the principle?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple can an actual metre rule demonstrate the principle?",
+      "slo": {
+        "purpose": "Perform an approved balance or record the unmet practical opportunity.",
+        "knowledge": "The actual unloaded balance point and measured load positions matter to a real demonstration.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "What is different between an ideal prediction and an observed balance?",
+        "purposeInStoryline": "A record assumes every ruler balances at50cm.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Perform an approved balance or record the unmet practical opportunity. Use complete named records;actual actions need observed evidence.\nMaterials: TF5; TF6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the TF5 first balancing distance.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read approval/setup/secured-load requirements;teacher checks safe access.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "If approved,find actual balance point and perform both low-load comparisons with measured records;otherwise use TF6 and mark not performed.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Compare ideal moments with actual deviations and identify measurement limits.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit actual action/measurement evidence or an honest not-performed record.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Perform an approved balance or record the unmet practical opportunity.",
+        "learned": "The actual unloaded balance point and measured load positions matter to a real demonstration.",
+        "explained": "What is different between an ideal prediction and an observed balance? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 6,
+      "title": "How should a small balance mismatch be interpreted?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple how should a small balance mismatch be interpreted?",
+      "slo": {
+        "purpose": "Calculate supplied moment mismatches and qualify uncertainty.",
+        "knowledge": "A numerical discrepancy may reflect measurement conditions;uncertainty is needed before strong judgments.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "Does a small mismatch prove a false report?",
+        "purposeInStoryline": "A fictional record accuses a group because moments differ slightly.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Calculate supplied moment mismatches and qualify uncertainty. Use complete named records;actual actions need observed evidence.\nMaterials: TF6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether both TF6 trials are ideally balanced.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read supplied trial records and identify their provenance.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate left,right and net signed moments for each.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain exact-model imbalance and why missing uncertainty limits conclusions.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a net moment and distinguish supplied from actual evidence.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Calculate supplied moment mismatches and qualify uncertainty.",
+        "learned": "A numerical discrepancy may reflect measurement conditions;uncertainty is needed before strong judgments.",
+        "explained": "Does a small mismatch prove a false report? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 7,
+      "title": "Why can equal opposite forces still turn a body?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple why can equal opposite forces still turn a body?",
+      "slo": {
+        "purpose": "Calculate a pure couple about two pivots and verify line separation.",
+        "knowledge": "Equal opposite parallel separated forces have zero resultant force and a pivot-independent nonzero couple moment.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "Does zero resultant force imply zero turning effect?",
+        "purposeInStoryline": "A diagram labels a separated force pair fully balanced.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Calculate a pure couple about two pivots and verify line separation. Use complete named records;actual actions need observed evidence.\nMaterials: TF7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the sense of both TF7 moments about O.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read both force positions/directions and draw O/P.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate resultant and each signed contribution about both pivots;checkF×separation.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain pure couple,coincident-line exception and need for an opposing moment for static balance.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit both totals and a justified couple definition.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Calculate a pure couple about two pivots and verify line separation.",
+        "learned": "Equal opposite parallel separated forces have zero resultant force and a pivot-independent nonzero couple moment.",
+        "explained": "Does zero resultant force imply zero turning effect? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 8,
+      "title": "When are anti-parallel forces not a couple?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple when are anti-parallel forces not a couple?",
+      "slo": {
+        "purpose": "Calculate unequal anti-parallel forces about specified pivots.",
+        "knowledge": "A nonzero resultant makes moment generally depend on pivot;unequal anti-parallel forces are not a pure couple.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "Can one F×spacing shortcut handle unequal forces?",
+        "purposeInStoryline": "A report applies the pure-couple formula to different magnitudes.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Calculate unequal anti-parallel forces about specified pivots. Use complete named records;actual actions need observed evidence.\nMaterials: TF8. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether TF8 resultant force is zero.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read positions and draw both pivots/force lines.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate resultant and moments about O/P using each force separately.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Compare TF7 and reject a pivot-independent shortcut for TF8.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a correctly signed total and reason for pivot dependence.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Calculate unequal anti-parallel forces about specified pivots.",
+        "learned": "A nonzero resultant makes moment generally depend on pivot;unequal anti-parallel forces are not a pure couple.",
+        "explained": "Can one F×spacing shortcut handle unequal forces? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 9,
+      "title": "How can a turning model support a practical choice?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple how can a turning model support a practical choice?",
+      "slo": {
+        "purpose": "Calculate application forces and qualify tool recommendations.",
+        "knowledge": "A greater perpendicular arm can reduce required force,but product and safety constraints remain.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "Why is a longer arm not permission for an improvised extension?",
+        "purposeInStoryline": "A fictional repair note recommends standing on an extended wrench.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Calculate application forces and qualify tool recommendations. Use complete named records;actual actions need observed evidence.\nMaterials: TF9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which TF9 door arm needs less force.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read door/wrench targets and identify perpendicular distances.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate both door forces and wrench force;explain a line-through-hinge push.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Reject unsafe extensions and name real product/stability limits.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a justified application choice with one practical limit.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Calculate application forces and qualify tool recommendations.",
+        "learned": "A greater perpendicular arm can reduce required force,but product and safety constraints remain.",
+        "explained": "Why is a longer arm not permission for an improvised extension? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 10,
+      "title": "Where are moments used around the school?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple where are moments used around the school?",
+      "slo": {
+        "purpose": "Identify approved actual or supplied applications and explain their geometry.",
+        "knowledge": "Applications require pivot,line of action and use conditions;cards do not prove a walk or digital viewing.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "How can an observation be reported honestly?",
+        "purposeInStoryline": "A supplied door picture is claimed as a completed school survey.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Identify approved actual or supplied applications and explain their geometry. Use complete named records;actual actions need observed evidence.\nMaterials: TF10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict one safe object that could show a turning effect.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read TF10 route/privacy/operation limits and supplied alternatives.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "If approved,observe safe route objects without operation;otherwise draw supplied cards and label not walked.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Compare single-force and possible couple examples and discuss two daily benefits with limits.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit actual/supplied status,pivot/force sketch and application explanation.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Identify approved actual or supplied applications and explain their geometry.",
+        "learned": "Applications require pivot,line of action and use conditions;cards do not prove a walk or digital viewing.",
+        "explained": "How can an observation be reported honestly? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 11,
+      "title": "Which moment claims withstand an audit?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "turning effect force moments couple which moment claims withstand an audit?",
+      "slo": {
+        "purpose": "Use counterexamples to correct four turning-effect overclaims.",
+        "knowledge": "Perpendicular arms,resultant force,net moment and pivot choice are separate checks.",
+        "skills": "Draw force lines,calculate signed moments and apply a bounded turning model.",
+        "attitudes": "Respect others’ reasoning and record measurements/actions honestly.",
+        "keyInquiry": "What extra condition does each shortcut omit?",
+        "purposeInStoryline": "A four-claim poster confuses force cancellation with complete static balance.",
+        "safetyNotes": "No heavy loads,sharp pivots,tool repair or appliance operation. TF5 secured light loads/stable low support and TF10 route need teacher approval and supervision."
+      },
+      "overview": "Use counterexamples to correct four turning-effect overclaims. Use complete named records;actual actions need observed evidence.\nMaterials: TF11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose one doubtful TF11 claim and the relevant evidence.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before confirming answers.",
+          "sensemakingStrategy": "State the relevant force,arm or evidence question.",
+          "formativeAssessment": "Prediction refers to the given pivot/conditions."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read all four claims and assign counterexample records.",
+          "teacherMoves": "8 minutes. Clarify geometry,units,signs,provenance and any actual-activity approval.",
+          "sensemakingStrategy": "Separate given facts from assumptions.",
+          "formativeAssessment": "Pivot,force lines and conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Correct each with required numerical/force-balance evidence.",
+          "teacherMoves": "18 minutes. Check each contribution or approved actual action;require diagrams and inspectable calculations.",
+          "sensemakingStrategy": "Use common-pivot reasoning or actual measured records.",
+          "formativeAssessment": "Complete card-specific calculations/drawings or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain a daily application while bounding model and performance claims.",
+          "teacherMoves": "6 minutes. Ask which omitted condition changes the conclusion.",
+          "sensemakingStrategy": "Revise with evidence and a precise limit.",
+          "formativeAssessment": "Correction distinguishes net force,moment and model assumptions."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one complete counterexample and practical reflection.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual demonstrations/walk/digital actions separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,turning sense and evidence limits stated where relevant."
+        }
+      ],
+      "teacherReflection": "Record actual balance/route/digital use or not performed;confirm measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Use counterexamples to correct four turning-effect overclaims.",
+        "learned": "Perpendicular arms,resultant force,net moment and pivot choice are separate checks.",
+        "explained": "What extra condition does each shortcut omit? Include the relevant pivot and evidence limit."
+      }
+    },
+    {
+      "number": 12,
+      "title": "Can turning-effect evidence support an independent explanation?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.1: Turning Effect of Force",
+      "aresKeywords": "independent turning moments anti-parallel force assessment",
+      "slo": {
+        "purpose": "Independently determine moments,compare anti-parallel pairs and justify applications.",
+        "knowledge": "Common-pivot signed sums,perpendicular distance and force balance distinguish moments,couples and static equilibrium.",
+        "skills": "Independent geometry,calculation,force diagrams and qualified application.",
+        "attitudes": "Report assumptions and performance honestly.",
+        "keyInquiry": "Which conditions make a turning-effect conclusion valid?",
+        "purposeInStoryline": "An unfamiliar final record tests lever arms,couple invariance and application constraints.",
+        "safetyNotes": "Paper-only reference;no loads,walks or actual tool operation."
+      },
+      "overview": "Four independent sections using held-out TF12 only.\nMaterials: TF12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 10 min, Explain 12 min, Driving Question Board (DQB) Creation 8 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read TF12 and final instructions individually.",
+          "teacherMoves": "4 minutes. Distribute final-only reference/prompts and clarify procedure without hints.",
+          "sensemakingStrategy": "Identify pivots,forces and unknowns.",
+          "formativeAssessment": "No teaching cards or keys supplied."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete Section1 moment magnitudes,senses and diagrams.",
+          "teacherMoves": "10 minutes. Supervise without confirming values or geometry.",
+          "sensemakingStrategy": "Use perpendicular force-line distance.",
+          "formativeAssessment": "Individual calculations preserve units and unknown sense."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Complete Section2 anti-parallel pair comparisons.",
+          "teacherMoves": "12 minutes. Keep work independent and provide procedural support only.",
+          "sensemakingStrategy": "Sum contributions about each stated pivot.",
+          "formativeAssessment": "Resultants/couple distinction justified."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Complete Section3 bar balance and application calculations.",
+          "teacherMoves": "8 minutes. No hints or shared corrections.",
+          "sensemakingStrategy": "Apply moment and force conditions.",
+          "formativeAssessment": "Inspectably derived forces/reaction and use limit."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Complete Section4 reflection;check and submit.",
+          "teacherMoves": "6 minutes. Collect before any feedback or answer discussion.",
+          "sensemakingStrategy": "State one model/actual-action distinction.",
+          "formativeAssessment": "Complete independent response with evidence scope."
+        }
+      ],
+      "teacherReflection": "Final calculations cannot certify actual ruler balancing,school walk or animation viewing;retain separate observed evidence.",
+      "summaryTablePrompt": {
+        "observed": "Independently connect signed moments,couples and useful applications.",
+        "learned": "Geometry,force balance and pivot choice govern conclusions.",
+        "explained": "Defend a calculation and a bounded practical use."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "Turning Effect of Force",
+    "instructions": "Independent40minutes:4readTF12,10Section1,12Section2,8Section3,6Section4/check/submit. Use only final reference/prompts;no hints or keys. Draw force diagrams and show contributions with units/turning sense. No actual practical or digital action is inferred.",
+    "sections": [
+      {
+        "title": "1. Moments and perpendicular distances",
+        "prompt": "Draw CaseA force lines and pivot from TF12. Calculate signed moment for the downward force,magnitude for the slant force and moment for the line-through-pivot force. Explain why the slant turning sense is unknown and why a general handle length is not always the lever arm.",
+        "exemplar": "Down10N at+0.24m gives−2.4N m clockwise. Through-pivot line gives0. Slant magnitude12×0.15=1.8N m;no arrow sense supplied,so its turning sense is undetermined. Use shortest perpendicular pivot-to-line distance,not arbitrary application distance. Actual diagrams required."
+      },
+      {
+        "title": "2. Anti-parallel pairs and pivot choice",
+        "prompt": "For CaseB find resultant force and net moment about both O andP,showing separate signed contributions. Verify the couple formula using line separation. For CaseC find resultant force and moment about O;explain why it is not a pure couple.",
+        "exemplar": "B resultant0. O:+1.5+0.5=+2.0N m. P:−1.0+3.0=+2.0N m. Separation0.40m×5N=2.0N m,counterclockwise. C resultant2N up;O:+0.6+0.5=+1.1N m. Unequal pair has nonzero resultant,not a pure couple;moment need not be pivot-independent."
+      },
+      {
+        "title": "3. Balance and application",
+        "prompt": "For CaseD draw all forces and find F and pivot reaction for static balance. Calculate the door force for the given required moment and arm. Explain one condition or practical limit on applying the door/tool model.",
+        "exemplar": "Moment balance2×0.25=F×0.10 givesF5N. Force balance requires upward reaction7N;reaction acts through pivot. Door6/0.75=8N perpendicular. Actual product/stability/clearance/friction conditions require checking;no improvised extensions or force trial is authorised."
+      },
+      {
+        "title": "4. Daily-use explanation and evidence scope",
+        "prompt": "Explain another everyday turning-effect use with pivot,force direction and arm identified. State a useful benefit and limit. Explain why zero net moment alone is insufficient for full static equilibrium and whether these written records prove actual balancing,walking or digital actions.",
+        "exemplar": "A handle/scissors/tap example identifies geometry and useful leverage/controlled turning with product/safety limits. Static balance also needs zero resultant force. Supplied calculations do not prove actual metre-rule demonstration,school walk or animation use;separate observations are needed."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Lever-arm representation",
+        "excellent": "All diagrams/distances/moments correct with units and honest unknown sense.",
+        "proficient": "Correct principal moments and perpendicular-distance explanation.",
+        "developing": "Some correct calculation but geometry or sense incomplete.",
+        "belowExpectations": "Needs guided force-line and distance identification."
+      },
+      {
+        "criterion": "Anti-parallel reasoning",
+        "excellent": "Correct separate sums about both pivots,resultants,couple separation and unequal-pair distinction.",
+        "proficient": "Principal sums/couple reasoning correct with minor notation omission.",
+        "developing": "Some correct contributions but sign,pivot or couple definition confused.",
+        "belowExpectations": "Needs guided signed moments and resultant comparison."
+      },
+      {
+        "criterion": "Balance and useful application",
+        "excellent": "Correct full-force diagram,F/reaction/door calculation and practical limit.",
+        "proficient": "Valid balance/application calculations and meaningful limit.",
+        "developing": "Partial calculation or omitted force-balance/product condition.",
+        "belowExpectations": "Needs support to connect moments with force balance and applications."
+      },
+      {
+        "criterion": "Reflection and evidence scope",
+        "excellent": "Specific daily-use geometry,benefit,limit and static/performance distinctions.",
+        "proficient": "Valid use and meaningful model/action limit.",
+        "developing": "General use description or partial confusion about balance/performance.",
+        "belowExpectations": "Needs prompts to distinguish geometry,model and observed actions."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand3.1: Turning Effect of Force",
+    "drivingQuestion": "How is the turning effect of force used in our daily life?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "Which distance gives a moment?",
+        "observed": "Determine moments using perpendicular line-of-action distance.",
+        "learned": "Moment magnitude is force times perpendicular pivot-to-force-line distance;turning sense needs direction.",
+        "explained": "Why can a force act without a moment about a chosen point? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 2,
+        "title": "How do units and unknown forces connect?",
+        "observed": "Convert distances and rearrange the moment relation.",
+        "learned": "N cm and N m differ;the appropriate perpendicular distance must retain units.",
+        "explained": "Can the same numerical product mean different moments? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 3,
+        "title": "How do force direction and position set turning sense?",
+        "observed": "Draw and calculate signed moments about one common pivot.",
+        "learned": "Clockwise/anticlockwise sense depends on pivot,force position and direction.",
+        "explained": "Does every downward force turn clockwise? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 4,
+        "title": "What conditions balance an ideal bar?",
+        "observed": "Apply moment and force balance with explicit bar-weight assumptions.",
+        "learned": "A pivot reaction can have zero moment while contributing to force balance;bar weight matters off the pivot.",
+        "explained": "What changes if the bar is not weightless? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 5,
+        "title": "Can an actual metre rule demonstrate the principle?",
+        "observed": "Perform an approved balance or record the unmet practical opportunity.",
+        "learned": "The actual unloaded balance point and measured load positions matter to a real demonstration.",
+        "explained": "What is different between an ideal prediction and an observed balance? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 6,
+        "title": "How should a small balance mismatch be interpreted?",
+        "observed": "Calculate supplied moment mismatches and qualify uncertainty.",
+        "learned": "A numerical discrepancy may reflect measurement conditions;uncertainty is needed before strong judgments.",
+        "explained": "Does a small mismatch prove a false report? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 7,
+        "title": "Why can equal opposite forces still turn a body?",
+        "observed": "Calculate a pure couple about two pivots and verify line separation.",
+        "learned": "Equal opposite parallel separated forces have zero resultant force and a pivot-independent nonzero couple moment.",
+        "explained": "Does zero resultant force imply zero turning effect? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 8,
+        "title": "When are anti-parallel forces not a couple?",
+        "observed": "Calculate unequal anti-parallel forces about specified pivots.",
+        "learned": "A nonzero resultant makes moment generally depend on pivot;unequal anti-parallel forces are not a pure couple.",
+        "explained": "Can one F×spacing shortcut handle unequal forces? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 9,
+        "title": "How can a turning model support a practical choice?",
+        "observed": "Calculate application forces and qualify tool recommendations.",
+        "learned": "A greater perpendicular arm can reduce required force,but product and safety constraints remain.",
+        "explained": "Why is a longer arm not permission for an improvised extension? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 10,
+        "title": "Where are moments used around the school?",
+        "observed": "Identify approved actual or supplied applications and explain their geometry.",
+        "learned": "Applications require pivot,line of action and use conditions;cards do not prove a walk or digital viewing.",
+        "explained": "How can an observation be reported honestly? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 11,
+        "title": "Which moment claims withstand an audit?",
+        "observed": "Use counterexamples to correct four turning-effect overclaims.",
+        "learned": "Perpendicular arms,resultant force,net moment and pivot choice are separate checks.",
+        "explained": "What extra condition does each shortcut omit? Include the relevant pivot and evidence limit."
+      },
+      {
+        "number": 12,
+        "title": "Can turning-effect evidence support an independent explanation?",
+        "observed": "Independently connect signed moments,couples and useful applications.",
+        "learned": "Geometry,force balance and pivot choice govern conclusions.",
+        "explained": "Defend a calculation and a bounded practical use."
+      }
+    ]
+  }
+};

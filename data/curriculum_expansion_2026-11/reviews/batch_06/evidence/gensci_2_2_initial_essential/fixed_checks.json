@@ -1,0 +1,264 @@
+{
+  "registered_arithmetic": [
+    {
+      "id": "CF_NA_WATER_NA",
+      "expression": "2-2",
+      "expected": 0,
+      "evaluated": 0,
+      "independently_derived": 0
+    },
+    {
+      "id": "CF_NA_WATER_H",
+      "expression": "2*2-(2+2)",
+      "expected": 0,
+      "evaluated": 0,
+      "independently_derived": 0
+    },
+    {
+      "id": "CF_MG_HCL_H",
+      "expression": "2-2",
+      "expected": 0,
+      "evaluated": 0,
+      "independently_derived": 0
+    },
+    {
+      "id": "CF_CHLORINE_CL",
+      "expression": "2-(1+1)",
+      "expected": 0,
+      "evaluated": 0,
+      "independently_derived": 0
+    }
+  ],
+  "six_unique_reactions": [
+    {
+      "task": "CF4water",
+      "left": [
+        [
+          2,
+          "Na"
+        ],
+        [
+          2,
+          "H2O"
+        ]
+      ],
+      "right": [
+        [
+          2,
+          "NaOH"
+        ],
+        [
+          1,
+          "H2"
+        ]
+      ],
+      "left_atoms": {
+        "Na": 2,
+        "H": 4,
+        "O": 2
+      },
+      "right_atoms": {
+        "Na": 2,
+        "O": 2,
+        "H": 4
+      },
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "CF4oxygenrich",
+      "left": [
+        [
+          2,
+          "Na"
+        ],
+        [
+          1,
+          "O2"
+        ]
+      ],
+      "right": [
+        [
+          1,
+          "Na2O2"
+        ]
+      ],
+      "left_atoms": {
+        "Na": 2,
+        "O": 2
+      },
+      "right_atoms": {
+        "Na": 2,
+        "O": 2
+      },
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "CF5oxygen",
+      "left": [
+        [
+          2,
+          "Mg"
+        ],
+        [
+          1,
+          "O2"
+        ]
+      ],
+      "right": [
+        [
+          2,
+          "MgO"
+        ]
+      ],
+      "left_atoms": {
+        "Mg": 2,
+        "O": 2
+      },
+      "right_atoms": {
+        "Mg": 2,
+        "O": 2
+      },
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "CF5steam",
+      "left": [
+        [
+          1,
+          "Mg"
+        ],
+        [
+          1,
+          "H2O"
+        ]
+      ],
+      "right": [
+        [
+          1,
+          "MgO"
+        ],
+        [
+          1,
+          "H2"
+        ]
+      ],
+      "left_atoms": {
+        "Mg": 1,
+        "H": 2,
+        "O": 1
+      },
+      "right_atoms": {
+        "Mg": 1,
+        "O": 1,
+        "H": 2
+      },
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "CF5acid",
+      "left": [
+        [
+          1,
+          "Mg"
+        ],
+        [
+          2,
+          "HCl"
+        ]
+      ],
+      "right": [
+        [
+          1,
+          "MgCl2"
+        ],
+        [
+          1,
+          "H2"
+        ]
+      ],
+      "left_atoms": {
+        "Mg": 1,
+        "H": 2,
+        "Cl": 2
+      },
+      "right_atoms": {
+        "Mg": 1,
+        "Cl": 2,
+        "H": 2
+      },
+      "coefficient_gcd": 1
+    },
+    {
+      "task": "CF6water",
+      "left": [
+        [
+          1,
+          "Cl2"
+        ],
+        [
+          1,
+          "H2O"
+        ]
+      ],
+      "right": [
+        [
+          1,
+          "HCl"
+        ],
+        [
+          1,
+          "HClO"
+        ]
+      ],
+      "left_atoms": {
+        "Cl": 2,
+        "H": 2,
+        "O": 1
+      },
+      "right_atoms": {
+        "H": 2,
+        "Cl": 2,
+        "O": 1
+      },
+      "coefficient_gcd": 1
+    }
+  ],
+  "final_records_rechecked": [
+    "CF5acid",
+    "CF6water"
+  ],
+  "first20_sort": {
+    "alkali": [
+      "Li",
+      "Na",
+      "K"
+    ],
+    "alkaline_earth": [
+      "Be",
+      "Mg",
+      "Ca"
+    ],
+    "halogen": [
+      "F",
+      "Cl"
+    ],
+    "noble": [
+      "He",
+      "Ne",
+      "Ar"
+    ],
+    "other": [
+      "H",
+      "B",
+      "C",
+      "N",
+      "O",
+      "Al",
+      "Si",
+      "P",
+      "S"
+    ],
+    "transition": []
+  },
+  "all_pass": true
+}

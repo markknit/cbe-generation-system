@@ -1,0 +1,481 @@
+{
+  "independent_registry": [
+    {
+      "id": "LM_DISP",
+      "expression": "4-3",
+      "reviewer_result": 1,
+      "author_expected": 1,
+      "pass": true
+    },
+    {
+      "id": "LM_AVGVEL",
+      "expression": "1/7",
+      "reviewer_result": 0.14285714285714285,
+      "author_expected": 0.14285714285714285,
+      "pass": true
+    },
+    {
+      "id": "LM_ACC",
+      "expression": "(-1-5)/3",
+      "reviewer_result": -2.0,
+      "author_expected": -2,
+      "pass": true
+    },
+    {
+      "id": "LM_ZERO_T",
+      "expression": "5/2",
+      "reviewer_result": 2.5,
+      "author_expected": 2.5,
+      "pass": true
+    },
+    {
+      "id": "LM_V",
+      "expression": "3+2*4",
+      "reviewer_result": 11,
+      "author_expected": 11,
+      "pass": true
+    },
+    {
+      "id": "LM_S",
+      "expression": "2*4+0.5*1.5*4**2",
+      "reviewer_result": 20.0,
+      "author_expected": 20,
+      "pass": true
+    },
+    {
+      "id": "LM_NT_V",
+      "expression": "sqrt(4**2+2*3*8)",
+      "reviewer_result": 8.0,
+      "author_expected": 8,
+      "pass": true
+    },
+    {
+      "id": "LM_STOP_S",
+      "expression": "12*4+0.5*(-3)*4**2",
+      "reviewer_result": 24.0,
+      "author_expected": 24,
+      "pass": true
+    },
+    {
+      "id": "LM_PIECE_S",
+      "expression": "4*3+0.5*(4+10)*3",
+      "reviewer_result": 33.0,
+      "author_expected": 33,
+      "pass": true
+    },
+    {
+      "id": "LM_FRAME_A",
+      "expression": "((0.45-0.20)/0.1-(0.20-0.05)/0.1)/0.1",
+      "reviewer_result": 9.999999999999996,
+      "author_expected": 10,
+      "pass": true
+    },
+    {
+      "id": "LM_FALL_B_T",
+      "expression": "sqrt(2*1.25/10)",
+      "reviewer_result": 0.5,
+      "author_expected": 0.5,
+      "pass": true
+    },
+    {
+      "id": "LM_FALL_C_S",
+      "expression": "2*0.4+0.5*10*0.4**2",
+      "reviewer_result": 1.6,
+      "author_expected": 1.6,
+      "pass": true
+    },
+    {
+      "id": "LM_UP_H",
+      "expression": "10*1-0.5*10*1**2",
+      "reviewer_result": 5.0,
+      "author_expected": 5,
+      "pass": true
+    },
+    {
+      "id": "LM_UP_HALF_S",
+      "expression": "10*0.5-0.5*10*0.5**2",
+      "reviewer_result": 3.75,
+      "author_expected": 3.75,
+      "pass": true
+    },
+    {
+      "id": "LM_FINAL_DISP",
+      "expression": "5-2",
+      "reviewer_result": 3,
+      "author_expected": 3,
+      "pass": true
+    },
+    {
+      "id": "LM_FINAL_VEL",
+      "expression": "3/7",
+      "reviewer_result": 0.42857142857142855,
+      "author_expected": 0.42857142857142855,
+      "pass": true
+    },
+    {
+      "id": "LM_FINAL_B_V",
+      "expression": "2+3*4",
+      "reviewer_result": 14,
+      "author_expected": 14,
+      "pass": true
+    },
+    {
+      "id": "LM_FINAL_B_S",
+      "expression": "2*4+0.5*3*4**2",
+      "reviewer_result": 32.0,
+      "author_expected": 32,
+      "pass": true
+    },
+    {
+      "id": "LM_FINAL_C_T",
+      "expression": "10/2",
+      "reviewer_result": 5.0,
+      "author_expected": 5,
+      "pass": true
+    },
+    {
+      "id": "LM_FINAL_C_S",
+      "expression": "10*5-0.5*2*5**2",
+      "reviewer_result": 25.0,
+      "author_expected": 25,
+      "pass": true
+    },
+    {
+      "id": "LM_FINAL_D_S",
+      "expression": "0.5*10*0.6**2",
+      "reviewer_result": 1.7999999999999998,
+      "author_expected": 1.8,
+      "pass": true
+    },
+    {
+      "id": "LM_FINAL_D_V",
+      "expression": "10*0.6",
+      "reviewer_result": 6.0,
+      "author_expected": 6,
+      "pass": true
+    }
+  ],
+  "independent_all_task_solutions": {
+    "LM1": {
+      "distance_m": 7,
+      "displacement_m": 1,
+      "average_speed_m_s": 1.0,
+      "average_velocity_m_s": 0.14285714285714285
+    },
+    "LM2": {
+      "t_s": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "positive_positions_m": [
+        0,
+        6,
+        12,
+        18
+      ],
+      "negative_positions_m": [
+        18,
+        12,
+        6,
+        0
+      ],
+      "interval_velocity_positive_m_s": [
+        3,
+        3,
+        3
+      ],
+      "interval_velocity_negative_m_s": [
+        -3,
+        -3,
+        -3
+      ]
+    },
+    "LM3": {
+      "a_m_s2": -2.0,
+      "zero_v_time_s": 2.5,
+      "graph_points_t_v": [
+        [
+          0,
+          5
+        ],
+        [
+          2.5,
+          0
+        ],
+        [
+          3,
+          -1
+        ]
+      ],
+      "optional_integral_displacement_m": 6.0,
+      "optional_path_length_m": 6.5
+    },
+    "LM4": {
+      "A_final_v_m_s": 11,
+      "B_time_s": 6.0,
+      "C_a_m_s2": 2.0
+    },
+    "LM5": {
+      "s_m": 20.0,
+      "final_v_m_s": 8.0,
+      "endpoint_mean_v_m_s": 5.0,
+      "independent_trapezoid_area_m": 20.0,
+      "incorrect_unsquared_value": 11.0,
+      "note": "Velocity stayspositive so distance20m; omitted t² also breaks dimensions."
+    },
+    "LM6": {
+      "v_squared_m2_s2": 64,
+      "speed_m_s": 8,
+      "required_forward_velocity_m_s": 8,
+      "algebraic_roots_m_s": [
+        -8,
+        8
+      ],
+      "first_rest_t_s": 4.0,
+      "first_rest_s_m": 24.0,
+      "note": "Do not extend a braking-to-first-rest model past its domain."
+    },
+    "LM7": {
+      "graph_points_t_v": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          10
+        ]
+      ],
+      "segment_accelerations_m_s2": [
+        0,
+        2
+      ],
+      "areas_m": [
+        12,
+        21
+      ],
+      "total_s_m": 33,
+      "total_distance_m": 33,
+      "average_v_m_s": 5.5,
+      "incorrect_single_ramp_area_m": 42.0
+    },
+    "LM8": {
+      "actual_data": "NONE supplied; school-approved observed record required",
+      "repeat_count": 3,
+      "max_height_m": 0.5,
+      "optional_ideal_max_height_fall_time_s": 0.31622776601683794,
+      "note": "0.316s ideal time illustrates why a low hand-timed drop cannot establish precise g; not an observed time. Downward observation alone is not a quantitative acceleration measurement."
+    },
+    "LM9": {
+      "times_s": [
+        0,
+        0.1,
+        0.2,
+        0.3
+      ],
+      "positions_m": [
+        0,
+        0.05,
+        0.2,
+        0.45
+      ],
+      "interval_average_v_m_s": [
+        0.5,
+        1.5000000000000002,
+        2.5000000000000004
+      ],
+      "midpoint_times_s": [
+        0.05,
+        0.15000000000000002,
+        0.25
+      ],
+      "successive_acceleration_m_s2": [
+        10.000000000000002,
+        10.000000000000002
+      ],
+      "ideal_formula_positions_m": [
+        0.0,
+        0.05,
+        0.2,
+        0.44999999999999996
+      ],
+      "actual_video": "not supplied"
+    },
+    "LM10": {
+      "A_s_m": 5.0,
+      "A_v_m_s": 10,
+      "B_t_s": 0.5,
+      "B_v_m_s": 5,
+      "C_s_m": 1.6,
+      "C_v_m_s": 6.0,
+      "note": "Paper heights5m/1.25m/1.6m do not change LM8actual0.50m maximum."
+    },
+    "LM11": {
+      "apex_t_s": 1,
+      "apex_s_m": 5.0,
+      "apex_v_m_s": 0,
+      "apex_a_m_s2": -10,
+      "return_t_s": 2,
+      "return_s_m": 0.0,
+      "return_v_m_s": -10,
+      "t_half_s": {
+        "s_m": 3.75,
+        "v_m_s": 5.0
+      },
+      "t_one_half_s": {
+        "s_m": 3.75,
+        "v_m_s": -5.0
+      }
+    },
+    "LM12": {
+      "double_height_ideal_impact_speed_factor": 1.4142135623730951,
+      "note": "Road contact/friction/drive forces prevent gravity-only freefall classification; ideal fall speed scales with sqrt(height),not height. No safety-system certification or actual road/height/digital activity follows."
+    },
+    "LM13/I1": {
+      "distance_m": 7,
+      "displacement_m": 3,
+      "average_speed_m_s": 1,
+      "average_velocity_m_s": 0.42857142857142855
+    },
+    "LM13/I2": {
+      "B_v_m_s": 14,
+      "B_s_m": 32.0,
+      "B_endpoint_area_m": 32.0,
+      "C_first_rest_t_s": 5,
+      "C_s_m": 25.0
+    },
+    "LM13/I3": {
+      "D_s_m": 1.7999999999999998,
+      "D_v_m_s": 6.0,
+      "E_interval_average_v_m_s": [
+        0.5,
+        1.5000000000000002,
+        2.5000000000000004
+      ],
+      "apex_v_m_s": 0,
+      "apex_acceleration": "downward g; sign depends coordinate",
+      "actual_investigation": "not established"
+    },
+    "LM13/I4": {
+      "note": "Two bounded precautions may preventfalls/excludepeople fromapproveddropzone and requirequalifiedroadcontrols; written model does not establish real safety,dropactivity or digitalresearch."
+    }
+  },
+  "checks": {
+    "all22registry": true,
+    "LM5_two_routes_agree": true,
+    "LM7_areas_match_piecewise_models": true,
+    "LM9_formula_frames_match": true,
+    "LM9_averages_are_midpoint_velocities_under_model": true,
+    "LM11_sameposition_oppositevelocities": true,
+    "all13lesson40min": true,
+    "final4_8_12_10_6": true,
+    "all_lesson_maps_match": true,
+    "all16assessmentmaps_match_tasks": true,
+    "four_rubric_links": true,
+    "four_source_outcomes_final": true,
+    "actual39blank_summary_cells": true
+  },
+  "checks_pass": 13,
+  "checks_total": 13,
+  "confirmed_artifact_defect": {
+    "embedded_positions": {
+      "StudentMaterials": [
+        {
+          "paragraph_index": 12,
+          "relationship": {
+            "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed": "rId10"
+          },
+          "preceding_text": [
+            "LM5 — Displacement under constant acceleration",
+            "Givenu2m/s,a1.5m/s²,t4s,calculate displacement with s=ut+½at² and final velocity with v=u+at. Check displacement using average velocity (u+v)/2 times time. Explain when displacement equals distance in this example. Then audit the incorrect calculation2×4+½×1.5×4,which omits the time square."
+          ],
+          "confirmed": "Referenced actual image after LM5 or LM8; graph data incompatible with current task."
+        },
+        {
+          "paragraph_index": 19,
+          "relationship": {
+            "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed": "rId11"
+          },
+          "preceding_text": [
+            "LM8 — Approved low-drop investigation",
+            "Actual observation only after teacher approves a light soft ball,stable floor-level catch tray,clear exclusion zone and maximum drop height0.50m;no climbing,stairs,windows,roads,hard/heavy objects or people below. Teacher marks a visible scale,supervises a release from rest without throwing,and retrieves only after rest. Repeat3times,recordactualheight,object,release condition,observer/date/role and downward motion. If approved video/frame capture is available,record actual frame times and positions against scale to examine increasing spacing for equal intervals;ordinary human stopwatch timing over this low height cannot establish precise g. Do not claim that looking alone measures acceleration or that ordinary air-resisted motion is exact free fall. If approval/provision missing,use LM9 supplied frame data and mark actual investigation not performed. Compare an ideal gravity-only model with real air resistance;no actual values are prefilled."
+          ],
+          "confirmed": "Referenced actual image after LM5 or LM8; graph data incompatible with current task."
+        }
+      ],
+      "MaterialsTeacherKey": [
+        {
+          "paragraph_index": 20,
+          "relationship": {
+            "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed": "rId10"
+          },
+          "preceding_text": [
+            "LM5 — Displacement under constant acceleration",
+            "Givenu2m/s,a1.5m/s²,t4s,calculate displacement with s=ut+½at² and final velocity with v=u+at. Check displacement using average velocity (u+v)/2 times time. Explain when displacement equals distance in this example. Then audit the incorrect calculation2×4+½×1.5×4,which omits the time square."
+          ],
+          "confirmed": "Referenced actual image after LM5 or LM8; graph data incompatible with current task."
+        },
+        {
+          "paragraph_index": 33,
+          "relationship": {
+            "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed": "rId11"
+          },
+          "preceding_text": [
+            "LM8 — Approved low-drop investigation",
+            "Actual observation only after teacher approves a light soft ball,stable floor-level catch tray,clear exclusion zone and maximum drop height0.50m;no climbing,stairs,windows,roads,hard/heavy objects or people below. Teacher marks a visible scale,supervises a release from rest without throwing,and retrieves only after rest. Repeat3times,recordactualheight,object,release condition,observer/date/role and downward motion. If approved video/frame capture is available,record actual frame times and positions against scale to examine increasing spacing for equal intervals;ordinary human stopwatch timing over this low height cannot establish precise g. Do not claim that looking alone measures acceleration or that ordinary air-resisted motion is exact free fall. If approval/provision missing,use LM9 supplied frame data and mark actual investigation not performed. Compare an ideal gravity-only model with real air resistance;no actual values are prefilled."
+          ],
+          "confirmed": "Referenced actual image after LM5 or LM8; graph data incompatible with current task."
+        }
+      ]
+    },
+    "graph1_sha256": "0abc74762b0987c5e805a89b3699d2606f5d6a3b7a243956bd1359de59bc3e06",
+    "graph1_points_t_s_x_m": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        8,
+        -2
+      ]
+    ],
+    "graph2_sha256": "8a953fdb52665bfa85db27ab70e0775bc51261cbd082df55f9e759874b097af7",
+    "graph2_points_t_s_v_m_s": [
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        -1
+      ],
+      [
+        6,
+        -1
+      ]
+    ],
+    "scope": "Both actual student/private Word companions; current material records have no diagram keys. Teacher may not infer these are current LM5/LM8 data."
+  }
+}

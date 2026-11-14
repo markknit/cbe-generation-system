@@ -1,0 +1,61 @@
+# GS3.1 Turning Effect of Force — independent initial content review
+
+**Verdict: ACCEPTED for the written/model content, with actual source activities and classroom confirmation separate.** No confirmed mathematical, task-validity, substantive source-fidelity, mapping/rubric, unsafe-procedure or five-Word propagation defect was found. Reviewer: core27. No author/source/output/pipeline/acceptance edits and no build/render. Preserve this initial report unchanged.
+
+Current content fingerprint: `d79c0882db7e510ae374d49577a545559671f8ee98c24acf89e74f7a82fb0edd`.
+
+## Source and full content coverage
+
+Visually inspected the complete native source image covering printed33–34 before authored-task review. Read canonical source, all12 materials and teacher keys, complete blueprint, all12 complete lesson records (60 phase rows), four final prompts/exemplars and four four-level rubric criteria (16 descriptors). All four source outcomes, three content areas, inquiry, seven experiences, competencies/values/PCI have substantive coverage. The source has no official lesson allocation; twelve40minute lessons are expressly teaching design. Printed continuation34 includes the final peer-discussion experience and competencies/values/PCI; those were included. Line breaks, source line-end hyphens and typographic plural formatting do not change the required activities.
+
+Independently derived every fixed moment, sign, conversion, required force/arm, pivot reaction and numerical counterexample, including unregistered teacher answers and final data. `fixed_checks.py` and `fixed_checks.json` record92/92 supplementary checks, including all19 registry values. This reader uses exact rational arithmetic for the signed cross product `(x−pivot_x)Fy−(y−pivot_y)Fx`, sums each force contribution, solves balance algebraically and verifies the pivot-translation identity. It does not evaluate registered expression strings as its solution method. Open applications/limits and qualitative force-diagram requirements were checked separately against the task evidence.
+
+## Independent solutions and geometry
+
+- TF1:down10N at+0.30m gives−3N m (clockwise); a horizontal force on a line throughO gives0; slant magnitude10×0.18=1.8N m. Its application distance0.30m is not the lever arm. The geometry is feasible, but the supplied line offset without force-arrow direction does not identify turning sense. A learner may draw a compatible line/perpendicular with the arrow explicitly unspecified or show alternatives; a unique physical arrow must not be invented. Moment is not force alone; N m is the moment unit here and does not establish work done.
+- TF2:25cm=0.25m,12×0.25=3N m;2.4/0.40=6N;1.8/6=0.30m.300N cm=3N m. All model units and rearrangements are correct.
+- TF3,anticlockwise positive:A−0.8,B+0.8,C+1.2,D−1.2N m. A+B+C=+1.2N m; its resultant force is5N downward. Signs follow position and arrow direction about the same pivot, not an up/down-only shortcut. Neither zero resultant alone nor zero moment alone establishes complete static balance; the usual static model also concerns a body at rest with zero net external force and moment.
+- TF4 weightless case:0.60=0.20F givesF3N downward; reaction5N upward. Adding1N at+0.10m gives0.60=0.20F+0.10,soF2.5N and reaction5.5N. Both full free-body models independently satisfy zero force and moment. The reaction passes throughO and has zero moment there while contributing to force balance. The key correctly refuses to silently assume an unstated uniform bar/centre or ignore off-centre weight.
+- TF5 ideal first prediction:0.5N at0.20m requires1N at0.10m opposite, each0.10N m. Second0.5N at0.15m each side gives0.075N m each. Actual balance point is measured, not assumed50cm, so rule self-weight has approximately zero pivot moment in the near-horizontal demonstration. No unprovided mass-to-weight g conversion is needed because loads are labelled in newtons.
+- TF6 trial1:left+0.10,right−0.10,net0N m. Trial2:left+0.075,right−0.080,net−0.005N m clockwise. It is not exact ideal moment balance; uncertainty/friction/tilt/provenance must be considered before judging measurements or honesty. Supplied data are not learner performance.
+- TF7 equal pair:resultant0;aboutO,+1.2+1.2=+2.4N m;aboutP−0.50m,−1.8+4.2=+2.4N m. Separation0.40m gives6×0.40=2.4N m anticlockwise. Independent translation checks confirm moment invariance for this pure couple. Equal/opposite separated forces do not make a complete static system without an opposing moment; coincident opposite lines cancel both force and moment.
+- TF8 unequal pair:resultant2N upward;aboutO,+0.8+1.2=+2.0N m;aboutP,−1.2+4.2=+3.0N m. The moment difference1.0N m equals0.50m×2N from shifting the pivot. General pivot translation subtracts displacement crossed with resultant force; it vanishes for a pure couple and does not vanish here. Unequal anti-parallel forces are not a pure couple and have no arbitrary pivot-independent chosen-force×spacing shortcut.
+- TF9:door forces8/0.20=40N and8/0.80=10N;wrench6/0.30=20N. A line through the hinge axis has zero perpendicular lever arm. These are ideal calculations with product/friction/stability/clearance limits, not instructions to test real fittings or improvise extensions. TF10's opposed-finger tap example is correctly conditional: equal,opposite,parallel,separated forces can form a couple, not every grasp automatically.
+- TF11 counterexamples correctly use TF7's zero-resultant/nonzero2.4N m and TF8's2.0/3.0N m pivot-dependent totals; zero net force is also required in the moment-balance claim. Daily-use explanation requires geometry and a limit rather than actual-tool operation.
+- FinalTF12:A down10N at+0.24m gives−2.4N m;throughO force0;slant12×0.15=1.8N m,arrow sense unknown. B resultant0;O+1.5+0.5=+2.0N m;P−1.0+3.0=+2.0N m;5×0.40=2.0N m. C resultant2N up andO+0.6+0.5=+1.1N m,not a pure couple. D moment balance0.50=0.10F givesF5N,upward reaction7N;door6/0.75=8N. Full diagrams,force lines/contributions,units and the unknown-sense distinction are explicitly required. No supplied drawing asset exists; learner-drawn evidence is required rather than prose alone.
+
+Primary physics checks agree with these boundaries: [OpenStax torque](https://openstax.org/books/university-physics-volume-1/pages/10-6-torque) gives perpendicular-arm/cross-product meaning; [static-equilibrium conditions and pivot translation](https://openstax.org/books/university-physics-volume-1/pages/12-1-conditions-for-static-equilibrium) distinguishes resultant force,net moment and rest. No apparatus or practical procedure from external pages is adopted.
+
+## Task mapping, final and source-performance limits
+
+Every lesson/task mapping was checked against its actual card/phases. a has explicit determination/calculation/geometry, b has equal and unequal anti-parallel calculations, c has geometry-based applications and conditional actual balancing/school observations, and d has daily benefit/limit explanations without an inferred enduring disposition. The four final task/rubric links match the elicited moment representation,anti-parallel reasoning,balance/application and everyday-use/evidence-scope tasks. The top descriptors ask for actual drawings/correct separate contributions, and full moment+force conditions rather than an answer-only shortcut. No unelicited outcome claim was found.
+
+Final instructions and L12 agree4read/10I1/12I2/8I3/6I4-check-submit=40. Procedure-only support, independence, no hints/shared corrections and collection before feedback are explicit. The final has enough supplied geometry for the requested quantities; unknown slant sense is an intentional assessed limit. A written final does not certify metre-rule demonstration,school walk,animation/simulation viewing,real-life video viewing or digital research.
+
+TF5 is conditional on teacher-approved stable low support,light rule,secured labelled loads no more than1N each,clear drop/pinch zones and supervised setup/removal. It requires finding actual unloaded balance point,actual near-horizontal observations/forces/perpendicular distances,roles/date/deviations and repeat comparisons. Sharp pivots/heavy masses/fingers below loads/unattended apparatus are prohibited. If provision is unavailable,TF6 is an honest supplied-record alternative and demonstration remains unperformed. Actual conditions/friction/nonuniformity and measurement uncertainty remain relevant. This review supplies no local risk approval or performance observation.
+
+TF10 requires a school-approved designated safe supervised route and privacy restrictions,with no appliance/tool operation,traffic/workshop entry or disassembly. Supplied fictional door/scissors/tap cards provide conceptual application work if the walk cannot occur; actual route/object observations remain separately recorded. Digital sources/animations/simulations and real-life application video clips must be previewed/provided and actual title/link/action evidence recorded. No such source performance is inferred from print notes. Individual actually observed honesty/respect remain task-level evidence. Setup/route/accessibility time and40minute final pacing require teacher confirmation; no classroom timing trial is claimed.
+
+## Actual five Word companions and exact binding
+
+Read extracted paragraph text/OOXML from the five current actual companions.373/373 propagation/structure checks pass: all24 student/teacher material strings reach MaterialsTeacherKey;TF1–11 student tasks reach StudentMaterials;TF12 student reference reaches AssessmentMaterials and is absent from teaching student materials;its private teacher answer is absent from the student assessment reference. All12 lesson titles/purpose/knowledge/safety/reflections and all240 phase-cell strings reach CompactTeacherGuide. All four source outcome strings propagate;every lesson totals40minutes. StudentSummaryTable has12 lesson rows and exactly36 empty evidence cells. SeaVuria/ARES,ChatGPT/Codex/OpenAI andCCBY-NC4.0 attribution markers are present in every companion. Zero media/embedded objects occur in the five ZIPs,consistent with these learner-drawn/model records and no supplied graphic claim. The final prompts remain canonical pending standard documents; AssessmentMaterials is their held reference companion,not a standalone full paper.
+
+All five canonical-input and five Word hashes were rechecked immediately before finalization and remain unchanged. SourcePDF,canonical-source,crop and verification-evidence hashes pass4/4. Exact original canonical bytes,source bindings,extracted texts and reproducible checks are in `evidence/gensci_3_1_core27/`.
+
+| Source binding | SHA-256 |
+|---|---|
+| `data/curriculum_expansion_2026-11/sources/gensci_3_1.json` | `803e6de88dea717867e4cbe70370b5979e1ecca53bd766eeb706adf58353bf78` |
+| `data/curriculum_expansion_2026-11/sources/gensci_3_1.verification.json` | `58d0547a47f23d96569ae7bb4adf0f6b9bf22dd46f87e4842427d8775b4a45e1` |
+| `CBE_Curriculums/Grade 10/STEM/General Science Grade 10 - July 2025.pdf` | `ee989d27038d838096438ff16a02fe1be0abc81e7010168036fcb9a125d0d0fd` |
+| `data/curriculum_expansion_2026-11/sources/gensci_3_1_source.png` | `f4ec761c797a532c61d66ac34eaa19b159445cafee454d0d873f070055c66a1a` |
+| `data/curriculum_expansion_2026-11/evidence/gensci_3_1_source_verification.md` | `edbdf373f5dd4b3a3ab39d5ce481313e6879c6021c20961d4b31524f927f6a37` |
+
+| Actual companion | SHA-256 |
+|---|---|
+| AssessmentMaterials | `2d949e85a92d74d972fe0547d3e15a2ee3435c0e7d0231ac2c08b35afcb6c0f3` |
+| CompactTeacherGuide | `099be934cad39b3fd91005ebf7de50570b7ef999a17e03b074a785e608216eb0` |
+| MaterialsTeacherKey | `40de966fd5225c0b4a0b9d7f596a3065eba9e144012b23c70149845d1ff713ad` |
+| StudentMaterials | `725f84eb7565096b04a836a9347cf8b0de20135db2295fe13efc942254b0d30d` |
+| StudentSummaryTable | `424989702fdf3a14c434533a392ed34823997cd6d0c96677e156c32e7c63c7c9` |
+
+No rendered deliverable/PDF page was inspected and no layout approval is claimed; source pixels were the only visual image review. Content acceptance does not fabricate actual source activities,local safety approval,observed attitudes,device access or classroom pacing. No correction is required within this reviewed content scope.

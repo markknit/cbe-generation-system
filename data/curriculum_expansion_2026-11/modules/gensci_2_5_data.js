@@ -1,0 +1,968 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "General Science",
+    "grade": 10,
+    "substrand_id": "2.5",
+    "substrand_name": "Rates of Reactions",
+    "outputDir": "v2/General_Science/SS2.5_Rates_of_Reactions",
+    "filePrefix": "Codex_General_Science_Rates_of_Reactions",
+    "titleDoc": "GENERAL SCIENCE GRADE 10: RATES OF REACTIONS",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 2.5 • 13 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "2.0 Matter and Chemical Reactions",
+    "substrand": "Sub-Strand2.5: Rates of Reactions",
+    "sep": "Plan controlled comparisons,record actual actions,analyse rates/graphs and distinguish mechanisms from unsupported generalisations.",
+    "careers": "Illustrative process engineering,food production and laboratory quality roles.",
+    "focus": "Rates of reactions; Factors affecting the rates of reactions",
+    "phenomenon": "A fictional process poster claims every increase in heat,pressure,light or concentration always improves all reactions and that supplied data prove an experiment was performed.",
+    "supportingPhenomena": "Time-volume records,conditional supervised open-cup endpoint comparison,enzyme/gas/catalyst examples and constrained process choices.",
+    "drivingQuestion": "How do various factors affect the rate of reactions?",
+    "storylineThread": "Meaning→graph→actual-approved evidence→repeats→temperature→concentration→surface→pressure→catalyst→light→optimum→audit→independent decision.",
+    "content": "Rates of reactions; Factors affecting the rates of reactions",
+    "coreCompetencies": "Communication and collaboration: as the learner discusses with peers the factors that affect the rate of chemical reactions.\nDigital literacy: as the learner uses digital devices and print media to research on the importance of optimum conditions in biological, chemical and physical processes.",
+    "values": "Responsibility: as the learner carefully uses digital devices to search for information on the importance of optimum conditions in industrial processes.\nRespect: as the learner respects others’ opinion while discussing with peers in a group the importance of efficient industrial processes.",
+    "pcis": "Safety and security: as the learner observes safety measures when carrying out activities to investigate rates of reactions.",
+    "gradeLevel": "10",
+    "subject": "General Science",
+    "totalDuration": "13 lessons × 40 minutes = 520 minutes",
+    "learningOutcomes": "describe rate of chemical reactions,\nperform experiments involving the rate of chemical reactions,\nexplain factors that influence the rate of reactions in biological, chemical and physical processes,\nappreciate the importance of manipulating factors affecting the rate of chemical and biological processes in day-to-day life."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "What does reaction rate measure?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence what does reaction rate measure?",
+      "slo": {
+        "purpose": "Define rate and distinguish a measured proxy from final amount.",
+        "knowledge": "Rate tracks change per time;chemical reaction involves reactant/product changes,while physical processes can also have rates.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "Can equal final amounts form at different rates?",
+        "purposeInStoryline": "Two supplied records produce the same gas amount in different times.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Define rate and distinguish a measured proxy from final amount. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which RR1 record has greater average rate.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read the two amount/time records and identify units.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate both average volume rates and compare with a labelled definition.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Distinguish rusting from physical salt dissolution and final amount from rate.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one calculation and one conceptual distinction.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Define rate and distinguish a measured proxy from final amount.",
+        "learned": "Rate tracks change per time;chemical reaction involves reactant/product changes,while physical processes can also have rates.",
+        "explained": "Can equal final amounts form at different rates? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 2,
+      "title": "How does a graph describe change through time?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence how does a graph describe change through time?",
+      "slo": {
+        "purpose": "Plot supplied product records and calculate interval averages.",
+        "knowledge": "Graph slope gives interval averages from tabulated changes;plateau does not identify a reaction cause by itself.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "Does every part of a curve have the same rate?",
+        "purposeInStoryline": "A graph caption calls every interval the initial rate.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Plot supplied product records and calculate interval averages. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict how a flattening volume curve differs from a straight line.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read RR2 and draw labelled axes with all six coordinates.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate five interval rates and overall0–40s average;annotate the plot.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain declining slope and plateau without identifying an exhausted reactant.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit an interval calculation and a precise graph-evidence limit.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Plot supplied product records and calculate interval averages.",
+        "learned": "Graph slope gives interval averages from tabulated changes;plateau does not identify a reaction cause by itself.",
+        "explained": "Does every part of a curve have the same rate? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 3,
+      "title": "What would count as an actual approved experiment?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence what would count as an actual approved experiment?",
+      "slo": {
+        "purpose": "Carry out and record an approved apparent-rate comparison or retain not-performed status.",
+        "knowledge": "A reproducible operational endpoint and actual observed action are needed for experimental evidence.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "Which part of a plan becomes evidence only when performed?",
+        "purposeInStoryline": "A practical checklist confuses supplied data with student timing.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Carry out and record an approved apparent-rate comparison or retain not-performed status. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR3; RR4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Identify the intended changed factor and predict an endpoint comparison.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read RR3 approval/equipment/safety requirements;teacher verifies access and product.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "If fully approved,perform three trials per temperature with supervised roles and actual records;otherwise analyse RR4 with experiment not performed.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Check controls,endpoint deviations and limitations from dissolution/effervescence.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit actual role/temperature/time/safety records or honest unperformed status.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Carry out and record an approved apparent-rate comparison or retain not-performed status.",
+        "learned": "A reproducible operational endpoint and actual observed action are needed for experimental evidence.",
+        "explained": "Which part of a plan becomes evidence only when performed? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 4,
+      "title": "How do repeats change a comparison?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence how do repeats change a comparison?",
+      "slo": {
+        "purpose": "Compute means,ranges and apparent endpoint indices with limitations.",
+        "knowledge": "Repeated endpoint times support a bounded comparison;1/time is not a measured volume rate or intrinsic constant.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "What can six supplied times tell us?",
+        "purposeInStoryline": "A report presents reciprocal time as cubic centimetres per second.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Compute means,ranges and apparent endpoint indices with limitations. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which RR4 condition reaches the endpoint sooner.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read all six supplied times and label provenance.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate means,ranges and reciprocal mean times with units/three significant figures.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain the comparison and name two controls and improvements.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a correctly labelled index and one limitation.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Compute means,ranges and apparent endpoint indices with limitations.",
+        "learned": "Repeated endpoint times support a bounded comparison;1/time is not a measured volume rate or intrinsic constant.",
+        "explained": "What can six supplied times tell us? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 5,
+      "title": "Does higher temperature always help?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence does higher temperature always help?",
+      "slo": {
+        "purpose": "Explain temperature effects with a biological counterexample and daily-use limit.",
+        "knowledge": "Kinetic energy and activation barriers matter;enzyme activity may decline at high temperature.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "Does the highest tested condition establish an exact optimum?",
+        "purposeInStoryline": "A fictional food-process plan simply chooses the hottest condition.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Explain temperature effects with a biological counterexample and daily-use limit. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict a limitation of an always-hotter claim.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read RR5 enzyme data and plot all five points.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Identify the highest tested condition and explain the rise/decline without overclaiming mechanism.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Apply cooling to spoilage with an explicit safety limit.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit an evidence-based temperature decision and missing optimum information.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Explain temperature effects with a biological counterexample and daily-use limit.",
+        "learned": "Kinetic energy and activation barriers matter;enzyme activity may decline at high temperature.",
+        "explained": "Does the highest tested condition establish an exact optimum? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 6,
+      "title": "When does concentration affect rate?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence when does concentration affect rate?",
+      "slo": {
+        "purpose": "Explain a tested concentration relation and design a controlled comparison.",
+        "knowledge": "Observed concentration dependence is reaction/range specific and can be confounded by changed conditions.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "Does doubling concentration always double every reaction rate?",
+        "purposeInStoryline": "A comparison changes concentration,temperature and particle size together.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Explain a tested concentration relation and design a controlled comparison. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict what evidence would isolate concentration.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read RR6 rates and concentration units.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Describe the tested proportional pattern and a particle-level explanation.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Identify both confounders and state controlled comparison conditions.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one supported relation and a limit on generalisation.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Explain a tested concentration relation and design a controlled comparison.",
+        "learned": "Observed concentration dependence is reaction/range specific and can be confounded by changed conditions.",
+        "explained": "Does doubling concentration always double every reaction rate? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 7,
+      "title": "How can the same amount expose more surface?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence how can the same amount expose more surface?",
+      "slo": {
+        "purpose": "Use a geometry model to explain interface effects and physical-rate distinctions.",
+        "knowledge": "Surface area can change at fixed volume/mass and affect heterogeneous encounters.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "Is a larger piece always more exposed overall?",
+        "purposeInStoryline": "A model confuses one large face with total exposed area of separate pieces.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Use a geometry model to explain interface effects and physical-rate distinctions. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether dividing the cube changes total volume.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read RR7 geometry assumptions and sketch the large/small cubes.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate both total areas/volumes and explain the interface implication.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Distinguish physical sugar dissolution from chemical product formation and qualify clumping.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit area ratio with fixed-mass reasoning and a rate limit.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Use a geometry model to explain interface effects and physical-rate distinctions.",
+        "learned": "Surface area can change at fixed volume/mass and affect heterogeneous encounters.",
+        "explained": "Is a larger piece always more exposed overall? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 8,
+      "title": "Which pressure change is relevant?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence which pressure change is relevant?",
+      "slo": {
+        "purpose": "Explain reactant number density without unsafe pressure experiments.",
+        "knowledge": "Gas concentration,not total pressure alone,underlies the simple encounter argument.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "Does adding inert gas always speed a reaction?",
+        "purposeInStoryline": "A poster proposes sealing effervescent tablets to study pressure.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Explain reactant number density without unsafe pressure experiments. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR8. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict number density after halving volume at fixed particle count.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read RR8 fixed-temperature cases.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Derive the density factor and compare inert-gas addition at fixed volume.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Reject the sealed-bottle proposal and an unsupported exact rate multiplier.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a condition-specific pressure explanation and safety boundary.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Explain reactant number density without unsafe pressure experiments.",
+        "learned": "Gas concentration,not total pressure alone,underlies the simple encounter argument.",
+        "explained": "Does adding inert gas always speed a reaction? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 9,
+      "title": "How do catalysts change a pathway?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence how do catalysts change a pathway?",
+      "slo": {
+        "purpose": "Calculate supplied catalytic rates and explain pathway/equilibrium distinctions.",
+        "knowledge": "Catalysts can lower activation barriers and be regenerated;they do not alter equilibrium at fixed conditions.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "Does a faster pathway imply more final equilibrium product?",
+        "purposeInStoryline": "A caption says catalyst is an extra reactant that makes unlimited product.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Calculate supplied catalytic rates and explain pathway/equilibrium distinctions. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which RR9 record has a larger interval average.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read the four product amounts and initial-zero condition.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate0–20s averages and explain an alternative reaction pathway.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Distinguish enzymes from all catalysts and identify unmeasured conditions.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one rate comparison and a corrected equilibrium claim.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Calculate supplied catalytic rates and explain pathway/equilibrium distinctions.",
+        "learned": "Catalysts can lower activation barriers and be regenerated;they do not alter equilibrium at fixed conditions.",
+        "explained": "Does a faster pathway imply more final equilibrium product? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 10,
+      "title": "When can light influence a process?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence when can light influence a process?",
+      "slo": {
+        "purpose": "Interpret a photosensitive record and distinguish heat confounding and phase change.",
+        "knowledge": "Suitable light matters for some processes;physical evaporation and chemical product formation differ.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "How can a brighter lamp change two factors?",
+        "purposeInStoryline": "A report attributes every change under a warming lamp to light alone.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Interpret a photosensitive record and distinguish heat confounding and phase change. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the confounder in a warmer bright-light condition.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read RR10 three light records and given controls.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain the supported light relation and a controlled comparison.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Compare photosensitive chemistry,biological light limitations and water evaporation.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a bounded light explanation and physical/chemical distinction.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Interpret a photosensitive record and distinguish heat confounding and phase change.",
+        "learned": "Suitable light matters for some processes;physical evaporation and chemical product formation differ.",
+        "explained": "How can a brighter lamp change two factors? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 11,
+      "title": "What makes a condition appropriate?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence what makes a condition appropriate?",
+      "slo": {
+        "purpose": "Use explicit constraints to discuss optimum conditions and actual research evidence.",
+        "knowledge": "Fastest need not meet a budget,safety,quality or environmental objective.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "What evidence is missing from an output-only decision?",
+        "purposeInStoryline": "A fictional plant ignores operating constraints when choosing its fastest condition.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Use explicit constraints to discuss optimum conditions and actual research evidence. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict a criterion beyond output rate.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read RR11 output/cost/budget facts and identify unknowns.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Make the conditional budget choice and explain missing quality/safety/emissions data.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Distinguish exact optimum from highest tested and print from actual digital research.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a qualified choice and one source/evidence need.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Use explicit constraints to discuss optimum conditions and actual research evidence.",
+        "learned": "Fastest need not meet a budget,safety,quality or environmental objective.",
+        "explained": "What evidence is missing from an output-only decision? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 12,
+      "title": "Can six factor claims survive an audit?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "reaction rate factors experiment evidence can six factor claims survive an audit?",
+      "slo": {
+        "purpose": "Correct all six overclaims with condition-specific evidence.",
+        "knowledge": "Different factors require relevant systems,controls and bounded mechanisms.",
+        "skills": "Measure or interpret change,calculate rates,control comparisons and qualify conclusions.",
+        "attitudes": "Respect peer evidence and record results honestly.",
+        "keyInquiry": "Which conditions make each factor explanation valid?",
+        "purposeInStoryline": "A poster makes six universal claims about rate factors.",
+        "safetyNotes": "RR3 actual work requires prior teacher product/risk/equipment approval and supervision;otherwise supplied data only. No sealed gas systems,pressure tests,medicinal tablets,crushing,dust,flames or learner heating."
+      },
+      "overview": "Correct all six overclaims with condition-specific evidence. Use the complete named card and distinguish an approved action from a plan or supplied record.\nMaterials: RR12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose one doubtful RR12 claim and identify a relevant record.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction before sharing answer guidance.",
+          "sensemakingStrategy": "Identify the quantity,claim or evidence needed.",
+          "formativeAssessment": "Prediction relates to the named record or experimental variable."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read all six claims and assign supporting task records.",
+          "teacherMoves": "8 minutes. Clarify units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate givens,controls and unknowns.",
+          "formativeAssessment": "Data origin and relevant conditions are explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Correct all six with the relevant mechanism and evidence.",
+          "teacherMoves": "18 minutes. Check card-specific calculations or actual approved actions;retain safe access and honest not-performed alternatives.",
+          "sensemakingStrategy": "Use measured or supplied evidence with its stated scope.",
+          "formativeAssessment": "Completed named task has inspectable units,reasoning or actual role records."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain one daily-use manipulation with a safety/decision limit.",
+          "teacherMoves": "6 minutes. Ask what the evidence supports and what it cannot establish.",
+          "sensemakingStrategy": "Revise the explanation or design with a precise limit.",
+          "formativeAssessment": "Condition-specific correction and honest provenance."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one complete correction and an evidence-based reflection.",
+          "teacherMoves": "4 minutes. Collect individual evidence and record actual practical/digital actions separately.",
+          "sensemakingStrategy": "State one defensible conclusion independently.",
+          "formativeAssessment": "Response includes evidence,units where relevant,and a limitation."
+        }
+      ],
+      "teacherReflection": "Record actual observer roles and measurements,or explicitly not performed;review access,pacing and confounders. Reading data does not certify source outcome b.",
+      "summaryTablePrompt": {
+        "observed": "Correct all six overclaims with condition-specific evidence.",
+        "learned": "Different factors require relevant systems,controls and bounded mechanisms.",
+        "explained": "Which conditions make each factor explanation valid? State a condition and an evidence limit."
+      }
+    },
+    {
+      "number": 13,
+      "title": "Can rate evidence support an independent decision?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Rates of Reactions",
+      "aresKeywords": "independent reaction rates factors decisions assessment",
+      "slo": {
+        "purpose": "Independently calculate,explain factor limits,design a fair comparison and evaluate a constrained daily-use choice.",
+        "knowledge": "A measured proxy,mechanism,experimental plan and actual performance establish different evidence.",
+        "skills": "Independent graphing,rate calculation,factor reasoning,design and reflection.",
+        "attitudes": "Use evidence honestly and avoid universal claims.",
+        "keyInquiry": "Which conclusions follow from the supplied rate evidence?",
+        "purposeInStoryline": "An unfamiliar process record mixes rate claims,enzyme limits and a budget decision.",
+        "safetyNotes": "Paper final only;no apparatus or actual experiment supplied."
+      },
+      "overview": "Four independent sections using held-out RR13 only;practical outcome b remains a separate actual-performance check.\nMaterials: RR13. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 6 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read RR13 and final instructions independently.",
+          "teacherMoves": "4 minutes. Distribute final-only reference/prompts;clarify procedure only.",
+          "sensemakingStrategy": "Identify givens and tasks.",
+          "formativeAssessment": "No teaching keys or answer hints."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete Section1 graph,interval rates and endpoint summaries.",
+          "teacherMoves": "14 minutes. Supervise without confirming calculations or plots.",
+          "sensemakingStrategy": "Use changes/time and correct index units.",
+          "formativeAssessment": "Individual graph and inspectable calculations."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Complete Section2 six factor explanations and enzyme interpretation.",
+          "teacherMoves": "10 minutes. Keep work independent.",
+          "sensemakingStrategy": "Apply mechanisms only to relevant conditions.",
+          "formativeAssessment": "Bounded explanations and tested-optimum distinction."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Complete Section3 a fair proposed comparison and performance scope.",
+          "teacherMoves": "6 minutes. Provide procedural access support only.",
+          "sensemakingStrategy": "Specify variable,controls,repeats and safe measure.",
+          "formativeAssessment": "Plan is not described as a performed experiment."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Complete Section4 constrained decision;check and submit.",
+          "teacherMoves": "6 minutes. Collect before any feedback or discussion.",
+          "sensemakingStrategy": "State practical unknowns and evidence limits.",
+          "formativeAssessment": "Independent complete response;no actual action claim."
+        }
+      ],
+      "teacherReflection": "Use separate RR3 observed action records for outcome b;final graphs/data/plans do not establish performed experiments or actual digital research.",
+      "summaryTablePrompt": {
+        "observed": "Independently calculate and qualify rate evidence.",
+        "learned": "Rate conclusions require meaningful quantities,conditions and provenance.",
+        "explained": "Defend a constrained decision while distinguishing actual from supplied evidence."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "Rates of Reactions",
+    "instructions": "Independent40minutes:4readRR13,14Section1,10Section2,6Section3,6Section4/check/submit. Use only final reference/prompts. No answer hints or teacher keys. Practical outcome b requires separately observed approved experiment,not this written final.",
+    "sections": [
+      {
+        "title": "1. Quantitative rate evidence",
+        "prompt": "From RR13 draw a labelled time-volume graph,calculate the four10s interval average rates and overall0–30s average. Find P/Q mean endpoint times,ranges and1/mean time indices to3significant figures with units. Compare processes and state what the plateau and indices cannot prove.",
+        "exemplar": "Graph points:(0,0),(10,12),(20,20),(30,24),(40,24). Interval rates1.2,0.8,0.4,0cm³/s;overall0–30s0.8cm³/s. Pmean50s,Q30s;ranges4s;indices0.0200s−1 and0.0333s−1. Q reaches the defined endpoint faster. Plateau does not establish cause/exhausted reactant;reciprocal times are not gas-volume rates or intrinsic constants."
+      },
+      {
+        "title": "2. Factors with conditions and limits",
+        "prompt": "Explain how each of temperature,pressure,catalyst,light,concentration andsurfacearea can affect an appropriate process,with a relevant limitation for each. Use RR13 enzyme data to identify the highest tested condition and explain why an exact biological optimum is not established. Distinguish one physical-rate process from chemical product formation.",
+        "exemplar": "Temperature can increase kinetic energy and the fraction of encounters overcoming activation barriers,but enzymes may lose activity at high temperature. Compressing a relevant gas can increase reactant concentration and encounters;adding inert gas at fixed volume/temperature does not. A catalyst provides an alternative pathway with a lower activation barrier,not a changed equilibrium. Suitable absorbed light can excite species or initiate photochemical changes,not every reaction. Greater reactant concentration can increase encounter frequency,depending on the reaction/range. Greater exposed surface gives more interface sites for a heterogeneous reaction at fixed mass,not a universal exact rate multiplier. Enzyme35°C has highest supplied8units;intermediate temperatures and uncertainty are needed for an exact optimum. Dissolution or evaporation can be physical without new substances. These mechanisms are explanatory models,not directly proven by the fictional records."
+      },
+      {
+        "title": "3. Fair planned experiment and performance scope",
+        "prompt": "Propose one teacher-approved rate comparison:state changed variable,measured operational quantity,at least two controls,repeats and two safety conditions. Explain how actual observed actions would be recorded and why this final answer does not satisfy performed-experiment evidence. No pressure vessel,unsafe chemicals or heating procedure.",
+        "exemplar": "A conditional approved open-cup identical-tablet endpoint comparison can vary teacher-prepared safe water temperature,measure defined visible-bubble endpoint times,hold water amount/tabletbatch/cup/endpoint/mixing fixed and repeat3times. Product/risk/supervision approval and open containers/no ingestion/no heating are required. Record actual observer/date/role/temperatures/times/deviations or not performed. A written plan alone does not meet outcome b. Equivalent safe controlled plans need explicit approved provision."
+      },
+      {
+        "title": "4. Appropriate conditions in daily use",
+        "prompt": "Use RR13 industrial facts and budget to make a qualified choice. Explain why fastest is not automatically best,identify two missing decision facts and give one daily-use example with a condition/safety limit. State whether any actual digital research or process manipulation occurred in this final.",
+        "exemplar": "A fits5tokens/hour;B costs9anddoesnot. Quality,safety,emissions orrealcosts remain unknown,so no best-overall verdict. Cooling may slow spoilage but does not sterilise food or guarantee safety. Written records do not show actual digital research or process manipulation."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Quantitative representation",
+        "excellent": "Correct graph,all averages/summaries,units and meaningful rate/index limits.",
+        "proficient": "Principal calculations and graph correct with valid limit.",
+        "developing": "Some calculations correct but graph,units or interpretation incomplete.",
+        "belowExpectations": "Needs guided change/time calculations and data representation."
+      },
+      {
+        "criterion": "Factor explanations",
+        "excellent": "All six factors have relevant mechanisms/limits;enzyme/physical-process distinctions correct.",
+        "proficient": "Most mechanisms correct with important conditions and biological limit.",
+        "developing": "Lists factors but misses conditions or makes some universal claims.",
+        "belowExpectations": "Needs guided factor-process matching and condition reasoning."
+      },
+      {
+        "criterion": "Experimental design and evidence",
+        "excellent": "Controlled,repeatable operational plan with approval/safety and honest actual-action distinction.",
+        "proficient": "Viable conditional plan and clear not-performed scope.",
+        "developing": "Partial controls/measure or confuses planned and performed evidence.",
+        "belowExpectations": "Needs support to plan safely and distinguish actual actions."
+      },
+      {
+        "criterion": "Decision and reflection",
+        "excellent": "Budget choice,missing criteria and daily-use limit clearly justified;actual research scope honest.",
+        "proficient": "Supported choice and meaningful practical limit.",
+        "developing": "Names a choice but omits constraints or overclaims safety/performance.",
+        "belowExpectations": "Needs guided comparison of rate,objective and evidence."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand2.5: Rates of Reactions",
+    "drivingQuestion": "How do various factors affect the rate of reactions?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "What does reaction rate measure?",
+        "observed": "Define rate and distinguish a measured proxy from final amount.",
+        "learned": "Rate tracks change per time;chemical reaction involves reactant/product changes,while physical processes can also have rates.",
+        "explained": "Can equal final amounts form at different rates? State a condition and an evidence limit."
+      },
+      {
+        "number": 2,
+        "title": "How does a graph describe change through time?",
+        "observed": "Plot supplied product records and calculate interval averages.",
+        "learned": "Graph slope gives interval averages from tabulated changes;plateau does not identify a reaction cause by itself.",
+        "explained": "Does every part of a curve have the same rate? State a condition and an evidence limit."
+      },
+      {
+        "number": 3,
+        "title": "What would count as an actual approved experiment?",
+        "observed": "Carry out and record an approved apparent-rate comparison or retain not-performed status.",
+        "learned": "A reproducible operational endpoint and actual observed action are needed for experimental evidence.",
+        "explained": "Which part of a plan becomes evidence only when performed? State a condition and an evidence limit."
+      },
+      {
+        "number": 4,
+        "title": "How do repeats change a comparison?",
+        "observed": "Compute means,ranges and apparent endpoint indices with limitations.",
+        "learned": "Repeated endpoint times support a bounded comparison;1/time is not a measured volume rate or intrinsic constant.",
+        "explained": "What can six supplied times tell us? State a condition and an evidence limit."
+      },
+      {
+        "number": 5,
+        "title": "Does higher temperature always help?",
+        "observed": "Explain temperature effects with a biological counterexample and daily-use limit.",
+        "learned": "Kinetic energy and activation barriers matter;enzyme activity may decline at high temperature.",
+        "explained": "Does the highest tested condition establish an exact optimum? State a condition and an evidence limit."
+      },
+      {
+        "number": 6,
+        "title": "When does concentration affect rate?",
+        "observed": "Explain a tested concentration relation and design a controlled comparison.",
+        "learned": "Observed concentration dependence is reaction/range specific and can be confounded by changed conditions.",
+        "explained": "Does doubling concentration always double every reaction rate? State a condition and an evidence limit."
+      },
+      {
+        "number": 7,
+        "title": "How can the same amount expose more surface?",
+        "observed": "Use a geometry model to explain interface effects and physical-rate distinctions.",
+        "learned": "Surface area can change at fixed volume/mass and affect heterogeneous encounters.",
+        "explained": "Is a larger piece always more exposed overall? State a condition and an evidence limit."
+      },
+      {
+        "number": 8,
+        "title": "Which pressure change is relevant?",
+        "observed": "Explain reactant number density without unsafe pressure experiments.",
+        "learned": "Gas concentration,not total pressure alone,underlies the simple encounter argument.",
+        "explained": "Does adding inert gas always speed a reaction? State a condition and an evidence limit."
+      },
+      {
+        "number": 9,
+        "title": "How do catalysts change a pathway?",
+        "observed": "Calculate supplied catalytic rates and explain pathway/equilibrium distinctions.",
+        "learned": "Catalysts can lower activation barriers and be regenerated;they do not alter equilibrium at fixed conditions.",
+        "explained": "Does a faster pathway imply more final equilibrium product? State a condition and an evidence limit."
+      },
+      {
+        "number": 10,
+        "title": "When can light influence a process?",
+        "observed": "Interpret a photosensitive record and distinguish heat confounding and phase change.",
+        "learned": "Suitable light matters for some processes;physical evaporation and chemical product formation differ.",
+        "explained": "How can a brighter lamp change two factors? State a condition and an evidence limit."
+      },
+      {
+        "number": 11,
+        "title": "What makes a condition appropriate?",
+        "observed": "Use explicit constraints to discuss optimum conditions and actual research evidence.",
+        "learned": "Fastest need not meet a budget,safety,quality or environmental objective.",
+        "explained": "What evidence is missing from an output-only decision? State a condition and an evidence limit."
+      },
+      {
+        "number": 12,
+        "title": "Can six factor claims survive an audit?",
+        "observed": "Correct all six overclaims with condition-specific evidence.",
+        "learned": "Different factors require relevant systems,controls and bounded mechanisms.",
+        "explained": "Which conditions make each factor explanation valid? State a condition and an evidence limit."
+      },
+      {
+        "number": 13,
+        "title": "Can rate evidence support an independent decision?",
+        "observed": "Independently calculate and qualify rate evidence.",
+        "learned": "Rate conclusions require meaningful quantities,conditions and provenance.",
+        "explained": "Defend a constrained decision while distinguishing actual from supplied evidence."
+      }
+    ]
+  }
+};

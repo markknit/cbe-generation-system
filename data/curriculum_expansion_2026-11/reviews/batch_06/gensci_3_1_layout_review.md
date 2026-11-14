@@ -1,0 +1,3 @@
+# GS3.1 final artifact review — progressive
+
+Acceptedfpd79c0882db7e510ae374d49577a545559671f8ee98c24acf89e74f7a82fb0edd. All18currentWord/PDFhashes match frozen scoped auditcf0aa8517d6d972e119468814286e4fc5ece1e172f3f8bf99a40677c0e6a0585.843/843Word+843/843PDF canonical propagation,473/473export/media/geometrychecks pass. Five accepted companion binariesunchanged;4finalanswercells/36summarycellsblank;no selectedresources/allfinal10slotsnull. Survey/readableinspection84pages inprogress; no finalverdict yet. Noauthor/build/render/acceptancechanges.

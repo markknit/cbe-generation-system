@@ -9,3 +9,8 @@ PDF SHA256: `ee989d27038d838096438ff16a02fe1be0abc81e7010168036fcb9a125d0d0fd`
 Crop SHA256: `628988ebbf875bf58f5f468a4fd46d923bc52532d198b853c932be5506226c05`
 
 Source-record SHA256: `24a898aa7cbe3238d96024c0b1e3e04c9fabbbb02b50a14c499d33c720314e90`
+
+
+## Independent source correction — 2026-11-14
+
+Printed29 experience4 includes biological, chemical and physical processes. Two independent initial reviewers confirmed that the prior canonical experience[3] omitted chemical. Root rechecked the exact pixels and restored the missing word/comma. All other source requirements unchanged; source record and verification binding refreshed. Prior wrong source bytes and original evidence are preserved in the independent initial review snapshots. This is a transcription correction,not lesson acceptance.
