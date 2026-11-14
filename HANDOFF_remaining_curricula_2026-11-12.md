@@ -1,6 +1,6 @@
 # Remaining three curricula: working checkpoint and takeover
 
-2026-11-13local/14NovemberUTC. **Full remaining-generation authorisation active:147new expansion lessons artifact-reviewed,178including frozenpilot;183new authored,214including pilot;24units without new drafts.** Quota not paused;10%guardactive.
+2026-11-13local/14NovemberUTC. **Full scope active:228new expansion lessons artifact-reviewed,259including frozenpilot;263new authored,294including pilot;17units without drafts.** Quota not paused;10%guardactive.
 
 ## Locked decisions
 
@@ -75,3 +75,7 @@ Cell12/Reflection11content+artifactPASS/ZIPreceipts/manifests. CoreStatistics16c
 ## Live checkpoint — 2026-11-14 03:52UTC
 
 Cell12/Reflection11/CoreStats16finalPASS+packages. Transport12/science_review andTrig12/essential_source_review contentPASS/finalreviewsrunning. CoreProbabilityI12/core27_pdf_completion fullcontentreviewrunning. Allpipeline mutation subprocess sessions complete;serialrulesremain.183authoredexpansion/16units,147reviewed/13;24nodrafts,16verifiedsource/17locatedtranscriptions/7Coregaps. Root47%03:51UTC. NextauthorGSRespiration:rootviewedprinted9–10fullsource;sourceJSONnotwrittenyet. PrimaryWSUprotocolPDF accessible viaOSU https://extension.oregonstate.edu/sites/default/files/documents/8836/fs173emakingyogurt.pdf ; sourceprojectNOALCOHOLBREWING,yeastactivityadaptationmustexplicit;safeapprovedlacticprojectacrosslessonswithteacheroutsideperiodlogging,neverfood/tastingclaim. RQCO2/O2undefinedzeroO2,substrateestimatesassumptionbound;sourceIntegritysays aerobicverbatim,butteachcorrectfermentation. Continueuntilallavailabledoneor10%guard;notjustcheckpoint.
+
+## Live checkpoint — 2026-11-14 04:30UTC
+
+263authoredexpansion/23units;228reviewed/20;17nodrafts(7Coreblocked+9GS+EssentialProbability).23verifiedsources/10locatedpending. NewlypackagedResp/Polygon/Circle/Growth;Surfacefinalreviewessential_source_review,Volumefinalreviewscience_review,EssentialStatscontentreviewcore27_pdf_completion. Allpipeline subprocesssessionscomplete;fail-fastserial rule. Root17%04:28UTC,no pause. NextrootEssentialProbability:sourceviewed32–35,printed4.2/internal3.2remainexplicit,maximumtwoexperiments/twooutcomes;designonlytwo binarycomponentexperiments,atmosttwo pertrial,declareinterpretationandteacherconfirmation;six-faced-diesuggestionnotfollowed. SourceJSON/materials/manuscriptnotwrittesyet. Do not inferprintedidcorrectionorofficialallocation. Preserveverbatimoutcomesa–i,performedA/Bsinglechanceandpairedindepactionsseparatefromwrittenfinal. Pauseat<=10,noseparatelybilledAPI/nopush/publication;savecurrentreviewstatesandsmallboundary.

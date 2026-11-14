@@ -1,0 +1,7 @@
+# Source acceptance:essmath_2_6
+
+Visually compared full150dpi crop printed20–21,allfiveoutcomes,content/inquiryandcompetency/value/PCIcontinuation. Noallocation. Sourcevolumecompetency/covewordingretainedandexplicitlydistinguishedfromarea. Bothopen/closedcone/pyramidfrustummodels included. Independentreviewmustrecomparepixels/nets/facecountingscope.
+
+PDF SHA256:7459a495859a658a42704799f848e27400fc3b10083b42d7fe8e6364ebf82e73
+Crop SHA256:08e314dbdfdd5b1387fc90d7ff04170ae4bc0764df2c3d060858d8784fb53074
+Source SHA256:dbfbb75c8d071462884c2c9e1db610ae76fb2ec99ca37d17e37be7a2a245d7e6
