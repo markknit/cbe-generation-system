@@ -1,0 +1,31 @@
+--- frozen_source_override_review
++++ current_scoped_prepare
+@@ -24,9 +24,18 @@
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--reuse-render-dir', type=Path, help='Reuse the exact 150dpi cbe-prep-<subject>.png renders from this preparation run')
++    parser.add_argument('--modules', nargs='+', help='Only refresh these module inventories/crops; preserve all others byte-for-byte')
+     args = parser.parse_args()
+     config = json.loads((ROOT / 'config/curriculum_source_sections.json').read_text())
+     units = json.loads((BASE / 'inventory/baseline_units.json').read_text())
++    selected = set(args.modules) if args.modules else None
++    known = {unit['module'] for unit in units}
++    if selected is not None:
++        if not selected <= known:
++            parser.error('Unknown module IDs: ' + ', '.join(sorted(selected - known)))
++        for module in known - selected:
++            if not (BASE / 'inventory' / (module + '.json')).is_file():
++                parser.error('Missing preserved inventory: ' + module)
+     rows = []
+     replacement_images = {}
+     with tempfile.TemporaryDirectory(prefix='cbe-source-render-') as temporary:
+@@ -40,6 +49,9 @@
+                 raise ValueError('Unexpected source-render geometry')
+             lines = json.loads((BASE / 'inventory' / (code + '_ocr_lines.json')).read_text())
+             for unit in sorted((u for u in units if u['module'].startswith(code + '_')), key=lambda u: u['module']):
++                if selected is not None and unit['module'] not in selected:
++                    rows.append(json.loads((BASE / 'inventory' / (unit['module'] + '.json')).read_text()))
++                    continue
+                 suffix = unit['module'].removeprefix(code + '_')
+                 override = config.get('source_overrides', {}).get(unit['module'])
+                 unit_pdf, unit_image, unit_lines = pdf, image, lines

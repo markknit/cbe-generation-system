@@ -24,10 +24,20 @@ def sha(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--reuse-render-dir', type=Path, help='Reuse the exact 150dpi cbe-prep-<subject>.png renders from this preparation run')
+    parser.add_argument('--modules', nargs='+', help='Only refresh these module inventories/crops; preserve all others byte-for-byte')
     args = parser.parse_args()
     config = json.loads((ROOT / 'config/curriculum_source_sections.json').read_text())
     units = json.loads((BASE / 'inventory/baseline_units.json').read_text())
+    selected = set(args.modules) if args.modules else None
+    known = {unit['module'] for unit in units}
+    if selected is not None:
+        if not selected <= known:
+            parser.error('Unknown module IDs: ' + ', '.join(sorted(selected - known)))
+        for module in known - selected:
+            if not (BASE / 'inventory' / (module + '.json')).is_file():
+                parser.error('Missing preserved inventory: ' + module)
     rows = []
+    replacement_images = {}
     with tempfile.TemporaryDirectory(prefix='cbe-source-render-') as temporary:
         for code, spec in config['subjects'].items():
             pdf = ROOT / spec['pdf']
@@ -39,24 +49,42 @@ def main():
                 raise ValueError('Unexpected source-render geometry')
             lines = json.loads((BASE / 'inventory' / (code + '_ocr_lines.json')).read_text())
             for unit in sorted((u for u in units if u['module'].startswith(code + '_')), key=lambda u: u['module']):
+                if selected is not None and unit['module'] not in selected:
+                    rows.append(json.loads((BASE / 'inventory' / (unit['module'] + '.json')).read_text()))
+                    continue
                 suffix = unit['module'].removeprefix(code + '_')
-                record = {**unit, 'pdf': spec['pdf'], 'pdf_sha256': sha(pdf), 'physical_pdf_page': 1,
+                override = config.get('source_overrides', {}).get(unit['module'])
+                unit_pdf, unit_image, unit_lines = pdf, image, lines
+                if override:
+                    unit_pdf = ROOT / override['pdf']
+                    if str(unit_pdf) not in replacement_images:
+                        replacement_path = Path(temporary) / ('replacement-' + str(len(replacement_images)) + '.png')
+                        subprocess.run(['pdftoppm', '-f', '1', '-l', '1', '-r', str(config['render_dpi']), '-singlefile', '-png', str(unit_pdf), str(replacement_path.with_suffix(''))], check=True, capture_output=True)
+                        replacement = Image.open(replacement_path)
+                        if replacement.width != config['pixel_width']:
+                            raise ValueError('Unexpected replacement source-render geometry')
+                        replacement_images[str(unit_pdf)] = replacement
+                    unit_image = replacement_images[str(unit_pdf)]
+                    unit_lines = json.loads((ROOT / override['ocr_lines']).read_text())
+                record = {**unit, 'pdf': override['pdf'] if override else spec['pdf'], 'pdf_sha256': sha(unit_pdf), 'physical_pdf_page': 1,
                           'official_lesson_allocation': None, 'allocation_status': 'Not inferred from baseline; decide against verified curriculum requirements.',
                           'reviewed_pilot': unit['module'] in PILOTS, 'new_lesson_count': None}
-                if suffix not in spec['sections']:
+                if suffix not in spec['sections'] and not override:
                     record.update(source_status='blocked_pdf_capture', authoring_ready=False,
                                   blocker='Current Core PDF repeats contents-page material in the requirements region; older OCR cannot establish current-source fidelity.',
                                   replacement_needed='Readable authoritative requirements and competency/value/PCI pages for this unit.')
                 else:
-                    start, end = spec['sections'][suffix]
+                    start, end = override['section'] if override else spec['sections'][suffix]
+                    if not 0 <= start < end <= unit_image.height:
+                        raise ValueError('Source crop outside captured image: ' + unit['module'])
                     crop = BASE / 'sources' / (unit['module'] + '_source.png')
-                    image.crop((0, start, image.width, end)).save(crop)
-                    text = '\n'.join(r['text'] for r in lines if start <= r['y'] < end)
+                    unit_image.crop((0, start, unit_image.width, end)).save(crop)
+                    text = '\n'.join(r['text'] for r in unit_lines if start <= r['y'] < end)
                     ocr = BASE / 'sources' / (unit['module'] + '_ocr.txt')
                     ocr.write_text('# OCR CANDIDATE — pixels are authority; not an accepted verbatim transcription.\n' + text + '\n')
                     record.update(source_status='located_requires_transcription_check', authoring_ready=False,
                                   crop=str(crop.relative_to(BASE)), crop_sha256=sha(crop),
-                                  crop_pixels=[0, start, image.width, end], render_dpi=config['render_dpi'],
+                                  crop_pixels=[0, start, unit_image.width, end], render_dpi=config['render_dpi'],
                                   ocr=str(ocr.relative_to(BASE)), ocr_sha256=sha(ocr),
                                   next_action='Visually verify the full requirements and exact transcription before source acceptance. Compiler requires a matching verification record.')
                     if unit['module'] in PILOTS:
@@ -71,7 +99,7 @@ def main():
                             if (verified.get('status') == 'verified'
                                     and verified.get('source_record_sha256') == sha(source_path)
                                     and verified.get('crop_sha256') == sha(crop)
-                                    and source.get('pdf_sha256') == sha(pdf)
+                                    and source.get('pdf_sha256') == sha(unit_pdf)
                                     and evidence.is_file()
                                     and verified.get('evidence_sha256') == sha(evidence)):
                                 record.update(source_status='verified', authoring_ready=True,

@@ -1,0 +1,76 @@
+[
+  {
+    "case": "selected_fresh",
+    "checks": {
+      "success": true,
+      "all36_inventories_byte_exact": true,
+      "all36_crops_ocr_byte_exact": true,
+      "all43_canonical_records_byte_exact": true,
+      "all36_fingerprints_unchanged": true,
+      "aggregate43unique": true,
+      "aggregate36_preserved_custom_rows": true,
+      "aggregate7_refreshed_unaccepted": true,
+      "aggregate_totals": true,
+      "replacement_cached": true,
+      "render_count": true
+    },
+    "pass": true,
+    "stderr": ""
+  },
+  {
+    "case": "selected_reuse",
+    "checks": {
+      "success": true,
+      "all36_inventories_byte_exact": true,
+      "all36_crops_ocr_byte_exact": true,
+      "all43_canonical_records_byte_exact": true,
+      "all36_fingerprints_unchanged": true,
+      "aggregate43unique": true,
+      "aggregate36_preserved_custom_rows": true,
+      "aggregate7_refreshed_unaccepted": true,
+      "aggregate_totals": true,
+      "replacement_cached": true,
+      "render_count": true
+    },
+    "pass": true,
+    "stderr": ""
+  },
+  {
+    "case": "unknown_module",
+    "checks": {
+      "exit2_before_mutation": true,
+      "no_renderer_calls": true,
+      "specific_error": true
+    },
+    "pass": true,
+    "stderr": "usage: fixture [-h] [--reuse-render-dir REUSE_RENDER_DIR]\n               [--modules MODULES [MODULES ...]]\nfixture: error: Unknown module IDs: not_a_real_module\n"
+  },
+  {
+    "case": "missing_preserved_inventory",
+    "checks": {
+      "exit2_before_mutation": true,
+      "no_renderer_calls": true,
+      "specific_error": true
+    },
+    "pass": true,
+    "stderr": "usage: fixture [-h] [--reuse-render-dir REUSE_RENDER_DIR]\n               [--modules MODULES [MODULES ...]]\nfixture: error: Missing preserved inventory: gensci_1_1\n"
+  },
+  {
+    "case": "missing_selected_inventory",
+    "checks": {
+      "success": true,
+      "all36_inventories_byte_exact": true,
+      "all36_crops_ocr_byte_exact": true,
+      "all43_canonical_records_byte_exact": true,
+      "all36_fingerprints_unchanged": true,
+      "aggregate43unique": true,
+      "aggregate36_preserved_custom_rows": true,
+      "aggregate7_refreshed_unaccepted": true,
+      "aggregate_totals": true,
+      "replacement_cached": true,
+      "render_count": true
+    },
+    "pass": true,
+    "stderr": ""
+  }
+]

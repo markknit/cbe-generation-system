@@ -34,7 +34,7 @@ legacy=b/'materials/diagrams'
 for card in bank['items']:
  p=legacy/(card['id']+'.png')
  if p.exists():files.add(p)
-for parent in [b/'reviews/batch_05',b/'reviews/batch_05/evidence',b/'reviews/batch_06',b/'reviews/batch_06/evidence',b/'evidence']:
+for parent in dict.fromkeys([b/'reviews/batch_05',b/'reviews/batch_05/evidence',b/'reviews/batch_06',b/'reviews/batch_06/evidence',report.parent,report.parent/'evidence',b/'evidence']):
  for p in parent.glob(n+'*'):
   if p.is_dir():files.update(x for x in p.rglob('*') if x.is_file())
   else:files.add(p)
