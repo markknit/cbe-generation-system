@@ -9,3 +9,6 @@ PDF SHA256: `ee989d27038d838096438ff16a02fe1be0abc81e7010168036fcb9a125d0d0fd`
 Crop SHA256: `0398de60b1a054a1de8aa129509aa364429ba9607a719db350e4bd37fb9e82ba`
 
 Source-record SHA256: `be21b927a12db2afb4f96d26151c64a4c61ef07235ed349fa2055ecc8f8064e4`
+
+
+Root pre-authoring recheck of complete printed40–43 on2026-11-14 restored the printed semicolon after Life skill in the PCI. Source words unchanged;verification source/evidence bindings refreshed before first lesson review.

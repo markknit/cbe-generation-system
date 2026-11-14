@@ -1,0 +1,13 @@
+--- frozen_recheck
++++ current
+@@ -57,7 +57,9 @@
+                 errors.append(f'{module}: no accepted content verdict')
+             if acceptance['content_fingerprint'] != current or unit['content_fingerprint'] != current:
+                 errors.append(f'{module}: current/accepted/packaged fingerprint mismatch')
+-            for evidence in acceptance['evidence']:
++            if not acceptance.get('evidence'):
++                errors.append(f'{module}: missing content review evidence')
++            for evidence in acceptance.get('evidence', []):
+                 if sha(evidence['path']) != evidence['sha256']:
+                     errors.append(f'{module}: content report hash changed: {evidence["path"]}')
+             # Recompute the archived fingerprint from actual canonical member bytes,

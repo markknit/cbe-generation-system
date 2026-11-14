@@ -113,6 +113,14 @@ result['final_answer_placeholders']=answer_rows
 result['canonical_hashes']={str(p.relative_to(ROOT)):sha(p) for p in [W/'sources/gensci_2_5.json',W/'blueprints/gensci_2_5.json',W/'materials/gensci_2_5.json',W/'manuscripts/gensci_2_5.json']}
 result['source_hashes']={str(p.relative_to(ROOT)):sha(p) for p in [W/'sources/gensci_2_5_source.png',W/'sources/gensci_2_5.verification.json',W/'evidence/gensci_2_5_source_verification.md']}
 result['all_private_card_keys_absent_student']={typ:all(norm(c['teacher']) not in words[typ] and not any(norm(c['teacher']) in t for _,t in streams[typ]) for c in M['items']) for typ in ['StudentMaterials','AssessmentMaterials','FinalExplanation']}
+a=json.loads(json.dumps(D['assessment']))
+result['export_removed_author_marks']=[{'section':x.get('id',x['title']),'marks':x.pop('marks')} for x in a['sections'] if 'marks' in x]
+result['export_final_equals_canonical_except_removed_author_marks']=a==export['FINAL_EXPLANATION']
+result['structured_export_sha256']=sha(OUT/(D['prefix']+'_data.json'))
+result['resource_policy_sha256']=sha(W/'resource_policy.json')
+result['current_module_resource_allowlist']=allowed
+result['canonical_hashes_match_content_acceptance']=result['canonical_hashes']==recheck['inputs']
+result['source_pdf_sha256']=sha(ROOT/'CBE_Curriculums/Grade 10/STEM/General Science Grade 10 - July 2025.pdf')
 Path(__file__).with_suffix('.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({k:v for k,v in result.items() if k not in ['checks','artifact_hashes']},ensure_ascii=False,indent=2))
 print('FAILURES',json.dumps([r for r in rows if not r['word_pass'] or not r['pdf_pass']],ensure_ascii=False))

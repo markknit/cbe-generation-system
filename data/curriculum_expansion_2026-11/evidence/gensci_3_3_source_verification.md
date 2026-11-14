@@ -9,3 +9,8 @@ PDF SHA256: `ee989d27038d838096438ff16a02fe1be0abc81e7010168036fcb9a125d0d0fd`
 Crop SHA256: `7b413c2e7adf72aa02fc63764389b23f4a31b4a0d09eaeedf184d839c018d2cf`
 
 Source-record SHA256: `13cc56dc4b95b34ee6ac4cda8123c883cbcb4158299be1c490dc58df4c2c0c94`
+
+
+## Independent PCI correction — 2026-11-14
+
+Printed39 Environmental issues PCI includes marine ecosystems. Both independent initial reviewers confirmed the omitted marine in source.pcis and manuscript unit.pcis;root restored it in both. The preceding competency correctly says ecosystems without marine and remains unchanged. PDF/crop unchanged;source/evidence/verifier bindings refreshed. Prior wrong bytes are preserved in initial review snapshots. This corrects transcription,not lesson acceptance.

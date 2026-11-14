@@ -44,13 +44,13 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "Can a return trip have motion but zero displacement?",
         "purposeInStoryline": "A fictional walker report uses distance and displacement interchangeably.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Explain path totals,displacement and average speed/velocity. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Explain path totals,displacement and average speed/velocity. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Predict distance and displacement for LM1.",
+          "learnerExperience": "Predict distance and displacement for GSLM1.",
           "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
           "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
           "formativeAssessment": "Prediction uses the named case or condition."
@@ -104,13 +104,13 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "Can the same speed have opposite velocities?",
         "purposeInStoryline": "Two records show equal slope magnitude but opposite directions.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Plot position records and interpret signed segment slopes. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Plot position records and interpret signed segment slopes. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Predict which LM2 record has negative velocity.",
+          "learnerExperience": "Predict which GSLM2 record has negative velocity.",
           "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
           "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
           "formativeAssessment": "Prediction uses the named case or condition."
@@ -164,13 +164,13 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "What happens when velocity crosses zero?",
         "purposeInStoryline": "A record keeps constant negative acceleration through a turning point.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Calculate acceleration and identify a velocity reversal. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Calculate acceleration and identify a velocity reversal. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Predict whether speed always falls in LM3.",
+          "learnerExperience": "Predict whether speed always falls in GSLM3.",
           "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
           "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
           "formativeAssessment": "Prediction uses the named case or condition."
@@ -224,13 +224,13 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "Can one acceleration represent a changing vehicle process?",
         "purposeInStoryline": "A formula is applied across two different acceleration stages.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Find final velocity,time and acceleration under one constant-a model. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Find final velocity,time and acceleration under one constant-a model. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Predict which quantity is unknown in each LM4 record.",
+          "learnerExperience": "Predict which quantity is unknown in each GSLM4 record.",
           "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
           "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
           "formativeAssessment": "Prediction uses the named case or condition."
@@ -284,13 +284,13 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "Why does time need to be squared?",
         "purposeInStoryline": "A solution drops the time square from an acceleration term.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Use displacement equations and cross-check with endpoint average velocity. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Use displacement equations and cross-check with endpoint average velocity. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Predict whether LM5 final velocity exceeds its initial value.",
+          "learnerExperience": "Predict whether GSLM5 final velocity exceeds its initial value.",
           "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
           "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
           "formativeAssessment": "Prediction uses the named case or condition."
@@ -344,13 +344,13 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "Does a positive square root always give the required velocity?",
         "purposeInStoryline": "A stopping model is extended into impossible continued braking assumptions.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Use squared-velocity and first-rest models without losing direction. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Use squared-velocity and first-rest models without losing direction. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Predict the context needed to choose the root in LM6.",
+          "learnerExperience": "Predict the context needed to choose the root in GSLM6.",
           "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
           "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
           "formativeAssessment": "Prediction uses the named case or condition."
@@ -404,13 +404,13 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "Can endpoint-average velocity describe every whole trip?",
         "purposeInStoryline": "A graph is treated as one straight ramp despite an initial flat interval.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Analyse piecewise velocity and graph areas. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Analyse piecewise velocity and graph areas. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Predict which LM7 interval has zero acceleration.",
+          "learnerExperience": "Predict which GSLM7 interval has zero acceleration.",
           "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
           "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
           "formativeAssessment": "Prediction uses the named case or condition."
@@ -464,9 +464,9 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "Does looking at a falling ball measure acceleration?",
         "purposeInStoryline": "A stopwatch result from a tiny drop is claimed as precise g.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Observe an approved low drop with honest limits or retain not-performed status. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM8; LM9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Observe an approved low drop with honest limits or retain not-performed status. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM8; GSLM9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
@@ -477,7 +477,7 @@ module.exports = {
         },
         {
           "phase": "Observe Phase",
-          "learnerExperience": "Read LM8 approval,soft-object,height and exclusion conditions;teacher verifies provision.",
+          "learnerExperience": "Read GSLM8 approval,soft-object,height and exclusion conditions;teacher verifies provision.",
           "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
           "sensemakingStrategy": "Separate given facts from model assumptions.",
           "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
@@ -491,7 +491,7 @@ module.exports = {
         },
         {
           "phase": "Driving Question Board (DQB) Creation",
-          "learnerExperience": "Compare actual observation limits with ideal LM9 supplied frames;mark supplied alternative not performed.",
+          "learnerExperience": "Compare actual observation limits with ideal GSLM9 supplied frames;mark supplied alternative not performed.",
           "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
           "sensemakingStrategy": "Revise using evidence and a precise limit.",
           "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
@@ -524,13 +524,13 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "Where in time does an interval average belong?",
         "purposeInStoryline": "A supplied video table labels every average as final speed.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Calculate interval velocities and compare with an ideal constant-g model. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Calculate interval velocities and compare with an ideal constant-g model. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Predict which LM9 interval has the greatest average velocity.",
+          "learnerExperience": "Predict which GSLM9 interval has the greatest average velocity.",
           "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
           "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
           "formativeAssessment": "Prediction uses the named case or condition."
@@ -584,9 +584,9 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "Are a paper height and an approved real drop the same thing?",
         "purposeInStoryline": "A calculation height is mistaken for permission to drop objects from it.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Apply constant-g equations with explicit sign and model assumptions. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Apply constant-g equations with explicit sign and model assumptions. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
@@ -597,7 +597,7 @@ module.exports = {
         },
         {
           "phase": "Observe Phase",
-          "learnerExperience": "Read LM10 g,release and no-drag conditions.",
+          "learnerExperience": "Read GSLM10 g,release and no-drag conditions.",
           "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
           "sensemakingStrategy": "Separate given facts from model assumptions.",
           "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
@@ -611,7 +611,7 @@ module.exports = {
         },
         {
           "phase": "Driving Question Board (DQB) Creation",
-          "learnerExperience": "Explain mass/drag and why only LM8 approved height applies to real activity.",
+          "learnerExperience": "Explain mass/drag and why only GSLM8 approved height applies to real activity.",
           "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
           "sensemakingStrategy": "Revise using evidence and a precise limit.",
           "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
@@ -644,9 +644,9 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "Can one position have two different velocities?",
         "purposeInStoryline": "A diagram switches gravity off at the highest point.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Calculate upward/return motion and distinguish zero velocity from zero acceleration. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Calculate upward/return motion and distinguish zero velocity from zero acceleration. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
@@ -657,7 +657,7 @@ module.exports = {
         },
         {
           "phase": "Observe Phase",
-          "learnerExperience": "Read LM11 upward-positive and same-height-return conditions.",
+          "learnerExperience": "Read GSLM11 upward-positive and same-height-return conditions.",
           "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
           "sensemakingStrategy": "Separate given facts from model assumptions.",
           "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
@@ -704,13 +704,13 @@ module.exports = {
         "attitudes": "Discuss calmly,respect peers and record observations honestly.",
         "keyInquiry": "What does a model omit from a real road or fall?",
         "purposeInStoryline": "A fictional safety poster conflates downhill rolling with free fall.",
-        "safetyNotes": "Paper calculations except teacher-approved LM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
       },
-      "overview": "Audit model overclaims and discuss bounded real-life significance. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: LM12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "overview": "Audit model overclaims and discuss bounded real-life significance. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Choose one LM12 claim that needs conditions.",
+          "learnerExperience": "Choose one GSLM12 claim that needs conditions.",
           "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
           "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
           "formativeAssessment": "Prediction uses the named case or condition."
@@ -766,11 +766,11 @@ module.exports = {
         "purposeInStoryline": "An unfamiliar record tests terms,stopping,free fall and safety-model distinctions.",
         "safetyNotes": "Paper-only final;no drops or road observation."
       },
-      "overview": "Four independent sections;conceptual free-fall reasoning does not certify an actual investigation.\nMaterials: LM13. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 12 min, Driving Question Board (DQB) Creation 10 min, Model Building 6 min.",
+      "overview": "Four independent sections;conceptual free-fall reasoning does not certify an actual investigation.\nMaterials: GSLM13. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 12 min, Driving Question Board (DQB) Creation 10 min, Model Building 6 min.",
       "framework": [
         {
           "phase": "Predict Phase",
-          "learnerExperience": "Read LM13 and instructions independently.",
+          "learnerExperience": "Read GSLM13 and instructions independently.",
           "teacherMoves": "4 minutes. Distribute final-only reference/prompts;clarify procedure without hints.",
           "sensemakingStrategy": "Identify signs,givens and requested evidence.",
           "formativeAssessment": "No teaching cards or keys."
@@ -814,7 +814,7 @@ module.exports = {
   ],
   "FINAL_EXPLANATION": {
     "subjectLabel": "Linear Motion",
-    "instructions": "Independent40minutes:4readLM13,8Section1,12Section2,10Section3,6Section4/check/submit. Use only final reference/prompts;no keys or hints. Show units,signs and equation assumptions. Written gravity evidence is not actual-investigation certification.",
+    "instructions": "Independent40minutes:4readGSLM13,8Section1,12Section2,10Section3,6Section4/check/submit. Use only final reference/prompts;no keys or hints. Show units,signs and equation assumptions. Written gravity evidence is not actual-investigation certification.",
     "sections": [
       {
         "title": "1. Terms and signed averages",

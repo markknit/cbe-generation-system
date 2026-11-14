@@ -1,0 +1,7 @@
+# Root content acceptance — Magnetism and Electromagnetic Induction
+
+Accepted fingerprint `fa49957ecb8e19bea3b04563d9931b4d5bed90bf332ca306485571f6f92d63cf` after two complete independent reviews and one focused correction pass. Removed unsupported eclaims in allfour linked arrays forL8/F8 andL14/F14;their actual tasks remain unchanged. GEM15teacher key now requests two magnetisation/two demagnetisation methods,matching finalI1. Added copper toGEM6/GEM7apparatus and blueprint confirmation as source-procedure clarification. Independent exactdelta verifies12paths only;source/verifier,all final prompts/exemplars/rubric and procedures unchanged. CurrentfiveWord465propagation/24focused/source4checks pass.
+
+Root read reports and checked task/key counts,mapping coverage and copper apparatus clarification;preflight/build pass. Domain/field/geometry/qualitative-factor/device solutions are independently checked. Content accepted for final rendering. Source qualitative treatment means no numerical e.m.f. derivation.
+
+Actual magnetisation/demagnetisation/field actions,GEM7four-motion experiment,outcomed,bell design/making/testing and digital actions require separately approved provision and observed records. Sourceprojectbell uses electromagnet make-break action and is explicitly contrasted with induction applications. Ratings,current limiting,brief supervised testing,power-off adjustments and no-mains/no-heating/no-hammering conditions remain. Actual apparatus sensitivity/access/pacing and any unperformed source actions remain teacher judgments.
