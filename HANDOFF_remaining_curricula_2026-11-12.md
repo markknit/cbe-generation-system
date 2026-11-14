@@ -4,6 +4,17 @@
 
 Mark changed the clean-stop threshold from10%to2% and explicitly resumed work. The live read-only meter at18:08UTC showed8%remaining with the old pause latch set; after changing the machine-readable threshold, `--resume` may clear that latch only if a fresh reading remains above2%. At2%or lower, stop and hand off; Mark will perform the full reset. This overrides the10%threshold recorded in the original pause below.
 
+## Latest live checkpoint — 2026-11-14 18:48UTC
+
+Resumed under Mark's **2% clean-stop threshold**. Most recent live reading18:47UTC=3% remaining, no pause latch. The 12-lesson General Science 1.7 Microorganisms draft was completed and built; pipeline check passes with expected independent-review warning. Current fingerprint `e3688efba2088c2116d7e32e2b878ade72b6e0ed99f9c13b36d08dad12d71b6b`. Three independent initial reviewers report HOLD: MI1/3/4/7/8/9/10/12 refer to absent evidence/stimuli; final section3 depends on missing preservation evidence; blueprint criterion3/4 mappings are incorrect; F9/F10 coverage overclaims outcomes. No acceptance/render/PDF/audit/package was created for this draft. Two reviewers are still saving their concise progressive reports; preserve their saved findings. At2%or lower stop and commit the exact state; Mark performs the full reset.
+
+- Existing completed inventory remains24 reviewed/packaged expansion units and273 lessons, plus frozen31-lesson pilot. Treat the new 12-lesson draft as unaccepted and do not include it in accepted totals.
+- Source packs:33 verified; zero located transcription pending; seven Core requirements remain blocked. There are16 units without complete lesson sets:15 have no draft, and GS1.7 is in draft/HOLD. The other eight located GS units and seven blocked Core units remain in queue.
+- Partner check remains exit1 for pinned R0 schema/resource incompatibilities plus missing baseline fixture; see `evidence/batch_06_latest_partner_checks.log`. Do not change partner schema.
+- **Next after reset:** repair GS1.7 with actual supplied fictional scenarios, infection/prevention/economic evidence, dated observations and preservation case; align tasks/outcomes and rubric links; independent focused recheck; then acceptance, render/PDF/audit, visual review and package. Continue with remaining available General Science sources. Seven Core units require readable authoritative requirements first.
+- No reset, paid API, push, promotion or Drive publication. Exclude unrelated untracked `data/codex_pilot_2026-11/Review_Package/` from commit.
+
+
 2026-11-13local/14NovemberUTC. **Original pause snapshot at10%:273new authored/263new final-reviewed;304authored/294reviewed including frozenpilot.** 16unitswithoutdrafts. EssentialProbability10draftsaved/unbuilt;Volume12+EssentialStats11finalPASS/unpackaged. Explicit resume and threshold change are recorded above; live policy is2%.
 
 ## Locked decisions

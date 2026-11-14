@@ -5,14 +5,16 @@ sys.path.insert(0,'scripts')
 from curriculum_pipeline import content_fingerprint
 b=Path('data/curriculum_expansion_2026-11')
 n,reportname,expected,scope=sys.argv[1:5]
-report=b/'reviews/batch_05'/reportname
 h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+report_candidates=[Path(reportname),b/'reviews/batch_05'/reportname,b/'reviews/batch_06'/reportname]
+report=next((p for p in report_candidates if p.is_file()),report_candidates[-1])
 assert h(report)==expected
 fp=content_fingerprint(b,n)
 ca=json.loads((b/'reviews'/n/'content_acceptance.json').read_text());assert ca['content_fingerprint']==fp and ca['verdict']=='accepted'
 m=json.loads((b/'manuscripts'/f'{n}.json').read_text());prefix=m['prefix']
 data=next((b/'outputs/v2').rglob(prefix+'_data.json'));out=data.parent
-audit=b/'evidence'/f'batch_05_{n}_artifact_audit.json'
+audit_candidates=[b/'evidence'/f'artifact_audit_{n}_2026-11-14.json',b/'evidence'/f'batch_05_{n}_artifact_audit.json']
+audit=next((p for p in audit_candidates if p.is_file()),audit_candidates[-1])
 rows=json.loads(audit.read_text())['documents'];assert len(rows)==9 and {r['module'] for r in rows}=={n}
 arts=[]
 for r in rows:
@@ -32,7 +34,7 @@ legacy=b/'materials/diagrams'
 for card in bank['items']:
  p=legacy/(card['id']+'.png')
  if p.exists():files.add(p)
-for parent in [b/'reviews/batch_05',b/'reviews/batch_05/evidence',b/'evidence']:
+for parent in [b/'reviews/batch_05',b/'reviews/batch_05/evidence',b/'reviews/batch_06',b/'reviews/batch_06/evidence',b/'evidence']:
  for p in parent.glob(n+'*'):
   if p.is_dir():files.update(x for x in p.rglob('*') if x.is_file())
   else:files.add(p)
