@@ -4,6 +4,12 @@
 
 Mark changed the clean-stop threshold from10%to2% and explicitly resumed work. The live read-only meter at18:08UTC showed8%remaining with the old pause latch set; after changing the machine-readable threshold, `--resume` may clear that latch only if a fresh reading remains above2%. At2%or lower, stop and hand off; Mark will perform the full reset. This overrides the10%threshold recorded in the original pause below.
 
+## Latest completed checkpoint — 2026-11-15 01:52 UTC
+
+All43 units/514 lessons are generated,independently reviewed,andpackaged locally. GeneralScience16/197,Essential13/135,Core14/182. Final currentindex: [FINAL_CURRICULUM_STATUS.md](data/curriculum_expansion_2026-11/FINAL_CURRICULUM_STATUS.md);machineindex `FINAL_DELIVERY_INDEX.json`. Forty expansion units/483lessons in37currentarchives plus frozenpilot3/31 inonearchive. Canonical andwholecollectionintegrity0errors;all43partner-renderPASS,contract16/16. PartnerR0 ingestion/Indicesadapter remainincompatible. Teacher practical/access/pacing acceptance remainsseparate. No generation/review/package work remains;do notresumeoldpausedtasksbelow. Core1.1/Essential1.3 useversionedrubric-correctedarchives;originalsretainedunchanged. No push/promotion/publication/APIspend.2%guardretained.
+
+Everything below is a historical checkpoint,not the current work queue.
+
 ## Latest clean-stop checkpoint —2026-11-14 22:03UTC
 
 **PAUSED at the user’s2%threshold** (guardexit10,pause latch set). All three reviewers saved/stopped;no generation/newreview/optionalpackaging after the signal. User will do a full reset. Fresh explicit resume plus verified allowance>2%is required before clearing the latch;do not consume resets automatically.

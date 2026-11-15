@@ -1,0 +1,1 @@
+/home/markk/ares/cbe-generation-system/data/curriculum_expansion_2026-11/reviews/batch_07/evidence/package_review_evidence_core27/closure_fixtures_v3/symlink_escape/data/outside.md

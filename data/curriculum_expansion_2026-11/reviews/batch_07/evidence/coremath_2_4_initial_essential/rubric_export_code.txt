@@ -1,0 +1,64 @@
+File:generators/lib/build_docs.js
+SHA256:cf378b8c338efa3ab27a34d129c9723816068912efb815c16fd7dc0d7b8814c4
+
+133: 
+134:   // Instructions
+135:   if (FE.instructions) {
+136:     body.push(makeTable([
+137:       fullHeader(isTeacher ? 'INSTRUCTIONS GIVEN TO STUDENTS' : 'INSTRUCTIONS FOR STUDENTS', C.teal, 'FFFFFF', SZ_H, 2),
+138:       new TableRow({ children: [
+139:         richCell(FE.instructions, { fill: C.lightBlue, w: W, size: SZ }),
+140:       ]}),
+141:     ], [W]));
+142:     body.push(SPACE());
+143:   }
+144: 
+145:   // Sections
+146:   for (const sec of FE.sections) {
+147:     if (isTeacher) {
+148:       body.push(makeTable([
+149:         fullHeader(sec.title, C.darkBlue, 'FFFFFF', SZ_H, 2, true),
+150:         new TableRow({ children: [
+151:           richCell(sec.prompt,   { fill: C.lightTeal,  bold: true, w: FLW, size: SZ }),
+152:           richCell(sec.exemplar, { fill: C.white,      w: FCW, size: SZ }),
+153:         ]}),
+154:       ], [FLW, FCW]));
+155:     } else {
+156:       // Full-width prompt, then a ruled blank area to write in. No exemplar.
+157:       body.push(makeTable([
+158:         fullHeader(sec.title, C.darkBlue, 'FFFFFF', SZ_H, 1, true),
+159:         new TableRow({ children: [
+160:           richCell(sec.prompt, { fill: C.lightTeal, bold: true, w: W, size: SZ, keepNext: true }),
+161:         ]}),
+162:         new TableRow({ height: { value: 4200, rule: 'atLeast' }, children: [
+163:           cell('Write your answer here:', { fill: C.white, w: W, size: SZ, italic: true, color: '808080' }),
+164:         ]}),
+165:       ], [W]));
+166:     }
+167:     body.push(SPACE());
+168:   }
+169: 
+170:   // Rubric
+171:   if (FE.rubric && FE.rubric.length > 0) {
+172:     const rubricRows = [
+173:       fullHeader('RUBRIC', C.darkBlue, 'FFFFFF', SZ_H, 4),
+174:       new TableRow({ children: [
+175:         cell('Criterion',      { fill: C.medBlue, bold: true, color: 'FFFFFF', w: FLW,  size: SZ }),
+176:         cell('Exceeds Expectations (4)',   { fill: C.teal,    bold: true, color: 'FFFFFF', w: RW3,  size: SZ }),
+177:         cell('Meets Expectations (3)',     { fill: C.medBlue, bold: true, color: 'FFFFFF', w: RW3,  size: SZ }),
+178:         cell('Approaches Expectations (2)',{ fill: C.teal,    bold: true, color: 'FFFFFF', w: RW3,  size: SZ }),
+179:         cell('Below Expectations (1)',     { fill: C.medBlue, bold: true, color: 'FFFFFF', w: RW3r, size: SZ }),
+180:       ]}),
+181:       ...FE.rubric.map(r => new TableRow({ children: [
+182:         cell(r.criterion,  { fill: C.lightBlue,  w: FLW,  size: SZ }),
+183:         cell(r.excellent,  { fill: C.white,      w: RW3,  size: SZ }),
+184:         cell(r.proficient, { fill: C.grey,       w: RW3,  size: SZ }),
+185:         cell(r.developing, { fill: C.white,      w: RW3,  size: SZ }),
+186:         cell(r.belowExpectations || '', { fill: C.grey, w: RW3r, size: SZ }),   // '' only possible under CBE_LEGACY_RUBRIC=1 (baseline render)
+187:       ]})),
+188:     ];
+189:     body.push(makeTable(rubricRows, [FLW, RW3, RW3, RW3, RW3r]));
+190:   }
+191: 
+192:   // Attribution at the end of the document (Mark, 2026-10-01).
+193:   body.push(SPACE(), ...substrandHeaderParas());

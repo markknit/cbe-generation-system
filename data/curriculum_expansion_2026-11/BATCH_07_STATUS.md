@@ -1,3 +1,7 @@
+# Batch 07 — completed; prior quota snapshot preserved
+
+All seven recovered Core units are complete. Two earlier rubric corrections are independently closed in versioned archives. See [final current status](FINAL_CURRICULUM_STATUS.md). The dated clean-stop record below is historical and must not be resumed as unfinished work.
+
 # Batch 07 — verified Core recovery; clean 2% stop
 
 Updated 2026-11-14 22:08 UTC. Generation and new reviews stopped when the guard reported **2% remaining at22:03:41UTC on2026-11-14**,exit10,pause latch set. All three reviewers saved and stopped. No optional packaging was started after that reading.

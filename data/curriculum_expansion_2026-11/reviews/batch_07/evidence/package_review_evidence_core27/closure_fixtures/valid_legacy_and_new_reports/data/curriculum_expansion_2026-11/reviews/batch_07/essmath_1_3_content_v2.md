@@ -1,0 +1,1 @@
+Isolated new CA closure.
