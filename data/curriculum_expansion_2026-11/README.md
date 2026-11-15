@@ -1,5 +1,7 @@
 # Remaining curricula: preparation and operating guide
 
+Remote delivery: completion commit `84626b9f` was pushed to `origin/main` at 2026-11-15 04:24 UTC with explicit user authorization. The hash-bound final status/index preserve their creation-time snapshots; this update records the subsequent push.
+
 Updated 2026-11-15 01:52 UTC. **All 43 units / 514 lessons are generated, independently reviewed, and packaged locally.** See [the final status and current archive index](FINAL_CURRICULUM_STATUS.md). Teacher classroom acceptance and partner R1 integration remain separate. Earlier quota checkpoints below are historical.
 
 The reviewed pilot remains frozen at `../codex_pilot_2026-11/`. The reusable compiler was exercised on isolated copies under `/tmp/cbe-preparation-fixture`; those copies are regression evidence, not new curriculum deliverables. No production modules, partner files or Drive documents were changed.
