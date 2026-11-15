@@ -1,0 +1,435 @@
+{
+  "registry": [
+    {
+      "id": "positiveProduct",
+      "expression": "2**3*2**2",
+      "independent_value": 32,
+      "registered_expected": 32,
+      "pass": true
+    },
+    {
+      "id": "quotient",
+      "expression": "3**5/3**2",
+      "independent_value": 27.0,
+      "registered_expected": 27,
+      "pass": true
+    },
+    {
+      "id": "nested",
+      "expression": "(2**3)**2",
+      "independent_value": 64,
+      "registered_expected": 64,
+      "pass": true
+    },
+    {
+      "id": "powerProduct",
+      "expression": "(2*3)**2",
+      "independent_value": 36,
+      "registered_expected": 36,
+      "pass": true
+    },
+    {
+      "id": "zero",
+      "expression": "5**0",
+      "independent_value": 1,
+      "registered_expected": 1,
+      "pass": true
+    },
+    {
+      "id": "negative",
+      "expression": "2**(-3)",
+      "independent_value": 0.125,
+      "registered_expected": 0.125,
+      "pass": true
+    },
+    {
+      "id": "fractional",
+      "expression": "27**(2/3)",
+      "independent_value": 8.999999999999998,
+      "registered_expected": 9,
+      "pass": true
+    },
+    {
+      "id": "negFraction",
+      "expression": "81**(-.5)",
+      "independent_value": 0.1111111111111111,
+      "registered_expected": 0.1111111111111111,
+      "pass": true
+    },
+    {
+      "id": "fifth",
+      "expression": "32**(2/5)",
+      "independent_value": 4.0,
+      "registered_expected": 4,
+      "pass": true
+    },
+    {
+      "id": "tower",
+      "expression": "2**(2**3)",
+      "independent_value": 256,
+      "registered_expected": 256,
+      "pass": true
+    },
+    {
+      "id": "minusInside",
+      "expression": "(-2)**2",
+      "independent_value": 4,
+      "registered_expected": 4,
+      "pass": true
+    },
+    {
+      "id": "minusOutside",
+      "expression": "-(2**2)",
+      "independent_value": -4,
+      "registered_expected": -4,
+      "pass": true
+    },
+    {
+      "id": "log70Arithmetic",
+      "expression": "1+.8451",
+      "independent_value": 1.8451,
+      "registered_expected": 1.8451,
+      "pass": true
+    },
+    {
+      "id": "logPoint007Arithmetic",
+      "expression": ".8451-3",
+      "independent_value": -2.1549,
+      "registered_expected": -2.1549,
+      "pass": true
+    },
+    {
+      "id": "logPoint02Arithmetic",
+      "expression": ".3010-2",
+      "independent_value": -1.699,
+      "registered_expected": -1.699,
+      "pass": true
+    },
+    {
+      "id": "productLog",
+      "expression": ".3010+.4771",
+      "independent_value": 0.7781,
+      "registered_expected": 0.7781,
+      "pass": true
+    },
+    {
+      "id": "scaledProductLog",
+      "expression": "1.3010+2.4771",
+      "independent_value": 3.7781000000000002,
+      "registered_expected": 3.7781,
+      "pass": true
+    },
+    {
+      "id": "divisionLog",
+      "expression": "1.4771-.6990",
+      "independent_value": 0.7781000000000001,
+      "registered_expected": 0.7781,
+      "pass": true
+    },
+    {
+      "id": "signedDivisionLog",
+      "expression": "2.4771-(-.3010)",
+      "independent_value": 2.7781000000000002,
+      "registered_expected": 2.7781,
+      "pass": true
+    },
+    {
+      "id": "powerLog",
+      "expression": "3*.3010",
+      "independent_value": 0.903,
+      "registered_expected": 0.903,
+      "pass": true
+    },
+    {
+      "id": "rootLog",
+      "expression": ".4771/2",
+      "independent_value": 0.23855,
+      "registered_expected": 0.23855,
+      "pass": true
+    },
+    {
+      "id": "combinedLog",
+      "expression": "1.3010+2.4771-.6990",
+      "independent_value": 3.0791000000000004,
+      "registered_expected": 3.0791,
+      "pass": true
+    },
+    {
+      "id": "finalProductLog",
+      "expression": ".8451+.6990",
+      "independent_value": 1.5440999999999998,
+      "registered_expected": 1.5441,
+      "pass": true
+    },
+    {
+      "id": "finalDivisionLog",
+      "expression": "1.3010-.9031",
+      "independent_value": 0.3978999999999999,
+      "registered_expected": 0.3979,
+      "pass": true
+    },
+    {
+      "id": "finalPowerLog",
+      "expression": "2*.4771",
+      "independent_value": 0.9542,
+      "registered_expected": 0.9542,
+      "pass": true
+    },
+    {
+      "id": "finalRootLog",
+      "expression": ".6990/2",
+      "independent_value": 0.3495,
+      "registered_expected": 0.3495,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_7781",
+      "expression": "10**0.7781",
+      "independent_value": 5.9992919915599545,
+      "registered_expected": 5.9992919915599545,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_301",
+      "expression": "10**0.301",
+      "independent_value": 1.9998618696327441,
+      "registered_expected": 1.9998618696327441,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_4771",
+      "expression": "10**0.4771",
+      "independent_value": 2.999853181190793,
+      "registered_expected": 2.999853181190793,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_699",
+      "expression": "10**0.699",
+      "independent_value": 5.000345349769784,
+      "registered_expected": 5.000345349769784,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_903",
+      "expression": "10**0.903",
+      "independent_value": 7.9983425500702845,
+      "registered_expected": 7.9983425500702845,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_2386",
+      "expression": "10**0.2386",
+      "independent_value": 1.7322078404288253,
+      "registered_expected": 1.7322078404288253,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_0791",
+      "expression": "10**0.0791",
+      "independent_value": 1.199775529871384,
+      "registered_expected": 1.199775529871384,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_3979",
+      "expression": "10**0.3979",
+      "independent_value": 2.499769702178508,
+      "registered_expected": 2.499769702178508,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_5441",
+      "expression": "10**0.5441",
+      "independent_value": 3.5002575415843395,
+      "registered_expected": 3.5002575415843395,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_9542",
+      "expression": "10**0.9542",
+      "independent_value": 8.999119108700521,
+      "registered_expected": 8.999119108700521,
+      "pass": true
+    },
+    {
+      "id": "antilog_0_3495",
+      "expression": "10**0.3495",
+      "independent_value": 2.236145198722521,
+      "registered_expected": 2.236145198722521,
+      "pass": true
+    }
+  ],
+  "unique_supplied_table_rows": [
+    {
+      "kind": "log10",
+      "x": "1",
+      "high_precision": "0",
+      "rounded": "0.0000",
+      "expected": "0.0000",
+      "pass": true
+    },
+    {
+      "kind": "log10",
+      "x": "2",
+      "high_precision": "0.301029995663981195213738894724493026768189881",
+      "rounded": "0.3010",
+      "expected": "0.3010",
+      "pass": true
+    },
+    {
+      "kind": "log10",
+      "x": "3",
+      "high_precision": "0.477121254719662437295027903255115309200128864",
+      "rounded": "0.4771",
+      "expected": "0.4771",
+      "pass": true
+    },
+    {
+      "kind": "log10",
+      "x": "4",
+      "high_precision": "0.602059991327962390427477789448986053536379763",
+      "rounded": "0.6021",
+      "expected": "0.6021",
+      "pass": true
+    },
+    {
+      "kind": "log10",
+      "x": "5",
+      "high_precision": "0.698970004336018804786261105275506973231810119",
+      "rounded": "0.6990",
+      "expected": "0.6990",
+      "pass": true
+    },
+    {
+      "kind": "log10",
+      "x": "6",
+      "high_precision": "0.778151250383643632508766797979608335968318746",
+      "rounded": "0.7782",
+      "expected": "0.7782",
+      "pass": true
+    },
+    {
+      "kind": "log10",
+      "x": "7",
+      "high_precision": "0.845098040014256830712216258592636193483572396",
+      "rounded": "0.8451",
+      "expected": "0.8451",
+      "pass": true
+    },
+    {
+      "kind": "log10",
+      "x": "8",
+      "high_precision": "0.903089986991943585641216684173479080304569644",
+      "rounded": "0.9031",
+      "expected": "0.9031",
+      "pass": true
+    },
+    {
+      "kind": "log10",
+      "x": "9",
+      "high_precision": "0.954242509439324874590055806510230618400257728",
+      "rounded": "0.9542",
+      "expected": "0.9542",
+      "pass": true
+    },
+    {
+      "kind": "log10",
+      "x": "10",
+      "high_precision": "1",
+      "rounded": "1.0000",
+      "expected": "1.0000",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".7781",
+      "high_precision": "5.99929199155995407926496470946485074392067067",
+      "rounded_4sf": "5.999",
+      "expected": "5.999",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".3010",
+      "high_precision": "1.99986186963274411114816490311200893548233268",
+      "rounded_4sf": "2.000",
+      "expected": "2.000",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".4771",
+      "high_precision": "2.99985318119079285498262660615403290250179079",
+      "rounded_4sf": "3.000",
+      "expected": "3.000",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".6990",
+      "high_precision": "5.00034534976978498819813122738538665536590435",
+      "rounded_4sf": "5.000",
+      "expected": "5.000",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".9030",
+      "high_precision": "7.99834255007028395607789903518968483815425791",
+      "rounded_4sf": "7.998",
+      "expected": "7.998",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".2386",
+      "high_precision": "1.73220784042882526646361815900049515044405999",
+      "rounded_4sf": "1.732",
+      "expected": "1.732",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".0791",
+      "high_precision": "1.19977552987138386692309136338448837515410049",
+      "rounded_4sf": "1.200",
+      "expected": "1.200",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".5441",
+      "high_precision": "3.50025754158433921401720603093706440306504094",
+      "rounded_4sf": "3.500",
+      "expected": "3.500",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".3979",
+      "high_precision": "2.49976970217850807370700285104666859803178001",
+      "rounded_4sf": "2.500",
+      "expected": "2.500",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".9542",
+      "high_precision": "8.99911910870051986689981016192524114327179876",
+      "rounded_4sf": "8.999",
+      "expected": "8.999",
+      "pass": true
+    },
+    {
+      "kind": "10^u",
+      "x": ".3495",
+      "high_precision": "2.23614519872252145937709675687280146293610510",
+      "rounded_4sf": "2.236",
+      "expected": "2.236",
+      "pass": true
+    }
+  ],
+  "registry_passed": 37,
+  "table_rows_passed": 21
+}

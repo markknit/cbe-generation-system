@@ -219,7 +219,7 @@ module.exports = {
       "aresKeywords": "indices powers roots common logarithms mathematical tables",
       "slo": {
         "purpose": "Apply fractional indices as roots of positive real bases.",
-        "knowledge": "For positive bases,1/n is a positive nth root;negative powers invert the result.",
+        "knowledge": "For positive x,x^(1/n) is the positive nth root of x;negative powers invert the result.",
         "skills": "Interpret roots and powers under an explicit positive-base domain.",
         "attitudes": "Respect different mathematical explanations and revise a law chart when counterevidence disagrees.",
         "keyInquiry": "What does the denominator of a fractional index mean?",
@@ -247,7 +247,7 @@ module.exports = {
           "learnerExperience": "Explain27^(2/3) by cube root then square and81^(−1/2) by root then reciprocal.",
           "teacherMoves": "10 minutes. Elicit individual mathematical reasons;correct the identified law,domain,sign orprecision error.",
           "sensemakingStrategy": "Connect factors or inverse notation to the numerical evidence.",
-          "formativeAssessment": "For positive bases,1/n is a positive nth root;negative powers invert the result."
+          "formativeAssessment": "For positive x,x^(1/n) is the positive nth root of x;negative powers invert the result."
         },
         {
           "phase": "Driving Question Board (DQB) Creation",
@@ -266,7 +266,7 @@ module.exports = {
       ],
       "teacherReflection": "Inspect the individual exit evidence for a specific operation,base,domain,sign orprecision error;provide targeted follow-up. A copied group chart is not individual derivation;actualcalculatoruse needs observation.",
       "summaryTablePrompt": {
-        "observed": "For positive bases,1/n is a positive nth root;negative powers invert the result.",
+        "observed": "For positive x,x^(1/n) is the positive nth root of x;negative powers invert the result.",
         "learned": "Apply fractional indices as roots of positive real bases.",
         "explained": "Interpret roots and powers under an explicit positive-base domain."
       }
@@ -724,7 +724,7 @@ module.exports = {
         },
         {
           "phase": "Explain Phase",
-          "learnerExperience": "Explain why 3.0791 normalises to10^3×10^0.0791;accept a reasoned preference for direct arithmetic on this simple example.",
+          "learnerExperience": "Explain why 10^(3.0791)=10^3×10^(0.0791) is the antilog of3.0791;accept a reasoned preference for direct arithmetic on this simple example.",
           "teacherMoves": "10 minutes. Elicit individual mathematical reasons;correct the identified law,domain,sign orprecision error.",
           "sensemakingStrategy": "Connect factors or inverse notation to the numerical evidence.",
           "formativeAssessment": "A combined positive-input expression can be transformed before inverse lookup;rounded tables trade precision for simpler arithmetic."
@@ -956,7 +956,7 @@ module.exports = {
       {
         "number": 4,
         "title": "What does the denominator of a fractional index mean?",
-        "observed": "For positive bases,1/n is a positive nth root;negative powers invert the result.",
+        "observed": "For positive x,x^(1/n) is the positive nth root of x;negative powers invert the result.",
         "learned": "Apply fractional indices as roots of positive real bases.",
         "explained": "Interpret roots and powers under an explicit positive-base domain."
       },
