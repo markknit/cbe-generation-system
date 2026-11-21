@@ -1,0 +1,165 @@
+{
+ "gensci_2_4": {
+  "issues": 2,
+  "edits": [
+   {
+    "n": 0,
+    "lesson": 3,
+    "path": "summaryTablePrompt.learned",
+    "old": "and that bleaching is a chemical action of a basic substance.",
+    "new": "and that bleaching is a chemical (oxidation) process in which sodium hypochlorite in bleach changes a coloured substance into a colourless one; liquid bleach also happens to be basic (pH about 11)."
+   },
+   {
+    "n": 1,
+    "lesson": 8,
+    "path": "slo.knowledge",
+    "old": "Acids release hydrogen ions (H+) and bases release hydroxide ions (OH-), which explains the pH colours, the fizzing, Juma's antacid relief and the behaviour of salts in air",
+    "new": "H+ and OH- explain the pH colours, the acid reactions and neutralisation. The damp salt and crumbling washing soda are explained by salts taking in water vapour (hygroscopic/deliquescent) or losing water of crystallisation (efflorescent)."
+   }
+  ],
+  "failed": [],
+  "cannot_fix": [],
+  "confirm_audit": {
+   "raw": 1,
+   "verified": 1,
+   "confirmed": 1,
+   "issues": [
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "where": "Lesson 6, overview",
+     "quote_a": "revising 'The Mombasa Kitchen Puzzle' model with the new idea that salts also interact with water vapour",
+     "problem": "The cumulative class model is called 'The Mombasa Kitchen Model' in every lesson, including this lesson's Model Building phase. The Lesson 6 overview calls the same poster 'The Mombasa Kitchen Puzzle' model.",
+     "correct_value": "The Mombasa Kitchen Model",
+     "autofix_ok": true
+    }
+   ]
+  }
+ },
+ "essmath_2_8": {
+  "issues": 2,
+  "edits": [
+   {
+    "n": 0,
+    "lesson": 7,
+    "path": "framework[4].teacherMoves",
+    "old": "Estimate before we test it in Lesson 8.",
+    "new": "Estimate your answer and keep it in your notebook."
+   },
+   {
+    "n": 1,
+    "lesson": 7,
+    "path": "framework[2].teacherMoves",
+    "old": "Mr Brooks paid the margin once at each change. Where did his USD 1.16 go?",
+    "new": "Over the round trip Mr Brooks paid the KES 1.50-per-USD margin once in total. Where did his USD 1.16 go?"
+   }
+  ],
+  "failed": [],
+  "cannot_fix": [],
+  "confirm_audit": {
+   "raw": 0,
+   "verified": 0,
+   "confirmed": 0,
+   "issues": []
+  }
+ },
+ "coremath_2_4": {
+  "issues": 3,
+  "edits": [
+   {
+    "n": 0,
+    "lesson": 3,
+    "path": "framework[1].teacherMoves",
+    "old": "if they get -0.7451 for sin 35",
+    "new": "if they get -0.4282 for sin 35"
+   },
+   {
+    "n": 1,
+    "lesson": 3,
+    "path": "framework[1].teacherMoves",
+    "old": "or 0.6136 for sin 35",
+    "new": "or 0.5225 for sin 35"
+   },
+   {
+    "n": 2,
+    "lesson": 7,
+    "path": "overview",
+    "old": "the flagpole from 10.0 m at 30 degrees (7.3 m in total)",
+    "new": "a tall pole from 10.0 m at 30 degrees (7.3 m in total)"
+   },
+   {
+    "n": 2,
+    "lesson": 7,
+    "path": "framework[1].teacherMoves",
+    "old": "the flagpole from 10.0 m at 30 degrees as a model",
+    "new": "a tall pole from 10.0 m at 30 degrees as a model"
+   },
+   {
+    "n": 2,
+    "lesson": 7,
+    "path": "framework[2].learnerExperience",
+    "old": "(a) flagpole from 10.0 m at 30 degrees",
+    "new": "(a) a tall pole from 10.0 m at 30 degrees"
+   }
+  ],
+  "failed": [],
+  "cannot_fix": [],
+  "confirm_audit": {
+   "raw": 1,
+   "verified": 1,
+   "confirmed": 1,
+   "issues": [
+    {
+     "type": "CROSS_REFERENCE",
+     "where": "Lesson 5, framework Predict Phase / overview",
+     "quote_a": "look at their Lesson 4 table (sin 35° = 0.5736, cos 35° = 0.8192, tan 35° = 0.7002)",
+     "problem": "Lesson 5 tells learners to compare sin ÷ cos against the tan column of their Lesson 4 table, but the Lesson 4 table has no tan column. Tan values were recorded in the Lesson 3 table, which does not include 30°, 45°, 55° or 60°.",
+     "correct_value": "Refer to the Lesson 3 table for tan values, or add a tan column to the Lesson 4 table.",
+     "autofix_ok": false
+    }
+   ]
+  }
+ },
+ "cost": 1.392,
+ "phases": {
+  "gensci_2_4:fix": {
+   "cost": 0.1102,
+   "secs": 4,
+   "model": "claude-sonnet-5-5"
+  },
+  "gensci_2_4:confirm_audit": {
+   "cost": 0.2881,
+   "secs": 30,
+   "model": "claude-opus-5-5"
+  },
+  "gensci_2_4:confirm_adjudicate": {
+   "cost": 0.108,
+   "secs": 3,
+   "model": "claude-sonnet-5-5"
+  },
+  "essmath_2_8:fix": {
+   "cost": 0.1099,
+   "secs": 2,
+   "model": "claude-sonnet-5-5"
+  },
+  "essmath_2_8:confirm_audit": {
+   "cost": 0.2659,
+   "secs": 22,
+   "model": "claude-opus-5-5"
+  },
+  "coremath_2_4:fix": {
+   "cost": 0.1228,
+   "secs": 9,
+   "model": "claude-sonnet-5-5"
+  },
+  "coremath_2_4:confirm_audit": {
+   "cost": 0.2749,
+   "secs": 23,
+   "model": "claude-opus-5-5"
+  },
+  "coremath_2_4:confirm_adjudicate": {
+   "cost": 0.1122,
+   "secs": 5,
+   "model": "claude-sonnet-5-5"
+  }
+ }
+}

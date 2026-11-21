@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining electromagnetic induction",
       "excellent": "Exceeds Expectations: Clearly explains that relative motion (or a changing field, as in a transformer) makes the flux through the conductor change (the conductor cuts field lines), inducing an e.m.f. that drives current. Explains why stillness gives zero e.m.f. and says no battery is needed.",
       "proficient": "Meets Expectations: States that movement between the conductor and the magnet induces an e.m.f. and that stopping stops the current, with limited explanation of field lines or flux.",
-      "developing": "Approaches Expectations: Says only that spinning makes electricity or that the magnet makes it, without linking to relative motion or induced e.m.f."
+      "developing": "Approaches Expectations: Says only that spinning makes electricity or that the magnet makes it, without linking to relative motion or induced e.m.f.",
+      "belowExpectations": "Below Expectations: does not link electricity to relative motion or induced e.m.f.; says only that the magnet or spinning makes it."
     },
     {
       "criterion": "Use of evidence from investigations",
       "excellent": "Exceeds Expectations: Uses specific results from the galvanometer experiments (stationary, parallel, upward, angled, speed, magnets, turns, 90° versus 0°) to support each claim in a Claim–Evidence–Reasoning way.",
       "proficient": "Meets Expectations: Uses some experimental results to support claims, but links to the reasoning may be incomplete.",
-      "developing": "Approaches Expectations: Gives few or no observations from the experiments, or states results incorrectly."
+      "developing": "Approaches Expectations: Gives few or no observations from the experiments, or states results incorrectly.",
+      "belowExpectations": "Below Expectations: gives almost no observations from the experiments, or states results wrongly, with no claim-evidence-reasoning."
     },
     {
       "criterion": "Factors affecting induced e.m.f.",
       "excellent": "Exceeds Expectations: Names all four factors, correctly states how each changes the e.m.f., links them to Faraday's law and rate of change of flux, and explains fair testing.",
       "proficient": "Meets Expectations: Names at least three factors with mostly correct effects, with a limited link to Faraday's law.",
-      "developing": "Approaches Expectations: Names one or two factors, or gives incorrect effects."
+      "developing": "Approaches Expectations: Names one or two factors, or gives incorrect effects.",
+      "belowExpectations": "Below Expectations: names few or no factors, or gives wrong effects, with no link to Faraday's law."
     },
     {
       "criterion": "Magnetism concepts and applications in Kenya",
       "excellent": "Exceeds Expectations: Accurately describes field lines and domains, the bell's magnetisation and demagnetisation (and how it differs from a dynamo), and at least two Kenyan applications, including the role of transformers, using correct terms.",
       "proficient": "Meets Expectations: Describes most magnetism ideas and one or two applications, with small errors or missing detail.",
-      "developing": "Approaches Expectations: Gives vague or incorrect descriptions and few or no Kenyan applications."
+      "developing": "Approaches Expectations: Gives vague or incorrect descriptions and few or no Kenyan applications.",
+      "belowExpectations": "Below Expectations: gives mostly wrong descriptions of field lines or domains and no Kenyan applications."
     },
     {
       "criterion": "Communication and connection to the driving question",
       "excellent": "Exceeds Expectations: Writes a coherent, well-organised final answer that links the Kericho phenomenon to the national grid and daily life, using scientific vocabulary accurately.",
       "proficient": "Meets Expectations: Writes a mostly clear answer that addresses the driving question, with some vocabulary slips or missing links.",
-      "developing": "Approaches Expectations: Writes a disorganised or incomplete answer that does not fully address the driving question."
+      "developing": "Approaches Expectations: Writes a disorganised or incomplete answer that does not fully address the driving question.",
+      "belowExpectations": "Below Expectations: writes an answer that is disorganised or does not address the driving question."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

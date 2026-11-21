@@ -1,0 +1,901 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "General Science",
+    "grade": 10,
+    "substrand_id": "1.6",
+    "substrand_name": "Plant Growth and Development",
+    "outputDir": "v2/General_Science/SS1.6_Plant_Growth_and_Development",
+    "filePrefix": "Codex_General_Science_Plant_Growth_and_Development",
+    "titleDoc": "GENERAL SCIENCE GRADE 10: PLANT GROWTH AND DEVELOPMENT",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 1.6 • 12 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "1.0 Life Science",
+    "substrand": "Sub-Strand1.6: Plant Growth and Development",
+    "sep": "Observe,control,record across time,compare species and qualify causal explanations.",
+    "careers": "Illustrative plant-establishment/research practices;no agronomic treatment or growth-regulator qualification.",
+    "focus": "Growth/development,dormancy,actual germination-condition trials and types,primary/secondary growth,factors and context-dependent hormones.",
+    "phenomenon": "A fictional seed report treats swelling as new tissue,every ungerminated seed as dead,and every hormone as a universal accelerator.",
+    "supportingPhenomena": "Actual replicated water/temperature trays,multi-daylogs,datedcommonbean/peaspecimens,separatefictionalpercentages/lengthrates andqualifiedcambium/hormone models.",
+    "drivingQuestion": "Which conditions,structures and records justify a plant-growth claim? KICD: Why is the concept of growth in plants important?",
+    "storylineThread": "Meaning → dormancy → plan → actualsetup → actualfollowup → actualtypes → growthorigins → factors → hormones → sourcecheck → audit → independent explanation.",
+    "content": "Concept of growth and development in plants; Seed dormancy; Conditions necessary for germination; Types of germination; Primary and secondary growth in plants; Role of growth hormones in plants",
+    "coreCompetencies": "Communication and collaboration: as the learner shares information gathered on differences between plant growth and development.\nSelf-efficacy: as the learner works on practical activities to investigate epigeal and hypogeal germination.\nLearning to learn: as the learner reflects on the experiments investigating conditions necessary for germination.",
+    "values": "Responsibility: Learner engages in assigned roles while working with others in the process of learning such as investigating conditions necessary for germination.",
+    "pcis": "Cyber security: as the learner observes online safety when searching for information on growth and development of plants.",
+    "gradeLevel": "10",
+    "subject": "General Science",
+    "totalDuration": "12 lessons × 40 minutes = 480 minutes",
+    "learningOutcomes": "explain the meaning of growth and development in plants,\ndescribe the causes of seed dormancy in plants,\ninvestigate the conditions necessary for germination,\ndifferentiate between epigeal and hypogeal germination,\ndistinguish between primary and secondary growth in plants,\ndescribe factors that contribute to growth and development in plants,\ndescribe the role of growth hormones in plants,\nappreciate the concept of growth and development in plants."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "Is every increase in size new growth?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Explain growth versus development with a useful plant example and limit.",
+        "knowledge": "Permanent tissue growth differs from water swelling and from changes in differentiation/maturity.",
+        "skills": "Classify changes and justify a practical monitoring implication.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Is every increase in size new growth?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a seed that swells immediately has necessarily made new tissue.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete GD1comparisons and a useful growth/development management example.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named evidence without inventing observations.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why elongation alone does not establish drymass or health.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask why some viable seeds still fail to germinate.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give an individual distinction,benefit and evidence limit.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Explain growth versus development with a useful plant example and limit.",
+        "learned": "Permanent tissue growth differs from water swelling and from changes in differentiation/maturity.",
+        "explained": "Classify changes and justify a practical monitoring implication."
+      }
+    },
+    {
+      "number": 2,
+      "title": "Does failure to germinate prove dormancy?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Describe possible dormancy causes and distinguish unsuitable conditions/nonviability.",
+        "knowledge": "Dormancy is an intrinsic block,not every absence of germination.",
+        "skills": "Compare cases and match conceptual species-specific treatments.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Does failure to germinate prove dormancy?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether every dry seed is dormant.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete GD2viable/dormant/quiescent/nonviable comparisons and cause-treatment matches.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named evidence without inventing observations.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why treatment guidance depends on species and no pupil chemical/heat treatment is used.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how a controlled actual trial could test external conditions.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one cause and one justified limit on diagnosis.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Describe possible dormancy causes and distinguish unsuitable conditions/nonviability.",
+        "learned": "Dormancy is an intrinsic block,not every absence of germination.",
+        "explained": "Compare cases and match conceptual species-specific treatments."
+      }
+    },
+    {
+      "number": 3,
+      "title": "Which conditions can our actual experiment isolate?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Plan controlled water and recorded-temperature comparisons with a genuine multi-day schedule.",
+        "knowledge": "A comparison needs matched variables,replicate environments and a declared germination criterion.",
+        "skills": "Define conditions,records,controls and untested factors.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Which conditions can our actual experiment isolate?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a waterlogged tray changes only oxygen.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete GD3actual plan,allocation,replicates and daily raw record definitions.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named evidence without inventing observations.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain A/Bwater versus A/Ctemperature comparisons and oxygen/light limits.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Assign safe actual setup/monitoring roles for the next lesson.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give an individual independent/dependent/control/timeline explanation.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Plan controlled water and recorded-temperature comparisons with a genuine multi-day schedule.",
+        "learned": "A comparison needs matched variables,replicate environments and a declared germination criterion.",
+        "explained": "Define conditions,records,controls and untested factors."
+      }
+    },
+    {
+      "number": 4,
+      "title": "Can we establish a traceable germination trial?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Set up actual approved trays and retain named individual action records.",
+        "knowledge": "Performed investigation needs genuine conditions and between-lesson monitoring.",
+        "skills": "Count,label,set conditions and record actual checks responsibly.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Can we establish a traceable germination trial?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD3; GD4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which readings must be recorded rather than filled with expected values.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Carry out GD4actual safe setup/count/label/moisture checks.",
+          "teacherMoves": "16 minutes. Use16minutes approved actual setup/follow-up/specimen observations and10minutes checks across phases2–3;teacher prepares dated material and owns daily between-lesson monitoring. Missing actual actions remain NOTOBSERVED.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Check condition IDs,replicate totals,actualtemperature and adult daily responsibilities.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Schedule follow-up after the packet-appropriate multi-day window.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Retain actual named contribution or mark unperformed action NOTOBSERVED.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Set up actual approved trays and retain named individual action records.",
+        "learned": "Performed investigation needs genuine conditions and between-lesson monitoring.",
+        "explained": "Count,label,set conditions and record actual checks responsibly."
+      }
+    },
+    {
+      "number": 5,
+      "title": "What do the actual records support?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Follow up actual trials,calculate percentages and compare without inventing conditions.",
+        "knowledge": "Observed association is limited by frame,time,viability and remaining confounds.",
+        "skills": "Count,check records,compute percentages and separate fictional practice.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "What do the actual records support?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD4; GD5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether seven-day nongermination proves seed death.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Analyse actual GD4follow-up and separately calculate all GD5fictional percentages.",
+          "teacherMoves": "16 minutes. Use16minutes approved actual setup/follow-up/specimen observations and10minutes checks across phases2–3;teacher prepares dated material and owns daily between-lesson monitoring. Missing actual actions remain NOTOBSERVED.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Compare matched conditions,replicate variation and missingness;do not claim tested oxygen/light conclusions.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how cotyledon positions vary between actual species.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Retain named actual count/check evidence and one limit.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Follow up actual trials,calculate percentages and compare without inventing conditions.",
+        "learned": "Observed association is limited by frame,time,viability and remaining confounds.",
+        "explained": "Count,check records,compute percentages and separate fictional practice."
+      }
+    },
+    {
+      "number": 6,
+      "title": "Which part lifts the cotyledons?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Compare actual dated common-bean and pea seedling stages with honest visibility limits.",
+        "knowledge": "Epigeal/hypogeal descriptions depend on cotyledon position and elongating region,not every species’ name.",
+        "skills": "Observe,draw and distinguish cotyledons from true leaves.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Which part lifts the cotyledons?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether every bean species must raise its cotyledons.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Observe GD6actual labelled series/specimens and make named individual sketches/records.",
+          "teacherMoves": "16 minutes. Use16minutes approved actual setup/follow-up/specimen observations and10minutes checks across phases2–3;teacher prepares dated material and owns daily between-lesson monitoring. Missing actual actions remain NOTOBSERVED.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain common-bean hypocotyl versus pea epicotyl roles using visible/supplied distinctions.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask whether increasing length and increasing stem girth have the same origin.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Record an actual comparison or state which structures/actions were not observed.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Compare actual dated common-bean and pea seedling stages with honest visibility limits.",
+        "learned": "Epigeal/hypogeal descriptions depend on cotyledon position and elongating region,not every species’ name.",
+        "explained": "Observe,draw and distinguish cotyledons from true leaves."
+      }
+    },
+    {
+      "number": 7,
+      "title": "Does secondary growth replace primary growth?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Distinguish typical primary and secondary growth without universalising a woody model.",
+        "knowledge": "Apical extension and lateral thickening can coexist and differ among plant groups.",
+        "skills": "Build labelled length/girth models with cambium direction.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Does secondary growth replace primary growth?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a thickening stem must stop extending.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete GD7apical/vascular/cork-cambium model and direction labels.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named evidence without inventing observations.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain typical woody xylem-in/phloem-out pattern and group/ring limits.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask which environmental factors affect germination versus later growth.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give a correct length/girth distinction and scope condition.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Distinguish typical primary and secondary growth without universalising a woody model.",
+        "learned": "Apical extension and lateral thickening can coexist and differ among plant groups.",
+        "explained": "Build labelled length/girth models with cambium direction."
+      }
+    },
+    {
+      "number": 8,
+      "title": "Do germination and later growth need identical inputs?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Describe growth/development factors and interpret length-change data cautiously.",
+        "knowledge": "Seed reserves/species requirements differ from later photosynthetic/mineral needs.",
+        "skills": "Calculate interval/overall rates and explain what length does not measure.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Do germination and later growth need identical inputs?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD8. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether every seed needs external mineral nutrients before germination.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete GD8factor comparison and all fictional interval/overall rate calculations.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named evidence without inventing observations.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain water/oxygen/temperature/light/nutrient interactions and length-versus-biomass limits.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how hormones interact with those conditions.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one qualified factor explanation and a rate with units.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Describe growth/development factors and interpret length-change data cautiously.",
+        "learned": "Seed reserves/species requirements differ from later photosynthetic/mineral needs.",
+        "explained": "Calculate interval/overall rates and explain what length does not measure."
+      }
+    },
+    {
+      "number": 9,
+      "title": "Does every hormone always increase growth?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Describe five hormone-role examples with tissue,dose and interaction limits.",
+        "knowledge": "Hormones regulate different processes in context;not all simply accelerate every tissue.",
+        "skills": "Build a role table and qualify a universal claim.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Does every hormone always increase growth?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a root and shoot must respond identically to auxin.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete every GD9hormone/example/condition row.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named evidence without inventing observations.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain multiple roles/interactions without applying any growth regulator.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Select three distinct claims for safe source checking.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give one accurate role and a context-dependent limit.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Describe five hormone-role examples with tissue,dose and interaction limits.",
+        "learned": "Hormones regulate different processes in context;not all simply accelerate every tissue.",
+        "explained": "Build a role table and qualify a universal claim."
+      }
+    },
+    {
+      "number": 10,
+      "title": "Can we check three growth claims safely?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Check all three source-claim categories and explain one useful qualified implication.",
+        "knowledge": "A cited claim still needs correct biological context and safe information access.",
+        "skills": "Check,record and share growth/dormancy/hormone evidence honestly.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Can we check three growth claims safely?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD1; GD2; GD9; GD10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether an online label alone validates a universal hormone claim.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete GD10threeclaimrecords using approved sources;record actual digital action separately.",
+          "teacherMoves": "16 minutes. Use16minutes on allthree approvedsourceclaims and10minutes sharing/checking across phases2–3;teacher previews print/digital pages and protects access without personal uploads.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Verify each growth/dormancy/hormone claim and discuss one useful management implication/limit.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Identify misleading growth claims for an audit.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Retain individual source records and reasoned benefit;printed-only is not digital performance.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Check all three source-claim categories and explain one useful qualified implication.",
+        "learned": "A cited claim still needs correct biological context and safe information access.",
+        "explained": "Check,record and share growth/dormancy/hormone evidence honestly."
+      }
+    },
+    {
+      "number": 11,
+      "title": "Which growth claims survive an evidence audit?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Correct eight growth claims and connect a correction to a useful conditional decision.",
+        "knowledge": "Mechanisms,conditions,species and actual-action evidence constrain conclusions.",
+        "skills": "Audit,justify and link a biological benefit with its limit.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Which growth claims survive an evidence audit?",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose a plausible GD11claim and state its evidence assumption.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its biological/condition assumption.",
+          "sensemakingStrategy": "Commit a stated prediction.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Audit every GD11case individually before comparing reasons.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named evidence without inventing observations.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Check all eight mechanism/species/condition/action distinctions.",
+          "teacherMoves": "10 minutes. Use10minutes to compare mechanisms,units,species and limits.",
+          "sensemakingStrategy": "Connect the result to mechanisms,conditions and limits.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Prepare final procedure only;withhold GD12data/keys.",
+          "teacherMoves": "4 minutes. Use4minutes for a warranted next question or scheduling boundary.",
+          "sensemakingStrategy": "Identify a supported next question.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Write a supported correction and useful benefit/limit.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain an individual conclusion/action.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Correct eight growth claims and connect a correction to a useful conditional decision.",
+        "learned": "Mechanisms,conditions,species and actual-action evidence constrain conclusions.",
+        "explained": "Audit,justify and link a biological benefit with its limit."
+      }
+    },
+    {
+      "number": 12,
+      "title": "Independent plant growth and development audit",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.6: Plant Growth and Development",
+      "aresKeywords": "plant growth development seed dormancy germination epigeal hypogeal hormones",
+      "slo": {
+        "purpose": "Independently explain growth mechanisms and interpret supplied investigation evidence.",
+        "knowledge": "Written data/descriptions do not certify actual multi-day trials or specimen observations.",
+        "skills": "Model,calculate,compare and identify separate actual evidence.",
+        "attitudes": "Take responsibility for assigned roles,share observations honestly and respect safe information access and living materials.",
+        "keyInquiry": "Independent plant growth and development audit",
+        "purposeInStoryline": "A fictional seed report calls every nongerminating seed dead and treats long shoots as proof of healthy growth;the class builds controlled records and species-aware explanations.",
+        "safetyNotes": "Use teacher-approved untreated seeds,clean covered ventilated trays and safe labelled seedlings;no eating,unknown/pesticide-treated seeds,acid/hot-water scarification,hormone application or mould handling. Teacher monitors/isolate-disposes affected trays and controls nonfood cooler access. No personal uploads/unknown downloads;approved print alternatives available."
+      },
+      "overview": "Use separate actual multi-day trials/dated specimens and supplied fictional records. Teacher schedules daily monitoring across7–10daysorpacketwindow;no hidden40minute germination claim.\nMaterials: GD12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 12 min, Driving Question Board (DQB) Creation 4 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read independent instructions and arrange GD12sheet/calculator.",
+          "teacherMoves": "4 minutes. 4minutes procedure only;no worked final mechanism/example.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Prediction identifies a mechanism/species/condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete sections1–2 independently.",
+          "teacherMoves": "16 minutes. 16minutes independent sections1–2;no peer or teacher content hints.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Records distinguish actual,fictional and not-observed actions."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Complete section3 mechanisms/factors/hormones independently.",
+          "teacherMoves": "12 minutes. 12minutes independent section3;no guided role table or answer cues.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Explanation/count/rate agrees with conditions,units and scope."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Complete section4 benefit/actual-evidence limits independently.",
+          "teacherMoves": "4 minutes. 4minutes independent section4;no feedback on benefit/evidence.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Hand in all labelled individual work.",
+          "teacherMoves": "4 minutes. 4minutes check/collection;teachingcards andkeys withheld.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Individual response/action record supports only what was observed."
+        }
+      ],
+      "teacherReflection": "Check actual individual F4/F5trial actions/raw daily logs and F6specimen observations separately from writing. Confirm seedlot,conditions,timewindow,mould checks,actualtemperature/moisture,access and40minute pacing;unperformed evidence remains NOTOBSERVED.",
+      "summaryTablePrompt": {
+        "observed": "Independently explain growth mechanisms and interpret supplied investigation evidence.",
+        "learned": "Written data/descriptions do not certify actual multi-day trials or specimen observations.",
+        "explained": "Model,calculate,compare and identify separate actual evidence."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "PLANT GROWTH AND DEVELOPMENT",
+    "instructions": "Lesson12,40minutes:4procedure,16sections1–2,12section3,4section4,4checking/collection. Work independently with GD12only,calculator and blankpaper. No teaching cards,specimens,peers,hints or media. Supplied records/descriptions are not your actual performed trials or observations;do not invent missing dates/conditions.",
+    "sections": [
+      {
+        "title": "1. Growth,development and dormancy",
+        "prompt": "Explain growth versus development and why initial seed swelling alone does not establish new tissue growth. Describe two possible dormancy causes and distinguish a dormant viable seed from a seed lacking suitable external conditions and a dead seed. State why species-specific dormancy-breaking guidance is necessary.",
+        "exemplar": "Permanentincreaseinsize/biomassandcellprocessesversusdifferentiation/maturity;imbibitionalone wateruptake. Acceptimpermeablecoat,physiologicalinhibition/embryomaturitywithappropriatecontext. Intrinsicdormancyversusexternalquiescenceversusnonviability;failedshorttrialalonecannotdiagnose. Treatments/speciesrequirementsdiffer,no unsafeapplication."
+      },
+      {
+        "title": "2. Germination conditions and types",
+        "prompt": "For FinalAcalculate condition percentages and give a justified comparison/limit. Propose two controls and a repeated/recorded check for an actual water-condition trial;state one condition not isolated here. For FinalBidentify epigeal/hypogeal cases and explain cotyledon/hypocotyl/epicotyl distinctions. State whether supplied descriptions prove you actually observed specimens.",
+        "exemplar": "M24/30=80%,D1/30≈3.33%;waterconditionassociationundermatchedroom/lot/time,notuniversalproof. Controlseedlot/count/tray/light/time/temp;replicatedtrays/dailyrawmoisture/temp/countlogs. Temp/oxygen/lightnotindependentlyisolated. Commonbeanepigealhypocotylraisescotyledons;peahypogealepicotylextendswhilecotyledonsbelow. Notfirsttrueleaves;supplieddescriptionnotperformedobservation."
+      },
+      {
+        "title": "3. Growth mechanisms,factors and hormones",
+        "prompt": "Distinguish typical primary length growth from secondary girth growth and label vascular-cambium xylem/phloem directions in a woody example. Explain two environmental/resource factors,including how germination differs from later photosynthetic growth. Give one accurate role each for auxin,gibberellins,cytokinins,ABAandethylene,with one context/interaction limit.",
+        "exemplar": "Primaryapicalextension/primarytissues;secondarylateralmeristemgirthcan coexist,typicalvascularcambiumxyleminward/phloemoutward,notallplantsidentical. Water/oxygen/temp/light/mineralcontext;reservessupportearlyseed,specieslightrequirementsvary,laterphotosynthesis/mineralneeds. Auxinshootelongation/tropism,GA germination/stemelongation,cytokinincelldivision,ABA dormancy/stomatalclosure,ethylene ripening/abscission;dose/tissue/interactionlimits."
+      },
+      {
+        "title": "4. A useful concept and separate actual evidence",
+        "prompt": "Explain one specific benefit of understanding growth/development for a plant decision,with a condition/limit. Name separate actual individual observations needed to confirm your germination investigation and epigeal/hypogeal comparison. Explain why a long shoot or a written record alone is insufficient evidence of every claimed action.",
+        "exemplar": "Acceptspecies-awareestablishment/timing/monitoringbenefitwithcondition/measurementlimit. Actualnamedsetup/count/moisture/temp/record/checkwithmulti-dayrawlogsF4/F5andactualdatedspecimen/sketch/checkF6needed. Lengthnotwholebiomass/health;supplied/writtenrecordnotperformedactionorlastingattitudeproof."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Explain growth,development and dormancy",
+        "excellent": "Accurate distinctions,causes and species/diagnosis limits with clear swelling-versus-tissue reasoning.",
+        "proficient": "Correct growth/development/dormancy explanations with valid causes and limits.",
+        "developing": "Some valid concepts but swelling,dormancy,viability or species inference needs correction.",
+        "belowExpectations": "Needs guided mechanism/condition/specimen/evidence questions to build a supported explanation."
+      },
+      {
+        "criterion": "Interpret germination evidence and types",
+        "excellent": "Correct percentages/qualified controls and complete cotyledon/region/type reasoning with actual-observation limits.",
+        "proficient": "Correct data comparison and epigeal/hypogeal distinctions with valid controls/evidence scope.",
+        "developing": "Some valid data/types but condition,isolation,region or performance claim needs correction.",
+        "belowExpectations": "Needs guided mechanism/condition/specimen/evidence questions to build a supported explanation."
+      },
+      {
+        "criterion": "Explain mechanisms,factors and hormones",
+        "excellent": "Accurate primary/secondary model/directions,factor stage distinctions and five context-qualified hormone roles.",
+        "proficient": "Correct main growth/factor mechanisms and hormone roles with a valid scope limit.",
+        "developing": "Some correct roles but growthorigin,direction,stage requirement or hormone claim needs correction.",
+        "belowExpectations": "Needs guided mechanism/condition/specimen/evidence questions to build a supported explanation."
+      },
+      {
+        "criterion": "Explain useful concept and actual evidence",
+        "excellent": "Specific causal plant-decision benefit/limit and precise separate investigation/specimen action evidence.",
+        "proficient": "Useful accurate benefit/limit and actual-evidence requirements.",
+        "developing": "Benefit plausible but mechanism,scope or actual-action distinction needs correction.",
+        "belowExpectations": "Needs guided mechanism/condition/specimen/evidence questions to build a supported explanation."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand1.6: Plant Growth and Development",
+    "drivingQuestion": "Which conditions,structures and records justify a plant-growth claim? KICD: Why is the concept of growth in plants important?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "Is every increase in size new growth?",
+        "observed": "Explain growth versus development with a useful plant example and limit.",
+        "learned": "Permanent tissue growth differs from water swelling and from changes in differentiation/maturity.",
+        "explained": "Classify changes and justify a practical monitoring implication."
+      },
+      {
+        "number": 2,
+        "title": "Does failure to germinate prove dormancy?",
+        "observed": "Describe possible dormancy causes and distinguish unsuitable conditions/nonviability.",
+        "learned": "Dormancy is an intrinsic block,not every absence of germination.",
+        "explained": "Compare cases and match conceptual species-specific treatments."
+      },
+      {
+        "number": 3,
+        "title": "Which conditions can our actual experiment isolate?",
+        "observed": "Plan controlled water and recorded-temperature comparisons with a genuine multi-day schedule.",
+        "learned": "A comparison needs matched variables,replicate environments and a declared germination criterion.",
+        "explained": "Define conditions,records,controls and untested factors."
+      },
+      {
+        "number": 4,
+        "title": "Can we establish a traceable germination trial?",
+        "observed": "Set up actual approved trays and retain named individual action records.",
+        "learned": "Performed investigation needs genuine conditions and between-lesson monitoring.",
+        "explained": "Count,label,set conditions and record actual checks responsibly."
+      },
+      {
+        "number": 5,
+        "title": "What do the actual records support?",
+        "observed": "Follow up actual trials,calculate percentages and compare without inventing conditions.",
+        "learned": "Observed association is limited by frame,time,viability and remaining confounds.",
+        "explained": "Count,check records,compute percentages and separate fictional practice."
+      },
+      {
+        "number": 6,
+        "title": "Which part lifts the cotyledons?",
+        "observed": "Compare actual dated common-bean and pea seedling stages with honest visibility limits.",
+        "learned": "Epigeal/hypogeal descriptions depend on cotyledon position and elongating region,not every species’ name.",
+        "explained": "Observe,draw and distinguish cotyledons from true leaves."
+      },
+      {
+        "number": 7,
+        "title": "Does secondary growth replace primary growth?",
+        "observed": "Distinguish typical primary and secondary growth without universalising a woody model.",
+        "learned": "Apical extension and lateral thickening can coexist and differ among plant groups.",
+        "explained": "Build labelled length/girth models with cambium direction."
+      },
+      {
+        "number": 8,
+        "title": "Do germination and later growth need identical inputs?",
+        "observed": "Describe growth/development factors and interpret length-change data cautiously.",
+        "learned": "Seed reserves/species requirements differ from later photosynthetic/mineral needs.",
+        "explained": "Calculate interval/overall rates and explain what length does not measure."
+      },
+      {
+        "number": 9,
+        "title": "Does every hormone always increase growth?",
+        "observed": "Describe five hormone-role examples with tissue,dose and interaction limits.",
+        "learned": "Hormones regulate different processes in context;not all simply accelerate every tissue.",
+        "explained": "Build a role table and qualify a universal claim."
+      },
+      {
+        "number": 10,
+        "title": "Can we check three growth claims safely?",
+        "observed": "Check all three source-claim categories and explain one useful qualified implication.",
+        "learned": "A cited claim still needs correct biological context and safe information access.",
+        "explained": "Check,record and share growth/dormancy/hormone evidence honestly."
+      },
+      {
+        "number": 11,
+        "title": "Which growth claims survive an evidence audit?",
+        "observed": "Correct eight growth claims and connect a correction to a useful conditional decision.",
+        "learned": "Mechanisms,conditions,species and actual-action evidence constrain conclusions.",
+        "explained": "Audit,justify and link a biological benefit with its limit."
+      },
+      {
+        "number": 12,
+        "title": "Independent plant growth and development audit",
+        "observed": "Independently explain growth mechanisms and interpret supplied investigation evidence.",
+        "learned": "Written data/descriptions do not certify actual multi-day trials or specimen observations.",
+        "explained": "Model,calculate,compare and identify separate actual evidence."
+      }
+    ]
+  }
+};

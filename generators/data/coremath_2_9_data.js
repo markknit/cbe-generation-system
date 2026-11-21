@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of key terms (distance/displacement, speed/velocity, scalar/vector, acceleration)",
       "excellent": "Defines all terms correctly, correctly labels each as scalar or vector, and uses them accurately and consistently throughout.",
       "proficient": "Defines most terms correctly with only minor slips in labelling scalar or vector.",
-      "developing": "Confuses distance with displacement or speed with velocity, or omits scalar/vector."
+      "developing": "Confuses distance with displacement or speed with velocity, or omits scalar/vector.",
+      "belowExpectations": "Cannot define most of the key terms, and mixes up distance with displacement, speed with velocity, and scalar with vector."
     },
     {
       "criterion": "Calculations (v = s/t, a = Δv/Δt, area under graph, relative speed)",
       "excellent": "All calculations are correct with clear working, correct formulas and correct units.",
       "proficient": "Most calculations are correct; occasional errors in units or working.",
-      "developing": "Several incorrect calculations or formulas, little working or missing units."
+      "developing": "Several incorrect calculations or formulas, little working or missing units.",
+      "belowExpectations": "Calculations are mostly incorrect or not attempted, with wrong formulas, little working and no units."
     },
     {
       "criterion": "Graph interpretation (gradient and area)",
       "excellent": "Correctly states that the gradient of a displacement-time graph is velocity, the gradient of a velocity-time graph is acceleration and the area is displacement. Sketches are neat, labelled, and linked to Runner A and Runner B.",
       "proficient": "States the meaning of gradient and area correctly, but sketches or links to the runners are partly incomplete.",
-      "developing": "Mixes up what the gradient or area means on the two types of graph, or sketches are unlabelled."
+      "developing": "Mixes up what the gradient or area means on the two types of graph, or sketches are unlabelled.",
+      "belowExpectations": "Cannot say what the gradient or area means on the graphs, and sketches are missing or have no labels."
     },
     {
       "criterion": "Explaining the phenomenon with evidence",
       "excellent": "Gives a complete, logical explanation of why Runner A won despite Runner B leading at 30 km, using velocity, acceleration, graph shape and relative speed.",
       "proficient": "Explains the main reason (B slowed in the middle) using at least two ideas from the unit.",
-      "developing": "Only restates that A won, or uses average speed alone, with little evidence."
+      "developing": "Only restates that A won, or uses average speed alone, with little evidence.",
+      "belowExpectations": "Only says that Runner A won, with no ideas from the unit and no evidence from the data."
     },
     {
       "criterion": "Kenyan contexts and communication",
       "excellent": "Links ideas clearly to Kenyan examples (matatu, boda-boda, Nairobi Marathon) in clear, well-organised sentences.",
       "proficient": "Uses some Kenyan examples; writing is mostly clear.",
-      "developing": "Few or no links to the contexts; explanations are unclear or very short."
+      "developing": "Few or no links to the contexts; explanations are unclear or very short.",
+      "belowExpectations": "Makes few or no links to Kenyan contexts, and the writing is too unclear or too short to follow."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

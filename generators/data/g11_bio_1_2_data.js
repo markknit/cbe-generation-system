@@ -616,31 +616,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence from the lessons",
       "excellent": "Uses specific evidence from the river video, the school field investigations, simulations, readings and pollution research to support every claim.",
       "proficient": "Uses some evidence from the lessons, but some claims are general or unsupported.",
-      "developing": "Gives few or no pieces of evidence, or evidence is not linked to the river."
+      "developing": "Gives few or no pieces of evidence, or evidence is not linked to the river.",
+      "belowExpectations": "Below Expectations: Gives almost no evidence from the lessons, or what is given has no link to the river."
     },
     {
       "criterion": "Scientific accuracy and ecological terms",
       "excellent": "Uses terms such as ecosystem, habitat, population, density, carrying capacity, eutrophication and dissolved oxygen correctly, with accurate adaptations and calculations.",
       "proficient": "Uses most terms correctly with minor errors in adaptations or calculations.",
-      "developing": "Uses few terms or makes major errors, such as confusing algae with hydrophytes or population with community."
+      "developing": "Uses few terms or makes major errors, such as confusing algae with hydrophytes or population with community.",
+      "belowExpectations": "Below Expectations: Uses almost no ecological terms correctly and repeats major errors, such as confusing algae with hydrophytes or population with community."
     },
     {
       "criterion": "Causal explanation of the phenomenon",
       "excellent": "Gives a complete ordered chain from nutrient runoff to algal bloom, decomposition, low oxygen, smell and fish loss, and mentions other limiting factors.",
       "proficient": "Gives a mostly correct chain but misses a step or does not link the smell or oxygen.",
-      "developing": "Lists causes without explaining how they connect, or relies on the original ideas (old fish, no food)."
+      "developing": "Lists causes without explaining how they connect, or relies on the original ideas (old fish, no food).",
+      "belowExpectations": "Below Expectations: Gives only a single cause or the original ideas (old fish, no food) without any chain linking runoff, algae, oxygen and fish loss."
     },
     {
       "criterion": "Sampling methods and data",
       "excellent": "Explains direct counting, quadrats, belt transects and capture-recapture correctly, calculates the estimate accurately and states assumptions.",
       "proficient": "Describes methods and calculates correctly, but explanations of when to use them or the assumptions are incomplete.",
-      "developing": "Confuses methods or cannot calculate the estimate."
+      "developing": "Confuses methods or cannot calculate the estimate.",
+      "belowExpectations": "Below Expectations: Cannot describe the sampling methods or attempt the estimate, or mixes the methods up throughout."
     },
     {
       "criterion": "Community solutions and model revision",
       "excellent": "Proposes realistic actions that each target a cause, suggests a way to monitor results, and clearly shows how the model has improved.",
       "proficient": "Proposes reasonable actions and some model changes, but links to causes or monitoring are weak.",
-      "developing": "Gives vague or unrelated actions and little model revision."
+      "developing": "Gives vague or unrelated actions and little model revision.",
+      "belowExpectations": "Below Expectations: Gives no actions, or actions that do not relate to the causes, and shows no change from the original model."
     }
   ]
 };
@@ -715,6 +720,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

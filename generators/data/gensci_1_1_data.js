@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence from the lessons",
       "excellent": "Uses specific evidence from the Kisumu farmer, the Kenyan examples and the Mystery Bags activity accurately and links each to the answer.",
       "proficient": "Uses some evidence from the lessons correctly, but links to the answer are sometimes unclear.",
-      "developing": "Gives few or vague examples, or uses evidence that is incorrect or not from the lessons."
+      "developing": "Gives few or vague examples, or uses evidence that is incorrect or not from the lessons.",
+      "belowExpectations": "Names almost none of the evidence from the Kisumu farmer, the Kenyan examples or the Mystery Bags activity, or gives only fragments that do not connect to the answer."
     },
     {
       "criterion": "Understanding of inference",
       "excellent": "Defines inference correctly, explains evidence, reasoning and inference clearly, and explains why inference is not a guess.",
       "proficient": "Defines inference and names the three parts, with limited explanation of how they connect.",
-      "developing": "Confuses inference with guessing or observation, or cannot name the parts."
+      "developing": "Confuses inference with guessing or observation, or cannot name the parts.",
+      "belowExpectations": "Cannot say what inference is, or treats it as the same as a guess or something seen, and names none or only one of evidence, reasoning and inference without prompting."
     },
     {
       "criterion": "Application to a new scenario",
       "excellent": "Applies the ERI framework to the Kericho tea scenario using the evidence given, a logical inference about a hidden cause that follows from that evidence, and a suitable career.",
       "proficient": "Applies the framework to the new scenario but the reasoning or career link is incomplete.",
-      "developing": "Gives an inference without evidence or reasoning, or does not name a career."
+      "developing": "Gives an inference without evidence or reasoning, or does not name a career.",
+      "belowExpectations": "Does not use the Kakamega well scenario to reach an inference, or only copies a clue from it, and gives no reason and no career."
     },
     {
       "criterion": "Science process skills and Kenyan contexts",
       "excellent": "Correctly names and explains at least three process skills and the difference between observation and inference, with relevant Kenyan contexts throughout.",
       "proficient": "Names two or three process skills with some explanation and includes some Kenyan examples.",
-      "developing": "Names few or no process skills, or examples are missing or not relevant."
+      "developing": "Names few or no process skills, or examples are missing or not relevant.",
+      "belowExpectations": "Names no science process skills and cannot tell an observation from an inference, with no relevant Kenyan example."
     },
     {
       "criterion": "Answer to the Driving Question and communication",
       "excellent": "Gives a clear, complete answer to the Driving Question that shows how thinking has changed, written in clear, organised sentences.",
       "proficient": "Answers the Driving Question partly, with some reflection on change in thinking.",
-      "developing": "Answer to the Driving Question is incomplete or unclear, with no reflection."
+      "developing": "Answer to the Driving Question is incomplete or unclear, with no reflection.",
+      "belowExpectations": "Gives no answer to the Driving Question, or writes a few unconnected words that are too unclear to follow."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

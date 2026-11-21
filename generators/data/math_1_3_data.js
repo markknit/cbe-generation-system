@@ -496,31 +496,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Distinguishing quadratic from linear and forming the equation",
       "excellent": "Correctly writes w(w + 2) = 120 as w^2 + 2w - 120 = 0, identifies a = 1, b = 2 and c = -120, and clearly explains using w x w and the linear perimeter 4w + 4 why a linear method fails.",
       "proficient": "Forms the equation and identifies a, b and c correctly, with a partial explanation of the difference between quadratic and linear.",
-      "developing": "Has errors in the equation or in a, b and c, or gives no explanation of why the equation is not linear."
+      "developing": "Has errors in the equation or in a, b and c, or gives no explanation of why the equation is not linear.",
+      "belowExpectations": "Cannot form a quadratic equation from the hall problem, does not identify a, b and c, and does not tell a quadratic from a linear equation."
     },
     {
       "criterion": "Expanding and factorising accurately",
       "excellent": "Expands (x + 5)(x + 3) and (2x - 1)(3x + 4) correctly, factorises w^2 + 2w - 120 as (w + 12)(w - 10), and checks by expanding.",
       "proficient": "Expands and factorises mostly correctly, with a minor sign or collecting-terms error or no check.",
-      "developing": "Several errors in expanding or factorising, and no connection made between the two."
+      "developing": "Several errors in expanding or factorising, and no connection made between the two.",
+      "belowExpectations": "Expands and factorises incorrectly or not at all, with no check, and shows no understanding that the two are linked."
     },
     {
       "criterion": "Solving by the three methods",
       "excellent": "Solves correctly by the Zero Product Property, completing the square and the quadratic formula, including D = 484, and shows the methods agree. Solves the Nakuru and mandazi problems correctly to 2 d.p.",
       "proficient": "Solves correctly by at least two methods, with minor slips in the working or rounding.",
-      "developing": "Can solve by one method only, or makes major errors in the formula, the discriminant or the square roots."
+      "developing": "Can solve by one method only, or makes major errors in the formula, the discriminant or the square roots.",
+      "belowExpectations": "Cannot complete any of the three methods, or leaves out the formula, the discriminant or the square roots."
     },
     {
       "criterion": "Using context and the discriminant to judge solutions",
       "excellent": "Rejects w = -12 with a clear reason, states width 10 m and length 12 m with a check of 120 m2, explains D > 0, D = 0 and D < 0 correctly, and justifies the mandazi price choice.",
       "proficient": "Rejects the impossible solution and states the answer, with a limited explanation of D or of the price choice.",
-      "developing": "Gives both solutions without choosing, or gives no reason for rejecting one."
+      "developing": "Gives both solutions without choosing, or gives no reason for rejecting one.",
+      "belowExpectations": "Does not use the context or the discriminant to decide between the solutions, and may accept an answer that does not fit the hall."
     },
     {
       "criterion": "Final explanation and communication",
       "excellent": "Gives a clear, connected explanation answering the driving question with the hall data, correct terms (solutions, discriminant, Zero Product Property) and another community example.",
       "proficient": "Explanation covers most required points with mostly correct terms but limited links.",
-      "developing": "Explanation is incomplete or does not use evidence from the lessons."
+      "developing": "Explanation is incomplete or does not use evidence from the lessons.",
+      "belowExpectations": "Explanation is very short or missing, with little or no evidence from the lessons."
     }
   ]
 };
@@ -581,6 +586,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

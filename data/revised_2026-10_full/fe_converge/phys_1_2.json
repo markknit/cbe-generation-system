@@ -1,0 +1,64 @@
+{
+ "module": "phys_1_2",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 4,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "Lesson 1 classifies the twine as borderline plastic with slight permanent deformation, whereas Lesson 2 says it returned at low loads. The FE's classification of the twine as elastic at low loads and ",
+     "reason": "Lesson 1 says twine showed slight permanent deformation (borderline plastic) and Lesson 2 says it returned at low loads but lengthened slightly at higher loads. These are compatible, and the FE's 'ela"
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "The 463 J figure is arithmetically correct. However, the rope A elastic-limit energy at 1.5 m would be larger than the stored energy at 0.92 m. The FE never asks about it, so this is not a defect.",
+     "reason": "Lesson 6 gives Ep≈463 J for rope B at its limit and ≈360 J for rope A at 0.92 m. The FE matches, the arithmetic is correct, and the candidate itself says it is not a defect."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "LESSON_CONFLICT",
+     "why": "quote not found",
+     "problem": "Lesson 3 gives lab-scale rope k values (40 and 25 N/m) while Lesson 6 gives 850 and 210 N/m for the same ropes. Lesson 3 does flag its values as 'simplified... "
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "raw": 3,
+   "verified": 3,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "The wording is consistent with Lessons 1 and 2, but the Part 1 exemplar says sisal twine 'returned at low loads but showed slight permanent lengthening at higher loads' while Lesson 1 describes it as ",
+     "reason": "The Part 1 exemplar matches Lessons 1 and 2 (rubber elastic, twine returns at low loads with slight permanent lengthening, copper stays bent); no contradiction."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Lesson 6 does not give a mass for the safe working load, only a force of 441 N. Using this as a rope that carried an 80 kg sack and then snapped is consistent. However, 441/9.8 = 45.0 kg is correct, s",
+     "reason": "441/9.8 = 45 kg is correct, and it follows from Lesson 6's 441 N force at the elastic limit; no defect."
+    },
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "Lesson 3 gives the old rope a smaller extension limit than the new (lower elastic limit) and the new rope has elastic limit 1.5 m in Lesson 6, whereas the old rope's elastic-limit extension (2.1 m) is",
+     "reason": "The FE copies Lesson 6's data (k = 210, limit 2.1 m, 441 N) exactly. Lesson 3's lab-scale card says nothing about extension limits, and Lesson 4 only claims a lower force at the limit, which holds (44"
+    }
+   ],
+   "dropped_by_code": []
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

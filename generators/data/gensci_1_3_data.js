@@ -555,31 +555,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Mechanical and chemical digestion",
       "excellent": "Clearly distinguishes the two types with correct examples and uses the Mandazi Moment evidence to explain amylase action on starch.",
       "proficient": "Distinguishes the two types with correct examples but gives only a weak link to the Mandazi evidence.",
-      "developing": "Mixes up the two types or gives no examples or evidence."
+      "developing": "Mixes up the two types or gives no examples or evidence.",
+      "belowExpectations": "Cannot tell mechanical digestion from chemical digestion, gives no example of either, and does not mention what happened to the ugali in the mouth."
     },
     {
       "criterion": "Enzymes, specificity and food tests",
       "excellent": "Matches each enzyme to its substrate and region accurately, explains specificity, and uses named food tests with correct colours as evidence.",
       "proficient": "Matches most enzymes to substrates and regions and mentions some food tests.",
-      "developing": "Names few enzymes correctly or does not link enzymes to substrates or tests."
+      "developing": "Names few enzymes correctly or does not link enzymes to substrates or tests.",
+      "belowExpectations": "Names no enzyme with its food or place in the canal, and does not mention any food test or colour change."
     },
     {
       "criterion": "Structural adaptations and self-protection",
       "excellent": "Explains villi and microvilli, mucus and pepsinogen, and both sphincters accurately, linking each structure to its function in the meal.",
       "proficient": "Explains most structures and functions with minor gaps.",
-      "developing": "Names structures without explaining their functions, or confuses them."
+      "developing": "Names structures without explaining their functions, or confuses them.",
+      "belowExpectations": "Names almost no part of the digestive system that helps absorption or protects the stomach, or names them with the wrong job."
     },
     {
       "criterion": "Connected explanation of the driving question",
       "excellent": "Gives a sequenced explanation of the meal through the canal and a reasoned prediction of what happens when an adaptation fails.",
       "proficient": "Gives a mostly sequenced explanation and a simple prediction.",
-      "developing": "Gives a list of facts without sequence or without a prediction."
+      "developing": "Gives a list of facts without sequence or without a prediction.",
+      "belowExpectations": "Does not follow the meal through the alimentary canal, lists a few separate facts, and makes no prediction about what happens when an adaptation fails."
     },
     {
       "criterion": "Use of evidence and Kenyan context",
       "excellent": "Consistently uses the ugali, sukuma wiki and nyama choma meal and practical observations to support claims, with correct scientific vocabulary.",
       "proficient": "Uses the meal and some observations, with mostly correct vocabulary.",
-      "developing": "Makes general claims with little reference to the meal or evidence."
+      "developing": "Makes general claims with little reference to the meal or evidence.",
+      "belowExpectations": "Makes statements with no mention of the ugali, sukuma wiki and nyama choma meal or any test or observation, and uses almost no scientific words correctly."
     }
   ]
 };
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of M = F × d and the Principle of Moments",
       "excellent": "Exceeds Expectations: calculates every moment correctly with units, converts masses to weights using g = 10 N/kg, identifies clockwise and anticlockwise moments, and states the Principle of Moments accurately.",
       "proficient": "Meets Expectations: calculates most moments correctly with units and states the Principle of Moments with minor gaps, such as a missing direction or unit.",
-      "developing": "Approaches Expectations: makes frequent calculation errors, omits units or directions, or cannot state the Principle of Moments."
+      "developing": "Approaches Expectations: makes frequent calculation errors, omits units or directions, or cannot state the Principle of Moments.",
+      "belowExpectations": "Below Expectations: calculates few moments correctly, usually without units or directions, and cannot state the Principle of Moments."
     },
     {
       "criterion": "Explaining the Jembe Handle Puzzle",
       "excellent": "Exceeds Expectations: identifies the blade-soil contact as the pivot and explains that the longer handle (90 cm against 30 cm) gives a larger perpendicular distance and so a larger moment for the same force, rejecting the idea that a bigger force is needed.",
       "proficient": "Meets Expectations: explains that a longer handle makes digging easier and refers to distance and moment, but the pivot or the same-force reasoning is incomplete.",
-      "developing": "Approaches Expectations: says only that a longer handle is easier or gives vague reasons, without linking to moment, pivot or perpendicular distance."
+      "developing": "Approaches Expectations: says only that a longer handle is easier or gives vague reasons, without linking to moment, pivot or perpendicular distance.",
+      "belowExpectations": "Below Expectations: gives no reason for the longer handle, or says a bigger force is needed, with no mention of pivot, distance or moment."
     },
     {
       "criterion": "Understanding of couples and net moment",
       "excellent": "Exceeds Expectations: defines a couple correctly, explains zero net force with pure rotation, calculates the moment of a couple using F × d with the distance between the forces, and explains a real couple such as the two-handed steering wheel grip. Uses the perpendicular distance, not the arrow length.",
       "proficient": "Meets Expectations: defines a couple and gives F × d, with small gaps in the calculation, in explaining net force, or in the steering wheel example.",
-      "developing": "Approaches Expectations: confuses a couple with a single force, or does not explain why the object turns."
+      "developing": "Approaches Expectations: confuses a couple with a single force, or does not explain why the object turns.",
+      "belowExpectations": "Below Expectations: does not say what a couple is, or treats it as a single force, and gives no calculation of its moment."
     },
     {
       "criterion": "Connecting to Kenyan contexts and the driving question",
       "excellent": "Exceeds Expectations: gives a coherent answer to the driving question with at least two correct Kenyan examples, each with pivot and design reason, and clearly shows how thinking changed since Lesson 1.",
       "proficient": "Meets Expectations: gives a mostly complete answer with two examples, where the pivot or design reasoning is partly missing.",
-      "developing": "Approaches Expectations: gives one example or none, with little link to the driving question or to the change in thinking."
+      "developing": "Approaches Expectations: gives one example or none, with little link to the driving question or to the change in thinking.",
+      "belowExpectations": "Below Expectations: gives no Kenyan example with a pivot, and little or no answer to the driving question or change in thinking."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Decomposition method and the (n – 2) triangle idea",
       "excellent": "Clearly explains drawing diagonals from one vertex, states (n – 2) triangles correctly for the heptagon and other polygons, and explains that the total is the sum of the triangle areas.",
       "proficient": "Describes splitting into triangles and summing areas, with the number of triangles mostly correct or the reasoning partly explained.",
-      "developing": "Mentions shapes but does not explain how the polygon is split or how the parts combine into the total."
+      "developing": "Mentions shapes but does not explain how the polygon is split or how the parts combine into the total.",
+      "belowExpectations": "Does not split the polygon into triangles, and cannot say how the parts add up to the total area."
     },
     {
       "criterion": "Use of formulae and calculation accuracy",
       "excellent": "Recalls all formulae correctly, derives A = ½ab sin C, and calculates 14.84 m², 43.46 m² and 48 m² with correct working and units.",
       "proficient": "Uses most formulae correctly and gets most calculations right, with minor slips in rounding or units.",
-      "developing": "Formulae are missing or confused (for example slant height instead of perpendicular height) and calculations are incomplete or incorrect."
+      "developing": "Formulae are missing or confused (for example slant height instead of perpendicular height) and calculations are incomplete or incorrect.",
+      "belowExpectations": "Cannot recall the formulae or uses the wrong ones, and calculations are mostly missing or incorrect, with no units."
     },
     {
       "criterion": "Reasoning and links between methods",
       "excellent": "Explains why the perpendicular height is needed, why the octagon formula and decomposition agree, why area scale factors are squared, and why different valid decompositions give the same area.",
       "proficient": "Gives reasons for most of these ideas, though some explanations are brief or incomplete.",
-      "developing": "States answers without reasons or does not connect methods to each other."
+      "developing": "States answers without reasons or does not connect methods to each other.",
+      "belowExpectations": "Gives answers with no reasons, and does not link the different methods to each other."
     },
     {
       "criterion": "Application to the Kericho land-division problem and Kenyan contexts",
       "excellent": "Clearly explains finding the total area, dividing it into three equal shares for the families, handling composite shapes by adding and subtracting, and the real-life importance of accurate area.",
       "proficient": "Explains how the plot is divided and gives a relevant Kenyan example, with some gaps in detail.",
-      "developing": "Gives a vague or incomplete explanation of the land division and little or no link to real contexts."
+      "developing": "Gives a vague or incomplete explanation of the land division and little or no link to real contexts.",
+      "belowExpectations": "Gives no clear explanation of the Kericho land division, and makes no link to real Kenyan contexts."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

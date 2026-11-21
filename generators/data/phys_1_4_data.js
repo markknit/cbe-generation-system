@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of data and calculations",
       "excellent": "All calculations (PE, work, power, KE, MA, VR, efficiency) are correct, use g = 10 N/kg, show steps and give correct units.",
       "proficient": "Most calculations are correct with steps; one or two small slips in units or arithmetic.",
-      "developing": "Several calculations are missing, incorrect or have no units or working."
+      "developing": "Several calculations are missing, incorrect or have no units or working.",
+      "belowExpectations": "Calculations are missing, or almost all are wrong, with no units or working."
     },
     {
       "criterion": "Explaining why the pulley feels easier",
       "excellent": "Clearly states a smaller force (125 N vs 200 N) over a longer distance (16 m vs 8 m) and that the work needed is not reduced.",
       "proficient": "States the smaller force and longer distance but is unclear about the work.",
-      "developing": "Says the pulley makes lifting easier without describing force and distance, or claims the pulley reduces work or gives energy."
+      "developing": "Says the pulley makes lifting easier without describing force and distance, or claims the pulley reduces work or gives energy.",
+      "belowExpectations": "Does not explain why the pulley feels easier, or says the pulley does the lifting by itself without mentioning force or distance."
     },
     {
       "criterion": "Energy source, transfer and conservation",
       "excellent": "Identifies the chemical energy from food as the source, accounts for 2000 J = 1600 J PE + 400 J heat, and states that energy is conserved and not destroyed.",
       "proficient": "Identifies the energy source and the 400 J as heat, but conservation is incompletely stated.",
-      "developing": "Does not identify the source, or says the energy is lost or destroyed."
+      "developing": "Does not identify the source, or says the energy is lost or destroyed.",
+      "belowExpectations": "Does not name an energy source or any energy transfer."
     },
     {
       "criterion": "Machine terms and efficiency",
       "excellent": "Correctly defines and calculates MA, VR and efficiency, and compares machines and the fixed pulley accurately.",
       "proficient": "Calculates most of MA, VR and efficiency correctly with minor errors in comparison.",
-      "developing": "Confuses MA, VR and efficiency or cannot calculate them."
+      "developing": "Confuses MA, VR and efficiency or cannot calculate them.",
+      "belowExpectations": "Does not use MA, VR or efficiency correctly, or leaves them out."
     },
     {
       "criterion": "Scientific communication",
       "excellent": "The explanation is organised, uses scientific terms accurately and refers to the Kitui well data throughout.",
       "proficient": "The explanation is mostly clear with some terms used loosely.",
-      "developing": "The explanation is disorganised or uses few scientific terms."
+      "developing": "The explanation is disorganised or uses few scientific terms.",
+      "belowExpectations": "The explanation is very disorganised and uses almost no scientific terms."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

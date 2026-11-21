@@ -1,0 +1,767 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "Essential Mathematics",
+    "grade": 10,
+    "substrand_id": "2.5",
+    "substrand_name": "Area of a Part of a Circle",
+    "outputDir": "v2/Essential_Mathematics/SS2.5_Area_of_a_Part_of_a_Circle",
+    "filePrefix": "Codex_Essential_Mathematics_Area_of_a_Part_of_a_Circle",
+    "titleDoc": "ESSENTIAL MATHEMATICS GRADE 10: AREA OF A PART OF A CIRCLE",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 2.5 • 10 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "2.0 Measurement and Geometry",
+    "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+    "sep": "Trace,measure,partition,calculate and qualify region/application evidence.",
+    "careers": "Illustrative pattern/material-design practices;no real door/site-clearance qualification.",
+    "focus": "Sector/segment boundaries,minor/majorareas,actual safe paper models and bounded design/sweep applications.",
+    "phenomenon": "A fictional decorator removes a circular cap but subtracts a whole wedge and confuses majorsector with majorsegment.",
+    "supportingPhenomena": "Two-panelboundaryschematic,actualsector/segmentmodels,sectorfractions,trianglepartitions,majorcomplementsandtabletopdoor-sweepmodels.",
+    "drivingQuestion": "Which boundaries and measurements justify a circle-part area? KICD: Where do we use area of part of a circle in real life?",
+    "storylineThread": "Boundaries → sector → actualsector → minorsegment → majorcomplement → actualsegment → sweep → capapplication → audit → independent evidence.",
+    "content": "Area of a sector; Area of a segment",
+    "coreCompetencies": "Critical Thinking and Problem Solving: the learner explores different options of improvising cutouts of sectors of a circle for working out their areas.\nLearning to Learn: the learner acquires new knowledge as they discuss with peers how to work out areas of circular objects.\nCitizenship; learners appreciate their immediate environment as they gather locally available circular objects",
+    "values": "Unity: The learner exhibits devotion and honesty by undertaking the task while working with peers to make paper cutouts of sectors of a circle and obtain the measurements.\nPeace: the learner displays care and tolerance while discussing with peers and obtaining circular objects, tracing and marking out sectors and segments.",
+    "pcis": "Education for Sustainable Development: the learner uses locally available circular objects to trace and mark out sectors and segments, and work out the areas.",
+    "gradeLevel": "10",
+    "subject": "Essential Mathematics",
+    "totalDuration": "10 lessons × 40 minutes = 400 minutes",
+    "learningOutcomes": "determine the area of a sector of a circle in different situations,\ndetermine the area of a segment of a circle in different situations,\napply the area of part of a circle in real-life situations,\nappreciate the application of area of part of circular objects in real-life situations."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "Which boundary makes a sector or a segment?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+      "aresKeywords": "circle sector segment area central angle minor major",
+      "slo": {
+        "purpose": "Distinguish sector/segment and minor/major region boundaries.",
+        "knowledge": "Two radii and an arc bound a sector;chord and arc bound a segment.",
+        "skills": "Label corresponding endpoints,centre,radii,chord and arc.",
+        "attitudes": "Share objects and tools honestly,care for materials and respect accessible ways of participating.",
+        "keyInquiry": "Which boundary makes a sector or a segment?",
+        "purposeInStoryline": "A fictional decorator treats a cap as an entire wedge;the class tests boundaries,units and genuine model measurements.",
+        "safetyNotes": "Use clean safe flat lids/paper/card and approved blunt tools;teacher handles sharp cuts/compass access as needed. No food knives,sharp metal lids,unknown waste,real moving-door/pinch or site-clearance activity. Use tabletop paper models for door applications."
+      },
+      "overview": "Use supplied exact design cases and separate actual safe cut-out/measurement records. CP1schematic has no physical print-scale claim.\nMaterials: CP1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether the same endpoints imply the same shaded region.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its boundary/angle assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies relevant boundaries/angle."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Annotate both CP1schematics and describe their different boundaries.",
+          "teacherMoves": "16 minutes. Use16minutes for supplied or actual task;retain named evidence without giving the learner’s calculation.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual measurements from supplied exact data."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain the central triangle’s presence/absence.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,conditions and limits.",
+          "sensemakingStrategy": "Connect the conclusion to boundary geometry and units.",
+          "formativeAssessment": "Partition,formula,units and interpretation agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask which fraction of the full-circle area a sector uses.",
+          "teacherMoves": "4 minutes. Use4minutes to identify a relevant next question.",
+          "sensemakingStrategy": "Identify a supported next question or limit.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give an individual boundary explanation and labelled sketch.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual explanation/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check individual region labels,degree/πsettings,partition/units/rounding and actual F3/F6making/measurement actions. Confirm safe object/tool access,precision and40minute pacing;provided data do not certify performed cut-outs/measuring.",
+      "summaryTablePrompt": {
+        "observed": "Distinguish sector/segment and minor/major region boundaries.",
+        "learned": "Two radii and an arc bound a sector;chord and arc bound a segment.",
+        "explained": "Label corresponding endpoints,centre,radii,chord and arc."
+      }
+    },
+    {
+      "number": 2,
+      "title": "How does central angle determine a sector fraction?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+      "aresKeywords": "circle sector segment area central angle minor major",
+      "slo": {
+        "purpose": "Determine minor/major sector areas from radius and degree angle.",
+        "knowledge": "Sector area is the central-angle fraction ofπr²,with square units.",
+        "skills": "Calculate exactπforms and rounded values with correct radius.",
+        "attitudes": "Share objects and tools honestly,care for materials and respect accessible ways of participating.",
+        "keyInquiry": "How does central angle determine a sector fraction?",
+        "purposeInStoryline": "A fictional decorator treats a cap as an entire wedge;the class tests boundaries,units and genuine model measurements.",
+        "safetyNotes": "Use clean safe flat lids/paper/card and approved blunt tools;teacher handles sharp cuts/compass access as needed. No food knives,sharp metal lids,unknown waste,real moving-door/pinch or site-clearance activity. Use tabletop paper models for door applications."
+      },
+      "overview": "Use supplied exact design cases and separate actual safe cut-out/measurement records. CP1schematic has no physical print-scale claim.\nMaterials: CP2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a270degree sector is smaller than a quarter circle.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its boundary/angle assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies relevant boundaries/angle."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete every CP2sector calculation with exact and rounded forms.",
+          "teacherMoves": "16 minutes. Use16minutes for supplied or actual task;retain named evidence without giving the learner’s calculation.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual measurements from supplied exact data."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Check radius/diameter and arc-length/area distinctions.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,conditions and limits.",
+          "sensemakingStrategy": "Connect the conclusion to boundary geometry and units.",
+          "formativeAssessment": "Partition,formula,units and interpretation agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how actual cut-out measurements compare with exact data.",
+          "teacherMoves": "4 minutes. Use4minutes to identify a relevant next question.",
+          "sensemakingStrategy": "Identify a supported next question or limit.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one sector area and a unit/angle check.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual explanation/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check individual region labels,degree/πsettings,partition/units/rounding and actual F3/F6making/measurement actions. Confirm safe object/tool access,precision and40minute pacing;provided data do not certify performed cut-outs/measuring.",
+      "summaryTablePrompt": {
+        "observed": "Determine minor/major sector areas from radius and degree angle.",
+        "learned": "Sector area is the central-angle fraction ofπr²,with square units.",
+        "explained": "Calculate exactπforms and rounded values with correct radius."
+      }
+    },
+    {
+      "number": 3,
+      "title": "Can we make and measure a genuine sector?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+      "aresKeywords": "circle sector segment area central angle minor major",
+      "slo": {
+        "purpose": "Make/mark and measure a safe actual sector with honest action/precision records.",
+        "knowledge": "A true centre,radius and central angle are necessary for the sector model.",
+        "skills": "Trace,locate centre,mark,measure and calculate from actual readings.",
+        "attitudes": "Share objects and tools honestly,care for materials and respect accessible ways of participating.",
+        "keyInquiry": "Can we make and measure a genuine sector?",
+        "purposeInStoryline": "A fictional decorator treats a cap as an entire wedge;the class tests boundaries,units and genuine model measurements.",
+        "safetyNotes": "Use clean safe flat lids/paper/card and approved blunt tools;teacher handles sharp cuts/compass access as needed. No food knives,sharp metal lids,unknown waste,real moving-door/pinch or site-clearance activity. Use tabletop paper models for door applications."
+      },
+      "overview": "Use supplied exact design cases and separate actual safe cut-out/measurement records. CP1schematic has no physical print-scale claim.\nMaterials: CP3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether an arbitrary point in a circle can be used as the centre.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its boundary/angle assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies relevant boundaries/angle."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Carry out CP3actual safe model/measurement tasks with named individual evidence.",
+          "teacherMoves": "16 minutes. Use16minutes actual safe tracing/marking/measuring and10minutes checks across phases2–3;teacher approves clean objects/blunttools and records actual or adapted actions honestly.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual measurements from supplied exact data."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Compare actual fraction/area and tool uncertainty without replacing readings.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,conditions and limits.",
+          "sensemakingStrategy": "Connect the conclusion to boundary geometry and units.",
+          "formativeAssessment": "Partition,formula,units and interpretation agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask which straight boundary produces a cap-shaped segment.",
+          "teacherMoves": "4 minutes. Use4minutes to identify a relevant next question.",
+          "sensemakingStrategy": "Identify a supported next question or limit.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Keep actual measurement/making records and accessible-adaptation scope.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual explanation/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check individual region labels,degree/πsettings,partition/units/rounding and actual F3/F6making/measurement actions. Confirm safe object/tool access,precision and40minute pacing;provided data do not certify performed cut-outs/measuring.",
+      "summaryTablePrompt": {
+        "observed": "Make/mark and measure a safe actual sector with honest action/precision records.",
+        "learned": "A true centre,radius and central angle are necessary for the sector model.",
+        "explained": "Trace,locate centre,mark,measure and calculate from actual readings."
+      }
+    },
+    {
+      "number": 4,
+      "title": "Why is a minor segment smaller than its sector?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+      "aresKeywords": "circle sector segment area central angle minor major",
+      "slo": {
+        "purpose": "Determine a minor segment as matching sector minus central triangle.",
+        "knowledge": "The chord splits off the central isosceles triangle from a minor sector.",
+        "skills": "Draw the correct partition and use the included central angle.",
+        "attitudes": "Share objects and tools honestly,care for materials and respect accessible ways of participating.",
+        "keyInquiry": "Why is a minor segment smaller than its sector?",
+        "purposeInStoryline": "A fictional decorator treats a cap as an entire wedge;the class tests boundaries,units and genuine model measurements.",
+        "safetyNotes": "Use clean safe flat lids/paper/card and approved blunt tools;teacher handles sharp cuts/compass access as needed. No food knives,sharp metal lids,unknown waste,real moving-door/pinch or site-clearance activity. Use tabletop paper models for door applications."
+      },
+      "overview": "Use supplied exact design cases and separate actual safe cut-out/measurement records. CP1schematic has no physical print-scale claim.\nMaterials: CP4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether subtracting triangle from whole circle gives the minor segment.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its boundary/angle assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies relevant boundaries/angle."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Draw and solve CP4same-endpoint sector/triangle/minorsegment.",
+          "teacherMoves": "16 minutes. Use16minutes for supplied or actual task;retain named evidence without giving the learner’s calculation.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual measurements from supplied exact data."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Check positivity,area units and rounding sensitivity.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,conditions and limits.",
+          "sensemakingStrategy": "Connect the conclusion to boundary geometry and units.",
+          "formativeAssessment": "Partition,formula,units and interpretation agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how to find the other segment without a reflex-angle shortcut.",
+          "teacherMoves": "4 minutes. Use4minutes to identify a relevant next question.",
+          "sensemakingStrategy": "Identify a supported next question or limit.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a labelled partition and one justified calculation.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual explanation/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check individual region labels,degree/πsettings,partition/units/rounding and actual F3/F6making/measurement actions. Confirm safe object/tool access,precision and40minute pacing;provided data do not certify performed cut-outs/measuring.",
+      "summaryTablePrompt": {
+        "observed": "Determine a minor segment as matching sector minus central triangle.",
+        "learned": "The chord splits off the central isosceles triangle from a minor sector.",
+        "explained": "Draw the correct partition and use the included central angle."
+      }
+    },
+    {
+      "number": 5,
+      "title": "How does the major segment differ from the major sector?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+      "aresKeywords": "circle sector segment area central angle minor major",
+      "slo": {
+        "purpose": "Determine minor/major segment areas and distinguish a major sector.",
+        "knowledge": "The two segments share a chord and sum to the whole circle;major sector has different straight boundaries.",
+        "skills": "Use a complement and compare three regions.",
+        "attitudes": "Share objects and tools honestly,care for materials and respect accessible ways of participating.",
+        "keyInquiry": "How does the major segment differ from the major sector?",
+        "purposeInStoryline": "A fictional decorator treats a cap as an entire wedge;the class tests boundaries,units and genuine model measurements.",
+        "safetyNotes": "Use clean safe flat lids/paper/card and approved blunt tools;teacher handles sharp cuts/compass access as needed. No food knives,sharp metal lids,unknown waste,real moving-door/pinch or site-clearance activity. Use tabletop paper models for door applications."
+      },
+      "overview": "Use supplied exact design cases and separate actual safe cut-out/measurement records. CP1schematic has no physical print-scale claim.\nMaterials: CP5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether majorsector270andmajorsegmenthaveequalareas.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its boundary/angle assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies relevant boundaries/angle."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete all CP5areas and a common-chord diagram.",
+          "teacherMoves": "16 minutes. Use16minutes for supplied or actual task;retain named evidence without giving the learner’s calculation.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual measurements from supplied exact data."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why the majorsegment contains the central triangle in addition to majorsector.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,conditions and limits.",
+          "sensemakingStrategy": "Connect the conclusion to boundary geometry and units.",
+          "formativeAssessment": "Partition,formula,units and interpretation agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Choose a safe segment template for actual measuring.",
+          "teacherMoves": "4 minutes. Use4minutes to identify a relevant next question.",
+          "sensemakingStrategy": "Identify a supported next question or limit.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give an individual complement calculation with labelled boundaries.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual explanation/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check individual region labels,degree/πsettings,partition/units/rounding and actual F3/F6making/measurement actions. Confirm safe object/tool access,precision and40minute pacing;provided data do not certify performed cut-outs/measuring.",
+      "summaryTablePrompt": {
+        "observed": "Determine minor/major segment areas and distinguish a major sector.",
+        "learned": "The two segments share a chord and sum to the whole circle;major sector has different straight boundaries.",
+        "explained": "Use a complement and compare three regions."
+      }
+    },
+    {
+      "number": 6,
+      "title": "What does a measured segment model establish?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+      "aresKeywords": "circle sector segment area central angle minor major",
+      "slo": {
+        "purpose": "Make/mark and measure an actual segment model using the same centre/radius/angle.",
+        "knowledge": "A segment estimate combines matched geometry and measured quantities with uncertainty.",
+        "skills": "Record actual dimensions,partition,calculate and state a precision limit.",
+        "attitudes": "Share objects and tools honestly,care for materials and respect accessible ways of participating.",
+        "keyInquiry": "What does a measured segment model establish?",
+        "purposeInStoryline": "A fictional decorator treats a cap as an entire wedge;the class tests boundaries,units and genuine model measurements.",
+        "safetyNotes": "Use clean safe flat lids/paper/card and approved blunt tools;teacher handles sharp cuts/compass access as needed. No food knives,sharp metal lids,unknown waste,real moving-door/pinch or site-clearance activity. Use tabletop paper models for door applications."
+      },
+      "overview": "Use supplied exact design cases and separate actual safe cut-out/measurement records. CP1schematic has no physical print-scale claim.\nMaterials: CP6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether chord length can be substituted for radius.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its boundary/angle assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies relevant boundaries/angle."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Carry out CP6actual model/measurement and conditional safe cutting.",
+          "teacherMoves": "16 minutes. Use16minutes actual safe tracing/marking/measuring and10minutes checks across phases2–3;teacher approves clean objects/blunttools and records actual or adapted actions honestly.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual measurements from supplied exact data."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Check same endpoints/centraltriangle and measured uncertainty.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,conditions and limits.",
+          "sensemakingStrategy": "Connect the conclusion to boundary geometry and units.",
+          "formativeAssessment": "Partition,formula,units and interpretation agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how a tabletop door model represents swept area.",
+          "teacherMoves": "4 minutes. Use4minutes to identify a relevant next question.",
+          "sensemakingStrategy": "Identify a supported next question or limit.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Retain named actual measurement/model action and one limitation.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual explanation/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check individual region labels,degree/πsettings,partition/units/rounding and actual F3/F6making/measurement actions. Confirm safe object/tool access,precision and40minute pacing;provided data do not certify performed cut-outs/measuring.",
+      "summaryTablePrompt": {
+        "observed": "Make/mark and measure an actual segment model using the same centre/radius/angle.",
+        "learned": "A segment estimate combines matched geometry and measured quantities with uncertainty.",
+        "explained": "Record actual dimensions,partition,calculate and state a precision limit."
+      }
+    },
+    {
+      "number": 7,
+      "title": "What does a door-sweep sector represent?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+      "aresKeywords": "circle sector segment area central angle minor major",
+      "slo": {
+        "purpose": "Apply sector area to a fictional tabletop sweep and explain its limits.",
+        "knowledge": "A plan-view swept region differs from door-surface area and real safety clearance.",
+        "skills": "Draw a model,calculate and justify a useful conditional application.",
+        "attitudes": "Share objects and tools honestly,care for materials and respect accessible ways of participating.",
+        "keyInquiry": "What does a door-sweep sector represent?",
+        "purposeInStoryline": "A fictional decorator treats a cap as an entire wedge;the class tests boundaries,units and genuine model measurements.",
+        "safetyNotes": "Use clean safe flat lids/paper/card and approved blunt tools;teacher handles sharp cuts/compass access as needed. No food knives,sharp metal lids,unknown waste,real moving-door/pinch or site-clearance activity. Use tabletop paper models for door applications."
+      },
+      "overview": "Use supplied exact design cases and separate actual safe cut-out/measurement records. CP1schematic has no physical print-scale claim.\nMaterials: CP7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether rectangular door-surface area equals swept floor area.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its boundary/angle assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies relevant boundaries/angle."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete CP7paper-only model and area calculation.",
+          "teacherMoves": "16 minutes. Use16minutes for supplied or actual task;retain named evidence without giving the learner’s calculation.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual measurements from supplied exact data."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain hinge/radius/angle assumptions and real thickness/obstacle limits.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,conditions and limits.",
+          "sensemakingStrategy": "Connect the conclusion to boundary geometry and units.",
+          "formativeAssessment": "Partition,formula,units and interpretation agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask whether removing a decorative cap removes the entire sector.",
+          "teacherMoves": "4 minutes. Use4minutes to identify a relevant next question.",
+          "sensemakingStrategy": "Identify a supported next question or limit.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give a useful modelling benefit with a practical limitation.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual explanation/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check individual region labels,degree/πsettings,partition/units/rounding and actual F3/F6making/measurement actions. Confirm safe object/tool access,precision and40minute pacing;provided data do not certify performed cut-outs/measuring.",
+      "summaryTablePrompt": {
+        "observed": "Apply sector area to a fictional tabletop sweep and explain its limits.",
+        "learned": "A plan-view swept region differs from door-surface area and real safety clearance.",
+        "explained": "Draw a model,calculate and justify a useful conditional application."
+      }
+    },
+    {
+      "number": 8,
+      "title": "Which area remains after removing a cap?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+      "aresKeywords": "circle sector segment area central angle minor major",
+      "slo": {
+        "purpose": "Apply segment subtraction to a decorative model and bound material-use claims.",
+        "knowledge": "Removing a minor cap leaves the major segment,not simply the major sector.",
+        "skills": "Partition,calculate and explain a useful design benefit/limit.",
+        "attitudes": "Share objects and tools honestly,care for materials and respect accessible ways of participating.",
+        "keyInquiry": "Which area remains after removing a cap?",
+        "purposeInStoryline": "A fictional decorator treats a cap as an entire wedge;the class tests boundaries,units and genuine model measurements.",
+        "safetyNotes": "Use clean safe flat lids/paper/card and approved blunt tools;teacher handles sharp cuts/compass access as needed. No food knives,sharp metal lids,unknown waste,real moving-door/pinch or site-clearance activity. Use tabletop paper models for door applications."
+      },
+      "overview": "Use supplied exact design cases and separate actual safe cut-out/measurement records. CP1schematic has no physical print-scale claim.\nMaterials: CP8. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether removing a60degree cap removesone-sixthofthedisk.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its boundary/angle assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies relevant boundaries/angle."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete CP8remaining-area calculation with a labelled chord/arc sketch.",
+          "teacherMoves": "16 minutes. Use16minutes for supplied or actual task;retain named evidence without giving the learner’s calculation.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual measurements from supplied exact data."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain the central triangle’s contribution and squared units.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,conditions and limits.",
+          "sensemakingStrategy": "Connect the conclusion to boundary geometry and units.",
+          "formativeAssessment": "Partition,formula,units and interpretation agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Identify curved-area claims needing an audit.",
+          "teacherMoves": "4 minutes. Use4minutes to identify a relevant next question.",
+          "sensemakingStrategy": "Identify a supported next question or limit.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Write an individual useful application and geometry/fit/waste limit.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual explanation/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check individual region labels,degree/πsettings,partition/units/rounding and actual F3/F6making/measurement actions. Confirm safe object/tool access,precision and40minute pacing;provided data do not certify performed cut-outs/measuring.",
+      "summaryTablePrompt": {
+        "observed": "Apply segment subtraction to a decorative model and bound material-use claims.",
+        "learned": "Removing a minor cap leaves the major segment,not simply the major sector.",
+        "explained": "Partition,calculate and explain a useful design benefit/limit."
+      }
+    },
+    {
+      "number": 9,
+      "title": "Which curved-area claims survive an audit?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+      "aresKeywords": "circle sector segment area central angle minor major",
+      "slo": {
+        "purpose": "Correct sector/segment,major-region and scale claims with an application reason.",
+        "knowledge": "Boundaries,units and squared radius determine curved-area calculations.",
+        "skills": "Audit formulas and justify corrections using labelled regions.",
+        "attitudes": "Share objects and tools honestly,care for materials and respect accessible ways of participating.",
+        "keyInquiry": "Which curved-area claims survive an audit?",
+        "purposeInStoryline": "A fictional decorator treats a cap as an entire wedge;the class tests boundaries,units and genuine model measurements.",
+        "safetyNotes": "Use clean safe flat lids/paper/card and approved blunt tools;teacher handles sharp cuts/compass access as needed. No food knives,sharp metal lids,unknown waste,real moving-door/pinch or site-clearance activity. Use tabletop paper models for door applications."
+      },
+      "overview": "Use supplied exact design cases and separate actual safe cut-out/measurement records. CP1schematic has no physical print-scale claim.\nMaterials: CP9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose a plausible CP9claim and state its hidden assumption.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its boundary/angle assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies relevant boundaries/angle."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Audit all four CP9claims individually before comparing reasons.",
+          "teacherMoves": "16 minutes. Use16minutes for supplied or actual task;retain named evidence without giving the learner’s calculation.",
+          "sensemakingStrategy": "Retain actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual measurements from supplied exact data."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Check area-versus-length units,complement and radius scaling.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,conditions and limits.",
+          "sensemakingStrategy": "Connect the conclusion to boundary geometry and units.",
+          "formativeAssessment": "Partition,formula,units and interpretation agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Prepare final procedure only;withhold CP10data and keys.",
+          "teacherMoves": "4 minutes. Use4minutes to identify a relevant next question.",
+          "sensemakingStrategy": "Identify a supported next question or limit.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give one supported correction and useful benefit/limit.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual explanation/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check individual region labels,degree/πsettings,partition/units/rounding and actual F3/F6making/measurement actions. Confirm safe object/tool access,precision and40minute pacing;provided data do not certify performed cut-outs/measuring.",
+      "summaryTablePrompt": {
+        "observed": "Correct sector/segment,major-region and scale claims with an application reason.",
+        "learned": "Boundaries,units and squared radius determine curved-area calculations.",
+        "explained": "Audit formulas and justify corrections using labelled regions."
+      }
+    },
+    {
+      "number": 10,
+      "title": "Independent circle-part area and application",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.5: Area of a Part of a Circle",
+      "aresKeywords": "circle sector segment area central angle minor major",
+      "slo": {
+        "purpose": "Independently determine sector/segment areas and bound a useful model.",
+        "knowledge": "Exact supplied diagrams/data cannot certify actual cut-out/measurement skill.",
+        "skills": "Draw,label,calculate,check complements and explain limits.",
+        "attitudes": "Share objects and tools honestly,care for materials and respect accessible ways of participating.",
+        "keyInquiry": "Independent circle-part area and application",
+        "purposeInStoryline": "A fictional decorator treats a cap as an entire wedge;the class tests boundaries,units and genuine model measurements.",
+        "safetyNotes": "Use clean safe flat lids/paper/card and approved blunt tools;teacher handles sharp cuts/compass access as needed. No food knives,sharp metal lids,unknown waste,real moving-door/pinch or site-clearance activity. Use tabletop paper models for door applications."
+      },
+      "overview": "Use supplied exact design cases and separate actual safe cut-out/measurement records. CP1schematic has no physical print-scale claim.\nMaterials: CP10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 12 min, Explain 16 min, Driving Question Board (DQB) Creation 4 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read independent instructions and arrange CP10,calculator and blank paper.",
+          "teacherMoves": "4 minutes. 4minutes procedure only;no final worked area example.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Prediction identifies relevant boundaries/angle."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete sections1–2 independently.",
+          "teacherMoves": "12 minutes. 12minutes independent sections1–2;no peer or teacher content hints.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Named records distinguish actual measurements from supplied exact data."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Complete sections3–4 independently.",
+          "teacherMoves": "16 minutes. 16minutes independent sections3–4;no shared diagrams/calculations or feedback.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Partition,formula,units and interpretation agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Check boundary labels,units and rounding silently.",
+          "teacherMoves": "4 minutes. 4minutes silent check;no new scaffolding.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Claim/question follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Hand in all labelled individual work.",
+          "teacherMoves": "4 minutes. 4minutes collection;teachingcards/keys withheld.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Individual explanation/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check individual region labels,degree/πsettings,partition/units/rounding and actual F3/F6making/measurement actions. Confirm safe object/tool access,precision and40minute pacing;provided data do not certify performed cut-outs/measuring.",
+      "summaryTablePrompt": {
+        "observed": "Independently determine sector/segment areas and bound a useful model.",
+        "learned": "Exact supplied diagrams/data cannot certify actual cut-out/measurement skill.",
+        "explained": "Draw,label,calculate,check complements and explain limits."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "AREA OF A PART OF A CIRCLE",
+    "instructions": "Lesson10,40minutes:4procedure,12sections1–2,16sections3–4,4silentcheck,4collection. Work independently with CP10only,blankpaper and calculatorπ/degree mode. No teaching cards,peers,hints or media. Show labelled boundaries/formulas/units;retain exactπexpressions and round final nonexact areas to2decimalplaces.",
+    "sections": [
+      {
+        "title": "1. Sector boundary and area",
+        "prompt": "Draw FinalAsector with centre,radii,arc and centralangle labelled. Compute its area. Explain why the arc-length formula would have the wrong units for this question.",
+        "exemplar": "Area135/360*π*8²=24π≈75.40cm². Tworadiiandarc;arclengthwoulduse2πrandproducecm,notcm²."
+      },
+      {
+        "title": "2. Minor segment partition",
+        "prompt": "For FinalBdraw the minor sector,chord and centraltriangle. Compute sector,triangle and minorsegment areas;explain the subtraction and one rounding/measurement limit.",
+        "exemplar": "Sector8π/3cm²,triangle(1/2)*16*sin60=4sqrt3cm²;minor8π/3-4sqrt3≈1.45cm². Subtractmatchingcentraltrianglefromsector;roundonlyatend,actualsmallcapsmeasurement-sensitive."
+      },
+      {
+        "title": "3. Major segment and a useful sweep",
+        "prompt": "Find FinalBmajorsegment by complement and show the two segment areas sum to the whole circle. Distinguish majorsegment from majorsector. Draw and compute FinalCpaper-door-sweep area,and state a condition/limitation for its use.",
+        "exemplar": "Major16π-(8π/3-4sqrt3)=40π/3+4sqrt3≈48.82cm²;sum16π. Majorsector300is40π/3only;majorsegmentalsoincludescentraltriangle. Door90/360*π*1.2²=0.36π≈1.13m²;idealhinge/radius/clearspace,notrealclearance/safetycertification."
+      },
+      {
+        "title": "4. Application and actual model evidence",
+        "prompt": "Explain one useful application of sector/segment area and one limit involving boundary choice,fit,waste or actual measurement. Describe one actual individual observation needed before claiming you made/measured a cut-out. Explain why exact fictional data alone do not establish that action.",
+        "exemplar": "Acceptdesign/pattern/material/sweepplanningwithcorrectregion/unitsandcondition. Actualnamedtrace/centre-mark/radius-anglemeasure/modelcheckwithrawrecordinF3/F6needed;preparedtemplateandgivenvaluescannotcertifyunperformedcutting/measuring. Reasonedbenefitnotpersistentattitudeproof."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Determine sector area with correct boundaries",
+        "excellent": "Complete labelled sector,correct exact/rounded result and precise length-versus-area unit distinction.",
+        "proficient": "Correct sector diagram/area with valid boundary/unit explanation.",
+        "developing": "Some valid work but radius,anglefraction,boundary or units needs correction.",
+        "belowExpectations": "Needs guided boundary/angle/unit/evidence questions to form a supported area model."
+      },
+      {
+        "criterion": "Determine minor segment by partition",
+        "excellent": "Matched sector/triangle/minorareas correct with clear chord/arc subtraction and precision limit.",
+        "proficient": "Correct partition and minorarea with sufficient formula/limit evidence.",
+        "developing": "Some valid geometry but centraltriangle,subtraction,units or rounding needs correction.",
+        "belowExpectations": "Needs guided boundary/angle/unit/evidence questions to form a supported area model."
+      },
+      {
+        "criterion": "Determine major segment and apply a sector",
+        "excellent": "Correct complement/sum,majorsector distinction and useful sweep model with precise conditions.",
+        "proficient": "Correct major/sweep areas and valid complement/boundary/model limits.",
+        "developing": "Some correct regions/calculations but complement,majorregion or application condition needs correction.",
+        "belowExpectations": "Needs guided boundary/angle/unit/evidence questions to form a supported area model."
+      },
+      {
+        "criterion": "Explain useful application and actual evidence",
+        "excellent": "Specific correct application/limit and precise separate individual making/measurement evidence requirement.",
+        "proficient": "Useful accurate application/limit and actual-action distinction.",
+        "developing": "Application plausible but boundary/use limit or performed-action evidence needs correction.",
+        "belowExpectations": "Needs guided boundary/angle/unit/evidence questions to form a supported area model."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand2.5: Area of a Part of a Circle",
+    "drivingQuestion": "Which boundaries and measurements justify a circle-part area? KICD: Where do we use area of part of a circle in real life?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "Which boundary makes a sector or a segment?",
+        "observed": "Distinguish sector/segment and minor/major region boundaries.",
+        "learned": "Two radii and an arc bound a sector;chord and arc bound a segment.",
+        "explained": "Label corresponding endpoints,centre,radii,chord and arc."
+      },
+      {
+        "number": 2,
+        "title": "How does central angle determine a sector fraction?",
+        "observed": "Determine minor/major sector areas from radius and degree angle.",
+        "learned": "Sector area is the central-angle fraction ofπr²,with square units.",
+        "explained": "Calculate exactπforms and rounded values with correct radius."
+      },
+      {
+        "number": 3,
+        "title": "Can we make and measure a genuine sector?",
+        "observed": "Make/mark and measure a safe actual sector with honest action/precision records.",
+        "learned": "A true centre,radius and central angle are necessary for the sector model.",
+        "explained": "Trace,locate centre,mark,measure and calculate from actual readings."
+      },
+      {
+        "number": 4,
+        "title": "Why is a minor segment smaller than its sector?",
+        "observed": "Determine a minor segment as matching sector minus central triangle.",
+        "learned": "The chord splits off the central isosceles triangle from a minor sector.",
+        "explained": "Draw the correct partition and use the included central angle."
+      },
+      {
+        "number": 5,
+        "title": "How does the major segment differ from the major sector?",
+        "observed": "Determine minor/major segment areas and distinguish a major sector.",
+        "learned": "The two segments share a chord and sum to the whole circle;major sector has different straight boundaries.",
+        "explained": "Use a complement and compare three regions."
+      },
+      {
+        "number": 6,
+        "title": "What does a measured segment model establish?",
+        "observed": "Make/mark and measure an actual segment model using the same centre/radius/angle.",
+        "learned": "A segment estimate combines matched geometry and measured quantities with uncertainty.",
+        "explained": "Record actual dimensions,partition,calculate and state a precision limit."
+      },
+      {
+        "number": 7,
+        "title": "What does a door-sweep sector represent?",
+        "observed": "Apply sector area to a fictional tabletop sweep and explain its limits.",
+        "learned": "A plan-view swept region differs from door-surface area and real safety clearance.",
+        "explained": "Draw a model,calculate and justify a useful conditional application."
+      },
+      {
+        "number": 8,
+        "title": "Which area remains after removing a cap?",
+        "observed": "Apply segment subtraction to a decorative model and bound material-use claims.",
+        "learned": "Removing a minor cap leaves the major segment,not simply the major sector.",
+        "explained": "Partition,calculate and explain a useful design benefit/limit."
+      },
+      {
+        "number": 9,
+        "title": "Which curved-area claims survive an audit?",
+        "observed": "Correct sector/segment,major-region and scale claims with an application reason.",
+        "learned": "Boundaries,units and squared radius determine curved-area calculations.",
+        "explained": "Audit formulas and justify corrections using labelled regions."
+      },
+      {
+        "number": 10,
+        "title": "Independent circle-part area and application",
+        "observed": "Independently determine sector/segment areas and bound a useful model.",
+        "learned": "Exact supplied diagrams/data cannot certify actual cut-out/measurement skill.",
+        "explained": "Draw,label,calculate,check complements and explain limits."
+      }
+    ]
+  }
+};

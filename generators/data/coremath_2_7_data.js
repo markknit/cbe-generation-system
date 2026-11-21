@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Calculating surface area and volume correctly",
       "excellent": "Uses the correct method for each solid (prism, cylinder, pyramid, cone, sphere, composite), uses slant height and vertical height correctly, gets all values right (30,800 cm2; 404,250 cm3; 322,500 cm3) with correct units and working.",
       "proficient": "Uses mostly correct methods and gets most values right, with one or two small slips in arithmetic, units or choice of height.",
-      "developing": "Confuses formulae, mixes slant and vertical height, or omits working and units, so the values are mostly incorrect."
+      "developing": "Confuses formulae, mixes slant and vertical height, or omits working and units, so the values are mostly incorrect.",
+      "belowExpectations": "Cannot choose the correct method for the solids, mixes up slant and vertical height, and values are incorrect or missing, with no working or units."
     },
     {
       "criterion": "Distinguishing surface area from volume",
       "excellent": "States clearly that surface area is the material covering a solid and volume is the space inside, and correctly classifies each task as a surface area or volume question with reasons.",
       "proficient": "Distinguishes the two ideas correctly but gives limited reasons or misclassifies one task.",
-      "developing": "Treats surface area and volume as the same thing or cannot say which one a task needs."
+      "developing": "Treats surface area and volume as the same thing or cannot say which one a task needs.",
+      "belowExpectations": "Cannot say what surface area and volume mean, and cannot tell which one a task needs."
     },
     {
       "criterion": "Explaining the phenomenon with evidence",
       "excellent": "Explains why the drum holds 81.75 litres more than the box using the shared 30,800 cm2, both volumes and the cross-section areas (3,850 cm2 against 2,500 cm2), noting that the drum's larger base outweighs the box's extra height, and links to the sphere as the most efficient shape.",
       "proficient": "Explains that shape decides capacity and quotes the main numbers, but the reasoning about cross-sections is incomplete.",
-      "developing": "States that the drum holds more without evidence, or suggests that equal surface area means equal volume."
+      "developing": "States that the drum holds more without evidence, or suggests that equal surface area means equal volume.",
+      "belowExpectations": "Does not explain why the drum and the box hold different amounts, or gives no evidence from the numbers."
     },
     {
       "criterion": "Handling composite solids and real-life application",
       "excellent": "Leaves out hidden joined faces in surface area, adds the volumes of the parts, and describes a realistic Kenyan design, explaining which calculation gives sheet and which gives capacity, plus a relevant career.",
       "proficient": "Handles composite solids mostly correctly and gives a reasonable Kenyan application with some detail missing.",
-      "developing": "Counts hidden faces or gives no clear real-life application."
+      "developing": "Counts hidden faces or gives no clear real-life application.",
+      "belowExpectations": "Cannot handle composite solids, and gives no real-life application or one that is unclear."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

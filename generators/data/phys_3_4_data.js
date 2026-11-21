@@ -616,31 +616,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Origin of charge (electron transfer and conservation)",
       "excellent": "Clearly explains that charges come from electrons already in atoms, that electrons move from hair to latex and protons stay put, uses the triboelectric order and the 1 nC, 6 x 10^9 electrons, 10^23 atoms figures, and states that charge is transferred, not created.",
       "proficient": "Explains that electrons transfer from hair to balloon so the balloon is negative and hair positive, and mentions that charge is conserved, but gives few or no numbers or no reason from the triboelectric order.",
-      "developing": "Says that rubbing creates charge or does not say what moves, or mixes up which object is positive and which is negative."
+      "developing": "Says that rubbing creates charge or does not say what moves, or mixes up which object is positive and which is negative.",
+      "belowExpectations": "Does not say what moves when objects are charged, or says that rubbing creates charge, and does not say which object is positive or negative."
     },
     {
       "criterion": "Attraction and repulsion, including neutral objects",
       "excellent": "Uses like-repel and unlike-attract with evidence from the rods and strips, and explains attraction of neutral paper and wall by induction (charge separation, nearer charge attracts more), with a labelled particle diagram and the point that neutral objects are never repelled.",
       "proficient": "Applies the rule to balloons and hair and mentions that neutral objects are attracted because of charge separation, but with limited detail or no diagram.",
-      "developing": "Only describes attraction and repulsion without giving a cause, or says that neutral objects are repelled or that positive charge moves."
+      "developing": "Only describes attraction and repulsion without giving a cause, or says that neutral objects are repelled or that positive charge moves.",
+      "belowExpectations": "Does not describe attraction and repulsion, or gives mostly wrong statements with no cause."
     },
     {
       "criterion": "Conductors, insulators, charging methods and distribution",
       "excellent": "Correctly links free versus tightly bound electrons to the conduction test and to the balloon keeping its charge, and compares contact (same sign) with induction and earthing (opposite sign). Explains charge on outer surfaces and at points with point discharge, using the electroscope and proof-plane readings.",
       "proficient": "Correctly states the difference between conductors and insulators and between contact and induction, and gives some of the readings, with some gaps in explaining distribution or earthing.",
-      "developing": "Confuses conductors with insulators or contact with induction, or gives no use of the readings."
+      "developing": "Confuses conductors with insulators or contact with induction, or gives no use of the readings.",
+      "belowExpectations": "Does not distinguish conductors from insulators, gives no charging method, and the readings are not used."
     },
     {
       "criterion": "Detection, humidity and applications",
       "excellent": "Explains the electroscope (same sign on leaf and stem, bigger angle means more charge, sign test, earthing), explains humidity using 35% and 80% and the 3 minutes against under 30 seconds figures, and links two applications to the correct idea.",
       "proficient": "Explains how the electroscope detects charge and mentions humidity and one application correctly, with few data values.",
-      "developing": "Does not explain how the electroscope works or the effect of humidity, or applications are not linked to electrostatics ideas."
+      "developing": "Does not explain how the electroscope works or the effect of humidity, or applications are not linked to electrostatics ideas.",
+      "belowExpectations": "Does not describe the electroscope, humidity or any application of electrostatics."
     },
     {
       "criterion": "Use of evidence, vocabulary and coherence",
       "excellent": "Uses exact data and lesson evidence, uses terms such as electric charge, electrostatic force, discharge, earthing and induction accurately, and gives a connected final answer that shows how the Lesson 1 model has changed.",
       "proficient": "Uses most evidence and terms correctly and gives a mostly connected answer.",
-      "developing": "Uses little evidence or incorrect terms such as static electricity as an explanation, and the answer is disconnected."
+      "developing": "Uses little evidence or incorrect terms such as static electricity as an explanation, and the answer is disconnected.",
+      "belowExpectations": "Uses almost no evidence, uses no correct terms, and the answer is disconnected and hard to follow."
     }
   ]
 };
@@ -715,6 +720,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

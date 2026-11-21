@@ -1,0 +1,968 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "General Science",
+    "grade": 10,
+    "substrand_id": "3.2",
+    "substrand_name": "Linear Motion",
+    "outputDir": "v2/General_Science/SS3.2_Linear_Motion",
+    "filePrefix": "Codex_General_Science_Linear_Motion",
+    "titleDoc": "GENERAL SCIENCE GRADE 10: LINEAR MOTION",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 3.2 • 13 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "3.0 Natural Physical Science",
+    "substrand": "Sub-Strand3.2: Linear Motion",
+    "sep": "Represent signed motion,calculate under explicit assumptions,observe safely and critique model scope.",
+    "careers": "Illustrative motion analysis,transport engineering and scientific measurement roles.",
+    "focus": "Terms used in linear motion; Equations of linear motion (no derivations needed),; Examples of linear motion with constant acceleration; Freely falling bodies.",
+    "phenomenon": "A fictional poster equates distance with displacement,negative acceleration with slowing,and a road vehicle with ideal free fall.",
+    "supportingPhenomena": "Path/position/velocity records,constant-a equations,piecewise motion,conditional low-drop observations and ideal frame positions.",
+    "drivingQuestion": "How is free fall motion important in real life? How can the dangers of free fall in our day to day life be mitigated?",
+    "storylineThread": "Terms→graphs→acceleration→velocityeq→displacementeq→withouttime→piecewise→actualdrop→frameevidence→downward→upward→applications→independent explanation.",
+    "content": "Terms used in linear motion; Equations of linear motion (no derivations needed),; Examples of linear motion with constant acceleration; Freely falling bodies.",
+    "coreCompetencies": "Communication and collaboration: as the learner works with peers to discuss and present in plenary the application of linear motion in real life.\nLearning to learn: as the learner carries out assignments on examples of bodies under free-fall motion and presents the findings in a group discussion.",
+    "values": "Peace: the learner displays tolerance and calmness when discussing the application of linear motion in real life.\nUnity: the learner displays cooperation and collaboration with others while investigating the effect of gravity on objects.",
+    "pcis": "Road safety: increased awareness on how to minimise fatal injuries resulting from road crashes on sloping roads using the concept of free fall of objects.\nLife Skills Education (self-awareness): the learner observes safety measures when dropping objects to investigate the effect of gravity on objects.",
+    "gradeLevel": "10",
+    "subject": "General Science",
+    "totalDuration": "13 lessons × 40 minutes = 520 minutes",
+    "learningOutcomes": "explain terms used in linear motion,\ncalculate variables of motion using equations of linear motion with constant acceleration,\ninvestigate the effect of gravity on bodies under free fall,\nappreciate the significance of linear motion and free fall in real life."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "How do distance and displacement differ?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall how do distance and displacement differ?",
+      "slo": {
+        "purpose": "Explain path totals,displacement and average speed/velocity.",
+        "knowledge": "Distance is path length;displacement is signed change of position.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "Can a return trip have motion but zero displacement?",
+        "purposeInStoryline": "A fictional walker report uses distance and displacement interchangeably.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Explain path totals,displacement and average speed/velocity. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict distance and displacement for GSLM1.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read the stated path,time and positive direction;draw a line sketch.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate distance,displacement,average speed and average velocity.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain direction/sign and a complete return-trip example.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a correctly labelled average and a term distinction.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Explain path totals,displacement and average speed/velocity.",
+        "learned": "Distance is path length;displacement is signed change of position.",
+        "explained": "Can a return trip have motion but zero displacement? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 2,
+      "title": "What does a position-time graph show?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall what does a position-time graph show?",
+      "slo": {
+        "purpose": "Plot position records and interpret signed segment slopes.",
+        "knowledge": "Position-time slope gives velocity;negative velocity does not mean negative speed.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "Can the same speed have opposite velocities?",
+        "purposeInStoryline": "Two records show equal slope magnitude but opposite directions.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Plot position records and interpret signed segment slopes. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which GSLM2 record has negative velocity.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read both tables and draw labelled position-time axes.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Plot all points and calculate interval velocities with signs/units.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain interpolation assumptions and limits between observations.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one velocity and a slope interpretation.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Plot position records and interpret signed segment slopes.",
+        "learned": "Position-time slope gives velocity;negative velocity does not mean negative speed.",
+        "explained": "Can the same speed have opposite velocities? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 3,
+      "title": "Does negative acceleration always mean slowing?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall does negative acceleration always mean slowing?",
+      "slo": {
+        "purpose": "Calculate acceleration and identify a velocity reversal.",
+        "knowledge": "Acceleration is velocity change per time;speed change depends on both velocity and acceleration directions.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "What happens when velocity crosses zero?",
+        "purposeInStoryline": "A record keeps constant negative acceleration through a turning point.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Calculate acceleration and identify a velocity reversal. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether speed always falls in GSLM3.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read endpoints/constant-acceleration assumption and sketch velocity axes.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate acceleration,zero-velocity time and draw the line.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain slowing before reversal and increasing speed afterwards.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit acceleration with units and a sign-based explanation.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Calculate acceleration and identify a velocity reversal.",
+        "learned": "Acceleration is velocity change per time;speed change depends on both velocity and acceleration directions.",
+        "explained": "What happens when velocity crosses zero? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 4,
+      "title": "When is v=u+at valid?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall when is v=u+at valid?",
+      "slo": {
+        "purpose": "Find final velocity,time and acceleration under one constant-a model.",
+        "knowledge": "Constant-acceleration equations need consistent signs,units and an interval where the assumption holds.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "Can one acceleration represent a changing vehicle process?",
+        "purposeInStoryline": "A formula is applied across two different acceleration stages.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Find final velocity,time and acceleration under one constant-a model. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which quantity is unknown in each GSLM4 record.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read the three given-value sets and direction convention.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Solve A,B,C with substitutions and units;no derivation required.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Audit a changing-acceleration shortcut and identify the model limit.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one complete calculation and valid-condition statement.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Find final velocity,time and acceleration under one constant-a model.",
+        "learned": "Constant-acceleration equations need consistent signs,units and an interval where the assumption holds.",
+        "explained": "Can one acceleration represent a changing vehicle process? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 5,
+      "title": "How is displacement calculated during acceleration?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall how is displacement calculated during acceleration?",
+      "slo": {
+        "purpose": "Use displacement equations and cross-check with endpoint average velocity.",
+        "knowledge": "For constant acceleration,s=ut+½at² and endpoint-mean velocity give consistent displacement.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "Why does time need to be squared?",
+        "purposeInStoryline": "A solution drops the time square from an acceleration term.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Use displacement equations and cross-check with endpoint average velocity. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether GSLM5 final velocity exceeds its initial value.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read all givens and identify the two solution routes.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate displacement/final velocity and cross-check using average velocity.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Correct the missing square and explain when distance equals displacement.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit the checked displacement with units and conditions.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Use displacement equations and cross-check with endpoint average velocity.",
+        "learned": "For constant acceleration,s=ut+½at² and endpoint-mean velocity give consistent displacement.",
+        "explained": "Why does time need to be squared? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 6,
+      "title": "What can an equation without time determine?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall what can an equation without time determine?",
+      "slo": {
+        "purpose": "Use squared-velocity and first-rest models without losing direction.",
+        "knowledge": "Squared velocity requires context for sign;stopping equations should not be extrapolated blindly past rest.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "Does a positive square root always give the required velocity?",
+        "purposeInStoryline": "A stopping model is extended into impossible continued braking assumptions.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Use squared-velocity and first-rest models without losing direction. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the context needed to choose the root in GSLM6.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read forward-motion and first-rest conditions.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate final velocity,stopping time and displacement.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain root/context and actual road-model limits.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a correctly signed result and a first-rest qualification.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Use squared-velocity and first-rest models without losing direction.",
+        "learned": "Squared velocity requires context for sign;stopping equations should not be extrapolated blindly past rest.",
+        "explained": "Does a positive square root always give the required velocity? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 7,
+      "title": "How can one trip need two models?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall how can one trip need two models?",
+      "slo": {
+        "purpose": "Analyse piecewise velocity and graph areas.",
+        "knowledge": "Separate constant-velocity/constant-acceleration intervals must be handled with their own assumptions.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "Can endpoint-average velocity describe every whole trip?",
+        "purposeInStoryline": "A graph is treated as one straight ramp despite an initial flat interval.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Analyse piecewise velocity and graph areas. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which GSLM7 interval has zero acceleration.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read the two stages and plot velocity-time points.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate each displacement,total,average velocity and stage accelerations.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain graph area and reject the whole-interval shortcut.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a labelled segment result and total comparison.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Analyse piecewise velocity and graph areas.",
+        "learned": "Separate constant-velocity/constant-acceleration intervals must be handled with their own assumptions.",
+        "explained": "Can endpoint-average velocity describe every whole trip? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 8,
+      "title": "What can a safe low-drop investigation establish?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall what can a safe low-drop investigation establish?",
+      "slo": {
+        "purpose": "Observe an approved low drop with honest limits or retain not-performed status.",
+        "knowledge": "Gravity-only free fall is an ideal model;real air resistance and measurement conditions matter.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "Does looking at a falling ball measure acceleration?",
+        "purposeInStoryline": "A stopwatch result from a tiny drop is claimed as precise g.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Observe an approved low drop with honest limits or retain not-performed status. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM8; GSLM9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the direction of motion and what measurement would show speed change.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read GSLM8 approval,soft-object,height and exclusion conditions;teacher verifies provision.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "If approved,perform supervised low releases and record actual roles/conditions;use approved calibrated frames if available,otherwise do not claim measured acceleration.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Compare actual observation limits with ideal GSLM9 supplied frames;mark supplied alternative not performed.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit actual record or not-performed status and one measurement limitation.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Observe an approved low drop with honest limits or retain not-performed status.",
+        "learned": "Gravity-only free fall is an ideal model;real air resistance and measurement conditions matter.",
+        "explained": "Does looking at a falling ball measure acceleration? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 9,
+      "title": "How do equal-time positions support a gravity model?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall how do equal-time positions support a gravity model?",
+      "slo": {
+        "purpose": "Calculate interval velocities and compare with an ideal constant-g model.",
+        "knowledge": "Increasing equal-time displacement supports acceleration in the supplied model;interval averages are not endpoint instantaneous speeds.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "Where in time does an interval average belong?",
+        "purposeInStoryline": "A supplied video table labels every average as final speed.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Calculate interval velocities and compare with an ideal constant-g model. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which GSLM9 interval has the greatest average velocity.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read all time/position pairs and supplied provenance.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate three averages,successive acceleration estimate and formula checks.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain midpoint/interval meaning and two real recording limits.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one interval calculation and distinguish ideal from actual investigation.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Calculate interval velocities and compare with an ideal constant-g model.",
+        "learned": "Increasing equal-time displacement supports acceleration in the supplied model;interval averages are not endpoint instantaneous speeds.",
+        "explained": "Where in time does an interval average belong? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 10,
+      "title": "How are downward free-fall variables calculated?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall how are downward free-fall variables calculated?",
+      "slo": {
+        "purpose": "Apply constant-g equations with explicit sign and model assumptions.",
+        "knowledge": "Near-Earth ideal free fall uses a stated g independent of mass when drag is negligible.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "Are a paper height and an approved real drop the same thing?",
+        "purposeInStoryline": "A calculation height is mistaken for permission to drop objects from it.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Apply constant-g equations with explicit sign and model assumptions. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict velocity direction with downward-positive convention.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read GSLM10 g,release and no-drag conditions.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate all three cases with units and correct initial velocity.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain mass/drag and why only GSLM8 approved height applies to real activity.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one complete ideal calculation and an activity boundary.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Apply constant-g equations with explicit sign and model assumptions.",
+        "learned": "Near-Earth ideal free fall uses a stated g independent of mass when drag is negligible.",
+        "explained": "Are a paper height and an approved real drop the same thing? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 11,
+      "title": "What is acceleration at the highest point?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall what is acceleration at the highest point?",
+      "slo": {
+        "purpose": "Calculate upward/return motion and distinguish zero velocity from zero acceleration.",
+        "knowledge": "Gravity acceleration persists at the apex and on both parts of an ideal vertical flight.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "Can one position have two different velocities?",
+        "purposeInStoryline": "A diagram switches gravity off at the highest point.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Calculate upward/return motion and distinguish zero velocity from zero acceleration. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict signs of velocity before/after the apex.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read GSLM11 upward-positive and same-height-return conditions.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Calculate apex/time/height/return and both selected time records.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Explain equal positions/opposite velocities and ongoing downward acceleration.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit apex velocity/acceleration and a corrected claim.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Calculate upward/return motion and distinguish zero velocity from zero acceleration.",
+        "learned": "Gravity acceleration persists at the apex and on both parts of an ideal vertical flight.",
+        "explained": "Can one position have two different velocities? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 12,
+      "title": "How do motion models support safer decisions?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "linear motion velocity acceleration free fall how do motion models support safer decisions?",
+      "slo": {
+        "purpose": "Audit model overclaims and discuss bounded real-life significance.",
+        "knowledge": "Gravity-only motion differs from supported road motion;ideal calculations cannot certify safety systems.",
+        "skills": "Explain terms,represent motion,calculate signed variables and evaluate model limits.",
+        "attitudes": "Discuss calmly,respect peers and record observations honestly.",
+        "keyInquiry": "What does a model omit from a real road or fall?",
+        "purposeInStoryline": "A fictional safety poster conflates downhill rolling with free fall.",
+        "safetyNotes": "Paper calculations except teacher-approved GSLM8 soft-object drop≤0.50m into clear floor-level catch zone. No climbing,roads,stairs,hard/heavy objects,throws or real braking tests."
+      },
+      "overview": "Audit model overclaims and discuss bounded real-life significance. Use complete named records and preserve ideal-versus-actual distinctions.\nMaterials: GSLM12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 18 min, Driving Question Board (DQB) Creation 6 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose one GSLM12 claim that needs conditions.",
+          "teacherMoves": "4 minutes. Elicit individual reasoning before answer guidance.",
+          "sensemakingStrategy": "Identify the relevant quantity,sign or evidence question.",
+          "formativeAssessment": "Prediction uses the named case or condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Read all four claims and assign relevant model evidence.",
+          "teacherMoves": "8 minutes. Clarify symbols,units,provenance and any approval boundaries.",
+          "sensemakingStrategy": "Separate given facts from model assumptions.",
+          "formativeAssessment": "Direction,constant-acceleration or actual-action conditions explicit."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Correct all claims using equation/sign/model reasoning.",
+          "teacherMoves": "18 minutes. Check each calculation/graph or approved observed action;require inspectable substitutions/records.",
+          "sensemakingStrategy": "Use the named equations or evidence with its proper scope.",
+          "formativeAssessment": "Completed card-specific reasoning or honest performance status."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Present two conceptual precautions and limits without actual risky activity.",
+          "teacherMoves": "6 minutes. Ask what condition or distinction prevents the overclaim.",
+          "sensemakingStrategy": "Revise using evidence and a precise limit.",
+          "formativeAssessment": "Correction separates distance/displacement,velocity/acceleration or actual/ideal as relevant."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit an evidence-based real-life reflection and actual participation status.",
+          "teacherMoves": "4 minutes. Collect individual work and record actual practical/research participation separately.",
+          "sensemakingStrategy": "Explain one result independently.",
+          "formativeAssessment": "Units,signs and evidence limits stated where needed."
+        }
+      ],
+      "teacherReflection": "Record actual drop/video/research evidence or unperformed status;confirm safe provision,measurement uncertainty,access and pacing.",
+      "summaryTablePrompt": {
+        "observed": "Audit model overclaims and discuss bounded real-life significance.",
+        "learned": "Gravity-only motion differs from supported road motion;ideal calculations cannot certify safety systems.",
+        "explained": "What does a model omit from a real road or fall? Include sign convention and evidence limits."
+      }
+    },
+    {
+      "number": 13,
+      "title": "Can motion evidence support an independent explanation?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand3.2: Linear Motion",
+      "aresKeywords": "independent linear motion constant acceleration free fall assessment",
+      "slo": {
+        "purpose": "Independently explain terms,calculate constant-acceleration variables and interpret gravity evidence with practical limits.",
+        "knowledge": "Signed kinematic quantities,constant-a conditions and actual-versus-supplied evidence are essential to valid conclusions.",
+        "skills": "Independent calculations,graph interpretation and qualified application.",
+        "attitudes": "Report assumptions and unperformed actions honestly.",
+        "keyInquiry": "Which conclusions follow from the supplied motion record?",
+        "purposeInStoryline": "An unfamiliar record tests terms,stopping,free fall and safety-model distinctions.",
+        "safetyNotes": "Paper-only final;no drops or road observation."
+      },
+      "overview": "Four independent sections;conceptual free-fall reasoning does not certify an actual investigation.\nMaterials: GSLM13. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 12 min, Driving Question Board (DQB) Creation 10 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read GSLM13 and instructions independently.",
+          "teacherMoves": "4 minutes. Distribute final-only reference/prompts;clarify procedure without hints.",
+          "sensemakingStrategy": "Identify signs,givens and requested evidence.",
+          "formativeAssessment": "No teaching cards or keys."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete Section1 distance/displacement and speed/velocity.",
+          "teacherMoves": "8 minutes. Supervise without confirming terms or calculations.",
+          "sensemakingStrategy": "Use signed position change and path totals.",
+          "formativeAssessment": "Individual terms/values with units."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Complete Section2 constant-acceleration/stopping calculations.",
+          "teacherMoves": "12 minutes. Provide procedural access support only.",
+          "sensemakingStrategy": "Check equation conditions and signs.",
+          "formativeAssessment": "Substitutions and units inspectable."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Complete Section3 ideal gravity and supplied-frame interpretation.",
+          "teacherMoves": "10 minutes. Keep work independent,no guided corrections.",
+          "sensemakingStrategy": "Separate interval and instantaneous quantities and ideal versus actual.",
+          "formativeAssessment": "Calculated gravity variables and evidence limit."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Complete Section4 real-life reflection;check and submit.",
+          "teacherMoves": "6 minutes. Collect before feedback or discussion.",
+          "sensemakingStrategy": "State relevant model and action limits.",
+          "formativeAssessment": "Independent complete response without safety/performance overclaim."
+        }
+      ],
+      "teacherReflection": "Final data/plan reasoning cannot certify actual low-drop investigation or digital research;retain separate observed records.",
+      "summaryTablePrompt": {
+        "observed": "Independently connect terms,equations and gravity evidence.",
+        "learned": "Physical quantities and model assumptions must remain distinct.",
+        "explained": "Defend a result and bound its real-life interpretation."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "Linear Motion",
+    "instructions": "Independent40minutes:4readGSLM13,8Section1,12Section2,10Section3,6Section4/check/submit. Use only final reference/prompts;no keys or hints. Show units,signs and equation assumptions. Written gravity evidence is not actual-investigation certification.",
+    "sections": [
+      {
+        "title": "1. Terms and signed averages",
+        "prompt": "For CaseA calculate distance,displacement,average speed and average velocity with direction/units. Explain why a return trip may have nonzero distance and zero displacement,and distinguish acceleration from speed.",
+        "exemplar": "Distance7m,displacement+3m east;average speed1m/s,average velocity+3/7≈+0.429m/s. Returning to start cancels displacement,not path length. Acceleration is velocity change per time,not speed itself;negative acceleration need not always slow an object."
+      },
+      {
+        "title": "2. Constant-acceleration variables",
+        "prompt": "For CaseB calculate final velocity and displacement using two consistent equations/checks. For CaseC calculate time and displacement to first rest. State sign conventions and why the equation assumptions matter.",
+        "exemplar": "B v2+3×4=14m/s;s2×4+½×3×16=32m;checkmean8m/s×4=32m. C t5s;s10×5−½×2×25=25m. Variables signed consistently;constant acceleration required over each interval and stopping model ends at first rest."
+      },
+      {
+        "title": "3. Gravity and investigation evidence",
+        "prompt": "For CaseD calculate displacement and velocity. From CaseE calculate three interval average velocities and explain the acceleration pattern without labelling them measured instantaneous endpoint speeds. State velocity and acceleration at the highest point of an ideal upward throw. Give one real recording limitation and explain whether supplied records prove an actual investigation.",
+        "exemplar": "D s½×10×0.60²=1.8m,v6m/s downward. E averages0.5,1.5,2.5m/s,consistent withconstant10m/s² under model;these are segment averages,not measured endpoint speeds. Atapexv0 but downwarda remainsg. Air resistance,release impulse or frame/scale error matters. Supplied records do not prove actual student drops."
+      },
+      {
+        "title": "4. Real-life significance and limits",
+        "prompt": "Explain why a rolling road vehicle is not ideal free fall. Give two conceptual precautions relevant to falling objects or sloping-road motion with practical limitations. Explain why a model calculation cannot certify a real safety system,and state whether any real activity or digital research occurred in this written final.",
+        "exemplar": "Road contact/friction/drive forces mean gravity-only freefall doesnotapply. Prevent falls/use appropriate barriers and keep people away from controlled drops;qualified road controls require real conditions and cannot be replaced by an ideal stopping number. Actual safety needs qualified design/inspection/context. Written final records show no actual activity/research."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Motion terms",
+        "excellent": "All totals/averages correct with signs/units and clear distinctions.",
+        "proficient": "Principal values and distinctions correct.",
+        "developing": "Some values correct but distance/velocity or acceleration confused.",
+        "belowExpectations": "Needs guided definitions and signed totals."
+      },
+      {
+        "criterion": "Equation use",
+        "excellent": "All variables/checks correct with consistent signs,units and constant-a/first-rest conditions.",
+        "proficient": "Correct main calculations and model condition.",
+        "developing": "Partial calculation or omitted sign/time-square/condition.",
+        "belowExpectations": "Needs support to select equations and substitute consistently."
+      },
+      {
+        "criterion": "Gravity evidence",
+        "excellent": "Correct ideal values,interval interpretation,apex acceleration and actual-evidence limit.",
+        "proficient": "Valid gravity reasoning and meaningful recording limit.",
+        "developing": "Some calculations correct but interval/instantaneous or ideal/actual confused.",
+        "belowExpectations": "Needs guided gravity/sign and observation reasoning."
+      },
+      {
+        "criterion": "Real-life reflection",
+        "excellent": "Road/freefall distinction,two bounded precautions and actual/safety evidence scope clear.",
+        "proficient": "Valid significance and practical model limit.",
+        "developing": "General safety example or unsupported real-world claim.",
+        "belowExpectations": "Needs prompts to connect model with conditions and evidence."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand3.2: Linear Motion",
+    "drivingQuestion": "How is free fall motion important in real life? How can the dangers of free fall in our day to day life be mitigated?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "How do distance and displacement differ?",
+        "observed": "Explain path totals,displacement and average speed/velocity.",
+        "learned": "Distance is path length;displacement is signed change of position.",
+        "explained": "Can a return trip have motion but zero displacement? Include sign convention and evidence limits."
+      },
+      {
+        "number": 2,
+        "title": "What does a position-time graph show?",
+        "observed": "Plot position records and interpret signed segment slopes.",
+        "learned": "Position-time slope gives velocity;negative velocity does not mean negative speed.",
+        "explained": "Can the same speed have opposite velocities? Include sign convention and evidence limits."
+      },
+      {
+        "number": 3,
+        "title": "Does negative acceleration always mean slowing?",
+        "observed": "Calculate acceleration and identify a velocity reversal.",
+        "learned": "Acceleration is velocity change per time;speed change depends on both velocity and acceleration directions.",
+        "explained": "What happens when velocity crosses zero? Include sign convention and evidence limits."
+      },
+      {
+        "number": 4,
+        "title": "When is v=u+at valid?",
+        "observed": "Find final velocity,time and acceleration under one constant-a model.",
+        "learned": "Constant-acceleration equations need consistent signs,units and an interval where the assumption holds.",
+        "explained": "Can one acceleration represent a changing vehicle process? Include sign convention and evidence limits."
+      },
+      {
+        "number": 5,
+        "title": "How is displacement calculated during acceleration?",
+        "observed": "Use displacement equations and cross-check with endpoint average velocity.",
+        "learned": "For constant acceleration,s=ut+½at² and endpoint-mean velocity give consistent displacement.",
+        "explained": "Why does time need to be squared? Include sign convention and evidence limits."
+      },
+      {
+        "number": 6,
+        "title": "What can an equation without time determine?",
+        "observed": "Use squared-velocity and first-rest models without losing direction.",
+        "learned": "Squared velocity requires context for sign;stopping equations should not be extrapolated blindly past rest.",
+        "explained": "Does a positive square root always give the required velocity? Include sign convention and evidence limits."
+      },
+      {
+        "number": 7,
+        "title": "How can one trip need two models?",
+        "observed": "Analyse piecewise velocity and graph areas.",
+        "learned": "Separate constant-velocity/constant-acceleration intervals must be handled with their own assumptions.",
+        "explained": "Can endpoint-average velocity describe every whole trip? Include sign convention and evidence limits."
+      },
+      {
+        "number": 8,
+        "title": "What can a safe low-drop investigation establish?",
+        "observed": "Observe an approved low drop with honest limits or retain not-performed status.",
+        "learned": "Gravity-only free fall is an ideal model;real air resistance and measurement conditions matter.",
+        "explained": "Does looking at a falling ball measure acceleration? Include sign convention and evidence limits."
+      },
+      {
+        "number": 9,
+        "title": "How do equal-time positions support a gravity model?",
+        "observed": "Calculate interval velocities and compare with an ideal constant-g model.",
+        "learned": "Increasing equal-time displacement supports acceleration in the supplied model;interval averages are not endpoint instantaneous speeds.",
+        "explained": "Where in time does an interval average belong? Include sign convention and evidence limits."
+      },
+      {
+        "number": 10,
+        "title": "How are downward free-fall variables calculated?",
+        "observed": "Apply constant-g equations with explicit sign and model assumptions.",
+        "learned": "Near-Earth ideal free fall uses a stated g independent of mass when drag is negligible.",
+        "explained": "Are a paper height and an approved real drop the same thing? Include sign convention and evidence limits."
+      },
+      {
+        "number": 11,
+        "title": "What is acceleration at the highest point?",
+        "observed": "Calculate upward/return motion and distinguish zero velocity from zero acceleration.",
+        "learned": "Gravity acceleration persists at the apex and on both parts of an ideal vertical flight.",
+        "explained": "Can one position have two different velocities? Include sign convention and evidence limits."
+      },
+      {
+        "number": 12,
+        "title": "How do motion models support safer decisions?",
+        "observed": "Audit model overclaims and discuss bounded real-life significance.",
+        "learned": "Gravity-only motion differs from supported road motion;ideal calculations cannot certify safety systems.",
+        "explained": "What does a model omit from a real road or fall? Include sign convention and evidence limits."
+      },
+      {
+        "number": 13,
+        "title": "Can motion evidence support an independent explanation?",
+        "observed": "Independently connect terms,equations and gravity evidence.",
+        "learned": "Physical quantities and model assumptions must remain distinct.",
+        "explained": "Defend a result and bound its real-life interpretation."
+      }
+    ]
+  }
+};

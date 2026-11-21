@@ -45,11 +45,13 @@ import json
 import re
 import sys
 import zipfile
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "outputs" / "v2"
-ISSUES = ROOT / "logs" / "final_explanation_issues"
+# CBE_FE_ISSUES_DIR: the revised workspace keeps its own copy (module ids were relabelled 2026-11-09, see round2/id_map.json)
+ISSUES = Path(os.environ["CBE_FE_ISSUES_DIR"]) if os.environ.get("CBE_FE_ISSUES_DIR") else ROOT / "logs" / "final_explanation_issues"
 
 LEAK = re.compile(r"\[\s*re-?calc|re-calculation|(?:^|[.!?\]\"']\s+)wait[,.!]|let me (?:re|try|check|redo)|"
                   r"\bactually,|\bhmm\b|correction:|on second thought", re.I)
@@ -67,7 +69,9 @@ _PREFIX_MAP = {}
 def module_of_prefix() -> dict:
     """filePrefix -> generators/data module name, scanned from the data modules."""
     if not _PREFIX_MAP:
-        for f in (ROOT / "generators" / "data").glob("*_data.js"):
+        # CBE_DATA_DIR: scan the revised workspace's modules instead (ids were relabelled there 2026-11-09)
+        data_dir = Path(os.environ["CBE_DATA_DIR"]) if os.environ.get("CBE_DATA_DIR") else ROOT / "generators" / "data"
+        for f in data_dir.glob("*_data.js"):
             m = re.search(r"filePrefix:\s*['\"]([^'\"]+)['\"]|\"filePrefix\":\s*\"([^\"]+)\"", f.read_text())
             if m:
                 _PREFIX_MAP[m.group(1) or m.group(2)] = f.name.removesuffix("_data.js")

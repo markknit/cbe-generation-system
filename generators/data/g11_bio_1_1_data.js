@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Correct use of characteristics (30%)",
       "excellent": "Consistently uses observable characteristics (cell type, number of cells, cell wall, chlorophyll, mode of nutrition) correctly to place organisms in kingdoms and explains why they are better than colour, habitat or usefulness.",
       "proficient": "Uses most characteristics correctly with minor errors or incomplete explanation of why they are better than personal criteria.",
-      "developing": "Uses few or incorrect characteristics, or relies on colour, habitat or usefulness."
+      "developing": "Uses few or incorrect characteristics, or relies on colour, habitat or usefulness.",
+      "belowExpectations": "Below Expectations: Uses almost no correct characteristics to place organisms in kingdoms, or sorts only by colour, habitat or usefulness without seeing why this is a problem."
     },
     {
       "criterion": "Evidence and justification (25%)",
       "excellent": "Claim-Evidence-Reasoning is complete, with specific evidence from the lessons (sorting, case sets, rank cards, name cards, profile cards) linked clearly to the claim.",
       "proficient": "CER is present with some evidence from the lessons, but the reasoning is partly missing or general.",
-      "developing": "Claim is given with little or no evidence or reasoning."
+      "developing": "Claim is given with little or no evidence or reasoning.",
+      "belowExpectations": "Below Expectations: Gives a claim with no evidence from the lessons, or evidence and reasoning are missing even with prompting."
     },
     {
       "criterion": "Accuracy of classification and naming (20%)",
       "excellent": "Ranks are in the correct order, kingdoms are correct, and scientific names follow all rules (capital genus, lower-case species, italics or underlined, two parts).",
       "proficient": "Mostly accurate with one or two errors in ranks, kingdoms or name writing.",
-      "developing": "Several errors in ranks, kingdoms or the writing of scientific names."
+      "developing": "Several errors in ranks, kingdoms or the writing of scientific names.",
+      "belowExpectations": "Below Expectations: Ranks are out of order or missing, kingdoms are mostly wrong, and scientific names do not follow the rules."
     },
     {
       "criterion": "Communication and collaboration (15%)",
       "excellent": "Writing and group poster are clear, logical and well organised, using correct vocabulary, with clear evidence of contributing to the group.",
       "proficient": "Writing is mostly clear with some correct vocabulary; contribution to group work is shown.",
-      "developing": "Writing is unclear or disorganised, with little correct vocabulary or little evidence of group contribution."
+      "developing": "Writing is unclear or disorganised, with little correct vocabulary or little evidence of group contribution.",
+      "belowExpectations": "Below Expectations: Writing is very hard to follow with almost no correct vocabulary, and there is no clear sign of contributing to the group poster."
     },
     {
       "criterion": "Local application and conservation connection (10%)",
       "excellent": "Uses Kenyan organisms and places and clearly explains how taxonomy helps with disease vectors, crop pests, useful organisms and conserving biodiversity.",
       "proficient": "Gives a Kenyan example and a general link to the importance of taxonomy or conservation.",
-      "developing": "Little or no link to Kenyan examples or the importance of taxonomy."
+      "developing": "Little or no link to Kenyan examples or the importance of taxonomy.",
+      "belowExpectations": "Below Expectations: Gives no Kenyan example, or does not link taxonomy to any use such as disease vectors, pests or conservation."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

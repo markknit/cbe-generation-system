@@ -675,25 +675,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of similar triangles and ratio ideas",
       "excellent": "Clearly explains that triangles with the same angle are similar, so the ratios are fixed by the angle alone, and links this to the Kisumu data.",
       "proficient": "States that the ratios stay the same for the same angle but gives only a partial reason about similarity.",
-      "developing": "Describes the ratios without explaining why they stay constant, or confuses the sides."
+      "developing": "Describes the ratios without explaining why they stay constant, or confuses the sides.",
+      "belowExpectations": "Cannot say why the ratios stay the same in similar triangles, and does not use the sides to describe them."
     },
     {
       "criterion": "Correct calculations and exact values",
       "excellent": "Correctly finds the tree height (about 11.94 m and 12.0 m) and the special-angle heights (9√3 m and 9.0 m), showing every step with units and exact values.",
       "proficient": "Calculations are mostly correct with minor slips in steps, units or rounding.",
-      "developing": "Calculations are incomplete or incorrect, or the opposite and adjacent sides are mixed up."
+      "developing": "Calculations are incomplete or incorrect, or the opposite and adjacent sides are mixed up.",
+      "belowExpectations": "Most calculations are missing or wrong, and the exact values of the special angles are not known."
     },
     {
       "criterion": "Relationships among the ratios",
       "excellent": "Proves tan θ = sin θ ÷ cos θ and explains sin θ = cos(90° − θ) using the swap of opposite and adjacent sides.",
       "proficient": "States both relationships correctly and checks them with numbers, but the explanation is brief.",
-      "developing": "States a relationship without a reason or with errors."
+      "developing": "States a relationship without a reason or with errors.",
+      "belowExpectations": "The learner partially relates the sines, cosines, of complementary angles or sines, cosines, and tangents of acute angles."
     },
     {
       "criterion": "Application, reasoning and integrity",
       "excellent": "Describes a complete method for finding any height from an angle and a baseline, explains measurement error honestly, and answers the driving question clearly with Kenyan examples.",
       "proficient": "Describes a workable method and mentions error, with a general answer to the driving question.",
-      "developing": "Method is unclear or missing, and error and honesty are not discussed."
+      "developing": "Method is unclear or missing, and error and honesty are not discussed.",
+      "belowExpectations": "Gives no method for the height of the mango tree, and does not mention error or honesty."
     }
   ]
 };
@@ -775,6 +779,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

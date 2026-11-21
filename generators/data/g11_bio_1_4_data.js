@@ -676,31 +676,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim and use of the phenomenon",
       "excellent": "Gives a clear claim that new cells come from division of existing cells, explains that food gives energy and raw materials but does not become cells, and links directly to the 3 kg to 50 kg growth of a child and to the Lesson 1 model.",
       "proficient": "States that cell division makes new cells and links to the growth of a child, but the role of food or the link to the Lesson 1 model is brief or incomplete.",
-      "developing": "Claim is vague or incorrect (for example, food turns directly into cells or cells only grow bigger) and there is little link to the phenomenon."
+      "developing": "Claim is vague or incorrect (for example, food turns directly into cells or cells only grow bigger) and there is little link to the phenomenon.",
+      "belowExpectations": "Below Expectations: Claim is missing or incorrect throughout (for example, food turns directly into cells), with no link to the growth of a child."
     },
     {
       "criterion": "Understanding of mitosis",
       "excellent": "Accurately describes DNA copying, the four stages and cytokinesis, explains how each daughter cell gets identical chromosomes and the right instructions, and explains doubling (1, 2, 4, 8, 16...) to billions of cells.",
       "proficient": "Describes mitosis and the formation of two identical cells with mostly correct stages, but explanation of how instructions are passed on or of doubling is partial.",
-      "developing": "Describes mitosis with major errors or omissions, such as missing stages or no mention of chromosomes being copied and shared."
+      "developing": "Describes mitosis with major errors or omissions, such as missing stages or no mention of chromosomes being copied and shared.",
+      "belowExpectations": "Below Expectations: Cannot describe mitosis, naming no correct stages and not mentioning chromosomes being copied or shared."
     },
     {
       "criterion": "Understanding of meiosis and other cell division (budding and binary fission)",
       "excellent": "Explains with the 46 + 46 = 92 reasoning why meiosis halves the chromosome number to 23, contrasts it correctly with mitosis, and accurately describes budding and binary fission with examples as asexual reproduction.",
       "proficient": "Correctly states that meiosis makes gametes with half the chromosomes and names budding and binary fission, but comparison or examples are limited.",
-      "developing": "Confuses mitosis and meiosis or does not correctly describe gametes, budding or binary fission."
+      "developing": "Confuses mitosis and meiosis or does not correctly describe gametes, budding or binary fission.",
+      "belowExpectations": "Below Expectations: Does not distinguish mitosis from meiosis and gives no correct description of gametes, budding or binary fission."
     },
     {
       "criterion": "Use of evidence and Kenyan examples",
       "excellent": "Uses at least three specific pieces of evidence from the investigations (such as the onion root tip squashes, clay model, case studies, tissue culture of bananas or tea) and ties each to the claim.",
       "proficient": "Uses two relevant pieces of evidence, with some connection to the claim.",
-      "developing": "Uses little or no evidence, or gives general statements not taken from our investigations."
+      "developing": "Uses little or no evidence, or gives general statements not taken from our investigations.",
+      "belowExpectations": "Below Expectations: Gives no evidence from the investigations, or gives only statements that are not from our lessons."
     },
     {
       "criterion": "Reasoning, importance of cell division and scientific communication",
       "excellent": "Logically links evidence to the claim, explains the importance of cell division for growth, development, repair and reproduction, and uses correct terms in clear, well-organised Claim-Evidence-Reasoning writing.",
       "proficient": "Reasoning mostly links evidence to the claim and mentions some importance of cell division, with minor errors in terms or organisation.",
-      "developing": "Reasoning is missing or unclear, few uses of the importance of cell division, and scientific terms are used incorrectly or not at all."
+      "developing": "Reasoning is missing or unclear, few uses of the importance of cell division, and scientific terms are used incorrectly or not at all.",
+      "belowExpectations": "Below Expectations: Gives no reasoning linking evidence to the claim, does not say why cell division matters, and uses scientific terms incorrectly or not at all."
     }
   ]
 };
@@ -782,6 +787,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

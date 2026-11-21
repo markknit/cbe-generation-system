@@ -496,31 +496,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence and data",
       "excellent": "Exceeds Expectations: uses accurate results from the bulb test and resistivity, gap and Tc values with correct units and the correct order of materials, and adds a comparison of his or her own (for example the silicon-to-copper ratio).",
       "proficient": "Meets Expectations: uses accurate results from the bulb test and resistivity, gap and Tc values with correct units and the correct order of materials.",
-      "developing": "Approaches Expectations: uses some evidence and numbers correctly, but units, order or results are missing or contain slips."
+      "developing": "Approaches Expectations: uses some evidence and numbers correctly, but units, order or results are missing or contain slips.",
+      "belowExpectations": "Below Expectations: uses little or no evidence, and the numbers given are missing or wrong."
     },
     {
       "criterion": "Scientific explanation using the band model",
       "excellent": "Exceeds Expectations: clearly explains conductors, insulators, semiconductors, temperature effects, doping and p-n junctions using energy gaps, free electrons and holes, and links the explanation to a new situation.",
       "proficient": "Meets Expectations: explains conductors, insulators, semiconductors, doping and p-n junctions using energy gaps, free electrons and holes, with only small gaps in reasoning.",
-      "developing": "Approaches Expectations: describes what happens but gives only part of the why, or confuses ideas such as n-type and p-type."
+      "developing": "Approaches Expectations: describes what happens but gives only part of the why, or confuses ideas such as n-type and p-type.",
+      "belowExpectations": "Below Expectations: does not use the band model, or the explanation is mostly incorrect, for example confusing n-type and p-type throughout."
     },
     {
       "criterion": "Correct use of terms and conventions",
       "excellent": "Exceeds Expectations: uses conductor, insulator, semiconductor, superconductor, forward-biased and reverse-biased correctly throughout and always says insulators allow almost no current.",
       "proficient": "Meets Expectations: uses the terms correctly with one or two mix-ups, and says insulators allow almost no current.",
-      "developing": "Approaches Expectations: often mixes terms or claims insulators allow no current at all."
+      "developing": "Approaches Expectations: often mixes terms or claims insulators allow no current at all.",
+      "belowExpectations": "Below Expectations: uses terms incorrectly throughout, or claims that insulators and conductors behave in the same way."
     },
     {
       "criterion": "Connection to Kenyan contexts and the Driving Question",
       "excellent": "Exceeds Expectations: links the answer to Mr Otieno's wiring and at least two Kenyan cases and answers both safety and efficiency fully.",
       "proficient": "Meets Expectations: links the answer to Mr Otieno's wiring and at least one other Kenyan case and answers the Driving Question for safety and efficiency.",
-      "developing": "Approaches Expectations: links to wiring only, or answers the Driving Question in part."
+      "developing": "Approaches Expectations: links to wiring only, or answers the Driving Question in part.",
+      "belowExpectations": "Below Expectations: does not connect to Kenyan contexts, and the Driving Question is not answered."
     },
     {
       "criterion": "Model revision and clarity",
       "excellent": "Exceeds Expectations: clearly describes how the class model changed from Lesson 1 and why, in well-organised sentences.",
       "proficient": "Meets Expectations: describes how the class model changed and writes clearly most of the time.",
-      "developing": "Approaches Expectations: mentions model change only briefly, or writing is hard to follow."
+      "developing": "Approaches Expectations: mentions model change only briefly, or writing is hard to follow.",
+      "belowExpectations": "Below Expectations: does not mention any change to the model, and the writing is hard to follow."
     }
   ]
 };
@@ -581,6 +586,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -675,25 +675,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining proportional reasoning",
       "excellent": "Clearly links central angle to the fraction θ/360° and explains why doubling the angle exactly doubles the area when the radius is fixed, referring to the pizza slices.",
       "proficient": "States that a larger angle gives a larger area and mentions direct proportion, but the link to the fraction of 360° is incomplete.",
-      "developing": "Says only that bigger slices are bigger, with no fraction or proportion reasoning."
+      "developing": "Says only that bigger slices are bigger, with no fraction or proportion reasoning.",
+      "belowExpectations": "Gives no reason why wider slices are larger and does not use fractions or proportion."
     },
     {
       "criterion": "Using formulas for arc length and sector area (minor and major)",
       "excellent": "Chooses the correct formulas, substitutes correctly, uses the radius, and gives accurate answers to 2 decimal places with units.",
       "proficient": "Uses the correct formulas with minor slips in substitution, rounding or units.",
-      "developing": "Uses the wrong formula or the diameter for the radius, or gives answers with no working."
+      "developing": "Uses the wrong formula or the diameter for the radius, or gives answers with no working.",
+      "belowExpectations": "Does not know which formula to use for arc length or sector area, and shows little or no working."
     },
     {
       "criterion": "Calculating segment areas",
       "excellent": "Correctly finds the triangle area, subtracts it from the sector to get the minor segment, and subtracts the minor segment from the whole circle to get the major segment.",
       "proficient": "Completes most steps correctly but makes a calculation slip or gives a weak explanation of why the triangle is subtracted.",
-      "developing": "Does not subtract the triangle, or confuses the segment with the sector."
+      "developing": "Does not subtract the triangle, or confuses the segment with the sector.",
+      "belowExpectations": "The learner partially determines the area of an annulus or sector or annular sector or segment of a circle."
     },
     {
       "criterion": "Diagnosing errors and communicating the answer to the driving question",
       "excellent": "Names each error precisely, corrects it, and gives a clear, complete answer to the driving question with a relevant Kenyan example.",
       "proficient": "Identifies the errors and gives a reasonable answer to the driving question, but with limited detail or no clear example.",
-      "developing": "Does not identify the errors, or gives an answer unrelated to the formulas learned."
+      "developing": "Does not identify the errors, or gives an answer unrelated to the formulas learned.",
+      "belowExpectations": "Does not find the errors, and gives little or no answer to the driving question."
     }
   ]
 };
@@ -775,6 +779,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

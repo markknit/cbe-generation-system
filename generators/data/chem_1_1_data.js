@@ -676,31 +676,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence from the Kisumu tray",
       "excellent": "Uses accurate results for several substances A-H, including exact numbers and units (such as 2.9 g, 2.8 g, 2.7 g, 8.4 g, 0.6 g, 4 g), and links each piece of evidence to a claim.",
       "proficient": "Uses correct evidence from some substances and at least one correct number, but links to the claim are sometimes missing.",
-      "developing": "Gives few or inaccurate results, or makes claims without evidence from the tray."
+      "developing": "Gives few or inaccurate results, or makes claims without evidence from the tray.",
+      "belowExpectations": "Gives no accurate results from the tray, or gives results with no link to any claim, even with prompting."
     },
     {
       "criterion": "Explaining properties and separation",
       "excellent": "Clearly explains that properties come from what a substance is made of, and correctly matches magnetic separation, filtration and evaporation to the properties of iron, sand and salt, including why dissolved salt needs evaporation.",
       "proficient": "Names the methods and most properties correctly, with a partly complete reason for why each method works.",
-      "developing": "Confuses methods or properties, or only states that substances are different without a reason."
+      "developing": "Confuses methods or properties, or only states that substances are different without a reason.",
+      "belowExpectations": "Cannot match a method to the properties of iron, sand or salt, or says the substances are different with no reason."
     },
     {
       "criterion": "Chemistry concepts and classification",
       "excellent": "Correctly defines chemistry and matter, classifies elements, compounds and mixtures with reasons, and names the five branches with a correct link.",
       "proficient": "Gives mostly correct definitions and classifications, with a reason missing in places.",
-      "developing": "Definitions or classifications are incomplete or mostly incorrect."
+      "developing": "Definitions or classifications are incomplete or mostly incorrect.",
+      "belowExpectations": "Gives few or no correct definitions or classifications, and cannot name the branches of chemistry."
     },
     {
       "criterion": "Medicines and safe use",
       "excellent": "Explains that the antacid neutralises acid and paracetamol acts differently, calculates 8 x 500 mg = 4000 mg = 4 g correctly, explains the harm of excess, and links label items, correct dosage and avoiding substance abuse to safety.",
       "proficient": "Explains the medicines and calculation correctly but gives limited detail on label items or harm.",
-      "developing": "Mixes up the two medicines, makes a calculation error, or gives little on safety."
+      "developing": "Mixes up the two medicines, makes a calculation error, or gives little on safety.",
+      "belowExpectations": "Cannot say what the antacid or paracetamol does, does not attempt the calculation or gets it wrong, and says nothing about safety."
     },
     {
       "criterion": "Final explanation: clarity, Kenyan context and responsibility",
       "excellent": "Gives a connected 8-10 sentence answer to the driving question, uses a Kenyan industry or example, and states a specific, realistic responsibility for school and home.",
       "proficient": "Answer is mostly connected and answers the driving question, with a general Kenyan example or responsibility.",
-      "developing": "Answer is a list of unconnected facts, is too short, or does not address the driving question."
+      "developing": "Answer is a list of unconnected facts, is too short, or does not address the driving question.",
+      "belowExpectations": "Writes a few unconnected words or sentences, with no Kenyan example, and does not address the driving question."
     }
   ]
 };
@@ -782,6 +787,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

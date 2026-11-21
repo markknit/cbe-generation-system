@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Forming quadratic equations",
       "excellent": "Writes correct Let statements and expressions, forms the product equation, and rearranges it correctly into standard form with a, b and c identified, in every context.",
       "proficient": "Forms the equations correctly with minor slips in rearranging or in identifying a, b and c.",
-      "developing": "Has difficulty writing the expression for the second unknown or forms a linear equation or an equation not set to zero."
+      "developing": "Has difficulty writing the expression for the second unknown or forms a linear equation or an equation not set to zero.",
+      "belowExpectations": "Does not write a Let statement or an expression for the second unknown, and cannot form a quadratic equation from the situation even with prompting."
     },
     {
       "criterion": "Solving by factorisation",
       "excellent": "Uses the product-and-sum method accurately, writes correct factors, applies the Zero Product Property to get both roots, and checks by expanding.",
       "proficient": "Factorises and finds both roots correctly but does not always check by expansion or explain the Zero Product Property.",
-      "developing": "Chooses the wrong factor pair, makes sign errors, or finds only one root."
+      "developing": "Chooses the wrong factor pair, makes sign errors, or finds only one root.",
+      "belowExpectations": "Does not attempt factorisation, or the factors and signs are wrong throughout and no root is found correctly."
     },
     {
       "criterion": "Verification and contextual validity",
       "excellent": "Substitutes both roots, correctly rejects the invalid root with a clear reason from the context, and checks that the final dimensions give the known total.",
       "proficient": "Substitutes the roots and rejects the invalid root, but the reason or the final check is incomplete.",
-      "developing": "Does not verify by substitution or does not use the context to choose the valid answer."
+      "developing": "Does not verify by substitution or does not use the context to choose the valid answer.",
+      "belowExpectations": "Does not substitute the roots into the equation and does not use the situation to decide which answer is valid."
     },
     {
       "criterion": "Explaining the full journey and the driving question",
       "excellent": "Gives a clear, ordered pathway from real-life situation to verified answer, explains why the squared term appears, and links to at least two Kenyan contexts.",
       "proficient": "Describes most steps of the pathway with a Kenyan example but with limited explanation of why the squared term appears.",
-      "developing": "Lists some steps with little reasoning and few or no links to real-life situations."
+      "developing": "Lists some steps with little reasoning and few or no links to real-life situations.",
+      "belowExpectations": "Gives few or no steps of the pathway from situation to answer, with no explanation of the squared term and no Kenyan context."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -26,7 +26,7 @@ module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMAR
 
 | Member | Type | Notes |
 |---|---|---|
-| `schemaVersion` | string | Semver (`^\d+\.\d+\.\d+$`) of the contract this file conforms to. Currently `'1.0.0'`. |
+| `schemaVersion` | string | Semver (`^\d+\.\d+\.\d+$`) of the contract this file conforms to. Currently `'1.1.0'` (contract revision R1; see `CONTRACT_CHANGELOG.md`). |
 | `META` | object | Output config + document titles. |
 | `UNIT` | object | Sub-strand overview. |
 | `LESSONS` | array | One object per lesson. |
@@ -44,7 +44,7 @@ Field *names* and *style* are governed by this document. Machine-validated
 (raw: `https://raw.githubusercontent.com/james-beep-boop/Lesson3/main/app/src/ingest/ares-contract.schema.json`).
 Validate with `npx tsx scripts/contract-drift.ts -- generators/data` (run from the colleague's `app/`).
 
-Current contract version: **1.0.0**, declared per file via the top-level `schemaVersion`.
+Current contract version: **1.1.0** (R1, 2026-11-09; 1.0.0 = R0), declared per file via the top-level `schemaVersion`.
 
 Required fields (everything else is optional):
 
@@ -171,15 +171,14 @@ Each element of the `LESSONS` array:
 | Field | Canonical name |
 |---|---|
 | Criterion | `criterion` |
-| Excellent | `excellent` |
-| Proficient | `proficient` |
-| Developing | `developing` |
+| Exceeds Expectations (4) | `excellent` |
+| Meets Expectations (3) | `proficient` |
+| Approaches Expectations (2) | `developing` |
+| Below Expectations (1) | `belowExpectations` (required; added in contract revision R1, 2026-11-09) |
 
-> The v1.0.0 contract enumerates the Biology 3-level set above. Subject-specific
-> frameworks (KICD 4-Level for Mathematics; Beginning/Developing/Proficient/Advanced
-> for Chemistry and Physics) carry more or differently-named levels — confirm the
-> rubric shape with the contract owner before generating Chemistry/Physics FE, or
-> omit `rubric` (it is optional) until the contract defines those variants.
+> The four CBE levels are Exceeds, Meets, Approaches and Below Expectations. The
+> first three keep their original JSON names so existing data only gains one key.
+> See `CONTRACT_CHANGELOG.md` for the full change list.
 
 ---
 

@@ -555,31 +555,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Scientific accuracy of the transport pathways",
       "excellent": "Correctly describes water and mineral entry (osmosis, active transport), upward flow in xylem and sugar flow in phloem, using the correct terms throughout.",
       "proficient": "Describes most pathways correctly with minor errors or missing terms (for example confuses one direction or omits the endodermis).",
-      "developing": "Confuses xylem and phloem, or the processes, or gives incomplete pathways."
+      "developing": "Confuses xylem and phloem, or the processes, or gives incomplete pathways.",
+      "belowExpectations": "Gives incorrect or almost no pathways for water and sugars, and does not distinguish xylem from phloem."
     },
     {
       "criterion": "Use of evidence from the investigations",
       "excellent": "Cites specific evidence and numbers from our lessons (potato strips, sweating leaf bag, stomatal impressions, potometer, girdled eucalyptus trees near Kericho) and links each piece to a claim.",
       "proficient": "Cites some evidence from the investigations but links it to claims only partly.",
-      "developing": "Gives little or no evidence, or only general statements."
+      "developing": "Gives little or no evidence, or only general statements.",
+      "belowExpectations": "Gives no evidence from the investigations, or evidence that is incorrect and not linked to any claim."
     },
     {
       "criterion": "Explaining the Kibwezi phenomenon",
       "excellent": "Fully explains why maize wilts despite watered soil, why riverbed maize wilts sooner, why some plants die and why shaded sukuma wiki is protected, using rate of loss versus supply.",
       "proficient": "Explains most parts of the phenomenon but misses one (for example the shade or the riverbed explanation).",
-      "developing": "Explains only that the plant needs water without linking to transpiration or soil water potential."
+      "developing": "Explains only that the plant needs water without linking to transpiration or soil water potential.",
+      "belowExpectations": "Does not explain why the maize wilts, or gives an incorrect reason that ignores transpiration and soil water."
     },
     {
       "criterion": "Reasoning with mechanisms (CER, cohesion-tension, pressure-flow)",
       "excellent": "Gives clear, logical reasoning connecting cause and effect, including cohesion-tension, the four transpiration factors, and pressure-flow.",
       "proficient": "Gives reasoning that is mostly logical but with gaps in one mechanism.",
-      "developing": "States facts without explaining how or why."
+      "developing": "States facts without explaining how or why.",
+      "belowExpectations": "Gives no reasoning, or incorrect reasoning, for how water and sugars move."
     },
     {
       "criterion": "Communication and Kenyan context",
       "excellent": "Writes clearly and in order, using the key terms correctly and linking ideas to the Kibwezi farm context.",
       "proficient": "Writes understandably with a few unclear parts or terms used loosely.",
-      "developing": "Writing is hard to follow and key terms are missing or misused."
+      "developing": "Writing is hard to follow and key terms are missing or misused.",
+      "belowExpectations": "Writing is very hard to follow, with key terms missing and no link to the Kibwezi farm."
     }
   ]
 };
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

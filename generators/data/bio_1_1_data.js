@@ -795,31 +795,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of cell structure knowledge",
       "excellent": "Accurately names and describes organelles and structures (cell theory, prokaryote versus eukaryote, plant versus animal cells) and links each to its function with correct scientific vocabulary.",
       "proficient": "Names most structures and functions correctly, with minor errors or gaps in the comparisons.",
-      "developing": "Names few structures, or confuses plant and animal features or prokaryotes and eukaryotes."
+      "developing": "Names few structures, or confuses plant and animal features or prokaryotes and eukaryotes.",
+      "belowExpectations": "Names almost no structures correctly, or mixes up plant and animal cells and prokaryotes and eukaryotes throughout."
     },
     {
       "criterion": "Linking structure to function",
       "excellent": "For several specialised cells, clearly explains how a specific structural feature enables the job the cell does, including the sickle-cell evidence.",
       "proficient": "Explains structure-function links for some cells but the reasoning is sometimes incomplete.",
-      "developing": "Lists features or functions without connecting them to each other."
+      "developing": "Lists features or functions without connecting them to each other.",
+      "belowExpectations": "Names cell features or functions but does not link them, or the links given are incorrect."
     },
     {
       "criterion": "Use of evidence and reasoning (CER)",
       "excellent": "Makes clear claims supported by specific evidence from lessons (onion and cheek practicals, micrographs) and reasons logically from evidence to claim.",
       "proficient": "Gives claims with some evidence, but the reasoning is thin or one part of CER is missing.",
-      "developing": "Makes statements with little or no evidence from the lessons."
+      "developing": "Makes statements with little or no evidence from the lessons.",
+      "belowExpectations": "Makes statements with no evidence from the lessons, or needs prompting to give any."
     },
     {
       "criterion": "Explaining the healing cut and the driving question",
       "excellent": "Gives a complete, correctly sequenced story of healing, naming at least four cell types or fragments, explaining same DNA with different gene expression, and the tissue-to-organism hierarchy.",
       "proficient": "Gives a mostly complete explanation, with some cell types, the sequence or the DNA and hierarchy ideas weak.",
-      "developing": "Gives a partial or unordered explanation that does not answer the driving question."
+      "developing": "Gives a partial or unordered explanation that does not answer the driving question.",
+      "belowExpectations": "Gives only a few unconnected facts about the cut or the cells, with no sequence and no answer to the driving question."
     },
     {
       "criterion": "Reflection and communication",
       "excellent": "Clearly shows how thinking has changed since Lesson 1, written in organised, clear sentences with correct terms.",
       "proficient": "Shows some change in thinking, with generally clear writing.",
-      "developing": "Reflection is missing or very general, and the writing is hard to follow."
+      "developing": "Reflection is missing or very general, and the writing is hard to follow.",
+      "belowExpectations": "Reflection is missing, and the writing is too unclear to follow."
     }
   ]
 };
@@ -915,6 +920,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -20,8 +20,8 @@ const META = {
 const UNIT = {
   "gradeLevel": "10",
   "subject": "Biology",
-  "strand": "Strand 2.0: Plant Anatomy and Physiology",
-  "substrand": "Sub-Strand 2.2: Plant Transport",
+  "strand": "Strand 2.0: Anatomy and Physiology of Plants",
+  "substrand": "Sub-Strand 2.2: Transport",
   "totalDuration": "Lesson 1 (40 minutes) + Lessons 2 to 8 (7 × 80 minutes = 560 minutes) = 600 minutes total (10 hours)",
   "content": "• Transport system in plants (structure, functions and adaptations of roots, stems, leaves and vascular tissues to transport)\n• Vascular tissues in monocots and dicots\n• Uptake of water and mineral salts\n• Transpiration\n• Mechanism of translocation in plants",
   "learningOutcomes": "By the end of the sub strand, the learner should be able to:\na) relate structures of the plant transport system to their functions in plants,\nb) illustrate the arrangement of vascular tissues in monocotyledonous and dicotyledonous plants,\nc) demonstrate the uptake of water and mineral salts from the roots to the leaves,\nd) demonstrate factors that affect the rate of transpiration in plants,\ne) describe the translocation of manufactured food in plants,\nf) appreciate the significance of transport in plants.",
@@ -42,7 +42,7 @@ const LESSONS = [
     "number": 1,
     "title": "The Wilting Maize of Kibwezi: Encountering the Phenomenon",
     "duration": "40 minutes",
-    "substrand": "2.2 Plant Transport",
+    "substrand": "2.2 Transport",
     "aresKeywords": "wilting, transport, xylem, phloem, water, vascular system, phenomenon, observation, prediction",
     "slo": {
       "purpose": "To launch curiosity about plant water transport by confronting students with a puzzling real-world phenomenon from Kibwezi, Makueni County, that challenges the intuitive belief that watering a plant is sufficient to prevent wilting",
@@ -102,7 +102,7 @@ const LESSONS = [
     "number": 2,
     "title": "What Do Plants Need to Survive? — Mapping the Case for a Transport System",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.2: Plant Transport",
+    "substrand": "Sub-Strand 2.2: Transport",
     "slo": {
       "purpose": "To establish that plants require multiple resources that enter at different locations from where they are used, creating the logical necessity for an internal transport system — the key to explaining why the Kibwezi maize wilts.",
       "knowledge": "Students identify the essential needs of a plant (water, mineral salts, carbon dioxide, sunlight/light energy) and map the specific location where each resource enters the plant and the location(s) where each resource is needed or used.",
@@ -162,7 +162,7 @@ const LESSONS = [
     "number": 3,
     "title": "The Big Picture: Overview of the Plant Transport System (Xylem and Phloem)",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.2: Plant Transport",
+    "substrand": "Sub-Strand 2.2: Transport",
     "slo": {
       "purpose": "To introduce students to the two vascular transport tissues — xylem and phloem — and establish the directional flow of water/mineral salts and manufactured food substances through the whole plant, directly connecting these transport highways to the wilting maize phenomenon in Kibwezi.",
       "knowledge": "By the end of this lesson, the learner should be able to: (a) identify xylem and phloem as the two vascular tissues responsible for transport in plants; (b) describe the direction of movement of water and mineral salts through xylem (soil → root → stem → leaf, upward); (c) describe the direction of movement of manufactured food substances through phloem (leaf → stem → root and other sinks, bidirectional but primarily downward); (d) locate xylem and phloem within a whole-plant diagram.",
@@ -222,7 +222,7 @@ const LESSONS = [
     "number": 4,
     "title": "The Entry Point: Root Structure and Water Absorption",
     "duration": "80 minutes (double lesson)",
-    "substrand": "Sub-Strand 2.2: Plant Transport",
+    "substrand": "Sub-Strand 2.2: Transport",
     "aresKeywords": "root hair cells, osmosis, active transport, cortex, endodermis, xylem, water potential, semi-arid, wilting, Kibwezi, mineral salts, surface area, root structure, turgidity",
     "slo": {
       "purpose": "To explain how water and mineral salts enter the root of a plant, linking root structure to the mechanisms of osmosis and active transport.",
@@ -282,7 +282,7 @@ const LESSONS = [
     "number": 5,
     "title": "The Highway: Stem Structure and Vascular Bundles",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.2: Plant Transport",
+    "substrand": "Sub-Strand 2.2: Transport",
     "slo": {
       "purpose": "To investigate the internal structure of herbaceous stems, identify xylem and phloem within vascular bundles, and connect stem anatomy to the movement of water and food through the plant — advancing students' understanding of why the Kibwezi maize wilts even after watering.",
       "knowledge": "Students identify xylem and phloem within vascular bundles of herbaceous stems, describe their arrangement and structural differences, and distinguish between herbaceous and woody stem organisation.",
@@ -326,14 +326,14 @@ const LESSONS = [
       {
         "phase": "Model Building Phase",
         "learnerExperience": "Students retrieve their cumulative transport model — the annotated diagram they have been building since Lesson 1, showing the full journey of water from soil to leaf. In Lessons 1–4, the model already includes: root hair cells, osmosis arrows, the cortex pathway, and the xylem column in the root. Today, students add the stem layer: they draw and label a cross-section of the herbaceous stem on the side of their model, showing vascular bundles with xylem (inner, thick-walled, dead cells, coloured blue or pencil-shaded) and phloem (outer, thin-walled, living, coloured red or dotted). They draw arrows showing: water moving UP through xylem, sugars moving DOWN through phloem. They annotate: 'Xylem = one-way upward highway for water and minerals.' 'Phloem = two-way food highway, mainly downward from leaves.' Students also mark a 'DANGER ZONE' on their model — where they think the highway is most vulnerable to failure in a drought-stressed Kibwezi maize plant — and write a one-sentence justification. Groups of three briefly compare models (2 minutes) and agree on any corrections before the lesson ends.",
-        "teacherMoves": "1. Say: 'Take out your cumulative model. You are now going to add the stem to your plant transport highway. Use today's observation to make this accurate — not a copy from the textbook, but from what YOU saw.' Allow 5 minutes for individual model updating. 2. Circulate and check: are xylem and phloem correctly positioned (xylem inner/adaxial, phloem outer/abaxial in most herbaceous dicots)? Prompt incorrect models: 'Look at your cross-section diagram — which bundle tissue was closest to the centre? Which was closest to the outside?' WAIT TIME: 10 seconds. 3. Say: 'Now mark a DANGER ZONE — where do you think the highway is most fragile? Write one sentence explaining your choice.' Allow 2 minutes. 4. Say: 'Compare with your group for 2 minutes. If you disagree on the danger zone, keep both versions — we will test this idea in Lessons 6 and 7.' 5. Close by pointing to the wilting maize photograph: 'This farmer in Kibwezi is still waiting for an answer. Our model is getting closer to explaining her problem. What do we still need to know?' Accept 2 quick verbal responses. WAIT TIME: 10 seconds each.",
+        "teacherMoves": "1. Say: 'Take out your cumulative model. You are now going to add the stem to your plant transport highway. Use today's observation to make this accurate — not a copy from the textbook, but from what YOU saw.' Allow 5 minutes for individual model updating. 2. Circulate and check: are xylem and phloem correctly positioned (xylem towards the centre (pith side) and phloem towards the outside (epidermis side) of each bundle)? Prompt incorrect models: 'Look at your cross-section diagram — which bundle tissue was closest to the centre? Which was closest to the outside?' WAIT TIME: 10 seconds. 3. Say: 'Now mark a DANGER ZONE — where do you think the highway is most fragile? Write one sentence explaining your choice.' Allow 2 minutes. 4. Say: 'Compare with your group for 2 minutes. If you disagree on the danger zone, keep both versions — we will test this idea in Lessons 6 and 7.' 5. Close by pointing to the wilting maize photograph: 'This farmer in Kibwezi is still waiting for an answer. Our model is getting closer to explaining her problem. What do we still need to know?' Accept 2 quick verbal responses. WAIT TIME: 10 seconds each.",
         "sensemakingStrategy": "Cumulative Model Revision — The running annotated diagram is the cornerstone sensemaking artefact of the eight-lesson sequence, embodying the NGSS Practice of Developing and Using Models. Each lesson adds one layer of mechanistic detail, so students can see — literally, visually — how their understanding has grown. The 'DANGER ZONE' annotation forces students to apply their new anatomical knowledge predictively, bridging from structure to function to the real-world failure case. Comparing models in small groups surfaces persistent misconceptions before they are consolidated.",
         "formativeAssessment": "Observable indicators: (1) The cumulative model now shows at minimum: root hair → cortex → xylem (root) → xylem (stem vascular bundle) → upward arrow to leaf, AND phloem with a downward sugar-transport arrow. (2) The 'DANGER ZONE' annotation is accompanied by a mechanistic justification (e.g., 'If xylem in the stem gets air-locked during extreme drought, water cannot reach the leaves and the plant wilts permanently — like in Kibwezi'). Models missing the phloem layer or showing only one undifferentiated 'tube' are flagged for follow-up at the start of Lesson 6."
       }
     ],
     "teacherReflection": "After the lesson, reflect on the following questions to inform Lesson 6 planning:\n1. SAFETY EXECUTION: Did all students follow the razor-blade cutting protocol correctly? Were there any near-misses or rule violations? If so, adjust the Lesson 6 celery observation setup to minimise further blade use.\n2. OBSERVATION QUALITY: When you collected notebooks during Phase 2, did students distinguish between their own observations and the reference diagram labels? If more than one-third of the class copied directly from the printed diagram without a personal observational drawing, begin Lesson 6 with a 5-minute 'blind observation' exercise — hand lens observation before any reference material is provided.\n3. MISCONCEPTIONS SURFACED: The most common misconception in this lesson is that xylem and phloem are 'side by side as two separate tubes running the full length of the stem' rather than organised into discrete vascular bundles. Did this arise in DQB entries or model drawings? If so, use the celery cross-section in Lesson 6 to explicitly re-address it.\n4. PHENOMENON CONNECTION: Did Group D (Phenomenon experts) produce a mechanistically rich explanation of how vascular bundle damage causes irreversible wilting, or did they stay at the descriptive level ('the tubes get blocked')? If only descriptive, plan a Lesson 6 opening hook: 'A sugarcane farmer in Kisumu notices that after a long dry spell, even when rain returns, some plants never recover — but some do. Using what you know about xylem and phloem, predict which damage would be reversible and which would not — and why.'\n5. CELERY PREDICTIONS: Review the written celery predictions collected at the end of the lesson. How many students correctly predicted that only xylem would be stained? How many predicted the whole stem or the phloem? Use this data to plan targeted questioning during Lesson 6 observations — cold-call students whose predictions were wrong first, so they can experience productive cognitive conflict when they see the actual result.",
     "summaryTablePrompt": {
-      "observed": "Students cut cross-sections of fresh bean or sunflower stems, stained them with eosin or iodine, and observed distinct coloured patches arranged in a ring pattern (in dicot stems), and scattered through the maize (monocot) stem. They noted that some regions had thicker walls and appeared more densely stained than others. They also set up split celery stalks in two different food-dye colours and observed the initial uptake of colour beginning at the cut base.",
+      "observed": "Students cut cross-sections of fresh bean or sunflower stems, stained them with eosin or iodine, and observed distinct coloured patches arranged in a ring pattern (in dicot stems), and scattered through the maize (monocot) stem. They noted that some regions had thicker walls and appeared more densely stained than others. They also set up split celery stalks in two different food-dye colours, to be observed in Lesson 6.",
       "learned": "The stem contains vascular bundles made up of two distinct tissues: xylem (inner, thick-walled, dead cells that form hollow tubes for carrying water and minerals upward) and phloem (outer, thin-walled, living cells that carry dissolved sugars mainly downward from leaves). In herbaceous dicot stems the bundles are arranged in a ring; in monocot stems (like maize) they are scattered. These bundles are the physical 'highway' that connects roots to leaves.",
       "explained": "Water and mineral salts absorbed from the soil by root hair cells travel upward through the xylem vessels in vascular bundles running through the stem to every leaf. Sugars manufactured in leaves by photosynthesis travel downward through the phloem to roots, growing tips, and storage organs. In the Kibwezi maize, extreme drought stress can cause air embolisms (cavitation) in the narrow xylem vessels, permanently breaking the water highway — which is why some plants never recover even after watering returns. Plants like the sukuma wiki shaded by the mango tree lose less water through transpiration, reducing the tension in their xylem and making cavitation far less likely."
     }
@@ -342,7 +342,7 @@ const LESSONS = [
     "number": 6,
     "title": "The Destination: Leaf Structure and Transpiration",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.2: Plant Transport",
+    "substrand": "Sub-Strand 2.2: Transport",
     "slo": {
       "purpose": "To investigate leaf anatomy and the process of transpiration, and to explain how water loss through stomata drives the wilting of maize in Kibwezi.",
       "knowledge": "By the end of the lesson, the learner should be able to: (a) describe the internal and external structure of a leaf in relation to transport and water loss; (b) define transpiration and identify the structures through which it occurs; (c) explain factors that affect the rate of transpiration.",
@@ -392,7 +392,7 @@ const LESSONS = [
     ],
     "teacherReflection": "After the lesson, reflect on the following questions in your professional journal:\n\n1. PHENOMENON CONNECTION: Could every student articulate — in their own words — why the maize in Kibwezi wilts in the afternoon even after morning watering? Did the CER task reveal students who still hold the misconception that 'watering = no wilting'? What will you do in Lesson 7's opening to address this?\n\n2. PRACTICAL QUALITY: Did the stomatal impression technique work with the leaf species available? If sukuma wiki leaves gave unclear impressions, which alternative leaves in your school compound gave better results? Note this for next year. Did the nail varnish dry sufficiently in the 2–3 minute window, or do you need to adjust timing?\n\n3. DYE EVIDENCE: Were students able to clearly identify stained xylem tissue from Lesson 5? If results were ambiguous, consider whether the dye concentration was sufficient (2 teaspoons of food colouring per 200 ml water is recommended) or whether stems were left in dye long enough (minimum 4 hours). Adjust Lesson 5 setup instructions accordingly.\n\n4. DIFFERENTIATION: Did higher-ability students complete the sukuma wiki comparison inset (shaded plot)? Were lower-ability students supported in completing at least the 4 required leaf inset labels? Consider preparing a partially pre-labelled scaffold diagram for the next cohort.\n\n5. TIME MANAGEMENT: The Observe phase (3 simultaneous observations) is the most time-pressured segment. Did 25 minutes feel sufficient? If not, consider moving the dye result recording to a warm-up activity before the lesson formally begins.\n\n6. DRIVING QUESTION PROGRESS: Review the DQB green sticky notes. Are students' answers becoming more mechanistic (citing stomata, transpiration rate, xylem) or are they still descriptive ('water comes out of the leaf')? This tells you how ready students are for Lesson 7's cohesion-tension content.",
     "summaryTablePrompt": {
-      "observed": "Students observed water droplets inside a polythene bag tied around a leafy branch (sweating leaf bag demonstration), confirming that leaves release water vapour. They recorded results from the Lesson 5 coloured dye experiment, observing stained xylem tissue in stem cross-sections. They prepared stomatal impressions from sukuma wiki leaves using clear nail varnish and observed guard cells and stomatal pores under a hand lens, finding more stomata on the lower epidermis. They made cross-sections of the leaf midrib and identified the vascular bundle, epidermis layers, mesophyll, and waxy cuticle.",
+      "observed": "Students observed water droplets inside a polythene bag tied around a leafy branch (sweating leaf bag demonstration), confirming that leaves release water vapour. They recorded results from the Lesson 5 coloured dye experiment, observing stained xylem tissue in stem cross-sections. They prepared stomatal impressions from sukuma wiki leaves using clear nail varnish and observed guard cells and stomatal pores under a microscope, finding more stomata on the lower epidermis. They made cross-sections of the leaf midrib and identified the vascular bundle, epidermis layers, mesophyll, and waxy cuticle.",
       "learned": "Students learned that transpiration is the loss of water vapour from a plant, mainly through stomata in the lower epidermis of leaves. They learned that xylem vessels carry water from the roots all the way to the leaf mesophyll cells, where it evaporates and exits through stomata as water vapour. They identified four factors that increase the rate of transpiration: high temperature, high wind speed, low humidity, and high light intensity — all of which are present in Kibwezi on a dry afternoon. They explained why the farmer's maize wilts: transpiration rate in the hot, windy, dry afternoon exceeds the rate at which roots can absorb water from the soil, causing a water deficit inside the plant.",
       "explained": "Students can now explain the complete water journey from soil to atmosphere: water enters root hairs by osmosis, travels through root cortex cells, enters xylem vessels, is pulled up the stem by the transpiration pull (tension created as water evaporates from leaves), reaches leaf mesophyll cells through vein xylem, evaporates into air spaces, and exits through stomata as water vapour. The wilting of the Kibwezi maize is explained by a rate mismatch: on hot, dry, windy afternoons, stomata are open for photosynthesis, and the four transpiration factors combine to drive water loss far faster than roots can replace it, causing cells to lose turgor and the plant to wilt. The sukuma wiki under the mango tree barely wilts because shade reduces both light intensity and temperature — two of the four factors — dramatically slowing transpiration rate."
     },
@@ -402,7 +402,7 @@ const LESSONS = [
     "number": 7,
     "title": "The Engine: Transpiration Pull, Cohesion-Tension, and Root Pressure",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.2: Plant Transport",
+    "substrand": "Sub-Strand 2.2: Transport",
     "slo": {
       "purpose": "To investigate and explain the mechanisms that drive upward water movement in plants — transpiration pull (cohesion-tension) and root pressure — and to use quantitative data to partially resolve why the Kibwezi maize wilts even after watering.",
       "knowledge": "Students will be able to: (a) describe the cohesion-tension mechanism as the primary driver of water movement up the xylem; (b) explain how transpiration pull is generated at the leaf surface; (c) describe root pressure as a supplementary driver of upward water movement; (d) define water potential and explain how gradients drive movement from soil → root → stem → leaf → atmosphere.",
@@ -462,7 +462,7 @@ const LESSONS = [
     "number": 8,
     "title": "The Return Journey: Translocation and Final Model Build",
     "duration": "80 minutes",
-    "substrand": "Sub-Strand 2.2: Plant Transport",
+    "substrand": "Sub-Strand 2.2: Transport",
     "slo": {
       "purpose": "To consolidate understanding of plant transport by examining phloem translocation through the pressure-flow hypothesis, completing a final annotated whole-plant transport model, and constructing a full evidence-based scientific explanation of the Kibwezi wilting phenomenon.",
       "knowledge": "By the end of the lesson, the learner should be able to: (a) explain the structure and function of phloem in translocating sugars and amino acids from source to sink; (b) describe the pressure-flow hypothesis as the mechanism driving translocation; (c) distinguish between xylem transport (water and mineral salts, root to leaf, transpiration pull) and phloem transport (sucrose and amino acids, source to sink, pressure flow); (d) explain the evidence from girdling experiments that supports phloem function.",
@@ -521,7 +521,7 @@ const LESSONS = [
 ];
 
 const FINAL_EXPLANATION = {
-  "subjectLabel": "Biology Grade 10 – Sub-strand 2.2 Plant Transport: Final Explanation",
+  "subjectLabel": "Biology Grade 10 – Sub-strand 2.2 Transport: Final Explanation",
   "instructions": "This is your Final Explanation for the unit. Use everything you learned in Lessons 1 to 8 to answer the driving question: How does water and food travel through an entire plant, from the soil to the highest leaf, and why does this journey sometimes fail, causing crops like maize in Kibwezi to wilt and die? Remember the Kibwezi farmer: she watered her maize in the morning, yet it wilted in the afternoon. Maize near the dry seasonal riverbed wilted sooner than maize on the wetter lower slopes, and sukuma wiki shaded by a mango tree barely wilted at all. Answer each section in full sentences in the space under each prompt. Use the key words you learned, such as xylem, phloem, osmosis, active transport, transpiration, cohesion-tension, turgor and pressure-flow. Where a section asks for a Claim-Evidence-Reasoning (CER) answer, give your claim, then your evidence from our investigations, then your reasoning. You may add a labelled diagram if it helps. Use your Summary Tables, your notebook and your cumulative model to build your answer. If English is not your first language, you may plan your ideas with labelled drawings or in Kiswahili first, and then write your answer in English. Write in your own words.",
   "sections": [
     {
@@ -555,31 +555,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Scientific accuracy of the transport pathways",
       "excellent": "Exceeds Expectations: Correctly describes water and mineral entry (osmosis, active transport), upward flow in xylem and sugar flow in phloem, using the correct terms throughout.",
       "proficient": "Meets Expectations: Describes most pathways correctly with minor errors or missing terms (for example confuses one direction or omits the endodermis).",
-      "developing": "Approaches Expectations: Confuses xylem and phloem, or the processes, or gives incomplete pathways."
+      "developing": "Approaches Expectations: Confuses xylem and phloem, or the processes, or gives incomplete pathways.",
+      "belowExpectations": "Below Expectations: Gives incorrect or almost no pathways for water and sugars, and does not distinguish xylem from phloem."
     },
     {
       "criterion": "Use of evidence from the investigations",
       "excellent": "Exceeds Expectations: Cites specific evidence and numbers from our lessons (potato strips, sweating leaf bag, stomatal impressions, potometer, girdled eucalyptus trees near Kericho) and links each piece to a claim.",
       "proficient": "Meets Expectations: Cites some evidence from the investigations but links it to claims only partly.",
-      "developing": "Approaches Expectations: Gives little or no evidence, or only general statements."
+      "developing": "Approaches Expectations: Gives little or no evidence, or only general statements.",
+      "belowExpectations": "Below Expectations: Gives no evidence from the investigations, or evidence that is incorrect and not linked to any claim."
     },
     {
       "criterion": "Explaining the Kibwezi phenomenon",
       "excellent": "Exceeds Expectations: Fully explains why maize wilts despite watered soil, why riverbed maize wilts sooner, why some plants recover by evening while others die, and why shaded sukuma wiki is protected, using rate of loss versus supply.",
       "proficient": "Meets Expectations: Explains most parts of the phenomenon but misses one (for example the shade, the riverbed or the recovery explanation).",
-      "developing": "Approaches Expectations: Explains only that the plant needs water without linking to transpiration or soil water potential."
+      "developing": "Approaches Expectations: Explains only that the plant needs water without linking to transpiration or soil water potential.",
+      "belowExpectations": "Below Expectations: Does not explain why the maize wilts, or gives an incorrect reason that ignores transpiration and soil water."
     },
     {
       "criterion": "Reasoning with mechanisms (CER, cohesion-tension, pressure-flow)",
       "excellent": "Exceeds Expectations: Gives clear, logical reasoning connecting cause and effect, including cohesion-tension, the four transpiration factors, and pressure-flow.",
       "proficient": "Meets Expectations: Gives reasoning that is mostly logical but with gaps in one mechanism.",
-      "developing": "Approaches Expectations: States facts without explaining how or why."
+      "developing": "Approaches Expectations: States facts without explaining how or why.",
+      "belowExpectations": "Below Expectations: Gives no reasoning, or incorrect reasoning, for how water and sugars move."
     },
     {
       "criterion": "Communication and Kenyan context",
       "excellent": "Exceeds Expectations: Writes clearly and in order, using the key terms correctly and linking ideas to the Kibwezi farm context.",
       "proficient": "Meets Expectations: Writes understandably with a few unclear parts or terms used loosely.",
-      "developing": "Approaches Expectations: Writing is hard to follow and key terms are missing or misused."
+      "developing": "Approaches Expectations: Writing is hard to follow and key terms are missing or misused.",
+      "belowExpectations": "Below Expectations: Writing is very hard to follow, with key terms missing and no link to the Kibwezi farm."
     }
   ]
 };
@@ -619,14 +624,14 @@ const SUMMARY_TABLE = {
     {
       "number": 5,
       "title": "The Highway: Stem Structure and Vascular Bundles",
-      "observed": "Students cut cross-sections of fresh bean or sunflower stems, stained them with eosin or iodine, and observed distinct coloured patches arranged in a ring pattern (in dicot stems), and scattered through the maize (monocot) stem. They noted that some regions had thicker walls and appeared more densely stained than others. They also set up split celery stalks in two different food-dye colours and observed the initial uptake of colour beginning at the cut base.",
+      "observed": "Students cut cross-sections of fresh bean or sunflower stems, stained them with eosin or iodine, and observed distinct coloured patches arranged in a ring pattern (in dicot stems), and scattered through the maize (monocot) stem. They noted that some regions had thicker walls and appeared more densely stained than others. They also set up split celery stalks in two different food-dye colours, to be observed in Lesson 6.",
       "learned": "The stem contains vascular bundles made up of two distinct tissues: xylem (inner, thick-walled, dead cells that form hollow tubes for carrying water and minerals upward) and phloem (outer, thin-walled, living cells that carry dissolved sugars mainly downward from leaves). In herbaceous dicot stems the bundles are arranged in a ring; in monocot stems (like maize) they are scattered. These bundles are the physical 'highway' that connects roots to leaves.",
       "explained": "Water and mineral salts absorbed from the soil by root hair cells travel upward through the xylem vessels in vascular bundles running through the stem to every leaf. Sugars manufactured in leaves by photosynthesis travel downward through the phloem to roots, growing tips, and storage organs. In the Kibwezi maize, extreme drought stress can cause air embolisms (cavitation) in the narrow xylem vessels, permanently breaking the water highway — which is why some plants never recover even after watering returns. Plants like the sukuma wiki shaded by the mango tree lose less water through transpiration, reducing the tension in their xylem and making cavitation far less likely."
     },
     {
       "number": 6,
       "title": "The Destination: Leaf Structure and Transpiration",
-      "observed": "Students observed water droplets inside a polythene bag tied around a leafy branch (sweating leaf bag demonstration), confirming that leaves release water vapour. They recorded results from the Lesson 5 coloured dye experiment, observing stained xylem tissue in stem cross-sections. They prepared stomatal impressions from sukuma wiki leaves using clear nail varnish and observed guard cells and stomatal pores under a hand lens, finding more stomata on the lower epidermis. They made cross-sections of the leaf midrib and identified the vascular bundle, epidermis layers, mesophyll, and waxy cuticle.",
+      "observed": "Students observed water droplets inside a polythene bag tied around a leafy branch (sweating leaf bag demonstration), confirming that leaves release water vapour. They recorded results from the Lesson 5 coloured dye experiment, observing stained xylem tissue in stem cross-sections. They prepared stomatal impressions from sukuma wiki leaves using clear nail varnish and observed guard cells and stomatal pores under a microscope, finding more stomata on the lower epidermis. They made cross-sections of the leaf midrib and identified the vascular bundle, epidermis layers, mesophyll, and waxy cuticle.",
       "learned": "Students learned that transpiration is the loss of water vapour from a plant, mainly through stomata in the lower epidermis of leaves. They learned that xylem vessels carry water from the roots all the way to the leaf mesophyll cells, where it evaporates and exits through stomata as water vapour. They identified four factors that increase the rate of transpiration: high temperature, high wind speed, low humidity, and high light intensity — all of which are present in Kibwezi on a dry afternoon. They explained why the farmer's maize wilts: transpiration rate in the hot, windy, dry afternoon exceeds the rate at which roots can absorb water from the soil, causing a water deficit inside the plant.",
       "explained": "Students can now explain the complete water journey from soil to atmosphere: water enters root hairs by osmosis, travels through root cortex cells, enters xylem vessels, is pulled up the stem by the transpiration pull (tension created as water evaporates from leaves), reaches leaf mesophyll cells through vein xylem, evaporates into air spaces, and exits through stomata as water vapour. The wilting of the Kibwezi maize is explained by a rate mismatch: on hot, dry, windy afternoons, stomata are open for photosynthesis, and the four transpiration factors combine to drive water loss far faster than roots can replace it, causing cells to lose turgor and the plant to wilt. The sukuma wiki under the mango tree barely wilts because shade reduces both light intensity and temperature — two of the four factors — dramatically slowing transpiration rate."
     },
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

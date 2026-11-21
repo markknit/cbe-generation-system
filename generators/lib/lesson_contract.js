@@ -162,7 +162,9 @@ function checkModule(mod, opts = {}) {
     if (FE.rubric != null && !Array.isArray(FE.rubric)) {
       errs.push('FINAL_EXPLANATION.rubric is not an array');
     } else if (FE.rubric) {
-      FE.rubric.forEach((r, i) => need(r || {}, ['criterion', 'excellent', 'proficient', 'developing'],
+      FE.rubric.forEach((r, i) => need(r || {}, (process.env.CBE_LEGACY_RUBRIC === '1'   // revise_build.py baseline render only (R0 data, three levels); see CONTRACT_CHANGELOG.md R1
+                                         ? ['criterion', 'excellent', 'proficient', 'developing']
+                                         : ['criterion', 'excellent', 'proficient', 'developing', 'belowExpectations']),
                                        `FINAL_EXPLANATION.rubric[${i}]`));
     }
   }

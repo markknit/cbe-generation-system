@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Right-angled triangle model and side naming",
       "excellent": "Draws and labels the triangle correctly from θ, identifies the hypotenuse, opposite and adjacent sides, and links each to a real part of the tank situation.",
       "proficient": "Labels the triangle and sides mostly correctly, with a weak link to the real situation.",
-      "developing": "Labels are missing or incorrect, or opposite and adjacent are confused."
+      "developing": "Labels are missing or incorrect, or opposite and adjacent are confused.",
+      "belowExpectations": "Does not draw the triangle or label its sides, and cannot tell the hypotenuse, opposite and adjacent sides apart."
     },
     {
       "criterion": "Understanding why ratios stay constant",
       "excellent": "Clearly explains that sin, cos and tan depend only on the angle, using the 35° triangle evidence, and links this to Wanjiru and Otieno getting the same height.",
       "proficient": "States that the ratios stay the same but gives limited evidence or a limited link to the tank.",
-      "developing": "Does not explain why the ratios stay constant, or says they change with triangle size."
+      "developing": "Does not explain why the ratios stay constant, or says they change with triangle size.",
+      "belowExpectations": "Gives no explanation of why the ratios stay constant, or gives an explanation unrelated to the angle and the tank."
     },
     {
       "criterion": "Choosing the ratio and calculating",
       "excellent": "Chooses the correct ratio from the known and wanted sides with a reason, calculates accurately with the 1.5 m eye height where needed, and gives correct units and rounding.",
       "proficient": "Chooses the correct ratio and calculates mostly correctly, with a small slip in units, rounding or eye height.",
-      "developing": "Chooses the wrong ratio or makes major calculation errors."
+      "developing": "Chooses the wrong ratio or makes major calculation errors.",
+      "belowExpectations": "Does not choose a ratio, or chooses one with no reason, and the calculation is missing or incorrect throughout."
     },
     {
       "criterion": "Checking results and explaining error",
       "excellent": "Compares calculated heights with the tape values, finds the small error of about 0.1 m and explains it by reading angles to the nearest degree.",
       "proficient": "Compares with the tape values but gives a limited explanation of the error.",
-      "developing": "Does not compare with the tape values or gives no valid reason for the error."
+      "developing": "Does not compare with the tape values or gives no valid reason for the error.",
+      "belowExpectations": "Does not compare the calculated heights with the tape values and gives no reason for any difference."
     },
     {
       "criterion": "Answering the driving and key inquiry questions",
       "excellent": "Gives a complete, well-organised explanation of the method and why it works, and explains why trigonometry is important with two or more Kenyan examples.",
       "proficient": "Explains the method and gives one example of why trigonometry is important.",
-      "developing": "The explanation is incomplete or has no real-life examples."
+      "developing": "The explanation is incomplete or has no real-life examples.",
+      "belowExpectations": "Gives little or no explanation of the method, and does not say why trigonometry is important or give a real-life example."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

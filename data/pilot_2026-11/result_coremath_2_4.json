@@ -1,0 +1,195 @@
+{
+ "target": "coremath_2_4",
+ "phases": {
+  "generate": {
+   "cost": 0.9889,
+   "secs": 461,
+   "model": "claude-sonnet-5-5"
+  },
+  "opus_lesson_review": {
+   "cost": 0.2928,
+   "secs": 29,
+   "model": "claude-opus-5-5"
+  },
+  "adjudicate_lessons": {
+   "cost": 0.1163,
+   "secs": 4,
+   "model": "claude-sonnet-5-5"
+  },
+  "sonnet_fe_audit": {
+   "cost": 0.1272,
+   "secs": 7,
+   "model": "claude-sonnet-5-5"
+  },
+  "baseline_opus_review": {
+   "cost": 0.4878,
+   "secs": 66,
+   "model": "claude-opus-5-5"
+  },
+  "baseline_adjudicate": {
+   "cost": 0.1773,
+   "secs": 8,
+   "model": "claude-sonnet-5-5"
+  }
+ },
+ "lessons": 8,
+ "fe_present": true,
+ "new": {
+  "raw": 4,
+  "verified": 3,
+  "confirmed": 3,
+  "confirmed_issues": [
+   {
+    "type": "ARITHMETIC",
+    "where": "Lesson 3, framework Observe Phase teacherMoves",
+    "quote_a": "if they get -0.7451 for sin 35 or 0.6136 for sin 35, the calculator is in the wrong mode (RAD or GRAD)",
+    "problem": "In RAD mode, sin 35 is about -0.4282, not -0.7451. The value given for the RAD-mode error is wrong.",
+    "correct_value": "-0.4282 (RAD mode)",
+    "code_confirmed": true,
+    "autofix_ok": true,
+    "reference": "sin(35 rad) = sin(35 − 10π) = sin(3.584) ≈ −0.4282; standard calculator RAD-mode computation"
+   },
+   {
+    "type": "ARITHMETIC",
+    "where": "Lesson 3, framework Observe Phase teacherMoves",
+    "quote_a": "or 0.6136 for sin 35, the calculator is in the wrong mode (RAD or GRAD)",
+    "problem": "In GRAD mode, sin 35 grad (= sin 31.5°) is about 0.5225, not 0.6136. The value given for the GRAD-mode error is wrong.",
+    "correct_value": "0.5225 (GRAD mode)",
+    "code_confirmed": true,
+    "autofix_ok": true,
+    "reference": "1 grad = 0.9°, so 35 grad = 31.5°, and sin 31.5° ≈ 0.5225"
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 7, overview / Explain Phase vs Lesson 2 summary",
+    "quote_a": "the flagpole from 10.0 m at 30 degrees (7.3 m in total)",
+    "problem": "The Mwangaza school flagpole is 5.6 m high in Lessons 2, 3, 5 and 8. In Lesson 7 the worked example for the same school flagpole gives a height of about 7.3 m. The same object has two different heights.",
+    "autofix_ok": false
+   }
+  ],
+  "rejected": [],
+  "dropped_by_code": [
+   [
+    "CROSS_REFERENCE",
+    "quote not found"
+   ]
+  ]
+ },
+ "fe": {
+  "raw": 0,
+  "verified": 0,
+  "confirmed": 0,
+  "confirmed_issues": []
+ },
+ "baseline_old_module": {
+  "lessons": 8,
+  "raw": 16,
+  "verified": 13,
+  "confirmed": 13,
+  "confirmed_issues": [
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 2, slo.purposeInStoryline",
+    "quote_a": "sin 50° ≈ 0.766 is the ratio that will eventually yield the mast's height",
+    "problem": "The mast height comes from tan 50° (opposite/adjacent), not sin 50°. Every other lesson uses tan 50°.",
+    "correct_value": "tan 50° ≈ 1.192 is the ratio that yields the mast's height",
+    "autofix_ok": true,
+    "reference": "tan θ = opposite/adjacent; height = 40 tan 50°"
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 2, slo.purposeInStoryline / Predict teacherMoves",
+    "quote_a": "Lesson 2 gives those three ratios their official names (sin, cos, tan)",
+    "problem": "Lesson 2 presents naming the ratios as new, but Lesson 1's Explain phase already names them. Lesson 1 also has learners write height ÷ 40 = tan 50°.",
+    "autofix_ok": false
+   },
+   {
+    "type": "SCIENCE",
+    "where": "Lesson 2, framework Observe formativeAssessment",
+    "quote_a": "if the sin and cos columns for the same angle do not roughly sum near 1 (not exactly — that is Lesson 3), a labelling or calculation error likely exists",
+    "problem": "sin θ + cos θ does not sum to about 1; for example, sin 35° + cos 35° ≈ 1.39. The identity is sin²θ + cos²θ = 1. Lesson 3 is about complementary angles, not this identity. As written, the check would flag correct work as errors.",
+    "correct_value": "sin²θ + cos²θ = 1 (sin θ + cos θ ranges from 1 to √2 for acute angles)",
+    "autofix_ok": false,
+    "reference": "sin²θ + cos²θ = 1; sin θ + cos θ is not about 1 (e.g. sin 35° + cos 35° ≈ 1.39)"
+   },
+   {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 4, framework Observe learnerExperience",
+    "quote_a": "Each pair retrieves their Lesson 2 data table ... listing sin θ, cos θ, and tan θ for θ = 20°, 30°, 40°, 50°, 60°, 70°",
+    "problem": "Lesson 2 never built a table for 20°–70° in 10° steps. Learners drew triangles of about 35° and 60° and filled a partial class table.",
+    "autofix_ok": false
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 5, framework Observe formativeAssessment",
+    "quote_a": "all four angles in Construction A sum to 180°",
+    "problem": "Construction A is a triangle with three angles, not four.",
+    "correct_value": "all three angles sum to 180°",
+    "autofix_ok": true,
+    "reference": "Angle sum of a triangle is 180°"
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 5, framework Explain learnerExperience",
+    "quote_a": "Learners record all values in a 6-column table: Angle | sin | cos | tan",
+    "problem": "The listed table has 4 columns, not 6.",
+    "correct_value": "4-column table",
+    "autofix_ok": true
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 5, Model Building teacherMoves",
+    "quote_a": "In Lesson 7, we take this tool outside — to angles of elevation and depression, right here in our school compound.",
+    "problem": "Lesson 5 promises an outdoor elevation/depression activity in Lesson 7. Lesson 7 states it is entirely indoor and paper-based.",
+    "autofix_ok": false
+   },
+   {
+    "type": "SCIENCE",
+    "where": "Lesson 6, Predict formativeAssessment",
+    "quote_a": "Diagram B → sine (opposite/hypotenuse ... or tan — accept either with valid reasoning)",
+    "problem": "With the opposite side (20 m) known and the adjacent side (horizontal distance) wanted, only tangent links them directly. Sine involves the hypotenuse, which is neither known nor wanted, so it is not a valid ratio choice here.",
+    "correct_value": "tan 35° = 20/d, so d = 20/tan 35° ≈ 28.6 m",
+    "autofix_ok": true,
+    "reference": "tan θ = opposite/adjacent; sine involves the hypotenuse, which is neither given nor wanted here"
+   },
+   {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 6, DQB teacherMoves / sensemakingStrategy",
+    "quote_a": "This learner asks: what if we only knew two sides and no angle? We do not know that yet — that is a great question for Lesson 7.",
+    "problem": "Finding an angle from two sides is already done in Lesson 6 Problem 4 and in Lesson 2's back-calculation. Lesson 7 covers elevation/depression, not inverse trigonometric ratios as the text claims.",
+    "autofix_ok": false
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 7, Predict learnerExperience",
+    "quote_a": "Learners are shown the anchoring phenomenon photograph of the Nakuru County Kenya Power transmission mast for the first time since Lesson 1.",
+    "problem": "The mast photograph is re-displayed in Lessons 2, 3, 4 and 5, so Lesson 7 is not the first showing since Lesson 1.",
+    "autofix_ok": true
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 7, Observe vs Explain",
+    "quote_a": "Fort Jesus cliff scenario (cliff height 20 m, angle of depression to a dhow = 35°)",
+    "problem": "The same Fort Jesus cliff is given two different heights (20 m and 27 m) within one lesson.",
+    "autofix_ok": false
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 8, overview vs Explain learnerExperience",
+    "quote_a": "a fisherman on a cliff observes a boat at an angle of depression of 32°, and the same boat observes the cliff-top lighthouse at an angle of elevation of 25°",
+    "problem": "The overview and the actual task disagree on the fisherman's position and on the angles (32°/25° vs 38°/22°).",
+    "autofix_ok": false
+   },
+   {
+    "type": "SCIENCE",
+    "where": "Lesson 8, Explain learnerExperience / teacherMoves",
+    "quote_a": "observes the top of the lighthouse at an angle of elevation of 38°. A coastguard at the top of the lighthouse observes the same boat at an angle of depression of 22°.",
+    "problem": "The summative task's data are impossible. By alternate angles, the depression from the lighthouse top to the boat must equal the elevation from the boat to the top, so 38° and 22° cannot both hold. Parts (b) and (c) cannot be answered, and the cliff height comes out negative. The mark scheme is also wrong: the 38° elevation from water level gives the total height above water, not the lighthouse height above the cliff top.",
+    "correct_value": "Use one consistent angle (elevation = depression), or give the elevations to the lighthouse top and to the cliff top separately. The total height above water is 120 tan θ.",
+    "autofix_ok": false,
+    "reference": "Alternate angles: the angle of elevation from the boat to the top equals the angle of depression from the top to the boat"
+   }
+  ]
+ },
+ "total_cost": 2.1903
+}

@@ -1,0 +1,83 @@
+{
+ "module": "phys_1_3",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "TIMING",
+    "where": "Lesson 1, framework (phase timings in teacherMoves)",
+    "problem": "The model-building phase runs through minute 80 including a 30-second closing commit, but the DQB phase ends at 73 min and the model brief starts at 73 min; the 4-minute construction window (76–80) plus a closing commit at minute 80 leaves no time, so the phases do not fit consistently. Additionally the Observe phase starts at 18 min after the Predict phase and a 2-minute gap exists (Predict ends 18, Observe 'DISTRIBUTE' 18–20 then 20–28 then 28–30, with a 10-minute wait inside 18–28 overlapping).",
+    "quote_a": "CLOSING COMMIT (80 min): '30 seconds — sign your name and today's date under your model.",
+    "quote_b": "",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Rebuild the Lesson 1 timeline so each phase ends before the next begins and the model-building phase finishes by minute 80. This needs activity cuts, e.g. shorten the Predict share-out, the Observe debrief or the DQB clustering.",
+   "reason": "The overlaps are real: Observe runs 18–35 with a 10-minute wait inside 20–28 plus the 28–30 bridge, and DQB ends 73 while the closing commit sits at 80, so the block is over-packed. Fixing it means choosing what to cut.",
+   "decision": "HUMAN",
+   "lesson": 1,
+   "color": "ORANGE",
+   "why_orange": "needs a human choice",
+   "final": "orange kept: The Predict, Observe and DQB overlaps cannot be fixed by relabelling. Fully resolving them means cutting activities, such as the share-out, debrief or DQB clust"
+  },
+  {
+   "item": {
+    "type": "TIMING",
+    "where": "Lesson 1, framework teacherMoves timestamps",
+    "problem": "Lesson 1's phase times run to 80 min but the Predict phase is timed 0–18 and the Observe phase starts at 18, ending at 35. Explain starts at 35 and ends at 58, DQB runs 58–73, and Model Building 73–80. The 'CLOSING COMMIT' step is placed at minute 80, after the 76–80 construction block, so its 30 seconds fall outside the lesson.",
+    "quote_a": "CLOSING COMMIT (80 min)",
+    "quote_b": "",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Treat this together with item 0 and re-time the whole Lesson 1 schedule so the 30-second closing commit falls inside the 80 minutes.",
+   "reason": "It duplicates item 0. The closing commit at minute 80 sits after the 76–80 construction block, and moving it requires trimming another step.",
+   "decision": "HUMAN",
+   "lesson": 1,
+   "color": "ORANGE",
+   "why_orange": "needs a human choice",
+   "final": "orange kept: This duplicates item 0. The closing commit can only be moved inside 80 min by re-timing the earlier phases or cutting activities, which is a human decision. The"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 5, framework Observe/Explain vs Lesson 5 observed summary",
+    "problem": "The worked example says the beam is installed at 20 °C and 'the seasonal temperature in Kisumu ranges from 18 degrees C to 35 degrees C, giving a maximum temperature rise of 17 degrees C'. A rise from 18 to 35 is 17, but the installation temperature is 20 °C, so the rise from installation would be 15 °C.",
+    "quote_a": "the engineer must leave a gap of at least about 0.94 mm at each end (1.87 mm in all)",
+    "quote_b": "Nairobi temperatures range from 10 degrees C to 30 degrees C",
+    "correct_value": "15 °C rise from 20 °C to 35 °C"
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Change the rise to 15 °C and update every downstream figure: ΔL = 1.65 mm, 0.83 mm per end, the learnerExperience arithmetic, the Lesson 5 overview and the summaryTablePrompt.",
+   "reason": "A 20 °C installation temperature to a 35 °C maximum is a 15 °C rise, not 17 °C. The 18–35 range only gives 17 °C if the beam was installed at 18 °C. The fix touches several places in the lesson, so a teacher should confirm it.",
+   "decision": "FIX",
+   "lesson": 5,
+   "color": "YELLOW",
+   "edit": {
+    "lesson": 5,
+    "path": "framework[2].learnerExperience",
+    "old": "The seasonal temperature in Kisumu ranges from 18 degrees C to 35 degrees C, giving a maximum temperature rise of 17 degrees C.",
+    "new": "The maximum temperature in Kisumu is 35 degrees C, giving a maximum temperature rise of 15 degrees C above the installation temperature."
+   },
+   "reference": "ΔT = T_final − T_installation; ΔL = αL₀ΔT = 11e-6 × 10 × 15 = 1.65 mm",
+   "final": "kept yellow"
+  },
+  {
+   "item": {
+    "type": "ARITHMETIC",
+    "where": "Lesson 5, Explain phase, teacherMoves/learnerExperience (bridge beam)",
+    "problem": "The learner problem states the worked answer for the beam with deltaL, but this is internally consistent. However the problem states the beam is installed at 20 °C and the range is 18 to 35 °C, so the rise is 15 °C, not 17 °C (35 − 18 = 17 is the range; relative to 20 °C installation it is 15 °C).",
+    "quote_a": "so if it is free to expand at both ends the engineer must leave a gap of at least about 0.94 mm at each end (1.87 mm in all)",
+    "quote_b": "",
+    "correct_value": "ΔL = 11e-6 × 10 × 15 = 1.65 mm if measured from 20 °C"
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "No separate change; the 20 °C versus 17 °C inconsistency is handled under item 2.",
+   "reason": "This is the same defect as item 2. The quoted gap text is internally consistent with the 17 °C rise (1.87 mm total, 0.94 mm per end).",
+   "decision": "NOT_REAL",
+   "lesson": 0,
+   "color": "WHITE"
+  }
+ ],
+ "applied": "phys_1_3: 3 applied, 0 rejected"
+}

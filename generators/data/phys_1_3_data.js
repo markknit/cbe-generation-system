@@ -435,31 +435,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Particle-level explanation of the cracked bottle",
       "excellent": "Clear labelled diagrams of liquid water and the hexagonal ice lattice. Explains greater spacing, larger volume, sealed container, outward pressure and tensile strength in a correct logical chain.",
       "proficient": "Explains that ice has more spacing and takes up more volume, and that the sealed bottle cracked because of pressure, but the chain of reasoning or the diagrams have small gaps.",
-      "developing": "States that water expands or that the bottle cracked but gives little or no particle-level reasoning, or diagrams are missing or incorrect."
+      "developing": "States that water expands or that the bottle cracked but gives little or no particle-level reasoning, or diagrams are missing or incorrect.",
+      "belowExpectations": "Does not give a particle-level reason for the cracked bottle, or only says that it cracked, and diagrams are missing."
     },
     {
       "criterion": "Temperature, scales and thermometers",
       "excellent": "Defines temperature as average kinetic energy, converts all temperatures to kelvin correctly (291 K, 255 K, 273 K), and explains thermometric property and thermometer types accurately.",
       "proficient": "Mostly correct definition and conversions with a minor error or incomplete explanation of how thermometers work.",
-      "developing": "Definition of temperature is incorrect or confused with heat, or conversions and thermometer descriptions are mostly wrong or missing."
+      "developing": "Definition of temperature is incorrect or confused with heat, or conversions and thermometer descriptions are mostly wrong or missing.",
+      "belowExpectations": "Does not define temperature, or confuses it with heat throughout, and conversions and thermometer descriptions are missing or wrong."
     },
     {
       "criterion": "Calculations and use of evidence",
       "excellent": "All calculations (12.4 mm, 1.65 mm, 545 ml, 45 ml, 9%) are set out with formula, substitution, correct units and answers, and the temperature-volume graph is accurately described as evidence.",
       "proficient": "Most calculations are correct with steps shown; one slip in units or arithmetic, or the graph description is partly complete.",
-      "developing": "Calculations are incomplete or incorrect, steps are not shown, or evidence from the graph is not used."
+      "developing": "Calculations are incomplete or incorrect, steps are not shown, or evidence from the graph is not used.",
+      "belowExpectations": "Calculations are missing or wrong, no steps are shown, and the graph is not used."
     },
     {
       "criterion": "Anomalous behaviour of water",
       "excellent": "Accurately describes the U-shaped graph, maximum density at 4 °C, the change in density from 1.00 to 0.917 g/cm³, and explains why ΔV = γV₀ΔT does not by itself describe freezing.",
       "proficient": "Describes the anomaly and 4 °C correctly but gives limited explanation of density change or of the formula's limits.",
-      "developing": "Does not identify 4 °C or the anomaly clearly, or treats water like all other substances."
+      "developing": "Does not identify 4 °C or the anomaly clearly, or treats water like all other substances.",
+      "belowExpectations": "Does not mention 4 °C or the unusual behaviour of water, and gives no explanation."
     },
     {
       "criterion": "Kenyan applications and communication",
       "excellent": "Connects the bottle to at least two Kenyan examples (SGR, Thika Superhighway, Kenya Power cables, burst pipes in Kericho or Nyandarua) with correct principles, and answers the driving question clearly using accurate scientific vocabulary in organised writing.",
       "proficient": "Uses one or two Kenyan examples correctly, with a reasonable link to the driving question and mostly accurate vocabulary.",
-      "developing": "Examples are missing, vague or incorrect, the link to the cracked bottle is weak, and the writing is hard to follow."
+      "developing": "Examples are missing, vague or incorrect, the link to the cracked bottle is weak, and the writing is hard to follow.",
+      "belowExpectations": "Examples are missing or unrelated, there is no link to the cracked bottle, and the writing is too unclear to follow."
     }
   ]
 };
@@ -513,6 +518,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -1,0 +1,52 @@
+[
+ {
+  "id": "phys_1_2-r2-fe-002",
+  "answer": "Make Lessons 3 and 4 say the old rope has a lower elastic-limit FORCE (its safe working load), not a lower elastic limit, so they match Lesson 6 and the FE, where Rope B's limit is a larger extension (2.1 m) but a smaller force (441 N vs 1275 N). Also state in Lesson 6 that the 0.92 m and 3.73 m extensions come from a teaching model and are not measured bridge-rope values, so no invented data is presented as real. Real sisal ropes stretch far less, so the numbers are labelled as scaled model values.",
+  "edits": [
+   {
+    "target": "lesson",
+    "lesson": 3,
+    "path": "framework[2].learnerExperience",
+    "old": "'The older rope had a lower elastic limit — its safe working load was less than the weight of the tea sack, which is why it failed.'",
+    "new": "'The older rope had a lower elastic-limit force — its safe working load was less than the weight of the tea sack, which is why it failed.'"
+   },
+   {
+    "target": "lesson",
+    "lesson": 3,
+    "path": "summaryTablePrompt.explained",
+    "old": "The new rope, with a higher elastic limit and greater spring constant,",
+    "new": "The new rope, with a higher elastic-limit force and greater spring constant,"
+   },
+   {
+    "target": "lesson",
+    "lesson": 4,
+    "path": "framework[4].learnerExperience",
+    "old": "'LOW k AND a lower force at its elastic limit — the 800 N load of the 80 kg tea sack was beyond that force.'",
+    "new": "'LOW k AND a lower force at its elastic limit (a lower safe working load) — the 800 N load of the 80 kg tea sack was beyond that force.'"
+   },
+   {
+    "target": "lesson",
+    "lesson": 4,
+    "path": "summaryTablePrompt.explained",
+    "old": "had a lower spring constant and a lower elastic limit than the rope that survived",
+    "new": "had a lower spring constant and a lower elastic-limit force (safe working load) than the rope that survived"
+   },
+   {
+    "target": "lesson",
+    "lesson": 6,
+    "path": "framework[0].learnerExperience",
+    "old": "Learners are shown the original Kericho bridge rope photograph/story from Lesson 1 alongside a data card displaying:",
+    "new": "Learners are shown the original Kericho bridge rope photograph/story from Lesson 1 alongside a scaled teaching-model data card (values chosen for calculation practice, not measured on the real bridge ropes) displaying:"
+   }
+  ],
+  "alternative": "Rescale the model data to a longer rope and a smaller load so extensions are realistic, and rewrite Lessons 6 and the FE calculations accordingly.",
+  "knock_on": "Lesson 6 and the FE already use the force-based wording; if the numbers were rescaled instead, the Lesson 6 and FE calculations would all change."
+ },
+ {
+  "id": "phys_1_2-r2-fe-003",
+  "answer": "Change the Lesson 6 overview from Sub-Strand 1.2 to Sub-Strand 1.3 so it matches the unit, every lesson's substrand field, the FE label and the teacher decision. Internal identifiers stay untouched.",
+  "edits": [],
+  "alternative": "Remove the sub-strand number from the overview and rely on the substrand field.",
+  "knock_on": "none"
+ }
+]

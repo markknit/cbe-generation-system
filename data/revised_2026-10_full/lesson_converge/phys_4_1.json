@@ -1,0 +1,90 @@
+{
+ "module": "phys_4_1",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "error": "2 reviewer call(s) failed: round does not count"
+  },
+  {
+   "round": 2,
+   "error": "2 reviewer call(s) failed: round does not count"
+  },
+  {
+   "round": 3,
+   "raw": 11,
+   "verified": 6,
+   "confirmed": 2,
+   "autofix": 0,
+   "to_teachers": 2,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "ARITHMETIC",
+     "problem": "The lesson data give 1.35 km² (1934) to under 0.20 km² (2023), which is a loss of about 85.2%. In Lesson 5 the same numbers are cited as 'more than 85%'. With 'less than 0.20' it is consistent, so thi",
+     "reason": "1.35 to 0.20 km² is a loss of about 85.2%, so 'more than 85%' is supported and consistent across lessons."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Consistent, no real contradiction.",
+     "reason": "The Lesson 1 and Lesson 5 glacier figures agree, so there is no contradiction."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Consistent with textbook. Not an error.",
+     "reason": "CO₂ does not absorb visible shortwave radiation, so the statement is scientifically correct."
+    },
+    {
+     "type": "TIMING",
+     "problem": "Lesson 3 phase minutes do not obviously fit 80 minutes, but this cannot be confirmed because no full breakdown is stated. Low confidence.",
+     "reason": "Lesson 3 gives no complete timing breakdown, so a mismatch with 80 minutes cannot be shown."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The phase minutes sum to 40, which matches the duration, but the Lesson 4 Predict phase text allows 90 seconds of writing plus pair sharing plus 3-4 pairs shari"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Lesson 3 and 5 claim the glacier lost 'more than 85%' of its area. From 1.35 to 0.20 km² is a loss of about 85.2%, which is only just over 85%, so the claim is "
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The pacing figures sum to 40 only if the phases add up. 7+10+12+5+6 = 40, so this is consistent. However the Observe phase content (graph, 2-minute video, cause"
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "Lesson 3 attributes Embu rain disruption to increased evaporation from 'Lake Victoria', whereas Lesson 4 and the unit attribute it to the Indian Ocean; the sour"
+    },
+    {
+     "type": "SCIENCE",
+     "why": "quote not found",
+     "problem": "Greenhouse gases warm the troposphere and cool the stratosphere, and a colder stratosphere can enhance polar ozone loss, so this is correct. However the lesson "
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "CROSS_REFERENCE",
+   "where": "Lesson 7, Observe Phase learnerExperience",
+   "problem": "Lesson 7 uses Response Cards (Olkaria, Lake Turkana wind, jiko, drought-tolerant crops), but Lessons 5 and 6 previewed that Lesson 7 covers 'Response Cards'; no earlier lesson distributes or introduces them, and Lesson 5 says Lesson 6 shows how the world acted on ozone. Also, the Lesson 7 timeline says 'seven lessons' yet shows six lesson panels.",
+   "quote_a": "Lesson 3 — PhET simulation showing infrared absorption; Lesson 4 — NASA temperature data and Lake Victoria flooding; Lesson 5 — Keeling Curve and temperature anomaly data",
+   "quote_b": "A seventh panel, Responses, shows four Response Cards",
+   "correct_value": ""
+  },
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 7, Predict Phase / Observe Phase",
+   "problem": "The Observe phase gives 4 minutes for discussion in the learner text and in teacherMoves ('You have four minutes'), then asks for share-out after 5 minutes. Timings disagree.",
+   "quote_a": "Students spend 4 minutes in groups of four reviewing the timeline and answering three focus questions written on the board, then 3 minutes sorting the Response Cards",
+   "quote_b": "After 5 minutes, ask one group to share their answer to question 1 and a different group to share their answer to question 3.",
+   "correct_value": "4 minutes"
+  }
+ ]
+}

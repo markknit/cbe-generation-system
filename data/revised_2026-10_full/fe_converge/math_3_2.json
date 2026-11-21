@@ -1,0 +1,58 @@
+{
+ "module": "math_3_2",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 3,
+   "verified": 3,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "Lesson 3 says 3 trips had fewer than 8 passengers. The data (6, 7, 6, 8...) give 6, 7, 6 = 3 trips with fewer than 8, so 3/20 is correct. But Lesson 3 also lists the 7-passenger trip, consistent with ",
+     "reason": "The FE's P(L)=2/20 is for fewer than 7 passengers (only the two 6s), as in Lesson 6; Lesson 3's 3/20 is for fewer than 8. Different events, so there is no conflict."
+    },
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "Lesson 2 gives no 12 and 17 head counts; the figures come only from the Lesson 2 summary prompt, so learners may not have met them as class data. This is minor but the 'for example' is not in the less",
+     "reason": "The 12 and 17 heads example comes from Lesson 2's own summaryTablePrompt 'observed' text, so the FE is consistent with the lessons."
+    },
+    {
+     "type": "LESSON_CONFLICT",
+     "problem": "The sum of the 20 counts is 6+9+14+11+14+8+14+12+7+14+10+14+13+6+14+9+14+11+8+14 = 219, not 222. So the average is 10.95 and the experimental seat fraction is 219/280 ≈ 0.78. Lessons 5, 9 and 11 rely ",
+     "reason": "The candidate's arithmetic is wrong. The 20 counts sum to 222 (6+9+14+11+14+8+14+12+7+14+10+14+13+6+14+9+14+11+8+14), so Lessons 5, 9 and 11 are correct and the FE's 11/14 premise stands."
+    }
+   ],
+   "dropped_by_code": []
+  },
+  {
+   "round": 2,
+   "raw": 2,
+   "verified": 0,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [],
+   "dropped_by_code": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "why": "quote not found",
+     "problem": "The FE's L count of 2 is correct for the data (only 6, 6). However, Lesson 3 says 3 trips had fewer than 8 passengers (3/20 = 0.15). Counting from the data, 6, "
+    },
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "why": "quote not found",
+     "problem": "The FE's L count is consistent with Lesson 6, but Lesson 3 gives 3 trips with fewer than 8 passengers (6, 7, 6), while the FE uses fewer than 7. This is a diffe"
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

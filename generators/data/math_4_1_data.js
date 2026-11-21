@@ -616,31 +616,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Organising data (frequency tables, Key Inquiry 1)",
       "excellent": "Builds a complete, correct grouped table with a common class width of 10, correct tallies and frequencies totalling 20 for each subject, and clearly explains why grouping is more useful than an ungrouped table.",
       "proficient": "Builds a mostly correct table with one small error, and gives a basic reason for using the same classes or for grouping.",
-      "developing": "Table has several errors or totals that do not equal 20, or gives no reason for the choice of classes."
+      "developing": "Table has several errors or totals that do not equal 20, or gives no reason for the choice of classes.",
+      "belowExpectations": "Table is missing, incomplete or built with no consistent classes, with frequencies that are wrong, and no reason given for grouping."
     },
     {
       "criterion": "Calculating measures (mean, median, mode, quartiles, IQR)",
       "excellent": "All measures are correct (80.35, 80.5, 33.85, 31.5, modes 32 and 60, IQR estimates 13.2 and 24.2) with clear working, and grouped values are called estimates with a reason given.",
       "proficient": "Most measures are correct with working shown, with a small slip, or the reason for 'estimate' is incomplete.",
-      "developing": "Several measures are incorrect or working is missing, and does not recognise grouped values as estimates."
+      "developing": "Several measures are incorrect or working is missing, and does not recognise grouped values as estimates.",
+      "belowExpectations": "The learner partially draws a frequency distribution table for grouped or ungrouped data or determines mean, mode or median."
     },
     {
       "criterion": "Interpreting tables, measures and graphs",
       "excellent": "Uses centre, spread, shape and pass rate together to compare the subjects, and explains what the graphs show that the raw lists hid.",
       "proficient": "Uses at least two features (such as the mean and the pass count) to compare the subjects, with limited reference to spread or shape.",
-      "developing": "Only lists numbers or describes one subject, with no comparison."
+      "developing": "Only lists numbers or describes one subject, with no comparison.",
+      "belowExpectations": "Reads few values from the tables or graphs and makes no comparison between subjects."
     },
     {
       "criterion": "Claim-evidence-reasoning and recommendations",
       "excellent": "Gives a clear claim supported by several correct pieces of evidence, and recommendations for Mr. Otieno, Mrs. Wanjiku, the learners and the 16 learners below 50, each linked to the data.",
       "proficient": "Gives a claim with some evidence and recommendations for most groups, but the link between the data and the recommendation is sometimes weak.",
-      "developing": "Claim is unsupported or recommendations are missing or not linked to the data."
+      "developing": "Claim is unsupported or recommendations are missing or not linked to the data.",
+      "belowExpectations": "Makes no claim, or a claim with no data, and gives no recommendation."
     },
     {
       "criterion": "Separating what the data shows from what it cannot explain",
       "excellent": "Treats reasons for the score difference as hypotheses using words such as 'may' and 'could', and names suitable extra data (topic-by-topic marks, a second test).",
       "proficient": "Recognises that causes are not known but gives an unclear or incomplete plan for finding out.",
-      "developing": "States a cause for the score difference as a fact."
+      "developing": "States a cause for the score difference as a fact.",
+      "belowExpectations": "Treats the data as proof of the cause of the score difference and does not see what the data cannot show, even when prompted."
     }
   ]
 };
@@ -715,6 +720,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence from the investigations",
       "excellent": "Cites specific results from the lessons (pH ranges, Mg + HCl observations, petri dish results, nitrate case study) for every claim.",
       "proficient": "Cites some specific evidence but some claims rely on general statements.",
-      "developing": "Gives little or no evidence from the investigations, or evidence is inaccurate."
+      "developing": "Gives little or no evidence from the investigations, or evidence is inaccurate.",
+      "belowExpectations": "Gives no specific evidence from the investigations, or states results that are wrong."
     },
     {
       "criterion": "Particle-level reasoning (ions)",
       "excellent": "Consistently explains phenomena using H⁺, OH⁻, Na⁺, Cl⁻ and ion–water attraction, accurately linked to pH, reactions and salt behaviour.",
       "proficient": "Uses ions in most explanations, with minor gaps or errors.",
-      "developing": "Describes only what is seen, with little or incorrect use of ions."
+      "developing": "Describes only what is seen, with little or incorrect use of ions.",
+      "belowExpectations": "Does not use ions in explanations, or uses them wrongly, and describes little beyond what was seen."
     },
     {
       "criterion": "Chemical vocabulary and equations",
       "excellent": "Uses terms such as hygroscopic, deliquescent, efflorescent, neutralisation and water of crystallisation correctly, and writes accurate word equations.",
       "proficient": "Uses most terms correctly; word equations are mostly correct.",
-      "developing": "Terms are missing or misused; equations are missing or incorrect."
+      "developing": "Terms are missing or misused; equations are missing or incorrect.",
+      "belowExpectations": "Uses few terms correctly and gives no word equations, or only incorrect ones."
     },
     {
       "criterion": "Connection to Kenyan contexts and the anchoring phenomenon",
       "excellent": "Fully explains both Lake Magadi and the sufuria, and links salt applications and Lake Victoria impacts to the driving question.",
       "proficient": "Explains both images, with limited links to applications or the environment.",
-      "developing": "Explains only one image or gives disconnected examples."
+      "developing": "Explains only one image or gives disconnected examples.",
+      "belowExpectations": "Does not explain either Lake Magadi or the sufuria correctly, and gives no link to the driving question."
     },
     {
       "criterion": "Reflection and model revision",
       "excellent": "Clearly identifies a changed idea, the evidence that changed it, and gives an accurate labelled particle sketch and a coherent answer to the driving question.",
       "proficient": "Identifies a changed idea with some evidence; sketch and final answer are mostly accurate.",
-      "developing": "Reflection is vague; sketch or final answer is missing or incorrect."
+      "developing": "Reflection is vague; sketch or final answer is missing or incorrect.",
+      "belowExpectations": "Does not identify a changed idea; the sketch and final answer are missing or wrong."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

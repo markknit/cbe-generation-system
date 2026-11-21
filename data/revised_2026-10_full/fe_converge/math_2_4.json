@@ -1,0 +1,55 @@
+{
+ "module": "math_2_4",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 2,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Lesson 5 justifies tan 90° undefined using limit arguments from table rows near 90° (the adjacent side approaching 0), and the identity tan = sin/cos from Lesson 4 is consistent with that. This is not",
+     "reason": "Not a defect: Lessons 4 and 5 teach tan θ = sin θ / cos θ and justify tan 90° undefined via the adjacent side approaching 0. The FE exemplar is consistent with both."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "Value is correct (sin 40° = 0.6428). No error."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "raw": 2,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "The explanation is acceptable and matches Lesson 5, so it is not a real defect. The only real issue found is the Part 4(b) rounding statement, handled separately.",
+     "reason": "Lesson 5 gives the same justification: adjacent side is 0 and division by zero is undefined. The FE matches it, so this is not a defect."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "sin 40° = cos 50° ≈ 0.6428 is correct. The check came out right, so this is not an arithmetic defect."
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

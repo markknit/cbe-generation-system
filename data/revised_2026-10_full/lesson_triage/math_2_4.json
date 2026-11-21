@@ -1,0 +1,79 @@
+{
+ "module": "math_2_4",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "SCIENCE",
+    "where": "Lesson 3, Model Building Phase learnerExperience",
+    "problem": "This is correct for the 50° angle at the base. However, the Lesson 3 Predict phase says the angle at the top is 40° and calls it looking down from the top at 40°. Elsewhere, the angle of depression from the top is 50°, not 40°. The Predict text 'stand at the top and look down at 40° — the complementary angle' conflicts with this. The Model Building text itself notes that the 40° angle is not the angle of depression.",
+    "quote_a": "sin 50° = cos 40° = h/hypotenuse and cos 50° = sin 40° = 40/hypotenuse",
+    "quote_b": "",
+    "correct_value": "The angle of depression from the top is 50°. The 40° angle lies between the mast and the line of sight."
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Reword the Predict text so the 40° is the angle between the mast and the line of sight, not a depression angle.",
+   "reason": "The Predict text calls 40° a look-down angle, which contradicts the Model Building note that it is not the angle of depression (that is 50°). The quoted ratios themselves are correct.",
+   "decision": "FIX",
+   "lesson": 3,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 3,
+    "path": "framework[0].teacherMoves",
+    "old": "But what if we could stand at the top and look down at 40° — the complementary angle? Would our sine and cosine values be related?",
+    "new": "But what if we look at the same triangle from the top of the mast, where the angle between the mast and the line of sight is 40° — the complementary angle? Would our sine and cosine values be related?"
+   },
+   "reference": "Angle of depression is measured from the horizontal and equals the angle of elevation (alternate angles): 50°. The angle between the vertical mast and the line of sight is 90° − 50° = 40°.",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 5, Model Building teacherMoves vs Lesson 8 Model Building",
+    "problem": "Lesson 8 says learners use the clinometer outside class time, while Lesson 5 says to bring it to Lesson 8 and learn to read it there. Lesson 8 contains no teaching of how to read the angle.",
+    "quote_a": "Bring it to Lesson 8; I will show you how to read the angle before you use it.",
+    "quote_b": "learners use the clinometer they made after Lesson 5 (outside class time, in pairs, inside the school compound)",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Keep Lesson 5 as written and make Lesson 8 consistent with it. Lesson 5 promises a how-to-read demonstration at Lesson 8, so Lesson 8 should include it, or the teacher can move the demonstration to Lesson 7.",
+   "reason": "Lesson 5 promises teaching in Lesson 8, but Lesson 8 only mentions outside-class use and never includes it. A teacher should confirm where the demonstration goes.",
+   "decision": "FIX",
+   "lesson": 8,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 8,
+    "path": "framework[4].learnerExperience",
+    "old": "learners use the clinometer they made after Lesson 5 (outside class time, in pairs, inside the school compound)",
+    "new": "learners use the clinometer they made after Lesson 5 (in pairs, inside the school compound), having been shown by the teacher how to read the angle before using it"
+   },
+   "reference": "",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 4, DQB teacherMoves",
+    "problem": "Lesson 5 does cover tan 90°, but 'given tan, find sin and cos' is not taught in Lesson 6, which covers solving triangles.",
+    "quote_a": "We call that a undefined ratio, and we will meet it in Lesson 5.",
+    "quote_b": "questions about 90° and about going backwards (given tan, find sin and cos) are flagged as 'coming in Lesson 5 and Lesson 6.'",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Correct the grammar. Also reword the 'coming in Lesson 5 and Lesson 6' flag in the learnerExperience so it matches what those lessons teach, for example by naming Lesson 5 for 90° and Lesson 6 for finding an angle from two sides.",
+   "reason": "Lesson 5 does cover tan 90°. Lesson 6 covers inverse tangent for finding angles, not 'given tan, find sin and cos', so the flag overstates Lesson 6. The learnerExperience wording needs a teacher's confirmation.",
+   "decision": "FIX",
+   "lesson": 4,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 4,
+    "path": "framework[3].teacherMoves",
+    "old": "We call that a undefined ratio, and we will meet it in Lesson 5.",
+    "new": "We call that an undefined ratio, and we will meet it in Lesson 5."
+   },
+   "reference": "",
+   "final": "completed (3 criteria met)"
+  }
+ ],
+ "applied": "math_2_4: 3 applied, 0 rejected"
+}

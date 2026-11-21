@@ -436,31 +436,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining stepwise growth and the exuvia",
       "excellent": "Clearly explains that the exoskeleton cannot stretch, a new larger cuticle forms beneath, the old one splits to leave the exuvia, and the insect expands while the new cuticle is soft. Links this accurately to the stepped graph.",
       "proficient": "Explains that the insect moults and gets bigger afterwards, and describes the stepped graph, but leaves out one detail such as the new cuticle forming first or the soft cuticle expanding.",
-      "developing": "States that the insect sheds its skin but does not explain why it must moult or how it becomes bigger, or treats the exuvia like peeling skin."
+      "developing": "States that the insect sheds its skin but does not explain why it must moult or how it becomes bigger, or treats the exuvia like peeling skin.",
+      "belowExpectations": "Below Expectations: Does not say that the insect moults, or gives a wrong reason for the shed skin and for how the insect gets bigger."
     },
     {
       "criterion": "Comparing growth curves (sigmoid vs intermittent)",
       "excellent": "Correctly names all four phases of the S-curve, uses the growth rate formula, identifies where rate is highest and lowest, and explains the difference from the insect staircase using the rigid exoskeleton.",
       "proficient": "Describes both curve shapes and names most phases or the formula, with a reasonable but incomplete explanation of the difference.",
-      "developing": "Describes only one curve or confuses the shapes, with few or incorrect phases and no clear link to the exoskeleton."
+      "developing": "Describes only one curve or confuses the shapes, with few or incorrect phases and no clear link to the exoskeleton.",
+      "belowExpectations": "Below Expectations: Cannot describe the growth curves, or confuses both shapes and gives no correct phases or link to the exoskeleton."
     },
     {
       "criterion": "Hormonal control (Brain Hormone, Ecdysone, JH)",
       "excellent": "Accurately explains the sequence from Brain Hormone to prothoracic glands to Ecdysone, and the role of high, falling and absent JH, using specific experimental evidence in a full CER.",
       "proficient": "Names the three hormones and their main roles and uses some experimental evidence, with minor gaps in the reasoning.",
-      "developing": "Names hormones but mixes up their roles, or gives claims with little or no evidence or reasoning."
+      "developing": "Names hormones but mixes up their roles, or gives claims with little or no evidence or reasoning.",
+      "belowExpectations": "Below Expectations: Does not name the hormones correctly or states roles that are wrong, with no experimental evidence."
     },
     {
       "criterion": "Metamorphosis pathways and survival value",
       "excellent": "Gives correct stages of both pathways, explains with JH why shapes differ, and gives two clear survival advantages.",
       "proficient": "Gives correct stages and a mostly accurate explanation of the shape difference, with one survival advantage.",
-      "developing": "Lists stages with errors or does not link the difference to JH or survival."
+      "developing": "Lists stages with errors or does not link the difference to JH or survival.",
+      "belowExpectations": "Below Expectations: Lists no correct stages of metamorphosis and gives no link to JH or survival."
     },
     {
       "criterion": "Final CER and scientific communication",
       "excellent": "A complete, well-organised Claim, Evidence and Reasoning that answers both parts of the Driving Question using class evidence, correct vocabulary, and a thoughtful new question.",
       "proficient": "A mostly complete CER that answers the Driving Question with some class evidence and mostly correct vocabulary.",
-      "developing": "An incomplete CER that answers only part of the Driving Question, with little evidence and limited scientific vocabulary."
+      "developing": "An incomplete CER that answers only part of the Driving Question, with little evidence and limited scientific vocabulary.",
+      "belowExpectations": "Below Expectations: Gives little or no Claim, Evidence or Reasoning, and does not answer the driving question."
     }
   ]
 };
@@ -514,6 +519,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

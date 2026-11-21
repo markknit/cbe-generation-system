@@ -1,0 +1,97 @@
+{
+ "module": "bio_1_3",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 2, teacherMoves (Predict Phase) and learnerExperience",
+    "problem": "Lesson 1 says no content is delivered and never mentions neutrophils, fibroblasts or a cross-section diagram. It only had a four-image photo sequence (blood, clot, scab, new skin).",
+    "quote_a": "Yesterday we met Amina's healing finger. Platelets, neutrophils, fibroblasts, and skin cells all rushed to help",
+    "quote_b": "Display the phenomenon image (Amina's healing finger, cross-section diagram from Lesson 1)",
+    "correct_value": "Lesson 1 had a four-image photo sequence; cell types were not named."
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Replace the 'cross-section diagram' wording with the Lesson 1 photo sequence; the cell-type naming is handled in item 2.",
+   "reason": "Lesson 1 never uses a cross-section diagram, so the reference is wrong.",
+   "decision": "FIX",
+   "lesson": 2,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 2,
+    "path": "framework[0].teacherMoves",
+    "old": "Display the phenomenon image (Amina's healing finger, cross-section diagram from Lesson 1) on the board before learners enter.",
+    "new": "Display the phenomenon image (Amina's healing finger, from the Lesson 1 photo sequence) on the board before learners enter."
+   },
+   "reference": "Lesson 1 framework[1] uses a four-image photo sequence, not a cross-section diagram.",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "TIMING",
+    "where": "Lesson 12, Model Building Phase",
+    "problem": "Lesson 12 phases: Predict 7 min, cold-call round plus 30 s reading (about 8 students x ~2 min), Explain 8 min writing plus sharing, DQB about 8-10 groups x 90 s = 12-15 min, exit 5 min, assessment 25 min. Together these exceed 80 minutes (7+~18+~12+~14+5+25 > 80), but exact figures are not given.",
+    "quote_a": "working independently for about 25 minutes on Sections 1 to 3",
+    "quote_b": "Learners complete a structured individual exit reflection in writing (5 minutes)",
+    "correct_value": ""
+   },
+   "origin": "UNCLEAR",
+   "recommendation": "Cut the DQB classification to the grouped cards (about 5 groups) and shorten the cold-call round, or move the assessment to its own period. Lesson 12 as written cannot fit in 80 minutes.",
+   "reason": "The activities sum to well over 80 minutes, so a teacher must choose what to cut or move.",
+   "decision": "HUMAN",
+   "lesson": 12,
+   "color": "ORANGE",
+   "why_orange": "needs a human choice",
+   "final": "orange kept: Lesson 12's timings add up to well over 80 minutes. Fixing this means choosing what to cut or move: the DQB classification, the cold-call round, or the assessme"
+  },
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 2, framework Predict Phase learnerExperience",
+    "problem": "Lesson 2 says learners already met platelets, neutrophils and fibroblasts in Lesson 1, but Lesson 1 never mentions them. It also refers to a 'cross-section diagram from Lesson 1' that Lesson 1 never uses (it uses a narrated photo sequence).",
+    "quote_a": "'Yesterday we met Amina's healing finger. Platelets, neutrophils, fibroblasts, and skin cells all rushed to help",
+    "quote_b": "Learners listen with eyes closed as the teacher narrates the scenario of a Grade 10 student in Nairobi — Amina",
+    "correct_value": "Lesson 1 only narrates the bleeding, clot, scab and new skin sequence; cell types are introduced later"
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Reword the recap so it does not claim cells were already named. Apply the same change to the teacherMoves quote that names platelets, skin cells and macrophages.",
+   "reason": "Lesson 1 delivers no content and does not name platelets, neutrophils or fibroblasts.",
+   "decision": "FIX",
+   "lesson": 2,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 2,
+    "path": "framework[0].learnerExperience",
+    "old": "'Yesterday we met Amina's healing finger. Platelets, neutrophils, fibroblasts, and skin cells all rushed to help — and they all look completely different.",
+    "new": "'In Lesson 1 we met Amina's healing finger: bleeding slowed, a clot formed, a scab developed and new skin grew. Many different kinds of cells worked together to do this — and they all look completely different."
+   },
+   "reference": "Lesson 1 only narrates the bleeding, clot, scab and new skin sequence; no cell types are named.",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 9, Observe Phase teacherMoves",
+    "problem": "The fibroblast is not covered in Lessons 4 and 5 or in Lesson 8, so 'Recall' is wrong. Its first mention as a cell with a profile is Lesson 10.",
+    "quote_a": "Recall the fibroblast from the healing cut: it makes collagen, a protein, so it needs many ribosomes and plenty of rough ER (Lessons 4 and 5; you meet it in detail in Lesson 10).",
+    "quote_b": "Lessons 1–8 learners established what cells are, how plant and animal cells differ, and how animal cells specialise (red blood cells, white blood cells, nerve, sperm and muscle cells).",
+    "correct_value": "Fibroblast is introduced in Lesson 10"
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Replace 'Recall' with wording that treats the fibroblast as a preview, and cite Lessons 4 and 5 only for the organelles.",
+   "reason": "The fibroblast was never taught before Lesson 10, so 'Recall' is inaccurate.",
+   "decision": "FIX",
+   "lesson": 9,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 9,
+    "path": "framework[1].teacherMoves",
+    "old": "Recall the fibroblast from the healing cut: it makes collagen, a protein, so it needs many ribosomes and plenty of rough ER (Lessons 4 and 5; you meet it in detail in Lesson 10).",
+    "new": "Think about the fibroblast in the healing cut: it makes collagen, a protein, so it needs many ribosomes and plenty of rough ER (organelles from Lessons 4 and 5; you meet the fibroblast properly in Lesson 10)."
+   },
+   "reference": "Fibroblast is first profiled in Lesson 10 (Healing Cells strip); Lessons 4, 5 and 8 cover only organelles and other specialised cells.",
+   "final": "completed (3 criteria met)"
+  }
+ ],
+ "applied": "bio_1_3: 4 applied, 0 rejected"
+}

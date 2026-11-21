@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Correct use of probability calculations (formula, addition rule, multiplication rule)",
       "excellent": "All calculations are correct and in simplest form, the correct rule is named and used each time, and working is clearly shown.",
       "proficient": "Most calculations are correct with the correct rule used; there may be one small arithmetic slip or missing step of working.",
-      "developing": "Several calculations are incorrect, or rules are mixed up (for example adding when events should be multiplied), or working is missing."
+      "developing": "Several calculations are incorrect, or rules are mixed up (for example adding when events should be multiplied), or working is missing.",
+      "belowExpectations": "Most calculations are incorrect or missing, rules are not named, and working is not shown."
     },
     {
       "criterion": "Understanding of independence and the gambler's fallacy",
       "excellent": "Clearly explains that each independent event has a fixed probability that past results cannot change, names the gambler's fallacy, and applies it to both the coin and Gor Mahia.",
       "proficient": "States that past outcomes do not change future probability and applies it to the coin or the football example, but the explanation is less complete.",
-      "developing": "Does not reject the idea that a team or coin is 'due', or gives an explanation that is unclear or incorrect."
+      "developing": "Does not reject the idea that a team or coin is 'due', or gives an explanation that is unclear or incorrect.",
+      "belowExpectations": "Accepts that a coin or team is 'due', and gives no explanation, or an incorrect one, of independence."
     },
     {
       "criterion": "Understanding of the range of probability and mutually exclusive events",
       "excellent": "Correctly explains that 0 ≤ P ≤ 1, that probabilities of all outcomes sum to 1, and when events are mutually exclusive and when the addition rule can and cannot be used.",
       "proficient": "Shows the range and the addition rule correctly but gives limited explanation of when the rule does not apply.",
-      "developing": "Confuses the range of probability or the meaning of mutually exclusive, or cannot say when the addition rule applies."
+      "developing": "Confuses the range of probability or the meaning of mutually exclusive, or cannot say when the addition rule applies.",
+      "belowExpectations": "Does not give the range of probability, and cannot say what mutually exclusive means or when the addition rule applies."
     },
     {
       "criterion": "Connection to the Driving Question and the Kenyan context",
       "excellent": "Combines all four concepts in a coherent argument, explains how independence is compatible with predicting what is likely, uses the Gor Mahia debate, betting advertisements and the stall data accurately, and ends with a thoughtful responsible decision.",
       "proficient": "Uses most concepts and the Kenyan context correctly, and gives a reasonable conclusion about responsible decisions.",
-      "developing": "Gives a general answer with few concepts, little or no reference to the Kenyan phenomenon, or no conclusion about decision-making."
+      "developing": "Gives a general answer with few concepts, little or no reference to the Kenyan phenomenon, or no conclusion about decision-making.",
+      "belowExpectations": "Gives little or no answer to the driving question, with no concepts, no Kenyan context and no conclusion about decisions."
     },
     {
       "criterion": "Communication and reasoning",
       "excellent": "Writing is clear, logical and uses correct mathematical vocabulary in full sentences throughout.",
       "proficient": "Writing is mostly clear with mostly correct vocabulary.",
-      "developing": "Writing is hard to follow or key vocabulary is missing or misused."
+      "developing": "Writing is hard to follow or key vocabulary is missing or misused.",
+      "belowExpectations": "Writing is very hard to follow and key mathematical vocabulary is missing."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

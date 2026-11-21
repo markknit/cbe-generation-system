@@ -555,31 +555,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Scalar and vector reasoning",
       "excellent": "Correctly classifies quantities as scalars or vectors with clear reasons, and explains fully how treating velocity as a scalar caused the ferry to miss Mbita.",
       "proficient": "Classifies most quantities correctly and gives a reasonable explanation of why direction matters in the ferry story.",
-      "developing": "Confuses scalars and vectors or does not link direction to the ferry missing Mbita."
+      "developing": "Confuses scalars and vectors or does not link direction to the ferry missing Mbita.",
+      "belowExpectations": "Cannot tell scalars from vectors and does not link direction to the ferry missing Mbita."
     },
     {
       "criterion": "Vector representation and addition",
       "excellent": "Writes all column and position vectors with correct signs, adds them accurately, and explains both triangle and parallelogram laws.",
       "proficient": "Writes and adds the column vectors correctly with minor sign or explanation slips.",
-      "developing": "Makes frequent errors in column vector signs or addition, or cannot describe the addition laws."
+      "developing": "Makes frequent errors in column vector signs or addition, or cannot describe the addition laws.",
+      "belowExpectations": "The learner partially represents vectors geometrically, performs operations on vectors or determines the magnitude of vectors."
     },
     {
       "criterion": "Magnitude, direction and calculation",
       "excellent": "Uses Pythagoras and arctan accurately with units and sensible rounding (about 21.5 km/h, 21.8° south of east, 24 km drift, 23.6° correction), and explains why 20 + 8 is wrong.",
       "proficient": "Calculates most values correctly with working shown, with small rounding or unit errors.",
-      "developing": "Cannot set up the right-angled triangle or calculate magnitude and angle correctly."
+      "developing": "Cannot set up the right-angled triangle or calculate magnitude and angle correctly.",
+      "belowExpectations": "Cannot set up the right-angled triangle, and does not calculate the magnitude or the angle even with support."
     },
     {
       "criterion": "Correction and scalar multiplication",
       "excellent": "Explains subtraction of position vectors, the negative and zero vector, and parallel scalar multiples, and applies them correctly to the corrected heading and doubled current.",
       "proficient": "Applies most of these ideas correctly with some gaps in explanation.",
-      "developing": "Does not connect subtraction or scalar multiplication to correcting the ferry's course."
+      "developing": "Does not connect subtraction or scalar multiplication to correcting the ferry's course.",
+      "belowExpectations": "Makes no use of vector subtraction or scalar multiplication, and gives no correction of the ferry's course."
     },
     {
       "criterion": "Communication and link to the driving question",
       "excellent": "Writes a clear, connected answer to the driving question using correct vocabulary, labelled diagrams and Kenyan context.",
       "proficient": "Answers the driving question with mostly correct vocabulary and some connection of ideas.",
-      "developing": "Answer is incomplete or lists facts without linking them to the ferry phenomenon."
+      "developing": "Answer is incomplete or lists facts without linking them to the ferry phenomenon.",
+      "belowExpectations": "Answer is very short or missing, with no link between the facts and the ferry phenomenon."
     }
   ]
 };
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

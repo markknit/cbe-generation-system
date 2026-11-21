@@ -1,0 +1,11 @@
+# Root acceptance checkpoint — Essential Mathematics 3.2 Probability I
+
+Root reviewed the independent source-first report, both immutable HOLD/recheck reports and the final focused PASS. The accepted content fingerprint is `7340b23168e2832985c6ba588d8635c6a6d95eabb7657ac6a138ba1331786e43`.
+
+The first finding was limited to the L9/F9 outcome-c evidence claim. The correction was narrowed to the four linked canonical outcome-ID arrays: manuscript Lesson9, blueprint lesson_map Lesson9, assessment_tasks F9 and assessment_map F9. The pass1 reviewer caught the untouched lesson_map array; pass2 verified all four now equal b,d,f,h,i. The independent pass2 restoration checks prove no other canonical content changed. Outcome c remains taught in L1 and assessed in final I1.
+
+The reviewer independently solved the fixed tasks, checked all nine registered calculations, all ten lesson records, the assessment/rubric links and all five built Word companions. Its first 380/380 propagation/structure checks passed; the companions remain byte-identical because the correction changed internal outcome mappings only. Root reran `venv/bin/python scripts/curriculum_pipeline.py check essmath_3_2` (10 lessons,9 calculations,0 errors; independent-review warning only), verified both edited canonical files parse as JSON and rebuilt the current fingerprint successfully: 10 lessons/9 calculation checks. No final rendering acceptance is inferred from this build.
+
+Bound interpretation limits remain: the current PDF's printed detailed identifier4.2 conflicts with overview/internal3.2, preserved transparently; “maximum of two experiments and two outcomes” is ambiguous. The accepted model uses at most two binary components per trial and produces four actual joint outcomes. Teacher/source confirmation is still required before classroom implementation; this review does not resolve that source ambiguity. Actual experiment actions, teacher pacing, school safety and classroom performance remain unobserved.
+
+The two prior HOLDs and the final PASS are preserved separately. Content is accepted for this conditional model; next gates are the normal nine-document render, PDF conversion, scoped artifact audit, independent visual artifact review and packaging.

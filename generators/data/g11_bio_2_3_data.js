@@ -376,31 +376,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining why plants lack excretory organs",
       "excellent": "Gives all three reasons (low metabolic rate, recycling of gases, storage of insoluble wastes) with specific evidence from the chart and mesophyll diagrams.",
       "proficient": "Gives two or three reasons with some evidence.",
-      "developing": "Gives one reason or lists reasons without evidence."
+      "developing": "Gives one reason or lists reasons without evidence.",
+      "belowExpectations": "Below Expectations: Gives no correct reason why plants lack excretory organs, or gives a reason with no evidence."
     },
     {
       "criterion": "Describing the routes of waste removal",
       "excellent": "Correctly names diffusion, transpiration, guttation, exudation and tissue fall, matches each to the waste type, and clearly distinguishes guttation from transpiration using local observations.",
       "proficient": "Names most routes correctly with minor confusion between guttation and transpiration.",
-      "developing": "Names few routes or confuses them."
+      "developing": "Names few routes or confuses them.",
+      "belowExpectations": "Below Expectations: Names no correct routes of waste removal, or confuses guttation, transpiration and diffusion throughout."
     },
     {
       "criterion": "Use of evidence and CER reasoning",
       "excellent": "Claim is clear, evidence comes from lesson observations (Acacia, Euphorbia, arrowroot and grass droplets, leaf microscope work), and reasoning links the evidence to the claim.",
       "proficient": "Claim and evidence present; reasoning is partial.",
-      "developing": "Claim is unsupported or evidence is not from the lessons."
+      "developing": "Claim is unsupported or evidence is not from the lessons.",
+      "belowExpectations": "Below Expectations: Claim is missing or unsupported, and no evidence from the lesson observations is used."
     },
     {
       "criterion": "Economic value and community uses",
       "excellent": "Accurately links products, sources and uses (gum arabic, latex, tannins, quinine, caffeine) to Kenyan markets, and explains the risk of harmful alkaloids.",
       "proficient": "Gives several correct products and uses, with limited explanation of value or risks.",
-      "developing": "Gives few or inaccurate examples."
+      "developing": "Gives few or inaccurate examples.",
+      "belowExpectations": "Below Expectations: Gives no correct products or uses, or examples that do not match the plant sources."
     },
     {
       "criterion": "Final explanation and new question",
       "excellent": "Integrates how wastes are removed and why they are valuable in one coherent answer and states the sustainable harvesting question with a reason.",
       "proficient": "Answer covers both parts but is not fully connected, and the new question is stated.",
-      "developing": "Answer covers only one part or omits the new question."
+      "developing": "Answer covers only one part or omits the new question.",
+      "belowExpectations": "Below Expectations: Answer is missing or covers neither part, and no new question is stated."
     }
   ]
 };
@@ -447,6 +452,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

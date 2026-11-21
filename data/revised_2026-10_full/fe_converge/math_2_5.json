@@ -1,0 +1,65 @@
+{
+ "module": "math_2_5",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 3,
+   "verified": 2,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "FE_CONTRADICTS_LESSONS",
+     "problem": "Heron's formula was taught in Lesson 6 and checked on a 6-8-10 triangle. A 13-14-15 triangle is new but the method is the same, so this is acceptable. Not a real defect.",
+     "reason": "Lesson 6 teaches Heron's formula and checks it on a 6-8-10 triangle; a 13-14-15 triangle is the same method, and the exemplar arithmetic (s=21, area 84 m²) is correct."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "The exemplar says a slanted side is always longer than the perpendicular height. That is only true for a slant side that is not itself perpendicular to the base. In a right-angled triangle, a leg is b",
+     "reason": "The exemplar refers to using a slanted side in place of the height, as in Lessons 1-2, and a slant side is longer than the perpendicular height. A right-angled leg is already the height, so the overes"
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "2 × 2.4142 × 9 = 43.4556, which rounds to 43.46, so this is fine. However, the lesson says 43.45 m² (using 1.414). Not a real error."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "raw": 3,
+   "verified": 1,
+   "confirmed_fixable": 0,
+   "lesson_conflicts": 0,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "The claim that a slanted side is always longer than the perpendicular height is valid only if it is measured from the same vertex. In the Kericho plot, the sides are not always slanted relative to the",
+     "reason": "The claim is correct: the slant side from the base's endpoint to the apex is the hypotenuse of the right triangle formed with the perpendicular height, so it is never shorter than the height. Using it"
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "21 × 8 × 7 × 6 = 7056, and the square root of 7056 is 84, so the arithmetic is correct. The only change here is to the unit."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: FE is right",
+     "problem": "2 × 2.41421 × 9 = 43.456, which rounds to 43.46, so the arithmetic is correct. Lesson 5 gives 43.45 m², but this is only a rounding difference."
+    }
+   ]
+  }
+ ],
+ "residual_for_teachers": {
+  "cannot_fix": [],
+  "lesson_conflicts": [],
+  "unfixed": []
+ }
+}

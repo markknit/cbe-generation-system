@@ -1,0 +1,47 @@
+{
+ "module": "math_3_2",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 3, Model Building Phase learnerExperience",
+    "problem": "Lesson 3 says the cumulative model began in Lesson 1 as a notebook sketch with a frequency bar. Lesson 1 actually starts the model as a 0-to-1 number line with Kamau's 0.4 on it. Lesson 3 also tells learners to add a number line 'below the notebook sketch', but no such sketch was ever drawn.",
+    "quote_a": "started in Lesson 1 as a sketch of Kamau's notebook with a frequency bar",
+    "quote_b": "Learners draw the FIRST version of a class model in their exercise books: a simple annotated number line from 0 to 1",
+    "correct_value": "The Lesson 3 description of the model should match Lesson 1: a number line with 0.4 already placed, to which new points are added."
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Rewrite Lesson 3's model description to match Lesson 1's number line; the two items are one defect, so apply this one fix only.",
+   "reason": "Lesson 1 starts the model as a number line, not a notebook sketch with a frequency bar, so Lesson 3 contradicts it.",
+   "decision": "FIX",
+   "lesson": 3,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 3,
+    "path": "framework[4].learnerExperience",
+    "old": "(started in Lesson 1 as a sketch of Kamau's notebook with a frequency bar). They now ADD a clearly labelled 0-to-1 number line below the notebook sketch.",
+    "new": "(started in Lesson 1 as a 0-to-1 number line with Kamau's 0.4 marked). They now ADD new labelled points to that same number line, extending it if needed."
+   },
+   "reference": "Lesson 1 Model Building: first model is a 0-to-1 number line with P(Full Bus) = 0.4",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 3, Model Building Phase learnerExperience",
+    "problem": "Lesson 3 says the cumulative model began in Lesson 1 as a notebook sketch with a frequency bar. Lesson 1 actually starts the model as a 0-to-1 number line with Kamau's 0.4 placed on it. Lesson 3 also asks learners to add a new number line below the sketch, although a number line already exists from Lesson 1.",
+    "quote_a": "Learners open to their cumulative probability model in their exercise books (started in Lesson 1 as a sketch of Kamau's notebook with a frequency bar).",
+    "quote_b": "Learners draw the FIRST version of a class model in their exercise books: a simple annotated number line from 0 to 1 with three labels",
+    "correct_value": "The model started in Lesson 1 is a 0-to-1 probability number line with P(Full Bus) = 0.4 marked."
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "No separate change; item 0's fix resolves this.",
+   "reason": "Duplicate of item 0, which covers the same passage and the same contradiction.",
+   "decision": "NOT_REAL",
+   "lesson": 0,
+   "color": "WHITE"
+  }
+ ],
+ "applied": "math_3_2: 1 applied, 0 rejected"
+}

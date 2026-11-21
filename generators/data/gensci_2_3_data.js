@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Linking bond type and structure to properties",
       "excellent": "Correctly identifies ionic, metallic and layered covalent bonding for all three substances and clearly links each structure to conductivity, melting point and mechanical behaviour.",
       "proficient": "Identifies the bond type for all three substances and links most properties to structure, with one or two gaps.",
-      "developing": "Names some bond types but describes properties without linking them to structure, or mixes up the substances."
+      "developing": "Names some bond types but describes properties without linking them to structure, or mixes up the substances.",
+      "belowExpectations": "Names few bond types correctly and does not link structure to properties, or mixes up the three substances."
     },
     {
       "criterion": "Particle-level reasoning about conductivity",
       "excellent": "Explains conduction in terms of freely moving ions or delocalised electrons and states why they are free or fixed in each substance, including graphite and dry versus dissolved salt.",
       "proficient": "Explains conduction using mobile ions or electrons for most substances, but with minor omissions.",
-      "developing": "Relies on rules such as 'metals conduct' or 'ionic does not conduct' without describing particles."
+      "developing": "Relies on rules such as 'metals conduct' or 'ionic does not conduct' without describing particles.",
+      "belowExpectations": "Does not describe moving ions or electrons, or gives wrong reasons for conductivity."
     },
     {
       "criterion": "Use of evidence (CER)",
       "excellent": "Supports every claim with specific evidence from our tests (for example the bulb lighting, 660 °C, over 800 °C, brittle versus bends) and clear reasoning.",
       "proficient": "Gives claims with some evidence from the tests, with reasoning that is sometimes incomplete.",
-      "developing": "Gives claims with little or no evidence, or evidence without reasoning."
+      "developing": "Gives claims with little or no evidence, or evidence without reasoning.",
+      "belowExpectations": "Gives claims with no evidence from the tests or data card, or the evidence is wrong."
     },
     {
       "criterion": "Applying ideas to new substances and real life",
       "excellent": "Accurately predicts the properties of iodine or iron from its structure and gives a sound Kenyan real-life reason for a material choice.",
       "proficient": "Makes a mostly correct prediction with partial justification and a simple real-life link.",
-      "developing": "Prediction is incorrect or has no reasoning, and the real-life link is missing or unclear."
+      "developing": "Prediction is incorrect or has no reasoning, and the real-life link is missing or unclear.",
+      "belowExpectations": "Makes no prediction for a new substance, or the prediction is wrong with no reasoning, and gives no real-life link."
     },
     {
       "criterion": "Scientific vocabulary and reflection",
       "excellent": "Uses terms such as lattice, electrostatic, delocalised and Van der Waals precisely, and reflects clearly on how thinking changed since Lesson 1.",
       "proficient": "Uses most terms correctly and gives a brief reflection on how thinking changed.",
-      "developing": "Uses few scientific terms correctly and gives little or no reflection."
+      "developing": "Uses few scientific terms correctly and gives little or no reflection.",
+      "belowExpectations": "Uses almost no scientific terms correctly and does not reflect on how thinking changed."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

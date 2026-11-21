@@ -1,0 +1,15 @@
+# Batch05 — full-scope generation continues
+
+Core2.9 LinearMotion:12lessons content/artifactPASS,27registered calculations plus allfixedtasks independently checked,zero confirmed errors/corrections.822canonical Word/PDFchecks per format,86PDFpage survey/22readable samples,actual graph pixels/aspect preserved,blank/key/data isolation/attribution/final10null pass. Package coremath_2_9_Reviewed.zip and exact receipt/manifest saved. Source race/acceleration wording retained verbatim but teaching explicitly rejects deriving acceleration from only distance/time;safe inclusive timing and paper/recorded traffic adaptations are documented. Classroom pacing/access and media preview remain teacher work.
+
+GS1.2 TheCell:verified source plus genuine licensed light/TEM plant/animal assets selected. Materials14cards and12lesson manuscript/blueprint built;full independent content review running. Original image bytes are bound assets;native Word crop frames select readable panels and preserve bars.Independent technical proof passed all5realimages. The preflight WebP/Word-codec gap was fixed and independently closed;22tests pass;current images are PNG/JPEG. Crop frames are not redaction;final rootFigure1source must be wholly withheld from teachingStudentMaterials,distinct from taught leafFigure3. Final mouse image intentionally repeats a taught source and is declared.
+
+Root will continue Cell and remaining units without routine reauthorisation.29units currently have no new lesson drafts;Cell12drafts are not yet accepted.22located sources still require root exact transcription;7Core requirements remain source-blocked. Independent surveys establish completeness,not authored source acceptance. Latest quota65%at03:15UTC,no pause;10%guardactive. No paid modelAPI,push,promotion,partner edits/Drive publication. Partner recheck on10exports/108lessons:10bundles renderPASS;enforcingR0ingestionFAIL0/10conform,47drift;Indicesfidelity3/7stillfails onattribution/rubric text. Checkoutunchanged;noR1downgrade.
+
+
+Live03:46UTC:Cell12andReflection11finalPASS/packaged;CoreStatistics16contentPASS/finalreviewrunning;Transport12andTrig12fullcontentreviewsrunning.171expansionauthored/131reviewed,plus31frozenpilot;25nodrafts;15verifiedsources/18locatedtranscriptions/7Coregaps. Root52%03:45UTC,noquota pause. Continueallavailablework.
+
+Live04:30UTC:263expansionauthored/228reviewed;plus31pilot294/259.17nodrafts. Surface/VolumefinalreviewsandStatscontentreviewactive;rootnextEssentialProbability. Root17%04:28UTC,no pause;10%guardactive. Currentreceipts/manifestsareauthority;olderparagraphsabovehistoricalcheckpoints.
+
+
+QUOTA STOP2026-11-14 04:35UTC:remaining10/exit10/pause_requestedtrue.273expansionauthored/263finalPASS;21packages240lessons;Volume12+Stats11finalPASSpackagepending. Probability10draftunbuilt/unreviewed. Withfrozenpilot304authored/294reviewed.16nodrafts(7Coreblocked+9GS).24verifiedsources/9locatedpending. Allreviewerscompleted/stopped;no newworkuntilpermittedexplicitresume. Rootfinalhandoff/evidence/quota_pause_2026-11-14.jsonoverridehistoricaltotalsabove.

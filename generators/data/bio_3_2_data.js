@@ -795,31 +795,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining why transport systems are needed",
       "excellent": "Links SA:V ratio, diffusion distance and the functions of transport accurately, using the cube and pulse data.",
       "proficient": "Explains that large animals need transport and names some functions, with limited use of SA:V evidence.",
-      "developing": "States that animals need transport without a clear reason or evidence."
+      "developing": "States that animals need transport without a clear reason or evidence.",
+      "belowExpectations": "Gives no reason why large animals need transport, or an incorrect one with no use of the data."
     },
     {
       "criterion": "Comparing transport systems across animals",
       "excellent": "Accurately compares grasshopper, tilapia, frog and mammal on open or closed, single or double, and mixing of blood, using correct terms.",
       "proficient": "Describes most systems correctly with a few gaps or errors.",
-      "developing": "Describes few systems, or confuses their features."
+      "developing": "Describes few systems, or confuses their features.",
+      "belowExpectations": "Describes almost no transport systems correctly, or confuses them throughout."
     },
     {
       "criterion": "Use of evidence and CER reasoning",
       "excellent": "Gives at least three accurate pieces of evidence from different lessons and links each clearly to the claim.",
       "proficient": "Gives two or three pieces of evidence with partial reasoning.",
-      "developing": "Gives little or vague evidence; claim is not supported."
+      "developing": "Gives little or vague evidence; claim is not supported.",
+      "belowExpectations": "Gives no relevant evidence, or only unrelated statements, and the claim is not linked to any evidence."
     },
     {
       "criterion": "Applying ideas to Kipchoge and the grasshopper scenario",
       "excellent": "Explains fully why a grasshopper system would fail Kipchoge, covering size, pressure, oxygen carrying and recovery, using the heart rate and stroke volume data.",
       "proficient": "Explains that the system would not supply enough oxygen, with some reasons.",
-      "developing": "Gives an unsupported or incorrect prediction."
+      "developing": "Gives an unsupported or incorrect prediction.",
+      "belowExpectations": "Gives no prediction, or one that is incorrect and unsupported, with no use of the heart rate or stroke volume data."
     },
     {
       "criterion": "Scientific communication and model reflection",
       "excellent": "Uses scientific vocabulary precisely and clearly describes how the final model differs from the Lesson 1 model.",
       "proficient": "Uses mostly correct vocabulary and names some changes to the model.",
-      "developing": "Vocabulary is often incorrect and model changes are not described."
+      "developing": "Vocabulary is often incorrect and model changes are not described.",
+      "belowExpectations": "Uses little scientific vocabulary correctly and does not describe how the model changed, or needs prompting throughout."
     }
   ]
 };
@@ -915,6 +920,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

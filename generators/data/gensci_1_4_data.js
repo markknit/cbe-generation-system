@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Scientific accuracy of the transport explanation",
       "excellent": "Correctly explains osmosis, active transport, root pressure, transpiration pull, xylem and phloem roles with all key terms used accurately.",
       "proficient": "Explains most processes correctly with minor errors or one missing mechanism.",
-      "developing": "Explanation has major errors or confuses xylem and phloem, or osmosis and active transport."
+      "developing": "Explanation has major errors or confuses xylem and phloem, or osmosis and active transport.",
+      "belowExpectations": "Names almost no correct process for how water and minerals enter and move up the maize plant, and mixes up xylem and phloem or osmosis and active transport throughout."
     },
     {
       "criterion": "Use of evidence from the lessons",
       "excellent": "Consistently links claims to the red-dye maize stem, the polythene bag, the girdling demonstration and the transpiration group results.",
       "proficient": "Refers to some of the evidence, but links are sometimes unclear.",
-      "developing": "Little or no reference to class evidence."
+      "developing": "Little or no reference to class evidence.",
+      "belowExpectations": "Does not mention the red-dye maize stem, the polythene bag, the girdling demonstration or the transpiration group results, or names them with no link to the answer."
     },
     {
       "criterion": "Explaining transpiration and gradients",
       "excellent": "Explains the effect of wind, humidity, light and blocked stomata using the water vapour concentration gradient, and gives three uses of transpiration.",
       "proficient": "Describes the effect of the factors, with a partial explanation of the gradient or fewer uses.",
-      "developing": "Only lists results without a mechanism."
+      "developing": "Only lists results without a mechanism.",
+      "belowExpectations": "Cannot say what transpiration is or how wind, humidity, light or blocked stomata change it, and gives no use of transpiration."
     },
     {
       "criterion": "Linking to the driving question and Kenyan context",
       "excellent": "Gives a coherent whole-journey explanation, a clear labelled diagram, and sensible advice relating to Kenyan farming.",
       "proficient": "Gives a mostly complete journey with a diagram and some context.",
-      "developing": "Explanation is fragmented, with a missing or unclear diagram and no application."
+      "developing": "Explanation is fragmented, with a missing or unclear diagram and no application.",
+      "belowExpectations": "Gives no journey of water from the soil to the leaves, or only a fragment of it, with no diagram or a diagram with no arrows, and no Kenyan farming link."
     },
     {
       "criterion": "Communication",
       "excellent": "Writes clearly in logical order with correct scientific vocabulary.",
       "proficient": "Writing is mostly clear with some vocabulary slips.",
-      "developing": "Writing is hard to follow and vocabulary is mostly everyday."
+      "developing": "Writing is hard to follow and vocabulary is mostly everyday.",
+      "belowExpectations": "Writes too little or too unclearly to follow, with no scientific words and no order."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

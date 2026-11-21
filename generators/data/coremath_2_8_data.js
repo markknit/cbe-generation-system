@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Scalar and vector concepts",
       "excellent": "Correctly identifies 8 km as a scalar, gives accurate Kenyan examples of both types, and clearly explains that magnitude and direction together describe a journey.",
       "proficient": "Identifies scalar and vector correctly with mostly accurate examples, but the explanation of why direction matters is brief.",
-      "developing": "Confuses scalar and vector, or gives examples without a reason."
+      "developing": "Confuses scalar and vector, or gives examples without a reason.",
+      "belowExpectations": "Cannot tell a scalar from a vector, and gives no examples or examples with no reason."
     },
     {
       "criterion": "Column vector and magnitude calculations",
       "excellent": "Reads components correctly and applies √(x² + y²) accurately to get 7.8 km and 7.2 km, with units and an honest comparison with the 8 km labels.",
       "proficient": "Calculates the magnitudes with a minor slip in rounding or units, and makes a limited comparison with the labels.",
-      "developing": "Cannot interpret components or uses an incorrect formula for magnitude."
+      "developing": "Cannot interpret components or uses an incorrect formula for magnitude.",
+      "belowExpectations": "Cannot read the components of a column vector, and does not find a magnitude or uses an incorrect formula."
     },
     {
       "criterion": "Position vectors, resultant, midpoint and translation",
       "excellent": "Correctly finds AB = (−3; −1), its magnitude, the midpoint (0.5; 2.5), the resultant (−1; 2), the scaled vectors, and links translation to displacement.",
       "proficient": "Gets most of the vector operations right with one or two arithmetic or sign errors, and links ideas partially.",
-      "developing": "Makes frequent errors in subtraction, addition or scalar multiplication and does not link the results."
+      "developing": "Makes frequent errors in subtraction, addition or scalar multiplication and does not link the results.",
+      "belowExpectations": "Makes errors throughout the vector operations, leaves most results missing, and does not link them to displacement."
     },
     {
       "criterion": "Final explanation of the driving question",
       "excellent": "Gives a coherent explanation using the vocabulary, the Part 2 evidence, and the multi-leg Nakuru journey, distinguishes distance from displacement, and reflects on how their thinking changed.",
       "proficient": "Answers the driving question with correct vocabulary but gives limited evidence or only a weak reflection.",
-      "developing": "Gives an incomplete or unclear answer that does not use the vector ideas or the evidence."
+      "developing": "Gives an incomplete or unclear answer that does not use the vector ideas or the evidence.",
+      "belowExpectations": "Gives an answer to the driving question that is missing or unclear, with no vector vocabulary and no evidence."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

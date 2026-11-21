@@ -1,0 +1,31 @@
+{
+ "module": "phys_3_2",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "TIMING",
+    "where": "Lesson 4, framework Predict Phase teacherMoves (pacing note)",
+    "problem": "The phase minutes (5+15+10+4+6) sum to 40, which matches the duration. However, the Model Building teacherMoves says 'Give 8 minutes' while the pacing allots 6 min for Model Building, so the phase times do not fit the stated pacing.",
+    "quote_a": "Predict 5 min, Observe 15 min (groups do tasks 1 to 3; task 4 is a quick teacher demonstration if groups run short",
+    "quote_b": "",
+    "correct_value": "Model Building time must be 6 minutes or the pacing must change"
+   },
+   "origin": "UNCLEAR",
+   "recommendation": "Change Model Building time from 8 to 6 minutes to match the 40-minute pacing note (5+15+10+4+6).",
+   "reason": "The pacing sums to 40 with Model Building at 6 min, so the 8-minute instruction overruns the single period.",
+   "decision": "FIX",
+   "lesson": 4,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 4,
+    "path": "framework[4].teacherMoves",
+    "old": "Give 8 minutes. Circulate",
+    "new": "Give 6 minutes. Circulate"
+   },
+   "reference": "",
+   "final": "completed (3 criteria met)"
+  }
+ ],
+ "applied": "phys_3_2: 1 applied, 0 rejected"
+}

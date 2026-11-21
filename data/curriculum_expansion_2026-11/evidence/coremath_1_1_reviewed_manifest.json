@@ -1,0 +1,992 @@
+{
+  "module": "coremath_1_1",
+  "lessons": 10,
+  "created_utc": "2026-11-15T01:52:18.317329+00:00",
+  "content_fingerprint": "78e0ecd0344157c601f8d94ba6c52571865ec8cfd62c098c9a5ba13e4aaffe5f",
+  "content_verdict": "accepted",
+  "artifact_verdict": "scoped_review_pass",
+  "teacher_acceptance": "pending",
+  "partner_ingestion": "R1supportpending",
+  "files": [
+    {
+      "path": "attribution.yaml",
+      "sha256": "6e36e0385330fc38b2f6433b85bb053afcd784c33d43b15075ca3d6a2003d916"
+    },
+    {
+      "path": "blueprints/coremath_1_1.json",
+      "sha256": "587f324f9818933daca1534c21dffeb31b16995dcfda017b9ff0383de1e0e8c8"
+    },
+    {
+      "path": "evidence/artifact_audit_coremath_1_1_2026-11-15.json",
+      "sha256": "6fa97d1e2ce22adf6164f7c3ad24f64fb9c80ed52086c34ee6520d2bd23f775b"
+    },
+    {
+      "path": "evidence/coremath_1_1_checks.json",
+      "sha256": "67d8572bc7db50c77898f4c37b7de73be26f13061f34b9b0c29ce175f568c1c8"
+    },
+    {
+      "path": "evidence/coremath_1_1_package.json",
+      "sha256": "8b3e1486ecb07928a17921cb4fbd9d787521a5e7ccd231b344e15c3387f8231a"
+    },
+    {
+      "path": "evidence/coremath_1_1_render.log",
+      "sha256": "09cc38c4951491d00653a9553fc9cf01d5ae5a9b0f6ffde5e24cbc96190d173f"
+    },
+    {
+      "path": "evidence/coremath_1_1_resource_policy_snapshot.json",
+      "sha256": "fba1a39eebe7cbfe9c7039fa9bd95d1af7b4d3ab9410c842be072dae63483a4e"
+    },
+    {
+      "path": "evidence/coremath_1_1_source_verification.md",
+      "sha256": "a24623163fac2c7d334102ca65608c6eb2d3363ffd66dbc2ed04bc5243948c1f"
+    },
+    {
+      "path": "manuscripts/coremath_1_1.json",
+      "sha256": "c257d0182ae33868260119079cc9dae2fa5b59e2840538ffb9a9dfe8b1b01fd0"
+    },
+    {
+      "path": "materials/coremath_1_1.json",
+      "sha256": "598deb0de862e861e250d31c4f1ad17973111b1432396dadb2ac86855838797d"
+    },
+    {
+      "path": "outputs/PDF/Codex_Core_Mathematics_Real_Numbers_AssessmentMaterials.pdf",
+      "sha256": "a272710552ae49ca2cd6f22c8b2b8066cb92023f5a24984bdd2af7863b4de4b8"
+    },
+    {
+      "path": "outputs/PDF/Codex_Core_Mathematics_Real_Numbers_CBE_LessonSequence.pdf",
+      "sha256": "74de090782d5f6388424c35ba92c5832c427c0cc35c862ccc8a2f6cc61f5c015"
+    },
+    {
+      "path": "outputs/PDF/Codex_Core_Mathematics_Real_Numbers_CompactTeacherGuide.pdf",
+      "sha256": "62b54ce5db77d1d0450362baa503a236481315d96cbca32ce46fbb9762bd947e"
+    },
+    {
+      "path": "outputs/PDF/Codex_Core_Mathematics_Real_Numbers_FinalExplanation.pdf",
+      "sha256": "b7b418ac59cc29b549e126fdcd88935204ba48926302af4bbb7739eedc2ea878"
+    },
+    {
+      "path": "outputs/PDF/Codex_Core_Mathematics_Real_Numbers_FinalExplanation_TeacherKey.pdf",
+      "sha256": "3db356f8aff05ef4fccb27953b30fa2b701ea5e78e2143f50bf8ea2f31b82109"
+    },
+    {
+      "path": "outputs/PDF/Codex_Core_Mathematics_Real_Numbers_MaterialsTeacherKey.pdf",
+      "sha256": "086fbf8e6ca0740f32d1c891bdfe766414720af2cfcf750acc7a60d655407de7"
+    },
+    {
+      "path": "outputs/PDF/Codex_Core_Mathematics_Real_Numbers_StudentMaterials.pdf",
+      "sha256": "689a6c2993b1569c3c86f1a1f6878d5e5e439d121f69c9bd204427aec85801d5"
+    },
+    {
+      "path": "outputs/PDF/Codex_Core_Mathematics_Real_Numbers_StudentSummaryTable.pdf",
+      "sha256": "e9ea05f3e82a659ea3279b7c293491bd24d7830d1968cb2e0c2a012438c2a166"
+    },
+    {
+      "path": "outputs/PDF/Codex_Core_Mathematics_Real_Numbers_SummaryTable.pdf",
+      "sha256": "dd82dd9cc7a043ad656692671d846fe1a8bfec82d53b57f3481ac4cb6802a64e"
+    },
+    {
+      "path": "outputs/v2/Core_Mathematics/SS1.1_Real_Numbers/Codex_Core_Mathematics_Real_Numbers_AssessmentMaterials.docx",
+      "sha256": "a74bab3e10f45ae786b724dcd24e37469ba198c5533317006a7adaaec98fc56c"
+    },
+    {
+      "path": "outputs/v2/Core_Mathematics/SS1.1_Real_Numbers/Codex_Core_Mathematics_Real_Numbers_CBE_LessonSequence.docx",
+      "sha256": "15cb7f0c05ff25e46d31e6e472eb7903f5fb4c36f8141e4e74f5af131fe25280"
+    },
+    {
+      "path": "outputs/v2/Core_Mathematics/SS1.1_Real_Numbers/Codex_Core_Mathematics_Real_Numbers_CompactTeacherGuide.docx",
+      "sha256": "4f7b971d758aad1193c153d732ac29e3a66de8a7c56054ec3e0caf0feb727b16"
+    },
+    {
+      "path": "outputs/v2/Core_Mathematics/SS1.1_Real_Numbers/Codex_Core_Mathematics_Real_Numbers_FinalExplanation.docx",
+      "sha256": "4afbe8b8418d5fd088762d6c3017b0d9982bf8626a96c68f231695c1eead1570"
+    },
+    {
+      "path": "outputs/v2/Core_Mathematics/SS1.1_Real_Numbers/Codex_Core_Mathematics_Real_Numbers_FinalExplanation_TeacherKey.docx",
+      "sha256": "4b9918adc2f780257b893d8b9444662d2c15038ca0e215c8838d871c698ccbd2"
+    },
+    {
+      "path": "outputs/v2/Core_Mathematics/SS1.1_Real_Numbers/Codex_Core_Mathematics_Real_Numbers_MaterialsTeacherKey.docx",
+      "sha256": "0f1d707d8dd4f1191def8e9511e38ae69e57331fb90a15499d585730e01cbc36"
+    },
+    {
+      "path": "outputs/v2/Core_Mathematics/SS1.1_Real_Numbers/Codex_Core_Mathematics_Real_Numbers_StudentMaterials.docx",
+      "sha256": "7e170675ea537fac4692ab32640dfcb6b1d8b4b04745306a6796ee9854db09e4"
+    },
+    {
+      "path": "outputs/v2/Core_Mathematics/SS1.1_Real_Numbers/Codex_Core_Mathematics_Real_Numbers_StudentSummaryTable.docx",
+      "sha256": "0cfee5e72439475decc4771b3d18849f309d953c89eb606f11889219fb6d3824"
+    },
+    {
+      "path": "outputs/v2/Core_Mathematics/SS1.1_Real_Numbers/Codex_Core_Mathematics_Real_Numbers_SummaryTable.docx",
+      "sha256": "4d4d9f423a07fab8b9ec9fa2a07529525dd31e4eb0899d060c9bfc1a2656ae9e"
+    },
+    {
+      "path": "outputs/v2/Core_Mathematics/SS1.1_Real_Numbers/Codex_Core_Mathematics_Real_Numbers_data.json",
+      "sha256": "a64950d233b9d50673bd0b082533bb421a7253a0f04f22dfbd32b030f4d483cc"
+    },
+    {
+      "path": "reviews/batch_07/coremath_1_1_initial_core27.md",
+      "sha256": "fa052734fc05e6ba01a063fb8ecad573013247c365325c5e8f9a75a6c1218eb4"
+    },
+    {
+      "path": "reviews/batch_07/coremath_1_1_initial_essential.md",
+      "sha256": "d7d1d352450f71e2022b30a26b439da21e4005f22b52fba2a7cf83274e4afb5a"
+    },
+    {
+      "path": "reviews/batch_07/coremath_1_1_initial_science.md",
+      "sha256": "48dc0a405a7063a958ced0b82e31515c2e5b7e5b806bbe91d19ae60f8a09ff49"
+    },
+    {
+      "path": "reviews/batch_07/coremath_1_1_layout_review.md",
+      "sha256": "8f92aa4b82b938bd50d914c8117c0872b0a7ec9b50f7f3333cf192a6be570745"
+    },
+    {
+      "path": "reviews/batch_07/coremath_1_1_root_acceptance.md",
+      "sha256": "a234ae0689cab0145097bc123341df29bd26aed5a36218e5d27df1c37b822e49"
+    },
+    {
+      "path": "reviews/batch_07/coremath_1_1_rubric_correction_layout_review.md",
+      "sha256": "d59a06472ec4d55006b5f4468aa8d9cf169410a16570fd10dbd760d0fbce153d"
+    },
+    {
+      "path": "reviews/batch_07/coremath_1_1_rubric_correction_recheck.md",
+      "sha256": "a425b26ab022f8613abb5122646294ed2f7460352b4a1da39ddfda060c6fb4a3"
+    },
+    {
+      "path": "reviews/batch_07/coremath_1_1_rubric_correction_root_acceptance.md",
+      "sha256": "8f4152a1480b5e5416501fe2dede0ec2d41d66bb973c51946b8d6c6e5dc382b4"
+    },
+    {
+      "path": "reviews/batch_07/corpus_rubric_disclosure_review.md",
+      "sha256": "6cd99301d25c1ce6d2571da1eb725fad0b011eac3ba7c05641c2f265c3ef3613"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_AssessmentMaterials_science_initial_review_text.txt",
+      "sha256": "2f783371f04322baad1d5d8d09b2bf9734577944396f6c1d3c1689e8be75eb8d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_CompactTeacherGuide_science_initial_review_text.txt",
+      "sha256": "59a00cdec8f090094e4cd65e4cd6701098c12c67a3fa1462ba22628d615b6cda"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_MaterialsTeacherKey_science_initial_review_text.txt",
+      "sha256": "b342432daf68c7e82a778bbd024c5cf06e56a42627ea6865b88897ebadb0dc37"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_StudentMaterials_science_initial_review_text.txt",
+      "sha256": "b7541d8702afe079fe5bf1357092dab77241713d9e2556f1f62b71bcf170ed2e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_StudentSummaryTable_science_initial_review_text.txt",
+      "sha256": "9c21fb1583785fadb98ca5fb63fc21d24780ee66d367c48bdcb50d2cfa47340e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/AssessmentMaterials.txt",
+      "sha256": "2f783371f04322baad1d5d8d09b2bf9734577944396f6c1d3c1689e8be75eb8d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/CompactTeacherGuide.txt",
+      "sha256": "59a00cdec8f090094e4cd65e4cd6701098c12c67a3fa1462ba22628d615b6cda"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/MaterialsTeacherKey.txt",
+      "sha256": "b342432daf68c7e82a778bbd024c5cf06e56a42627ea6865b88897ebadb0dc37"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/StudentMaterials.txt",
+      "sha256": "b7541d8702afe079fe5bf1357092dab77241713d9e2556f1f62b71bcf170ed2e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/StudentSummaryTable.txt",
+      "sha256": "9c21fb1583785fadb98ca5fb63fc21d24780ee66d367c48bdcb50d2cfa47340e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/binding.json",
+      "sha256": "f50f6bf8200ccc9f95a7a3fb430f86b256d18c2157c1b0360f6680dce14c6ccb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/check.py",
+      "sha256": "2e164b4461adb768da2afee45169bdee3dfe7047a3ac710d6f126bee6f3d6135"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/independent_checks.json",
+      "sha256": "b7e14f61f4f60435eb2ca1635401848c7c75ed5017c186ce236750b6dd2251b1"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/independent_checks.py",
+      "sha256": "043b2e91d7abc1f7c17d5605376c99f4f4638f652a7bb4877dc26f450c90feee"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/initial_blueprints.json",
+      "sha256": "587f324f9818933daca1534c21dffeb31b16995dcfda017b9ff0383de1e0e8c8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/initial_manuscripts.json",
+      "sha256": "76a8504cbf8cdf543d5a0570d579bc87f954e529c19403111cd01fe05aae498e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/initial_materials.json",
+      "sha256": "598deb0de862e861e250d31c4f1ad17973111b1432396dadb2ac86855838797d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/initial_sources.json",
+      "sha256": "3f6b0e7f72ab8d9039a8cdaafa9a291e7d05939e917256f27023672adb160fcb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_core27/solutions.md",
+      "sha256": "332f99b10aabb5d79d698987b9f3fbbb094d566a7791b9c3bfddc99bd4f8c544"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_independent_pdf_crop.png",
+      "sha256": "16561be726b675970d8607bb12cceb475c10dee4eec20f7eac171a32d48ffbc1"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_blueprints_snapshot.json",
+      "sha256": "587f324f9818933daca1534c21dffeb31b16995dcfda017b9ff0383de1e0e8c8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/AssessmentMaterials.txt",
+      "sha256": "2f783371f04322baad1d5d8d09b2bf9734577944396f6c1d3c1689e8be75eb8d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/CompactTeacherGuide.txt",
+      "sha256": "12fcf2cf945be364acb37e65e9e666774491f4529022a74164ddca7b448cee5d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/MaterialsTeacherKey.txt",
+      "sha256": "b342432daf68c7e82a778bbd024c5cf06e56a42627ea6865b88897ebadb0dc37"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/StudentMaterials.txt",
+      "sha256": "b7541d8702afe079fe5bf1357092dab77241713d9e2556f1f62b71bcf170ed2e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/StudentSummaryTable.txt",
+      "sha256": "b58cd9fa7cad7d62c2009eaa3695d9c87908f44333c520dfee1b8fe25029fadb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/binding.json",
+      "sha256": "48f224df931f840a615d23765b1e1a7cb596e9a11bd33939ae752e1d84c57231"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/blueprints_snapshot.json",
+      "sha256": "587f324f9818933daca1534c21dffeb31b16995dcfda017b9ff0383de1e0e8c8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/check.py",
+      "sha256": "bf363fa143790fb33a1418be801945f70ba3e53427a496ab7d36c92bb6d942c3"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/coremath_1_1.verification.json",
+      "sha256": "c2e6c54bda9936842e70cce85927d0436c3a5e699c196f68d584bc951646775b"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/coremath_1_1_source_verification.md",
+      "sha256": "a24623163fac2c7d334102ca65608c6eb2d3363ffd66dbc2ed04bc5243948c1f"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/fixed_checks.json",
+      "sha256": "4afb3f67c63a4b1883836f81453e45ac9b2961e4957da0c3cdc5fb7c0d343a85"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/manuscripts_snapshot.json",
+      "sha256": "76a8504cbf8cdf543d5a0570d579bc87f954e529c19403111cd01fe05aae498e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/mapping_checks.json",
+      "sha256": "f2287c5b2747d45e1c589c414d858304c264ed142f0162b248ecaff42d09efe9"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/materials_snapshot.json",
+      "sha256": "598deb0de862e861e250d31c4f1ad17973111b1432396dadb2ac86855838797d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/sources_snapshot.json",
+      "sha256": "3f6b0e7f72ab8d9039a8cdaafa9a291e7d05939e917256f27023672adb160fcb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/task_solutions.md",
+      "sha256": "5ed74145e46d03ca87967374f9bcc2299ea314c0cf55533ad28469b231b20d2e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential/word_structure.json",
+      "sha256": "8775b689e5270c4fdc46ac79e0b04e998f81560ef750c691b0da6abde3f0b042"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_essential_manifest.json",
+      "sha256": "c2d022d0e53fec59eb4ee1591b6b1825c4017377894ba73c74c409257c9234ba"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_final_binding.json",
+      "sha256": "4139a28d14a6acd6aadb20005003ebbe1454b9e1c286b6e80ba7cb2bfcfc16a7"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_manuscripts_snapshot.json",
+      "sha256": "76a8504cbf8cdf543d5a0570d579bc87f954e529c19403111cd01fe05aae498e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_materials_snapshot.json",
+      "sha256": "598deb0de862e861e250d31c4f1ad17973111b1432396dadb2ac86855838797d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_initial_sources_snapshot.json",
+      "sha256": "3f6b0e7f72ab8d9039a8cdaafa9a291e7d05939e917256f27023672adb160fcb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/AssessmentMaterials.txt",
+      "sha256": "166ed2a4747b3e74bff7d46a0adff225081a084caf8c84d7a1f0459f1789a225"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/AssessmentMaterials_overview_1.jpg",
+      "sha256": "252e331d0c0c39018b589e74a3f785b7a34d4401acbc12768da9abe93a67513f"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/AssessmentMaterials_readable_1.png",
+      "sha256": "0bd2c70a74fa6114275e08cd39066c7901749f1d43f0bc11c12d961c1febbc07"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/AssessmentMaterials_word.txt",
+      "sha256": "2f783371f04322baad1d5d8d09b2bf9734577944396f6c1d3c1689e8be75eb8d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence.txt",
+      "sha256": "d58f322d8294302bdfbc788294d874a1c62fa52a3b69efed0162d4260904aaf2"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_overview_1.jpg",
+      "sha256": "4562f8202c21f0190f8975e12c433b944f94aeef538f9363e9e2e66f88748cb0"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_overview_13.jpg",
+      "sha256": "8053e28166f326b0a00de81ef776fd905f4c3c9edf9e73b30f5e87e8402c1300"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_overview_25.jpg",
+      "sha256": "ed54da66f15aea1c26987687a5437ecc223ed82023eeecfe56840d6c14f88c8a"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_overview_37.jpg",
+      "sha256": "3d1bbe7e2674a6497ea16273beb476135cc4549f222074381654edb376d4103f"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_readable_1.png",
+      "sha256": "86d146d9518283d283f8075885874c9d7346ecb08f72866958f1cc503eabd7b3"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_readable_19.png",
+      "sha256": "587c419528de9fe91b2c02cfd86077756b124a4cca854896922a11e2b36b45a1"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_readable_20.png",
+      "sha256": "fe0ff6e880868a2c805306cf8cedab2d9d962e7fe317aa689737bf31ec97f4aa"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_readable_23.png",
+      "sha256": "e7c4f663da3f3e1b44333baa5f5b6ef069d038f2f309dc5533ebc0ca81527dc9"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_readable_24.png",
+      "sha256": "1665a54536fa1fc4d08c70124c0e1fb20a387ae219eb18153a4a1673457ea42c"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_readable_31.png",
+      "sha256": "74e27d0c463d1fd71b42dcbfb63f8f8ae5d38227e9207b6dc517a1411fd33b17"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_readable_39.png",
+      "sha256": "340834cf38084d78177eae1c773c71460e3f3707245684c57b59081794413c5d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_readable_40.png",
+      "sha256": "df224b6c3d6a902d31c005ad60e28d735edc2414a2201689f140e6dadac4f91f"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_readable_41.png",
+      "sha256": "f8a75b8fc366775689b4606beefed980421aee18b6b8e11329c1f174e759d8e4"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_readable_42.png",
+      "sha256": "224601213781400c4825892e542f60decc83f9e4c366803f5ead3736466e8a94"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CBE_LessonSequence_word.txt",
+      "sha256": "9ddd09deb6e8b6e148a3a15fc0ed85f82b9c9c5b69a8044ad62ce5b7854c8cc8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CompactTeacherGuide.txt",
+      "sha256": "ae8bbf72a2ab2869d4c8281f004ddee6ca89b4fd8fc77939f5dc4c44a6215ee8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CompactTeacherGuide_overview_1.jpg",
+      "sha256": "8a28b6c984246f4b53ac6d80d32c39496eaa6852cf5edab906feffb711e4fdd1"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CompactTeacherGuide_readable_11.png",
+      "sha256": "d7308a1c665d3ca1a9d5d7e2a21f536ad8ff7292d1f8d97e5e4e4316a6b8a93f"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CompactTeacherGuide_readable_12.png",
+      "sha256": "e5d50d43a55411747dfd657e7a939d66eebd74ae13d01a0ecebfc205546c1c0d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CompactTeacherGuide_readable_7.png",
+      "sha256": "311378ffe52c290d830d8f417bfd591c84aebef80aa0f73d3693eba29c4fd1dc"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/CompactTeacherGuide_word.txt",
+      "sha256": "59a00cdec8f090094e4cd65e4cd6701098c12c67a3fa1462ba22628d615b6cda"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation.txt",
+      "sha256": "02af06cc1d1989bc14bbd6e7ead7f6401eaf722be4e2a8fb3b605a66d914cd49"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_TeacherKey.txt",
+      "sha256": "a0add66c2fe2b1aefb8ce414620d479d1af6ca17345b473ae016f0981616e6cd"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_TeacherKey_overview_1.jpg",
+      "sha256": "95e64e0b1b59c45cf3ae6d1796eebaf1d0cde6407422ae610029a4767e739bdf"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_TeacherKey_readable_1.png",
+      "sha256": "0c337d84c1f40fd9300421228a485fb49db8f47f125220e12c3229da8dae5c16"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_TeacherKey_readable_2.png",
+      "sha256": "6a11e99bfa4f49a8e46aefdeeb74ec93c6efe85dc0882fa9fecc086ce891322c"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_TeacherKey_readable_3.png",
+      "sha256": "ffc1dc2193d95e0d5589fada8838ccd38bad12822bba76e21eff2cb4c5b2d458"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_TeacherKey_word.txt",
+      "sha256": "a199c155dd7598e68ff1764f29a6d5cc3847e53b04e6871a2c70be40ba7dc5b0"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_overview_1.jpg",
+      "sha256": "6b33163c88c076f82245fd25d4f8f71076c7d9e4169a33a5bd003ceb911e4b91"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_readable_1.png",
+      "sha256": "8082ab2ba7fa2e5c8f333ba905a40332c1ebf4086237f37495aaf20a4dfa1b99"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_readable_2.png",
+      "sha256": "822c8b0183e6e70bf81b11ea7b5d942b0db7aa43b1a656610db7199bb5699723"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_readable_3.png",
+      "sha256": "fdd7aa3ead7cd719f2343672d9c92b6a8e09a8c7bb913f89dc32e898b3e7f4d8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_readable_4.png",
+      "sha256": "cb592c11629abed17861edb7bd3c85ec44c36b9703cc2f2de1e57087a3252deb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_readable_5.png",
+      "sha256": "f19ac2d262fd32604e638c3882f2cc1c9abb9b9ac8ad48e97f5253bcb0d2e10a"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_readable_6.png",
+      "sha256": "44a8374681f5da0f215484435bdabf8640578f10fab69df491aee4b5c18a86c2"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/FinalExplanation_word.txt",
+      "sha256": "9f5c23ea0efb16c331f9f9ec387fd97b7906b2743e99077b346962fbf2b44e99"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/MaterialsTeacherKey.txt",
+      "sha256": "46815a08022b8a5fe92b2a82d97370024daae884bd4e725ce988a6f47bf3b4ec"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/MaterialsTeacherKey_overview_1.jpg",
+      "sha256": "6df43606eb799c043e934e6431217e3b788b6dba0b41b07d48157cffa7035883"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/MaterialsTeacherKey_readable_1.png",
+      "sha256": "cd5176d1d9bcf24e973000e5051f9996f3a8a333d345bcddfcca863b8d90ea5a"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/MaterialsTeacherKey_readable_2.png",
+      "sha256": "1cd7f59e256fa0b4d035096ddd31c0ccc21cab6676974f88ace219a4c44cc6ea"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/MaterialsTeacherKey_readable_3.png",
+      "sha256": "9574341c7e97a6b5104b6ebd3d83d0e455d235e3cb474174219cc1c984fe41ce"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/MaterialsTeacherKey_readable_4.png",
+      "sha256": "67aafc711152b85edb060f59e3ba8ce56e69d4e911337e4ffe3c5d4fdd8309e3"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/MaterialsTeacherKey_word.txt",
+      "sha256": "b342432daf68c7e82a778bbd024c5cf06e56a42627ea6865b88897ebadb0dc37"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/StudentMaterials.txt",
+      "sha256": "0e79466ce5e4aa3d8e842a4ea009f5a78297db67d31092f364c658f9de358bf5"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/StudentMaterials_overview_1.jpg",
+      "sha256": "60788c521c4f9e5ed0328e1e2f924363efbcb2ac6eb3816781fc4111494e3efc"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/StudentMaterials_readable_1.png",
+      "sha256": "980c0be1cb5bb729bfb7d894cc454cac982b0515c2774f72bd46f0447aca57d8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/StudentMaterials_readable_2.png",
+      "sha256": "5faa8fa55538e8fb5cc847464f284e3406ca5c854b076c333980667493bb32fe"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/StudentMaterials_word.txt",
+      "sha256": "b7541d8702afe079fe5bf1357092dab77241713d9e2556f1f62b71bcf170ed2e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/StudentSummaryTable.txt",
+      "sha256": "b00c8c6b009643d69196b7493c3418b0bcd348e151e20a530363f49a3ac16ffb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/StudentSummaryTable_overview_1.jpg",
+      "sha256": "8287f618b43635b539512b9787cbf8df0e316a15197b51769311b9b97d786c08"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/StudentSummaryTable_readable_1.png",
+      "sha256": "d3f3123f97409853effd278643905da547a21c7bd5435c9814dc7bc4176803c2"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/StudentSummaryTable_word.txt",
+      "sha256": "9c21fb1583785fadb98ca5fb63fc21d24780ee66d367c48bdcb50d2cfa47340e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/SummaryTable.txt",
+      "sha256": "552b2f5b3215cf1ed35a1093c1bd7fa77e40ce45002d5514dcd78cdddc8863fa"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/SummaryTable_overview_1.jpg",
+      "sha256": "b5fe365a48241a198fcadc0b3eb651a5fdc29b71d02916ebaced00858d369387"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/SummaryTable_readable_1.png",
+      "sha256": "4be28496fa0615d7169793570342316afa7da2c3df5fd7b638d44590e14d1e22"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/SummaryTable_readable_2.png",
+      "sha256": "3e76b2d21f62a3d6ea86d227301cd58d73d4ad577e24478cf7bbe491c5ac042c"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/SummaryTable_word.txt",
+      "sha256": "61cbafedb0472acb02390ad60a8a61ab90ed1c31acf675c625645a347ac074b5"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/check.json",
+      "sha256": "0c585f4ad05998a685a1aa0d9db959a846aa5acb3e1aa1f1c6658139eab3e2c4"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/check.py",
+      "sha256": "ce57e4ba878dfb44a4d4b468c23584e73af2cf9c4fb18830931ba268887a407d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/frozen_audit_snapshot.json",
+      "sha256": "fedce4f47af3a02858e2ce13a6459ac38ae2900887f788b198a2dab67d4845fb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/readable_plan.json",
+      "sha256": "7b0a88256f0cc613236956127b69484d6088ceaa87d0493da9fc638eb02de905"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/resource_policy_snapshot.json",
+      "sha256": "fba1a39eebe7cbfe9c7039fa9bd95d1af7b4d3ab9410c842be072dae63483a4e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/visual_inventory.json",
+      "sha256": "9c73806eb07ce516032253021b7b235d0716c64024022c8625e1ffc61735f252"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout/visualize.py",
+      "sha256": "f43ba8fe84c11c361ab60c2b199e76cb9c9cd03e836cf62a509f83febff7e7d6"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_layout_manifest.json",
+      "sha256": "750263d28d44af80d3098ce139af934ec12cd0d9a9f7db2e5b45a6a66b6514d9"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_original_png_region.png",
+      "sha256": "f34a9afc35ccd786bae5d03dff1e768f5c588cdef375e1bf9787d672ce4d29c4"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/AssessmentMaterials.txt",
+      "sha256": "166ed2a4747b3e74bff7d46a0adff225081a084caf8c84d7a1f0459f1789a225"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/AssessmentMaterials_overview_1.jpg",
+      "sha256": "252e331d0c0c39018b589e74a3f785b7a34d4401acbc12768da9abe93a67513f"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/AssessmentMaterials_readable_1.png",
+      "sha256": "0bd2c70a74fa6114275e08cd39066c7901749f1d43f0bc11c12d961c1febbc07"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence.txt",
+      "sha256": "d58f322d8294302bdfbc788294d874a1c62fa52a3b69efed0162d4260904aaf2"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence_overview_1.jpg",
+      "sha256": "4562f8202c21f0190f8975e12c433b944f94aeef538f9363e9e2e66f88748cb0"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence_overview_13.jpg",
+      "sha256": "8053e28166f326b0a00de81ef776fd905f4c3c9edf9e73b30f5e87e8402c1300"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence_overview_25.jpg",
+      "sha256": "ed54da66f15aea1c26987687a5437ecc223ed82023eeecfe56840d6c14f88c8a"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence_overview_37.jpg",
+      "sha256": "3d1bbe7e2674a6497ea16273beb476135cc4549f222074381654edb376d4103f"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence_readable_1.png",
+      "sha256": "86d146d9518283d283f8075885874c9d7346ecb08f72866958f1cc503eabd7b3"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence_readable_20.png",
+      "sha256": "fe0ff6e880868a2c805306cf8cedab2d9d962e7fe317aa689737bf31ec97f4aa"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence_readable_24.png",
+      "sha256": "1665a54536fa1fc4d08c70124c0e1fb20a387ae219eb18153a4a1673457ea42c"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence_readable_40.png",
+      "sha256": "df224b6c3d6a902d31c005ad60e28d735edc2414a2201689f140e6dadac4f91f"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence_readable_41.png",
+      "sha256": "f8a75b8fc366775689b4606beefed980421aee18b6b8e11329c1f174e759d8e4"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CBE_LessonSequence_readable_42.png",
+      "sha256": "224601213781400c4825892e542f60decc83f9e4c366803f5ead3736466e8a94"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CompactTeacherGuide.txt",
+      "sha256": "ae8bbf72a2ab2869d4c8281f004ddee6ca89b4fd8fc77939f5dc4c44a6215ee8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CompactTeacherGuide_overview_1.jpg",
+      "sha256": "8a28b6c984246f4b53ac6d80d32c39496eaa6852cf5edab906feffb711e4fdd1"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CompactTeacherGuide_readable_11.png",
+      "sha256": "d7308a1c665d3ca1a9d5d7e2a21f536ad8ff7292d1f8d97e5e4e4316a6b8a93f"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CompactTeacherGuide_readable_12.png",
+      "sha256": "e5d50d43a55411747dfd657e7a939d66eebd74ae13d01a0ecebfc205546c1c0d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/CompactTeacherGuide_readable_7.png",
+      "sha256": "311378ffe52c290d830d8f417bfd591c84aebef80aa0f73d3693eba29c4fd1dc"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation.txt",
+      "sha256": "7f6dbbd5487a2496f49be60aa69d9995f8e418fd9ebb0f3284f9e8dbe412c05c"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_TeacherKey.txt",
+      "sha256": "2c9c03e960144a9d090668ec937db0126932c05e6f9b61d73de9ad06e30f8c39"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_TeacherKey_overview_1.jpg",
+      "sha256": "418853936f3fb9bbd9e40b9ecbcf27d2da2f7551a9ddf72286c2d3229a048f2f"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_TeacherKey_readable_1.png",
+      "sha256": "0c337d84c1f40fd9300421228a485fb49db8f47f125220e12c3229da8dae5c16"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_TeacherKey_readable_2.png",
+      "sha256": "6a11e99bfa4f49a8e46aefdeeb74ec93c6efe85dc0882fa9fecc086ce891322c"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_TeacherKey_readable_3.png",
+      "sha256": "fddf24e70f43f9c9e86b006955f2639f75c2fa224eac1b0f039f74d558186eae"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_overview_1.jpg",
+      "sha256": "c7f6fbc90d77bbebbe1639100ece0b9a547eb3b0f67480c8219c47261ab02f7a"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_readable_1.png",
+      "sha256": "8082ab2ba7fa2e5c8f333ba905a40332c1ebf4086237f37495aaf20a4dfa1b99"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_readable_2.png",
+      "sha256": "822c8b0183e6e70bf81b11ea7b5d942b0db7aa43b1a656610db7199bb5699723"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_readable_3.png",
+      "sha256": "fdd7aa3ead7cd719f2343672d9c92b6a8e09a8c7bb913f89dc32e898b3e7f4d8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_readable_4.png",
+      "sha256": "cb592c11629abed17861edb7bd3c85ec44c36b9703cc2f2de1e57087a3252deb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_readable_5.png",
+      "sha256": "f19ac2d262fd32604e638c3882f2cc1c9abb9b9ac8ad48e97f5253bcb0d2e10a"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/FinalExplanation_readable_6.png",
+      "sha256": "1fcab7aafac16ee5150e5d3be9669e96246e6dfdc8c92ebcd50bb8d5b5a442a4"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/MaterialsTeacherKey.txt",
+      "sha256": "46815a08022b8a5fe92b2a82d97370024daae884bd4e725ce988a6f47bf3b4ec"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/MaterialsTeacherKey_overview_1.jpg",
+      "sha256": "6df43606eb799c043e934e6431217e3b788b6dba0b41b07d48157cffa7035883"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/MaterialsTeacherKey_readable_2.png",
+      "sha256": "1cd7f59e256fa0b4d035096ddd31c0ccc21cab6676974f88ace219a4c44cc6ea"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/MaterialsTeacherKey_readable_3.png",
+      "sha256": "9574341c7e97a6b5104b6ebd3d83d0e455d235e3cb474174219cc1c984fe41ce"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/MaterialsTeacherKey_readable_4.png",
+      "sha256": "67aafc711152b85edb060f59e3ba8ce56e69d4e911337e4ffe3c5d4fdd8309e3"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/StudentMaterials.txt",
+      "sha256": "0e79466ce5e4aa3d8e842a4ea009f5a78297db67d31092f364c658f9de358bf5"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/StudentMaterials_overview_1.jpg",
+      "sha256": "60788c521c4f9e5ed0328e1e2f924363efbcb2ac6eb3816781fc4111494e3efc"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/StudentMaterials_readable_1.png",
+      "sha256": "980c0be1cb5bb729bfb7d894cc454cac982b0515c2774f72bd46f0447aca57d8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/StudentMaterials_readable_2.png",
+      "sha256": "5faa8fa55538e8fb5cc847464f284e3406ca5c854b076c333980667493bb32fe"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/StudentSummaryTable.txt",
+      "sha256": "b00c8c6b009643d69196b7493c3418b0bcd348e151e20a530363f49a3ac16ffb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/StudentSummaryTable_overview_1.jpg",
+      "sha256": "8287f618b43635b539512b9787cbf8df0e316a15197b51769311b9b97d786c08"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/StudentSummaryTable_readable_1.png",
+      "sha256": "d3f3123f97409853effd278643905da547a21c7bd5435c9814dc7bc4176803c2"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/SummaryTable.txt",
+      "sha256": "552b2f5b3215cf1ed35a1093c1bd7fa77e40ce45002d5514dcd78cdddc8863fa"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/SummaryTable_overview_1.jpg",
+      "sha256": "b5fe365a48241a198fcadc0b3eb651a5fdc29b71d02916ebaced00858d369387"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/SummaryTable_readable_1.png",
+      "sha256": "4be28496fa0615d7169793570342316afa7da2c3df5fd7b638d44590e14d1e22"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/SummaryTable_readable_2.png",
+      "sha256": "3e76b2d21f62a3d6ea86d227301cd58d73d4ad577e24478cf7bbe491c5ac042c"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/archived_AssessmentMaterials.pdf",
+      "sha256": "9a8fdac12996fbe677082fea1477212501acf227d7eb5db28e6f0629cd1166b0"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/archived_CBE_LessonSequence.pdf",
+      "sha256": "4b128554bee21d8cf8cd116d60a561c53ac77477d2fa06fd0ebf0d35739076a5"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/archived_CompactTeacherGuide.pdf",
+      "sha256": "4bac6f13053ad6179fb017867da90088fe15d9a9ffa2c7bb0d0278140d294b46"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/archived_FinalExplanation.pdf",
+      "sha256": "5d9f5e1bd209010038119a1fdbbe6084612f722bb27ffc33163d09a58a584e45"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/archived_FinalExplanation_TeacherKey.pdf",
+      "sha256": "4e3e5b09c8b1cab3c39ba6fba3467cbf5912cad19316a6e0162364f725f77c1e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/archived_MaterialsTeacherKey.pdf",
+      "sha256": "3c2e7cac143c61bf1be86438bf9d2fe0522b704b4ce473a3035e4361fc1de655"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/archived_StudentMaterials.pdf",
+      "sha256": "0af5c10c8f81ac8eac37fc62e23c14d2f9d7dace7609b04fdd4a99a08f7af9f6"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/archived_StudentSummaryTable.pdf",
+      "sha256": "f69c01795a199a25e1273be4f4a5861e493f60792970806678e06791174d01c5"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/archived_SummaryTable.pdf",
+      "sha256": "58cd54a205463313ffa08072b81c375635d77c6eec8ee0d326a49a27d192165d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/bridge.json",
+      "sha256": "b537d6ffcbf2a764acbb679cab2c1f0d4b3233254d1aa324f351334807c52d13"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/bridge.py",
+      "sha256": "01c141e07e2a5b920136810b92c579f28add226eeb90e59cd07614bc78d4fa1b"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/check.json",
+      "sha256": "c938b22e2d3373e29520c59be6b83ef1088dde0e86ed6e9524ac7a516a5805ac"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/check.py",
+      "sha256": "77b7119914f742c9fb7c0d4935f5ae6e8f0d63227b7ddbbbf750da676ea2e967"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/check_console.json",
+      "sha256": "35e923251eab3142a5d334c421352e07fa6f805f63275c88a908c4a5593c26cc"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/final_binding.json",
+      "sha256": "e0437ab0c4daa459bcef8b2665f19537849b5fbfaec8e3b4441a8547db9efa96"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/frozen_audit_snapshot.json",
+      "sha256": "6fa97d1e2ce22adf6164f7c3ad24f64fb9c80ed52086c34ee6520d2bd23f775b"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/frozen_content_acceptance.json",
+      "sha256": "8b5a53ba4ec12f5210b9801c120099cf44f170195e3333b00b4eba0a7176872e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/readable_plan.json",
+      "sha256": "263ead9c109991158058385acf9bafead766c99c81d81e091408b44ea3ce8776"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/visual_inventory.json",
+      "sha256": "048e989778faf05f1c37b589f5159dbec23045dbf78fa9a36fb26aaf4a39487b"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/visual_manifest.json",
+      "sha256": "ce51404e3a99a991897c28c5773fc5abf6627563367ad6a67b939115fbba9d79"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_layout/visualize.py",
+      "sha256": "cfc55a82287cace6acade2d4cb44c2a1faf297ef3b3a8f5dfd10711d761b9d11"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/AssessmentMaterials_current.txt",
+      "sha256": "2f783371f04322baad1d5d8d09b2bf9734577944396f6c1d3c1689e8be75eb8d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/CompactTeacherGuide_current.txt",
+      "sha256": "12fcf2cf945be364acb37e65e9e666774491f4529022a74164ddca7b448cee5d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/MaterialsTeacherKey_current.txt",
+      "sha256": "b342432daf68c7e82a778bbd024c5cf06e56a42627ea6865b88897ebadb0dc37"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/StudentMaterials_current.txt",
+      "sha256": "b7541d8702afe079fe5bf1357092dab77241713d9e2556f1f62b71bcf170ed2e"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/StudentSummaryTable_current.txt",
+      "sha256": "b58cd9fa7cad7d62c2009eaa3695d9c87908f44333c520dfee1b8fe25029fadb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/binding.json",
+      "sha256": "1a665160f3d6b4b326b7cfd017f242fb9e1344c245fcad0332a378d125b0d4b7"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/check_both_units.py",
+      "sha256": "2082d850141b952ea8d1a8ee87392e5bf6dfed6bb4f87cb472e54cc411383cec"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/current_blueprints.json",
+      "sha256": "587f324f9818933daca1534c21dffeb31b16995dcfda017b9ff0383de1e0e8c8"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/current_manuscripts.json",
+      "sha256": "c257d0182ae33868260119079cc9dae2fa5b59e2840538ffb9a9dfe8b1b01fd0"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/current_materials.json",
+      "sha256": "598deb0de862e861e250d31c4f1ad17973111b1432396dadb2ac86855838797d"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/current_sources.json",
+      "sha256": "3f6b0e7f72ab8d9039a8cdaafa9a291e7d05939e917256f27023672adb160fcb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_rubric_correction_recheck/manifest.json",
+      "sha256": "e131c535a7cb2fdb594cd95f8a1d362eb45048687e53a9a0bb76ffdbac737a7c"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_science_initial_word_check.json",
+      "sha256": "8f47e661b7b70cf8fa7dda898fc311c2548454f9d6372d1ae72970745b2eb8ac"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_science_initial_word_check.py",
+      "sha256": "0049079c25401c44a9b994a118c0c18af2d986785441d27cfe61bf9ec1f56d64"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_science_solutions.json",
+      "sha256": "33ad0c26dc092ce127f7319afa65c420d2a7a81da191b821e57fa05083a17557"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_science_solutions.py",
+      "sha256": "3ad1ebb6521e0fb9c0a8016cac848eff4a53fba15da49cd66d9ab37b5803746b"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_source_initial.json",
+      "sha256": "3f6b0e7f72ab8d9039a8cdaafa9a291e7d05939e917256f27023672adb160fcb"
+    },
+    {
+      "path": "reviews/batch_07/evidence/coremath_1_1_source_recheck_snapshot.json",
+      "sha256": "3f6b0e7f72ab8d9039a8cdaafa9a291e7d05939e917256f27023672adb160fcb"
+    },
+    {
+      "path": "reviews/coremath_1_1/artifact_acceptance.json",
+      "sha256": "95e00115fa91daab265ff7955ed7c180e678f02214297f3f0236c92360dc9c5b"
+    },
+    {
+      "path": "reviews/coremath_1_1/content_acceptance.json",
+      "sha256": "8b5a53ba4ec12f5210b9801c120099cf44f170195e3333b00b4eba0a7176872e"
+    },
+    {
+      "path": "sources/coremath_1_1.json",
+      "sha256": "3f6b0e7f72ab8d9039a8cdaafa9a291e7d05939e917256f27023672adb160fcb"
+    },
+    {
+      "path": "sources/coremath_1_1.verification.json",
+      "sha256": "c2e6c54bda9936842e70cce85927d0436c3a5e699c196f68d584bc951646775b"
+    },
+    {
+      "path": "sources/coremath_1_1_ocr.txt",
+      "sha256": "494ac5335053269361a9db6f5f0d1b01ec570ea253999b798e6f9fefcd632095"
+    },
+    {
+      "path": "sources/coremath_1_1_source.png",
+      "sha256": "f53737b3a5115509af7aa5f47b678dd1cf628a0fb00dd3724fef34d831b906de"
+    }
+  ]
+}

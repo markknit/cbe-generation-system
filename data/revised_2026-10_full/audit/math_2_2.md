@@ -1,10 +1,11 @@
 # Known audit items: math_2_2
 
 ## Lesson-sequence items (teacher review list)
-- **[structural]** Shamba dimensions: L1 (48,35,52,40,37), L2 AB=120/AC=95/68 deg, L4 sub-plot 40/55/63, L7 (42,38,45,30,50) — Real: L1's sides are given 'e.g.' and later lessons (and FE Part 2) each use their own numbers with full worked calculations; reconciling needs one designed dataset, not spot edits.
+- **[structural]** When reflection properties were first discovered — L3 overview and slo already state the equidistance/perpendicular properties that L4 frames as first discovery; overlapping content, not a small edit.
+- **[teaching choice]** Mirror line as guarantor of congruence (L2) vs congruence as open puzzle (L1/L7) — Line-of-symmetry framing (L2) vs distance-preservation proof (L7) are two valid explanations at different depths.
 
 ## Final Explanation reviewer findings (unverified; some are false alarms)
 - none
 
 ## Other
-- Template problem: Template has activities but no real phenomenon.
+- none

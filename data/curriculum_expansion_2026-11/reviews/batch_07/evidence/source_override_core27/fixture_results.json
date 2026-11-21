@@ -1,0 +1,62 @@
+[
+  {
+    "case": "fresh",
+    "checks": {
+      "protected_bytes_identical": true,
+      "accepted_fingerprints_identical": true,
+      "all_accepted_remain_verified": true,
+      "renderer_calls_exact": true,
+      "replacement_render_cached": true,
+      "coremath_1_1_replacement_record": true,
+      "coremath_1_1_ocr_bounds_and_source": true,
+      "coremath_1_1_not_autoaccepted": true,
+      "coremath_1_2_replacement_record": true,
+      "coremath_1_2_ocr_bounds_and_source": true,
+      "coremath_1_2_not_autoaccepted": true
+    },
+    "error": null,
+    "pass": true
+  },
+  {
+    "case": "reuse",
+    "checks": {
+      "protected_bytes_identical": true,
+      "accepted_fingerprints_identical": true,
+      "all_accepted_remain_verified": true,
+      "renderer_calls_exact": true,
+      "replacement_render_cached": true,
+      "coremath_1_1_replacement_record": true,
+      "coremath_1_1_ocr_bounds_and_source": true,
+      "coremath_1_1_not_autoaccepted": true,
+      "coremath_1_2_replacement_record": true,
+      "coremath_1_2_ocr_bounds_and_source": true,
+      "coremath_1_2_not_autoaccepted": true
+    },
+    "error": null,
+    "pass": true
+  },
+  {
+    "case": "negative_start",
+    "checks": {
+      "expected_geometry_or_bounds_rejection": true
+    },
+    "error": "Source crop outside captured image: coremath_1_1",
+    "pass": true
+  },
+  {
+    "case": "end_beyond_image",
+    "checks": {
+      "expected_geometry_or_bounds_rejection": true
+    },
+    "error": "Source crop outside captured image: coremath_1_1",
+    "pass": true
+  },
+  {
+    "case": "replacement_wrong_width",
+    "checks": {
+      "expected_geometry_or_bounds_rejection": true
+    },
+    "error": "Unexpected replacement source-render geometry",
+    "pass": true
+  }
+]

@@ -1,0 +1,328 @@
+[
+  {
+    "case": "baseline",
+    "expected_exit": 0,
+    "exit_code": 0,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": []
+    },
+    "created_utc": "2026-11-14T20:15:35.621005+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "artifact_HOLD_and_changed_layout_report",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "Fixture.zip: archived review file changed: reviews/layout.md",
+        "demo: artifact acceptance verdict/fingerprint mismatch",
+        "demo: artifact report hash changed: data/curriculum_expansion_2026-11/reviews/layout.md"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:35.664038+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "wrong_nine_document_types",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "demo: exact delivery document types mismatch"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:35.693975+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "empty_member_manifest",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "Fixture.zip: manifest must uniquely cover every member except itself"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:35.723534+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "archived_canonical_differs",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "demo: archived canonical fingerprint differs from accepted/current"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:35.754307+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "bad_receipt_sha_control",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "Fixture.zip: receipt SHA mismatch"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:35.785660+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "bad_member_sha_control",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "Fixture.zip: member SHA mismatch: outputs/Demo_CBE_LessonSequence.docx"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:35.829000+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "legacy_fallback_positive",
+    "expected_exit": 0,
+    "exit_code": 0,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": []
+    },
+    "created_utc": "2026-11-14T20:15:35.872223+00:00",
+    "acceptance_mode": "legacy_frozen_manifest_and_review_hashes"
+  },
+  {
+    "case": "legacy_bad_verdict",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "demo: no accepted frozen artifact verdict"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:35.914942+00:00",
+    "acceptance_mode": "legacy_frozen_manifest_and_review_hashes"
+  },
+  {
+    "case": "legacy_changed_review",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "Fixture.zip: archived review file changed: reviews/layout.md"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:35.958764+00:00",
+    "acceptance_mode": "legacy_frozen_manifest_and_review_hashes"
+  },
+  {
+    "case": "missing_implicit_image",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "demo: missing archived fingerprint input"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:35.988449+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "changed_declared_asset",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "demo: archived canonical fingerprint differs from accepted/current"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:36.018287+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "duplicate_manifest_row",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "Fixture.zip: manifest must uniquely cover every member except itself"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:36.064186+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "artifact_acceptance_bad_hash",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": [
+        "demo: artifact acceptance SHA mismatch: outputs/Demo_CBE_LessonSequence.docx"
+      ]
+    },
+    "created_utc": "2026-11-14T20:15:36.107987+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  },
+  {
+    "case": "empty_content_evidence",
+    "expected_exit": 1,
+    "exit_code": 0,
+    "matches_expected": false,
+    "result": {
+      "expansion_units": 1,
+      "expansion_lessons": 1,
+      "by_subject_expansion_only": {
+        "Fixture": {
+          "units": 1,
+          "lessons": 1
+        }
+      },
+      "blocked_source_modules": [],
+      "errors": []
+    },
+    "created_utc": "2026-11-14T20:15:36.151517+00:00",
+    "acceptance_mode": "explicit_artifact_acceptance"
+  }
+]

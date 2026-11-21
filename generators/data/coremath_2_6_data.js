@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Selecting and stating the correct formula for each circle part",
       "excellent": "Names the correct formula for all five sub-regions (annulus, sector, annular sector, segment, common region) and explains why each fits the shape's structure.",
       "proficient": "States the correct formula for most sub-regions, with only minor slips or limited explanation of why it fits.",
-      "developing": "States few correct formulae or confuses them, for example omitting the triangle subtraction in the segment formula."
+      "developing": "States few correct formulae or confuses them, for example omitting the triangle subtraction in the segment formula.",
+      "belowExpectations": "Cannot state the correct formula for most of the circle parts, or confuses them, even when prompted."
     },
     {
       "criterion": "Accuracy of calculations and units",
       "excellent": "All calculations are correct, with each radius squared before subtracting, angles used correctly, and answers given in the right units (m², cm², m).",
       "proficient": "Most calculations are correct, with small rounding or unit errors that do not change the method.",
-      "developing": "Several calculation errors, such as subtracting radii before squaring, or units missing or wrong."
+      "developing": "Several calculation errors, such as subtracting radii before squaring, or units missing or wrong.",
+      "belowExpectations": "Calculations are mostly incorrect or not attempted, with radii and angles used wrongly, and units missing or wrong."
     },
     {
       "criterion": "Structured working and mathematical reasoning",
       "excellent": "Working is set out clearly step by step, and the cosine rule steps for the lens are explained and linked to the segments.",
       "proficient": "Working is mostly clear, with some steps missing or the reasoning for the common region only partly explained.",
-      "developing": "Working is hard to follow or answers are given without steps or reasons."
+      "developing": "Working is hard to follow or answers are given without steps or reasons.",
+      "belowExpectations": "Working is missing or cannot be followed, and the steps for the common region are not attempted."
     },
     {
       "criterion": "Connecting to the phenomenon and Kenyan contexts",
       "excellent": "Clearly links every formula to the Laikipia farm and gives a correct, relevant Kenyan example showing how exact area avoids waste.",
       "proficient": "Links most answers to the Laikipia farm, and gives a Kenyan example with limited explanation.",
-      "developing": "Little or no link to the farm or Kenyan contexts, and the answer to the driving question is incomplete."
+      "developing": "Little or no link to the farm or Kenyan contexts, and the answer to the driving question is incomplete.",
+      "belowExpectations": "Makes no link to the Laikipia farm or Kenyan contexts, and does not answer the driving question."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

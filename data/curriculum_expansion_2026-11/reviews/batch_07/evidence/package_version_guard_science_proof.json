@@ -1,0 +1,75 @@
+{
+  "verdict": "PASS",
+  "scope": "Exactly six added preflight lines plus moved archive path assignment;five isolated fail-before-write scenarios only;no production helper execution or package/state mutation.",
+  "current_helper_sha256": "cd65aa16966638bea2d22d3f1208bdbd3b7d4a585618e9cc660fd011401aa4a1",
+  "prior_audit_date_helper_sha256": "5ad6ba255cd0d6dcf5c5271181a1d919422c70d98d797b465ffd7837f46cf7db",
+  "exact_reverse_delta_matches_prior_reviewed_helper": true,
+  "diff": "--- prior_audit_date_reviewed\n+++ version_guard\n@@ -5,6 +5,12 @@\n from curriculum_pipeline import content_fingerprint\n b=Path('data/curriculum_expansion_2026-11')\n n,reportname,expected,scope=sys.argv[1:5]\n+archive_name=sys.argv[5] if len(sys.argv)>5 else n+'_Reviewed.zip'\n+if Path(archive_name).name!=archive_name or Path(archive_name).suffix!='.zip':\n+ raise ValueError('archive name must be a simple .zip filename')\n+zp=b/archive_name\n+if zp.exists():\n+ raise FileExistsError('Frozen archive already exists; choose an explicit new version: '+str(zp))\n h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()\n report_candidates=[Path(reportname),b/'reviews/batch_05'/reportname,b/'reviews/batch_06'/reportname]\n report=next((p for p in report_candidates if p.is_file()),report_candidates[-1])\n@@ -46,7 +52,6 @@\n  files.update(p for p in (b/'reviews/batch_05/evidence/respiration_primary').rglob('*') if p.is_file())\n manifest=dict(module=n,lessons=len(m['lessons']),created_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),content_fingerprint=fp,content_verdict='accepted',artifact_verdict='scoped_review_pass',teacher_acceptance='pending',partner_ingestion='R1supportpending',files=[dict(path=str(p.relative_to(b)),sha256=h(p)) for p in sorted(files)])\n mp=b/'evidence'/f'{n}_reviewed_manifest.json';mp.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\\n');files.add(mp)\n-zp=b/(n+'_Reviewed.zip')\n with zipfile.ZipFile(zp,'w',zipfile.ZIP_DEFLATED) as z:\n  for p in sorted(files):z.write(p,p.relative_to(b))\n with zipfile.ZipFile(zp) as z:\n",
+  "fixture_root": "/home/markk/ares/cbe-generation-system/data/curriculum_expansion_2026-11/reviews/batch_07/evidence/package_version_guard_science_fixture",
+  "fixture_initial_file_sha256": {
+    "data/curriculum_expansion_2026-11/evidence/isolated_unit_package.json": "f5f7edb22bc954bdcf37236575c82a03b938e256d0db6fb2a86133cec3b3f9d5",
+    "data/curriculum_expansion_2026-11/evidence/isolated_unit_reviewed_manifest.json": "31c13d5fa146d693b283833f5d5d0b0fe749a3b7d2c2bbeae8d2048c4b6d4f48",
+    "data/curriculum_expansion_2026-11/inventory/progress.json": "8290c48d82ca8c3073fe4dec578b6ddc9f295e8e2533be73a3aefb81edf676f5",
+    "data/curriculum_expansion_2026-11/isolated_unit_Reviewed.zip": "a2f7527a02d871cafaf792ac5ba4064de39b8f3a41af75eb4e0fd7375d0614f4",
+    "data/curriculum_expansion_2026-11/isolated_unit_Reviewed_v1.zip": "a2f7527a02d871cafaf792ac5ba4064de39b8f3a41af75eb4e0fd7375d0614f4",
+    "data/curriculum_expansion_2026-11/reviews/isolated_unit/artifact_acceptance.json": "c0d64037a1c582a883b7031a89378ef3c4cf842710dbd82756dcdd15b85c6bcd",
+    "report.md": "93a962fe08174d81c6f86f433329912594c1e9a01dd471fc6ba7a8dfe1072d42",
+    "reviewed_package_helper.py": "cd65aa16966638bea2d22d3f1208bdbd3b7d4a585618e9cc660fd011401aa4a1",
+    "scripts/curriculum_pipeline.py": "5b2ccc6c306c93c4de0a2d93ea0a74fb5877f139f8477bcd7d7c56a1c94bc7b2"
+  },
+  "cases": [
+    {
+      "case": "existing default",
+      "optional_archive_name": null,
+      "returncode": 1,
+      "expected_exception": "FileExistsError",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/markk/ares/cbe-generation-system/data/curriculum_expansion_2026-11/reviews/batch_07/evidence/package_version_guard_science_fixture/reviewed_package_helper.py\", line 13, in <module>\n    raise FileExistsError('Frozen archive already exists; choose an explicit new version: '+str(zp))\nFileExistsError: Frozen archive already exists; choose an explicit new version: data/curriculum_expansion_2026-11/isolated_unit_Reviewed.zip\n",
+      "stdout": "",
+      "all_files_unchanged": true,
+      "pass": true
+    },
+    {
+      "case": "existing explicit frozen version",
+      "optional_archive_name": "isolated_unit_Reviewed_v1.zip",
+      "returncode": 1,
+      "expected_exception": "FileExistsError",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/markk/ares/cbe-generation-system/data/curriculum_expansion_2026-11/reviews/batch_07/evidence/package_version_guard_science_fixture/reviewed_package_helper.py\", line 13, in <module>\n    raise FileExistsError('Frozen archive already exists; choose an explicit new version: '+str(zp))\nFileExistsError: Frozen archive already exists; choose an explicit new version: data/curriculum_expansion_2026-11/isolated_unit_Reviewed_v1.zip\n",
+      "stdout": "",
+      "all_files_unchanged": true,
+      "pass": true
+    },
+    {
+      "case": "invalid parent path",
+      "optional_archive_name": "../escape.zip",
+      "returncode": 1,
+      "expected_exception": "ValueError",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/markk/ares/cbe-generation-system/data/curriculum_expansion_2026-11/reviews/batch_07/evidence/package_version_guard_science_fixture/reviewed_package_helper.py\", line 10, in <module>\n    raise ValueError('archive name must be a simple .zip filename')\nValueError: archive name must be a simple .zip filename\n",
+      "stdout": "",
+      "all_files_unchanged": true,
+      "pass": true
+    },
+    {
+      "case": "invalid suffix",
+      "optional_archive_name": "isolated_unit_v2.txt",
+      "returncode": 1,
+      "expected_exception": "ValueError",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/markk/ares/cbe-generation-system/data/curriculum_expansion_2026-11/reviews/batch_07/evidence/package_version_guard_science_fixture/reviewed_package_helper.py\", line 10, in <module>\n    raise ValueError('archive name must be a simple .zip filename')\nValueError: archive name must be a simple .zip filename\n",
+      "stdout": "",
+      "all_files_unchanged": true,
+      "pass": true
+    },
+    {
+      "case": "new explicit version reaches unchanged report guard",
+      "optional_archive_name": "isolated_unit_Reviewed_v2.zip",
+      "returncode": 1,
+      "expected_exception": "AssertionError",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/markk/ares/cbe-generation-system/data/curriculum_expansion_2026-11/reviews/batch_07/evidence/package_version_guard_science_fixture/reviewed_package_helper.py\", line 17, in <module>\n    assert h(report)==expected\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "stdout": "",
+      "all_files_unchanged": true,
+      "pass": true
+    }
+  ],
+  "all_fixture_files_unchanged": true,
+  "production_helper_unchanged": true,
+  "limit": "Preflight proof covers existing files at invocation under the serialized packaging workflow;it does not test successful production packaging or broaden earlier acceptance/audit review."
+}

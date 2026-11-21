@@ -1,0 +1,64 @@
+{
+ "module": "phys_3_2",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 8,
+   "verified": 4,
+   "confirmed": 1,
+   "autofix": 0,
+   "to_teachers": 1,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Lesson 6 states the bulb filament is 30 Ω at full brightness on 9 V. The 9 V, 2.7 W rating gives R = 81/2.7 = 30 Ω at full brightness. The series and parallel data (0.30 A at 9 V) are consistent. Less",
+     "reason": "The lessons say consistently that the 30 Ω value is an idealised simplification, so there is no contradiction."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "The calculation is correct: 1.1e-6/3.1e-8 = 35.5 Ω. No error.",
+     "reason": "The arithmetic is correct: 1.1e-6/3.1e-8 is about 35.5 Ω."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "This is correct for an ideal meter, so no scientific error is present.",
+     "reason": "With an ideal voltmeter across the open gap in the series loop, nearly the full 9 V appears there, so the statement is correct."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The pacing allots 15 min to Explain, but that phase asks for a CER write-up, three cost calculations, a joule calculation, and a blown-tube variant, plus a Mode"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Arithmetic is fine here. However, the Lesson 4 Observe phase claims that with one series bulb removed the voltmeter across the gap reads about 9 V, which is con"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The arithmetic is correct. The same-lesson exit-ticket answer was checked and also holds. Nothing wrong found here, so this is a placeholder with no defect."
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The calculation is correct. The lesson later gives a 60 Ω current as 0.15 A, which is also correct, so this is not a defect."
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "TIMING",
+   "where": "Lesson 4, framework Predict Phase teacherMoves (pacing note)",
+   "problem": "The phase minutes (5+15+10+4+6) sum to 40, which matches the duration. However, the Model Building teacherMoves says 'Give 8 minutes' while the pacing allots 6 min for Model Building, so the phase times do not fit the stated pacing.",
+   "quote_a": "Predict 5 min, Observe 15 min (groups do tasks 1 to 3; task 4 is a quick teacher demonstration if groups run short",
+   "quote_b": "",
+   "correct_value": "Model Building time must be 6 minutes or the pacing must change"
+  }
+ ]
+}

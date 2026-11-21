@@ -676,31 +676,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim answers the driving question",
       "excellent": "Gives a clear claim that alkalinity, with strength and safety, largely determines uses, and states why antacids are given for hyperacidity.",
       "proficient": "Gives a claim about uses and antacids but leaves out strength or safety.",
-      "developing": "Claim is missing, unclear or does not address both parts of the question."
+      "developing": "Claim is missing, unclear or does not address both parts of the question.",
+      "belowExpectations": "Gives no claim, or a claim that is incorrect and does not address the driving question."
     },
     {
       "criterion": "Use of evidence and data",
       "excellent": "Uses exact pH values, concentrations, indicator colours, reaction tests and stomach/soil pH changes correctly in every part.",
       "proficient": "Uses most data correctly, with one or two missing or small errors.",
-      "developing": "Uses little data, or data is incorrect or not linked to the claim."
+      "developing": "Uses little data, or data is incorrect or not linked to the claim.",
+      "belowExpectations": "Uses no data, or uses data that is incorrect and not linked to any claim."
     },
     {
       "criterion": "Particle-level reasoning",
       "excellent": "Explains using H+ (aq) and OH- (aq), the Arrhenius definitions, the 10-fold pH change and H+ (aq) + OH- (aq) gives H2O (l) accurately.",
       "proficient": "Mentions H+ and OH- ions correctly but explanations are incomplete.",
-      "developing": "Does not use ions, or confuses acids and bases."
+      "developing": "Does not use ions, or confuses acids and bases.",
+      "belowExpectations": "Does not use ions in the explanation, or confuses acids and bases throughout."
     },
     {
       "criterion": "Strength, concentration and safety",
       "excellent": "Clearly separates strength from concentration using the HCl, ethanoic acid, NaOH and ammonia data, and links this to safe antacid and soap use.",
       "proficient": "Describes strength correctly but does not link to safety clearly.",
-      "developing": "Confuses strength with concentration or omits safety."
+      "developing": "Confuses strength with concentration or omits safety.",
+      "belowExpectations": "Treats strength and concentration as the same, and says nothing about safety."
     },
     {
       "criterion": "Kenyan context and communication",
       "excellent": "Links to Kisumu products, Kericho lime and the Nairobi pharmacist; uses correct terms in clear, organised sentences.",
       "proficient": "Uses some contexts and mostly correct terms.",
-      "developing": "Little context; terms are misused or writing is hard to follow."
+      "developing": "Little context; terms are misused or writing is hard to follow.",
+      "belowExpectations": "Gives no Kenyan context, uses terms incorrectly, and the writing is hard to follow."
     }
   ]
 };
@@ -782,6 +787,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

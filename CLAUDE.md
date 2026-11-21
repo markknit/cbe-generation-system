@@ -1,8 +1,10 @@
 # CLAUDE.md — Kenya CBE Lesson Plan Generation System
 
-> **Last updated: 2026-07-31** (the "MCP Tools: code-review-graph" section
-> at the bottom was appended by an installer, then scoped by hand the same
-> day — see `STATUS.md` Known Issues for what the installer got wrong)
+> **Last updated: 2026-11-12** (weekly usage clean-stop policy added;
+> 2026-10-26: presentations no longer "deferred";
+> 2026-11-08: graph/file counts re-derived. The "MCP Tools: code-review-graph"
+> section at the bottom was appended by an installer, then scoped by hand on
+> 2026-07-31 — see `STATUS.md` Known Issues for what the installer got wrong)
 > (an earlier version was corrupted as UTF-16 —
 > re-saved as UTF-8; if this file ever displays garbled again, check
 > encoding before assuming content is wrong)
@@ -43,6 +45,18 @@ in the whole project.
 ---
 
 ## Project Identity
+
+**Codex usage checkpoints:** before authoring a module or starting a reviewer
+batch, run `python3 scripts/check_codex_usage.py`; repeat during long active
+work as specified in WORKFLOW.md. The threshold and stop policy are in
+`config/codex_usage_guard.json`. Exit 10 means stop launching work, save at
+the next small clean boundary, perform the project's `/update` workflow,
+commit a precise handoff locally, report paused and end the turn. Exit 20
+means usage is unknown: do not start more authoring/reviewers until verified.
+`/restart` uses `--read-only`; it verifies state and does not resume generation.
+After explicit user resume, use `--resume` to clear an old pause latch only
+when the live allowance permits it. Do not automatically switch accounts,
+consume resets or buy credits. See WORKFLOW.md for the full handoff protocol.
 
 **Goal:** Generate ~2,000 Kenya CBE lesson plans as `.docx` files (Grade 10 Biology, Chemistry, Physics, Mathematics).
 **Server:** `jhm-spark` | **User:** `markk` | **Root:** `/home/markk/ares/cbe-generation-system`
@@ -161,6 +175,7 @@ scripts/check_resource_links.py         - Link gate, run by generate.js; non-zer
 scripts/validate_quiz.py                - Quiz validator (gates generation and rendering)
 scripts/validate_corpus.js              - Lesson contract check, all data files
 ares-contract.schema.json               - Partner contract (strict) for *_data.json
+CONTRACT_CHANGELOG.md                   - EVERY change to that contract, newest first, with where-in-repo + what the partner must do
 PARTNER_CONTRACT_NOTES.md               - What changed for the partner, and what didn't
 scripts/patch_lesson.js                 - Repair stub lessons
 scripts/patch_fe.js                     - Repair missing Final Explanations
@@ -445,7 +460,7 @@ Grep/Glob/Read.** It is faster, cheaper, and gives structural context
 
 ### What the graph covers
 
-Exactly the 183 tracked `.js` / `.py` / `.sh` files: `generators/`,
+Exactly the 585 tracked `.js` / `.py` / `.sh` files (re-counted 2026-11-08; `git ls-files | grep -E '\.(js|py|sh)$' | wc -l`): `generators/`,
 `generators/lib/`, `src/`, `scripts/`. This is where it earns its keep.
 
 - **Exploring code**: `semantic_search_nodes_tool` or `query_graph_tool` instead of Grep
@@ -456,12 +471,12 @@ Exactly the 183 tracked `.js` / `.py` / `.sh` files: `generators/`,
 
 ### What the graph does not cover — read these files directly
 
-- **All 52 tracked `.md` files — zero are indexed.** Indexed languages are
+- **All 245 tracked `.md` files — zero are indexed** (re-counted 2026-11-08). Indexed languages are
   python, bash, javascript only. `STATUS.md`, `CLAUDE.md`, `WORKFLOW.md`,
   and everything in `docs/` are invisible to the graph. **The mandatory
   first action in this project — reading `STATUS.md`'s Active Threads —
   is a plain `Read`, and no graph tool substitutes for it.**
-- **`generators/data/*_data.js` content.** All 85 are indexed, but each is
+- **`generators/data/*_data.js` content.** All 95 are indexed, but each is
   a bare `File` node: they export object literals, so there are no
   functions, calls, or imports to graph. The graph can tell you a data
   file exists; it cannot tell you anything about lesson content, phase

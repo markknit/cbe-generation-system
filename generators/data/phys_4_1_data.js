@@ -495,31 +495,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence from the unit",
       "excellent": "Uses specific data from the lessons accurately, such as the glacier area of about 1.35 km² in 1934 falling to less than 0.20 km² in 2023, the loss of over 90% of its mass since 1900, the Embu farmer's testimony, the Keeling Curve and the PhET observations, and links each to a claim.",
       "proficient": "Uses some evidence from the unit correctly but with limited detail or missing a number, and links most evidence to claims.",
-      "developing": "Gives little or no evidence, or evidence is inaccurate or not linked to a claim."
+      "developing": "Gives little or no evidence, or evidence is inaccurate or not linked to a claim.",
+      "belowExpectations": "Gives no evidence, or the evidence is wrong and not linked to any claim."
     },
     {
       "criterion": "Physics of the greenhouse effect",
       "excellent": "Correctly traces shortwave radiation in, longwave infrared out, absorption and re-emission by greenhouse gases, and back-radiation, and clearly distinguishes the natural from the enhanced greenhouse effect.",
       "proficient": "Describes the main steps of the mechanism with minor gaps or imprecise terms, and mentions the natural and enhanced effects.",
-      "developing": "Describes warming in general terms, with missing steps or confusion between types of radiation."
+      "developing": "Describes warming in general terms, with missing steps or confusion between types of radiation.",
+      "belowExpectations": "Does not explain the greenhouse effect, or the explanation is mostly incorrect."
     },
     {
       "criterion": "Causal chain and explanation of both phenomena",
       "excellent": "Builds a complete connected chain from Kenyan human activity to greenhouse gas increase, to enhanced back-radiation, to warming, to glacier loss and altered rainfall, and explains why one cause accounts for both.",
       "proficient": "Builds a mostly complete chain with one step missing or weakly explained.",
-      "developing": "Gives isolated statements without a connected chain, or explains only one of the two phenomena."
+      "developing": "Gives isolated statements without a connected chain, or explains only one of the two phenomena.",
+      "belowExpectations": "Does not give a causal chain for either phenomenon."
     },
     {
       "criterion": "Distinguishing ideas (ozone, correlation, mechanism)",
       "excellent": "Clearly separates ozone depletion from the greenhouse effect and the correlation shown in data from the explanation by physics.",
       "proficient": "Separates these ideas with some imprecision.",
-      "developing": "Confuses ozone depletion with the greenhouse effect or treats correlation as the explanation."
+      "developing": "Confuses ozone depletion with the greenhouse effect or treats correlation as the explanation.",
+      "belowExpectations": "Treats ozone depletion, the greenhouse effect and correlation as the same thing."
     },
     {
       "criterion": "Responses and communication",
       "excellent": "Suggests Kenyan responses placed at the correct step of the chain, uses the Montreal Protocol as evidence, and writes clearly with correct scientific terms and a relevant open question.",
       "proficient": "Suggests reasonable responses with limited link to the chain and mostly clear writing.",
-      "developing": "Gives vague responses or unclear writing with few scientific terms."
+      "developing": "Gives vague responses or unclear writing with few scientific terms.",
+      "belowExpectations": "Gives no response, or the writing is unclear with almost no scientific terms."
     }
   ]
 };
@@ -580,6 +585,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -1,0 +1,54 @@
+{
+ "module": "phys_1_4",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 6,
+   "verified": 4,
+   "confirmed": 1,
+   "autofix": 0,
+   "to_teachers": 1,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "Mwende has a mass of 30 kg (300 N). She could pull down with 200 N using body weight, which is fine. But the plan's Lesson 6 expected model-lift readings 'never below 10 N' for a 20 N load with 2 supp",
+     "reason": "The reviewer's own note says there is no error; a fixed pulley with VR = 1 and body-weight pulling is consistent."
+    },
+    {
+     "type": "ARITHMETIC",
+     "problem": "75 J into a 5 kg sack of sand (specific heat ~800 J/kg.K) gives about 0.019 K, which is fine; no error.",
+     "reason": "75 J into 5 kg of sand at about 800 J/kg.K gives roughly 0.019 K, so the figure is correct."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Not a contradiction; consistent.",
+     "reason": "The values are consistent: v = 3.2 m/s ideal, 3.0 m/s real, KE 9 J, 1 J transferred."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The given speeds do not match KE = 1/2 x 20 x v^2 (400 J gives 6.3 m/s, which is correct, but 1200 J at 2 m gives 15.5 m/s, not 11.0 m/s), and the lesson tells "
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "With KE = 400 J and m = 20 kg, v = sqrt(2*400/20) = 6.3 m/s is correct, but the 4 m value is also fine; however the 2 m speed of 11.0 m/s is wrong, since KE 120"
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 4 vs Lesson 3, free-fall of the bucket",
+   "problem": "Lesson 3 gives a speed of 11.0 m/s at 2 m (KE 1200 J), while Lesson 4 gives 11 m/s as the speed at the water (KE 1210 J). The same speed is attached to different energies and positions.",
+   "quote_a": "compare the ideal fall of the bucket (KE 1600 J, v = 12.6 m/s) with the real fall (v = 11 m/s, KE 1210 J)",
+   "quote_b": "at 2 m PE = 400 J, KE = 1200 J, v = 11.0 m/s",
+   "correct_value": ""
+  }
+ ]
+}

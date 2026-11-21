@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Forming and expanding quadratic expressions",
       "excellent": "Correctly derives length 20 − x and area x(20 − x) = 20x − x², explains the x² term and the valid range 0 < x < 20 with clear reasons.",
       "proficient": "Writes the correct expression and expands it, with the range given but with a limited explanation of the x² term or the limits.",
-      "developing": "Has errors in the length or area expression, or does not expand, or omits the valid range."
+      "developing": "Has errors in the length or area expression, or does not expand, or omits the valid range.",
+      "belowExpectations": "Cannot write the length or area expression for the plot, does not expand, and gives no valid range for x."
     },
     {
       "criterion": "Solving by factorisation and checking",
       "excellent": "Rearranges to zero, factorises correctly, uses the zero-product property, and checks each solution against the context and by substitution or expansion.",
       "proficient": "Solves correctly but the checking against the context is brief or incomplete.",
-      "developing": "Makes factorisation or rearrangement errors, or does not use the zero-product property or check solutions."
+      "developing": "Makes factorisation or rearrangement errors, or does not use the zero-product property or check solutions.",
+      "belowExpectations": "Cannot rearrange to zero or factorise, does not use the zero-product property, and does not check the solutions."
     },
     {
       "criterion": "Explaining equal areas and the maximum",
       "excellent": "States that 8 m and 12 m give the same 8 m by 12 m rectangle turned round, explains symmetry about x = 10, and uses A = 100 − (x − 10)² to explain the maximum of 100 m².",
       "proficient": "Explains the equal areas or the maximum correctly but the reasoning for one of them is incomplete.",
-      "developing": "Describes the two plots as different shapes, or states the maximum without a reason."
+      "developing": "Describes the two plots as different shapes, or states the maximum without a reason.",
+      "belowExpectations": "Gives no explanation for the equal areas or the maximum, or the explanation is incorrect and unsupported."
     },
     {
       "criterion": "Applying to new situations",
       "excellent": "Forms and solves the mandazi, ball and garden equations accurately, rejecting invalid roots and keeping valid ones with a reason linked to the situation.",
       "proficient": "Forms and solves most equations correctly but gives weak reasons for keeping or rejecting roots.",
-      "developing": "Cannot form the equations from the situations, or accepts invalid roots."
+      "developing": "Cannot form the equations from the situations, or accepts invalid roots.",
+      "belowExpectations": "Cannot form the mandazi, ball or garden equations from the situations, and accepts or rejects roots without any reason."
     },
     {
       "criterion": "Communicating and linking to the driving question",
       "excellent": "Gives a clear answer to the driving question, compares the Lesson 1 and final models, and uses correct units and vocabulary throughout.",
       "proficient": "Answers the driving question with mostly correct vocabulary and units but a limited comparison to Lesson 1.",
-      "developing": "The answer to the driving question is incomplete or unclear, with frequent missing units or vocabulary errors."
+      "developing": "The answer to the driving question is incomplete or unclear, with frequent missing units or vocabulary errors.",
+      "belowExpectations": "Gives no answer to the driving question or one that is unclear, with no comparison to Lesson 1 and with units and vocabulary mostly missing or wrong."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -496,31 +496,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Accuracy of excretion science (wastes, kidney, liver, skin)",
       "excellent": "Correctly names ammonia, urea and uric acid with the animals and structures, and accurately explains ultrafiltration, selective reabsorption, secretion and the roles of the liver and skin, linking waste type to water availability.",
       "proficient": "Mostly correct explanation of wastes, nephron steps and the roles of the liver and skin, with minor gaps or one weak link to water availability.",
-      "developing": "Several errors or missing parts; confuses wastes, structures or nephron steps, or lists facts without explaining."
+      "developing": "Several errors or missing parts; confuses wastes, structures or nephron steps, or lists facts without explaining.",
+      "belowExpectations": "Below Expectations: Confuses nearly all wastes, structures and nephron steps, and gives no correct explanation of the roles of the kidney, liver or skin."
     },
     {
       "criterion": "Explanation of homeostasis and negative feedback",
       "excellent": "Clearly explains negative feedback and applies it correctly to ADH and water, insulin and glucagon and temperature control, including the role of the hypothalamus and effectors and the difference between the dog and the lizard.",
       "proficient": "Explains negative feedback and applies it to most examples with small omissions.",
-      "developing": "Describes changes without showing a loop, or confuses the responses of endotherms and ectotherms."
+      "developing": "Describes changes without showing a loop, or confuses the responses of endotherms and ectotherms.",
+      "belowExpectations": "Below Expectations: Does not explain negative feedback, and describes no loop or correct response for ADH, insulin, glucagon or temperature."
     },
     {
       "criterion": "Use of evidence and claim-evidence-reasoning",
       "excellent": "Gives a clear claim supported by specific evidence from the lessons (dog, lizard, goat, freshwater fish, dissection, case studies) and reasoning that links evidence to the claim.",
       "proficient": "Gives a claim with some evidence from the lessons, but the reasoning is partly missing.",
-      "developing": "Claim is unclear or evidence is vague, missing or not from the lessons."
+      "developing": "Claim is unclear or evidence is vague, missing or not from the lessons.",
+      "belowExpectations": "Below Expectations: Gives no clear claim, and no evidence from the lessons."
     },
     {
       "criterion": "Answering the driving question and reflecting on learning",
       "excellent": "Fully connects all four animals to the driving question, explains why excretion and homeostasis are essential for cell survival, and states a specific change from the Lesson 1 model.",
       "proficient": "Connects most animals to the driving question and gives a general reason and a simple change in thinking.",
-      "developing": "Leaves out animals or gives no reason why excretion and homeostasis matter; no clear reflection."
+      "developing": "Leaves out animals or gives no reason why excretion and homeostasis matter; no clear reflection.",
+      "belowExpectations": "Below Expectations: Does not connect the animals to the driving question, gives no reason why excretion and homeostasis matter, and shows no reflection."
     },
     {
       "criterion": "Scientific vocabulary and clarity",
       "excellent": "Uses scientific terms correctly and consistently in well-organised, clear sentences.",
       "proficient": "Uses most terms correctly; writing is mostly clear.",
-      "developing": "Uses few scientific terms or uses them incorrectly; writing is hard to follow."
+      "developing": "Uses few scientific terms or uses them incorrectly; writing is hard to follow.",
+      "belowExpectations": "Below Expectations: Writing is very hard to follow, and scientific terms are not used or are used wrongly."
     }
   ]
 };
@@ -581,6 +586,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

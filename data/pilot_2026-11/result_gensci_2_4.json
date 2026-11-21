@@ -1,0 +1,60 @@
+{
+ "target": "gensci_2_4",
+ "phases": {
+  "generate": {
+   "cost": 1.0859,
+   "secs": 505,
+   "model": "claude-sonnet-5-5"
+  },
+  "opus_lesson_review": {
+   "cost": 0.2997,
+   "secs": 35,
+   "model": "claude-opus-5-5"
+  },
+  "adjudicate_lessons": {
+   "cost": 0.1118,
+   "secs": 4,
+   "model": "claude-sonnet-5-5"
+  },
+  "sonnet_fe_audit": {
+   "cost": 0.2421,
+   "secs": 9,
+   "model": "claude-sonnet-5-5"
+  }
+ },
+ "lessons": 8,
+ "fe_present": true,
+ "new": {
+  "raw": 2,
+  "verified": 2,
+  "confirmed": 2,
+  "confirmed_issues": [
+   {
+    "type": "SCIENCE",
+    "where": "Lesson 3, summaryTablePrompt.learned",
+    "quote_a": "bleaching is a chemical action of a basic substance",
+    "problem": "This says bleach removes colour because it is basic. Household bleach removes colour because sodium hypochlorite oxidises the coloured substance. Being basic is not the cause: other bases, such as sodium hydroxide or the antacid, do not bleach. Learners would take away a wrong cause-and-effect link.",
+    "correct_value": "Bleaching is a chemical (oxidation) process in which sodium hypochlorite in bleach changes a coloured substance into a colourless one; liquid bleach also happens to be basic (pH about 11).",
+    "autofix_ok": false,
+    "reference": "Household bleach (sodium hypochlorite) bleaches by oxidation; it is basic but basicity is not the cause."
+   },
+   {
+    "type": "SCIENCE",
+    "where": "Lesson 8, slo.knowledge",
+    "quote_a": "Acids release hydrogen ions (H+) and bases release hydroxide ions (OH-), which explains the pH colours, the fizzing, Juma's antacid relief and the behaviour of salts in air",
+    "problem": "The behaviour of salts in air cannot be explained by H+ and OH- ions. Hygroscopic, deliquescent and efflorescent behaviour depends on a salt taking in water vapour or losing water of crystallisation, as Lesson 6 teaches. It has nothing to do with releasing H+ or OH-.",
+    "correct_value": "H+ and OH- explain the pH colours, the acid reactions and neutralisation. The damp salt and crumbling washing soda are explained by salts taking in water vapour (hygroscopic/deliquescent) or losing water of crystallisation (efflorescent).",
+    "autofix_ok": false
+   }
+  ],
+  "rejected": [],
+  "dropped_by_code": []
+ },
+ "fe": {
+  "raw": 2,
+  "verified": 1,
+  "confirmed": 0,
+  "confirmed_issues": []
+ },
+ "total_cost": 1.7395
+}

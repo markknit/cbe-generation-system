@@ -435,31 +435,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Moment calculations and the Principle of Moments",
       "excellent": "Correctly states M = F × d and the Principle of Moments, calculates all values with correct working and units (N·m, N), and interprets what the results mean for the stool.",
       "proficient": "States the formulas and gets most calculations right, with minor errors in units or working, and gives limited interpretation.",
-      "developing": "Gives incomplete or incorrect formulas, calculation errors, or missing units, with little or no interpretation."
+      "developing": "Gives incomplete or incorrect formulas, calculation errors, or missing units, with little or no interpretation.",
+      "belowExpectations": "Gives no correct formula or calculation for moments, and does not use the Principle of Moments."
     },
     {
       "criterion": "Use of centre of gravity and base of support",
       "excellent": "Accurately defines centre of gravity and states the toppling condition (vertical line outside the base of support), and applies it precisely to both stools and the crane.",
       "proficient": "Defines the terms and states the condition mostly correctly, applying it to the stool with some gaps.",
-      "developing": "Confuses centre of gravity with other ideas, or does not link the vertical line to the base of support."
+      "developing": "Confuses centre of gravity with other ideas, or does not link the vertical line to the base of support.",
+      "belowExpectations": "Does not use centre of gravity or base of support, or the ideas are mostly wrong."
     },
     {
       "criterion": "Evidence from the investigations",
       "excellent": "Refers specifically to observations from the lessons (500 g mass on the metre rule, plumb line, clay at top or base, flaps, 200 N jerrycan, crane case) to support every claim.",
       "proficient": "Refers to some observations from the lessons but some claims are not backed by evidence.",
-      "developing": "Makes general statements with little or no reference to what was observed."
+      "developing": "Makes general statements with little or no reference to what was observed.",
+      "belowExpectations": "Gives no reference to what was observed in the investigations."
     },
     {
       "criterion": "Causal explanation of the anchoring phenomenon",
       "excellent": "Gives a complete cause-and-effect chain linking moments, shift of the combined centre of gravity, the base of support and equilibrium to explain both stools, and makes a correct prediction.",
       "proficient": "Explains the phenomenon using most key ideas but the chain of reasoning has a missing link.",
-      "developing": "Describes what happened without explaining why, or uses ideas incorrectly."
+      "developing": "Describes what happened without explaining why, or uses ideas incorrectly.",
+      "belowExpectations": "Does not explain the anchoring phenomenon, or the explanation is mostly incorrect."
     },
     {
       "criterion": "Application and communication",
       "excellent": "Gives realistic Kenyan applications with correct reasoning, uses scientific vocabulary correctly throughout, and presents clear, well-organised answers.",
       "proficient": "Gives reasonable applications and mostly correct vocabulary, with some unclear parts.",
-      "developing": "Applications are missing or unrealistic, vocabulary is often incorrect, and answers are hard to follow."
+      "developing": "Applications are missing or unrealistic, vocabulary is often incorrect, and answers are hard to follow.",
+      "belowExpectations": "Applications are missing, vocabulary is mostly incorrect or not used, and the answer is very hard to follow."
     }
   ]
 };
@@ -513,6 +518,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

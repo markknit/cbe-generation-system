@@ -1,0 +1,31 @@
+{
+ "module": "phys_1_3",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 4, Observe phase Part A vs Lesson 3 reference table",
+    "problem": "Concrete α is given as 12 × 10⁻⁶ in Lesson 4 and approximately 10 × 10⁻⁶ in Lesson 5; the lessons disagree on the value for concrete.",
+    "quote_a": "if α = 12 × 10⁻⁶ K⁻¹, what is the increase in area when the slab reaches 45 °C",
+    "quote_b": "Card A — Expansion Joints on a Bridge: ... concrete has a linear expansivity of approximately 10 x 10 to the power of minus 6 per degree C",
+    "correct_value": "Use one consistent value for concrete's linear expansivity"
+   },
+   "origin": "UNCLEAR",
+   "recommendation": "Change Lesson 4 to α = 10 × 10⁻⁶ K⁻¹ and update the expected answer in the same field to ΔA = 20 × 10⁻⁶ × 48 × 30 ≈ 0.029 m².",
+   "reason": "Concrete is given as 12 × 10⁻⁶ in Lesson 4 but about 10 × 10⁻⁶ in Lesson 5, and both fall within the accepted range. Lesson 5's value is chosen because it is stated as 'approximately' and keeps the numbers simple.",
+   "decision": "FIX",
+   "lesson": 4,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 4,
+    "path": "framework[1].learnerExperience",
+    "old": "if α = 12 × 10⁻⁶ K⁻¹, what is the increase in area when the slab reaches 45 °C",
+    "new": "if α = 10 × 10⁻⁶ K⁻¹, what is the increase in area when the slab reaches 45 °C"
+   },
+   "reference": "Typical linear expansivity of concrete is about 10–12 × 10⁻⁶ K⁻¹ (standard physics data tables); use 10 × 10⁻⁶ to match Lesson 5.",
+   "final": "kept yellow"
+  }
+ ],
+ "applied": "phys_1_3: 1 applied, 0 rejected"
+}

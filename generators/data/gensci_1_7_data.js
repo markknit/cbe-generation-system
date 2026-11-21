@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Explanation of the phenomenon (what and where from)",
       "excellent": "Clearly identifies the patches as living fungal mould colonies, explains airborne spores as the source and route, and explains the colour variation as different species.",
       "proficient": "Identifies the patches as fungal mould and says spores came from the air, but gives limited explanation of the colour variation.",
-      "developing": "Says the patches are germs or dirt, or does not explain how the organisms reached the food."
+      "developing": "Says the patches are germs or dirt, or does not explain how the organisms reached the food.",
+      "belowExpectations": "Says the patches are just dirt or does not know what they are, and gives no explanation of where the organisms came from, even with prompting."
     },
     {
       "criterion": "Use of evidence on growth conditions",
       "excellent": "Names warmth, moisture and air exposure, uses the Lesson 7 observations, and links all three to the overnight spoilage in Kisumu.",
       "proficient": "Names the conditions and links most of them to the phenomenon, with limited use of investigation evidence.",
-      "developing": "Names one condition or gives a vague link to the phenomenon, with no evidence."
+      "developing": "Names one condition or gives a vague link to the phenomenon, with no evidence.",
+      "belowExpectations": "Names no growth condition, or names conditions that do not match the investigation, and does not link anything to the overnight spoilage in Kisumu."
     },
     {
       "criterion": "Prevention and control reasoning",
       "excellent": "Matches each control measure to the route or condition it interrupts and suggests accessible, low-cost options for Kenyan households.",
       "proficient": "Gives suitable control measures with some explanation of how they work.",
-      "developing": "Lists measures without explaining why they work."
+      "developing": "Lists measures without explaining why they work.",
+      "belowExpectations": "Names no control measure, or names measures that do not match the spoilage, and gives no reason for any of them."
     },
     {
       "criterion": "Scientific knowledge of microorganisms",
       "excellent": "Accurately describes infections, transmission routes and beneficial and harmful roles, and shows how the same group can be both.",
       "proficient": "Mostly accurate examples with minor gaps in transmission or the dual role.",
-      "developing": "Few or inaccurate examples."
+      "developing": "Few or inaccurate examples.",
+      "belowExpectations": "Gives no accurate examples of infections, transmission routes or roles of microorganisms, or mixes up beneficial and harmful roles."
     },
     {
       "criterion": "Communication and Kenyan context",
       "excellent": "Clear, well-organised message for the community that uses accurate scientific terms and local examples.",
       "proficient": "Clear message with some scientific terms and some local context.",
-      "developing": "Message is unclear or lacks scientific terms and local context."
+      "developing": "Message is unclear or lacks scientific terms and local context.",
+      "belowExpectations": "Message is missing or too unclear to follow, with no scientific terms and no local context."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

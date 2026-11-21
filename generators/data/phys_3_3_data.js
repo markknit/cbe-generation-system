@@ -496,31 +496,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of evidence and data",
       "excellent": "Uses accurate results from the bulb test and resistivity, gap and Tc values with correct units and the correct order of materials.",
       "proficient": "Uses most evidence and numbers correctly, with a few missing units or small slips.",
-      "developing": "Uses little evidence, or numbers and results are missing or incorrect."
+      "developing": "Uses little evidence, or numbers and results are missing or incorrect.",
+      "belowExpectations": "Uses little or no evidence, and the numbers given are missing or wrong."
     },
     {
       "criterion": "Scientific explanation using the band model",
       "excellent": "Clearly explains conductors, insulators, semiconductors, temperature effects, doping and p-n junctions using energy gaps, free electrons and holes.",
       "proficient": "Explains most ideas using gaps and free electrons or holes, with some gaps in reasoning.",
-      "developing": "Describes what happens but does not explain why, or confuses ideas such as n-type and p-type."
+      "developing": "Describes what happens but does not explain why, or confuses ideas such as n-type and p-type.",
+      "belowExpectations": "Does not use the band model, or the explanation is mostly incorrect, for example confusing n-type and p-type throughout."
     },
     {
       "criterion": "Correct use of terms and conventions",
       "excellent": "Uses conductor, insulator, semiconductor, superconductor, forward-biased and reverse-biased correctly and says insulators allow almost no current.",
       "proficient": "Mostly correct terms, with one or two mix-ups.",
-      "developing": "Often mixes terms or claims insulators allow no current at all."
+      "developing": "Often mixes terms or claims insulators allow no current at all.",
+      "belowExpectations": "Uses terms incorrectly throughout, or claims that insulators and conductors behave in the same way."
     },
     {
       "criterion": "Connection to Kenyan contexts and the Driving Question",
       "excellent": "Links the answer to Mr Otieno's wiring and at least two Kenyan cases and answers safety and efficiency fully.",
       "proficient": "Links to wiring and one other case, answering the Driving Question in part.",
-      "developing": "Few or no links to the contexts, or the Driving Question is not answered."
+      "developing": "Few or no links to the contexts, or the Driving Question is not answered.",
+      "belowExpectations": "Does not connect to Kenyan contexts, and the Driving Question is not answered."
     },
     {
       "criterion": "Model revision and clarity",
       "excellent": "Clearly describes how the class model changed from Lesson 1 and writes in well-organised sentences.",
       "proficient": "Mentions model change and writes clearly most of the time.",
-      "developing": "Does not describe model change, or writing is hard to follow."
+      "developing": "Does not describe model change, or writing is hard to follow.",
+      "belowExpectations": "Does not mention any change to the model, and the writing is hard to follow."
     }
   ]
 };
@@ -581,6 +586,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

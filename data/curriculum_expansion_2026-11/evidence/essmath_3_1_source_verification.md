@@ -1,0 +1,7 @@
+# Source acceptance:essmath_3_1
+
+Visually compared full150dpi crop printed30–31,allfiveoutcomes,content/inquiry,completeprojectandcompetencies/values/PCI. Noallocation. Sourcecategoryfavouritecolour exampleexplicitlyqualified:labelsnotaveraged. Allbar/line/pieandactualproject/digitalroutesrequired. Independentreviewmustrecomparepixels/graphsemantics/actionscope.
+
+PDF SHA256:7459a495859a658a42704799f848e27400fc3b10083b42d7fe8e6364ebf82e73
+Crop SHA256:ff75d9295aa7a671945f76cb00edc9e2bd193f019cd037be6a3d4d9621e62eae
+Source SHA256:7d065e1ebbe0882a1b3bee5f60827e6a32915b3fb3fe244340673ff4e457fb71

@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Use of the wave equation and calculations",
       "excellent": "All calculations are set out correctly with formulas, steps and units (4 Hz, 0.25 s, 150 m, 0.50 m and 0.47 m), and the inverse relationship between f and λ is clearly explained.",
       "proficient": "Most calculations are correct with some units or steps missing; the f and λ relationship is stated but not fully explained.",
-      "developing": "Calculations contain errors or are missing; the wave equation is stated without being applied correctly."
+      "developing": "Calculations contain errors or are missing; the wave equation is stated without being applied correctly.",
+      "belowExpectations": "Gives few correct calculations, with formulas, steps or units missing; the wave equation is not applied."
     },
     {
       "criterion": "Explanation of reflection, refraction and diffraction",
       "excellent": "Each behaviour is defined accurately and the mechanism is explained (angle law; speed change at a boundary with bending towards the normal and constant frequency; diffraction greatest when size is close to wavelength).",
       "proficient": "Each behaviour is defined correctly but one mechanism is incomplete or imprecise.",
-      "developing": "Behaviours are confused with each other or described without any mechanism."
+      "developing": "Behaviours are confused with each other or described without any mechanism.",
+      "belowExpectations": "Confuses reflection, refraction and diffraction, and gives no mechanism for any of them."
     },
     {
       "criterion": "Connection to the anchoring phenomenon",
       "excellent": "Each of the three observations (cliff echo, bending water waves, sound in the cove) is matched to the correct wave behaviour, and the limits of reflection and refraction are explained.",
       "proficient": "Observations are matched to wave behaviours with minor gaps in the reasoning.",
-      "developing": "Few links are made to the fisherman at Kisumu, or the matches are incorrect."
+      "developing": "Few links are made to the fisherman at Kisumu, or the matches are incorrect.",
+      "belowExpectations": "Does not match the cliff echo, the bending water waves or the sound in the cove to wave behaviours, with no link to the fisherman at Kisumu."
     },
     {
       "criterion": "Kenyan applications and environmental impact",
       "excellent": "Applications, impacts and mitigation are accurate, use Kenyan contexts, and name the wave property and the physics of how it works.",
       "proficient": "Applications and impacts are correct but the physics of how they work is only partly explained.",
-      "developing": "Examples are vague, not linked to wave properties, or incorrect."
+      "developing": "Examples are vague, not linked to wave properties, or incorrect.",
+      "belowExpectations": "Gives few or no Kenyan examples, or examples with no link to wave properties."
     },
     {
       "criterion": "Scientific communication and Scientist's Statement",
       "excellent": "Writing is clear, uses correct vocabulary, and the statement to the fisherman is accurate, plain-language and links wave science to community safety.",
       "proficient": "Writing is mostly clear with some vocabulary slips; the statement is accurate but links to safety are brief.",
-      "developing": "Writing is unclear or vocabulary is misused; the statement is missing or inaccurate."
+      "developing": "Writing is unclear or vocabulary is misused; the statement is missing or inaccurate.",
+      "belowExpectations": "Writing is hard to follow with vocabulary mostly misused; the statement to the fisherman is missing or wrong."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

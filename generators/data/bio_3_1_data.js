@@ -675,31 +675,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim and use of structure–function–food reasoning",
       "excellent": "Gives a clear, accurate claim in every section and consistently links a named structure to its function and to the food or nutrient it allows access to, explaining why other structures could not do the same job.",
       "proficient": "Gives mostly clear claims and links structure to function, but the link to food or nutrients is sometimes missing or incomplete.",
-      "developing": "Claims are vague or missing; structures are named without explaining what they do or why they suit the food."
+      "developing": "Claims are vague or missing; structures are named without explaining what they do or why they suit the food.",
+      "belowExpectations": "Claims are missing or incorrect, and structures are not named or linked to function or food, even with prompting."
     },
     {
       "criterion": "Use of evidence from the lessons",
       "excellent": "Uses specific, accurate evidence from several lessons (Kakamega insects, Lake Nakuru birds, Maasai Mara mammals, food-test results, villus diagram) including at least one external and one internal structure.",
       "proficient": "Uses accurate evidence from some lessons but may rely on one or two examples or give evidence without detail.",
-      "developing": "Evidence is general, inaccurate or not drawn from the lessons."
+      "developing": "Evidence is general, inaccurate or not drawn from the lessons.",
+      "belowExpectations": "Gives no evidence from the lessons, or evidence that is incorrect."
     },
     {
       "criterion": "Accuracy of digestion and absorption science",
       "excellent": "Correctly explains amylase action with food-test results, the roles of pepsin and lipase, villus adaptations, the two absorption routes, and absorption versus assimilation.",
       "proficient": "Mostly accurate but with minor gaps, such as a missing enzyme role or one absorption route.",
-      "developing": "Contains major errors or confuses digestion, absorption and assimilation."
+      "developing": "Contains major errors or confuses digestion, absorption and assimilation.",
+      "belowExpectations": "Contains major errors throughout, with no clear idea of digestion, absorption or assimilation."
     },
     {
       "criterion": "Connecting external feeding structures to internal digestion",
       "excellent": "Explains clearly why a mosquito's liquid food and a human's mixed diet need different amounts of processing, and ties all parts into one unifying explanation.",
       "proficient": "Makes a connection between external and internal structures but does not fully explain the difference in processing.",
-      "developing": "Treats external and internal structures as unrelated topics."
+      "developing": "Treats external and internal structures as unrelated topics.",
+      "belowExpectations": "Does not connect external feeding structures to internal digestion, and gives no explanation of the difference."
     },
     {
       "criterion": "Scientific communication and Kenyan context",
       "excellent": "Writes in organised, precise sentences with correct terms (adaptation, mechanical digestion, enzyme, villi, assimilation) and applies the biology sensibly to Kenyan food and health examples.",
       "proficient": "Writing is mostly clear with some correct terms; Kenyan examples are used but with limited explanation.",
-      "developing": "Writing is hard to follow, terms are misused, and Kenyan examples are absent or unconnected to the biology."
+      "developing": "Writing is hard to follow, terms are misused, and Kenyan examples are absent or unconnected to the biology.",
+      "belowExpectations": "Writing is very hard to follow, with key terms missing or misused and no link to Kenyan food or health."
     }
   ]
 };
@@ -781,6 +786,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

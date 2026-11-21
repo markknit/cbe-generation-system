@@ -68,6 +68,11 @@ Read these fresh, even if you read them earlier in this session:
   table or the next task depends on (an output path, a hostname, a tool
   such as `soffice`, a data file the task will read) against the real
   filesystem.
+- **Codex usage handoff:** in a Codex execution session, run
+  `python3 scripts/check_codex_usage.py --read-only`. Report a pending clean-stop
+  latch or unavailable reading. Never clear it or launch generation as part
+  of `/restart`; an explicit user resume and a fresh permitted allowance are
+  required. See WORKFLOW.md's Codex usage and takeover policy.
 
 ## 3. Compare against this session's operating assumptions
 

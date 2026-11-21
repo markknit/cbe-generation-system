@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim answers the driving question",
       "excellent": "Gives a clear claim that a standard system based on shared, observable characteristics and dichotomous keys allows accurate identification and classification.",
       "proficient": "Gives a claim about classification but it is general or only partly linked to observable characteristics and keys.",
-      "developing": "Claim is missing, unclear or does not answer the driving question."
+      "developing": "Claim is missing, unclear or does not answer the driving question.",
+      "belowExpectations": "Below Expectations: Claim is missing or does not mention classification, and does not answer the driving question."
     },
     {
       "criterion": "Evidence from the lessons",
       "excellent": "Uses specific evidence from several lessons, such as the school organisms, moss, fern, maize, bean, earthworm, snail, mosquito, goat, chicken and lizard, and the key results.",
       "proficient": "Uses some correct evidence from the lessons but it is limited or lacks detail.",
-      "developing": "Evidence is vague, incorrect or not taken from the lessons."
+      "developing": "Evidence is vague, incorrect or not taken from the lessons.",
+      "belowExpectations": "Below Expectations: Gives no evidence from the lessons, or evidence is incorrect or about unrelated organisms."
     },
     {
       "criterion": "Scientific reasoning and use of terms",
       "excellent": "Explains why observable shared features give the same result for everyone while size, colour or use do not, and uses divisions, phyla, classes, couplets and viruses correctly.",
       "proficient": "Gives some reasoning and uses most terms correctly.",
-      "developing": "Little or no reasoning; terms are missing or misused."
+      "developing": "Little or no reasoning; terms are missing or misused.",
+      "belowExpectations": "Below Expectations: Gives no reasoning for why shared features work better than size, colour or use, and uses terms incorrectly or not at all."
     },
     {
       "criterion": "Dichotomous key and virus knowledge",
       "excellent": "Writes correct contrasting couplets and accurately describes virus characteristics and their importance with Kenyan examples.",
       "proficient": "Writes a mostly workable key and gives some correct virus facts.",
-      "developing": "Key is not workable and virus ideas are missing or incorrect."
+      "developing": "Key is not workable and virus ideas are missing or incorrect.",
+      "belowExpectations": "Below Expectations: Cannot write a couplet or a workable key, and gives no correct facts about viruses."
     },
     {
       "criterion": "Revision of thinking",
       "excellent": "Clearly compares the Lesson 1 groupings with the final model and states a relevant new question.",
       "proficient": "Mentions that thinking changed but with limited comparison.",
-      "developing": "Does not show how thinking has changed."
+      "developing": "Does not show how thinking has changed.",
+      "belowExpectations": "Below Expectations: Gives no comparison with the Lesson 1 groupings and no sign that thinking has changed."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

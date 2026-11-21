@@ -1,0 +1,103 @@
+{
+ "module": "phys_1_2",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 3, Observe Phase learnerExperience vs Explain phase",
+    "problem": "With F = kx, k = 40 N/m and x = 0.05 m gives F = 2 N, and k = 25 and x = 0.08 gives 2 N, consistent. But the Ep values stated (0.05 J and 0.08 J) are computed as ½Fx = ½×2×0.05 = 0.05 J, correct. The Lesson 3 summary states a different load: the tea sack ≈ 800 N, inconsistent with the lab-scale 2 N data.",
+    "quote_a": "new rope: spring constant k = 40 N per m, extension x = 0.05 m; older rope: k = 25 N per m, extension x = 0.08 m",
+    "quote_b": "under the same 2 N test force",
+    "correct_value": ""
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Keep the lab-scale 2 N data; remove the unsupported 800 N figure from the Lesson 3 summary, or label it as the real bridge load, which is unrelated to the 2 N card.",
+   "reason": "The data card values are internally consistent (2 N, 0.05 J and 0.08 J), but the summary cites 800 N, a load never used in the lesson's calculations.",
+   "decision": "FIX",
+   "lesson": 3,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 3,
+    "path": "summaryTablePrompt.explained",
+    "old": "the weight of the tea sack (approximately 800 N) exceeded the rope s safe working load",
+    "new": "the load on the old rope exceeded the rope s safe working load (in the lab-scale data card, the same 2 N test force stretched the older rope further, 0.08 m against 0.05 m, and stored more energy)"
+   },
+   "reference": "Hooke's law F = kx and Ep = ½Fx = ½kx² (standard KICD/IGCSE mechanics)",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 4 vs Lesson 6, rope spring constants",
+    "problem": "Lesson 4 says the old rope has a lower elastic limit, but Lesson 6 gives the old rope a higher elastic limit extension (2.1 m vs 1.5 m for the new rope). The force at the limit is lower (441 N vs 1275 N), so this is only consistent in terms of force, not extension.",
+    "quote_a": "Rope A (survived): 'HIGH k — large restoring force per unit extension' and Rope B (snapped): 'LOW k AND low elastic limit",
+    "quote_b": "Old rope: elastic limit at an extension of 2.1 m, so the largest force it can take elastically is F = kx = 210 × 2.1 = 441 N.",
+    "correct_value": ""
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Reword Lesson 4 to refer to the lower elastic-limit force. This matches Lesson 6 (441 N against a 784 N load), where the old rope's limit extension is greater but its limit force is lower.",
+   "reason": "Lesson 6 gives the old rope a larger limit extension (2.1 m against 1.5 m), so 'lower elastic limit' is only true in terms of force.",
+   "decision": "FIX",
+   "lesson": 4,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 4,
+    "path": "framework[4].learnerExperience",
+    "old": "'LOW k AND low elastic limit — passed its proportionality limit under the load of the 80 kg tea sack.'",
+    "new": "'LOW k AND a lower force at its elastic limit — the 800 N load of the 80 kg tea sack was beyond that force.'"
+   },
+   "reference": "Elastic limit is defined by the force and extension at which permanent deformation starts (standard Hooke's law treatment)",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 2, summaryTablePrompt vs Observe phase",
+    "problem": "The summary states specific observed results (sisal at 300 g, copper at 100–200 g) as fixed outcomes, whereas the lesson says results are to be recorded by learners. Also Lesson 1 says sisal twine showed slight permanent deformation within 200 g, which conflicts with Lesson 2's claim that sisal twine returns to original length until about 300 g.",
+    "quote_a": "the sisal twine returned at low loads but showed permanent lengthening beyond approximately 300 g, and the copper wire permanently bent after even a small load of 100–200 g",
+    "quote_b": "The rubber band may stay fully elastic up to 500 g",
+    "correct_value": ""
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Make the summary describe typical, not fixed, outcomes and tell learners to report their own recorded loads. Lesson 1 also shows slight sisal deformation within 200 g, so avoid a specific 300 g threshold.",
+   "reason": "The summary states one fixed load threshold as if observed, but the Observe phase has learners record their own results, and Lesson 1 shows deformation sooner.",
+   "decision": "FIX",
+   "lesson": 2,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 2,
+    "path": "summaryTablePrompt.observed",
+    "old": "the sisal twine returned at low loads but showed permanent lengthening beyond approximately 300 g, and the copper wire permanently bent after even a small load of 100–200 g",
+    "new": "typical results were that the sisal twine returned at low loads but showed slight permanent lengthening at higher loads, and the copper wire stayed bent after small loads (groups recorded their own load values)"
+   },
+   "reference": "Elastic limit is found empirically from recorded data; no fixed value applies to hand-made samples",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 5, Explain phase vs summary",
+    "problem": "The Lesson 5 Model Building phase requires new rope E > old rope E, and the Lesson 5 summary states the old rope had lower E, contradicting the instruction to let the data decide.",
+    "quote_a": "Do not tell learners beforehand which strip will have the higher E; aged rubber often becomes harder and cracks, so let the data decide.",
+    "quote_b": "approximate Young's Modulus of each rope, and an arrow or annotation showing",
+    "correct_value": ""
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Remove the fixed E ordering in the model-building assessment and the summary. Keep only 'old rope has lower fracture stress' as the fixed conclusion, consistent with the data-decides instruction.",
+   "reason": "The lesson tells the teacher to let the data decide E, but the Model Building rubric and the summary then require new rope E > old rope E.",
+   "decision": "FIX",
+   "lesson": 5,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 5,
+    "path": "framework[4].formativeAssessment",
+    "old": "Both ropes are shown with numerically different E-values — even if estimates, the directionality must be correct (new rope E > old rope E).",
+    "new": "Both ropes are shown with numerically different E-values taken from the class's own data (do not require new rope E > old rope E; require only that the old rope's fracture stress is lower)."
+   },
+   "reference": "Young's modulus E = stress/strain measures stiffness, not strength (standard materials-science definition)",
+   "final": "completed (3 criteria met)"
+  }
+ ],
+ "applied": "phys_1_2: 4 applied, 0 rejected"
+}

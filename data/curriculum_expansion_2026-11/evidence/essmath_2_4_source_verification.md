@@ -1,0 +1,7 @@
+# Source acceptance:essmath_2_4
+
+Visually compared complete150dpi crop printed16–17,allfiveoutcomes,content/inquiryandcompetency/value/PCIcontinuation. Noallocation. Retain source discuss discuss and tringlewording;teachcorrectgeometry. Independentreviewmustrecomparepixelsandallactualmeasurementrequirements.
+
+PDF SHA256:7459a495859a658a42704799f848e27400fc3b10083b42d7fe8e6364ebf82e73
+Crop SHA256:a1a7e5e44404d414012b208b6021dc235a7ba1edefd337d855873356505bec3e
+Source SHA256:5d03cfd14f4745c06a0e318c90797c167a74d8e73a778d65c991f9d3bb7a9d0a

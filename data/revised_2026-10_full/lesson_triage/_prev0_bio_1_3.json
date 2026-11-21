@@ -1,0 +1,91 @@
+{
+ "module": "bio_1_3",
+ "status": "ok",
+ "items": [
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 9, Predict Phase learnerExperience",
+    "problem": "Lesson 9 purposeInStoryline says Lessons 1-8 covered animal specialisation with 'platelets, red blood cells, neutrophils', but Lesson 8 covers red blood cells, white blood cells, nerve, sperm and muscle cells, not platelets. Platelets were not studied in Lesson 8.",
+    "quote_a": "We have seen that blood cells specialise — red blood cells are biconcave discs and neutrophils are flexible and full of lysosomes.",
+    "quote_b": "Learners will be able to identify and describe the structural features of root hair cells",
+    "correct_value": "Lesson 8 covered red blood cells, white blood cells, nerve, sperm and muscle cells"
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Replace the platelet reference in Lesson 9 purposeInStoryline with the cells Lesson 8 actually covers.",
+   "reason": "Lesson 8 does not study platelets (it covers red and white blood cells, nerve, sperm and muscle cells), so Lesson 9's claim is wrong; Quote A is fine.",
+   "decision": "FIX",
+   "lesson": 9,
+   "color": "WHITE",
+   "why_orange": "edit path invalid",
+   "final": "fixed by the finalise pass"
+  },
+  {
+   "item": {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 11, Predict Phase teacherMoves",
+    "problem": "Lesson 1 says the Version 0 model is compared with 'Version 4 model in Lesson 11', but Version 4 is built in Lesson 10 (hierarchy) and Lesson 11 makes a poster; and Lesson 1 sticky-note questions are described as 'ten lessons ago' consistent. Version numbering is also inconsistent: Lesson 2 builds Version 1 and Lesson 3 adds to Version 1.",
+    "quote_a": "Here is what Akinyi wrote in Lesson 1 — she asked, Why does the body know which cell to send?",
+    "quote_b": "Learners are told that throughout this unit they will build a cumulative cell model... Version 4 model in Lesson 11",
+    "correct_value": "Version 4 is created in Lesson 10"
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Change the Lesson 1 reference so the Version 0 drawing is compared with the final model in Lesson 12, where the comparison actually happens.",
+   "reason": "Version 4 is built in Lesson 10 and Lesson 11 makes a poster, so 'Version 4 in Lesson 11' is wrong; the Version 0 comparison occurs in Lesson 12. The 'ten lessons ago' wording is fine.",
+   "decision": "FIX",
+   "lesson": 1,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 1,
+    "path": "framework[4].learnerExperience",
+    "old": "this drawing will be compared with their Version 4 model in Lesson 11",
+    "new": "this drawing will be compared with their final model in Lesson 12"
+   },
+   "reference": "Lesson 10 builds Version 4; Lesson 12 does the Then vs Now comparison with the Lesson 1 diagram",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 11, Model Building Phase vs Lesson 12",
+    "problem": "Lesson 11 does not have learners revise a model; Lesson 12 expects a 'Lesson 11 revised model' that was never made (Lesson 11 produces a group poster and notebook entry).",
+    "quote_a": "Version 4 of my model shows",
+    "quote_b": "Learners place their Lesson 1 cell diagram and their most recent (Lesson 11) revised model side by side",
+    "correct_value": "Use the Version 4 model from Lesson 10 or the Lesson 11 poster"
+   },
+   "origin": "INTRODUCED_BY_REVISION",
+   "recommendation": "Point Lesson 12 to the Version 4 model from Lesson 10 and the Lesson 11 poster, which actually exist.",
+   "reason": "No revised model is made in Lesson 11, so Lesson 12 refers to an artefact that does not exist.",
+   "decision": "FIX",
+   "lesson": 12,
+   "color": "WHITE",
+   "edit": {
+    "lesson": 12,
+    "path": "framework[2].learnerExperience",
+    "old": "their most recent (Lesson 11) revised model side by side",
+    "new": "their Version 4 model (Lesson 10) and their Lesson 11 group poster side by side"
+   },
+   "reference": "Lesson 10 builds Version 4; Lesson 11 produces a group poster-model and notebook entry",
+   "final": "completed (3 criteria met)"
+  },
+  {
+   "item": {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 2 Model Building vs Lesson 1",
+    "problem": "Lesson 3 says the Version 1 add-on was done in Lesson 3 while Lesson 4 calls it Version 2 plant cell and says animal cell was drawn in Lesson 2/3; Lesson 4 says 'facing your animal cell model' though Lesson 2 let learners choose plant or animal.",
+    "quote_a": "Version 1 of their Cumulative Cell Model",
+    "quote_b": "Version 3 model (plant and animal cells side by side, from Lesson 5)",
+    "correct_value": ""
+   },
+   "origin": "PRE_EXISTING",
+   "recommendation": "Settle one version scheme (e.g. L2=V1, L3=V1 add-on, L4=V2, L5=V3, L10=V4) and make Lesson 4's 'facing your animal cell model' match Lesson 2's plant-or-animal choice.",
+   "reason": "The numbering and the plant-or-animal choice conflict across Lessons 2-5, and the right resolution is a design choice that also affects the four-levels decision.",
+   "decision": "HUMAN",
+   "lesson": 3,
+   "color": "ORANGE",
+   "why_orange": "needs a human choice",
+   "final": "orange kept: The version scheme is tangled across Lessons 2 to 5, with Lesson 3 adding to V1 and Lesson 4 calling the plant cell V2. Lesson 2 lets learners draw either a pla"
+  }
+ ],
+ "applied": "bio_1_3: 4 applied, 0 rejected"
+}

@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Linking atomic structure to the periodic table",
       "excellent": "Clearly explains the periodic law, periods and groups, and correctly links calcium and nitrogen to their groups through their valence electrons.",
       "proficient": "Explains most ideas about periods, groups and valence electrons, with one small gap or error in placing calcium or nitrogen.",
-      "developing": "Describes the periodic table only as a list, or does not connect groups to valence electrons."
+      "developing": "Describes the periodic table only as a list, or does not connect groups to valence electrons.",
+      "belowExpectations": "Gives few correct ideas about periods, groups or valence electrons, or places calcium and nitrogen in the wrong groups without help."
     },
     {
       "criterion": "Explaining ion formation",
       "excellent": "Correctly shows electron loss or gain for Ca and N, gives Ca²⁺ and N³⁻, and explains the noble-gas stability reason, including why the charge is fixed.",
       "proficient": "Gives correct ions and electron changes but the reasoning about stability or fixed charge is incomplete.",
-      "developing": "States ions without explaining the electron changes, or confuses cations and anions."
+      "developing": "States ions without explaining the electron changes, or confuses cations and anions.",
+      "belowExpectations": "Does not show electron loss or gain for Ca and N, or gives ions with the wrong charges and no reason for them."
     },
     {
       "criterion": "Writing and checking formulae",
       "excellent": "Applies the criss-cross rule accurately, uses brackets correctly for radicals, and verifies charge balance with numbers for Ca(NO₃)₂, NH₄NO₃ and (NH₄)₂HPO₄.",
       "proficient": "Writes correct formulae with the criss-cross rule but gives limited checking of charge balance or explanation of brackets.",
-      "developing": "Writes formulae incorrectly or without the steps, and does not check that charges balance."
+      "developing": "Writes formulae incorrectly or without the steps, and does not check that charges balance.",
+      "belowExpectations": "Writes few correct formulae, does not use the criss-cross rule, and does not check charge balance even when prompted."
     },
     {
       "criterion": "Connecting the whole explanation to the phenomenon",
       "excellent": "Builds a complete, ordered causal chain from electron arrangement to valency to formula on the CAN and DAP bags, uses a balanced equation correctly to show conservation of atoms and why only coefficients change, and refers throughout to the Kericho learner.",
       "proficient": "Gives a mostly correct chain with one link missing or weakly explained, and refers to the fertiliser bags.",
-      "developing": "Gives disconnected statements and does not link atomic structure to the formulae on the bags."
+      "developing": "Gives disconnected statements and does not link atomic structure to the formulae on the bags.",
+      "belowExpectations": "Gives separate statements with no chain from electrons to valency to formula, and does not refer to the fertiliser bags or the equation."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

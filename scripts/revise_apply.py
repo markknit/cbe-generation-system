@@ -138,6 +138,23 @@ def where(m: dict, r: dict) -> str:
     return f"Unit overview, {p}"
 
 
+def display_id_name(m: dict):
+    """(id, name) shown to teachers on the Summary Table. The ids in META (module id, folder, files) stay
+    as they are (Mark 2026-11-09, option b); the KICD number/name teachers asked for live in UNIT.substrand
+    ('Sub-Strand 1.3: Cell Structure and Specialisation'). Use them when present, else META."""
+    mt = m["META"]
+    mm = re.match(r"\s*Sub-?\s*Strand\s+([\d.]+)\s*[:\-\u2013]?\s*(.*)", (m.get("UNIT") or {}).get("substrand", ""), re.I)
+    if not mm:
+        return mt["substrand_id"], mt["substrand_name"]
+    name = re.sub(r"\s*\(.*$", "", mm.group(2)).strip()        # drop a trailing '(condensed unit ...)' note
+    meta_name = mt["substrand_name"]
+    if "\u2014" in name:                                       # a composite like 'Cell Biology \u2014 Cell Structure ...': not a clean KICD name, keep ours
+        name = meta_name
+    if name and name.lower() in meta_name.lower() and name.lower() != meta_name.lower():
+        name = meta_name                                       # KICD short name ('Nutrition') qualified by the strand: keep ours ('Plant Nutrition')
+    return mm.group(1), (name or meta_name)
+
+
 def apply(module: str, records_file: str, dry: bool):
     from generate_substrand import derive_summary_table  # needs the venv
     mod = REV / "modules" / f"{module}_data.js"
@@ -180,8 +197,9 @@ def apply(module: str, records_file: str, dry: bool):
         src = replace_lessons_block(src, m["LESSONS"])
         src = replace_block(src, "FINAL_EXPLANATION", m["FINAL_EXPLANATION"])
         src = replace_block(src, "UNIT", m["UNIT"])
+        sid, sname = display_id_name(m)
         src = replace_block(src, "SUMMARY_TABLE", derive_summary_table(
-            m["UNIT"], m["LESSONS"], m["META"]["substrand_id"], m["META"]["substrand_name"]))
+            m["UNIT"], m["LESSONS"], sid, sname))
         mod.write_text(src)
     stamp = datetime.datetime.now().isoformat(timespec="seconds")
     for r in applied:

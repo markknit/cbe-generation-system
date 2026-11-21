@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Understanding of lines of symmetry and mirror lines",
       "excellent": "Defines a line of symmetry accurately, links it to the mirror line, gives all correct counts for the shapes and explains why the fold and mirror tests agree.",
       "proficient": "Defines a line of symmetry and gives most counts correctly, with a partial link to the mirror line.",
-      "developing": "Gives an incomplete definition or several incorrect counts, with no link between folding and mirroring."
+      "developing": "Gives an incomplete definition or several incorrect counts, with no link between folding and mirroring.",
+      "belowExpectations": "Gives no accurate definition of a line of symmetry, counts of lines are mostly wrong, and there is no link between folding and mirroring."
     },
     {
       "criterion": "Properties of reflection and calculations",
       "excellent": "States all three properties precisely and correctly calculates 2.4 m, using the properties to explain the phenomenon fully.",
       "proficient": "States the three properties and calculates the distance correctly, with a partial explanation of the phenomenon.",
-      "developing": "Names fewer than three properties or makes errors in the distance calculation."
+      "developing": "Names fewer than three properties or makes errors in the distance calculation.",
+      "belowExpectations": "States few or none of the properties of reflection and does not calculate the distance, or the calculation is incorrect."
     },
     {
       "criterion": "Cartesian reflection rules",
       "excellent": "Gives all three rules correctly, finds all three images correctly and explains the lateral flip through the sign change.",
       "proficient": "Gives the rules and most images correctly, with a limited explanation of the flip.",
-      "developing": "Confuses the rules or gives incorrect image coordinates."
+      "developing": "Confuses the rules or gives incorrect image coordinates.",
+      "belowExpectations": "Does not give the rules for reflecting in the axes or y = x, and the image coordinates are mostly incorrect."
     },
     {
       "criterion": "Finding the mirror line and reasoning",
       "excellent": "Describes the compass construction accurately, justifies the perpendicular bisector using equal distances and perpendicularity (showing why a non-perpendicular line fails), and gives the full algebraic method: midpoint, negative reciprocal gradient, y − y₁ = m(x − x₁), and the horizontal and vertical special cases.",
       "proficient": "Describes the construction and gives a partial justification or most steps of the algebraic method.",
-      "developing": "Gives an unclear construction and no justification, or omits the perpendicular gradient."
+      "developing": "Gives an unclear construction and no justification, or omits the perpendicular gradient.",
+      "belowExpectations": "Does not describe how to construct the mirror line, offers no justification, and does not use the gradient method."
     },
     {
       "criterion": "Final explanation using Kenyan contexts",
       "excellent": "Gives a coherent, accurate explanation that links the perpendicular bisector to all three properties, the lateral reversal, the matatu mirror and a Kenyan application.",
       "proficient": "Gives an accurate explanation that covers most ideas with some contexts.",
-      "developing": "Gives an explanation that is incomplete or has misconceptions, with few links to the phenomenon."
+      "developing": "Gives an explanation that is incomplete or has misconceptions, with few links to the phenomenon.",
+      "belowExpectations": "Gives little or no explanation of the mirror puzzle, with major misconceptions and no reference to the Kenyan examples."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

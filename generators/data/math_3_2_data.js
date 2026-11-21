@@ -676,31 +676,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Describing rotation with centre, angle and direction",
       "excellent": "Correctly names Earth's axis as the centre, 15° per hour (with the 360° ÷ 24 working) as the angle, and anticlockwise (positive) as the direction, and uses them consistently, including the 90° in 6 hours calculation.",
       "proficient": "Names the centre, angle and direction with only one small error or missing working, for example omits the sign of the angle.",
-      "developing": "Names fewer than three of the elements or gives wrong values, for example confuses clockwise and anticlockwise or gives the wrong rate."
+      "developing": "Names fewer than three of the elements or gives wrong values, for example confuses clockwise and anticlockwise or gives the wrong rate.",
+      "belowExpectations": "The learner partially determines the properties of rotation or rotates an object, given the centre and angle of rotation."
     },
     {
       "criterion": "Properties of rotation and congruence",
       "excellent": "Correctly finds A', B', C' and A'' using the rules, states the sides of the image, and explains that rotation preserves length, angle, size and shape (direct congruence), with only position and facing changing.",
       "proficient": "Finds most images correctly and states that the shape is preserved but gives only a partial explanation linked to the cities.",
-      "developing": "Makes errors with the coordinate rules or the sign of the angle, or does not link preserved shape and size to the congruence idea."
+      "developing": "Makes errors with the coordinate rules or the sign of the angle, or does not link preserved shape and size to the congruence idea.",
+      "belowExpectations": "The learner partially determines the order of rotational symmetry in solids or relates rotation and congruence."
     },
     {
       "criterion": "Calculations with centre finding, symmetry and longitude timing",
       "excellent": "Explains that the first two bisectors coincide and so give no unique intersection, uses a third bisector to find the centre O(0,0) and +90°, gives correct orders and angles using 360° ÷ order, and a fully correct table (2.9°, 2.0°, 4.9° giving about 12, 8 and 20 minutes).",
       "proficient": "Most values are correct with one or two arithmetic or rounding slips, or reasoning for the third bisector is incomplete.",
-      "developing": "Several values are incorrect or missing, or the method (dividing by 15 or 360 ÷ order) is not shown."
+      "developing": "Several values are incorrect or missing, or the method (dividing by 15 or 360 ÷ order) is not shown.",
+      "belowExpectations": "Most values are incorrect or missing, and no method for the centre, the orders, the angles or the timing is shown."
     },
     {
       "criterion": "Claim-evidence-reasoning explanation of the phenomenon",
       "excellent": "States a clear claim that Earth rotates once about its axis in 24 hours with the Sun lighting one half, supports it with at least two specific pieces of evidence from the lessons (video times, globe and torch, longitude difference), and reasons that Mombasa gets sunrise about 20 minutes before Kisumu and that the Sun only appears to move east to west.",
       "proficient": "States a correct claim with one piece of evidence and reasoning that is mostly complete.",
-      "developing": "Gives a claim without evidence or reasoning, or includes a misconception such as the Sun moving around a still Earth."
+      "developing": "Gives a claim without evidence or reasoning, or includes a misconception such as the Sun moving around a still Earth.",
+      "belowExpectations": "Gives a claim with no evidence or reasoning and keeps a misconception such as the Sun moving around a still Earth."
     },
     {
       "criterion": "Real-life applications and model revision",
       "excellent": "Correctly describes the clock (-6° per minute, -30° per hour) and the 3-blade turbine (order 3, 120°), gives three correct symmetry examples with orders, and identifies two specific improvements to the Lesson 1 model.",
       "proficient": "Gives correct applications with one error, or only one clear improvement to the model.",
-      "developing": "Applications are missing or wrong, or no clear change to the model is described."
+      "developing": "Applications are missing or wrong, or no clear change to the model is described.",
+      "belowExpectations": "Gives no real-life application and describes no change to the model."
     }
   ]
 };
@@ -782,6 +787,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

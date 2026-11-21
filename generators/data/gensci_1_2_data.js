@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Explaining the two microscopes",
       "excellent": "Clearly links the different pictures to resolution and magnification, using the correct values or comparisons, and names two further differences correctly.",
       "proficient": "Says the electron microscope shows more detail and gives one or two correct differences, but without clear reference to resolution.",
-      "developing": "States that one microscope is better, with no correct scientific reason or differences."
+      "developing": "States that one microscope is better, with no correct scientific reason or differences.",
+      "belowExpectations": "Cannot say why the two microscopes show different pictures, or names only that one is bigger, with no mention of detail, resolution or magnification."
     },
     {
       "criterion": "Cell structure and diagram",
       "excellent": "Accurate, neat labelled plant cell with eight or more correct labels and correct plant versus animal differences.",
       "proficient": "Mostly accurate diagram with five to seven correct labels and at least two correct differences.",
-      "developing": "Diagram is incomplete or has several wrong labels and the differences are mostly incorrect."
+      "developing": "Diagram is incomplete or has several wrong labels and the differences are mostly incorrect.",
+      "belowExpectations": "Draws a cell with only a few labels, most of them wrong or missing, and cannot say which structures belong to plant cells and which to human cheek cells."
     },
     {
       "criterion": "Organelle functions and interdependence",
       "excellent": "Gives correct functions for five organelles and explains how at least two depend on each other, using Kenyan examples.",
       "proficient": "Gives correct functions for most organelles and mentions a link between them.",
-      "developing": "Gives few correct functions and does not show how organelles work together."
+      "developing": "Gives few correct functions and does not show how organelles work together.",
+      "belowExpectations": "Names fewer than two organelles with a correct function, or only the names without functions, and gives no link between organelles."
     },
     {
       "criterion": "Explaining the phenomenon",
       "excellent": "Gives a full, correctly ordered cause-and-effect chain from water loss and turgor to photosynthesis, mitochondria and death of cells, tissues and the leaf, and explains the green colour and crispness.",
       "proficient": "Explains wilting using turgor or photosynthesis, with some steps missing.",
-      "developing": "Only says the leaf dies because it dries, with no reference to cell structures."
+      "developing": "Only says the leaf dies because it dries, with no reference to cell structures.",
+      "belowExpectations": "Gives no steps for why the sukuma wiki leaf wilts and dies, or says only that it died, with no mention of water loss or the cells."
     },
     {
       "criterion": "Levels of organisation and answering the driving question",
       "excellent": "Orders all six levels correctly, gives correct examples for both organisms, and answers the driving question using evidence.",
       "proficient": "Orders the levels with one or two errors and gives a partly complete answer.",
-      "developing": "Levels are mostly wrongly ordered and the answer to the driving question is missing or unrelated."
+      "developing": "Levels are mostly wrongly ordered and the answer to the driving question is missing or unrelated.",
+      "belowExpectations": "Cannot put the levels of organisation in order, gives no examples for the plant or the human being, and writes nothing that answers the driving question."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

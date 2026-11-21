@@ -1,0 +1,60 @@
+{
+  "checks": {
+    "CompactTeacherGuide_hash_unchanged": true,
+    "StudentMaterials_hash_unchanged": true,
+    "MaterialsTeacherKey_hash_unchanged": true,
+    "StudentSummaryTable_hash_unchanged": true,
+    "AssessmentMaterials_hash_unchanged": true,
+    "exact42_blank_response_cells": true,
+    "CompactTeacherGuide_full_final_stimulus_absent": true,
+    "StudentMaterials_full_final_stimulus_absent": true,
+    "StudentSummaryTable_full_final_stimulus_absent": true,
+    "sources/coremath_1_2.json_unchanged": true,
+    "materials/coremath_1_2.json_unchanged": true,
+    "manuscripts/coremath_1_2.json_unchanged": true,
+    "blueprints/coremath_1_2.json_unchanged": true,
+    "sources/coremath_1_2.verification.json_unchanged": true,
+    "fingerprint_unchanged": true
+  },
+  "pass": 15,
+  "total": 15,
+  "blank_summary_cells": 42,
+  "content_fingerprint": "d94af2a1939d656839200f8c98cba4f3eda3e8811db5ac4028217f96f4ec822f",
+  "confirmed_defects": {
+    "CIL-S1": {
+      "paths": [
+        "/lessons/3/knowledge",
+        "/lessons/3/phases/2/3",
+        "/lessons/3/summary/observed"
+      ],
+      "actual": "For positive bases,1/n is a positive nth root;negative powers invert the result.",
+      "meaning": "Exponent1/n confused with value x^(1/n).",
+      "actual_guide_contains_error": true
+    },
+    "CIL-S2": {
+      "paths": [
+        "/lessons/11/phases/2/0"
+      ],
+      "actual": "Explain why 3.0791 normalises to10^3\u00d710^0.0791;accept a reasoned preference for direct arithmetic on this simple example.",
+      "meaning": "Logarithm3.0791 confused with antilog10^3.0791.",
+      "actual_guide_contains_error": true
+    },
+    "CIL-S3": {
+      "paths": [
+        "manuscripts:/lessons/12/outcomes",
+        "blueprints:/lesson_map/12/outcomes",
+        "blueprints:/assessment_map/12/outcomes",
+        "blueprints:/assessment_tasks/12/outcomes"
+      ],
+      "actual": [
+        "b",
+        "c",
+        "d",
+        "g"
+      ],
+      "meaning": "CIL13/L13asksrepair/audit,notexplicitfactor-lawderivation(b),inverseindex/logconversion(d),orindividualusefulness/limitreflection(g).",
+      "minimal_scope_option": "Map only c in allfourlinkedarrays,or add actual eliciting instructions/key/individualrecord for claims."
+    }
+  },
+  "verdict": "HOLD despite propagation/arithmetic checks passing"
+}

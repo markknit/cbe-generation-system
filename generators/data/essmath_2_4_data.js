@@ -556,25 +556,29 @@ const FINAL_EXPLANATION = {
       "criterion": "Choosing and justifying the correct formula",
       "excellent": "Selects the correct formula for every shape and explains clearly, using the available measurements, why it is the practical choice when no height can be measured.",
       "proficient": "Selects the correct formula for most shapes and gives a reasonable but incomplete reason.",
-      "developing": "Chooses formulas incorrectly or without giving a reason."
+      "developing": "Chooses formulas incorrectly or without giving a reason.",
+      "belowExpectations": "Does not select a suitable formula for most shapes, and gives no reason for the choices."
     },
     {
       "criterion": "Derivations and links between formulas",
       "excellent": "Shows correctly how h = b sin C leads to ½ab sin C, and links the parallelogram, equilateral triangle, hexagon and pentagon formulas to the triangle formulas with clear steps and angles.",
       "proficient": "Gives most steps of the derivations, with a small gap in the angles or in the link between formulas.",
-      "developing": "States formulas without showing how they are derived or connected."
+      "developing": "States formulas without showing how they are derived or connected.",
+      "belowExpectations": "States few or no formulas and gives no steps to show how they come from the triangle formulas."
     },
     {
       "criterion": "Accurate calculation",
       "excellent": "Calculations are correct and fully shown (Heron's ≈ 1,087.7 m², stage ≈ 21.75 m², pentagon ≈ 139.4 cm²), with units and sensible rounding.",
       "proficient": "Method is correct but with a minor arithmetic, rounding or unit error.",
-      "developing": "Method is incorrect or the working is not shown."
+      "developing": "Method is incorrect or the working is not shown.",
+      "belowExpectations": "Has little or no working and the method and answers are incorrect, with units missing."
     },
     {
       "criterion": "Connecting to the Kericho courtyard and driving question",
       "excellent": "Clearly explains how the formulas let the contractor find every area from measurable data and avoid over- or under-ordering, including rounding up tile counts.",
       "proficient": "Links the formulas to the courtyard but gives limited detail on ordering material.",
-      "developing": "Gives little or no link to the courtyard or the driving question."
+      "developing": "Gives little or no link to the courtyard or the driving question.",
+      "belowExpectations": "Gives no link between the formulas and the courtyard or the driving question, and does not mention ordering material."
     }
   ]
 };
@@ -642,6 +646,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

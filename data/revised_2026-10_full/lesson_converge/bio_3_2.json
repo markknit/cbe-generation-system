@@ -1,0 +1,102 @@
+{
+ "module": "bio_3_2",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 15,
+   "verified": 12,
+   "confirmed": 2,
+   "autofix": 0,
+   "to_teachers": 2,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Not a real contradiction; skip",
+     "reason": "Not a contradiction: 172 to ~100 bpm at about 4 minutes is consistent in both quotes."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Internal inconsistency in the lesson: the Lesson 4 diagram text says blood goes 'ventral aorta → gill capillaries'; this is fine. However the Lesson 4 trace says 'deoxygenated blood → atrium' while th",
+     "reason": "The candidate itself says it is minor and not definite; the fish heart is commonly described as two-chambered with accessory chambers (sinus venosus, bulbus arteriosus)."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Arithmetic is correct (0.8 s gives 75 BPM). However, stroke volume for 37 BPM: 5000/37 ≈ 135 is correct. No error.",
+     "reason": "Arithmetic is correct: 60/0.8 = 75 bpm, and 5000/37 is about 135 mL."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "Lesson 5 Observe Phase earlier text treats Lesson 4 fish as having oxygen delivery score; no error. Skip.",
+     "reason": "No defect; the cross-reference to Lesson 1's recovery curve is valid."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Diffusion time scales with distance squared: 1 mm is 20x 0.05 mm, so about 400 s (~7 min), consistent; fine. Not an error.",
+     "reason": "The diffusion-time scaling (distance squared) is consistent with the figures given."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Consistent; no error.",
+     "reason": "The efficiency scores match in the two places."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Claiming a human heart is the same size as a sheep heart is questionable but a simplification; not reported.",
+     "reason": "A simplification, not an error; a human heart is roughly comparable in size to a sheep heart, and the 37 bpm resting rate is a different measure."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Lesson 1 narrative says 90 s to below 130 then 'four minutes later' about 100, while the data sheet says 100 bpm within about 4 minutes total. Timeline differs (100 bpm at 4 min vs 5.5 min).",
+     "reason": "The 90 s then 4 min timeline reads as 'about 100 bpm at about 4 minutes'; no real disagreement."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "Lesson 4 says the heart is 'two-chambered' yet the diagram lists sinus venosus, atrium, ventricle, bulbus arteriosus; minor. More notably the Observe text says blood goes 'ventral aorta → gill capilla",
+     "reason": "Fish heart structure and blood flow are consistent; the candidate itself is low confidence."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "Values are correct (6/s), but the label '1 cm³ cube' should be a 1 cm cube; minor wording. Not a real error.",
+     "reason": "Values are correct; the '1 cm³ cube' wording is a trivial style issue."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "why": "quote not found",
+     "problem": "Not a contradiction; skip"
+    },
+    {
+     "type": "ARITHMETIC",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "Phases sum to 0.8 s and 60/0.8=75, which is correct; however stroke volume at 37 BPM: 5000/37 = 135 is correct. No error here."
+    },
+    {
+     "type": "TIMING",
+     "why": "quote not found",
+     "problem": "Lesson 1 activities listed (3+2 min predict, 2 min observe notice, 3 min write, 3 min DQB reading, 5 min model plus narrative etc.) are plausible; no clear mism"
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "SCIENCE",
+   "where": "Lesson 12, summaryTablePrompt explained",
+   "problem": "Overstated and inconsistent with the lesson's own point that insects are small and the grasshopper's haemolymph does not carry oxygen; also 'delivering 20+ litres of oxygenated blood per minute' conflates blood with oxygen; cardiac output in elite athletes is about 30-40 L/min so figure is fine, but claim that muscles fail within seconds due to the circulatory system is unsupported.",
+   "quote_a": "his muscles would fail within seconds of any intense effort",
+   "quote_b": "",
+   "correct_value": "Muscles could not receive enough oxygen via diffusion/haemolymph to sustain aerobic effort"
+  },
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 3, Observe Phase vs summary",
+   "problem": "Lesson 3 Model Building asks learners to label 4 structures including ostia, though the observe phase says ostia often cannot be seen; also the model section says 'all 4 required labelled structures' but lists five annotations.",
+   "quote_a": "(2) Look for the ostia (tiny paired slits along the dorsal vessel) with a hand lens; they are very small and often cannot be seen in a school dissection",
+   "quote_b": "Ostia — 'Entry points for haemolymph; no equivalent in closed systems'",
+   "correct_value": "Five annotations listed"
+  }
+ ]
+}

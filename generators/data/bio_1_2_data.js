@@ -436,31 +436,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Chemicals of life (composition and classification)",
       "excellent": "Correctly names all the food chemical groups, classifies them as organic or inorganic using the carbon-bonded-to-hydrogen rule, names the building blocks and links them to the meal amounts.",
       "proficient": "Names most chemical groups and classifies them correctly, with some building blocks or meal amounts missing.",
-      "developing": "Names few groups, or confuses organic and inorganic, with little reference to the meal."
+      "developing": "Names few groups, or confuses organic and inorganic, with little reference to the meal.",
+      "belowExpectations": "Names very few or no food chemical groups, or classifies them incorrectly, and makes no link to the meal."
     },
     {
       "criterion": "Use of evidence from investigations",
       "excellent": "Uses specific test results (colours, foods, times, mmol/L values) accurately from several lessons to support claims, including the ugali Benedict's result.",
       "proficient": "Uses some specific results accurately but misses some or states them in general terms.",
-      "developing": "Uses little evidence, or results are vague or incorrect."
+      "developing": "Uses little evidence, or results are vague or incorrect.",
+      "belowExpectations": "Gives no test results, or results that are mostly incorrect."
     },
     {
       "criterion": "Enzymes and digestion",
       "excellent": "Explains amylase as a protein catalyst digesting starch to maltose then glucose, uses the saliva results and the boiled-saliva control, and explains the effect of temperature (37 degrees C, denaturation, inactive at 0 degrees C).",
       "proficient": "Explains the role of amylase and the main results, with incomplete reasoning about temperature or the control.",
-      "developing": "Mentions enzymes but does not explain how they digest starch or how temperature affects them."
+      "developing": "Mentions enzymes but does not explain how they digest starch or how temperature affects them.",
+      "belowExpectations": "Does not explain what enzymes do, or gives an incorrect idea of amylase and temperature."
     },
     {
       "criterion": "Explaining the phenomenon (rise and fall)",
       "excellent": "Gives a complete sequence: digestion, absorption, rise to 8.0 mmol/L at 60 min, insulin, uptake, respiration and glycogen storage, fall to 4.5 mmol/L at 180 min, with correct calculations.",
       "proficient": "Explains both the rise and the fall with minor gaps in the sequence or calculations.",
-      "developing": "Explains only the rise or only the fall, or has major gaps or calculation errors."
+      "developing": "Explains only the rise or only the fall, or has major gaps or calculation errors.",
+      "belowExpectations": "Does not explain the rise or the fall in blood sugar, or the explanation is mostly incorrect."
     },
     {
       "criterion": "Scientific reasoning",
       "excellent": "Links claims to evidence and gives reasons why carbohydrates, not proteins or lipids, are the main cause of the spike; writes clearly using the correct terms.",
       "proficient": "Gives some reasoning linking evidence to claims, with some unsupported statements.",
-      "developing": "Mostly lists facts without reasoning or evidence."
+      "developing": "Mostly lists facts without reasoning or evidence.",
+      "belowExpectations": "Gives a few unconnected facts with no claims linked to evidence."
     }
   ]
 };
@@ -514,6 +519,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

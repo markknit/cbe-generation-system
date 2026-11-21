@@ -1,0 +1,98 @@
+{
+ "module": "bio_2_1",
+ "status": "CONVERGED",
+ "rounds": [
+  {
+   "round": 1,
+   "raw": 15,
+   "verified": 10,
+   "confirmed": 4,
+   "autofix": 0,
+   "to_teachers": 4,
+   "fixed": 0,
+   "rejected_by_second_reviewer": [
+    {
+     "type": "SCIENCE",
+     "problem": "This is partially defensible, since chlorophyll synthesis in angiosperms is light-dependent (protochlorophyllide reduction). It is not a clear error and should be disregarded.",
+     "reason": "Light-dependent chlorophyll synthesis is scientifically defensible; not an error."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "This reference is consistent, since the Lesson 7 graphs exist. It is withdrawn.",
+     "reason": "Lesson 7 graphs exist, so the reference is consistent."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "This is consistent with Lesson 9 and is withdrawn.",
+     "reason": "Lesson 9 covers minerals, so the reference is consistent."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "problem": "This is consistent with Lesson 8, which covers CO₂ and temperature, and is withdrawn.",
+     "reason": "Lesson 8 covers CO2 and temperature, so the reference is consistent."
+    },
+    {
+     "type": "INTERNAL_CONTRADICTION",
+     "problem": "The card values are consistent with the formula (400, 100, 25, 11, 6), so this is not a contradiction. It is withdrawn.",
+     "reason": "The values match the formula."
+    },
+    {
+     "type": "SCIENCE",
+     "problem": "The diagram step shows 3 CO₂ fixed per turn, with 1 G3P exiting. One glucose needs 2 G3P, which takes 6 turns, so this is consistent. It is withdrawn.",
+     "reason": "One G3P exits per turn, so six turns give 6 G3P, which is enough for 1 glucose with 5 more turns' worth regenerated; consistent."
+    }
+   ],
+   "dropped_by_code": [
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The stated phase times add to 41, not 40. The Observe sub-steps (5 + 8 + 2 = 15) do not match the 18-minute Observe budget."
+    },
+    {
+     "type": "CROSS_REFERENCE",
+     "why": "quote not found",
+     "problem": "This is consistent and is withdrawn."
+    },
+    {
+     "type": "TIMING",
+     "why": "recomputed in code: the lesson is right",
+     "problem": "The stated budget claims the 5 phases sum to 40, but 5+18+8+4+5 = 40 is fine; however the Observe plan (demo 5 + groups 8 + comparison 2 = 15) and the 5 minutes"
+    }
+   ]
+  }
+ ],
+ "for_teachers": [
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 4, Observe learnerExperience vs teacherMoves",
+   "problem": "The learner experience says groups follow the whole method, including boiling and ethanol decolourisation. The teacher moves have the teacher pre-boil and pre-decolourise leaves for groups.",
+   "quote_a": "The teacher demonstrates Steps 1-2 on one leaf (watch the leaf soften and the ethanol turn green), and each group then uses its own pre-decolourised leaf for Steps 3-5.",
+   "quote_b": "Groups of 3 to 4 follow a step-by-step method card.",
+   "correct_value": ""
+  },
+  {
+   "type": "INTERNAL_CONTRADICTION",
+   "where": "Lesson 4, Observe learnerExperience vs teacherMoves",
+   "problem": "Learner steps have groups boiling and decolourising leaves in ethanol (Steps 1-2) while the same text says the teacher demonstrates Steps 1-2 and groups only do Steps 3-5.",
+   "quote_a": "each group then uses its own pre-decolourised leaf for Steps 3-5",
+   "quote_b": "Transfer the leaf using tongs into a tube of ethanol placed in a hot water bath",
+   "correct_value": ""
+  },
+  {
+   "type": "CROSS_REFERENCE",
+   "where": "Lesson 1, Observe teacherMoves",
+   "problem": "Lesson 3 is about raw materials; fine, but Lesson 1 Observe learnerExperience says the misconception 'is a known misconception to address in Lesson 3' while the teacher reflection says to address it in Lessons 3 and 5; Lesson 5 does not address it.",
+   "quote_a": "Lesson 3 returns to what the plant takes in, and Lesson 9 to what the soil supplies",
+   "quote_b": "",
+   "correct_value": ""
+  },
+  {
+   "type": "CROSS_REFERENCE",
+   "where": "Lesson 5, Phase 5 teacherMoves / Lesson 6 Model Building",
+   "problem": "Lesson 5 says the model began in Lesson 1 (starting model) while others say it was started in Lesson 3; inconsistent origin of the cumulative model.",
+   "quote_a": "Get out your photosynthesis model from Lesson 3.",
+   "quote_b": "Learners open their personal photosynthesis model (started in Lesson 3 and revised in Lessons 4–5).",
+   "correct_value": ""
+  }
+ ]
+}

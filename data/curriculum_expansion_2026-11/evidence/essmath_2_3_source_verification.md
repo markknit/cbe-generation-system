@@ -1,0 +1,7 @@
+# Source acceptance:essmath_2_3
+
+Visually compared complete150dpi crop,printed14–15,allfiveoutcomes,content/inquiry,fullclinometerprojectandcompetency/value/PCI. Noallocation. Tangentexplicitinb. Independentcontentreviewmustrecomparepixelsandactualprojectscope.
+
+PDF SHA256:7459a495859a658a42704799f848e27400fc3b10083b42d7fe8e6364ebf82e73
+Crop SHA256:c460b179d7f96af1cabbec503c8cf7ebb241aaaa6c27f49b17f7bd4f8fcbf569
+Source SHA256:fcaa16676edbf3e5da4f0013949bf41c80308f87348f3c1d837bdd8502700fa2

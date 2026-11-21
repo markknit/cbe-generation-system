@@ -616,31 +616,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Meaning of probability and relative frequency",
       "excellent": "Clearly explains that 70% is a long-run likelihood, not a guarantee, and uses 14/20 = 0.7 and the running relative frequencies correctly to show that more trials give steadier estimates.",
       "proficient": "States that the forecast is not a guarantee and calculates 14/20 = 0.7 correctly, but gives limited explanation of why more trials matter.",
-      "developing": "Treats 70% as a guarantee or does not link it to past records or relative frequency."
+      "developing": "Treats 70% as a guarantee or does not link it to past records or relative frequency.",
+      "belowExpectations": "Treats a 70% forecast as certain, or does not know that it comes from past records."
     },
     {
       "criterion": "Sample space, events and theoretical probability",
       "excellent": "Lists S = {rain, storm, dry}, writes events as subsets, calculates P(H) and P(even) correctly, and explains both chance variation and why the weather states are not equally likely.",
       "proficient": "Lists the sample space and calculates theoretical probabilities correctly, with a partial explanation of differences from experimental results.",
-      "developing": "Sample space is incomplete or theoretical probabilities are incorrect, with no explanation of differences."
+      "developing": "Sample space is incomplete or theoretical probabilities are incorrect, with no explanation of differences.",
+      "belowExpectations": "The learner partially generates probability space of different events or determines the probability of mutually exclusive or independent events."
     },
     {
       "criterion": "Use of the laws of probability",
       "excellent": "Chooses the addition law, complement rule and multiplication law correctly, justifies each by mutually exclusive or independent events, and calculates 0.7, 0.4, 0.3 and 0.49 correctly.",
       "proficient": "Applies the laws correctly with minor gaps in justifying why each one is allowed.",
-      "developing": "Mixes up the laws or applies them without checking the events, giving incorrect answers."
+      "developing": "Mixes up the laws or applies them without checking the events, giving incorrect answers.",
+      "belowExpectations": "The learner partially applies the laws of probability or determines the probability of independent events using tree diagrams."
     },
     {
       "criterion": "Tree diagram and two-day probabilities",
       "excellent": "Draws a fully labelled tree, multiplies along branches, checks that the total is 1.00, and finds 0.42 and 0.91 with the complement as a check.",
       "proficient": "Draws a correct tree and finds most of the outcomes correctly, with a missing check or small error.",
-      "developing": "Tree is incomplete or probabilities are not multiplied and added correctly."
+      "developing": "Tree is incomplete or probabilities are not multiplied and added correctly.",
+      "belowExpectations": "Cannot draw the tree or write probabilities on the branches, and does not multiply or add them."
     },
     {
       "criterion": "Claim, Evidence, Reasoning and decisions",
       "excellent": "Gives a clear claim, uses specific evidence from the lessons, applies thresholds correctly for Wanjiru, Captain Otieno and Ms Achieng, and explains why decisions based on probability are sensible despite occasional bad luck.",
       "proficient": "Gives a claim with some evidence and mostly correct decisions, but the reasoning is brief.",
-      "developing": "Claim is unclear, evidence is missing or decisions are not linked to the probabilities."
+      "developing": "Claim is unclear, evidence is missing or decisions are not linked to the probabilities.",
+      "belowExpectations": "Gives no clear claim and no evidence, and the advice is not linked to the probabilities."
     }
   ]
 };
@@ -715,6 +720,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

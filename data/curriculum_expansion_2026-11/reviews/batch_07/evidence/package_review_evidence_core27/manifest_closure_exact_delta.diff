@@ -1,0 +1,14 @@
+--- 
++++ 
+@@ -58,8 +58,10 @@
+  files.update(p for p in (b/'reviews/batch_04/evidence/cell_assets').rglob('*') if p.is_file())
+ if n=='gensci_1_5':
+  files.update(p for p in (b/'reviews/batch_05/evidence/respiration_primary').rglob('*') if p.is_file())
++mp=b/'evidence'/f'{n}_reviewed_manifest.json'
++files.discard(mp)
+ manifest=dict(module=n,lessons=len(m['lessons']),created_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),content_fingerprint=fp,content_verdict='accepted',artifact_verdict='scoped_review_pass',teacher_acceptance='pending',partner_ingestion='R1supportpending',files=[dict(path=str(p.relative_to(b)),sha256=h(p)) for p in sorted(files)])
+-mp=b/'evidence'/f'{n}_reviewed_manifest.json';mp.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n');files.add(mp)
++mp.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n');files.add(mp)
+ with zipfile.ZipFile(zp,'w',zipfile.ZIP_DEFLATED) as z:
+  for p in sorted(files):z.write(p,p.relative_to(b))
+ with zipfile.ZipFile(zp) as z:

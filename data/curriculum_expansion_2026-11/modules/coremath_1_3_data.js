@@ -1,0 +1,1035 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "Core Mathematics",
+    "grade": 10,
+    "substrand_id": "1.3",
+    "substrand_name": "Quadratic Expressions and Equations",
+    "outputDir": "v2/Core_Mathematics/SS1.3_Quadratic_Expressions_and_Equations",
+    "filePrefix": "Codex_Core_Mathematics_Quadratic_Expressions_and_Equations",
+    "titleDoc": "CORE MATHEMATICS GRADE 10: QUADRATIC EXPRESSIONS AND EQUATIONS",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 1.3 • 14 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "1.0 Numbers and Algebra",
+    "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+    "sep": "Model area,derive identities and test algebraic and contextual solutions.",
+    "careers": "Illustrative mathematical modelling and paper design planning;no professional qualification or real construction claim.",
+    "focus": "Quadratic expression formation,area identities,numerical identities,factorisation,equation formation,solutions by factorisation and real-life paper models.",
+    "content": "Quadratic expressions; Quadratic identities; Factorisation of quadratic expressions; Formation of quadratic equations; Solution of quadratic equations by factorisation; Application of quadratic equations to real-life situations",
+    "phenomenon": "A fictional design chart drops a cross term,loses a zero root and accepts a negative width because it solves an equation.",
+    "supportingPhenomena": "Labelled area partitions,coefficient checks,zero products,repeated roots and changed-area model comparisons.",
+    "drivingQuestion": "How do we use equations in daily life?",
+    "storylineThread": "Expression→area sum→area differences→numerical use→common factor→monic→nonmonic→equation formation→zero-product→complete roots→context→exploration→audit→independent evidence.",
+    "coreCompetencies": "Critical thinking and problem solving: the learner interprets statements to form and solve quadratic equations to get solutions to real-life cases.\nCommunication and collaboration: the learner discusses with peers and comes up with quadratic identities.",
+    "values": "Unity: the learner works with others to write quadratic identities on a chart.\nRespect: the learner works with peers to form and solve quadratic equations to get solutions to real-life cases.",
+    "pcis": "Socio-economic and environmental issues (social cohesion): the learner works with peers to form and solve quadratic equations to get solutions to real-life cases.",
+    "gradeLevel": "10",
+    "subject": "Core Mathematics",
+    "totalDuration": "14 lessons × 40 minutes = 560 minutes",
+    "learningOutcomes": "form quadratic expressions from different situations,\nderive the quadratic identities from the concept of area,\napply quadratic identities in numerical cases,\nfactorise quadratic expressions from different situations,\nform quadratic equations in different situations,\nsolve quadratic equations by factorisation,\napply quadratic equations to real life situations,\nexplore the use of quadratic equations in real life situations."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "What exactly makes an expression quadratic?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Form quadratic expressions from statements and paper area models.",
+        "knowledge": "After collecting terms,a quadratic in x is ax²+bx+c with a≠0;an expression is different from an equation.",
+        "skills": "Translate a situation,collect terms and identify degree.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "What exactly makes an expression quadratic?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE1.\nMaterials: CQE1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether x²−x²+3 remains quadratic.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete all three CQE1 formations,expansions and coefficient identifications. Compare the constant-expression counterexample.",
+          "teacherMoves": "14 minutes. Provide CQE1,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Translate a situation,collect terms and identify degree."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Connect each word/model to its expression and distinguish simplification from solving.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "After collecting terms,a quadratic in x is ax²+bx+c with a≠0;an expression is different from an equation."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Form quadratic expressions from statements and paper area models."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:form and expand the rectangle expression x(x+4),naming its leading coefficient.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Translate a situation,collect terms and identify degree."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "After collecting terms,a quadratic in x is ax²+bx+c with a≠0;an expression is different from an equation.",
+        "learned": "Form quadratic expressions from statements and paper area models.",
+        "explained": "Translate a situation,collect terms and identify degree."
+      }
+    },
+    {
+      "number": 2,
+      "title": "How do four regions derive a square identity?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Derive (a+b)² from a labelled area partition.",
+        "knowledge": "Two distinct cross rectangles each have area ab,so the expansion contains2ab.",
+        "skills": "Derive an identity from areas rather than recalling only its final form.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "How do four regions derive a square identity?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE2.\nMaterials: CQE2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether the area can be just a²+b².",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Draw and label all four CQE2 regions individually for10minutes;compare and write the pair chart for4minutes.",
+          "teacherMoves": "14 minutes. Provide CQE2,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Derive an identity from areas rather than recalling only its final form."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Sum the four areas and check4cm+2cm;separate the positive-length area model from the all-real algebraic identity.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "Two distinct cross rectangles each have area ab,so the expansion contains2ab."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Derive (a+b)² from a labelled area partition."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:submit a labelled individual drawing and explain why both ab terms are needed.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Derive an identity from areas rather than recalling only its final form."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "Two distinct cross rectangles each have area ab,so the expansion contains2ab.",
+        "learned": "Derive (a+b)² from a labelled area partition.",
+        "explained": "Derive an identity from areas rather than recalling only its final form."
+      }
+    },
+    {
+      "number": 3,
+      "title": "Why must an overlap be added back?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Derive a difference-square identity and a difference-of-squares factorisation from distinct area models.",
+        "knowledge": "Removing two strips counts their overlap twice;the L-shaped remainder has a different area decomposition.",
+        "skills": "Label geometry,avoid double subtraction and connect area sums to factors.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "Why must an overlap be added back?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE3.\nMaterials: CQE3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 18 min, Explain 10 min, Driving Question Board (DQB) Creation 3 min, Model Building 5 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the correction needed after subtracting both b-wide strips.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Use CQE3 to draw both fully specified models,derive their formulas and check a=5cm,b=2cm.",
+          "teacherMoves": "18 minutes. Provide CQE3,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Label geometry,avoid double subtraction and connect area sums to factors."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Distinguish (a−b)²=a²−2ab+b² from a²−b²=(a+b)(a−b),including the different regions and length conditions.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "Removing two strips counts their overlap twice;the L-shaped remainder has a different area decomposition."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "3 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Derive a difference-square identity and a difference-of-squares factorisation from distinct area models."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:identify the b² overlap and explain the L-shaped rectangle rearrangement.",
+          "teacherMoves": "5 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Label geometry,avoid double subtraction and connect area sums to factors."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "Removing two strips counts their overlap twice;the L-shaped remainder has a different area decomposition.",
+        "learned": "Derive a difference-square identity and a difference-of-squares factorisation from distinct area models.",
+        "explained": "Label geometry,avoid double subtraction and connect area sums to factors."
+      }
+    },
+    {
+      "number": 4,
+      "title": "How can an identity simplify a numerical calculation?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Apply quadratic identities to exact numerical cases.",
+        "knowledge": "A convenient nearby number exposes cross terms or a difference of squares.",
+        "skills": "Choose a valid identity and verify numerical arithmetic.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "How can an identity simplify a numerical calculation?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE4.\nMaterials: CQE4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict how98² relates to10000 without multiplying98by98 first.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete every CQE4 calculation and one direct check;compare which identity fits each case.",
+          "teacherMoves": "14 minutes. Provide CQE4,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Choose a valid identity and verify numerical arithmetic."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Retain all cross terms and use a=b=1 to reject the false sum-of-squares shortcut.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "A convenient nearby number exposes cross terms or a difference of squares."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Apply quadratic identities to exact numerical cases."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:show the identity calculation for51×49 and its exact result.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Choose a valid identity and verify numerical arithmetic."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "A convenient nearby number exposes cross terms or a difference of squares.",
+        "learned": "Apply quadratic identities to exact numerical cases.",
+        "explained": "Choose a valid identity and verify numerical arithmetic."
+      }
+    },
+    {
+      "number": 5,
+      "title": "Can a common x factor be discarded?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Factor common terms out of quadratic expressions and verify by expansion.",
+        "knowledge": "Factoring an identity does not divide away a possible zero value in a later equation.",
+        "skills": "Extract complete common factors and check every term.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "Can a common x factor be discarded?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE5.\nMaterials: CQE5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the common factor of6x²+9x.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Factor all three CQE5 expressions,expand to check and compare the role of an x factor.",
+          "teacherMoves": "14 minutes. Provide CQE5,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Extract complete common factors and check every term."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain the sign in−2x(x−4) and distinguish an identity from division by a possibly zero x.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "Factoring an identity does not divide away a possible zero value in a later equation."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Factor common terms out of quadratic expressions and verify by expansion."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:factor x²−5x and explain why the factor x remains.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Extract complete common factors and check every term."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "Factoring an identity does not divide away a possible zero value in a later equation.",
+        "learned": "Factor common terms out of quadratic expressions and verify by expansion.",
+        "explained": "Extract complete common factors and check every term."
+      }
+    },
+    {
+      "number": 6,
+      "title": "Which constant pairs reproduce a quadratic?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Factor monic quadratics using sum/product reasoning.",
+        "knowledge": "Expanding (x+p)(x+q) gives middle coefficient p+q and constant pq.",
+        "skills": "Search valid factor pairs and verify the entire expression.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "Which constant pairs reproduce a quadratic?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE6.\nMaterials: CQE6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict which pair has sum5 and product6.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Factor and expand every CQE6 case,including a difference of squares and a repeated factor.",
+          "teacherMoves": "14 minutes. Provide CQE6,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Search valid factor pairs and verify the entire expression."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Connect each selected pair to both middle and constant terms,not just one.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "Expanding (x+p)(x+q) gives middle coefficient p+q and constant pq."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Factor monic quadratics using sum/product reasoning."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:factor x²−x−6 and check the signs by expansion.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Search valid factor pairs and verify the entire expression."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "Expanding (x+p)(x+q) gives middle coefficient p+q and constant pq.",
+        "learned": "Factor monic quadratics using sum/product reasoning.",
+        "explained": "Search valid factor pairs and verify the entire expression."
+      }
+    },
+    {
+      "number": 7,
+      "title": "How do two leading coefficients change factoring?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Factor nonmonic quadratics by grouping or checked candidate products.",
+        "knowledge": "A split middle term must preserve the original coefficient and allow a common binomial factor.",
+        "skills": "Organise coefficients and use expansion to reject false factorisations.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "How do two leading coefficients change factoring?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE7.\nMaterials: CQE7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether (2x+1)(x+3) has the required middle term7x.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete all CQE7 factorisations and expansion checks;explain the stated limitation case.",
+          "teacherMoves": "14 minutes. Provide CQE7,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Organise coefficients and use expansion to reject false factorisations."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Show7x=6x+x and−x=3x−4x;do not claim every quadratic has integer or real linear factors.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "A split middle term must preserve the original coefficient and allow a common binomial factor."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Factor nonmonic quadratics by grouping or checked candidate products."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:factor6x²−x−2 and verify its middle coefficient.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Organise coefficients and use expansion to reject false factorisations."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "A split middle term must preserve the original coefficient and allow a common binomial factor.",
+        "learned": "Factor nonmonic quadratics by grouping or checked candidate products.",
+        "explained": "Organise coefficients and use expansion to reject false factorisations."
+      }
+    },
+    {
+      "number": 8,
+      "title": "How can roots or a context determine an equation?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Form monic quadratic equations from roots and a paper rectangle.",
+        "knowledge": "A root r corresponds to a zero factor x−r;nonzero multiples share roots,so the monic request matters.",
+        "skills": "Translate roots or a context into a specified quadratic equation.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "How can roots or a context determine an equation?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE8.\nMaterials: CQE8. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict the factor for a root−3.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Form both CQE8 root equations and the rectangle’s zero-form equation with side constraints.",
+          "teacherMoves": "14 minutes. Provide CQE8,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Translate roots or a context into a specified quadratic equation."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Distinguish equation formation from solving;state the repeated-root and monic conventions.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "A root r corresponds to a zero factor x−r;nonzero multiples share roots,so the monic request matters."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Form monic quadratic equations from roots and a paper rectangle."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:form the requested equation from roots2and−3 and expand it.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Translate roots or a context into a specified quadratic equation."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "A root r corresponds to a zero factor x−r;nonzero multiples share roots,so the monic request matters.",
+        "learned": "Form monic quadratic equations from roots and a paper rectangle.",
+        "explained": "Translate roots or a context into a specified quadratic equation."
+      }
+    },
+    {
+      "number": 9,
+      "title": "Why does a zero product require separate cases?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Solve factorable equations with the zero-product law and retain zero roots.",
+        "knowledge": "The factor-zero cases apply only when the product equals0;dividing by x can lose x=0.",
+        "skills": "Apply the zero-product law without dividing away a solution.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "Why does a zero product require separate cases?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE9.\nMaterials: CQE9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether x=0 can solve2x²−6x=0.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Solve and substitute all CQE9 zero-form cases;test the false shortcut for the product equal7.",
+          "teacherMoves": "14 minutes. Provide CQE9,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Apply the zero-product law without dividing away a solution."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why either factor may be zero and why the nonzero right-hand side changes the method.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "The factor-zero cases apply only when the product equals0;dividing by x can lose x=0."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Solve factorable equations with the zero-product law and retain zero roots."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:give both roots of2x²−6x=0 with original-equation checks.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Apply the zero-product law without dividing away a solution."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "The factor-zero cases apply only when the product equals0;dividing by x can lose x=0.",
+        "learned": "Solve factorable equations with the zero-product law and retain zero roots.",
+        "explained": "Apply the zero-product law without dividing away a solution."
+      }
+    },
+    {
+      "number": 10,
+      "title": "How can rearrangement reveal every distinct root?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Rearrange and solve quadratic equations by factorisation.",
+        "knowledge": "The original equation must first be equivalent to a zero product;repeated factors may give one distinct root.",
+        "skills": "Preserve equivalence,solve each factor case and check the complete solution set.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "How can rearrangement reveal every distinct root?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE10.\nMaterials: CQE10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict how many distinct roots (x+2)²=0 has.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete all four CQE10 equations,show factors and substitute each distinct root into its original equation.",
+          "teacherMoves": "14 minutes. Provide CQE10,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Preserve equivalence,solve each factor case and check the complete solution set."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Compare negative,positive,fractional and repeated roots;retain both signs in x²=25.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "The original equation must first be equivalent to a zero product;repeated factors may give one distinct root."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Rearrange and solve quadratic equations by factorisation."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:solve x²+2x=15 by factorisation and check both roots.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Preserve equivalence,solve each factor case and check the complete solution set."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "The original equation must first be equivalent to a zero product;repeated factors may give one distinct root.",
+        "learned": "Rearrange and solve quadratic equations by factorisation.",
+        "explained": "Preserve equivalence,solve each factor case and check the complete solution set."
+      }
+    },
+    {
+      "number": 11,
+      "title": "Which roots describe a positive length or count?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Apply quadratic equations to fictional paper dimensions and array counts.",
+        "knowledge": "An algebraic root must satisfy the model’s domain,not only the equation.",
+        "skills": "Model a context and justify a feasible solution.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "Which roots describe a positive length or count?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE11.\nMaterials: CQE11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a negative width can be accepted because its product is positive.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Form,solve and interpret both CQE11 models;record exact assumptions,units/counts and rejected-root reasons.",
+          "teacherMoves": "14 minutes. Provide CQE11,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Model a context and justify a feasible solution."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Verify4mby9m and4rowsby5columns;separate algebraic validity from physical feasibility.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "An algebraic root must satisfy the model’s domain,not only the equation."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Apply quadratic equations to fictional paper dimensions and array counts."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:state one complete model,its selected root,check and constraint.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Model a context and justify a feasible solution."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "An algebraic root must satisfy the model’s domain,not only the equation.",
+        "learned": "Apply quadratic equations to fictional paper dimensions and array counts.",
+        "explained": "Model a context and justify a feasible solution."
+      }
+    },
+    {
+      "number": 12,
+      "title": "Does every area problem produce a quadratic?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Explore and compare supplied area models and a learner-generated variation.",
+        "knowledge": "Collecting terms can reveal a linear model even when the original expression contains squared terms.",
+        "skills": "Explore a use by changing a parameter and evaluating the resulting model.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "Does every area problem produce a quadratic?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE12.\nMaterials: CQE12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether the fixed-width border equation must remain quadratic.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Use both complete CQE12 paper briefs:form,solve and compare models;pose and answer a question about changing the square’s area to64cm².",
+          "teacherMoves": "14 minutes. Provide CQE12,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Explore a use by changing a parameter and evaluating the resulting model."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Derive the border equation4x+10=30 and compare it with x²=49;record actual optional external research only if performed.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "Collecting terms can reveal a linear model even when the original expression contains squared terms."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Explore and compare supplied area models and a learner-generated variation."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:submit the model comparison,own answered variation and honest resource/observation record.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Explore a use by changing a parameter and evaluating the resulting model."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "Collecting terms can reveal a linear model even when the original expression contains squared terms.",
+        "learned": "Explore and compare supplied area models and a learner-generated variation.",
+        "explained": "Explore a use by changing a parameter and evaluating the resulting model."
+      }
+    },
+    {
+      "number": 13,
+      "title": "Can correct algebra still give an unusable dimension?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions identities factorisation quadratic equations area model",
+      "slo": {
+        "purpose": "Audit a false factorisation,a lost zero root and an infeasible context answer.",
+        "knowledge": "Expression identities,solution sets and model domains answer distinct questions.",
+        "skills": "Audit factors,solution completeness and physical interpretation.",
+        "attitudes": "Listen respectfully,share resources responsibly and revise a model when an expansion or substitution check disagrees.",
+        "keyInquiry": "Can correct algebra still give an unusable dimension?",
+        "purposeInStoryline": "A fictional class design team checks area identities,equation models and feasible paper-plan dimensions.",
+        "safetyNotes": "Paper models only;no actual construction,cutting,liquid handling or financial transactions. Use a pencil,ruler and clean reused paper. Draw area partitions without cutting. Optional approved research devices need supervision,no accounts/personal data and honest observed/not-observed records."
+      },
+      "overview": "The complete task,all model dimensions and separate teacher checks are supplied in CQE13.\nMaterials: CQE13. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 14 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 8 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose one CQE13 claim and give a reasoned initial verdict.",
+          "teacherMoves": "4 minutes. Record an individual prediction before discussing or revealing a worked result.",
+          "sensemakingStrategy": "Make a testable mathematical claim.",
+          "formativeAssessment": "An initial reason names evidence that could settle the question."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Repair all three CQE13 claims individually with the specified expansion,solution and context checks;compare only afterwards.",
+          "teacherMoves": "14 minutes. Provide CQE13,plain paper and a ruler. Keep individual working;observe actual group/resource actions separately.",
+          "sensemakingStrategy": "Investigate the fully supplied task and compare at the specified stage.",
+          "formativeAssessment": "Audit factors,solution completeness and physical interpretation."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Use the specific checks to explain the earlier error rather than merely giving a true/false verdict.",
+          "teacherMoves": "10 minutes. Elicit the individual derivation,expansion or substitution evidence and correct the specific error.",
+          "sensemakingStrategy": "Connect a model or symbolic form to a valid general rule.",
+          "formativeAssessment": "Expression identities,solution sets and model domains answer distinct questions."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Record or refine one question about the representation,condition or next step revealed by this task.",
+          "teacherMoves": "4 minutes. Locate the evidence needed;do not infer each learner’s mastery from a shared chart.",
+          "sensemakingStrategy": "Refine the driving question with a specific mathematical observation.",
+          "formativeAssessment": "Audit a false factorisation,a lost zero root and an infeasible context answer."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Exit:submit one revised individual solution and its check,retaining all feasible roots.",
+          "teacherMoves": "8 minutes. Collect the named individual evidence and choose a targeted next support.",
+          "sensemakingStrategy": "Revise the original claim using a check.",
+          "formativeAssessment": "Audit factors,solution completeness and physical interpretation."
+        }
+      ],
+      "teacherReflection": "Inspect individual diagrams,algebra and the named exit evidence. Record a specific term,sign,factor,zero-product or domain error and targeted support. Verify actual pacing,access and group/research actions separately.",
+      "summaryTablePrompt": {
+        "observed": "Expression identities,solution sets and model domains answer distinct questions.",
+        "learned": "Audit a false factorisation,a lost zero root and an infeasible context answer.",
+        "explained": "Audit factors,solution completeness and physical interpretation."
+      }
+    },
+    {
+      "number": 14,
+      "title": "Can an independent quadratic model survive every check?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+      "aresKeywords": "quadratic expressions equations independent explanation",
+      "slo": {
+        "purpose": "Produce independent expression,identity,factorisation,equation and model-exploration evidence.",
+        "knowledge": "A symbolic solution needs valid derivation,equivalence and context checks.",
+        "skills": "Draw,derive,form,factor,solve,verify and interpret independently.",
+        "attitudes": "Work independently and report exact calculations and assumptions honestly.",
+        "keyInquiry": "Which evidence makes the quadratic model and its chosen solution reliable?",
+        "purposeInStoryline": "Each learner audits new paper-plan data independently.",
+        "safetyNotes": "Paper assessment with pencil,ruler and reused paper only. No cutting,construction,external search,personal data or peer consultation."
+      },
+      "overview": "Lesson14,40minutes:4procedure,8section1,8section2,8section3,10section4 and2independent checking. Work independently with CQE14,plain paper and ruler;no teaching cards,peers or worked keys. Use exact arithmetic,show derivations/factors and check roots in original equations. Paper models only.\nMaterials: CQE14. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 8 min, Explain 8 min, Driving Question Board (DQB) Creation 8 min, Model Building 12 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read procedure and distribute only CQE14 and blank response materials.",
+          "teacherMoves": "4 minutes. Explain independent conditions and equipment without revealing mathematical steps or keys.",
+          "sensemakingStrategy": "Prepare an individual evidence record.",
+          "formativeAssessment": "No peer consultation or teaching-card/key access."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Using CQE14,form and expand the expression for the rectangle’s area. Independently draw and label the square of side p+q split at p on both adjacent sides. Label all four region areas and use them to derive (p+q)². Explain the positive-length condition of the drawing and the separate algebraic extension.",
+          "teacherMoves": "8 minutes. Allow8minutes without mathematical coaching.",
+          "sensemakingStrategy": "Draw and derive independently.",
+          "formativeAssessment": "Individual expression and labelled area derivation."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Evaluate99² through an appropriate quadratic identity,showing every term. Factor2x²+5x−3 and verify by full expansion. Explain why matching only the constant term would be insufficient.",
+          "teacherMoves": "8 minutes. Allow8minutes without factor hints.",
+          "sensemakingStrategy": "Calculate,factor and expand independently.",
+          "formativeAssessment": "Numerical identity and full factor verification."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Form one monic quadratic equation with roots−2and5,showing factors and expansion. Separately solve2x²−5x−3=0 by factorisation and substitute each distinct root into the original equation. State the zero-product condition.",
+          "teacherMoves": "8 minutes. Allow8minutes without worked transformations.",
+          "sensemakingStrategy": "Form and solve independently.",
+          "formativeAssessment": "Monic equation,complete roots and original-equation checks."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "For the CQE14 area28cm² model,form a zero-form equation,solve by factorisation and select feasible dimensions. Give the rejected-root reason and a unit-bearing area check. Explore changing only the area to40cm²:state the changed equation and find/check a positive width and length. Explain what the comparison reveals about using a quadratic model,under the stated exact-rectangle assumption. No peer consultation or invented external research.",
+          "teacherMoves": "12 minutes. Allow10minutes for section4 and2minutes independent checking,then collect work.",
+          "sensemakingStrategy": "Interpret,explore and check own work.",
+          "formativeAssessment": "Feasible dimensions,changed model,units and explicit assumptions."
+        }
+      ],
+      "teacherReflection": "Score the four linked criteria against individual diagrams and algebra. Record the specific derivation,factor,root or interpretation error and verify actual40minute pacing.",
+      "summaryTablePrompt": {
+        "observed": "New inputs still require factor,identity and domain checks.",
+        "learned": "A quadratic equation has mathematical roots whose contextual feasibility must be assessed.",
+        "explained": "A changed condition can change the equation and selected dimensions in a checkable way."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "QUADRATIC EXPRESSIONS AND EQUATIONS",
+    "instructions": "Lesson14,40minutes:4procedure,8section1,8section2,8section3,10section4 and2independent checking. Work independently with CQE14,plain paper and ruler;no teaching cards,peers or worked keys. Use exact arithmetic,show derivations/factors and check roots in original equations. Paper models only.",
+    "sections": [
+      {
+        "title": "1. Form an expression and derive an identity",
+        "prompt": "Using CQE14,form and expand the expression for the rectangle’s area. Independently draw and label the square of side p+q split at p on both adjacent sides. Label all four region areas and use them to derive (p+q)². Explain the positive-length condition of the drawing and the separate algebraic extension.",
+        "exemplar": "Rectangle area x(x+4)=x²+4x. Four labelled square regions have areas p²,pq,pq,q²,so(p+q)²=p²+2pq+q². The area diagram uses positive p,q;expanding(p+q)(p+q) separately establishes the identity for all real p,q. Both cross rectangles are required."
+      },
+      {
+        "title": "2. Use an identity and factor a quadratic",
+        "prompt": "Evaluate99² through an appropriate quadratic identity,showing every term. Factor2x²+5x−3 and verify by full expansion. Explain why matching only the constant term would be insufficient.",
+        "exemplar": "99²=(100−1)²=10000−200+1=9801. 2x²+5x−3=(2x−1)(x+3),because expansion gives2x²+6x−x−3. The leading,middle and constant coefficients must all match;the constant alone does not establish an identity."
+      },
+      {
+        "title": "3. Form an equation and solve by factorisation",
+        "prompt": "Form one monic quadratic equation with roots−2and5,showing factors and expansion. Separately solve2x²−5x−3=0 by factorisation and substitute each distinct root into the original equation. State the zero-product condition.",
+        "exemplar": "(x+2)(x−5)=0 givesx²−3x−10=0. The separate equation factors(2x+1)(x−3)=0,sox=−1/2or3. Checks:2(1/4)+5/2−3=0 and18−15−3=0. At least one factor is0 because the product equals0;this rule does not apply by simply setting factors to0 when their product is a nonzero number."
+      },
+      {
+        "title": "4. Interpret and explore a paper model",
+        "prompt": "For the CQE14 area28cm² model,form a zero-form equation,solve by factorisation and select feasible dimensions. Give the rejected-root reason and a unit-bearing area check. Explore changing only the area to40cm²:state the changed equation and find/check a positive width and length. Explain what the comparison reveals about using a quadratic model,under the stated exact-rectangle assumption. No peer consultation or invented external research.",
+        "exemplar": "x(x+3)=28 givesx²+3x−28=(x+7)(x−4)=0. Algebraic roots−7,4;choosewidth4cm,length7cm since dimensions are positive;check4×7=28cm². Changed equationx²+3x−40=0=(x+8)(x−5),sochoose5cmby8cm,check40cm²;−8 is infeasible. The constant changes with the area while the side relation remains fixed. A quadratic model generates candidate dimensions,but units,assumptions and positive-domain checks determine which describe the paper plan."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Form a quadratic expression and derive an area identity",
+        "excellent": "All representations and labels are correct,and both cross terms and the domain distinction are clearly justified.",
+        "proficient": "Correct rectangle expression and expansion,and a labelled four-region derivation with valid length/algebra conditions.",
+        "developing": "Some relevant model or algebra is correct,but a requested term,sign,derivation,solution,check or interpretation needs support.",
+        "belowExpectations": "Needs a guided example to connect the stated situation to valid algebra and a checked result."
+      },
+      {
+        "criterion": "Apply a numerical identity and factor with verification",
+        "excellent": "All terms,signs and checks are complete,with a clear reason why partial coefficient matching is insufficient.",
+        "proficient": "Correct99² identity calculation,factorisation and full coefficient check.",
+        "developing": "Some relevant model or algebra is correct,but a requested term,sign,derivation,solution,check or interpretation needs support.",
+        "belowExpectations": "Needs a guided example to connect the stated situation to valid algebra and a checked result."
+      },
+      {
+        "criterion": "Form and solve quadratic equations by factorisation",
+        "excellent": "All formation and solution evidence is correct and the validity of each transformation is clearly explained.",
+        "proficient": "Correct monic equation,complete solution of the separate equation,substitution checks and zero-product condition.",
+        "developing": "Some relevant model or algebra is correct,but a requested term,sign,derivation,solution,check or interpretation needs support.",
+        "belowExpectations": "Needs a guided example to connect the stated situation to valid algebra and a checked result."
+      },
+      {
+        "criterion": "Apply and explore a constrained model",
+        "excellent": "Both models are correctly formed and solved,with explicit rejected roots,assumptions and an evidence-based interpretation of the change.",
+        "proficient": "Correct original/changed models,feasible dimensions,units,checks and explanation of the variation.",
+        "developing": "Some relevant model or algebra is correct,but a requested term,sign,derivation,solution,check or interpretation needs support.",
+        "belowExpectations": "Needs a guided example to connect the stated situation to valid algebra and a checked result."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand1.3: Quadratic Expressions and Equations",
+    "drivingQuestion": "How do we use equations in daily life?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "What exactly makes an expression quadratic?",
+        "observed": "After collecting terms,a quadratic in x is ax²+bx+c with a≠0;an expression is different from an equation.",
+        "learned": "Form quadratic expressions from statements and paper area models.",
+        "explained": "Translate a situation,collect terms and identify degree."
+      },
+      {
+        "number": 2,
+        "title": "How do four regions derive a square identity?",
+        "observed": "Two distinct cross rectangles each have area ab,so the expansion contains2ab.",
+        "learned": "Derive (a+b)² from a labelled area partition.",
+        "explained": "Derive an identity from areas rather than recalling only its final form."
+      },
+      {
+        "number": 3,
+        "title": "Why must an overlap be added back?",
+        "observed": "Removing two strips counts their overlap twice;the L-shaped remainder has a different area decomposition.",
+        "learned": "Derive a difference-square identity and a difference-of-squares factorisation from distinct area models.",
+        "explained": "Label geometry,avoid double subtraction and connect area sums to factors."
+      },
+      {
+        "number": 4,
+        "title": "How can an identity simplify a numerical calculation?",
+        "observed": "A convenient nearby number exposes cross terms or a difference of squares.",
+        "learned": "Apply quadratic identities to exact numerical cases.",
+        "explained": "Choose a valid identity and verify numerical arithmetic."
+      },
+      {
+        "number": 5,
+        "title": "Can a common x factor be discarded?",
+        "observed": "Factoring an identity does not divide away a possible zero value in a later equation.",
+        "learned": "Factor common terms out of quadratic expressions and verify by expansion.",
+        "explained": "Extract complete common factors and check every term."
+      },
+      {
+        "number": 6,
+        "title": "Which constant pairs reproduce a quadratic?",
+        "observed": "Expanding (x+p)(x+q) gives middle coefficient p+q and constant pq.",
+        "learned": "Factor monic quadratics using sum/product reasoning.",
+        "explained": "Search valid factor pairs and verify the entire expression."
+      },
+      {
+        "number": 7,
+        "title": "How do two leading coefficients change factoring?",
+        "observed": "A split middle term must preserve the original coefficient and allow a common binomial factor.",
+        "learned": "Factor nonmonic quadratics by grouping or checked candidate products.",
+        "explained": "Organise coefficients and use expansion to reject false factorisations."
+      },
+      {
+        "number": 8,
+        "title": "How can roots or a context determine an equation?",
+        "observed": "A root r corresponds to a zero factor x−r;nonzero multiples share roots,so the monic request matters.",
+        "learned": "Form monic quadratic equations from roots and a paper rectangle.",
+        "explained": "Translate roots or a context into a specified quadratic equation."
+      },
+      {
+        "number": 9,
+        "title": "Why does a zero product require separate cases?",
+        "observed": "The factor-zero cases apply only when the product equals0;dividing by x can lose x=0.",
+        "learned": "Solve factorable equations with the zero-product law and retain zero roots.",
+        "explained": "Apply the zero-product law without dividing away a solution."
+      },
+      {
+        "number": 10,
+        "title": "How can rearrangement reveal every distinct root?",
+        "observed": "The original equation must first be equivalent to a zero product;repeated factors may give one distinct root.",
+        "learned": "Rearrange and solve quadratic equations by factorisation.",
+        "explained": "Preserve equivalence,solve each factor case and check the complete solution set."
+      },
+      {
+        "number": 11,
+        "title": "Which roots describe a positive length or count?",
+        "observed": "An algebraic root must satisfy the model’s domain,not only the equation.",
+        "learned": "Apply quadratic equations to fictional paper dimensions and array counts.",
+        "explained": "Model a context and justify a feasible solution."
+      },
+      {
+        "number": 12,
+        "title": "Does every area problem produce a quadratic?",
+        "observed": "Collecting terms can reveal a linear model even when the original expression contains squared terms.",
+        "learned": "Explore and compare supplied area models and a learner-generated variation.",
+        "explained": "Explore a use by changing a parameter and evaluating the resulting model."
+      },
+      {
+        "number": 13,
+        "title": "Can correct algebra still give an unusable dimension?",
+        "observed": "Expression identities,solution sets and model domains answer distinct questions.",
+        "learned": "Audit a false factorisation,a lost zero root and an infeasible context answer.",
+        "explained": "Audit factors,solution completeness and physical interpretation."
+      },
+      {
+        "number": 14,
+        "title": "Can an independent quadratic model survive every check?",
+        "observed": "New inputs still require factor,identity and domain checks.",
+        "learned": "A quadratic equation has mathematical roots whose contextual feasibility must be assessed.",
+        "explained": "A changed condition can change the equation and selected dimensions in a checkable way."
+      }
+    ]
+  }
+};

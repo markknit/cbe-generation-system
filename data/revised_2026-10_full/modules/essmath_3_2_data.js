@@ -528,7 +528,7 @@ const FINAL_EXPLANATION = {
     {
       "title": "Part 1: Does the past change the chance? (Equally likely events)",
       "prompt": "In our class experiment, each pair tossed a 10-shilling coin 40 times and we pooled the results. A fan at a Nairobi bus stage says: 'A coin has landed on heads five times in a row, so tails is now more likely.'\n(a) What is the theoretical probability of heads on one toss of a fair coin? Show how you get it using the formula.\n(b) Is the fan correct? Explain your answer using what you know about how one toss relates to the next.\n(c) Why did pooling the whole class's results give a more reliable estimate of the probability than your own pair's 40 tosses?\n(d) Name the mistake in thinking that the fan, and the fans who said Gor Mahia was 'due' for a loss, are making.",
-      "exemplar": "(a) P(heads) = number of favourable outcomes ÷ total number of equally likely outcomes = 1 ÷ 2 = 1/2 (0.5 or 50%).\n(b) No. Each toss is an independent event: the result of one toss gives no information about the next. A coin has no memory, so after five heads the probability of tails on the next toss is still 1/2, exactly the same as the probability of heads.\n(c) A larger sample gives a more reliable estimate. One pair's 40 tosses can drift away from 1/2 by chance, but when many pairs' results are pooled these chance differences tend to even out and the experimental probability gets closer to the theoretical 1/2.\n(d) This is the gambler's fallacy: believing that past outcomes change the probability of future independent events. Each match Gor Mahia plays is treated as an independent event, so the earlier wins do not change the probability of the next result. The fans who say the team is 'due' for a loss are wrongly treating the next match as if it depends on the earlier wins."
+      "exemplar": "(a) P(heads) = number of favourable outcomes ÷ total number of equally likely outcomes = 1 ÷ 2 = 1/2 (0.5 or 50%).\n(b) No. Each toss is an independent event: the result of one toss gives no information about the next. A coin has no memory, so after five heads the probability of tails on the next toss is still 1/2, exactly the same as the probability of heads.\n(c) A larger sample gives a more reliable estimate. One pair's 40 tosses can drift away from 1/2 by chance, but when many pairs' results are pooled, the chance differences become a much smaller share of the total and the experimental probability usually gets closer to the theoretical 1/2 (later tosses do not make up for earlier ones; each toss is still independent).\n(d) This is the gambler's fallacy: believing that past outcomes change the probability of future independent events. Each match Gor Mahia plays is treated as an independent event, so the earlier wins do not change the probability of the next result. The fans who say the team is 'due' for a loss are wrongly treating the next match as if it depends on the earlier wins."
     },
     {
       "title": "Part 2: Computing probabilities from the mandazi bag (Equally likely outcomes and the range of probability)",
@@ -548,7 +548,7 @@ const FINAL_EXPLANATION = {
     {
       "title": "Part 5: Answering the Driving Question",
       "prompt": "Driving question: If past outcomes of a chance event, like a coin toss or a football match, do not change future probabilities, how can we use mathematics to predict what is likely to happen, and why does this understanding protect us from the dangers of gambling?\nWrite a full explanation (about 8 to 10 sentences) that:\n- uses all four ideas from this unit: equally likely events, the range of probability, mutually exclusive events and independent events;\n- refers to the Gor Mahia winning-streak debate and the betting advertisements on Nairobi matatus and social media;\n- ends by saying how this knowledge can help you make a responsible decision.",
-      "exemplar": "Mathematics lets us say what is likely, not what will certainly happen. Independence does not stop us doing this: each trial has a fixed probability, and we can calculate it and compare it with results over many trials. For equally likely outcomes we use P(event) = favourable outcomes ÷ total outcomes, for example P(heads) = 1/2 for a fair coin, and our pooled class data supported this because larger samples give more reliable estimates. Every probability lies between 0 and 1, so an advertisement claiming '120% odds' or a commentator saying a streak makes a win 'inevitable' is mathematically impossible. When outcomes are mutually exclusive, such as Win, Draw and Loss in one Gor Mahia match, we add their probabilities, but advertisements that stress only the favourable combination, like P(Win or Draw), hide the probability of losing. Most importantly, if each match is treated as an independent event, then like a coin a team has no memory: the probability of the next match stays fixed no matter how long the winning streak is. The fans who said Gor Mahia was 'due' for a loss, and bettors who think tails is 'due' after five heads, are making the gambler's fallacy. The multiplication rule shows that the probability of winning several bets in a row gets smaller with each extra bet, so long winning streaks are unlikely. In our stall example, the stall expected to collect Ksh 3,600 and pay out Ksh 1,800 over 180 spins, so it expects a profit, although short runs can differ. Understanding this protects me because I will not trust betting advertisements that promise I can 'beat the odds', and I will not spend my money chasing a 'due' win. Instead I will use probability to make careful and responsible decisions."
+      "exemplar": "Mathematics lets us say what is likely, not what will certainly happen. Independence does not stop us doing this: each trial has a fixed probability, and we can calculate it and compare it with results over many trials. For equally likely outcomes we use P(event) = favourable outcomes ÷ total outcomes, for example P(heads) = 1/2 for a fair coin, and our pooled class data supported this because larger samples give more reliable estimates. Every probability lies between 0 and 1, so an advertisement claiming '120% odds' or a commentator saying a streak makes a win 'inevitable' is mathematically impossible. When outcomes are mutually exclusive, such as Win, Draw and Loss in one Gor Mahia match, we add their probabilities, but advertisements that stress only the favourable combination, like P(Win or Draw), hide the probability of losing. Most importantly, if each match is treated as an independent event, then like a coin a team has no memory: the probability of the next match stays fixed no matter how long the winning streak is. The fans who said Gor Mahia was 'due' for a loss, and bettors who think tails is 'due' after five heads, are making the gambler's fallacy. The multiplication rule shows that the probability of winning several bets in a row, worked out before we start, gets smaller with each extra bet, so a long winning streak is unlikely to happen; but once a streak has happened, it does not change the probability of the next bet. In our stall example, the stall expected to collect Ksh 3,600 and pay out Ksh 1,800 over 180 spins, so it expects a profit, although short runs can differ. Understanding this protects me because I will not trust betting advertisements that promise I can 'beat the odds', and I will not spend my money chasing a 'due' win. Instead I will use probability to make careful and responsible decisions."
     }
   ],
   "rubric": [
@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Correct use of probability calculations (formula, addition rule, multiplication rule)",
       "excellent": "Exceeds Expectations: All calculations are correct and in simplest form, the correct rule is named and used each time, and working is clearly shown.",
       "proficient": "Meets Expectations: Most calculations are correct with the correct rule used; there may be one small arithmetic slip or missing step of working.",
-      "developing": "Approaches Expectations: Several calculations are incorrect, or rules are mixed up (for example adding when events should be multiplied), or working is missing."
+      "developing": "Approaches Expectations: Several calculations are incorrect, or rules are mixed up (for example adding when events should be multiplied), or working is missing.",
+      "belowExpectations": "Below Expectations: Most calculations are incorrect or missing, rules are not named, and working is not shown."
     },
     {
       "criterion": "Understanding of independence and the gambler's fallacy",
       "excellent": "Exceeds Expectations: Clearly explains that each independent event has a fixed probability that past results cannot change, names the gambler's fallacy, and applies it to both the coin and Gor Mahia.",
       "proficient": "Meets Expectations: States that past outcomes do not change future probability and applies it to the coin or the football example, but the explanation is less complete.",
-      "developing": "Approaches Expectations: Does not reject the idea that a team or coin is 'due', or gives an explanation that is unclear or incorrect."
+      "developing": "Approaches Expectations: Does not reject the idea that a team or coin is 'due', or gives an explanation that is unclear or incorrect.",
+      "belowExpectations": "Below Expectations: Accepts that a coin or team is 'due', and gives no explanation, or an incorrect one, of independence."
     },
     {
       "criterion": "Understanding of the range of probability and mutually exclusive events",
       "excellent": "Exceeds Expectations: Correctly explains that 0 ≤ P ≤ 1, that probabilities of all outcomes sum to 1, and when events are mutually exclusive and when the addition rule can and cannot be used.",
       "proficient": "Meets Expectations: Shows the range and the addition rule correctly but gives limited explanation of when the rule does not apply.",
-      "developing": "Approaches Expectations: Confuses the range of probability or the meaning of mutually exclusive, or cannot say when the addition rule applies."
+      "developing": "Approaches Expectations: Confuses the range of probability or the meaning of mutually exclusive, or cannot say when the addition rule applies.",
+      "belowExpectations": "Below Expectations: Does not give the range of probability, and cannot say what mutually exclusive means or when the addition rule applies."
     },
     {
       "criterion": "Connection to the Driving Question and the Kenyan context",
       "excellent": "Exceeds Expectations: Combines all four concepts in a coherent argument, explains how independence is compatible with predicting what is likely, uses the Gor Mahia debate, betting advertisements and the stall data accurately, and ends with a thoughtful responsible decision.",
       "proficient": "Meets Expectations: Uses most concepts and the Kenyan context correctly, and gives a reasonable conclusion about responsible decisions.",
-      "developing": "Approaches Expectations: Gives a general answer with few concepts, little or no reference to the Kenyan phenomenon, or no conclusion about decision-making."
+      "developing": "Approaches Expectations: Gives a general answer with few concepts, little or no reference to the Kenyan phenomenon, or no conclusion about decision-making.",
+      "belowExpectations": "Below Expectations: Gives little or no answer to the driving question, with no concepts, no Kenyan context and no conclusion about decisions."
     },
     {
       "criterion": "Communication and reasoning",
       "excellent": "Exceeds Expectations: Writing is clear, logical and uses correct mathematical vocabulary in full sentences throughout.",
       "proficient": "Meets Expectations: Writing is mostly clear with mostly correct vocabulary.",
-      "developing": "Approaches Expectations: Writing is hard to follow or key vocabulary is missing or misused."
+      "developing": "Approaches Expectations: Writing is hard to follow or key vocabulary is missing or misused.",
+      "belowExpectations": "Below Expectations: Writing is very hard to follow and key mathematical vocabulary is missing."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

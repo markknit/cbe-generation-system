@@ -496,31 +496,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Number types and classification",
       "excellent": "Correctly names whole numbers, fractions, decimals, rational and irrational numbers, and classifies the duka numbers as odd, even, prime or composite using factors, with correct handling of 1 and 2.",
       "proficient": "Names most number types and classifies most duka numbers correctly, with some factor reasoning.",
-      "developing": "Confuses number types or classifies numbers without using factors."
+      "developing": "Confuses number types or classifies numbers without using factors.",
+      "belowExpectations": "Names few number types correctly and cannot classify the duka numbers as odd, even, prime or composite, or does not use factors at all."
     },
     {
       "criterion": "Evidence for rational and irrational numbers",
       "excellent": "Uses the decimal conversions and the squaring checks (1.999396, 1.99996164, 2.002225) to explain clearly why √2 is irrational and places numbers on the real-number map.",
       "proficient": "Uses some evidence and states that √2 never ends or repeats, but the link to the squaring checks is partial.",
-      "developing": "States that √2 is irrational without evidence, or confuses recurring and non-recurring decimals."
+      "developing": "States that √2 is irrational without evidence, or confuses recurring and non-recurring decimals.",
+      "belowExpectations": "Does not use the decimal conversions or the squaring checks, and cannot say whether √2 is rational or irrational."
     },
     {
       "criterion": "Reciprocals and tools",
       "excellent": "Defines the reciprocal, finds correct values, checks with n × 1/n = 1, links to unit price, and explains why tables and the calculator differ.",
       "proficient": "Defines the reciprocal and finds most values correctly, with limited explanation of tools or accuracy.",
-      "developing": "Confuses reciprocal with another idea or makes calculation errors with no check."
+      "developing": "Confuses reciprocal with another idea or makes calculation errors with no check.",
+      "belowExpectations": "The learner partially determines the reciprocal of real numbers by division, tables or calculators."
     },
     {
       "criterion": "Application and accuracy of calculation",
       "excellent": "All calculations are correct and shown (135, 65, 15, 8 h, 6 h, Ksh 800, Ksh 400, 3 years) using reciprocals.",
       "proficient": "Most calculations are correct with some working shown.",
-      "developing": "Several calculation errors or no working shown."
+      "developing": "Several calculation errors or no working shown.",
+      "belowExpectations": "Most calculations are incorrect, and little or no working is shown even with prompting."
     },
     {
       "criterion": "Answer to the Driving Question",
       "excellent": "Gives a connected answer tying Achieng's trip to real numbers and to reciprocals turning division into multiplication, using examples from several lessons.",
       "proficient": "Answers the question using the duka trip but gives few links to other lessons.",
-      "developing": "Gives a list of facts without answering the question."
+      "developing": "Gives a list of facts without answering the question.",
+      "belowExpectations": "Gives few or no relevant facts and does not attempt to answer the Driving Question about real numbers and reciprocals."
     }
   ]
 };
@@ -581,6 +586,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

@@ -1,0 +1,3 @@
+# General Science 1.7 correction-pass1 — progressive review
+
+Full current materials/keys, all12lessons and complete blueprint/final/rubric read against preserved initial evidence. Initial review was quota-interrupted before a finalized report; original fingerprint/evidence remain in evidence/gensci_1_7_core27/binding.json. Three initially communicated defect groups (missing substantive task inputs; wrong rubric linkage; unsupported F9/F10a/e evidence) are corrected in current text. Final timing/protocol mismatch remains: assessment instructions5/10/10/10/5 versus L12/guide4/8/18/6/4with guided conclusion/source-review phases; HOLD pending focused protocol correction. No source/math/content edits by reviewer. Current Word and exact binding checks in progress.

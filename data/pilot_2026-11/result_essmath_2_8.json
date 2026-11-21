@@ -1,0 +1,129 @@
+{
+ "target": "essmath_2_8",
+ "phases": {
+  "generate": {
+   "cost": 1.1893,
+   "secs": 549,
+   "model": "claude-sonnet-5-5"
+  },
+  "opus_lesson_review": {
+   "cost": 0.2802,
+   "secs": 26,
+   "model": "claude-opus-5-5"
+  },
+  "adjudicate_lessons": {
+   "cost": 0.1128,
+   "secs": 3,
+   "model": "claude-sonnet-5-5"
+  },
+  "sonnet_fe_audit": {
+   "cost": 0.1197,
+   "secs": 3,
+   "model": "claude-sonnet-5-5"
+  },
+  "baseline_opus_review": {
+   "cost": 0.453,
+   "secs": 51,
+   "model": "claude-opus-5-5"
+  },
+  "baseline_adjudicate": {
+   "cost": 0.1724,
+   "secs": 6,
+   "model": "claude-sonnet-5-5"
+  }
+ },
+ "lessons": 8,
+ "fe_present": true,
+ "new": {
+  "raw": 2,
+  "verified": 2,
+  "confirmed": 2,
+  "confirmed_issues": [
+   {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 7, Model Building Phase teacherMoves",
+    "quote_a": "If the club changed KES 5,000 to dollars and back, would it get KES 5,000 back? Estimate before we test it in Lesson 8.",
+    "problem": "Lesson 7 says this KES 5,000 round trip will be tested in Lesson 8, but Lesson 8 never tests or calculates it. Lesson 8 only reuses Mr Brooks's USD 100 round trip.",
+    "correct_value": "Remove the reference to Lesson 8, or add the KES 5,000 round-trip calculation to Lesson 8.",
+    "autofix_ok": false
+   },
+   {
+    "type": "SCIENCE",
+    "where": "Lesson 7, Explain Phase teacherMoves",
+    "quote_a": "Mr Brooks paid the margin once at each change. Where did his USD 1.16 go?",
+    "problem": "The lesson defines the margin as the whole KES 1.50 per USD gap between the buying and selling rates. A round trip (buy at 128.00, sell back at 129.50) loses that gap only once in total: 1 - 128/129.50 ≈ 1.16%, which gives USD 98.84. If the full margin were paid at each of the two changes, the loss would be about double. So the statement contradicts the lesson's own USD 98.84 result.",
+    "correct_value": "Over the round trip Mr Brooks loses the KES 1.50-per-USD spread once in total: 100 × (1 − 128/129.50) ≈ USD 1.16.",
+    "autofix_ok": true,
+    "reference": "Round-trip loss = spread once: 100 × (1 − 128/129.50) ≈ USD 1.16; the buy/sell spread is the dealer's margin."
+   }
+  ],
+  "rejected": [],
+  "dropped_by_code": []
+ },
+ "fe": {
+  "raw": 1,
+  "verified": 0,
+  "confirmed": 0,
+  "confirmed_issues": []
+ },
+ "baseline_old_module": {
+  "lessons": 8,
+  "raw": 6,
+  "verified": 6,
+  "confirmed": 6,
+  "confirmed_issues": [
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 3, Observe Phase formativeAssessment",
+    "quote_a": "Pairs who correctly find that Shop Pendo has a lower sale price (KSh 2,040) versus Shop Fahari (KSh 2,150) AND a bigger percentage discount (15% vs 17.3%)",
+    "problem": "15% is smaller than 17.3% (450 ÷ 2,600 × 100). Shop Fahari gives the bigger percentage discount, not Shop Pendo. The Explain phase of the same lesson says so correctly.",
+    "correct_value": "Shop Pendo has the lower sale price (KSh 2,040) but the smaller percentage discount (15% vs 17.3%)",
+    "autofix_ok": true,
+    "reference": "450 ÷ 2,600 × 100 = 17.3%, which is greater than 15%"
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 1, Explain Phase teacherMoves",
+    "quote_a": "(Expected: Amina also faces a deficit — she needs more money than she has for all three goals",
+    "problem": "Lesson 1 teaches that Amina has a deficit across her three goals. The later lessons fully fund all three: KSh 800 + KSh 2,560 + KSh 1,140 = KSh 4,500. There is no shortfall.",
+    "correct_value": "Amina's three goals exactly use her KSh 4,500 (no deficit)",
+    "autofix_ok": false
+   },
+   {
+    "type": "CROSS_REFERENCE",
+    "where": "Lesson 6, Explain Phase formativeAssessment",
+    "quote_a": "whether learners correctly multiply CP by 1.25 (using the SP formula from Lesson 3)",
+    "problem": "The profit-based SP formula is introduced in Lesson 6 itself (its knowledge outcomes). Lesson 3 only taught the discount sale-price formula.",
+    "correct_value": "SP formula from Lesson 6 (this lesson)",
+    "autofix_ok": true,
+    "reference": "Lesson 6 knowledge outcomes introduce SP = CP × (1 + %Profit ÷ 100)"
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 8, Observe Phase sensemakingStrategy",
+    "quote_a": "sequences the five sub-tasks in the same order as the unit's lesson sequence (budget → discount → commission → currency → profit/loss)",
+    "problem": "The unit teaches profit/loss (Lessons 5–6) before currency conversion (Lesson 7). The task order stated here does not match the lesson sequence it claims to follow.",
+    "correct_value": "budget → discount → commission → profit/loss → currency",
+    "autofix_ok": false
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 8, teacherReflection",
+    "quote_a": "which of the six operations (budget, discount, commission, profit/loss, currency conversion) generated the most errors?",
+    "problem": "The lesson repeatedly refers to 'six operations' but lists only five (budget, discount, commission, profit/loss, currency conversion).",
+    "correct_value": "five operations",
+    "autofix_ok": false
+   },
+   {
+    "type": "INTERNAL_CONTRADICTION",
+    "where": "Lesson 1, overview",
+    "quote_a": "generated a rich set of unanswered questions that will propel the next five lessons forward",
+    "problem": "The unit has eight lessons, so seven lessons follow Lesson 1, not five.",
+    "correct_value": "next seven lessons",
+    "autofix_ok": true,
+    "reference": "Lessons 2–8 = seven lessons following Lesson 1"
+   }
+  ]
+ },
+ "total_cost": 2.3274
+}

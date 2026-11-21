@@ -1,0 +1,259 @@
+{
+  "created_utc": "2026-11-15T01:40:54.194328+00:00",
+  "helper_sha256": "ea16845449fc2d858780af782bf6b66539bb6cf857a8f47221e88830c14183f4",
+  "frozen_prior_helper_sha256": "cd65aa16966638bea2d22d3f1208bdbd3b7d4a585618e9cc660fd011401aa4a1",
+  "reverse_exact_delta_matches_frozen_prior": true,
+  "diff": "--- frozen_version_guard\n+++ review_evidence_delta\n@@ -30,6 +30,10 @@\n ar=dict(verdict='accepted',kind='independent_scoped_artifact_review',content_fingerprint=fp,evidence=[dict(path=str(report),sha256=h(report))],artifacts=[dict(path=str(p.relative_to(b)),sha256=h(p)) for p in sorted(arts)],scope=scope)\n p=b/'reviews'/n/'artifact_acceptance.json';p.write_text(json.dumps(ar,ensure_ascii=False,indent=2)+'\\n')\n files=set(arts+[p,b/'reviews'/n/'content_acceptance.json',report,b/'attribution.yaml',audit,b/'evidence'/f'{n}_resource_policy_snapshot.json'])\n+review_evidence=[Path(item['path']) for item in ca['evidence']]\n+for evidence_path,item in zip(review_evidence,ca['evidence']):\n+ assert evidence_path.is_relative_to(b) and h(evidence_path)==item['sha256']\n+files.update(review_evidence)\n for area in ('sources','blueprints','materials','manuscripts'):\n  files.update((b/area).glob(n+'*'))\n files={p for p in files if p.is_file()}\n@@ -40,7 +44,7 @@\n for card in bank['items']:\n  p=legacy/(card['id']+'.png')\n  if p.exists():files.add(p)\n-for parent in dict.fromkeys([b/'reviews/batch_05',b/'reviews/batch_05/evidence',b/'reviews/batch_06',b/'reviews/batch_06/evidence',report.parent,report.parent/'evidence',b/'evidence']):\n+for parent in dict.fromkeys([b/'reviews/batch_05',b/'reviews/batch_05/evidence',b/'reviews/batch_06',b/'reviews/batch_06/evidence',report.parent,report.parent/'evidence',b/'evidence']+[parent for path in review_evidence for parent in (path.parent,path.parent/'evidence')]):\n  for p in parent.glob(n+'*'):\n   if p.is_dir():files.update(x for x in p.rglob('*') if x.is_file())\n   else:files.add(p)\n",
+  "actual_legacy_CA": {
+    "path": "data/curriculum_expansion_2026-11/reviews/essmath_1_3/content_acceptance.json",
+    "sha256": "aadf16f62afdc3b85a8520c1edeff05fbca84a8cbcddc393933ef47cd95874de",
+    "evidence": [
+      {
+        "path": "data/curriculum_expansion_2026-11/reviews/batch_03/essmath_1_3_initial.md",
+        "exists": true,
+        "lexical_under_base": true,
+        "resolved_under_base": true,
+        "sha_matches": true,
+        "sha256": "becca2020de6292767ff7410167da1ea970b6c7ad902c04806ddee53b87c09db"
+      }
+    ]
+  },
+  "new_parents": [
+    "data/curriculum_expansion_2026-11/reviews/batch_03",
+    "data/curriculum_expansion_2026-11/reviews/batch_03/evidence"
+  ],
+  "selected_count": 37,
+  "selected": [
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/essmath_1_3_initial.md",
+      "sha256": "becca2020de6292767ff7410167da1ea970b6c7ad902c04806ddee53b87c09db",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/essmath_1_3_layout_review.md",
+      "sha256": "d67285044e5d04c74d654c53e9f17aac6ff94aa81bdbd91f3d653b0e77226d39",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_AssessmentMaterials-1.png",
+      "sha256": "9bf61361b93ce37d3d9901583b504f5d54721deeae33ea6c50b100d2dfe23d0f",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_AssessmentMaterials_overview_1.jpg",
+      "sha256": "64591f8ddbb17ec1750390adc2b750d12099cfb37326c1f4b047508ca1ab2afa",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CBE_LessonSequence-08.png",
+      "sha256": "a83c0a104775ba80fa441b83bd3371b32a93f4b40314d6d6fa4a4c15764eae87",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CBE_LessonSequence-20.png",
+      "sha256": "2b65c8ee701afcd4ba1ef2947b7e80b80c439033b94a044c3ba94757fd5de0a2",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CBE_LessonSequence-35.png",
+      "sha256": "95f921931f24098f58f14d594556b561efa9b20633e866748cae8134d4c7c901",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CBE_LessonSequence-36.png",
+      "sha256": "03dfd4fee274ba88c556ad9f9ca72d6b1a0123e1e49d8b6d5060e3251be49650",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CBE_LessonSequence-37.png",
+      "sha256": "f41be876766f3e57ac8d59a0585781e71f00e03d310ce0ee2514e8551196515b",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CBE_LessonSequence_overview_1.jpg",
+      "sha256": "5c6af92b8a70b5d8bbf4e7a7d0a21db1f7d5097eca8c26b837f64882a52f12ca",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CBE_LessonSequence_overview_13.jpg",
+      "sha256": "96b19f8aed6578abb0343eb325984a561dc7f0bb6a99b2b0855885e25ee41015",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CBE_LessonSequence_overview_25.jpg",
+      "sha256": "7321f9db8a22e9b251cadd846c272f404f5b3646e53ee4ed71e241d0981bd838",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CBE_LessonSequence_overview_37.jpg",
+      "sha256": "9b42027caadf3fbb71c4abda0e973f91c24c3de1d1634949b0ab11c0fe2963c8",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CompactTeacherGuide-10.png",
+      "sha256": "c0d589942316fd480aa6880780d1b0a6761e5030d31b4e6dc1eaea1add9b2f24",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_CompactTeacherGuide_overview_1.jpg",
+      "sha256": "0715e429773fc4db222e1864f1bae99f1449eb3e1887134e3e29dbb14eaf84ff",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_FinalExplanation-3.png",
+      "sha256": "64dce15fd44105e3af601af1ec3a4fe869974c36b4f176d8a2f7edf5b990b22a",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_FinalExplanation-5.png",
+      "sha256": "32fe693f854883f95bf3bf0a269d45a3f47865e06b1a52593e6b8c3639c0089a",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_FinalExplanation-6.png",
+      "sha256": "763be187f18064f486d27e7510853265f385836c37a648734b1a3d962fcff203",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_FinalExplanation_TeacherKey-1.png",
+      "sha256": "77204831be4cd8ee43b8a0d4bc63a4eba6ccc90ba72e393e9716037ebf898914",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_FinalExplanation_TeacherKey-2.png",
+      "sha256": "2de41cf92c20fa6720b5521db6f0d4229bb9111fd41612f0d704d0789d13d85e",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_FinalExplanation_TeacherKey_overview_1.jpg",
+      "sha256": "3ae4acabb93d25af132a1c69c42bfd0209fb1788d6aa17d43bdf16528dde218e",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_FinalExplanation_overview_1.jpg",
+      "sha256": "00f2373d38f9b294912f991e656c4407a1a0094db35932da96f00e5263830b6a",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_MaterialsTeacherKey-2.png",
+      "sha256": "b64d176edcb467791e87a92c89e8d71181621dd6022c47aaf5e78f498ac5e0b0",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_MaterialsTeacherKey-3.png",
+      "sha256": "f01c37ac210a82581484d811020e40cc724361dd1eee8b019aa2c3b2ca113f44",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_MaterialsTeacherKey_overview_1.jpg",
+      "sha256": "9e0f848ff86233db3f8b7d5f004533922222aa79c3e948b004c4683f64504895",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_StudentMaterials-1-bottom.png",
+      "sha256": "4cacc18268a5df521d16023ac11d1f2e556a7bc17b6814100d01b777cee3fd91",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_StudentMaterials-1.png",
+      "sha256": "58e9500bba69820c30c8552fa78b62657602bcf6a72d807d73a8c19d415cd94a",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_StudentMaterials-2.png",
+      "sha256": "2436ee9f287f99c6d25925c0d2a8fba818f22bd68cd5b1719039bdac2bdc1131",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_StudentMaterials_overview_1.jpg",
+      "sha256": "ba8fceb62220e911e559e24ce823cd00525e1d3c57a6287a576e234f54053963",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_StudentSummaryTable-1.png",
+      "sha256": "b532e390852930b5cd4d6be19365f48398741c3ab2b0e2c8ad89a779a76b1636",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_StudentSummaryTable_overview_1.jpg",
+      "sha256": "b31a44007fc2d5fb3bcb392747331edf411d9ddd9856523b36b226134fccd7c3",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_SummaryTable-2.png",
+      "sha256": "b0d09a5ccf8b5425e4960f57513fd3151b1238a7bc317e2f48bb11fbb74c1df9",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_SummaryTable_overview_1.jpg",
+      "sha256": "646d134bb836c46226cf5f1c13e8277a2faca80828223db136876a582f987f0d",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_artifact_review_check.json",
+      "sha256": "7400c40949791d98fff19bc6da4b908f60498f860ccb9edfa35dfdd22bbe08f0",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_artifact_review_check.py",
+      "sha256": "265eeb8db8a0d8b0eea74549df60a1d71d3688192b4e0e4c636fb132a17b6f93",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_review_binding.json",
+      "sha256": "3ff897ddf4d02b93f4fe9db7239b9d0a66bdb4c8a8ecdc859198979d2d749813",
+      "resolved_under_base": true,
+      "module_prefix": true
+    },
+    {
+      "path": "data/curriculum_expansion_2026-11/reviews/batch_03/evidence/essmath_1_3_visual_manifest.json",
+      "sha256": "aebda60f25265446b07f16ccb974fb1a3c200760eabe2747980963537e3c736a",
+      "resolved_under_base": true,
+      "module_prefix": true
+    }
+  ],
+  "actual_selection_all_resolve_inside": true,
+  "actual_selection_all_module_prefixed": true,
+  "counterexample_no_file_operations": {
+    "path": "data/curriculum_expansion_2026-11/../outside.md",
+    "lexical_under_base": true,
+    "resolved_under_base": false
+  },
+  "artifact_acceptance_write_before_new_evidence_validation": true,
+  "limits": "Read-only static and path/file enumeration proof;production helper not executed. Transitive supporting references with non-module-prefixed names are not automatically included unless independently selected/explicit evidence entries."
+}

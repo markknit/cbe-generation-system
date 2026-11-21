@@ -1,0 +1,901 @@
+'use strict';
+module.exports = {
+  "schemaVersion": "1.1.0",
+  "META": {
+    "subject": "Essential Mathematics",
+    "grade": 10,
+    "substrand_id": "2.6",
+    "substrand_name": "Surface Area of Solids",
+    "outputDir": "v2/Essential_Mathematics/SS2.6_Surface_Area_of_Solids",
+    "filePrefix": "Codex_Essential_Mathematics_Surface_Area_of_Solids",
+    "titleDoc": "ESSENTIAL MATHEMATICS GRADE 10: SURFACE AREA OF SOLIDS",
+    "subtitleDoc": "OpenAI-only evaluation • Sub-Strand 2.6 • 12 lessons • teacher review copy"
+  },
+  "UNIT": {
+    "strand": "2.0 Measurement and Geometry",
+    "substrand": "Sub-Strand2.6: Surface Area of Solids",
+    "sep": "Construct nets,match boundaries,list faces,measure and qualify ideal models.",
+    "careers": "Illustrative material/design practices;no professional construction/site approval.",
+    "focus": "Cone/square/rectangular-pyramid nets,sphere/hemisphere,open/closed conical/pyramidfrustums,actual safe models/diameters and bounded applications.",
+    "phenomenon": "A fictional planner uses verticalheight as slantheight and adds both endfaces to an open-top bucket.",
+    "supportingPhenomena": "Compatiblecone/squarepyramidnets,two rectangularfaceheights,curved/diskscope,annular/trapezoidfrustummodels,actualballdiameters andvolume-areacontrast.",
+    "drivingQuestion": "Which nets,faces and measurements justify a solid’s surface area? KICD: How solids used in real life?",
+    "storylineThread": "Cone → squarepyramid → rectangularpyramid → sphere → hemisphere → conefrustum → pyramidfrustum → actualmodels → actualdiameter → application/volumecontrast → audit → independent evidence.",
+    "content": "Surface area cone, pyramid (square or rectangular base), sphere, frustum; Applications on area of solids",
+    "coreCompetencies": "Critical Thinking and Problem Solving: the learner uses a cylinder and a cone of the same radius and height to relate volume of a cove to the volume of a cylinder.\nCreativity and Imagination: The learner work with peers to model frustums of cones and pyramids both open and closed.",
+    "values": "Social Justice: the learner accords equal opportunities when discussing the uses of pyramids and frustums are used\nResponsibility: the learner observes safety precautions of others while using locally available materials to model frustums of cones and pyramids.",
+    "pcis": "Environment and technology: The learner collects and uses locally available materials to model frustums of cones and pyramids for use as a learning resources.",
+    "gradeLevel": "10",
+    "subject": "Essential Mathematics",
+    "totalDuration": "12 lessons × 40 minutes = 480 minutes",
+    "learningOutcomes": "determine the surface area of cones and pyramids from the nets,\ncalculate the surface area of a sphere and a hemisphere,\ndetermine the surface area of frustums of cones and pyramids,\napply the surfaces area of cones, pyramids and frustums in real life situations,\nappreciate the application of surface area of solids."
+  },
+  "LESSONS": [
+    {
+      "number": 1,
+      "title": "Which cone net actually fits its base?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Determine cone surface area from a compatible sector-and-disk net.",
+        "knowledge": "Lateral arc must match base circumference;slantheight and counted disks determine area.",
+        "skills": "Construct/label a net and verify arc/area geometry.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "Which cone net actually fits its base?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF1. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether verticalheight4can replace slant5in a cone’s lateral net.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete SF1sector/disk construction,arc match and counted-area calculation.",
+          "teacherMoves": "16 minutes. Use16minutes actual drawing/model/measurement and10minutes checks across phases2–3;teacher prepares safe templates/sharpcuts and records accessible adaptations. Extend actual making opportunities where needed;do not infer them from a diagram.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain separate curved piece/base disk and actual seam/tabs versus ideal geometry.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how polygon faces partition a pyramid net.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Retain an individual net/drawing/action and a lateral/closed-area distinction.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Determine cone surface area from a compatible sector-and-disk net.",
+        "learned": "Lateral arc must match base circumference;slantheight and counted disks determine area.",
+        "explained": "Construct/label a net and verify arc/area geometry."
+      }
+    },
+    {
+      "number": 2,
+      "title": "How do four triangular faces meet a square base?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Determine square-pyramid area from a physically consistent net.",
+        "knowledge": "Each face attaches to one base edge;face slantheight is not verticalheight.",
+        "skills": "Make/label four face triangles and count the base once.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "How do four triangular faces meet a square base?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF2. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a triangle pointing inward can fold into the intended pyramid.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Use SF2net to make/label model or record accessible-template adaptation,then calculate areas.",
+          "teacherMoves": "16 minutes. Use16minutes actual drawing/model/measurement and10minutes checks across phases2–3;teacher prepares safe templates/sharpcuts and records accessible adaptations. Extend actual making opportunities where needed;do not infer them from a diagram.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Check matching edges,faceheights and lateral-versus-closed counts.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask whether a rectangular base preserves one common faceheight.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a correctly counted net explanation and actual-action scope.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Determine square-pyramid area from a physically consistent net.",
+        "learned": "Each face attaches to one base edge;face slantheight is not verticalheight.",
+        "explained": "Make/label four face triangles and count the base once."
+      }
+    },
+    {
+      "number": 3,
+      "title": "Why does a rectangular pyramid need two face heights?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Determine a rectangular-pyramid area from two pairs of correctly labelled faces.",
+        "knowledge": "Perpendicular horizontal half-width differs for the two edge directions.",
+        "skills": "Derive slantheights,draw net and sum face/base areas.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "Why does a rectangular pyramid need two face heights?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF3. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether every triangular face on a rectangular base is congruent.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete SF3slantheight calculations and labelled net/area.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named net/model/measurement evidence.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Match each8or6baseedge with its correct faceheight and common corneredge.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask why a sphere differs from these flat-face nets.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give an individual two-height justification and closedarea.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Determine a rectangular-pyramid area from two pairs of correctly labelled faces.",
+        "learned": "Perpendicular horizontal half-width differs for the two edge directions.",
+        "explained": "Derive slantheights,draw net and sum face/base areas."
+      }
+    },
+    {
+      "number": 4,
+      "title": "Why is a sphere not an exact flat net?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Calculate ideal sphere surface area and qualify a flat-model approximation.",
+        "knowledge": "Sphere area depends on radius squared;flat facets/peel analogies are approximate.",
+        "skills": "Convert diameter,radius and area units correctly.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "Why is a sphere not an exact flat net?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF4. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a ball’s radius can be replaced by its diameter in4πr².",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete SF4two sphere calculations and explain a model limit.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named net/model/measurement evidence.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Distinguish area/volume units and ideal outside area from a thick shell.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask which circular face a hemisphere may include.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit a correct sphere area with radius/unit reasoning.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Calculate ideal sphere surface area and qualify a flat-model approximation.",
+        "learned": "Sphere area depends on radius squared;flat facets/peel analogies are approximate.",
+        "explained": "Convert diameter,radius and area units correctly."
+      }
+    },
+    {
+      "number": 5,
+      "title": "Which hemisphere surface is being counted?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Calculate curved and closed hemisphere areas with explicit counted-face scope.",
+        "knowledge": "A closed hemisphere adds one disk to its curved surface.",
+        "skills": "List surfaces and distinguish ideal dome from thick bowl.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "Which hemisphere surface is being counted?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF5. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether3πr²is curvedsurfacealone.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete SF5curved/closed calculations and dome/bowl comparison.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named net/model/measurement evidence.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain why inner/outer/rim geometry needs more dimensions.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how two unequal circular ends affect a frustum.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give an individual face list and matching area formula.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Calculate curved and closed hemisphere areas with explicit counted-face scope.",
+        "learned": "A closed hemisphere adds one disk to its curved surface.",
+        "explained": "List surfaces and distinguish ideal dome from thick bowl."
+      }
+    },
+    {
+      "number": 6,
+      "title": "What does an open-top cone frustum omit?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Determine conical-frustum lateral,closed and specified open areas.",
+        "knowledge": "Two radius roles,slantheight and declared enddisks determine the total.",
+        "skills": "Check feasibility and count each surface explicitly.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "What does an open-top cone frustum omit?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF6. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether an open-topbucket omits the smaller bottom disk.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete all SF6areas with top/bottom radii and surface list.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named net/model/measurement evidence.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain slant versus verticalheight and separate disk terms.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how a polygonal frustum’s trapezoids differ.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Submit one open/closed comparison with correct counted ends.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Determine conical-frustum lateral,closed and specified open areas.",
+        "learned": "Two radius roles,slantheight and declared enddisks determine the total.",
+        "explained": "Check feasibility and count each surface explicitly."
+      }
+    },
+    {
+      "number": 7,
+      "title": "How do four trapezoids form a pyramid frustum?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Determine square-pyramid-frustum surface areas by net partition.",
+        "knowledge": "Trapezoid faceheight differs from verticalheight and disk formulas do not apply.",
+        "skills": "Draw net,list faces and sum trapezoid/end areas.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "How do four trapezoids form a pyramid frustum?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF7. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a cone formula fits every tapered container.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete SF7net partition and all open/closed area cases.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named net/model/measurement evidence.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain matching trapezoid edges and faceheight/verticalheight difference.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Prepare safe removable-lid model pieces for the next lesson.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give an individual face-count/area justification.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Determine square-pyramid-frustum surface areas by net partition.",
+        "learned": "Trapezoid faceheight differs from verticalheight and disk formulas do not apply.",
+        "explained": "Draw net,list faces and sum trapezoid/end areas."
+      }
+    },
+    {
+      "number": 8,
+      "title": "Can our models show both open and closed frustums?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Make and compare actual cone/pyramid frustum models with removable ends.",
+        "knowledge": "Net arc/edge compatibility and removable faces connect geometry with counted area.",
+        "skills": "Construct,measure/check and record named individual contributions.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "Can our models show both open and closed frustums?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF8. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether a half-annulus can fit unequal circular ends.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Carry out SF8safe construction/checks for cone and pyramid frustums,using teacher-prepared pieces where needed.",
+          "teacherMoves": "16 minutes. Use16minutes actual drawing/model/measurement and10minutes checks across phases2–3;teacher prepares safe templates/sharpcuts and records accessible adaptations. Extend actual making opportunities where needed;do not infer them from a diagram.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Verify arc/circumference or trapezoid matching and compare open/closed surfaces.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how actual object measurements differ from exact net labels.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Retain actual model/contribution or mark unperformed making NOTOBSERVED.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Make and compare actual cone/pyramid frustum models with removable ends.",
+        "learned": "Net arc/edge compatibility and removable faces connect geometry with counted area.",
+        "explained": "Construct,measure/check and record named individual contributions."
+      }
+    },
+    {
+      "number": 9,
+      "title": "How accurately can a safe ball represent a sphere?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Measure an actual spherical approximation and compute a qualified surface estimate.",
+        "knowledge": "Diameter variation/non-sphericity and tool precision limit ideal formulas.",
+        "skills": "Measure in three directions,record and calculate honestly.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "How accurately can a safe ball represent a sphere?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF9. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether one rough diameter gives an exact physical surface area.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Carry out SF9actual lightweight-card diameter readings and ideal sphere estimate.",
+          "teacherMoves": "16 minutes. Use16minutes actual drawing/model/measurement and10minutes checks across phases2–3;teacher prepares safe templates/sharpcuts and records accessible adaptations. Extend actual making opportunities where needed;do not infer them from a diagram.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Compare readings and qualify optional dome surface scope.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Ask how material allowances and volume differ from ideal area.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Retain actual named measurements and one modelling limit.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Measure an actual spherical approximation and compute a qualified surface estimate.",
+        "learned": "Diameter variation/non-sphericity and tool precision limit ideal formulas.",
+        "explained": "Measure in three directions,record and calculate honestly."
+      }
+    },
+    {
+      "number": 10,
+      "title": "Does a volume ratio determine an area ratio?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Apply area to a fictional material plan and address the source’s separate volume competency.",
+        "knowledge": "A material allowance is declared separately;volume and area have different dimensions/ratios.",
+        "skills": "Calculate cover area/allowance and compare cone/cylinder models.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "Does a volume ratio determine an area ratio?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF10. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Predict whether cone/cylinder1/3volume forces1/3surfacearea.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete SF10cover plan and same-radius/height volume/closedarea contrast.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named net/model/measurement evidence.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Explain units,fit/seams/waste and the source competency’s volume-versus-area distinction.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Identify solid-area claims needing a face-list audit.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give a useful material-planning benefit and a relevant limitation.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Apply area to a fictional material plan and address the source’s separate volume competency.",
+        "learned": "A material allowance is declared separately;volume and area have different dimensions/ratios.",
+        "explained": "Calculate cover area/allowance and compare cone/cylinder models."
+      }
+    },
+    {
+      "number": 11,
+      "title": "Which solid-area claims survive a net audit?",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Correct five faceheight/endface/volume-area claims with a useful application.",
+        "knowledge": "A valid surface area requires appropriate geometry and an explicit list of counted pieces.",
+        "skills": "Audit,partition and justify a conditional practical claim.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "Which solid-area claims survive a net audit?",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF11. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 16 min, Explain 10 min, Driving Question Board (DQB) Creation 4 min, Model Building 6 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Choose a plausible SF11claim and state its geometric assumption.",
+          "teacherMoves": "4 minutes. Elicit an individual prediction and its counted-surface assumption.",
+          "sensemakingStrategy": "Commit a reasoned prediction.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Audit all five SF11cases individually before comparing reasons.",
+          "teacherMoves": "16 minutes. Use16minutes on supplied or actual task;retain named net/model/measurement evidence.",
+          "sensemakingStrategy": "Retain individual actual/supplied task evidence.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Check net,slantheight,endface and unit/ratio distinctions.",
+          "teacherMoves": "10 minutes. Use10minutes to compare geometry,units,face counts and limits.",
+          "sensemakingStrategy": "Connect a result to matching geometry and counted surfaces.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Prepare final procedure only;withhold SF12data and keys.",
+          "teacherMoves": "4 minutes. Use4minutes for a supported next question or preparation boundary.",
+          "sensemakingStrategy": "Identify a supported question or practical limit.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Give a supported correction and practical benefit/limit.",
+          "teacherMoves": "6 minutes. Use6minutes to collect an individual explanation/action record.",
+          "sensemakingStrategy": "Explain one individual checked conclusion.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Correct five faceheight/endface/volume-area claims with a useful application.",
+        "learned": "A valid surface area requires appropriate geometry and an explicit list of counted pieces.",
+        "explained": "Audit,partition and justify a conditional practical claim."
+      }
+    },
+    {
+      "number": 12,
+      "title": "Independent solid surface and application audit",
+      "duration": "40 minutes",
+      "substrand": "Sub-Strand2.6: Surface Area of Solids",
+      "aresKeywords": "surface area cone pyramid sphere hemisphere frustum nets",
+      "slo": {
+        "purpose": "Independently use nets/formulas to determine counted surfaces and bound an application.",
+        "knowledge": "Exact design data do not certify actual model construction or diameter measurement.",
+        "skills": "Draw face lists/nets,calculate and justify limits.",
+        "attitudes": "Offer equal participation,share materials fairly and report actual model/measurement work honestly.",
+        "keyInquiry": "Independent solid surface and application audit",
+        "purposeInStoryline": "A fictional material planner counts every frustum disk and transfers a volume ratio to surface area;the class tests nets,faces and real model limits.",
+        "safetyNotes": "Use clean card,tape,approved blunt tools,light flat cards and soft balls/plastic objects. Teacher prepares sharp cuts/compass templates. No sharp metal,glass/fruit cutting,electrical lamps,heavy-book squeezing,site access or unsafe containers;actualmaking/measurement alternatives keep honest scope."
+      },
+      "overview": "Use supplied exact net/design cases and separately observed safe model/diameter actions. Diagrams are schematic with no physical print-scale claim;tabs/seams extra.\nMaterials: SF12. Use the companion Student Materials and Teacher Materials Key. Pacing: Predict 4 min, Observe 12 min, Explain 16 min, Driving Question Board (DQB) Creation 4 min, Model Building 4 min.",
+      "framework": [
+        {
+          "phase": "Predict Phase",
+          "learnerExperience": "Read independent instructions and arrange SF12,calculator and blankpaper.",
+          "teacherMoves": "4 minutes. 4minutes procedure only;no final worked face/area example.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Prediction identifies a slant/face/unit condition."
+        },
+        {
+          "phase": "Observe Phase",
+          "learnerExperience": "Complete sections1–2 independently.",
+          "teacherMoves": "12 minutes. 12minutes independent sections1–2;no peer or teacher content hints.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Named records distinguish actual construction/measurement from supplied exact designs."
+        },
+        {
+          "phase": "Explain Phase",
+          "learnerExperience": "Complete sections3–4 independently.",
+          "teacherMoves": "16 minutes. 16minutes independent sections3–4;no shared face lists/calculations or feedback.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Net geometry,formula,units and counted surfaces agree."
+        },
+        {
+          "phase": "Driving Question Board (DQB) Creation",
+          "learnerExperience": "Check face lists,units and rounding silently.",
+          "teacherMoves": "4 minutes. 4minutes silent self-check;no scaffolding.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Question/claim follows from available evidence."
+        },
+        {
+          "phase": "Model Building Phase",
+          "learnerExperience": "Hand in all labelled individual work.",
+          "teacherMoves": "4 minutes. 4minutes collection;keys and teachingcards withheld.",
+          "sensemakingStrategy": "Work independently without hints or peer comparison.",
+          "formativeAssessment": "Individual response/action record supports only its stated scope."
+        }
+      ],
+      "teacherReflection": "Check actual individual F1/F2/F8construction andF9diameter actions separately from calculations. Confirm net compatibility,face count,object/tool access,precision and40minute pacing;extend unobserved making opportunities rather than certify from paper answers.",
+      "summaryTablePrompt": {
+        "observed": "Independently use nets/formulas to determine counted surfaces and bound an application.",
+        "learned": "Exact design data do not certify actual model construction or diameter measurement.",
+        "explained": "Draw face lists/nets,calculate and justify limits."
+      }
+    }
+  ],
+  "FINAL_EXPLANATION": {
+    "subjectLabel": "SURFACE AREA OF SOLIDS",
+    "instructions": "Lesson12,40minutes:4procedure,12sections1–2,16sections3–4,4silentcheck,4collection. Work independently with SF12only,calculatorπand blankpaper. No teaching cards,models,peers,hints or media. Draw labelled nets/face lists,show formulas and square units;round final nonexact areas to2decimalplaces.",
+    "sections": [
+      {
+        "title": "1. Cone and pyramid from nets",
+        "prompt": "For FinalA,draw/describe a compatible cone sector-and-disk net and a square-pyramid net with every counted face labelled. Determine each closed total surface area and explain slantheight versus verticalheight.",
+        "exemplar": "Conenetsectorradius5,angle360*4/5=288degrees,arc8πmatchesbasecircumference;sectorarea20π,base16π,total36π≈113.10cm². Pyramidfourtrianglesbase6/faceheight5,total60,base36,total96cm². Conevertical3notslant5;faceheightnotpyramidverticalheight."
+      },
+      {
+        "title": "2. Sphere and hemisphere counts",
+        "prompt": "Determine FinalBsphere area,hemispherecurved area and hemisphereclosed total. State exactly which circularface is included,and why an exact flat sphere net or a thick bowl’s total area is not established by these ideal formulas.",
+        "exemplar": "Sphere16π≈50.27cm²;hemicurved8π≈25.13,closed12π≈37.70addsone4πdisk. Exactflatnetwithoutdistortionnotavailable;thickinnerouter/rimrequiresmoregeometry."
+      },
+      {
+        "title": "3. Two frustums,open and closed",
+        "prompt": "For FinalCcompute conicalfrustum lateral,closed and open-top-with-bottom areas;label top/bottomradii. For FinalDdraw a face partition and compute closed and open-top areas. Explain why only the declared missing face is omitted.",
+        "exemplar": "Clateralπ(4+2)*3=18π;closed18π+16π+4π=38π≈119.38;opentopremoveR4disk→22π≈69.12cm². Dfourtrapezoids .5*(5+3)*4=16each,lateral64;bottom25/top9;closed98,opentop89cm². Do notuseconeformulaforpolygonoromitbottom."
+      },
+      {
+        "title": "4. Application,dimensions and actual evidence",
+        "prompt": "Explain one useful area application and one fit/waste/measurement limitation. Explain why cone/cylinder1/3volumeratio alone cannot determine area ratio. Name one separate actual observation needed to confirm model-making or diameter-measurement skill.",
+        "exemplar": "Acceptcover/material/paintplanningwithdeclaredfaces,units,seams/wastelimit. VolumeL³versusareaL²;geometry/countedsurfacesdiffer,so1/3Vnot1/3A. Actualnamedconstruction/check/modelartifactF1/F2/F8oractualdiameter/tool/rawreadingsF9needed;exactgiven-datafinalnotperformedmaking/measuring. Reasonedbenefitnotpersistentattitudeproof."
+      }
+    ],
+    "rubric": [
+      {
+        "criterion": "Determine cone/pyramid area from nets",
+        "excellent": "Both compatible complete nets/areas correct with precise face/slant/vertical distinctions.",
+        "proficient": "Correct nets/areas and valid counted-face/height explanations.",
+        "developing": "Some correct pieces but compatibility,face count,slantheight or units needs correction.",
+        "belowExpectations": "Needs guided net/face/height/unit questions to build a supported surface model."
+      },
+      {
+        "criterion": "Determine sphere/hemisphere area",
+        "excellent": "All three correct areas with exact disk count and clear sphere-net/thick-shell limits.",
+        "proficient": "Correct sphere/hemisphere areas and valid face/model distinction.",
+        "developing": "Some valid formula use but radius,hemisphereface or model scope needs correction.",
+        "belowExpectations": "Needs guided net/face/height/unit questions to build a supported surface model."
+      },
+      {
+        "criterion": "Determine open/closed frustum areas",
+        "excellent": "Both solid partitions and all requested totals correct with precise top/bottom/faceheight reasoning.",
+        "proficient": "Correct requested areas and valid counted-face lists for each shape.",
+        "developing": "Some valid lateral/end work but shapeformula,facecount or height needs correction.",
+        "belowExpectations": "Needs guided net/face/height/unit questions to build a supported surface model."
+      },
+      {
+        "criterion": "Explain useful application and separate evidence",
+        "excellent": "Specific useful conditional application,dimension/ratio reasoning and precise actual construction/measurement evidence.",
+        "proficient": "Useful accurate application/limit and correct ratio/action-evidence distinctions.",
+        "developing": "Application plausible but countedface,dimensionratio or actual-action evidence needs correction.",
+        "belowExpectations": "Needs guided net/face/height/unit questions to build a supported surface model."
+      }
+    ]
+  },
+  "SUMMARY_TABLE": {
+    "subStrand": "Sub-Strand2.6: Surface Area of Solids",
+    "drivingQuestion": "Which nets,faces and measurements justify a solid’s surface area? KICD: How solids used in real life?",
+    "lessons": [
+      {
+        "number": 1,
+        "title": "Which cone net actually fits its base?",
+        "observed": "Determine cone surface area from a compatible sector-and-disk net.",
+        "learned": "Lateral arc must match base circumference;slantheight and counted disks determine area.",
+        "explained": "Construct/label a net and verify arc/area geometry."
+      },
+      {
+        "number": 2,
+        "title": "How do four triangular faces meet a square base?",
+        "observed": "Determine square-pyramid area from a physically consistent net.",
+        "learned": "Each face attaches to one base edge;face slantheight is not verticalheight.",
+        "explained": "Make/label four face triangles and count the base once."
+      },
+      {
+        "number": 3,
+        "title": "Why does a rectangular pyramid need two face heights?",
+        "observed": "Determine a rectangular-pyramid area from two pairs of correctly labelled faces.",
+        "learned": "Perpendicular horizontal half-width differs for the two edge directions.",
+        "explained": "Derive slantheights,draw net and sum face/base areas."
+      },
+      {
+        "number": 4,
+        "title": "Why is a sphere not an exact flat net?",
+        "observed": "Calculate ideal sphere surface area and qualify a flat-model approximation.",
+        "learned": "Sphere area depends on radius squared;flat facets/peel analogies are approximate.",
+        "explained": "Convert diameter,radius and area units correctly."
+      },
+      {
+        "number": 5,
+        "title": "Which hemisphere surface is being counted?",
+        "observed": "Calculate curved and closed hemisphere areas with explicit counted-face scope.",
+        "learned": "A closed hemisphere adds one disk to its curved surface.",
+        "explained": "List surfaces and distinguish ideal dome from thick bowl."
+      },
+      {
+        "number": 6,
+        "title": "What does an open-top cone frustum omit?",
+        "observed": "Determine conical-frustum lateral,closed and specified open areas.",
+        "learned": "Two radius roles,slantheight and declared enddisks determine the total.",
+        "explained": "Check feasibility and count each surface explicitly."
+      },
+      {
+        "number": 7,
+        "title": "How do four trapezoids form a pyramid frustum?",
+        "observed": "Determine square-pyramid-frustum surface areas by net partition.",
+        "learned": "Trapezoid faceheight differs from verticalheight and disk formulas do not apply.",
+        "explained": "Draw net,list faces and sum trapezoid/end areas."
+      },
+      {
+        "number": 8,
+        "title": "Can our models show both open and closed frustums?",
+        "observed": "Make and compare actual cone/pyramid frustum models with removable ends.",
+        "learned": "Net arc/edge compatibility and removable faces connect geometry with counted area.",
+        "explained": "Construct,measure/check and record named individual contributions."
+      },
+      {
+        "number": 9,
+        "title": "How accurately can a safe ball represent a sphere?",
+        "observed": "Measure an actual spherical approximation and compute a qualified surface estimate.",
+        "learned": "Diameter variation/non-sphericity and tool precision limit ideal formulas.",
+        "explained": "Measure in three directions,record and calculate honestly."
+      },
+      {
+        "number": 10,
+        "title": "Does a volume ratio determine an area ratio?",
+        "observed": "Apply area to a fictional material plan and address the source’s separate volume competency.",
+        "learned": "A material allowance is declared separately;volume and area have different dimensions/ratios.",
+        "explained": "Calculate cover area/allowance and compare cone/cylinder models."
+      },
+      {
+        "number": 11,
+        "title": "Which solid-area claims survive a net audit?",
+        "observed": "Correct five faceheight/endface/volume-area claims with a useful application.",
+        "learned": "A valid surface area requires appropriate geometry and an explicit list of counted pieces.",
+        "explained": "Audit,partition and justify a conditional practical claim."
+      },
+      {
+        "number": 12,
+        "title": "Independent solid surface and application audit",
+        "observed": "Independently use nets/formulas to determine counted surfaces and bound an application.",
+        "learned": "Exact design data do not certify actual model construction or diameter measurement.",
+        "explained": "Draw face lists/nets,calculate and justify limits."
+      }
+    ]
+  }
+};

@@ -223,7 +223,7 @@ FE_SCHEMA = ('{"subjectLabel": "FILL IN CAPS", '
              '{"title": "SECTION 1: TITLE IN CAPS", "prompt": "FILL", "exemplar": "FILL - 2-3 paragraphs with Kenyan examples"}'
              '], '
              '"rubric": ['
-             '{"criterion": "FILL", "excellent": "FILL", "proficient": "FILL", "developing": "FILL"}'
+             '{"criterion": "FILL", "excellent": "FILL", "proficient": "FILL", "developing": "FILL", "belowExpectations": "FILL"}'
              ']}')
 
 

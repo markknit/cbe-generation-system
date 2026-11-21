@@ -1,7 +1,7 @@
 # Known audit items: math_2_3
 
 ## Lesson-sequence items (teacher review list)
-- **[structural]** When the sector area formula is taught: L1 Explain names and writes A = (θ/360°)πr², L2 formalises it, L3/L4 treat it as derived new in L4 — L1's Explain and model phases already name and apply the sector area formula although its overview says no formula is taught, and L4 derives it as new; sequencing issue, not edited (earlier pass missed L1's Explain phase).
+- **[science — needs rewrite]** Rotation: direct vs opposite congruence (L7 vs L8) — Correct fact: rotation produces DIRECT congruence (orientation preserved, image superimposable by sliding/turning in the plane). L7's whole activity, SLOs, chart and summary are built on 'rotation = opposite congruence'; needs author rewrite of L7.
 
 ## Final Explanation reviewer findings (unverified; some are false alarms)
 - none

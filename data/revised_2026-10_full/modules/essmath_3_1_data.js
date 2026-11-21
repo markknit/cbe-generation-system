@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Organising data and calculating from tables",
       "excellent": "Exceeds Expectations: All percentages, angles, means and medians are correct, with clear working and the frequencies checked against the total.",
       "proficient": "Meets Expectations: Most calculations are correct with some working shown; one small slip in rounding or working.",
-      "developing": "Approaches Expectations: Several calculations are incorrect or have no working; totals are not checked."
+      "developing": "Approaches Expectations: Several calculations are incorrect or have no working; totals are not checked.",
+      "belowExpectations": "Below Expectations: Most calculations are incorrect or missing, with no working, and the frequencies are not checked against the total."
     },
     {
       "criterion": "Choosing measures and graphs",
       "excellent": "Exceeds Expectations: Chooses mean, median, mode and graph types correctly for each data type, and explains using the outlier and the categorical data.",
       "proficient": "Meets Expectations: Chooses most measures and graphs correctly with partial reasons.",
-      "developing": "Approaches Expectations: Choices are unclear or not linked to the type of data."
+      "developing": "Approaches Expectations: Choices are unclear or not linked to the type of data.",
+      "belowExpectations": "Below Expectations: Does not choose a measure or graph suited to the data, and gives no reason."
     },
     {
       "criterion": "Evidence-based reasoning about the claims",
       "excellent": "Exceeds Expectations: Uses exact numbers (14 of 40, 35%; 12 of 40, 30%; 65%) to judge each claim, and correctly says the class count cannot test Zawadi's bus claim.",
       "proficient": "Meets Expectations: Judges the claims with some numbers; the bus claim is mentioned but not fully explained.",
-      "developing": "Approaches Expectations: Gives opinions without numbers, or states the claims are right or wrong without evidence."
+      "developing": "Approaches Expectations: Gives opinions without numbers, or states the claims are right or wrong without evidence.",
+      "belowExpectations": "Below Expectations: Gives no numbers to judge the claims, and makes statements about the claims with no evidence."
     },
     {
       "criterion": "Critical reading of graphs",
       "excellent": "Exceeds Expectations: Explains the truncated axis effect (12 times against a true ratio of about 4.7) and lists several correct checks for an honest graph.",
       "proficient": "Meets Expectations: Explains that the axis can mislead and lists some checks.",
-      "developing": "Approaches Expectations: Does not recognise how a graph can mislead."
+      "developing": "Approaches Expectations: Does not recognise how a graph can mislead.",
+      "belowExpectations": "Below Expectations: Does not notice that a graph can mislead, and says nothing about the axis."
     },
     {
       "criterion": "Final recommendation and communication",
       "excellent": "Exceeds Expectations: Clear, honest report that links the steps from raw list to evidence, advises no shed, recommends whole-school data, and states the limit of one class.",
       "proficient": "Meets Expectations: Gives a clear recommendation but misses one step or the limit of the sample.",
-      "developing": "Approaches Expectations: Recommendation is unclear or is not supported by the data."
+      "developing": "Approaches Expectations: Recommendation is unclear or is not supported by the data.",
+      "belowExpectations": "Below Expectations: Gives no recommendation, or one with no link to the data and no mention of the limits of one class."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

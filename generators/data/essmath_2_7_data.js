@@ -556,31 +556,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Mathematical accuracy and units",
       "excellent": "All volumes, capacities, ratios and conversions are correct, use pi = 22/7, and include correct units with litres to 2 decimal places for the Kericho containers.",
       "proficient": "Most calculations are correct, with one or two small slips in arithmetic or units that do not change the conclusion.",
-      "developing": "Several calculations or conversions are incorrect, or units are missing, so the conclusions are not supported."
+      "developing": "Several calculations or conversions are incorrect, or units are missing, so the conclusions are not supported.",
+      "belowExpectations": "Most calculations and conversions are incorrect or missing, and units are missing, so no conclusion is supported."
     },
     {
       "criterion": "Use of formulas and methods",
       "excellent": "Chooses the correct formula for each solid and uses the large-minus-small method and similar triangles accurately, showing the cone-cylinder and pyramid-cuboid one-third relationships.",
       "proficient": "Uses the correct formulas in most cases but the working for similar triangles or large-minus-small is partly incomplete.",
-      "developing": "Uses wrong formulas or cannot show how a frustum relates to a cone or pyramid."
+      "developing": "Uses wrong formulas or cannot show how a frustum relates to a cone or pyramid.",
+      "belowExpectations": "Does not choose the correct formula for the solids, and cannot relate a frustum to a cone or pyramid."
     },
     {
       "criterion": "Explaining the phenomenon",
       "excellent": "Clearly explains that the containers differ in capacity because their shape differs, uses 27.72 L, 58.52 L and 83.16 L, and answers Mr. Kiprop's question with the tapering reasoning.",
       "proficient": "Explains that shape matters and quotes the capacities, but the reasoning about tapering is general or incomplete.",
-      "developing": "States that the containers differ without a mathematical explanation or with incorrect numbers."
+      "developing": "States that the containers differ without a mathematical explanation or with incorrect numbers.",
+      "belowExpectations": "Does not explain why the containers differ in capacity, and the capacities quoted are missing or incorrect."
     },
     {
       "criterion": "Evidence, error and design reasoning",
       "excellent": "Uses evidence from the pouring and model investigations, explains percentage error and its causes, and describes a clear process for designing a frustum of a required capacity.",
       "proficient": "Mentions evidence and at least one cause of error, and gives a partial design process.",
-      "developing": "Gives little evidence from the investigations and no clear explanation of error or design."
+      "developing": "Gives little evidence from the investigations and no clear explanation of error or design.",
+      "belowExpectations": "Gives no evidence from the investigations, and does not mention error or how a frustum might be designed."
     },
     {
       "criterion": "Communication and usefulness of volume and capacity",
       "excellent": "Writes clear, well-organised steps in sensible language and gives well-chosen Kenyan examples that show why volume and capacity are useful.",
       "proficient": "Writing is mostly clear and gives one or two examples of usefulness.",
-      "developing": "Writing is hard to follow and gives no examples of why volume and capacity are useful."
+      "developing": "Writing is hard to follow and gives no examples of why volume and capacity are useful.",
+      "belowExpectations": "Writing is very hard to follow and gives no examples of why volume and capacity are useful."
     }
   ]
 };
@@ -648,6 +653,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

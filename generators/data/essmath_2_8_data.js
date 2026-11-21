@@ -555,31 +555,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Accuracy of calculations",
       "excellent": "All calculations (deficit, discount, sale price, commission, UGX conversion, profit and percentage profit) are correct, use the right formulas and the right base amounts, and carry through correctly from one step to the next.",
       "proficient": "Most calculations are correct and use the right formulas, with one or two minor arithmetic or rounding slips that do not change the overall plan.",
-      "developing": "Several calculations are incorrect or formulas are missing or misused, for example using the wrong base for a percentage or the wrong exchange rate."
+      "developing": "Several calculations are incorrect or formulas are missing or misused, for example using the wrong base for a percentage or the wrong exchange rate.",
+      "belowExpectations": "Most calculations are missing or incorrect, with the wrong formulas or the wrong base amounts, so the plan cannot be built."
     },
     {
       "criterion": "Use of concepts and terms",
       "excellent": "Uses terms such as fixed and variable cost, deficit, marked price, sale price, commission, buying rate, selling rate, spread, cost price and percentage profit correctly and precisely throughout.",
       "proficient": "Uses most terms correctly, with occasional imprecision.",
-      "developing": "Terms are missing, confused or used incorrectly."
+      "developing": "Terms are missing, confused or used incorrectly.",
+      "belowExpectations": "Does not use the terms, or uses them incorrectly throughout."
     },
     {
       "criterion": "Reasoning and explanation",
       "excellent": "Explains clearly why percentages cannot be compared alone, why the exchange rate depends on direction, why the spread is a hidden commission, and why percentage profit uses cost price, with evidence from the calculations.",
       "proficient": "Gives mostly correct explanations, but some lack evidence or full reasoning.",
-      "developing": "Explanations are missing, vague or incorrect, or are not supported by the calculations."
+      "developing": "Explanations are missing, vague or incorrect, or are not supported by the calculations.",
+      "belowExpectations": "Gives no explanation, or gives incorrect explanations with no support from the calculations."
     },
     {
       "criterion": "Integration of the whole plan",
       "excellent": "Presents a complete, consistent plan in which each step feeds into the next (budget, discount, commission, conversion) and accounts for all KSh 4,500, and links it clearly to the driving question.",
       "proficient": "Presents a mostly complete plan with the main steps linked, but minor gaps in the connections or the link to the driving question.",
-      "developing": "The plan is incomplete or the steps are not linked, and little connection is made to the driving question."
+      "developing": "The plan is incomplete or the steps are not linked, and little connection is made to the driving question.",
+      "belowExpectations": "Does not present a plan, or presents separate steps that are not linked and do not account for Amina's KSh 4,500."
     },
     {
       "criterion": "Kenyan context and presentation",
       "excellent": "Keeps Amina's Kenyan context central, shows working clearly with units and steps, and writes in an organised, easy-to-follow way.",
       "proficient": "Working is mostly clear with units, and the context is mostly used.",
-      "developing": "Working is hard to follow, units are often missing, and the context is not used."
+      "developing": "Working is hard to follow, units are often missing, and the context is not used.",
+      "belowExpectations": "Working is very hard to follow, units are missing and Amina's context is not used."
     }
   ]
 };
@@ -647,6 +652,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };

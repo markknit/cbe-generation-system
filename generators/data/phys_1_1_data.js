@@ -616,31 +616,36 @@ const FINAL_EXPLANATION = {
       "criterion": "Claim and use of the key idea (same force, different area)",
       "excellent": "States a clear claim that the difference is the area, not the force, uses the words 'same force, different area', and links pressure to force and area correctly.",
       "proficient": "States that area is different and pressure is greater for the sharp knife, but the idea that force is the same is missing or unclear.",
-      "developing": "Claim is missing, or says the sharp knife uses more force, or gives no link to pressure."
+      "developing": "Claim is missing, or says the sharp knife uses more force, or gives no link to pressure.",
+      "belowExpectations": "Gives no clear claim about why the sharp knife cuts, or says only that it is stronger or pushed harder, and does not link pressure to force and area."
     },
     {
       "criterion": "Calculations and units",
       "excellent": "All areas and pressures are correct (5 x 10^-6 m2, 5 x 10^-5 m2, 8 MPa, 0.8 MPa) with correct unit conversions and units throughout the other calculations.",
       "proficient": "Method is correct but there is one small error in conversion or units.",
-      "developing": "Several errors or missing units, or P = F/A is not used correctly."
+      "developing": "Several errors or missing units, or P = F/A is not used correctly.",
+      "belowExpectations": "Most areas and pressures are missing or wrong, P = F/A is not used or is used with wrong values, and units are mostly missing."
     },
     {
       "criterion": "Use of evidence and threshold reasoning",
       "excellent": "Compares 8 MPa and 0.8 MPa with the 2 MPa value to explain cutting versus squashing, and supports the idea with evidence from the brick, camel and other lessons.",
       "proficient": "Uses the knife numbers but uses the 2 MPa value or other lessons' evidence only partly.",
-      "developing": "Gives little or no evidence, or does not use the 2 MPa value."
+      "developing": "Gives little or no evidence, or does not use the 2 MPa value.",
+      "belowExpectations": "Gives no evidence from the lessons, or does not compare the knife pressures with the 2 MPa value."
     },
     {
       "criterion": "Extension to liquids, air and hydraulics",
       "excellent": "Correctly calculates and explains dam pressure, the air force on the glass and the jack, and clearly contrasts the jack (same pressure, different area) with the knives.",
       "proficient": "Calculates most of these correctly but explanations are brief or the contrast with the knives is weak.",
-      "developing": "Calculations or explanations are mostly missing or incorrect."
+      "developing": "Calculations or explanations are mostly missing or incorrect.",
+      "belowExpectations": "Does not extend the idea to liquids, air or hydraulics, or the examples given are unrelated to pressure."
     },
     {
       "criterion": "Model revision and communication",
       "excellent": "Compares the Lesson 1 model with the final model, naming what stayed, what changed and which lessons caused it, in clear organised sentences.",
       "proficient": "Describes some changes to the model but with few links to lessons.",
-      "developing": "Does not compare the models or the writing is unclear."
+      "developing": "Does not compare the models or the writing is unclear.",
+      "belowExpectations": "Does not show how the first idea changed, and the writing is too unclear to follow."
     }
   ]
 };
@@ -715,6 +720,6 @@ const SUMMARY_TABLE = {
   ]
 };
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 
 module.exports = { schemaVersion, META, UNIT, LESSONS, FINAL_EXPLANATION, SUMMARY_TABLE };
