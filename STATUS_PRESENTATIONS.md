@@ -1,6 +1,6 @@
 # STATUS — Presentations branch
 
-*Last updated: 2026-10-22*
+*Last updated: 2026-11-21*
 
 The status file for the `presentations` branch (worktree
 `/home/markk/ares/cbe-presentations`). For lesson-plan state, see
@@ -21,7 +21,12 @@ The status file for the `presentations` branch (worktree
 | Phase 0 preconditions (HANDOFF §5) | **Done 2026-10-22** except Mark's HANDOFF review: logos in `data/logos/` (checked: both PNGs opaque, white background, usable on a light footer band; ARES copy trimmed for equal visual weight); lesson length rule decided; Spark vision QA reader installed | See pilot row. |
 | Needed change on `main` (not editable here) | **Done 2026-10-26** (`956d3b8d` on `main`, merged in) | `CLAUDE.md` no longer says presentations are deferred / "don't build it"; it now says they are built only on this branch. |
 
+| `main` merge + `main` gates on this branch | **Merged 2026-11-21 (`626a8a19`, 50 commits, no conflicts); 0 behind `main`; NOT pushed (51 ahead of `origin/presentations`).** Gates: `validate_corpus.js` PASS (95 files / 806 lessons); `run_lesson3_checks.sh` ALL PASS; **`check_resource_links.py` FAIL (exit 1): SHAPE=553, T1-T4 and DEAD = 0** | SHAPE failures are the rendered `data/outputs/v2/` JSON still on contract R0 (`schemaVersion` 1.0.0, no `belowExpectations`); `generators/data` is on R1 and passes. Same state as `main`'s STATUS.md ("rendered outputs are still R0"), not caused by the merge. Only the first 281 failure lines were broken down by subject (Bio 45, Chem 35, Core Maths 70, Essential Maths 50); the other 272 not itemised. **Consequence:** the link gate cannot pass, so no merge of `presentations` to `main` (Branch Policy gate 2) until `main` regenerates outputs after the Round 2 promotion. Does not block building decks from `generators/data`. |
+
 ## Known Issues / Lessons Learned
+
+- **(2026-11-21) The branch's control documents were 50 commits stale.** CLAUDE.md, WORKFLOW.md and `ares-contract.schema.json` (contract R1, 1.1.0) had not been merged since 2026-10-26. Caught by `/restart`; fixed by `git merge main`. Structural fix: already the Branch Policy rule (merge `main` at every session start); `/restart` reports the count and proposes it.
+- **(2026-11-21) Resource DB not verified in this worktree.** `data/ares_index/ares_content.db` reported missing by `ls`, and the symlink check was blocked by the sandbox. Check before any step that rebuilds resource links.
 
 - **(2026-10-22) `UNIT.totalDuration` is not a usable lesson-length source.** It assumes 40 minutes per lesson and disagrees with the lessons in 11 of 28 Bio/Chem/Phys modules (e.g. `bio_1_1`: lessons sum 840 min, field says 480). **Structural fix:** the build reads per-lesson `duration` only, and the Phase 2 validator should also check that the slide timings equal that figure.
 
@@ -124,3 +129,12 @@ The status file for the `presentations` branch (worktree
 - The first merge push also pushed the pilot commit `3aa2646f`, which the 2026-10-22 log said was committed only at Mark's request. It is now on GitHub; only `_samples/` holds a committed deck.
 - Active Threads: pilot row (Mark's layout approval, pushed, scaling hold recommendation) and "Needed change on `main`" (done) updated.
 - Untracked in this worktree, not touched: `data/outputs/presentations2/` (not covered by the outputs `.gitignore` rule), `data/Presentations-templates/`, `logs/deck_runs/`, `logs/deck_usage.jsonl`, `logs/exp_partb*`, `logs/rerate/`.
+
+## Updates — 2026-11-21 — `/restart`, merge of `main`, gates run
+- `/restart` found the branch 50 commits behind `main` (`main`'s STATUS.md last updated 2026-11-15). Merged on Mark's yes: `626a8a19`, no conflicts, 0 behind afterwards. Not pushed.
+- Brought in: CLAUDE.md "Codex usage checkpoints" policy and WORKFLOW.md usage/handoff section (apply to Codex-based authoring on `main`; deck authoring here uses Sonnet 5.5 via API), contract R1 (`belowExpectations`, `schemaVersion` 1.1.0; `CONTRACT_CHANGELOG.md`), Round 2 revised data, and the 43 General Science / Essential Maths / Core Maths units.
+- Gates run: `validate_corpus.js` PASS (95 / 806); `run_lesson3_checks.sh` ALL PASS; link gate FAIL, SHAPE=553 (rendered outputs on R0), see Active Threads row.
+- No generator code, deck, lesson data or shared pipeline file edited on this branch. Nothing generated, no API spend.
+- Checked, don't redo: merge state and the three gates, unless `main` changes. Not checked: `data/ares_index` symlink (sandbox-blocked); full per-subject breakdown of the 553 failures.
+- Pilot status unchanged: Bio 1.1 decks approved for graphics/layout; scaling on hold until the Grade 10 revision is signed off. Round 2 on `main` has split Maths lessons and revised data, so the pilot decks stay provisional.
+- Still open: push of the merge (Mark has not asked); teacher check of the 12 decks; PowerPoint/Presenter View check; human look at the 19 pictures; Drive destination for decks; Maths/other-subject guidance; Mark's HANDOFF review; link gate passes only after `main` regenerates outputs; presentations row in `main`'s STATUS.md is accurate and needs no change yet (update only from `main`).
