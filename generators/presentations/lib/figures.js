@@ -354,6 +354,89 @@ function buildFlow(sp) {
 function tintOf(hex) { const c = [0, 2, 4].map(i => parseInt(hex.slice(i, i + 2), 16)); return c.map(v => Math.round(v + (255 - v) * 0.85).toString(16).padStart(2, '0')).join('').toUpperCase(); }
 
 
+
+// ---------------------------------------------------------------- graph
+// spec: {kind:'line'|'scatter'|'bar', x:{label,min,max,step}, y:{label,min,max,step}, series:[{name,points:[[x,y]],style:'straight'|'curve'|'none',best_fit,color}],
+//        bars:[{label,value,color}], hide_points:false, title}
+function buildGraph(sp) {
+  const errors = [], kind = sp.kind || 'line', ax = sp.x || {}, ay = sp.y || {};
+  if (!['line', 'scatter', 'bar'].includes(kind)) return { errors: ["graph: kind must be line, scatter or bar"] };
+  const axErr = (a, nm) => { if (!a.label || a.label.length > 30) errors.push(`graph: ${nm} axis needs a label of 1 to 30 characters`);
+    else if (!/\(.+\)/.test(a.label) && !a.unitless) errors.push(`graph: ${nm} axis label '${a.label}' needs a unit in brackets, e.g. 'Time (s)' (set unitless true only for a pure number or category)`); };
+  axErr(ay, 'y'); if (kind !== 'bar') axErr(ax, 'x'); else if (!ax.label) errors.push('graph: x axis needs a label');
+  if (!isNum(ay.min) || !isNum(ay.max) || ay.min >= ay.max) errors.push('graph: y needs numeric min < max');
+  if (!(ay.step > 0) || (ay.max - ay.min) / ay.step > 20) errors.push('graph: y step must be positive and give at most 20 ticks');
+  if (kind !== 'bar') { if (!isNum(ax.min) || !isNum(ax.max) || ax.min >= ax.max) errors.push('graph: x needs numeric min < max'); if (!(ax.step > 0) || (ax.max - ax.min) / ax.step > 20) errors.push('graph: x step must be positive and give at most 20 ticks'); }
+  const series = sp.series || [], bars = sp.bars || [];
+  if (kind === 'bar') { if (bars.length < 2 || bars.length > 8) errors.push('graph: a bar chart needs 2 to 8 bars'); bars.forEach(b => { if (!isNum(b.value)) errors.push(`graph: bar '${b.label}' needs a numeric value`); else if (b.value < ay.min || b.value > ay.max) errors.push(`graph: bar '${b.label}' value ${b.value} is outside the y axis (${ay.min} to ${ay.max})`); if (!b.label || b.label.length > 18) errors.push(`graph: bar label '${b.label}' must be 1 to 18 characters`); }); }
+  else { if (!series.length || series.length > 4) errors.push('graph: give 1 to 4 series');
+    series.forEach((s, i) => { const nm = s.name || `series ${i + 1}`, pts = s.points || [];
+      if (pts.length < 1 || pts.length > 30 || !pts.every(isPt)) errors.push(`graph: ${nm} needs 1 to 30 [x,y] points`);
+      else { pts.forEach(p => { if (p[0] < ax.min || p[0] > ax.max || p[1] < ay.min || p[1] > ay.max) errors.push(`graph: ${nm} point (${p[0]}, ${p[1]}) is outside the axes`); });
+        const style = s.style || (kind === 'scatter' ? 'none' : 'straight'); if (style !== 'none' && pts.length < 2) errors.push(`graph: ${nm} needs at least 2 points to join`);
+        if (style !== 'none') for (let k = 1; k < pts.length; k++) if (pts[k][0] <= pts[k - 1][0]) { errors.push(`graph: ${nm} x values must increase along a joined line (sort the points, or use style "none")`); break; }
+        if (s.best_fit && pts.length < 3) errors.push(`graph: ${nm} best_fit needs at least 3 points`); }
+      if (series.length > 1 && (!s.name || s.name.length > 24)) errors.push('graph: with more than one series, each needs a name of up to 24 characters'); }); }
+  if (errors.length) return { errors };
+  const out = [], X0 = 15, X1 = 96, Y0 = 6, Y1 = 56, fx = v => X0 + (v - ax.min) / (ax.max - ax.min) * (X1 - X0), fy = v => Y1 - (v - ay.min) / (ay.max - ay.min) * (Y1 - Y0);
+  const fmt = v => String(Math.round(v * 1000) / 1000);
+  for (let v = ay.min; v <= ay.max + 1e-9; v += ay.step) { out.push(L(X0, fy(v), X1, fy(v), { w: 0.5, color: LIGHT })); out.push(T(X0 - 1.5, fy(v), fmt(v), { pt: 12, align: 'r', wu: 9, tick: true })); }
+  if (kind === 'bar') {
+    const n = bars.length, slot = (X1 - X0) / n, bw = Math.min(slot * 0.6, 14);
+    bars.forEach((b, i) => { const cx = X0 + slot * (i + 0.5), c = col(b.color, i); out.push(R(cx - bw / 2, fy(b.value), bw, Y1 - fy(b.value), { fill: tintOf(c), line: c, w: 2 })); out.push(T(cx, Y1 + 3.5, b.label, { pt: 12, wu: slot, tick: true })); if (!sp.hide_points) out.push(T(cx, fy(b.value) - 2.5, fmt(b.value), { pt: 12, bold: true, wu: 12, tick: true })); });
+  } else {
+    for (let v = ax.min; v <= ax.max + 1e-9; v += ax.step) { out.push(L(fx(v), Y0, fx(v), Y1, { w: 0.5, color: LIGHT })); out.push(T(fx(v), Y1 + 3, fmt(v), { pt: 12, wu: 9, tick: true })); }
+    series.forEach((s, i) => { const c = col(s.color, i), pts = s.points, style = s.style || (kind === 'scatter' ? 'none' : 'straight');
+      if (!sp.hide_points) {
+        if (style === 'straight') out.push(...polyline(pts.map(p => [fx(p[0]), fy(p[1])]), { color: c, w: 2.5 }));
+        else if (style === 'curve') { const P = pts.map(p => [fx(p[0]), fy(p[1])]), q = [P[0], ...P, P[P.length - 1]], sm = [];
+          for (let k = 1; k < q.length - 2; k++) for (let u = 0; u < 8; u++) { const tt = u / 8, a = q[k - 1], b = q[k], cc = q[k + 1], d = q[k + 2]; sm.push([0, 1].map(m => 0.5 * ((2 * b[m]) + (-a[m] + cc[m]) * tt + (2 * a[m] - 5 * b[m] + 4 * cc[m] - d[m]) * tt * tt + (-a[m] + 3 * b[m] - 3 * cc[m] + d[m]) * tt * tt * tt))); }
+          sm.push(P[P.length - 1]); out.push(...polyline(sm, { color: c, w: 2.5 })); }
+        if (s.best_fit) { const n = pts.length, mx = pts.reduce((a, p) => a + p[0], 0) / n, my = pts.reduce((a, p) => a + p[1], 0) / n, sxx = pts.reduce((a, p) => a + (p[0] - mx) ** 2, 0), sxy = pts.reduce((a, p) => a + (p[0] - mx) * (p[1] - my), 0);
+          if (sxx > 0) { const m = sxy / sxx, b = my - m * mx, xa = Math.min(...pts.map(p => p[0])), xb = Math.max(...pts.map(p => p[0])); const ya = m * xa + b, yb = m * xb + b;
+            if (ya < ay.min || ya > ay.max || yb < ay.min || yb > ay.max) errors.push(`graph: the best-fit line of ${s.name || 'series ' + (i + 1)} leaves the y axis; widen the y range`); else out.push(L(fx(xa), fy(ya), fx(xb), fy(yb), { color: c, w: 2, dash: 'dash' })); } }
+        pts.forEach(p => out.push(E(fx(p[0]), fy(p[1]), 1.1, 1.1, { fill: c, line: c, w: 1 }))); }
+      if (series.length > 1) { const ly = 8 + i * 5; out.push(L(X1 - 22, ly, X1 - 17, ly, { color: c, w: 3 })); out.push(T(X1 - 15.5, ly, s.name, { pt: 12, align: 'l', wu: 18 })); } });
+  }
+  out.push(L(X0, Y0, X0, Y1, { w: 2.5 })); out.push(L(X0, Y1, X1, Y1, { w: 2.5 }));
+  out.push(T(X0, 1.5, ay.label, { pt: 14, bold: true, align: 'l', wu: 40 })); out.push(T((X0 + X1) / 2, 66, ax.label, { pt: 14, bold: true, wu: 50 }));
+  return { w: 100, h: 69, shapes: out, errors, notes: 'graph' };
+}
+
+
+// ---------------------------------------------------------------- forces
+// spec: {object:{shape:'box'|'ball'|'trolley', label}, forces:[{name,dir:'up'|'down'|'left'|'right'|degrees,value,unit?,label?}], balanced:true|false|null, surface:true}
+// Arrow lengths are drawn in proportion to the values. If balanced is true the forces must add to zero; if false they must not.
+const DIRS = { right: 0, up: 90, left: 180, down: 270 };
+function buildForces(sp) {
+  const errors = [], fs = sp.forces || [], ob = sp.object || {};
+  if (!['box', 'ball', 'trolley'].includes(ob.shape || 'box')) errors.push('forces: object.shape must be box, ball or trolley');
+  if (fs.length < 1 || fs.length > 6) errors.push('forces: give 1 to 6 forces');
+  const names = new Set(), vec = [];
+  fs.forEach((f, i) => { const nm = f.name || `force ${i + 1}`;
+    if (!f.name || f.name.length > 24) errors.push(`forces: force ${i + 1} needs a name of 1 to 24 characters`); else if (names.has(f.name)) errors.push(`forces: '${f.name}' is repeated`); names.add(f.name);
+    if (!isNum(f.value) || f.value <= 0) errors.push(`forces: ${nm} needs a positive numeric value`);
+    const a = typeof f.dir === 'number' ? f.dir : DIRS[f.dir]; if (a === undefined) errors.push(`forces: ${nm} dir must be up, down, left, right or an angle in degrees (0 = right, 90 = up)`); else vec.push({ f, a: a * Math.PI / 180 }); });
+  if (errors.length) return { errors };
+  const sx = vec.reduce((s, v) => s + v.f.value * Math.cos(v.a), 0), sy = vec.reduce((s, v) => s + v.f.value * Math.sin(v.a), 0), net = Math.hypot(sx, sy), mx = Math.max(...vec.map(v => v.f.value));
+  if (sp.balanced === true && net > 0.02 * mx) errors.push(`forces: marked balanced, but the forces add up to ${Math.round(net * 100) / 100} (not zero); fix the values or directions`);
+  if (sp.balanced === false && net < 0.02 * mx) errors.push('forces: marked unbalanced, but the forces add up to zero');
+  if (errors.length) return { errors };
+  const out = [], cx = 50, cy = 33, k = 22 / mx, bw = 16, bh = 10;
+  const half = d => { // distance from centre to the object's edge along direction d
+    if (ob.shape === 'ball') return 6; const c = Math.abs(Math.cos(d)), s = Math.abs(Math.sin(d)); return Math.min(c > 1e-6 ? (bw / 2) / c : 1e9, s > 1e-6 ? (bh / 2) / s : 1e9); };
+  if (sp.surface !== false) out.push(L(10, cy + bh / 2 + (ob.shape === 'trolley' ? 3.4 : 0), 90, cy + bh / 2 + (ob.shape === 'trolley' ? 3.4 : 0), { w: 3, color: '595959' }));
+  if (ob.shape === 'ball') out.push(E(cx, cy, 6, 6, { fill: 'D9E8F5', line: INK, w: 2 })); else { out.push(R(cx - bw / 2, cy - bh / 2, bw, bh, { fill: 'D9E8F5', line: INK, w: 2 })); if (ob.shape === 'trolley') { out.push(E(cx - 5, cy + bh / 2 + 1.7, 1.7, 1.7, { fill: '8A8A8A', line: INK, w: 1.5 })); out.push(E(cx + 5, cy + bh / 2 + 1.7, 1.7, 1.7, { fill: '8A8A8A', line: INK, w: 1.5 })); } }
+  if (ob.label) out.push(T(cx, cy, ob.label, { pt: 14, bold: true, wu: bw - 1 }));
+  vec.forEach((v, i) => { const c = PALETTE[i % PALETTE.length], d = half(v.a), len = v.f.value * k, ux = Math.cos(v.a), uy = -Math.sin(v.a);
+    const x1 = cx + ux * d, y1 = cy + uy * d, x2 = cx + ux * (d + len), y2 = cy + uy * (d + len);
+    out.push(L(x1, y1, x2, y2, { color: c, w: 3.5, arrow: 'end' }));
+    const txt = v.f.label !== undefined ? v.f.label : `${v.f.name} ${v.f.value} ${v.f.unit || 'N'}`, lx = x2 + ux * 3, ly = y2 + uy * 3.4;
+    out.push(T(lx, ly, txt, { pt: 14, bold: true, color: c, wu: 28, align: Math.abs(ux) < 0.3 ? 'c' : ux > 0 ? 'l' : 'r' })); });
+  const xs = out.filter(s => s.t === 'text').map(s => s.x);
+  return { w: 100, h: 66, shapes: out, errors, notes: 'forces' };
+}
+
 // ---------------------------------------------------------------- apparatus
 // spec: {parts:[{id,type,x,size,liquid,colour,stopper,on,in,inverted,reading,holds,flame}], links:[{from,to}], labels:[{on,text,side,at}]}
 // Fixed, correctly drawn bench parts placed by position. The generator owns the drawing and checks the setup.
@@ -485,13 +568,15 @@ function buildApparatus(sp) {
 }
 
 // ---------------------------------------------------------------- public API
-const FAMILIES = { geometry: buildGeometry, grid: buildGrid, circuit: buildCircuit, atoms: buildAtoms, flow: buildFlow, apparatus: buildApparatus };
+const FAMILIES = { geometry: buildGeometry, grid: buildGrid, circuit: buildCircuit, atoms: buildAtoms, flow: buildFlow, apparatus: buildApparatus, graph: buildGraph, forces: buildForces };
 
 const FAMILY_DOCS = {
   geometry: 'Lines, polygons, circles and marked angles from coordinates. spec: {"points":{"A":[0,0],"B":[6,0],"C":[2,4]},"lines":[{"a":"A","b":"B","label":"6 cm","tick":0,"dash":false}],"circles":[{"c":"O","r":3,"label":""}],"angles":[{"at":"B","from":"A","to":"C","label":"40°","right":false}],"point_labels":true,"scale":"exact"}. Coordinates are maths coordinates (y up). scale "exact" => labelled lengths and angles are checked against the coordinates (build fails if they disagree); "not_to_scale" => a caption says so. Use exact only when you give coordinates that really satisfy the labels. Do NOT label an answer students must find.',
   grid: 'Cartesian grid with plotted shapes, lines, points and vectors (transformations, graphs of lines, coordinates). spec: {"x":[-6,6],"y":[-6,6],"step":1,"shapes":[{"pts":[[1,1],[3,1],[3,2]],"labels":["A","B","C"],"color":"blue"}],"lines":[{"m":2,"c":1,"label":"y = 2x + 1"},{"x":3},{"y":2},{"p":[0,0],"q":[2,3]}],"points":[{"at":[2,3],"label":"P"}],"vectors":[{"from":[0,0],"to":[3,2],"label":"a"}]}. Colours: blue, red, green, orange, purple. Everything must lie inside the window. Never draw the image shape students must find.',
   circuit: 'Circuit diagram in standard symbols. spec: {"source":{"type":"cell|battery","label":"6 V"},"series":[{"type":"switch_closed","label":"S"},{"type":"ammeter","label":""}],"parallel":[[{"type":"bulb","label":"L1"}],[{"type":"resistor","label":"R"}]],"bottom":[]}. Types: cell, battery, bulb, resistor, variable_resistor, switch_open, switch_closed, ammeter, voltmeter, fuse, diode, led. Series parts go along the top wire; each parallel entry is one branch (a vertical column of parts). Ammeters go in series, voltmeters in a parallel branch (checked).',
   atoms: 'Bohr diagrams of atoms and ions (shells with electrons). spec: {"atoms":[{"symbol":"Na","protons":11,"neutrons":12,"shells":[2,8,1],"charge":0,"show_counts":true,"label":"atom","outer_only":false}]}. 1-4 atoms side by side (e.g. Na and Na+). Electron counts are checked against the element and charge (first 36 elements). outer_only draws dots for the outer shell only. Omit neutrons if the lesson does not give them. Do not draw an atom students are asked to draw.',
+  graph: 'Data graphs and bar charts with labelled axes. spec: {"kind":"line|scatter|bar","x":{"label":"Time (s)","min":0,"max":10,"step":2},"y":{"label":"Distance (m)","min":0,"max":20,"step":5},"series":[{"name":"Cart A","points":[[0,0],[2,4],[4,8]],"style":"straight|curve|none","best_fit":false,"color":"blue"}],"bars":[{"label":"Day 1","value":12}],"hide_points":false}. Every axis label needs a unit in brackets (Time (s)); for a bar chart x is categories (give x.label, unitless true if it has no unit). Points must lie inside the axes; joined lines need increasing x; best_fit draws a least-squares dashed line (3+ points) and must stay inside the y range. Use hide_points:true to show only empty axes when students must plot the data themselves. Use only values the lesson plan or its data table gives; never plot a result students are asked to find or predict.',
+  forces: 'Free-body force diagrams: an object with force arrows drawn in proportion to their values. spec: {"object":{"shape":"box|ball|trolley","label":"Box"},"forces":[{"name":"Weight","dir":"down","value":50},{"name":"Normal force","dir":"up","value":50},{"name":"Push","dir":"right","value":30},{"name":"Friction","dir":"left","value":30}],"balanced":true,"surface":true}. dir is up, down, left, right or an angle in degrees (0 = right, 90 = up). Arrow length is proportional to value, so give real values. balanced true => the build checks that the forces add to zero; balanced false => that they do not; omit balanced when the lesson leaves it for students to decide. A label is built from name and value (override with label, or label "" to hide it). Do not give a value or direction students must find.',
   apparatus: 'Laboratory bench setups from fixed, correctly drawn parts. spec: {"parts":[{"id":"b1","type":"beaker","x":50,"size":"m","liquid":0.6,"colour":"blue"}],"links":[{"from":"f1","to":"t1"}],"labels":[{"on":"b1","text":"water","side":"right","at":"liquid"}]}. Part types: beaker, conical_flask, test_tube, measuring_cylinder, bunsen, tripod, gas_jar, trough, balance, thermometer, funnel, dish, stand. x is the position along the bench, 22 to 78 (parts at different x must not overlap: beakers and flasks are about 15 wide, a trough 30). liquid 0 to 1 (fraction full); colour blue, red, green, orange, purple or clear. A part resting on another gives on:"id" (a vessel on a tripod; a tripod, trough and balance can carry things); a bunsen sits at the same x under its tripod. A thermometer or funnel gives in:"id" (a container). stopper:true seals a flask or test tube; a delivery tube is a link from a stoppered vessel to a container. inverted:true on a gas_jar on a trough. stand with holds:"id" clamps a part. Labels: side left or right, at liquid, top or base. The build checks: overlaps, a closed vessel over a flame, a flame heating nothing, a thermometer in no liquid, a tube with no stopper. Do not label what students must identify or predict.',
   flow: 'Boxes joined by arrows: a process flow or a cycle. spec: {"kind":"flow|cycle","nodes":[{"text":"Light is absorbed"},{"text":"..."}],"arrow_labels":["","..."],"per_row":4}. 2-10 nodes, each text up to 60 characters. flow runs left to right and wraps in a snake; cycle places nodes in a ring, last arrow returning to the first. arrow_labels[i] labels the arrow leaving node i. Use for sequences, cycles, food chains, processes.',
 };
@@ -512,7 +597,8 @@ function drawFigure(pptx, slide, boxIn, fig, opts = {}) {
   const font = opts.font || 'Calibri', texts = [];
   for (const sh of fig.shapes) {
     if (sh.t === 'line') {
-      const x1 = X(sh.x1), y1 = Y(sh.y1), x2 = X(sh.x2), y2 = Y(sh.y2);
+      const x1 = X(sh.x1), y1 = Y(sh.y1); let x2 = X(sh.x2), y2 = Y(sh.y2);
+      if (Math.abs(x2 - x1) < 1e-6) x2 = x1; if (Math.abs(y2 - y1) < 1e-6) y2 = y1; // float noise (cos 270 deg = -1.8e-16) must not flip a vertical or horizontal line
       const line = { color: sh.color, width: sh.w, dashType: sh.dash };
       if (sh.arrow) line.endArrowType = 'triangle';
       slide.addShape(pptx.ShapeType.line, { x: Math.min(x1, x2), y: Math.min(y1, y2), w: Math.abs(x2 - x1), h: Math.abs(y2 - y1), flipV: (x2 - x1) * (y2 - y1) < 0, flipH: false, line, ...(x2 < x1 && y2 === y1 ? { flipH: true } : {}), ...(y2 < y1 && x2 === x1 ? { flipV: true } : {}) });

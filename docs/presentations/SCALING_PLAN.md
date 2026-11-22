@@ -128,3 +128,15 @@ Provisional link format from the response-capture project: `http://ares.local/qu
 - `quiz_links.py slidemap` proposes a slide per question from the deck manifest (spread across the question's phase,
   flagged "confirm the transition"). Slide numbers move when a deck changes, so regenerate the list after each build.
 - Not built: the link icon on slides.
+
+## Triage of the 147 "other" survey drawings (2026-11-22)
+
+147 of the 2,100 drawings (7%) were classed "other" by the survey. Re-read with whole-word matching (a first pass matched "ion" inside "action" and "section" and was discarded): 38 are students' own cumulative model sketches, about 30 blank grids or tables, 17 concept maps or organisers, 34 unclassified single items (clock-hand sequences, number grids), 9 particle or atom models, 9 scene or object sketches, 7 nested-set or Venn diagrams, 3 scale sketches. No single family is large enough to justify a generator. Handling: blank grids and tables use the existing `table` block; concept maps use the `flow` family (labelled arrows are supported); students' own cumulative models stay text prompts on the slide (the model is drawn on paper); particle models and Venn diagrams wait until a real lesson needs them.
+
+## Further figure families built (2026-11-22, not yet used by a model)
+
+- `apparatus`: 13 bench parts with checks (sealed vessel over a flame, burner heating nothing, thermometer in no liquid, tube without a stopper, overlaps, wrong support). 3 setups rendered; 9 error cases caught.
+- `graph`: line, scatter (with least-squares best-fit line) and bar charts. Checks: every axis label carries a unit in brackets, points inside the axes, joined lines have increasing x, best fit needs 3+ points and stays on the chart, at most 20 ticks. `hide_points` draws empty axes for students to plot. 5 charts rendered; 6 error cases caught.
+- `forces`: free-body diagrams with arrows in proportion to the values. A diagram marked balanced must add to zero and one marked unbalanced must not. 3 rendered; 5 error cases caught.
+- Bug found and fixed in `drawFigure`: float noise (`cos 270 deg = -1.8e-16`) flipped downward vertical arrows. Vertical and horizontal lines are now snapped.
+- Still not built: ray and wave diagrams, vectors, number lines, statistics charts beyond bar charts, bonding, structural formulae, periodic table views.
