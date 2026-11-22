@@ -35,6 +35,7 @@ NOTES_DEF = obj(
 #   illustration -> items = [art_id, scene prompt], text = alt text (a generated picture beside the slide text)
 #   bullets / numbered / callout / columns items may start with "icon_name :: " to show a colourful icon
 #   diagram   -> template + labels, text = caption
+#   figure    -> figure = JSON string {family, spec} for a code-drawn figure (geometry, grid, circuit, atoms, flow), text = caption
 def _template_names():
     """Diagram templates come from the JS library, so adding a template needs no schema edit."""
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,10 +45,11 @@ def _template_names():
 
 
 BLOCK = obj(
-    type={"type": "string", "enum": ["text", "bullets", "numbered", "callout", "table", "cards", "columns", "tiles", "illustration", "diagram"]},
+    type={"type": "string", "enum": ["text", "bullets", "numbered", "callout", "table", "cards", "columns", "tiles", "illustration", "diagram", "figure"]},
     style={"type": "string", "enum": ["normal", "question", "emphasis", "caption"]},
     text=S, items=SL, rows={"type": "array", "items": SL},
     template={"type": "string", "enum": ["none"] + _template_names()}, labels=SL,
+    figure=S,  # JSON string for a figure block: {"family": ..., "spec": {...}}; "" for every other block type
 )
 
 PHASES = ["predict", "observe", "explain", "dqb", "model"]

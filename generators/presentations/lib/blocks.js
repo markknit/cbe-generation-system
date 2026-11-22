@@ -7,6 +7,8 @@
 const { heightIn, lineCount, widthIn } = require('./measure');
 const { T, CFG, tint, shade, onColour } = require('./theme');
 const { drawDiagram, frameOf } = require('./diagrams');
+const { buildFigure, drawFigure } = require('./figures');
+const frameFor = b => (b.fig && !b.fig.errors.length ? { w: b.fig.w, h: b.fig.h } : frameOf(b.template));
 const { iconPath, parseIcon } = require('./icons');
 
 const GAP = 0.2;
@@ -17,6 +19,7 @@ function normalize(b) {
   if (b.type === 'table') { const rows = b.rows || []; n.headers = rows[0] || []; n.rows = rows.slice(1); }
   if (b.type === 'cards') n.cards = n.items;
   if (b.type === 'columns' && !b.columns) n.columns = n.items.map(s => { const [h, ...r] = String(s).split('::'); const hh = parseIcon(String(s)); return hh.icon ? { icon: hh.icon, heading: hh.text.split('::')[0].trim(), text: hh.text.split('::').slice(1).join('::').trim(), items: [] } : { heading: h.trim(), text: r.join('::').trim(), items: [] }; });
+  if (b.type === 'figure') { n.type = 'diagram'; n.template = undefined; n.fig = buildFigure(b.figure); n.highlight = []; }
   if (b.type === 'diagram') { n.template = b.template === 'none' ? undefined : b.template; n.highlight = []; }
   if (b.type === 'tiles') n.tiles = n.items.map(parseIcon);
   if (b.type === 'bullets' || b.type === 'numbered') n.rows = n.items.map(parseIcon);
@@ -85,6 +88,7 @@ function measure(b, w, pt) {
     case 'columns': return columnsGeom(b, w, pt).h;
     case 'tiles': return tilesGeom(b, w, pt).total;
     case 'resource': return 0.62;
+    case 'quizlink': return 0.62;
     default: return 0;
   }
 }
@@ -113,11 +117,11 @@ function fitGap(blocks, region, hidden, GAPV) {
   }
   return finish(res, blocks, region, flexIdx, scale, false, GAPV);
 }
-function naturalDiagram(b, region) { const fr = frameOf(b.template), capH = b.text ? heightIn(b.text, 16, region.w, false, true) + 0.08 : 0; return region.w * fr.h / fr.w + capH; }
+function naturalDiagram(b, region) { const fr = frameFor(b), capH = b.text ? heightIn(b.text, 16, region.w, false, true) + 0.08 : 0; return region.w * fr.h / fr.w + capH; }
 function finish(res, blocks, region, flexIdx, scale, fits, GAPV) {
   const heights = res.heights.slice();
   if (flexIdx >= 0) {
-    const left = region.h - res.used, fr = frameOf(blocks[flexIdx].template), capH = blocks[flexIdx].text ? heightIn(blocks[flexIdx].text, 16, region.w, false, true) + 0.08 : 0;
+    const left = region.h - res.used, fr = frameFor(blocks[flexIdx]), capH = blocks[flexIdx].text ? heightIn(blocks[flexIdx].text, 16, region.w, false, true) + 0.08 : 0;
     const dh = Math.min(left, region.w * fr.h / fr.w + capH);
     heights[flexIdx] = Math.max(0, dh); if (dh < Math.min(2.8, naturalDiagram(blocks[flexIdx], region) - 0.01)) fits = false;
   }
@@ -127,7 +131,7 @@ function finish(res, blocks, region, flexIdx, scale, fits, GAPV) {
 function render(pptx, slide, rawBlocks, region, opts) {
   // A diagram next to other blocks: text in a narrow left column, the diagram large on the right
   // (a landscape slide has far more room sideways than downwards).
-  const dIdx = rawBlocks.findIndex(b => b.type === 'diagram');
+  const dIdx = rawBlocks.findIndex(b => b.type === 'diagram' || b.type === 'figure');
   if (dIdx >= 0 && rawBlocks.length > 1 && !opts._nested) {
     const lw = Math.min(4.3, region.w * 0.36);
     render(pptx, slide, rawBlocks.filter((_, i) => i !== dIdx), { x: region.x, y: region.y, w: lw, h: region.h }, { ...opts, _nested: true });
@@ -212,9 +216,28 @@ function render(pptx, slide, rawBlocks, region, opts) {
       });
     } else if (b.type === 'diagram') {
       const capH = b.text ? heightIn(b.text, 16, w, false, true) + 0.08 : 0;
+      if (b.fig) {
+        if (b.fig.errors.length) b.fig.errors.forEach(e => report.errors.push(e));
+        else {
+          const fr = drawFigure(pptx, slide, { x, y, w, h: Math.max(0, h - capH) }, b.fig, { font: CFG.font });
+          fr.errors.forEach(e => report.errors.push(e)); fr.warnings.forEach(e => report.warnings.push(e));
+        }
+        if (b.text) slide.addText(b.text, { ...common, x, y: y + h - capH + 0.04, w, h: capH, fontSize: 16, italic: true, color: T.muted, align: 'center' });
+        y += h + f.gap; return;
+      }
       const rep = drawDiagram(pptx, slide, { x, y, w, h: Math.max(0, h - capH) }, { template: b.template, labels: b.labels, highlight: b.highlight, shapes: b.shapes }, { labelPt: 16, font: CFG.font });
       if (rep.labelsMissing.length) report.errors.push(`diagram '${b.template}': unknown labels ${rep.labelsMissing.join(', ')}`);
       if (b.text) slide.addText(b.text, { ...common, x, y: y + h - capH + 0.04, w, h: capH, fontSize: 16, italic: true, color: T.muted, align: 'center' });
+    } else if (b.type === 'quizlink') {
+      let rx = x;
+      const iconQ = require('path').join(__dirname, '..', 'assets', 'icon_quiz.png');
+      for (const l of b.links) {
+        const text = b.links.length > 1 || l.n > 1 ? `Check understanding (question ${l.n})` : 'Check understanding';
+        const lw = Math.min(5.2, widthIn(text, 16, true) + 0.1);
+        slide.addImage({ path: iconQ, x: rx, y: y + 0.05, w: 0.5, h: 0.5, hyperlink: { url: l.url, tooltip: text }, altText: `${text} - opens quiz question ${l.q} in ARES` });
+        slide.addText(text, { ...common, x: rx + 0.58, y: y + 0.05, w: lw, h: 0.5, fontSize: 16, bold: true, color: 'A3125F', valign: 'middle', hyperlink: { url: l.url, tooltip: text } });
+        rx += 0.58 + lw + 0.35; if (rx > x + w) report.warnings.push('quiz link row wider than the slide area');
+      }
     } else if (b.type === 'resource') {
       let rx = x;
       for (const key of b.resource_keys || []) {

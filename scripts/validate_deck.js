@@ -18,8 +18,10 @@ const { lessonLength } = require('../generators/presentations/build_deck');
 const { drivingQuestion } = require('../generators/presentations/lib/unit');
 const { iconPath, unknownIconPrefixes } = require('../generators/presentations/lib/icons');
 const { artPath } = require('../generators/presentations/lib/art');
+const quizLinks = require('../generators/presentations/lib/quizlinks');
 
 const NOTE_ORDER = ['PHASE', 'TIME', 'DO', 'SAY', 'WAIT TIME', 'LOOK FOR', 'IF…', 'WHY THIS WORKS', 'ANSWER KEY', 'SCIENCE NOTE FOR YOU', 'RESOURCE LINKS', 'TEACHER REFLECTION'];
+const BUILDER_RE = /\b(build[- ]log|source review|lesson-plan criterion|the (deck )?spec(ification)?\b|schema|validator|(retain|keep)[^.]{0,60}(unchanged|as supplied|as recorded))/i;
 const US_SPELL = /\b(color|colors|colored|specialization|specialized|aluminum|center|centers|meter(?!s? reading)|liter|fiber|organize[sd]?|analyze[sd]?|behavior|favorite|neighbor|gray|recognize[sd]?|summarize[sd]?|catalog)\b/i;
 const LABEL_RE = /^(TIME:|DO$|SAY$|WAIT TIME$|LOOK FOR$|IF…$|WHY THIS WORKS$|ANSWER KEY$|SCIENCE NOTE FOR YOU$|RESOURCE LINKS|TEACHER REFLECTION$|[A-Z][A-Z ]+ PHASE \(|DRIVING QUESTION BOARD \()/;
 
@@ -142,10 +144,13 @@ async function validate({ deck, specP, dataP, lessonNo, opts = {} }) {
     const before = s.xml.slice(0, at), spStart = before.lastIndexOf('<p:sp>'), prev = before.slice(before.lastIndexOf('<p:sp>', spStart - 1), spStart);
     if (!prev.includes(CFG.phases[k].hex)) E('S10', i + 1, `phase pill colour is not ${CFG.phases[k].hex} (${k})`);
   });
+  const quizOk = quizLinks.allowedUrls(data.META, lessonNo);
   // --- links (Overrides 2/3): only ares.local links of this lesson's resourceLinks; icon alt text; URL also in notes
   slides.forEach((s, i) => {
     for (const u of s.links) {
-      if (!urls.has(u)) E('L1', i + 1, `hyperlink not in this lesson's resourceLinks: ${u}`);
+      const isQuiz = /^http:\/\/ares\.local\/quiz\//.test(u);   // quiz-question links (Mark 2026-11-21): must match the registry's current version for this lesson
+      if (isQuiz) { if (!quizOk.has(u)) E('L7', i + 1, `quiz link not in data/quiz_registry.json for this lesson at its current version (regenerate the deck after a quiz version change): ${u}`); }
+      else if (!urls.has(u)) E('L1', i + 1, `hyperlink not in this lesson's resourceLinks: ${u}`);
       if (!/^http:\/\/ares\.local/.test(u)) E('L1', i + 1, `non-ares.local link: ${u}`);
       if (!s.notes.some(l => l.includes(u))) E('L2', i + 1, `link URL not repeated in the notes (printed copies keep it): ${u}`);
     }
@@ -175,6 +180,7 @@ async function validate({ deck, specP, dataP, lessonNo, opts = {} }) {
     const vis = s.text.join(' ');
     if (/\bDQB\b/.test(vis)) E('W1', i + 1, "'DQB' on a slide: write 'Driving Question Board' in full (Manual s4)");
     const m = US_SPELL.exec(vis + ' ' + s.notes.join(' ')); if (m) W('W2', i + 1, `US spelling '${m[1]}' (British spelling, Manual s11)`);
+    { const m = BUILDER_RE.exec(vis + ' ' + s.notes.join(' ')); if (m) E('N1', i + 1, `builder language in teacher-facing text: '${m[0]}' (put it in build_log, not on the slide or notes)`); }
     if (/\bForm [1-4]\b/.test(vis + s.notes.join(' '))) E('W3', i + 1, "'Form N' (use Grade 10, Manual s11)");
   });
   // --- title slide: five phases, one-line, lesson N of M, minutes; unit map has the driving question

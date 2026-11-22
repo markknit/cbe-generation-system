@@ -18,6 +18,7 @@ const PptxGenJS = require('pptxgenjs');
 const { ROOT, CFG, PHASE_ORDER, T, onColour, tint, shade } = require('./lib/theme');
 const { heightIn, lineCount, widthIn } = require('./lib/measure');
 const { deckAttribution, footerText } = require('./lib/attr');
+const quizLinks = require('./lib/quizlinks');
 const { resourceIndex } = require('./lib/resources');
 const { render } = require('./lib/blocks');
 const { drivingQuestion } = require('./lib/unit');
@@ -76,6 +77,7 @@ function build(dataPath, lessonNo, specPath, outPath) {
   pptx.theme = { headFontFace: CFG.font, bodyFontFace: CFG.font };
 
   const notesOf = [];                 // parallel to slides
+  const quizRows = [];                // quiz links placed on slides (written beside the deck)
   const startSlide = (kind, o = {}) => {
     const s = pptx.addSlide();
     if (o.dark) s.background = { color: T.dark };
@@ -361,7 +363,9 @@ function build(dataPath, lessonNo, specPath, outPath) {
   const phaseMinutes = {};
   for (const sl of spec.slides) phaseMinutes[sl.phase] = (phaseMinutes[sl.phase] || 0) + sl.minutes;
   const seenPhase = new Set();
-  for (const sl of spec.slides) {
+  const quizPlan = quizLinks.plan(meta, lessonNo, spec.slides);
+  if (quizPlan.unplaced.length) report.warnings.push(`quiz questions with no slide in their phase (no link placed): ${quizPlan.unplaced.join(', ')}`);
+  for (const [slideIdx, sl] of spec.slides.entries()) {
     const ph = CFG.phases[sl.phase], s = startSlide('phase', { label: sl.phase });
     decor(s, ph.hex);
     const fb = footer(s, false, false);
@@ -381,11 +385,15 @@ function build(dataPath, lessonNo, specPath, outPath) {
       for (const k of sl.resources) { const m = matchOf[k]; if (m && m.match === 'do_not_use') report.errors.push(`slide '${sl.title}' shows resource ${k}, which the glance notes mark DO NOT USE`); }
       blocks.push({ type: 'resource', resource_keys: sl.resources });
     }
+    const qlinks = quizPlan.bySlide.get(slideIdx) || [];
+    if (qlinks.length) blocks.push({ type: 'quizlink', links: qlinks });
     render(pptx, s, blocks, region, { phaseHex: ph.hex, report, resources: resMap, label: sl.title });
     const first = !seenPhase.has(sl.phase); seenPhase.add(sl.phase);
     const phaseHeader = first ? `${ph.label.toUpperCase()}${sl.phase === 'dqb' ? '' : ' PHASE'} (${plural(phaseMinutes[sl.phase])} total)` : undefined;
     const resLines = (sl.resources || []).map(k => resMap[k] ? `${resMap[k].title} (${resMap[k].source}): ${resMap[k].url}` : null).filter(Boolean);
+    qlinks.forEach(l => resLines.push(`Quiz question ${l.q} (opens in ARES; you start capture there): ${l.url}`));
     notesOf.push(composeNotes(sl.notes, { phaseHeader, time: sl.minutes, timeNote: sl.time_note, resourceLines: resLines }));
+    if (qlinks.length) quizRows.push(...qlinks.map(l => ({ slide: report.slides.length, ...l })));
   }
 
   // ===================== 8. Summary table =====================
@@ -415,6 +423,9 @@ function build(dataPath, lessonNo, specPath, outPath) {
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
     fs.writeFileSync(outPath, out);
     fs.writeFileSync(outPath.replace(/\.pptx$/, '.layout.json'), JSON.stringify(report, null, 1));
+    const qp = outPath.replace(/\.pptx$/, '.quizlinks.csv');
+    if (quizRows.length) fs.writeFileSync(qp, ['slide,quiz_id,version,question_id,url,phase,placement,status', ...quizRows.map(r => [r.slide, r.quiz, r.version, r.q, r.url, r.phase, JSON.stringify(r.placement), 'auto: spread across the phase; confirm the transition'].join(','))].join('\n') + '\n');
+    else if (fs.existsSync(qp)) fs.unlinkSync(qp);
     return report;
   });
 }

@@ -16,6 +16,7 @@ import argparse
 import datetime
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -83,7 +84,10 @@ def _main():
             print(f"art: gen_art.py failed for '{aid}' (exit {rc})"); failed.append(aid); continue
         subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "pick_art.py"), os.path.join(CAND, aid)], cwd=ROOT)  # advisory; falls back to candidate 0
         meta = json.load(open(os.path.join(CAND, aid, "meta.json")))
-        chosen = meta.get("chosen") or os.path.join(CAND, aid, "cand_0.png")
+        first = min((f for f in os.listdir(os.path.join(CAND, aid)) if re.fullmatch(r"cand_\d+\.png", f)), default="cand_1.png")
+        if not meta.get("chosen"):
+            print(f"art: WARNING '{aid}': the vision ranker recorded no choice; using {first}. A human must look at it.")
+        chosen = meta.get("chosen") or os.path.join(CAND, aid, first)
         if not os.path.isabs(chosen):
             chosen = os.path.join(CAND, aid, os.path.basename(chosen))
         finish(chosen, os.path.join(FINAL, aid + ".png"))
