@@ -140,3 +140,9 @@ Provisional link format from the response-capture project: `http://ares.local/qu
 - `forces`: free-body diagrams with arrows in proportion to the values. A diagram marked balanced must add to zero and one marked unbalanced must not. 3 rendered; 5 error cases caught.
 - Bug found and fixed in `drawFigure`: float noise (`cos 270 deg = -1.8e-16`) flipped downward vertical arrows. Vertical and horizontal lines are now snapped.
 - Still not built: ray and wave diagrams, vectors, number lines, statistics charts beyond bar charts, bonding, structural formulae, periodic table views.
+
+## Remaining figure families built (2026-11-23, not yet used by a model)
+
+- `waves` (transverse and longitudinal; v = f x wavelength checked), `rays` (reflection, refraction with Snell's law and total internal reflection, convex and concave lenses with the image computed from the lens equation), `numberline` (points, intervals with open and closed ends, jumps), `molecule` (structural formulae; every atom's valency and the formula are checked), `periodic` (first 20 or 36 elements with highlighted groups, periods or elements).
+- Rendered 13 test figures and viewed them; 11 error cases are caught (reflection angle mismatch, refraction angle wrong, total internal reflection with a refracted angle, object at the focal point, wrong image distance, v = f x lambda mismatch, crest on a longitudinal wave, point off the line, wrong valency, formula mismatch, element outside the table).
+- Still not built: vectors beyond the grid family, statistics charts beyond bar charts (histogram, box plot, pie), dot-and-cross bonding diagrams, cell and organism drawings beyond the existing templates.

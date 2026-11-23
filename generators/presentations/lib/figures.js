@@ -1,7 +1,7 @@
 'use strict';
 // Parametric figure generators (code-drawn, editable PowerPoint shapes, no photos).
 // Unlike the fixed templates in diagrams.js, a figure is built from a small JSON spec the deck author supplies:
-//   geometry | grid | circuit | atoms | flow     (see FAMILY_DOCS for the spec each takes)
+//   geometry | grid | circuit | atoms | flow | apparatus | graph | forces | machines | sankey | waves | rays | numberline | molecule | periodic   (see FAMILY_DOCS for the spec each takes)
 // The generator owns the drawing rules and checks the spec for science/maths errors (a label that contradicts
 // the drawing, a voltmeter in series, electrons that do not add up). Errors go back to the authoring repair loop.
 // A figure is built once into a list of primitives in a frame {w,h} (units); drawFigure() scales it into a box.
@@ -681,10 +681,215 @@ function buildSankey(sp) {
   return { w: 100, h: 66, shapes: out, errors, notes: 'sankey' };
 }
 
+// ---------------------------------------------------------------- waves
+// spec: {kind:'transverse'|'longitudinal', cycles:2, wavelength:{label}, amplitude:{label}, show:[...], speed, frequency, wavelength_value}
+function buildWaves(sp) {
+  const errors = [], kind = sp.kind || 'transverse', cyc = sp.cycles === undefined ? 2 : sp.cycles;
+  if (!['transverse', 'longitudinal'].includes(kind)) errors.push('waves: kind must be transverse or longitudinal');
+  if (!Number.isInteger(cyc) || cyc < 1 || cyc > 4) errors.push('waves: cycles must be a whole number from 1 to 4');
+  const v = sp.speed, f = sp.frequency, lam = sp.wavelength_value;
+  [['speed', v], ['frequency', f], ['wavelength_value', lam]].forEach(([k, x]) => { if (x !== undefined && (!isNum(x) || x <= 0)) errors.push(`waves: ${k} must be a positive number`); });
+  if (isNum(v) && isNum(f) && isNum(lam) && !near(v, f * lam, 0.02)) errors.push(`waves: speed ${v} does not equal frequency ${f} x wavelength ${lam} = ${Math.round(f * lam * 1000) / 1000} (v = f x lambda)`);
+  const show = sp.show || ['wavelength', 'amplitude'];
+  if (!Array.isArray(show) || show.some(s => !['wavelength', 'amplitude', 'crest', 'trough', 'rest', 'direction', 'compression', 'rarefaction'].includes(s))) errors.push('waves: show may contain wavelength, amplitude, crest, trough, rest, direction, compression, rarefaction');
+  if (kind === 'transverse' && show.some(s => ['compression', 'rarefaction'].includes(s))) errors.push('waves: compressions and rarefactions belong to a longitudinal wave');
+  if (kind === 'longitudinal' && show.some(s => ['amplitude', 'crest', 'trough'].includes(s))) errors.push('waves: crests, troughs and amplitude are drawn on a transverse wave; a longitudinal wave has compressions and rarefactions');
+  if (errors.length) return { errors };
+  const out = [], x0 = 10, x1 = 90, lw = (x1 - x0) / cyc, wl = (sp.wavelength || {}).label, am = (sp.amplitude || {}).label;
+  if (kind === 'transverse') {
+    const cy = 36, A = 13, pts = [];
+    for (let i = 0; i <= cyc * 40; i++) { const x = x0 + lw * i / 40; pts.push([x, cy - A * Math.sin(2 * Math.PI * (x - x0) / lw)]); }
+    if (show.includes('rest') || show.includes('amplitude')) out.push(L(x0 - 2, cy, x1 + 2, cy, { w: 1, color: GREY, dash: 'dash' }));
+    out.push(...polyline(pts, { w: 3, color: '1F77B4' }));
+    const crest = x => x0 + lw * 0.25 + lw * x;
+    if (show.includes('crest')) out.push(T(crest(0), cy - A - 4, 'crest', { pt: 14, bold: true, wu: 14 }));
+    if (show.includes('trough')) out.push(T(x0 + lw * 0.75, cy + A + 4, 'trough', { pt: 14, bold: true, wu: 14 }));
+    if (show.includes('wavelength')) { const xa = crest(0), xb = crest(1) > x1 ? x1 - lw * 0.25 + lw * 0 : crest(1), ya = cy - A - 9;
+      if (cyc < 2) { const a = x0, b = x0 + lw; out.push(L(a, ya, b, ya, { w: 1.5 })); out.push(L(b, ya, a, ya, { w: 1.5, arrow: 'end' })); out.push(L(a, ya, b, ya, { w: 1.5, arrow: 'end' })); out.push(T((a + b) / 2, ya - 4, wl || 'wavelength', { pt: 15, bold: true, wu: 30 })); }
+      else { out.push(L(xa, ya, xb, ya, { w: 1.5, arrow: 'end' })); out.push(L(xb, ya, xa, ya, { w: 1.5, arrow: 'end' })); out.push(L(xa, ya, xa, cy - A - 1, { w: 1, color: GREY, dash: 'dash' })); out.push(L(xb, ya, xb, cy - A - 1, { w: 1, color: GREY, dash: 'dash' })); out.push(T((xa + xb) / 2, ya - 4, wl || 'wavelength', { pt: 15, bold: true, wu: 30 })); } }
+    if (show.includes('amplitude')) { const xc = x0 + lw * 0.25 + (cyc >= 2 ? lw : 0), xt = xc + 5; out.push(L(xt, cy, xt, cy - A, { w: 1.5, arrow: 'end' })); out.push(L(xt, cy - A, xt, cy, { w: 1.5, arrow: 'end' })); out.push(L(xc, cy - A, xt + 2, cy - A, { w: 1, color: GREY, dash: 'dash' })); out.push(T(xt + 3, cy - A / 2, am || 'amplitude', { pt: 15, bold: true, wu: 24, align: 'l' })); }
+    if (show.includes('direction')) { out.push(L(40, 62, 62, 62, { w: 2.5, arrow: 'end' })); out.push(T(51, 57, 'direction of travel', { pt: 14, wu: 30 })); }
+  } else {
+    const cy = 33, n = 34 * cyc + 6, k = 2 * Math.PI / lw, a = lw * 0.22, h = 9;
+    for (let i = 0; i < n; i++) { const xr = x0 + (x1 - x0) * i / (n - 1), x = xr + a * Math.sin(k * (xr - x0)); out.push(L(x, cy - h, x, cy + h, { w: 1.6, color: '1F77B4' })); }
+    const cen = j => x0 + lw * (j + 0.5), ya = cy - h - 5;
+    if (show.includes('compression')) for (let j = 0; j < cyc; j++) out.push(T(cen(j) + a * Math.sin(k * (cen(j) - x0)), cy + h + 5, 'compression', { pt: 13, bold: true, wu: 20 }));
+    if (show.includes('rarefaction')) for (let j = 0; j < cyc; j++) { const xr = x0 + lw * j, xx = xr + lw; out.push(T(xr, cy + h + 13, 'rarefaction', { pt: 13, bold: true, wu: 20 })); }
+    if (show.includes('wavelength') && cyc >= 2) { const xa = cen(0) + a * Math.sin(k * (cen(0) - x0)), xb = cen(1) + a * Math.sin(k * (cen(1) - x0)); out.push(L(xa, ya, xb, ya, { w: 1.5, arrow: 'end' })); out.push(L(xb, ya, xa, ya, { w: 1.5, arrow: 'end' })); out.push(T((xa + xb) / 2, ya - 4, wl || 'wavelength', { pt: 15, bold: true, wu: 30 })); }
+    else if (show.includes('wavelength')) errors.push('waves: a longitudinal wavelength needs cycles of at least 2 (it is measured between two compressions)');
+    if (show.includes('direction')) { out.push(L(40, 59, 62, 59, { w: 2.5, arrow: 'end' })); out.push(T(51, 64, 'direction of travel', { pt: 14, wu: 30 })); }
+  }
+  return { w: 100, h: 66, shapes: out, errors, notes: 'waves' };
+}
+
+// ---------------------------------------------------------------- rays (reflection, refraction, lenses)
+const MEDIA = { air: 1.0, water: 1.33, glass: 1.5, perspex: 1.49, diamond: 2.42, oil: 1.47 };
+const deg = r => r * 180 / Math.PI, rad = d => d * Math.PI / 180;
+function buildRays(sp) {
+  const errors = [], kind = sp.kind;
+  if (!['reflection', 'refraction', 'lens'].includes(kind)) return { errors: ['rays: kind must be reflection, refraction or lens'] };
+  const out = [], showLab = !sp.hide_angle_labels;
+  const angleMark = (cx, cy, a0, a1, label) => { out.push(...arc(cx, cy, 11, a0, a1, { w: 1.5 })); if (label) { const m = (a0 + a1) / 2; out.push(T(cx + 19 * Math.cos(m), cy + 19 * Math.sin(m), label, { pt: 14, bold: true, wu: 16 })); } };
+  if (kind === 'reflection') {
+    const i = sp.incidence, r = sp.reflection;
+    if (!isNum(i) || i <= 0 || i >= 85) errors.push('rays: incidence must be an angle between 0 and 85 degrees, measured from the normal');
+    if (r !== undefined && r !== null && !(isNum(r) && Math.abs(r - i) <= 0.5)) errors.push(`rays: the angle of reflection must equal the angle of incidence (${i} degrees), not ${r}`);
+    if (errors.length) return { errors };
+    const cx = 50, cy = 42, len = 28;
+    out.push(L(cx - 32, cy, cx + 32, cy, { w: 3 })); for (let x = cx - 30; x <= cx + 30; x += 4) out.push(L(x, cy, x - 3, cy + 4, { w: 1, color: GREY }));
+    out.push(L(cx, cy - 34, cx, cy, { w: 1.2, color: GREY, dash: 'dash' })); out.push(T(cx + 4, cy - 33, 'normal', { pt: 13, wu: 12, align: 'l' }));
+    out.push(L(cx - len * Math.sin(rad(i)), cy - len * Math.cos(rad(i)), cx, cy, { w: 2.5, color: 'D62728', arrow: 'end' }));
+    out.push(L(cx, cy, cx + len * Math.sin(rad(i)), cy - len * Math.cos(rad(i)), { w: 2.5, color: 'D62728', arrow: 'end' }));
+    if (showLab) { angleMark(cx, cy, -Math.PI / 2 - rad(i), -Math.PI / 2, `i = ${i}°`); angleMark(cx, cy, -Math.PI / 2, -Math.PI / 2 + rad(i), `r = ${i}°`); }
+    out.push(T(cx - len * Math.sin(rad(i)) - 3, cy - len * Math.cos(rad(i)) - 4, 'incident ray', { pt: 13, wu: 20, align: 'r' }));
+    out.push(T(cx + len * Math.sin(rad(i)) + 3, cy - len * Math.cos(rad(i)) - 4, 'reflected ray', { pt: 13, wu: 22, align: 'l' }));
+    out.push(T(cx, cy + 9, 'plane mirror', { pt: 13, wu: 24 }));
+    return { w: 100, h: 66, shapes: out, errors, notes: 'rays' };
+  }
+  if (kind === 'refraction') {
+    const m1 = sp.medium1 || 'air', m2 = sp.medium2 || 'glass', i = sp.incidence, rr = sp.refraction;
+    const n1 = MEDIA[m1], n2 = MEDIA[m2];
+    if (!n1 || !n2) errors.push(`rays: medium1 and medium2 must be among ${Object.keys(MEDIA).join(', ')}`);
+    if (!isNum(i) || i <= 0 || i >= 89) errors.push('rays: incidence must be between 0 and 89 degrees, measured from the normal');
+    if (errors.length) return { errors };
+    if (m1 === m2) return { errors: ['rays: the two media must differ'] };
+    const s = n1 * Math.sin(rad(i)) / n2, tir = s >= 1;
+    if (tir && rr !== undefined && rr !== null) errors.push(`rays: at ${i} degrees going from ${m1} into ${m2} the light is totally internally reflected (the critical angle is ${Math.round(deg(Math.asin(n2 / n1)) * 10) / 10} degrees), so there is no refracted angle to show`);
+    const r = tir ? null : deg(Math.asin(s));
+    if (!tir && rr !== undefined && rr !== null && !(isNum(rr) && Math.abs(rr - r) <= 1.5)) errors.push(`rays: ${m1} to ${m2} at ${i} degrees refracts to about ${Math.round(r * 10) / 10} degrees (n = ${n1} and ${n2}), not ${rr}`);
+    if (errors.length) return { errors };
+    const cx = 50, cy = 33, len = 26;
+    out.push(R(12, cy, 76, 30, { fill: 'E3F0FA', line: null })); out.push(L(12, cy, 88, cy, { w: 2 }));
+    out.push(T(14, 8, m1, { pt: 14, bold: true, wu: 20, align: 'l' })); out.push(T(14, 60, m2, { pt: 14, bold: true, wu: 20, align: 'l' }));
+    out.push(L(cx, 4, cx, 62, { w: 1.2, color: GREY, dash: 'dash' })); out.push(T(cx + 3, 6, 'normal', { pt: 13, wu: 12, align: 'l' }));
+    out.push(L(cx - len * Math.sin(rad(i)), cy - len * Math.cos(rad(i)), cx, cy, { w: 2.5, color: 'D62728', arrow: 'end' }));
+    if (showLab) angleMark(cx, cy, -Math.PI / 2 - rad(i), -Math.PI / 2, `i = ${i}°`);
+    if (tir) { out.push(L(cx, cy, cx + len * Math.sin(rad(i)), cy - len * Math.cos(rad(i)), { w: 2.5, color: 'D62728', arrow: 'end' })); if (showLab) angleMark(cx, cy, -Math.PI / 2, -Math.PI / 2 + rad(i), `r = ${i}°`); out.push(T(cx, 46, 'total internal reflection', { pt: 14, bold: true, wu: 40 })); }
+    else { out.push(L(cx, cy, cx + len * Math.sin(rad(r)), cy + len * Math.cos(rad(r)), { w: 2.5, color: 'D62728', arrow: 'end' })); if (showLab && !sp.hide_refracted_angle) angleMark(cx, cy, Math.PI / 2 - rad(r), Math.PI / 2, `r = ${Math.round(r * 10) / 10}°`); }
+    return { w: 100, h: 66, shapes: out, errors, notes: 'rays' };
+  }
+  // lens
+  const type = sp.type, u = sp.object_distance, f = sp.f, h = sp.object_height === undefined ? 3 : sp.object_height;
+  if (!['convex', 'concave'].includes(type)) errors.push('rays: lens type must be convex or concave');
+  if (!isNum(f) || f <= 0) errors.push('rays: f (focal length) must be a positive number; the type says whether the lens converges or diverges');
+  if (!isNum(u) || u <= 0) errors.push('rays: object_distance must be a positive number');
+  if (!isNum(h) || h <= 0) errors.push('rays: object_height must be a positive number');
+  if (errors.length) return { errors };
+  const fe = type === 'convex' ? f : -f;
+  if (Math.abs(u - fe) < 1e-9) return { errors: ['rays: the object is at the focal point of a convex lens: the rays leave parallel and no image forms. Choose another object distance'] };
+  const v = u * fe / (u - fe), m = -v / u, hi = m * h, real = v > 0;
+  if (Math.abs(v) > 6 * Math.max(u, f)) return { errors: ['rays: the image would be very far away; move the object further from the focal point'] };
+  if (sp.image_distance !== undefined && !(isNum(sp.image_distance) && near(Math.abs(v), sp.image_distance, 0.03))) errors.push(`rays: with f = ${f} and an object at ${u}, the image is at ${Math.round(Math.abs(v) * 100) / 100} (1/f = 1/u + 1/v), not ${sp.image_distance}`);
+  if (sp.magnification !== undefined && !(isNum(sp.magnification) && near(Math.abs(m), sp.magnification, 0.03))) errors.push(`rays: the magnification is ${Math.round(Math.abs(m) * 100) / 100}, not ${sp.magnification}`);
+  if (errors.length) return { errors };
+  const kx = 38 / Math.max(u, Math.abs(v), 2 * f), ky = 14 / Math.max(h, Math.abs(hi)), cx = 50, cy = 33, X = d => cx + kx * d, Y = d => cy - ky * d, unit = sp.unit || '';
+  out.push(L(8, cy, 92, cy, { w: 1.2, color: GREY }));
+  const tb = (x, y, s) => { const up = s > 0; out.push(L(x, y, x - 1.6, y + (up ? 4 : -4), { w: 2 })); out.push(L(x, y, x + 1.6, y + (up ? 4 : -4), { w: 2 })); };
+  out.push(L(cx, 12, cx, 54, { w: 2.5 }));
+  if (type === 'convex') { tb(cx, 12, 1); tb(cx, 54, -1); } else { tb(cx, 16, -1); tb(cx, 50, 1); }
+  [-1, 1].forEach(sg => { out.push(L(X(sg * f), cy - 1.8, X(sg * f), cy + 1.8, { w: 1.5 })); out.push(T(X(sg * f), cy + 5, 'F', { pt: 14, bold: true, wu: 6 })); });
+  if (sp.show_2f) [-1, 1].forEach(sg => { out.push(L(X(sg * 2 * f), cy - 1.8, X(sg * 2 * f), cy + 1.8, { w: 1.5 })); out.push(T(X(sg * 2 * f), cy + 5, '2F', { pt: 14, bold: true, wu: 8 })); });
+  const ox = X(-u), oy = Y(h), ix = X(v), iy = Y(hi);
+  out.push(L(ox, cy, ox, oy, { w: 3, color: '1F77B4', arrow: 'end' })); out.push(T(ox, cy + 5 + (ky * h > 0 ? 0 : 0), 'object', { pt: 13, bold: true, wu: 12, color: '1F77B4' }));
+  out.push(L(ix, cy, ix, iy, { w: 3, color: real ? '2CA02C' : '2CA02C', dash: real ? undefined : 'dash', arrow: 'end' }));
+  if (sp.label_image !== false) out.push(T(ix, iy + (hi > 0 ? -4 : 4), 'image', { pt: 13, bold: true, wu: 12, color: '2CA02C' }));
+  const rays = [[cx, oy], [cx, cy]];
+  rays.forEach(([px, py]) => {
+    out.push(L(ox, oy, px, py, { w: 2, color: 'D62728' }));
+    if (real) out.push(L(px, py, ix, iy, { w: 2, color: 'D62728', arrow: 'end' }));
+    else { const dx = px - ix, dy = py - iy; let t = (88 - px) / dx; if (Math.abs(py + dy * t - cy) > 28) t = t * 28 / Math.abs(py + dy * t - cy); out.push(L(px, py, px + dx * t, py + dy * t, { w: 2, color: 'D62728', arrow: 'end' })); out.push(L(px, py, ix, iy, { w: 1.5, color: 'D62728', dash: 'dash' })); }
+  });
+  if (sp.describe_image) out.push(T(50, 62, `Image: ${real ? 'real' : 'virtual'}, ${hi > 0 ? 'upright' : 'inverted'}, ${Math.abs(m) > 1.02 ? 'magnified' : Math.abs(m) < 0.98 ? 'diminished' : 'same size'}`, { pt: 14, bold: true, wu: 60 }));
+  return { w: 100, h: 66, shapes: out, errors, notes: 'rays' };
+}
+
+// ---------------------------------------------------------------- number line
+function buildNumberLine(sp) {
+  const errors = [], lo = sp.min, hi = sp.max, st = sp.step === undefined ? 1 : sp.step;
+  if (!isNum(lo) || !isNum(hi) || hi <= lo) return { errors: ['numberline: min and max are required and max must be larger'] };
+  if (!isNum(st) || st <= 0) return { errors: ['numberline: step must be a positive number'] };
+  const n = Math.round((hi - lo) / st); if (n > 24) return { errors: ['numberline: more than 24 steps; use a larger step'] };
+  if (Math.abs(lo + n * st - hi) > 1e-9) errors.push('numberline: (max - min) must be a whole number of steps');
+  const inR = v => isNum(v) && v >= lo - 1e-9 && v <= hi + 1e-9, X = v => 12 + 76 * (v - lo) / (hi - lo), cy = 36, fmt = v => String(Math.round(v * 10000) / 10000);
+  const pts = sp.points || [], iv = sp.intervals || [], jp = sp.jumps || [];
+  pts.forEach((p, i) => { if (!inR(p.at)) errors.push(`numberline: point ${i + 1} is outside ${lo} to ${hi}`); });
+  iv.forEach((p, i) => { const a = p.from === '-inf' ? lo : p.from, b = p.to === 'inf' ? hi : p.to; if (!inR(a) || !inR(b)) errors.push(`numberline: interval ${i + 1} is outside ${lo} to ${hi}`); else if (a >= b) errors.push(`numberline: interval ${i + 1} needs from < to`); });
+  jp.forEach((p, i) => { if (!inR(p.from) || !inR(p.to) || p.from === p.to) errors.push(`numberline: jump ${i + 1} must go between two different values inside the line`); });
+  const custom = sp.tick_labels; if (custom && (!Array.isArray(custom) || custom.length !== n + 1)) errors.push(`numberline: tick_labels needs ${n + 1} entries (one per tick)`);
+  if (errors.length) return { errors };
+  const out = [L(7, cy, 93, cy, { w: 2, arrow: 'end' }), L(93, cy, 7, cy, { w: 2, arrow: 'end' })];
+  for (let k = 0; k <= n; k++) { const v = lo + k * st, x = X(v); out.push(L(x, cy - 2.5, x, cy + 2.5, { w: 1.5 })); if (sp.hide_values !== true) out.push(T(x, cy + 8, custom ? custom[k] : fmt(v), { pt: n > 14 ? 13 : 16, wu: 10, tick: false })); }
+  iv.forEach((p, i) => { const a = p.from === '-inf' ? lo : p.from, b = p.to === 'inf' ? hi : p.to, c = col(p.color, i);
+    out.push(L(X(a), cy, X(b), cy, { w: 6, color: c }));
+    if (p.from === '-inf') out.push(L(X(a) + 4, cy, X(a) - 3, cy, { w: 6, color: c, arrow: 'end' })); else out.push(E(X(a), cy, 1.7, 1.7, { fill: p.from_open ? 'FFFFFF' : c, line: c, w: 2 }));
+    if (p.to === 'inf') out.push(L(X(b) - 4, cy, X(b) + 3, cy, { w: 6, color: c, arrow: 'end' })); else out.push(E(X(b), cy, 1.7, 1.7, { fill: p.to_open ? 'FFFFFF' : c, line: c, w: 2 }));
+    if (p.label) out.push(T((X(a) + X(b)) / 2, cy - 9, p.label, { pt: 15, bold: true, wu: 30, color: c })); });
+  pts.forEach((p, i) => { const c = col(p.color, i); out.push(E(X(p.at), cy, 1.8, 1.8, { fill: p.open ? 'FFFFFF' : c, line: c, w: 2 })); if (p.label) out.push(T(X(p.at), cy - 8, p.label, { pt: 16, bold: true, wu: 14, color: c })); });
+  jp.forEach((p, i) => { const a = X(p.from), b = X(p.to), c = col(p.color, i + 2), r = Math.abs(b - a) / 2, mid = (a + b) / 2, h = Math.min(r, 12), pp = [];
+    for (let k = 0; k <= 16; k++) { const t = Math.PI * k / 16, x = mid + (a < b ? -1 : 1) * r * Math.cos(t), y = cy - 3 - h * Math.sin(t); pp.push([x, y]); }
+    out.push(...polyline(pp.slice(0, 15), { w: 2.5, color: c })); out.push(L(pp[15][0], pp[15][1], pp[16][0], pp[16][1], { w: 2.5, color: c, arrow: 'end' }));
+    if (p.label) out.push(T(mid, cy - 3 - h - 4, p.label, { pt: 15, bold: true, wu: 24, color: c })); });
+  return { w: 100, h: 66, shapes: out, errors, notes: 'numberline' };
+}
+
+// ---------------------------------------------------------------- molecule (structural formulae)
+const VALENCY = { H: 1, C: 4, N: 3, O: 2, F: 1, Cl: 1, Br: 1, I: 1, S: 2, P: 3 };
+function formulaCounts(s) {
+  const st = [{}]; const re = /([A-Z][a-z]?)(\d*)|(\()|(\))(\d*)/g; let m;
+  while ((m = re.exec(s))) { if (m[1]) { const t = st[st.length - 1]; t[m[1]] = (t[m[1]] || 0) + (m[2] ? +m[2] : 1); } else if (m[3]) st.push({}); else if (m[4]) { const g = st.pop(), k = m[5] ? +m[5] : 1, t = st[st.length - 1]; for (const e in g) t[e] = (t[e] || 0) + g[e] * k; } }
+  return st[0];
+}
+function buildMolecule(sp) {
+  const errors = [], A = sp.atoms || [], B = sp.bonds || [];
+  if (A.length < 2 || A.length > 40) return { errors: ['molecule: give 2 to 40 atoms'] };
+  const ids = new Set();
+  A.forEach((a, i) => { if (!a.id || ids.has(a.id)) errors.push(`molecule: atom ${i + 1} needs a unique id`); ids.add(a.id); if (!VALENCY[a.el]) errors.push(`molecule: atom ${a.id}: element must be one of ${Object.keys(VALENCY).join(', ')}`); if (!isNum(a.x) || !isNum(a.y)) errors.push(`molecule: atom ${a.id} needs x and y`); });
+  if (errors.length) return { errors };
+  const by = Object.fromEntries(A.map(a => [a.id, a])), used = Object.fromEntries(A.map(a => [a.id, 0]));
+  B.forEach((b, i) => { const o = b.order === undefined ? 1 : b.order; if (!by[b.a] || !by[b.b] || b.a === b.b) { errors.push(`molecule: bond ${i + 1} must join two different atoms by id`); return; } if (![1, 2, 3].includes(o)) { errors.push(`molecule: bond ${b.a}-${b.b} order must be 1, 2 or 3`); return; } used[b.a] += o; used[b.b] += o; });
+  if (errors.length) return { errors };
+  if (sp.check_valency !== false) A.forEach(a => { if (a.charge) return; if (used[a.id] !== VALENCY[a.el]) errors.push(`molecule: ${a.el} (${a.id}) has ${used[a.id]} bond${used[a.id] === 1 ? '' : 's'} but ${a.el} forms ${VALENCY[a.el]} (valency)`); });
+  for (let i = 0; i < A.length; i++) for (let j = i + 1; j < A.length; j++) if (Math.hypot(A[i].x - A[j].x, A[i].y - A[j].y) < 0.7) errors.push(`molecule: atoms ${A[i].id} and ${A[j].id} sit on top of each other (keep at least 1 unit apart; a bond is about 1.5 units)`);
+  if (sp.formula) { const want = formulaCounts(sp.formula), got = {}; A.forEach(a => { got[a.el] = (got[a.el] || 0) + 1; }); const keys = new Set([...Object.keys(want), ...Object.keys(got)]); keys.forEach(k => { if ((want[k] || 0) !== (got[k] || 0)) errors.push(`molecule: formula ${sp.formula} has ${want[k] || 0} ${k} but the drawing has ${got[k] || 0}`); }); }
+  if (errors.length) return { errors };
+  const bb = bbox(A.map(a => [a.x, a.y])), w = Math.max(bb.x1 - bb.x0, 0.01), h = Math.max(bb.y1 - bb.y0, 0.01), k = Math.min(74 / w, 44 / h, 17), cx = 50 - k * (bb.x0 + bb.x1) / 2, cy = 33 + k * (bb.y0 + bb.y1) / 2;
+  const P = a => [cx + k * a.x, cy - k * a.y], out = [];
+  B.forEach(b => { const o = b.order || 1, p = P(by[b.a]), q = P(by[b.b]), d = Math.hypot(q[0] - p[0], q[1] - p[1]), ux = (q[0] - p[0]) / d, uy = (q[1] - p[1]) / d, g = 3.6;
+    const s = [p[0] + ux * g, p[1] + uy * g], e = [q[0] - ux * g, q[1] - uy * g], off = o === 1 ? [0] : o === 2 ? [-1.1, 1.1] : [-1.8, 0, 1.8];
+    off.forEach(f => out.push(L(s[0] - uy * f, s[1] + ux * f, e[0] - uy * f, e[1] + ux * f, { w: 2 }))); });
+  A.forEach(a => { const p = P(a); out.push(T(p[0], p[1], a.el, { pt: 20, bold: true, wu: 8, color: a.el === 'C' ? INK : a.el === 'O' ? 'D62728' : a.el === 'N' ? '1F77B4' : INK })); if (a.charge) out.push(T(p[0] + 4, p[1] - 4, a.charge > 0 ? (a.charge > 1 ? a.charge : '') + '+' : (a.charge < -1 ? -a.charge : '') + '−', { pt: 14, bold: true, wu: 6 })); });
+  if (sp.name) out.push(T(50, 62, sp.name, { pt: 16, bold: true, wu: 60 }));
+  return { w: 100, h: 66, shapes: out, errors, notes: 'molecule' };
+}
+
+// ---------------------------------------------------------------- periodic table (first 36 elements)
+function buildPeriodic(sp) {
+  const errors = [], max = sp.rows === 'first20' ? 20 : 36, hl = sp.highlight || [];
+  const pos = {}; // symbol -> [period, group]
+  const grp = [[1, 18], [1, 2, 13, 14, 15, 16, 17, 18], [1, 2, 13, 14, 15, 16, 17, 18], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]];
+  let z = 0; grp.forEach((gs, pi) => gs.forEach(g => { z++; pos[SYM[z - 1]] = [pi + 1, g, z]; }));
+  const periods = max <= 20 ? 4 : 4;
+  hl.forEach((h, i) => { const syms = h.symbols || []; if (h.group !== undefined && !(Number.isInteger(h.group) && h.group >= 1 && h.group <= 18)) errors.push(`periodic: highlight ${i + 1}: group must be 1 to 18`); if (h.period !== undefined && !(Number.isInteger(h.period) && h.period >= 1 && h.period <= 4)) errors.push(`periodic: highlight ${i + 1}: period must be 1 to 4`); syms.forEach(s => { if (!pos[s] || pos[s][2] > max) errors.push(`periodic: highlight ${i + 1}: '${s}' is not among the first ${max} elements`); }); if (!syms.length && h.group === undefined && h.period === undefined) errors.push(`periodic: highlight ${i + 1} needs symbols, a group or a period`); });
+  if (errors.length) return { errors };
+  const cw = 4.9, ch = 8.2, x0 = 5, y0 = 11, out = [];
+  for (let g = 1; g <= 18; g++) out.push(T(x0 + (g - 0.5) * cw, y0 - 4, String(g), { pt: 12, wu: 5, color: GREY }));
+  for (let p = 1; p <= periods; p++) out.push(T(x0 - 2.2, y0 + (p - 0.5) * ch, String(p), { pt: 12, wu: 4, color: GREY }));
+  const colour = {}; hl.forEach((h, i) => { const c = tintOf(col(h.color, i)); Object.keys(pos).forEach(s => { const [p, g, zz] = pos[s]; if (zz > max) return; if ((h.symbols || []).includes(s) || (h.group === g) || (h.period === p)) colour[s] = c; }); });
+  Object.keys(pos).forEach(s => { const [p, g, zz] = pos[s]; if (zz > max) return; out.push(R(x0 + (g - 1) * cw, y0 + (p - 1) * ch, cw - 0.3, ch - 0.3, { fill: colour[s] || 'F5F5F5', line: GREY, w: 0.75 })); if (sp.hide_symbols !== true) out.push(T(x0 + (g - 0.5) * cw - 0.15, y0 + (p - 0.5) * ch - 0.15, s, { pt: 12, bold: true, wu: cw })); });
+  out.push(T(50, y0 + periods * ch + 4, 'Group (columns) and period (rows)', { pt: 12, wu: 60, color: GREY }));
+  hl.forEach((h, i) => { if (h.label) { out.push(R(8 + i * 30, 56, 4, 4, { fill: tintOf(col(h.color, i)), line: GREY, w: 0.75 })); out.push(T(13 + i * 30, 58, h.label, { pt: 13, wu: 24, align: 'l' })); } });
+  return { w: 100, h: 66, shapes: out, errors, notes: 'periodic' };
+}
+
 // ---------------------------------------------------------------- public API
-const FAMILIES = { geometry: buildGeometry, grid: buildGrid, circuit: buildCircuit, atoms: buildAtoms, flow: buildFlow, apparatus: buildApparatus, graph: buildGraph, forces: buildForces, machines: buildMachines, sankey: buildSankey };
+const FAMILIES = { geometry: buildGeometry, grid: buildGrid, circuit: buildCircuit, atoms: buildAtoms, flow: buildFlow, apparatus: buildApparatus, graph: buildGraph, forces: buildForces, machines: buildMachines, sankey: buildSankey, waves: buildWaves, rays: buildRays, numberline: buildNumberLine, molecule: buildMolecule, periodic: buildPeriodic };
 
 const FAMILY_DOCS = {
+  waves: 'Transverse and longitudinal wave diagrams. spec: {"kind":"transverse","cycles":2,"show":["wavelength","amplitude","crest","trough","rest","direction"],"wavelength":{"label":"wavelength (λ)"},"amplitude":{"label":"amplitude"},"speed":340,"frequency":170,"wavelength_value":2} (kind longitudinal shows compression, rarefaction, wavelength, direction instead; cycles 1 to 4). If speed, frequency and wavelength_value are all given they are checked (v = f x wavelength). Labels are free text; give a number only if the lesson gives it.',
+  rays: 'Light-ray diagrams. spec: {"kind":"reflection","incidence":35} (angles from the normal; reflection angle, if given, must equal it). {"kind":"refraction","medium1":"air","medium2":"glass","incidence":40,"refraction":25.4} (media air, water, glass, perspex, diamond, oil; the refracted angle is computed from Snell law and, if you give one, checked within 1.5 degrees; past the critical angle the ray is totally reflected and you must not give a refracted angle). {"kind":"lens","type":"convex","f":5,"object_distance":12,"object_height":3,"show_2f":true,"describe_image":false} (the image is computed from 1/f = 1/u + 1/v and drawn with two principal rays; image_distance or magnification, if given, are checked; use describe_image:true to caption it real/virtual, upright/inverted, magnified/diminished). hide_angle_labels:true or hide_refracted_angle:true when students must measure or find the angle.',
+  numberline: 'Number lines. spec: {"min":-5,"max":5,"step":1,"points":[{"at":2,"label":"A","open":false}],"intervals":[{"from":-2,"to":3,"from_open":true,"to_open":false,"label":"-2 < x <= 3"},{"from":1,"to":"inf"}],"jumps":[{"from":0,"to":3,"label":"+3"}],"tick_labels":["0","1/4",...],"hide_values":false}. (max - min) must be a whole number of steps, at most 24; everything must lie on the line. An open circle excludes the end value. tick_labels (one per tick) lets you write fractions.',
+  molecule: 'Structural formulae from coordinates, with valency checked. spec: {"atoms":[{"id":"c1","el":"C","x":0,"y":0},{"id":"h1","el":"H","x":0,"y":1.5}],"bonds":[{"a":"c1","b":"h1","order":1}],"formula":"CH4","name":"methane"}. Elements H C N O F Cl Br I S P; a bond is about 1.5 units long; order 1, 2 or 3. Every atom must have exactly its usual number of bonds (H 1, C 4, N 3, O 2, halogens 1) unless it carries a charge; formula, if given, must match the atoms drawn. Use for alkanes, alkenes, alcohols, acids and small molecules. Do not draw a structure students are asked to draw.',
+  periodic: 'First 20 or 36 elements of the periodic table with highlighted groups, periods or elements. spec: {"rows":"first20","highlight":[{"group":1,"color":"orange","label":"Group 1"},{"period":3,"color":"blue","label":"Period 3"},{"symbols":["Na","Cl"],"color":"green"}],"hide_symbols":false}. Colours: blue, red, green, orange, purple. hide_symbols:true shows an empty table with the pattern only.',
   machines: 'Pulleys, levers and ramps, with the physics checked. spec: {"kind":"pulley","supporting_ropes":3,"ideal":true,"load":{"label":"Bucket","value":90},"effort":{"label":"Pull","value":30}} (ideal true: effort = load / ropes; ideal false: effort must be larger; supporting_ropes 1 is a fixed pulley). {"kind":"lever","class":1,"fulcrum":{"pos":0.5,"label":"fulcrum"},"load":{"pos":0.2,"label":"Stone","value":600},"effort":{"pos":0.9,"label":"Push","value":300},"balanced":true} (pos 0 to 1 along the beam; class 1 fulcrum between, class 2 load between, class 3 effort between; balanced needs load x distance = effort x distance). {"kind":"ramp","angle":30,"smooth":true,"object":{"label":"Block"},"forces":[{"name":"Weight","value":20,"dir":"weight"},{"name":"Normal","value":17.3,"dir":"normal"},{"name":"Push","value":10,"dir":"push_up"}],"balanced":true,"length_label":"2 m","height_label":"1 m"} (dir weight, normal, push_up, push_down, friction_up, friction_down; with balanced:true the forces must add to zero at that angle; a weight needs a normal force; a smooth ramp has no friction; optional height and length numbers are checked against the angle).',
   sankey: 'Sankey diagram of an energy (or quantity) flow, band widths proportional. spec: {"input":{"label":"Electrical energy","value":100,"unit":"J"},"outputs":[{"label":"Light","value":10,"useful":true},{"label":"Heat","value":90,"useful":false}]}. 2 to 4 outputs; they must add up to the input (energy is conserved). Do not use for a diagram students must draw themselves unless you show the input only.',
   geometry: 'Lines, polygons, circles and marked angles from coordinates. spec: {"points":{"A":[0,0],"B":[6,0],"C":[2,4]},"lines":[{"a":"A","b":"B","label":"6 cm","tick":0,"dash":false}],"circles":[{"c":"O","r":3,"label":""}],"angles":[{"at":"B","from":"A","to":"C","label":"40°","right":false}],"point_labels":true,"scale":"exact"}. Coordinates are maths coordinates (y up). scale "exact" => labelled lengths and angles are checked against the coordinates (build fails if they disagree); "not_to_scale" => a caption says so. Use exact only when you give coordinates that really satisfy the labels. Do NOT label an answer students must find.',
