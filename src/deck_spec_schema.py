@@ -73,6 +73,7 @@ SPEC_A = obj(
     unit_map_minutes=I, goals_minutes=I, safety_minutes=I, summary_minutes=I,
     hero=obj(art_id=S, prompt=S, alt=S, icon=S),
     slides={"type": "array", "items": SLIDE},
+    figure_coverage={"type": "array", "items": obj(id=S, status={"type": "string", "enum": ["drawn", "declined"]}, slide=S, reason=S)},
     build_log=BUILD_LOG,
 )
 SPEC_B = obj(

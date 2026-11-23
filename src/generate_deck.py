@@ -57,6 +57,63 @@ def figure_docs():
     return node_json("console.log(JSON.stringify(require('./generators/presentations/lib/figures.js').FAMILY_DOCS))")
 
 
+SURVEY = os.path.join(ROOT, "data", "presentations_specs", "_survey", "survey.jsonl")
+_SURVEY_CACHE = {}
+
+
+def surveyed(data_path, lesson_no):
+    """True if the diagram survey has a record for this lesson (a lesson with no record gets NO required-figure list)."""
+    required_figures(data_path, lesson_no)  # loads the cache
+    return (os.path.abspath(data_path), int(lesson_no)) in _SURVEY_CACHE
+
+
+def required_figures(data_path, lesson_no):
+    """Figures the lesson plan has students look at, label, draw or complete (from the diagram survey, run on the lesson plans).
+    Ids F1.. follow the survey's order. Empty if the lesson was not surveyed."""
+    if not _SURVEY_CACHE and os.path.exists(SURVEY):
+        for line in open(SURVEY, encoding="utf8"):
+            r = json.loads(line)
+            _SURVEY_CACHE[(os.path.abspath(os.path.join(ROOT, r["file"])), r["lesson"])] = r
+    r = _SURVEY_CACHE.get((os.path.abspath(data_path), int(lesson_no))) if data_path else None
+    if not r:
+        return []
+    out = []
+    for d in r["diagrams"]:
+        if d.get("slide_must_show_figure"):
+            out.append({"id": f"F{len(out) + 1}", "kind": d["kind"], "what": d["what"], "elements": d.get("elements", ""), "student_action": d.get("student_action", "")})
+    return out
+
+
+def coverage_problems(spec, required):
+    """Every required figure must be drawn on a named slide (a figure, diagram or illustration block) or declined with a reason."""
+    if not required:
+        return []
+    ids = {r["id"] for r in required}
+    cov = spec.get("figure_coverage") or []
+    got = {}
+    for c in cov:
+        got.setdefault(c.get("id"), c)
+    problems = []
+    for r in required:
+        c = got.get(r["id"])
+        if not c:
+            problems.append(f"F1 figure_coverage: required figure {r['id']} ('{r['what'][:70]}') has no entry; draw it or decline it with a reason")
+            continue
+        if c.get("status") == "declined":
+            if len((c.get("reason") or "").strip()) < 25:
+                problems.append(f"F1 figure_coverage {r['id']}: a declined figure needs a reason of at least 25 characters (say which kind of drawing is missing or why a slide cannot show it)")
+        elif c.get("status") == "drawn":
+            sl = [x for x in spec["slides"] if x["title"].strip() == (c.get("slide") or "").strip()]
+            if not sl or not any(b["type"] in ("figure", "diagram", "illustration") for b in sl[0]["blocks"]):
+                problems.append(f"F1 figure_coverage {r['id']}: says drawn on slide '{c.get('slide')}', but no slide with exactly that title has a figure, diagram or illustration block")
+        else:
+            problems.append(f"F1 figure_coverage {r['id']}: status must be drawn or declined")
+    for k in got:
+        if k not in ids:
+            problems.append(f"F1 figure_coverage: '{k}' is not one of the required figure ids ({', '.join(sorted(ids))})")
+    return problems
+
+
 def resources_for(data_path, lesson_no):
     return node_json(f"const d=require({json.dumps(os.path.abspath(data_path))});const l=d.LESSONS.find(x=>x.number=={lesson_no});"
                      "console.log(JSON.stringify(require('./generators/presentations/lib/resources.js').resourceIndex(l).map(r=>({key:r.key,also:r.also,title:r.title,source:r.source,content_type:r.content_type}))))")
@@ -88,6 +145,7 @@ Code does these for you; do NOT write them: footer text, logos, phase colours, f
 10. RESOURCES. Use ONLY the resource keys listed in the input. glance.resource_notes needs exactly one entry per listed key (use the primary key shown). match = best_match (fits what students do at the moment of its slot) / preview_first (related but not an exact match: the teacher previews it) / use_later (a good resource that would give an answer away or pre-empt a discovery if shown too early: the note must say WHEN to use it, e.g. "after the card sort" or "as revision after Explain" or "in Lesson 5") / do_not_use (ONLY for resources that are off topic, wrong level or for another subject, with the reason). The lesson plan placed each resource in a phase slot (key like explain.video): a resource in an Explain, Driving Question Board or Model Building slot is normally best_match, preview_first or use_later, not do_not_use; a resource in a Predict or Observe slot that explains the idea is normally use_later (after Explain). Put a key in slide.resources only where it genuinely fits that moment, only for best_match or preview_first, and never where it would spoil a result. Most slides have no resource.
 11. DIAGRAMS. When the SoW has students study or label cell diagrams, SHOW them on slides (one diagram slide per cell type, in the SoW's order, so the lesson does not depend on printed cards); never cut a diagram the SoW uses. Use the diagram block with a template name and label names EXACTLY from the template's list (given). Use only labels this lesson's students should see at that moment (do not label what the SoW has not introduced). Caption (diagram.text) must say it is a drawing, e.g. "This is a drawing, not a photograph." Where the lesson needs a drawing that is NOT one of the cell templates (a geometry figure, a coordinate grid, a circuit, an atom or ion, a process or cycle), use a FIGURE block instead (rule 11b). Otherwise describe the drawing task in text/bullets.
 11b. FIGURE BLOCKS. type "figure": figure = a JSON STRING {"family": ..., "spec": {...}} using one of figure_families_you_may_use (the docs for each family give the spec); text = caption; template "none", labels [], items [] and rows []. Use a figure when the SoW has students look at, label, complete, measure from or compare with a drawing of that kind, in the SoW's order; one figure per slide, together with at most one short text block. Rules: (a) the figure shows only what the SoW or textbook fact supports (no invented measurements or data); (b) never draw the answer students must find (the image of a transformation, a missing angle, the electron arrangement students are asked to draw): draw the starting figure and give the answer in the notes ANSWER KEY; (c) labels students must supply are left off (a label that is a question mark or blank is allowed: use "?"); (d) for geometry use scale "exact" only when your coordinates really satisfy the labelled lengths and angles (the build checks this and fails if not), otherwise "not_to_scale"; (e) the build also checks circuits (ammeter in series, voltmeter in parallel), atoms (electrons add up to the proton number minus the charge) and grids (everything inside the window); if the build reports a figure error, fix the spec; (f) caption says it is a drawing and, for a measured figure, whether it is to scale. If no family fits, do not force one: describe the drawing task in text.
+11c. REQUIRED FIGURES. required_figures lists the drawings the lesson plan has students look at, label, draw or complete. For EVERY one, add an entry to figure_coverage: {id, status, slide, reason}. status "drawn": put a figure (best), diagram or illustration block on the slide whose title you give in slide (exactly), in the SoW's order; reason "". For a figure students must DRAW or COMPLETE themselves, show the blank frame, empty axes or the starting setup, never the finished answer. status "declined": ONLY when no family can draw it correctly (say which kind of drawing is missing) or the SoW has it done by hand on paper with nothing to show; slide "" and a reason of at least 25 characters. Prefer drawing: a declined figure is a gap the teacher must fill. A figure that is only a view INSIDE an ARES resource or simulation (for example a PhET bar chart the students watch) may be declined, with the reason 'shown inside the resource <key>'. A photograph-style illustration does not satisfy a diagram the students must read measurements or labels from; use a figure family for that.
 12. SAFETY. is_practical true if students or the teacher do a hands-on practical or demonstration with materials. Then safety.rules has at most 5 rules, specific to today's hazards, title "Safety first" style. If not a practical: is_practical false, safety.title "", rules [], minutes 0 and empty notes.
 13. LANGUAGE. British spelling (colour, specialisation). "Grade 10", never "Form". Short sentences, common words. Kenyan names/places/foods only where the SoW uses them. Write "Driving Question Board" in full on slides (DQB is fine in notes). No deficit framing.
 14. NOTES FIELDS. do: short bullets, include grouping and materials. say: natural spoken lines the teacher can read aloud (no surrounding quote marks). wait_time: e.g. "10 seconds after the question" (empty if none). look_for / if_then: specific. why_this_works: one or two sentences giving the reason behind the strategy. answer_key: one entry per student task. science_note: optional background, empty if none. Name the lesson's common misconception and how the slide addresses it (in why_this_works or look_for). Cold-calling: say who to choose and why. Link back to the anchor phenomenon whenever it fits. NOTES ARE FOR THE TEACHER IN THE ROOM: never write about how the deck was built. No 'build log', 'source review', 'schema', 'the spec', 'validator', 'as supplied', 'as recorded', 'retain ... unchanged', 'lesson-plan criterion'. Anything a reviewer or the build should know goes in build_log, not in the notes. Refer to 'the lesson plan' only to tell the teacher where to look something up.
@@ -103,6 +161,7 @@ The manual itself REQUIRES these, so they are never 'invented content': the Pred
 FIDELITY BEATS EVERYTHING ELSE. If the SoW itself gives a result away, or contains the odd instruction, the deck must follow the SoW; report that as MINOR (category other, 'for the SoW owner'), never as a major. Report a spoiler as major only when the DECK adds the leak (a slide, key word, label or resource) that the SoW does not.
 You are an independent reviewer of a lesson deck spec. You did not write it. Read the SoW lesson (the source of truth), the other lessons' summaries, the resource list and the deck spec. Apply the manual's section 13 builder self-check and section 14 teacher check, and these overrides. Report only real problems, most important first. Be specific: slide title, what is wrong, how to fix.
 Look hard for: (1) SPOILERS - any slide, key word, resource or diagram label that gives away a result or a later lesson before students find it; (2) FIDELITY - activities missing, added, reordered or reworded in ways that change the lesson, materials/numbers changed; (3) INVENTED content - quantities, resources, results, facts not in the SoW and not logged as added_fact; (4) SCIENCE - statements, labels, answer keys that are wrong or contradict each other (report them; the deck must not silently fix them: check the build_log flags them); (5) NOTES QUALITY - missing or vague LOOK FOR / IF, SAY lines that are not natural speech, answer keys that miss a student task; (6) STUDENT TEXT - too long, teacher instructions or answers on a student slide, jargon beyond the grade; (7) TIMING - unrealistic times for a large class, mismatch with SoW; (8) SAFETY; (9) RESOURCE matches (do_not_use reasons, a resource placed where it spoils); (10) LANGUAGE ('Form', DQB on slides, US spellings). BRITISH spelling is REQUIRED (colour, labelled, generalised, specialisation): never report British spelling as a problem. (11) TIMING FAIRNESS - report as major any phase that lost more than a quarter of its SoW time when the trim could have been spread, or fixed slides (unit map, goals, summary) that take more than 5 minutes together.
+Also check figure_coverage: a 'declined' figure whose reason is weak (a family exists that could draw it) is a MINOR finding for the deck author; a 'drawn' figure whose content contradicts the SoW or shows the answer students must find is MAJOR.
 severity major = a teacher would be misled, a result is spoiled, or the lesson no longer matches the SoW; minor = polish. verdict = needs_repair if any major, else pass.
 """
 
@@ -134,7 +193,7 @@ def drivingQ(u):
     return m.group(1).strip() if m else s.split("\n\n")[0]
 
 
-def payload(data, lesson, resources, tpl_labels):
+def payload(data, lesson, resources, tpl_labels, data_path=None):
     L = {k: v for k, v in lesson.items() if k != "resourceLinks"}
     others = [{"number": l["number"], "title": l["title"], "duration": l["duration"], "overview": l["overview"]} for l in data["LESSONS"]]
     u = data["UNIT"]
@@ -149,6 +208,7 @@ def payload(data, lesson, resources, tpl_labels):
         "ares_resources_key_and_details": resources,
         "diagram_templates_and_allowed_labels": tpl_labels,
         "figure_families_you_may_use": figure_docs(),
+        "required_figures": required_figures(data_path, lesson["number"]),
         "icon_names_you_may_use": icon_names(),
         "existing_illustrations_reuse_these_ids_when_they_fit": art_catalogue(),
     }
@@ -210,7 +270,7 @@ B_PROBLEM = re.compile(r"glance|unit map|goals|key word|title slide|S11|S12|S7\b
 
 def part_a_of(spec):
     return {"unit_map_minutes": spec["unit_map_minutes"], "goals_minutes": spec["goals_minutes"], "safety_minutes": spec["safety"]["minutes"], "hero": spec.get("hero", {"art_id": "", "prompt": "", "alt": "", "icon": ""}),
-            "summary_minutes": spec["summary"]["minutes"], "slides": spec["slides"], "build_log": spec["build_log"]}
+            "summary_minutes": spec["summary"]["minutes"], "slides": spec["slides"], "figure_coverage": spec.get("figure_coverage", []), "build_log": spec["build_log"]}
 
 
 def msgs_a(pay_text, fix=None, prev=None):
@@ -218,7 +278,7 @@ def msgs_a(pay_text, fix=None, prev=None):
     base = {"type": "text", "text": pay_text, "cache_control": {"type": "ephemeral"}}
     tail = ""
     if fix:
-        tail = ("\n\n# PREVIOUS ATTEMPT (your Part A, which has problems)\n" + json.dumps({k: prev[k] for k in ("unit_map_minutes", "goals_minutes", "hero", "slides")} | {"safety_minutes": prev["safety"]["minutes"], "summary_minutes": prev["summary"]["minutes"]}, ensure_ascii=False) +
+        tail = ("\n\n# PREVIOUS ATTEMPT (your Part A, which has problems)\n" + json.dumps({k: prev.get(k, []) for k in ("unit_map_minutes", "goals_minutes", "hero", "slides", "figure_coverage")} | {"safety_minutes": prev["safety"]["minutes"], "summary_minutes": prev["summary"]["minutes"]}, ensure_ascii=False) +
                 "\n\n# PROBLEMS TO FIX (fix every one; change nothing else that is correct; return the COMPLETE corrected Part A)\n" + json.dumps(fix, ensure_ascii=False, indent=1))
     return [base, {"type": "text", "text": "Build the deck spec for this lesson only. Follow the manual exactly.\n\n" + PART_A + tail}]
 
@@ -267,6 +327,10 @@ def build_and_validate(data_path, lesson_no, spec_path, deck_path):
                 problems.append(f"{i['id']} slide {i['slide']}: {i['msg']}")
     except Exception:
         problems.append("VALIDATOR CRASH: " + out2.strip()[-600:])
+    try:
+        problems += coverage_problems(json.load(open(spec_path)), required_figures(data_path, lesson_no))
+    except Exception as e:
+        problems.append(f"COVERAGE CHECK CRASH: {e}")
     return problems, out + out2
 
 
@@ -298,7 +362,7 @@ def main():
     resources = resources_for(a.data, a.lesson)
     tpl = template_labels()
     sysm = system_prompt()
-    pay = payload(data, lesson, resources, tpl)
+    pay = payload(data, lesson, resources, tpl, a.data)
     pay_text = "# INPUT (the SoW lesson and everything you may use)\n" + json.dumps(pay, ensure_ascii=False, indent=1)
     user = "Build the deck spec for this lesson only. Follow the manual exactly.\n\n" + pay_text
 

@@ -575,10 +575,118 @@ function buildApparatus(sp) {
   return { w: W, h: 66 - dy, shapes: out, errors, notes: 'apparatus' };
 }
 
+
+// ---------------------------------------------------------------- machines (pulley, lever, ramp)
+// spec: {kind:"pulley"|"lever"|"ramp", ...}. Checks the physics the drawing implies (ideal effort, moments, components on a slope).
+const near = (a, b, tol) => Math.abs(a - b) <= tol * Math.max(Math.abs(a), Math.abs(b), 1e-9);
+function buildMachines(sp) {
+  const errors = [], out = [], kind = sp.kind;
+  const txt = o => !o ? '' : (o.label || '') + (isNum(o.value) ? ` ${o.value} ${o.unit || 'N'}` : '');
+  if (kind === 'pulley') {
+    const n = sp.supporting_ropes, ld = sp.load || {}, ef = sp.effort || {};
+    if (!Number.isInteger(n) || n < 1 || n > 6) return { errors: ['machines: pulley needs supporting_ropes, a whole number from 1 to 6 (the rope strands that hold up the load)'] };
+    if (isNum(ld.value) && isNum(ef.value)) {
+      if (sp.ideal === undefined) errors.push('machines: load and effort values are given, so set "ideal": true (no friction, no pulley weight: effort = load / ropes) or false (real: effort is larger)');
+      else if (sp.ideal === true && !near(ef.value, ld.value / n, 0.03)) errors.push(`machines: ideal pulley with ${n} supporting ropes needs effort = load / ${n} = ${Math.round(ld.value / n * 100) / 100}, not ${ef.value}`);
+      else if (sp.ideal === false && ef.value <= ld.value / n) errors.push(`machines: a real pulley (friction, moving pulley weight) needs MORE effort than load / ${n} = ${Math.round(ld.value / n * 100) / 100}, not ${ef.value}`); }
+    if (errors.length) return { errors };
+    out.push(L(14, 5, 86, 5, { w: 3, color: '595959' }));
+    let lx, effX;
+    if (n === 1) { out.push(L(40, 5, 40, 10, { w: 2 })); out.push(E(40, 16, 6, 6, { fill: 'D9D9D9', line: INK, w: 2 })); out.push(L(34, 16, 34, 38, { w: 2.5, color: '595959' })); effX = 46; out.push(L(46, 16, 46, 38, { w: 2.5, color: '595959' })); lx = 34; }
+    else { const dx = Math.min(10, 30 / (n - 1)), xs = Array.from({ length: n }, (_, i) => 38 + i * dx), a = xs[0] - 4, b = xs[n - 1] + 4;
+      out.push(L(a + 2, 5, a + 2, 10, { w: 2 })); out.push(L(b - 2, 5, b - 2, 10, { w: 2 }));
+      out.push(R(a, 10, b - a, 6, { fill: 'D9D9D9', line: INK, w: 2 })); out.push(R(a, 34, b - a, 6, { fill: 'D9D9D9', line: INK, w: 2 }));
+      xs.forEach(x => out.push(L(x, 16, x, 34, { w: 2.5, color: '595959' })));
+      effX = b + 6; out.push(...polyline([[b, 13], [effX, 13], [effX, 40]], { w: 2.5, color: '595959' })); lx = (a + b) / 2; out.push(L(lx, 40, lx, 41, { w: 2 })); }
+    const top = n === 1 ? 38 : 41; out.push(L(lx, top - (n === 1 ? 0 : 1), lx, top + 4, { w: 2.5, color: '595959' }));
+    out.push(R(lx - 9, top + 4, 18, 9, { fill: 'D9E8F5', line: INK, w: 2 })); out.push(T(lx, top + 17, txt(ld) || 'load', { pt: 14, bold: true, wu: 30 }));
+    out.push(L(effX, 40, effX, 52, { w: 3.5, color: PALETTE[1], arrow: 'end' })); out.push(T(effX + 2, 54, txt(ef) || 'effort', { pt: 14, bold: true, color: PALETTE[1], wu: 26, align: 'l' }));
+    out.push(T(86, 28, `${n} supporting rope${n > 1 ? 's' : ''}`, { pt: 12, color: GREY, wu: 22, align: 'r' }));
+    return { w: 100, h: 66, shapes: out, errors, notes: 'machines' }; }
+  if (kind === 'lever') {
+    const cls = sp.class, fu = sp.fulcrum, ld = sp.load || {}, ef = sp.effort || {};
+    if (![1, 2, 3].includes(cls)) errors.push('machines: lever needs class 1, 2 or 3');
+    const fp = fu && fu.pos, lp = ld.pos, ep = ef.pos;
+    [['fulcrum', fp], ['load', lp], ['effort', ep]].forEach(([nm, v]) => { if (!isNum(v) || v < 0 || v > 1) errors.push(`machines: ${nm}.pos must be a number from 0 to 1 along the beam`); });
+    if (errors.length) return { errors };
+    const dl = Math.abs(lp - fp), de = Math.abs(ep - fp);
+    if (dl < 0.08 || de < 0.08 || Math.abs(lp - ep) < 0.12) errors.push('machines: fulcrum, load and effort must be at least 0.08 to 0.12 apart along the beam so they can be drawn');
+    const between = (m, a, b) => (m > Math.min(a, b) && m < Math.max(a, b));
+    if (cls === 1 && !between(fp, lp, ep)) errors.push('machines: class 1 lever: the fulcrum must lie between the load and the effort');
+    if (cls === 2 && !between(lp, fp, ep)) errors.push('machines: class 2 lever: the load must lie between the fulcrum and the effort');
+    if (cls === 3 && !between(ep, fp, lp)) errors.push('machines: class 3 lever: the effort must lie between the fulcrum and the load');
+    if (sp.balanced === true) { if (!(isNum(ld.value) && isNum(ef.value))) errors.push('machines: balanced lever needs load.value and effort.value'); else if (!near(ld.value * dl, ef.value * de, 0.03)) errors.push(`machines: not balanced: load moment ${Math.round(ld.value * dl * 1000) / 1000} vs effort moment ${Math.round(ef.value * de * 1000) / 1000} (value x distance from the fulcrum)`); }
+    if (errors.length) return { errors };
+    const X = f => 12 + 76 * f; out.push(R(12, 34.5, 76, 3, { fill: 'C9A66B', line: INK, w: 2 }));
+    const fx = X(fp); out.push(...polyline([[fx, 37.5], [fx - 5, 48], [fx + 5, 48], [fx, 37.5]], { w: 2.5 })); out.push(L(fx - 8, 48, fx + 8, 48, { w: 3, color: '595959' }));
+    out.push(L(X(lp), 37.5, X(lp), 50, { w: 3.5, color: PALETTE[0], arrow: 'end' })); out.push(T(X(lp), 53.5, txt(ld) || 'load', { pt: 14, bold: true, color: PALETTE[0], wu: 26 }));
+    if (cls === 1) { out.push(L(X(ep), 37.5, X(ep), 50, { w: 3.5, color: PALETTE[1], arrow: 'end' })); out.push(T(X(ep), 53.5, txt(ef) || 'effort', { pt: 14, bold: true, color: PALETTE[1], wu: 26 })); }
+    else { out.push(L(X(ep), 34.5, X(ep), 21, { w: 3.5, color: PALETTE[1], arrow: 'end' })); out.push(T(X(ep), 17, txt(ef) || 'effort', { pt: 14, bold: true, color: PALETTE[1], wu: 26 })); }
+    out.push(T(fx, 58.5, fu.label || 'fulcrum', { pt: 12, color: GREY, wu: 22 }));
+    return { w: 100, h: 66, shapes: out, errors, notes: 'machines' }; }
+  if (kind === 'ramp') {
+    const th = sp.angle, fs = sp.forces || [];
+    if (!isNum(th) || th < 5 || th > 60) return { errors: ['machines: ramp needs angle between 5 and 60 degrees'] };
+    const A = th * Math.PI / 180, DIR = { weight: -90, normal: th + 90, push_up: th, push_down: th + 180, friction_up: th, friction_down: th + 180 };
+    if (fs.length > 5) errors.push('machines: at most 5 forces');
+    const names = new Set(); const vec = [];
+    fs.forEach((f, i) => { if (!f.name || f.name.length > 24) errors.push(`machines: force ${i + 1} needs a name of 1 to 24 characters`); else if (names.has(f.name)) errors.push(`machines: '${f.name}' is repeated`); names.add(f.name);
+      if (!isNum(f.value) || f.value <= 0) errors.push(`machines: ${f.name || 'force ' + (i + 1)} needs a positive value`); if (DIR[f.dir] === undefined) errors.push(`machines: ${f.name || 'force ' + (i + 1)} dir must be weight, normal, push_up, push_down, friction_up or friction_down (relative to the slope)`); else vec.push({ f, a: DIR[f.dir] * Math.PI / 180 }); });
+    if (sp.smooth === true && fs.some(f => /^friction/.test(f.dir))) errors.push('machines: the ramp is marked smooth, so it cannot have a friction force');
+    if (fs.some(f => f.dir === 'weight') && !fs.some(f => f.dir === 'normal')) errors.push('machines: an object resting on a ramp has a normal (contact) force; add one with dir "normal"');
+    if (isNum(sp.height) && isNum(sp.length) && !near(sp.height, sp.length * Math.sin(A), 0.04)) errors.push(`machines: height ${sp.height} and length ${sp.length} do not fit a ${th} degree ramp (height should be ${Math.round(sp.length * Math.sin(A) * 100) / 100})`);
+    if (vec.length && !errors.length) { const sx = vec.reduce((t, v) => t + v.f.value * Math.cos(v.a), 0), sy = vec.reduce((t, v) => t + v.f.value * Math.sin(v.a), 0), net = Math.hypot(sx, sy), mx = Math.max(...vec.map(v => v.f.value));
+      if (sp.balanced === true && net > 0.03 * mx) errors.push(`machines: marked balanced, but the forces add up to ${Math.round(net * 100) / 100}; check the values against the ${th} degree angle (weight along the slope = weight x sin, normal = weight x cos)`);
+      if (sp.balanced === false && net < 0.03 * mx) errors.push('machines: marked unbalanced, but the forces add up to zero'); }
+    if (errors.length) return { errors };
+    const len = Math.min(62, 36 / Math.sin(A)), run = len * Math.cos(A), rise = len * Math.sin(A), x0 = 16, yb = 56;
+    out.push(...polyline([[x0, yb], [x0 + run, yb], [x0 + run, yb - rise], [x0, yb]], { w: 2.5 })); out.push(L(8, yb, x0 + run + 8, yb, { w: 3, color: '595959' }));
+    out.push(T(x0 + 9, yb - 1.8, `${Math.round(th * 10) / 10}°`, { pt: 13, bold: true, wu: 8, align: 'l' }));
+    if (sp.length_label) out.push(T(x0 + run * 0.2 - 4 * Math.sin(A), yb - rise * 0.2 - 4 * Math.cos(A) - 1, sp.length_label, { pt: 13, bold: true, wu: 16, align: 'r' }));
+    if (sp.height_label) out.push(T(x0 + run + 2, yb - rise / 2, sp.height_label, { pt: 13, bold: true, wu: 16, align: 'l' }));
+    const t = 0.5, px = x0 + run * t, py = yb - rise * t, ux = Math.cos(A), uy = -Math.sin(A), nyv = -Math.cos(A), bw = 9, bh = 6;
+    const cc = [[-bw / 2, 0], [bw / 2, 0], [bw / 2, bh], [-bw / 2, bh]].map(([a, b]) => [px + ux * a + (-Math.sin(A)) * b, py + uy * a + (-Math.cos(A)) * b]);
+    out.push(...polyline([...cc, cc[0]], { w: 2 })); const ox = px - Math.sin(A) * bh / 2, oy = py - Math.cos(A) * bh / 2;
+    if (sp.object && sp.object.label) { const lb = sp.object.label; if (lb.length <= 7) out.push(T(ox, oy, lb, { pt: 11, bold: true, wu: 9 })); else out.push(T(ox - Math.sin(A) * 15 - 6, oy - Math.cos(A) * 15, lb, { pt: 12, bold: true, wu: 24, align: 'r' })); }
+    const k = vec.length ? 20 / Math.max(...vec.map(v => v.f.value)) : 1;
+    vec.forEach((v, i) => { const col2 = PALETTE[i % PALETTE.length], ux2 = Math.cos(v.a), uy2 = -Math.sin(v.a), d = 4, l2 = v.f.value * k;
+      const x1 = ox + ux2 * d, y1 = oy + uy2 * d, x2 = ox + ux2 * (d + l2), y2 = oy + uy2 * (d + l2);
+      out.push(L(x1, y1, x2, y2, { color: col2, w: 3.5, arrow: 'end' }));
+      out.push(T(x2 + ux2 * 2.5, y2 + uy2 * 3, v.f.label !== undefined ? v.f.label : `${v.f.name} ${v.f.value} ${v.f.unit || 'N'}`, { pt: 13, bold: true, color: col2, wu: 26, align: Math.abs(ux2) < 0.3 ? 'c' : ux2 > 0 ? 'l' : 'r' })); });
+    return { w: 100, h: 66, shapes: out, errors, notes: 'machines' }; }
+  return { errors: ['machines: kind must be pulley, lever or ramp'] };
+}
+
+// ---------------------------------------------------------------- sankey (energy or quantity flow)
+// spec: {input:{label,value,unit}, outputs:[{label,value,useful}]}. Band widths are proportional; outputs must add up to the input.
+function buildSankey(sp) {
+  const errors = [], inp = sp.input || {}, os = sp.outputs || [], unit = inp.unit || 'J';
+  if (!inp.label || !isNum(inp.value) || inp.value <= 0) errors.push('sankey: input needs a label and a positive value');
+  if (os.length < 2 || os.length > 4) errors.push('sankey: give 2 to 4 outputs');
+  os.forEach((o, i) => { if (!o.label || o.label.length > 30) errors.push(`sankey: output ${i + 1} needs a label of 1 to 30 characters`); if (!isNum(o.value) || o.value <= 0) errors.push(`sankey: output ${i + 1} needs a positive value`); });
+  if (errors.length) return { errors };
+  const tot = os.reduce((t, o) => t + o.value, 0);
+  if (!near(tot, inp.value, 0.01)) errors.push(`sankey: the outputs add up to ${Math.round(tot * 1000) / 1000} ${unit} but the input is ${inp.value} ${unit} (energy is conserved: they must be equal)`);
+  if (errors.length) return { errors };
+  const out = [], k = 28 / inp.value, gap = 5, H = inp.value * k + gap * (os.length - 1), y0 = 33 - H / 2, inTop = 33 - inp.value * k / 2;
+  const x0 = 8, x1 = 34, x2 = 58, x3 = 80, band = (xa, xb, ya, yb, col2) => out.push(R(xa, ya, xb - xa, yb - ya, { fill: col2, line: null }));
+  band(x0, x1, inTop, inTop + inp.value * k, 'BFDFF5'); let a = inTop, b = y0;
+  os.forEach(o => { const h = o.value * k, col2 = o.useful ? 'BFE5BF' : 'F9D3A8', steps = 28;
+    for (let i = 0; i < steps; i++) { const f0 = i / steps, f1 = (i + 1) / steps, e = f => 0.5 - 0.5 * Math.cos(Math.PI * f), t = e((f0 + f1) / 2);
+      const ya = a + (b - a) * t; out.push(R(x1 + (x2 - x1) * f0 - 0.05, ya, (x2 - x1) / steps + 0.1, h, { fill: col2, line: null })); }
+    band(x2, x3, b, b + h, col2); out.push(L(x2, b, x3, b, { w: 1, color: GREY })); out.push(L(x2, b + h, x3, b + h, { w: 1, color: GREY }));
+    out.push(T(x3 + 2, b + h / 2, `${o.label} ${o.value} ${unit}`, { pt: 14, bold: true, wu: 19, align: 'l' })); a += h; b += h + gap; });
+  out.push(L(x0, inTop, x1, inTop, { w: 1, color: GREY })); out.push(L(x0, inTop + inp.value * k, x1, inTop + inp.value * k, { w: 1, color: GREY }));
+  out.push(T((x0 + x1) / 2, inTop - 4, `${inp.label} ${inp.value} ${unit}`, { pt: 14, bold: true, wu: 28 }));
+  return { w: 100, h: 66, shapes: out, errors, notes: 'sankey' };
+}
+
 // ---------------------------------------------------------------- public API
-const FAMILIES = { geometry: buildGeometry, grid: buildGrid, circuit: buildCircuit, atoms: buildAtoms, flow: buildFlow, apparatus: buildApparatus, graph: buildGraph, forces: buildForces };
+const FAMILIES = { geometry: buildGeometry, grid: buildGrid, circuit: buildCircuit, atoms: buildAtoms, flow: buildFlow, apparatus: buildApparatus, graph: buildGraph, forces: buildForces, machines: buildMachines, sankey: buildSankey };
 
 const FAMILY_DOCS = {
+  machines: 'Pulleys, levers and ramps, with the physics checked. spec: {"kind":"pulley","supporting_ropes":3,"ideal":true,"load":{"label":"Bucket","value":90},"effort":{"label":"Pull","value":30}} (ideal true: effort = load / ropes; ideal false: effort must be larger; supporting_ropes 1 is a fixed pulley). {"kind":"lever","class":1,"fulcrum":{"pos":0.5,"label":"fulcrum"},"load":{"pos":0.2,"label":"Stone","value":600},"effort":{"pos":0.9,"label":"Push","value":300},"balanced":true} (pos 0 to 1 along the beam; class 1 fulcrum between, class 2 load between, class 3 effort between; balanced needs load x distance = effort x distance). {"kind":"ramp","angle":30,"smooth":true,"object":{"label":"Block"},"forces":[{"name":"Weight","value":20,"dir":"weight"},{"name":"Normal","value":17.3,"dir":"normal"},{"name":"Push","value":10,"dir":"push_up"}],"balanced":true,"length_label":"2 m","height_label":"1 m"} (dir weight, normal, push_up, push_down, friction_up, friction_down; with balanced:true the forces must add to zero at that angle; a weight needs a normal force; a smooth ramp has no friction; optional height and length numbers are checked against the angle).',
+  sankey: 'Sankey diagram of an energy (or quantity) flow, band widths proportional. spec: {"input":{"label":"Electrical energy","value":100,"unit":"J"},"outputs":[{"label":"Light","value":10,"useful":true},{"label":"Heat","value":90,"useful":false}]}. 2 to 4 outputs; they must add up to the input (energy is conserved). Do not use for a diagram students must draw themselves unless you show the input only.',
   geometry: 'Lines, polygons, circles and marked angles from coordinates. spec: {"points":{"A":[0,0],"B":[6,0],"C":[2,4]},"lines":[{"a":"A","b":"B","label":"6 cm","tick":0,"dash":false}],"circles":[{"c":"O","r":3,"label":""}],"angles":[{"at":"B","from":"A","to":"C","label":"40°","right":false}],"point_labels":true,"scale":"exact"}. Coordinates are maths coordinates (y up). scale "exact" => labelled lengths and angles are checked against the coordinates (build fails if they disagree); "not_to_scale" => a caption says so. Use exact only when you give coordinates that really satisfy the labels. Do NOT label an answer students must find.',
   grid: 'Cartesian grid with plotted shapes, lines, points and vectors (transformations, graphs of lines, coordinates). spec: {"x":[-6,6],"y":[-6,6],"step":1,"shapes":[{"pts":[[1,1],[3,1],[3,2]],"labels":["A","B","C"],"color":"blue"}],"lines":[{"m":2,"c":1,"label":"y = 2x + 1"},{"x":3},{"y":2},{"p":[0,0],"q":[2,3]}],"points":[{"at":[2,3],"label":"P"}],"vectors":[{"from":[0,0],"to":[3,2],"label":"a"}]}. Colours: blue, red, green, orange, purple. Everything must lie inside the window. Never draw the image shape students must find.',
   circuit: 'Circuit diagram in standard symbols. spec: {"source":{"type":"cell|battery","label":"6 V"},"series":[{"type":"switch_closed","label":"S"},{"type":"ammeter","label":""}],"parallel":[[{"type":"bulb","label":"L1"}],[{"type":"resistor","label":"R"}]],"bottom":[]}. Types: cell, battery, bulb, resistor, variable_resistor, switch_open, switch_closed, ammeter, voltmeter, fuse, diode, led. Series parts go along the top wire; each parallel entry is one branch (a vertical column of parts). Ammeters go in series, voltmeters in a parallel branch (checked).',

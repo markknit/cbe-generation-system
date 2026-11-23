@@ -133,7 +133,8 @@ function render(pptx, slide, rawBlocks, region, opts) {
   // (a landscape slide has far more room sideways than downwards).
   const dIdx = rawBlocks.findIndex(b => b.type === 'diagram' || b.type === 'figure');
   if (dIdx >= 0 && rawBlocks.length > 1 && !opts._nested) {
-    const lw = Math.min(4.3, region.w * 0.36);
+    const others = rawBlocks.filter((_, i) => i !== dIdx), onlyQuestion = others.length === 1 && others[0].type === 'text' && others[0].style === 'question';
+    const lw = onlyQuestion ? Math.min(5.2, region.w * 0.42) : Math.min(4.3, region.w * 0.36);  // a lone question box gets a wider column so it does not wrap word by word
     render(pptx, slide, rawBlocks.filter((_, i) => i !== dIdx), { x: region.x, y: region.y, w: lw, h: region.h }, { ...opts, _nested: true });
     return render(pptx, slide, [rawBlocks[dIdx]], { x: region.x + lw + 0.3, y: region.y, w: region.w - lw - 0.3, h: region.h }, { ...opts, _nested: true });
   }

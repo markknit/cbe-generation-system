@@ -212,6 +212,37 @@
      "additionalProperties": false
     }
    },
+   "figure_coverage": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "string"
+      },
+      "status": {
+       "type": "string",
+       "enum": [
+        "drawn",
+        "declined"
+       ]
+      },
+      "slide": {
+       "type": "string"
+      },
+      "reason": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "id",
+      "status",
+      "slide",
+      "reason"
+     ],
+     "additionalProperties": false
+    }
+   },
    "build_log": {
     "type": "array",
     "items": {
@@ -264,6 +295,7 @@
    "summary_minutes",
    "hero",
    "slides",
+   "figure_coverage",
    "build_log"
   ],
   "additionalProperties": false,

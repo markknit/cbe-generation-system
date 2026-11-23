@@ -130,10 +130,12 @@ def plan(a):
             continue
         for ln in (parse_lessons(",".join(picked), len(d["LESSONS"])) if picked else parse_lessons(a.lessons, len(d["LESSONS"])) if a.lessons else range(1, len(d["LESSONS"]) + 1)):
             key = jkey(data, ln)
+            if not gd.surveyed(data, ln):
+                print(f"WARNING: {key} has no record in the diagram survey, so it gets NO required-figure list. Re-run scripts/survey_diagrams.py on the current lesson plans before a real run.", flush=True)
             job = {"data": data, "lesson": ln, "out_tag": a.out_tag, "stage": "A", "round": 0, "fix": None, "redo": "AB",
                    "usage": [], "rounds": [], "key": key}
             lesson = next(l for l in d["LESSONS"] if l["number"] == ln)
-            pay = gd.payload(d, lesson, gd.resources_for(data, ln), tpl)
+            pay = gd.payload(d, lesson, gd.resources_for(data, ln), tpl, data)
             pay_text = "# INPUT (the SoW lesson and everything you may use)\n" + json.dumps(pay, ensure_ascii=False, indent=1)
             stable = {k: v for k, v in pay.items() if k != "existing_illustrations_reuse_these_ids_when_they_fit"}  # catalogue grows as art is made
             job["hash"] = input_hash(sysm, json.dumps(stable, sort_keys=True), st["config"]["model"], st["config"]["effort"], quiz_hash(d["META"], ln))
@@ -162,7 +164,7 @@ def prior_spec_dir(job):
 
 def pay_text_of(job, sysm_tpl):
     data, lesson = paths(job)
-    pay = gd.payload(data, lesson, gd.resources_for(job["data"], job["lesson"]), sysm_tpl)
+    pay = gd.payload(data, lesson, gd.resources_for(job["data"], job["lesson"]), sysm_tpl, job["data"])
     return pay, "# INPUT (the SoW lesson and everything you may use)\n" + json.dumps(pay, ensure_ascii=False, indent=1)
 
 
