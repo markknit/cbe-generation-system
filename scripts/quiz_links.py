@@ -127,9 +127,47 @@ def registry(a):
           f"{sum(len(v['questions']) for v in reg['quizzes'].values())} questions; versions above v1: {bumped or 'none'}")
 
 
+def check(a):
+    """Consistency between the quiz files and the lesson plans they belong to (the contract in docs/presentations/QUIZ_DECK_CONTRACT.md)."""
+    import yaml
+    cfg = yaml.safe_load(open(os.path.join(ROOT, "config", "quiz_generation.yaml")))
+    phases = set(cfg["phases"]); problems, n = [], 0
+    for f in sorted(glob.glob(os.path.join(ROOT, "data/outputs/v2/**/*_quiz.json"), recursive=True)):
+        if "/PDF/" in f:
+            continue
+        q = json.load(open(f)); rel = os.path.relpath(f, ROOT)
+        dp = f.replace("_quiz.json", "_data.json")
+        plan = {}
+        if os.path.exists(dp):
+            d = json.load(open(dp)); plan = {l["number"]: l for l in d.get("lessons", [])}
+        else:
+            problems.append(f"{rel}: no _data.json beside the quiz")
+        for l in q["lessons"]:
+            if not l.get("quiz"):
+                continue
+            n += 1; tag = f"{rel} L{l['number']}"
+            if plan and l["number"] not in plan:
+                problems.append(f"{tag}: the lesson plan has no lesson {l['number']} (renumbered or split?)")
+            elif plan and plan[l["number"]].get("title", "").strip() != l["title"].strip():
+                problems.append(f"{tag}: quiz title differs from the lesson plan title (plan: {plan[l['number']].get('title', '')[:60]!r})")
+            for i, x in enumerate(l["quiz"], 1):
+                if x.get("phase") not in phases:
+                    problems.append(f"{tag} Q{i}: phase {x.get('phase')!r} is not one of {sorted(phases)}")
+                if not (x.get("placement") or "").strip():
+                    problems.append(f"{tag} Q{i}: no placement text")
+                if re.search(r"\b(the|this) (slide|picture|photo|image|figure)\b|\bshown (above|below)\b", x["prompt"], re.I):
+                    problems.append(f"{tag} Q{i}: the question depends on something the student cannot see")
+    print(f"checked {n} quizzes")
+    for p in problems:
+        print("  PROBLEM", p)
+    print("contract check: " + ("OK" if not problems else f"{len(problems)} problem(s)"))
+    sys.exit(1 if problems else 0)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
     r = sub.add_parser("registry"); r.add_argument("--check", action="store_true"); r.set_defaults(f=registry)
+    c = sub.add_parser("check"); c.set_defaults(f=check)
     a = ap.parse_args()
     a.f(a)
