@@ -147,6 +147,8 @@ Provisional link format from the response-capture project: `http://ares.local/qu
 - Rendered 13 test figures and viewed them; 11 error cases are caught (reflection angle mismatch, refraction angle wrong, total internal reflection with a refracted angle, object at the focal point, wrong image distance, v = f x lambda mismatch, crest on a longitudinal wave, point off the line, wrong valency, formula mismatch, element outside the table).
 - Still not built: vectors beyond the grid family, statistics charts beyond bar charts (histogram, box plot, pie), dot-and-cross bonding diagrams, cell and organism drawings beyond the existing templates.
 
-## Quiz <-> deck contract (2026-11-23)
+## Three-project contract (2026-11-23, supersedes the quiz-deck draft below)
 
 Drafted `docs/presentations/QUIZ_DECK_CONTRACT.md` and added `scripts/quiz_links.py check` (quiz vs lesson plan: lesson number, title, phase, placement, self-containment). All 105 existing quizzes pass. Roughly 10 quizzes are being rebuilt on `main`; the registry is rebuilt from scratch after that, before any deck with links is distributed.
+
+Expanded 2026-11-23 to a three-project contract (lessons and quizzes, decks, classroom runtime on another device, Codex CLI, Kolibri). DRAFT: Project 3 has not seen or acknowledged it. All tasks are on hold until the three projects are in sync (Mark).
