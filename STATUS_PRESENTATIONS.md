@@ -1,5 +1,14 @@
 # STATUS — Presentations branch
 
+
+## Coordination (read first, every session)
+
+Before work that touches lesson/quiz data, a deck, a quiz link or response capture, read the open issues for P2:
+`gh issue list -R markknit/cbe-coordination-system --label needs:p2` (local clone `/home/markk/ares/cbe-coordination-system`; `git pull` it first),
+answer them, and post what was done and what is awaited when finishing. The contract there (`CONTRACT.md`) is the master. Do not change an
+interface (link format, quiz identity, registry, `quizlinks.csv`) without an issue. No student or class data in that repository.
+All other tasks are on hold until the three projects have acknowledged contract v2 (Mark, 2026-11-23).
+
 *Last updated: 2026-11-22*
 
 The status file for the `presentations` branch (worktree
