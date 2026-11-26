@@ -42,6 +42,12 @@ exists to stop that from happening to *current state* specifically,
 which changes every session and is therefore the most perishable fact
 in the whole project.
 
+**Coordination with P2 and P3 (added 2026-11-24, per PROTOCOL.md):** this project is P1.
+
+> Before starting work that touches the lesson/quiz data, a deck, a quiz link or response capture, read the open issues labelled `needs:p1` in
+> `markknit/cbe-coordination-system` (`gh issue list -R markknit/cbe-coordination-system --label needs:p1`), answer them, and post what you did and what you
+> are waiting for when you finish. The contract there is the master; do not change an interface without an issue.
+
 ---
 
 ## Project Identity
