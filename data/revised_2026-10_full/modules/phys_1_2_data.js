@@ -42,7 +42,7 @@ const LESSONS = [
     "number": 1,
     "title": "Predict and Observe: Elastic vs Plastic Behaviour — The Kericho Bridge Rope Mystery",
     "duration": "40 minutes",
-    "substrand": "1.3 Mechanical Properties of Materials",
+    "substrand": "Sub-Strand 1.3: Mechanical Properties of Materials",
     "aresKeywords": "elasticity, plastic deformation, elastic behaviour, force, extension, Driving Question Board, mechanical properties, sisal, rubber, copper wire",
     "slo": {
       "purpose": "To launch the unit by introducing the anchoring phenomenon and engaging learners in predicting and observing how different materials respond to applied forces, establishing the need for scientific investigation of mechanical properties.",
@@ -162,7 +162,7 @@ const LESSONS = [
     "number": 3,
     "title": "Elastic Potential Energy and the Elastic Limit: How Much Can a Material Store Before It Fails?",
     "duration": "40 minutes",
-    "substrand": "1.3 Mechanical Properties of Materials",
+    "substrand": "Sub-Strand 1.3: Mechanical Properties of Materials",
     "aresKeywords": "elastic potential energy, elastic limit, spring constant, Hooke's Law, safe working load, force-extension graph, energy storage, Kericho rope, mechanical failure",
     "slo": {
       "purpose": "Learners calculate elastic potential energy stored in a stretched spring using Ep = half kx squared, interpret the significance of the elastic limit as a failure threshold, and apply these ideas quantitatively to predict when a material will fail — connecting directly to why the older Kericho sisal rope snapped.",
@@ -401,7 +401,7 @@ const LESSONS = [
 ];
 
 const FINAL_EXPLANATION = {
-  "subjectLabel": "Physics Grade 10 – Sub-strand 1.3 Mechanical Properties of Materials: Final Explanation",
+  "subjectLabel": "Physics Grade 10 – Sub-Strand 1.3: Mechanical Properties of Materials: Final Explanation",
   "instructions": "Imagine you are sharing your measurements with the farmer in Kericho and the neighbours who built the sisal footbridge, so that together they can decide what to do about ropes that behaved so differently under an 80 kg sack of tea leaves. Answer each question in the space under it, in your own words, using evidence from Lessons 1 to 6, your Summary Table, your force-extension graphs and your Final Model. Use correct vocabulary (elastic, plastic, elastic limit, spring constant, Hooke's Law, elastic potential energy, stress, strain, Young's Modulus). Show every calculation step with units, and explain WHY and HOW, not just WHAT. Take g = 9.8 N/kg. You may add labelled diagrams, and you may explain any answer aloud to your teacher instead of writing it. You have 80 to 100 minutes and you work individually.",
   "sections": [
     {

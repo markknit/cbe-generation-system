@@ -1,48 +1,124 @@
-== lesson3 checks 2026-10-08T20:51:12-07:00  ours=262298c4  his=0364df5  files=95 lessons=806
+== lesson3 checks 2026-11-23T17:43:53-08:00  ours=cf9e7f06  his=0364df5  files=80 lessons=693
 - **Pinned commit:** `f83db61931566df6bde9252db552bd353ed43d7a` (`f83db61`, upstream 2026-10-08 UTC; a direct
 --- contract-drift
-Contract drift vs src/ingest/ares-contract.schema.json — 95 file(s)
+Contract drift vs src/ingest/ares-contract.schema.json — 80 file(s)
 
-✓ Biology_Animal_Gaseous_Exchange_and_Respiration_data.json — conforms
-✓ Biology_Animal_Nutrition_data.json — conforms
-✓ Biology_Animal_Transport_data.json — conforms
-✓ Biology_Cell_Biology_data.json — conforms
+• Biology_Animal_Gaseous_Exchange_and_Respiration_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Biology_Animal_Nutrition_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Biology_Animal_Transport_data.json — 7 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[5].belowExpectations: unexpected key
 ✓ Biology_Cell_Division_data.json — conforms
-✓ Biology_Cell_Structure_data.json — conforms
-✓ Biology_Chemicals_of_Life_data.json — conforms
+• Biology_Cell_Structure_and_Specialisation_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Biology_Chemicals_of_Life_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
 ✓ Biology_Ecology_data.json — conforms
 ✓ Biology_Excretion_and_Homeostasis_in_Animals_data.json — conforms
 ✓ Biology_Excretion_in_Plants_data.json — conforms
 ✓ Biology_Growth_and_Development_in_Animals_data.json — conforms
 ✓ Biology_Growth_and_Development_in_Plants_data.json — conforms
-✓ Biology_Plant_Gaseous_Exchange_and_Respiration_data.json — conforms
-✓ Biology_Plant_Nutrition_data.json — conforms
-✓ Biology_Plant_Transport_data.json — conforms
+• Biology_Plant_Gaseous_Exchange_and_Respiration_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Biology_Plant_Nutrition_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Biology_Plant_Transport_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
 ✓ Biology_Reproduction_in_Animals_data.json — conforms
 ✓ Biology_Reproduction_in_Plants_data.json — conforms
 ✓ Biology_Taxonomy_II_data.json — conforms
 ✓ Biology_Taxonomy_I_data.json — conforms
-✓ Chemistry_Acids_and_Bases_data.json — conforms
-✓ Chemistry_Chemical_Bonding_data.json — conforms
-✓ Chemistry_Introduction_to_Chemistry_data.json — conforms
-✓ Chemistry_Introduction_to_Salts_data.json — conforms
-✓ Chemistry_Periodicity_data.json — conforms
-✓ Chemistry_The_Atom_data.json — conforms
-✓ Chemistry_The_Periodic_Table_data.json — conforms
-✓ Core_Mathematics_Area_of_Polygons_data.json — conforms
-✓ Core_Mathematics_Area_of_a_Part_of_a_Circle_data.json — conforms
-✓ Core_Mathematics_Indices_and_Logarithms_data.json — conforms
-✓ Core_Mathematics_Linear_Motion_data.json — conforms
-✓ Core_Mathematics_Probability_I_data.json — conforms
-✓ Core_Mathematics_Quadratic_Expressions_and_Equations_data.json — conforms
-✓ Core_Mathematics_Real_Numbers_data.json — conforms
-✓ Core_Mathematics_Reflection_and_Congruence_data.json — conforms
-✓ Core_Mathematics_Rotation_data.json — conforms
-✓ Core_Mathematics_Similarity_and_Enlargement_data.json — conforms
-✓ Core_Mathematics_Statistics_I_data.json — conforms
-✓ Core_Mathematics_Surface_Area_and_Volume_of_Solids_data.json — conforms
-✓ Core_Mathematics_Trigonometry_1_data.json — conforms
-✓ Core_Mathematics_Vectors_data.json — conforms
+• Chemistry_Acids_and_Bases_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Chemistry_Chemical_Bonding_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Chemistry_Introduction_to_Chemistry_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Chemistry_Introduction_to_Salts_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Chemistry_Periodicity_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Chemistry_The_Atom_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Chemistry_The_Periodic_Table_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
 ✓ Essential_Mathematics_Area_of_Part_of_a_Circle_data.json — conforms
 ✓ Essential_Mathematics_Area_of_Polygons_data.json — conforms
 ✓ Essential_Mathematics_Commercial_Arithmetic_1_data.json — conforms
@@ -72,41 +148,205 @@ Contract drift vs src/ingest/ares-contract.schema.json — 95 file(s)
 ✓ General_Science_Transport_in_Plants_data.json — conforms
 ✓ General_Science_Turning_Effect_of_Force_data.json — conforms
 ✓ General_Science_Waves_data.json — conforms
-✓ Mathematics_Area_of_Part_of_a_Circle_data.json — conforms
-✓ Mathematics_Area_of_Polygons_data.json — conforms
-✓ Mathematics_Congruence_data.json — conforms
-✓ Mathematics_Indices_data.json — conforms
-✓ Mathematics_Linear_Motion_data.json — conforms
-✓ Mathematics_Probability_I_data.json — conforms
-✓ Mathematics_Quadratic_Equations_data.json — conforms
-✓ Mathematics_Real_Numbers_data.json — conforms
-✓ Mathematics_Rotation_data.json — conforms
-✓ Mathematics_Similarity_and_Enlargement_data.json — conforms
-✓ Mathematics_Statistics_I_data.json — conforms
-✓ Mathematics_Surface_Area_and_Volume_of_Solids_data.json — conforms
-✓ Mathematics_Trigonometry_I_data.json — conforms
-✓ Mathematics_Vectors_I_data.json — conforms
-✓ Physics_Current_Electricity_data.json — conforms
-✓ Physics_Electrostatics_data.json — conforms
-✓ Physics_Energy,_Work,_Power_and_Machines_data.json — conforms
-✓ Physics_Greenhouse_Effect_and_Climate_Change_data.json — conforms
-✓ Physics_Introduction_to_Electronics_data.json — conforms
-✓ Physics_Introduction_to_Space_Physics_data.json — conforms
-✓ Physics_Mechanical_Properties_of_Materials_data.json — conforms
-✓ Physics_Moments_of_Equilibrium_data.json — conforms
-✓ Physics_Pressure_data.json — conforms
-✓ Physics_Properties_of_Waves_data.json — conforms
-✓ Physics_Radioactivity_and_Stability_of_Isotopes_data.json — conforms
-✓ Physics_Temperature_and_Thermal_Expansion_data.json — conforms
+• Mathematics_Area_of_Polygons_data.json — 2 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+• Mathematics_Area_of_a_Part_of_a_Circle_data.json — 3 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+• Mathematics_Indices_and_Logarithms_data.json — 4 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+• Mathematics_Linear_Motion_data.json — 4 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+• Mathematics_Probability_I_data.json — 4 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+• Mathematics_Quadratic_Expressions_and_Equations_data.json — 5 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+• Mathematics_Real_Numbers_data.json — 4 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+• Mathematics_Reflection_and_Congruence_data.json — 3 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+• Mathematics_Rotation_data.json — 3 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+• Mathematics_Similarity_and_Enlargement_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Mathematics_Statistics_I_data.json — 3 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+• Mathematics_Surface_Area_and_Volume_of_Solids_data.json — 3 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+• Mathematics_Trigonometry_1_data.json — 5 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+• Mathematics_Vectors_data.json — 3 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+• Physics_Current_Electricity_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Electrostatics_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Energy,_Work,_Power_and_Machines_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Greenhouse_Effect_and_Climate_Change_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Introduction_to_Electronics_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Introduction_to_Space_Physics_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Mechanical_Properties_of_Materials_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Moments_of_Equilibrium_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Pressure_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Properties_of_Waves_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Radioactivity_and_Stability_of_Isotopes_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+• Physics_Temperature_and_Thermal_Expansion_data.json — 6 issue(s):
+    - schemaVersion: value "1.1.0" not in allowed [1.0.0]
+    - FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+    - FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
 
 ==================================================
-95/95 file(s) conform · 0 total drift issue(s)
+39/80 file(s) conform · 215 total drift issue(s)
     PASS
 --- corpus-resource-check
-ARES replacement corpus: 95 file(s), 806 lesson(s)
-  ✓ all files conform to definitive 1.0.0
-  ✓ every resourceLinks map round-trips exactly through the Payload adapter boundary
-    PASS
+ARES replacement corpus: 80 file(s), 310 lesson(s)
+  ✗ Biology_Animal_Gaseous_Exchange_and_Respiration_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Biology_Animal_Nutrition_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Biology_Animal_Transport_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[5].belowExpectations: unexpected key
+  ✗ Biology_Cell_Structure_and_Specialisation_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Biology_Chemicals_of_Life_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Biology_Plant_Gaseous_Exchange_and_Respiration_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Biology_Plant_Nutrition_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Biology_Plant_Transport_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Chemistry_Acids_and_Bases_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Chemistry_Chemical_Bonding_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Chemistry_Introduction_to_Chemistry_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Chemistry_Introduction_to_Salts_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Chemistry_Periodicity_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Chemistry_The_Atom_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Chemistry_The_Periodic_Table_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Mathematics_Area_of_Polygons_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key
+  ✗ Mathematics_Area_of_a_Part_of_a_Circle_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+  ✗ Mathematics_Indices_and_Logarithms_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+  ✗ Mathematics_Linear_Motion_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+  ✗ Mathematics_Probability_I_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+  ✗ Mathematics_Quadratic_Expressions_and_Equations_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+  ✗ Mathematics_Real_Numbers_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key
+  ✗ Mathematics_Reflection_and_Congruence_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+  ✗ Mathematics_Rotation_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+  ✗ Mathematics_Similarity_and_Enlargement_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Mathematics_Statistics_I_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+  ✗ Mathematics_Surface_Area_and_Volume_of_Solids_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+  ✗ Mathematics_Trigonometry_1_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key
+  ✗ Mathematics_Vectors_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key
+  ✗ Physics_Current_Electricity_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Electrostatics_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Energy,_Work,_Power_and_Machines_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Greenhouse_Effect_and_Climate_Change_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Introduction_to_Electronics_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Introduction_to_Space_Physics_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Mechanical_Properties_of_Materials_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Moments_of_Equilibrium_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Pressure_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Properties_of_Waves_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Radioactivity_and_Stability_of_Isotopes_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ Physics_Temperature_and_Thermal_Expansion_data.json: schemaVersion: value "1.1.0" not in allowed [1.0.0] | FINAL_EXPLANATION.rubric[0].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[1].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[2].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[3].belowExpectations: unexpected key | FINAL_EXPLANATION.rubric[4].belowExpectations: unexpected key
+  ✗ corpus lesson count: expected 693, found 310
+    FAIL (details in /home/markk/ares/cbe-generation-system/logs/lesson3_checks.log)
 --- corpus-check
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
@@ -142,14 +382,6 @@ ARES replacement corpus: 95 file(s), 806 lesson(s)
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L10
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L11
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L12
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
@@ -591,94 +823,10 @@ ARES replacement corpus: 95 file(s), 806 lesson(s)
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L9
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L10
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L11
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L12
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
@@ -697,73 +845,9 @@ ARES replacement corpus: 95 file(s), 806 lesson(s)
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L9
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L10
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L9
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L10
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L9
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L9
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L10
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L11
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L12
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L13
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
@@ -784,7 +868,38 @@ ARES replacement corpus: 95 file(s), 806 lesson(s)
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L9
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
@@ -795,6 +910,12 @@ ARES replacement corpus: 95 file(s), 806 lesson(s)
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L9
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L10
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L11
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L12
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L13
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L14
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L15
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L16
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
@@ -803,8 +924,14 @@ ARES replacement corpus: 95 file(s), 806 lesson(s)
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L9
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L10
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
+  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L2
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L3
@@ -914,14 +1041,14 @@ ARES replacement corpus: 95 file(s), 806 lesson(s)
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L4
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L5
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
-corpus: /tmp/tmp.FYCVuUxiOB
-bundles checked: 95  (valid JSON skipped as not a bundle: 0)
-framework tables extracted to a full-width row: 2 in 2 bundle(s)
+corpus: /tmp/tmp.0UVmRl2bJu
+bundles checked: 80  (valid JSON skipped as not a bundle: 0)
+framework tables extracted to a full-width row: 1 in 1 bundle(s)
 lone "|" lines (read each — maths is fine, a header-only table is not): 2
   Essential_Mathematics_Quadratic_Equations_data.json [lessonSequence] | Expression | Expanded Form | Highest Power of x |
   Essential_Mathematics_Quadratic_Equations_data.json [lessonSequence] | Expression | a | b | c |
 
-✓ 95 bundle(s) generated, previewed and grouped; no unrendered multi-row table
+✓ 80 bundle(s) generated, previewed and grouped; no unrendered multi-row table
 ⚠ 2 lone line(s) look like header-only tables and print literally — NOT a pass for those;
   fix the source (add a `|---|` separator row), get upstream to handle it, or accept it in DECISIONS.
     PASS
@@ -934,12 +1061,12 @@ Phase 3 ingest extraction gate:
 
   {
     FINAL_EXPLANATION: {
-      instructions: "Driving Question: Why do the cells in my body, and in the sukuma wiki on my plate, look so different from each other, and how does each cell's structure allow it to do its specific job? Remember the Kisumu blood smear: red blood cells with no nucleus next to white blood cells with large nuclei, and the sukuma wiki leaf cell that is rectangular, has chloroplasts and a large central vacuole. Answer every section in the space under each prompt. Write in full sentences and use the scientific words you learned in Lessons 1 to 8. Use evidence from the images, practicals and activities we did. Where a prompt asks for a Claim, Evidence and Reasoning (CER) answer, state your claim, back it with evidence, and then explain why the evidence supports your claim. Work on your own.",
+      instructions: 'Driving question: Why do cells in our body look so different from each other, and how does the shape of a cell determine the job it can do? Use everything you learned in Lessons 1 to 12 to write a complete, evidence-based explanation of The Healing Cut: the Grade 10 student in Nairobi who cut a finger while slicing onions for supper. Answer each section in the space under its prompt. Write in full sentences, use correct scientific words, and refer to evidence from our lessons (diagrams, the onion and cheek cell practicals, the specialised cell studies, the sickle-cell micrographs and the cell organisation hierarchy). Where a question asks you to make a claim, give your Claim, your Evidence and your Reasoning. Sketches and labelled diagrams are welcome.',
       rubric: [
         {
 ...
     },
-+   schemaVersion: '1.0.0'
++   schemaVersion: '1.1.0'
   }
 
   ✓ safety: benign top-level statement is never executed (canary unset)
@@ -1006,8 +1133,10 @@ Payload adapter fidelity gate — Physics_Greenhouse_Effect_and_Climate_Change
 
 ── LessonSequence (resources included) ─────
   ⓘ excluded 43 oracle-only "Related topic" partial-match note(s) (judge data is outside the JSON)
-  generated bytes: 100912  | blocks gen=482 approved=482
-  ✓ CONTENT IDENTICAL — 482 blocks
+  generated bytes: 101771  | blocks gen=482 approved=482
+  ✗ MISMATCH at block #41:
+      generated: "Licensing & Copyright: © 2026 SeaVuria and ARES. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/. You are free to copy, redistribute, and adapt th
+      approved : "Licensing & Copyright: © 2026 SeaVuria and ARES Education. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/. You are free to copy, redistribute, an
 
 ── LessonSequence package structure ────────────
   ✓ 7 Section-C tables use exact 1520/3040×4 widths
@@ -1018,21 +1147,26 @@ Payload adapter fidelity gate — Physics_Greenhouse_Effect_and_Climate_Change
   ✓ every emitted hyperlink is http(s)
 
 ── FinalExplanation ────────────────────────
-  generated bytes: 13311  | blocks gen=57 approved=57
-  ✓ CONTENT IDENTICAL — 57 blocks
+  generated bytes: 13487  | blocks gen=57 approved=63
+  ✗ MISMATCH at block #29:
+      generated: "Excellent (4)"
+      approved : "Exceeds Expectations (4)"
 
 ── TeacherKey ──────────────────────────────
-  generated bytes: 15156  | blocks gen=51 approved=51
-  ✓ CONTENT IDENTICAL — 51 blocks
+  generated bytes: 15660  | blocks gen=51 approved=57
+  ✗ MISMATCH at block #23:
+      generated: "Excellent (4)"
+      approved : "Exceeds Expectations (4)"
 
 ── SummaryTable ────────────────────────────
-  generated bytes: 15730  | blocks gen=46 approved=46
-  ✓ CONTENT IDENTICAL — 46 blocks
+  generated bytes: 15865  | blocks gen=46 approved=46
+  ✗ MISMATCH at block #45:
+      generated: "Licensing & Copyright: © 2026 SeaVuria and ARES. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/. You are free to copy, redistribute, and adapt th
+      approved : "Licensing & Copyright: © 2026 SeaVuria and ARES Education. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/. You are free to copy, redistribute, an
 
 ==================================================
-GATE: 7/7 adapter/fidelity checks passed
-✓ PAYLOAD ADAPTER FIDELITY GATE PASSED
-    PASS
+GATE: 3/7 adapter/fidelity checks passed
+    FAIL (details in /home/markk/ares/cbe-generation-system/logs/lesson3_checks.log)
 --- adapter-fidelity SS1.2_Indices
 Payload adapter fidelity gate — Essential_Mathematics_Indices
   ✓ all resourceLinks maps round-trip exactly
@@ -1048,7 +1182,7 @@ Payload adapter fidelity gate — Essential_Mathematics_Indices
 
 ── LessonSequence (resources included) ─────
   ⓘ excluded 23 oracle-only "Related topic" partial-match note(s) (judge data is outside the JSON)
-  generated bytes: 114127  | blocks gen=574 approved=574
+  generated bytes: 114159  | blocks gen=574 approved=574
   ✓ CONTENT IDENTICAL — 574 blocks
 
 ── LessonSequence package structure ────────────
@@ -1060,23 +1194,23 @@ Payload adapter fidelity gate — Essential_Mathematics_Indices
   ✓ every emitted hyperlink is http(s)
 
 ── FinalExplanation ────────────────────────
-  generated bytes: 13064  | blocks gen=53 approved=53
+  generated bytes: 13063  | blocks gen=53 approved=53
   ✓ CONTENT IDENTICAL — 53 blocks
 
 ── TeacherKey ──────────────────────────────
-  generated bytes: 14445  | blocks gen=47 approved=47
+  generated bytes: 14442  | blocks gen=47 approved=47
   ✓ CONTENT IDENTICAL — 47 blocks
 
 ── SummaryTable ────────────────────────────
-  generated bytes: 15733  | blocks gen=50 approved=50
+  generated bytes: 15726  | blocks gen=50 approved=50
   ✓ CONTENT IDENTICAL — 50 blocks
 
 ==================================================
 GATE: 7/7 adapter/fidelity checks passed
 ✓ PAYLOAD ADAPTER FIDELITY GATE PASSED
     PASS
---- adapter-fidelity SS3.1_Trigonometry_I
-Payload adapter fidelity gate — Mathematics_Trigonometry_I
+--- adapter-fidelity SS2.4_Trigonometry_1
+Payload adapter fidelity gate — Mathematics_Trigonometry_1
   ✓ all resourceLinks maps round-trip exactly
   ✓ Payload row ids removed
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L1
@@ -1087,37 +1221,42 @@ Payload adapter fidelity gate — Mathematics_Trigonometry_I
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L6
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L7
   [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L8
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L9
-  [sectionC] ARES DB not found (/dev/null/lesson3-no-ares-content-db); keeping existing resourceLinks for L10
 
 ── LessonSequence (resources included) ─────
-  ⓘ excluded 26 oracle-only "Related topic" partial-match note(s) (judge data is outside the JSON)
-  generated bytes: 132265  | blocks gen=678 approved=678
-  ✓ CONTENT IDENTICAL — 678 blocks
+  ⓘ excluded 75 oracle-only "Related topic" partial-match note(s) (judge data is outside the JSON)
+  generated bytes: 108465  | blocks gen=543 approved=543
+  ✗ MISMATCH at block #41:
+      generated: "Licensing & Copyright: © 2026 SeaVuria and ARES. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/. You are free to copy, redistribute, and adapt th
+      approved : "Licensing & Copyright: © 2026 SeaVuria and ARES Education. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/. You are free to copy, redistribute, an
 
 ── LessonSequence package structure ────────────
-  ✓ 10 Section-C tables use exact 1520/3040×4 widths
+  ✓ 8 Section-C tables use exact 1520/3040×4 widths
   ✓ Section-C fills/striping match upstream
-  ✓ page-break count matches upstream (11)
-  ✓ resource hyperlink targets match upstream (223)
-  ✓ all hyperlink targets match supplied resources + linkable prose + attribution (200 + 0 + 23)
+  ✓ page-break count matches upstream (9)
+  ✓ resource hyperlink targets match upstream (174)
+  ✓ all hyperlink targets match supplied resources + linkable prose + attribution (155 + 0 + 19)
   ✓ every emitted hyperlink is http(s)
 
 ── FinalExplanation ────────────────────────
-  generated bytes: 12879  | blocks gen=53 approved=53
-  ✓ CONTENT IDENTICAL — 53 blocks
+  generated bytes: 13192  | blocks gen=53 approved=58
+  ✗ MISMATCH at block #29:
+      generated: "Excellent (4)"
+      approved : "Exceeds Expectations (4)"
 
 ── TeacherKey ──────────────────────────────
-  generated bytes: 14091  | blocks gen=47 approved=47
-  ✓ CONTENT IDENTICAL — 47 blocks
+  generated bytes: 14874  | blocks gen=47 approved=52
+  ✗ MISMATCH at block #23:
+      generated: "Excellent (4)"
+      approved : "Exceeds Expectations (4)"
 
 ── SummaryTable ────────────────────────────
-  generated bytes: 16274  | blocks gen=58 approved=58
-  ✓ CONTENT IDENTICAL — 58 blocks
+  generated bytes: 15560  | blocks gen=50 approved=50
+  ✗ MISMATCH at block #49:
+      generated: "Licensing & Copyright: © 2026 SeaVuria and ARES. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/. You are free to copy, redistribute, and adapt th
+      approved : "Licensing & Copyright: © 2026 SeaVuria and ARES Education. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/. You are free to copy, redistribute, an
 
 ==================================================
-GATE: 7/7 adapter/fidelity checks passed
-✓ PAYLOAD ADAPTER FIDELITY GATE PASSED
-    PASS
+GATE: 3/7 adapter/fidelity checks passed
+    FAIL (details in /home/markk/ares/cbe-generation-system/logs/lesson3_checks.log)
 
-ALL LESSON3 CHECKS PASSED
+FAILED: corpus-resource-check adapter-fidelity SS4.1_Greenhouse_Effect_and_Climate_Change adapter-fidelity SS2.4_Trigonometry_1

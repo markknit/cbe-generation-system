@@ -65,7 +65,7 @@ echo "--- ingest-extract-check (informational)" | tee -a "$LOG"
 (cd "$L3/app" && env ARES_DEMO_PATH="$DEMO" npx tsx scripts/ingest-extract-check.ts) >>"$LOG" 2>&1 \
   && echo "    PASS" | tee -a "$LOG" || echo "    not clean (his gate; see log, not counted)" | tee -a "$LOG"
 run "contract-check"          npx tsx scripts/contract-check.ts
-for d in Physics/SS4.1_Greenhouse_Effect_and_Climate_Change Essential_Mathematics/SS1.2_Indices Maths/SS3.1_Trigonometry_I; do
+for d in Physics/SS4.1_Greenhouse_Effect_and_Climate_Change Essential_Mathematics/SS1.2_Indices Maths/SS2.4_Trigonometry_1; do
   dir="$(find "$OUT" -type d -path "*/$d" -not -path '*/PDF/*' | head -1)"
   if [ -z "$dir" ]; then dir="$(find "$OUT" -type d -name "$(basename "$d")" -not -path '*/PDF/*' | head -1)"; fi
   [ -n "$dir" ] && run "adapter-fidelity $(basename "$d")" env ARES_FIDELITY_SUBSTRAND_DIR="$dir" npx tsx scripts/adapter-fidelity.ts \
