@@ -1,0 +1,891 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Mathematics",
+  "grade": 10,
+  "substrandId": "1.2",
+  "substrandName": "Indices and Logarithms",
+  "filePrefix": "Mathematics_Indices_and_Logarithms"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "Index Notation and Powers: Launching the Tea Farm Phenomenon",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "On Chai Bora Estate in Kericho, one tea plant produces 2³ = 8 grams of processed tea per harvest cycle. If the exponent increased by 1, so that the output became 2⁴ grams, how many grams would one plant produce?",
+     "choices": [
+      "12 grams",
+      "24 grams",
+      "9 grams",
+      "16 grams"
+     ],
+     "correctIndex": 3,
+     "rationale": "2⁴ = 2 × 2 × 2 × 2 = 16 grams. Learners who predict 9 or 12 are thinking of adding a fixed amount instead of multiplying.",
+     "phase": "predict",
+     "placement": "Predict prompt (1): exponent increased by 1, from 2³ to 2⁴",
+     "check": "2**4"
+    },
+    {
+     "prompt": "In a powers-of-2 table built by repeated doubling, the value of 2⁸ is 256. What is the value of 2⁷?",
+     "choices": [
+      "128",
+      "255",
+      "248",
+      "512"
+     ],
+     "correctIndex": 0,
+     "rationale": "Decreasing the exponent by 1 halves the value: 256 ÷ 2 = 128.",
+     "phase": "observe",
+     "placement": "Part A: Powers of 2 Table and Part B: Reading the Table (what happens when n decreases by 1)",
+     "check": "256/2"
+    },
+    {
+     "prompt": "One tea plant produces 2³ = 8 grams per harvest cycle and the estate has 2¹⁰ = 1 024 plants. Using the powers-of-2 table, how many grams does the whole estate produce per cycle?",
+     "choices": [
+      "1 032 grams",
+      "8 192 grams",
+      "3 072 grams",
+      "8 000 grams"
+     ],
+     "correctIndex": 1,
+     "rationale": "Total = 8 × 1 024 = 8 192 grams, which is about 8 kg. Adding (8 + 1 024 = 1 032) is a common slip.",
+     "phase": "observe",
+     "placement": "Part B: Reading the Table (estate total using 2¹⁰ from the table)",
+     "check": "8*1024"
+    },
+    {
+     "prompt": "In the expression 2¹⁰, which statement correctly names the parts?",
+     "choices": [
+      "The base is 10 and the exponent is 2.",
+      "The base is 2 and the exponent is 20.",
+      "The base is 2 and the exponent is 10.",
+      "The base and the exponent are both 2 × 10."
+     ],
+     "correctIndex": 2,
+     "rationale": "In 2¹⁰ the base (2) is the number being multiplied and the exponent (10) tells how many times it is used as a factor.",
+     "phase": "explain",
+     "placement": "Step 1: Index Notation (base and exponent in 2¹⁰)"
+    },
+    {
+     "prompt": "What is the value of 3⁴?",
+     "choices": [
+      "12",
+      "64",
+      "7",
+      "81"
+     ],
+     "correctIndex": 3,
+     "rationale": "3⁴ = 3 × 3 × 3 × 3 = 81. The answer 12 comes from multiplying 3 × 4, and 7 from adding.",
+     "phase": "explain",
+     "placement": "Step 1: Index Notation (write 3⁴ in expanded form and evaluate it)",
+     "check": "3**4"
+    },
+    {
+     "prompt": "Which of these is 5 × 5 × 5 written in index form?",
+     "choices": [
+      "3⁵",
+      "15",
+      "5 × 3",
+      "5³"
+     ],
+     "correctIndex": 3,
+     "rationale": "The number 5 is used as a factor 3 times, so the base is 5 and the exponent is 3: 5³. 3⁵ swaps the base and the exponent.",
+     "phase": "explain",
+     "placement": "Step 1: Index Notation (write 5 × 5 × 5 in index form)"
+    },
+    {
+     "prompt": "A student writes this question on the Driving Question Board: 'Why does adding two small numbers from a logarithm table give the same answer as multiplying two huge numbers?' Where does the class stand on this question at the end of Lesson 1?",
+     "choices": [
+      "It is not answered yet; it is the central puzzle that the class will investigate in later lessons.",
+      "It is already answered: adding the exponents is the same as doubling the plant.",
+      "It is already answered: the logarithm table simply makes the numbers smaller.",
+      "It cannot be answered, because logarithm tables do not give correct results."
+     ],
+     "correctIndex": 0,
+     "rationale": "Lesson 1 only introduces the puzzle, index notation and the doubling pattern. The question about why logarithms turn multiplication into addition is left open on the Driving Question Board for later lessons.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: Kamau's question about adding numbers in a log table"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Deriving the Laws of Indices — Part 1: Product Rule, Quotient Rule, and Zero Index Law",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A Kericho plot has 2³ rows of tea and each row has 2⁴ plants. How many plants are there altogether, written as one power of 2?",
+     "choices": [
+      "2¹",
+      "4⁷",
+      "2⁷",
+      "2¹²"
+     ],
+     "correctIndex": 2,
+     "rationale": "2³ × 2⁴ = (2×2×2) × (2×2×2×2), which is seven factors of 2, so 2⁷. The product rule adds the exponents: 3 + 4 = 7.",
+     "phase": "predict",
+     "placement": "Predict: 2³ × 2⁴ tea rows and plants prediction"
+    },
+    {
+     "prompt": "A nursery has 2¹⁰ tea seedlings to share equally among 2³ farmers. How many seedlings does each farmer get?",
+     "choices": [
+      "8 192",
+      "1",
+      "128",
+      "7"
+     ],
+     "correctIndex": 2,
+     "rationale": "2¹⁰ ÷ 2³ = 2¹⁰⁻³ = 2⁷ = 128. Subtract the exponents. Adding them gives 2¹³ = 8 192, and dividing the bases gives 1.",
+     "phase": "predict",
+     "placement": "Predict: 2¹⁰ ÷ 2³ nursery seedlings prediction",
+     "check": "2**7"
+    },
+    {
+     "prompt": "In Table 1, a group expands 2² × 2³ into repeated multiplication. How many factors of 2 are there altogether, and what does this show?",
+     "choices": [
+      "1 factor, so 2² × 2³ = 2¹ (cancel the common base)",
+      "5 factors, so 2² × 2³ = 4⁵ (multiply the bases)",
+      "6 factors, so 2² × 2³ = 2⁶ (multiply the exponents)",
+      "5 factors, so 2² × 2³ = 2⁵ (add the exponents)"
+     ],
+     "correctIndex": 3,
+     "rationale": "2² × 2³ = (2×2) × (2×2×2) has 2 + 3 = 5 factors of 2, so it equals 2⁵. This is the pattern behind the product rule.",
+     "phase": "observe",
+     "placement": "Observe: Table 1 (Product Rule) expanding 2² × 2³, 3² × 3³, 5¹ × 5⁴"
+    },
+    {
+     "prompt": "In Table 3, a group works out 2³ ÷ 2³ by cancelling common factors and also by the quotient rule. What is the value of 2⁰?",
+     "choices": [
+      "2",
+      "3",
+      "1",
+      "0"
+     ],
+     "correctIndex": 2,
+     "rationale": "By cancellation, (2×2×2) ÷ (2×2×2) = 1. By the quotient rule, 2³ ÷ 2³ = 2³⁻³ = 2⁰. So 2⁰ = 1, not 0.",
+     "phase": "observe",
+     "placement": "Observe: Table 3 (Zero Index) 2³ ÷ 2³ and aⁿ ÷ aⁿ",
+     "check": "2**0"
+    },
+    {
+     "prompt": "A Rift Valley farmer owns a rectangular plot measuring 3⁴ metres by 3² metres. What is the area of the plot?",
+     "choices": [
+      "6 561 m²",
+      "9 m²",
+      "531 441 m²",
+      "729 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "Area = 3⁴ × 3² = 3⁴⁺² = 3⁶ = 729 m². Multiplying the exponents would give 3⁸ and multiplying the bases would give 9⁶. Subtracting exponents gives 3² = 9, which is the quotient rule and does not apply here.",
+     "phase": "explain",
+     "placement": "Explain: pair application problem 1 (Rift Valley plot 3⁴ m by 3² m)",
+     "check": "3**6"
+    },
+    {
+     "prompt": "A Kisumu fish trader divides 4⁶ kg of dried tilapia equally among 4³ market stalls. How many kilograms does each stall get?",
+     "choices": [
+      "64 kg",
+      "16 kg",
+      "1 kg",
+      "262 144 kg"
+     ],
+     "correctIndex": 0,
+     "rationale": "4⁶ ÷ 4³ = 4⁶⁻³ = 4³ = 64 kg. Dividing the exponents gives 4² = 16, which is wrong. Adding them gives 4⁹ = 262 144, and dividing the bases gives 1.",
+     "phase": "explain",
+     "placement": "Explain: pair application problem 2 (Kisumu fish trader 4⁶ ÷ 4³)",
+     "check": "4**3"
+    },
+    {
+     "prompt": "A tea estate's harvest is 2ⁿ grams per cycle. If the exponent increases by 1 to n + 1, what happens to the harvest?",
+     "choices": [
+      "It increases by 2 grams",
+      "It is multiplied by n",
+      "It increases by 1 gram",
+      "It doubles"
+     ],
+     "correctIndex": 3,
+     "rationale": "2ⁿ⁺¹ = 2ⁿ × 2¹ = 2 × 2ⁿ, so the harvest doubles. An exponent that is one larger means one more factor of 2.",
+     "phase": "end",
+     "placement": "End of lesson: connecting the laws back to the Kericho tea-farm phenomenon (2³ and 2¹⁰)"
+    },
+    {
+     "prompt": "Which statement about the laws of indices (a is not 0) is correct and belongs in a Laws Panel?",
+     "choices": [
+      "aᵐ × aⁿ = aᵐ⁺ⁿ, aᵐ ÷ aⁿ = aᵐ⁻ⁿ and a⁰ = a",
+      "aᵐ × aⁿ = aᵐ⁺ⁿ, aᵐ ÷ aⁿ = aᵐ⁻ⁿ and a⁰ = 1",
+      "aᵐ × aⁿ = aᵐ⁺ⁿ, aᵐ ÷ aⁿ = aᵐ⁺ⁿ and a⁰ = 0",
+      "aᵐ × aⁿ = aᵐⁿ, aᵐ ÷ aⁿ = aᵐ⁻ⁿ and a⁰ = 1"
+     ],
+     "correctIndex": 1,
+     "rationale": "The product rule adds exponents, the quotient rule subtracts them, and any non-zero base raised to the power 0 equals 1. The other options multiply exponents, add them in a quotient, or give a wrong value for a⁰.",
+     "phase": "model",
+     "placement": "Model Building: adding the Laws Panel to the Index Toolbox diagram"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Deriving the Laws of Indices — Part 2: Power, Negative, and Fractional Indices",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:29:13+00:00",
+   "quiz": [
+    {
+     "prompt": "The reciprocal of a number is the number you multiply it by to get 1. What is the reciprocal of 2³?",
+     "choices": [
+      "1/8",
+      "8",
+      "−8",
+      "1/6"
+     ],
+     "correctIndex": 0,
+     "rationale": "2³ = 8, and 8 × 1/8 = 1, so the reciprocal is 1/8. Choosing 8 repeats the number itself, and −8 confuses the reciprocal with the negative.",
+     "phase": "predict",
+     "placement": "Reciprocal recall (3 minutes): reciprocal of 8, of 1/4 and of 2³"
+    },
+    {
+     "prompt": "8 g (2³ g) of tea from one plant is shared equally among 2⁵ = 32 tasting cups. Using 2³ ÷ 2⁵, how much tea goes in each cup?",
+     "choices": [
+      "2^(−2) g, which equals −4 g",
+      "2² g, which equals 4 g",
+      "2^(−2) g, which equals 1/4 g",
+      "2^(−2) g, which equals −1/4 g"
+     ],
+     "correctIndex": 2,
+     "rationale": "The quotient rule gives 2^(3−5) = 2^(−2). Ordinary arithmetic gives 8 ÷ 32 = 1/4, so 2^(−2) = 1/2² = 1/4. A negative index gives a reciprocal, not a negative amount.",
+     "phase": "observe",
+     "placement": "Station B: Negative Index Rule (8 g of tea shared among 32 tasting cups)"
+    },
+    {
+     "prompt": "Using the power rule, (2^(1/2))² = 2^(1/2 × 2) = 2¹ = 2. What does this tell us 2^(1/2) must be?",
+     "choices": [
+      "Half of 2, which is 1",
+      "The square of 2, which is 4",
+      "The number that, multiplied by itself, gives 2 (that is, √2)",
+      "2 ÷ 2 ÷ 2 = 1/2"
+     ],
+     "correctIndex": 2,
+     "rationale": "Since 2^(1/2) squared equals 2, 2^(1/2) is the number whose square is 2, which is √2. The index 1/2 means a square root, not 'half of 2'.",
+     "phase": "observe",
+     "placement": "Station C: Fractional Index Rule (using the power rule in reverse)"
+    },
+    {
+     "prompt": "What is the value of (2⁴)³?",
+     "choices": [
+      "128",
+      "64",
+      "4 096",
+      "24"
+     ],
+     "correctIndex": 2,
+     "rationale": "By the power rule, (2⁴)³ = 2^(4×3) = 2¹² = 4 096. The answer 128 comes from wrongly adding the indices (2⁷), which is the error in the rule audit.",
+     "phase": "explain",
+     "placement": "Tier 1 (a) and the whole-class 'rule audit' ((2^4)^3 = 2^7)",
+     "check": "(2**4)**3"
+    },
+    {
+     "prompt": "What is the value of 8^(2/3)?",
+     "choices": [
+      "2",
+      "16/3",
+      "4",
+      "8/3"
+     ],
+     "correctIndex": 2,
+     "rationale": "The denominator 3 is the root and the numerator 2 is the power: 8^(2/3) = (∛8)² = 2² = 4. Answers such as 16/3 or 8/3 come from treating 2/3 as something to multiply or divide by.",
+     "phase": "explain",
+     "placement": "Tier 1 (d): simplify 8^(2/3), writing the rule used",
+     "check": "2**2"
+    },
+    {
+     "prompt": "A Kericho estate has 2¹⁰ tea plants arranged in 2⁴ equal rows. How many plants are in each row?",
+     "choices": [
+      "64",
+      "16 384",
+      "256",
+      "6"
+     ],
+     "correctIndex": 0,
+     "rationale": "Plants per row = 2¹⁰ ÷ 2⁴ = 2^(10−4) = 2⁶ = 64. Dividing 1 024 by 4 gives 256, which wrongly divides by the index instead of by 2⁴ = 16.",
+     "phase": "explain",
+     "placement": "Tier 2 (pairs): 2^10 tea plants arranged in 2^4 equal rows",
+     "check": "2**(10-4)"
+    },
+    {
+     "prompt": "A farm worker says 2^(−3) container-loads of tea. What does this mean?",
+     "choices": [
+      "A negative amount of tea, equal to −6 container-loads",
+      "8 container-loads, because the negative sign is ignored",
+      "A negative amount of tea, equal to −8 container-loads",
+      "1/8 of a container-load, because 2^(−3) is the reciprocal of 2³"
+     ],
+     "correctIndex": 3,
+     "rationale": "By the negative index rule, 2^(−3) = 1/2³ = 1/8, which is a small positive amount. A negative index does not mean a negative quantity.",
+     "phase": "explain",
+     "placement": "Tier 2: explain in words what 2^(−3) container-loads of tea means physically"
+    },
+    {
+     "prompt": "Which statement correctly states the fractional index rule for a^(m/n)?",
+     "choices": [
+      "a^(m/n) = a^m ÷ a^n",
+      "a^(m/n) = a^(m−n)",
+      "a^(m/n) = ⁿ√(a^m), which is the same as (ⁿ√a)^m",
+      "a^(m/n) = m × ⁿ√a"
+     ],
+     "correctIndex": 2,
+     "rationale": "Using the power rule, a^(m/n) = (a^(1/n))^m = (ⁿ√a)^m = ⁿ√(a^m). The denominator n gives the root and the numerator m gives the power.",
+     "phase": "model",
+     "placement": "Index Laws page of the Concept Map: new row for the fractional index rule"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Introduction to Common Logarithms: Definition, Characteristic, Mantissa, and Reading Four-Figure Tables",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "If 10ⁿ = 1 000, what is the value of n?",
+     "choices": [
+      "1 000",
+      "4",
+      "3",
+      "2"
+     ],
+     "correctIndex": 2,
+     "rationale": "1 000 = 10 × 10 × 10 = 10³, so n = 3. This is the exponent idea from index notation, which the definition of a logarithm builds on.",
+     "phase": "predict",
+     "placement": "Predict: half-sheet question 'If 10ⁿ = 1,000, what is n?'",
+     "check": "log10(1000)"
+    },
+    {
+     "prompt": "Lemon juice has a hydrogen ion concentration [H⁺] of 0.01 mol/L. How is 0.01 written as a power of 10?",
+     "choices": [
+      "10⁻¹",
+      "10²",
+      "10⁻²",
+      "10⁻¹⁰"
+     ],
+     "correctIndex": 2,
+     "rationale": "0.01 = 1/100 = 1/10² = 10⁻². The number is less than 1, so the exponent must be negative.",
+     "phase": "observe",
+     "placement": "Supporting Phenomenon: pH Scale of Kenyan Foods, Observation Table"
+    },
+    {
+     "prompt": "What is the value of log₁₀ 0.001?",
+     "choices": [
+      "−2",
+      "−3",
+      "3",
+      "0.003"
+     ],
+     "correctIndex": 1,
+     "rationale": "log₁₀ 0.001 = n means 10ⁿ = 0.001. Since 0.001 = 1/10³ = 10⁻³, n = −3.",
+     "phase": "explain",
+     "placement": "Part A: Formal Definition (worked examples and four-item rapid conversion table)",
+     "check": "log10(0.001)"
+    },
+    {
+     "prompt": "Without using tables, what is the characteristic of log₁₀ 45 200?",
+     "choices": [
+      "5",
+      "0.2",
+      "3",
+      "4"
+     ],
+     "correctIndex": 3,
+     "rationale": "45 200 has 5 digits before the decimal point. The characteristic is one less than that, so 5 − 1 = 4. This is because 10⁴ ≤ 45 200 < 10⁵.",
+     "phase": "explain",
+     "placement": "Part B: Characteristic and Mantissa (five-item characteristic identification)",
+     "check": "5-1"
+    },
+    {
+     "prompt": "log₁₀ 3 500 = 3.5441. What is the mantissa of this logarithm?",
+     "choices": [
+      "3.5441",
+      "3",
+      "0.3544",
+      "0.5441"
+     ],
+     "correctIndex": 3,
+     "rationale": "The mantissa is the decimal part of the logarithm, which is 3.5441 − 3 = 0.5441. The characteristic is the whole-number part, 3.",
+     "phase": "explain",
+     "placement": "Part B: Characteristic and Mantissa (worked example log₁₀ 3,500 ≈ 3.5441)",
+     "check": "3.5441-3"
+    },
+    {
+     "prompt": "A student uses a four-figure logarithm table to find log₁₀ 3 142. Row 31, column 4 gives 0.4969. The mean difference for the fourth digit 2 is 3 (that is, 0.0003). What is log₁₀ 3 142?",
+     "choices": [
+      "3.4972",
+      "3.4969",
+      "2.4972",
+      "3.4999"
+     ],
+     "correctIndex": 0,
+     "rationale": "3 142 has 4 digits, so the characteristic is 3. The mantissa is 0.4969 + 0.0003 = 0.4972, so log₁₀ 3 142 = 3.4972.",
+     "phase": "explain",
+     "placement": "Part C: Reading Four-Figure Tables (teacher models log₁₀ 3,142 using the mean-difference column)",
+     "check": "3+0.4969+0.0003"
+    },
+    {
+     "prompt": "From a four-figure table, log₁₀ 0.064 = 2̄.8062, which means −2 + 0.8062. What is this as a single decimal number?",
+     "choices": [
+      "−2.1938",
+      "−2.8062",
+      "1.1938",
+      "−1.1938"
+     ],
+     "correctIndex": 3,
+     "rationale": "The characteristic is −2 and the mantissa stays positive at 0.8062. So −2 + 0.8062 = −1.1938.",
+     "phase": "explain",
+     "placement": "Part C: Table-Reading Record (pairs look up log₁₀ 0.064)",
+     "check": "-2+0.8062"
+    },
+    {
+     "prompt": "Which statement best describes what a common logarithm is?",
+     "choices": [
+      "It is the number divided by 10.",
+      "It is the exponent (power) to which 10 must be raised to give the number.",
+      "It is the number of digits in the number.",
+      "It is the answer you get when you multiply a number by 10."
+     ],
+     "correctIndex": 1,
+     "rationale": "log₁₀ x = n means 10ⁿ = x, so a logarithm is the exponent rewritten on the other side of the equation. Number of digits relates only to the characteristic, not the whole logarithm.",
+     "phase": "model",
+     "placement": "Model Building: Concept Map 'LOGARITHM SIDE' bridge statement"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Using Mathematical Tables and Calculators for Logarithms and Antilogarithms",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "An analyst finds that log₁₀ x = 7.2304, where x is the number of M-Pesa transactions in a day. Which expression gives x?",
+     "choices": [
+      "x = 7.2304^10",
+      "x = 7.2304 × 10",
+      "x = 7.2304 ÷ 10",
+      "x = 10^7.2304"
+     ],
+     "correctIndex": 3,
+     "rationale": "The definition log₁₀ x = n ⟺ 10ⁿ = x means x = 10^7.2304. The antilogarithm of 7.2304 is 10 raised to that power.",
+     "phase": "predict",
+     "placement": "Predict: M-Pesa prompt – recovering 17,000,000 from 7.2304"
+    },
+    {
+     "prompt": "Using four-figure tables, the characteristic of log₁₀ of a number is found from the digits before the decimal point. What is the characteristic of log₁₀(58.4)?",
+     "choices": [
+      "0",
+      "1",
+      "3",
+      "2"
+     ],
+     "correctIndex": 1,
+     "rationale": "58.4 has 2 digits before the decimal point, so the characteristic is 2 − 1 = 1. Learners who answer 2 are using the number of digits instead of one less.",
+     "phase": "observe",
+     "placement": "Observe: Worked Example 1 (log lookup) – Kariuki's characteristic question",
+     "check": "2-1"
+    },
+    {
+     "prompt": "A Kericho tea estate produces 3,240 kg of tea in a day. From the log table, the mantissa of 3240 is 0.5105. What is log₁₀(3 240)?",
+     "choices": [
+      "0.5105",
+      "3.3240",
+      "4.5105",
+      "3.5105"
+     ],
+     "correctIndex": 3,
+     "rationale": "3240 has 4 digits before the decimal point, so the characteristic is 4 − 1 = 3. Adding the mantissa gives 3 + 0.5105 = 3.5105.",
+     "phase": "observe",
+     "placement": "Observe: Practice Problem A – log₁₀(3,240)",
+     "check": "log10(3240)"
+    },
+    {
+     "prompt": "From the antilog table, the mantissa 0.5922 gives the digits 3910 (that is, 3.910). What is the antilogarithm of 4.5922?",
+     "choices": [
+      "3 910",
+      "3.910",
+      "39 100",
+      "391 000"
+     ],
+     "correctIndex": 2,
+     "rationale": "The characteristic 4 means the number has 4 + 1 = 5 digits before the decimal point. So antilog 4.5922 = 3.910 × 10⁴ = 39 100, and a calculator's 10ˣ key gives the same.",
+     "phase": "observe",
+     "placement": "Observe: Practice Problem C – antilog(4.5922)",
+     "check": "10**4.5922"
+    },
+    {
+     "prompt": "Why is an antilogarithm table described as a table of powers of 10?",
+     "choices": [
+      "Because the table divides each logarithm by 10",
+      "Because log₁₀ x = n means 10ⁿ = x, so the table gives the value of 10 raised to each logarithm",
+      "Because the table lists the numbers 10, 20, 30 and so on",
+      "Because the table gives the negative of each logarithm"
+     ],
+     "correctIndex": 1,
+     "rationale": "By the index definition log₁₀ x = n ⟺ 10ⁿ = x, finding the number from its logarithm n means working out 10ⁿ. The antilog table lists these values. It does not give a negative log or a division by 10.",
+     "phase": "explain",
+     "placement": "Explain: Prompt 1 – why the antilogarithm table is a table of powers of 10"
+    },
+    {
+     "prompt": "An analyst should have written log₁₀ N = 7.2304 but wrote 7.2340 by mistake. When she finds the antilogarithm of 7.2340, how will her number compare with the correct number?",
+     "choices": [
+      "It will be negative, because the logarithm was written wrongly",
+      "It will be exactly the same, because the characteristic is still 7",
+      "It will be smaller, because the digits were swapped",
+      "It will be larger, because a bigger logarithm means a bigger number"
+     ],
+     "correctIndex": 3,
+     "rationale": "Since 10ˣ increases as x increases, 7.2340 is greater than 7.2304, so its antilogarithm is greater. Antilog table values rise as the mantissa rises.",
+     "phase": "explain",
+     "placement": "Explain: Prompt 2 – analyst writes 7.2340 instead of 7.2304"
+    },
+    {
+     "prompt": "A tea estate manager wants to multiply 3 240 × 47.6 using logarithms. He knows log₁₀ 3 240 = 3.5105 and log₁₀ 47.6 = 1.6776. Which method is correct?",
+     "choices": [
+      "Add 3 240 + 47.6, then find the logarithm of the sum",
+      "Multiply 3.5105 × 1.6776, then find the antilogarithm",
+      "Find the antilog of 3.5105 and of 1.6776, then add the two answers",
+      "Add 3.5105 + 1.6776 = 5.1881, then find the antilogarithm of 5.1881"
+     ],
+     "correctIndex": 3,
+     "rationale": "The logarithms are added first: 3.5105 + 1.6776 = 5.1881. The antilogarithm of 5.1881 gives the product, about 154 200. Taking antilogs first and then adding reverses the steps.",
+     "phase": "explain",
+     "placement": "Explain: Prompt 3 – tea manager multiplies 3,240 × 47.6 using Practice Problems A and B",
+     "check": "3.5105+1.6776"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Applying Logarithms to Multiplication and Division",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A tea farmer is told that log(1024) ≈ 3.0103 and log(8) ≈ 0.9031. Using the product law of logarithms, what is log(1024 × 8)?",
+     "choices": [
+      "3.9134",
+      "3.0103 × 0.9031 = 2.7186 and then doubled to 5.4372",
+      "0.9031",
+      "2.7186"
+     ],
+     "correctIndex": 0,
+     "rationale": "The product law says log(ab) = log a + log b, so log(1024 × 8) = 3.0103 + 0.9031 = 3.9134. Multiplying the logs (2.7186) is the common error.",
+     "phase": "predict",
+     "placement": "Predict: learners predict log(1024 × 8) from the side-by-side worked examples",
+     "check": "3.0103+0.9031"
+    },
+    {
+     "prompt": "Suppose log M = a and log N = b, so M = 10^a and N = 10^b. Then M × N = 10^(a + b). What is log(M × N)?",
+     "choices": [
+      "a − b",
+      "a × b",
+      "a + b",
+      "10^(a + b)"
+     ],
+     "correctIndex": 2,
+     "rationale": "log(M × N) = log(10^(a+b)) = a + b, which equals log M + log N. This is the product law.",
+     "phase": "observe",
+     "placement": "Part A: Deriving the Laws (Step 3 of the discovery worksheet)"
+    },
+    {
+     "prompt": "A learner claims that log(M × N) = log M × log N. Test the claim with M = 10 and N = 10, where log 10 = 1. Which statement is correct?",
+     "choices": [
+      "The claim is wrong: the correct law is log(M × N) = log(M + N).",
+      "The claim is wrong: log(10 × 10) = log 100 = 2, but log 10 × log 10 = 1. The correct law adds the logs: 1 + 1 = 2.",
+      "The claim is correct: both sides equal 2.",
+      "The claim is correct: both sides equal 1."
+     ],
+     "correctIndex": 1,
+     "rationale": "log 100 = 2 but 1 × 1 = 1, so multiplying logs fails. Adding the logs (1 + 1 = 2) matches the product law.",
+     "phase": "observe",
+     "placement": "Part A: Deriving the Laws (red flag: confusing log of a product with the product of logs)"
+    },
+    {
+     "prompt": "Using the antilogarithm table, what is antilog(2.7482)?",
+     "choices": [
+      "5 600",
+      "5.600",
+      "560.0",
+      "56.00"
+     ],
+     "correctIndex": 2,
+     "rationale": "The mantissa .7482 gives the digits 5600. The characteristic 2 means the answer is in the hundreds, so antilog(2.7482) ≈ 560.0.",
+     "phase": "observe",
+     "placement": "Part B: Reading Antilogarithm Tables (guided lookup antilog(2.7482))",
+     "check": "10**2.7482"
+    },
+    {
+     "prompt": "A maize trader at Wakulima Market buys 346 bags, each weighing 91.5 kg. From the tables, log 346 = 2.5391 and log 91.5 = 1.9614. Using logarithms, what is the total mass of maize?",
+     "choices": [
+      "About 3 166 kg",
+      "About 4.5005 kg",
+      "About 31 660 kg",
+      "About 316 600 kg"
+     ],
+     "correctIndex": 2,
+     "rationale": "Add the logs: 2.5391 + 1.9614 = 4.5005. The antilog of 4.5005 is about 31 660, and the characteristic 4 puts it in the tens of thousands.",
+     "phase": "explain",
+     "placement": "Problem 1 (Multiplication): maize trader at Wakulima Market",
+     "check": "10**(2.5391+1.9614)"
+    },
+    {
+     "prompt": "A fertiliser depot in Nakuru shares 7 820 kg of CAN fertiliser equally among 34 farms. From the tables, log 7820 = 3.8932 and log 34 = 1.5315. Using logarithms, how much does each farm receive?",
+     "choices": [
+      "About 2 300 kg",
+      "About 23 kg",
+      "About 230 kg",
+      "About 5.4247 kg"
+     ],
+     "correctIndex": 2,
+     "rationale": "Division means subtracting the logs: 3.8932 − 1.5315 = 2.3617. The antilog of 2.3617 is about 230, and the characteristic 2 gives hundreds.",
+     "phase": "explain",
+     "placement": "Problem 2 (Division): fertiliser depot in Nakuru",
+     "check": "7820/34"
+    },
+    {
+     "prompt": "Which list gives the correct order of steps for multiplying two large numbers using logarithm tables?",
+     "choices": [
+      "Multiply the numbers, then find the log of the answer, then add 1",
+      "Find the log of each number, add the logs, and stop because the sum is the product",
+      "Find the log of each number, add the logs, then use the antilog table to get the product",
+      "Find the log of each number, multiply the logs, then use the antilog table to get the product"
+     ],
+     "correctIndex": 2,
+     "rationale": "The chain is: look up each log, add the logs, then convert back with the antilog table. Leaving out the antilog step is a common gap.",
+     "phase": "model",
+     "placement": "Model Building: adding the multiplication chain (multiply → log → add → antilog) to the concept map"
+    },
+    {
+     "prompt": "A Kericho tea estate produces 2 480 kg of tea per week for 52 weeks. The tea is sold at Ksh 118 per kg. Using logarithms, log 2480 = 3.3945, log 52 = 1.7160 and log 118 = 2.0719. What is the annual revenue?",
+     "choices": [
+      "About Ksh 15 220 000",
+      "About Ksh 1 522 000",
+      "About Ksh 7.1824",
+      "About Ksh 152 200 000"
+     ],
+     "correctIndex": 0,
+     "rationale": "There are three factors, so add three logs: 3.3945 + 1.7160 + 2.0719 = 7.1824. The antilog of 7.1824 is about 15 220 000, and the characteristic 7 gives an 8-digit number.",
+     "phase": "end",
+     "placement": "Extension / Take-home (Problem 3, Combined): annual tea revenue for a Kericho estate",
+     "check": "10**(3.3945+1.7160+2.0719)"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Applying Logarithms to Powers and Roots — Unlocking the Exponent and the Square Plot",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In the SACCO loan problem, a learner wants to find log(1.045²). Using the product law log(a × b) = log a + log b, which result is correct?",
+     "choices": [
+      "log 1.045 + 2",
+      "(log 1.045)²",
+      "2 × log 1.045",
+      "log 2.045"
+     ],
+     "correctIndex": 2,
+     "rationale": "1.045² = 1.045 × 1.045, so log(1.045²) = log 1.045 + log 1.045 = 2 × log 1.045. This repeated addition is where the n in the power law comes from.",
+     "phase": "observe",
+     "placement": "Observe: teacher-led SACCO working, Step 1 (derivation of the power law from the product law)"
+    },
+    {
+     "prompt": "A Kericho SACCO member borrows Ksh 50,000 at 4.5% compound interest per annum for 12 years. Using the power law, log(1.045¹²) = 12 × log 1.045. From the four-figure tables, log 1.045 = 0.0191. What is log(1.045¹²)?",
+     "choices": [
+      "0.0016",
+      "0.2292",
+      "12.0191",
+      "1.2191"
+     ],
+     "correctIndex": 1,
+     "rationale": "Power law: log(1.045¹²) = 12 × 0.0191 = 0.2292. Adding 12 to the log (instead of multiplying) or dividing by 12 are common errors.",
+     "phase": "observe",
+     "placement": "Observe: teacher-led SACCO working, Step 2 (table reading and multiplying by 12)",
+     "check": "12*0.0191"
+    },
+    {
+     "prompt": "A SACCO member borrows Ksh 50,000 at 4.5% compound interest per annum. After 12 years the amount owed is A = 50,000 × 1.045¹². Using tables, log(1.045¹²) = 0.2292 and antilog 0.2292 ≈ 1.695. What is the amount owed, to the nearest Ksh 10?",
+     "choices": [
+      "Ksh 84,750",
+      "Ksh 50,001.70",
+      "Ksh 77,000",
+      "Ksh 8,475"
+     ],
+     "correctIndex": 0,
+     "rationale": "1.045¹² ≈ 1.695, so A = 50,000 × 1.695 = Ksh 84,750. Ksh 77,000 comes from treating the interest as simple interest (50,000 × 0.045 × 12 = 27,000, added to 50,000).",
+     "phase": "observe",
+     "placement": "Observe: teacher-led SACCO working, Steps 3 and 4 (antilog and final answer in Ksh)",
+     "check": "50000*1.695"
+    },
+    {
+     "prompt": "A square plot in Nakuru County has an area of 8,464 m². The side length is √8,464. Using the root law, log(√8,464) = (1/2) × log 8,464. If log 8,464 = 3.9276, what is log(√8,464)?",
+     "choices": [
+      "1.9638",
+      "7.8552",
+      "1.9276",
+      "0.9638"
+     ],
+     "correctIndex": 0,
+     "rationale": "The square root means one half of the log: 3.9276 ÷ 2 = 1.9638. Doubling the log would give the log of 8,464², not of its square root.",
+     "phase": "observe",
+     "placement": "Observe: independent root-law working, Step 2 (apply root law)",
+     "check": "3.9276/2"
+    },
+    {
+     "prompt": "A learner wants to find log 8,464 from four-figure tables. What is the characteristic of log 8,464?",
+     "choices": [
+      "4",
+      "3",
+      "0",
+      "2"
+     ],
+     "correctIndex": 1,
+     "rationale": "8,464 has 4 digits before the decimal point, so the characteristic is 4 − 1 = 3. Writing 2 or 4 shows a miscount of digits or a wrong rule.",
+     "phase": "observe",
+     "placement": "Observe: independent root-law working, Step 1 (find log 8,464 and its characteristic)",
+     "check": "4-1"
+    },
+    {
+     "prompt": "A surveyor finds that the logarithm of the side of a square plot of area 8,464 m² is 1.9638. Antilog 1.9638 gives a number with digits 92.0. Which is the side length of the plot?",
+     "choices": [
+      "4,232 m",
+      "9.20 m",
+      "920 m",
+      "92.0 m"
+     ],
+     "correctIndex": 3,
+     "rationale": "A characteristic of 1 means two digits before the decimal point, so the side is about 92.0 m. Check: 92² = 8,464. The value 4,232 comes from wrongly halving the area.",
+     "phase": "observe",
+     "placement": "Observe: independent root-law working, Steps 3 and 4 (antilog and state answer with units)",
+     "check": "sqrt(8464)"
+    },
+    {
+     "prompt": "Why can we write log(√8,464) as (1/2) × log 8,464?",
+     "choices": [
+      "Because log of a square root is always half of the number itself",
+      "Because the quotient law says log(a/b) = log a − log b",
+      "Because the square root of a number is the same as dividing the number by 2",
+      "Because √8,464 = 8,464^(1/2), and the power law says log(aⁿ) = n × log a with n = 1/2"
+     ],
+     "correctIndex": 3,
+     "rationale": "The fractional-index rule a^(1/n) = ⁿ√a from Lesson 3 lets us write √8,464 as 8,464^(1/2). The power law then brings the 1/2 to the front of the log.",
+     "phase": "explain",
+     "placement": "Explain: pair explanation of the root law (Q2: which lesson's index law makes the root law work)"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Consolidation, Combined Operations, and Model Revision: Answering the Driving Question",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Kamau must evaluate (2.374 × 0.8163³) ÷ √54.72 using four-figure tables. Which line correctly shows the logarithm of this whole expression?",
+     "choices": [
+      "log 2.374 × 3 log 0.8163 ÷ ½ log 54.72",
+      "log 2.374 + 3 log 0.8163 − 2 log 54.72",
+      "log 2.374 + 3 log 0.8163 − ½ log 54.72",
+      "log 2.374 + (log 0.8163)³ − √(log 54.72)"
+     ],
+     "correctIndex": 2,
+     "rationale": "Multiplication becomes addition (product law), division becomes subtraction (quotient law), the cube becomes 3 × the log (power law) and the square root becomes ½ × the log (root law).",
+     "phase": "predict",
+     "placement": "Predict Phase: law inventory for Kamau's blended-yield problem"
+    },
+    {
+     "prompt": "log 0.8163 = 1̄.9119, which means −1 + 0.9119. What is the value of 3 × 1̄.9119 written as an ordinary decimal?",
+     "choices": [
+      "2.7357",
+      "−5.7357",
+      "−0.2643",
+      "−2.7357"
+     ],
+     "correctIndex": 2,
+     "rationale": "3 × (−1 + 0.9119) = −3 + 2.7357 = −0.2643, which is written as the bar number 1̄.7357. Reading 1̄.9119 as −1.9119 would wrongly give −5.7357.",
+     "phase": "observe",
+     "placement": "Observe Phase: 3-minute bar-number demonstration (cubing log 0.8163)",
+     "check": "3*(-1+0.9119)"
+    },
+    {
+     "prompt": "log 0.6731 = 1̄.8281. Which of these is half of 1̄.8281, that is, the logarithm of √0.6731?",
+     "choices": [
+      "0.4141",
+      "2̄.9140",
+      "1̄.9140",
+      "1̄.4141"
+     ],
+     "correctIndex": 2,
+     "rationale": "First rewrite 1̄.8281 as 2̄ + 1.8281 so the negative part divides evenly. Half of this is 1̄ + 0.9140 = 1̄.9140. Halving only the decimal part gives the wrong answer 1̄.4141.",
+     "phase": "observe",
+     "placement": "Observe Phase: 3-minute bar-number demonstration (halving a bar number)"
+    },
+    {
+     "prompt": "In Problem A, log 2.374 = 0.3755 and log (0.8163³) = −0.2643 (that is, 1̄.7357). What is the logarithm of the numerator 2.374 × 0.8163³?",
+     "choices": [
+      "−0.0993",
+      "1.1265",
+      "0.6398",
+      "0.1112"
+     ],
+     "correctIndex": 3,
+     "rationale": "By the product law, log of a product is the sum of the logs: 0.3755 + (−0.2643) = 0.1112. Multiplying the logs, or ignoring the negative sign, are common errors.",
+     "phase": "observe",
+     "placement": "Observe Phase: groups complete the log-table template for Problem A",
+     "check": "0.3755+3*(-1+0.9119)"
+    },
+    {
+     "prompt": "In Problem A the logarithm of the final answer is 1̄.242 (that is, −1 + 0.242). From the antilogarithm table, the antilog of 0.242 is 1.746. What is the value of the answer?",
+     "choices": [
+      "17.46",
+      "1.746",
+      "0.01746",
+      "0.1746"
+     ],
+     "correctIndex": 3,
+     "rationale": "The bar 1̄ means the answer is 1.746 × 10⁻¹, so the answer is 1.746 ÷ 10 = 0.1746.",
+     "phase": "explain",
+     "placement": "Explain Phase: class builds the Problem A solution step by step, naming the antilog step",
+     "check": "1.746/10"
+    },
+    {
+     "prompt": "A tea plant yields 2³ grams per harvest and the estate has 2¹⁰ plants, so the total is 2¹³ = 8 192 grams. If each plant's yield rises to 2⁴ grams and there are still 2¹⁰ plants, what is the new total in grams?",
+     "choices": [
+      "16 384",
+      "8 193",
+      "32 768",
+      "12 288"
+     ],
+     "correctIndex": 0,
+     "rationale": "2⁴ × 2¹⁰ = 2¹⁴ = 16 384. Increasing the index by 1 doubles the value, so the total doubles from 8 192 to 16 384, not 'adds 1'.",
+     "phase": "explain",
+     "placement": "Explain Phase: discussion on why changing the exponent from 2³ to 2⁴ doubles the harvest",
+     "check": "2**14"
+    },
+    {
+     "prompt": "Logarithms turn multiplication into addition: log (a × b) = log a + log b. Which index law is this product law of logarithms based on?",
+     "choices": [
+      "aᵐ ÷ aⁿ = aᵐ⁻ⁿ",
+      "a⁰ = 1",
+      "(aᵐ)ⁿ = aᵐⁿ",
+      "aᵐ × aⁿ = aᵐ⁺ⁿ"
+     ],
+     "correctIndex": 3,
+     "rationale": "A logarithm is an index. Multiplying numbers with the same base adds their indices (aᵐ × aⁿ = aᵐ⁺ⁿ), so the logs of the numbers add when the numbers are multiplied.",
+     "phase": "dqb",
+     "placement": "DQB Phase: Final Explanation of how logarithms convert multiplication to addition"
+    }
+   ]
+  }
+ ]
+}

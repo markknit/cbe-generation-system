@@ -12,100 +12,100 @@
    "number": 1,
    "title": "The Blood Glucose Puzzle: Why Does Glucose Rise and Fall After Eating Ugali?",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-10-05T03:52:34+00:00",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
    "quiz": [
     {
-     "prompt": "Wanjiru fasted, then ate ugali, sukuma wiki and beans. Her blood glucose was 4.5 mmol/L at 0 min and reached its highest value of 8.0 mmol/L at 60 min. By how much did her blood glucose rise from 0 to 60 min?",
+     "prompt": "Wanjiru ate ugali, sukuma wiki and beans after fasting. Her blood glucose (mmol/L) was measured at 0, 15, 30, 60, 90, 120, 150 and 180 minutes: 4.5, 5.5, 7.0, 8.0, 6.5, 5.2, 4.7, 4.5. By how much did her blood glucose rise from the start (0 min) to the peak?",
      "choices": [
       "8.0 mmol/L",
-      "4.5 mmol/L",
+      "60 mmol/L",
       "3.5 mmol/L",
       "12.5 mmol/L"
      ],
      "correctIndex": 2,
-     "rationale": "Rise = peak minus starting value = 8.0 - 4.5 = 3.5 mmol/L. Learners who choose 12.5 added the values instead of finding the difference.",
+     "rationale": "The peak is 8.0 mmol/L at 60 min and the start is 4.5 mmol/L, so the rise is 8.0 - 4.5 = 3.5 mmol/L. 8.0 is the peak value itself, not the rise.",
      "phase": "observe",
-     "placement": "Observe: data questions on Wanjiru's table and graph (By how much did glucose rise from 0 to 60 min?)",
+     "placement": "Data questions: By how much did glucose rise from 0 to 60 min?",
      "check": "8.0-4.5"
     },
     {
-     "prompt": "Wanjiru's blood glucose started at 4.5 mmol/L and rose by 3.5 mmol/L to a peak of 8.0 mmol/L. About what percentage above her starting level was the peak?",
+     "prompt": "Wanjiru's blood glucose was 4.5 mmol/L before her meal and reached a peak of 8.0 mmol/L at 60 minutes, a rise of 3.5 mmol/L. About what percentage above her starting level was the peak?",
      "choices": [
-      "About 56%",
+      "About 178%",
       "About 3.5%",
       "About 78%",
       "About 44%"
      ],
      "correctIndex": 2,
-     "rationale": "Percentage rise = rise divided by starting value times 100 = 3.5 / 4.5 x 100 = about 78%. Dividing by the peak (3.5 / 8.0) gives the common error of about 44%.",
+     "rationale": "Percentage rise = rise ÷ starting value × 100 = 3.5 ÷ 4.5 × 100 ≈ 78%. Dividing by 8.0 gives 44%, which is the wrong base.",
      "phase": "observe",
-     "placement": "Observe: calculating the rise (3.5 mmol/L, about 78% above the start)",
+     "placement": "Data questions: rise from 0 to 60 min, about 78% above the start",
      "check": "round(3.5/4.5*100)"
     },
     {
-     "prompt": "Wanjiru's blood glucose rose by 3.5 mmol/L between 0 and 60 min (4.5 to 8.0 mmol/L). It then fell by 3.5 mmol/L between 60 and 180 min (8.0 back to 4.5 mmol/L). What do these numbers show?",
+     "prompt": "Wanjiru's blood glucose rose by 3.5 mmol/L between 0 and 60 minutes. After the peak it fell by 3.5 mmol/L between 60 and 180 minutes. Which statement about the rise and the fall is correct?",
      "choices": [
-      "The rise and fall cannot be compared because they have different start times.",
-      "The rise was faster because the same 3.5 mmol/L change took 60 min going up but 120 min coming down.",
-      "The fall was faster because glucose ended at a lower value than the peak.",
-      "The rise and the fall were equally fast because both changes were 3.5 mmol/L."
+      "The fall was faster, because it took more minutes.",
+      "The rise was faster, because the same change took 60 minutes compared with 120 minutes.",
+      "The rise and fall were equally fast, because both changed by 3.5 mmol/L.",
+      "The fall was faster, because it ended at the starting value."
      ],
      "correctIndex": 1,
-     "rationale": "The same change of 3.5 mmol/L took 60 min on the way up and 120 min on the way down, so the rise was about twice as fast. Equal change does not mean equal speed.",
+     "rationale": "The same change of 3.5 mmol/L took 60 min going up but 120 min coming down, so the rise was quicker. Equal change does not mean equal speed, because time must be considered.",
      "phase": "observe",
-     "placement": "Observe: 'Which is faster, rise or fall? Prove it with numbers.'"
+     "placement": "Data questions: Which is faster, rise or fall?"
     },
     {
-     "prompt": "A meal card for Wanjiru's lunch lists: ugali about 70 g carbohydrate, beans about 20 g protein and 15 g carbohydrate, sukuma wiki about 3 g protein plus fibre, vitamins and minerals, cooking oil about 10 g fat. Which food in the meal contained the largest amount of carbohydrate?",
+     "prompt": "A normal fasting blood glucose range is 4.0 to 5.5 mmol/L. Wanjiru's readings after the peak of 8.0 mmol/L at 60 min were: 6.5 (90 min), 5.2 (120 min), 4.7 (150 min) and 4.5 (180 min). At which measurement time after the peak was her blood glucose first back in the normal fasting range?",
      "choices": [
-      "Sukuma wiki",
-      "Cooking oil",
-      "Ugali",
-      "Beans"
+      "60 minutes",
+      "120 minutes",
+      "180 minutes",
+      "90 minutes"
+     ],
+     "correctIndex": 1,
+     "rationale": "At 90 min the value of 6.5 mmol/L is still above 5.5. At 120 min the value of 5.2 mmol/L is within 4.0 to 5.5, so that is the first time. It reaches her starting 4.5 mmol/L only at 180 min.",
+     "phase": "observe",
+     "placement": "Data questions: When did glucose return to the normal fasting range of 4.0 to 5.5 mmol/L?"
+    },
+    {
+     "prompt": "In a Claim-Evidence-Reasoning task, a group is asked: 'What makes Wanjiru's blood glucose fall after the peak at 60 minutes?' At this point in the unit, which response is the most scientific?",
+     "choices": [
+      "Glucose is burnt off in the stomach, so it falls.",
+      "Glucose just disappears with time, so nothing needs explaining.",
+      "The data show that it falls, but we do not yet know how. We need to investigate and add this to our questions.",
+      "Glucose falls only because Wanjiru stopped eating, so nothing in the body is involved."
      ],
      "correctIndex": 2,
-     "rationale": "Ugali has about 70 g carbohydrate, far more than the 15 g in beans. Sukuma wiki is mostly protein, fibre, vitamins and minerals, and cooking oil is fat.",
-     "phase": "observe",
-     "placement": "Observe: looking at the meal composition card"
-    },
-    {
-     "prompt": "After looking at the graph of blood glucose rising to 8.0 mmol/L and then falling back to 4.5 mmol/L, a group is asked what causes the fall after the peak. Which statement is the most honest scientific position at this stage of the unit?",
-     "choices": [
-      "Glucose is burnt off in the stomach straight after the meal.",
-      "The graph shows that glucose falls, but we have not yet explained what causes it, so it is a question to investigate.",
-      "Glucose falls only because the person has stopped eating.",
-      "Glucose simply disappears from the blood with time and nothing is involved."
-     ],
-     "correctIndex": 1,
-     "rationale": "The data show the pattern but not its cause. The class still has to investigate it, and saying 'I do not know yet' is acceptable. The other choices are unsupported everyday ideas.",
+     "rationale": "The lesson leaves the cause unexplained. The honest conclusion from the data is that something lowers glucose, but the process is not yet known and should be investigated. The other options are untested ideas that the data do not support.",
      "phase": "explain",
-     "placement": "Explain: Claim-Evidence-Reasoning organiser and 'What I am sure about / not sure about yet'"
+     "placement": "Claim-Evidence-Reasoning organiser: 'What I am not sure about yet'"
     },
     {
-     "prompt": "Learners are writing questions for the Driving Question Board about the glucose graph. Which question is the most specific and can be investigated?",
+     "prompt": "The meal card for Wanjiru's lunch says: ugali has about 70 g carbohydrate; beans have about 9 g protein and 23 g carbohydrate; sukuma wiki has about 3 g protein plus fibre, vitamins and mineral salts; cooking oil gives about 10 g fat. Which statement is supported by this card?",
      "choices": [
-      "Is glucose good?",
-      "What chemicals are in ugali?",
-      "Did Wanjiru enjoy her lunch?",
-      "Why is food?"
+      "Sukuma wiki is the main source of carbohydrate in the meal.",
+      "The meal contains several kinds of food chemicals, including carbohydrate, protein and fat.",
+      "Beans contain only protein.",
+      "Ugali has no carbohydrate, because it is not sweet."
      ],
      "correctIndex": 1,
-     "rationale": "'What chemicals are in ugali?' is clear and can be investigated, for example by testing foods in the lab. The others are vague, opinion-based or not linked to the graph.",
-     "phase": "dqb",
-     "placement": "DQB: writing and sorting questions under 'What chemicals are in the food we eat, and what happens to them in our bodies?'"
+     "rationale": "The card lists carbohydrate, protein, fat, vitamins and minerals in the meal. Ugali has the most carbohydrate (about 70 g), beans contain both protein and carbohydrate, and sukuma wiki has little carbohydrate listed.",
+     "phase": "observe",
+     "placement": "Meal composition card"
     },
     {
-     "prompt": "Learners draw an initial model of Wanjiru's meal and her glucose graph, using boxes and arrows with question marks where they are unsure. Which skeleton shows the correct order of the parts?",
+     "prompt": "A learner draws this initial model: Food chemicals → ? → Glucose in blood (8.0 mmol/L at 60 min) → ? → Back to normal (4.5 mmol/L at 180 min). What do the question marks show?",
      "choices": [
-      "Back to normal → ? → Food chemicals → ? → Glucose in blood",
-      "Glucose in blood → ? → Food chemicals → ? → Back to normal",
-      "Food chemicals → ? → Back to normal → ? → Glucose in blood",
-      "Food chemicals → ? → Glucose in blood (rises to 8.0 mmol/L) → ? → Back to normal (4.5 mmol/L)"
+      "Steps that do not happen in the body.",
+      "Mistakes in the model that must be rubbed out.",
+      "Steps the learner does not yet understand. They will become questions to investigate and revise the model.",
+      "Places where the teacher must give the correct answer immediately."
      ],
-     "correctIndex": 3,
-     "rationale": "The pattern runs from food chemicals, to a rise of glucose in the blood to 8.0 mmol/L, to a return to normal at 4.5 mmol/L. The question marks show the processes still unknown.",
+     "correctIndex": 2,
+     "rationale": "An initial model shows current thinking. The question marks mark gaps, which go onto the Driving Question Board and are revised in later lessons.",
      "phase": "model",
-     "placement": "Model: initial flow-diagram model (Food chemicals → ? → Glucose in blood → ? → Back to normal)"
+     "placement": "Initial flow-diagram model: Food chemicals → ? → Glucose in blood → ? → Back to normal"
     }
    ]
   },
@@ -113,99 +113,99 @@
    "number": 2,
    "title": "Elements and Compounds of Life: What Is Wanjiru's Lunch Made Of?",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-10-05T03:52:34+00:00",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
    "quiz": [
     {
-     "prompt": "Wanjiru's meal has ugali (about 70 g carbohydrate), beans (about 20 g protein and 15 g carbohydrate), sukuma wiki (about 3 g protein plus fibre) and cooking oil (about 10 g fat). What is the total mass of carbohydrate in the meal?",
+     "prompt": "Wanjiru's lunch includes ugali made from maize flour. A learner says, \"Ugali is just one chemical.\" Which statement is correct?",
      "choices": [
-      "70 g",
-      "85 g",
-      "105 g",
-      "95 g"
+      "Ugali is made of many chemicals, mainly starch (a carbohydrate) together with water and small amounts of other substances.",
+      "Ugali is one chemical called starch and nothing else.",
+      "Ugali contains no chemicals because it is a natural food.",
+      "Ugali contains only minerals such as iron and calcium."
      ],
-     "correctIndex": 1,
-     "rationale": "Carbohydrate comes from ugali and beans only: 70 g + 15 g = 85 g. The other values leave out the beans or wrongly add protein or fat.",
-     "phase": "observe",
-     "placement": "Station A: Nutrient data",
-     "check": "70+15"
+     "correctIndex": 0,
+     "rationale": "Foods are mixtures of many chemicals. Ugali is mostly starch, a carbohydrate, plus water and other substances, so the idea that a food is only one chemical is a misconception.",
+     "phase": "predict",
+     "placement": "Predict: learners list the chemicals they think are in each food and compare in pairs"
     },
     {
-     "prompt": "Mr Otieno heats a small piece of dry maize flour in a flame and it turns black. Table salt heated in the same flame does not turn black. What does the black residue show?",
+     "prompt": "A meal card for Wanjiru's lunch says: ugali about 70 g carbohydrate; beans about 23 g carbohydrate and 9 g protein; cooking oil about 10 g fat. How much carbohydrate do the ugali and the beans give together?",
      "choices": [
-      "The maize flour contains salt, which turns black when heated",
-      "The maize flour contains carbon, which is present in organic compounds",
-      "The maize flour contains iron, which turns black when heated",
-      "The maize flour contains water, which turns black when heated"
+      "102 g",
+      "79 g",
+      "80 g",
+      "93 g"
      ],
-     "correctIndex": 1,
-     "rationale": "Blackening (charring) is the carbon left behind when an organic food burns. Salt is inorganic and has no carbon, so it does not blacken.",
+     "correctIndex": 3,
+     "rationale": "Add only the carbohydrate amounts: 70 g + 23 g = 93 g. The 9 g of protein and the 10 g of fat are not carbohydrate.",
+     "phase": "observe",
+     "placement": "Station A: Nutrient data (meal nutrient approximations)",
+     "check": "70+23"
+    },
+    {
+     "prompt": "Mr Otieno holds a small piece of dry maize flour in a flame and it turns black. He then holds table salt in the flame and it does not turn black. What does the black residue from the maize flour show?",
+     "choices": [
+      "The maize flour contains mineral salts such as sodium.",
+      "The maize flour contains iron.",
+      "The maize flour contains water only.",
+      "The maize flour contains carbon."
+     ],
+     "correctIndex": 3,
+     "rationale": "Charring leaves black carbon, so the maize flour contains carbon. Salt does not blacken because it contains no carbon, which supports the idea that organic compounds contain carbon.",
      "phase": "observe",
      "placement": "Station C: Burn test demonstration"
     },
     {
-     "prompt": "Starch (a carbohydrate) is made of C, H and O. Which element is found in proteins, such as those in beans and milk, but is NOT found in carbohydrates like starch?",
+     "prompt": "Starch, found in ugali, is made of carbon, hydrogen and oxygen. Protein, found in beans, milk and nyama choma, contains those elements and always one more. Which element is it?",
      "choices": [
-      "Oxygen (O)",
+      "Calcium (Ca)",
       "Nitrogen (N)",
-      "Hydrogen (H)",
-      "Carbon (C)"
+      "Sodium (Na)",
+      "Iron (Fe)"
      ],
      "correctIndex": 1,
-     "rationale": "Proteins contain nitrogen (and sometimes sulphur) in addition to C, H and O. Carbohydrates contain only C, H and O.",
+     "rationale": "Proteins contain nitrogen as well as carbon, hydrogen and oxygen. Calcium, iron and sodium are mineral elements found in mineral salts, not part of every protein.",
      "phase": "observe",
-     "placement": "Station B: Element cards"
+     "placement": "Station B: Element cards (matching elements to foods in the meal)"
     },
     {
-     "prompt": "Which list contains ONLY organic compounds found in Wanjiru's meal?",
+     "prompt": "On the classification chart, water is placed in the Inorganic column even though every living thing contains it. Why?",
      "choices": [
-      "Protein, calcium salts, fat, starch",
-      "Starch, water, fat, vitamin C",
-      "Water, iron salts, calcium salts, protein",
-      "Starch, protein, fat, vitamin C"
+      "Water is a liquid, and organic compounds must be solids.",
+      "Water contains hydrogen and oxygen but no carbon, so it has no carbon bonded to hydrogen.",
+      "Water contains no hydrogen.",
+      "Water is not found in foods such as milk and sukuma wiki."
      ],
-     "correctIndex": 3,
-     "rationale": "Carbohydrates (starch), proteins, lipids (fat) and vitamins are organic. Water and mineral salts such as calcium and iron salts are inorganic, so they spoil the other lists.",
+     "correctIndex": 1,
+     "rationale": "Organic compounds contain carbon bonded to hydrogen. Water (H and O only) has no carbon, so it is inorganic, even though living things need it.",
      "phase": "explain",
-     "placement": "Classification Chart: Organic and Inorganic columns"
+     "placement": "Classification Chart: sorting nutrients into Organic and Inorganic columns"
     },
     {
-     "prompt": "Water is found in every living thing and in all foods, yet it is placed in the inorganic column. Why?",
+     "prompt": "A learner writes a claim about the chemical in Wanjiru's lunch most likely to cause her blood glucose to rise. The meal data show: ugali about 70 g carbohydrate; beans about 23 g carbohydrate and 9 g protein; cooking oil about 10 g fat. Which claim is best supported by this evidence?",
      "choices": [
-      "Water is a liquid and organic compounds are always solids",
-      "Water is not a chemical, so it cannot be organic",
-      "Water is made of only hydrogen and oxygen and has no carbon bonded to hydrogen",
-      "Water is not found inside cells"
+      "Protein, because beans contain protein.",
+      "Carbohydrate, because the meal contains much more carbohydrate (70 g in the ugali alone) than protein or fat.",
+      "Fat, because cooking oil is used to cook the meal.",
+      "Mineral salts, because sukuma wiki contains iron and calcium."
+     ],
+     "correctIndex": 1,
+     "rationale": "The largest amount in the meal is carbohydrate, with 70 g in the ugali alone, so it is the best-supported suspect. The other groups are present in much smaller amounts, and the lesson gives no evidence linking them to the glucose rise.",
+     "phase": "explain",
+     "placement": "Claim-Evidence-Reasoning statement: the chemical most likely to cause the glucose rise"
+    },
+    {
+     "prompt": "Which pair of substances from Wanjiru's lunch are both inorganic?",
+     "choices": [
+      "Starch (from ugali) and water",
+      "Vitamin C (from sukuma wiki) and iron salts",
+      "Water and calcium salts (from milk)",
+      "Protein (from beans) and calcium salts"
      ],
      "correctIndex": 2,
-     "rationale": "Organic compounds contain carbon bonded to hydrogen. Water (H and O only) has no carbon, so it is inorganic even though living things need it.",
-     "phase": "explain",
-     "placement": "Classification Chart: why water goes in the inorganic column"
-    },
-    {
-     "prompt": "Wanjiru's blood glucose rose after she ate a meal containing about 70 g carbohydrate in ugali, about 20 g protein in beans and about 10 g fat from cooking oil. Which claim and evidence is best supported by this data?",
-     "choices": [
-      "Water is most likely the cause, because it is found in all foods",
-      "Protein is most likely the cause, because beans contain 20 g of it",
-      "Fat is most likely the cause, because cooking oil is added to the meal",
-      "Carbohydrate is most likely the cause, because the meal contains about 70 g of it in ugali, more than any other nutrient"
-     ],
-     "correctIndex": 3,
-     "rationale": "The largest amount of any nutrient is carbohydrate (about 70 g in ugali), so it is the most likely link to the glucose rise. The other claims are not supported by the quantities given.",
-     "phase": "explain",
-     "placement": "Claim-Evidence-Reasoning statement"
-    },
-    {
-     "prompt": "In the class model, the first box 'Food chemicals' is filled in, but the box 'Glucose in blood' is left as a question mark. Why?",
-     "choices": [
-      "We know the kinds of chemicals in the lunch, but we do not yet know which one becomes glucose or how",
-      "Carbohydrates have no link to the glucose rise",
-      "Glucose is never found in blood",
-      "The model is finished and no more boxes are needed"
-     ],
-     "correctIndex": 0,
-     "rationale": "Models grow only with evidence. This lesson gives evidence about the groups of chemicals in food, not how they change into glucose, so that box stays open for later lessons.",
-     "phase": "model",
-     "placement": "Class model flow diagram: filling in the first box, Food chemicals"
+     "rationale": "Water and mineral salts such as calcium salts are inorganic because they do not contain carbon bonded to hydrogen. Vitamins, starch and proteins are organic.",
+     "phase": "end",
+     "placement": "Exit slip after the class model: naming organic and inorganic chemicals in Wanjiru's meal"
     }
    ]
   },
@@ -213,99 +213,138 @@
    "number": 3,
    "title": "Carbohydrates: Starch and Sugars",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-10-05T03:52:34+00:00",
+   "generatedAt": "2026-11-25T06:26:44+00:00",
    "quiz": [
     {
-     "prompt": "A group adds 2-3 drops of iodine solution to some maize flour mixed with water. Which result shows that starch is present?",
+     "prompt": "Before the tests, a learner predicts that only sweet-tasting foods contain carbohydrates. Which fact from the lesson shows that this idea is wrong?",
      "choices": [
-      "The mixture turns brick-red",
-      "The mixture turns blue-black",
-      "The mixture turns yellow-orange and stays clear",
-      "The mixture turns green"
-     ],
-     "correctIndex": 1,
-     "rationale": "Iodine turns blue-black when starch is present. Brick-red and green are Benedict's test colours for reducing sugar, not iodine results.",
-     "phase": "observe",
-     "placement": "Test 1: iodine test for starch"
-    },
-    {
-     "prompt": "A learner mixes 2 cm3 of mashed ripe banana solution with 2 cm3 of Benedict's solution and heats it in a hot water bath for 4 minutes. It turns orange to brick-red. What does this show?",
-     "choices": [
-      "The banana contains starch",
-      "The banana contains a lot of reducing sugar",
-      "The banana contains protein",
-      "The banana contains no carbohydrate"
-     ],
-     "correctIndex": 1,
-     "rationale": "Benedict's solution changes from blue through green, yellow and orange to brick-red as the amount of reducing sugar increases, so orange to brick-red means a lot of reducing sugar is present.",
-     "phase": "observe",
-     "placement": "Test 2: Benedict's test for reducing sugars"
-    },
-    {
-     "prompt": "Ugali turns blue-black with iodine solution but stays blue when heated with Benedict's solution. What does this tell us about the carbohydrate in ugali before digestion?",
-     "choices": [
-      "It contains starch but no reducing sugar such as glucose",
-      "It contains no carbohydrate",
-      "It contains both starch and a lot of glucose",
-      "It contains glucose but no starch"
+      "Ugali is not sweet but is rich in carbohydrate, mostly starch from maize",
+      "Carbohydrates are made only of carbon and hydrogen",
+      "Sukuma wiki is the food with the most carbohydrate",
+      "Carbohydrates are found only in foods that turn Benedict's solution brick-red"
      ],
      "correctIndex": 0,
-     "rationale": "Blue-black with iodine shows starch is present. Benedict's staying blue shows there is no reducing sugar (glucose) in the ugali before digestion.",
-     "phase": "explain",
-     "placement": "Explain Step 1: group discussion on ugali being blue-black with iodine but blue with Benedict's"
+     "rationale": "Ugali contains about 70 g of carbohydrate, mostly starch, yet it does not taste sweet. So carbohydrates are not only sweet foods.",
+     "phase": "predict",
+     "placement": "Predict: Wanjiru's graph and predicting which foods contain starch and sugar"
     },
     {
-     "prompt": "Ugali has no reducing sugar, yet Wanjiru's blood glucose went up after she ate it. Which statement best explains this?",
+     "prompt": "A learner adds 2-3 drops of iodine solution to a small amount of maize flour mixed with water. What colour shows that starch is present?",
      "choices": [
-      "Starch is already glucose, so it passes straight into the blood",
-      "Beans turn into starch in the stomach, which raises the glucose",
-      "Starch changes into protein, which then enters the blood as glucose",
-      "Starch is made of many glucose units joined together, so it must be broken down into glucose before entering the blood"
+      "Blue-black",
+      "Brick-red",
+      "Colourless",
+      "Green"
+     ],
+     "correctIndex": 0,
+     "rationale": "Iodine turns blue-black when starch is present. Brick-red is a Benedict's result, not an iodine result.",
+     "phase": "observe",
+     "placement": "Observe: Test 1, iodine test for starch"
+    },
+    {
+     "prompt": "A learner heats 2 cm3 of glucose solution with 2 cm3 of Benedict's solution in a hot water bath for 3-5 minutes. The solution turns brick-red. What does this show?",
+     "choices": [
+      "A large amount of reducing sugar is present",
+      "No reducing sugar is present",
+      "Protein is present",
+      "Starch is present"
+     ],
+     "correctIndex": 0,
+     "rationale": "Benedict's solution changes from blue through green, yellow and orange to brick-red as the amount of reducing sugar increases. Brick-red means a lot of reducing sugar.",
+     "phase": "observe",
+     "placement": "Observe: Test 2, Benedict's test for reducing sugars"
+    },
+    {
+     "prompt": "Which of the following is the safe way to carry out Benedict's test in the lesson?",
+     "choices": [
+      "Wear goggles and heat the test tubes in a hot water bath",
+      "Taste a little of each food solution to see if it is sweet",
+      "Heat the test tubes in a flame, then add iodine",
+      "Heat the test tubes directly in a flame without goggles"
+     ],
+     "correctIndex": 0,
+     "rationale": "The teacher's safety rules were: goggles on, and heat only in the water bath, never in the flame. Tasting chemicals or food in the laboratory is unsafe.",
+     "phase": "observe",
+     "placement": "Observe: Test 2, Benedict's test, safe handling of hot water bath and reagents"
+    },
+    {
+     "prompt": "Ugali gives a blue-black colour with iodine but stays blue with Benedict's solution. What does this tell us about the carbohydrate in ugali before digestion?",
+     "choices": [
+      "It contains a lot of reducing sugar",
+      "It is glucose, which is a reducing sugar",
+      "It is starch, which is not a reducing sugar",
+      "It contains no carbohydrate"
+     ],
+     "correctIndex": 2,
+     "rationale": "Blue-black with iodine shows starch. No change with Benedict's shows there is no reducing sugar, so the ugali has starch but not free glucose.",
+     "phase": "explain",
+     "placement": "Explain: Step 1, ugali is blue-black with iodine but blue with Benedict's"
+    },
+    {
+     "prompt": "In the bead-chain model of starch, what does each bead stand for?",
+     "choices": [
+      "One drop of Benedict's solution",
+      "One whole starch molecule",
+      "One glucose unit",
+      "One molecule of iodine"
+     ],
+     "correctIndex": 2,
+     "rationale": "Starch is a large carbohydrate made of many glucose units (monosaccharides) joined together. Each bead is one glucose unit and the whole chain is the starch.",
+     "phase": "explain",
+     "placement": "Explain: Step 2, paper-strip or bead model of starch and glucose"
+    },
+    {
+     "prompt": "Wanjiru's blood glucose rose from 4.5 mmol/L to 8.0 mmol/L in the 60 minutes after eating ugali, sukuma wiki and beans. Ugali has no reducing sugar when tested. Which statement is the best reasoning to link ugali to this rise?",
+     "choices": [
+      "Ugali already contains a lot of glucose, so it goes straight into the blood",
+      "Ugali has no carbohydrate, so it cannot affect blood glucose",
+      "Starch turns into iodine in the stomach, which raises blood glucose",
+      "Starch is made of glucose units, so it must be broken down into glucose before it can enter the blood"
      ],
      "correctIndex": 3,
-     "rationale": "Starch is a large carbohydrate made of many glucose units. It must be broken down into single glucose units (monosaccharides) before glucose can enter the blood.",
+     "rationale": "The evidence shows starch is present but no reducing sugar. Since starch is made of glucose units, it must be broken down to glucose to enter the blood. The statement that ugali already contains glucose is the misconception the Benedict's result challenges.",
      "phase": "explain",
-     "placement": "Explain Step 2: bead or paper-chain model of starch breaking into glucose"
+     "placement": "Explain: Step 3, claim-evidence-reasoning (CER) statement"
     },
     {
-     "prompt": "Wanjiru's blood glucose concentration was 4.5 mmol/L before lunch and reached a peak of 8.0 mmol/L after 60 minutes. By how much did it rise, in mmol/L?",
+     "prompt": "Wanjiru's blood glucose was 4.5 mmol/L before lunch and 8.0 mmol/L at its peak. By how many mmol/L did it rise?",
      "choices": [
-      "3.0",
+      "8.0",
       "3.5",
-      "12.5",
-      "4.5"
+      "4.5",
+      "12.5"
      ],
      "correctIndex": 1,
      "rationale": "Rise = peak minus starting value = 8.0 - 4.5 = 3.5 mmol/L.",
      "phase": "explain",
-     "placement": "Explain Step 3: using the numbers from the graph to write the CER statement",
-     "check": "8.0-4.5"
+     "placement": "Explain: Step 3, using the numbers from Wanjiru's graph",
+     "check": "8.0 - 4.5"
     },
     {
-     "prompt": "After today's food tests, the class DQB has these four questions. Which one can the class now answer using the test results?",
+     "prompt": "After the tests, a learner writes this question on the Driving Question Board: \"How does starch become glucose?\" What should the class do with this question in this lesson?",
      "choices": [
-      "Does the body use only carbohydrates for energy?",
-      "Why did Wanjiru's blood glucose fall after 60 minutes?",
-      "Which enzyme breaks starch into glucose?",
-      "Do ugali and maize flour contain starch?"
+      "Answer it by saying that glucose is made of starch",
+      "Keep it as a question still to investigate in a later lesson",
+      "Remove it because it is not about food",
+      "Move it to the 'Answered' column because the iodine test explains it"
      ],
-     "correctIndex": 3,
-     "rationale": "The blue-black iodine result for ugali and maize flour answers this directly. The other questions need further investigation in later lessons.",
+     "correctIndex": 1,
+     "rationale": "Today's tests show that ugali contains starch and that starch is made of glucose units, but they do not show how starch is broken down. The question stays unanswered and is linked to a later lesson.",
      "phase": "dqb",
      "placement": "DQB: sorting sticky notes into answered, partly answered and still to investigate"
     },
     {
-     "prompt": "Which statement about the chain from ugali to blood glucose is supported by today's evidence and should be added to the 'food chemicals' box of the class model?",
+     "prompt": "Which statement about the flow-diagram model (Food chemicals, then ?, then glucose in blood, then ?, then back to normal) is best supported by today's evidence?",
      "choices": [
-      "Ugali contains starch, which is made of glucose units, so it can be a source of the glucose in the blood",
-      "Nyama choma gives a blue-black result with iodine, so it is the main source of starch in Wanjiru's lunch",
-      "Ugali gives a brick-red result with Benedict's solution, so it already contains glucose",
-      "Only sweet foods contain carbohydrates, so ugali cannot be a source of glucose"
+      "Starch from ugali must be broken down into glucose between food chemicals and glucose in the blood",
+      "Ugali puts glucose directly into the blood with no change",
+      "Glucose changes into starch between food chemicals and glucose in the blood",
+      "Iodine turns starch into glucose before it enters the blood"
      ],
      "correctIndex": 0,
-     "rationale": "Ugali is blue-black with iodine, so it contains starch, and starch is made of glucose units. Ugali stays blue with Benedict's, and nyama choma does not give a positive starch test.",
+     "rationale": "The gap in the model between food chemicals and blood glucose is where starch must be broken into glucose. Today's evidence shows starch is made of glucose units and is not itself a reducing sugar.",
      "phase": "model",
-     "placement": "Revising the class flow-diagram model: adding evidence to the 'Food chemicals' box"
+     "placement": "Model: revising the class flow-diagram model, arrow with question mark between food chemicals and glucose in blood"
     }
    ]
   },
@@ -313,99 +352,98 @@
    "number": 4,
    "title": "Proteins and Lipids: Do They Cause the Glucose Spike?",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-10-05T03:52:34+00:00",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
    "quiz": [
     {
-     "prompt": "Before the tests, a learner says: \"Iodine shows starch in ugali, so I will use iodine to find out whether beans contain protein.\" Which response is correct?",
+     "prompt": "In the biuret test, a learner adds dilute sodium hydroxide and then a few drops of dilute copper sulphate to a sample of bean paste. What result shows that protein is present?",
      "choices": [
-      "Iodine will turn violet if protein is present, so the plan works",
-      "Iodine tests for all food chemicals, so it will show protein and fat as well",
-      "Iodine tests for starch only, so a different test (the biuret test) is needed for protein",
-      "Protein cannot be tested for in the laboratory, so beans must be judged by taste"
+      "The mixture turns blue-black",
+      "The mixture turns brick-red",
+      "The mixture turns violet or purple",
+      "A translucent spot forms on paper"
      ],
      "correctIndex": 2,
-     "rationale": "Iodine reacts with starch (blue-black). Protein needs its own test, the biuret test, which uses sodium hydroxide and dilute copper sulphate.",
-     "phase": "predict",
-     "placement": "Predict: teacher asks \"Which test method from Lesson 3 could we adapt to check?\""
-    },
-    {
-     "prompt": "A group adds 2 cm³ of dilute sodium hydroxide and then 2-3 drops of dilute copper sulphate to a tube of bean paste mixed with water. The mixture turns violet (purple). What does this result show?",
-     "choices": [
-      "The beans contain starch",
-      "The beans contain protein",
-      "The beans contain lipids (fats and oils)",
-      "The beans contain reducing sugar"
-     ],
-     "correctIndex": 1,
-     "rationale": "A blue to violet/purple colour change in the biuret test shows that protein is present. Starch gives blue-black with iodine, reducing sugar gives a brick-red colour with Benedict's, and lipids give a translucent spot or cloudy emulsion.",
+     "rationale": "A violet or purple colour in the biuret test shows protein. Blue-black is the iodine test for starch, brick-red is the Benedict's test for sugar, and a translucent spot is the grease-spot test for lipids.",
      "phase": "observe",
-     "placement": "Test A: biuret test for protein on beans, milk, nyama choma and ugali"
+     "placement": "Test A, biuret test for protein (beans, milk, nyama choma, ugali paste)"
     },
     {
-     "prompt": "A learner rubs crushed groundnuts on a piece of brown paper, dries it gently and holds it up to the light. A translucent (see-through) spot is left on the paper. What does this show?",
+     "prompt": "A learner rubs crushed groundnuts on a piece of brown paper, dries it gently and holds it up to the light. Which observation shows that lipids are present?",
      "choices": [
-      "The groundnuts contain starch",
-      "The groundnuts contain protein",
-      "The groundnuts contain lipids (oil)",
-      "The groundnuts contain only water, which has made the paper thin"
+      "A cloudy white layer forms on the paper",
+      "The paper turns violet",
+      "A translucent (see-through) spot is left on the paper",
+      "The paper stays completely dry and opaque"
      ],
      "correctIndex": 2,
-     "rationale": "Lipids leave a translucent grease spot that does not disappear when the paper dries. Water would evaporate on drying, and the protein and starch tests use different reagents.",
+     "rationale": "Lipids leave a greasy, translucent spot on paper that lets light through. Violet is the biuret test for protein, and a cloudy white layer belongs to the emulsion test, which is done in water, not on paper.",
      "phase": "observe",
      "placement": "Test B (i): grease-spot test on groundnuts, mandazi, milk and ugali"
     },
     {
-     "prompt": "Which row correctly matches each food chemical to the smaller units it is built from?",
+     "prompt": "In the emulsion test, a learner shakes a food sample with 2 cm3 of ethanol and pours the clear liquid into 2 cm3 of cold water. What result shows that the food contains lipids?",
      "choices": [
-      "Carbohydrates: glucose units; proteins: amino acids; lipids: fatty acids and glycerol",
-      "Carbohydrates: glucose units; proteins: fatty acids and glycerol; lipids: amino acids",
-      "Carbohydrates: amino acids; proteins: glucose units; lipids: fatty acids and glycerol",
-      "Carbohydrates: fatty acids and glycerol; proteins: glucose units; lipids: amino acids"
-     ],
-     "correctIndex": 0,
-     "rationale": "Starch and other carbohydrates are chains of glucose units, proteins are chains of amino acids, and lipids are made of fatty acids and glycerol.",
-     "phase": "explain",
-     "placement": "Explain: comparison table of carbohydrates, proteins and lipids (building blocks)"
-    },
-    {
-     "prompt": "Wanjiru's ugali contains about 70 g of carbohydrate and about 10 g of fat. About how many times more carbohydrate than fat is this?",
-     "choices": [
-      "60 times",
-      "80 times",
-      "7 times",
-      "0.14 times"
+      "The water turns blue-black",
+      "The water turns violet",
+      "A cloudy white layer forms",
+      "The water stays clear and colourless"
      ],
      "correctIndex": 2,
-     "rationale": "70 g ÷ 10 g = 7, so there is about 7 times more carbohydrate than fat. This supports the claim that carbohydrate, not fat, is the main cause of the glucose rise from 4.5 to 8.0 mmol/L.",
-     "phase": "explain",
-     "placement": "Explain: Claim-Evidence-Reasoning using the meal numbers (70 g carbohydrate, 10 g fat)",
-     "check": "70/10"
+     "rationale": "Lipids dissolve in ethanol but not in water. When the ethanol is poured into water, tiny droplets of lipid form a cloudy white emulsion. A clear liquid means no lipid.",
+     "phase": "observe",
+     "placement": "Test B (ii): emulsion test on groundnuts, mandazi, milk and ugali"
     },
     {
-     "prompt": "Beans, milk and groundnuts are not the main cause of the glucose spike after a meal. Why do they still matter for the body?",
+     "prompt": "A class tests ugali paste. With iodine it turns blue-black. With the biuret test it stays pale blue. With the grease-spot test it leaves no translucent spot. What can the class conclude?",
      "choices": [
-      "They are turned into glucose immediately, so they cause the spike as well",
-      "They only add sweetness, so they have no use in the body",
-      "They replace carbohydrates completely, so ugali is not needed",
-      "Proteins in them are used for growth and repair of body tissues, and lipids are used for energy storage"
+      "Ugali contains starch, protein and lipid in equal amounts",
+      "Ugali contains protein and lipid but no starch",
+      "Ugali contains starch but little or no protein or lipid",
+      "Ugali contains none of the three food chemicals"
      ],
-     "correctIndex": 3,
-     "rationale": "Proteins are needed for growth and repair of body tissues, and lipids store energy and give insulation. Their roles differ from carbohydrates, which are the main energy source and cause the spike.",
-     "phase": "explain",
-     "placement": "Explain: \"Why do beans, milk and groundnuts still matter for Wanjiru...?\""
+     "correctIndex": 2,
+     "rationale": "Blue-black with iodine means starch is present. A pale blue biuret result and no grease spot mean protein and lipid are absent or only in very small amounts.",
+     "phase": "observe",
+     "placement": "Learners add a 'carbohydrate' column using Lesson 3 results (ugali blue-black with iodine) to compare"
     },
     {
-     "prompt": "Learners are updating their flow-diagram model of what happens to a meal of ugali, beans and cooking oil. Which arrow should be drawn thick, as the main cause of the glucose spike in the blood?",
+     "prompt": "Which row correctly matches each food chemical with its building blocks?",
      "choices": [
-      "Proteins (beans, nyama choma) to glucose in blood",
-      "Carbohydrates (starch in ugali) to glucose in blood",
-      "Proteins and lipids to glucose in blood, equally with carbohydrates",
-      "Lipids (cooking oil, groundnuts) to glucose in blood"
+      "Carbohydrates: amino acids; proteins: glucose units; lipids: fatty acids and glycerol",
+      "Carbohydrates: glucose units; proteins: amino acids; lipids: fatty acids and glycerol",
+      "Carbohydrates: glucose units; proteins: fatty acids and glycerol; lipids: amino acids",
+      "Carbohydrates: fatty acids and glycerol; proteins: amino acids; lipids: glucose units"
      ],
      "correctIndex": 1,
-     "rationale": "The meal data (about 70 g carbohydrate against about 20 g protein and 10 g fat) and the test results link carbohydrates to the glucose rise. Proteins and lipids go on thinner arrows towards growth, repair and energy storage.",
+     "rationale": "Starch and other carbohydrates are made of glucose units, proteins of amino acids, and lipids of fatty acids and glycerol.",
+     "phase": "explain",
+     "placement": "Comparison table of carbohydrates, proteins and lipids (building blocks)"
+    },
+    {
+     "prompt": "Wanjiru ate a meal with about 70 g of carbohydrate (mostly starch in ugali), about 12 g of protein and about 10 g of fat from cooking oil. Her blood glucose rose from 4.5 to 8.0 mmol/L. Which claim is best supported by this evidence?",
+     "choices": [
+      "Protein caused the spike because beans are sweet",
+      "Carbohydrates were the main cause of the spike because the meal had far more of them, and starch is made of glucose units",
+      "All three caused the spike equally because they were all in the same meal",
+      "Fat caused the spike because the cooking oil was used in the meal"
+     ],
+     "correctIndex": 1,
+     "rationale": "The meal had about 70 g of carbohydrate compared with 12 g of protein and 10 g of fat. Carbohydrates are made of glucose units, whereas proteins and lipids are made of different building blocks, so carbohydrates are the main cause of the glucose rise.",
+     "phase": "explain",
+     "placement": "Claim-Evidence-Reasoning: 'Carbohydrates, not proteins or lipids, are the main cause of the spike from 4.5 to 8.0 mmol/L because...'"
+    },
+    {
+     "prompt": "In the class flow-diagram model, thick arrows link carbohydrates to 'glucose in blood', and thin dotted arrows link proteins and lipids to other boxes. Which pair of labels belongs on the thin dotted arrows from proteins and from lipids?",
+     "choices": [
+      "Proteins: growth and repair of body tissues; lipids: energy storage and insulation",
+      "Proteins: the cause of the glucose spike; lipids: removal of glucose from the blood",
+      "Proteins: energy storage and insulation; lipids: growth and repair of body tissues",
+      "Proteins: main source of blood glucose; lipids: main source of blood glucose"
+     ],
+     "correctIndex": 0,
+     "rationale": "Proteins mainly support growth and repair of body tissues, and lipids mainly store energy and provide insulation. Neither is the main source of the blood glucose rise.",
      "phase": "model",
-     "placement": "Model: expanding the 'Food chemicals' box with thick and thin arrows"
+     "placement": "Revise the class flow-diagram model: thin dotted arrows from proteins and lipids to 'growth, repair and energy storage'"
     }
    ]
   },
@@ -413,98 +451,124 @@
    "number": 5,
    "title": "Water, Mineral Salts and Enzymes in Digestion",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-10-05T03:52:34+00:00",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
    "quiz": [
     {
-     "prompt": "Wanjiru's blood glucose rose from 4.5 to 8.0 mmol/L after she ate ugali, which is mostly starch. Why must starch be digested before it can raise her blood glucose?",
+     "prompt": "Wanjiru's blood glucose rose from 4.5 to 8.0 mmol/L after she ate ugali, which is mostly starch. Starch is a very large molecule. What must happen to the starch before it can raise her blood glucose?",
      "choices": [
-      "Starch is a very large insoluble molecule and must be broken down into small soluble sugars first",
-      "Starch is already glucose, but it needs to be warmed to 37 degrees C first",
-      "Starch turns directly into blood once it is swallowed",
-      "Saliva only makes the food wet so it can be swallowed, and this is all that is needed"
+      "It must be broken down by enzymes into small soluble sugars",
+      "It must be heated to 100 degrees C so that it dissolves",
+      "It must be made wet by saliva so that it can slide into the blood",
+      "It must pass into the blood as starch and then turn into glucose"
      ],
      "correctIndex": 0,
-     "rationale": "Digestion breaks large insoluble food molecules into small soluble ones. Starch is too large to enter the blood, so it must first become sugars such as glucose.",
+     "rationale": "Starch is large and insoluble, so digestive enzymes must break it down into small soluble sugars such as glucose before it can enter the blood. The distractors are the misconceptions that saliva only makes food wet and that starch turns directly into blood.",
      "phase": "predict",
-     "placement": "Predict: Wanjiru's blood glucose graph and prediction about starch and saliva"
+     "placement": "Predict: Wanjiru's blood glucose graph and predictions about starch and saliva"
     },
     {
-     "prompt": "In an investigation, tube A has starch and saliva. Tube B has starch and boiled saliva. Both are kept at about 37 degrees C. Why is tube B included?",
+     "prompt": "In the saliva and starch investigation, tube A has starch and saliva, and tube B has starch and boiled saliva (or water). Both tubes are kept at about 37 degrees C. Why is tube B included?",
      "choices": [
-      "To make sure there is more liquid to test with iodine",
-      "To show that boiled saliva digests starch faster than fresh saliva",
-      "To test whether Benedict's solution can change colour without heating",
-      "To show that the changes in tube A are caused by active saliva and not by warmth or time alone"
-     ],
-     "correctIndex": 3,
-     "rationale": "The control differs only in having boiled saliva. If tube B stays unchanged while tube A changes, the change must be due to something active in saliva (the enzyme), not warmth or time.",
-     "phase": "observe",
-     "placement": "Observe: saliva and starch investigation, control tube B (starch + boiled saliva or water)"
-    },
-    {
-     "prompt": "At 10 minutes, a sample from the tube of starch and fresh saliva at 37 degrees C gives a yellow-brown colour with iodine and a brick-red colour with Benedict's solution after heating. What do these results show?",
-     "choices": [
-      "Starch is still present, and the saliva has turned into a reducing sugar",
-      "Starch has been used up and a reducing sugar is now present",
-      "Starch is still present and no sugar has formed",
-      "Starch has increased and Benedict's solution has turned it into protein"
-     ],
-     "correctIndex": 1,
-     "rationale": "Iodine stays blue-black while starch is present, so yellow-brown means starch has gone. A brick-red Benedict's result means reducing sugar has formed from the starch.",
-     "phase": "observe",
-     "placement": "Observe: Steps 5 and 6, iodine tests at 5 and 10 min and Benedict's test at 10 min"
-    },
-    {
-     "prompt": "A tube of starch and saliva was boiled before the test and stayed blue-black with iodine after 10 minutes. What is the correct explanation?",
-     "choices": [
-      "Boiling turned the enzyme into starch",
-      "Boiling made the starch molecules too big to be digested",
-      "Boiling used up all the enzyme by making it work too fast",
-      "Boiling denatured the enzyme, so it could no longer digest starch"
-     ],
-     "correctIndex": 3,
-     "rationale": "Salivary amylase is a protein. Boiling changes its shape (denatures it), so it cannot digest the starch and the iodine stays blue-black.",
-     "phase": "explain",
-     "placement": "Explain: claim-evidence-reasoning for how saliva changed the starch, and why boiled saliva did not work"
-    },
-    {
-     "prompt": "A tube of starch and fresh saliva is placed in ice at 0 degrees C. After 10 minutes it is still blue-black with iodine. What does this tell us about the enzyme?",
-     "choices": [
-      "The enzyme is inactive at this low temperature",
-      "The enzyme works fastest at 0 degrees C",
-      "The enzyme is not needed to digest starch",
-      "The enzyme has been denatured and destroyed for ever by the cold"
+      "To show that the colour changes in tube A are caused by something active in saliva, and not by warmth or time alone",
+      "To produce more reducing sugar for the Benedict's test",
+      "To show that boiled saliva is a stronger enzyme than fresh saliva",
+      "To make sure the starch solution is heated to the correct temperature"
      ],
      "correctIndex": 0,
-     "rationale": "At 0 degrees C the enzyme is inactive, so the starch is not digested. Enzymes work best at about 37 degrees C in the body, and boiling is what denatures them.",
-     "phase": "explain",
-     "placement": "Explain: discussion (b) on why the enzyme did not work at 0 degrees C or after boiling"
+     "rationale": "The control changes only one thing, which is active versus boiled saliva. If tube B stays blue-black while tube A changes, the change must come from the active enzyme in saliva.",
+     "phase": "observe",
+     "placement": "Observe: saliva and starch investigation, tube B control"
     },
     {
-     "prompt": "Water is an inorganic compound found in the starch solution and in saliva. What is its main role in the digestion of starch?",
+     "prompt": "A drop from tube A (starch plus saliva at 37 degrees C) is tested with iodine. At 0 minutes it is blue-black. At 10 minutes it is yellow-brown. What does the change in colour show?",
      "choices": [
-      "It is the enzyme that breaks starch into sugar",
-      "It is the medium in which the enzyme and starch react and in which the digested sugars are carried",
-      "It makes the enzyme a protein",
-      "It changes the iodine from blue-black to yellow-brown"
+      "The saliva has been used up completely",
+      "Glucose has been formed, because iodine tests for glucose",
+      "The starch has been broken down and is no longer present",
+      "More starch has been made in the tube"
+     ],
+     "correctIndex": 2,
+     "rationale": "Iodine gives a blue-black colour only when starch is present. A change to yellow-brown means the starch has gone. Iodine does not test for sugar, and the enzyme is not used up.",
+     "phase": "observe",
+     "placement": "Observe: iodine test at 0, 5 and 10 minutes"
+    },
+    {
+     "prompt": "At 10 minutes, Benedict's solution is added to a sample from tube A (starch plus saliva) and heated in a hot water bath. It changes from blue to orange. What does this result show?",
+     "choices": [
+      "Protein is present",
+      "A reducing sugar is present",
+      "Starch is still present",
+      "The enzyme has been denatured"
      ],
      "correctIndex": 1,
-     "rationale": "Water is the medium in which reactions happen and it carries the digested sugars. It is not the enzyme and does not act as the iodine indicator.",
-     "phase": "explain",
-     "placement": "Explain: discussion (c) on the roles of water and mineral salts"
+     "rationale": "Benedict's solution turns green, yellow or orange when heated with a reducing sugar. This shows that saliva has digested starch into sugar. Starch alone gives no change with Benedict's.",
+     "phase": "observe",
+     "placement": "Observe: Benedict's test at 10 minutes"
     },
     {
-     "prompt": "A group is revising the 'Digestion by enzymes' box in the class model. Which statement about salivary amylase should they write?",
+     "prompt": "Starch is mixed with saliva that has been boiled first and kept at 37 degrees C. After 10 minutes the iodine test is still blue-black. What is the best explanation?",
      "choices": [
-      "It is a protein catalyst that speeds up the digestion of starch to maltose, and it is not used up",
-      "It is a lipid that stores energy in the mouth",
-      "It is a carbohydrate that is used up as it digests starch",
-      "It is a mineral salt that works best at 0 degrees C"
+      "Boiling denatured the enzyme in the saliva, so it could not digest the starch",
+      "Boiling turned the starch into protein",
+      "Boiling used up all the starch before the test",
+      "Boiling made the saliva too wet to work"
      ],
      "correctIndex": 0,
-     "rationale": "Amylase is an enzyme, which is a protein that acts as a biological catalyst. A catalyst speeds up a reaction and is not used up. It digests starch to maltose, which is then broken to glucose.",
+     "rationale": "Salivary amylase is a protein enzyme. Boiling changes its shape (denatures it), so it can no longer work. The starch therefore stays unchanged and the iodine stays blue-black.",
+     "phase": "explain",
+     "placement": "Explain: claim-evidence-reasoning for how saliva changed the starch, and the boiled saliva control"
+    },
+    {
+     "prompt": "Starch and fresh saliva are placed in a tube in ice at 0 degrees C. After 10 minutes the iodine test is still blue-black. What does this show about the enzyme?",
+     "choices": [
+      "It is inactive at this low temperature",
+      "It has been destroyed (denatured) by the cold",
+      "It has been used up by the starch",
+      "It works fastest at 0 degrees C"
+     ],
+     "correctIndex": 0,
+     "rationale": "At 0 degrees C the enzyme is inactive, so the starch is not digested. Unlike boiling, cold does not denature it. Enzymes work best at about 37 degrees C in the body.",
+     "phase": "explain",
+     "placement": "Explain: why the water bath is at about 37 degrees C and why the enzyme did not work at 0 degrees C"
+    },
+    {
+     "prompt": "Which statement correctly describes salivary amylase?",
+     "choices": [
+      "It is a mineral salt that keeps the pH of the mouth steady",
+      "It is a carbohydrate that is used up as it breaks down starch",
+      "It is a protein that acts as a biological catalyst, speeding up the breakdown of starch",
+      "It is a lipid that dissolves the starch"
+     ],
+     "correctIndex": 2,
+     "rationale": "Enzymes are proteins that act as biological catalysts. A catalyst speeds up a reaction and is not used up. Amylase breaks starch down to maltose, which is then broken down to glucose.",
+     "phase": "explain",
+     "placement": "Explain: reasoning that saliva contains amylase, a protein catalyst"
+    },
+    {
+     "prompt": "In the digestion of starch by saliva, what is the main role of water?",
+     "choices": [
+      "It is the medium in which the starch and enzyme react and which carries the digested sugars",
+      "It is the enzyme that breaks down the starch",
+      "It is the substance that turns blue-black with iodine",
+      "It is the food chemical that gives the body energy"
+     ],
+     "correctIndex": 0,
+     "rationale": "Water is an inorganic compound that acts as the medium in which reactions take place. The starch solution and the enzyme react in it, and it carries the digested sugars.",
+     "phase": "explain",
+     "placement": "Explain: roles of water and mineral salts"
+    },
+    {
+     "prompt": "A class revises its flow-diagram model to explain Wanjiru's rising blood glucose after eating ugali. Which sequence fits the evidence from the saliva and starch investigation?",
+     "choices": [
+      "Digestion by enzymes, then food chemicals (starch), then glucose in the blood",
+      "Food chemicals (starch), then digestion by enzymes to sugars, then glucose in the blood",
+      "Food chemicals (starch), then glucose in the blood, then digestion by enzymes",
+      "Glucose in the blood, then digestion by enzymes, then food chemicals (starch)"
+     ],
+     "correctIndex": 1,
+     "rationale": "The investigation shows that starch is digested by an enzyme into sugars. The sugars can then become glucose in the blood. Digestion therefore comes between the food chemicals and the glucose.",
      "phase": "model",
-     "placement": "Model: revising the class flow-diagram, 'Digestion by enzymes' box"
+     "placement": "Model: revising the class flow-diagram (food chemicals, digestion by enzymes, glucose in blood)"
     }
    ]
   },
@@ -512,113 +576,113 @@
    "number": 6,
    "title": "Absorption, Respiration and Regulation: Explaining the Fall Back to 4.5 mmol/L",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-10-05T03:52:34+00:00",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
    "quiz": [
     {
-     "prompt": "Wanjiru's blood glucose reached a peak of 8.0 mmol/L at 60 minutes after her meal of ugali, sukuma wiki and beans. Suppose nothing removed glucose from her blood after that time. What would her blood glucose concentration do?",
+     "prompt": "Wanjiru's blood glucose peaks at 8.0 mmol/L, 60 minutes after eating ugali, sukuma wiki and beans. It then falls back to 4.5 mmol/L by 180 minutes. Which statement best explains where the glucose goes after the peak?",
      "choices": [
-      "It would keep rising without limit because glucose is made in the blood",
-      "It would stay high, close to 8.0 mmol/L, because nothing is taking glucose out",
-      "It would fall back to 4.5 mmol/L anyway because glucose slowly disappears",
-      "It would fall because glucose is lost in sweat and urine"
+      "It is destroyed in the blood and disappears.",
+      "It is taken up by body cells, the liver and muscles, and used for energy or stored.",
+      "It is mostly lost in sweat and urine.",
+      "It turns back into starch in the small intestine."
      ],
      "correctIndex": 1,
-     "rationale": "The fall on the graph is caused by processes that remove glucose (uptake by cells, respiration, storage). If nothing removed it, the level would stay high. Glucose does not simply disappear or get lost in sweat.",
+     "rationale": "After absorption, glucose is taken up by cells and used in respiration, and the excess is stored as glycogen in the liver and muscles. It is not simply lost in urine or sweat, and it does not disappear.",
      "phase": "predict",
-     "placement": "Predict: 'What would the graph look like if nothing removed glucose from the blood?' (dotted line sketch)"
+     "placement": "Predict: 'Where does the glucose go after 60 minutes?' prediction and pair-share"
     },
     {
-     "prompt": "Wanjiru's blood glucose was 8.0 mmol/L at 60 minutes and 6.5 mmol/L at 90 minutes. By how much did it fall in this 30-minute interval?",
+     "prompt": "Wanjiru's blood glucose was 8.0 mmol/L at 60 minutes and 6.5 mmol/L at 90 minutes. By how much did it fall between 60 and 90 minutes (in mmol/L)?",
      "choices": [
-      "3.5 mmol/L",
-      "1.5 mmol/L",
-      "0.5 mmol/L",
-      "14.5 mmol/L"
+      "1.3",
+      "1.5",
+      "3.5",
+      "2.0"
      ],
      "correctIndex": 1,
-     "rationale": "Fall = 8.0 - 6.5 = 1.5 mmol/L. 3.5 mmol/L is the total fall over 120 minutes, not this one interval.",
+     "rationale": "Fall = 8.0 - 6.5 = 1.5 mmol/L. The value 1.3 is the fall from 90 to 120 minutes, and 3.5 is the total fall.",
      "phase": "observe",
-     "placement": "Part 1: Data analysis in groups of 4 (calculating the fall in each interval)",
+     "placement": "Part 1: Data analysis, calculating the fall in each interval from the glucose table",
      "check": "8.0-6.5"
     },
     {
-     "prompt": "Wanjiru's blood glucose rose by 3.5 mmol/L in the first 60 minutes (4.5 to 8.0). It then fell by 3.5 mmol/L from 60 to 180 minutes (8.0 to 4.5). How many times longer did the fall take than the rise?",
+     "prompt": "Wanjiru's blood glucose rose by 3.5 mmol/L in the first 60 minutes. It then fell by 3.5 mmol/L between 60 and 180 minutes. How many times longer did the fall take than the rise?",
      "choices": [
-      "3.5 times as long",
-      "2 times as long",
-      "The same time, because both changes are 3.5 mmol/L",
-      "Half as long, because the body removes glucose quickly"
+      "3 times longer",
+      "2 times longer",
+      "4 times longer",
+      "The same time"
      ],
      "correctIndex": 1,
-     "rationale": "The rise took 60 min and the fall took 180 - 60 = 120 min, so the fall took 120 ÷ 60 = 2 times as long. The change in concentration is the same but the fall is slower.",
+     "rationale": "The rise took 60 minutes and the fall took 180 - 60 = 120 minutes. 120 / 60 = 2, so the fall is slower and takes twice as long.",
      "phase": "observe",
-     "placement": "Part 1: Data analysis in groups of 4 (comparing the rise with the fall)",
+     "placement": "Part 1: Data analysis, comparing the rate of rise with the rate of fall",
      "check": "120/60"
     },
     {
-     "prompt": "In the role-play of glucose after a meal, a learner holds up insulin cards when the blood glucose is high. Which statement correctly describes insulin?",
+     "prompt": "In the 'Journey of the glucose' role-play, the pancreas holds up insulin cards when the blood glucose is high (at the 60-minute peak) and not at 0 minutes. What does insulin do?",
      "choices": [
-      "The pancreas releases insulin, and it causes cells, the liver and muscles to take up glucose from the blood",
-      "The small intestine releases insulin, and it moves glucose into the blood",
-      "Insulin is a food that gives the body energy when we eat",
-      "The liver releases insulin, and it digests starch into glucose"
+      "It is a food that gives the body energy.",
+      "It carries glucose out of the body in urine.",
+      "It causes cells, the liver and muscles to take up glucose from the blood.",
+      "It digests starch into glucose in the small intestine."
      ],
-     "correctIndex": 0,
-     "rationale": "Insulin is a hormone made by the pancreas. It is released when blood glucose is high and causes cells, liver and muscles to take up glucose, so blood glucose falls.",
+     "correctIndex": 2,
+     "rationale": "The pancreas releases insulin when blood glucose is high. Insulin causes cells, the liver and muscles to take up glucose, so the blood level falls. Insulin is a hormone, not a food, and it does not digest starch.",
      "phase": "observe",
-     "placement": "Part 2: Role-play 'Journey of the glucose' (pancreas holds insulin cards)"
+     "placement": "Part 2: Role-play 'Journey of the glucose', step 3 and 4 (pancreas releases insulin)"
     },
     {
-     "prompt": "Inside body cells, glucose is used in respiration to release energy. Which equation correctly shows respiration?",
+     "prompt": "Inside body cells, glucose is used in respiration to release energy. Which equation correctly shows this?",
      "choices": [
       "Glucose + water gives starch + oxygen + energy",
       "Glucose + carbon dioxide gives oxygen + water + energy",
       "Glucose + oxygen gives carbon dioxide + water + energy",
-      "Glucose + oxygen gives glycogen + carbon dioxide + energy"
+      "Glucose + oxygen gives glycogen + water + energy"
      ],
      "correctIndex": 2,
-     "rationale": "In respiration, glucose reacts with oxygen to produce carbon dioxide and water, and energy (ATP) is released. This is also why we breathe harder after running to catch a matatu.",
-     "phase": "observe",
-     "placement": "Part 2: Role-play 'Journey of the glucose' (step 5: respiration in the cells)"
+     "rationale": "In respiration, glucose reacts with oxygen to produce carbon dioxide and water, and energy (ATP) is released. This is why cells need oxygen and why we breathe harder after running.",
+     "phase": "explain",
+     "placement": "Part 2 role-play step 5 and the Final Explanation: reasoning on respiration"
     },
     {
-     "prompt": "After a meal, some glucose is not needed straight away. What happens to this excess glucose?",
+     "prompt": "After a meal, extra glucose that the body does not need straight away is changed and stored. Where is it stored and in what form?",
      "choices": [
-      "It is removed from the body as sugar in urine",
-      "It is changed to insulin in the pancreas",
-      "It is destroyed in the blood",
-      "It is stored as glycogen in the liver and muscles"
+      "As glucose in the kidneys",
+      "As starch in the blood",
+      "As insulin in the pancreas",
+      "As glycogen in the liver and muscles"
      ],
      "correctIndex": 3,
-     "rationale": "The liver and muscles store excess glucose as glycogen. This helps to bring blood glucose back to normal. It is not simply lost in urine or destroyed.",
-     "phase": "observe",
-     "placement": "Part 2: Role-play 'Journey of the glucose' (step 6: liver and muscles store glycogen)"
-    },
-    {
-     "prompt": "Learners write a Claim-Evidence-Reasoning explanation of Wanjiru's graph. Which piece of evidence best shows that the glucose in the blood came from digesting the starch in ugali?",
-     "choices": [
-      "Her blood glucose fell by 3.5 mmol/L over 120 minutes",
-      "The normal fasting range of blood glucose is 4.0 to 5.5 mmol/L",
-      "Saliva containing amylase, kept at 37 degrees C with starch, gave a brick-red colour with Benedict's test after 10 minutes",
-      "Sukuma wiki is a green vegetable"
-     ],
-     "correctIndex": 2,
-     "rationale": "The brick-red colour shows that enzyme action turned starch into a reducing sugar. This links starch to glucose. The other choices do not show where the glucose came from.",
+     "rationale": "Excess glucose is stored as glycogen in the liver and muscles. This helps to bring the blood glucose back down to normal.",
      "phase": "explain",
-     "placement": "Final Explanation (Claim-Evidence-Reasoning): choosing evidence that glucose came from the starch in ugali"
+     "placement": "Part 2 role-play step 6 and Final Explanation (CER): glycogen storage"
     },
     {
-     "prompt": "Which flow diagram shows the correct order of the final model that explains Wanjiru's blood glucose graph?",
+     "prompt": "Wanjiru's meal had ugali (starch), beans (protein) and cooking oil (lipid). Proteins and lipids are also digested. Which statement correctly explains why carbohydrates are the main cause of the spike in blood glucose?",
      "choices": [
-      "Food chemicals, then digestion by enzymes, then glucose in blood, then cells (respiration) and storage, then back to normal",
-      "Food chemicals, then glucose in blood, then digestion by enzymes, then cells and storage, then back to normal",
-      "Digestion by enzymes, then food chemicals, then glucose in blood, then back to normal, then cells and storage",
-      "Food chemicals, then cells and storage, then digestion by enzymes, then glucose in blood, then back to normal"
+      "Proteins and lipids are turned into glucose faster than starch is.",
+      "Carbohydrates are the only chemicals the body can absorb.",
+      "Proteins and lipids are not digested at all.",
+      "Starch is digested into glucose, which is absorbed into the blood, while proteins and lipids are used mainly for growth, repair and energy storage."
+     ],
+     "correctIndex": 3,
+     "rationale": "Digestion of starch in ugali produces glucose, which enters the blood and raises its concentration. Proteins and lipids are also digested but are used mainly for growth, repair and energy storage.",
+     "phase": "explain",
+     "placement": "Final Explanation (CER): roles of proteins and lipids and why carbohydrates cause the spike"
+    },
+    {
+     "prompt": "Which order correctly shows the stages in the final flow-diagram model that explains Wanjiru's graph?",
+     "choices": [
+      "Food chemicals, digestion by enzymes, glucose in blood, cells (respiration) and storage, back to normal",
+      "Food chemicals, glucose in blood, digestion by enzymes, cells and storage, back to normal",
+      "Digestion by enzymes, food chemicals, glucose in blood, back to normal, cells and storage",
+      "Food chemicals, digestion by enzymes, cells and storage, glucose in blood, back to normal"
      ],
      "correctIndex": 0,
-     "rationale": "Food is first digested by enzymes into glucose, which is absorbed into the blood. Cells use it in respiration and the liver and muscles store it, so the level returns to normal (4.5 mmol/L).",
+     "rationale": "Food chemicals are digested by enzymes into glucose, which is absorbed into the blood. Cells then use it in respiration or it is stored, and the level returns to normal (4.5 mmol/L).",
      "phase": "model",
-     "placement": "Part 1: Build the final flow-diagram model on chart paper"
+     "placement": "Part 1: Building the final flow-diagram model on chart paper"
     }
    ]
   }

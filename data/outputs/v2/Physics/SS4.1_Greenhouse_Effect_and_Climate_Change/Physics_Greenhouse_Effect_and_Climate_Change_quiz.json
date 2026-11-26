@@ -1,0 +1,733 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Physics",
+  "grade": 10,
+  "substrandId": "4.1",
+  "substrandName": "Greenhouse Effect and Climate Change",
+  "filePrefix": "Physics_Greenhouse_Effect_and_Climate_Change"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "What Is the Greenhouse Effect? — Anchoring Phenomenon Introduction",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A data strip gives the area of Mount Kenya's Lewis Glacier as about 1.35 km² in 1934 and about 0.37 km² in 2004. By about how much did the glacier's area decrease between 1934 and 2004?",
+     "choices": [
+      "0.37 km²",
+      "1.15 km²",
+      "0.98 km²",
+      "1.72 km²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Decrease = 1.35 − 0.37 = 0.98 km². Adding the two values (1.72) or reading off a single value are common slips.",
+     "phase": "observe",
+     "placement": "Step C: Data Strip (Lewis Glacier area in 1934, 2004 and 2023)",
+     "check": "round(1.35-0.37,2)"
+    },
+    {
+     "prompt": "Students are filling in an Observation T-chart with the columns WHAT I OBSERVE (facts only) and WHAT I INFER (explanations). Which statement belongs in the WHAT I OBSERVE column?",
+     "choices": [
+      "The Lewis Glacier covers a much smaller area in the recent satellite image than in the 1934 photograph.",
+      "The farmer's rains are late because the glacier is melting.",
+      "The glacier is shrinking because the Sun has moved closer to Earth.",
+      "The glacier is shrinking because of a hole in the sky."
+     ],
+     "correctIndex": 0,
+     "rationale": "A fact that can be seen directly in the images goes in the observe column. The other statements give causes, so they are inferences.",
+     "phase": "observe",
+     "placement": "Step A: Visual Evidence, Observation T-chart (observe vs infer)"
+    },
+    {
+     "prompt": "The Lewis Glacier's area was about 1.35 km² in 1934, about 0.37 km² in 2004, and is estimated at less than 0.20 km² in 2023. Which sentence best describes the pattern in these three data points?",
+     "choices": [
+      "The glacier's area grew between 2004 and 2023.",
+      "The glacier's area has got smaller at each measurement.",
+      "The glacier's area shrank only between 2004 and 2023.",
+      "The glacier's area stayed about the same from 2004 to 2023."
+     ],
+     "correctIndex": 1,
+     "rationale": "1.35 > 0.37 > 0.20, so the area falls at every step. The other options contradict the numbers.",
+     "phase": "observe",
+     "placement": "Step C: Data Strip, describe the pattern in one sentence"
+    },
+    {
+     "prompt": "In the testimony written for this lesson, a fictional maize farmer in Embu County, James Muriithi, describes what has changed on his farm. Which statement matches what he reports?",
+     "choices": [
+      "The long rains now arrive weeks earlier than before, and his maize and bean yields have risen.",
+      "The long rains (March–May) now arrive weeks later than in his grandfather's time, and his maize and bean yields have fallen sharply.",
+      "The long rains have stopped completely, but his yields are the same as before.",
+      "The long rains arrive on time, but the glaciers have disappeared from his farm."
+     ],
+     "correctIndex": 1,
+     "rationale": "The testimony reports later long rains and sharply lower maize and bean harvests. This is a fact reported in the testimony, not an explanation of its cause.",
+     "phase": "observe",
+     "placement": "Step B: Farmer Testimony (round-robin reading of James Muriithi's account)"
+    },
+    {
+     "prompt": "Students know that ice melts when heat is added. They found it puzzling that the Lewis Glacier on Mount Kenya is shrinking even though the mountain has not moved closer to the Sun. What is the puzzle they are left with?",
+     "choices": [
+      "Why does ice melt at all when heat is added?",
+      "Why is Mount Kenya a volcanic mountain?",
+      "Why is the Sun hotter at noon than in the morning?",
+      "Where does the extra heat that melts the glacier come from, if the mountain is no nearer the Sun?"
+     ],
+     "correctIndex": 3,
+     "rationale": "The anchoring puzzle is that melting needs added heat, yet the mountain has not moved closer to the Sun. The question is left open at this stage.",
+     "phase": "predict",
+     "placement": "Predict: Prediction Wall (what could cause a glacier to shrink AND rains to become unpredictable?)"
+    },
+    {
+     "prompt": "The Lewis Glacier has shrunk since 1934, and farmers about 50 km away report late and unpredictable long rains. These changes are happening at the same time. Which statement is best supported by the evidence the class has seen so far?",
+     "choices": [
+      "It is proven that the Sun has moved closer to Earth.",
+      "The two places are 50 km apart, so the changes cannot possibly be linked.",
+      "The changes happen at the same time, but this evidence alone does not show what causes them, so the class still has to investigate.",
+      "It is proven that a hole in the sky is letting in extra sunlight."
+     ],
+     "correctIndex": 2,
+     "rationale": "The images, data and testimony show that both changes occur. They do not by themselves prove a cause, so the cause is left to investigate in the unit. A distance of 50 km does not rule out a shared cause either.",
+     "phase": "observe",
+     "placement": "Step B: Farmer Testimony, discussion of why a glacier AND a farmer's testimony are shown together"
+    },
+    {
+     "prompt": "The class sorts its Driving Question Board notes into clusters: (A) causes of greenhouse gas increase, (B) how warming links to rainfall, (C) what can be done, (D) other physics questions. Which question belongs in cluster B?",
+     "choices": [
+      "Which human activities add more gases to the air?",
+      "How is infrared radiation different from visible light?",
+      "What can Kenyan farmers and communities do to respond?",
+      "How could a warmer climate change the timing of the long rains?"
+     ],
+     "correctIndex": 3,
+     "rationale": "Cluster B is about how warming links to rainfall. The second question fits cluster A, the third fits cluster C and the fourth fits cluster D.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: sorting question notes into clusters A, B, C and D"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "What Human Activities in Kenya Are Increasing Greenhouse Gases?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "During a class discussion, a student says: \"Only factories add greenhouse gases to the air.\" Which reply is best?",
+     "choices": [
+      "That is correct, because factory chimneys are the only place where smoke is made.",
+      "That is incomplete: farming, burning charcoal and clearing forests also add greenhouse gases in Kenya.",
+      "That is incomplete: only cooking fires add greenhouse gases, and factories do not.",
+      "That is correct, because cattle and forests only take gases in and never release them."
+     ],
+     "correctIndex": 1,
+     "rationale": "Many Kenyan greenhouse gases come from everyday activities such as burning charcoal, keeping livestock and clearing forests, not only from factories.",
+     "phase": "predict",
+     "placement": "Four-image grid prediction: sticky notes in the Activity and Gas Released table"
+    },
+    {
+     "prompt": "A bar graph shows Kenya's greenhouse gas emissions by sector: agriculture, energy, land use, waste and industrial processes. Which two sectors together account for more than 75 percent of Kenya's national emissions?",
+     "choices": [
+      "Energy and waste",
+      "Waste and industrial processes",
+      "Industrial processes and energy",
+      "Agriculture and land use"
+     ],
+     "correctIndex": 3,
+     "rationale": "The Kenya data shows that agriculture and land-use change together make up more than 75 percent of national emissions. Industrial emissions are visually dramatic but much smaller.",
+     "phase": "observe",
+     "placement": "Observation table using the Kenya sectoral emissions bar graph and global pie chart data sheet"
+    },
+    {
+     "prompt": "Cattle farming is part of the agriculture sector in Kenya's emissions data. Which greenhouse gas do cattle release, and how?",
+     "choices": [
+      "Oxygen, released when cattle digest grass",
+      "Carbon monoxide, released through cattle sweat",
+      "Methane, made by microbes in the stomach and released mainly by belching",
+      "Methane, released only when cattle dung is burned"
+     ],
+     "correctIndex": 2,
+     "rationale": "Microbes in a cow's stomach make methane (CH₄) during digestion, and it is released mainly by belching. This is called enteric fermentation.",
+     "phase": "observe",
+     "placement": "Group observation table: livestock (CH4) and the agriculture bar"
+    },
+    {
+     "prompt": "A family in Nairobi cooks ugali on a charcoal jiko. Which gas does burning charcoal release, and why?",
+     "choices": [
+      "Carbon dioxide, because carbon in the charcoal combines with oxygen when it burns",
+      "Carbon dioxide, because charcoal absorbs heat from the Sun and gives it out as gas",
+      "Oxygen, because burning produces oxygen from the wood",
+      "Methane, because charcoal contains stored methane gas"
+     ],
+     "correctIndex": 0,
+     "rationale": "Charcoal is mostly carbon. When it burns, the carbon combines with oxygen from the air and forms carbon dioxide (CO₂).",
+     "phase": "explain",
+     "placement": "Evidence claim: In Kenya, [source] releases [gas] because [mechanism] (charcoal burning example)"
+    },
+    {
+     "prompt": "Large areas of the Mau Forest are cleared. Why does this increase carbon dioxide in the atmosphere?",
+     "choices": [
+      "The carbon stored in the wood is released as CO₂ when it burns or rots, and fewer trees remain to absorb CO₂",
+      "Trees never take in carbon dioxide, so removing them changes nothing",
+      "Cut trees release methane, which turns into carbon dioxide in the air",
+      "Cleared land moves closer to the Sun, so more carbon dioxide forms"
+     ],
+     "correctIndex": 0,
+     "rationale": "Trees store carbon taken from CO₂ over many years. Clearing them releases this carbon as CO₂ when the wood burns or rots, and the loss of trees means less CO₂ is absorbed.",
+     "phase": "explain",
+     "placement": "Whole-class share-out and T-chart: Mau Forest deforestation, gas and mechanism"
+    },
+    {
+     "prompt": "Using the physics of the greenhouse effect, why does adding more CO₂ to the atmosphere increase warming?",
+     "choices": [
+      "More CO₂ molecules reflect all sunlight back into space, which warms the atmosphere",
+      "More CO₂ molecules make the Earth's surface give out less infrared radiation",
+      "More CO₂ molecules absorb more of the infrared radiation re-emitted by Earth's surface, trapping more heat",
+      "More CO₂ molecules move the Earth closer to the Sun"
+     ],
+     "correctIndex": 2,
+     "rationale": "CO₂ absorbs and re-emits infrared radiation from Earth's surface. More CO₂ means more infrared is trapped, which strengthens the greenhouse effect.",
+     "phase": "explain",
+     "placement": "Third sentence of the evidence claim: connecting to the Lesson 1 physics and the PhET simulation"
+    },
+    {
+     "prompt": "A student adds a sources layer to their atmospheric model. Which set of labels is correct for Kenyan sources?",
+     "choices": [
+      "Charcoal burning gives CO₂; livestock give CH₄; Mau Forest clearing gives CO₂",
+      "Charcoal burning gives CO₂; livestock give CO₂ only; Mau Forest clearing removes all greenhouse gases",
+      "Charcoal burning gives CH₄; livestock give CO₂; Mau deforestation gives oxygen",
+      "Charcoal burning gives CH₄; livestock give CH₄; Mau Forest clearing gives CH₄"
+     ],
+     "correctIndex": 0,
+     "rationale": "Burning charcoal and clearing forests release CO₂, while livestock release CH₄ made by microbes in their stomachs.",
+     "phase": "model",
+     "placement": "Revise the cumulative atmospheric model: add the sources layer with three Kenyan sources and their gases"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "How Does the Greenhouse Effect Actually Work? — Tracing Energy Through Kenya's Atmosphere",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "The Moon is about the same distance from the Sun as the Earth. Its surface reaches about 127 °C by day and falls to −173 °C at night. Earth's day-to-night temperature swings are much smaller. What is the best explanation for this difference?",
+     "choices": [
+      "Gases in Earth's atmosphere absorb infrared energy from the surface and send some back down, slowing heat loss",
+      "Earth's atmosphere reflects all sunlight straight back into space",
+      "Earth is much closer to the Sun than the Moon is",
+      "The Moon receives no sunlight at all during the day"
+     ],
+     "correctIndex": 0,
+     "rationale": "Greenhouse gases in the atmosphere absorb the infrared energy emitted by the surface and re-emit some of it back toward the surface, so Earth cools slowly at night. The Moon has no atmosphere, so heat escapes quickly.",
+     "phase": "predict",
+     "placement": "Predict: Moon-vs-Earth stimulus card and written prediction"
+    },
+    {
+     "prompt": "In a simulation, a student records the equilibrium surface temperature for an atmosphere with no greenhouse gases, then with a small amount, then with a large amount of greenhouse gases. What pattern should the data table show?",
+     "choices": [
+      "The temperature rises at first and then drops back to the starting value",
+      "The temperature stays the same because gases do not affect sunlight",
+      "The temperature rises as the greenhouse gas concentration increases",
+      "The temperature falls as the greenhouse gas concentration increases"
+     ],
+     "correctIndex": 2,
+     "rationale": "More greenhouse gas means more infrared is absorbed and re-emitted back toward the surface, so the equilibrium surface temperature rises with concentration.",
+     "phase": "observe",
+     "placement": "Steps 1–3 of the PhET investigation: two-column data table (Atmosphere Condition | Equilibrium Surface Temperature)"
+    },
+    {
+     "prompt": "A student fires one infrared photon at a CO₂ molecule, then at a CH₄ molecule, then at an N₂ molecule. Which result is correct?",
+     "choices": [
+      "Only N₂ absorbs the photon because it is the most common gas in air",
+      "All three molecules absorb the photon equally",
+      "None of the molecules absorb it because infrared passes through all gases",
+      "CO₂ and CH₄ absorb the photon, but N₂ does not"
+     ],
+     "correctIndex": 3,
+     "rationale": "CO₂ and CH₄ are greenhouse gases and absorb infrared photons. N₂ does not absorb infrared, so not all gases trap heat equally.",
+     "phase": "observe",
+     "placement": "Step 4: 'Photon Absorption' tab – firing IR photons at CO₂, CH₄ and N₂"
+    },
+    {
+     "prompt": "Sunlight reaches the ground in Trans-Nzoia and warms the soil. In what form does the warm Earth's surface mainly give out this energy?",
+     "choices": [
+      "Shortwave ultraviolet radiation",
+      "It does not give out energy; it keeps all of it",
+      "Longwave infrared radiation",
+      "Shortwave visible light, as the Sun does"
+     ],
+     "correctIndex": 2,
+     "rationale": "The Sun's radiation is mainly shortwave. Earth's surface is much cooler, so it re-emits the absorbed energy mainly as longwave infrared radiation.",
+     "phase": "explain",
+     "placement": "Direct instruction: shortwave radiation absorbed by the surface and re-emitted as longwave infrared"
+    },
+    {
+     "prompt": "A student says, 'The ozone layer is the gas that causes the greenhouse effect.' Which response is correct?",
+     "choices": [
+      "Correct, ozone and CO₂ absorb the same type of radiation, so they are the same process",
+      "Incorrect, the ozone layer absorbs ultraviolet radiation from the Sun, while the greenhouse effect is caused by gases such as CO₂ and CH₄ absorbing infrared",
+      "Correct, ozone absorbs infrared from the Earth's surface and this is the main greenhouse effect",
+      "Incorrect, ozone reflects infrared back to space so Earth stays cool"
+     ],
+     "correctIndex": 1,
+     "rationale": "Ozone absorbs ultraviolet from the Sun. The greenhouse effect involves infrared from the surface being absorbed and re-emitted by gases such as CO₂, CH₄ and water vapour. These are two different processes.",
+     "phase": "explain",
+     "placement": "Revisiting 'Our Current Ideas' misconceptions: ozone layer vs greenhouse gases"
+    },
+    {
+     "prompt": "A CO₂ molecule in the lower atmosphere above Kenya absorbs an infrared photon from the ground. What happens next?",
+     "choices": [
+      "The energy is destroyed, so it cannot warm anything",
+      "The molecule stores the energy for ever and never re-emits it",
+      "The molecule re-emits the energy in all directions, including back toward the surface",
+      "The molecule turns the infrared into shortwave radiation that goes up into space"
+     ],
+     "correctIndex": 2,
+     "rationale": "Greenhouse gas molecules re-emit absorbed infrared in all directions. The part sent back toward the surface is back-radiation, which raises surface temperature.",
+     "phase": "explain",
+     "placement": "Direct instruction: GHG molecules absorb and re-emit IR (back-radiation)"
+    },
+    {
+     "prompt": "More charcoal is burned in Nairobi and more cattle are kept in Laikipia, so greenhouse gas levels rise. Which chain of events best explains how this can melt the Lewis Glacier on Mount Kenya?",
+     "choices": [
+      "More greenhouse gases absorb and re-emit more infrared back toward the surface, so surface temperature rises and the ice melts",
+      "More greenhouse gases make the ozone layer thinner, and this directly heats the air and melts the ice",
+      "More greenhouse gases let more infrared escape to space, which warms the mountain",
+      "More greenhouse gases bring the Sun closer to Mount Kenya, so the ice gets more heat"
+     ],
+     "correctIndex": 0,
+     "rationale": "More greenhouse gases mean more infrared is absorbed and re-emitted back toward the surface. This increases back-radiation, which raises temperature (the enhanced greenhouse effect) and melts glacier ice.",
+     "phase": "model",
+     "placement": "Updating the Atmospheric Model: enhanced greenhouse effect and Lewis Glacier annotation"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "How Is Global Warming Changing Kenya's Environment?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "An Embu farmer says the long rains (March–May) now arrive weeks later than in her grandparents' time. Using what you know about the greenhouse effect, which statement best links the enhanced greenhouse effect to this change?",
+     "choices": [
+      "Thinning of the ozone layer lets in more sunlight, which directly delays the rain clouds.",
+      "More greenhouse gases absorb and re-emit more infrared radiation, raising surface temperatures, which changes evaporation and the circulation that brings the rains.",
+      "Greenhouse gases remove water vapour from the air, so rain clouds can no longer form.",
+      "Earth has moved closer to the Sun, so Embu receives more heat and the rains come later."
+     ],
+     "correctIndex": 1,
+     "rationale": "Enhanced back-radiation raises surface temperature, which changes evaporation and atmospheric circulation and so the timing of rainfall. Ozone depletion and Earth's distance from the Sun are common misconceptions and do not explain this.",
+     "phase": "predict",
+     "placement": "Predict: Embu farmer testimony card and the 'Our Predictions' column"
+    },
+    {
+     "prompt": "A NASA graph shows global temperature anomaly from 1880 to the present. An anomaly of +0.5 °C for a certain year means that the global average surface temperature in that year was:",
+     "choices": [
+      "0.5 °C below the long-term average.",
+      "exactly 0.5 °C in total.",
+      "0.5 °C higher than the previous year.",
+      "0.5 °C above the long-term average."
+     ],
+     "correctIndex": 3,
+     "rationale": "An anomaly is the difference from a long-term average. A positive value means the year was warmer than that average by that amount.",
+     "phase": "observe",
+     "placement": "Observe: NASA GISS global temperature anomaly graph (find the year the anomaly first exceeded 0.5 °C)"
+    },
+    {
+     "prompt": "From 1950 onward, the NASA global temperature anomaly graph shows which overall pattern?",
+     "choices": [
+      "Anomalies stay about the same, with no clear change.",
+      "Anomalies rise overall, with the most recent decades warmer than earlier ones.",
+      "Anomalies fall steadily as the atmosphere cools.",
+      "Anomalies rise and fall in a regular cycle with no overall trend."
+     ],
+     "correctIndex": 1,
+     "rationale": "The NASA record shows a clear overall upward trend in global average temperature since 1950, with recent decades the warmest. Year-to-year ups and downs do not change this trend.",
+     "phase": "observe",
+     "placement": "Observe: NASA GISS graph, 'What pattern do you see from 1950 onward? Mark the steepest rise'"
+    },
+    {
+     "prompt": "Lake Victoria rose about 1.2 m above its long-term average in 2019–20 and flooded homes in Kisumu. Scientists link this to very heavy rains driven mainly by a strong Indian Ocean Dipole. Which statement about global warming and this event is the most scientifically careful?",
+     "choices": [
+      "The flooding shows that Lake Victoria will keep rising every year because of global warming.",
+      "Because the flooding was linked to a natural pattern, global warming has nothing to do with extreme rainfall.",
+      "Global warming alone caused the flooding, so no other natural pattern was involved.",
+      "A warmer climate makes extreme rainfall more likely, so the event is one piece of the climate-change story but not proof on its own."
+     ],
+     "correctIndex": 3,
+     "rationale": "The lesson states that the main driver was the Indian Ocean Dipole, and that studies suggest a warmer climate makes such extreme rain more likely. A single event is not proof by itself.",
+     "phase": "observe",
+     "placement": "Observe: Lake Victoria supporting phenomenon (Kisumu flooding, 2019–20)"
+    },
+    {
+     "prompt": "Which cause chain correctly connects more greenhouse gases to flooding of homes near Lake Victoria, with no key step missing?",
+     "choices": [
+      "More greenhouse gases → the Sun gets hotter → lake water expands and floods homes.",
+      "More greenhouse gases → more carbon dioxide dissolves in the lake → lake floods.",
+      "More greenhouse gases trap more infrared radiation → surface temperature rises → more evaporation and moisture in the air → heavier rain more likely → lake level rises and homes flood.",
+      "More greenhouse gases → ozone layer thins → more sunlight reaches Earth → lake floods."
+     ],
+     "correctIndex": 2,
+     "rationale": "The complete chain includes the rise in surface temperature and its effect on evaporation and rainfall. Other options skip steps or use ozone and Sun misconceptions.",
+     "phase": "observe",
+     "placement": "Observe: three-box cause-chain card (greenhouse gases to a Kenyan community affected)"
+    },
+    {
+     "prompt": "Warming can cause flooding in some parts of Kenya and drought in others at the same time. Which explanation is best?",
+     "choices": [
+      "Flooding and drought cannot both be linked to warming, so one must be caused by something else.",
+      "Warming intensifies the water cycle, with more evaporation and heavier but more uneven rainfall, so some areas flood while others dry out.",
+      "Warming stops evaporation in dry areas, so drought and floods have unrelated causes.",
+      "Warming creates extra water on Earth, which falls only in flood areas."
+     ],
+     "correctIndex": 1,
+     "rationale": "Warming increases evaporation and makes rainfall more intense but unevenly distributed, so one change in the water cycle can produce both floods and drought.",
+     "phase": "explain",
+     "placement": "Explain: whole-class discussion after the effects web and gallery walk ('How can warming cause both flooding and drought?')"
+    },
+    {
+     "prompt": "A student writes a Driving Question Board answer to 'Why is Mount Kenya's Lewis Glacier shrinking?' Which answer uses correct scientific reasoning?",
+     "choices": [
+      "The ozone hole is letting extra ultraviolet light melt the ice directly.",
+      "The glacier is shrinking because Mount Kenya is getting closer to the Sun.",
+      "Mount Kenya's volcano is becoming active and its heat is melting the glacier.",
+      "Enhanced greenhouse gases increase back-radiation of infrared energy, raising surface temperature, so ice melts faster than snow builds up."
+     ],
+     "correctIndex": 3,
+     "rationale": "Higher concentrations of greenhouse gases increase back-radiation and raise air and surface temperatures, so melting exceeds snow accumulation. The mountain has not moved closer to the Sun, ozone is a separate issue, and volcanic heat is not the cause.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: answering a Lesson 1 question using scientific vocabulary"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "How Do Human Activities Amplify the Greenhouse Effect — and What Does This Mean for Mount Kenya and Kenyan Farmers?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "The Keeling Curve shows atmospheric CO₂ rising from about 315 ppm in 1958 to over 420 ppm today. What does a reading of 420 ppm mean?",
+     "choices": [
+      "There are about 420 CO₂ molecules in every million molecules of air",
+      "The air contains 420 kg of CO₂ for every tonne of air",
+      "CO₂ makes up 42% of the air",
+      "Only one air molecule in every 420 is a CO₂ molecule"
+     ],
+     "correctIndex": 0,
+     "rationale": "ppm means parts per million, so 420 ppm is 420 CO₂ molecules among every million air molecules. That is only about 0.04% of the air, which is why the percentage and 1-in-420 options are wrong.",
+     "phase": "observe",
+     "placement": "Part A — Graph Analysis: Keeling Curve (the 'What does ppm mean?' prompt)"
+    },
+    {
+     "prompt": "Students notice that atmospheric CO₂ concentration and global average temperature anomaly have both risen steadily since about 1950. A student says, 'This proves that rising CO₂ causes the warming.' What is the best scientific response?",
+     "choices": [
+      "The graphs show a correlation. To support causation we also need a mechanism and evidence, such as a simulation that changes only the greenhouse gas amount",
+      "Two graphs that rise together always prove that one causes the other",
+      "The graphs show that temperature rise causes the CO₂ rise, not the other way round",
+      "Correlation can never be used as evidence in science"
+     ],
+     "correctIndex": 0,
+     "rationale": "A correlation is useful evidence but does not prove causation by itself. The mechanism (greenhouse gases absorb IR) and a controlled simulation that changes one variable strengthen the causal claim.",
+     "phase": "observe",
+     "placement": "Part A — Graph Analysis: 'Does correlation prove causation? What else would you need to know?'"
+    },
+    {
+     "prompt": "In the PhET 'Greenhouse Effect' simulation, a student changes the atmosphere from 'Today's atmosphere' to 'Lots of greenhouse gases'. What happens to the equilibrium temperature, and why?",
+     "choices": [
+      "It rises, because more of the infrared radiation from the surface is absorbed and re-emitted back toward the surface",
+      "It stays the same, because only the energy from the Sun decides the temperature",
+      "It rises, because greenhouse gases produce extra ultraviolet radiation",
+      "It falls, because the extra gases reflect more sunlight back to space"
+     ],
+     "correctIndex": 0,
+     "rationale": "More greenhouse gas absorbs more outgoing infrared and re-emits part of it back to the surface. Less energy escapes to space, so the surface warms until a new, higher equilibrium temperature is reached.",
+     "phase": "observe",
+     "placement": "Part B — PhET Recall: add 'Lots of greenhouse gases' and record the new temperature"
+    },
+    {
+     "prompt": "The Lewis Glacier on Mount Kenya covered about 1.35 km² in 1934 and less than 0.20 km² today. Taking the area today as 0.20 km², what percentage of its ice area has it lost?",
+     "choices": [
+      "85.2%",
+      "1.15%",
+      "14.8%",
+      "675%"
+     ],
+     "correctIndex": 0,
+     "rationale": "Area lost = 1.35 − 0.20 = 1.15 km². Percentage lost = 1.15 ÷ 1.35 × 100 ≈ 85.2%, which matches 'more than 85%'. The 14.8% option is the share that remains.",
+     "phase": "observe",
+     "placement": "Part C — Kenyan Emissions Context: Lewis Glacier lost more than 85% of its ice area since 1934",
+     "check": "round((1.35-0.20)/1.35*100,1)"
+    },
+    {
+     "prompt": "A student writes: 'The hole in the ozone layer is what is causing global warming.' Which statement correctly separates the ozone layer from greenhouse gases?",
+     "choices": [
+      "Ozone traps infrared radiation, and CO₂ blocks ultraviolet radiation",
+      "Greenhouse gases block UV from the Sun, which is why Earth warms",
+      "Ozone and greenhouse gases do the same job, so a hole in the ozone layer lets heat escape from Earth",
+      "The ozone layer blocks ultraviolet (UV) radiation, while greenhouse gases such as CO₂ trap infrared (IR) radiation, so they are two different mechanisms"
+     ],
+     "correctIndex": 3,
+     "rationale": "Ozone absorbs UV from the Sun. Greenhouse gases absorb and re-emit IR from Earth's surface, which amplifies warming. The two mechanisms should not be confused.",
+     "phase": "explain",
+     "placement": "Addressing the misconception that 'the ozone hole is causing warming' (ozone blocks UV, greenhouse gases trap IR)"
+    },
+    {
+     "prompt": "Which sequence correctly explains how burning charcoal in Nairobi contributes to the melting of the Lewis Glacier on Mount Kenya?",
+     "choices": [
+      "Charcoal burning releases CO₂ → CO₂ reflects visible light from the Sun back to space → Earth warms → ice melts",
+      "Charcoal burning releases CO₂ → CO₂ blocks ultraviolet radiation from the Sun → Earth's energy balance is unchanged → the glacier melts because the mountain is closer to the Sun",
+      "Charcoal burning releases CO₂ → more CO₂ absorbs and re-emits infrared radiation from Earth's surface → less energy escapes to space, so Earth gains net energy → global temperature rises → ice melts faster than it builds up",
+      "Charcoal burning releases CO₂ → CO₂ lets more infrared escape to space → temperature rises → ice melts"
+     ],
+     "correctIndex": 2,
+     "rationale": "The full chain is: human emission of a greenhouse gas, more IR absorbed and re-emitted, a net energy gain, a higher global temperature, and then faster glacier melt. The other options give the wrong radiation type or a wrong energy-balance effect.",
+     "phase": "explain",
+     "placement": "Causal chain scaffold and the exam-style question: 'Explain, using physics, why burning charcoal in Nairobi contributes to the melting of glaciers on Mount Kenya'"
+    },
+    {
+     "prompt": "A student adds a 'Human Amplification Layer' to an energy model by thickening the greenhouse gas layer. Which new arrow should they draw to show the effect of the extra gas?",
+     "choices": [
+      "An arrow showing more shortwave radiation coming from the Sun",
+      "An arrow showing more infrared radiation going straight out to space",
+      "An arrow showing more infrared radiation re-emitted back toward Earth's surface, giving a net energy gain at the surface",
+      "An arrow showing more ultraviolet radiation absorbed by the ozone layer"
+     ],
+     "correctIndex": 2,
+     "rationale": "A thicker greenhouse gas layer absorbs more outgoing IR and re-emits more of it back toward the surface. This causes a net energy gain and a rising surface temperature. The arrow must point back toward Earth, not away from it.",
+     "phase": "model",
+     "placement": "Adding the 'Human Amplification Layer' to the cumulative atmospheric energy model"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "The Ozone Layer: A Separate Shield — and How Its Damage Connects to Mount Kenya's Disappearing Ice",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Which statement best describes what the ozone layer does for life on Earth?",
+     "choices": [
+      "It produces the oxygen that animals breathe",
+      "It absorbs harmful ultraviolet (UV-B) radiation from the Sun before it reaches the surface",
+      "It traps heat leaving Earth's surface, keeping the planet warm",
+      "It reflects all sunlight back into space so Earth does not overheat"
+     ],
+     "correctIndex": 1,
+     "rationale": "The ozone layer absorbs harmful UV-B radiation coming in from the Sun. Trapping outgoing infrared heat is the job of greenhouse gases, not ozone.",
+     "phase": "predict",
+     "placement": "Predict: UV-B graph and ozone hole map, notebook prompt 'What do you think the ozone layer does for Earth?'"
+    },
+    {
+     "prompt": "A student says: 'Ozone depletion and the greenhouse effect are the same thing, because both are about gases in the atmosphere.' Which response is most accurate?",
+     "choices": [
+      "The student is right: both are caused by the same gas doing the same job",
+      "The student is wrong: ozone depletion is about reduced absorption of incoming UV-B in the stratosphere, while the greenhouse effect is about trapping outgoing infrared radiation in the troposphere",
+      "The student is wrong: the greenhouse effect happens only in the stratosphere and ozone depletion only at the surface",
+      "The student is right: thinning of the ozone layer is what makes the greenhouse effect stronger"
+     ],
+     "correctIndex": 1,
+     "rationale": "They are distinct processes. Ozone depletion involves UV-B absorption in the stratosphere. The greenhouse effect involves infrared trapping in the troposphere. They interact but are not the same.",
+     "phase": "predict",
+     "placement": "Predict: notebook prompt 'Do you think ozone depletion and the greenhouse effect are the same thing, different things, or related things?'"
+    },
+    {
+     "prompt": "CFC molecules rise to the stratosphere, where ultraviolet radiation releases chlorine atoms that destroy ozone. What is the key feature of how CFCs destroy ozone?",
+     "choices": [
+      "CFCs only damage ozone over Antarctica and have no effect elsewhere",
+      "The chlorine atom is regenerated after each reaction, so one CFC molecule can destroy many ozone molecules",
+      "Each CFC molecule destroys exactly one ozone molecule and is then used up",
+      "CFCs turn ozone into carbon dioxide, which then escapes into space"
+     ],
+     "correctIndex": 1,
+     "rationale": "The destruction is catalytic: the chlorine is not used up and keeps destroying ozone molecules, so small amounts of CFCs do a lot of damage.",
+     "phase": "observe",
+     "placement": "Source A: Khan Academy 'Ozone Layer and Ozone Hole' reading, Evidence Collection Table column 'What damages it and how'"
+    },
+    {
+     "prompt": "UV-B measurements in Nairobi rose to a peak in the late 1990s and then slowly decreased. The Montreal Protocol, which cut the production of CFCs, began to take effect around that time. What is the best explanation for the fall in UV-B after 2000?",
+     "choices": [
+      "More greenhouse gases in the troposphere absorbed the extra UV-B",
+      "Less CFC in the atmosphere meant less ozone was destroyed, so the ozone layer slowly recovered and absorbed more UV-B",
+      "Nairobi moved further from the equator, so it received less sunlight",
+      "The Sun began giving out less UV-B after the 1990s"
+     ],
+     "correctIndex": 1,
+     "rationale": "Reduced CFC production let ozone recover gradually. More ozone means more UV-B absorbed, so less reaches the ground. The decline lags behind the Protocol because CFCs stay in the atmosphere for a long time.",
+     "phase": "observe",
+     "placement": "Source B: UNEP Ozone Data Portal, Nairobi UV-B irradiance graph annotation"
+    },
+    {
+     "prompt": "The Antarctic ozone hole is very large, but the change in ozone and UV-B over Nairobi, near the equator, is much smaller. Why?",
+     "choices": [
+      "Ozone loss was greatest near the poles and was small near the equator",
+      "Nairobi is too high above sea level to be affected by UV-B",
+      "Ozone depletion is caused only by cold weather, and Nairobi is warm",
+      "CFCs are only released near the South Pole"
+     ],
+     "correctIndex": 0,
+     "rationale": "Ozone loss was greatest near the poles and much smaller near the equator, so the UV-B change in Nairobi is much smaller than the Antarctic ozone hole.",
+     "phase": "observe",
+     "placement": "Source B: teacher question 'Is the change in Nairobi as big as the Antarctic ozone hole? Why not?'"
+    },
+    {
+     "prompt": "Mount Kenya's Lewis Glacier has retreated greatly since 1934, and rains in Embu County have become unpredictable. Which atmospheric process is the primary driver of this warming and rainfall disruption?",
+     "choices": [
+      "Ozone depletion alone, because UV-B directly melts the ice and changes the rains",
+      "Neither, because the atmosphere has no effect on glaciers",
+      "The greenhouse effect, because extra greenhouse gases trap more outgoing infrared radiation and warm the surface",
+      "Both equally, because ozone depletion and the greenhouse effect are the same process"
+     ],
+     "correctIndex": 2,
+     "rationale": "The greenhouse effect (trapped infrared) is the main driver of warming, glacier retreat and rainfall change. Ozone depletion is a separate process that raises UV-B at the surface.",
+     "phase": "explain",
+     "placement": "Explain: T-chart discussion, 'Which of these two phenomena best explains what they're experiencing?' (farmer in Embu and glacier at Mount Kenya)"
+    },
+    {
+     "prompt": "Which statement correctly describes an interaction between ozone depletion and the greenhouse effect?",
+     "choices": [
+      "Ozone depletion cools the troposphere, which stops the greenhouse effect",
+      "Greenhouse gases remove CFCs from the stratosphere, so they never harm ozone",
+      "Ozone molecules trap infrared radiation, which is the cause of the greenhouse effect",
+      "CFCs destroy ozone and are also powerful greenhouse gases"
+     ],
+     "correctIndex": 3,
+     "rationale": "CFCs link the two problems: they deplete stratospheric ozone and they also trap infrared heat in the atmosphere as greenhouse gases.",
+     "phase": "explain",
+     "placement": "Explain: group sentence 'how do these two phenomena interact?' and Venn diagram overlap"
+    },
+    {
+     "prompt": "A student is adding the ozone layer to their model of the atmosphere. Which drawing and note is correct?",
+     "choices": [
+      "Ozone layer drawn in the troposphere, mixed in with the greenhouse gases, with a note that it absorbs infrared",
+      "Ozone layer drawn at ground level, with a note that thinning of ozone traps more infrared heat",
+      "Ozone layer drawn in the stratosphere, with a note that visible light is absorbed by ozone and cannot reach the surface",
+      "Ozone layer drawn in the stratosphere (about 15–35 km), above the troposphere, with a note that fewer ozone molecules means more UV-B reaching the surface"
+     ],
+     "correctIndex": 3,
+     "rationale": "Ozone is in the stratosphere (about 15–35 km), above the troposphere where greenhouse gases act. It absorbs UV-B, so thinner ozone means more UV-B at the surface, not extra warming from infrared.",
+     "phase": "model",
+     "placement": "Model: adding the stratospheric ozone layer and CFC annotations to the cumulative atmospheric model"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Final Model Building, Driving Question Board Closure, and Unit Synthesis: Answering the Mystery of Mount Kenya's Retreating Glaciers",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A Grade 10 student sketches the greenhouse effect from memory. Which sequence of steps is scientifically correct?",
+     "choices": [
+      "Sunlight is blocked by greenhouse gases, so Earth receives less energy and the lower atmosphere cools",
+      "Sunlight passes through the atmosphere, Earth re-emits infrared radiation, and greenhouse gases absorb and re-radiate it, warming the lower atmosphere",
+      "Greenhouse gases make the Sun give out more heat, and this extra heat warms Earth's surface directly",
+      "Earth reflects all incoming ultraviolet radiation, and the ozone layer then traps it near the surface"
+     ],
+     "correctIndex": 1,
+     "rationale": "Incoming shortwave solar radiation passes through, Earth gives out longwave infrared, and gases such as CO2, CH4 and N2O absorb and re-radiate that infrared, warming the lower atmosphere.",
+     "phase": "predict",
+     "placement": "Predict phase: sketching the full causal chain from memory (Lewis Glacier images and farmer testimony)"
+    },
+    {
+     "prompt": "Mount Kenya's Lewis Glacier has retreated since 1934. At the same time, farmers in Embu County, about 50 km away, find the long rains harder to predict. Which statement best explains how both changes can be linked?",
+     "choices": [
+      "Ozone layer depletion is the only cause of both changes, because it traps infrared radiation",
+      "Mount Kenya has moved closer to the Sun, so the ice melts and the rains arrive late",
+      "The enhanced greenhouse effect raises temperatures, which melts glacier ice and also changes evaporation and rainfall patterns",
+      "The two changes are unrelated, because the glacier is on a mountain and the farm is on lower ground"
+     ],
+     "correctIndex": 2,
+     "rationale": "Extra greenhouse gases trap more infrared energy and warm the planet. Warmer temperatures melt ice and alter the water cycle (evaporation and rainfall patterns), so one root cause can explain both observations.",
+     "phase": "predict",
+     "placement": "Predict phase: connecting glacier retreat and rainfall disruption to the same root cause"
+    },
+    {
+     "prompt": "Lake Turkana Wind Power produces electricity from the wind in northern Kenya. Is it a mitigation or an adaptation response to climate change, and why?",
+     "choices": [
+      "Adaptation, because it helps people cope with warming that has already happened",
+      "Mitigation, because it makes electricity without releasing greenhouse gases, so it acts at the first step of the causal chain",
+      "Neither, because wind power does not change greenhouse gas emissions",
+      "Adaptation, because it removes carbon dioxide from the air"
+     ],
+     "correctIndex": 1,
+     "rationale": "Mitigation means cutting greenhouse gas emissions or removing CO2. Wind power replaces fuels that release greenhouse gases, so it acts at the first step of the chain (fewer greenhouse gases released).",
+     "phase": "observe",
+     "placement": "Observe phase: sorting the Response Cards (Olkaria geothermal, Lake Turkana Wind Power, efficient jiko, drought-tolerant crops with rainwater harvesting) into mitigation and adaptation"
+    },
+    {
+     "prompt": "A farmer in Embu plants drought-tolerant crops and uses rainwater harvesting. Why is this classed as adaptation and not mitigation?",
+     "choices": [
+      "It reduces the amount of carbon dioxide in the atmosphere",
+      "It stops infrared radiation from being absorbed by greenhouse gases",
+      "It does not change the greenhouse effect, but it reduces the harm from changing rainfall",
+      "It replaces charcoal with a cleaner fuel for cooking"
+     ],
+     "correctIndex": 2,
+     "rationale": "Adaptation helps people cope with change already happening. These farming methods do not alter greenhouse gas levels; they reduce the damage from drought and unreliable rain.",
+     "phase": "observe",
+     "placement": "Observe phase: sorting the Response Cards into MITIGATION and ADAPTATION and saying which step of the causal chain each acts on"
+    },
+    {
+     "prompt": "Which statement correctly describes the role of the ozone layer, and how it differs from the greenhouse effect?",
+     "choices": [
+      "The ozone layer traps infrared radiation from Earth and is the main cause of the greenhouse effect",
+      "The ozone layer reflects visible light back to space and so keeps Earth cool",
+      "The ozone layer absorbs UV-B radiation from the Sun; it is a separate process from greenhouse gases trapping infrared radiation",
+      "The ozone layer produces CFCs, which then absorb infrared radiation"
+     ],
+     "correctIndex": 2,
+     "rationale": "Ozone in the stratosphere absorbs harmful UV-B. The greenhouse effect involves gases absorbing and re-radiating infrared. CFCs are human-made chemicals that deplete ozone, not something the ozone layer produces.",
+     "phase": "explain",
+     "placement": "Explain phase: annotating the ozone layer position and UV-B absorption function on Component A (cumulative model template)"
+    },
+    {
+     "prompt": "A student writes: \"Greenhouse gases are the only reason the long rains in Embu have become harder to predict.\" What is the best scientific response?",
+     "choices": [
+      "Incorrect, because greenhouse gases have no effect on rainfall at all",
+      "Correct, because natural cycles have no effect on Kenya's rainfall",
+      "Incomplete, because natural cycles such as El Niño and the Indian Ocean Dipole also affect Kenya's rainfall; warming is a major contributor, not the only cause",
+      "Correct, because El Niño and the Indian Ocean Dipole only affect rainfall in other countries"
+     ],
+     "correctIndex": 2,
+     "rationale": "Warming changes the water cycle and rainfall patterns, but natural climate cycles like El Niño and the Indian Ocean Dipole also change rainfall from year to year. A strong explanation says warming is a major contributor, not the only one.",
+     "phase": "explain",
+     "placement": "Explain phase: Component B written explanation on why the long rains in Embu County have become harder to predict"
+    },
+    {
+     "prompt": "Why does clearing and burning part of the Mau Forest add to the enhanced greenhouse effect?",
+     "choices": [
+      "Trees give out infrared radiation, so fewer trees means less infrared escapes to space",
+      "Trees reflect sunlight, so removing them lets more UV-B reach Earth and that causes the greenhouse effect",
+      "Burning and clearing release CO2, and there are fewer trees left to absorb CO2 from the air",
+      "Cutting trees thins the ozone layer directly, which warms the ground"
+     ],
+     "correctIndex": 2,
+     "rationale": "Trees take in CO2 as they grow. Deforestation, especially by burning, releases stored carbon as CO2 and removes trees that would absorb it, so greenhouse gas levels rise.",
+     "phase": "explain",
+     "placement": "Explain phase: Component B, naming a Kenyan human activity (charcoal burning, Mau Forest deforestation) that contributes to the problem"
+    },
+    {
+     "prompt": "Which one-sentence ending best explains the Embu farmer's experience using physics?",
+     "choices": [
+      "Because the Sun is giving out more heat than it did in his grandfather's time, the rains have moved",
+      "Because the ozone layer has stopped the rain clouds from forming over Embu",
+      "Because the farmer has planted maize at the wrong time, so the rains are no longer reliable",
+      "Because greenhouse gases from human activities trap more infrared energy, warming the planet and changing evaporation and rainfall patterns, so the rains are harder to predict"
+     ],
+     "correctIndex": 3,
+     "rationale": "The physics link is the enhanced greenhouse effect: more trapped infrared raises temperatures, which alters the water cycle and rainfall timing. The other statements invent causes or blame the farmer.",
+     "phase": "end",
+     "placement": "Model phase: closing sentence \"I can now explain the farmer's experience using physics because...\""
+    }
+   ]
+  }
+ ]
+}

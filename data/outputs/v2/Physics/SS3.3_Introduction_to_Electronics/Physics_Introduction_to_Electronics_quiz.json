@@ -1,0 +1,709 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Physics",
+  "grade": 10,
+  "substrandId": "3.3",
+  "substrandName": "Introduction to Electronics",
+  "filePrefix": "Physics_Introduction_to_Electronics"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "Which Materials Light the Bulb? Launching the Phenomenon",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Grade 10 learners build a test circuit with two 1.5 V dry cells, a 3 V torch bulb and crocodile clips. They touch the clips together first, and the bulb lights. Why do they do this check before testing any material?",
+     "choices": [
+      "To warm the bulb so it lights faster",
+      "To be sure the cells, bulb and wires work, so that an off bulb later is due to the material",
+      "To clean the clips so the materials conduct better",
+      "To make the cells stronger before the test"
+     ],
+     "correctIndex": 1,
+     "rationale": "Touching the clips together shows the circuit itself works. If the bulb later stays off, learners can say the tested material is the reason and not a flat cell or a loose wire.",
+     "phase": "observe",
+     "placement": "Observe: build the test circuit and close the gap with a clip-to-clip touch"
+    },
+    {
+     "prompt": "In the 3 V test circuit, a group tests copper wire, glass, dry wood and a plastic strip one after another. Which result did the groups record?",
+     "choices": [
+      "Copper and dry wood lit the bulb, glass and plastic did not",
+      "All four materials lit the bulb, but copper was the brightest",
+      "Glass and plastic lit the bulb dimly, copper left it off",
+      "Copper lit the bulb brightly, while glass, dry wood and plastic left it off"
+     ],
+     "correctIndex": 3,
+     "rationale": "Only copper lit the bulb (brightly). Glass, dry wood and plastic left it off, so 1 of the 4 ordinary materials let current flow.",
+     "phase": "observe",
+     "placement": "Observe: testing the materials in the fixed order and recording results in the table"
+    },
+    {
+     "prompt": "A silicon diode (1N4007) is connected in the 3 V test circuit with the 3 V bulb. What do learners observe when they connect it one way and then reverse it?",
+     "choices": [
+      "The bulb stays off when connected forward and lights when reversed",
+      "The bulb lights when the diode is connected forward and stays off when it is reversed",
+      "The bulb stays off both ways, as it does with plastic",
+      "The bulb lights both ways, as it does with copper"
+     ],
+     "correctIndex": 1,
+     "rationale": "The diode lit the bulb when forward-connected and left it off when reversed. It behaved differently from all four ordinary materials.",
+     "phase": "observe",
+     "placement": "Observe: testing the silicon diode forward-connected, then reversed"
+    },
+    {
+     "prompt": "Mr Otieno, an electrician in Nairobi, holds a copper cable covered in PVC plastic while it carries current. Using only the results of today's bulb test, what can learners say about why this is safe?",
+     "choices": [
+      "In the test, plastic left the bulb off while copper lit it, so the plastic cover does not let current flow easily",
+      "Copper only carries current when nobody is holding the cable",
+      "The plastic cover has no electrons inside it",
+      "In the test, plastic lit the bulb better than copper did"
+     ],
+     "correctIndex": 0,
+     "rationale": "The evidence is that copper lit the bulb and plastic did not. This supports a claim that the cover does not let current pass easily. The test does not show why, and that comes in later lessons.",
+     "phase": "explain",
+     "placement": "Explain: linking the results back to Mr Otieno's insulated wire"
+    },
+    {
+     "prompt": "Copper, glass, dry wood, plastic and silicon are all made of atoms that have electrons. Yet copper lights the bulb and plastic does not. At this point in the unit, which statement is correct?",
+     "choices": [
+      "The difference is because plastic and wood have no electrons",
+      "The difference is because copper atoms are bigger than plastic atoms",
+      "The difference is because wood is natural, so it should conduct",
+      "This has not been explained yet, so it is a puzzle we will investigate in the coming lessons"
+     ],
+     "correctIndex": 3,
+     "rationale": "The lesson names a puzzle: the same building blocks give very different behaviour. The explanation is not given in this lesson, and learners should not claim one without evidence.",
+     "phase": "explain",
+     "placement": "Explain: naming the puzzle (all materials are made of atoms with electrons, yet behave so differently)"
+    },
+    {
+     "prompt": "A class is building a Driving Question Board about why some materials conduct and others do not. Which note is the best question to post, because it comes straight from today's test results?",
+     "choices": [
+      "What is the price of copper wire in Nairobi?",
+      "Who sold the dry cells to the school?",
+      "What colour is the plastic on the cable?",
+      "Why does the diode light the bulb in only one direction?"
+     ],
+     "correctIndex": 3,
+     "rationale": "A good DQB question starts with why or how and comes from the evidence. The diode lighting the bulb one way only is an observation that learners cannot yet explain.",
+     "phase": "dqb",
+     "placement": "DQB: writing questions on sticky notes and posting them under the Driving Question"
+    },
+    {
+     "prompt": "Wanjiku draws her first model of copper and plastic using only today's evidence. Which model idea fits what the lesson asks learners to do?",
+     "choices": [
+      "Drawing the model only after the teacher gives the correct answer",
+      "Drawing electrons only in copper, because plastic has none",
+      "Leaving out the diode, because models must explain everything",
+      "Drawing atoms and electrons in both copper and plastic, showing where electrons move when the cells are connected, and noting what the model cannot explain yet"
+     ],
+     "correctIndex": 3,
+     "rationale": "The first class model shows atoms and electrons in each material and links electron movement to the bulb lighting. It also records what it cannot explain yet, such as the diode, so it can be revised in later lessons.",
+     "phase": "model",
+     "placement": "Model: drawing a first model of electrons in copper, plastic and the diode"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Classifying Conductors, Insulators and Semiconductors",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:31:25+00:00",
+   "quiz": [
+    {
+     "prompt": "In a 3 V test circuit with a torch bulb, a piece of dry wood is connected in place of copper wire and the bulb stays dark. Which statement best explains this?",
+     "choices": [
+      "Dry wood has a very high resistivity, so the current is too small to light the bulb, but it is not exactly zero.",
+      "Dry wood has no electrons, so no current can ever flow in it.",
+      "Dry wood has a very low resistivity, so the current is used up before it reaches the bulb.",
+      "Dry wood is a semiconductor, so it only works when connected in the reverse direction."
+     ],
+     "correctIndex": 0,
+     "rationale": "Dry wood has a resistivity of about 10^8 to 10^11 ohm metre, so only a tiny current flows, far too small to light the bulb. The current is almost zero, not exactly zero, and wood still contains electrons.",
+     "phase": "observe",
+     "placement": "Part A: re-running the five-material test circuit (copper, glass, dry wood, plastic, diode)"
+    },
+    {
+     "prompt": "Resistivity values at about 20 C are: copper 1.7 x 10^-8 ohm metre, germanium 0.46 ohm metre, silicon 2.3 x 10^3 ohm metre, PVC about 10^13 ohm metre. Which list is in order from LOWEST to HIGHEST resistivity?",
+     "choices": [
+      "PVC, silicon, germanium, copper",
+      "Germanium, copper, silicon, PVC",
+      "Copper, silicon, germanium, PVC",
+      "Copper, germanium, silicon, PVC"
+     ],
+     "correctIndex": 3,
+     "rationale": "Compare the powers of ten: 10^-8 is smaller than 0.46 (about 10^-1), which is smaller than 10^3, which is smaller than 10^13. So the order is copper, germanium, silicon, PVC.",
+     "phase": "observe",
+     "placement": "Part B: arranging the resistivity cards on a number line of powers of ten"
+    },
+    {
+     "prompt": "Pure silicon has a resistivity of 2.3 x 10^3 ohm metre. Conductivity is 1/resistivity. What is the conductivity of silicon, to two significant figures?",
+     "choices": [
+      "2.3 x 10^-3 per ohm metre",
+      "2.3 x 10^3 per ohm metre",
+      "4.3 x 10^3 per ohm metre",
+      "4.3 x 10^-4 per ohm metre"
+     ],
+     "correctIndex": 3,
+     "rationale": "Conductivity = 1/rho = 1 / (2.3 x 10^3) = 4.3 x 10^-4 per ohm metre. A large resistivity gives a small conductivity.",
+     "phase": "observe",
+     "placement": "Part B: calculating conductivity 1/rho for copper and silicon",
+     "check": "1/2.3e3"
+    },
+    {
+     "prompt": "Copper has a resistivity of 1.7 x 10^-8 ohm metre and pure silicon has a resistivity of 2.3 x 10^3 ohm metre. About how many times more resistive is silicon than copper?",
+     "choices": [
+      "1.4 x 10^11 times",
+      "3.9 x 10^-5 times",
+      "1.4 x 10^-11 times",
+      "1.4 x 10^5 times"
+     ],
+     "correctIndex": 0,
+     "rationale": "Ratio = 2.3 x 10^3 divided by 1.7 x 10^-8, which is about 1.4 x 10^11. Silicon is about 140 billion times more resistive than copper.",
+     "phase": "observe",
+     "placement": "Part B: calculating how many times silicon is more resistive than copper",
+     "check": "2.3e3/1.7e-8"
+    },
+    {
+     "prompt": "Germanium has a resistivity of 0.46 ohm metre at about 20 C. Copper is 1.7 x 10^-8 ohm metre and PVC is about 10^13 ohm metre. How should germanium be classified?",
+     "choices": [
+      "Conductor, because it is a solid",
+      "Insulator, because it is much more resistive than copper",
+      "Conductor, because its resistivity is less than 1 ohm metre",
+      "Semiconductor, because its resistivity lies between that of conductors and insulators"
+     ],
+     "correctIndex": 3,
+     "rationale": "0.46 ohm metre is far above copper (a conductor) and far below PVC (an insulator), so germanium is a semiconductor, as is silicon.",
+     "phase": "observe",
+     "placement": "Part B: sorting materials into conductor, semiconductor and insulator columns"
+    },
+    {
+     "prompt": "Mr Otieno, an electrician in Nairobi, wires a house with copper cable covered in PVC at 240 V. Which explanation best shows why a person can safely hold the insulated cable?",
+     "choices": [
+      "Copper has a very low resistivity so it carries current well, while PVC has a very high resistivity so almost no current passes through it to the hand.",
+      "PVC has no electrons, so no current at all can pass through it.",
+      "A thicker wire matters more than the material, so the cover has no effect on safety.",
+      "Copper is a poor conductor, so the PVC cover is only there to hold it together."
+     ],
+     "correctIndex": 0,
+     "rationale": "Copper (1.7 x 10^-8 ohm metre) carries current efficiently. PVC (about 10^13 ohm metre or more) allows almost no current, so the current stays in the wire. PVC still has electrons and is not perfectly non-conducting.",
+     "phase": "explain",
+     "placement": "Claim-evidence-reasoning explanation: why Mr Otieno uses copper cable covered in PVC"
+    },
+    {
+     "prompt": "Pure silicon has a resistivity of 2.3 x 10^3 ohm metre. Copper is 1.7 x 10^-8 ohm metre and PVC is about 10^13 ohm metre. Why is silicon NOT a good choice for either the wire or the cover of household cable?",
+     "choices": [
+      "Silicon has the same resistivity as copper, so it cannot be told apart from it.",
+      "Silicon is a better conductor than copper, so it would be wasted as a wire.",
+      "Silicon is too resistive to carry current efficiently like copper, but not resistive enough to stop current like PVC.",
+      "Silicon is an insulator that allows no current at all."
+     ],
+     "correctIndex": 2,
+     "rationale": "Silicon's resistivity lies in between: it is about 10^11 times more resistive than copper, so it makes a poor wire, and about 10^10 times less resistive than PVC, so it would not keep the current in the wire.",
+     "phase": "explain",
+     "placement": "Claim-evidence-reasoning explanation: what silicon being in between means and why it is neither a good wire nor a good cover"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Intrinsic Semiconductors: Silicon and Germanium",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Which list puts these materials in order from the LOWEST resistivity to the HIGHEST resistivity?",
+     "choices": [
+      "Copper, silicon, germanium, glass",
+      "Glass, silicon, germanium, copper",
+      "Copper, germanium, silicon, glass",
+      "Germanium, copper, silicon, glass"
+     ],
+     "correctIndex": 2,
+     "rationale": "Copper is about 1.7 x 10^-8 ohm metre, germanium about 0.46, silicon about 2.3 x 10^3 and glass 10^10 or more ohm metre. The same order matches the energy gaps: copper 0 eV, germanium 0.67 eV, silicon 1.1 eV, glass above 5 eV.",
+     "phase": "observe",
+     "placement": "Part A: evidence card ranking materials by energy gap and resistivity"
+    },
+    {
+     "prompt": "A pure silicon sample has a resistivity of about 2300 ohm metre at 300 K, about 600 ohm metre at 320 K and about 180 ohm metre at 340 K. What do these data show?",
+     "choices": [
+      "Silicon conducts less as it gets warmer",
+      "Silicon only conducts once it is above 340 K",
+      "Silicon's conduction does not change with temperature",
+      "Silicon conducts better as it gets warmer"
+     ],
+     "correctIndex": 3,
+     "rationale": "Resistivity falls as temperature rises, so conductivity (1/resistivity) rises. Warmer pure silicon conducts better.",
+     "phase": "observe",
+     "placement": "Part C: temperature dataset for pure silicon"
+    },
+    {
+     "prompt": "A copper wire has a resistivity of about 1.7 x 10^-8 ohm metre at 300 K, about 1.8 x 10^-8 at 320 K and about 2.0 x 10^-8 at 340 K. How does copper's behaviour with temperature compare with that of pure silicon?",
+     "choices": [
+      "Both copper and silicon become more resistive when warmed",
+      "Copper's resistance rises slightly when warmed, but silicon's resistivity falls steeply",
+      "Copper's resistance falls steeply when warmed, just like silicon's",
+      "Neither copper nor silicon changes when warmed"
+     ],
+     "correctIndex": 1,
+     "rationale": "Copper's resistivity increases slightly with temperature, while silicon's decreases a lot. Metals and pure semiconductors respond in opposite ways.",
+     "phase": "observe",
+     "placement": "Part C: copper dataset and conductivity-against-temperature graphs"
+    },
+    {
+     "prompt": "Silicon has an energy gap of 1.1 eV and glass has an energy gap above about 5 eV. Why does pure silicon conduct a little at room temperature while glass conducts almost nothing?",
+     "choices": [
+      "Silicon has no energy gap, so its electrons are all free",
+      "Glass has no electrons in its atoms",
+      "Silicon's gap is small enough for a few electrons to gain the energy to jump it, but glass's gap is too large",
+      "Silicon atoms hold more electrons than glass atoms, so they conduct"
+     ],
+     "correctIndex": 2,
+     "rationale": "At room temperature a few electrons in silicon gain enough thermal energy to cross the small gap and become free. In glass the gap is so large that almost no electrons cross. Glass still has electrons, and silicon still has a gap.",
+     "phase": "explain",
+     "placement": "Energy band picture: explaining copper, glass, silicon and germanium"
+    },
+    {
+     "prompt": "In pure silicon, an electron gains enough energy to jump across the energy gap and becomes a free electron. What is left behind in the valence band?",
+     "choices": [
+      "A hole, so an electron-hole pair forms and the silicon stays electrically neutral",
+      "An extra positive particle that is added to the silicon from the air",
+      "Nothing, because the free electron comes from outside the silicon",
+      "A hole, which makes the silicon piece positively charged overall"
+     ],
+     "correctIndex": 0,
+     "rationale": "The electron leaves an empty place called a hole, and the free electron and hole together form an electron-hole pair. No charge is added or removed, so the silicon stays neutral overall.",
+     "phase": "explain",
+     "placement": "Energy band picture: free electrons, holes and electron-hole pairs"
+    },
+    {
+     "prompt": "At the same temperature, germanium (energy gap 0.67 eV) has lower resistivity than silicon (energy gap 1.1 eV). What is the correct reason?",
+     "choices": [
+      "Germanium has a larger gap, so its electrons are pushed across it more easily",
+      "Germanium has a smaller gap, so more electrons cross it and more electron-hole pairs form",
+      "Germanium is a metal, so its resistance rises with temperature",
+      "Germanium has no gap, so it behaves like copper"
+     ],
+     "correctIndex": 1,
+     "rationale": "A smaller gap means more electrons gain enough energy to cross it at the same temperature. That gives more electron-hole pairs and lower resistivity.",
+     "phase": "explain",
+     "placement": "Think-pair-share: why germanium conducts more than silicon at the same temperature"
+    },
+    {
+     "prompt": "Which sentence best explains why warming increases the conduction of pure silicon?",
+     "choices": [
+      "Warming removes the energy gap completely",
+      "Warming adds extra electrons to the silicon from the surroundings",
+      "Warming gives more electrons enough energy to cross the gap, forming more electron-hole pairs",
+      "Warming makes silicon behave like a metal, so its resistance rises"
+     ],
+     "correctIndex": 2,
+     "rationale": "Higher temperature gives more electrons enough energy to cross the gap. More electron-hole pairs means more charge carriers and higher conductivity. The gap stays the same, and the silicon stays neutral.",
+     "phase": "model",
+     "placement": "Model revision: arrow labelled 'warmer, more pairs, higher conductivity' and exit prompt"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Doping: Making n-type and p-type Semiconductors",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A student connects a silicon diode (1N4007) in a circuit with two 1.5 V dry cells in series and a 3 V torch bulb. With the diode connected one way, the bulb lights. When she reverses the diode, the bulb stays off. What does this result show?",
+     "choices": [
+      "The diode conducts equally well in both directions, like copper",
+      "The diode lets current pass in one direction only",
+      "The diode is damaged when it is reversed",
+      "The bulb needs more than two cells to light when the diode is reversed"
+     ],
+     "correctIndex": 1,
+     "rationale": "A diode conducts when forward-connected and blocks current when reverse-connected, so the bulb lights in only one direction. This is the one-way action the lesson explains with the p-n junction.",
+     "phase": "predict",
+     "placement": "Predict: recall of the Lesson 1 test of copper, glass, wood, plastic and the 1N4007 diode before the prediction sheet"
+    },
+    {
+     "prompt": "Silicon atoms have 4 outer electrons, and each one shares them with 4 neighbours. One silicon atom in a crystal is replaced by a phosphorus atom, which has 5 outer electrons. What results?",
+     "choices": [
+      "The silicon becomes positively charged because phosphorus has an extra proton",
+      "A hole forms, so the silicon becomes p-type",
+      "One extra free electron is left over, so the silicon becomes n-type with electrons as majority carriers",
+      "No electrons are left over because phosphorus forms 5 bonds with the same neighbours"
+     ],
+     "correctIndex": 2,
+     "rationale": "Phosphorus uses 4 of its 5 outer electrons to bond with the 4 neighbours. The fifth is a free electron, giving n-type silicon with electrons as majority carriers.",
+     "phase": "observe",
+     "placement": "Part B: counter-based model grid, replacing 1 silicon counter with a 'phosphorus' counter (5 dots)"
+    },
+    {
+     "prompt": "A boron atom (3 outer electrons) replaces one silicon atom (4 outer electrons) in a silicon crystal. Which statement about the result is correct?",
+     "choices": [
+      "The hole is a new positive particle added by the boron atom",
+      "Boron adds one extra free electron, so the silicon becomes n-type",
+      "One electron is missing from the bonds, a hole, so the silicon becomes p-type with holes as majority carriers",
+      "The boron atom completes all 4 bonds, so nothing changes"
+     ],
+     "correctIndex": 2,
+     "rationale": "Boron has only 3 outer electrons, so one bond is incomplete. This missing electron is the hole, and it is not a particle that was added. The silicon becomes p-type with holes as majority carriers.",
+     "phase": "observe",
+     "placement": "Part B: replacing a counter with a 'boron' counter (3 dots) and noting the hole (empty circle)"
+    },
+    {
+     "prompt": "A piece of silicon has been doped with phosphorus so it has many extra free electrons. What is the overall electric charge of the piece?",
+     "choices": [
+      "Neutral, because every phosphorus atom still has equal numbers of protons and electrons",
+      "Positive, because phosphorus gives away electrons",
+      "Negative, because it has extra free electrons",
+      "Negative on the surface and positive inside"
+     ],
+     "correctIndex": 0,
+     "rationale": "Each phosphorus atom has 15 protons and 15 electrons, so it is neutral. The free electron was already balanced by a proton in the nucleus, so the doped silicon is neutral overall.",
+     "phase": "observe",
+     "placement": "Part B: teacher prompt 'Is the doped silicon charged overall? Count the protons and electrons.'"
+    },
+    {
+     "prompt": "A sample contains 50 000 000 silicon atoms. It is doped so that 1 atom in every 10 000 000 is replaced by phosphorus. How many phosphorus atoms are in the sample?",
+     "choices": [
+      "500",
+      "5",
+      "5 000 000",
+      "50"
+     ],
+     "correctIndex": 1,
+     "rationale": "Number of dopant atoms = 50 000 000 ÷ 10 000 000 = 5. This shows how very small a doping amount is.",
+     "phase": "observe",
+     "placement": "Part B: data card 'Doping about 1 atom in 10^7 to 10^8 with phosphorus or boron'",
+     "check": "50000000/10000000"
+    },
+    {
+     "prompt": "Pure silicon has a resistivity of about 2.3 x 10^3 ohm metre. Why is doped silicon more useful in electronics than pure silicon?",
+     "choices": [
+      "Doping makes silicon charged, so it attracts current",
+      "Doping makes silicon a perfect conductor, exactly like copper",
+      "Doping makes silicon an insulator like plastic, which is safer",
+      "A very small amount of dopant raises conductivity many thousands of times, and the amount added controls how much"
+     ],
+     "correctIndex": 3,
+     "rationale": "Adding about 1 atom in 10^7 to 10^8 of phosphorus or boron raises conductivity many thousands of times. The amount of dopant lets engineers control the conductivity, which pure silicon cannot offer.",
+     "phase": "explain",
+     "placement": "CER explanation: 'Why is doped silicon more useful in electronics than pure silicon?'"
+    },
+    {
+     "prompt": "Which description of a p-n junction diode, like the 1N4007 in the bulb test, is correct?",
+     "choices": [
+      "Two n-type pieces joined together, which conduct equally in both directions",
+      "A p-type piece joined to an n-type piece, which conducts only when reverse-biased",
+      "A p-type piece joined to an n-type piece, which conducts when forward-biased and not when reverse-biased",
+      "A block of pure silicon, which lights the bulb in both directions"
+     ],
+     "correctIndex": 2,
+     "rationale": "A diode is p-type silicon joined to n-type silicon. Forward-biased, the bulb lights. Reverse-biased, the bulb stays off. This is the one-way action seen in the test.",
+     "phase": "model",
+     "placement": "Revising the class model: panel showing the p-n junction labelled 'forward-biased: bulb lit' and 'reverse-biased: bulb off'"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "PhET Simulation: Testing the Band Model with Digital Evidence",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In the class band model, four materials have these energy gaps: copper 0 eV, germanium 0.67 eV, silicon 1.1 eV and glass above about 5 eV. Which list puts them in order from the smallest gap to the largest gap?",
+     "choices": [
+      "Copper, silicon, germanium, glass",
+      "Glass, silicon, germanium, copper",
+      "Copper, germanium, silicon, glass",
+      "Germanium, copper, silicon, glass"
+     ],
+     "correctIndex": 2,
+     "rationale": "Copper has overlapping bands (0 eV), then germanium (0.67 eV), then silicon (1.1 eV), then glass (above about 5 eV). Germanium's gap is smaller than silicon's.",
+     "phase": "predict",
+     "placement": "Predict: sketching energy band boxes for copper, silicon, germanium and glass"
+    },
+    {
+     "prompt": "In the simulation, a learner sets the energy gap to a value above about 5 eV, like glass, and keeps the temperature the same. What should the simulated current reading show?",
+     "choices": [
+      "High current, the same as copper",
+      "The same current as silicon at room temperature",
+      "Almost none, because very few electrons can cross the large gap",
+      "Exactly zero, because no electron can ever move"
+     ],
+     "correctIndex": 2,
+     "rationale": "A very large gap means almost no electrons reach the upper band, so the current is almost none. It is not exactly zero, which is a common misconception.",
+     "phase": "observe",
+     "placement": "Observe, Investigation 1 (gap): setting the gap for a metal, germanium, silicon and an insulator"
+    },
+    {
+     "prompt": "A group selects silicon in the simulation and raises the temperature in three steps. What do they expect to record in their table?",
+     "choices": [
+      "The number of free electrons and holes increases",
+      "The number of free electrons and holes stays the same",
+      "The number of free electrons and holes decreases",
+      "Free electrons increase but there are no holes"
+     ],
+     "correctIndex": 0,
+     "rationale": "Higher temperature gives more electrons enough energy to cross the 1.1 eV gap. Each electron that crosses leaves a hole, so free electrons and holes both increase.",
+     "phase": "observe",
+     "placement": "Observe, Investigation 2 (temperature): raising the temperature of silicon in 3 steps"
+    },
+    {
+     "prompt": "A group adds boron, which has 3 valence electrons, to silicon in the simulation. What type of semiconductor do they record, and what are the majority carriers?",
+     "choices": [
+      "n-type, with electrons as the majority carriers",
+      "p-type, with holes as the majority carriers",
+      "n-type, with holes as the majority carriers",
+      "p-type, with electrons as the majority carriers"
+     ],
+     "correctIndex": 1,
+     "rationale": "Boron has 3 valence electrons, so it leaves gaps (holes) in the silicon bonds. This gives p-type silicon, where holes are the majority carriers.",
+     "phase": "observe",
+     "placement": "Observe, Investigation 3 (doping): adding phosphorus (n-type) and then boron (p-type) to silicon"
+    },
+    {
+     "prompt": "Phosphorus is added to a piece of silicon, giving it many extra free electrons. Is the doped silicon negatively charged overall?",
+     "choices": [
+      "No, it is still electrically neutral overall, because each phosphorus atom is also neutral",
+      "No, it is positively charged because it has lost holes",
+      "Yes, because it now has extra electrons",
+      "Yes, because phosphorus atoms carry a negative charge"
+     ],
+     "correctIndex": 0,
+     "rationale": "Each phosphorus atom has equal numbers of protons and electrons. The extra free electron comes from a neutral atom, so the doped silicon stays neutral overall.",
+     "phase": "explain",
+     "placement": "Explain: challenge question \"If we add phosphorus to silicon, is the silicon now negatively charged? Use evidence.\""
+    },
+    {
+     "prompt": "Mr Otieno in Nairobi safely holds a PVC-covered copper cable that carries current. Which explanation best uses the band model?",
+     "choices": [
+      "PVC has an energy gap of 0 eV, so electrons are stopped by overlapping bands",
+      "PVC has a very large energy gap (above about 5 eV), so almost no electrons can move through it",
+      "PVC has no electrons, so there is nothing to carry current",
+      "PVC has a smaller gap than copper, so it blocks the electrons"
+     ],
+     "correctIndex": 1,
+     "rationale": "The large gap in PVC means almost no electrons can reach the upper band, so almost no current flows through it. Copper's 0 eV gap lets electrons move easily.",
+     "phase": "explain",
+     "placement": "Explain: CER frame for why copper lit the bulb while glass, wood and plastic did not"
+    },
+    {
+     "prompt": "A group wants to test how temperature affects the number of free electrons in the simulation. Which plan is a fair test?",
+     "choices": [
+      "Raise the temperature and add phosphorus at the same time",
+      "Change the gap size at each step and keep a guess of the temperature",
+      "Raise the temperature and change from silicon to germanium at the same time",
+      "Keep the same material and doping, and change only the temperature in steps"
+     ],
+     "correctIndex": 3,
+     "rationale": "A fair test changes one variable at a time. Changing only the temperature lets any change in free electrons be linked to temperature alone.",
+     "phase": "observe",
+     "placement": "Observe: the checker confirms that only one variable was changed at a time"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Superconductors and MRI Magnets: When Resistance Drops to Zero",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In the class model of electrons moving through copper wire, what causes copper to have a small resistance at room temperature?",
+     "choices": [
+      "The plastic covering stops the electrons from entering the copper",
+      "Electrons are held tightly in the atoms and cannot move at all",
+      "Copper atoms have no electrons, so current passes through the gaps",
+      "Electrons collide with the vibrating copper atoms and some energy becomes heat"
+     ],
+     "correctIndex": 3,
+     "rationale": "In the Lesson 1 model, moving electrons collide with atoms, which gives resistance and turns some electrical energy into heat. Copper has free electrons, so its resistance is small but not zero.",
+     "phase": "predict",
+     "placement": "Predict: recalling the Lesson 1 test circuit and what resistance means in the class model of electrons moving through copper"
+    },
+    {
+     "prompt": "Liquid nitrogen boils at -196 C. Using K = C + 273, what is this temperature in kelvin?",
+     "choices": [
+      "77 K",
+      "196 K",
+      "469 K",
+      "-77 K"
+     ],
+     "correctIndex": 0,
+     "rationale": "K = C + 273 = -196 + 273 = 77 K. Adding 196 instead of subtracting it gives the wrong value of 469 K.",
+     "phase": "observe",
+     "placement": "Observe: data card activity where groups convert temperatures using K = C + 273",
+     "check": "-196 + 273"
+    },
+    {
+     "prompt": "A YBCO disc has Tc of about 92 K and an NbTi coil has Tc of 9.2 K. Liquid nitrogen is at 77 K and liquid helium is at 4.2 K. Which statement is correct?",
+     "choices": [
+      "Liquid helium is too cold for NbTi, so NbTi needs liquid nitrogen",
+      "Liquid nitrogen cools NbTi below its Tc because 77 K is a very low temperature",
+      "Liquid nitrogen is not cold enough for NbTi, but it cools YBCO below its Tc",
+      "Liquid nitrogen cannot make YBCO superconducting because 77 K is above 9.2 K"
+     ],
+     "correctIndex": 2,
+     "rationale": "77 K is below the Tc of YBCO (about 92 K), so YBCO becomes superconducting. 77 K is above the Tc of NbTi (9.2 K), so NbTi needs liquid helium at 4.2 K.",
+     "phase": "observe",
+     "placement": "Observe: data card activity where groups mark which coolant works for each material"
+    },
+    {
+     "prompt": "A YBCO disc is cooled in liquid nitrogen at 77 K, below its Tc, and a small magnet floats above it. What does this show about the disc?",
+     "choices": [
+      "The disc has become a superconductor with zero resistance",
+      "The disc has become an insulator",
+      "The disc has a larger resistance than copper",
+      "The disc has melted and become a liquid"
+     ],
+     "correctIndex": 0,
+     "rationale": "Below its critical temperature a superconductor has zero resistance and shows the Meissner effect, so a magnet levitates. It is not an insulator.",
+     "phase": "explain",
+     "placement": "Explain: building the CER statement 'A superconductor has zero resistance below Tc'"
+    },
+    {
+     "prompt": "Dr Wekesa's MRI machine uses NbTi coils with Tc of 9.2 K. Why must the coils be kept at 4.2 K with liquid helium?",
+     "choices": [
+      "Liquid helium makes the current bigger by pushing electrons through the coils",
+      "The coils must be above 9.2 K so that the resistance is zero",
+      "The coils must stay below 9.2 K to keep zero resistance, so a large current flows without energy loss",
+      "Liquid helium is needed to turn the NbTi into copper"
+     ],
+     "correctIndex": 2,
+     "rationale": "NbTi has zero resistance only below its Tc of 9.2 K. At 4.2 K the coils carry a large current without losing energy as heat and give a field of about 1.5 T to 3 T.",
+     "phase": "explain",
+     "placement": "Explain: answering 'How does Dr Wekesa's MRI machine use NbTi?'"
+    },
+    {
+     "prompt": "Why does Mr Otieno still wire houses in Nairobi with copper and PVC instead of superconductors?",
+     "choices": [
+      "Room temperature is far above the Tc of the superconductors listed (4.2 K, 9.2 K and about 92 K), so they would need cooling",
+      "Copper has zero resistance at room temperature, which is better than any superconductor",
+      "Superconductors only work with a magnet above them",
+      "Superconductors are insulators, so current cannot pass through them"
+     ],
+     "correctIndex": 0,
+     "rationale": "Room temperature (about 293 K) is much higher than every Tc in the lesson, so these materials would not be superconducting without costly cooling. Superconductors are not insulators.",
+     "phase": "explain",
+     "placement": "Explain: discussing why household wiring still uses copper and PVC"
+    },
+    {
+     "prompt": "During an MRI scan the NbTi coil at 4.2 K warms up to 12 K. Its Tc is 9.2 K. What happens?",
+     "choices": [
+      "The resistance becomes smaller, so the magnetic field becomes stronger",
+      "The resistance stays zero because the coil is still very cold",
+      "The coil becomes an insulator and the current stops completely",
+      "The resistance returns, so the magnet stops working properly and energy is lost as heat"
+     ],
+     "correctIndex": 3,
+     "rationale": "12 K is above the Tc of 9.2 K, so the NbTi is no longer a superconductor. Its resistance returns, so the large current cannot flow without loss and the magnet stops working.",
+     "phase": "model",
+     "placement": "Model: adding the superconductor panel and the NbTi MRI coil sketch to the class model"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Case Studies and the Final Answer to the Driving Question",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Mr Otieno, an electrician in Nairobi, holds a copper cable covered in PVC plastic while it carries current at 240 V. Which idea best explains why the PVC cover makes the cable safe to hold?",
+     "choices": [
+      "PVC has a very large energy gap (above about 5 eV), so almost no electrons can move through it",
+      "PVC has a small energy gap, so it conducts only a little current",
+      "PVC has overlapping energy bands, so its electrons move only in one direction",
+      "PVC has no electrons at all, so it has zero conduction"
+     ],
+     "correctIndex": 0,
+     "rationale": "Insulators such as PVC, glass and dry wood have a large energy gap (above about 5 eV), so almost no electrons are free to move. It is 'almost none', not zero, conduction.",
+     "phase": "predict",
+     "placement": "Predict: explaining to Mr Otieno why he can safely hold the PVC-covered copper cable at 240 V"
+    },
+    {
+     "prompt": "In the five-material test, a bulb lit brightly with a copper wire in the circuit. Which statement correctly explains why copper conducts so well?",
+     "choices": [
+      "Copper has zero resistance at room temperature because it is a superconductor",
+      "Copper has holes that carry current because it is doped with boron",
+      "Copper has a large energy gap of about 1.1 eV, so electrons are easily pushed across it",
+      "Copper has overlapping energy bands (0 eV gap), so its outer electrons are free to move through the metal"
+     ],
+     "correctIndex": 3,
+     "rationale": "In metals like copper the bands overlap (0 eV gap), so outer electrons are free to move. Copper still has a small resistance (1.7 x 10^-8 ohm metre) and is not a superconductor at room temperature.",
+     "phase": "predict",
+     "placement": "Predict: class poster of the five-material test (copper bright; glass, dry wood and plastic strip off)"
+    },
+    {
+     "prompt": "At the Garissa solar plant, the silicon in the panels has a p-type layer and an n-type layer. Which statement about the p-type layer is correct?",
+     "choices": [
+      "It is pure silicon with a 0 eV energy gap",
+      "It is silicon doped with phosphorus, which adds extra free electrons",
+      "It is silicon that has been given a positive charge overall",
+      "It is silicon doped with boron, which creates holes that act as charge carriers"
+     ],
+     "correctIndex": 3,
+     "rationale": "p-type silicon is doped with boron, which leaves holes as the majority carriers. Phosphorus doping gives n-type silicon with extra free electrons, and doped silicon stays electrically neutral.",
+     "phase": "observe",
+     "placement": "Observe: Group A (Garissa solar plant, 50 MW) case card on silicon p-n junctions"
+    },
+    {
+     "prompt": "A 1N4007 diode is connected in a simple circuit with a bulb. The bulb lights when the diode is connected one way round and stays off when it is reversed. What property of the diode does this show?",
+     "choices": [
+      "The diode conducts only when it is cooled below its critical temperature",
+      "The diode has zero resistance in both directions",
+      "The diode is an insulator that breaks down when turned round",
+      "The p-n junction conducts in one direction only"
+     ],
+     "correctIndex": 3,
+     "rationale": "A diode is made by joining p-type and n-type silicon, and the p-n junction conducts one way only. This one-way action is the basis of solar cells and microchips.",
+     "phase": "observe",
+     "placement": "Observe: Group B (microchips in phones, M-Pesa and computers) case card, one-way behaviour like the 1N4007 diode"
+    },
+    {
+     "prompt": "At Kenyatta National Hospital, the NbTi magnet in an MRI machine is cooled by liquid helium at 4.2 K. NbTi has a critical temperature (Tc) of 9.2 K. Why is this cooling needed?",
+     "choices": [
+      "Cooling below Tc gives the NbTi zero resistance, so large current flows without energy lost as heat",
+      "Cooling raises the energy gap so the magnet becomes an insulator",
+      "Cooling makes NbTi work as a diode so the current flows one way",
+      "Cooling adds holes to the NbTi, making it p-type"
+     ],
+     "correctIndex": 0,
+     "rationale": "A superconductor has zero resistance only below its critical temperature. At 4.2 K, which is below 9.2 K, NbTi carries a large current to make a strong field (about 1.5 T to 3 T) without losing energy as heat.",
+     "phase": "observe",
+     "placement": "Observe: Group C (Kenyatta National Hospital MRI, Dr Wekesa) case card on NbTi magnets and Tc"
+    },
+    {
+     "prompt": "Silicon is about 10^11 times more resistive than copper, yet it is used in solar panels at Garissa and in phone chips. Which statement best explains why it is so useful?",
+     "choices": [
+      "Silicon is a conductor with overlapping bands, so its resistance does not change",
+      "Silicon has zero resistance at room temperature when it is doped",
+      "Silicon has a small energy gap (1.1 eV), and doping with phosphorus or boron raises its conductivity in a controlled way",
+      "Silicon has an energy gap above 5 eV, so it conducts better than copper once doped"
+     ],
+     "correctIndex": 2,
+     "rationale": "Silicon's small gap (1.1 eV) means it conducts a little, and doping greatly raises conductivity in a controlled way. Joining p and n types gives diodes and transistors.",
+     "phase": "explain",
+     "placement": "Explain: 'Why does it work?' concept chain and the question on silicon being about 10^11 times more resistive than copper"
+    },
+    {
+     "prompt": "A learner says: 'Silicon doped with phosphorus is negatively charged because it has extra free electrons.' Which response is correct?",
+     "choices": [
+      "Incorrect, because phosphorus atoms also add extra positive charge in their nuclei, so the doped silicon stays electrically neutral overall",
+      "Correct, but only when it is joined to p-type silicon",
+      "Incorrect, because phosphorus doping removes electrons and creates holes",
+      "Correct, because each extra electron gives the whole piece a negative charge"
+     ],
+     "correctIndex": 0,
+     "rationale": "Each phosphorus atom brings an extra electron and an extra proton, so n-type silicon has more free electrons as carriers but remains electrically neutral overall.",
+     "phase": "model",
+     "placement": "Model: final class model showing n-type (phosphorus, extra free electrons) and p-type (boron, holes) silicon"
+    }
+   ]
+  }
+ ]
+}

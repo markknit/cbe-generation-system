@@ -1,0 +1,1398 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Physics",
+  "grade": 10,
+  "substrandId": "3.2",
+  "substrandName": "Current Electricity",
+  "filePrefix": "Physics_Current_Electricity"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "The Blown Tube and the Dim Bulbs: Anchoring Phenomenon",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In class, three identical bulbs are connected one after another in a single loop to a 9 V battery pack (series). What do learners observe about the brightness of the bulbs?",
+     "choices": [
+      "The first bulb is brightest and the last bulb is the dimmest",
+      "The bulbs glow dim",
+      "The bulbs glow brightly",
+      "The bulbs do not light at all"
+     ],
+     "correctIndex": 1,
+     "rationale": "In the series demonstration the three identical bulbs all glow dim. The observation does not show the first bulb brighter than the last.",
+     "phase": "observe",
+     "placement": "Demo A: three identical bulbs connected one after another to the 9 V pack"
+    },
+    {
+     "prompt": "Three identical bulbs are connected in series to a 9 V pack. Mr. Otieno unscrews the middle bulb. What do learners observe?",
+     "choices": [
+      "All the bulbs go out",
+      "The other two bulbs become brighter",
+      "Only the bulb next to the battery stays lit",
+      "The other two bulbs stay lit at the same brightness"
+     ],
+     "correctIndex": 0,
+     "rationale": "In Demo A, unscrewing one bulb in the series circuit makes all the bulbs go out.",
+     "phase": "observe",
+     "placement": "Demo A: unscrewing one bulb in the series circuit"
+    },
+    {
+     "prompt": "Three identical bulbs are connected on separate branches (parallel) to a 9 V pack, and one bulb is unscrewed. What do learners observe about the other two bulbs?",
+     "choices": [
+      "They stay lit at the same brightness as before",
+      "They become dimmer",
+      "They go out",
+      "They flicker and then go out"
+     ],
+     "correctIndex": 0,
+     "rationale": "In Demo B, the two remaining bulbs stay lit at the same brightness as before when one is removed.",
+     "phase": "observe",
+     "placement": "Demo B: three identical bulbs on separate branches with one bulb unscrewed"
+    },
+    {
+     "prompt": "Which statement about the two bench circuits is correct? Both use the same type of 9 V battery pack and three identical bulbs.",
+     "choices": [
+      "The brightness is different because the parallel circuit uses a stronger battery",
+      "The brightness is the same, but the parallel bulbs stay lit longer",
+      "The series bulbs glow brighter because they are connected one after another",
+      "The parallel bulbs glow brighter than the series bulbs, even though only the connection pattern is different"
+     ],
+     "correctIndex": 3,
+     "rationale": "The same battery and identical bulbs were used. Only the arrangement changed, and the parallel bulbs were brighter.",
+     "phase": "observe",
+     "placement": "Demo B: Mr. Otieno says that nothing has changed except how the wires are arranged"
+    },
+    {
+     "prompt": "An old string of Christmas lights goes completely dark when one bulb fails. Which of the two bench circuits does it behave like?",
+     "choices": [
+      "The parallel circuit, because the bulbs are dim",
+      "The parallel circuit, because the other bulbs stay lit",
+      "Neither circuit, because bulbs in Christmas lights are different",
+      "The series circuit, because all the bulbs go out when one is removed"
+     ],
+     "correctIndex": 3,
+     "rationale": "Because the whole string goes dark when one bulb fails, it behaves like the series circuit. The classroom tubes behave like the parallel circuit.",
+     "phase": "observe",
+     "placement": "Looking at the old string of Christmas lights and linking it to the bench circuits"
+    },
+    {
+     "prompt": "During evening prep in a Nairobi classroom, one of four fluorescent tubes blows out and the other three stay lit. Which bench circuit does the classroom lighting behave like?",
+     "choices": [
+      "Both circuits behave the same way",
+      "The series circuit",
+      "The parallel circuit",
+      "Neither circuit"
+     ],
+     "correctIndex": 2,
+     "rationale": "In the parallel circuit the other bulbs stay lit when one is removed, as the classroom tubes do.",
+     "phase": "observe",
+     "placement": "Looking at the classroom lighting: switching off one tube while the others stay lit"
+    },
+    {
+     "prompt": "At the end of Lesson 1, a learner asks: \"Why are the series bulbs so dim?\" What is the best response in this lesson?",
+     "choices": [
+      "The battery pushes harder in the parallel circuit",
+      "We have not yet gathered evidence to explain this, so we put it on the Driving Question Board to investigate",
+      "The first bulb uses up the current, so the others get less",
+      "Bulbs in series share the light between them"
+     ],
+     "correctIndex": 1,
+     "rationale": "This is the anchoring lesson, so the cause is deliberately not explained. The question goes on the Driving Question Board until evidence is collected. The other choices are untested ideas that the teacher does not confirm.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: posting questions such as Wanjiru's 'Why are the series bulbs so dim?'"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Circuit Components and Symbols: What Does a Bulb Need to Light?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "You have one 9 V bulb, a 9 V battery pack and some wires. What is the minimum you need to make the bulb light?",
+     "choices": [
+      "One wire from the + terminal of the pack to the bulb",
+      "Two wires that both join the bulb to the + terminal only",
+      "Two wires that make a complete loop: from the + terminal through the bulb to the - terminal",
+      "One wire joining the + terminal directly to the - terminal, with the bulb left out"
+     ],
+     "correctIndex": 2,
+     "rationale": "A bulb lights only when it is part of a complete closed loop that includes the source, so the path must leave one terminal, pass through the bulb and return to the other terminal. One wire is not enough because there is no return path.",
+     "phase": "predict",
+     "placement": "Predict: 'What is the minimum you need to make this one bulb light?' sketches A, B, C"
+    },
+    {
+     "prompt": "A 9 V pack, a switch and a 9 V bulb are joined by wires in one loop. The switch is open and the bulb is off. Why is the bulb off?",
+     "choices": [
+      "The bulb needs a second battery pack to light",
+      "The wires are too long for the current to reach the bulb",
+      "The open switch leaves a gap, so the loop is not complete (an open circuit)",
+      "The pack has no electricity until the switch is closed"
+     ],
+     "correctIndex": 2,
+     "rationale": "An open switch breaks the loop, making an open circuit, so the bulb goes out. Closing the switch completes the loop and the bulb lights.",
+     "phase": "observe",
+     "placement": "Investigation 1: arrangement (d), a switch added, tested open and closed"
+    },
+    {
+     "prompt": "A group has a bulb that is lit in a complete loop with a 9 V pack. They break the loop at different places: first they remove one wire, then they put the wire back and open the switch, then they put the switch back and remove the bulb from its holder. What do they see?",
+     "choices": [
+      "The bulb goes out wherever the loop is broken",
+      "The bulb gets brighter when the loop is broken at the switch",
+      "The bulb goes out only when the wire is removed",
+      "The bulb goes out only when the break is next to the battery pack"
+     ],
+     "correctIndex": 0,
+     "rationale": "In a single loop a break anywhere has the same effect: the circuit is open and the bulb goes out. The position of the break does not matter.",
+     "phase": "observe",
+     "placement": "Investigation 2: opening the loop at a wire, the bulb and the switch"
+    },
+    {
+     "prompt": "In a circuit diagram, which symbol is used for a bulb?",
+     "choices": [
+      "A circle with the letter V inside",
+      "One long thin line next to one short thick line",
+      "A circle with a cross inside",
+      "A circle with the letter A inside"
+     ],
+     "correctIndex": 2,
+     "rationale": "A bulb is drawn as a circle with a cross. A circle with A is an ammeter, a circle with V is a voltmeter, and a long line with a short line is a cell.",
+     "phase": "explain",
+     "placement": "Introducing the standard symbols and redrawing the working circuit as a circuit diagram"
+    },
+    {
+     "prompt": "Three identical bulbs are connected one after another in a single loop with a 9 V pack (in series). One bulb is removed from its holder. What happens to the other two bulbs, and why?",
+     "choices": [
+      "They stay lit, because each bulb has its own loop",
+      "They stay lit but get dimmer, because the loop is shorter",
+      "They go out, because the removed bulb used up all the current",
+      "They go out, because there is only one loop and removing a bulb breaks it"
+     ],
+     "correctIndex": 3,
+     "rationale": "Series means one loop. Removing any bulb opens the circuit, so all the bulbs go out. This is why a whole old string of Christmas lights can go dark when one bulb fails.",
+     "phase": "explain",
+     "placement": "Tracing the series diagram: 'If one bulb were removed from each, where would the loop be broken?'"
+    },
+    {
+     "prompt": "Three identical bulbs are each connected on a separate branch across the same 9 V pack (in parallel). One bulb is removed. What happens to the other two bulbs, and why?",
+     "choices": [
+      "They stay lit, because the pack has no need of a loop",
+      "They go out, because the removed bulb was the first in the path",
+      "They go out, because the loop is broken",
+      "They stay lit, because each of them is still part of a complete loop with the pack"
+     ],
+     "correctIndex": 3,
+     "rationale": "Parallel means branches. Removing one bulb breaks only its own branch, and the other branches still form complete loops with the pack. This is like the Nairobi classroom where one tube blew and the other three stayed lit.",
+     "phase": "explain",
+     "placement": "Tracing the parallel diagram and writing an explanation for the Nairobi classroom tubes"
+    },
+    {
+     "prompt": "After Lesson 2, the class knows that a bulb needs a complete closed loop with a source. Which question on the Driving Question Board should go under 'We still wonder'?",
+     "choices": [
+      "Does removing a bulb from a series loop break the loop?",
+      "Does an open switch stop the bulb from lighting?",
+      "Does a bulb need a complete loop to light?",
+      "Why are bulbs in series dimmer than bulbs in parallel when both have complete loops?"
+     ],
+     "correctIndex": 3,
+     "rationale": "Today's work showed that a complete loop is needed and that a break stops the bulb. A complete loop does not yet explain why the brightness is different, so that question is still to be explained in later lessons.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: sorting notes into 'We now know' and 'We still wonder'"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Electric Current: Charge Flow and the Ammeter in Series",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Three identical bulbs are connected one after another to a 9 V battery. You want to measure the current in this series loop. How should the ammeter be connected?",
+     "choices": [
+      "Across the battery, joined to both of its terminals",
+      "Beside the circuit, with only one end joined to the loop",
+      "Across one bulb, joined to both of its terminals",
+      "In the loop, as one of the wires in the circuit, so the current passes through it"
+     ],
+     "correctIndex": 3,
+     "rationale": "An ammeter measures the charge flowing past a point, so the current must pass through it. It is connected in series, in the loop. Across a bulb or the battery is a parallel connection and is wrong.",
+     "phase": "predict",
+     "placement": "Predict: students draw the series loop and mark where they would place the ammeter"
+    },
+    {
+     "prompt": "Wanjiru says: 'Bulbs use up some current, so less current comes out at the end of the loop.' Three identical bulbs are in series with a battery. The ammeter reads 0.10 A before the first bulb. What will an ammeter read after the third bulb?",
+     "choices": [
+      "0.07 A, because some current is used up in the bulbs",
+      "0 A, because the bulbs use up all the current",
+      "0.03 A, because each bulb uses up one third",
+      "0.10 A, the same as before the first bulb"
+     ],
+     "correctIndex": 3,
+     "rationale": "In a single series loop the charge has nowhere to go, so the same current passes every point. Bulbs transfer energy but do not use up current.",
+     "phase": "predict",
+     "placement": "Predict: Wanjiru's idea that 'bulbs use up some current' and the class vote"
+    },
+    {
+     "prompt": "In a series circuit with three identical bulbs, all bulbs are lit and the ammeter reads about 0.10 A. A learner unscrews one bulb. What happens, and why?",
+     "choices": [
+      "The ammeter reads 0.20 A because the current moves to the other bulbs",
+      "The ammeter reads 0 A and all bulbs go out, because the loop is broken",
+      "The ammeter reads 0 A, but the other two bulbs stay lit",
+      "The ammeter still reads 0.10 A and the other two bulbs stay lit"
+     ],
+     "correctIndex": 1,
+     "rationale": "Removing a bulb opens the only path round the loop, so no charge flows anywhere. The current is 0 A and all bulbs go out. This matches the closed-loop idea from Lesson 2.",
+     "phase": "observe",
+     "placement": "Part A, series: unscrewing one bulb and noting the ammeter drops to 0 A"
+    },
+    {
+     "prompt": "Three identical bulbs are connected in PARALLEL to the same 9 V battery. The ammeter is used to measure each branch and the battery lead. Which set of readings was recorded, and how did the bulbs look compared with the series circuit?",
+     "choices": [
+      "0.10 A in each branch and 0.10 A at the battery; the bulbs were the same brightness",
+      "0.30 A in each branch and 0.90 A at the battery; the bulbs were brighter",
+      "0.30 A in each branch and 0.30 A at the battery; the bulbs were dimmer",
+      "0.90 A in each branch and 0.30 A at the battery; the bulbs were brighter"
+     ],
+     "correctIndex": 1,
+     "rationale": "The parallel measurements gave 0.30 A in each branch and 0.90 A at the battery, with brighter bulbs than in series. These were recorded only; the explanation comes in later lessons.",
+     "phase": "observe",
+     "placement": "Part B, parallel: recording 0.30 A in each branch and 0.90 A at the battery"
+    },
+    {
+     "prompt": "In a series circuit the current is 0.10 A. How much charge passes any point in the loop in 60 seconds? (Use Q = I × t.)",
+     "choices": [
+      "0.6 C",
+      "6 C",
+      "600 C",
+      "6 A"
+     ],
+     "correctIndex": 1,
+     "rationale": "Q = I × t = 0.10 A × 60 s = 6 C. Charge is measured in coulombs, not amperes.",
+     "phase": "explain",
+     "placement": "Explain: calculating Q = It for t = 60 s with the series current of 0.10 A",
+     "check": "0.10*60"
+    },
+    {
+     "prompt": "A student says: 'A current of 0.10 A means 0.10 C of charge passes each point in the wire every second.' Which statement about current is correct?",
+     "choices": [
+      "Current is the total charge in the wire, and it gets used up as it passes a bulb",
+      "Current is the energy stored in a battery, measured in coulombs",
+      "Current is the push of the battery, measured in amperes",
+      "Current is the rate of flow of charge, I = Q/t, and 1 A means 1 C passes each second"
+     ],
+     "correctIndex": 3,
+     "rationale": "Current is the rate of flow of charge, I = Q/t, so 1 A = 1 C/s. It is not stored energy, total charge or the push of the battery.",
+     "phase": "explain",
+     "placement": "Explain: introducing I = Q/t (0.10 A moves 0.10 C every second)"
+    },
+    {
+     "prompt": "In a circuit diagram, conventional current is drawn leaving the + terminal of the battery. In the metal wires, which way do the electrons actually move?",
+     "choices": [
+      "From the + terminal towards the - terminal, the same as the conventional current",
+      "They do not move; only the bulb filament has moving charges",
+      "From the - terminal towards the + terminal, opposite to the conventional current",
+      "Both ways at once, so they cancel out"
+     ],
+     "correctIndex": 2,
+     "rationale": "Conventional current is drawn from + to -, but electrons are negatively charged and move from - to + in the wires, opposite to the arrows on the diagram.",
+     "phase": "explain",
+     "placement": "Explain: clarifying conventional current versus electron movement on the diagram"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Potential Difference and e.m.f.: Energy Per Charge in the Dim and Bright Bulbs",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A group wants to measure the potential difference (p.d.) across one bulb in a working circuit. How should the voltmeter be connected?",
+     "choices": [
+      "In the loop next to the bulb, in series with it",
+      "Across the bulb, in parallel with it",
+      "Between the battery and the switch, in series",
+      "Directly across the battery only, never across a bulb"
+     ],
+     "correctIndex": 1,
+     "rationale": "A voltmeter is connected in parallel, like a bridge across the component being measured. An ammeter is the instrument that goes in series in the loop.",
+     "phase": "predict",
+     "placement": "Predict phase: learners draw both circuits and sketch where the voltmeter would be placed"
+    },
+    {
+     "prompt": "Three identical bulbs are connected in series to a 9 V battery pack. A voltmeter is connected across ONE of the bulbs. What does it read?",
+     "choices": [
+      "0.10 V",
+      "9.0 V",
+      "3.0 V",
+      "1.5 V"
+     ],
+     "correctIndex": 2,
+     "rationale": "The three identical bulbs share the 9 V equally, so each has 9 ÷ 3 = 3.0 V. The three readings add up to the battery e.m.f.",
+     "phase": "observe",
+     "placement": "Observe phase, measurement (2): series circuit of three bulbs, voltmeter across each bulb in turn",
+     "check": "9/3"
+    },
+    {
+     "prompt": "Three identical bulbs are connected in parallel to a 9 V battery pack. A voltmeter is connected across ONE bulb. What does it read, and how bright are the bulbs compared with the same bulbs in series?",
+     "choices": [
+      "3.0 V, brighter than in series",
+      "9.0 V, brighter than in series",
+      "3.0 V, the same brightness as in series",
+      "9.0 V, dimmer than in series"
+     ],
+     "correctIndex": 1,
+     "rationale": "Each parallel bulb is connected across the full battery, so each has 9.0 V. This is why the parallel bulbs glow brightly, while the series bulbs with 3.0 V each are dim.",
+     "phase": "observe",
+     "placement": "Observe phase, measurement (3): parallel circuit of three bulbs, voltmeter across each bulb"
+    },
+    {
+     "prompt": "A 9 V battery is described as having an e.m.f. of 9 V. Which statement correctly uses the idea 1 V = 1 J/C?",
+     "choices": [
+      "The battery pushes a current of 9 amperes round the circuit",
+      "The battery stores 9 joules of energy in total",
+      "The battery supplies 9 coulombs of charge every second",
+      "The battery supplies 9 joules of energy to every coulomb of charge that passes through it"
+     ],
+     "correctIndex": 3,
+     "rationale": "One volt is one joule per coulomb, so 9 V means 9 J of energy supplied to each coulomb. Coulombs per second would be current, and the stored total energy depends on the battery's capacity.",
+     "phase": "explain",
+     "placement": "Explain phase: porter analogy and 'What does 1 V mean?' (1 volt is one ___ per ___)"
+    },
+    {
+     "prompt": "Which pair of statements correctly describes the difference between e.m.f. and potential difference (p.d.)?",
+     "choices": [
+      "e.m.f. is the energy per coulomb supplied by the source; p.d. is the energy per coulomb transferred in a component",
+      "e.m.f. is the current in the source; p.d. is the current in a component",
+      "e.m.f. is the energy per coulomb transferred in a component; p.d. is the energy per coulomb supplied by the source",
+      "e.m.f. is measured in volts; p.d. is measured in amperes"
+     ],
+     "correctIndex": 0,
+     "rationale": "e.m.f. belongs to the source, which supplies energy to each coulomb. p.d. belongs to a component, where energy is transferred as light and heat. Both are measured in volts.",
+     "phase": "explain",
+     "placement": "Explain phase: CER question 'What is the difference between e.m.f. and p.d.?'"
+    },
+    {
+     "prompt": "A charge of 4 C passes through a bulb that has a p.d. of 3.0 V across it. How much energy is transferred by the bulb as light and heat? (Use energy = charge × p.d.)",
+     "choices": [
+      "12 J",
+      "0.75 J",
+      "7 J",
+      "1.33 J"
+     ],
+     "correctIndex": 0,
+     "rationale": "Energy = charge × p.d. = 4 C × 3.0 V = 12 J. Adding the numbers (7) or dividing them gives wrong answers.",
+     "phase": "explain",
+     "placement": "Explain phase: pair work calculating the energy given up by charge passing through a 3.0 V bulb and a 9.0 V bulb",
+     "check": "4*3.0"
+    },
+    {
+     "prompt": "In a series circuit of three identical bulbs on a 9 V battery, the current is 0.10 A at every point in the loop, and each bulb has 3.0 V across it. Which statement best explains why each series bulb is dim?",
+     "choices": [
+      "Each coulomb of charge gives up only 3 J to each bulb, and the charge itself is not used up",
+      "The charge is used up as it passes through each bulb, so less is left for the next bulb",
+      "The voltage is used up by the first bulb, so the other bulbs get less current",
+      "Each bulb receives the full 9 V but only a third of the battery's current"
+     ],
+     "correctIndex": 0,
+     "rationale": "The current is the same everywhere, so charge is not used up. Each coulomb carries 9 J and gives up 3 J at each of the three bulbs, so each bulb has only 3.0 V across it and glows dimly.",
+     "phase": "model",
+     "placement": "Model Building phase: caption on why the series bulb is dim, using energy per coulomb"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Ohm's Law: How Much Current Does a Resistor Allow for Each Volt?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A group wants to measure the current through a resistor and the p.d. across it. How should they connect the two meters?",
+     "choices": [
+      "Ammeter in parallel with the resistor, voltmeter in series with it",
+      "Both meters in series with the resistor",
+      "Ammeter in series with the resistor, voltmeter in parallel across the resistor",
+      "Both meters in parallel across the resistor"
+     ],
+     "correctIndex": 2,
+     "rationale": "All the current must pass through the ammeter, so it goes in series. The voltmeter measures the p.d. between two points, so it goes in parallel across the resistor.",
+     "phase": "observe",
+     "placement": "Observe: building the circuit with a 30 Ω resistor, ammeter in series and voltmeter in parallel"
+    },
+    {
+     "prompt": "A group measures a 30 Ω resistor and finds: 1.5 V gives 0.05 A, 3.0 V gives 0.10 A, 4.5 V gives 0.15 A. They add a column V/I and get 30 Ω every time. What does this show?",
+     "choices": [
+      "The resistor uses up more current as the p.d. rises",
+      "The resistance stays constant, so the current is directly proportional to the p.d.",
+      "The resistance falls as the current rises",
+      "The resistance of the resistor rises as the p.d. rises"
+     ],
+     "correctIndex": 1,
+     "rationale": "V/I is the resistance. It stays at 30 Ω, so doubling the p.d. doubles the current: the current is directly proportional to the p.d.",
+     "phase": "observe",
+     "placement": "Observe: adding the V/I column to the data table"
+    },
+    {
+     "prompt": "A graph is plotted for a fixed 30 Ω resistor at constant temperature, with V on the y-axis and I on the x-axis. What does the graph look like?",
+     "choices": [
+      "A straight line passing through the origin",
+      "A curve that gets steeper as the current rises",
+      "A straight line that does not pass through the origin",
+      "A horizontal straight line"
+     ],
+     "correctIndex": 0,
+     "rationale": "For an ohmic conductor at constant temperature, V is directly proportional to I. The graph is therefore a straight line through the origin.",
+     "phase": "observe",
+     "placement": "Observe: plotting V against I and drawing a line of best fit"
+    },
+    {
+     "prompt": "On a V-I graph for a resistor (V on the y-axis, I on the x-axis), two points on the line of best fit are (0.10 A, 3.0 V) and (0.25 A, 7.5 V). What is the gradient, and what does it represent?",
+     "choices": [
+      "0.033 Ω, the resistance of the resistor",
+      "30 A, the current in the resistor",
+      "4.5 V, the p.d. across the resistor",
+      "30 Ω, the resistance of the resistor"
+     ],
+     "correctIndex": 3,
+     "rationale": "Gradient = (7.5 - 3.0)/(0.25 - 0.10) = 4.5/0.15 = 30. Since V is on the y-axis and I is on the x-axis, the gradient is V/I, which is the resistance in ohms.",
+     "phase": "explain",
+     "placement": "Explain: calculating the gradient of the V-I graph using two points far apart",
+     "check": "(7.5-3.0)/(0.25-0.10)"
+    },
+    {
+     "prompt": "A 30 Ω resistor passes 0.30 A when connected to a 9 V supply. The 30 Ω resistor is replaced by a 60 Ω resistor and the supply stays at 9 V. What is the current now?",
+     "choices": [
+      "0.60 A",
+      "0.15 A",
+      "540 A",
+      "0.30 A, because the supply is still 9 V"
+     ],
+     "correctIndex": 1,
+     "rationale": "Using I = V/R = 9/60 = 0.15 A. Doubling the resistance for the same p.d. halves the current.",
+     "phase": "explain",
+     "placement": "Explain: 'If I doubled the resistance to 60 Ω and kept 9 V, what would the current be?'",
+     "check": "9/60"
+    },
+    {
+     "prompt": "Three bulbs are connected in series to a 9 V battery. The measured current in the loop is 0.10 A. Using R = V/I, what is the total resistance of the loop?",
+     "choices": [
+      "0.011 Ω",
+      "90 Ω",
+      "0.9 Ω",
+      "30 Ω"
+     ],
+     "correctIndex": 1,
+     "rationale": "R = V/I = 9/0.10 = 90 Ω. The 30 Ω is the resistance of one bulb only, not the whole loop.",
+     "phase": "explain",
+     "placement": "Explain: series loop problem (9 V supply, 0.10 A, find total resistance)",
+     "check": "9/0.10"
+    },
+    {
+     "prompt": "A filament bulb gives a V/I value that gets larger as it heats up and glows brighter. How should this bulb be described, and why?",
+     "choices": [
+      "Non-ohmic, because it uses up current as it glows",
+      "Non-ohmic, because its V/I does not stay constant as the filament heats up",
+      "Ohmic, because it obeys V = IR at every temperature",
+      "Ohmic, because its resistance rises with temperature"
+     ],
+     "correctIndex": 1,
+     "rationale": "An ohmic conductor has a constant V/I and a straight V-I line through the origin at constant temperature. A filament's V/I changes as it heats up, so it is non-ohmic.",
+     "phase": "explain",
+     "placement": "Explain: KICD extension, classifying ohmic and non-ohmic conductors using the resistor graph and the bulb reading"
+    },
+    {
+     "prompt": "A resistor has colour bands brown, black, red. Using the code black 0, brown 1, red 2, the first two bands are digits and the third band is the multiplier. What is its resistance?",
+     "choices": [
+      "102 Ω",
+      "1000 Ω",
+      "12 Ω",
+      "10 Ω"
+     ],
+     "correctIndex": 1,
+     "rationale": "Brown = 1 and black = 0 give 10. Red as multiplier means x 100, so 10 x 100 = 1000 Ω (1 kΩ).",
+     "phase": "explain",
+     "placement": "Explain: KICD extension, reading a resistor's colour bands (orange, black, black = 30 Ω)",
+     "check": "10*100"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Factors Affecting Resistance: Why Long Thin Extension Cables Heat Up",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In a length test, a piece of thin nichrome wire 25 cm long has a resistance of 9 Ω. The same wire (same thickness, same temperature) is now used at a length of 100 cm. What is its resistance?",
+     "choices": [
+      "18 Ω",
+      "9 Ω",
+      "13 Ω",
+      "36 Ω"
+     ],
+     "correctIndex": 3,
+     "rationale": "Resistance is proportional to length. 100 cm is 4 times 25 cm, so R = 4 × 9 = 36 Ω.",
+     "phase": "observe",
+     "placement": "Station A (Length): nichrome wire tested at 25 cm, 50 cm, 75 cm and 100 cm",
+     "check": "9*4"
+    },
+    {
+     "prompt": "At Station B, a single strand of nichrome wire has a resistance of 20 Ω. Two identical strands of the same length are twisted together to double the cross-sectional area. What is the resistance of the twisted pair (same length, same temperature)?",
+     "choices": [
+      "10 Ω",
+      "5 Ω",
+      "40 Ω",
+      "20 Ω"
+     ],
+     "correctIndex": 0,
+     "rationale": "Doubling the area halves the resistance, so R = 20 ÷ 2 = 10 Ω. A thicker wire has lower resistance.",
+     "phase": "observe",
+     "placement": "Station B (Thickness): one strand versus two strands twisted together to double the area",
+     "check": "20/2"
+    },
+    {
+     "prompt": "A bulb filament is connected to one 1.5 V cell. It is dim and cool, and R = V/I gives 15 Ω. It is then connected to three cells (4.5 V). It is brighter and hotter, and R = V/I gives 30 Ω. What best explains the higher resistance?",
+     "choices": [
+      "Resistance depends only on the current, so more current always means more resistance.",
+      "The filament is hotter, and the resistance of a metal increases when its temperature rises.",
+      "The voltmeter reads incorrectly at higher voltages.",
+      "The filament became a different material when it got brighter."
+     ],
+     "correctIndex": 1,
+     "rationale": "The material, length and thickness are unchanged. Only the temperature changed, and for metals resistance increases as temperature increases.",
+     "phase": "observe",
+     "placement": "Station D (Temperature): the 9 V, 2.7 W demo bulb on one cell and then three cells"
+    },
+    {
+     "prompt": "The same current flows through a short copper connecting wire and through a bulb filament of 30 Ω. The filament glows but the copper wire stays cool. Why?",
+     "choices": [
+      "The copper wire is thicker, so it resists the current more and stays cool.",
+      "The filament has a much higher resistance, so more energy is transferred as heat in it.",
+      "Current is used up in the filament but not in the copper wire.",
+      "Copper is an insulator, so no current flows through it."
+     ],
+     "correctIndex": 1,
+     "rationale": "For the same current, a component with a much higher resistance transfers much more energy as heat. The filament has a high resistance (30 Ω) and copper has a very low resistance.",
+     "phase": "observe",
+     "placement": "Demonstration: copper connecting wire next to the 30 Ω bulb filament"
+    },
+    {
+     "prompt": "A long thin extension cable becomes warm when a heater is used on it, but a short thick cable carrying the same current stays cool. Which is the best explanation?",
+     "choices": [
+      "The resistance of the cable depends only on the current, not on its length or thickness.",
+      "Thick wire resists more because it is bigger, so the thick cable should heat up more.",
+      "The long thin cable has a higher resistance, so more energy is transferred as heat for the same current.",
+      "The long thin cable has a lower resistance, so more current flows and it heats up."
+     ],
+     "correctIndex": 2,
+     "rationale": "Resistance increases with length and decreases as thickness (area) increases. A long thin cable therefore has a high resistance and transfers more energy as heat for the same current.",
+     "phase": "explain",
+     "placement": "CER explanation: 'Why does a long thin extension cable heat up?'"
+    },
+    {
+     "prompt": "Nichrome has resistivity ρ = 1.1 × 10⁻⁶ Ω m. A nichrome wire has cross-sectional area A = 3.1 × 10⁻⁸ m². Using R = ρL/A, what is the resistance of a 2.0 m length of this wire?",
+     "choices": [
+      "35 Ω",
+      "71 Ω",
+      "7.1 × 10⁻⁵ Ω",
+      "18 Ω"
+     ],
+     "correctIndex": 1,
+     "rationale": "R = ρL/A = (1.1 × 10⁻⁶ × 2.0) ÷ (3.1 × 10⁻⁸) = about 71 Ω. This is double the value for 1.0 m (about 35 Ω).",
+     "phase": "explain",
+     "placement": "KICD extension: R = ρL/A worked with the nichrome example, finding R for a 2.0 m length",
+     "check": "round(1.1e-6*2.0/3.1e-8)"
+    },
+    {
+     "prompt": "A 9 V battery is connected across a 30 Ω bulb filament. It is then connected across a longer, thinner wire of resistance 90 Ω. Using R = V/I, what is the current in the 90 Ω wire?",
+     "choices": [
+      "0.1 A",
+      "10 A",
+      "810 A",
+      "0.3 A"
+     ],
+     "correctIndex": 0,
+     "rationale": "I = V/R = 9 ÷ 90 = 0.1 A. This is smaller than the 0.3 A in the 30 Ω filament, so a larger resistance gives a smaller current for the same p.d.",
+     "phase": "model",
+     "placement": "Model revision: add an arrow showing that a larger resistance means a smaller current for the same p.d. (R = V/I)",
+     "check": "9/90"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Resistors in Series: Why Three Bulbs Share the Battery and Glow Dim",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A 9 V battery is connected to one 30 Ω bulb. Two more identical bulbs are then added in the same single loop (in series). What happens to the current from the battery, and why?",
+     "choices": [
+      "It increases, because more bulbs can carry more current",
+      "It stays the same, because the battery p.d. is still 9 V",
+      "It decreases, because the first bulb uses up some of the current",
+      "It decreases, because the total resistance of the loop increases"
+     ],
+     "correctIndex": 3,
+     "rationale": "Adding bulbs in series adds resistance (30 Ω becomes 90 Ω), so by V = IR the current falls from 0.30 A to 0.10 A. The current is not used up.",
+     "phase": "predict",
+     "placement": "Predict: diagrams of one, two and three bulbs in a loop, and predictions about brightness and battery current"
+    },
+    {
+     "prompt": "Three identical bulbs are connected in series to a 9 V battery. An ammeter reads 0.10 A before bulb 1. What will the ammeter read between bulb 1 and bulb 2?",
+     "choices": [
+      "0.07 A, because bulb 1 has used up some current",
+      "0.05 A, because the current is shared equally between the bulbs",
+      "0.10 A, because the current is the same everywhere in a series loop",
+      "0.00 A, because bulb 1 stops the current"
+     ],
+     "correctIndex": 2,
+     "rationale": "There is only one path, so the same charge passes each point every second. Current is not used up by the bulbs.",
+     "phase": "observe",
+     "placement": "Step 1: measure the current at three points (before bulb 1, between bulbs 1 and 2, after bulb 3)"
+    },
+    {
+     "prompt": "Three identical bulbs are connected in series to a 9 V battery. A voltmeter is connected across one bulb. What does it read?",
+     "choices": [
+      "3.0 V, because the 9 V is shared equally between three identical bulbs",
+      "0.10 V, because the current is 0.10 A",
+      "9.0 V, because each bulb gets the full battery p.d.",
+      "4.5 V, because the battery p.d. is shared between two bulbs"
+     ],
+     "correctIndex": 0,
+     "rationale": "Identical bulbs in series share the battery p.d. equally: 9 V ÷ 3 = 3.0 V each, and 3.0 + 3.0 + 3.0 = 9.0 V.",
+     "phase": "observe",
+     "placement": "Step 2 and Step 3: measure the p.d. across each bulb and add the three p.d.s to compare with the battery",
+     "check": "9/3"
+    },
+    {
+     "prompt": "In a series circuit of three bulbs, bulb 2 is unscrewed. All the bulbs go out and the ammeter reads 0 A. What is the correct explanation?",
+     "choices": [
+      "The other two bulbs now have too much resistance for current to flow",
+      "The battery has run out of charge because bulb 2 was removed",
+      "The loop is open, so there is no complete path and the current is zero",
+      "Bulb 2 was using all the current, so the others now get none"
+     ],
+     "correctIndex": 2,
+     "rationale": "A series circuit has one path only. Removing a bulb breaks the loop, so current cannot flow anywhere, which is also why one dead bulb makes an old Christmas-light string go dark.",
+     "phase": "observe",
+     "placement": "Step 4: remove one bulb (unscrew bulb 2) and observe all bulbs go out"
+    },
+    {
+     "prompt": "A 9 V battery is connected to three identical 30 Ω bulbs in series. What is the current from the battery?",
+     "choices": [
+      "3.0 A",
+      "0.33 A",
+      "0.30 A",
+      "0.10 A"
+     ],
+     "correctIndex": 3,
+     "rationale": "R(total) = 30 + 30 + 30 = 90 Ω. Then I = V/R = 9/90 = 0.10 A.",
+     "phase": "explain",
+     "placement": "Steps 1 to 3: use V = IR to find R(total) = 90 Ω and show R(total) = R1 + R2 + R3",
+     "check": "9/(30+30+30)"
+    },
+    {
+     "prompt": "In a series circuit, each 30 Ω bulb has 3.0 V across it and 0.10 A through it. Each bulb is rated 2.7 W at its full 9 V. What power does each bulb actually have, and what does this mean for its brightness?",
+     "choices": [
+      "0.30 W, which is much less than 2.7 W, so the bulb glows dim",
+      "0.03 W, so the bulb is too weak to light at all",
+      "2.7 W, so the bulb glows at full brightness",
+      "0.90 W, because power is 9 V × 0.10 A, so it glows brighter than normal"
+     ],
+     "correctIndex": 0,
+     "rationale": "P = IV = 0.10 × 3.0 = 0.30 W. This is 9 times smaller than 2.7 W, so the bulb glows dim.",
+     "phase": "explain",
+     "placement": "Step 4: calculate power in each bulb, P = IV, and compare with the rating of 2.7 W",
+     "check": "0.10*3.0"
+    },
+    {
+     "prompt": "Two 30 Ω resistors are connected in series to a 9 V battery. What is the current in the circuit?",
+     "choices": [
+      "0.10 A",
+      "0.30 A",
+      "0.15 A",
+      "0.075 A"
+     ],
+     "correctIndex": 2,
+     "rationale": "R(total) = 30 + 30 = 60 Ω. I = V/R = 9/60 = 0.15 A.",
+     "phase": "explain",
+     "placement": "Exit-ticket question: two 30 Ω resistors in series on a 9 V battery",
+     "check": "9/(30+30)"
+    },
+    {
+     "prompt": "A 60 Ω resistor and a 30 Ω resistor are connected in series to a 9 V battery to form a potential divider. What is the p.d. across the 60 Ω resistor?",
+     "choices": [
+      "9.0 V",
+      "3.0 V",
+      "6.0 V",
+      "4.5 V"
+     ],
+     "correctIndex": 2,
+     "rationale": "R(total) = 90 Ω, so I = 9/90 = 0.10 A. The p.d. across the 60 Ω resistor is V = IR = 0.10 × 60 = 6.0 V (and 3.0 V across the 30 Ω).",
+     "phase": "explain",
+     "placement": "KICD extension: teacher demonstration of the potential-divider example (60 Ω and 30 Ω on 9 V)",
+     "check": "9/(60+30)*60"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Resistors in Parallel: Why One Failed Tube Does Not Darken the Others",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:26:44+00:00",
+   "quiz": [
+    {
+     "prompt": "Three identical 30 Ω bulbs are connected on separate branches (in parallel) across a 9 V battery pack. What is the potential difference (p.d.) across each bulb?",
+     "choices": [
+      "4.5 V",
+      "27 V",
+      "9.0 V",
+      "3.0 V"
+     ],
+     "correctIndex": 2,
+     "rationale": "Each branch is connected directly across the battery terminals, so every parallel bulb has the full 9.0 V. The 3.0 V value is the carry-over from the series circuit, where the 9 V is shared among three bulbs.",
+     "phase": "predict",
+     "placement": "Predict: prediction (b) about the p.d. across each parallel bulb"
+    },
+    {
+     "prompt": "A 30 Ω bulb is on its own branch directly across a 9 V battery pack. What current flows in that branch?",
+     "choices": [
+      "0.60 A",
+      "0.90 A",
+      "0.30 A",
+      "0.10 A"
+     ],
+     "correctIndex": 2,
+     "rationale": "I = V/R = 9.0/30 = 0.30 A. The 0.10 A is the series value and 0.90 A is the total battery current for three such branches.",
+     "phase": "observe",
+     "placement": "Observe: Step 3, ammeter placed in series in each branch",
+     "check": "9/30"
+    },
+    {
+     "prompt": "Three identical bulbs each carry 0.30 A on separate parallel branches. What does an ammeter placed at the battery read?",
+     "choices": [
+      "0.10 A",
+      "0.30 A",
+      "0.90 A",
+      "0.60 A"
+     ],
+     "correctIndex": 2,
+     "rationale": "Branch currents add up in a parallel circuit: 0.30 + 0.30 + 0.30 = 0.90 A. The current is not shared out as in a series circuit.",
+     "phase": "observe",
+     "placement": "Observe: Step 3, ammeter placed at the battery (expect 0.90 A)",
+     "check": "0.30*3"
+    },
+    {
+     "prompt": "Three 30 Ω bulbs are connected in parallel. Using 1/R = 1/R1 + 1/R2 + 1/R3, what is the effective resistance of the combination?",
+     "choices": [
+      "90 Ω",
+      "30 Ω",
+      "10 Ω",
+      "0.10 Ω"
+     ],
+     "correctIndex": 2,
+     "rationale": "1/R = 1/30 + 1/30 + 1/30 = 3/30, so R = 30/3 = 10 Ω. This is smaller than any one bulb because the extra branches give the current more paths.",
+     "phase": "explain",
+     "placement": "Explain: step (3) effective resistance, 1/R = 3/30",
+     "check": "1/(3/30)"
+    },
+    {
+     "prompt": "Three identical 30 Ω bulbs are lit on separate parallel branches across a 9 V pack. The battery current is 0.90 A. One bulb is removed. What happens?",
+     "choices": [
+      "The other two bulbs share the 9 V, so each has 4.5 V and the battery current falls to 0.60 A.",
+      "The other two bulbs go out because the circuit is broken.",
+      "The other two bulbs get brighter and the battery current stays at 0.90 A.",
+      "The other two bulbs stay at 9.0 V and 0.30 A each, and the battery current falls to 0.60 A."
+     ],
+     "correctIndex": 3,
+     "rationale": "Each remaining branch is still connected across the battery, so it keeps 9.0 V and 0.30 A. Only the total current falls: 0.30 + 0.30 = 0.60 A.",
+     "phase": "observe",
+     "placement": "Observe: Step 4, removing one bulb and re-reading the meters",
+     "check": "0.30*2"
+    },
+    {
+     "prompt": "A classroom has 4 identical fluorescent tubes in parallel across 240 V. Each tube is rated 36 W, so each draws 0.15 A. One tube blows. What is the total current from the supply now?",
+     "choices": [
+      "0.45 A",
+      "0.15 A",
+      "0.60 A",
+      "0 A"
+     ],
+     "correctIndex": 0,
+     "rationale": "The other three tubes still have 240 V and 0.15 A each, so the total is 3 × 0.15 = 0.45 A (the same as 3 × 36/240). The total falls from 0.60 A but not to zero.",
+     "phase": "explain",
+     "placement": "Explain: working the Nairobi classroom tubes (0.60 A falling to 0.45 A)",
+     "check": "3*36/240"
+    },
+    {
+     "prompt": "In an old string of Christmas lights, the bulbs are connected one after another in series. One bulb fails and the whole string goes dark. Why?",
+     "choices": [
+      "The failed bulb takes the whole p.d., leaving none for the other bulbs.",
+      "The bulbs are in a single loop, so the failed bulb breaks the circuit and no current flows anywhere.",
+      "The remaining bulbs get too much p.d. and all burn out at once.",
+      "The failed bulb uses up all the current before it reaches the others."
+     ],
+     "correctIndex": 1,
+     "rationale": "In series there is only one path for the charge. A failed bulb opens the loop, so the current is zero everywhere, unlike a parallel circuit where each branch has its own path.",
+     "phase": "explain",
+     "placement": "Explain: written paragraph on why the Christmas-light string (series) goes dark but the classroom lights stay on"
+    },
+    {
+     "prompt": "A 9.0 V, 30 Ω bulb on a parallel branch carries 0.30 A, while the same bulb in a series circuit carries 0.10 A and has 3.0 V across it. What is the power of the bulb in the parallel branch, and how does this compare with the series bulb?",
+     "choices": [
+      "0.30 W, the same as the series bulb",
+      "0.90 W, three times the series bulb",
+      "2.7 W, which is 9 times the series bulb's 0.30 W",
+      "27 W, because the bulb has 9.0 V and the series current is 3.0 A"
+     ],
+     "correctIndex": 2,
+     "rationale": "P = V × I = 9.0 × 0.30 = 2.7 W. The series bulb has P = 3.0 × 0.10 = 0.30 W, so the parallel bulb is 9 times greater and so is much brighter.",
+     "phase": "explain",
+     "placement": "Explain: step (4) power link, 2.7 W in parallel compared with 0.30 W in series",
+     "check": "9.0*0.30"
+    },
+    {
+     "prompt": "Kipchirchir says: 'The battery will get used up faster in parallel.' Three identical bulbs draw 0.90 A from the same battery when in parallel, but 0.10 A when in series. What is the best response to his idea?",
+     "choices": [
+      "He is right, because each bulb in parallel has only 3.0 V.",
+      "He is wrong, because the battery current is the same in both circuits.",
+      "He is partly right, because the parallel circuit draws a larger current from the battery (0.90 A compared with 0.10 A).",
+      "He is wrong, because current is used up in each bulb so both circuits drain the battery equally."
+     ],
+     "correctIndex": 2,
+     "rationale": "The measured battery current is 9 times larger in parallel, so more charge flows from the battery each second and it would run down faster. The reasons that he is wrong or that p.d. is 3.0 V do not match the data.",
+     "phase": "dqb",
+     "placement": "DQB: recording Kipchirchir's battery question and linking it to the 0.90 A vs 0.10 A readings"
+    },
+    {
+     "prompt": "In a metre bridge, an unknown resistor X is in one gap and a known resistor R = 10 Ω is in the other. The galvanometer reads zero when the jockey is at l = 60 cm from the X end. Using X = R × l/(100 − l), what is X?",
+     "choices": [
+      "6.0 Ω",
+      "60 Ω",
+      "15 Ω",
+      "6.7 Ω"
+     ],
+     "correctIndex": 2,
+     "rationale": "X = 10 × 60/(100 − 60) = 10 × 60/40 = 15 Ω. The value 6.7 Ω comes from swapping l and (100 − l).",
+     "phase": "end",
+     "placement": "Explain: KICD extension, metre bridge worked example and homework (R = 10 Ω, l = 60 cm)",
+     "check": "10*60/(100-60)"
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "Combined Circuits and Cells: Reducing a Mixed Circuit and Powering Homes from Kisumu to Kericho",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In a mixed circuit, two identical 30 Ω bulbs are connected in parallel with each other. What is the equivalent resistance of this parallel pair?",
+     "choices": [
+      "60 Ω",
+      "45 Ω",
+      "15 Ω",
+      "30 Ω"
+     ],
+     "correctIndex": 2,
+     "rationale": "For a parallel pair, 1/R = 1/30 + 1/30 = 2/30, so R = 15 Ω. Adding 30 + 30 = 60 Ω is the series rule, which is the common mistake.",
+     "phase": "explain",
+     "placement": "STEP 1: reduce the parallel pair B and C",
+     "check": "1/(1/30+1/30)"
+    },
+    {
+     "prompt": "A 9 V battery is connected to a 30 Ω bulb in series with a parallel pair of 30 Ω bulbs. The parallel pair has an equivalent resistance of 15 Ω. What current does the battery supply?",
+     "choices": [
+      "0.20 A",
+      "0.12 A",
+      "0.15 A",
+      "0.30 A"
+     ],
+     "correctIndex": 0,
+     "rationale": "Total R = 30 + 15 = 45 Ω, so I = V/R = 9/45 = 0.20 A. The value 0.12 A comes from wrongly adding 30 + 30 + 15 = 75 Ω.",
+     "phase": "explain",
+     "placement": "STEP 2 and STEP 3: redraw the circuit, add to find total R, then find the main current",
+     "check": "9/(30+15)"
+    },
+    {
+     "prompt": "In a mixed circuit on a 9 V battery, a 30 Ω bulb A is in series with a parallel pair of bulbs B and C. The main current is 0.20 A. What is the p.d. across bulb A?",
+     "choices": [
+      "3.0 V",
+      "9.0 V",
+      "4.5 V",
+      "6.0 V"
+     ],
+     "correctIndex": 3,
+     "rationale": "Bulb A carries the whole main current, so V = IR = 0.20 × 30 = 6.0 V. The remaining 3.0 V is across the parallel pair. The idea that every bulb gets 9 V is a misconception.",
+     "phase": "explain",
+     "placement": "STEP 4: find the p.d. across A",
+     "check": "0.20*30"
+    },
+    {
+     "prompt": "Three identical 30 Ω bulbs are on a 9 V battery. Bulb A is in series with the parallel pair B and C. Bulb B is unscrewed. What does the ammeter in the main circuit now read?",
+     "choices": [
+      "0.30 A",
+      "0.15 A",
+      "0.20 A, because the current stays the same",
+      "0 A, because removing B puts out everything"
+     ],
+     "correctIndex": 1,
+     "rationale": "Only A and C remain, in series: 30 + 30 = 60 Ω, so I = 9/60 = 0.15 A. C stays lit and glows brighter, while A glows dimmer.",
+     "phase": "observe",
+     "placement": "Unscrew bulb B and observe that C stays lit while A glows dimmer",
+     "check": "9/(30+30)"
+    },
+    {
+     "prompt": "Which statement correctly describes the 3 bulbs in the mixed circuit (A in series with the parallel pair B and C) when they are first connected, with A having 6.0 V and 0.20 A, and B and C each 3.0 V and 0.10 A?",
+     "choices": [
+      "Bulb A is dimmest because it is first in the circuit and uses up the current",
+      "All three bulbs are equally bright because they are identical",
+      "Bulb A is brightest because it has more p.d. and more current than B or C",
+      "Bulbs B and C are brightest because they are in parallel"
+     ],
+     "correctIndex": 2,
+     "rationale": "Bulb A has 6.0 V and 0.20 A, while B and C each have only 3.0 V and 0.10 A, so A is brightest. Current is not used up by the first bulb; it is the same all around the main loop.",
+     "phase": "predict",
+     "placement": "Predict: which bulb will be brightest, A, B or C?"
+    },
+    {
+     "prompt": "Achieng's family solar home system in Kisumu uses a 12 V battery made of 1.5 V cells connected in series. How many cells are needed?",
+     "choices": [
+      "8",
+      "4",
+      "6",
+      "12"
+     ],
+     "correctIndex": 0,
+     "rationale": "E.m.f. adds for cells in series, so the number of cells = 12 ÷ 1.5 = 8. Six cells give only 9 V.",
+     "phase": "explain",
+     "placement": "Explain: Achieng's family uses a 12 V battery. How many 1.5 V cells in series would give 12 V?",
+     "check": "12/1.5"
+    },
+    {
+     "prompt": "Two identical 1.5 V dry cells are connected in parallel to a bulb. Compared with one cell alone, what is the result?",
+     "choices": [
+      "The e.m.f. is 3.0 V and the cells last longer",
+      "The e.m.f. is 1.5 V and the cells last longer",
+      "The e.m.f. is 1.5 V and the cells run out faster",
+      "The e.m.f. is 3.0 V and the cells last the same time"
+     ],
+     "correctIndex": 1,
+     "rationale": "Cells in parallel keep the same e.m.f. of 1.5 V, but each cell supplies only a share of the current, so the set lasts longer. Only cells in series add their e.m.f.",
+     "phase": "observe",
+     "placement": "Compare cells: two cells in parallel (1.5 V)"
+    },
+    {
+     "prompt": "On a 9 V battery, three identical bulbs in parallel drew 0.90 A, but the same three bulbs in series drew 0.10 A. Kipchirchir predicted that the battery is used up faster with bulbs in parallel. What do these currents show?",
+     "choices": [
+      "He is partly right, because the battery supplies 9 times more current in parallel",
+      "He is right because the p.d. across the bulbs is lower in parallel",
+      "He is wrong, because the battery gives the same current in both circuits",
+      "He is wrong, because the bulbs in series are dimmer and so drain the battery faster"
+     ],
+     "correctIndex": 0,
+     "rationale": "The parallel bulbs draw 0.90 A against 0.10 A in series, so the battery supplies more current and is drained faster. The p.d. across each parallel bulb is higher (9 V), not lower.",
+     "phase": "dqb",
+     "placement": "DQB: Kipchirchir's idea that the battery gets used up faster in parallel"
+    },
+    {
+     "prompt": "A real dry cell has e.m.f. 1.5 V and internal resistance 0.5 Ω. It is connected to an external resistor of 2.5 Ω. What is the terminal p.d. of the cell while it supplies current?",
+     "choices": [
+      "1.25 V",
+      "0.25 V",
+      "0.50 V",
+      "1.5 V"
+     ],
+     "correctIndex": 0,
+     "rationale": "I = E/(R + r) = 1.5/(2.5 + 0.5) = 0.50 A. Terminal p.d. V = E - Ir = 1.5 - 0.50 × 0.5 = 1.25 V, which also equals IR = 0.50 × 2.5.",
+     "phase": "explain",
+     "placement": "KICD extension: dry cell with a voltmeter, with no load and then with a bulb connected; E = I(R + r) worked example",
+     "check": "1.5-0.5*0.5"
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "title": "Electrical Energy and Power: Why Series Bulbs Glow Dim and What the Tubes Cost",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:26:44+00:00",
+   "quiz": [
+    {
+     "prompt": "Brightness of a bulb depends on how fast it transfers electrical energy. Which two quantities must you multiply to find this rate (the power)?",
+     "choices": [
+      "The current through the bulb and the time it is on",
+      "The resistance of the bulb and the time it is on",
+      "The current through the bulb and the p.d. across it",
+      "The p.d. of the battery and the number of bulbs"
+     ],
+     "correctIndex": 2,
+     "rationale": "Power is the rate of energy transfer, P = IV: the current through the component multiplied by the p.d. across it. Time is needed for energy (E = Pt), not for power.",
+     "phase": "predict",
+     "placement": "Predict: 'What quantity could we calculate to compare the series and parallel bulbs?'"
+    },
+    {
+     "prompt": "In a series circuit, one 30 Ω bulb has 3.0 V across it and a current of 0.10 A through it. What is the power of this bulb?",
+     "choices": [
+      "0.03 W",
+      "30 W",
+      "0.30 W",
+      "3.1 W"
+     ],
+     "correctIndex": 2,
+     "rationale": "P = IV = 3.0 V x 0.10 A = 0.30 W. Dividing instead of multiplying gives 30, and adding gives 3.1.",
+     "phase": "observe",
+     "placement": "Observe: calculating P = IV for one series bulb",
+     "check": "3.0*0.10"
+    },
+    {
+     "prompt": "One identical bulb in a series circuit has 3.0 V across it and 0.10 A through it. One bulb in the parallel circuit has 9.0 V across it and 0.30 A through it. How many times more power does the parallel bulb have than the series bulb?",
+     "choices": [
+      "6 times",
+      "3 times",
+      "9 times",
+      "27 times"
+     ],
+     "correctIndex": 2,
+     "rationale": "Parallel bulb: 9.0 x 0.30 = 2.7 W. Series bulb: 3.0 x 0.10 = 0.30 W. The ratio is 2.7 / 0.30 = 9.",
+     "phase": "observe",
+     "placement": "Observe: comparing the power of a series bulb and a parallel bulb (ratio of 9)",
+     "check": "(9.0*0.30)/(3.0*0.10)"
+    },
+    {
+     "prompt": "Three identical bulbs are connected in series to a 9 V battery and glow dimly. Which statement best explains why they are dim?",
+     "choices": [
+      "Each bulb gets only 3.0 V of the 9 V and 0.10 A, so its power is only 0.30 W.",
+      "Each bulb has a much higher resistance when it is in series.",
+      "The battery has become weaker because it is connected in series.",
+      "The first bulb uses up most of the current, so little is left for the others."
+     ],
+     "correctIndex": 0,
+     "rationale": "The 9 V is shared between three bulbs, so each has 3.0 V across it and 0.10 A through it. Its power is 0.30 W, much less than the 2.7 W of a bulb connected directly across 9 V. The bulb resistance stays the same and current is not used up.",
+     "phase": "explain",
+     "placement": "Explain: claim-evidence-reasoning on why series bulbs are dim and parallel bulbs are bright"
+    },
+    {
+     "prompt": "A Nairobi classroom has four 36 W tubes working on the 240 V mains. All four are on for 5 hours. How much energy do they use?",
+     "choices": [
+      "0.72 kWh",
+      "720 kWh",
+      "0.144 kWh",
+      "7.2 kWh"
+     ],
+     "correctIndex": 0,
+     "rationale": "Total power = 4 x 36 = 144 W = 0.144 kW. Energy = 0.144 kW x 5 h = 0.72 kWh.",
+     "phase": "explain",
+     "placement": "Explain: cost problem (a), four 36 W tubes for 5 h",
+     "check": "4*36/1000*5"
+    },
+    {
+     "prompt": "One of the four 36 W tubes in a classroom blows. The other three stay lit for 5 hours. Electricity costs KSh 25 per kWh (a teaching figure). What is the cost of running the three tubes?",
+     "choices": [
+      "KSh 18.00",
+      "KSh 4.50",
+      "KSh 13.50",
+      "KSh 54.00"
+     ],
+     "correctIndex": 2,
+     "rationale": "Power = 3 x 36 = 108 W = 0.108 kW. Energy = 0.108 x 5 = 0.54 kWh. Cost = 0.54 x 25 = KSh 13.50.",
+     "phase": "explain",
+     "placement": "Explain: what happens to the cost if one of the four tubes blows",
+     "check": "3*36/1000*5*25"
+    },
+    {
+     "prompt": "A 60 W filament bulb is on for 5 hours. Electricity costs KSh 25 per kWh (a teaching figure). What does it cost?",
+     "choices": [
+      "KSh 75",
+      "KSh 0.30",
+      "KSh 7.50",
+      "KSh 1.13"
+     ],
+     "correctIndex": 2,
+     "rationale": "Energy = 0.060 kW x 5 h = 0.300 kWh. Cost = 0.300 x 25 = KSh 7.50. A 9 W LED for the same time costs only about KSh 1.13.",
+     "phase": "explain",
+     "placement": "Explain: cost problem (b), 60 W bulb compared with 9 W LED",
+     "check": "0.060*5*25"
+    },
+    {
+     "prompt": "A 12 V solar system powers a 36 W light. Using P = IV, what current does the light draw?",
+     "choices": [
+      "48 A",
+      "432 A",
+      "0.33 A",
+      "3 A"
+     ],
+     "correctIndex": 3,
+     "rationale": "I = P / V = 36 W / 12 V = 3 A.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: Achieng's transfer question on the 12 V solar system and 36 W light",
+     "check": "36/12"
+    },
+    {
+     "prompt": "Three identical bulbs are in series. The current through the first bulb is 0.10 A. What is the current through the third bulb?",
+     "choices": [
+      "Less than 0.10 A, because the first two bulbs have used up some current",
+      "0.10 A, the same as everywhere else in the series loop",
+      "0.30 A, because the current adds up along the loop",
+      "0.03 A, because each bulb uses up some current"
+     ],
+     "correctIndex": 1,
+     "rationale": "Current is not used up in a series loop. It is 0.10 A everywhere. What changes at each bulb is the energy transferred per coulomb (the p.d. across it).",
+     "phase": "model",
+     "placement": "Model Building: showing that the series current is 0.10 A everywhere on the model"
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "title": "Domestic Wiring and Safety: Why the Fuse Blows When a Socket Is Overloaded",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A kettle is rated 3000 W and is used on the 240 V mains. What current does it take? (Use I = P/V.)",
+     "choices": [
+      "12.5 A",
+      "0.08 A",
+      "720 000 A",
+      "3240 A"
+     ],
+     "correctIndex": 0,
+     "rationale": "I = P/V = 3000 ÷ 240 = 12.5 A. Dividing the wrong way round gives 0.08 A, and multiplying or adding the numbers is not what P = IV says.",
+     "phase": "observe",
+     "placement": "Part A (calculation from data): current in the kettle using I = P/V",
+     "check": "3000/240"
+    },
+    {
+     "prompt": "A 3000 W kettle (12.5 A) and a 2000 W heater (8.33 A) are plugged into one extension socket on the 240 V mains and switched on together. What is the total current drawn from the socket?",
+     "choices": [
+      "20.8 A",
+      "10.4 A",
+      "4.2 A",
+      "12.5 A"
+     ],
+     "correctIndex": 0,
+     "rationale": "The appliances are in parallel, so their currents add: 12.5 A + 8.33 A = 20.8 A. Subtracting, averaging or using only the larger current are common errors.",
+     "phase": "observe",
+     "placement": "Part A (calculation from data): adding the currents and comparing with the 13 A fuse",
+     "check": "round((3000+2000)/240, 1)"
+    },
+    {
+     "prompt": "Two appliances are plugged into the same 240 V socket and work in parallel. Why do we ADD their currents to find the total current from the socket?",
+     "choices": [
+      "Each appliance has its own branch and takes its own current from the same 240 V, so the supply must provide both currents together.",
+      "The fuse stores current from the first appliance and passes it to the second.",
+      "The voltage of the socket rises when a second appliance is plugged in, so the current rises too.",
+      "The resistances of the two appliances add up, which makes the current bigger."
+     ],
+     "correctIndex": 0,
+     "rationale": "In a parallel circuit each branch is connected across the same voltage and carries its own current. The supply current is the sum of the branch currents. Voltage does not rise when appliances are added.",
+     "phase": "observe",
+     "placement": "Part A (calculation from data): teacher question 'Why do we ADD the currents and not the resistances here?'"
+    },
+    {
+     "prompt": "A 13 A fuse is in a plug. A kettle and a heater together draw 20.8 A from this plug. Which statement best explains what happens?",
+     "choices": [
+      "The fuse has 13 V across it, so it blows when the voltage is too low.",
+      "The fuse wire melts, because the current is more than 13 A and the thin wire heats up and breaks the circuit.",
+      "The fuse uses up the extra current so that less electricity reaches the appliances.",
+      "Nothing happens, because the fuse only stops current in series circuits."
+     ],
+     "correctIndex": 1,
+     "rationale": "20.8 A is above the 13 A rating. The current heats the thin fuse wire, which is the weakest part, so it melts and opens the circuit before the cable overheats. A fuse rating is a current, not a voltage, and a fuse does not use up or reduce current.",
+     "phase": "explain",
+     "placement": "CER explanation: Claim that the 13 A fuse blows when the kettle and heater share the socket"
+    },
+    {
+     "prompt": "In a 3-pin plug, which wire must the fuse be connected to, and why?",
+     "choices": [
+      "The neutral wire, because the neutral carries the most current.",
+      "Any wire, because a fuse works the same wherever it is placed.",
+      "The live wire, so that when the fuse melts the appliance is cut off from the 240 V supply and is not left live.",
+      "The earth wire, because the fuse must be joined to the ground."
+     ],
+     "correctIndex": 2,
+     "rationale": "The fuse and switch go on the live (brown) wire. When they break the circuit, the appliance is disconnected from the 240 V live supply and is not left live.",
+     "phase": "observe",
+     "placement": "Part C: inspection station 1, the dismantled 3-pin plug with fuse and live, neutral and earth wires"
+    },
+    {
+     "prompt": "A faulty live wire touches the metal body of an electric kettle that is connected to an earth wire. How does the earth wire protect a person using the kettle?",
+     "choices": [
+      "It stores the extra voltage in the ground until the kettle is switched off.",
+      "It lets the current flow through the person to the ground so the kettle keeps working.",
+      "It gives the fault current a low-resistance path to the ground, so a large current flows and blows the fuse, and the metal body does not stay live.",
+      "It increases the resistance of the kettle so that less current flows."
+     ],
+     "correctIndex": 2,
+     "rationale": "The earth wire gives a low-resistance path to the ground. A large fault current then flows and blows the fuse, cutting off the live supply so the metal body cannot give a shock.",
+     "phase": "explain",
+     "placement": "Application question (c): earthing and the faulty live wire touching the kettle body"
+    },
+    {
+     "prompt": "Why is a proper 13 A fuse a safer choice in a plug than a thick nail?",
+     "choices": [
+      "A nail would stop the current from flowing at all.",
+      "A nail has a lower resistance, so it carries more current and is better for appliances.",
+      "A fuse wire is thin, so it heats and melts when the current is too high, but a thick nail would not melt and the cable could overheat and start a fire.",
+      "A nail would reduce the voltage of the mains, so appliances would not work."
+     ],
+     "correctIndex": 2,
+     "rationale": "A fuse is designed to be the weakest, thinnest part, so it melts first on overload. A thick nail would not melt, so the cable could get very hot (as with thin cables in Lesson 6) and cause a fire.",
+     "phase": "explain",
+     "placement": "Application question (a): Why is a 13 A fuse better than a thick nail in the plug?"
+    },
+    {
+     "prompt": "A 2000 W heater and a 1000 W iron share one socket on the 240 V mains, and the plug has a 13 A fuse. What is the total current, and will the fuse blow?",
+     "choices": [
+      "12.5 A; the fuse will blow because the two appliances are in parallel.",
+      "0.08 A; the fuse will not blow.",
+      "12.5 A; the fuse will not blow, because the current is just below 13 A.",
+      "20.8 A; the fuse will blow."
+     ],
+     "correctIndex": 2,
+     "rationale": "Total power = 2000 + 1000 = 3000 W, so I = 3000 ÷ 240 = 12.5 A (or 8.33 A + 4.17 A). This is just below 13 A, so the fuse should not blow, but it is close.",
+     "phase": "end",
+     "placement": "Explain phase: quick exit slip on the 2000 W heater and 1000 W iron sharing a 13 A socket",
+     "check": "(2000+1000)/240"
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "title": "Model Revision and Application: Why the Other Tubes Stay Lit and Why Series Bulbs Glow Dim",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A Kericho dormitory has four identical 36 W tubes, each connected on its own branch directly across a 240 V supply. What is the total current drawn when all four tubes are on?",
+     "choices": [
+      "0.60 A",
+      "0.15 A",
+      "1.67 A",
+      "6.67 A"
+     ],
+     "correctIndex": 0,
+     "rationale": "Each tube draws I = P/V = 36/240 = 0.15 A. Branch currents add in parallel, so the total is 4 x 0.15 = 0.60 A.",
+     "phase": "predict",
+     "placement": "Predict: sketch a circuit and predict the current when four 36 W tubes are all on 240 V",
+     "check": "4*36/240"
+    },
+    {
+     "prompt": "An electrician wants the other tubes in a dormitory to stay lit when one tube fails. How should the tubes be wired?",
+     "choices": [
+      "In series, so the same current passes through every tube",
+      "In parallel, so each tube is on its own branch across the full supply",
+      "In parallel, so the first tube uses up the current before it reaches the others",
+      "In series, so the tubes share the supply voltage equally"
+     ],
+     "correctIndex": 1,
+     "rationale": "In parallel each tube has its own branch with the full supply p.d. A failed tube breaks only its own branch. The last option is wrong because current is not used up.",
+     "phase": "predict",
+     "placement": "Predict: how would you wire the tubes so that one failure does not darken the room, and what if they were in series"
+    },
+    {
+     "prompt": "Three identical 30 Ω bulbs are connected in series to a 9 V battery. What current flows through the battery?",
+     "choices": [
+      "0.33 A",
+      "0.10 A",
+      "0.90 A",
+      "0.30 A"
+     ],
+     "correctIndex": 1,
+     "rationale": "In series the total resistance is 3 x 30 = 90 Ω. The current is I = V/R = 9/90 = 0.10 A.",
+     "phase": "observe",
+     "placement": "Observe: (a) connect the three bulbs in series and record the current",
+     "check": "9/(3*30)"
+    },
+    {
+     "prompt": "Three identical bulbs are connected in series to a 9 V battery. Each has a p.d. of 3.0 V and a current of 0.10 A. When the same bulbs are connected in parallel to the same battery, each has 9.0 V and 0.30 A. Why is the power of each parallel bulb nine times greater?",
+     "choices": [
+      "Because the parallel circuit has a larger total resistance",
+      "Because the battery gives out more voltage in a parallel circuit",
+      "Because the current is three times bigger and the p.d. is also three times bigger, and P = IV",
+      "Because the current is nine times bigger and the p.d. stays the same"
+     ],
+     "correctIndex": 2,
+     "rationale": "P = IV. Series: 0.10 x 3.0 = 0.30 W. Parallel: 0.30 x 9.0 = 2.7 W. Current is 3 times bigger and p.d. is 3 times bigger, so power is 3 x 3 = 9 times bigger.",
+     "phase": "explain",
+     "placement": "Explain: Final Explanation, why power is nine times bigger in parallel (P = IV)"
+    },
+    {
+     "prompt": "An old string of Christmas lights has its bulbs connected in series. One bulb fails and the filament breaks. Why does the whole string go dark?",
+     "choices": [
+      "The p.d. across each remaining bulb drops to zero but the current continues",
+      "The failed bulb uses up all the current from the battery",
+      "The other bulbs each receive the full supply p.d. and burn out",
+      "The broken filament opens the only loop, so the current is zero everywhere"
+     ],
+     "correctIndex": 3,
+     "rationale": "A series circuit has only one loop. A broken filament makes a gap, so I = 0 in every bulb and all go out.",
+     "phase": "explain",
+     "placement": "Explain: failed series component opens the single loop (the Christmas-light string)"
+    },
+    {
+     "prompt": "In a Nairobi classroom, four identical 36 W tubes are wired in parallel on a 240 V supply. One tube blows. What is the total current now, and what p.d. is across each remaining tube?",
+     "choices": [
+      "0.60 A and 240 V",
+      "0.45 A and 240 V",
+      "0.15 A and 240 V",
+      "0.45 A and 80 V"
+     ],
+     "correctIndex": 1,
+     "rationale": "Each remaining tube still has 240 V and draws 36/240 = 0.15 A. Three tubes give 3 x 0.15 = 0.45 A in total.",
+     "phase": "explain",
+     "placement": "Explain: Nairobi classroom numbers, current drops from 0.60 A to 0.45 A when one tube blows",
+     "check": "3*36/240"
+    },
+    {
+     "prompt": "A learner says: 'A resistor is useful in a circuit because it limits the current for a given p.d.' Which equation supports this idea?",
+     "choices": [
+      "I = P/V, because resistance has no effect on current",
+      "V = I + R, because resistance adds to the voltage",
+      "V = IR, because for the same V a larger R gives a smaller I",
+      "P = IV, because more resistance always gives more power"
+     ],
+     "correctIndex": 2,
+     "rationale": "From V = IR, I = V/R. For a fixed p.d., a larger resistance gives a smaller current, which is why resistors limit current.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: Why are resistors used in electrical circuits?"
+    },
+    {
+     "prompt": "In a classroom lighting circuit, where should the 13 A fuse or circuit breaker be placed?",
+     "choices": [
+      "On the live wire, so the tubes are cut off from the supply when it trips",
+      "In the earth wire, so it can carry the fault current",
+      "In the neutral wire, so the current is stopped after the tubes",
+      "Between the tubes, so each tube has its own fuse in series with the next"
+     ],
+     "correctIndex": 0,
+     "rationale": "A fuse or breaker on the live wire disconnects the live supply when the current is too large. This protects people and cables from shock and fire.",
+     "phase": "model",
+     "placement": "Model Part 2: design a safe lighting circuit with a 13 A fuse or breaker in the live wire"
+    },
+    {
+     "prompt": "Four 36 W tubes (144 W in total) run for 5 hours. Electricity costs KSh 25 per kWh (an assumed teaching tariff). What is the cost?",
+     "choices": [
+      "KSh 18",
+      "KSh 3.60",
+      "KSh 72",
+      "KSh 3600"
+     ],
+     "correctIndex": 0,
+     "rationale": "144 W = 0.144 kW. Energy = 0.144 x 5 = 0.72 kWh. Cost = 0.72 x 25 = KSh 18.",
+     "phase": "end",
+     "placement": "Model Part 2: calculate the cost of running the tubes for 5 h",
+     "check": "0.144*5*25"
+    }
+   ]
+  }
+ ]
+}

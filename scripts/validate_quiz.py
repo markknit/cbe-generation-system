@@ -99,6 +99,19 @@ def numbers_in(text: str) -> list[tuple[float, int]]:
             out.append((float(raw), len(raw.split(".")[1]) if "." in raw else 0))
         except ValueError:
             pass
+    # 2026-11-24: also read fractions ("1/8") and scientific notation ("9 × 10¹³", "2.0 x 10^8").
+    # Additive: the plain numbers above are still returned, so nothing that passed before can fail.
+    sup = str.maketrans("\u2070\u00b9\u00b2\u00b3\u2074\u2075\u2076\u2077\u2078\u2079\u207b", "0123456789-")
+    t = (text or "").replace("\u2212", "-")
+    for m in re.finditer(r"(\d+(?:\.\d+)?)\s*[\u00d7xX*]\s*10\s*\^?\s*\(?([-+]?\d+|[\u2070\u00b9\u00b2\u00b3\u2074-\u2079\u207b]+)\)?", t):
+        e = m.group(2).translate(sup)
+        try:
+            out.append((float(m.group(1)) * 10 ** int(e), (len(m.group(1).split(".")[1]) if "." in m.group(1) else 0) - int(e)))  # decimals relative to the power of ten, so "1.4 x 10^11" is rounded at 1e10
+        except ValueError:
+            pass
+    for m in re.finditer(r"(?<![\d./])(\d+)\s*/\s*(\d+)(?![\d./])", t):
+        if int(m.group(2)):
+            out.append((int(m.group(1)) / int(m.group(2)), 6))
     return out
 
 
@@ -233,6 +246,15 @@ def main(argv):
                 print(f"  WARN {rel} L{L['number']} {w}")
             n_err += len(errs)
             n_warn += len(warns)
+            # Coordination contract 8.2 (2026-11-24): quiz lesson must exist in the plan, and its title must match.
+            if lessons:
+                plan = lessons.get(L["number"])
+                if plan is None:
+                    print(f"  FAIL {rel} L{L['number']} lesson number not in the lesson plan")
+                    n_err += 1
+                elif L.get("title") != plan.get("title"):
+                    print(f"  FAIL {rel} L{L['number']} quiz title differs from plan title: {L.get('title')!r} vs {plan.get('title')!r}")
+                    n_err += 1
         missing = sorted(set(lessons) - seen)
         if missing:
             print(f"  WARN {rel}: no quiz for lessons {missing}")

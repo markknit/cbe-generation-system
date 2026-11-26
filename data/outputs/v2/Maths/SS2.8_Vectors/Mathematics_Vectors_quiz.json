@@ -1,0 +1,826 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Mathematics",
+  "grade": 10,
+  "substrandId": "2.8",
+  "substrandName": "Vectors",
+  "filePrefix": "Mathematics_Vectors"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "Why Does 8 km Take You to Westlands or South B? Launching the Matatu Phenomenon",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:26:44+00:00",
+   "quiz": [
+    {
+     "prompt": "Two matatus leave Kencom Bus Stop in Nairobi's CBD. Each is labelled '8 km'. One ends at Westlands and the other at South B. What information does the label '8 km' give?",
+     "choices": [
+      "How far the matatu travels and which way it goes",
+      "How far the matatu travels, but not which way it goes",
+      "Which stage the matatu ends at",
+      "How long the journey takes and which road is used"
+     ],
+     "correctIndex": 1,
+     "rationale": "The label '8 km' only states the distance travelled. It does not say which way the matatu goes, so it cannot tell us where the journey ends. The time, the road and the final stage are not given in it.",
+     "phase": "predict",
+     "placement": "Predict: Nairobi street grid map with Route A and Route B and the prompt 'What information is missing from the label 8 km?'"
+    },
+    {
+     "prompt": "Two matatus start at Kencom Bus Stop. Route A is 8 km towards Westlands (northwest) and Route B is 8 km towards South B (southeast). Which is something that is the SAME about the two routes?",
+     "choices": [
+      "Both take exactly the same road",
+      "Both start at Kencom and both are 8 km long",
+      "Both end at the same place",
+      "Both travel in the same direction"
+     ],
+     "correctIndex": 1,
+     "rationale": "Both routes start at Kencom and both have a distance of 8 km. They end at different places, and they head in different directions along different roads.",
+     "phase": "observe",
+     "placement": "Activity A: Map Analysis, observation question 1 'What is the same about Route A and Route B?'"
+    },
+    {
+     "prompt": "In class, one learner walks 8 steps north from a starting point. Another learner walks 8 steps east from the same starting point. What do we observe?",
+     "choices": [
+      "Both take 8 steps but they end up in different places",
+      "Both take 8 steps so they end up in the same place",
+      "The learner walking north walks further because north is up",
+      "The learner walking east takes more steps to get there"
+     ],
+     "correctIndex": 0,
+     "rationale": "Both learners take the same number of steps (8) from the same start. They walk in different directions, so they end at different places.",
+     "phase": "observe",
+     "placement": "Activity B: Live Demonstration with 8 steps north and 8 steps east"
+    },
+    {
+     "prompt": "Which of these quantities is a VECTOR?",
+     "choices": [
+      "The temperature in Nairobi today: 22°C",
+      "The time taken to cook ugali: 20 minutes",
+      "The velocity of a bodaboda travelling at 40 km/h heading south on Ngong Road",
+      "The mass of a bag of maize at Wakulima Market: 90 kg"
+     ],
+     "correctIndex": 2,
+     "rationale": "A vector needs both magnitude and direction. Only the velocity gives a size (40 km/h) and a direction (south). Temperature, mass and time have size only, so they are scalars.",
+     "phase": "explain",
+     "placement": "Classification activity: eight Kenyan-context quantities, item 8 (bodaboda velocity) compared with items 1, 3 and 7"
+    },
+    {
+     "prompt": "Compare two statements: (i) 'A matatu travels 8 km.' (ii) 'A matatu travels 8 km northwest from Kencom towards Westlands.' Which choice classifies them correctly?",
+     "choices": [
+      "Both are scalars because both give 8 km",
+      "Both are vectors because both describe a journey",
+      "(i) is a vector because it has a distance; (ii) is a scalar because it has a place name",
+      "(i) is a scalar because it has size only; (ii) is a vector because it has size and direction"
+     ],
+     "correctIndex": 3,
+     "rationale": "A scalar is described completely by its magnitude only, which fits '8 km'. A vector needs magnitude and direction, which fits '8 km northwest'. Having a number or describing a journey does not make a quantity a vector.",
+     "phase": "explain",
+     "placement": "Definition phase: 'Is 8 km a scalar or a vector?' and '8 km northwest from Kencom towards Westlands'"
+    },
+    {
+     "prompt": "The wind speed at Kisumu Airport is 15 km/h, blowing from Lake Victoria towards the east. A learner says this is a scalar because it is only a speed. Which response is correct?",
+     "choices": [
+      "It is a scalar, because any speed is a scalar",
+      "It is a vector, because the direction (towards the east) is stated as well as the size (15 km/h)",
+      "It is a vector, because 15 is a large number",
+      "It is a scalar, because wind cannot have a direction"
+     ],
+     "correctIndex": 1,
+     "rationale": "The quantity includes the phrase 'towards the east', so it gives magnitude and direction and is a vector. The learner read only the magnitude. '15 km/h' alone, with no direction, would be a scalar.",
+     "phase": "explain",
+     "placement": "Whole-class debrief of the classification activity: item 2 (wind speed at Kisumu Airport)"
+    },
+    {
+     "prompt": "A grid has Kencom Bus Stop at the centre. Which drawing correctly shows the two matatu routes from the puzzle (Route A to Westlands, Route B to South B)?",
+     "choices": [
+      "One arrow from Kencom pointing northwest labelled 8 km, and another from Kencom pointing southeast labelled 8 km",
+      "Two arrows from Kencom both pointing northwest, one labelled 8 km and the other labelled 4 km",
+      "One arrow pointing northwest labelled 8 km and another pointing southeast labelled 3 km",
+      "Two arrows from Kencom both pointing northwest, both labelled 8 km"
+     ],
+     "correctIndex": 0,
+     "rationale": "Both routes are 8 km long but go in different directions. So the two arrows must start at Kencom, have the same distance label, and point northwest and southeast.",
+     "phase": "model",
+     "placement": "Initial model: drawing Route A and Route B on the 4×4 grid with Kencom at the centre"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Observe + Represent — Drawing the Matatu Journey as an Arrow",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Two straight lines are each exactly 8 cm long, but they point in different directions. They have no arrowheads and no labels. A student says, \"These two lines are enough to describe two different matatu journeys.\" What is the best response?",
+     "choices": [
+      "They are not enough: a plain line shows only length, so we need an arrowhead to show direction",
+      "They are not enough, because the lines must be longer than 8 cm to show a journey",
+      "They are enough, because lines of equal length always describe the same journey",
+      "They are enough, because a plain line already shows both distance and direction"
+     ],
+     "correctIndex": 0,
+     "rationale": "A plain line segment gives only length (magnitude). An arrowhead is needed to show which way the journey goes, so the journey is fully described by a directed line segment.",
+     "phase": "predict",
+     "placement": "Predict: two unlabelled 8 cm line segments and the sketch of the Kencom-to-Westlands arrow"
+    },
+    {
+     "prompt": "A learner draws the journey from Kencom (point K) to Westlands (point W) as a vector. Where should the arrowhead be placed?",
+     "choices": [
+      "At K, the starting point, because that is where the journey begins",
+      "At both K and W, so the journey can be read either way",
+      "At W, the destination, because the head of the vector shows the direction of travel",
+      "Nowhere; only the length of the line is needed"
+     ],
+     "correctIndex": 2,
+     "rationale": "The tail of a vector is at the start (K) and the head, marked with the arrowhead, is at the destination (W). A common error is placing the arrowhead at the tail.",
+     "phase": "observe",
+     "placement": "Observe: tracing the Kencom routes as arrow-headed line segments on the Nairobi grid-map worksheet"
+    },
+    {
+     "prompt": "On a square grid, 1 square = 1 km, east and north are positive. A matatu journey goes 6 km west and 5 km north. Which column vector (x-component on top, y-component below) describes this journey?",
+     "choices": [
+      "−6 on top, 5 below",
+      "−6 on top, −5 below",
+      "6 on top, 5 below",
+      "5 on top, −6 below"
+     ],
+     "correctIndex": 0,
+     "rationale": "The x-component comes first. Going 6 km west gives x = −6 and going 5 km north gives y = +5, so the column vector is (−6, 5).",
+     "phase": "observe",
+     "placement": "Observe: labelling the Westlands arrow with column vector notation"
+    },
+    {
+     "prompt": "A vector is written as the column vector (3, −4), with the x-component on top and the y-component below. Which arrow does it describe?",
+     "choices": [
+      "3 units to the left and 4 units up",
+      "3 units to the right and 4 units up",
+      "4 units to the right and 3 units down",
+      "3 units to the right and 4 units down"
+     ],
+     "correctIndex": 3,
+     "rationale": "The x-component 3 is positive, so the arrow goes 3 units right. The y-component −4 is negative, so it goes 4 units down.",
+     "phase": "explain",
+     "placement": "Explain: Notation Translation Table (column vector to geometric arrow description)"
+    },
+    {
+     "prompt": "The Westlands journey is the vector (−6, 5), drawn as an arrow starting at Kencom. A second arrow is drawn on the same grid starting at a different point. It also has column vector (−6, 5). Which statement is correct?",
+     "choices": [
+      "The two arrows are equivalent, because they have the same magnitude and the same direction",
+      "The two arrows are different vectors, because they start at different points",
+      "The two arrows are equivalent only if they have the same length, even if the directions differ",
+      "The two arrows are equivalent only if they end at the same point"
+     ],
+     "correctIndex": 0,
+     "rationale": "Equivalent vectors have identical column vectors, meaning the same magnitude and direction. Where the arrow is drawn on the grid does not change the vector.",
+     "phase": "explain",
+     "placement": "Explain: equivalent-vectors task (vectors P, Q and R compared with the Westlands vector)"
+    },
+    {
+     "prompt": "Which statement about vectors is correct?",
+     "choices": [
+      "A vector is an arrow whose arrowhead shows magnitude and whose length shows direction",
+      "A vector is a directed line segment: its length shows magnitude and its arrowhead shows direction",
+      "A vector can be written only as a bold letter, never as a column",
+      "A vector is any straight line, because the length alone tells us everything about the journey"
+     ],
+     "correctIndex": 1,
+     "rationale": "A vector is represented by a directed line segment. Its length encodes magnitude and its arrowhead encodes direction. It can be written in several forms, including bold, underline, letter-pair and column notation.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: 'We now know...' sticky note about arrows and notation"
+    },
+    {
+     "prompt": "Two matatus each travel 8 km from Kencom. One goes north-west to Westlands and the other goes south-east to South B. Which sentence correctly completes this model caption? \"The two journey vectors are not equivalent because ____.\"",
+     "choices": [
+      "they both start at Kencom",
+      "they have the same magnitude but different directions",
+      "they are both measured in kilometres",
+      "they have different magnitudes"
+     ],
+     "correctIndex": 1,
+     "rationale": "Both journeys are 8 km, so the magnitudes are equal. North-west and south-east are different directions, so the vectors are not equivalent. Equal magnitude alone is not enough.",
+     "phase": "model",
+     "placement": "Model Building: upgrading the Lesson 1 sketch-model and writing the model caption"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Adding Vectors: Finding the Resultant of a Two-Leg Matatu Journey",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A matatu leaves Kencom Bus Stop, goes to the University of Nairobi (leg 1), then turns and goes to GPO (leg 2). Which description matches the ONE arrow that would take a passenger directly from Kencom to GPO?",
+     "choices": [
+      "An arrow that starts at Kencom and ends at the University of Nairobi",
+      "An arrow that starts at the University of Nairobi and ends at GPO",
+      "An arrow that starts at Kencom and continues in the same direction as leg 2",
+      "An arrow that starts at Kencom and ends at GPO"
+     ],
+     "correctIndex": 3,
+     "rationale": "The resultant is the single displacement from where the journey starts (Kencom) to where it finally ends (GPO). Simply continuing in the direction of leg 2 is the common misconception.",
+     "phase": "predict",
+     "placement": "Predict: sketch the single arrow from Kencom to GPO"
+    },
+    {
+     "prompt": "Vector a is the journey from Kencom to the University of Nairobi. Vector b is the journey from the University of Nairobi to GPO. Using the triangle law (tip-to-tail), how do you draw the resultant r = a + b?",
+     "choices": [
+      "Draw r from the tail of a to the tip of b, with b starting at the tip of a",
+      "Draw r from the tip of b back to the tail of a",
+      "Draw r from the tail of a to the tail of b",
+      "Draw r from the tip of a to the tip of b"
+     ],
+     "correctIndex": 0,
+     "rationale": "In the triangle law, b is placed with its tail at the tip of a. The resultant runs from where the first vector starts (tail of a) to where the last vector ends (tip of b).",
+     "phase": "observe",
+     "placement": "Part A: Triangle Law (tip-to-tail) on the squared-paper grid"
+    },
+    {
+     "prompt": "On a grid where 1 square = 100 m, a matatu makes two displacements: a = (5, 2) and b = (−2, 2), measured in squares. What is the length of the resultant displacement a + b?",
+     "choices": [
+      "500 m",
+      "400 m",
+      "820 m",
+      "700 m"
+     ],
+     "correctIndex": 0,
+     "rationale": "a + b = (5 + (−2), 2 + 2) = (3, 4). Its length is √(3² + 4²) = 5 squares = 500 m. Adding the lengths of a and b separately (about 820 m) is scalar thinking.",
+     "phase": "observe",
+     "placement": "Part A: measuring the resultant length in grid squares (1 square = 100 m)",
+     "check": "sqrt(3**2+4**2)*100"
+    },
+    {
+     "prompt": "In the parallelogram law of vector addition, how are the two vectors drawn and where is the resultant?",
+     "choices": [
+      "The vectors are drawn in opposite directions, and the resultant is the shorter side",
+      "Both vectors start at the same point, and the resultant is the diagonal that joins the tips of the two vectors",
+      "The vectors are placed tip-to-tail, and the resultant is one side of the parallelogram",
+      "Both vectors start at the same point, and the resultant is the diagonal of the parallelogram from that point"
+     ],
+     "correctIndex": 3,
+     "rationale": "With both vectors drawn from the same starting point (tail-to-tail) and the parallelogram completed, the resultant is the diagonal that starts at that common point. It gives the same resultant as the triangle law.",
+     "phase": "observe",
+     "placement": "Parallelogram law shown on the class poster/slide"
+    },
+    {
+     "prompt": "Two matatu drivers each travel exactly 8 km from Kencom Bus Stop. One ends at Westlands and the other at South B. Which statement best explains this?",
+     "choices": [
+      "The resultant is the sum of the distances, so both drivers should end at the same place",
+      "One driver must have travelled more than 8 km, because the destinations are different",
+      "The two journeys have the same distance but their displacement vectors have different directions, so their resultants are different",
+      "Distance and displacement are the same thing, so the drivers must have taken different roads"
+     ],
+     "correctIndex": 2,
+     "rationale": "Distance is a scalar and only tells how far. The resultant displacement has both magnitude and direction, so equal distances in different directions give different final positions.",
+     "phase": "explain",
+     "placement": "Task 2: Apply to the phenomenon (Westlands and South B, both 8 km from Kencom)"
+    },
+    {
+     "prompt": "A courier bike in Kisumu makes two journeys, written as column vectors in km: leg 1 = (6, 3) and leg 2 = (−2, 5). What is the resultant vector?",
+     "choices": [
+      "(4, 8)",
+      "(8, −2)",
+      "(8, 8)",
+      "(−12, 15)"
+     ],
+     "correctIndex": 0,
+     "rationale": "Add corresponding components: (6 + (−2), 3 + 5) = (4, 8). The negative component means 2 km in the opposite direction (left/west) and must be subtracted from 6.",
+     "phase": "explain",
+     "placement": "Task 3: Practise column vector addition (Kisumu courier bike)"
+    },
+    {
+     "prompt": "Which caption correctly describes the resultant vector of a two-leg matatu journey?",
+     "choices": [
+      "The resultant gives the direct displacement from the start to the final destination, whatever path was taken",
+      "The resultant is the total distance travelled along both legs of the route",
+      "The resultant always points in the same direction as the last leg of the journey",
+      "The resultant is the length of the first leg only"
+     ],
+     "correctIndex": 0,
+     "rationale": "The resultant is the single displacement vector equivalent to the successive displacements. It joins the start of the first vector to the end of the last vector, and it is not the distance along the path.",
+     "phase": "model",
+     "placement": "Model building: caption for the Kencom → UoN → GPO resultant"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Scaling the Journey: Scalar Multiplication and Subtraction of Vectors",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Kamau the boda-boda rider travels vector d = (2, 1) km from Kencom (2 km east, 1 km north). He makes the SAME trip 3 times in a row from the same start. Which single vector describes his total journey?",
+     "choices": [
+      "(5, 4)",
+      "(6, 3)",
+      "(6, 1)",
+      "(2, 3)"
+     ],
+     "correctIndex": 1,
+     "rationale": "Making the trip 3 times is 3d, so each component is multiplied by 3: (3×2, 3×1) = (6, 3). Adding 3 to each component, or multiplying only one component, are common errors.",
+     "phase": "predict",
+     "placement": "Predict: Kamau's boda-boda scenario, part (a) the SAME trip 3 times in a row"
+    },
+    {
+     "prompt": "On a grid where each square is 1 km, vector d = (2, 1) means 2 km east and 1 km north. Which column vector is −2d?",
+     "choices": [
+      "(−4, −2)",
+      "(−2, −1)",
+      "(−4, −1)",
+      "(4, 2)"
+     ],
+     "correctIndex": 0,
+     "rationale": "−2d = −2 × (2, 1) = (−4, −2), which is 4 km west and 2 km south. The negative sign reverses the direction and the 2 doubles the size.",
+     "phase": "observe",
+     "placement": "Observe: construction (D) Draw −2d on the Nairobi-style grid"
+    },
+    {
+     "prompt": "Vector d is 2 km east and 1 km north from Kencom. Compared with d, the vector −2d:",
+     "choices": [
+      "is twice as long, points in the same direction as d, and lies on the same line as d",
+      "is twice as long, points in the opposite direction, and lies on the same line as d",
+      "is twice as long, points in the opposite direction, and lies on a different line from d",
+      "is the same length as d, points in the opposite direction, and lies on a different line"
+     ],
+     "correctIndex": 1,
+     "rationale": "The magnitude is |−2| × |d| = 2|d|, so it is twice as long. The negative scalar reverses the direction, but the vector stays on the same line of action as d.",
+     "phase": "observe",
+     "placement": "Observe: observation table (direction and line of action columns) and one-sentence summary"
+    },
+    {
+     "prompt": "Akinyi's matatu covers vector r = (3, −4) km from Kisumu Bus Park to Dunga Beach. What is ½r?",
+     "choices": [
+      "(−1.5, 2)",
+      "(1.5, 2)",
+      "(6, −8)",
+      "(1.5, −2)"
+     ],
+     "correctIndex": 3,
+     "rationale": "Multiply each component by ½: (½×3, ½×(−4)) = (1.5, −2). The direction is unchanged because ½ is positive.",
+     "phase": "explain",
+     "placement": "Explain: Akinyi's Kisumu application problem (write 2r, −r, ½r in column form)"
+    },
+    {
+     "prompt": "Akinyi's matatu covers vector r = (3, −4) km from Kisumu Bus Park to Dunga Beach. What is the magnitude of 2r?",
+     "choices": [
+      "10 km",
+      "5 km",
+      "25 km",
+      "14 km"
+     ],
+     "correctIndex": 0,
+     "rationale": "2r = (6, −8), so the magnitude = √(6² + (−8)²) = √100 = 10 km. This is also 2 × |r| = 2 × 5.",
+     "phase": "explain",
+     "placement": "Explain: Akinyi's Kisumu application problem (calculate the magnitude of each)",
+     "check": "sqrt(6**2 + (-8)**2)"
+    },
+    {
+     "prompt": "Given a = (5, 2) and b = (3, 6), what is a − b?",
+     "choices": [
+      "(8, 8)",
+      "(2, −4)",
+      "(2, 4)",
+      "(−2, 4)"
+     ],
+     "correctIndex": 1,
+     "rationale": "a − b = a + (−b) = (5, 2) + (−3, −6) = (2, −4). Getting (−2, 4) means b − a was worked out by mistake.",
+     "phase": "explain",
+     "placement": "Explain: vector subtraction practice with a = (5, 2) and b = (3, 6)"
+    },
+    {
+     "prompt": "Vector w is the journey from Kencom to Westlands. Vector s is the journey from Kencom to South B. Which expression describes the journey from Westlands to South B?",
+     "choices": [
+      "w + s",
+      "s + (−w)",
+      "−w − s",
+      "w − s"
+     ],
+     "correctIndex": 1,
+     "rationale": "To go from Westlands to South B, first reverse the trip to Kencom (−w), then go on to South B (s). This gives s + (−w), which is s − w.",
+     "phase": "explain",
+     "placement": "Explain: connecting subtraction to the phenomenon (journey from Westlands to South B)"
+    },
+    {
+     "prompt": "A vector v = (4, −3). Without a calculator, what is the magnitude of −2v?",
+     "choices": [
+      "−10",
+      "10",
+      "7",
+      "5"
+     ],
+     "correctIndex": 1,
+     "rationale": "−2v = (−8, 6), so the magnitude = √(64 + 36) = √100 = 10. Magnitude is never negative, because the negative sign only reverses the direction.",
+     "phase": "end",
+     "placement": "Model: exit-ticket question on v = (4, −3), write −2v and state its magnitude",
+     "check": "sqrt((-8)**2 + 6**2)"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Column Vectors & Position Vectors — Giving Every Nairobi Landmark an Address",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "One matatu travels 3 blocks east and 4 blocks north from Kencom. Another matatu travels 5 blocks east and 0 blocks north from Kencom. Are these two journeys the same displacement?",
+     "choices": [
+      "No, because only the second journey is a vector",
+      "Yes, because both journeys go towards the east",
+      "Yes, because both journeys start from the same place, Kencom",
+      "No, because the horizontal and vertical parts of the two journeys are different"
+     ],
+     "correctIndex": 3,
+     "rationale": "A displacement needs both a horizontal and a vertical part. The first journey is 3 east and 4 north, and the second is 5 east and 0 north, so their components differ and the journeys are not the same.",
+     "phase": "predict",
+     "placement": "Predict: Think-Pair-Share, question (b) on 3 blocks east and 4 blocks north versus 5 blocks east and 0 blocks north"
+    },
+    {
+     "prompt": "On a Cartesian grid with Kencom at the origin O, Uhuru Park is at point B (-1, 2). Column vectors are written here as (top / bottom). Which is the column vector OB?",
+     "choices": [
+      "(2 / -1)",
+      "(1 / 2)",
+      "(-1 / 2)",
+      "(-1 / -2)"
+     ],
+     "correctIndex": 2,
+     "rationale": "The top number is the horizontal move (1 unit west is -1) and the bottom number is the vertical move (2 units north is 2). So OB = (-1 / 2).",
+     "phase": "observe",
+     "placement": "Observe: learners plot B = Uhuru Park at (-1, 2), draw OB and write its column vector"
+    },
+    {
+     "prompt": "On a grid with origin O at Kencom, KICC is at A (2, 3) and Uhuru Park is at B (-1, 2). So OA = (2 / 3) and OB = (-1 / 2). Which is the column vector AB, the journey from KICC to Uhuru Park?",
+     "choices": [
+      "(-3 / -1)",
+      "(1 / -1)",
+      "(3 / 1)",
+      "(-3 / 1)"
+     ],
+     "correctIndex": 0,
+     "rationale": "AB = OB - OA = (-1 - 2 / 2 - 3) = (-3 / -1). This means 3 units west and 1 unit south. Choosing (3 / 1) comes from subtracting in the wrong order.",
+     "phase": "explain",
+     "placement": "Explain: pair task calculating AB = OB - OA from the position vectors of KICC and Uhuru Park"
+    },
+    {
+     "prompt": "P and Q are two landmarks on a grid with origin O. Which rule correctly gives the vector PQ, the journey from P to Q?",
+     "choices": [
+      "PQ = OQ, because every journey starts at O",
+      "PQ = OP + OQ, which is the two position vectors added",
+      "PQ = OQ - OP, which is where you end minus where you start",
+      "PQ = OP - OQ, which is where you start minus where you end"
+     ],
+     "correctIndex": 2,
+     "rationale": "The vector from P to Q is the position vector of the end point minus the position vector of the start point. Reversing the order gives the vector QP, which points the opposite way.",
+     "phase": "explain",
+     "placement": "Explain: consolidation RULE on the board, AB = OB - OA (position vector of where you are minus where you start)"
+    },
+    {
+     "prompt": "On a grid with origin O at Kencom, Uhuru Park is at B (-1, 2) and Nairobi Railway Station is at C (-3, -2). Which is the column vector BC, the journey from Uhuru Park to the Railway Station?",
+     "choices": [
+      "(-2 / -4)",
+      "(-4 / -2)",
+      "(2 / 4)",
+      "(-4 / 0)"
+     ],
+     "correctIndex": 0,
+     "rationale": "BC = OC - OB = (-3 - (-1) / -2 - 2) = (-2 / -4). That means 2 units west and 4 units south. (2 / 4) comes from subtracting in the wrong order.",
+     "phase": "explain",
+     "placement": "Explain: extension task introducing C = Nairobi Railway Station at (-3, -2) and finding BC = OC - OB"
+    },
+    {
+     "prompt": "From Kencom, Driver 1 ends at (-6, 5) and Driver 2 ends at (5, -6). Both travelled about the same distance, 8 km. Which statement best explains why they arrived at different places?",
+     "choices": [
+      "Their column vectors are the same, but the drivers wrote the numbers in a different order",
+      "Their column vectors have different components, so they moved in different directions, even though the distance is the same",
+      "Distance alone is enough to fix the destination, so one driver must have made an error",
+      "One driver must have travelled further than the other"
+     ],
+     "correctIndex": 1,
+     "rationale": "Driver 1's displacement is (-6 / 5), which is west and north. Driver 2's is (5 / -6), which is east and south. The distance is the same but the full column vectors are different, so the endpoints are different.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: green sticky note on how column vectors answer why two matatu journeys of the same distance end at different destinations"
+    },
+    {
+     "prompt": "A column vector is written as (top / bottom), where the top number is the horizontal move (east is positive) and the bottom number is the vertical move (north is positive). What journey does the column vector (-3 / -1) describe?",
+     "choices": [
+      "3 units west and 1 unit south",
+      "1 unit west and 3 units south",
+      "3 units south and 1 unit west",
+      "3 units east and 1 unit north"
+     ],
+     "correctIndex": 0,
+     "rationale": "The top number -3 means 3 units west and the bottom number -1 means 1 unit south. The horizontal part always comes first, so the components cannot be swapped.",
+     "phase": "model",
+     "placement": "Model Building: adding column vectors and the derived displacement vector AB to the Nairobi Vector Map"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Magnitude & Midpoint — How Far Is the Fishing Ground, and Where Is the Halfway Mark?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A fishing boat leaves Kisumu pier, travels 6 km due east and then 8 km due north to reach a fishing ground on Lake Victoria. What is the straight-line distance from the pier to the fishing ground?",
+     "choices": [
+      "48 km",
+      "2 km",
+      "14 km",
+      "10 km"
+     ],
+     "correctIndex": 3,
+     "rationale": "The two legs form a right-angled triangle, so the straight-line distance is the hypotenuse: √(6² + 8²) = √(36 + 64) = √100 = 10 km.",
+     "phase": "predict",
+     "placement": "Predict: fishing boat from Kisumu pier (6 km east, 8 km north) and the 'Our Predictions' board",
+     "check": "sqrt(6**2 + 8**2)"
+    },
+    {
+     "prompt": "A learner says, \"The boat travelled 6 km east and 8 km north, so the straight-line distance from the pier is 6 + 8 = 14 km.\" What is wrong with this reasoning?",
+     "choices": [
+      "The learner should have multiplied 6 × 8 instead.",
+      "Nothing is wrong, because distances are always added together.",
+      "14 km is the distance along the two legs. The straight line is the hypotenuse of a right-angled triangle, so it is shorter.",
+      "The learner should have subtracted 8 − 6 = 2 km."
+     ],
+     "correctIndex": 2,
+     "rationale": "Adding 6 + 8 gives the length of the path along the two legs. The straight-line displacement is the hypotenuse, found with Pythagoras' theorem (10 km), which is shorter than 14 km.",
+     "phase": "observe",
+     "placement": "Observe: Step 3 of the guided derivation, comparing predictions of 10 and 14 on the predictions board"
+    },
+    {
+     "prompt": "A fishing boat leaves Kisumu pier with displacement vector v = (−5; 12), in km. What is the straight-line distance |v| to the fishing ground?",
+     "choices": [
+      "−13 km",
+      "7 km",
+      "13 km",
+      "17 km"
+     ],
+     "correctIndex": 2,
+     "rationale": "|v| = √((−5)² + 12²) = √(25 + 144) = √169 = 13 km. Squaring removes the negative sign, and a distance cannot be negative.",
+     "phase": "observe",
+     "placement": "Observe: second fishing-boat problem with v = (−5; 12)",
+     "check": "sqrt((-5)**2 + 12**2)"
+    },
+    {
+     "prompt": "Achieng runs a relay leg at Kasarani Stadium from A = (−3; 5) to B = (7; −1), with units in metres. Her coach stands at the halfway point (midpoint) of her leg. Where does the coach stand?",
+     "choices": [
+      "(2; 2)",
+      "(−2; 2)",
+      "(4; 4)",
+      "(5; −3)"
+     ],
+     "correctIndex": 0,
+     "rationale": "M = ((−3 + 7)/2 ; (5 + (−1))/2) = (4/2 ; 4/2) = (2; 2). The midpoint has the mean of the x-coordinates and the mean of the y-coordinates.",
+     "phase": "explain",
+     "placement": "Explain: midpoint practice problem with negative coordinates, A = (−3; 5) and B = (7; −1)"
+    },
+    {
+     "prompt": "On a map of Nairobi, a matatu route from Kencom Bus Stop (the origin) has displacement vector v₂ = (5; −6), in km. What is its magnitude |v₂|, to 1 decimal place?",
+     "choices": [
+      "61 km",
+      "1 km",
+      "11 km",
+      "7.8 km"
+     ],
+     "correctIndex": 3,
+     "rationale": "|v₂| = √(5² + (−6)²) = √(25 + 36) = √61 ≈ 7.8 km, which is close to the 8 km label on the map.",
+     "phase": "explain",
+     "placement": "Explain: returning to the driving question map to compute the magnitude of the South B route",
+     "check": "round(sqrt(5**2 + 6**2), 1)"
+    },
+    {
+     "prompt": "Two matatus leave Kencom Bus Stop. One has displacement vector (−6; 5) km and the other has (5; −6) km. Each journey has a magnitude of about 7.8 km, yet the matatus end up at different places. What explains this?",
+     "choices": [
+      "The vector with the negative x-component travels a negative distance.",
+      "Magnitude gives only 'how far'. The two vectors have different directions, so they lead to different destinations.",
+      "Two displacement vectors can only have the same magnitude if they end at the same place.",
+      "The magnitudes must really be different, because different destinations need different distances."
+     ],
+     "correctIndex": 1,
+     "rationale": "Magnitude strips away direction and gives only the distance. Equal magnitudes with different directions give different endpoints, which is why the 8 km label alone cannot tell us the destination.",
+     "phase": "explain",
+     "placement": "Explain: 'Same magnitude. COMPLETELY different direction.' discussion on what the 8 km label does and does not tell us"
+    },
+    {
+     "prompt": "A matatu starts at Kencom Bus Stop, the origin (0; 0), and its displacement vector is (−6; 5), in km. What are the coordinates of the midpoint of this displacement, where the matatu is halfway through its journey?",
+     "choices": [
+      "(−3; 2.5)",
+      "(−12; 10)",
+      "(−3; −2.5)",
+      "(3; −2.5)"
+     ],
+     "correctIndex": 0,
+     "rationale": "M = ((0 + (−6))/2 ; (0 + 5)/2) = (−3; 2.5). Each coordinate of the midpoint is the mean of the start and end coordinates.",
+     "phase": "model",
+     "placement": "Model Building: marking and labelling the midpoint of each route's displacement vector on the matatu map"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Translation Vector as a Transformation: Moving Shapes the Matatu Way",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A matatu starts at Kencom Bus Stop and follows the Tom Mboya Street arrow for 3 blocks to the right and 2 blocks up. Which column vector describes this journey (horizontal component on top, vertical component below)?",
+     "choices": [
+      "−3 on top, 2 below",
+      "5 (the total number of blocks)",
+      "2 on top, 3 below",
+      "3 on top, 2 below"
+     ],
+     "correctIndex": 3,
+     "rationale": "A column vector is written with the horizontal component on top and the vertical component below. Right 3 gives +3 and up 2 gives +2, so the vector is (3 over 2). A single number such as 5 is only a scalar and loses the direction.",
+     "phase": "predict",
+     "placement": "Predict: Nairobi street-grid handout (Tom Mboya Street arrow, writing the journey as a column vector)"
+    },
+    {
+     "prompt": "Two matatus start at the same stop. Matatu A moves by the column vector (3 over 2), meaning 3 blocks right and 2 blocks up. Matatu B moves by the column vector (−3 over 2), meaning 3 blocks left and 2 blocks up. Which statement is correct?",
+     "choices": [
+      "They end at the same place because both go 2 blocks up.",
+      "They end at different places because their horizontal movements are in opposite directions.",
+      "They end at different places because Matatu B travels a longer distance.",
+      "They end at the same place because both go 3 blocks sideways."
+     ],
+     "correctIndex": 1,
+     "rationale": "The upward parts are equal but one matatu goes right and the other goes left, so their vectors are different and they end at different places. Both travel the same distance, so distance alone does not decide the destination.",
+     "phase": "predict",
+     "placement": "Predict: Tom Mboya Street vs Kenyatta Avenue prediction (will they end up at the same place?)"
+    },
+    {
+     "prompt": "Triangle KNB has vertices K(1,1), N(3,1) and B(2,3). It is translated by the translation vector t = (4 over 2), meaning 4 units right and 2 units up. What are the coordinates of B', the image of B?",
+     "choices": [
+      "(6, 5)",
+      "(2, 3)",
+      "(4, 2)",
+      "(−2, 1)"
+     ],
+     "correctIndex": 0,
+     "rationale": "Every point moves by the same vector, so B' = (2 + 4, 3 + 2) = (6, 5). The point (4, 2) is the vector itself, not the image of B.",
+     "phase": "observe",
+     "placement": "Observe: teacher translation of triangle KNB by t = (4 over 2)"
+    },
+    {
+     "prompt": "A triangle with sides 3 cm, 4 cm and 5 cm is translated by the vector (4 over 2). What are the side lengths of its image?",
+     "choices": [
+      "3 cm, 4 cm and 5 cm, because a translation changes only position",
+      "7 cm, 6 cm and 5 cm, because the vector is added to the sides",
+      "6 cm, 8 cm and 10 cm, because the translation doubles the size",
+      "They cannot be known, because the size depends on the direction of the vector"
+     ],
+     "correctIndex": 0,
+     "rationale": "A translation is an isometry: shape and size are preserved and only the position changes. The image is congruent to the object, so the sides stay 3 cm, 4 cm and 5 cm.",
+     "phase": "observe",
+     "placement": "Observe: image triangle K'N'B' compared with triangle KNB and the MJUA object–image pair"
+    },
+    {
+     "prompt": "Triangle SUK has the vertex S(−4, 1). After a translation, the image of S is S'(1, 3). What is the translation vector (horizontal component on top, vertical below)?",
+     "choices": [
+      "(5 over 2)",
+      "(−3 over 4)",
+      "(−5 over −2)",
+      "(5 over 4)"
+     ],
+     "correctIndex": 0,
+     "rationale": "The translation vector is the image position vector minus the object position vector: (1 − (−4), 3 − 1) = (5, 2). Subtracting in the wrong order gives (−5, −2), and adding the coordinates gives (−3, 4).",
+     "phase": "explain",
+     "placement": "Explain: Part B reverse-engineering the translation vector for triangle SUK",
+     "check": "1 - (-4)"
+    },
+    {
+     "prompt": "The quadrilateral GITI has the vertex T(2, 3). It is translated by the vector p = (−3 over 4), meaning 3 units left and 4 units up. What are the coordinates of T', the image of T?",
+     "choices": [
+      "(−1, 7)",
+      "(−3, 4)",
+      "(−1, −1)",
+      "(5, −1)"
+     ],
+     "correctIndex": 0,
+     "rationale": "Add the vector components to the coordinates: (2 + (−3), 3 + 4) = (−1, 7). The pair (5, −1) comes from reversing both signs, and (−3, 4) is just the vector.",
+     "phase": "explain",
+     "placement": "Explain: Part A forward translation of quadrilateral GITI by p = (−3 over 4)",
+     "check": "3 + 4"
+    },
+    {
+     "prompt": "Two matatu drivers both travel exactly 8 km from Kencom Bus Stop, but one reaches Westlands and the other reaches South B. Which explanation uses what we learned about vectors?",
+     "choices": [
+      "Their journeys are described by different translation vectors because their directions are different, even though the distance is the same.",
+      "Both followed the same vector but started from different bus stops.",
+      "Distance alone fixes the destination, so the map must be wrong.",
+      "One driver must have travelled further than 8 km."
+     ],
+     "correctIndex": 0,
+     "rationale": "A distance is a scalar and gives only the size. A vector gives size and direction, so two journeys of 8 km in different directions are different vectors and end at different places. A road arrow gives the direction only, not how far to go.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: green 'We now know…' note and class consensus statement about the two matatu drivers"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Model Build, Consolidation & Final Explanation — Vectors in Nakuru: Synthesising the Complete Journey",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "On a Nakuru map, a matatu leg goes from Westside Mall to the ASK Showground: 5 km East and 2 km South. Taking East as positive x and North as positive y, which column vector describes this leg?",
+     "choices": [
+      "(-5; 2)",
+      "(5; -2)",
+      "(2; -5)",
+      "(5; 2)"
+     ],
+     "correctIndex": 1,
+     "rationale": "East is positive x, so 5 km East gives +5. South is negative y, so 2 km South gives -2. The vector is (5; -2).",
+     "phase": "observe",
+     "placement": "Observe: tracing each leg of the three-leg Nakuru journey on the sketch map"
+    },
+    {
+     "prompt": "A three-leg journey in Nakuru has leg vectors (3; 4), (5; -2) and (-2; 6), each in km. What is the resultant displacement vector?",
+     "choices": [
+      "(8; 6)",
+      "(0; 0)",
+      "(6; 8)",
+      "(10; 12)"
+     ],
+     "correctIndex": 2,
+     "rationale": "Add the matching components: x = 3 + 5 + (-2) = 6 and y = 4 + (-2) + 6 = 8. The resultant is (6; 8).",
+     "phase": "explain",
+     "placement": "Explain: Task 2 – add the three column vectors to find the resultant displacement"
+    },
+    {
+     "prompt": "The resultant displacement of a journey from Nakuru CBD Terminus to Lake Nakuru Viewpoint is (6; 8) km. What is the magnitude of this vector, that is, the straight-line distance from start to finish?",
+     "choices": [
+      "100 km",
+      "7 km",
+      "14 km",
+      "10 km"
+     ],
+     "correctIndex": 3,
+     "rationale": "Use Pythagoras' theorem: magnitude = sqrt(6² + 8²) = sqrt(36 + 64) = sqrt(100) = 10 km.",
+     "phase": "explain",
+     "placement": "Explain: Task 3 – find the magnitude of the resultant displacement vector",
+     "check": "sqrt(6**2+8**2)"
+    },
+    {
+     "prompt": "A journey starts at point S with position vector (2; 1) and ends at point F with position vector (8; 9), relative to origin O. What is the position vector of the midpoint of the journey from S to F?",
+     "choices": [
+      "(6; 8)",
+      "(5; 5)",
+      "(4; 4)",
+      "(10; 10)"
+     ],
+     "correctIndex": 1,
+     "rationale": "The midpoint is half the sum of the position vectors: ½[(2; 1) + (8; 9)] = ½(10; 10) = (5; 5). (6; 8) is the displacement from S to F, not the midpoint.",
+     "phase": "explain",
+     "placement": "Explain: Task 4 – find the position vector of the endpoint and the midpoint of the journey"
+    },
+    {
+     "prompt": "A matatu journey has three legs of lengths 5 km, about 5.4 km and about 6.3 km, so the total path is about 16.7 km. The resultant displacement from start to finish has magnitude 10 km. Why is the 10 km smaller than the 16.7 km?",
+     "choices": [
+      "Displacement is always exactly half of the total path distance",
+      "Vectors cannot be added, so the 10 km is only an estimate",
+      "The displacement is the straight-line distance from start to finish, while the path distance follows every change of direction",
+      "Some of the leg distances were measured wrongly"
+     ],
+     "correctIndex": 2,
+     "rationale": "The path distance adds the lengths of all legs, which turn in different directions. The displacement is the single straight-line vector from start to end, so it is shorter.",
+     "phase": "explain",
+     "placement": "Observe/Explain: comparing total path distance with the straight-line distance from Nakuru CBD Terminus to Lake Nakuru Viewpoint"
+    },
+    {
+     "prompt": "Two matatus leave Kencom Bus Stop in Nairobi and each travels exactly 8 km. One ends at Westlands and the other ends at South B. What best explains why they end at different places?",
+     "choices": [
+      "Distance is a vector, so equal distances should give equal destinations",
+      "They have the same distance (a scalar) but different directions, so their displacement vectors are different",
+      "They have the same displacement vector but different speeds",
+      "The matatus travelled different distances"
+     ],
+     "correctIndex": 1,
+     "rationale": "Distance is a scalar and gives only magnitude. A displacement vector also needs direction. Equal magnitudes with different directions give different end points.",
+     "phase": "dqb",
+     "placement": "DQB: writing the Final DQB Answer on the Kencom to Westlands vs Kencom to South B phenomenon"
+    },
+    {
+     "prompt": "The translation vector that maps the start point of a journey to its end point is (6; 8), in km. A boda-boda rider is told this vector. What does it tell the rider?",
+     "choices": [
+      "Move 14 km in any direction",
+      "Move 10 km, and the direction does not matter",
+      "Move 6 km East and 8 km North from the start point",
+      "Move 6 km North and then 8 km East"
+     ],
+     "correctIndex": 2,
+     "rationale": "The top component is the x (East) movement and the bottom component is the y (North) movement. So (6; 8) means 6 km East and 8 km North. This is a vector, so it gives both magnitude (10 km) and direction.",
+     "phase": "model",
+     "placement": "Model: Final Model – the translation vector mapping start to end, and Explain Task 5"
+    }
+   ]
+  }
+ ]
+}

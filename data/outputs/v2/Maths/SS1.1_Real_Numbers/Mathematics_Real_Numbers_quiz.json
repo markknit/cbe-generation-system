@@ -1,0 +1,835 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Mathematics",
+  "grade": 10,
+  "substrandId": "1.1",
+  "substrandName": "Real Numbers",
+  "filePrefix": "Mathematics_Real_Numbers"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "What Kind of Number Is That? (Predict & Classify)",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In the Ugali Pot Problem, the sufuria has a diameter of exactly 28 cm. What makes the problem puzzling?",
+     "choices": [
+      "28 is too large a number to multiply by π.",
+      "The diameter 28 cm is a whole number, but 28 × π gives digits that never end or repeat.",
+      "The calculator was faulty because it showed too many digits.",
+      "The sufuria is not a perfect circle, so it has no exact circumference."
+     ],
+     "correctIndex": 1,
+     "rationale": "The puzzle is the contrast between a neat whole-number diameter and a product whose decimal digits go on forever without repeating. The lesson only raises this puzzle and does not explain it.",
+     "phase": "predict",
+     "placement": "Teacher reads the Ugali Pot Problem aloud (pause after '…the digits never end or repeat.')"
+    },
+    {
+     "prompt": "On the Number Sort Card, which of these Kenyan numbers can be written down completely and exactly, with its digits stopping?",
+     "choices": [
+      "87.96459430… (calculator result of 28 × π)",
+      "π (the number used in the sufuria problem)",
+      "34.5 (temperature in Kisumu, °C)",
+      "0.333… (calculator form of 1/3)"
+     ],
+     "correctIndex": 2,
+     "rationale": "34.5 has digits that stop after one decimal place, so it can be written completely. The other three go on and cannot be written out in full.",
+     "phase": "predict",
+     "placement": "Number Sort Card: sorting into Column A ('I can write this number down completely and exactly') and Column B ('I cannot')"
+    },
+    {
+     "prompt": "A learner uses a calculator to find the circumference of a circle with a diameter of 28 cm, using 28 × 0.5 as a first practice step. What does the calculator show for 28 × 0.5?",
+     "choices": [
+      "14",
+      "1.4",
+      "56",
+      "140"
+     ],
+     "correctIndex": 0,
+     "rationale": "28 × 0.5 is half of 28, which is 14. The decimal stops, so it can be written exactly.",
+     "phase": "observe",
+     "placement": "Calculator investigation: computation (B) 28 × 0.5",
+     "check": "28*0.5"
+    },
+    {
+     "prompt": "A learner calculates 28 × 3, 28 × 0.5 and 28 × π on a calculator. Which statement best describes what the learner observes?",
+     "choices": [
+      "28 × 3 and 28 × π both stop, but 28 × 0.5 goes on forever.",
+      "28 × π repeats a short block of digits such as 87.96 87.96 87.96.",
+      "28 × 3 and 28 × 0.5 stop, but 28 × π shows digits that keep going with no repeating pattern.",
+      "All three answers stop after a few digits."
+     ],
+     "correctIndex": 2,
+     "rationale": "28 × 3 = 84 and 28 × 0.5 = 14 both stop. 28 × π = 87.96459430… keeps going with no repeating pattern.",
+     "phase": "observe",
+     "placement": "Calculator investigation: 'What I Observed' for computations (A), (B) and (C)"
+    },
+    {
+     "prompt": "The calculator shows the circumference of the sufuria as 87.96459430… cm. The daughter cuts the string to 88 cm. To 2 decimal places, how many centimetres longer is the string than 87.9645943 cm?",
+     "choices": [
+      "0.4 cm",
+      "0.96 cm",
+      "0.04 cm",
+      "0.004 cm"
+     ],
+     "correctIndex": 2,
+     "rationale": "88 − 87.9645943 = 0.0354057, which is 0.04 cm to 2 decimal places. The 88 cm string is a rounded value, so a tiny gap or overlap remains.",
+     "phase": "observe",
+     "placement": "Calculator investigation: computation (C) 28 × π and the daughter's string of 88 cm",
+     "check": "round(88-87.9645943,2)"
+    },
+    {
+     "prompt": "Some learners say that 22/7 and π are the same number. To test the idea, a group first works out 22/7 × 7. What is the answer?",
+     "choices": [
+      "22",
+      "154",
+      "3.14",
+      "7"
+     ],
+     "correctIndex": 0,
+     "rationale": "22/7 × 7 = 22, because multiplying by 7 cancels the division by 7. This arithmetic does not settle whether 22/7 equals π, which the class investigates later.",
+     "phase": "explain",
+     "placement": "Group sorting on the A3 sheet: teacher asks 'Is 22/7 × 7 exactly 22? What does that tell you?'",
+     "check": "22/7*7"
+    },
+    {
+     "prompt": "At the end of the first lesson, which statement about 28 × π = 87.96459430… is true of what the class has done so far?",
+     "choices": [
+      "The class has learned that calculators are not accurate enough to show it.",
+      "The class has found that it is exactly 28 × 22/7.",
+      "The class has shown that it is exactly 88 cm.",
+      "The class has seen that its digits never end or repeat, but has not yet explained why."
+     ],
+     "correctIndex": 3,
+     "rationale": "Learners have observed the endless, non-repeating digits and written a first hypothesis. The explanation is left for later lessons and is on the Driving Question Board.",
+     "phase": "end",
+     "placement": "End of lesson: after the Driving Question Board and 'My Number Landscape: Unit Model (Start)'"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Sorting the Number World: Classifying Real Numbers from Kenyan Contexts",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A learner says: \"The decimal 0.333… (one-third of a kilogram of unga) goes on forever, so it must be irrational like π.\" Which response is correct?",
+     "choices": [
+      "The learner is wrong, because 0.333… is a whole number.",
+      "The learner is correct, because any decimal that never ends is irrational.",
+      "The learner is wrong, because 0.333… is equal to 1/3, a ratio of two integers, so it is rational.",
+      "The learner is correct, because only terminating decimals can be rational."
+     ],
+     "correctIndex": 2,
+     "rationale": "0.333… repeats the digit 3 forever and equals 1/3, which has the form p/q with integers p and q (q ≠ 0). Repeating decimals are rational. Only decimals that never end AND never repeat are irrational.",
+     "phase": "explain",
+     "placement": "Explain: teacher walks through RATIONAL numbers and asks 'Is 0.333… rational?'"
+    },
+    {
+     "prompt": "Which statement gives the best reason why π is irrational, so that the mama mboga's daughter could never cut the string to the exact circumference of the sufuria?",
+     "choices": [
+      "π is irrational because it has a decimal point.",
+      "π is irrational because its decimal never terminates, even though it can be written as a fraction of two integers.",
+      "π is irrational because it cannot be written as p/q with p and q integers, and its decimal 3.14159… never terminates or repeats.",
+      "π is irrational because it is a very large number."
+     ],
+     "correctIndex": 2,
+     "rationale": "An irrational number cannot be written as p/q (q ≠ 0, p and q integers), and its decimal neither terminates nor repeats. Both parts are needed for a full justification.",
+     "phase": "explain",
+     "placement": "Explain: pairs read the justification for π aloud and the class agrees"
+    },
+    {
+     "prompt": "Which statement about the numbers 1, 7, 28 and 160 is correct?",
+     "choices": [
+      "7 is an odd prime number.",
+      "1 is a prime number because it is only divisible by itself.",
+      "160 is an odd composite number.",
+      "28 is an even prime number."
+     ],
+     "correctIndex": 0,
+     "rationale": "7 has exactly two factors (1 and 7), so it is odd and prime. 1 is neither prime nor composite. 28 and 160 are even and composite because they have more than two factors.",
+     "phase": "explain",
+     "placement": "Explain: classifying the whole numbers on the cards as odd, even, prime or composite"
+    },
+    {
+     "prompt": "The night temperature on Mt Kenya was −7 °C. Looking at the sets ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ, which is the smallest set that contains −7?",
+     "choices": [
+      "ℚ, the rational numbers",
+      "The irrational numbers",
+      "ℕ, the natural numbers",
+      "ℤ, the integers"
+     ],
+     "correctIndex": 3,
+     "rationale": "−7 is a negative whole number, so it is not a natural number. The smallest set containing it is the integers ℤ. It is also in ℚ and ℝ, but those sets are larger. It is not irrational because −7 = −7/1.",
+     "phase": "explain",
+     "placement": "Explain: INTEGERS – 'Which cards are integers but not natural numbers?'"
+    },
+    {
+     "prompt": "1 kg of unga costs Ksh 60.50. A learner says this number is irrational because it has a decimal point. Which response is correct?",
+     "choices": [
+      "The learner is wrong, because 60.50 is a natural number.",
+      "The learner is wrong, because 60.50 terminates and can be written as the fraction 121/2, so it is rational.",
+      "The learner is correct, because 60.50 is not a whole number.",
+      "The learner is correct, because every number with a decimal point is irrational."
+     ],
+     "correctIndex": 1,
+     "rationale": "60.50 = 6050/100 = 121/2, a ratio of two integers, so it is rational. Terminating decimals are always rational, so a decimal point alone does not make a number irrational.",
+     "phase": "explain",
+     "placement": "Explain: pairs re-sort their 12 cards onto a paper Venn diagram"
+    },
+    {
+     "prompt": "In your Real Number System Model you draw the nested diagram ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ with the irrationals as a region of ℝ. Which statement about this diagram is correct?",
+     "choices": [
+      "ℤ lies outside ℚ because integers cannot be written as fractions.",
+      "Irrational numbers lie inside ℚ, next to the integers.",
+      "Every natural number is also an integer, a rational number and a real number.",
+      "Every rational number is also an integer."
+     ],
+     "correctIndex": 2,
+     "rationale": "Because the sets are nested, every natural number is in ℤ, ℚ and ℝ. Irrationals are in ℝ but outside ℚ. Not every rational is an integer (for example 2/3), and integers can be written as fractions (for example −7 = −7/1).",
+     "phase": "model",
+     "placement": "Model: first Real Number System Model with a nested Venn diagram of five labelled regions"
+    },
+    {
+     "prompt": "A 1 m × 1 m plot has a diagonal of length √2 m, which is 1.41421356… with digits that never end and never repeat. Which of these numbers is also irrational?",
+     "choices": [
+      "0.121212… (the block 12 repeats forever)",
+      "0.333…",
+      "π = 3.14159… (the digits never end and never repeat)",
+      "0.5"
+     ],
+     "correctIndex": 2,
+     "rationale": "π is irrational because its decimal never terminates and never repeats. 0.5 terminates, and 0.121212… and 0.333… repeat, so all three are rational.",
+     "phase": "end",
+     "placement": "End of lesson: revisiting the Kenyan number cards (π and √2 versus 0.333…)"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Lesson 3 — \"Rational or Irrational? Sorting the Number Family\"",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:26:44+00:00",
+   "quiz": [
+    {
+     "prompt": "Which of these Kenyan measurements can definitely be written exactly as a fraction p/q, where p and q are integers and q is not 0?",
+     "choices": [
+      "√5, a length in a roof truss",
+      "34.5, the temperature in Kisumu in °C",
+      "√2, the diagonal of a 1 m by 1 m tile",
+      "π, the circumference of a sufuria divided by its diameter"
+     ],
+     "correctIndex": 1,
+     "rationale": "34.5 = 69/2, so it is rational. π, √2 and √5 are irrational, so they cannot be written exactly as a fraction.",
+     "phase": "predict",
+     "placement": "Predict: sorting the card strip of ten Kenyan numbers into 'Definitely can write as a fraction', 'Definitely CANNOT' or 'Not sure'"
+    },
+    {
+     "prompt": "A learner types 1 ÷ 7 on a calculator and sees 0.142857142857… Which description of the decimal is correct?",
+     "choices": [
+      "It never ends and has no pattern, like π",
+      "It never ends, so it must be irrational",
+      "The same 6 digits, 142857, repeat forever, so the pattern is recurring and the number is a fraction (1/7)",
+      "It stops after 6 decimal places"
+     ],
+     "correctIndex": 2,
+     "rationale": "The block 142857 repeats forever, so this is a recurring decimal. Recurring decimals are rational, and here the number is 1/7.",
+     "phase": "observe",
+     "placement": "Decimal Detective worksheet: describing the decimal pattern of 0.142857142857… (1 ÷ 7)"
+    },
+    {
+     "prompt": "On a calculator, 22 ÷ 7 = 3.142857142857… (the digits 142857 repeat) and π = 3.14159265358979… (no repeating block). A carpenter says 'I use 22/7 for π.' Which statement is correct?",
+     "choices": [
+      "22/7 is exactly equal to π because both begin 3.14",
+      "π is rational because the calculator shows only a limited number of digits",
+      "22/7 is only close to π: it is rational with a repeating decimal, while π is irrational and never repeats",
+      "22/7 is irrational because it is a fraction of two whole numbers that never ends"
+     ],
+     "correctIndex": 2,
+     "rationale": "The digits of 22/7 and π differ after 3.14, and 22/7 repeats while π does not. So 22/7 is a rational approximation of π, not equal to it.",
+     "phase": "observe",
+     "placement": "Teacher projects 22 ÷ 7 beside π and learners record the difference in red"
+    },
+    {
+     "prompt": "A square plot has an area of 4 m². Its side length is √4 m. Which statement is correct?",
+     "choices": [
+      "√4 is irrational because it is not a natural number",
+      "√4 is neither rational nor irrational",
+      "√4 is irrational because it has a square root sign",
+      "√4 = 2 = 2/1, so it is rational"
+     ],
+     "correctIndex": 3,
+     "rationale": "√4 is exactly 2, and 2 = 2/1 has the form p/q with integers p and q (q ≠ 0). So √4 is rational even though it is written with a root sign.",
+     "phase": "explain",
+     "placement": "Block 1: definitions of rational and irrational numbers; learners reclassify the ten numbers (√4 = 2 = 2/1)"
+    },
+    {
+     "prompt": "Let x = 0.272727… (the digits 27 repeat forever). Multiplying by 100 gives 100x = 27.2727…, so 99x = 27. Which fraction is equal to x in its simplest form?",
+     "choices": [
+      "1/27",
+      "27/10",
+      "3/11",
+      "27/100"
+     ],
+     "correctIndex": 2,
+     "rationale": "100x − x = 27.2727… − 0.2727… = 27, so 99x = 27 and x = 27/99 = 3/11. This shows that a recurring decimal is a fraction in disguise.",
+     "phase": "explain",
+     "placement": "Block 2: recurring decimals as fractions (0.333… = 1/3 and 0.181818… = 2/11)"
+    },
+    {
+     "prompt": "A sufuria has a diameter of 28 cm, so its circumference is 28π cm. Which statement correctly explains why this circumference cannot be written as an exact fraction?",
+     "choices": [
+      "Because calculators do not show enough digits; a better calculator would show the exact fraction",
+      "Because π is irrational: its decimal never ends or repeats, so it cannot be written as p/q",
+      "Because 28 is too big a number to write as a fraction",
+      "Because π equals 22/7, and 22/7 is too long to measure with string"
+     ],
+     "correctIndex": 1,
+     "rationale": "π is irrational, so its decimal neither terminates nor repeats and it cannot be written as p/q. Therefore 28π cannot be written as an exact fraction, which is why the string always has a small gap or overlap.",
+     "phase": "explain",
+     "placement": "Block 3: back to the phenomenon, completing 'The circumference of the sufuria (28π cm) cannot be written as an exact fraction because π is irrational, which means ___'"
+    },
+    {
+     "prompt": "A learner draws two non-overlapping regions inside the real numbers, labelled 'Rational' and 'Irrational'. Which placement of numbers is correct?",
+     "choices": [
+      "Rational: 1/3, 22/7. Irrational: √4, π, √2",
+      "Rational: 1/3, √4, √2. Irrational: π, 22/7, √5",
+      "Rational: 1/3, √4, 22/7. Irrational: π, √2, √5",
+      "Rational: 1/3, √4, π. Irrational: 22/7, √2, √5"
+     ],
+     "correctIndex": 2,
+     "rationale": "1/3, √4 = 2 and 22/7 are rational, as they are fractions of integers with terminating or recurring decimals. π, √2 and √5 are irrational, with non-terminating, non-recurring decimals.",
+     "phase": "model",
+     "placement": "Cumulative model: drawing rational (ℚ) and irrational subsets inside the real numbers and placing today's numbers"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Placing Numbers on the Line: Can We Always Find the Exact Spot?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In the lesson, groups use a calculator to find π − 3 to 4 decimal places before pegging it on the number line. Using π ≈ 3.14159265, which value is π − 3 to 4 decimal places?",
+     "choices": [
+      "0.1416",
+      "0.5000",
+      "3.1416",
+      "6.1416"
+     ],
+     "correctIndex": 0,
+     "rationale": "π − 3 ≈ 3.14159265 − 3 = 0.14159265, which is 0.1416 to 4 decimal places. It lies between 0 and 1, close to 0, not at 0.5 or at 3.14.",
+     "phase": "observe",
+     "placement": "Observe: completing the Decimal Approximation Table for the eight cards",
+     "check": "round(3.14159265358979 - 3, 4)"
+    },
+    {
+     "prompt": "Which list shows the numbers −√3, −1.5, 0, 2/3 and √2 in order from smallest to largest on the number line?",
+     "choices": [
+      "−√3, −1.5, 0, 2/3, √2",
+      "−√3, −1.5, 0, √2, 2/3",
+      "−1.5, −√3, 0, 2/3, √2",
+      "0, 2/3, √2, −1.5, −√3"
+     ],
+     "correctIndex": 0,
+     "rationale": "−√3 ≈ −1.732 is to the left of −1.5. Then come 0, 2/3 ≈ 0.667 and √2 ≈ 1.414, so the order is −√3, −1.5, 0, 2/3, √2.",
+     "phase": "observe",
+     "placement": "Observe: pegging the eight number cards on the string number line"
+    },
+    {
+     "prompt": "A group is classifying the Kericho temperature 19.333…°C, where the 3s repeat forever. One learner says it is irrational because the decimal never stops. Which statement is correct?",
+     "choices": [
+      "It is irrational, because it has digits after the decimal point.",
+      "It is neither rational nor irrational, because it has no exact position on the number line.",
+      "It is irrational, because any decimal that never stops is irrational.",
+      "It is rational, because a repeating decimal can be written as a fraction (58/3)."
+     ],
+     "correctIndex": 3,
+     "rationale": "A repeating decimal is rational because it equals a ratio of two integers, here 19.333… = 58/3. Only decimals that neither end nor repeat are irrational.",
+     "phase": "observe",
+     "placement": "Observe: Kericho temperature classification by the Kericho Temperature Analyst"
+    },
+    {
+     "prompt": "The Kericho temperature one day was (16 + √5)°C. Using √5 ≈ 2.236, what is this temperature to 2 decimal places, and is it rational or irrational?",
+     "choices": [
+      "18.50°C, rational",
+      "18.24°C, irrational",
+      "21.00°C, rational",
+      "18.24°C, rational"
+     ],
+     "correctIndex": 1,
+     "rationale": "16 + √5 ≈ 16 + 2.236 = 18.236, which is 18.24 to 2 decimal places. Since √5 is irrational, adding 16 gives an irrational number.",
+     "phase": "observe",
+     "placement": "Observe: classifying the seven Kericho daily temperatures as rational or irrational",
+     "check": "round(16 + sqrt(5), 2)"
+    },
+    {
+     "prompt": "In the Mathematical Court, a learner is asked: 'You cannot write √2 exactly, so how do you know it has a place on the number line?' Which answer is the best?",
+     "choices": [
+      "It sits at the nearest whole number, which is 1.",
+      "It has no exact place, because its decimal never ends, so we can only guess a spot near 1.4.",
+      "It has one exact position. We cannot write it completely, but decimal approximations such as 1.4142 show that it lies between 1.414 and 1.415.",
+      "It is not on the line, but only in the gaps between the rational numbers."
+     ],
+     "correctIndex": 2,
+     "rationale": "Every real number, rational or irrational, corresponds to exactly one point on the number line. Better and better approximations locate that point precisely, even though the number cannot be written exactly.",
+     "phase": "explain",
+     "placement": "Explain: Mathematical Court defence of √2, π − 3, −√3 and 2.333…"
+    },
+    {
+     "prompt": "A sufuria has diameter 28 cm, so its circumference is exactly 28π cm, which is about 87.9646 cm. The daughter cut her string at 88 cm. On a number line of lengths, where is 88 compared with 28π?",
+     "choices": [
+      "88 is exactly at 28π, because rounding gives the exact value.",
+      "88 and 28π cannot be compared, because 28π has no position on the number line.",
+      "88 is slightly to the left of 28π.",
+      "88 is slightly to the right of 28π, so the string is a tiny bit too long."
+     ],
+     "correctIndex": 3,
+     "rationale": "28π ≈ 87.9646, which is less than 88, so 88 lies slightly to the right of 28π. The tiny gap is the approximation error, because 28π has an exact position but cannot be written exactly.",
+     "phase": "explain",
+     "placement": "Explain: revisiting the sufuria phenomenon ('is 88 exactly at 28π?')"
+    },
+    {
+     "prompt": "For the 'Kenyan Connections' box in the model, a learner must pick the irrational quantity. Which one is irrational?",
+     "choices": [
+      "The circumference of a sufuria of diameter 28 cm, 28π cm",
+      "A temperature of 18.75°C (= 75/4)",
+      "The distance from Nairobi to Nakuru, 160 km (= 160/1)",
+      "The price of unga, Ksh 60.50 (= 121/2)"
+     ],
+     "correctIndex": 0,
+     "rationale": "28π is irrational because π is irrational, so it cannot be written as a ratio of two integers. The other three can each be written as a fraction. Whether a number is rational does not depend on how big or small it is.",
+     "phase": "model",
+     "placement": "Model: 'Kenyan Connections' box in the cumulative Real Number System Model"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Reciprocal of Real Numbers by Division: What Do We Multiply By to Get 1?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Four friends share a 1 kg bag of unga equally, so each gets 1/4 kg. What must you multiply 4 by to get exactly 1?",
+     "choices": [
+      "1/4",
+      "−4",
+      "3",
+      "4"
+     ],
+     "correctIndex": 0,
+     "rationale": "4 × 1/4 = 1, so 1/4 is the number that multiplies 4 to give exactly 1. Subtracting 3 would give 1 but that is not multiplication.",
+     "phase": "predict",
+     "placement": "Predict: the unga sharing question (what must you multiply 4 by to get exactly 1?)"
+    },
+    {
+     "prompt": "In the Reciprocal Table a pair divides 1 by 1.6. What is the reciprocal of 1.6?",
+     "choices": [
+      "0.16",
+      "1.625",
+      "0.625",
+      "6.25"
+     ],
+     "correctIndex": 2,
+     "rationale": "The reciprocal is 1 ÷ 1.6 = 0.625. Multiplying back, 1.6 × 0.625 = 1.",
+     "phase": "observe",
+     "placement": "Observe: Reciprocal Table (1 ÷ 1.6 = 0.625)",
+     "check": "1/1.6"
+    },
+    {
+     "prompt": "Wanjiru finds the reciprocal of −8 by dividing 1 by −8. Which answer is correct?",
+     "choices": [
+      "−8",
+      "8",
+      "−0.125",
+      "0.125"
+     ],
+     "correctIndex": 2,
+     "rationale": "1 ÷ (−8) = −0.125, so the sign stays negative. Check: (−8) × (−0.125) = 1.",
+     "phase": "observe",
+     "placement": "Observe: Reciprocal Table (the number −8)",
+     "check": "1/-8"
+    },
+    {
+     "prompt": "What is the reciprocal of the fraction 3/4?",
+     "choices": [
+      "3/4",
+      "1/4",
+      "−3/4",
+      "4/3"
+     ],
+     "correctIndex": 3,
+     "rationale": "1 ÷ 3/4 = 4/3, so a fraction is flipped upside down. Check: 3/4 × 4/3 = 1.",
+     "phase": "observe",
+     "placement": "Observe: Reciprocal Table (3/4) and the pattern-finding for 2/3 and 3/4"
+    },
+    {
+     "prompt": "Using a calculator, 1 ÷ √2 is worked out and rounded to 4 decimal places. Which value is correct?",
+     "choices": [
+      "0.5",
+      "1.4142",
+      "0.7071",
+      "0.7017"
+     ],
+     "correctIndex": 2,
+     "rationale": "1 ÷ √2 = 1 ÷ 1.41421… = 0.70710…, which is 0.7071 to 4 decimal places. 1.4142 is √2 itself.",
+     "phase": "observe",
+     "placement": "Observe: Reciprocal Table (1 ÷ √2 ≈ 0.7071)",
+     "check": "1/sqrt(2)"
+    },
+    {
+     "prompt": "Why does the number 0 have no reciprocal?",
+     "choices": [
+      "No number multiplied by 0 gives 1, and 1 ÷ 0 is not defined",
+      "1 ÷ 0 = 0, which is not equal to 1",
+      "0 is not a real number",
+      "The reciprocal of 0 is negative, so it cannot be written"
+     ],
+     "correctIndex": 0,
+     "rationale": "A reciprocal of x must satisfy x × (1/x) = 1. Anything multiplied by 0 is 0, so no number works, and division by zero is not defined.",
+     "phase": "explain",
+     "placement": "Explain: 'Why can nothing be the reciprocal of 0?'"
+    },
+    {
+     "prompt": "Is 1/π rational or irrational?",
+     "choices": [
+      "Rational: the reciprocal of any number is always rational",
+      "Rational: it is written as 1 over a number, so it is a fraction",
+      "Irrational: it is less than 1",
+      "Irrational: if 1/π were a fraction p/q, then π would be q/p, a fraction, but π is irrational"
+     ],
+     "correctIndex": 3,
+     "rationale": "If 1/π = p/q then π = q/p would be rational, which contradicts π being irrational. So the reciprocal of an irrational number is irrational.",
+     "phase": "explain",
+     "placement": "Explain: 'Is 1/π rational or irrational? How do you know?'"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Reciprocal of Real Numbers from Mathematical Tables: Reading the Value Instead of Dividing",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A shopkeeper in Kisumu wants 1 ÷ 4.5 quickly. Without a calculator, which estimate of 1 ÷ 4.5 is sensible?",
+     "choices": [
+      "About 0.45, because you just move the decimal point",
+      "About 2.2, because you divide 4.5 by 2",
+      "More than 0.25, because 4.5 is a small number",
+      "Between 0.2 and 0.25, because 4.5 is between 4 and 5"
+     ],
+     "correctIndex": 3,
+     "rationale": "1 ÷ 4 = 0.25 and 1 ÷ 5 = 0.2, so 1 ÷ 4.5 must lie between 0.2 and 0.25.",
+     "phase": "predict",
+     "placement": "Predict: estimating 1 ÷ 4.5 before opening the tables"
+    },
+    {
+     "prompt": "Using a table of reciprocals, the reciprocal of 4.8 is read and stated to 4 significant figures. Which value is correct?",
+     "choices": [
+      "0.208",
+      "0.2083",
+      "2.083",
+      "0.2100"
+     ],
+     "correctIndex": 1,
+     "rationale": "1 ÷ 4.8 = 0.20833…, which is 0.2083 to 4 significant figures. 0.208 has only 3 significant figures.",
+     "phase": "observe",
+     "placement": "Observe: Table Reading Sheet (reading 2.5, 4.5, 8, 3.2 and 4.8)",
+     "check": "round(1/4.8, 4)"
+    },
+    {
+     "prompt": "A pair reads 0.2222 from the table as the reciprocal of 4.5. When they multiply back, 4.5 × 0.2222 = 0.9999, not exactly 1. What is the best explanation?",
+     "choices": [
+      "The table of reciprocals is faulty and should not be used",
+      "They read the wrong row of the table",
+      "The table value is rounded to 4 significant figures, so the product is very close to 1 but not exact",
+      "They should have added 4.5 and 0.2222 instead of multiplying"
+     ],
+     "correctIndex": 2,
+     "rationale": "1 ÷ 4.5 = 0.2222… never ends, so the table value is rounded. Multiplying back therefore gives a number very near 1, not exactly 1.",
+     "phase": "observe",
+     "placement": "Observe: Table Reading Sheet (multiply back to check, noting differences between table and division)"
+    },
+    {
+     "prompt": "From the table, the reciprocal of 4.5 is 0.2222. Using standard form (45 = 4.5 × 10), what is the reciprocal of 45?",
+     "choices": [
+      "2.222",
+      "0.002222",
+      "0.2222",
+      "0.02222"
+     ],
+     "correctIndex": 3,
+     "rationale": "1/45 = (1/4.5) × (1/10) = 0.2222 × 0.1 = 0.02222. A larger number has a smaller reciprocal.",
+     "phase": "explain",
+     "placement": "Explain: worked example of 45 = 4.5 × 10 using standard form",
+     "check": "0.2222/10"
+    },
+    {
+     "prompt": "From the table, the reciprocal of 3.2 is 0.3125. Using standard form, what is the reciprocal of 0.032?",
+     "choices": [
+      "312.5",
+      "0.03125",
+      "31.25",
+      "3.125"
+     ],
+     "correctIndex": 2,
+     "rationale": "0.032 = 3.2 × 10⁻², so 1/0.032 = 0.3125 × 10² = 31.25. Since 0.032 is small, its reciprocal must be large.",
+     "phase": "explain",
+     "placement": "Explain: practice with 450, 0.032 and 48",
+     "check": "0.3125*100"
+    },
+    {
+     "prompt": "A learner says, \"The table gives the exact reciprocal of every number, even 1/π.\" Which response is correct?",
+     "choices": [
+      "Correct, because tables are made from exact calculations",
+      "Wrong, because table values are given to 4 significant figures, so they are approximations",
+      "Wrong, because tables only work for whole numbers",
+      "Correct, but only for numbers between 1 and 10"
+     ],
+     "correctIndex": 1,
+     "rationale": "Table values are rounded to 4 significant figures. The reciprocal of an irrational number like π never ends, so a table can only give an approximation.",
+     "phase": "dqb",
+     "placement": "DQB: 'Is a table value exact for 1/π?' and the 'What we now understand' notes"
+    },
+    {
+     "prompt": "From the table, 1/3.14 = 0.3185 (4 s.f.), but 1/π ≈ 0.3183. Why are the two values different?",
+     "choices": [
+      "Reciprocals of numbers between 1 and 10 are always wrong in the table",
+      "The table has a printing error",
+      "1/π cannot be found by division",
+      "3.14 is only an approximation of π, so its reciprocal is not the reciprocal of π"
+     ],
+     "correctIndex": 3,
+     "rationale": "The table value is the reciprocal of 3.14, which is a rounded, nearby number and not π itself. This is like cutting the string at 88 cm instead of the exact circumference.",
+     "phase": "model",
+     "placement": "Model: adding 'Tables' to the Reciprocal Layer and comparing 1/3.14 with 1/π"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Reciprocal of Real Numbers Using Calculators and Digital Devices: Fast, Accurate and Checked",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A scientific calculator shows 1/π = 0.3183098862. Which statement about this display is correct?",
+     "choices": [
+      "It is the exact value of 1/π because the calculator is accurate",
+      "It shows 1/π is a rational number because the display ends",
+      "It is exact because it stops after 10 decimal places",
+      "It is a rounded value, so it is only an approximation of 1/π"
+     ],
+     "correctIndex": 3,
+     "rationale": "A calculator can only show a limited number of digits, so the display is a rounded approximation. The true decimal for 1/π never ends and never repeats.",
+     "phase": "predict",
+     "placement": "Predict: which of division, tables or a calculator gives the most accurate value of 1/π"
+    },
+    {
+     "prompt": "Which key sequence on a calculator correctly gives the reciprocal of 4.8?",
+     "choices": [
+      "4.8 ÷ 1 =",
+      "1 ÷ 4.8 =",
+      "1 ÷ 48 =",
+      "1 ÷ 4 × 8 ="
+     ],
+     "correctIndex": 1,
+     "rationale": "The reciprocal of 4.8 is 1 ÷ 4.8, which can also be found with the x⁻¹ key. Entering 1 ÷ 4 × 8 gives 2, and 1 ÷ 48 drops the decimal point.",
+     "phase": "observe",
+     "placement": "Observe: Three Methods Sheet, calculator reciprocal of 4.8"
+    },
+    {
+     "prompt": "The calculator shows 1/4.8 = 0.208333… Write this correct to 4 significant figures.",
+     "choices": [
+      "0.2084",
+      "0.2083",
+      "0.2833",
+      "0.2080"
+     ],
+     "correctIndex": 1,
+     "rationale": "The first four significant figures are 2, 0, 8, 3. The next digit is 3, which is less than 5, so the answer stays 0.2083.",
+     "phase": "observe",
+     "placement": "Observe: Three Methods Sheet, answer rounded to 4 decimal places or 4 significant figures",
+     "check": "round(1/4.8, 4)"
+    },
+    {
+     "prompt": "A learner finds that the reciprocal of 4.8 is about 0.2083. Which check shows that the answer is sensible?",
+     "choices": [
+      "4.8 ÷ 0.2083 is about 1",
+      "4.8 − 0.2083 is about 1",
+      "4.8 × 0.2083 is about 1",
+      "4.8 + 0.2083 is about 5"
+     ],
+     "correctIndex": 2,
+     "rationale": "A number multiplied by its reciprocal gives 1. Here 4.8 × 0.2083 = 0.99984, which is very close to 1.",
+     "phase": "observe",
+     "placement": "Observe: teacher check 'Does your answer times 4.8 give 1?'"
+    },
+    {
+     "prompt": "On a calculator, 1/7 = 0.142857142857… and 1/π = 0.31830988… Which statement is correct?",
+     "choices": [
+      "1/7 is irrational because its decimal never ends; 1/π is rational",
+      "Both are irrational because their decimals go on forever",
+      "1/7 repeats, so it is rational; 1/π never repeats, so it is irrational",
+      "Both are rational because every reciprocal is a fraction"
+     ],
+     "correctIndex": 2,
+     "rationale": "A decimal that repeats (the block 142857) can be written as a fraction, so 1/7 is rational. 1/π never repeats and cannot be written as a fraction of whole numbers, so it is irrational.",
+     "phase": "explain",
+     "placement": "Explain: discussion 'Which answers repeat, and which never repeat?'"
+    },
+    {
+     "prompt": "A calculator gives 1/(28π) ≈ 0.011368210… A learner measures the rim of a sufuria to the nearest millimetre. Why is it NOT sensible to write all the digits from the calculator in the answer?",
+     "choices": [
+      "Because 1/(28π) is a rational number",
+      "The calculator cannot show more than four digits",
+      "More digits always make an answer more accurate for any job",
+      "Digits beyond the precision of the measurement give a false sense of accuracy"
+     ],
+     "correctIndex": 3,
+     "rationale": "The number of digits kept should match the job and the precision of the instrument. Extra digits beyond the nearest millimetre add no real accuracy.",
+     "phase": "explain",
+     "placement": "Explain: 'How many digits of 1/(28π) are sensible if the sufuria rim is measured to the nearest millimetre?'"
+    },
+    {
+     "prompt": "Which statement about finding reciprocals is correct?",
+     "choices": [
+      "Tables work without batteries but give only about 4 digits; a calculator gives many digits but the display is rounded",
+      "Tables need a battery or a device to work",
+      "A calculator display is always exact",
+      "Tables give more digits than a calculator"
+     ],
+     "correctIndex": 0,
+     "rationale": "Tables are handy without a device but limited to about 4 digits. A calculator shows more digits, but they are still rounded and it needs a device.",
+     "phase": "model",
+     "placement": "Model: Methods Box with one advantage and one limit for each method"
+    },
+    {
+     "prompt": "Use a calculator to find the reciprocal of 6.5. Give your answer correct to 4 decimal places.",
+     "choices": [
+      "0.1580",
+      "0.1538",
+      "0.1385",
+      "0.1539"
+     ],
+     "correctIndex": 1,
+     "rationale": "1 ÷ 6.5 = 0.153846…, and the fifth decimal digit is 6, so rounding to 4 decimal places gives 0.1538. Check: 6.5 × 0.1538 = 0.9997, close to 1. 0.1539 is a rounding error.",
+     "phase": "model",
+     "placement": "Model: quick test, find 1/6.5 with a calculator and check by multiplying back",
+     "check": "round(1/6.5, 4)"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Applying the Reciprocal in Everyday Computations, and the Final Explanation of the Real Number System",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A shop has 6 kg of unga to pack into packets of 3/4 kg each. How many packets can be filled?",
+     "choices": [
+      "8 packets",
+      "4.5 packets",
+      "18 packets",
+      "2 packets"
+     ],
+     "correctIndex": 0,
+     "rationale": "Dividing by 3/4 is the same as multiplying by its reciprocal 4/3, so 6 ÷ 3/4 = 6 × 4/3 = 8. Check: 8 × 3/4 = 6 kg.",
+     "phase": "predict",
+     "placement": "Predict: 6 kg of unga into 3/4 kg packets",
+     "check": "6/(3/4)"
+    },
+    {
+     "prompt": "A runner takes 3 minutes 45 seconds to run 1 km. Using the reciprocal of her pace in minutes per km, what is her speed in km per hour?",
+     "choices": [
+      "17.4 km per hour",
+      "16 km per hour",
+      "3.75 km per hour",
+      "0.2667 km per hour"
+     ],
+     "correctIndex": 1,
+     "rationale": "3 minutes 45 seconds = 3.75 minutes per km. The reciprocal is 1/3.75 = 0.2667 km per minute, and 0.2667 × 60 = 16 km per hour (same as 60 ÷ 3.75). Writing 3 minutes 45 seconds as 3.45 minutes is the common error.",
+     "phase": "observe",
+     "placement": "Station 2: running pace (3 minutes 45 seconds per km)",
+     "check": "60/3.75"
+    },
+    {
+     "prompt": "A boda-boda travels 35 km on each litre of petrol. Taking the reciprocal of this rate, how much petrol does it use per kilometre?",
+     "choices": [
+      "0.2857 litres per km",
+      "35 litres per km",
+      "0.02857 litres per km",
+      "2.857 litres per km"
+     ],
+     "correctIndex": 2,
+     "rationale": "The reciprocal of 35 km per litre is 1/35 = 0.02857 litres per km. Check: 35 km × 0.02857 litres per km is about 1 litre.",
+     "phase": "observe",
+     "placement": "Station 3: fuel use of a boda-boda (35 km per litre)",
+     "check": "round(1/35, 5)"
+    },
+    {
+     "prompt": "Ksh 130 buys USD 1. Ksh 1 buys 1/130 USD. Using this reciprocal, how many US dollars can Ksh 6 500 buy?",
+     "choices": [
+      "0.05 USD",
+      "845 000 USD",
+      "5 USD",
+      "50 USD"
+     ],
+     "correctIndex": 3,
+     "rationale": "The reciprocal of the rate is 1/130 USD per shilling. So 6 500 × 1/130 = 50 USD. Check by multiplying back: 50 × 130 = 6 500.",
+     "phase": "observe",
+     "placement": "Station 4: exchange rate (shillings per dollar to dollars per shilling)",
+     "check": "6500/130"
+    },
+    {
+     "prompt": "Why is the answer to 6 ÷ 3/4 bigger than 6?",
+     "choices": [
+      "Because the reciprocal of 3/4 is 3/4 itself.",
+      "Because 3/4 is less than 1, so 6 contains more than 6 groups of 3/4 (we multiply by 4/3, which is more than 1).",
+      "Because dividing always gives a bigger answer than the number you start with.",
+      "Because we divide 6 by 3 and then by 4 separately."
+     ],
+     "correctIndex": 1,
+     "rationale": "Dividing by a number less than 1 gives more than you started with, because 3/4 fits into 6 more than 6 times. This matches 6 × 4/3 = 8, where 4/3 is greater than 1.",
+     "phase": "explain",
+     "placement": "Debrief of the stations: a ÷ b = a × 1/b and why dividing by a number below 1 increases the value"
+    },
+    {
+     "prompt": "A calculator shows 28 × π = 87.96459430… with digits that never end or repeat. What is the reciprocal of 28π, and is it rational or irrational?",
+     "choices": [
+      "About 0.01137; it is irrational because its decimal never ends or repeats, so it cannot be written exactly as a fraction of whole numbers.",
+      "About 0.01137; it is rational because it is 1 divided by a number, which is a fraction.",
+      "About 0.01137; it is rational because the calculator shows it ending after a few decimal places.",
+      "About 0.0357; it is irrational because it contains π."
+     ],
+     "correctIndex": 0,
+     "rationale": "1/(28π) ≈ 0.01137 to 4 s.f. The calculator display is only an approximation. The reciprocal of an irrational number is irrational, so its decimal never terminates or repeats.",
+     "phase": "model",
+     "placement": "Exit ticket: The reciprocal of 28π is… It is rational/irrational because…",
+     "check": "round(1/(28*3.141592653589793), 5)"
+    },
+    {
+     "prompt": "A sufuria has a diameter of exactly 28 cm. Its circumference is 28π cm, and a student cuts string 88 cm long, which leaves a tiny gap. Which statement best explains how we work accurately with such a number?",
+     "choices": [
+      "The string should be 87 cm, because irrational numbers must always be rounded down.",
+      "The string cannot be cut, because 28π does not exist as a number.",
+      "28π can never be written completely, so we choose and state an accuracy that suits the job, such as 87.96 cm to 2 decimal places.",
+      "The circumference is exactly 88 cm, because 88 is the nearest whole number."
+     ],
+     "correctIndex": 2,
+     "rationale": "28π is irrational, so its decimal never ends and it cannot be written exactly. In practice we round to a stated accuracy suited to the job, for example 87.96 cm. The 88 cm string is only an approximation, which is why there is a gap.",
+     "phase": "dqb",
+     "placement": "Closing the Driving Question Board: re-reading the driving question about numbers that go on forever"
+    }
+   ]
+  }
+ ]
+}

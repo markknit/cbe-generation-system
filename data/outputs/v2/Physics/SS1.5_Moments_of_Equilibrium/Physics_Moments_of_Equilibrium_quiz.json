@@ -1,0 +1,683 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Physics",
+  "grade": 10,
+  "substrandId": "1.5",
+  "substrandName": "Moments of Equilibrium",
+  "filePrefix": "Physics_Moments_of_Equilibrium"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "Why Did the Stool Fall? — Introducing the Moment of a Force",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In a class demonstration, the same full 20-litre jerrycan was placed on one corner of a narrow three-legged Jiko stool, with part of it overhanging beyond the leg, and the stool was given a gentle nudge. The jerrycan was then placed at the same corner with the same small overhang on a wider, lower four-legged stool, and that stool was nudged too. What was observed?",
+     "choices": [
+      "Both stools toppled over.",
+      "Neither stool moved at all.",
+      "The four-legged stool toppled, but the three-legged stool stayed upright.",
+      "The three-legged stool toppled, but the four-legged stool rocked and returned upright."
+     ],
+     "correctIndex": 3,
+     "rationale": "Demos 2 and 3 showed the same jerrycan in the same place toppling the narrow stool while the wide four-legged stool only rocked and self-righted. This is an observation only, not an explanation.",
+     "phase": "observe",
+     "placement": "Part A: Live Demonstration (Demo 2 and Demo 3 with the jerrycan)"
+    },
+    {
+     "prompt": "A 30 cm ruler is balanced on a pencil at its centre. A 50 g mass is placed 5 cm from the pivot on the left side. A second 50 g mass is placed 10 cm from the pivot on the right side. What happens?",
+     "choices": [
+      "The ruler stays balanced because both masses are 50 g.",
+      "The ruler does not move because the pivot is at the centre.",
+      "The left side goes down because it is closer to the pivot.",
+      "The right side goes down because the same mass is further from the pivot."
+     ],
+     "correctIndex": 3,
+     "rationale": "Both masses are equal, but the one at 10 cm gives a bigger turning effect than the one at 5 cm. So the right side goes down.",
+     "phase": "observe",
+     "placement": "Part B: Beam-Balance Turning Activity (50 g at 5 cm left, 50 g at 10 cm right)"
+    },
+    {
+     "prompt": "On a ruler balanced at its centre on a pencil, a 100 g mass is placed 6 cm to the left of the pivot. A single 50 g mass is placed on the right side to balance it. How far from the pivot should the 50 g mass be?",
+     "choices": [
+      "12 cm",
+      "6 cm",
+      "24 cm",
+      "3 cm"
+     ],
+     "correctIndex": 0,
+     "rationale": "Balance needs equal mass × distance on each side: 100 g × 6 cm = 600 g·cm. So 50 g × d = 600 g·cm, giving d = 12 cm.",
+     "phase": "observe",
+     "placement": "Part B: Beam-Balance Turning Activity (finding where a 50 g mass balances 100 g at 6 cm)",
+     "check": "100*6/50"
+    },
+    {
+     "prompt": "Which statement correctly defines the moment of a force?",
+     "choices": [
+      "The weight of the object only, measured in newtons",
+      "The turning effect of a force about a pivot, equal to the force multiplied by the perpendicular distance from the pivot",
+      "The force divided by its distance from the pivot",
+      "The distance from the pivot to the object only, measured in metres"
+     ],
+     "correctIndex": 1,
+     "rationale": "A moment is the turning effect of a force about a pivot: M = F × d. It depends on both the force and the perpendicular distance, not on weight alone or distance alone.",
+     "phase": "explain",
+     "placement": "Part A: Concept Introduction via Guided Notes (defining MOMENT OF A FORCE)"
+    },
+    {
+     "prompt": "A sufuria containing 4 kg of ugali has a weight of 40 N. It is placed 0.3 m from one leg of a Jiko stool, and that leg acts as the pivot. What is the moment of the sufuria's weight about that leg?",
+     "choices": [
+      "13.3 N·m",
+      "12 N·m",
+      "120 N·m",
+      "1.2 N·m"
+     ],
+     "correctIndex": 1,
+     "rationale": "M = F × d = 40 N × 0.3 m = 12 N·m.",
+     "phase": "explain",
+     "placement": "Part B: Worked Example with Kenyan Context (sufuria of ugali on a Jiko stool)",
+     "check": "4*10*0.3"
+    },
+    {
+     "prompt": "A student pushes on the handle of a kiosk door to open it. The door turns on its hinges. Which part is the pivot for this turning effect?",
+     "choices": [
+      "The student's hand",
+      "The handle",
+      "The hinges",
+      "The middle of the door"
+     ],
+     "correctIndex": 2,
+     "rationale": "The door turns about its hinges, so the hinges are the pivot. The push is the force, and the perpendicular distance is measured from the hinges to the line of action of the push.",
+     "phase": "explain",
+     "placement": "Part A: Concept Introduction via Guided Notes (labelling pivot, force and perpendicular distance)"
+    },
+    {
+     "prompt": "In a sketch-model, a full 20-litre jerrycan has a mass of 20 kg, so its weight is 200 N (taking 10 N per kg). Its weight acts 0.1 m from the pivot leg of a stool. What is the moment of the jerrycan's weight about that leg?",
+     "choices": [
+      "200.1 N·m",
+      "20 N·m",
+      "2000 N·m",
+      "2 N·m"
+     ],
+     "correctIndex": 1,
+     "rationale": "M = F × d = 200 N × 0.1 m = 20 N·m. The common error is to multiply the mass (20 kg) by the distance instead of the weight in newtons.",
+     "phase": "model",
+     "placement": "Initial Model Construction (labelled force arrow F = 200 N and calculated moment)",
+     "check": "200*0.1"
+    },
+    {
+     "prompt": "At the end of Lesson 1, the class has named the turning effect (moment) of the jerrycan about a leg. Which statement best describes where the class has got to on the stool puzzle?",
+     "choices": [
+      "The four-legged stool did not topple only because its wood is stronger.",
+      "We can describe moments, but we cannot yet fully explain why the four-legged stool did not topple, so this stays on the Driving Question Board.",
+      "It is settled that heavier loads always topple stools, so nothing is left to find out.",
+      "The class has fully explained why every stool topples or stays upright."
+     ],
+     "correctIndex": 1,
+     "rationale": "Lesson 1 introduces moments and opens the Driving Question Board. The full explanation of why the two stools behave differently is not yet reached and is left for later lessons.",
+     "phase": "end",
+     "placement": "Driving Question Board (clustering the 'I wonder...' questions) and the closing remarks of the Model phase"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Turning Forces: Introducing the Moment of a Force",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A Jiko stool stays steady when a 20-litre jerrycan of water is placed over its legs. It topples when the same jerrycan is placed so that it hangs out beyond one leg at the corner. Which explanation best fits this?",
+     "choices": [
+      "At the corner, the jerrycan's weight acts farther from the leg that acts as the pivot, so its turning effect is larger.",
+      "A heavy load always makes a stool topple, wherever it is placed.",
+      "The jerrycan becomes heavier when it is placed at the corner.",
+      "The stool only topples because the person nudged it."
+     ],
+     "correctIndex": 0,
+     "rationale": "The weight of the jerrycan is the same in both positions. Only its distance from the pivot (the leg) changes, so the turning effect (moment) changes.",
+     "phase": "predict",
+     "placement": "Prediction revision: revisit Lesson 1 predictions, force-based vs position-based reasons"
+    },
+    {
+     "prompt": "A metre rule is balanced on a pencil pivot at the 50 cm mark. A 500 g mass hangs on the right, 30 cm from the pivot. An identical 500 g mass hangs on the left, 20 cm from the pivot. What happens?",
+     "choices": [
+      "The right side goes down because its mass is farther from the pivot.",
+      "The rule stays balanced because both masses are 500 g.",
+      "It is impossible to tell without converting the masses to newtons.",
+      "The left side goes down because the left mass is closer to the pivot."
+     ],
+     "correctIndex": 0,
+     "rationale": "The two forces are equal, but the right mass is farther from the pivot. It has the larger moment, so the right side goes down.",
+     "phase": "observe",
+     "placement": "Metre rule and pencil pivot investigation: moving the left 500 g mass to 10, 20, 30, 40 and 50 cm"
+    },
+    {
+     "prompt": "At a school gate, Wanjiru pushes with the same force first near the hinge and then near the outer edge. Why does it feel harder to push near the hinge?",
+     "choices": [
+      "Near the hinge the distance from the pivot is smaller, so the same force gives a smaller turning effect.",
+      "The turning effect does not depend on where you push, so it only feels harder.",
+      "Near the hinge the force is smaller, so the gate resists more.",
+      "Near the hinge the gate becomes heavier."
+     ],
+     "correctIndex": 0,
+     "rationale": "The hinge is the pivot. Moment = force × distance, so the same force at a smaller distance gives a smaller moment and the gate is harder to turn.",
+     "phase": "observe",
+     "placement": "Door/gate demonstration: pushing near the hinge vs near the outer edge"
+    },
+    {
+     "prompt": "A mama pushes a mkokoteni cart handle with a force of 40 N. The handle is 0.8 m from the wheel axle, which acts as the pivot. What is the moment of her force about the axle?",
+     "choices": [
+      "0.02 N·m",
+      "50 N·m",
+      "40.8 N·m",
+      "32 N·m"
+     ],
+     "correctIndex": 3,
+     "rationale": "Moment = F × d = 40 N × 0.8 m = 32 N·m. Dividing or adding the numbers is a common error.",
+     "phase": "explain",
+     "placement": "Step 4 worked example (a): mama pushing a mkokoteni cart",
+     "check": "40*0.8"
+    },
+    {
+     "prompt": "A student pushes a school gate with a force of 25 N at a point 30 cm from the hinge. What is the moment of the force about the hinge in N·m?",
+     "choices": [
+      "7.5 N·m",
+      "55 N·m",
+      "30 N·m",
+      "750 N·m"
+     ],
+     "correctIndex": 0,
+     "rationale": "Convert 30 cm to 0.3 m first. Moment = 25 N × 0.3 m = 7.5 N·m. Using 30 gives 750, which is in N·cm and not the SI unit.",
+     "phase": "explain",
+     "placement": "Step 4 worked examples (b) and (c): school gate pushed with 25 N at different distances from the hinge",
+     "check": "25*0.3"
+    },
+    {
+     "prompt": "A force is measured in newtons (N) and a perpendicular distance is measured in metres (m). In what unit is the moment of the force given?",
+     "choices": [
+      "N",
+      "N/m",
+      "Newton-metre (N·m)",
+      "kg·m"
+     ],
+     "correctIndex": 2,
+     "rationale": "Moment = force × distance, so the unit is newtons × metres = N·m.",
+     "phase": "explain",
+     "placement": "Step 3 of the derivation: Units for moment"
+    },
+    {
+     "prompt": "A jerrycan overhangs the corner of a Jiko stool. To work out the moment of its weight that tends to topple the stool, which distance should be used as d?",
+     "choices": [
+      "The height of the stool above the floor.",
+      "The distance from the jerrycan to the opposite corner of the seat.",
+      "The distance from the jerrycan's weight to the centre of the stool.",
+      "The perpendicular distance from the line of action of the jerrycan's weight to the nearest supporting leg (the pivot)."
+     ],
+     "correctIndex": 3,
+     "rationale": "The stool begins to turn about the nearest leg, so that leg is the pivot. d is the perpendicular distance from the weight's line of action to that pivot.",
+     "phase": "explain",
+     "placement": "Step 5 phenomenon reconnection: Jiko stool moment calculation (200 N jerrycan)"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Lesson 3: Centre of Gravity and the Tipping Point — Why Does the Jiko Stool Fall?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A learner is asked to mark the 'centre of gravity' of a flat piece of cardboard cut in an irregular shape. Which statement correctly describes the centre of gravity?",
+     "choices": [
+      "The point through which the total weight of the body appears to act",
+      "It is always at the exact middle of the outline, whatever the shape",
+      "The point farthest from the ground when the shape lies flat",
+      "The lowest edge of the shape, because weight pulls downward"
+     ],
+     "correctIndex": 0,
+     "rationale": "Centre of gravity is defined as the point through which the whole weight of a body appears to act. For an irregular shape it depends on how the mass is spread, so it is not always at the geometric middle.",
+     "phase": "predict",
+     "placement": "Predict: marking where the weight of the Jiko stool profile and sufuria-lid cut-outs is 'centred'"
+    },
+    {
+     "prompt": "A group hangs an irregular cardboard shape from three different pin-holes in turn. Each time they hang a plumb line (string with a nut) from the same pin and draw the vertical line it makes. How do they find the centre of gravity of the shape?",
+     "choices": [
+      "It is the point where the nut touches the cardboard",
+      "It is the middle of the longest of the three lines only",
+      "It is the hole that is nearest to the edge of the cardboard",
+      "It is the point where the three plumb lines cross"
+     ],
+     "correctIndex": 3,
+     "rationale": "When the shape hangs freely, the plumb line shows the vertical direction through the centre of gravity. The centre of gravity lies on each line, so it is where the three lines meet.",
+     "phase": "observe",
+     "placement": "Activity A: Plumb-Line Centre of Gravity Hunt"
+    },
+    {
+     "prompt": "Tower A is made of 4 light blocks side by side, 1 block high (wide base). Tower B is made of 4 light blocks stacked 1 block wide and 4 blocks tall (narrow base). A 500 g mass is slid from the centre of the top outwards towards the edge of each tower. Which tower topples first, and why?",
+     "choices": [
+      "Tower A, because a wider base always makes a tower fall more easily",
+      "Tower B, because its centre of gravity is higher and its base is narrower, so the vertical line through it leaves the base sooner",
+      "Tower A, because it has more blocks touching the table",
+      "Both topple at the same moment, because the 500 g mass has the same weight on each"
+     ],
+     "correctIndex": 1,
+     "rationale": "A tall narrow tower has a higher centre of gravity and a smaller base, so only a small overhang of the mass moves the vertical line through the centre of gravity outside the base. The same weight is on both towers, but the geometry is different.",
+     "phase": "observe",
+     "placement": "Activity B: Tipping Towers (wide-base Tower A and narrow-base Tower B with 500 g mass)"
+    },
+    {
+     "prompt": "Complete the sentence: A body topples when the vertical line through its centre of gravity passes ______ its base of support.",
+     "choices": [
+      "just above the edge of but still within",
+      "exactly through the middle of",
+      "outside",
+      "inside"
+     ],
+     "correctIndex": 2,
+     "rationale": "Toppling happens once the vertical line from the centre of gravity falls outside the base of support. While the line stays inside the base, the body returns upright.",
+     "phase": "explain",
+     "placement": "Explain: co-constructing 'A body topples when the vertical line through its centre of gravity passes ____ the base of support'"
+    },
+    {
+     "prompt": "A solid sphere (like a ball) rests on a flat table. If it is pushed slightly, it rolls to a new position and stays there without returning or toppling. Its centre of gravity is always directly above its contact point with the table. Which state of equilibrium is this?",
+     "choices": [
+      "Stable equilibrium",
+      "Neutral equilibrium",
+      "Unstable equilibrium",
+      "It is not in equilibrium at all"
+     ],
+     "correctIndex": 1,
+     "rationale": "In neutral equilibrium, a small push moves the body to a new position where it is again in balance, because the centre of gravity stays directly above the contact point. It neither returns (stable) nor topples (unstable).",
+     "phase": "explain",
+     "placement": "Explain: three canonical diagrams of equilibrium (sphere on a flat surface)"
+    },
+    {
+     "prompt": "A three-legged Jiko stool stands steady with a sufuria of ugali near its centre. A full 20-litre jerrycan is then placed on one corner of the seat, overhanging past the leg, and the stool is nudged and topples. Which explanation is best?",
+     "choices": [
+      "The jerrycan makes the stool lighter, so it is easier to push over",
+      "The jerrycan lowers the centre of gravity so much that the stool cannot stay upright",
+      "The weight of the stool stops acting once a jerrycan is placed on it",
+      "The combined centre of gravity of stool and jerrycan moves so that its vertical line falls outside the triangle formed by the legs"
+     ],
+     "correctIndex": 3,
+     "rationale": "The stool and jerrycan act as one system, and the combined centre of gravity shifts towards the overhanging corner. When its vertical line falls outside the base of support formed by the legs, the stool topples.",
+     "phase": "explain",
+     "placement": "Explain: annotating the Jiko stool diagram with the jerrycan at the corner (CG, base of support, vertical CG line)"
+    },
+    {
+     "prompt": "A craftsman in Kericho makes a stool taller but with narrower legs, so the base is smaller. What happens to the stability of the stool, and why?",
+     "choices": [
+      "It becomes less stable, because the centre of gravity is higher and the base is smaller, so a small tilt puts the vertical line outside the base",
+      "It becomes more stable, because a taller stool has more weight",
+      "It becomes more stable, because a smaller base means less area to tip over",
+      "Its stability does not change, because the weight of the stool is the same"
+     ],
+     "correctIndex": 0,
+     "rationale": "A higher centre of gravity and a narrower base mean that only a small tilt moves the vertical line through the centre of gravity outside the base. This makes the stool less stable.",
+     "phase": "model",
+     "placement": "Model: Teacher question 1 about the Kericho craftsman's taller stool with narrower legs"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "The Principle of Moments: Balancing Forces on a Bao Plank",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A bao plank is 2 m long and balanced on a log at its midpoint. Child A (mass 40 kg) sits 30 cm from the centre. Child B (mass 20 kg) sits on the opposite side. How far from the centre must Child B sit for the plank to balance?",
+     "choices": [
+      "90 cm",
+      "15 cm",
+      "60 cm",
+      "30 cm"
+     ],
+     "correctIndex": 2,
+     "rationale": "At balance, 40 kg × 30 cm = 1200 kg·cm, so 20 kg × d = 1200 kg·cm and d = 60 cm. The lighter child must sit farther from the pivot.",
+     "phase": "predict",
+     "placement": "Bao plank prediction: Child A (40 kg) at 30 cm, where must Child B (20 kg) sit?",
+     "check": "40*30/20"
+    },
+    {
+     "prompt": "Which statement correctly defines the moment of a force and gives its SI unit?",
+     "choices": [
+      "Force × time taken; measured in newton-seconds (N·s)",
+      "Force × perpendicular distance from the pivot; measured in newton-metres (N·m)",
+      "Mass × distance from the pivot; measured in kilograms (kg)",
+      "Force ÷ distance from the pivot; measured in newtons per metre (N/m)"
+     ],
+     "correctIndex": 1,
+     "rationale": "The moment of a force is the force multiplied by its perpendicular distance from the pivot, so its SI unit is the newton-metre (N·m).",
+     "phase": "explain",
+     "placement": "Learning outcome (a): defining the moment of a force and its SI unit, when learners state the Principle of Moments"
+    },
+    {
+     "prompt": "A metre rule is balanced on a pencil pivot at its 50 cm mark. A 100 g bag of beans hangs 20 cm to the left of the pivot. A 50 g bag of beans hangs 30 cm to the right of the pivot. What happens to the rule?",
+     "choices": [
+      "It stays balanced because 100 g and 50 g are in the ratio 2 : 1",
+      "It tips to the right because the right bag is farther from the pivot",
+      "It tips to the left because the left moment (2000 g·cm) is greater than the right moment (1500 g·cm)",
+      "It stays balanced because the masses are both small"
+     ],
+     "correctIndex": 2,
+     "rationale": "Left moment = 100 g × 20 cm = 2000 g·cm. Right moment = 50 g × 30 cm = 1500 g·cm. The larger moment is on the left, so the rule tips left.",
+     "phase": "observe",
+     "placement": "Metre-rule balance experiment: Data Checkpoint on comparing the two moment columns"
+    },
+    {
+     "prompt": "In the metre-rule experiment, a group hangs an 80 g bag of beans 25 cm from the pivot. What is the moment of this bag about the pivot?",
+     "choices": [
+      "2000 g·cm",
+      "105 g·cm",
+      "3.2 g·cm",
+      "200 g·cm"
+     ],
+     "correctIndex": 0,
+     "rationale": "Moment = mass × distance = 80 g × 25 cm = 2000 g·cm. The unit is g·cm because mass is in grams and distance in centimetres.",
+     "phase": "observe",
+     "placement": "Metre-rule balance experiment: computing moment = mass × distance for each trial",
+     "check": "80*25"
+    },
+    {
+     "prompt": "Which statement correctly gives the Principle of Moments for a body in equilibrium?",
+     "choices": [
+      "The sum of all the forces on the body is always zero, whatever the distances from the pivot",
+      "The sum of clockwise moments about any point equals the sum of anti-clockwise moments about the same point",
+      "The mass on the left of the pivot equals the mass on the right of the pivot",
+      "The distance of the load on the left from the pivot equals the distance of the load on the right"
+     ],
+     "correctIndex": 1,
+     "rationale": "Balance depends on both force and distance. At equilibrium, the total clockwise moment equals the total anti-clockwise moment about the same point. Equal masses or equal distances alone are not required.",
+     "phase": "explain",
+     "placement": "Pooling class data and stating the Principle of Moments"
+    },
+    {
+     "prompt": "A market weighing plank is balanced on a pivot. A sufuria of ugali of mass 3 kg is placed 0.4 m from the pivot on one side. What mass of maize grain placed 0.6 m from the pivot on the other side will balance it?",
+     "choices": [
+      "4.5 kg",
+      "3 kg",
+      "1.2 kg",
+      "2 kg"
+     ],
+     "correctIndex": 3,
+     "rationale": "At balance, 3 kg × 0.4 m = m × 0.6 m. So 1.2 = 0.6 m and m = 2 kg.",
+     "phase": "explain",
+     "placement": "Individual problem 2: sufuria of ugali on the market weighing plank",
+     "check": "3*0.4/0.6"
+    },
+    {
+     "prompt": "A narrow three-legged Jiko stool has a 20 kg jerrycan on it. Its weight is 200 N and its centre is 0.10 m beyond the tipping edge. Taking the tipping edge as the pivot, what is the toppling moment of the jerrycan?",
+     "choices": [
+      "20 N·m",
+      "2 N·m",
+      "7.5 N·m",
+      "200 N·m"
+     ],
+     "correctIndex": 0,
+     "rationale": "Toppling moment = force × perpendicular distance from the pivot = 200 N × 0.10 m = 20 N·m.",
+     "phase": "explain",
+     "placement": "Individual problem 3: the Jiko stool, calculating the toppling moment of the jerrycan about the tipping edge",
+     "check": "200*0.10"
+    },
+    {
+     "prompt": "A wider four-legged stool has a mass of 8 kg (weight 80 N). Its centre of gravity is 0.30 m inside its tipping edge. A 20 kg jerrycan (weight 200 N) sits with its centre 0.10 m beyond the tipping edge. What happens when the stool is nudged?",
+     "choices": [
+      "It topples, because any load placed beyond the tipping edge always causes toppling",
+      "It rocks and returns upright, because the restoring moment (80 N × 0.30 m = 24 N·m) is greater than the toppling moment (200 N × 0.10 m = 20 N·m)",
+      "It topples, because the jerrycan's weight (200 N) is greater than the stool's weight (80 N)",
+      "It stays perfectly balanced, because the restoring moment equals the toppling moment"
+     ],
+     "correctIndex": 1,
+     "rationale": "The restoring moment of the stool is 80 × 0.30 = 24 N·m. The toppling moment of the jerrycan is 200 × 0.10 = 20 N·m. Since 24 N·m is greater than 20 N·m, the stool rocks back. Comparing the weights alone is not enough, because the distances matter too.",
+     "phase": "explain",
+     "placement": "Individual problem 3: repeating the Jiko stool calculation for the wider four-legged stool"
+    },
+    {
+     "prompt": "When groups add a 'balance condition' annotation to their Jiko stool model, which statement correctly describes when the stool is stable about its tipping edge?",
+     "choices": [
+      "When the toppling moment of the load beyond the tipping edge is greater than the restoring moment of the stool's weight",
+      "When the restoring moment from the stool's weight is greater than the toppling moment from the load beyond the tipping edge",
+      "When the jerrycan is heavier than the stool",
+      "When the stool has more than three legs, whatever the moments"
+     ],
+     "correctIndex": 1,
+     "rationale": "The stool stays stable when its restoring moment about the tipping edge is greater than the toppling moment of the load. Toppling happens when the toppling moment becomes larger. The number of legs or the weight of the load alone does not decide this.",
+     "phase": "model",
+     "placement": "Model revision: adding the 'balance condition' annotation to the cumulative Jiko stool diagram"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "How Do Engineers Keep Things From Falling? — Factors Affecting Stability and Real-Life Applications",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Two identical tall cardboard boxes stand on a table. Each has the same lump of clay stuck inside. In Box A the clay is near the top. In Box B the clay is on the inside base. The table is tilted slowly. Which box will topple first, and why?",
+     "choices": [
+      "Neither box topples, because the clay holds the box in place",
+      "Box A, because its centre of gravity is higher, so the vertical line through it leaves the base after only a small tilt",
+      "Both topple at the same time, because the boxes and clay have the same mass",
+      "Box B, because the clay at the bottom makes it heavier at the base and easier to push over"
+     ],
+     "correctIndex": 1,
+     "rationale": "Clay near the top raises the centre of gravity, so the box needs only a small tilt before the vertical line through the centre of gravity falls outside the base. Mass is equal in both boxes, so it is the position of the mass that matters.",
+     "phase": "predict",
+     "placement": "Predict: Box A (clay near top) and Box B (clay on inside base), tilting-table prediction"
+    },
+    {
+     "prompt": "In Investigation A, a student tilts a tall box until it just topples. With two clay lumps taped at the top, the critical tipping angle is 12°. After moving both lumps to the inside base, the critical tipping angle is 31°. What does this result show?",
+     "choices": [
+      "The clay lumps became heavier when moved to the base",
+      "Lowering the centre of gravity means the box must tilt further before it topples, so it is more stable",
+      "The box became wider at the base, so it needs less turning effect to topple",
+      "A bigger angle means the box toppled more easily"
+     ],
+     "correctIndex": 1,
+     "rationale": "The same box and the same clay gave a larger critical angle when the clay was low. The lower centre of gravity has to be tilted further before the vertical line through it leaves the base, so the box is more stable.",
+     "phase": "observe",
+     "placement": "Investigation A: Centre of Gravity Height (clay at top vs clay at base, critical tipping angle table)"
+    },
+    {
+     "prompt": "In Investigation B, a pair folds out the cardboard flaps of a box to widen its base from 10 cm to 20 cm to 30 cm, and records the critical tipping angle each time. To make this a fair test of base width, what must they do?",
+     "choices": [
+      "Change the base width and the height of the box together to save time",
+      "Use the same box with the same clay, tilt it the same way, and change only the width of the base",
+      "Use a different box each time so the results are more varied",
+      "Add more clay each time the base is widened"
+     ],
+     "correctIndex": 1,
+     "rationale": "A fair test changes one variable at a time. Only the base width may change, and the box, its mass, the position of its centre of gravity and the tilting method stay the same.",
+     "phase": "observe",
+     "placement": "Investigation B: Base of Support Width (flaps folded in, two flaps out, all four flaps out)"
+    },
+    {
+     "prompt": "Which statement correctly gives the condition for an object to topple?",
+     "choices": [
+      "It topples when its centre of gravity is at the lowest point of the object",
+      "It topples when the vertical line through its centre of gravity falls outside its base of support",
+      "It topples whenever it is tilted by any angle at all",
+      "It topples when its weight is greater than the force pushing it"
+     ],
+     "correctIndex": 1,
+     "rationale": "While the vertical line through the centre of gravity is inside the base, the weight turns the object back upright. Once the line is outside the base, the weight produces a toppling moment and the object falls over.",
+     "phase": "explain",
+     "placement": "Explain: teacher diagram of the tall box with the vertical line through the centre of gravity at the critical tipping moment"
+    },
+    {
+     "prompt": "Two tall boxes have exactly the same total mass. In Box X the heavy mass is kept at the bottom. In Box Y the same heavy mass is kept near the top. A student says, \"Box X is more stable because it is heavier.\" What is the best correction?",
+     "choices": [
+      "Box Y is more stable because mass near the top balances the box",
+      "Both boxes are equally stable because they have the same mass",
+      "Box X is more stable because its extra weight pushes down harder on the table",
+      "Box X is more stable because the heavy mass is low, which keeps its centre of gravity low; the total mass is the same in both"
+     ],
+     "correctIndex": 3,
+     "rationale": "The masses are equal, so Box X is not heavier. The stability difference comes from where the mass is placed: a low centre of gravity means the box must tilt further before the vertical line leaves the base.",
+     "phase": "explain",
+     "placement": "Explain: teacher redirect of 'heavier base makes it stable' – is it the mass or where the mass is placed?"
+    },
+    {
+     "prompt": "A tower crane on a building site lifts a heavy concrete block and swings it far beyond the crane's rated radius. The crane overturns. Which explanation uses the idea of moments correctly?",
+     "choices": [
+      "The crane was too wide at the base, so it could not stay upright",
+      "The turning effect (weight × distance from the tipping edge) of the load became greater than the opposing moment of the crane's own weight and counterweight",
+      "The block became lighter as it moved outwards, so the crane lost balance",
+      "The block's weight stopped acting once the crane swung it outside the base"
+     ],
+     "correctIndex": 1,
+     "rationale": "Moment = force × perpendicular distance. A larger radius gives the load a larger moment about the tipping edge. When it exceeds the opposing moment from the crane's weight and counterweight, the crane overturns.",
+     "phase": "observe",
+     "placement": "Case study: 'A Tower-Crane Overturning: A Composite Case Study', guided question 1 (using the word moment)"
+    },
+    {
+     "prompt": "Double-decker buses in Nairobi have the heavy engine, gearbox and fuel tank placed low in the chassis, and the wheels are set wide apart. How do these two design choices make the bus less likely to topple on a bend?",
+     "choices": [
+      "The low heavy parts make the bus heavier, and a heavier bus cannot tilt",
+      "The wide wheels and low parts lower the bus's speed, so it cannot tilt",
+      "They move the centre of gravity to the top, which balances the bus",
+      "They keep the centre of gravity low and the base wide, so the vertical line through it stays inside the base even when the bus leans"
+     ],
+     "correctIndex": 3,
+     "rationale": "A low centre of gravity and a wide wheel track both mean the bus must lean much further before the vertical line through its centre of gravity leaves the base. Those are the two strategies found in the investigations.",
+     "phase": "model",
+     "placement": "Model: engineering example inset (double-decker bus) labelled with the two stability strategies"
+    },
+    {
+     "prompt": "A three-legged Jiko stool topples when a full 20-litre jerrycan is placed on one corner so that it overhangs the seat edge. A wider, lower four-legged stool with the same jerrycan in the same place only rocks and then returns upright. Which is the best explanation?",
+     "choices": [
+      "The four-legged stool has more legs, and the number of legs alone decides stability",
+      "The four-legged stool is stronger, so the jerrycan weighs less on it",
+      "The jerrycan's weight acts only on the three-legged stool",
+      "The wide, low stool has a bigger base and a lower centre of gravity, so the vertical line through its centre of gravity stays inside the base"
+     ],
+     "correctIndex": 3,
+     "rationale": "The jerrycan weighs the same in both cases. The wide, low stool keeps the vertical line through the combined centre of gravity inside its base, so the weight turns it back upright. On the narrow stool the line moves outside the base and it topples.",
+     "phase": "end",
+     "placement": "Model: Stool-vs-Jerrycan scenario update (why the narrow stool topples but the wide stool does not)"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Can We Explain and Predict Toppling? — Consolidation, Model Finalisation, and DQB Review",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A tall three-legged stool has a heavy maize sack placed on one corner of its seat, and the stool is given a small nudge. Which condition tells you the stool will topple?",
+     "choices": [
+      "The nudge is bigger than the weight of the sack.",
+      "The vertical line through the combined centre of gravity falls outside the base of support.",
+      "The stool is tall, so it always topples when nudged.",
+      "The sack is heavy, so the stool must fall."
+     ],
+     "correctIndex": 1,
+     "rationale": "An object topples when the vertical line through the combined centre of gravity of the stool and load falls outside the base of support. The weight then gives an unbalanced moment that turns the stool over. 'It is heavy' or 'it is tall' are vague and are not the deciding condition.",
+     "phase": "predict",
+     "placement": "Prediction card: topple or remain stable, and the deciding physical condition"
+    },
+    {
+     "prompt": "A wide, low four-legged stool carries a full jerrycan at one corner with a small overhang. When nudged, it rocks and then returns upright. What is the best explanation?",
+     "choices": [
+      "The vertical line through the centre of gravity falls outside the base, but the legs push the stool back.",
+      "The stool is heavy, so no moments act on it.",
+      "The jerrycan weighs less on a four-legged stool than on a three-legged stool.",
+      "The wide base keeps the vertical line through the combined centre of gravity inside the base of support, so the stool returns upright."
+     ],
+     "correctIndex": 3,
+     "rationale": "On a wide base the vertical line through the combined centre of gravity stays inside the base of support even when the stool tilts. The weight's moment then turns the stool back to upright, which is stable equilibrium.",
+     "phase": "observe",
+     "placement": "Live demonstration: (C) container at the corner of the wide flat model rocks but returns upright"
+    },
+    {
+     "prompt": "A force of 50 N pushes on a door at an angle. Which distance is used with the force to calculate the moment about the hinge?",
+     "choices": [
+      "The full width of the door.",
+      "The height of the hand above the floor.",
+      "The shortest (perpendicular) distance from the hinge to the line along which the force acts.",
+      "The distance along the slanted path from the hinge to the hand."
+     ],
+     "correctIndex": 2,
+     "rationale": "Moment = force × perpendicular distance from the pivot to the line of action of the force. Using the total or slanted distance is the common error of confusing the moment arm with total distance.",
+     "phase": "explain",
+     "placement": "Group model presentations: moment arm annotations (teacher draws a perpendicular on the board)"
+    },
+    {
+     "prompt": "A student pushes a school gate with a force of 40 N at a point 0.8 m from the hinge. The force is perpendicular to the gate. What is the moment of the force about the hinge?",
+     "choices": [
+      "0.02 N·m",
+      "50 N·m",
+      "40.8 N·m",
+      "32 N·m"
+     ],
+     "correctIndex": 3,
+     "rationale": "Moment = force × perpendicular distance = 40 N × 0.8 m = 32 N·m.",
+     "phase": "model",
+     "placement": "Summative problem set, Question 2: school gate moment",
+     "check": "40*0.8"
+    },
+    {
+     "prompt": "A see-saw is balanced on its pivot. A child of weight 300 N sits 1.2 m from the pivot. A second child of weight 400 N sits on the other side. How far from the pivot must the second child sit for the see-saw to balance?",
+     "choices": [
+      "0.9 m",
+      "1.2 m",
+      "0.3 m",
+      "1.6 m"
+     ],
+     "correctIndex": 0,
+     "rationale": "By the Principle of Moments, clockwise moment = anticlockwise moment. 300 × 1.2 = 360 N·m, so 400 × d = 360 and d = 0.9 m. The heavier child sits closer to the pivot.",
+     "phase": "model",
+     "placement": "Summative problem set, Question 3: see-saw balance",
+     "check": "300*1.2/400"
+    },
+    {
+     "prompt": "A 20-litre jerrycan of water weighs 200 N. Its centre is 0.15 m beyond the pivot leg of a three-legged stool, so it tends to turn the stool clockwise about that leg. What is the moment of the jerrycan about the pivot leg?",
+     "choices": [
+      "1333 N·m",
+      "200.15 N·m",
+      "300 N·m",
+      "30 N·m"
+     ],
+     "correctIndex": 3,
+     "rationale": "Moment = force × perpendicular distance = 200 N × 0.15 m = 30 N·m.",
+     "phase": "model",
+     "placement": "Summative problem set, Question 5(a): jerrycan-on-stool clockwise moment",
+     "check": "200*0.15"
+    },
+    {
+     "prompt": "A three-legged stool weighs 30 N, and its centre of gravity is 0.1 m on one side of a pivot leg. A 200 N jerrycan has its centre 0.15 m on the other side of that leg. The jerrycan's moment is 30 N·m. The stool's weight gives a moment of 3 N·m the other way. What happens when the stool is nudged?",
+     "choices": [
+      "It stays stable, because the stool's centre of gravity is close to the leg.",
+      "It topples, because the clockwise moment of 30 N·m is greater than the anticlockwise moment of 3 N·m.",
+      "It stays stable, because the stool's moment of 3 N·m cancels the jerrycan's moment.",
+      "It topples, because 30 N·m minus 3 N·m is 27 N·m, which means the moments are balanced."
+     ],
+     "correctIndex": 1,
+     "rationale": "The Principle of Moments gives balance only when the moments are equal. Here 30 N·m is much greater than 3 N·m, so there is a large unbalanced clockwise moment and the stool topples.",
+     "phase": "model",
+     "placement": "Summative problem set, Question 5(c): topples or remains stable, justified with the Principle of Moments"
+    },
+    {
+     "prompt": "A double-decker bus is built with heavy parts such as the engine and chassis in the lower deck and a lighter upper deck. Why does this make the bus less likely to topple when it tilts on a bend?",
+     "choices": [
+      "It lowers the centre of gravity, so the vertical line through it stays inside the base of support for larger tilts.",
+      "It removes all turning effects on the bus.",
+      "It makes the wheels grip the road better, so the bus can never tilt.",
+      "It makes the bus weigh less, so there is less moment to turn it over."
+     ],
+     "correctIndex": 0,
+     "rationale": "Keeping the heavy parts low lowers the centre of gravity. The bus can then tilt further before the vertical line through the centre of gravity leaves the base of support, so it is more stable. Lowering the centre of gravity does not reduce the weight.",
+     "phase": "model",
+     "placement": "Summative problem set, Question 4: double-decker bus design"
+    }
+   ]
+  }
+ ]
+}

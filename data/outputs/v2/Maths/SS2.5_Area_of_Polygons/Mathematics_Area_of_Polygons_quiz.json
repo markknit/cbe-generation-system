@@ -1,0 +1,850 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Mathematics",
+  "grade": 10,
+  "substrandId": "2.5",
+  "substrandName": "Area of Polygons",
+  "filePrefix": "Mathematics_Area_of_Polygons"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "Anchoring the Phenomenon — The Kericho Land Plot: How Much Land Is There, and Can We Share It Fairly?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:26:44+00:00",
+   "quiz": [
+    {
+     "prompt": "On the scaled drawing of the Kericho plot, 1 cm stands for 5 m. One side of the plot measures 3.6 cm on the drawing. What is the real length of that side?",
+     "choices": [
+      "8.6 m",
+      "18 m",
+      "3.6 m",
+      "1.8 m"
+     ],
+     "correctIndex": 1,
+     "rationale": "Each centimetre stands for 5 m, so 3.6 cm × 5 = 18 m. Adding 5 m instead of multiplying gives 8.6 m. Dividing by 2 gives 1.8 m, which is also wrong.",
+     "phase": "predict",
+     "placement": "Predict: individual estimate from the scaled drawing of the Kericho heptagonal plot (scale 1 cm : 5 m)",
+     "check": "3.6*5"
+    },
+    {
+     "prompt": "A learner estimates the area of the irregular Kericho plot by drawing a rectangle that completely surrounds the plot and finding the area of that rectangle. Compared with the true area of the plot, what is this estimate likely to be?",
+     "choices": [
+      "Too small, because the rectangle has only four sides",
+      "Exactly right, because a rectangle is a standard shape",
+      "Impossible to compare, because the plot has no area formula",
+      "Too big, because the rectangle also covers some land outside the plot"
+     ],
+     "correctIndex": 3,
+     "rationale": "A rectangle drawn around the whole plot includes corners of space outside the boundary, so its area is more than the area of the plot. This is why it only gives an estimate.",
+     "phase": "predict",
+     "placement": "Predict: pair-share of reasoning strategies (surrounding rectangle, grid squares, known shape inside)"
+    },
+    {
+     "prompt": "The Kericho plot has seven sides of 18 m, 22 m, 15 m, 20 m, 25 m, 17 m and 19 m, and none of its angles is 90°. Which statement best describes the problem the village meeting faces?",
+     "choices": [
+      "Land with seven sides cannot have an area",
+      "The plot is too big to be measured in square metres",
+      "The area formulas for a rectangle, a square or a triangle do not directly fit this one shape",
+      "The families must first agree that all the sides are equal"
+     ],
+     "correctIndex": 2,
+     "rationale": "The plot is not a single rectangle, square or triangle, so no one familiar formula gives its area directly. The area still exists. We just do not yet have a method for it.",
+     "phase": "observe",
+     "placement": "Observe: group 'Observation Record' (formula audit and 'This plot is puzzling because ___')"
+    },
+    {
+     "prompt": "A right-angled card triangle has a base of 8 cm and a perpendicular height of 6 cm. Using A = ½bh, what is its area?",
+     "choices": [
+      "48 cm²",
+      "24 cm²",
+      "14 cm²",
+      "28 cm²"
+     ],
+     "correctIndex": 1,
+     "rationale": "A = ½ × 8 × 6 = 24 cm². Forgetting the ½ gives 48 cm². Adding the two lengths gives 14 cm².",
+     "phase": "explain",
+     "placement": "Part A: triangle area review with the right-angled card triangle (base 8 cm, height 6 cm)",
+     "check": "0.5*8*6"
+    },
+    {
+     "prompt": "An acute triangle has a base of 10 cm. Its perpendicular height from the base to the opposite vertex is 5 cm. Its slanting side is 6.4 cm long. Using A = ½bh, what is the area of the triangle?",
+     "choices": [
+      "25 cm²",
+      "64 cm²",
+      "50 cm²",
+      "32 cm²"
+     ],
+     "correctIndex": 0,
+     "rationale": "The height must be the perpendicular distance, 5 cm. So A = ½ × 10 × 5 = 25 cm². Using the slant side gives 32 cm², which is the common error. 50 cm² leaves out the ½.",
+     "phase": "explain",
+     "placement": "Part A: acute triangle cut-out (base 10 cm, height 5 cm) and the altitude demonstration",
+     "check": "0.5*10*5"
+    },
+    {
+     "prompt": "At the end of this lesson, which statement about the total area of the Kericho plot is correct?",
+     "choices": [
+      "The area can never be found because the plot is irregular",
+      "Every learner's estimate is correct because the plot has no single formula",
+      "The exact area is already known and the plot can now be divided equally",
+      "We only have estimates so far, and the real area has not yet been calculated"
+     ],
+     "correctIndex": 3,
+     "rationale": "The lesson gives estimates and reviews triangle area as a first tool. The plot itself is not measured and calculated until a later lesson, so the total area and the fair division are still open questions.",
+     "phase": "end",
+     "placement": "Model: first Unit Model Book entry and closing link to the driving question"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Quadrilaterals — Parallelograms, Rhombuses, Trapeziums and Kites",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A parallelogram-shaped rooftop panel has a base of 8 cm. Its slanted side is 6 cm long, and its perpendicular height (measured with a set-square) is 5 cm. What is its area?",
+     "choices": [
+      "20 cm²",
+      "48 cm²",
+      "40 cm²",
+      "30 cm²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Area of a parallelogram = base × perpendicular height = 8 × 5 = 40 cm². The slant side (6 cm) is not the height, so 8 × 6 = 48 cm² is wrong.",
+     "phase": "observe",
+     "placement": "Observe: measuring the base and perpendicular height of the parallelogram cut-out with a set-square",
+     "check": "8*5"
+    },
+    {
+     "prompt": "A group cuts a parallelogram along a perpendicular height line and slides the triangle from one end to the other end. What shape do they make, and what does this show about the parallelogram's area?",
+     "choices": [
+      "A rectangle with the same base and slant side, so the area is base × slant side",
+      "A triangle, so the area is ½ × base × height",
+      "A trapezium, so the area is ½(a + b)h",
+      "A rectangle with the same base and height, so the area is base × height"
+     ],
+     "correctIndex": 3,
+     "rationale": "The cut-off triangle fits on the other side to form a rectangle with the same base and perpendicular height. So the parallelogram's area is bh.",
+     "phase": "observe",
+     "placement": "Observe: dissection of the parallelogram along a perpendicular height line to form a rectangle"
+    },
+    {
+     "prompt": "A rhombus-shaped decorative tile and a kite-shaped festival decoration both have diagonals of 10 cm and 6 cm. Which statement is correct?",
+     "choices": [
+      "The rhombus has the larger area because all its sides are equal",
+      "The kite has the larger area because its sides are unequal",
+      "Both have an area of 30 cm²",
+      "Both have an area of 60 cm²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Both areas are ½ × d₁ × d₂ = ½ × 10 × 6 = 30 cm². Equal diagonals in both shapes give equal areas, whatever the side lengths.",
+     "phase": "explain",
+     "placement": "Explain: groups derive the rhombus and kite formulae and compare with the Predict question on shapes B and D",
+     "check": "0.5*10*6"
+    },
+    {
+     "prompt": "Why can the area of both a rhombus and a kite be found using A = ½d₁d₂?",
+     "choices": [
+      "Both shapes have all four sides equal in length",
+      "In both shapes, each diagonal cuts the other diagonal exactly in half",
+      "Both shapes have two pairs of parallel sides",
+      "In both shapes, the diagonals cross at right angles, so one diagonal is a base and the parts of the other diagonal are the heights of the triangles"
+     ],
+     "correctIndex": 3,
+     "rationale": "The diagonals of a rhombus and a kite cross at right angles, so one diagonal splits the shape into triangles whose heights add up to the other diagonal. In a kite only one diagonal is bisected, and a kite does not have parallel sides or four equal sides.",
+     "phase": "explain",
+     "placement": "Explain: teacher formalises the formulae and asks why the rhombus and kite share the same formula"
+    },
+    {
+     "prompt": "A parallelogram-shaped cattle pen near Naivasha has a base of 24 m and a perpendicular height of 15 m. What is its area?",
+     "choices": [
+      "39 m²",
+      "720 m²",
+      "360 m²",
+      "180 m²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Area = base × perpendicular height = 24 × 15 = 360 m². Using ½ × 24 × 15 = 180 m² wrongly treats it as a triangle.",
+     "phase": "explain",
+     "placement": "Explain: Problem 1, the parallelogram-shaped cattle pen in Naivasha",
+     "check": "24*15"
+    },
+    {
+     "prompt": "A tea-farm terrace in Kericho has a trapezium-shaped cross-section. Its parallel widths are 3.6 m and 2.2 m, and its depth (perpendicular height) is 1.4 m. What is the cross-sectional area?",
+     "choices": [
+      "8.12 m²",
+      "3.08 m²",
+      "5.04 m²",
+      "4.06 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "Area = ½(a + b)h = ½ × (3.6 + 2.2) × 1.4 = ½ × 5.8 × 1.4 = 4.06 m². Leaving out the ½ gives 8.12 m².",
+     "phase": "explain",
+     "placement": "Explain: Problem 2, the trapezium-shaped tea terrace in Kericho",
+     "check": "0.5*(3.6+2.2)*1.4"
+    },
+    {
+     "prompt": "While decomposing a land plot, a group finds a four-sided region with exactly one pair of parallel sides, 12 m and 8 m long, which are 5 m apart. The other two sides are not parallel. Which shape is it, and which formula should they use for its area?",
+     "choices": [
+      "Kite, A = ½d₁d₂",
+      "Parallelogram, A = bh",
+      "Trapezium, A = (a + b)h",
+      "Trapezium, A = ½(a + b)h"
+     ],
+     "correctIndex": 3,
+     "rationale": "A four-sided shape with exactly one pair of parallel sides is a trapezium. Its area is ½(a + b)h, and the ½ must not be left out.",
+     "phase": "model",
+     "placement": "Model Building: decomposing the seven-sided Kericho plot and writing the formula for each sub-shape"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Trigonometric Area of Triangles — When the Height Is Hidden",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:26:44+00:00",
+   "quiz": [
+    {
+     "prompt": "A triangular solar panel in Kisumu has two sides of 5 m and 7 m with an angle of 58° between them. The perpendicular height cannot be measured because the panel is bolted flat on a sloped roof. What is the best way to find its area?",
+     "choices": [
+      "Use ½ × 5 × 7 = 17.5 m², because the two sides are enough to replace the base and height",
+      "The area cannot be found unless the perpendicular height is measured",
+      "Use the two sides and the angle between them in A = ½ab sin C",
+      "Assume the height equals 5 m and use A = ½ × 7 × 5"
+     ],
+     "correctIndex": 2,
+     "rationale": "A = ½bh needs h, which is unknown. But two sides and the included angle are known, so A = ½ab sin C can be used without measuring the height.",
+     "phase": "predict",
+     "placement": "Predict: Kisumu solar panel card (5 m, 7 m, 58°, no perpendicular height marked)"
+    },
+    {
+     "prompt": "In a triangle, sides a and b meet at angle C. A perpendicular of length h is drawn from the end of side a to side b (extended if needed). This makes a right-angled triangle in which side a is the hypotenuse and angle C is one of the angles. Which expression gives h?",
+     "choices": [
+      "h = a sin C",
+      "h = b sin C",
+      "h = a cos C",
+      "h = a ÷ sin C"
+     ],
+     "correctIndex": 0,
+     "rationale": "In the right-angled triangle, sin C = opposite ÷ hypotenuse = h/a, so h = a sin C. Using b means the wrong side has been taken as the hypotenuse.",
+     "phase": "observe",
+     "placement": "Observe: structured derivation worksheet, Step 2 and Step 3 (sin C in terms of h and a, then make h the subject)"
+    },
+    {
+     "prompt": "A triangular panel has sides a = 5 m and b = 7 m with an included angle C = 58°. Given that sin 58° ≈ 0.8480, what is its area, to 2 decimal places?",
+     "choices": [
+      "29.68 m²",
+      "9.27 m²",
+      "17.50 m²",
+      "14.84 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "A = ½ab sin C = ½ × 5 × 7 × 0.8480 ≈ 14.84 m². 17.50 m² forgets sin C, 29.68 m² forgets the ½, and 9.27 m² uses cos 58° instead of sin 58°.",
+     "phase": "observe",
+     "placement": "Observe: applying the derived formula to the Kisumu solar panel (calculator and tables)",
+     "check": "0.5*5*7*sin(58)"
+    },
+    {
+     "prompt": "In triangle KLM, KL = 8 m, LM = 10 m, angle L = 35° and angle K = 80°. Which expression gives the area of the triangle using A = ½ab sin C?",
+     "choices": [
+      "½ × 8 × 10 × sin 80°",
+      "½ × 8 × 10 × cos 35°",
+      "8 × 10 × sin 35°",
+      "½ × 8 × 10 × sin 35°"
+     ],
+     "correctIndex": 3,
+     "rationale": "The angle must lie between the two sides used. KL and LM meet at L, so the included angle is 35° and A = ½ × 8 × 10 × sin 35°. Using 80° picks an angle that is not between those sides.",
+     "phase": "explain",
+     "placement": "Explain: application problems (choosing the correct two sides and the included angle)"
+    },
+    {
+     "prompt": "A triangular maize plot near Kericho has two sides of 12 m and 9 m with an included angle of 72°. Given that sin 72° ≈ 0.9511, what is the area of the plot, to 2 decimal places?",
+     "choices": [
+      "16.69 m²",
+      "102.71 m²",
+      "54.00 m²",
+      "51.36 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "A = ½ × 12 × 9 × sin 72° = 54 × 0.9511 ≈ 51.36 m². 54 m² leaves out sin C, 102.71 m² leaves out the ½, and 16.69 m² uses cos 72°.",
+     "phase": "explain",
+     "placement": "Explain: Problem 1 (Direct), triangular maize plot near Kericho",
+     "check": "0.5*12*9*sin(72)"
+    },
+    {
+     "prompt": "One triangle inside a polygonal plot has two sides of 8.4 m and 11.2 m with an included angle of 65°. Its perpendicular height is not marked. Given that sin 65° ≈ 0.9063, what is its area, to 2 decimal places?",
+     "choices": [
+      "42.63 m²",
+      "19.88 m²",
+      "85.26 m²",
+      "47.04 m²"
+     ],
+     "correctIndex": 0,
+     "rationale": "A = ½ × 8.4 × 11.2 × sin 65° = 47.04 × 0.9063 ≈ 42.63 m². 47.04 m² forgets sin C, 85.26 m² forgets the ½, and 19.88 m² uses cos 65°.",
+     "phase": "explain",
+     "placement": "Explain: Problem 2 (embedded in polygon decomposition), triangle with sides 8.4 m and 11.2 m and angle 65°",
+     "check": "0.5*8.4*11.2*sin(65)"
+    },
+    {
+     "prompt": "A plot is split into triangles to find its total area. For one triangle, the perpendicular height cannot be measured, but two sides and the angle between them are known. Which statement best describes how A = ½ab sin C helps?",
+     "choices": [
+      "It works only for right-angled triangles, so it cannot help with this triangle",
+      "It means the plot no longer needs to be split into triangles",
+      "It always gives a larger area than A = ½bh, so it is used for bigger triangles",
+      "It allows that triangle's area to be found without the height, so the plot's total area can still be found by adding the triangle areas"
+     ],
+     "correctIndex": 3,
+     "rationale": "A = ½ab sin C works for any triangle when two sides and the included angle are known. So every triangle in a decomposed polygon can be solved and the areas added.",
+     "phase": "model",
+     "placement": "Model: updating the cumulative Polygon Area Model and writing the Model Update Statement"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Heptagons — Decomposing the Kericho Land Plot into Triangles",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A village plot in Kericho is a heptagon (a polygon with 7 sides). A learner chooses one corner (vertex) and draws diagonals from it to every other corner it can reach, so that the plot is split into non-overlapping triangles. How many triangles are formed?",
+     "choices": [
+      "5",
+      "6",
+      "7",
+      "4"
+     ],
+     "correctIndex": 0,
+     "rationale": "A diagonal from one vertex splits an n-sided polygon into n - 2 triangles, so 7 - 2 = 5. The common error is thinking the number of triangles equals the number of sides.",
+     "phase": "predict",
+     "placement": "Predict: written prediction of how many non-overlapping triangles fit inside the heptagon",
+     "check": "7-2"
+    },
+    {
+     "prompt": "A learner wants to find the area of a triangle on the scaled plot drawing using A = ½ × base × height. Which measurement should they use as the height?",
+     "choices": [
+      "The length of the side next to the chosen base",
+      "The perpendicular distance from the chosen base to the opposite vertex",
+      "The length of the longest side of the triangle",
+      "Half the length of the chosen base"
+     ],
+     "correctIndex": 1,
+     "rationale": "The height must be measured at right angles (perpendicular) to the chosen base, up to the opposite vertex. Using a slanted side overestimates the area.",
+     "phase": "observe",
+     "placement": "Observe, Step 2: measuring the base and the corresponding perpendicular height of each triangle"
+    },
+    {
+     "prompt": "On a scale drawing of a land plot, 1 cm represents 5 m. One triangle inside the plot has a base of 8 cm and a perpendicular height of 5 cm on the drawing. What is the real area of this triangle on the ground?",
+     "choices": [
+      "20 m²",
+      "500 m²",
+      "250 m²",
+      "100 m²"
+     ],
+     "correctIndex": 1,
+     "rationale": "Area on the drawing = ½ × 8 × 5 = 20 cm². Since 1 cm = 5 m, 1 cm² = 25 m², so the real area is 20 × 25 = 500 m². Multiplying by only 5 gives the wrong answer of 100 m².",
+     "phase": "observe",
+     "placement": "Observe, Steps 3 and 4: calculating triangle areas in cm² and converting with the scale (1 cm² = 25 m²)",
+     "check": "0.5*8*5*25"
+    },
+    {
+     "prompt": "Two groups measured the same heptagon plot drawing. Group A got a total area of 1 240 m² and Group B got 1 270 m². What is the most likely reason for the small difference?",
+     "choices": [
+      "Small measurement errors, such as reading the ruler at an angle or not measuring the height exactly perpendicular to the base",
+      "Group B must have used 7 triangles while Group A used 5",
+      "The formula A = ½bh gives a different answer each time it is used",
+      "The area of a heptagon changes depending on which group measures it"
+     ],
+     "correctIndex": 0,
+     "rationale": "The polygon's true area is fixed, and the formula is the same for everyone. Small differences come from measuring errors such as parallax or a height that is not exactly perpendicular.",
+     "phase": "explain",
+     "placement": "Explain, written question Q2: why Group A and Group B totals differ"
+    },
+    {
+     "prompt": "The total area of a plot is 1 260 m². It must be shared equally among three farming families. What area should each family receive?",
+     "choices": [
+      "630 m²",
+      "1 260 m²",
+      "3 780 m²",
+      "420 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "Each family gets one-third of the total: 1 260 ÷ 3 = 420 m². Multiplying by 3 or dividing by 2 are common slips.",
+     "phase": "explain",
+     "placement": "Explain, written question Q3: one family receives one-third of the total area",
+     "check": "1260/3"
+    },
+    {
+     "prompt": "A pentagon (5 sides) splits into 3 triangles and a hexagon (6 sides) splits into 4 triangles when all diagonals are drawn from one vertex. Using the same pattern, how many triangles will a polygon with 9 sides split into?",
+     "choices": [
+      "7",
+      "6",
+      "8",
+      "9"
+     ],
+     "correctIndex": 0,
+     "rationale": "The pattern is number of triangles = n - 2, where n is the number of sides. For 9 sides, 9 - 2 = 7 triangles.",
+     "phase": "explain",
+     "placement": "Explain: class discussion generalising the pentagon, hexagon and heptagon results to (n - 2) triangles",
+     "check": "9-2"
+    },
+    {
+     "prompt": "A heptagon is split into five non-overlapping triangles T1 to T5 with bases b₁ to b₅ and perpendicular heights h₁ to h₅. Which statement correctly gives the area of the heptagon?",
+     "choices": [
+      "Area = ½b₁h₁ × ½b₂h₂ × ½b₃h₃ × ½b₄h₄ × ½b₅h₅",
+      "Area = ½ × (b₁ + b₂ + b₃ + b₄ + b₅) × (h₁ + h₂ + h₃ + h₄ + h₅)",
+      "Area = ½b₁h₁ + ½b₂h₂ + ½b₃h₃ + ½b₄h₄ + ½b₅h₅",
+      "Area = ½ × 7 × b₁ × h₁"
+     ],
+     "correctIndex": 2,
+     "rationale": "The area of the polygon equals the sum of the areas of its non-overlapping triangles, and each triangle's area is ½ × base × height. Adding all the bases and all the heights first, or multiplying the areas, gives the wrong result.",
+     "phase": "model",
+     "placement": "Model: writing the general statement 'Area of heptagon = A(T1) + A(T2) + ... + A(T5)' on the poster"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Octagons — Decomposing the Mombasa Courtyard",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A regular octagon has centre O. Straight lines are drawn from O to each of its 8 vertices, dividing it into 8 congruent triangles. What is the angle at O in each triangle?",
+     "choices": [
+      "135°",
+      "60°",
+      "22.5°",
+      "45°"
+     ],
+     "correctIndex": 3,
+     "rationale": "The angles around the centre add up to 360°, and they are shared equally among 8 triangles: 360° ÷ 8 = 45°. The value 135° is the interior angle of the octagon, not the central angle.",
+     "phase": "observe",
+     "placement": "Task 1: Decomposition Observation (drawing lines from centre O to each vertex and measuring the central angle)",
+     "check": "360/8"
+    },
+    {
+     "prompt": "A regular octagon of side 3 m is split from its centre into 8 identical isosceles triangles. Each triangle has base 3 m and height (apothem) 3.62 m. What is the area of ONE triangle, to 2 decimal places?",
+     "choices": [
+      "43.44 m²",
+      "4.50 m²",
+      "5.43 m²",
+      "10.86 m²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Area of a triangle = ½ × base × height = ½ × 3 × 3.62 = 5.43 m². Forgetting the ½ gives 10.86 m², and 43.44 m² is the area of all 8 triangles together.",
+     "phase": "explain",
+     "placement": "Part A: Decomposition Method (area of one isosceles triangle from the measured apothem)",
+     "check": "0.5*3*3.62"
+    },
+    {
+     "prompt": "The area of a regular octagon with side length s is A = 2(1 + √2)s². Using this formula, what is the area of the Mombasa courtyard, a regular octagon with side 3 m? Give the answer to 2 decimal places.",
+     "choices": [
+      "43.46 m²",
+      "14.49 m²",
+      "86.91 m²",
+      "21.73 m²"
+     ],
+     "correctIndex": 0,
+     "rationale": "A = 2(1 + √2) × 3² = 2 × 2.4142 × 9 ≈ 43.46 m² (43.45 m² if √2 is rounded to 1.414). Using 3 instead of 3² gives 14.49 m², and leaving out the factor 2 gives 21.73 m².",
+     "phase": "explain",
+     "placement": "Part B: Formula Method (substituting s = 3 m into A = 2(1 + √2)s²)",
+     "check": "2*(1+sqrt(2))*3**2"
+    },
+    {
+     "prompt": "A group finds the area of a regular octagon (side 3 m) as 43.5 m² by decomposing it into 8 triangles. The formula A = 2(1 + √2)s² gives 43.45 m². Why are the two answers very slightly different?",
+     "choices": [
+      "The decomposition method only works for hexagons, not octagons.",
+      "The eight triangles are not exactly the same size.",
+      "The apothem (3.62 m) was rounded or measured, so the decomposition answer is only approximate.",
+      "The formula is for irregular octagons, so it cannot match."
+     ],
+     "correctIndex": 2,
+     "rationale": "Both methods describe the same octagon, since the formula comes from the decomposition. The small difference comes from rounding the apothem to 3.62 m. The triangles are congruent.",
+     "phase": "explain",
+     "placement": "Part C: Verification (comparing the two answers and justifying why they are almost identical)"
+    },
+    {
+     "prompt": "The Mombasa courtyard has an area of 43.45 m². Each square tile measures 0.25 m × 0.25 m. How many tiles are needed to cover the courtyard, before any allowance for wastage? (Round to a whole number of tiles you must buy.)",
+     "choices": [
+      "696 tiles",
+      "174 tiles",
+      "695 tiles",
+      "173 tiles"
+     ],
+     "correctIndex": 0,
+     "rationale": "One tile has area 0.25 × 0.25 = 0.0625 m². Number of tiles = 43.45 ÷ 0.0625 = 695.2, which must be rounded UP to 696 so the whole floor is covered. Dividing by 0.25 instead of 0.0625 gives about 174.",
+     "phase": "explain",
+     "placement": "Part D: Tile and Cost Calculation (number of tiles)",
+     "check": "696"
+    },
+    {
+     "prompt": "A contractor needs 696 tiles to cover a courtyard floor. She adds 10% for wastage, which makes 766 tiles in total (rounded up). Each tile costs Ksh 85. What is the total cost of the tiles she orders?",
+     "choices": [
+      "Ksh 65,110",
+      "Ksh 60,010",
+      "Ksh 5,916",
+      "Ksh 59,160"
+     ],
+     "correctIndex": 0,
+     "rationale": "Total tiles = 696 × 1.10 ≈ 766. Cost = 766 × 85 = Ksh 65,110. Ksh 59,160 ignores wastage, and Ksh 60,010 wrongly adds 10 tiles instead of 10%.",
+     "phase": "explain",
+     "placement": "Part D: Tile and Cost Calculation (total cost including 10% wastage)",
+     "check": "766*85"
+    },
+    {
+     "prompt": "A regular heptagon has side 4 m. It is split from its centre into 7 congruent isosceles triangles, each with base 4 m and height (apothem) 4.15 m. What is the area of the heptagon?",
+     "choices": [
+      "58.1 m²",
+      "116.2 m²",
+      "8.3 m²",
+      "66.4 m²"
+     ],
+     "correctIndex": 0,
+     "rationale": "One triangle = ½ × 4 × 4.15 = 8.3 m². The heptagon has 7 triangles, so 7 × 8.3 = 58.1 m². The value 8.3 m² is only one triangle, and 66.4 m² uses 8 triangles.",
+     "phase": "explain",
+     "placement": "Part F: Regular heptagon (decomposition with s = 4 m and apothem 4.15 m)",
+     "check": "7*0.5*4*4.15"
+    },
+    {
+     "prompt": "A village plot has seven sides of different lengths, and no single area formula fits it. Which strategy from this lesson's work on octagons and heptagons could be used to find its area?",
+     "choices": [
+      "Measure only the longest side and use the octagon formula.",
+      "Divide the plot into triangles, find each triangle's area and add them up.",
+      "Multiply the longest side by the shortest side.",
+      "Say it is impossible to find the area of a shape with unequal sides."
+     ],
+     "correctIndex": 1,
+     "rationale": "Every polygon can be decomposed into triangles, whose areas can be found with ½ × base × height and then added. This is the main idea of the cumulative area model leading to the Kericho plot.",
+     "phase": "model",
+     "placement": "Model Building: cumulative area model, timeline and note under the Kericho Plot box"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Irregular Polygons — Triangulation of the Nakuru School Shamba",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A five-sided polygon (pentagon) is split into triangles by drawing diagonals from ONE corner to every corner that is not next to it. How many triangles are formed?",
+     "choices": [
+      "3",
+      "4",
+      "2",
+      "5"
+     ],
+     "correctIndex": 0,
+     "rationale": "A polygon with n sides gives n − 2 triangles from one vertex, so 5 − 2 = 3 triangles.",
+     "phase": "predict",
+     "placement": "Prediction: how many triangles from one corner of the five-sided Nakuru shamba",
+     "check": "5-2"
+    },
+    {
+     "prompt": "A group is finding the area of a triangle on a scale drawing. The base is 6 cm. One student measures the slanted side from the top corner to the end of the base as 5 cm. Another student measures the straight distance from the top corner to the base, meeting it at 90°, as 4 cm. Which measurement should be used as the height in A = ½bh?",
+     "choices": [
+      "Either one, because both reach the base",
+      "The 4 cm distance that meets the base at 90°",
+      "The average of the two, 4.5 cm",
+      "The 5 cm slanted side, because it is the longest distance"
+     ],
+     "correctIndex": 1,
+     "rationale": "The height in A = ½bh must be the perpendicular height, which meets the base at 90°. Using a slanted side overestimates the area.",
+     "phase": "observe",
+     "placement": "Step 2 – Measure: measuring base and perpendicular height with ruler and set square"
+    },
+    {
+     "prompt": "A shamba drawing has scale 1 cm : 4 m. It is split into three triangles with areas on the drawing of 2.5 cm², 4.0 cm² and 3.0 cm². What is the total real area of the shamba?",
+     "choices": [
+      "76 m²",
+      "9.5 m²",
+      "152 m²",
+      "38 m²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Total on the drawing = 2.5 + 4.0 + 3.0 = 9.5 cm². Since 1 cm² represents 16 m² (4 × 4), the real area is 9.5 × 16 = 152 m².",
+     "phase": "observe",
+     "placement": "Steps 3–4 – Calculate, convert cm² to m², sum and post the total on the Evidence Wall",
+     "check": "(2.5+4.0+3.0)*16"
+    },
+    {
+     "prompt": "On a drawing with scale 1 cm : 4 m, a group converted an area from cm² to m² by multiplying by 4. Why is this wrong?",
+     "choices": [
+      "Area is multiplied by the scale factor squared, 4 × 4 = 16, because both length and width are enlarged",
+      "Area must be multiplied by 8, which is 4 × 2",
+      "Multiplying by 4 is correct for lengths and so also for areas",
+      "The scale factor should be added to the area, not multiplied"
+     ],
+     "correctIndex": 0,
+     "rationale": "Both dimensions are enlarged 4 times, so area is enlarged 4² = 16 times. Multiplying by 4 only works for lengths.",
+     "phase": "explain",
+     "placement": "Reconciliation: diagnosing Group 3's conversion error (multiplying by 4 instead of 16)"
+    },
+    {
+     "prompt": "A surveyor measures the three sides of a triangular plot as 13 m, 14 m and 15 m. She cannot measure its height. Using Heron's formula, what is the area of the plot?",
+     "choices": [
+      "42 m²",
+      "168 m²",
+      "21 m²",
+      "84 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "s = (13 + 14 + 15) ÷ 2 = 21. A = √[21 × (21 − 13) × (21 − 14) × (21 − 15)] = √(21 × 8 × 7 × 6) = √7056 = 84 m².",
+     "phase": "explain",
+     "placement": "Heron's formula segment: using s = (a + b + c) ÷ 2 and A = √[s(s − a)(s − b)(s − c)]",
+     "check": "sqrt(21*8*7*6)"
+    },
+    {
+     "prompt": "When is Heron's formula most useful for finding the area of a triangle?",
+     "choices": [
+      "When only the three side lengths are known and the height cannot be measured",
+      "When the triangle has a right angle",
+      "When the triangle has two equal sides",
+      "When the area is needed in square metres instead of square centimetres"
+     ],
+     "correctIndex": 0,
+     "rationale": "Heron's formula needs only the three side lengths, so it is useful when the perpendicular height is not known or cannot be measured.",
+     "phase": "explain",
+     "placement": "Heron's formula segment: 'What if a surveyor can measure only the three sides of a triangle?'"
+    },
+    {
+     "prompt": "A village near Kericho has a seven-sided plot whose sides all have different lengths and whose angles are all different. A student says, 'We cannot split it into triangles because it is not a regular polygon.' Which reply is correct?",
+     "choices": [
+      "The student is right, because triangulation only works on polygons with equal sides",
+      "The student is wrong, but only if the plot is first redrawn as a regular polygon",
+      "The student is right, because triangulation only works on five-sided polygons",
+      "The student is wrong, because any polygon can be split into non-overlapping triangles using diagonals, whatever its side lengths or angles"
+     ],
+     "correctIndex": 3,
+     "rationale": "Triangulation does not need equal sides or equal angles. Any polygon can be split into non-overlapping triangles by drawing diagonals from one vertex.",
+     "phase": "dqb",
+     "placement": "DQB: 'Does our method work for the Kericho plot even if its sides are all different lengths?'"
+    },
+    {
+     "prompt": "You draw diagonals from one corner of a seven-sided plot to every corner that is not next to it. How many triangles do you get?",
+     "choices": [
+      "7",
+      "6",
+      "5",
+      "4"
+     ],
+     "correctIndex": 2,
+     "rationale": "A polygon with n sides gives n − 2 triangles, so 7 − 2 = 5 triangles. The areas of these 5 triangles are then added.",
+     "phase": "model",
+     "placement": "Model building: generalisation statement and 'Lesson 7: n = 7, so I will draw ____ triangles'",
+     "check": "7-2"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Composite Polygons and Real-Life Application: Solving the Kericho Land-Division Problem",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A village elder draws a seven-sided plot of land with sides of different lengths. No single area formula you know fits the whole shape. What is the best first step to find its area?",
+     "choices": [
+      "Say the area cannot be found because the shape is irregular",
+      "Draw lines inside the plot to split it into triangles and quadrilaterals, find each area, then add them",
+      "Measure only the longest side and square it",
+      "Pick the longest side and multiply it by the shortest side"
+     ],
+     "correctIndex": 1,
+     "rationale": "Any polygon can be decomposed into shapes whose areas we already know, such as triangles, rectangles and trapezoids. The total area is the sum of these parts.",
+     "phase": "predict",
+     "placement": "Predict Phase: sketching internal lines on the Kericho plot and writing predictions"
+    },
+    {
+     "prompt": "The Kiambu Girls' Secondary School science block has an L-shaped footprint. It fits inside a rectangle 18 m long and 12 m wide. A rectangular notch 6 m by 7 m is missing from one corner. What is the area of the L-shape?",
+     "choices": [
+      "174 m²",
+      "216 m²",
+      "90 m²",
+      "258 m²"
+     ],
+     "correctIndex": 0,
+     "rationale": "Subtract the notch from the full rectangle: 18 × 12 − 6 × 7 = 216 − 42 = 174 m².",
+     "phase": "observe",
+     "placement": "Observe Phase: L-shaped Kiambu school building footprint worksheet",
+     "check": "18*12-6*7"
+    },
+    {
+     "prompt": "One group finds the area of an L-shaped building by subtracting the notch from a big rectangle. Another group splits the L into two rectangles and adds them. Both groups work correctly. What will they find?",
+     "choices": [
+      "The two answers will differ by the area of the notch",
+      "The subtraction method gives a bigger area because it starts with a bigger rectangle",
+      "The addition method gives a bigger area because it uses more shapes",
+      "The two answers will be the same, because the area of a shape does not depend on how it is divided"
+     ],
+     "correctIndex": 3,
+     "rationale": "Area is a property of the shape itself. Any correct decomposition must give the same total, so different answers mean an arithmetic error.",
+     "phase": "observe",
+     "placement": "Observe Phase: using at least TWO different decomposition strategies for the L-shape"
+    },
+    {
+     "prompt": "The Nakuru Community Organic Garden is a rectangle 15 m by 10 m. A triangle with base 10 m and height 4 m is added to one short side. A rectangular vegetable patch 3 m by 4 m is removed from the inside. What is the area of the garden?",
+     "choices": [
+      "182 m²",
+      "138 m²",
+      "170 m²",
+      "158 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "Add the triangle and subtract the patch: 15 × 10 + ½ × 10 × 4 − 3 × 4 = 150 + 20 − 12 = 158 m².",
+     "phase": "observe",
+     "placement": "Observe Phase: Nakuru pentagonal community garden worksheet",
+     "check": "15*10+0.5*10*4-3*4"
+    },
+    {
+     "prompt": "Which statement correctly describes how to find the area of a composite polygon?",
+     "choices": [
+      "Always add all the areas, even for a section that is cut out",
+      "Add the areas of the component shapes, and subtract the area of any section that is removed",
+      "Multiply the areas of all the component shapes together",
+      "Find the area of the largest component shape only"
+     ],
+     "correctIndex": 1,
+     "rationale": "The general rule is Area(composite) = sum of component areas, or whole area minus the removed area. Areas are never multiplied together, and a removed part must be subtracted.",
+     "phase": "explain",
+     "placement": "Explain Phase: Gallery Walk and teacher synthesis of the composite-polygon rule"
+    },
+    {
+     "prompt": "A group splits a plot into two triangles and a trapezoid with areas 300 m², 450 m² and 510 m². The total area is shared equally among three farming families. How much land does each family get?",
+     "choices": [
+      "420 m²",
+      "1 260 m²",
+      "510 m²",
+      "630 m²"
+     ],
+     "correctIndex": 0,
+     "rationale": "Total area = 300 + 450 + 510 = 1 260 m². Each family gets 1 260 ÷ 3 = 420 m².",
+     "phase": "dqb",
+     "placement": "Driving Question Board phase: calculating the Kericho total area and the equal share for each family",
+     "check": "(300+450+510)/3"
+    },
+    {
+     "prompt": "A village divides a plot fairly among three families. Which statement best describes a fair division of the land?",
+     "choices": [
+      "Each family's section has the same number of sides",
+      "Each family's section has the same area, even if the shapes are different",
+      "Each family's section has the same perimeter",
+      "Each family's section has one side of equal length"
+     ],
+     "correctIndex": 1,
+     "rationale": "A fair division means equal areas. Sections can have different shapes, sides or perimeters and still have the same area.",
+     "phase": "dqb",
+     "placement": "Driving Question Board phase: shading and justifying the three equal sections of the Kericho plot"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Model Building, DQB Resolution & Final Assessment — Solving the Kericho Land Division Problem",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Two groups find the area of the same seven-sided plot near Kericho. Group 2 splits it into five triangles. Group 4 splits it into two triangles and one trapezium. Both groups measure and calculate carefully. What should be true about their total areas?",
+     "choices": [
+      "Group 2's total should be larger because it used more shapes",
+      "The two totals should be almost the same, because the area of the plot does not depend on how it is split",
+      "The totals must be different, because different formulae were used",
+      "Group 4's total should be larger because a trapezium covers more land than triangles"
+     ],
+     "correctIndex": 1,
+     "rationale": "Area is a property of the plot itself. Any correct decomposition into triangles and quadrilaterals gives the same total, apart from small rounding or measuring differences.",
+     "phase": "observe",
+     "placement": "Group presentations: comparing totals from different decompositions of the Kericho heptagonal plot"
+    },
+    {
+     "prompt": "The total area of the Kericho plot is 1 260 m². It must be divided into three sections of equal area for three farming families. What area should each family receive?",
+     "choices": [
+      "1 257 m²",
+      "630 m²",
+      "3 780 m²",
+      "420 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "Equal division among three families means total ÷ 3, so 1 260 ÷ 3 = 420 m². Dividing by 2 would only suit two owners.",
+     "phase": "observe",
+     "placement": "Group presentations: dividing the total area equally among the three farming families",
+     "check": "1260/3"
+    },
+    {
+     "prompt": "A triangular maize plot near Eldoret has a base of 48 m and a perpendicular height of 35 m. What is its area?",
+     "choices": [
+      "420 m²",
+      "83 m²",
+      "840 m²",
+      "1 680 m²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Area of a triangle = ½ × base × height = ½ × 48 × 35 = 840 m². Choosing 1 680 m² forgets the ½.",
+     "phase": "model",
+     "placement": "Individual written assessment, Q1: triangular maize plot near Eldoret",
+     "check": "0.5*48*35"
+    },
+    {
+     "prompt": "A tea-drying platform in Kericho is a trapezium. Its parallel sides are 22 m and 14 m long, and the perpendicular distance between them is 9 m. What is its area?",
+     "choices": [
+      "324 m²",
+      "277 m²",
+      "162 m²",
+      "198 m²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Area = ½ × (sum of parallel sides) × height = ½ × (22 + 14) × 9 = 162 m². Leaving out the ½ gives 324 m².",
+     "phase": "model",
+     "placement": "Individual written assessment, Q2: tea-drying platform in Kericho (trapezium)",
+     "check": "0.5*(22+14)*9"
+    },
+    {
+     "prompt": "A community centre floor in Kisumu is a regular octagon with side 6 m and apothem 7.24 m. Using area = ½ × perimeter × apothem, what is the area of the floor?",
+     "choices": [
+      "21.72 m²",
+      "43.44 m²",
+      "347.52 m²",
+      "173.76 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "The perimeter is 8 × 6 = 48 m. Area = ½ × 48 × 7.24 = 173.76 m². Using 6 × 7.24 × ½ only covers one side, and skipping the ½ doubles the answer.",
+     "phase": "model",
+     "placement": "Individual written assessment, Q3(a): regular octagon community centre floor in Kisumu",
+     "check": "0.5*48*7.24"
+    },
+    {
+     "prompt": "A garden in the shape of a regular heptagon has side 4 m and apothem 4.15 m. Using area = ½ × perimeter × apothem, what is the area of the garden?",
+     "choices": [
+      "8.3 m²",
+      "58.1 m²",
+      "116.2 m²",
+      "29.05 m²"
+     ],
+     "correctIndex": 1,
+     "rationale": "A heptagon has 7 sides, so the perimeter is 7 × 4 = 28 m. Area = ½ × 28 × 4.15 = 58.1 m². Forgetting the ½ gives 116.2 m².",
+     "phase": "model",
+     "placement": "Individual written assessment, Q3(b): regular heptagon garden",
+     "check": "0.5*28*4.15"
+    },
+    {
+     "prompt": "A school roof in Mombasa is a rectangle 30 m long and 20 m wide. Inside it, solar panels cover a parallelogram with base 18 m, perpendicular height 20 m and slanted side 22 m. What is the area of the roof NOT covered by solar panels?",
+     "choices": [
+      "204 m²",
+      "960 m²",
+      "240 m²",
+      "360 m²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Rectangle = 30 × 20 = 600 m². Parallelogram = base × perpendicular height = 18 × 20 = 360 m². Area not covered = 600 − 360 = 240 m². Using the slanted side gives 204 m², which is wrong.",
+     "phase": "model",
+     "placement": "Individual written assessment, Q5: solar panel parallelogram inside a rectangular roof in Mombasa",
+     "check": "30*20-18*20"
+    }
+   ]
+  }
+ ]
+}

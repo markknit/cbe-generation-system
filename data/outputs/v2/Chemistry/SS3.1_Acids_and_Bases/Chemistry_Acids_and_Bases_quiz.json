@@ -9,115 +9,1063 @@
  },
  "lessons": [
   {
+   "number": 1,
+   "title": "Phenomenon: Why Do Lemon Juice, Vinegar, Baking Soda and Soap Behave So Differently?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Four clear cups on a teacher's bench hold lemon juice, vinegar, baking soda solution and soap solution. They all look similar. Which is the safe way to find out how they differ?",
+     "choices": [
+      "Taste a little from each cup and compare",
+      "Touch each liquid to feel which is slippery",
+      "Use measurements such as pH values and the teacher's given observations, without tasting or touching",
+      "Decide by colour alone, since clear liquids are all the same"
+     ],
+     "correctIndex": 2,
+     "rationale": "Unknown chemicals must never be tasted or touched. Measured data such as pH and the teacher's read-out observations let us compare the products safely, and clear liquids are not necessarily the same.",
+     "phase": "predict",
+     "placement": "Predict: learners look at the four products and answer 'Without any equipment, how could we tell them apart?'"
+    },
+    {
+     "prompt": "A pH meter at 25 °C gave these readings: lemon juice 2.0, vinegar 2.8, pure water 7.0, baking soda solution 8.3, soap solution 10.0. Which list shows the products in order from LOWEST to HIGHEST pH?",
+     "choices": [
+      "Lemon juice, vinegar, baking soda, pure water, soap",
+      "Vinegar, lemon juice, pure water, soap, baking soda",
+      "Lemon juice, vinegar, pure water, baking soda, soap",
+      "Soap, baking soda, pure water, vinegar, lemon juice"
+     ],
+     "correctIndex": 2,
+     "rationale": "Ordering the numbers from smallest to largest gives 2.0 (lemon juice), 2.8 (vinegar), 7.0 (water), 8.3 (baking soda) and 10.0 (soap).",
+     "phase": "observe",
+     "placement": "Observe: studying the pH graph and putting the products in order from lowest to highest pH"
+    },
+    {
+     "prompt": "Pure water has a pH of 7.0 and is used as the reference line. Lemon juice is 2.0, vinegar is 2.8, baking soda solution is 8.3 and soap solution is 10.0. Which pair of products both have a pH ABOVE 7?",
+     "choices": [
+      "Vinegar and baking soda",
+      "Baking soda and soap",
+      "Lemon juice and vinegar",
+      "Lemon juice and soap"
+     ],
+     "correctIndex": 1,
+     "rationale": "Only baking soda (8.3) and soap (10.0) lie above the water line at 7. Lemon juice (2.0) and vinegar (2.8) lie below it.",
+     "phase": "observe",
+     "placement": "Observe: marking which products are below and above the water line at 7"
+    },
+    {
+     "prompt": "Soap solution has a pH of 10.0 and baking soda solution has a pH of 8.3. What is the difference between their pH values?",
+     "choices": [
+      "18.3",
+      "1.7",
+      "2.3",
+      "0.7"
+     ],
+     "correctIndex": 1,
+     "rationale": "Subtract the smaller value from the larger one: 10.0 - 8.3 = 1.7.",
+     "phase": "observe",
+     "placement": "Observe: calculating differences between pH values (soap and baking soda)",
+     "check": "10.0-8.3"
+    },
+    {
+     "prompt": "Pure water has a pH of 7.0. Lemon juice is 2.0, vinegar is 2.8, baking soda solution is 8.3 and soap solution is 10.0. Which product has a pH furthest from the pH of pure water?",
+     "choices": [
+      "Baking soda, because it is the closest to soap",
+      "Vinegar, because it is used for pickling",
+      "Soap, because it has the highest number",
+      "Lemon juice, because 7.0 - 2.0 = 5.0 is the biggest gap from water"
+     ],
+     "correctIndex": 3,
+     "rationale": "The gaps from 7.0 are lemon juice 5.0, vinegar 4.2, baking soda 1.3 and soap 3.0, so lemon juice is furthest. Learners who pick soap assume the highest number is the furthest from water.",
+     "phase": "observe",
+     "placement": "Observe: 'Which is furthest from water?' prompt while reading the pH graph"
+    },
+    {
+     "prompt": "Lemon juice (pH 2.0) tastes sour and soap solution (pH 10.0) feels slippery. At this early stage of the unit, which statement is the best description of what we know?",
+     "choices": [
+      "We have noticed a pattern between pH values and taste or feel, but we have not yet explained why the products behave differently",
+      "A higher pH number means a product is more sour, so the graph already explains everything",
+      "Lemon juice is sour because it is clear and soap is slippery because it is white",
+      "Soap is slippery only because it contains oil, so the pH does not matter"
+     ],
+     "correctIndex": 0,
+     "rationale": "The graph shows a pattern (sour products are below 7, slippery ones above 7), but the reason is deliberately not explained yet. It will be built across the unit, and the hypotheses are tested later.",
+     "phase": "explain",
+     "placement": "Explain: claim-evidence-reasoning hypotheses on why lemon juice and vinegar differ from soap"
+    },
+    {
+     "prompt": "The driving question is: 'Why are patients with hyperacidity issues given antacid medications?' Which learner question would best fit on the Driving Question Board under it?",
+     "choices": [
+      "How much does a bar of soap cost at the market?",
+      "What colour is the antacid bottle?",
+      "What is in an antacid that helps a patient after eating spicy nyama choma?",
+      "Is lemon juice sold in Kisumu market?"
+     ],
+     "correctIndex": 2,
+     "rationale": "A good DQB question asks 'what' or 'why/how' about the phenomenon and connects to the driving question. The antacid question does both, while the others are about colour, price or where things are sold.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: learners write two questions each on sticky notes and sort them"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Sorting the Kitchen: Classifying Household Substances as Acids or Bases with Litmus and Red Cabbage",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A soap solution has a pH of 10.0 on the pH graph. Which prediction for the litmus test is best supported by this evidence?",
+     "choices": [
+      "Red litmus will stay red, because soap looks white and clear.",
+      "Neither litmus paper will change, because soap is not food.",
+      "Red litmus will turn blue, because a pH above 7 suggests a base.",
+      "Blue litmus will turn red, because soap feels slippery."
+     ],
+     "correctIndex": 2,
+     "rationale": "A pH above 7 points to a base, and bases turn red litmus blue. The other reasons rely on feel, appearance or whether it is food, none of which decide acidity.",
+     "phase": "predict",
+     "placement": "Predict: writing a prediction and reason for each product using the Lesson 1 pH graph"
+    },
+    {
+     "prompt": "In the practical, learners test pure water as well as lemon juice, vinegar, baking soda solution and soap solution. Why is water included?",
+     "choices": [
+      "It makes the acids and bases weaker so the colours are easier to see.",
+      "It is expected to be a strong acid, to compare with lemon juice.",
+      "It cleans the litmus strips between tests.",
+      "It is a reference that shows what the indicators look like in a neutral liquid, so other results can be compared with it."
+     ],
+     "correctIndex": 3,
+     "rationale": "Water is neutral. Its results (litmus unchanged, cabbage extract purple) are the baseline against which colour changes in the other liquids are judged.",
+     "phase": "observe",
+     "placement": "Observe: testing 5 cups (lemon juice, vinegar, water, baking soda solution, soap solution) with red litmus, blue litmus and red cabbage extract"
+    },
+    {
+     "prompt": "A group adds 10 drops of red cabbage extract to 2 cm of vinegar, but only 3 drops to 5 cm of baking soda solution. Why is this a problem for the investigation?",
+     "choices": [
+      "There is no problem, because the colour depends only on the type of substance.",
+      "It is a problem only because vinegar should never be tested with red cabbage extract.",
+      "It is a problem only because baking soda solution should be tested with litmus instead.",
+      "It is not a fair test, because the amounts differ, so the colours cannot be compared reliably."
+     ],
+     "correctIndex": 3,
+     "rationale": "In a fair test only the substance being tested changes. The amount of liquid and the number of drops must be the same each time.",
+     "phase": "observe",
+     "placement": "Observe: Step 3, adding about 10 drops of red cabbage extract to about 2 cm of each liquid (fair test)"
+    },
+    {
+     "prompt": "A learner tests an unknown kitchen liquid. Blue litmus turns red, red litmus stays red, and purple red cabbage extract turns pink-red. How should the liquid be classified?",
+     "choices": [
+      "Base",
+      "It cannot be classified without tasting it",
+      "Neutral",
+      "Acid"
+     ],
+     "correctIndex": 3,
+     "rationale": "Acids turn blue litmus red, leave red litmus red, and turn red cabbage extract red/pink. All three indicators agree it is an acid.",
+     "phase": "explain",
+     "placement": "Explain: looking for patterns in the class results table and writing the claim 'Lemon juice and vinegar are ___ because ___'"
+    },
+    {
+     "prompt": "Which piece of evidence best shows that vinegar is an acid?",
+     "choices": [
+      "Vinegar is safe to eat.",
+      "Vinegar is used to pickle kachumbari and onions.",
+      "Blue litmus turns red and red cabbage extract turns pink-red in vinegar.",
+      "Vinegar is clear, like water."
+     ],
+     "correctIndex": 2,
+     "rationale": "Classification must rest on a pattern of indicator colour changes. Appearance, use and being edible are not evidence of acidity.",
+     "phase": "explain",
+     "placement": "Explain: CER claim using evidence from at least two indicators; challenging 'colour or appearance' reasoning"
+    },
+    {
+     "prompt": "Pure water (pH 7.0) leaves both red litmus and blue litmus unchanged and keeps red cabbage extract purple. How should water be classified?",
+     "choices": [
+      "Neutral, because it shows no acid or base colour change",
+      "Base, because red litmus did not turn red",
+      "Acid, because blue litmus did not turn blue",
+      "A weak base, because the cabbage extract stayed purple instead of turning red"
+     ],
+     "correctIndex": 0,
+     "rationale": "Acids and bases cause colour changes in the indicators. With no change and a pH of 7.0, water is neither acidic nor basic, so it is neutral.",
+     "phase": "explain",
+     "placement": "Explain: 'Water stayed purple. Where would you place it?'"
+    },
+    {
+     "prompt": "In Lesson 1, a learner hypothesised that soap is an acid because it is used for cleaning. In the practical, red litmus turned blue in soap solution and red cabbage extract turned blue-green. What should the learner do?",
+     "choices": [
+      "Repeat the test until red litmus stays red, so the result matches the hypothesis.",
+      "Label soap neutral, because it is a cleaning product and not food.",
+      "Keep the hypothesis, because the first idea should not be changed.",
+      "Revise the hypothesis and label soap a base, because the evidence does not support the acid idea."
+     ],
+     "correctIndex": 3,
+     "rationale": "Evidence outranks an earlier hypothesis. Red litmus turning blue and blue-green cabbage extract show a base, so the model label should be corrected.",
+     "phase": "model",
+     "placement": "Model: labelling each box 'acid', 'base' or 'neutral' and revising any hypothesis that was not supported"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Natural and Laboratory Indicators: Building a Classification Table",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Pure water from a tap is added to the sorting table for acids, neutral substances and bases. Which column does pure water belong in, and why?",
+     "choices": [
+      "Base column, because water does not taste sour",
+      "Acid column, because water is a liquid we drink like lemon juice",
+      "Neutral column, because pure water has a pH of 7.0",
+      "It does not belong in any column, because water has no pH"
+     ],
+     "correctIndex": 2,
+     "rationale": "Pure water is neutral with pH 7.0, which is neither below 7 (acid) nor above 7 (base). Water does have a pH value, and not tasting sour does not make it a base.",
+     "phase": "predict",
+     "placement": "Predict: prediction strip and where water fits (acid, base or neither)"
+    },
+    {
+     "prompt": "Red cabbage extract is purple in pure water. A learner adds 2 cm3 of this extract to lemon juice. What colour will the mixture be?",
+     "choices": [
+      "Green-yellow",
+      "Purple, the same as in water",
+      "Blue",
+      "Red or pink"
+     ],
+     "correctIndex": 3,
+     "rationale": "Red cabbage extract turns red or pink in acids such as lemon juice. Blue is the colour in weak bases, and purple means neutral.",
+     "phase": "observe",
+     "placement": "Observe: Step 1, red cabbage extract added to the five labelled test tubes"
+    },
+    {
+     "prompt": "Five solutions are tested with universal indicator. The colours are: red-orange (pH 2), orange (pH 3), green (pH 7), blue (pH 8) and blue-purple (pH 10). Which solution is the most basic?",
+     "choices": [
+      "The blue-purple solution at pH 10",
+      "The blue solution at pH 8",
+      "The red-orange solution at pH 2",
+      "The green solution at pH 7"
+     ],
+     "correctIndex": 0,
+     "rationale": "The higher the pH above 7, the more basic the solution, so pH 10 (blue-purple) is the most basic. The pH 2 solution is the most acidic and the pH 7 solution is neutral.",
+     "phase": "observe",
+     "placement": "Observe: Step 2, universal indicator in a second set of tubes compared with the pH colour chart"
+    },
+    {
+     "prompt": "Red cabbage extract turns lemon juice pink and soap solution blue-green. Universal indicator turns lemon juice red-orange and soap solution blue-purple. The colours are different, but both indicators sort lemon juice as an acid and soap as a base. Why?",
+     "choices": [
+      "One of the indicators is wrong and the other is correct",
+      "Each indicator has its own set of colours, but every indicator changes colour according to whether a substance is acidic, neutral or basic",
+      "The indicators change the pH of the substances, so the colours differ",
+      "Indicators only work on the colour of the substance, not on whether it is acidic or basic"
+     ],
+     "correctIndex": 1,
+     "rationale": "Different indicators use different colour schemes, but they all respond to the same property, which is whether the substance is acid, neutral or base. So the sorting is the same even though the colours differ.",
+     "phase": "explain",
+     "placement": "Explain: comparing indicators, question (a) 'Why is the sorting the same with all indicators but the colours differ?'"
+    },
+    {
+     "prompt": "A pH meter gives lemon juice a pH of 2.0 and vinegar a pH of 2.8. Which statement is correct?",
+     "choices": [
+      "Lemon juice and vinegar are equally acidic, because both are acids",
+      "Lemon juice is more acidic, because its pH is lower and further below 7",
+      "Vinegar is a base, because its pH is not a whole number",
+      "Vinegar is more acidic, because 2.8 is a larger number than 2.0"
+     ],
+     "correctIndex": 1,
+     "rationale": "Below pH 7, a lower pH means a more acidic substance. Lemon juice (2.0) is lower than vinegar (2.8), so it is more acidic. Both are acids, but they are not equally acidic.",
+     "phase": "explain",
+     "placement": "Explain: claim-evidence-reasoning statement comparing lemon juice (pH 2.0) and vinegar (pH 2.8)"
+    },
+    {
+     "prompt": "A learner has a completed table showing that lemon juice is an acid with pH 2.0, and that it turns red cabbage extract pink and universal indicator red-orange. She asks: 'Why is lemon juice sour?' What can be said about this question?",
+     "choices": [
+      "The table already answers it, because a low pH is the reason for the sour taste",
+      "The question cannot be answered by science, so it is removed from the board",
+      "The table shows that lemon juice is acidic but not why it is sour, so it is kept as a question on the Driving Question Board",
+      "The table answers it, because lemon juice turns red cabbage extract pink"
+     ],
+     "correctIndex": 2,
+     "rationale": "The table classifies substances using evidence, but it does not explain what makes an acid sour. That is a new 'why' question to park on the board and answer in later lessons.",
+     "phase": "dqb",
+     "placement": "DQB: sticky notes 'What we now know' and 'New questions' (Otieno's question about lemon being sour)"
+    },
+    {
+     "prompt": "In a first draft particle model, red dots stand for 'whatever makes a substance acidic' and blue dots stand for 'whatever makes it basic'. Lemon juice is drawn with many red dots. How should a beaker of pure water (pH 7.0) be drawn?",
+     "choices": [
+      "With equal numbers of red and blue dots, and very few of each",
+      "With many red dots and no blue dots",
+      "With many blue dots and no red dots",
+      "With no dots at all, because water has no pH"
+     ],
+     "correctIndex": 0,
+     "rationale": "Water is neutral, so the acid-making and base-making dots are balanced. Water has pH 7.0 and is not strongly acidic or basic, so the dots are few and equal.",
+     "phase": "model",
+     "placement": "Model: first draft particle model using red and blue placeholder dots for the five beakers"
+    }
+   ]
+  },
+  {
    "number": 4,
    "title": "Why is Lemon Juice Sour? Acids Release H⁺ Ions in Water (Arrhenius Definition)",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-10-05T03:52:36+00:00",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
    "quiz": [
     {
-     "prompt": "Pure water has pH 7.0 and H⁺ concentration of 1 x 10⁻⁷ mol/L. Which statement about the H⁺ ions in pure water is correct?",
+     "prompt": "Mwalimu Achieng writes the Arrhenius definition on the board. Which statement correctly completes it? 'An acid is a substance that ...'",
      "choices": [
-      "It has a tiny amount of H⁺, far less than lemon juice",
-      "It has more H⁺ than vinegar",
-      "It has the same amount of H⁺ as lemon juice",
-      "It has no H⁺ ions at all"
+      "produces H⁺ (aq) ions when dissolved in water",
+      "has a pH above 7 and turns red litmus blue",
+      "contains no water particles",
+      "tastes sour and feels slippery"
      ],
      "correctIndex": 0,
-     "rationale": "1 x 10⁻⁷ mol/L is very small but not zero, and it is much less than lemon juice (1 x 10⁻² mol/L) or vinegar (about 1.6 x 10⁻³ mol/L).",
-     "phase": "observe",
-     "placement": "Part A (data): data card with pH and H+ concentration"
+     "rationale": "The Arrhenius definition says an acid produces H⁺ (aq) ions in water. Sour taste is how the tongue detects H⁺, and a slippery feel belongs to bases.",
+     "phase": "explain",
+     "placement": "Explain: class definition of an acid (Arrhenius wording) written on the board"
     },
     {
-     "prompt": "Lemon juice has pH 2.0 and H⁺ = 1 x 10⁻² mol/L. Vinegar has pH 2.8 and H⁺ about 1.6 x 10⁻³ mol/L. About how many times more H⁺ does lemon juice have than vinegar?",
+     "prompt": "A data card shows lemon juice (pH 2.0, H⁺ = 1 x 10^-2 mol/L) and vinegar (pH 2.8, H⁺ about 1.6 x 10^-3 mol/L). About how many times more H⁺ does lemon juice have than vinegar?",
      "choices": [
       "About 0.8 times",
-      "About 10 times",
+      "About 60 times",
       "About 6 times",
-      "About 60 times"
+      "About 2 times"
      ],
      "correctIndex": 2,
-     "rationale": "Divide the concentrations: (1 x 10⁻²) ÷ (1.6 x 10⁻³) = 6.25, which is about 6 times. The pH difference of 0.8 does not mean 0.8 times more H⁺, because each pH unit is a 10-fold change.",
+     "rationale": "Divide the concentrations: 1 x 10^-2 ÷ 1.6 x 10^-3 = 6.25, which is about 6 times. The pH difference of 0.8 is not the same as the ratio of H⁺.",
      "phase": "observe",
-     "placement": "Part A (data): 'How many times more H+ does lemon juice have than vinegar?'",
+     "placement": "Part A (data): data card with pH and H⁺ concentration of lemon juice, vinegar and water",
      "check": "round(1e-2/1.6e-3)"
     },
     {
-     "prompt": "In a particle simulation, acid molecules from lemon juice dissolve in water. What do learners see happen?",
+     "prompt": "Lemon juice has pH 2.0 and vinegar has pH 2.8. The pH values differ by only 0.8, yet lemon juice has about 6 times more H⁺. What is the best explanation?",
      "choices": [
-      "The acid molecules stay whole and release nothing",
-      "The acid molecules turn into sugar particles",
-      "The acid molecules remove all the water particles",
-      "The acid molecules release H⁺ (aq) ions into the water"
-     ],
-     "correctIndex": 3,
-     "rationale": "An acid dissolving in water releases H⁺ (aq) ions. This is the particle-level change that explains the properties of acids.",
-     "phase": "observe",
-     "placement": "Part B (simulation or paper model): acid molecules dissolving in water and releasing H+ (aq) ions"
-    },
-    {
-     "prompt": "Which statement is the Arrhenius definition of an acid?",
-     "choices": [
-      "A substance that is harmful if swallowed",
-      "A substance that contains no water",
-      "A substance that produces H⁺ (aq) ions when dissolved in water",
-      "A substance that tastes sour in the laboratory"
-     ],
-     "correctIndex": 2,
-     "rationale": "The Arrhenius definition says an acid produces H⁺ (aq) ions in water. Being harmful or tasting sour is not the definition, and we never taste chemicals in the laboratory.",
-     "phase": "explain",
-     "placement": "Pairs' CER explanation and the class definition recorded on the board"
-    },
-    {
-     "prompt": "Lemon juice (pH 2.0) and vinegar (pH 2.8) are both acids. Why does lemon juice have the lower pH?",
-     "choices": [
-      "It contains no water, but vinegar does",
-      "It has fewer H⁺ ions than vinegar",
-      "It has a higher concentration of H⁺ ions than vinegar",
-      "It contains more sugar than vinegar"
-     ],
-     "correctIndex": 2,
-     "rationale": "A lower pH means a higher H⁺ concentration. Lemon juice has about 6 times more H⁺ (1 x 10⁻² mol/L) than vinegar (about 1.6 x 10⁻³ mol/L).",
-     "phase": "explain",
-     "placement": "Claim-evidence-reasoning: 'Why is lemon juice sour, and why does it have a lower pH than vinegar?'"
-    },
-    {
-     "prompt": "Stomach acid is hydrochloric acid. Which particle does it release when it dissolves in water, making it an acid?",
-     "choices": [
-      "No particles, because it is a liquid",
-      "Only water particles",
-      "H⁺ (aq) ions",
-      "Sugar particles"
-     ],
-     "correctIndex": 2,
-     "rationale": "Hydrochloric acid is an acid, so by the Arrhenius definition it releases H⁺ (aq) ions in water, just like the acids in lemon juice and vinegar.",
-     "phase": "dqb",
-     "placement": "Driving Question Board: linking notes to the hyperacidity question"
-    },
-    {
-     "prompt": "In a Model drawing, lemon juice (H⁺ = 1 x 10⁻² mol/L) is shown with 6 H⁺ dots. Which drawing for vinegar (about 1.6 x 10⁻³ mol/L) and water (1 x 10⁻⁷ mol/L) is best?",
-     "choices": [
-      "Vinegar 6 dots, water 0 dots",
-      "Vinegar 1 dot, water almost no dots",
-      "Vinegar 1 dot, water exactly 0 dots",
-      "Vinegar 12 dots, water 6 dots"
+      "Vinegar contains more water particles, so its H⁺ ions are smaller",
+      "Each change of one pH unit means a 10-fold change in H⁺ concentration, so a small pH difference means a large H⁺ difference",
+      "The pH numbers and the H⁺ concentration are not related to each other",
+      "The pH scale only measures how sour a substance tastes, not its H⁺"
      ],
      "correctIndex": 1,
-     "rationale": "Lemon juice has about 6 times more H⁺ than vinegar, so 6 dots against 1 dot. Water has a tiny amount of H⁺, so it is drawn with almost none, not exactly zero.",
-     "phase": "model",
-     "placement": "Model page: three boxes for lemon juice, vinegar and water showing H+ (aq) ions"
+     "rationale": "The pH scale is not a simple straight-line scale. Each pH unit is a 10-fold change in H⁺, so even 0.8 of a unit gives a big change (about 6 times).",
+     "phase": "observe",
+     "placement": "Part A (data): teacher prompt 'Why does a small pH change mean a big change in H⁺?'"
     },
     {
-     "prompt": "Lemon juice turns blue litmus paper red. Which explanation uses the idea from this lesson?",
+     "prompt": "In a particle simulation, learners compare lemon juice, vinegar and pure water (H⁺ = 1 x 10^-7 mol/L). Which sketch of the H⁺ ions in the pure water beaker is most correct?",
      "choices": [
-      "Lemon juice contains H⁺ (aq) ions released by its acid in water",
-      "Lemon juice is red in colour",
-      "Lemon juice has no water particles",
-      "Lemon juice contains sugar particles"
+      "Many H⁺ ions, as many as in lemon juice",
+      "Exactly the same number of H⁺ ions as in vinegar",
+      "No H⁺ ions at all, because water has no H⁺",
+      "Almost no H⁺ ions, because only a tiny amount is present"
+     ],
+     "correctIndex": 3,
+     "rationale": "Pure water has a very small H⁺ concentration (1 x 10^-7 mol/L), so 'almost none' is correct. Showing zero is a common misconception, and showing many ions is wrong because water is not an acid.",
+     "phase": "observe",
+     "placement": "Part B (simulation or paper model): beakers of lemon juice, vinegar and pure water"
+    },
+    {
+     "prompt": "Lemon juice turns blue litmus paper red. Which particle-level reason best explains this?",
+     "choices": [
+      "Lemon juice contains sugar particles that turn litmus red",
+      "Lemon juice has fewer H⁺ ions than pure water",
+      "Lemon juice has no water, so the litmus changes colour",
+      "The acid in lemon juice releases H⁺ (aq) ions in water, and these ions cause the red colour"
+     ],
+     "correctIndex": 3,
+     "rationale": "The litmus colour change is linked to H⁺ (aq) ions released by the acid in water. Lemon juice has far more H⁺ than pure water, which is why its pH is 2.0.",
+     "phase": "explain",
+     "placement": "Explain: CER task connecting the H⁺ idea to litmus and indicator evidence from Lessons 2-3"
+    },
+    {
+     "prompt": "A learner draws H⁺ ions as dots to show the amounts in lemon juice (H⁺ = 1 x 10^-2 mol/L), vinegar (about 1.6 x 10^-3 mol/L) and water (1 x 10^-7 mol/L). Which drawing best matches the data?",
+     "choices": [
+      "The same number of dots in lemon juice and vinegar, and none in water",
+      "3 dots in lemon juice, 3 dots in vinegar, and 3 dots in water",
+      "1 dot in lemon juice, 6 dots in vinegar, no dots in water",
+      "6 dots in lemon juice, 1 dot in vinegar, almost no dots in water"
+     ],
+     "correctIndex": 3,
+     "rationale": "Lemon juice has about 6 times more H⁺ than vinegar, so 6 dots against 1 dot shows this. Water has almost none, so very few or no dots are shown.",
+     "phase": "model",
+     "placement": "Model Building: three boxes (lemon juice, vinegar, water) showing H⁺ (aq) ions"
+    },
+    {
+     "prompt": "During the lesson, Mwalimu Achieng says: 'We NEVER taste anything in the laboratory.' Why is this rule important when studying acids?",
+     "choices": [
+      "Sourness can only be explained, not tested, because acids have no taste",
+      "Every acid is harmful, even lemon juice and vinegar in food",
+      "Laboratory acids can be dangerous, so we use indicators and pH values instead of tasting",
+      "Taste is more accurate than indicators for finding the H⁺ concentration"
+     ],
+     "correctIndex": 2,
+     "rationale": "Laboratory chemicals can be harmful, so we use indicators and pH data. Lemon juice and vinegar are safe in food because they are dilute and food-grade, so 'acid means harmful' is a misconception.",
+     "phase": "explain",
+     "placement": "Explain: safety reminder about never tasting laboratory chemicals, and the lemon juice and vinegar food examples"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Arrhenius Definition (Bases and Alkalis): Why Does Soap Feel Slippery?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A learner dips red litmus paper into a clear solution and it turns blue. What does this result show about the solution?",
+     "choices": [
+      "The solution is acidic, because it contains H+ (aq) ions",
+      "The solution is basic, because it contains OH- (aq) ions",
+      "The solution is a salt that cannot be basic or acidic",
+      "The solution is neutral, like pure water with pH 7.0"
+     ],
+     "correctIndex": 1,
+     "rationale": "Red litmus turns blue in basic solutions such as soap and baking soda solutions, which contain OH- (aq) ions. Acids such as vinegar turn blue litmus red.",
+     "phase": "observe",
+     "placement": "Station 1 - Litmus: red and blue litmus in baking soda solution, soap solution, vinegar and water"
+    },
+    {
+     "prompt": "Pure water has an OH- concentration of 1 x 10^-7 mol/L. Soap solution (pH 10.0) has an OH- concentration of 1 x 10^-4 mol/L. How many times more OH- does the soap solution have than pure water?",
+     "choices": [
+      "10 000 times",
+      "3 times",
+      "100 times",
+      "1000 times"
+     ],
+     "correctIndex": 3,
+     "rationale": "Divide the concentrations: 10^-4 / 10^-7 = 10^3 = 1000. The 3 comes from subtracting the powers instead of dividing the numbers.",
+     "phase": "observe",
+     "placement": "Station 3 - Data card: OH- concentration of soap against the water value",
+     "check": "10**(-4+7)"
+    },
+    {
+     "prompt": "Soap solution has pH 10.0 and baking soda solution has pH 8.3. Which statement about their OH- (aq) ions is correct?",
+     "choices": [
+      "Both have the same amount of OH- because both have pH above 7",
+      "Baking soda solution has more OH- because it is used in food",
+      "Baking soda solution has no OH- at all",
+      "Soap solution has more OH- than baking soda solution"
+     ],
+     "correctIndex": 3,
+     "rationale": "A higher pH above 7 means more OH- ions. Soap (pH 10.0) has more OH- than baking soda (pH 8.3), which is only weakly basic but still has some OH-.",
+     "phase": "observe",
+     "placement": "Station 3 - Data card: 'Soap is pH 10.0 and baking soda 8.3. Which has more OH- and how do you know?'"
+    },
+    {
+     "prompt": "Wanjiru asked why soap solution feels slippery. Which explanation best uses the evidence from the lesson?",
+     "choices": [
+      "Vinegar makes soap slippery when the two are mixed",
+      "Soap solution is slippery because it is clear and looks like water",
+      "Soap solution contains many H+ ions that make the skin smooth",
+      "The OH- (aq) ions in soap solution react with the oils on the skin"
+     ],
+     "correctIndex": 3,
+     "rationale": "Soap solution contains OH- (aq) ions (pH 10.0), and these ions react with oils on the skin to give the slippery feel. Vinegar, which contains H+ ions, does not feel slippery.",
+     "phase": "explain",
+     "placement": "Claim-Evidence-Reasoning: answering Wanjiru's question about slippery soap"
+    },
+    {
+     "prompt": "Copper(II) oxide is a base that does not dissolve in water. Which statement about it is correct?",
+     "choices": [
+      "It is an acid, because it does not dissolve in water",
+      "It is an alkali, because all bases are alkalis",
+      "It is neither a base nor an alkali, because it has no OH in its formula",
+      "It is a base but not an alkali, because it does not dissolve in water to give OH- (aq) ions"
+     ],
+     "correctIndex": 3,
+     "rationale": "An alkali is a base that dissolves in water producing OH- (aq) ions. Copper(II) oxide is an insoluble base, so it is a base but not an alkali: all alkalis are bases, but not all bases are alkalis.",
+     "phase": "explain",
+     "placement": "Card sort: sodium hydroxide, calcium hydroxide, ammonia solution, magnesium hydroxide and copper(II) oxide"
+    },
+    {
+     "prompt": "Mama Wanjiru adds baking soda (pH 8.3) to her mandazi mixture. Which explanation fits what the class learned about baking soda?",
+     "choices": [
+      "It is a weak base that gives only a few OH- ions, so it is only slightly above neutral",
+      "It is a strong alkali, so only a tiny amount can be used",
+      "It is an acid, so it is safe to eat",
+      "It contains no ions, so it has no effect"
      ],
      "correctIndex": 0,
-     "rationale": "Acids release H⁺ (aq) ions in water. These ions explain the low pH, the sour taste and the colour change of indicators such as litmus.",
+     "rationale": "Baking soda solution gives only a few OH- ions, so its pH (8.3) is just above 7. It is therefore only weakly basic and safe in small amounts in mandazi.",
+     "phase": "explain",
+     "placement": "Explain phase: baking soda (pH 8.3) explained as a weak base"
+    },
+    {
+     "prompt": "A learner draws a particle model with four boxes. Lemon juice has H+ of 1 x 10^-2 mol/L. Vinegar has H+ of about 1.6 x 10^-3 mol/L. Baking soda solution is pH 8.3. Soap solution is pH 10.0. Which model shows the particles correctly?",
+     "choices": [
+      "Lemon juice has more H+ than vinegar, and soap solution has more OH- than baking soda solution",
+      "Soap solution has only H+ and no OH-, and lemon juice has more H+ than vinegar",
+      "Lemon juice has more H+ than vinegar, and baking soda solution has more OH- than soap solution",
+      "Lemon juice has fewer H+ than vinegar, and soap has more OH- than baking soda solution"
+     ],
+     "correctIndex": 0,
+     "rationale": "1 x 10^-2 is larger than 1.6 x 10^-3, so lemon juice has more H+ than vinegar. Soap (pH 10.0) has more OH- than baking soda (pH 8.3).",
+     "phase": "model",
+     "placement": "Model phase: four-box particle drawing (lemon juice, vinegar, baking soda solution, soap solution)"
+    },
+    {
+     "prompt": "Which sentence correctly defines an alkali?",
+     "choices": [
+      "Any substance that releases H+ (aq) ions in water",
+      "A base that dissolves in water producing OH- (aq) ions",
+      "A substance with a pH above 7 only",
+      "A base that does not dissolve in water"
+     ],
+     "correctIndex": 1,
+     "rationale": "By the Arrhenius definition, an alkali is a base that dissolves in water producing OH- (aq) ions. Saying only 'pH above 7' misses the OH- idea, and H+ release describes acids.",
      "phase": "end",
-     "placement": "End of lesson: linking H+ ions to the litmus and indicator colours from Lessons 2-3"
+     "placement": "Exit ticket: 'Write one sentence defining an alkali and name one product from our lesson that contains one.'"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Chemical Properties I: How Acids React with Metals and Carbonates",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Mrs Achieng mixes vinegar with baking soda and the mixture fizzes. The gas is bubbled through limewater and the limewater turns milky. Which gas is produced?",
+     "choices": [
+      "Oxygen",
+      "Hydrogen",
+      "Carbon dioxide",
+      "Air from the cup"
+     ],
+     "correctIndex": 2,
+     "rationale": "Limewater turning milky is the test for carbon dioxide. Vinegar is an acid reacting with a carbonate-type substance, which gives carbon dioxide.",
+     "phase": "observe",
+     "placement": "Investigation A (carbonate): vinegar + baking soda with limewater test"
+    },
+    {
+     "prompt": "A 2 cm strip of magnesium ribbon is placed in dilute hydrochloric acid. Bubbles form. A lighted splint is held at the mouth of the tube and a squeaky pop is heard. Which gas is present?",
+     "choices": [
+      "Hydrogen",
+      "Steam",
+      "Oxygen",
+      "Carbon dioxide"
+     ],
+     "correctIndex": 0,
+     "rationale": "Hydrogen burns with a squeaky pop when a lighted splint is brought near. Acids react with reactive metals such as magnesium to give a salt and hydrogen.",
+     "phase": "observe",
+     "placement": "Investigation B (metal): magnesium ribbon + dilute hydrochloric acid with lighted splint test"
+    },
+    {
+     "prompt": "A group places magnesium ribbon in water as well as in dilute hydrochloric acid. The water tube has no bubbles. Why is the water tube included in the investigation?",
+     "choices": [
+      "To show that the fizzing needs an acid and does not happen with water alone",
+      "To make the magnesium react faster in the acid",
+      "To collect extra gas for the splint test",
+      "To show that water also produces hydrogen"
+     ],
+     "correctIndex": 0,
+     "rationale": "A control shows what happens without the acid. Since water gives no bubbles, the acid must be the cause of the gas in the other tube.",
+     "phase": "observe",
+     "placement": "Investigation B: magnesium in water as a control (no bubbles)"
+    },
+    {
+     "prompt": "Which word equation correctly shows what happens when magnesium reacts with dilute hydrochloric acid?",
+     "choices": [
+      "Magnesium + hydrochloric acid → magnesium oxide + oxygen",
+      "Magnesium + hydrochloric acid → magnesium chloride + hydrogen",
+      "Magnesium + hydrochloric acid → magnesium chloride + water + carbon dioxide",
+      "Magnesium + hydrochloric acid → magnesium chloride + oxygen"
+     ],
+     "correctIndex": 1,
+     "rationale": "The general pattern is acid + metal → salt + hydrogen. Magnesium and hydrochloric acid give magnesium chloride (the salt) and hydrogen gas.",
+     "phase": "explain",
+     "placement": "Explain: completing word equations (magnesium + hydrochloric acid) and the general pattern acid + metal"
+    },
+    {
+     "prompt": "Vinegar (ethanoic acid) reacts with sodium hydrogencarbonate (baking soda). Which set of products is correct?",
+     "choices": [
+      "A salt and hydrogen only",
+      "A salt and carbon dioxide only",
+      "A salt, water and carbon dioxide",
+      "A salt, water and oxygen"
+     ],
+     "correctIndex": 2,
+     "rationale": "The general pattern is acid + carbonate (or hydrogencarbonate) → salt + water + carbon dioxide. This explains the fizzing and the milky limewater.",
+     "phase": "explain",
+     "placement": "Explain: word equation for vinegar + sodium hydrogencarbonate and the pattern acid + carbonate"
+    },
+    {
+     "prompt": "Soap solution has a pH of 10. Why does magnesium ribbon not give bubbles of gas when placed in soap solution, while it does in dilute hydrochloric acid?",
+     "choices": [
+      "Soap is too slippery for the magnesium to touch",
+      "Soap solution is not an acid, so it does not supply the H+ (aq) ions needed for the reaction",
+      "Magnesium only reacts with substances that taste sour",
+      "Soap solution contains too much water for any reaction"
+     ],
+     "correctIndex": 1,
+     "rationale": "Soap solution is basic and contains mainly OH- ions, not an excess of H+ ions. The reaction with magnesium needs H+ (aq) ions from an acid.",
+     "phase": "explain",
+     "placement": "Explain: Wanjiru's question, why soap does not give fizz with magnesium"
+    },
+    {
+     "prompt": "Magnesium reacts with hydrochloric acid, and baking soda reacts with vinegar. What is the same in both reactions that makes them happen?",
+     "choices": [
+      "Both acids supply OH- (aq) ions that take part in the reaction",
+      "Both acids supply H+ (aq) ions that take part in the reaction",
+      "Both reactions produce oxygen gas",
+      "Both reactions only happen when a lighted splint is present"
+     ],
+     "correctIndex": 1,
+     "rationale": "Both reactions depend on the H+ (aq) ions released by the acid. The H+ ions react with the metal or the carbonate to give a gas.",
+     "phase": "model",
+     "placement": "Model: revising the particle drawings to show H+ ions in both reactions"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Chemical Properties II: Neutralisation and Antacids",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A patient in Nairobi has too much acid in the stomach (hydrochloric acid, pH about 1.5 to 2). The pharmacist gives an antacid containing magnesium hydroxide, which is a base. What will happen to the pH of the stomach contents?",
+     "choices": [
+      "The pH rises because the base removes some of the H+ ions",
+      "The pH falls because the base adds more particles to the stomach",
+      "The pH stays the same because the base only mixes with the acid",
+      "The pH jumps straight to 14 because a base is added"
+     ],
+     "correctIndex": 0,
+     "rationale": "The base supplies OH- ions that react with H+ ions, so there are fewer H+ ions and the pH rises, but only to about 3.5 to 5 and not to 14.",
+     "phase": "predict",
+     "placement": "Predict: drawing a prediction about the antacid, H+ ions and pH for the patient in Nairobi"
+    },
+    {
+     "prompt": "Dilute hydrochloric acid contains universal indicator and looks red (pH about 1). Magnesium hydroxide is added a little at a time with stirring. Which colour sequence will you see?",
+     "choices": [
+      "Red, purple, blue, green",
+      "Red, orange, yellow, green",
+      "Green, yellow, orange, red",
+      "Red stays red, because the base only dilutes the acid"
+     ],
+     "correctIndex": 1,
+     "rationale": "As the base removes H+ ions the pH rises from about 1 towards 7, so universal indicator changes from red through orange and yellow to green.",
+     "phase": "observe",
+     "placement": "Observe Step 1: adding magnesium hydroxide suspension to hydrochloric acid with universal indicator"
+    },
+    {
+     "prompt": "In the neutralisation investigation, learners add the same volume of water (instead of a base) to a beaker of the acid with universal indicator. What is the reason for doing this?",
+     "choices": [
+      "To make the acid stronger so that the base reacts faster",
+      "To show that water is also a base",
+      "To wash the indicator out of the beaker",
+      "To show that the colour change is caused by the base and not just by dilution"
+     ],
+     "correctIndex": 3,
+     "rationale": "The water control changes the colour very little, so the large pH rise with the base must be due to the base reacting with the acid and not only to dilution.",
+     "phase": "observe",
+     "placement": "Observe Step 3 (control): adding the same volume of water to the acid"
+    },
+    {
+     "prompt": "A teacher warms dilute sulphuric (VI) acid and adds black copper(II) oxide powder. The black solid dissolves and the solution turns blue. Which word equation correctly describes the reaction?",
+     "choices": [
+      "Copper(II) oxide + sulphuric (VI) acid gives copper + sulphuric (VI) oxide",
+      "Copper(II) oxide + sulphuric (VI) acid gives copper(II) sulphate + hydrogen",
+      "Copper(II) oxide + sulphuric (VI) acid gives copper(II) sulphate + carbon dioxide",
+      "Copper(II) oxide + sulphuric (VI) acid gives copper(II) sulphate + water"
+     ],
+     "correctIndex": 3,
+     "rationale": "A metal oxide reacts with an acid like a base: acid + metal oxide gives salt + water. The blue colour shows copper(II) sulphate has formed.",
+     "phase": "observe",
+     "placement": "Observe: teacher demonstration of copper(II) oxide with warm dilute sulphuric (VI) acid"
+    },
+    {
+     "prompt": "Which equation shows what happens to the particles when an acid is neutralised by a base such as magnesium hydroxide?",
+     "choices": [
+      "OH- (aq) + OH- (aq) gives H2O (l)",
+      "H+ (aq) + H+ (aq) gives H2 (g)",
+      "H+ (aq) + OH- (aq) gives nothing, because the two cancel out and disappear",
+      "H+ (aq) + OH- (aq) gives H2O (l)"
+     ],
+     "correctIndex": 3,
+     "rationale": "In neutralisation, H+ ions from the acid and OH- ions from the base join to form water molecules. They do not simply cancel out or vanish.",
+     "phase": "explain",
+     "placement": "Explain: particle diagrams and the ion equation H+ (aq) + OH- (aq) gives H2O (l)"
+    },
+    {
+     "prompt": "Which word equation correctly shows the reaction between stomach acid (hydrochloric acid) and the antacid magnesium hydroxide?",
+     "choices": [
+      "Hydrochloric acid + magnesium hydroxide gives magnesium chloride + hydrogen",
+      "Hydrochloric acid + magnesium hydroxide gives magnesium oxide + chlorine",
+      "Hydrochloric acid + magnesium hydroxide gives magnesium chloride + water",
+      "Hydrochloric acid + magnesium hydroxide gives magnesium + water"
+     ],
+     "correctIndex": 2,
+     "rationale": "Acid + base gives salt + water. The salt from hydrochloric acid and magnesium hydroxide is magnesium chloride.",
+     "phase": "explain",
+     "placement": "Explain: writing the word equation for hydrochloric acid + magnesium hydroxide"
+    },
+    {
+     "prompt": "Why does a pharmacist not give a patient with hyperacidity a strong base such as sodium hydroxide (pH 13) as an antacid?",
+     "choices": [
+      "Sodium hydroxide cannot react with hydrochloric acid",
+      "Sodium hydroxide would make the stomach more acidic",
+      "Sodium hydroxide is harmful, like soap but much stronger, so it is not safe to swallow",
+      "Sodium hydroxide has no OH- ions"
+     ],
+     "correctIndex": 2,
+     "rationale": "Sodium hydroxide would neutralise the acid, but it is a very alkaline and harmful substance that is unsafe to swallow. Antacids use mild bases such as magnesium hydroxide.",
+     "phase": "explain",
+     "placement": "Explain: why the pharmacist does not give sodium hydroxide as an antacid"
+    },
+    {
+     "prompt": "A learner revises their particle model of the stomach before and after taking a magnesium hydroxide antacid. Which model panel is correct?",
+     "choices": [
+      "After the antacid there are fewer H+ ions, H+ and OH- join to form H2O, and the pH is about 3.5 to 5",
+      "After the antacid there are fewer H+ ions, and the pH falls to about 1",
+      "After the antacid there are more H+ ions, and the pH is about 1.5 to 2",
+      "After the antacid the H+ ions have simply disappeared, and no water forms"
+     ],
+     "correctIndex": 0,
+     "rationale": "The antacid supplies OH- ions that join with H+ ions to form water, so the H+ ions decrease and the stomach pH rises from about 1.5 to 2 to about 3.5 to 5.",
+     "phase": "model",
+     "placement": "Model: adding the stomach before and after antacid panel to the particle model"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Strength of Acids and Bases and the pH Scale",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Four solutions, each of concentration 0.1 M, were tested with universal indicator. The pH values were: hydrochloric acid 1, ethanoic acid 3, ammonia solution 11, sodium hydroxide 13. Which list puts them in order from lowest pH to highest pH?",
+     "choices": [
+      "Ethanoic acid, hydrochloric acid, sodium hydroxide, ammonia",
+      "Hydrochloric acid, sodium hydroxide, ethanoic acid, ammonia",
+      "Sodium hydroxide, ammonia, ethanoic acid, hydrochloric acid",
+      "Hydrochloric acid, ethanoic acid, ammonia, sodium hydroxide"
+     ],
+     "correctIndex": 3,
+     "rationale": "Ordering by pH value from lowest to highest gives 1 (HCl), 3 (ethanoic acid), 11 (ammonia), 13 (NaOH). Acids are below 7 and bases above 7.",
+     "phase": "observe",
+     "placement": "Observe: group practical recording the pH of 0.1 M HCl, ethanoic acid, NaOH and ammonia with universal indicator"
+    },
+    {
+     "prompt": "A teacher dips a torch bulb circuit with carbon electrodes into 0.1 M hydrochloric acid and then into 0.1 M ethanoic acid. The bulb glows brightly in the hydrochloric acid but only dimly in the ethanoic acid. What does this show?",
+     "choices": [
+      "Ethanoic acid contains no ions at all",
+      "Hydrochloric acid contains more water than ethanoic acid",
+      "The 0.1 M hydrochloric acid contains many more ions than the 0.1 M ethanoic acid",
+      "Ethanoic acid is more concentrated than hydrochloric acid"
+     ],
+     "correctIndex": 2,
+     "rationale": "A brighter bulb means more ions are present to carry current. Both solutions are 0.1 M, so the difference is that hydrochloric acid ionises almost completely while ethanoic acid ionises only partly.",
+     "phase": "observe",
+     "placement": "Observe: teacher demonstration with torch bulb, battery and carbon electrodes"
+    },
+    {
+     "prompt": "0.1 M hydrochloric acid has pH 1 and 0.1 M ethanoic acid has pH 3. Both have the same concentration. Why is the pH of hydrochloric acid lower?",
+     "choices": [
+      "More hydrochloric acid has dissolved in the water than ethanoic acid",
+      "Hydrochloric acid is more concentrated than ethanoic acid",
+      "Ethanoic acid does not form any H+ (aq) ions in water",
+      "Almost all hydrochloric acid molecules ionise, giving many more H+ (aq) ions than ethanoic acid, where only a few molecules ionise"
+     ],
+     "correctIndex": 3,
+     "rationale": "Strength depends on the degree of ionisation. HCl ionises almost completely, giving a high H+ (aq) concentration and low pH. Ethanoic acid ionises only partly, so it has fewer H+ (aq) ions.",
+     "phase": "explain",
+     "placement": "Explain: degree of ionisation particle drawing for HCl and ethanoic acid"
+    },
+    {
+     "prompt": "Solution X is 0.001 M hydrochloric acid (very watery). Solution Y is 5 M ethanoic acid (very concentrated). Which statement is correct?",
+     "choices": [
+      "Strong acids are always concentrated and weak acids are always dilute",
+      "X is a weak acid because it is dilute, and Y is a strong acid because it is concentrated",
+      "Hydrochloric acid is still the strong acid even though X is dilute, and ethanoic acid is still the weak acid even though Y is concentrated",
+      "Y must contain the strong acid because it is more concentrated"
+     ],
+     "correctIndex": 2,
+     "rationale": "Strength is about how much an acid ionises in water, while concentration is how much is dissolved. Strong does not mean concentrated and weak does not mean dilute.",
+     "phase": "explain",
+     "placement": "Explain: separating strength from concentration (dilute strong acid versus concentrated weak acid)"
+    },
+    {
+     "prompt": "Lemon juice has pH 2.0 and vinegar has pH 2.8. Each pH unit is a 10-fold change in H+ (aq) concentration. About how many times more H+ (aq) does lemon juice have than vinegar?",
+     "choices": [
+      "About 6.3 times",
+      "About 8 times",
+      "About 10 times",
+      "About 1.4 times"
+     ],
+     "correctIndex": 0,
+     "rationale": "The difference is 2.8 - 2.0 = 0.8 pH units. The ratio of H+ (aq) concentrations is 10^0.8, which is about 6.3.",
+     "phase": "explain",
+     "placement": "Explain: using the pH graph and the 10-fold rule to compare lemon juice and vinegar",
+     "check": "10**0.8"
+    },
+    {
+     "prompt": "A pharmacist in Nairobi gives a patient with hyperacidity an antacid containing magnesium hydroxide instead of sodium hydroxide. Why is magnesium hydroxide the better choice?",
+     "choices": [
+      "Magnesium hydroxide is more concentrated than sodium hydroxide, so it works faster",
+      "Sodium hydroxide cannot neutralise stomach hydrochloric acid",
+      "Magnesium hydroxide is a mild base. It dissolves only slightly, so the pH stays near 10 and the stomach does not become strongly basic, while sodium hydroxide is corrosive",
+      "Magnesium hydroxide is a strong acid, so it removes the extra acid quickly"
+     ],
+     "correctIndex": 2,
+     "rationale": "Magnesium hydroxide is only slightly soluble, so few OH- (aq) ions are free and the pH cannot rise much above 10. Sodium hydroxide gives pH 13 at 0.1 M and is corrosive, so it is unsafe to swallow.",
+     "phase": "explain",
+     "placement": "Explain: link to Lesson 7, pharmacist choosing an antacid for hyperacidity"
+    },
+    {
+     "prompt": "A learner draws a particle diagram of 0.1 M ammonia solution, a weak base. Which drawing is correct?",
+     "choices": [
+      "H+ (aq) ions only, because the solution is a base",
+      "Almost every ammonia molecule has changed into ions, giving a large number of OH- (aq) ions",
+      "A few OH- (aq) ions together with many whole ammonia molecules that have not ionised",
+      "No ions at all, only whole ammonia molecules"
+     ],
+     "correctIndex": 2,
+     "rationale": "A weak base ionises only partly in water, so the solution has a few OH- (aq) ions and many intact molecules. This is why ammonia has pH 11, lower than NaOH at pH 13.",
+     "phase": "model",
+     "placement": "Model: drawing ions and whole molecules in four beakers (0.1 M HCl, ethanoic acid, NaOH, ammonia)"
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "Uses of Acids and Bases and Safety: Why Vinegar Pickles, Soap Cleans, Lime Heals Soil and Antacids Soothe",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Mama Wanjiru wants to remove grease from a sufuria. She has soap solution (pH 10.0), vinegar (pH 2.8), lemon juice (pH 2.0) and plain water (pH 7.0). Which is the best choice, and why?",
+     "choices": [
+      "Lemon juice, because the sour taste shows it is the strongest cleaner",
+      "Vinegar, because all acids dissolve grease better than bases",
+      "Soap solution, because it is basic and OH- (aq) ions help to lift the grease",
+      "Water, because pH 7.0 is the only safe value for cleaning"
+     ],
+     "correctIndex": 2,
+     "rationale": "Soap solution (pH 10.0) is basic and contains OH- (aq) ions, and in the cleaning station it lifted grease better than water or vinegar. Taste or being an acid does not make a product a good cleaner.",
+     "phase": "predict",
+     "placement": "Predict: prediction card, job (b) removing grease from a sufuria"
+    },
+    {
+     "prompt": "Mama mboga stores onions for kachumbari in vinegar (5% ethanoic acid, pH 2.8). Which statement best explains why vinegar is used for pickling?",
+     "choices": [
+      "Vinegar has a low pH with H+ (aq) ions, which makes the conditions unsuitable for many spoilage microbes",
+      "Vinegar is a base, so it neutralises the microbes",
+      "Vinegar is clear, so the onions stay white",
+      "Vinegar has pH 2.8, which is higher than water, so it keeps the onions fresh"
+     ],
+     "correctIndex": 0,
+     "rationale": "A pH of 2.8 is lower than water (7.0), so vinegar is acidic and contains H+ (aq) ions. This acidic environment is unsuitable for many spoilage microbes, so the onions keep longer.",
+     "phase": "observe",
+     "placement": "Observe: Station 1 Pickling (acid)"
+    },
+    {
+     "prompt": "Mama Wanjiru adds baking soda solution (pH 8.3) to her mandazi dough. Which property explains why baking soda helps the dough rise and soften?",
+     "choices": [
+      "It has pH 7.0, so it does not react with anything in the dough",
+      "It is a strong alkali that dissolves the flour",
+      "It is a base that reacts with acids to release carbon dioxide gas (CO2), which makes the dough rise",
+      "It is an acid that makes the dough sour and soft"
+     ],
+     "correctIndex": 2,
+     "rationale": "Baking soda is basic (pH 8.3) and releases CO2 when it reacts with an acid, as seen with vinegar earlier. The gas bubbles make the dough rise.",
+     "phase": "observe",
+     "placement": "Observe: Station 2 Cleaning and baking (bases), recipe card for mandazi"
+    },
+    {
+     "prompt": "On Mr Kamau's farm in Kericho the soil is acidic (pH about 4.5). He adds lime. What happens in the soil?",
+     "choices": [
+      "Lime has no effect on the ions in the soil; it only adds colour",
+      "Lime dissolves the soil, so the pH falls below 4.5",
+      "OH- (aq) or carbonate from lime reacts with H+ (aq) in the soil, so the pH rises",
+      "Lime adds more H+ (aq) ions, so the soil becomes sweeter"
+     ],
+     "correctIndex": 2,
+     "rationale": "Lime is basic. Its OH- (aq) or carbonate ions neutralise H+ (aq) in the acidic soil, forming water or carbon dioxide and water, so the pH rises.",
+     "phase": "observe",
+     "placement": "Observe: Station 3 Farming, Mr Kamau's maize farm in Kericho"
+    },
+    {
+     "prompt": "Before liming, Mr Kamau's soil had a pH of about 4.5. After liming it was about 6.0. By how many pH units did the pH rise?",
+     "choices": [
+      "2.5",
+      "1.5",
+      "10.5",
+      "0.5"
+     ],
+     "correctIndex": 1,
+     "rationale": "Rise in pH = final pH - starting pH = 6.0 - 4.5 = 1.5 pH units.",
+     "phase": "observe",
+     "placement": "Observe: Station 3 Farming, soil pH card (4.5 before lime and about 6.0 after liming)",
+     "check": "6.0-4.5"
+    },
+    {
+     "prompt": "A patient in Nairobi has hyperacidity after eating nyama choma. Stomach acid is hydrochloric acid (pH about 1.5-2). Why is magnesium hydroxide chosen as an antacid instead of sodium hydroxide (pH 13)?",
+     "choices": [
+      "Sodium hydroxide is weaker than magnesium hydroxide",
+      "Magnesium hydroxide is a mild, only slightly soluble base that raises the stomach pH to about 3.5-5, while sodium hydroxide is a strong base that would be harmful",
+      "All bases are safe to swallow, so either would work equally well",
+      "Magnesium hydroxide is an acid, so it is gentler on the stomach"
+     ],
+     "correctIndex": 1,
+     "rationale": "Magnesium hydroxide is a mild base that is only slightly soluble. It neutralises some of the excess acid and raises the pH to about 3.5-5. Sodium hydroxide is a strong, corrosive base and is not safe to swallow.",
+     "phase": "explain",
+     "placement": "Explain: strong and weak comparison, why magnesium hydroxide is used for antacids instead of sodium hydroxide"
+    },
+    {
+     "prompt": "Soap solution (pH 10.0) removes grease very well but is harmful if swallowed. Which safety precaution matches this?",
+     "choices": [
+      "Soap is a base, and bases are safe to swallow because antacids are bases, so no precaution is needed",
+      "Soap is only dangerous when it is a solid bar, so solutions need no care",
+      "Use soap for washing only, and store it away from children and food",
+      "Mix soap with vinegar before use so that it becomes safe to swallow"
+     ],
+     "correctIndex": 2,
+     "rationale": "Soap is useful for washing but harmful if swallowed, so the precaution is to use it for washing only and keep it away from children. Not all bases are safe to swallow, and antacids are only safe in the correct dose.",
+     "phase": "explain",
+     "placement": "Explain: Safety Courtroom on soap"
+    },
+    {
+     "prompt": "Vinegar (ethanoic acid, 0.1 mol/L) has pH 3, but hydrochloric acid of the same concentration (0.1 mol/L) has pH 1. Which statement is correct?",
+     "choices": [
+      "Vinegar is a weak acid, so it is dilute, and HCl is a strong acid, so it is concentrated",
+      "Both acids have the same strength because they have the same concentration",
+      "Vinegar is safer because it is a base",
+      "HCl is a strong acid that ionises fully to give many more H+ (aq) ions, so it is more hazardous than vinegar of the same concentration"
+     ],
+     "correctIndex": 3,
+     "rationale": "Strength is about how much an acid ionises, and concentration is about how much acid is dissolved. At the same concentration, strong HCl gives many more H+ (aq) ions (pH 1) than weak ethanoic acid (pH 3). A weak acid is not the same as a dilute acid.",
+     "phase": "explain",
+     "placement": "Explain: compare strong and weak, vinegar (pH 3 at 0.1 M) and HCl (pH 1)"
+    },
+    {
+     "prompt": "A learner draws a model of the stomach after a patient takes a magnesium hydroxide antacid. Which drawing and caption best show what happens?",
+     "choices": [
+      "All H+ (aq) ions disappear completely and the stomach reaches pH 14",
+      "H+ (aq) ions change into OH- (aq) ions on their own, with no reaction",
+      "OH- (aq) ions from the antacid combine with H+ (aq) ions to form H2O, so fewer H+ (aq) remain, but some are still present (pH about 3.5-5)",
+      "The antacid adds more H+ (aq) ions, so the pH rises"
+     ],
+     "correctIndex": 2,
+     "rationale": "Neutralisation: H+ (aq) + OH- (aq) gives H2O. Only some H+ (aq) ions are removed, so the pH rises to about 3.5-5 and the stomach is still acidic.",
+     "phase": "model",
+     "placement": "Model: mini-model (4) the stomach with H+ (aq) from hydrochloric acid and OH- (aq) from magnesium hydroxide"
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "title": "Consolidation: Answering the Driving Question – Alkalinity, Uses and Antacids",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A Kisumu kitchen has four products with these pH values: lemon juice 2.0, vinegar 2.8, baking soda solution 8.3 and bar soap solution 10.0. Which product has the most OH- (aq) ions and is the most alkaline?",
+     "choices": [
+      "Bar soap solution, because it has the highest pH",
+      "Lemon juice, because it is the sourest",
+      "Baking soda solution, because it is used in mandazi",
+      "Vinegar, because it is used for pickling"
+     ],
+     "correctIndex": 0,
+     "rationale": "The higher the pH above 7, the more alkaline the solution and the more OH- (aq) it has. Soap at pH 10.0 is the highest of the four.",
+     "phase": "predict",
+     "placement": "Predict: Think-Pair-Share on the pH graph and the four Kisumu kitchen products"
+    },
+    {
+     "prompt": "Each drop of one pH unit in a solution means the H+ (aq) concentration becomes 10 times greater. How many times more H+ (aq) ions does lemon juice at pH 2.0 have than a solution at pH 4.0?",
+     "choices": [
+      "100 times",
+      "2 times",
+      "1000 times",
+      "20 times"
+     ],
+     "correctIndex": 0,
+     "rationale": "The pH difference is 4.0 - 2.0 = 2 units, so the H+ concentration differs by 10^2 = 100 times. Many learners wrongly subtract or multiply the pH values instead of using powers of 10.",
+     "phase": "observe",
+     "placement": "Observe: Evidence Gallery Walk, Station 1 (pH graph data and the 10-fold H+ change per pH unit)",
+     "check": "10**(4-2)"
+    },
+    {
+     "prompt": "Vinegar is added to baking soda and the mixture fizzes. The gas given off turns limewater milky. Which gas is it?",
+     "choices": [
+      "Water vapour, because the mixture is wet",
+      "Hydrogen, because it gives a squeaky pop",
+      "Oxygen, because it relights a glowing splint",
+      "Carbon dioxide, because acids react with carbonates to release it"
+     ],
+     "correctIndex": 3,
+     "rationale": "Acids react with carbonates and hydrogen carbonates to give a salt, water and carbon dioxide. Carbon dioxide turns limewater milky, while hydrogen (from a metal and acid) gives a squeaky pop.",
+     "phase": "observe",
+     "placement": "Observe: Evidence Gallery Walk, Station 4 (reactions: vinegar + baking soda and Mg + HCl)"
+    },
+    {
+     "prompt": "A learner says, 'Hydrochloric acid at pH 1 is a strong acid, so it must be the same as a concentrated acid.' Which statement best corrects this idea?",
+     "choices": [
+      "Strength and concentration mean the same thing, so the learner is correct",
+      "Strength tells how fully an acid forms H+ (aq) ions in water, while concentration tells how much acid is dissolved in a given volume",
+      "A strong acid always has a pH above 7",
+      "Strength tells how much acid is dissolved in a litre, while concentration tells how fully it forms ions"
+     ],
+     "correctIndex": 1,
+     "rationale": "Strength is about how completely an acid ionises to release H+ (aq). Concentration is the amount of acid per litre, so a strong acid is not automatically a concentrated one.",
+     "phase": "observe",
+     "placement": "Observe: Evidence Gallery Walk, Station 6 (strength: HCl pH 1 versus ethanoic acid pH 3)"
+    },
+    {
+     "prompt": "A patient in Nairobi has hyperacidity after eating spicy nyama choma and is given magnesium hydroxide. Why does this help?",
+     "choices": [
+      "It only hides the pain and does not change the acid in the stomach",
+      "It adds more acid so the stomach digests the food faster",
+      "The base neutralises the excess hydrochloric acid, forming a salt and water and raising the stomach pH",
+      "It turns the stomach acid into a stronger acid"
+     ],
+     "correctIndex": 2,
+     "rationale": "Magnesium hydroxide is a base. It reacts with excess HCl (acid + base gives salt + water), so the stomach pH rises from about 1.5 to 2 up to about 3.5 to 5.",
+     "phase": "explain",
+     "placement": "Explain: Claim-Evidence-Reasoning Final Explanation on why a patient with hyperacidity is given magnesium hydroxide"
+    },
+    {
+     "prompt": "Sodium hydroxide (pH 13) is a base that could neutralise stomach acid. Why is magnesium hydroxide used in antacids instead?",
+     "choices": [
+      "Sodium hydroxide cannot react with acids",
+      "Sodium hydroxide is a strong base that is unsafe to swallow, while magnesium hydroxide is a mild base that dissolves only slightly",
+      "Sodium hydroxide is a weak base, so it does not work quickly enough",
+      "Magnesium hydroxide is an acid, so it is safe"
+     ],
+     "correctIndex": 1,
+     "rationale": "Sodium hydroxide at pH 13 is strongly alkaline and harmful if swallowed. Magnesium hydroxide dissolves only slightly, so it is a mild base that can safely neutralise excess acid.",
+     "phase": "explain",
+     "placement": "Explain: addressing the limits of the claim (strength and safety, why not sodium hydroxide at pH 13)"
+    },
+    {
+     "prompt": "Wanjiru asked, 'Why is soap slippery?' Which answer is best supported by the evidence from the unit?",
+     "choices": [
+      "Soap solution is slippery because it is a strong acid",
+      "Soap solution is alkaline (pH 10.0) and contains OH- (aq) ions, which give the slippery feel",
+      "Soap solution is neutral at pH 7.0, like water",
+      "Soap solution contains many H+ (aq) ions, as lemon juice does"
+     ],
+     "correctIndex": 1,
+     "rationale": "Soap at pH 10.0 is alkaline, so it has more OH- (aq) than H+ (aq). Sourness is linked to H+ (aq) in acids, and the slippery feel to alkalis.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: sorting Otieno's and Wanjiru's sticky notes into Answered, Partly answered and Still wondering"
+    },
+    {
+     "prompt": "In Kericho, Mr Kamau adds lime to soil with pH about 4.5 and raises it to about 6.0 for growing maize. Which explanation matches the particle model?",
+     "choices": [
+      "Lime is a base that neutralises H+ (aq) ions in the soil, so H+ + OH- forms H2O and the pH rises",
+      "Lime changes the soil into a strong acid",
+      "Lime removes all ions so the soil becomes pH 14",
+      "Lime adds more H+ (aq) ions to the soil"
+     ],
+     "correctIndex": 0,
+     "rationale": "Lime is a base. It reacts with H+ (aq) in acidic soil (H+ + OH- gives H2O), reducing acidity so the pH rises towards neutral, which suits maize.",
+     "phase": "end",
+     "placement": "End of lesson: applying the final model to lime for Kericho soil (Station 6 and the final particle model)"
     }
    ]
   }

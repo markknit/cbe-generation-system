@@ -1,0 +1,768 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Mathematics",
+  "grade": 10,
+  "substrandId": "1.3",
+  "substrandName": "Quadratic Expressions and Equations",
+  "filePrefix": "Mathematics_Quadratic_Expressions_and_Equations"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "Forming Quadratic Expressions from Areas: Mama Wanjiru's Kericho Garden",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:23+00:00",
+   "quiz": [
+    {
+     "prompt": "Mama Wanjiru's garden is a rectangle whose length is always 3 m more than its width. If the garden is 5 m wide, what is its area?",
+     "choices": [
+      "40 m²",
+      "13 m²",
+      "25 m²",
+      "15 m²"
+     ],
+     "correctIndex": 0,
+     "rationale": "Length = 5 + 3 = 8 m, so area = 5 × 8 = 40 m². Adding 5 + 8 gives 13 and 5 × 3 gives 15, which are common slips.",
+     "phase": "predict",
+     "placement": "Predict: 'If the garden is 5 m wide, how long is it and what is its area?'",
+     "check": "5*(5+3)"
+    },
+    {
+     "prompt": "Chebet and Kiprop drew gardens whose length is 3 m more than the width. A garden 8 m wide has area 88 m², one 9 m wide has area 108 m², and one 10 m wide has area 130 m². What pattern do these areas show?",
+     "choices": [
+      "The area grows as the width grows, but it grows by less each time.",
+      "The area grows by the same amount each time the width increases by 1 m.",
+      "The area stays the same because the length is always 3 m more than the width.",
+      "The area grows as the width grows, and it grows by more each time."
+     ],
+     "correctIndex": 3,
+     "rationale": "The area goes up by 20 m² (88 to 108) and then by 22 m² (108 to 130), so it grows by more each time.",
+     "phase": "observe",
+     "placement": "Observe: grid-paper rectangles and class table of widths, lengths and areas"
+    },
+    {
+     "prompt": "Mama Wanjiru's garden has width x metres, and its length is 3 m more than its width. Which expression gives the area of the garden in m²?",
+     "choices": [
+      "x² + 3",
+      "2x + 3",
+      "x + 3",
+      "x(x + 3)"
+     ],
+     "correctIndex": 3,
+     "rationale": "The length is x + 3, so area = width × length = x(x + 3). The expression x + 3 is only the length.",
+     "phase": "explain",
+     "placement": "Explain: letting width = x, length = x + 3 and area = x(x + 3)"
+    },
+    {
+     "prompt": "Expand x(x + 3).",
+     "choices": [
+      "x + 3x",
+      "x² + 3",
+      "3x²",
+      "x² + 3x"
+     ],
+     "correctIndex": 3,
+     "rationale": "Multiply x by each term in the bracket: x × x = x² and x × 3 = 3x, so x(x + 3) = x² + 3x. Testing x = 8 gives 64 + 24 = 88, which matches the table.",
+     "phase": "explain",
+     "placement": "Explain: expanding x(x + 3) using the grid"
+    },
+    {
+     "prompt": "Using area tiles, a rectangle has sides (x + 3) and (x + 5). The four parts have areas x², 5x, 3x and 15. What is the expanded expression for the total area?",
+     "choices": [
+      "x² + 5x + 15",
+      "x² + 8x + 15",
+      "x² + 15",
+      "x² + 8x + 8"
+     ],
+     "correctIndex": 1,
+     "rationale": "Add the four parts: x² + 5x + 3x + 15. The like terms 5x and 3x combine to 8x, giving x² + 8x + 15.",
+     "phase": "explain",
+     "placement": "Explain: tile model of (x + 3)(x + 5)"
+    },
+    {
+     "prompt": "A quadratic expression is an expression whose highest power of x is 2. Which of these is a quadratic expression?",
+     "choices": [
+      "x² + 8x + 15",
+      "2x + 9",
+      "3x + 7",
+      "x³ + 2"
+     ],
+     "correctIndex": 0,
+     "rationale": "x² + 8x + 15 has highest power 2. 3x + 7 and 2x + 9 have highest power 1, and x³ + 2 has highest power 3.",
+     "phase": "explain",
+     "placement": "Explain: classifying quadratic and non-quadratic expressions (thumbs up or down)"
+    },
+    {
+     "prompt": "At the end of the lesson, the class wrote the garden's area as x² + 3x. They found that a width of 9 m gives exactly 108 m², but only by trying widths one after another. What is the correct statement about what the class has done so far?",
+     "choices": [
+      "They have explained completely why the area grows faster as the width grows.",
+      "They have written the area as an expression, but they still wonder how to find the width for a target area without trial and error.",
+      "They have proved that 9 m is the only possible width for any garden.",
+      "They have shown how to solve for x to find the width for any target area."
+     ],
+     "correctIndex": 1,
+     "rationale": "The lesson only formed the area expression. Solving for the width without trial and error is a question left on the DQB for later lessons.",
+     "phase": "dqb",
+     "placement": "DQB Creation: questions about finding the width for a target area"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Deriving the Squares Identities from Area: Why 12² = (10 + 2)² and 8² = (10 − 2)²",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:23+00:00",
+   "quiz": [
+    {
+     "prompt": "Mama Wanjiru's garden is 9 m wide and 12 m long. Wafula says: \"12² = (10 + 2)² = 10² + 2² = 104.\" What is wrong with his working?",
+     "choices": [
+      "12 should be written as 10 × 2.",
+      "He missed the two middle strips, each 10 × 2, so (10 + 2)² is not 10² + 2².",
+      "He did not use a calculator, so the answer cannot be trusted.",
+      "10² should be 20, not 100."
+     ],
+     "correctIndex": 1,
+     "rationale": "A square of side 10 + 2 is made of a 10 × 10 square, two 10 × 2 strips and a 2 × 2 square. Wafula left out the two strips (2 × 10 × 2 = 40), so 144, not 104, is the correct answer.",
+     "phase": "predict",
+     "placement": "Predict: is (10 + 2)² equal to 10² + 2²? Yes or no, and why?"
+    },
+    {
+     "prompt": "Learners fit these paper tiles together to make one big square: a 10 cm by 10 cm square, two 10 cm by 2 cm strips and a 2 cm by 2 cm square. What is the total area of the big square?",
+     "choices": [
+      "140 cm²",
+      "144 cm²",
+      "104 cm²",
+      "124 cm²"
+     ],
+     "correctIndex": 1,
+     "rationale": "Add the pieces: 100 + 20 + 20 + 4 = 144 cm². This matches 12 × 12 = 144, because the side is 10 + 2 = 12 cm.",
+     "phase": "observe",
+     "placement": "Observe Part A: (a + b)² tile square of side 12 cm",
+     "check": "100+2*10*2+2**2"
+    },
+    {
+     "prompt": "A 10 cm by 10 cm square has a 2 cm wide strip cut away along its top edge and a 2 cm wide strip cut away along its right edge, leaving an 8 cm by 8 cm square. When we work out 100 − 20 − 20 + 4, why is the 4 added back?",
+     "choices": [
+      "The 2 × 2 corner was never part of the original square.",
+      "The 8 cm square needs 4 cm² extra to be complete.",
+      "Every subtraction must be followed by adding the square of the small side without any reason.",
+      "The 2 × 2 corner was removed twice, once with each strip, so it is added back once."
+     ],
+     "correctIndex": 3,
+     "rationale": "Each 10 × 2 strip includes the 2 × 2 corner, so cutting both strips takes the corner away twice. Adding 4 back once gives 100 − 40 + 4 = 64 cm², which equals 8 × 8.",
+     "phase": "observe",
+     "placement": "Observe Part B: (a − b)² cut-out square, overlapping corner"
+    },
+    {
+     "prompt": "The big square has side a + b and the cut-out square has side a − b (with a bigger than b). Which pair of identities is correct?",
+     "choices": [
+      "(a + b)² = a² + 2ab + b² and (a − b)² = a² − 2ab − b²",
+      "(a + b)² = a² + 2ab + b² and (a − b)² = a² − 2ab + b²",
+      "(a + b)² = a² + b² and (a − b)² = a² − b²",
+      "(a + b)² = a² + ab + b² and (a − b)² = a² − ab + b²"
+     ],
+     "correctIndex": 1,
+     "rationale": "The big square is a² + ab + ab + b² = a² + 2ab + b². In the cut-out square the two strips 2ab are removed and b² is added back once, giving a² − 2ab + b².",
+     "phase": "explain",
+     "placement": "Explain: writing (a + b)² and (a − b)² as sums of pieces"
+    },
+    {
+     "prompt": "Use (a − b)² = a² − 2ab + b² with a = 10 and b = 3 to work out (10 − 3)². What is the answer?",
+     "choices": [
+      "91",
+      "109",
+      "31",
+      "49"
+     ],
+     "correctIndex": 3,
+     "rationale": "(10 − 3)² = 100 − 2 × 10 × 3 + 9 = 100 − 60 + 9 = 49, which equals 7².",
+     "phase": "explain",
+     "placement": "Explain: testing the identities on numbers (12², 8², 10², and other values of a and b)",
+     "check": "100-2*10*3+3**2"
+    },
+    {
+     "prompt": "Which is the correct expansion of (x + 3)²?",
+     "choices": [
+      "x² + 3x + 9",
+      "x² − 6x + 9",
+      "x² + 9",
+      "x² + 6x + 9"
+     ],
+     "correctIndex": 3,
+     "rationale": "Using (a + b)² = a² + 2ab + b² with a = x and b = 3 gives x² + 2(3)x + 9 = x² + 6x + 9. The middle term 2ab = 6x must not be left out.",
+     "phase": "explain",
+     "placement": "Explain: whiteboard quick check \"Expand (x + 3)²\""
+    },
+    {
+     "prompt": "The square of side 10 has area 100. The square of side 12 has area 144. Where does the extra area come from when we build the 12 by 12 square from the 10 by 10 square?",
+     "choices": [
+      "Only a 2 × 2 square is added, giving 4 more.",
+      "Two 10 × 2 strips are added, giving 40 more, and nothing else.",
+      "Two 10 × 2 strips and a 2 × 2 corner are added, giving 40 + 4 = 44 more.",
+      "Two 2 × 2 squares are added, giving 8 more."
+     ],
+     "correctIndex": 2,
+     "rationale": "144 − 100 = 44. This is the two strips (2 × 10 × 2 = 40) plus the 2 × 2 corner (4), which are the 2ab and b² parts of the identity.",
+     "phase": "model",
+     "placement": "Model v1: area model pictures for the (a + b) square, a = 10 and b = 2, area 144",
+     "check": "2*10*2+2**2"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Cutting a Small Square from a Large Square: Difference of Two Squares",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:23+00:00",
+   "quiz": [
+    {
+     "prompt": "A square of side 10 cm has a small square of side 4 cm cut from one corner. What is the area of the L-shaped piece that is left?",
+     "choices": [
+      "84 cm²",
+      "96 cm²",
+      "36 cm²",
+      "116 cm²"
+     ],
+     "correctIndex": 0,
+     "rationale": "The area left is the large square minus the small square: 10² − 4² = 100 − 16 = 84 cm².",
+     "phase": "predict",
+     "placement": "Predict: silent written prediction about the 10 cm square with a 4 cm corner removed",
+     "check": "10**2-4**2"
+    },
+    {
+     "prompt": "An L-shape is made by cutting a square of side b = 4 cm from a corner of a square of side a = 10 cm. It is cut along a straight line into two rectangles (10 cm by 6 cm and 4 cm by 6 cm). The 4 cm by 6 cm rectangle is turned and joined to the other to make one long rectangle. What are the sides of this long rectangle?",
+     "choices": [
+      "10 cm by 14 cm",
+      "4 cm by 10 cm",
+      "6 cm by 6 cm",
+      "6 cm by 14 cm"
+     ],
+     "correctIndex": 3,
+     "rationale": "The width is a − b = 10 − 4 = 6 cm and the length is a + b = 10 + 4 = 14 cm, because the 10 cm and 4 cm sides join end to end. The area 6 × 14 = 84 cm² matches the L-shape.",
+     "phase": "observe",
+     "placement": "Observe, Steps 3 and 4: cutting the L-shape into two rectangles and joining them into one long rectangle"
+    },
+    {
+     "prompt": "Why does the long rectangle (a − b) by (a + b) have the same area as the L-shape a² − b²?",
+     "choices": [
+      "The same pieces of paper were only rearranged, so the area did not change",
+      "The L-shape and the rectangle have the same perimeter, so the areas must be equal",
+      "Cutting a shape always makes its area bigger",
+      "The rectangle has area a × b, which is the same as a² − b²"
+     ],
+     "correctIndex": 0,
+     "rationale": "No paper was added or removed, only moved. Area is conserved when pieces are rearranged, so a² − b² = (a − b)(a + b).",
+     "phase": "explain",
+     "placement": "Explain: writing why the L-shape area equals the rectangle area"
+    },
+    {
+     "prompt": "Use a² − b² = (a − b)(a + b) to work out 52² − 48² without a calculator. What is the answer?",
+     "choices": [
+      "16",
+      "2704",
+      "400",
+      "4"
+     ],
+     "correctIndex": 2,
+     "rationale": "52² − 48² = (52 − 48)(52 + 48) = 4 × 100 = 400. Direct check: 2704 − 2304 = 400.",
+     "phase": "explain",
+     "placement": "Explain: mental calculation of 52² − 48² using the identity",
+     "check": "(52-48)*(52+48)"
+    },
+    {
+     "prompt": "Kamau says, \"52² − 48² is the same as (52 − 48)², so the answer is 16.\" Which statement is correct?",
+     "choices": [
+      "Kamau is right: a² − b² and (a − b)² are always equal",
+      "Kamau is wrong: 52² − 48² = 400, but (52 − 48)² = 16, so a² − b² is not the same as (a − b)²",
+      "Kamau is right, but only when a and b are both even numbers",
+      "Kamau is wrong: 52² − 48² = (52 + 48)² = 10 000"
+     ],
+     "correctIndex": 1,
+     "rationale": "52² − 48² = 2704 − 2304 = 400, while (52 − 48)² = 4² = 16. The correct identity is a² − b² = (a − b)(a + b), not (a − b)².",
+     "phase": "explain",
+     "placement": "Explain: contrasting cases, is 52² − 48² the same as (52 − 48)²?"
+    },
+    {
+     "prompt": "Mama Wanjiru's garden is 9 m wide and 12 m long. Use the identity to find 12² − 9², the area of a 12 m square minus the area of a 9 m square.",
+     "choices": [
+      "63 m²",
+      "9 m²",
+      "27 m²",
+      "108 m²"
+     ],
+     "correctIndex": 0,
+     "rationale": "12² − 9² = (12 − 9)(12 + 9) = 3 × 21 = 63 m². Check: 144 − 81 = 63.",
+     "phase": "explain",
+     "placement": "Explain: linking the identity to the garden numbers, 12² − 9²",
+     "check": "(12-9)*(12+9)"
+    },
+    {
+     "prompt": "Which statement correctly gives the third identity found by cutting a small square from a large square?",
+     "choices": [
+      "a² − b² = (a + b)²",
+      "a² − b² = (a − b)²",
+      "a² − b² = (a − b)(a + b)",
+      "a² − b² = a² − 2ab + b²"
+     ],
+     "correctIndex": 2,
+     "rationale": "The L-shape a² − b² is rearranged into a rectangle with sides (a − b) and (a + b). The other options are the wrong product or belong to other identities.",
+     "phase": "model",
+     "placement": "Model: adding the third panel and identity to the class cumulative model"
+    },
+    {
+     "prompt": "Use a² − b² = (a − b)(a + b) to find 63² − 37².",
+     "choices": [
+      "2600",
+      "26",
+      "676",
+      "3600"
+     ],
+     "correctIndex": 0,
+     "rationale": "63² − 37² = (63 − 37)(63 + 37) = 26 × 100 = 2600.",
+     "phase": "end",
+     "placement": "Model: exit ticket, use a² − b² = (a − b)(a + b) to find 63² − 37²",
+     "check": "(63-37)*(63+37)"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Factorising x² + bx + c: Running the Expansion Backwards to Find the Garden",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:23+00:00",
+   "quiz": [
+    {
+     "prompt": "Mama Wanjiru's new bed has an area of x² + 8x + 15 square metres. Its width is (x + 3) metres. Earlier, Chebet saw that (x + 3)(x + 5) = x² + 8x + 15. What is the length of the bed?",
+     "choices": [
+      "(x + 8) metres",
+      "(x + 5) metres",
+      "(x + 15) metres",
+      "(x + 12) metres"
+     ],
+     "correctIndex": 1,
+     "rationale": "The area is width × length, and (x + 3)(x + 5) expands to x² + 8x + 15, so the length is (x + 5) m. Choosing (x + 12) or (x + 15) comes from adding or copying numbers without using the expansion.",
+     "phase": "predict",
+     "placement": "Predict: Mama Wanjiru's new bed has area x² + 8x + 15 m² and width (x + 3) m"
+    },
+    {
+     "prompt": "Learners factorise x² + 3x − 108 by listing factor pairs of 108 and looking for a pair that differs by 3. Which two numbers p and q give x² + 3x − 108 = (x + p)(x + q)?",
+     "choices": [
+      "p = 108 and q = −1",
+      "p = 12 and q = 9",
+      "p = 12 and q = −9",
+      "p = 9 and q = −12"
+     ],
+     "correctIndex": 2,
+     "rationale": "The product must be −108, so one number is negative. The sum must be +3, so the bigger number (12) is positive and the smaller (9) is negative: 12 + (−9) = 3 and 12 × (−9) = −108. 9 and −12 give a sum of −3.",
+     "phase": "observe",
+     "placement": "Task C: factor pairs of 108 for x² + 3x − 108"
+    },
+    {
+     "prompt": "Using the same pattern, a learner expands (x + 12)(x − 9) to check the factorisation of x² + 3x − 108. Which result is correct?",
+     "choices": [
+      "x² + 3x − 108",
+      "x² + 21x − 108",
+      "x² − 3x − 108",
+      "x² + 3x + 108"
+     ],
+     "correctIndex": 0,
+     "rationale": "(x + 12)(x − 9) = x² − 9x + 12x − 108 = x² + 3x − 108. The middle term is −9x + 12x = +3x and the last term is 12 × (−9) = −108.",
+     "phase": "observe",
+     "placement": "Task C: expanding (x + 12)(x − 9) to confirm"
+    },
+    {
+     "prompt": "Factorise x² + 2x − 15.",
+     "choices": [
+      "(x + 5)(x + 3)",
+      "(x − 5)(x + 3)",
+      "(x + 15)(x − 1)",
+      "(x + 5)(x − 3)"
+     ],
+     "correctIndex": 3,
+     "rationale": "We need two numbers with product −15 and sum +2. 5 and −3 work: 5 × (−3) = −15 and 5 + (−3) = 2. (x − 5)(x + 3) gives a middle term of −2x, and (x + 15)(x − 1) gives +14x.",
+     "phase": "explain",
+     "placement": "Worksheet: applying the Factorising Recipe to x² + 2x − 15"
+    },
+    {
+     "prompt": "A learner says that (x + 3)(x + 5) = x² + 15 because 3 × 5 = 15. Which statement is correct?",
+     "choices": [
+      "The correct expansion is x² + 2x + 15, because the numbers are subtracted.",
+      "The correct expansion is x² + 15x + 8, because the numbers swap places.",
+      "The learner is right, because only the last numbers are multiplied.",
+      "The correct expansion is x² + 8x + 15, because the x terms 3x and 5x also add to the middle term."
+     ],
+     "correctIndex": 3,
+     "rationale": "Expanding gives x² + 5x + 3x + 15 = x² + 8x + 15. The two x strips of 3 and 5 make the middle term 8x, which is why p + q = b.",
+     "phase": "explain",
+     "placement": "Teacher move: addressing the misconception that (x + 3)(x + 5) = x² + 15"
+    },
+    {
+     "prompt": "Factorise x² − 9x + 20 and choose the correct answer.",
+     "choices": [
+      "(x + 4)(x + 5)",
+      "(x − 2)(x − 10)",
+      "(x − 4)(x + 5)",
+      "(x − 4)(x − 5)"
+     ],
+     "correctIndex": 3,
+     "rationale": "We need two numbers with product +20 and sum −9. Both must be negative: (−4) × (−5) = 20 and (−4) + (−5) = −9. Expanding (x − 4)(x − 5) gives x² − 9x + 20.",
+     "phase": "explain",
+     "placement": "Worksheet: applying the Factorising Recipe to x² − 9x + 20"
+    },
+    {
+     "prompt": "Mama Wanjiru's garden has an area of 108 m² and its length is 3 m more than its width. The expression x² + 3x − 108 factorises as (x + 12)(x − 9). Which statement best links the numbers in the brackets to the garden?",
+     "choices": [
+      "The width is 9 m and the length is 12 m, because 12 − 9 = 3 and 12 × 9 = 108.",
+      "The width is −9 m and the length is 12 m, because those are the numbers in the brackets.",
+      "The width is 3 m and the length is 36 m, because 3 × 36 = 108.",
+      "The width is 12 m and the length is 9 m, because 12 comes first."
+     ],
+     "correctIndex": 0,
+     "rationale": "9 m by 12 m has area 9 × 12 = 108 m², and the length 12 is 3 more than the width 9. A width of 12 m with a length of 9 m would not fit 'length is 3 m more', and a length cannot be negative.",
+     "phase": "dqb",
+     "placement": "Explain and DQB: how does (x + 12)(x − 9) connect to Mama Wanjiru's garden?"
+    },
+    {
+     "prompt": "Factorise x² − 13x + 36 and check by expanding. Which factorisation is correct?",
+     "choices": [
+      "(x + 4)(x + 9)",
+      "(x − 6)(x − 6)",
+      "(x − 4)(x − 9)",
+      "(x − 3)(x − 12)"
+     ],
+     "correctIndex": 2,
+     "rationale": "We need two numbers with product 36 and sum −13, so both are negative: (−4) × (−9) = 36 and (−4) + (−9) = −13. Expanding (x − 4)(x − 9) gives x² − 9x − 4x + 36 = x² − 13x + 36.",
+     "phase": "model",
+     "placement": "Exit task: factorise x² − 13x + 36 and check by expanding"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Factorising ax² + bx + c (a ≠ 1) and Special Cases: Which Method Works Best?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:23+00:00",
+   "quiz": [
+    {
+     "prompt": "A learner guesses that 2x² + 7x + 3 factorises as (2x + 3)(x + 1). What happens when this guess is checked by expansion?",
+     "choices": [
+      "It expands to 2x² + 4x + 3, so the guess is wrong",
+      "It expands to 2x² + 7x + 3, so the guess is correct",
+      "It expands to 2x² + 5x + 3, so the guess is wrong",
+      "It expands to x² + 5x + 3, so the guess is wrong"
+     ],
+     "correctIndex": 2,
+     "rationale": "(2x + 3)(x + 1) = 2x² + 2x + 3x + 3 = 2x² + 5x + 3. The middle term is 5x, not 7x, so the guess fails the expansion check.",
+     "phase": "predict",
+     "placement": "Predict: learners write a first guess such as (2x + 3)(x + 1) and say how to check it"
+    },
+    {
+     "prompt": "To factorise 2x² + 7x + 3 by grouping, you find ac = 2 × 3 = 6. Which split of the middle term 7x should you use?",
+     "choices": [
+      "6x + x",
+      "5x + 2x",
+      "2x + 3x",
+      "3x + 4x"
+     ],
+     "correctIndex": 0,
+     "rationale": "The two numbers must multiply to ac = 6 and add to b = 7. Only 6 and 1 do this, giving 2x² + 6x + x + 3. The pair 5 and 2 adds to 7 but multiplies to 10, and 2 and 3 multiplies to 6 but adds to 5.",
+     "phase": "observe",
+     "placement": "Part B (grouping): splitting the middle term of 2x² + 7x + 3 with ac = 6"
+    },
+    {
+     "prompt": "A learner has reached 2x(x + 3) + 1(x + 3). What is the full factorised form?",
+     "choices": [
+      "2x(x + 3)",
+      "(2x + 3)(x + 1)",
+      "2x(x + 3) + x",
+      "(2x + 1)(x + 3)"
+     ],
+     "correctIndex": 3,
+     "rationale": "(x + 3) is a common factor of both terms. Taking it out leaves 2x + 1, so the result is (2x + 1)(x + 3). The 1 in the second group must not be dropped.",
+     "phase": "observe",
+     "placement": "Part B (grouping): taking out common factors 2x(x + 3) + 1(x + 3)"
+    },
+    {
+     "prompt": "Which is the correct factorisation of x² + 10x + 25?",
+     "choices": [
+      "(x + 25)(x + 1)",
+      "(x + 5)(x − 5)",
+      "(x + 5)²",
+      "(x + 10)(x + 15)"
+     ],
+     "correctIndex": 2,
+     "rationale": "5 × 5 = 25 and 5 + 5 = 10, so x² + 10x + 25 = (x + 5)(x + 5) = (x + 5)². This is a perfect square, (a + b)² = a² + 2ab + b². (x + 5)(x − 5) would give x² − 25.",
+     "phase": "observe",
+     "placement": "Part C (special cases): testing x² + 10x + 25 by tiles and by sum and product"
+    },
+    {
+     "prompt": "A learner factorises 3x² + 10x + 3 using grouping. Which answer is correct?",
+     "choices": [
+      "(3x − 1)(x − 3)",
+      "(3x + 3)(x + 1)",
+      "(x + 9)(x + 1)",
+      "(3x + 1)(x + 3)"
+     ],
+     "correctIndex": 3,
+     "rationale": "ac = 3 × 3 = 9, and 9 and 1 add to 10. So 3x² + 9x + x + 3 = 3x(x + 3) + 1(x + 3) = (3x + 1)(x + 3). Expanding (3x + 1)(x + 3) gives 3x² + 10x + 3.",
+     "phase": "explain",
+     "placement": "Pair work: factorising 3x² + 10x + 3 (ac = 9, numbers 9 and 1)"
+    },
+    {
+     "prompt": "Mama Wanjiru's garden expression is x² + 3x − 108. To factorise it by grouping, you need two numbers that multiply to −108 and add to 3. Which split of 3x is correct?",
+     "choices": [
+      "12x and −9x",
+      "−12x and −9x",
+      "9x and −12x",
+      "12x and 9x"
+     ],
+     "correctIndex": 0,
+     "rationale": "12 × (−9) = −108 and 12 + (−9) = 3. So x² + 12x − 9x − 108 = x(x + 12) − 9(x + 12) = (x − 9)(x + 12), the same brackets that sum and product give.",
+     "phase": "explain",
+     "placement": "Connecting back to the phenomenon: grouping x² + 3x − 108 into (x + 12)(x − 9)"
+    },
+    {
+     "prompt": "A learner must factorise 5x² − 20. Which is the best first step?",
+     "choices": [
+      "Take out the common factor 5 to get 5(x² − 4), then use the difference of two squares",
+      "Say it cannot be factorised because there is no middle term",
+      "Split the middle term into 5x and −4x",
+      "Use sum and product, because the x² term is there"
+     ],
+     "correctIndex": 0,
+     "rationale": "Always look for a common factor or a special case first. 5x² − 20 = 5(x² − 4) = 5(x − 2)(x + 2). A missing middle term does not stop factorising; it points to a difference of two squares.",
+     "phase": "dqb",
+     "placement": "DQB review: choosing a method for 5x² − 20 and stating the class rules of thumb"
+    },
+    {
+     "prompt": "Mama Wanjiru's garden has an area of 108 m² and its length is 3 m more than its width. Since x² + 3x − 108 = (x + 12)(x − 9), which dimensions fit the garden?",
+     "choices": [
+      "6 m wide and 18 m long",
+      "8 m wide and 11 m long",
+      "9 m wide and 12 m long",
+      "10 m wide and 13 m long"
+     ],
+     "correctIndex": 2,
+     "rationale": "The numbers 12 and 9 in the brackets are the length and width, and 9 × 12 = 108 with 12 being 3 more than 9. The 8 m by 11 m garden has area 88 m² and the 10 m by 13 m garden has area 130 m². The 6 m by 18 m garden has area 108 m² but its length is 12 m more than its width, not 3 m.",
+     "phase": "model",
+     "placement": "Cumulative model revision: linking x² + 3x − 108 = (x + 12)(x − 9) to the garden's length and width"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "One Equation, One Garden: Solving Quadratic Equations by Factorisation",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:23+00:00",
+   "quiz": [
+    {
+     "prompt": "Mama Wanjiru's rectangular garden has a length that is 3 m more than its width. A garden 8 m wide has an area of 88 m², and a garden 10 m wide has an area of 130 m². She wants an area of exactly 108 m². What can you say about the width she needs?",
+     "choices": [
+      "It is more than 10 m",
+      "It is less than 8 m",
+      "It cannot be estimated without more tables",
+      "It is between 8 m and 10 m"
+     ],
+     "correctIndex": 3,
+     "rationale": "The area rises as the width rises. 108 m² lies between 88 m² and 130 m², so the width must lie between 8 m and 10 m.",
+     "phase": "predict",
+     "placement": "Predict: 'Chebet's way or Kiprop's way' prediction using the rows x = 8 and x = 10 of the area table"
+    },
+    {
+     "prompt": "The width of the garden is x m and the length is (x + 3) m. The area must be 108 m². Which is the equation written in standard form, equal to zero?",
+     "choices": [
+      "x² + 3 − 108 = 0",
+      "x² − 3x − 108 = 0",
+      "x² + 3x − 108 = 0",
+      "x² + 3x + 108 = 0"
+     ],
+     "correctIndex": 2,
+     "rationale": "x(x + 3) = 108 expands to x² + 3x = 108. Subtracting 108 from both sides gives x² + 3x − 108 = 0.",
+     "phase": "observe",
+     "placement": "Observe, Step 1: write x(x + 3) = 108, expand and rearrange to standard form"
+    },
+    {
+     "prompt": "Which is the correct factorised form of x² + 3x − 108? (Hint: find two numbers with sum 3 and product −108.)",
+     "choices": [
+      "(x − 12)(x + 9)",
+      "(x + 12)(x − 9)",
+      "(x + 12)(x + 9)",
+      "(x + 18)(x − 6)"
+     ],
+     "correctIndex": 1,
+     "rationale": "12 + (−9) = 3 and 12 × (−9) = −108, so the factors are (x + 12)(x − 9). The other choices have the wrong sum or the wrong product.",
+     "phase": "observe",
+     "placement": "Observe, Step 2: factorise using the sum-and-product method and check by expanding"
+    },
+    {
+     "prompt": "A learner is solving (x + 12)(x − 9) = 108. She says, \"So x + 12 = 108 or x − 9 = 108.\" Why is this wrong?",
+     "choices": [
+      "Because the brackets must always be added, not multiplied",
+      "Because x − 9 can never equal 108",
+      "Because only a product equal to 0 tells us that one factor must be 0, and many pairs of numbers multiply to give 108",
+      "Because 108 is not a multiple of 12"
+     ],
+     "correctIndex": 2,
+     "rationale": "The zero-product property works only when the product is 0. Many pairs, such as 4 × 27 or 9 × 12, multiply to give 108, so neither bracket has to equal 108. That is why we rearrange to zero first.",
+     "phase": "observe",
+     "placement": "Observe, Step 3: 'Mystery product cards' and zero-product property (product = 0 compared with product = 108)"
+    },
+    {
+     "prompt": "Solving x(x + 3) = 108 for the width x m of Mama Wanjiru's garden gives x = 9 or x = −12. Both values give an area of 108 when substituted into x(x + 3). Which statement is correct?",
+     "choices": [
+      "The garden is 12 m wide and 9 m long, because −12 means 12 m",
+      "The garden is 9 m wide and 12 m long, and x = −12 is rejected because a width cannot be negative",
+      "Neither answer can be used, because the equation has two solutions",
+      "The garden can be either 9 m wide or −12 m wide, because both answers work"
+     ],
+     "correctIndex": 1,
+     "rationale": "9 × 12 = 108 and 12 = 9 + 3, so the width is 9 m and the length is 12 m. x = −12 satisfies the equation as arithmetic but cannot be a width, so we reject it using the context.",
+     "phase": "explain",
+     "placement": "Explain: 'Which answer is the width, and how do you know?' and the grid-paper 9 m by 12 m garden"
+    },
+    {
+     "prompt": "A learner looks at (x + 12)(x − 9) = 0 and says, \"The 12 in the bracket is the width.\" Suppose the width of the garden were 12 m and the length 3 m more than the width. What would the area be?",
+     "choices": [
+      "36 m²",
+      "180 m²",
+      "144 m²",
+      "108 m²"
+     ],
+     "correctIndex": 1,
+     "rationale": "If the width is 12 m, the length is 12 + 3 = 15 m. The area is 12 × 15 = 180 m², not 108 m², so 12 is not the width.",
+     "phase": "explain",
+     "placement": "Explain: trying x = 12 as a width (length 15, area 180) on grid paper",
+     "check": "12*(12+3)"
+    },
+    {
+     "prompt": "For a different garden, the width is x m and the length is (x + 3) m. The equation for the target area is x² + 3x − 70 = 0, which factorises as (x + 10)(x − 7) = 0. What is the width of this garden in metres?",
+     "choices": [
+      "7",
+      "10",
+      "3",
+      "−10"
+     ],
+     "correctIndex": 0,
+     "rationale": "By the zero-product property, x = −10 or x = 7. A width cannot be negative, so x = 7 m. The length is 7 + 3 = 10 m and the area is 7 × 10 = 70 m².",
+     "phase": "model",
+     "placement": "Model: testing the revised cumulative model 'Solving for a target area' with a new target of 70 m²",
+     "check": "7"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Forming and Solving Quadratic Equations from Real-Life Situations: Mandazi Tray, Path Around the Shamba and Thrown Ball",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:23+00:00",
+   "quiz": [
+    {
+     "prompt": "A trader at a Kisumu market stall arranges 60 mandazi in a rectangular tray with x rows. There are 4 more columns than rows, so there are (x + 4) columns. Which equation, written with zero on one side, describes this tray?",
+     "choices": [
+      "x² + 4x − 60 = 0",
+      "x² − 4x − 60 = 0",
+      "x + (x + 4) = 60",
+      "x² + 4x + 60 = 0"
+     ],
+     "correctIndex": 0,
+     "rationale": "The number of mandazi is rows × columns, so x(x + 4) = 60. This expands to x² + 4x = 60, and subtracting 60 from both sides gives x² + 4x − 60 = 0.",
+     "phase": "observe",
+     "placement": "Stage A: Mandazi tray (define the variable, write x(x + 4) = 60, rearrange to zero)"
+    },
+    {
+     "prompt": "A shamba in the Rift Valley is 12 m long and 8 m wide. A path of uniform width w metres is built all the way around it. The shamba and the path together cover 140 m². Which equation shows this?",
+     "choices": [
+      "12w × 8w = 140",
+      "(12 + w)(8 + w) = 140",
+      "(12 + 2w)(8 + 2w) = 96",
+      "(12 + 2w)(8 + 2w) = 140"
+     ],
+     "correctIndex": 3,
+     "rationale": "The path lies on both sides of the length and the width, so the outer rectangle measures (12 + 2w) by (8 + 2w). Its area is the total of 140 m². Using (12 + w) is the common error of adding the path only once.",
+     "phase": "observe",
+     "placement": "Stage B: Path around the shamba (outer rectangle (12 + 2w) by (8 + 2w))"
+    },
+    {
+     "prompt": "When (12 + 2w)(8 + 2w) = 140 is expanded and simplified, we get 4w² + 40w − 44 = 0. Dividing every term by 4, which equation do we get?",
+     "choices": [
+      "w² + 10w − 44 = 0",
+      "w² + 40w − 11 = 0",
+      "w² + 10w − 11 = 0",
+      "w² + 10w + 11 = 0"
+     ],
+     "correctIndex": 2,
+     "rationale": "Every term must be divided by 4: 4w² ÷ 4 = w², 40w ÷ 4 = 10w and −44 ÷ 4 = −11. So the equation is w² + 10w − 11 = 0.",
+     "phase": "observe",
+     "placement": "Stage B: Path around the shamba (expand, simplify, then divide by 4)"
+    },
+    {
+     "prompt": "The mandazi tray equation x² + 4x − 60 = 0 factorises as (x + 10)(x − 6) = 0, where x is the number of rows. Which statement about the answer is correct?",
+     "choices": [
+      "x = 10, because the bracket contains +10",
+      "x = −10, because it is the first root found",
+      "x = 6, because the number of rows cannot be negative, so x = −10 is rejected",
+      "Both x = 6 and x = −10 are answers, because both satisfy the equation"
+     ],
+     "correctIndex": 2,
+     "rationale": "Setting each bracket to zero gives x = −10 or x = 6. A tray cannot have −10 rows, so it is rejected. Only x = 6 works, since 6 rows × 10 columns = 60 mandazi.",
+     "phase": "explain",
+     "placement": "Keep or reject? table: mandazi tray, x = −10 and x = 6"
+    },
+    {
+     "prompt": "For a path of width w metres around a 12 m by 8 m shamba, the equation is w² + 10w − 11 = 0. What is the width of the path?",
+     "choices": [
+      "11 m",
+      "1 m",
+      "−1 m",
+      "−11 m"
+     ],
+     "correctIndex": 1,
+     "rationale": "w² + 10w − 11 = (w + 11)(w − 1) = 0, so w = −11 or w = 1. A path cannot have negative width, so w = 1 m. Check: the outer size is 14 m by 10 m = 140 m².",
+     "phase": "explain",
+     "placement": "Keep or reject? table: path around the shamba, w = −11 and w = 1"
+    },
+    {
+     "prompt": "A football is kicked at Kasarani. Its height after t seconds is h = 20t − 5t² metres. Solving 20t − 5t² = 15 gives t = 1 and t = 3. Why are BOTH answers valid?",
+     "choices": [
+      "One of the answers must be negative, so it is rejected",
+      "The ball is at 15 m once on the way up (t = 1 s) and once on the way down (t = 3 s)",
+      "t = 3 is an error, because it is bigger than t = 1",
+      "Only t = 1 is valid, because the ball reaches 15 m first"
+     ],
+     "correctIndex": 1,
+     "rationale": "Substituting gives 20(1) − 5(1)² = 15 and 20(3) − 5(3)² = 60 − 45 = 15. The ball rises through 15 m and falls through it again, so both times fit the situation.",
+     "phase": "explain",
+     "placement": "Keep or reject? table: thrown ball, t = 1 s (rising) and t = 3 s (falling)"
+    },
+    {
+     "prompt": "A ball's height is h = 20t − 5t² metres after t seconds, and it is kicked at t = 0. To find when it lands, set h = 0 and solve 20t − 5t² = 0. At what time, in seconds, does the ball land?",
+     "choices": [
+      "5",
+      "20",
+      "2",
+      "4"
+     ],
+     "correctIndex": 3,
+     "rationale": "20t − 5t² = 5t(4 − t) = 0, so t = 0 (the kick) or t = 4. The ball lands at t = 4 s. The value 2 s is when it reaches its highest point (20 m).",
+     "phase": "explain",
+     "placement": "Challenge a group: when is the ball on the ground? (5t(4 − t) = 0)",
+     "check": "4"
+    },
+    {
+     "prompt": "Which list gives the steps for forming and solving a quadratic equation from a story in the correct order?",
+     "choices": [
+      "Define the variable with units, write the equation, rearrange to ax² + bx + c = 0, factorise and use the zero-product property, check each root in the story",
+      "Write the equation, check the roots in the story, define the variable, rearrange to zero, factorise",
+      "Define the variable with units, write the equation, factorise, use the zero-product property, rearrange to zero, give both roots as answers",
+      "Define the variable with units, write the equation, factorise, rearrange to ax² + bx + c = 0, check the roots in the story"
+     ],
+     "correctIndex": 0,
+     "rationale": "The equation must be rearranged to zero before it can be factorised. The zero-product property then gives the roots. Each root is checked against the story last, because the context decides which roots are answers.",
+     "phase": "model",
+     "placement": "Cumulative model: 'Form and solve' flowchart"
+    }
+   ]
+  }
+ ]
+}

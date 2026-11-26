@@ -1,0 +1,977 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Chemistry",
+  "grade": 10,
+  "substrandId": "1.2",
+  "substrandName": "The Atom",
+  "filePrefix": "Chemistry_The_Atom"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "The Mystery of Coloured Flames: Noticing and Wondering",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A teacher dips a clean nichrome wire loop into sodium chloride (table salt) solution and holds it in a Bunsen burner flame. What colour does the flame show?",
+     "choices": [
+      "Bright yellow-orange",
+      "Blue-green",
+      "No colour change at all",
+      "Violet"
+     ],
+     "correctIndex": 0,
+     "rationale": "Sodium chloride gives a vivid yellow-orange flame, the same colour the cook saw when salt fell into the hearth fire.",
+     "phase": "observe",
+     "placement": "Observe: teacher demonstration with sodium chloride on the nichrome wire loop"
+    },
+    {
+     "prompt": "A teacher holds a nichrome loop dipped in potassium chloride solution in a Bunsen flame in a dim room. Which colour is seen?",
+     "choices": [
+      "Bright red",
+      "Blue-green",
+      "Bright yellow-orange",
+      "Faint lilac-violet"
+     ],
+     "correctIndex": 3,
+     "rationale": "Potassium chloride gives a faint lilac-violet flame, fainter and shorter-lived than sodium's yellow. This matches the violet flash the neighbour saw from banana-peel ash.",
+     "phase": "observe",
+     "placement": "Observe: potassium chloride flame test"
+    },
+    {
+     "prompt": "In a flame test, colourless potassium chloride solution gives a lilac flame. Blue copper sulphate solution gives a blue-green flame. Which conclusion is best supported by these two observations?",
+     "choices": [
+      "The flame colour is always exactly the same as the colour of the solution",
+      "The solution colour alone does not explain the flame colour, because a colourless solution gave a coloured flame",
+      "All solutions give the same flame colour if the flame is hot enough",
+      "Colourless solutions can never make a coloured flame"
+     ],
+     "correctIndex": 1,
+     "rationale": "Colourless potassium chloride still gave a lilac flame, so the colour we see in the solution cannot be the whole story. The lesson does not explain the reason yet.",
+     "phase": "observe",
+     "placement": "Observe: two-column table comparing predictions with observations (solution colour vs flame colour)"
+    },
+    {
+     "prompt": "During a flame test with potassium chloride, a student sees a brief yellow flicker in the faint lilac flame. What does the lesson suggest is the most likely cause?",
+     "choices": [
+      "Potassium always gives yellow at the start of every test",
+      "The solution has changed into sodium chloride",
+      "The Bunsen burner gas has run out",
+      "Sodium contamination left on the wire"
+     ],
+     "correctIndex": 3,
+     "rationale": "Sodium gives a strong yellow-orange colour, so even a trace of it on the wire can show as a yellow flicker. This is why the wire is cleaned in dilute hydrochloric acid between tests.",
+     "phase": "observe",
+     "placement": "Observe: potassium chloride test and cleaning the wire in dilute hydrochloric acid between tests"
+    },
+    {
+     "prompt": "The teacher repeats the sodium chloride flame test a second time. What does the second test show?",
+     "choices": [
+      "The flame turns violet because the wire is now hot",
+      "No colour appears because the salt has been used up",
+      "The same yellow-orange colour appears again, so the result is repeatable",
+      "The colour is random and changes each time"
+     ],
+     "correctIndex": 2,
+     "rationale": "The second sodium chloride test gives the same yellow-orange colour. This shows the observation is repeatable and not a one-off accident.",
+     "phase": "observe",
+     "placement": "Observe: repeating the sodium chloride test to confirm repeatability"
+    },
+    {
+     "prompt": "The class has seen that sodium always gives yellow and potassium always gives violet. At the end of the discussion, which statement best describes where the class is?",
+     "choices": [
+      "The class has noticed a clear pattern but cannot yet explain why the type of atom changes the flame colour",
+      "The class has already proved the colour comes from the dye in each salt",
+      "The class has shown that fire is just heat, so atoms have no effect on the colour",
+      "The class has shown the colour comes only from the nichrome wire"
+     ],
+     "correctIndex": 0,
+     "rationale": "The lesson ends with the pattern noticed (different substance, different repeatable colour) and the explanation still unanswered. The teacher names this as the starting point for the unit.",
+     "phase": "explain",
+     "placement": "Explain: whole-class discussion and concept web ('Our ideas so far')"
+    },
+    {
+     "prompt": "Which of these is the best question to post on the Driving Question Board after watching the flame tests?",
+     "choices": [
+      "What is the price of a Bunsen burner?",
+      "Should the teacher repeat the demonstration tomorrow?",
+      "Why does sodium always give the same yellow-orange colour every time?",
+      "When is the next chemistry test?"
+     ],
+     "correctIndex": 2,
+     "rationale": "A good Driving Question Board question starts with Why, How or What and asks about the phenomenon the class observed. The sodium question does this and can guide the investigation.",
+     "phase": "dqb",
+     "placement": "DQB: writing a question on a sticky note for 'OUR DRIVING QUESTION BOARD'"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "What Is an Atom? Reviewing Atomic Structure — Dalton & Rutherford Models",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A potassium atom (neutral) has atomic number 19 and mass number 39. Which row correctly gives its numbers of protons, neutrons and electrons?",
+     "choices": [
+      "39 protons, 19 neutrons, 39 electrons",
+      "19 protons, 20 neutrons, 19 electrons",
+      "19 protons, 19 neutrons, 39 electrons",
+      "20 protons, 19 neutrons, 20 electrons"
+     ],
+     "correctIndex": 1,
+     "rationale": "The atomic number is the number of protons (19), and a neutral atom has equal numbers of protons and electrons (19). Neutrons = mass number - atomic number = 39 - 19 = 20.",
+     "phase": "observe",
+     "placement": "Part A: Element Card Comparison (potassium card)"
+    },
+    {
+     "prompt": "An iron atom has atomic number 26 and mass number 56. How many neutrons does it have?",
+     "choices": [
+      "30",
+      "56",
+      "26",
+      "82"
+     ],
+     "correctIndex": 0,
+     "rationale": "Number of neutrons = mass number - atomic number = 56 - 26 = 30.",
+     "phase": "observe",
+     "placement": "Part A: Element Card Comparison (rule for calculating neutron number)",
+     "check": "56-26"
+    },
+    {
+     "prompt": "In the Rutherford gold foil experiment, most alpha particles passed straight through the gold foil. What does this show about gold atoms?",
+     "choices": [
+      "Alpha particles are too heavy to be affected by atoms",
+      "The atom is mostly empty space",
+      "The atom is a solid sphere that lets alpha particles pass through it",
+      "All the mass of the atom is spread evenly through it"
+     ],
+     "correctIndex": 1,
+     "rationale": "If most particles pass through undisturbed, most of the atom must be empty space. A solid, evenly filled sphere would block or deflect the particles.",
+     "phase": "observe",
+     "placement": "Part B: Rutherford Simulation (what did most of the particles do?)"
+    },
+    {
+     "prompt": "In the gold foil experiment, a very small number of alpha particles bounced almost straight back. What did this tell scientists must exist inside the atom?",
+     "choices": [
+      "Gaps in the gold foil where the atoms were missing",
+      "Electrons that are heavy enough to turn the alpha particles back",
+      "A tiny, dense, positively charged centre called the nucleus",
+      "Solid, indivisible spheres packed tightly together"
+     ],
+     "correctIndex": 2,
+     "rationale": "Positive alpha particles were repelled by a very small, dense, positively charged centre (the nucleus). An alpha particle is about 7,300 times heavier than an electron, so electrons cannot turn it back.",
+     "phase": "observe",
+     "placement": "Part B: Rutherford Simulation (what the bounced-back particles told the scientists)"
+    },
+    {
+     "prompt": "John Dalton pictured every atom as a tiny, solid, indivisible sphere. If gold atoms really were solid spheres packed together in a thin foil, what would you expect to happen to the alpha particles fired at the foil?",
+     "choices": [
+      "Most would pass through and a few would be absorbed by electrons",
+      "Most would pass straight through with no change",
+      "Half would pass through and half would bounce back",
+      "Most would be blocked or deflected by the solid atoms"
+     ],
+     "correctIndex": 3,
+     "rationale": "A solid sphere leaves no empty space for particles to pass through, so most would be blocked or deflected. The simulation showed the opposite, which is why Dalton's model had to be revised.",
+     "phase": "explain",
+     "placement": "Explain Phase: Dalton's solid-sphere model compared with the Results Table"
+    },
+    {
+     "prompt": "A group says the few alpha particles bounced back because they 'bounced off the electrons'. Which statement shows why this explanation is wrong?",
+     "choices": [
+      "Electrons are positively charged, so they would attract the alpha particles",
+      "Electrons do not exist inside gold atoms",
+      "An alpha particle is about 7,300 times heavier than an electron, so electrons cannot turn it back",
+      "Electrons are packed so tightly together that they form a solid wall"
+     ],
+     "correctIndex": 2,
+     "rationale": "An alpha particle is far heavier than an electron, so an electron cannot make it rebound. Only a very small, dense, positively charged nucleus can do that.",
+     "phase": "explain",
+     "placement": "Explain Phase: completing the Explanation Frame (prompt 2, deflections at large angles)"
+    },
+    {
+     "prompt": "After building the Rutherford model, your class records what the model cannot yet explain. Which of these is the question it still cannot answer?",
+     "choices": [
+      "Why most particles pass straight through a thin gold foil",
+      "Why the nucleus is positively charged",
+      "Why atoms of different elements, such as sodium and potassium, give different flame colours",
+      "Whether an atom has a small, dense centre"
+     ],
+     "correctIndex": 2,
+     "rationale": "The Rutherford model explains the mostly empty atom and the dense nucleus, but it does not say how electrons are arranged or why that gives different flame colours. This gap leads into the next lesson.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: 'New questions this raises' card and the 'Rutherford showed us that… but' sentence"
+    },
+    {
+     "prompt": "In your bottle-top and maize-seed model of sodium, a nucleus is shown by bottle tops about 3 cm across. In a real atom the nucleus is about 100,000 times smaller than the atom. Which statement describes a limitation of the model?",
+     "choices": [
+      "A real atom is much larger compared with its nucleus, so the seeds would be kilometres away from the bottle tops",
+      "The nucleus should be bigger, because it takes up most of the atom",
+      "The seeds should be heavier than the bottle tops, because electrons are heavier than the nucleus",
+      "The electrons should sit still in neat rings, as the seeds do"
+     ],
+     "correctIndex": 0,
+     "rationale": "If the nucleus were 3 cm across, the atom would be about 3 cm x 100,000 = 3 km across. The model also cannot show electric charge, and electrons do not sit still.",
+     "phase": "model",
+     "placement": "Model Phase: building the Rutherford model with bottle tops and maize seeds and noting its limits"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Bohr's Model and Energy Levels",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Niels Bohr's model of the atom says something important about where electrons can be found. Which statement matches Bohr's key idea?",
+     "choices": [
+      "Electrons can only exist at specific energy levels (shells), not in between them",
+      "Electrons can have any amount of energy, so they can be anywhere around the nucleus",
+      "Electrons sit inside the nucleus together with the protons",
+      "Electrons move randomly in a cloud around the nucleus with no fixed positions"
+     ],
+     "correctIndex": 0,
+     "rationale": "Bohr's key idea is that electrons occupy fixed energy levels (shells) and cannot exist in between them. This is what links atomic structure to flame colours.",
+     "phase": "observe",
+     "placement": "Part A: Guided Diagram Analysis of the sodium Bohr model diagrams"
+    },
+    {
+     "prompt": "A carbon atom has 6 electrons. Using the shell rules (Shell 1 holds a maximum of 2 electrons, Shell 2 holds a maximum of 8), how are its electrons arranged?",
+     "choices": [
+      "6",
+      "2, 4",
+      "2, 2, 2",
+      "4, 2"
+     ],
+     "correctIndex": 1,
+     "rationale": "Shell 1 fills first with 2 electrons. The remaining 4 electrons go into Shell 2, giving 2, 4.",
+     "phase": "observe",
+     "placement": "Part B: Drawing Practice, Bohr models for elements 1–10 (checkpoint element carbon)"
+    },
+    {
+     "prompt": "A lithium atom has 3 electrons. Where must the third electron be placed in a Bohr model?",
+     "choices": [
+      "In Shell 3, because Shell 2 must stay empty until Shell 1 has 3 electrons",
+      "In Shell 2, because Shell 1 is already full with 2 electrons",
+      "Inside the nucleus with the protons",
+      "In Shell 1, because it is closest to the nucleus"
+     ],
+     "correctIndex": 1,
+     "rationale": "Shell 1 holds a maximum of 2 electrons, so it is full after two. The third electron starts Shell 2, giving lithium the arrangement 2, 1.",
+     "phase": "observe",
+     "placement": "Part B: Drawing Practice, Bohr models for elements 1–10 (Shell 2 begins filling from lithium)"
+    },
+    {
+     "prompt": "In a cooking fire, the outermost electron of a sodium atom absorbs heat energy and jumps to a higher energy level. What happens when that electron falls back to its original level?",
+     "choices": [
+      "It leaves the atom and the sodium turns into a different element",
+      "It releases the energy only as sound, so no colour is seen",
+      "It releases the energy it absorbed as a photon of light, which is yellow for sodium",
+      "It absorbs even more energy from the flame and becomes more stable"
+     ],
+     "correctIndex": 2,
+     "rationale": "The excited electron is unstable at the higher level. When it falls back, it releases the absorbed energy as a photon of light, and for sodium this light is yellow.",
+     "phase": "explain",
+     "placement": "Part A: Think-Pair-Share, the three steps of a sodium electron in a cooking fire"
+    },
+    {
+     "prompt": "Sodium gives a yellow flame and potassium gives a violet flame. Using Bohr's model, what is the best explanation for this difference?",
+     "choices": [
+      "Potassium atoms have no electrons, so they cannot give out yellow light",
+      "The flame changes its own colour depending on how hot it is, not on the substance",
+      "Each type of atom has different spacings between its energy levels, so the energy released when electrons fall back is different and gives a different colour",
+      "Sodium and potassium electrons release exactly the same energy, but potassium releases it more slowly"
+     ],
+     "correctIndex": 2,
+     "rationale": "The colour depends on how much energy is released when an electron falls back. This depends on the spacing between energy levels, which is different for each type of atom.",
+     "phase": "explain",
+     "placement": "Part B: Connecting to the Driving Question, why potassium gives violet and sodium gives yellow"
+    },
+    {
+     "prompt": "A silicon atom has 14 electrons. What is its electron arrangement?",
+     "choices": [
+      "8, 6",
+      "2, 6, 6",
+      "2, 8, 8",
+      "2, 8, 4"
+     ],
+     "correctIndex": 3,
+     "rationale": "Shell 1 holds 2 and Shell 2 holds 8, which is 10 electrons. The remaining 14 − 10 = 4 electrons go in Shell 3, giving 2, 8, 4.",
+     "phase": "explain",
+     "placement": "Part C: Worked Example, electron arrangements (phosphorus 2, 8, 5, then elements 11–15)"
+    },
+    {
+     "prompt": "A learner is writing a green 'I now understand' note about the yellow flame at a cooking fire. Which note explains the phenomenon using Bohr's model, rather than only describing it?",
+     "choices": [
+      "Electrons in sodium jump to higher shells when they absorb heat and release yellow light when they fall back",
+      "Atoms have a nucleus and electrons, as we learned in Lesson 2",
+      "Sodium makes a yellow flame and potassium makes a violet flame",
+      "The fire is hot, so the salt changes colour when it burns"
+     ],
+     "correctIndex": 0,
+     "rationale": "Only this note describes the mechanism: absorbing energy, jumping to a higher shell, then falling back and releasing light. The other notes only describe the observation or repeat earlier ideas.",
+     "phase": "dqb",
+     "placement": "DQB update: green 'I now understand' sticky notes under 'Lesson 3 — Bohr's Model'"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Isotopes and Relative Atomic Mass — Part 1: Meaning and Concept",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Sodium-23 and sodium-24 are two isotopes of sodium (atomic number 11). Sodium-24 is slightly heavier because it has one extra neutron. A pinch of each is placed in a Bunsen burner flame. What do you predict?",
+     "choices": [
+      "Sodium-23 gives yellow and sodium-24 gives violet because the masses are different",
+      "Sodium-24 gives no colour because it has an extra neutron",
+      "Sodium-24 gives a different colour because its heavier nucleus changes the energy levels of the electrons",
+      "Both give the same yellow colour because both have the same number of electrons arranged in the same energy levels"
+     ],
+     "correctIndex": 3,
+     "rationale": "Flame colour depends on how electrons are arranged in energy levels. Both isotopes have 11 protons and so 11 electrons with the same arrangement, so they give the same yellow flame.",
+     "phase": "predict",
+     "placement": "Predict: two sealed envelopes (Chlorine Atom A mass 35, Chlorine Atom B mass 37) written prediction"
+    },
+    {
+     "prompt": "Normal carbon (carbon-12) has 6 protons. Carbon-14 is used to date younger remains such as charcoal and bone. It has mass number 14 and is also carbon. How many neutrons does an atom of carbon-14 have?",
+     "choices": [
+      "8",
+      "2",
+      "6",
+      "14"
+     ],
+     "correctIndex": 0,
+     "rationale": "Number of neutrons = mass number − atomic number = 14 − 6 = 8. Carbon-14 has 2 more neutrons than carbon-12, which has 6.",
+     "phase": "observe",
+     "placement": "Activity A: Isotope Context Card and Nuclear Composition Table (C-12 and C-14)",
+     "check": "14-6"
+    },
+    {
+     "prompt": "A group fills in a table for protium (¹H), deuterium (²H) and tritium (³H), which are isotopes of hydrogen. Which pattern will they find in their table?",
+     "choices": [
+      "The number of electrons changes, but the number of protons stays the same in a neutral atom",
+      "Both the number of protons and the number of neutrons stay the same",
+      "The number of protons changes, but the number of neutrons stays the same",
+      "The number of protons is the same in all three, but the number of neutrons changes"
+     ],
+     "correctIndex": 3,
+     "rationale": "All hydrogen isotopes have 1 proton (atomic number 1). The mass number changes (1, 2, 3), so the neutrons change (0, 1, 2).",
+     "phase": "observe",
+     "placement": "Activity B: Spot-the-Pattern Gallery Walk (green and red dots)"
+    },
+    {
+     "prompt": "Chlorine-35 and chlorine-37 both have the electron arrangement 2, 8, 7. Which statement best explains why?",
+     "choices": [
+      "Neutrons are lost when the atom is placed in a flame, leaving the same electrons",
+      "Both have the same mass number, so they must have the same electrons",
+      "Chlorine-37 is heavier, so its extra neutrons are added to the outer shell",
+      "Both have 17 protons, so a neutral atom of each has 17 electrons, and neutrons carry no charge and do not change the electron arrangement"
+     ],
+     "correctIndex": 3,
+     "rationale": "Isotopes have the same atomic number, so the same number of protons and electrons in a neutral atom. Neutrons are neutral and sit in the nucleus, so they do not affect the electron arrangement.",
+     "phase": "explain",
+     "placement": "Activity A: Connecting to Electrons (Cl-35 and Cl-37 side-by-side diagram and 'Connect the Dots' sentence frame)"
+    },
+    {
+     "prompt": "Learners sort atom cards into isotope families. Which pair of atoms are isotopes of the same element?",
+     "choices": [
+      "Atom with atomic number 19 and mass number 39, and atom with atomic number 11 and mass number 23",
+      "Atom with atomic number 12 and mass number 24, and atom with atomic number 11 and mass number 24",
+      "Atom with atomic number 11 and mass number 23, and atom with atomic number 12 and mass number 24",
+      "Atom with atomic number 11 and mass number 23, and atom with atomic number 11 and mass number 24"
+     ],
+     "correctIndex": 3,
+     "rationale": "Isotopes of the same element have the same atomic number (here 11) but different mass numbers (23 and 24). Matching mass numbers alone does not make atoms isotopes.",
+     "phase": "explain",
+     "placement": "Activity B: Isotope Sort Card Game (sorting 12 atom cards into isotope families)"
+    },
+    {
+     "prompt": "Olorgesailie stone tools are hundreds of thousands to over a million years old. Archaeologists date the volcanic ash around them using potassium-40, not carbon-14. Why?",
+     "choices": [
+      "Carbon-14 is not an isotope of carbon",
+      "Volcanic ash contains no atoms with neutrons",
+      "Potassium-40 has the same mass number as carbon-14",
+      "Carbon-14 can only date remains up to about 50,000 years old, which is far younger than the tools"
+     ],
+     "correctIndex": 3,
+     "rationale": "Carbon-14 dating works only to about 50,000 years at most. Potassium-40, a radioactive isotope of potassium, can date much older volcanic layers.",
+     "phase": "observe",
+     "placement": "Activity A: Isotope Context Card (Olorgesailie Prehistoric Site)"
+    },
+    {
+     "prompt": "Which claim is scientifically accurate for a yellow note on the Driving Question Board about the cooking hearth phenomenon?",
+     "choices": [
+      "Isotopes of sodium have different electron arrangements, so they give different flame colours",
+      "The heavier isotope of an element always gives a more intense flame colour because it has more neutrons",
+      "Isotopes of the same element have the same electron arrangement, so they give the same flame colour",
+      "Isotopes have different atomic numbers, so their flame colours depend on mass number"
+     ],
+     "correctIndex": 2,
+     "rationale": "Isotopes share the same atomic number and so the same electron arrangement. Electron arrangement, not neutron number, determines flame colour.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: yellow claim note under 'Lesson 4 — Isotopes'"
+    },
+    {
+     "prompt": "A learner draws two isotopes of potassium for the model revision: potassium-39 and potassium-41. The atomic number of potassium is 19. How many neutrons should be labelled in the potassium-41 atom?",
+     "choices": [
+      "19",
+      "22",
+      "60",
+      "41"
+     ],
+     "correctIndex": 1,
+     "rationale": "Number of neutrons = mass number − atomic number = 41 − 19 = 22. The atom also has 19 protons and 19 electrons.",
+     "phase": "model",
+     "placement": "Model: revise the cumulative atomic model to show two isotopes of one element (sodium, potassium or chlorine)",
+     "check": "41-19"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Isotopes and Relative Atomic Mass — Part 2: Calculation and Weighted Averages",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "The periodic table gives the relative atomic mass of chlorine as about 35.5, yet chlorine atoms exist only as Cl-35 and Cl-37, which have whole-number masses. Which explanation is best?",
+     "choices": [
+      "Some chlorine atoms contain half a neutron, which makes the mass 35.5",
+      "Relative atomic mass is a weighted average of the masses of the isotopes, based on how much of each there is",
+      "The periodic table value is a rounding error and is not a real measurement",
+      "The electrons in chlorine add extra mass to every atom to make it 35.5"
+     ],
+     "correctIndex": 1,
+     "rationale": "Chlorine is a mixture of Cl-35 and Cl-37, so its relative atomic mass is an average of the two masses, weighted by their abundances. No single atom has a mass of 35.5.",
+     "phase": "predict",
+     "placement": "Predict: sticky-note prediction on how chlorine's atomic mass can be 35.5"
+    },
+    {
+     "prompt": "A maize farmer in Kericho harvests heavy cobs (3 kg each) that make up 75% of the harvest, and light cobs (1 kg each) that make up 25% of the harvest. What is the weighted average mass of a cob?",
+     "choices": [
+      "1.5 kg",
+      "2.0 kg",
+      "3.0 kg",
+      "2.5 kg"
+     ],
+     "correctIndex": 3,
+     "rationale": "Weighted average = (3 × 0.75) + (1 × 0.25) = 2.25 + 0.25 = 2.5 kg. The simple average of 2.0 kg ignores how much of each type there is.",
+     "phase": "observe",
+     "placement": "Observe: Kericho maize-harvest analogy (weighted average cob mass)",
+     "check": "3*0.75+1*0.25"
+    },
+    {
+     "prompt": "Chlorine has two isotopes: Cl-35 with an abundance of 75% and Cl-37 with an abundance of 25%. What is the relative atomic mass of chlorine?",
+     "choices": [
+      "36.0",
+      "35.5",
+      "35.0",
+      "36.5"
+     ],
+     "correctIndex": 1,
+     "rationale": "RAM = (35 × 0.75) + (37 × 0.25) = 26.25 + 9.25 = 35.5. The value 36.0 comes from the simple average (35 + 37)/2, and 36.5 comes from swapping the abundances.",
+     "phase": "observe",
+     "placement": "Observe: pair calculation of chlorine RAM from the Data Card",
+     "check": "35*0.75+37*0.25"
+    },
+    {
+     "prompt": "Carbon has two isotopes: C-12 with an abundance of 98.9% and C-13 with an abundance of 1.1%. What is the relative atomic mass of carbon, to 3 decimal places?",
+     "choices": [
+      "12.989",
+      "25.000",
+      "12.011",
+      "12.500"
+     ],
+     "correctIndex": 2,
+     "rationale": "RAM = (12 × 0.989) + (13 × 0.011) = 11.868 + 0.143 = 12.011. Carbon is almost all C-12, so its RAM is very close to 12.",
+     "phase": "observe",
+     "placement": "Observe: independent pair work calculating the RAM of carbon",
+     "check": "12*0.989+13*0.011"
+    },
+    {
+     "prompt": "A learner calculates the relative atomic mass of an element with two isotopes, X-63 and X-65, and gets an answer of 66.2. What is the best conclusion?",
+     "choices": [
+      "The answer must be wrong because a weighted average must lie between 63 and 65",
+      "The answer must be wrong because relative atomic mass must always be a whole number",
+      "The answer is correct because heavier isotopes always raise the average above both masses",
+      "The answer is correct as long as the percentages add up to 100%"
+     ],
+     "correctIndex": 0,
+     "rationale": "The reasonableness check says a weighted average must fall between the lightest and heaviest isotope masses. 66.2 is above 65, so there is a calculation error.",
+     "phase": "observe",
+     "placement": "Observe: reasonableness check (does 35.5 lie between 35 and 37?)"
+    },
+    {
+     "prompt": "Cl-35 and Cl-37 have different masses. Why do they give the same colour in a flame test?",
+     "choices": [
+      "They have different numbers of neutrons, and neutrons cancel out the colour",
+      "They have the same number of protons, so the same electron arrangement",
+      "The flame colour depends on the mass number, and 35 and 37 are close together",
+      "They have almost the same mass, so the flame cannot tell them apart"
+     ],
+     "correctIndex": 1,
+     "rationale": "Isotopes of an element have the same atomic number (17 protons) and so the same electron arrangement. Flame colour depends on the electrons, not on the mass.",
+     "phase": "explain",
+     "placement": "Explain: Gallery Walk poster flame-colour sentence for Cl-35 and Cl-37"
+    },
+    {
+     "prompt": "Sodium-23 is a stable isotope of sodium and sodium-24 is a radioactive isotope. Both have 11 protons. A pinch of sodium-24 is put in a Bunsen flame. What colour is seen, and why?",
+     "choices": [
+      "Violet, because the extra neutron changes the electron arrangement",
+      "Yellow-orange, because both isotopes have the same atomic number and electron arrangement",
+      "A deeper orange, because sodium-24 is heavier than sodium-23",
+      "No colour, because radioactive atoms do not have electrons in energy levels"
+     ],
+     "correctIndex": 1,
+     "rationale": "Both isotopes have 11 protons and the same electron arrangement, so they give the same yellow-orange flame. Mass does not change the flame colour.",
+     "phase": "dqb",
+     "placement": "DQB: Na-23 and Na-24 flame colour discussion"
+    },
+    {
+     "prompt": "A learner draws a model of the Cl-37 isotope. Chlorine has atomic number 17. Which set of particle numbers should the model show?",
+     "choices": [
+      "17 protons, 37 neutrons, 17 electrons",
+      "17 protons, 20 neutrons, 37 electrons",
+      "17 protons, 20 neutrons, 17 electrons",
+      "20 protons, 17 neutrons, 20 electrons"
+     ],
+     "correctIndex": 2,
+     "rationale": "The atomic number gives 17 protons, and in a neutral atom there are 17 electrons. Neutrons = mass number − atomic number = 37 − 17 = 20.",
+     "phase": "model",
+     "placement": "Model: drawing Cl-35 and Cl-37 side by side in the running atomic model"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "From Energy Levels to Orbitals: Introducing s and p Orbitals",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "At a school lab in Kisumu, copper wire, table salt and potassium chloride are each put in the SAME Bunsen flame at the SAME temperature. The flame turns green, yellow and lilac-violet respectively. What best explains the different colours?",
+     "choices": [
+      "The electrons in each type of atom are arranged differently, so each releases a different amount of energy as light",
+      "The flame becomes hotter for some substances than for others",
+      "Some substances burn more of the Bunsen gas than others",
+      "The atoms of each substance are different sizes, and only size decides the colour"
+     ],
+     "correctIndex": 0,
+     "rationale": "The temperature is the same, so the difference must come from inside the atoms. Different electron arrangements mean different energy is released as light, giving different colours.",
+     "phase": "predict",
+     "placement": "Predict: Kisumu lab mystery card and Think-Pair-Share"
+    },
+    {
+     "prompt": "In a sodium atom, two electrons are both in Shell 2 but have different energies. What does this show that Bohr's shell model cannot explain?",
+     "choices": [
+      "Electrons can only exist in Shell 1",
+      "Shell 2 is made of sub-regions (2s and 2p) with different energies, so a shell is not one uniform region",
+      "The nucleus changes the energy of electrons by moving around",
+      "Electrons in the same shell must always have exactly the same energy"
+     ],
+     "correctIndex": 1,
+     "rationale": "Animation 1 shows that a shell contains sub-regions called orbitals (2s and 2p) with different energies. Bohr's model treats each shell as having a single energy.",
+     "phase": "observe",
+     "placement": "Observe: Animation 1 'The Limit of Bohr Shells'"
+    },
+    {
+     "prompt": "Which statement correctly describes the shapes of s and p orbitals?",
+     "choices": [
+      "Both s and p orbitals are flat rings around the nucleus",
+      "s orbitals are dumbbell-shaped and p orbitals are spherical",
+      "s orbitals are spherical and there is only one dumbbell-shaped p orbital in each shell",
+      "s orbitals are spherical, and there are three dumbbell-shaped 2p orbitals lying along the x, y and z axes"
+     ],
+     "correctIndex": 3,
+     "rationale": "An s orbital is a sphere. Each p sub-shell has three dumbbell-shaped orbitals (px, py, pz) pointing along the three axes.",
+     "phase": "observe",
+     "placement": "Observe: Animation 2 'Shapes of s and p Orbitals'"
+    },
+    {
+     "prompt": "A student writes in the observation table: '2p orbitals hold a maximum of 2 electrons.' What is the correct maximum number of electrons in the whole 2p sub-shell? (Each p orbital holds 2 electrons, and there are three 2p orbitals.)",
+     "choices": [
+      "3",
+      "2",
+      "8",
+      "6"
+     ],
+     "correctIndex": 3,
+     "rationale": "Each of the three 2p orbitals (2px, 2py, 2pz) holds 2 electrons. So 3 × 2 = 6 electrons in the 2p sub-shell. The value 2 is the capacity of a single p orbital.",
+     "phase": "observe",
+     "placement": "Observe: observation table (Orbital Name | Shape | Maximum Electrons) and the 2p misconception check",
+     "check": "3*2"
+    },
+    {
+     "prompt": "A sodium atom has 11 electrons (Z = 11). The orbitals fill in the order 1s → 2s → 2p → 3s → 3p → 4s. In which orbital is sodium's outermost electron?",
+     "choices": [
+      "2p",
+      "3s",
+      "3p",
+      "4s"
+     ],
+     "correctIndex": 1,
+     "rationale": "1s holds 2, 2s holds 2 and 2p holds 6, which makes 10 electrons. The 11th electron goes into 3s, the next orbital in the order.",
+     "phase": "explain",
+     "placement": "Explain: card sort, applying the sorted table to fill orbitals for Na (Z=11)"
+    },
+    {
+     "prompt": "A potassium atom has 19 electrons (Z = 19). Using the filling order 1s → 2s → 2p → 3s → 3p → 4s, which orbital holds its outermost electron?",
+     "choices": [
+      "3p",
+      "4s",
+      "3s",
+      "2p"
+     ],
+     "correctIndex": 1,
+     "rationale": "1s (2) + 2s (2) + 2p (6) + 3s (2) + 3p (6) = 18 electrons. The 19th electron goes into 4s, in energy level 4.",
+     "phase": "explain",
+     "placement": "Explain: card sort, applying the sorted table to fill orbitals for K (Z=19)"
+    },
+    {
+     "prompt": "Sodium's outermost electron is in the 3s orbital and potassium's is in the 4s orbital. Which statement best explains why sodium gives a yellow-orange flame and potassium gives a violet flame?",
+     "choices": [
+      "Sodium is heated more than potassium in the flame",
+      "All electrons release the same energy, but our eyes see it differently",
+      "The electrons are in different orbitals at different energy levels, so they release different amounts of energy as different colours of light",
+      "Potassium atoms have no electrons that can absorb energy"
+     ],
+     "correctIndex": 2,
+     "rationale": "A heated electron jumps to a higher orbital and releases energy as light when it falls back. Different orbitals mean a different energy gap, so a different colour of light.",
+     "phase": "dqb",
+     "placement": "DQB: 'Then vs Now' card and sentence frame on why sodium and potassium give different flame colours"
+    },
+    {
+     "prompt": "Which electron arrangement correctly shows a sodium atom (11 electrons) in the orbital model?",
+     "choices": [
+      "1s² 2s² 2p⁶ 3p¹",
+      "1s² 2s² 2p⁶ 3s¹",
+      "1s² 2s² 2p⁵ 3s²",
+      "1s² 2s² 3s² 3p⁵"
+     ],
+     "correctIndex": 1,
+     "rationale": "Fill in order: 1s² (2) + 2s² (2) + 2p⁶ (6) = 10 electrons, and the last electron goes into 3s¹. The other choices fill 3s before 2p is full, put the electron in 3p before 3s, or skip 2p.",
+     "phase": "model",
+     "placement": "Model: Layer 6, drawing sodium's orbital model labelled 1s² 2s² 2p⁶ 3s¹"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Filling the Orbitals: Aufbau, Pauli, and Hund's Rules",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Carbon has 6 electrons. The orbitals available are 1s, 2s and three 2p boxes. Electrons fill the lowest-energy orbitals first. Where do the first 4 electrons of carbon go?",
+     "choices": [
+      "All 4 in the 1s orbital",
+      "2 in the 1s orbital and 2 in the 2s orbital",
+      "1 each in 1s, 2s and two of the 2p boxes",
+      "2 in the 1s orbital and 2 in the 2p orbitals"
+     ],
+     "correctIndex": 1,
+     "rationale": "1s has lower energy than 2s, which has lower energy than 2p. Each orbital holds at most 2 electrons, so 1s takes 2 and 2s takes the next 2.",
+     "phase": "predict",
+     "placement": "Predict: individual 'Orbital Seating Chart' placing carbon's 6 electrons"
+    },
+    {
+     "prompt": "Helium has 2 electrons, both in the 1s orbital. Which arrow arrangement in the 1s box is correct?",
+     "choices": [
+      "Both arrows pointing down (same spin)",
+      "One arrow up and one arrow down (opposite spins)",
+      "One arrow in the 1s box and one in the 2s box",
+      "Both arrows pointing up (same spin)"
+     ],
+     "correctIndex": 1,
+     "rationale": "Two electrons in the same orbital must have opposite spins (Pauli exclusion principle), and the lowest-energy orbital 1s is filled first.",
+     "phase": "observe",
+     "placement": "Part: 'Electron Seat' activity, Step 2 (He) and the 5-minute check of He diagrams"
+    },
+    {
+     "prompt": "Nitrogen has 7 electrons: 1s² and 2s² are already full. How are the remaining 3 electrons placed in the three 2p boxes?",
+     "choices": [
+      "All three in a single 2p box",
+      "Two paired in one 2p box, one in a second 2p box, the third box empty",
+      "One electron in each of the three 2p boxes",
+      "Two paired in one 2p box and the third electron in the 3s orbital"
+     ],
+     "correctIndex": 2,
+     "rationale": "Hund's rule: orbitals of equal energy are filled singly before any pairing, so each of the three 2p boxes gets one electron.",
+     "phase": "observe",
+     "placement": "Part: 'Electron Seat' activity, spotlight on Group 3's nitrogen (Rule C)"
+    },
+    {
+     "prompt": "A learner draws oxygen (8 electrons) like this: 1s: ↑↓, 2s: ↑↓, and the three 2p boxes: ↑↓, ↑↓, empty. Which rule has been broken?",
+     "choices": [
+      "Hund's rule, because electrons paired up before each 2p box had one electron",
+      "Aufbau principle, because 2p was filled before 1s",
+      "Pauli exclusion principle, because two electrons share a box with the same spin",
+      "No rule has been broken"
+     ],
+     "correctIndex": 0,
+     "rationale": "The four 2p electrons should go one in each of the three 2p boxes first, and only the fourth pairs up (↑↓, ↑, ↑). Pairing in two boxes while the third is empty breaks Hund's rule.",
+     "phase": "explain",
+     "placement": "'Spot the Mistake' challenge (diagrams for B, C, O and F)"
+    },
+    {
+     "prompt": "Sodium (Na) has 11 electrons. Which electron configuration follows the order of filling correctly?",
+     "choices": [
+      "1s²2s²2p⁶3s¹",
+      "1s²2s²2p⁷",
+      "1s²2s²2p⁶3p¹",
+      "1s²2s²2p⁵3s²"
+     ],
+     "correctIndex": 0,
+     "rationale": "1s, 2s and 2p fill completely (2 + 2 + 6 = 10 electrons), and the 11th electron goes into the next lowest orbital, 3s, giving 1s²2s²2p⁶3s¹.",
+     "phase": "explain",
+     "placement": "Sodium pivot: extending the three rules to write Na's configuration"
+    },
+    {
+     "prompt": "At a Rift Valley homestead, salt (sodium chloride) thrown into a cooking fire always gives a yellow-orange flame. What is the best explanation?",
+     "choices": [
+      "Every element gives yellow light because all electrons follow the same filling rules",
+      "The sodium atoms always have the same electron arrangement, so the lone 3s electron always releases the same amount of energy as light when it falls back",
+      "Salt burns to make a yellow substance that colours the flame",
+      "The flame heat changes the number of electrons in sodium each time, so the colour is always yellow"
+     ],
+     "correctIndex": 1,
+     "rationale": "Sodium's 3s¹ electron absorbs energy, jumps up, and releases a fixed amount of energy as light when it falls back. The same arrangement always gives the same energy, so the same yellow colour.",
+     "phase": "explain",
+     "placement": "Sodium pivot: teacher explanation of the 3s¹ electron as the source of the yellow flame colour"
+    },
+    {
+     "prompt": "Lithium has 3 electrons. Using the three filling rules, which orbital does its outermost electron occupy?",
+     "choices": [
+      "2p",
+      "3s",
+      "2s",
+      "1s"
+     ],
+     "correctIndex": 2,
+     "rationale": "Lithium is 1s²2s¹. The 1s orbital holds only 2 electrons, so the third electron goes into the next lowest orbital, 2s.",
+     "phase": "model",
+     "placement": "Cumulative 'Atomic Model' revision: model statement naming the orbital of the outermost electron"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Electron Configuration for Elements 1–20 (s and p Notation)",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Chlorine has atomic number 17. Which is its full s and p electron configuration?",
+     "choices": [
+      "1s² 2s² 2p⁶ 3s² 3p⁴",
+      "1s² 2s² 2p⁶ 3s⁵",
+      "1s² 2s² 2p⁶ 3s² 3p⁵",
+      "1s² 2s² 2p⁶ 3s¹ 3p⁶"
+     ],
+     "correctIndex": 2,
+     "rationale": "Fill in Aufbau order: 2+2+6+2 = 12 electrons, leaving 5 for 3p, so 3p⁵. The other options either have the wrong total or put too many electrons in 3s (maximum 2).",
+     "phase": "predict",
+     "placement": "Prediction Card: predicting the configuration of H, C, Na, Mg, Cl, Ca"
+    },
+    {
+     "prompt": "Calcium has atomic number 20. Which is its correct full electron configuration?",
+     "choices": [
+      "1s² 2s² 2p⁶ 3s² 3p⁸",
+      "1s² 2s² 2p⁶ 3s² 3p⁶ 4s²",
+      "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹",
+      "1s² 2s² 2p⁶ 3s² 3p⁶ 3d²"
+     ],
+     "correctIndex": 1,
+     "rationale": "After 3p⁶ is full (18 electrons), the next orbital in the Aufbau order is 4s, which takes the last 2 electrons. 3d does not fill before 4s, 4s¹ would be potassium, and 3p holds a maximum of 6 electrons.",
+     "phase": "observe",
+     "placement": "Part A: Paired Systematic Configuration Practice (elements 11–20)"
+    },
+    {
+     "prompt": "Lithium (1s² 2s¹), sodium (1s² 2s² 2p⁶ 3s¹) and potassium (1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹) are all in Group 1. What do their configurations have in common?",
+     "choices": [
+      "Each has one electron in an outermost p subshell",
+      "Each has the same total number of electrons",
+      "Each has exactly one electron in its outermost s subshell",
+      "Each has the same number of occupied energy levels"
+     ],
+     "correctIndex": 2,
+     "rationale": "All three end in ns¹, which is why they are in the same group. They have different numbers of energy levels (2, 3 and 4) and different total electrons (3, 11 and 19), and none ends in a p subshell.",
+     "phase": "observe",
+     "placement": "Part B: Colour-Coded Group Pattern Discovery (Group 1 column)"
+    },
+    {
+     "prompt": "Magnesium has the configuration 1s² 2s² 2p⁶ 3s². Which element has the same type and number of outermost electrons as magnesium?",
+     "choices": [
+      "Calcium, 1s² 2s² 2p⁶ 3s² 3p⁶ 4s²",
+      "Chlorine, 1s² 2s² 2p⁶ 3s² 3p⁵",
+      "Sodium, 1s² 2s² 2p⁶ 3s¹",
+      "Aluminium, 1s² 2s² 2p⁶ 3s² 3p¹"
+     ],
+     "correctIndex": 0,
+     "rationale": "Magnesium and calcium both end in ns² (Group 2). Sodium ends in ns¹, while aluminium and chlorine have outermost electrons in a p subshell.",
+     "phase": "observe",
+     "placement": "Part B: shading Group 2 (Be, Mg, Ca) on the Configuration Table"
+    },
+    {
+     "prompt": "Sulfur has atomic number 16 and the configuration 1s² 2s² 2p⁶ 3s² 3p⁴. How many electrons are in its 3p subshell?",
+     "choices": [
+      "4",
+      "6",
+      "16",
+      "2"
+     ],
+     "correctIndex": 0,
+     "rationale": "Subtract the electrons in the inner subshells from the total: 16 − (2 + 2 + 6 + 2) = 4 electrons remain in 3p.",
+     "phase": "explain",
+     "placement": "Part A: Peer-Teaching Carousel (explaining how many electrons are in each subshell)",
+     "check": "16-2-2-6-2"
+    },
+    {
+     "prompt": "Sodium (…3s¹) and potassium (…4s¹) both have one electron in their outermost s orbital, yet sodium gives a yellow-orange flame and potassium gives a violet flame. Which statement best explains the different colours?",
+     "choices": [
+      "Potassium has more outermost electrons than sodium, so it gives a different colour",
+      "Sodium's outermost electron is in a p subshell and potassium's is in an s subshell",
+      "The colour depends only on how hot the flame is, not on the type of atom",
+      "The outermost electron is in a different energy level in each atom, so the energy released as light differs and gives a different wavelength"
+     ],
+     "correctIndex": 3,
+     "rationale": "Both have ns¹, but the outermost electron is in level 3 for sodium and level 4 for potassium. The different energy gaps give photons of different energy and wavelength, so the colours differ.",
+     "phase": "explain",
+     "placement": "Part B: Think-Pair-Share: Phenomenon Reconnection (Na and K configurations side by side)"
+    },
+    {
+     "prompt": "A learner draws a model of a potassium atom (atomic number 19, 1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹). Which description of the diagram is correct?",
+     "choices": [
+      "Three energy levels are occupied, and the outermost electron is in the 3p subshell",
+      "Four energy levels are occupied, and the outermost electron is in the 4s subshell",
+      "Four energy levels are occupied, and the outermost electron is in the 3d subshell",
+      "Three energy levels are occupied, and the outermost electron is in the 3s subshell"
+     ],
+     "correctIndex": 1,
+     "rationale": "The configuration uses levels 1, 2, 3 and 4, and the last electron enters 4s. This higher energy level is what makes potassium's flame colour differ from sodium's.",
+     "phase": "model",
+     "placement": "Cumulative Model Annotation: drawing the potassium diagram beside sodium"
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "Model Building, DQB Resolution, and Unit Consolidation: Answering the Driving Question",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Salt (sodium chloride) is sprinkled into a cooking fire and the flame glows yellow. Which explanation is best?",
+     "choices": [
+      "The sodium nucleus breaks apart in the heat and gives out yellow light.",
+      "Sodium atoms melt in the fire and the liquid sodium itself glows yellow.",
+      "Sodium electrons leave the atom for good and the yellow colour is the smoke from the escaped electrons.",
+      "Sodium electrons absorb energy from the flame and jump to a higher energy level. When they fall back, they release that energy as yellow light."
+     ],
+     "correctIndex": 3,
+     "rationale": "Flame colour comes from electrons. They absorb heat, move to higher energy levels (excited state), then fall back and release the energy as light of a particular colour.",
+     "phase": "predict",
+     "placement": "Predict: silent writing and Think-Pair explanation of why sodium gives yellow and potassium gives violet light"
+    },
+    {
+     "prompt": "A sodium atom (Z = 11) has the electron configuration 1s²2s²2p⁶3s¹. Which orbital holds the outermost (valence) electron that gets excited in a flame?",
+     "choices": [
+      "3p",
+      "3s",
+      "1s",
+      "2p"
+     ],
+     "correctIndex": 1,
+     "rationale": "The configuration ends in 3s¹. The single electron in the 3s orbital is the outermost (valence) electron, and it is the one excited in the flame.",
+     "phase": "observe",
+     "placement": "Evidence Station D: energy level and orbital filling diagram for Na and K"
+    },
+    {
+     "prompt": "Which atomic model was the first to place electrons in fixed energy levels (shells) around a small central nucleus?",
+     "choices": [
+      "Dalton's solid sphere model",
+      "Rutherford's nuclear model",
+      "Bohr's shell model",
+      "Dalton's model after adding a nucleus"
+     ],
+     "correctIndex": 2,
+     "rationale": "Rutherford showed there is a small, dense nucleus. Bohr then arranged the electrons in fixed energy levels (shells). Dalton's model had no electrons at all.",
+     "phase": "observe",
+     "placement": "Evidence Station A: Dalton, Rutherford and Bohr model diagrams with key evidence"
+    },
+    {
+     "prompt": "Sodium gives a yellow flame and potassium gives a violet flame. What is the best reason for the difference?",
+     "choices": [
+      "Potassium atoms have more neutrons, so their flame burns hotter and looks violet.",
+      "The two flames use different fuels, so the colour is caused by the firewood.",
+      "Potassium electrons do not move in a flame, so only sodium makes light.",
+      "The electrons in sodium and potassium have different energy levels, so they release different amounts of energy as light, and different energies give different colours."
+     ],
+     "correctIndex": 3,
+     "rationale": "Each element has its own electron arrangement and energy levels. The energy released when an excited electron falls back differs between sodium and potassium, so the colour of the light differs.",
+     "phase": "explain",
+     "placement": "Atomic Model Journey poster: flame explanation panel (Na 3s electron and K 4s electron diagrams)"
+    },
+    {
+     "prompt": "Chlorine has two isotopes: Cl-35 (75% of atoms) and Cl-37 (25% of atoms). What is the relative atomic mass (RAM) of chlorine?",
+     "choices": [
+      "35.5",
+      "35.0",
+      "36.0",
+      "36.5"
+     ],
+     "correctIndex": 0,
+     "rationale": "RAM is a weighted average: (75 × 35 + 25 × 37) ÷ 100 = (2625 + 925) ÷ 100 = 35.5. Taking a simple average (36.0) ignores that Cl-35 is more common.",
+     "phase": "explain",
+     "placement": "Atomic Model Journey poster: isotope panel with the RAM calculation for chlorine",
+     "check": "(75*35+25*37)/100"
+    },
+    {
+     "prompt": "A learner on the Driving Question Board asked: 'Are all atoms of the same element identical?' Which answer is correct?",
+     "choices": [
+      "No, because atoms of the same element can have different numbers of neutrons. These are called isotopes.",
+      "Yes, because neutrons do not affect the atom in any way.",
+      "No, because the number of protons can change between atoms of the same element.",
+      "Yes, because atoms of one element always have the same mass number."
+     ],
+     "correctIndex": 0,
+     "rationale": "Atoms of one element have the same number of protons, but can have different numbers of neutrons. This gives different mass numbers, for example Cl-35 and Cl-37.",
+     "phase": "dqb",
+     "placement": "Driving Question Board closure: voting on the wonder question 'Are all atoms of the same element identical?'"
+    },
+    {
+     "prompt": "Potassium has atomic number 19. Which is its correct electron configuration?",
+     "choices": [
+      "1s²2s²2p⁶3s²3p⁶4s²",
+      "1s²2s²2p⁶3s²3p⁵4s²",
+      "1s²2s²2p⁶3s²3p⁶4s¹",
+      "1s²2s²2p⁶3s²3p⁶4p¹"
+     ],
+     "correctIndex": 2,
+     "rationale": "The orbitals fill in the order 1s, 2s, 2p, 3s, 3p, 4s: 2+2+6+2+6+1 = 19 electrons. The last electron goes into 4s, not 4p. The option ending 4s² has 20 electrons.",
+     "phase": "model",
+     "placement": "Exit slip Task 1: electron configuration of potassium (K, Z = 19)"
+    },
+    {
+     "prompt": "Why can the colour of a flame be used to help identify an element such as sodium, potassium or copper?",
+     "choices": [
+      "The flame colour depends only on how hot the Bunsen burner is.",
+      "The colour is decided by the number of neutrons, which is the same in every atom of an element.",
+      "Each element has its own electron energy levels, so it always gives off light of the same colours. The colour acts like a fingerprint.",
+      "All elements give the same colour, but the brightness shows which element it is."
+     ],
+     "correctIndex": 2,
+     "rationale": "The energy levels of electrons are fixed for each element. The light released is therefore repeatable and specific to the element, which is why flame colour is a fingerprint of electron arrangement.",
+     "phase": "end",
+     "placement": "Whole-lesson close: class answer to the driving question about flame colours and electron arrangement"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,876 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Mathematics",
+  "grade": 10,
+  "substrandId": "2.7",
+  "substrandName": "Surface Area and Volume of Solids",
+  "filePrefix": "Mathematics_Surface_Area_and_Volume_of_Solids"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "Anchoring Phenomenon & Surface Area of Prisms: Same Metal, Different Grain",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Wanjiru the metalsmith used exactly 30,800 cm² of iron sheet to make each closed container for Mzee Kiplagat. What does the 30,800 cm² tell us about a container?",
+     "choices": [
+      "The area of iron sheet needed to cover the outside of the container",
+      "The space inside the container",
+      "How much maize the container can hold",
+      "The height of the container"
+     ],
+     "correctIndex": 0,
+     "rationale": "30,800 cm² is an area, the amount of sheet covering the outside (surface area). It does not tell how much the container holds.",
+     "phase": "predict",
+     "placement": "Predict: prediction slip on Mzee Kiplagat's drum and box"
+    },
+    {
+     "prompt": "A closed cardboard box measures 5 cm by 4 cm by 3 cm. Its net has 6 rectangular faces. What is the total surface area of the box?",
+     "choices": [
+      "60 cm²",
+      "47 cm²",
+      "12 cm²",
+      "94 cm²"
+     ],
+     "correctIndex": 3,
+     "rationale": "The faces come in 3 equal pairs: 5 x 4 = 20, 5 x 3 = 15, 4 x 3 = 12. TSA = 2(20 + 15 + 12) = 94 cm². The 60 is 5 x 4 x 3, which is not a surface area.",
+     "phase": "observe",
+     "placement": "Observe: Task A (rectangular prism net, 5 cm x 4 cm x 3 cm)",
+     "check": "2*(20+15+12)"
+    },
+    {
+     "prompt": "A triangular prism has right-angled triangle ends with sides 3 cm, 4 cm and 5 cm. The prism is 10 cm long. Its net has 2 triangles and 3 rectangles. What is its total surface area?",
+     "choices": [
+      "60 cm²",
+      "120 cm²",
+      "126 cm²",
+      "132 cm²"
+     ],
+     "correctIndex": 3,
+     "rationale": "Each triangle is 1/2 x 3 x 4 = 6 cm², so two give 12 cm². The rectangles are 30 + 40 + 50 = 120 cm². TSA = 12 + 120 = 132 cm². Choosing 120 forgets the triangles, and 126 counts only one triangle.",
+     "phase": "observe",
+     "placement": "Observe: Task B (triangular prism net, 3-4-5 cm ends, length 10 cm)",
+     "check": "2*6+12*10"
+    },
+    {
+     "prompt": "The 3 rectangles in the net of a triangular prism (ends 3 cm, 4 cm, 5 cm; length 10 cm) are laid side by side to make one long rectangle. What are the dimensions of this long rectangle?",
+     "choices": [
+      "7 cm by 10 cm",
+      "5 cm by 10 cm",
+      "12 cm by 10 cm",
+      "12 cm by 6 cm"
+     ],
+     "correctIndex": 2,
+     "rationale": "The widths 3 + 4 + 5 = 12 cm add up to the perimeter of the triangle, and the height of the strip is the length of the prism, 10 cm.",
+     "phase": "observe",
+     "placement": "Observe: looking for a pattern linking the two bases and the rectangles around them"
+    },
+    {
+     "prompt": "Mzee Kiplagat's closed box has a square base 50 cm by 50 cm and a height of 129 cm. Using TSA = 2 x base area + perimeter of base x length, what is the total surface area of the box?",
+     "choices": [
+      "30,800 cm²",
+      "322,500 cm²",
+      "25,800 cm²",
+      "15,400 cm²"
+     ],
+     "correctIndex": 0,
+     "rationale": "Base area = 50 x 50 = 2,500 cm², so 2 x base = 5,000 cm². Perimeter = 200 cm, so 200 x 129 = 25,800 cm². TSA = 5,000 + 25,800 = 30,800 cm². The 25,800 leaves out the two bases.",
+     "phase": "explain",
+     "placement": "Explain: applying the formula to Mzee Kiplagat's box (50 cm x 50 cm x 129 cm)",
+     "check": "2*50*50+200*129"
+    },
+    {
+     "prompt": "The box has a total surface area of 30,800 cm². Does this number tell us how much maize the box can hold?",
+     "choices": [
+      "No, because the box has a different surface area from the drum",
+      "Yes, because surface area and volume are the same thing",
+      "No, it only tells the area of sheet covering the box; the space inside is the volume, which we have not found yet",
+      "Yes, because more sheet metal always means more maize"
+     ],
+     "correctIndex": 2,
+     "rationale": "Surface area is the material covering a solid and volume is the space inside. They are different quantities, and the box's volume has not been calculated yet.",
+     "phase": "explain",
+     "placement": "Explain: distinguishing surface area (covering) from volume (space inside)"
+    },
+    {
+     "prompt": "On the Driving Question Board, a group is sorting questions into 'Surface area questions' and 'Volume questions'. Which question belongs under 'Volume questions'?",
+     "choices": [
+      "How much maize does the drum hold?",
+      "How much iron sheet covers the drum?",
+      "What is the perimeter of the box's base?",
+      "How many faces are in the net of the box?"
+     ],
+     "correctIndex": 0,
+     "rationale": "How much the drum can hold is about the space inside, which is volume. The other questions are about sheet, perimeter or faces, which relate to surface area.",
+     "phase": "dqb",
+     "placement": "DQB: sorting questions into Surface area, Volume, and Shape and design categories"
+    },
+    {
+     "prompt": "At the end of this lesson, the class knows the box's surface area is 30,800 cm². Which statement best describes what the class can say about why the drum holds more maize?",
+     "choices": [
+      "It is because the box has a smaller surface area than the drum",
+      "It is because the drum uses more iron sheet than the box",
+      "It has not been explained yet; we still need the drum's surface area and both volumes",
+      "It is because the drum is round"
+     ],
+     "correctIndex": 2,
+     "rationale": "This lesson found only the box's surface area. The drum's surface area and the volumes are investigated in later lessons, so the puzzle is still open. The other choices are guesses with no evidence yet.",
+     "phase": "model",
+     "placement": "Model: first draft of the chart 'Why does the drum hold more maize?'"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Surface Area of Pyramids: Slant Height, Vertical Height and Roof Cover",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Wanjiru must roof a store with a square-based pyramid roof. The base is 6 m by 6 m and the vertical height is 4 m. She wants the area of one sloping triangular face. Which length should she use as the height of that triangle?",
+     "choices": [
+      "The vertical height from the apex to the centre of the base, 4 m",
+      "The full base side, 6 m",
+      "The slant height, measured from the apex down the middle of the face to the midpoint of a base edge",
+      "Half of the base side, 3 m"
+     ],
+     "correctIndex": 2,
+     "rationale": "The height of a triangular face is measured along the face, perpendicular to its base edge, so it is the slant height. The vertical height runs inside the pyramid and gives the common error of 48 m2.",
+     "phase": "predict",
+     "placement": "Predict: square-based pyramid roof for Mzee Kiplagat's store (6 m x 6 m, h = 4 m)"
+    },
+    {
+     "prompt": "A square-based pyramid has a base side of 6 m and a vertical height h = 4 m. The slant height l, the vertical height h and half the base side form a right-angled triangle. What is the slant height l?",
+     "choices": [
+      "4 m",
+      "7 m",
+      "5 m",
+      "About 7.2 m"
+     ],
+     "correctIndex": 2,
+     "rationale": "Half the base is 3 m, so l² = 4² + 3² = 16 + 9 = 25 and l = 5 m. Adding 4 + 3 gives the wrong 7 m, and using the full base of 6 m gives about 7.2 m.",
+     "phase": "observe",
+     "placement": "Observe: building the 6 cm square-based pyramid net and checking 3² + 4² = 5²",
+     "check": "sqrt(4**2+3**2)"
+    },
+    {
+     "prompt": "Learners built a square-based pyramid model and measured both heights. They found that the slant height is longer than the vertical height. Which statement explains why?",
+     "choices": [
+      "The slant height is the longest side (hypotenuse) of the right-angled triangle formed by the vertical height, half the base side and the slant height",
+      "The slant height is measured along an edge of the pyramid, so it is always longer",
+      "The slant height is always exactly double the vertical height",
+      "The slant height is longer because the base is a square and not a triangle"
+     ],
+     "correctIndex": 0,
+     "rationale": "The vertical height and half the base are the two shorter sides of a right-angled triangle, and the slant height is its hypotenuse, so it is longer than either. For h = 4 and half-base = 3, l = 5, which is not double 4.",
+     "phase": "observe",
+     "placement": "Observe: groups compare vertical height and slant height on the model and answer 'Why is the slant height longer than the vertical height?'"
+    },
+    {
+     "prompt": "A pyramid-shaped iron-sheet roof has a square base of 6 m by 6 m, a vertical height of 4 m and a slant height of 5 m. The roof has no floor. How many m2 of iron sheet cover the four sloping faces?",
+     "choices": [
+      "48 m2",
+      "120 m2",
+      "60 m2",
+      "96 m2"
+     ],
+     "correctIndex": 2,
+     "rationale": "Each triangular face is 1/2 x 6 x 5 = 15 m2, and 4 faces give 60 m2. The base is not covered for a roof, so the 36 m2 base is not added. Using h = 4 gives the wrong 48 m2, and including the base gives the wrong 96 m2.",
+     "phase": "explain",
+     "placement": "Explain: worked example of the 60 m2 roof area (4 x 1/2 x 6 x 5)",
+     "check": "4*0.5*6*5"
+    },
+    {
+     "prompt": "A school hall in Kajiado has a pyramid-shaped roof with a square base of 8 m by 8 m and a vertical height of 3 m. The roof has no floor. What is the area of iron sheet needed to cover the four sloping faces?",
+     "choices": [
+      "144 m2",
+      "48 m2",
+      "160 m2",
+      "80 m2"
+     ],
+     "correctIndex": 3,
+     "rationale": "Half the base is 4 m, so l = √(3² + 4²) = 5 m. Roof area = 4 x 1/2 x 8 x 5 = 80 m2. Using h = 3 gives the wrong 48 m2, adding the 64 m2 base gives the wrong 144 m2, and forgetting the 1/2 gives the wrong 160 m2.",
+     "phase": "explain",
+     "placement": "Explain: pairs solve the Kajiado school hall roof problem (8 m x 8 m base, h = 3 m)",
+     "check": "4*0.5*8*sqrt(3**2+4**2)"
+    },
+    {
+     "prompt": "A regular triangular pyramid (tetrahedron) has all its edges equal to 6 cm. Each of its four triangular faces has an area of about 15.59 cm2. What is the total surface area of the pyramid?",
+     "choices": [
+      "About 93.53 cm2",
+      "About 46.77 cm2",
+      "About 31.18 cm2",
+      "About 62.35 cm2"
+     ],
+     "correctIndex": 3,
+     "rationale": "Pyramid TSA = base area + areas of the triangular faces. A tetrahedron has 4 equal faces, so TSA = 4 x 9√3 ≈ 62.35 cm2. Using 3 faces gives the wrong 46.77 cm2 because the base is left out.",
+     "phase": "explain",
+     "placement": "Explain: teacher-supplied regular triangular pyramid (tetrahedron, edges 6 cm)",
+     "check": "4*9*sqrt(3)"
+    },
+    {
+     "prompt": "A metalsmith in Eldoret makes a cylindrical drum and a rectangular box from the same area of iron sheet, 30,800 cm2 each. The drum holds more maize than the box. Which statement best explains this?",
+     "choices": [
+      "Surface area only tells us how much material covers a solid, and the shape decides how much the solid can hold",
+      "Equal surface area always means equal volume, so the box must have been measured wrongly",
+      "The drum must have used more iron sheet than the box",
+      "The box has a larger surface area, so it should hold more"
+     ],
+     "correctIndex": 0,
+     "rationale": "Surface area measures the covering material, while volume measures the space inside, and these are different quantities. Two solids with the same surface area can have different volumes because of their shapes.",
+     "phase": "dqb",
+     "placement": "DQB: sticky notes linking surface area (covering material only) to the drum and box with the same 30,800 cm2"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Surface Area of Cones and Frustums: From Sector Nets to Turkana Water Tanks",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A paper cone is cut open along its slant edge, from the base circle up to the apex, and flattened on the table. What shape do you get, and what does its straight edge represent?",
+     "choices": [
+      "A sector of a circle whose straight edge is the slant height l of the cone",
+      "A triangle whose height is the vertical height h of the cone",
+      "A rectangle whose length is the circumference of the base",
+      "A sector of a circle whose straight edge is the base radius r of the cone"
+     ],
+     "correctIndex": 0,
+     "rationale": "Unrolling the curved surface gives a sector of a circle. Its straight edge is the sloping side of the cone, so the sector's radius is the slant height l, not r or h.",
+     "phase": "observe",
+     "placement": "Task A (cone net): cutting a paper cone open along its slant edge and flattening it"
+    },
+    {
+     "prompt": "A paper cone has base radius 3.5 cm and slant height 12 cm. It is cut open along its slant edge and flattened into a sector. Using π = 22/7, how long is the curved arc of the sector?",
+     "choices": [
+      "About 75.4 cm",
+      "11 cm",
+      "22 cm",
+      "44 cm"
+     ],
+     "correctIndex": 2,
+     "rationale": "The arc of the sector is the same length as the string around the base of the cone, which is the circumference 2πr = 2 × 22/7 × 3.5 = 22 cm. 75.4 cm would be the whole circle of radius l, which is not the arc.",
+     "phase": "observe",
+     "placement": "Task A (cone net): comparing the sector's arc length with the string around the base circle",
+     "check": "2*22/7*3.5"
+    },
+    {
+     "prompt": "A conical top for a school water tank in Narok has base radius 1.4 m, vertical height about 1.43 m and slant height 2 m. The cone sits on top of the tank, so no base is needed. Using π = 22/7, how much sheet metal is needed for the conical top?",
+     "choices": [
+      "14.96 m²",
+      "6.29 m²",
+      "17.6 m²",
+      "8.8 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "The sheet covers the curved surface, so curved SA = πrl = 22/7 × 1.4 × 2 = 8.8 m². Using the vertical height instead of the slant height gives 6.29 m², and adding the base gives 14.96 m².",
+     "phase": "explain",
+     "placement": "Task 1 (conical tank top): calculating the sheet needed for r = 1.4 m, l = 2 m",
+     "check": "22/7*1.4*2"
+    },
+    {
+     "prompt": "An ice-cream cone has base radius 3.5 cm and slant height 12 cm. Using π = 22/7, what is its total surface area, including the circular base?",
+     "choices": [
+      "38.5 cm²",
+      "132 cm²",
+      "170.5 cm²",
+      "135.5 cm²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Total SA = πr(r + l) = 22/7 × 3.5 × (3.5 + 12) = 11 × 15.5 = 170.5 cm². This is the curved part, 132 cm², plus the base circle, 38.5 cm².",
+     "phase": "explain",
+     "placement": "Task 2 (total SA contrast): ice-cream cone curved SA versus total SA",
+     "check": "22/7*3.5*(3.5+12)"
+    },
+    {
+     "prompt": "A Turkana water tank is a frustum made by removing a small cone from the top of a big cone. The big cone has slant height 3.5 m and the small cone has slant height 1.75 m. The frustum has big radius R = 2.1 m and small radius r = 1.05 m. Which slant height l goes into the formula π(R + r)l?",
+     "choices": [
+      "3.5 m, the slant height of the big cone",
+      "1.4 m, the vertical height of the frustum",
+      "1.75 m, the length along the slanted side of the frustum itself",
+      "5.25 m, the two slant heights added together"
+     ],
+     "correctIndex": 2,
+     "rationale": "The slant height l in the frustum formula is the length of the frustum's own sloping side, which is 3.5 − 1.75 = 1.75 m. The big cone's slant height and the vertical height are not the slanted side of the frustum.",
+     "phase": "explain",
+     "placement": "Task 3 (frustum formula): choosing the slant height for the Turkana frustum",
+     "check": "3.5-1.75"
+    },
+    {
+     "prompt": "A Turkana tank is a frustum made by cutting a small cone off a big cone. The big cone has base radius 2.1 m and slant height 3.5 m. The small cone that is removed has base radius 1.05 m and slant height 1.75 m. Using π = 22/7, what is the curved surface area of the frustum?",
+     "choices": [
+      "5.775 m²",
+      "28.875 m²",
+      "23.1 m²",
+      "17.325 m²"
+     ],
+     "correctIndex": 3,
+     "rationale": "The frustum is the big cone minus the small cone: 22/7 × 2.1 × 3.5 = 23.1 m² and 22/7 × 1.05 × 1.75 = 5.775 m², so 23.1 − 5.775 = 17.325 m². The formula π(R + r)l = 22/7 × 3.15 × 1.75 gives the same value.",
+     "phase": "explain",
+     "placement": "Task 3 (frustum formula): Turkana frustum computed by subtraction and by π(R + r)l",
+     "check": "22/7*(2.1+1.05)*1.75"
+    },
+    {
+     "prompt": "A class works out that a conical tank top needs 8.8 m² of sheet metal. What does this number tell us?",
+     "choices": [
+      "How much the conical top will weigh once it is made",
+      "How much sheet metal is needed to cover the curved surface, but nothing about how much the tank can hold",
+      "The capacity of the tank in litres, because a larger area always means more storage",
+      "The volume of grain or water the tank can hold"
+     ],
+     "correctIndex": 1,
+     "rationale": "Surface area measures the material needed to cover a solid. It does not measure the space inside, so the tank's capacity needs volume, which is still an open question on the Driving Question Board.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: sorting notes into 'surface area tools' and 'questions about capacity'"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Surface Area of Spheres and Composite Solids: Wrapping the Football, Decomposing the Container",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A football has a circumference of 66 cm. Using π = 22/7, what is its radius?",
+     "choices": [
+      "33 cm",
+      "10.5 cm",
+      "5.25 cm",
+      "21 cm"
+     ],
+     "correctIndex": 1,
+     "rationale": "Circumference = 2πr, so r = 66 ÷ (2 × 22/7) = 10.5 cm. 21 cm is the diameter, and 33 cm is half the circumference.",
+     "phase": "observe",
+     "placement": "Station A (sphere): finding r of the football from its circumference of about 66 cm",
+     "check": "66/(2*22/7)"
+    },
+    {
+     "prompt": "Learners cover a ball with paper strips, peel them off and lay them flat. They find the strips from the whole ball cover about the same area as circles of the same radius as the ball. About how many such circles are needed?",
+     "choices": [
+      "3 circles",
+      "6 circles",
+      "2 circles",
+      "4 circles"
+     ],
+     "correctIndex": 3,
+     "rationale": "Half the ball used about 2 circles' worth of strips, so the whole ball needs about 4. This is why the sphere's surface area is 4πr².",
+     "phase": "observe",
+     "placement": "Station A (sphere): covering half the ball with paper strips and counting circles' worth"
+    },
+    {
+     "prompt": "A football has radius 10.5 cm. Using π = 22/7, what is its surface area (SA = 4πr²)?",
+     "choices": [
+      "132 cm²",
+      "693 cm²",
+      "346.5 cm²",
+      "1,386 cm²"
+     ],
+     "correctIndex": 3,
+     "rationale": "SA = 4 × 22/7 × 10.5 × 10.5 = 1,386 cm². This is 4 × 346.5, the area of 4 great circles. 346.5 is only one circle, and 132 comes from forgetting to square r.",
+     "phase": "explain",
+     "placement": "Part 1: claim 'SA of a sphere is 4 times the area of its great circle' and 4πr² = 1,386 cm²",
+     "check": "4*22/7*10.5*10.5"
+    },
+    {
+     "prompt": "What is the curved surface area of a hemisphere of radius 7 cm (not counting the flat circular face)? Use π = 22/7.",
+     "choices": [
+      "616 cm²",
+      "308 cm²",
+      "462 cm²",
+      "154 cm²"
+     ],
+     "correctIndex": 1,
+     "rationale": "A hemisphere's curved surface is half of a sphere's: 2πr² = 2 × 22/7 × 7 × 7 = 308 cm². 616 is the whole sphere, and 154 is only one circle's area.",
+     "phase": "observe",
+     "placement": "Station B (composite solid): computing the curved hemisphere area of the Nairobi packaging container",
+     "check": "2*22/7*7*7"
+    },
+    {
+     "prompt": "A hemisphere is joined on top of a cylinder, and both have the same radius. A learner is finding the area of the outside surface that needs covering. What should be done about the circle where the two solids meet?",
+     "choices": [
+      "Count it only if the cylinder has no base",
+      "Count it once, because it belongs to the cylinder",
+      "Leave it out, because it is hidden inside the joined solid and needs no covering",
+      "Count it twice, once for each solid"
+     ],
+     "correctIndex": 2,
+     "rationale": "The circle where the solids join is inside the composite solid, so it is not part of the outside surface. Only the visible parts are added.",
+     "phase": "observe",
+     "placement": "Station B (composite solid): marking the joined circle (r = 7 cm) as 'hidden'"
+    },
+    {
+     "prompt": "A container is a cylinder of radius 7 cm and height 10 cm with a closed base. A hemisphere of radius 7 cm sits on top of it. Using π = 22/7, what is the total outside surface area? (Curved cylinder wall = 440 cm², base circle = 154 cm², curved hemisphere = 308 cm².)",
+     "choices": [
+      "1,056 cm²",
+      "902 cm²",
+      "594 cm²",
+      "748 cm²"
+     ],
+     "correctIndex": 1,
+     "rationale": "Add the visible parts only: 440 + 154 + 308 = 902 cm². 1,056 wrongly counts the hidden joined circle (154 cm²) a second time. 748 leaves out the base, and 594 leaves out the hemisphere.",
+     "phase": "explain",
+     "placement": "Part 2: finishing the Nairobi container, 440 + 154 + 308 = 902 cm²",
+     "check": "2*22/7*7*10 + 22/7*7*7 + 2*22/7*7*7"
+    },
+    {
+     "prompt": "A closed cylindrical drum has radius 35 cm and height 105 cm. Using π = 22/7, what is its total surface area?",
+     "choices": [
+      "23,100 cm²",
+      "26,950 cm²",
+      "7,700 cm²",
+      "30,800 cm²"
+     ],
+     "correctIndex": 3,
+     "rationale": "Two circular faces: 2πr² = 2 × 22/7 × 35 × 35 = 7,700 cm². Curved wall: 2πrh = 2 × 22/7 × 35 × 105 = 23,100 cm². Total = 30,800 cm². Using only the curved wall, or only one base, gives the wrong totals.",
+     "phase": "explain",
+     "placement": "Part 3: checking the method on the drum (r = 35 cm, h = 105 cm, closed), TSA = 30,800 cm²",
+     "check": "2*22/7*35*35 + 2*22/7*35*105"
+    },
+    {
+     "prompt": "A closed drum and a rectangular box are each made from 30,800 cm² of iron sheet, but the drum holds more maize. What does this show?",
+     "choices": [
+      "The maize grains fit better in a rectangular box, so the box is wasting space",
+      "The box must have been measured wrongly, since equal sheet should give equal capacity",
+      "The drum must have a larger surface area than the box",
+      "Surface area measures the material used, not the space inside, so equal surface area does not mean equal capacity"
+     ],
+     "correctIndex": 3,
+     "rationale": "Surface area tells us how much sheet was used. Capacity depends on the shape, so two solids with the same surface area can hold different amounts.",
+     "phase": "end",
+     "placement": "Part 3 / Model: 'Both containers use the same sheet, so surface area does not tell us capacity'"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Volume of Prisms and Pyramids: How Much Maize Can the Box Hold?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Wanjiru made a rectangular box from 30,800 cm2 of iron sheet. She says this number tells us how much maize the box can hold. Is she right?",
+     "choices": [
+      "No, because a rectangular box has a surface area but no volume.",
+      "Yes, because cm2 can be changed directly into litres of maize.",
+      "No, because surface area measures the material covering the outside, not the space inside the box.",
+      "Yes, because the area of sheet is the same as the size of the box, so it gives the capacity."
+     ],
+     "correctIndex": 2,
+     "rationale": "Surface area is the amount of material covering a solid (cm2). Volume is the space inside (cm3), so the sheet area cannot tell us the capacity.",
+     "phase": "predict",
+     "placement": "Predict: Wanjiru says the box has a surface area of 30,800 cm2, so does that tell us how much maize it holds?"
+    },
+    {
+     "prompt": "A triangular prism has right-angled triangle ends with sides 3 cm, 4 cm and 5 cm. The prism is 10 cm long. What is its volume?",
+     "choices": [
+      "60 cm3",
+      "120 cm3",
+      "6 cm3",
+      "150 cm3"
+     ],
+     "correctIndex": 0,
+     "rationale": "The base is a right-angled triangle with perpendicular sides 3 cm and 4 cm, so base area = 1/2 x 3 x 4 = 6 cm2. Volume = 6 x 10 = 60 cm3, the same as the 5 x 4 x 3 cm rectangular prism.",
+     "phase": "observe",
+     "placement": "Observe, Pair 1 (prisms): rectangular prism and 3-4-5 triangular prism filled with sand",
+     "check": "0.5*3*4*10"
+    },
+    {
+     "prompt": "A hollow pyramid and a hollow prism have the same square base and the same vertical height. You fill the pyramid with sand and pour it into the prism, again and again, until the prism is full. How many pyramid-fuls of sand fill the prism?",
+     "choices": [
+      "3",
+      "2",
+      "1",
+      "4"
+     ],
+     "correctIndex": 0,
+     "rationale": "The sand-fill investigation shows that 3 pyramid-fuls fill a prism with the same base and height. This is why the pyramid volume is 1/3 x base area x height.",
+     "phase": "observe",
+     "placement": "Observe, Pair 2 (pyramid and prism): fill the pyramid and pour it into the prism"
+    },
+    {
+     "prompt": "A closed box has a square base of 50 cm by 50 cm and a height of 129 cm. How many litres of maize can it hold when full? (1 litre = 1,000 cm3)",
+     "choices": [
+      "322.5 litres",
+      "3,225 litres",
+      "32.25 litres",
+      "322,500 litres"
+     ],
+     "correctIndex": 0,
+     "rationale": "Base area = 50 x 50 = 2,500 cm2. V = 2,500 x 129 = 322,500 cm3. Dividing by 1,000 gives 322.5 litres.",
+     "phase": "explain",
+     "placement": "Explain, Apply (1): Box from Mzee Kiplagat, V = 2,500 x 129",
+     "check": "50*50*129/1000"
+    },
+    {
+     "prompt": "A roof is a pyramid with a square base 6 m by 6 m. Its vertical height is 4 m and its slant height is 5 m. What is the volume of the pyramid?",
+     "choices": [
+      "144 m3",
+      "48 m3",
+      "24 m3",
+      "60 m3"
+     ],
+     "correctIndex": 1,
+     "rationale": "Use the vertical height, not the slant height. V = 1/3 x 36 x 4 = 48 m3. Using the slant height of 5 m wrongly gives 60 m3.",
+     "phase": "explain",
+     "placement": "Explain, Apply (2): Pyramid roof from Lesson 2, V = 1/3 x 36 x 4",
+     "check": "1/3*36*4"
+    },
+    {
+     "prompt": "A prism has a base area of 40 cm2 and a height of 9 cm. A pyramid has the same base and the same vertical height. What are the volumes of the prism and the pyramid?",
+     "choices": [
+      "Prism 360 cm2 and pyramid 120 cm2",
+      "Prism 360 cm3 and pyramid 120 cm3",
+      "Prism 120 cm3 and pyramid 360 cm3",
+      "Prism 360 cm3 and pyramid 180 cm3"
+     ],
+     "correctIndex": 1,
+     "rationale": "Prism V = base area x height = 40 x 9 = 360 cm3. The pyramid holds one third of that: 1/3 x 40 x 9 = 120 cm3. Volume is in cm3, not cm2.",
+     "phase": "explain",
+     "placement": "Explain, exit question: prism with base area 40 cm2 and height 9 cm and a pyramid with the same base and height",
+     "check": "1/3*40*9"
+    },
+    {
+     "prompt": "Learners are updating the class model with two columns: 'Surface area' and 'Volume'. Which entry is placed correctly for a box with base 50 cm by 50 cm and height 129 cm?",
+     "choices": [
+      "Surface area 30,800 cm3 (material covering the box); Volume 322,500 cm2 (space inside the box)",
+      "Surface area and volume are both 30,800 because the same sheet is used",
+      "Surface area 322,500 cm3 (material covering the box); Volume 30,800 cm2 (space inside the box)",
+      "Surface area 30,800 cm2 (material covering the box); Volume 322,500 cm3 (space inside the box)"
+     ],
+     "correctIndex": 3,
+     "rationale": "Surface area is the material covering the solid and is measured in cm2. Volume is the space inside and is measured in cm3. Equal surface area does not mean equal volume.",
+     "phase": "model",
+     "placement": "Model: revise the class model with columns 'Surface area (material, cm2)' and 'Volume (space inside, cm3)'"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Volume of Cones, Frustums and Spheres: Resolving Why the Drum Holds More Maize",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A hollow cone and a hollow cylinder have the same radius and the same vertical height. The cone is filled to the brim with sand and poured into the cylinder again and again until the cylinder is full. How many cone-fuls of sand fill the cylinder?",
+     "choices": [
+      "4 cone-fuls",
+      "6 cone-fuls",
+      "3 cone-fuls",
+      "2 cone-fuls"
+     ],
+     "correctIndex": 2,
+     "rationale": "A cone holds one third of a cylinder with the same base and height, so 3 cone-fuls fill the cylinder. In the lesson this was seen with r = 7 cm, h = 12 cm.",
+     "phase": "observe",
+     "placement": "Part 1: pouring sand or water from the cone model into the cylinder model (r = 7 cm, h = 12 cm)"
+    },
+    {
+     "prompt": "A cone has radius 7 cm and vertical height 12 cm. Using π = 22/7, what is its volume?",
+     "choices": [
+      "88 cm³",
+      "1,848 cm³",
+      "924 cm³",
+      "616 cm³"
+     ],
+     "correctIndex": 3,
+     "rationale": "V = ⅓πr²h = ⅓ × 22/7 × 7 × 7 × 12 = 616 cm³. Leaving out the ⅓ gives 1,848 cm³, which is the cylinder volume.",
+     "phase": "observe",
+     "placement": "Part 1: calculating cylinder volume 1,848 cm³ and cone volume 616 cm³ for the matching models",
+     "check": "(1/3)*(22/7)*7*7*12"
+    },
+    {
+     "prompt": "A cone has radius 7 cm, vertical height 12 cm and slant height about 13.9 cm. Which measurement of the cone is used for h in the formula V = ⅓πr²h?",
+     "choices": [
+      "The diameter, 14 cm, because it is the widest part",
+      "The sum of the two heights, 25.9 cm",
+      "The slant height, 13.9 cm, because it runs along the cone's surface",
+      "The vertical height, 12 cm, measured straight from the tip to the centre of the base"
+     ],
+     "correctIndex": 3,
+     "rationale": "Volume uses the vertical (perpendicular) height, not the slant height. The prompt card in the lesson says: 'Volume uses h, not l.'",
+     "phase": "observe",
+     "placement": "Part 1: checking that the cone and cylinder have the same radius and the same vertical height, not slant height"
+    },
+    {
+     "prompt": "A football is a sphere of radius 10.5 cm. Using V = 4/3πr³ and π = 22/7, what is its volume?",
+     "choices": [
+      "3,638.25 cm³",
+      "4,851 cm³",
+      "462 cm³",
+      "14,553 cm³"
+     ],
+     "correctIndex": 1,
+     "rationale": "V = 4/3 × 22/7 × 10.5 × 10.5 × 10.5 = 4,851 cm³. Leaving out the 4/3 gives 3,638.25 cm³, and using r² instead of r³ gives 462 cm³.",
+     "phase": "observe",
+     "placement": "Part 2: checking the football volume (r = 10.5 cm) by arithmetic",
+     "check": "(4/3)*(22/7)*10.5**3"
+    },
+    {
+     "prompt": "A water tank is shaped like a frustum. A complete big cone would have volume 12.936 m³. The small cone cut off from the top has volume 1.617 m³. What is the volume of the frustum?",
+     "choices": [
+      "11.319 m³",
+      "14.553 m³",
+      "1.617 m³",
+      "8 m³"
+     ],
+     "correctIndex": 0,
+     "rationale": "Frustum = big cone − small cone = 12.936 − 1.617 = 11.319 m³ (11,319 litres). Adding the volumes is a common mistake.",
+     "phase": "observe",
+     "placement": "Part 2: Turkana water tank frustum, big cone minus small cone",
+     "check": "12.936-1.617"
+    },
+    {
+     "prompt": "A cylindrical drum has radius 35 cm and height 105 cm. Using π = 22/7, what is the volume of the drum?",
+     "choices": [
+      "404,250 cm³",
+      "30,800 cm³",
+      "322,500 cm³",
+      "134,750 cm³"
+     ],
+     "correctIndex": 0,
+     "rationale": "V = πr²h = 22/7 × 35 × 35 × 105 = 404,250 cm³. Dividing by 3 is the cone rule and does not apply to a cylinder.",
+     "phase": "explain",
+     "placement": "Step (2): calculating the drum volume with V = πr²h",
+     "check": "(22/7)*35*35*105"
+    },
+    {
+     "prompt": "The drum holds 404,250 cm³ and the box holds 322,500 cm³. 1,000 cm³ is 1 litre. How many more litres of maize does the drum hold than the box?",
+     "choices": [
+      "81.75 litres",
+      "726.75 litres",
+      "8.175 litres",
+      "81,750 litres"
+     ],
+     "correctIndex": 0,
+     "rationale": "404,250 − 322,500 = 81,750 cm³. Dividing by 1,000 gives 81.75 litres.",
+     "phase": "explain",
+     "placement": "Step (3): comparing the drum and box volumes and finding the difference in litres",
+     "check": "(404250-322500)/1000"
+    },
+    {
+     "prompt": "Wanjiru used 30,800 cm² of iron sheet for a drum and also 30,800 cm² for a box. The drum holds 404,250 cm³ and the box holds 322,500 cm³. Which statement best explains this?",
+     "choices": [
+      "The box holds less because boxes are always smaller than drums, whatever the shape.",
+      "Surface area measures the sheet covering a solid and volume measures the space inside, so equal surface areas can give different volumes when the shapes differ.",
+      "Surface area and volume measure the same thing, so the drum must have used more sheet.",
+      "Equal surface area always means equal volume, so one of the volumes must have been measured wrongly."
+     ],
+     "correctIndex": 1,
+     "rationale": "Surface area is the material covering a solid and volume is the space inside. The shape decides how much space the same amount of material encloses, so the drum holds more.",
+     "phase": "explain",
+     "placement": "Step (4): CER explanation for Mzee Kiplagat, distinguishing surface area from volume"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Composite Solids: Volume, Surface Area & Real-Life Applications",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Two metal containers are made from exactly the same area of iron sheet. Which statement is correct?",
+     "choices": [
+      "They must hold the same amount of grain because the same amount of metal was used.",
+      "The taller container always holds more grain.",
+      "They can hold different amounts of grain because the shape of the container also affects its volume.",
+      "Volume depends only on how thick the iron sheet is."
+     ],
+     "correctIndex": 2,
+     "rationale": "Surface area is the sheet used to cover a solid, while volume is the space inside. Different shapes with equal surface area can have different volumes, as with Mzee Kiplagat's drum and box.",
+     "phase": "predict",
+     "placement": "Predict: tank photo and the question 'Will the paint needed and the water held come from the same calculation?'"
+    },
+    {
+     "prompt": "A water tank is a cylinder of radius 2.1 m and height 4 m with a hemispherical dome on top and a flat base. Use pi = 22/7. What is the total outer surface area to be covered with sheet (wall + base + curved dome)?",
+     "choices": [
+      "94.38 m²",
+      "66.66 m²",
+      "108.24 m²",
+      "80.52 m²"
+     ],
+     "correctIndex": 0,
+     "rationale": "Wall = 2 x 22/7 x 2.1 x 4 = 52.8 m²; base = 22/7 x 2.1 x 2.1 = 13.86 m²; dome = 2 x 22/7 x 2.1 x 2.1 = 27.72 m². Total = 52.8 + 13.86 + 27.72 = 94.38 m². The circle between the cylinder and dome is inside the tank and is not covered.",
+     "phase": "observe",
+     "placement": "Observe: Pair A (water tank) Evidence Card: Tank and Silo",
+     "check": "2*22/7*2.1*4 + 22/7*2.1*2.1 + 2*22/7*2.1*2.1"
+    },
+    {
+     "prompt": "A water tank is a cylinder of radius 2.1 m and height 4 m with a hemisphere of the same radius on top. Use pi = 22/7. How many litres of water can the tank hold when full? (1 m³ = 1,000 litres)",
+     "choices": [
+      "19,404 litres",
+      "74,844 litres",
+      "74.844 litres",
+      "55,440 litres"
+     ],
+     "correctIndex": 1,
+     "rationale": "Cylinder = 22/7 x 2.1 x 2.1 x 4 = 55.44 m³. Hemisphere = 2/3 x 22/7 x 2.1³ = 19.404 m³. Total = 74.844 m³, and 74.844 x 1,000 = 74,844 litres.",
+     "phase": "observe",
+     "placement": "Observe: Pair A (water tank) volume calculation and conversion from m³ to litres",
+     "check": "(22/7*2.1*2.1*4 + 2/3*22/7*2.1**3)*1000"
+    },
+    {
+     "prompt": "A grain silo has a cone-shaped roof of base radius 2.1 m, vertical height 2.8 m and slant height 3.5 m. Use pi = 22/7. What is the curved surface area of the roof (the sheet needed for the roof)?",
+     "choices": [
+      "18.48 m²",
+      "12.936 m²",
+      "23.1 m²",
+      "46.2 m²"
+     ],
+     "correctIndex": 2,
+     "rationale": "The curved area of a cone uses the slant height: pi x r x l = 22/7 x 2.1 x 3.5 = 23.1 m². The vertical height 2.8 m is used for the volume, not the curved area.",
+     "phase": "observe",
+     "placement": "Observe: Pair B (Rift Valley silo) roof area using slant height 3.5 m",
+     "check": "22/7*2.1*3.5"
+    },
+    {
+     "prompt": "A grain silo is a cylinder of radius 2.1 m and height 6 m with a cone roof on top. The cone has the same radius, a vertical height of 2.8 m and a slant height of 3.5 m. Use pi = 22/7. What is the total volume of grain the silo can hold?",
+     "choices": [
+      "121.968 m³",
+      "96.096 m³",
+      "99.33 m³",
+      "83.16 m³"
+     ],
+     "correctIndex": 1,
+     "rationale": "Cylinder = 22/7 x 2.1 x 2.1 x 6 = 83.16 m³. Cone = 1/3 x 22/7 x 2.1 x 2.1 x 2.8 = 12.936 m³, using the vertical height. Total = 83.16 + 12.936 = 96.096 m³.",
+     "phase": "observe",
+     "placement": "Observe: Pair B (Rift Valley silo) volume = cylinder + cone",
+     "check": "22/7*2.1*2.1*6 + 1/3*22/7*2.1*2.1*2.8"
+    },
+    {
+     "prompt": "The outside of a water tank has a total surface area of 94.38 m². A painter charges KES 150 per m² and the whole outside is painted. What is the cost of painting?",
+     "choices": [
+      "KES 11,226.60",
+      "KES 17,424",
+      "KES 12,078",
+      "KES 14,157"
+     ],
+     "correctIndex": 3,
+     "rationale": "Painting covers the outside, so it depends on surface area: 94.38 x 150 = KES 14,157. The other amounts come from using the silo's area, the tank's volume or a surface area with the base left out.",
+     "phase": "explain",
+     "placement": "Explain: Question Sort, worked task (ii) painting cost of the tank",
+     "check": "94.38*150"
+    },
+    {
+     "prompt": "Which of these questions about a grain silo needs a VOLUME calculation rather than a surface area calculation?",
+     "choices": [
+      "How much will it cost to paint the outside of the silo?",
+      "How much grain can fit inside the silo?",
+      "How much iron sheet is needed to make the cone roof?",
+      "How much sheet is needed for the flat floor?"
+     ],
+     "correctIndex": 1,
+     "rationale": "Grain fills the space inside the silo, so the question is about volume (capacity). Sheet, paint and cost are about covering the outside, which needs surface area.",
+     "phase": "explain",
+     "placement": "Explain: Question Sort into SURFACE AREA or VOLUME"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Project Presentations, Model Building & Unit Consolidation: Why the Drum Holds More Than the Box",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Wanjiru made a closed cylindrical drum and a closed rectangular box for Mzee Kiplagat's posho mill, each from exactly 30,800 cm² of iron sheet. Which statement about their capacities is correct?",
+     "choices": [
+      "The one with the greater surface area holds more grain.",
+      "Their capacities cannot be compared until the sheet thickness is known.",
+      "They hold the same amount of grain, because the same amount of sheet metal was used.",
+      "They may hold different amounts of grain, because the shape also decides the volume."
+     ],
+     "correctIndex": 3,
+     "rationale": "Surface area measures the material and volume measures the space inside. Equal surface areas do not guarantee equal volumes, and here the drum holds 404,250 cm³ while the box holds 322,500 cm³.",
+     "phase": "predict",
+     "placement": "Predict: students write a prediction about which design holds the most for its sheet metal"
+    },
+    {
+     "prompt": "A drum has a volume of 404,250 cm³ and a box has a volume of 322,500 cm³. Given that 1 litre = 1,000 cm³, how many more litres of maize does the drum hold than the box?",
+     "choices": [
+      "8.175 litres",
+      "726.75 litres",
+      "81,750 litres",
+      "81.75 litres"
+     ],
+     "correctIndex": 3,
+     "rationale": "The difference is 404,250 − 322,500 = 81,750 cm³. Dividing by 1,000 gives 81.75 litres.",
+     "phase": "observe",
+     "placement": "Observe: group project presentations (volume converted to litres)",
+     "check": "(404250-322500)/1000"
+    },
+    {
+     "prompt": "A group designs a grain silo with a cone-shaped roof. The cone has base radius 7 m, vertical height 24 m and slant height 25 m. Using π = 22/7, what is the curved surface area of the roof?",
+     "choices": [
+      "154 m²",
+      "528 m²",
+      "550 m²",
+      "704 m²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Curved surface area = πrl, using the slant height l. So 22/7 × 7 × 25 = 550 m². Using the vertical height 24 m gives the wrong answer of 528 m².",
+     "phase": "observe",
+     "placement": "Observe: peer critique, 'Did you use slant height l or vertical height h for the cone roof?'",
+     "check": "22/7*7*25"
+    },
+    {
+     "prompt": "Both a closed cylinder (r = 35 cm, h = 105 cm) and a closed square-based box (50 cm × 50 cm × 129 cm) use 30,800 cm² of sheet, but the cylinder holds more. Which is the best reason?",
+     "choices": [
+      "The cylinder is taller, and the tallest solid always holds the most.",
+      "Volume is found by adding the face areas, and the cylinder's faces add up to more.",
+      "The cylinder's circular cross-section encloses more area for its perimeter than a square one, so the same material encloses more space.",
+      "The cylinder has more faces than the box, so it has more surface area."
+     ],
+     "correctIndex": 2,
+     "rationale": "For the same sheet, a circular cross-section encloses more area than a square one, which gives more space inside. Surface area and volume are different quantities, so equal sheet does not mean equal capacity.",
+     "phase": "explain",
+     "placement": "Explain: Final Explanation using Claim-Evidence-Reasoning (reasoning about shape)"
+    },
+    {
+     "prompt": "Wanjiru bends 30,800 cm² of sheet into a sphere. Using π = 22/7, which equation gives its radius r?",
+     "choices": [
+      "4 × 22/7 × r² = 30,800",
+      "4/3 × 22/7 × r³ = 30,800",
+      "2 × 22/7 × r² = 30,800",
+      "22/7 × r² = 30,800"
+     ],
+     "correctIndex": 0,
+     "rationale": "The sheet is the surface area, and the surface area of a sphere is 4πr². So 4 × 22/7 × r² = 30,800, which gives r² = 2,450 and r ≈ 49.5 cm. The 4/3πr³ option is the volume formula.",
+     "phase": "explain",
+     "placement": "Explain: testing the Predict-phase sphere prediction (sphere made from 30,800 cm² of sheet)"
+    },
+    {
+     "prompt": "The sphere made from 30,800 cm² of sheet holds about 508 litres, the drum holds 404.25 litres and the box holds 322.5 litres. Which statement best sums up the shape principle?",
+     "choices": [
+      "For a fixed amount of sheet, a sphere holds the least and a box holds the most.",
+      "For a fixed amount of sheet, the shape with the most flat faces holds the most.",
+      "For a fixed amount of sheet, every shape holds the same volume.",
+      "For a fixed amount of sheet, the shape decides how much space can be enclosed, and a sphere encloses the most."
+     ],
+     "correctIndex": 3,
+     "rationale": "With the same 30,800 cm² of sheet, the sphere (about 508 L) holds more than the drum (404.25 L), which holds more than the box (322.5 L). So shape decides capacity, although cost, stacking and welding also matter in practice.",
+     "phase": "model",
+     "placement": "Model: final cumulative model, part (4) the principle that shape determines capacity"
+    },
+    {
+     "prompt": "Wanjiru is making a water tank for a Kajiado community. Which measure should she use to decide how much sheet metal to buy, and which should she use to decide how many litres of water it holds?",
+     "choices": [
+      "Surface area for both, because the sheet is the outside of the tank",
+      "Surface area for the sheet metal, and volume for the litres of water",
+      "Volume for both, because the tank is a solid",
+      "Volume for the sheet metal, and surface area for the litres of water"
+     ],
+     "correctIndex": 1,
+     "rationale": "Surface area is the material covering the solid, so it tells how much sheet to buy. Volume is the space inside, so it tells how much water the tank holds.",
+     "phase": "end",
+     "placement": "End: exit ticket on which measure Wanjiru would use to order sheet metal and which Mzee Kiplagat would use for sacks"
+    }
+   ]
+  }
+ ]
+}

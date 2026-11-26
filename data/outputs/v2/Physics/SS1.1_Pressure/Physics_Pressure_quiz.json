@@ -9,104 +9,1006 @@
  },
  "lessons": [
   {
+   "number": 1,
+   "title": "Anchoring Phenomenon: Why Does the Sharp Knife Cut but the Blunt Knife Only Squash?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In a Kisumu kitchen, Mama Wanjiru pushes with a force of 40 N on a sharp knife (edge 0.1 mm thick) and then on a blunt knife (edge 1 mm thick). The two knives are the same size and shape and she cuts the same kind of tomato. Which of these was the SAME for both knives?",
+     "choices": [
+      "How sharp the knife was",
+      "The thickness of the knife edge",
+      "The force of the push, 40 N",
+      "The result on the tomato"
+     ],
+     "correctIndex": 2,
+     "rationale": "The force meter read 40 N each time, the person, the food and the knife size were also the same. The edge thickness and the result were what differed.",
+     "phase": "observe",
+     "placement": "Observe: Same / Different chart"
+    },
+    {
+     "prompt": "Mama Wanjiru cut a tomato with a sharp knife and with a blunt knife. Learners were asked to write down only what they could SEE, not the reason. Which sentence is an observation?",
+     "choices": [
+      "The blunt knife pressed the tomato flat and the skin did not break.",
+      "The sharp knife cuts because it is made of stronger metal.",
+      "The sharp knife is heavier than the blunt knife.",
+      "The sharp knife is pushed harder than the blunt knife."
+     ],
+     "correctIndex": 0,
+     "rationale": "An observation says what can be seen. Pressing the tomato flat without breaking the skin was seen. The other statements are untested reasons or claims about the knives.",
+     "phase": "observe",
+     "placement": "Observe: table 'What I see for the sharp knife / What I see for the blunt knife'"
+    },
+    {
+     "prompt": "A learner says, 'The sharp knife cut the tomato because Mama Wanjiru pushed harder on it.' The force meter showed 40 N for the sharp knife and 40 N for the blunt knife. What is the best reply?",
+     "choices": [
+      "We cannot say anything because forces cannot be measured.",
+      "The claim is not supported by the evidence, because the force meter showed the same push each time.",
+      "The claim is correct because the sharp knife is heavier.",
+      "The claim is correct because sharp knives always need a bigger push."
+     ],
+     "correctIndex": 1,
+     "rationale": "Using evidence from the force meter, the push was the same (40 N) for both knives, so 'pushed harder' does not match what was observed.",
+     "phase": "observe",
+     "placement": "Observe: teacher asks 'Was the push the same? How do you know?'"
+    },
+    {
+     "prompt": "By the end of the first lesson, the class knows that the force is the same (40 N) and that only the knife edge is different (0.1 mm and 1 mm), yet one knife cuts and the other squashes. Which statement is the best thing to say about why this happens?",
+     "choices": [
+      "Mama Wanjiru unknowingly pushes harder on the sharp knife.",
+      "The sharp knife is made of a stronger metal, so it always wins.",
+      "We have not explained it yet, so we will keep our ideas as questions and test them in the coming lessons.",
+      "The sharp knife is heavier, so it cuts."
+     ],
+     "correctIndex": 2,
+     "rationale": "This is the opening lesson and the cause is deliberately left unexplained. Learners have only observed that force is the same and the edges differ. Honest 'I am not sure yet' thinking is the aim.",
+     "phase": "explain",
+     "placement": "Explain: group poster and sentence 'I think the sharp knife cuts better because ... but I am still wondering ...'"
+    },
+    {
+     "prompt": "The class Driving Question is: 'Why does a sharp knife cut better than a blunt knife when using the same force?' Which learner question is the best one to add to the Driving Question Board because it can be investigated?",
+     "choices": [
+      "Why?",
+      "How much does a knife cost in Kisumu market?",
+      "Is Mama Wanjiru's kitchen big?",
+      "Does the thickness of the knife edge change whether the tomato is cut?"
+     ],
+     "correctIndex": 3,
+     "rationale": "A good DQB question has a clear subject and can be tested with evidence. The edge-thickness question links to what was observed. The others are vague or not related to the phenomenon.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: learners write 2 questions on sticky notes"
+    },
+    {
+     "prompt": "You are drawing an initial model of the two knives pressing on a tomato, using only what the class observed. Which drawing matches the evidence?",
+     "choices": [
+      "The same edge thickness on both knives but a longer force arrow on the blunt knife",
+      "Force arrows drawn only on the blunt knife",
+      "The same force arrow on both knives, a thinner edge on the sharp knife and a thicker edge on the blunt knife",
+      "A longer force arrow on the sharp knife and a shorter arrow on the blunt knife"
+     ],
+     "correctIndex": 2,
+     "rationale": "The force was the same (40 N) for both knives and only the edge thickness differed (0.1 mm and 1 mm). A model that fits the evidence shows equal force arrows and different edges.",
+     "phase": "model",
+     "placement": "Model Building: initial model drawing of the sharp and blunt knives"
+    },
+    {
+     "prompt": "At the end of the lesson, the class writes a first model statement on chart paper and labels it 'Version 1 - to be tested'. What does this label mean?",
+     "choices": [
+      "It is the final correct answer and cannot be changed.",
+      "It is a starting idea that the class will test and change when evidence shows it should be changed.",
+      "It is a wrong idea that will be thrown away tomorrow.",
+      "It is the teacher's answer, so learners should copy it."
+     ],
+     "correctIndex": 1,
+     "rationale": "Version 1 is the class's starting model. Later lessons will test it and revise it with evidence, which is how scientific models improve.",
+     "phase": "end",
+     "placement": "Model Building: shared class model statement marked 'Version 1 - to be tested'"
+    }
+   ]
+  },
+  {
    "number": 2,
    "title": "What is Pressure? Force and Area on Flour",
    "model": "claude-sonnet-5-5",
-   "generatedAt": "2026-10-05T03:52:35+00:00",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
    "quiz": [
     {
-     "prompt": "A 2 kg brick (weight 20 N) is placed gently on flour, first on its large face and then on its small face. Which statement about the force the brick presses on the flour with is correct?",
+     "prompt": "A 2 kg brick is placed gently on flour, first on its large face and then on its small face. Take g = 10 N/kg. What can you say about the force the brick presses on the flour with?",
      "choices": [
-      "The force is greater on the small face because it is narrower.",
-      "The force is 20 N on both faces because the weight does not change.",
-      "The force is greater on the large face because it is bigger.",
-      "The force on the small face is zero because the brick is balanced."
+      "It is less than 20 N on the large face because the force is spread out",
+      "It is 20 N on the large face and more than 20 N on the small face",
+      "It is 20 N on both faces, because the weight of the brick does not change",
+      "It is greater on the large face because that face is bigger"
      ],
-     "correctIndex": 1,
-     "rationale": "The force is the brick's weight, W = mg = 2 x 10 = 20 N, however the brick is placed. Only the contact area changes.",
+     "correctIndex": 2,
+     "rationale": "Weight W = mg = 2 × 10 = 20 N. The brick's weight stays the same however it is placed, so the force on the flour is 20 N on every face. Only the area in contact changes.",
      "phase": "predict",
-     "placement": "Predict: brick placed on the large, medium and small face on the tray of flour"
+     "placement": "Predict: brick placed on the large, medium and small face of flour",
+     "check": "2*10"
     },
     {
-     "prompt": "The large face of a brick measures 20 cm by 10 cm, so its area is 200 cm2. Given that 1 m2 = 10,000 cm2, what is this area in m2?",
+     "prompt": "The small face of a brick measures 10 cm by 5 cm. What is the area of this face in m², ready to use in P = F/A?",
      "choices": [
-      "0.02 m2",
-      "0.002 m2",
-      "0.2 m2",
-      "2 m2"
+      "0.005 m²",
+      "0.0005 m²",
+      "0.05 m²",
+      "0.5 m²"
      ],
      "correctIndex": 0,
-     "rationale": "Divide by 10,000 to change cm2 to m2: 200 / 10,000 = 0.02 m2.",
+     "rationale": "Area = 10 × 5 = 50 cm². Since 1 m² = 10,000 cm², 50 cm² = 50 ÷ 10,000 = 0.005 m².",
      "phase": "observe",
-     "placement": "Observe: converting each face area from cm2 to m2 in the data table",
-     "check": "200/10000"
+     "placement": "Observe: converting area from cm² to m² in the data table",
+     "check": "50/10000"
     },
     {
-     "prompt": "A 2 kg brick (g = 10 N/kg) rests on its small face, which has an area of 0.005 m2. What pressure does it exert on the flour?",
+     "prompt": "A 2 kg brick has weight 20 N. Its large face has an area of 0.02 m² and rests on flour. What pressure does the brick exert on the flour through this face?",
      "choices": [
-      "4,000 Pa",
-      "1,000 Pa",
-      "0.1 Pa",
-      "0.00025 Pa"
+      "400 Pa",
+      "0.001 Pa",
+      "20 Pa",
+      "1,000 Pa"
      ],
-     "correctIndex": 0,
-     "rationale": "F = mg = 2 x 10 = 20 N. P = F/A = 20 / 0.005 = 4,000 Pa.",
+     "correctIndex": 3,
+     "rationale": "P = F/A = 20 N ÷ 0.02 m² = 1,000 Pa. Dividing by a small area gives a large number.",
      "phase": "observe",
      "placement": "Observe: calculating P = F/A for each face of the brick",
-     "check": "20/0.005"
+     "check": "20/0.02"
     },
     {
-     "prompt": "The same brick of weight 20 N makes the deepest dent in flour when it rests on its small face. What is the best explanation?",
+     "prompt": "The same 2 kg brick (weight 20 N) is placed on flour on its large, medium and small faces. The small face makes the deepest dent. Why?",
      "choices": [
-      "The small face makes the brick heavier.",
-      "The small face pushes with a bigger force than the large face.",
-      "The same 20 N is spread over a smaller area, so the pressure is greater.",
-      "Force and pressure are the same thing, so the dent depends only on the force."
+      "The brick becomes heavier when it stands on its small face",
+      "The dents are all the same because the weight is the same",
+      "The same 20 N acts on a smaller area, so the pressure is greater",
+      "A bigger face always gives a bigger force, so the large face should sink deepest"
      ],
      "correctIndex": 2,
-     "rationale": "The weight is 20 N on every face, but a smaller area gives a larger force per unit area, so the pressure is greater and the dent is deeper.",
+     "rationale": "The force is 20 N on every face, but the small face has the smallest area. 20 N over 0.005 m² gives 4,000 Pa, the greatest pressure, so the dent is deepest.",
      "phase": "explain",
-     "placement": "Explain: claim-evidence-reasoning statement on why the small face sinks deepest"
+     "placement": "Explain: claim-evidence-reasoning on why the small face sinks deepest"
     },
     {
-     "prompt": "A force of 30 N acts at right angles on a surface of area 0.5 m2. What is the pressure on the surface?",
+     "prompt": "Which statement correctly defines pressure and gives its unit?",
      "choices": [
-      "0.017 Pa",
-      "30 Pa",
-      "60 Pa",
-      "15 Pa"
+      "Pressure is the area covered by a force, measured in m²",
+      "Pressure is the force acting at right angles per unit area, measured in pascals (Pa), where 1 Pa = 1 N/m²",
+      "Pressure is the weight of an object, measured in kilograms (kg)",
+      "Pressure is the same as force and is measured in newtons (N)"
+     ],
+     "correctIndex": 1,
+     "rationale": "Pressure is force acting normally per unit area, P = F/A. Its unit is the pascal, with 1 Pa = 1 N/m². It is not the same as force, area or mass.",
+     "phase": "explain",
+     "placement": "Explain: writing a definition of pressure as P = F/A and stating the unit"
+    },
+    {
+     "prompt": "A force of 40 N acts at right angles on a surface of area 0.5 m². What is the pressure on the surface?",
+     "choices": [
+      "0.0125 Pa",
+      "80 Pa",
+      "40.5 Pa",
+      "20 Pa"
+     ],
+     "correctIndex": 1,
+     "rationale": "P = F/A = 40 N ÷ 0.5 m² = 80 Pa. Dividing by 0.5 doubles the force value.",
+     "phase": "explain",
+     "placement": "Explain: quick calculation check using P = F/A",
+     "check": "40/0.5"
+    },
+    {
+     "prompt": "Mama Wanjiru pushes with the same 40 N force on a sharp knife and on a blunt knife. The sharp knife cuts the tomato easily. Which statement best explains this using what the brick on flour showed?",
+     "choices": [
+      "The blunt knife has a smaller contact area, so it gives a greater pressure",
+      "The sharp knife has a bigger force because it is sharper",
+      "The sharp knife has a smaller contact area, so the same force gives a greater pressure",
+      "Both knives give the same pressure, so the difference is only in the tomato"
      ],
      "correctIndex": 2,
-     "rationale": "P = F/A = 30 / 0.5 = 60 Pa.",
-     "phase": "explain",
-     "placement": "Explain: quick calculation check (30 N on 0.5 m2)",
-     "check": "30/0.5"
-    },
-    {
-     "prompt": "Which statement correctly defines pressure and its unit?",
-     "choices": [
-      "Pressure is the force multiplied by the area, measured in pascals.",
-      "Pressure is the total force on a surface, measured in newtons.",
-      "Pressure is the mass of an object, measured in kilograms.",
-      "Pressure is the force acting at right angles per unit area, measured in pascals where 1 Pa = 1 N/m2."
-     ],
-     "correctIndex": 3,
-     "rationale": "Pressure is force acting normally per unit area, P = F/A, and its unit is the pascal (1 Pa = 1 N/m2). It is not the same as force.",
-     "phase": "explain",
-     "placement": "Explain: writing the definition of pressure as P = F/A with the unit Pa"
-    },
-    {
-     "prompt": "Mama Wanjiru pushes with the same 40 N force on a sharp knife and on a blunt knife. The sharp knife cuts a tomato easily. Using what you learnt from the brick on flour, what is the best explanation?",
-     "choices": [
-      "The pressure is the same for both knives because the force is the same.",
-      "The sharp knife has a bigger force on the tomato than the blunt knife.",
-      "The sharp knife has a larger contact area, so it cuts better.",
-      "The sharp edge has a much smaller contact area, so the same force gives a greater pressure."
-     ],
-     "correctIndex": 3,
-     "rationale": "The force is the same, but the sharp edge touches the food over a much smaller area, so P = F/A is greater. This is the same idea as the brick's small face.",
+     "rationale": "The force is the same for both knives, but the sharp edge touches the food over a much smaller area. Since P = F/A, the smaller area gives a greater pressure, as the small face of the brick did.",
      "phase": "model",
-     "placement": "Model: revising the Lesson 1 knife model with 'same force, small area, P = F/A'"
+     "placement": "Model Building: revising the knife model with 'same force' and small or large contact area"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "How Does Area Affect Pressure? Calculating Pressure for Knives, Camel Feet and Shoes",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:29:13+00:00",
+   "quiz": [
+    {
+     "prompt": "Last lesson, a brick with the same weight was placed on flour on its large face, then on its small face. Which statement about the pressure on the flour is correct?",
+     "choices": [
+      "The small face gives a larger pressure because the same force acts on a smaller area.",
+      "The small face gives a smaller pressure because less of the brick touches the flour.",
+      "The pressure is the same because the weight of the brick did not change.",
+      "The pressure depends only on the weight, so the face does not matter."
+     ],
+     "correctIndex": 0,
+     "rationale": "Since P = F/A, the same force on a smaller area gives a larger pressure. This is why the brick's smallest face gave 4,000 Pa.",
+     "phase": "predict",
+     "placement": "Predict Phase: recall the rule P = F/A and the brick results (1,000, 2,000, 4,000 Pa)"
+    },
+    {
+     "prompt": "Mama Wanjiru's sharp knife touches the tomato along a length of 0.05 m. The edge is 0.1 mm thick (0.0001 m). What is the contact area of the edge?",
+     "choices": [
+      "5 × 10^-3 m²",
+      "5 × 10^-5 m²",
+      "5 × 10^-6 m²",
+      "5 × 10^-7 m²"
+     ],
+     "correctIndex": 2,
+     "rationale": "Area = length × thickness = 0.05 × 0.0001 = 0.000005 m², which is 5 × 10^-6 m². Learners must first convert 0.1 mm to 0.0001 m.",
+     "phase": "observe",
+     "placement": "Observe Phase, Task 1: sharp knife contact area",
+     "check": "0.05*0.0001"
+    },
+    {
+     "prompt": "Mama Wanjiru pushes the sharp knife with a force of 40 N. The contact area of the edge is 5 × 10^-6 m². What is the pressure under the edge?",
+     "choices": [
+      "8 kPa",
+      "0.8 MPa",
+      "8 MPa",
+      "80 MPa"
+     ],
+     "correctIndex": 2,
+     "rationale": "P = F/A = 40 ÷ 0.000005 = 8,000,000 Pa, which is 8 MPa (1 MPa = 1,000,000 Pa).",
+     "phase": "observe",
+     "placement": "Observe Phase, Task 1: sharp knife pressure",
+     "check": "40/0.000005/1000000"
+    },
+    {
+     "prompt": "Mama Wanjiru pushes a blunt knife with 40 N. Its edge has a contact area of 5 × 10^-5 m². A tomato skin gives way at about 2 MPa. What is the pressure under the blunt edge, and what happens to the tomato?",
+     "choices": [
+      "0.8 MPa, so the tomato is squashed because the force is smaller than for the sharp knife.",
+      "8 MPa, which is more than 2 MPa, so the tomato is cut.",
+      "0.8 MPa, which is less than 2 MPa, so the tomato is only squashed.",
+      "0.8 MPa, which is less than 2 MPa, so the tomato is cut easily."
+     ],
+     "correctIndex": 2,
+     "rationale": "P = 40 ÷ 0.00005 = 800,000 Pa = 0.8 MPa. This is below the 2 MPa needed, so the food only squashes. The force is the same 40 N as for the sharp knife.",
+     "phase": "observe",
+     "placement": "Observe Phase, Task 2: blunt knife and comparison with 2 MPa",
+     "check": "40/0.00005/1000000"
+    },
+    {
+     "prompt": "A camel has a mass of 400 kg. Take g = 10 N/kg. It stands on four feet, each with an area of 0.05 m². What pressure does the camel exert on the sand?",
+     "choices": [
+      "2 kPa",
+      "5 kPa",
+      "80 kPa",
+      "20 kPa"
+     ],
+     "correctIndex": 3,
+     "rationale": "Weight = 400 × 10 = 4,000 N. Total area = 4 × 0.05 = 0.2 m². P = 4,000 ÷ 0.2 = 20,000 Pa = 20 kPa.",
+     "phase": "observe",
+     "placement": "Observe Phase, Task 3: camel and person",
+     "check": "400*10/(4*0.05)/1000"
+    },
+    {
+     "prompt": "A 400 kg camel is about 6.7 times heavier than a 60 kg student. On desert sand the camel exerts a pressure of 20 kPa and the student in school shoes exerts 15 kPa. Why does the camel not sink about 6.7 times deeper?",
+     "choices": [
+      "The camel's wide feet spread its weight over a much larger area, so its pressure is only a little larger.",
+      "The sand pushes back harder on a camel than on a student.",
+      "The camel's weight is much smaller than the student's weight.",
+      "Heavier animals always press less on the ground than lighter ones."
+     ],
+     "correctIndex": 0,
+     "rationale": "Pressure depends on both force and area. The camel's area (0.2 m²) is five times the student's (0.04 m²), which cancels most of the extra weight.",
+     "phase": "explain",
+     "placement": "Explain Phase: second prompt on why the camel does not sink much deeper than the student"
+    },
+    {
+     "prompt": "Mama Wanjiru pushes a sharp knife and a blunt knife with the same 40 N force. The sharp knife cuts a tomato, but the blunt knife only squashes it. Which explanation is best?",
+     "choices": [
+      "The sharp knife is pushed with a bigger force.",
+      "The sharp knife has a larger contact area, so it presses harder.",
+      "The pressure is the same for both, but the sharp knife is stronger.",
+      "The force is the same, but the sharp edge has a smaller area, so it gives a larger pressure."
+     ],
+     "correctIndex": 3,
+     "rationale": "Both knives have the same force (40 N). The sharp edge has 10 times less area, so by P = F/A its pressure (8 MPa) is above the 2 MPa needed to cut, while the blunt knife gives only 0.8 MPa.",
+     "phase": "explain",
+     "placement": "Explain Phase: claim-evidence-reasoning explanation 'same force, different area'"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Pressure in Liquids and Depth: The Can with Holes and the Dam Wall",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Mama Wanjiru in Kisumu pushes with the same 40 N force on a sharp knife and on a blunt knife. The sharp knife slices a tomato easily, but the blunt knife only squashes it. Why?",
+     "choices": [
+      "The sharp knife has a smaller edge area, so the same force gives a larger pressure",
+      "The sharp knife has a larger area, so the pressure is spread out more",
+      "The sharp knife gives the tomato a bigger force than the blunt knife",
+      "The blunt knife is pushed with a smaller force than the sharp knife"
+     ],
+     "correctIndex": 0,
+     "rationale": "Pressure = force / area. The force is the same (40 N), but the sharp edge has a much smaller area, so the pressure on the tomato is larger.",
+     "phase": "predict",
+     "placement": "Predict: recall of Mama Wanjiru's knives (same force of 40 N, different area)"
+    },
+    {
+     "prompt": "A tin is filled with water. It has three small holes at 5 cm, 10 cm and 15 cm below the water surface. All the tape is removed at the same time. Which jet of water squirts out the farthest?",
+     "choices": [
+      "The jet from the 15 cm hole, because the water is deepest there",
+      "All three jets land the same distance away",
+      "The jet from the 10 cm hole, because it is in the middle",
+      "The jet from the 5 cm hole, because it is closest to the air"
+     ],
+     "correctIndex": 0,
+     "rationale": "The lowest hole (15 cm deep) has the greatest pressure, so its jet pushes out the farthest. The idea that the top hole is farthest because it is near the air is a common misconception.",
+     "phase": "observe",
+     "placement": "Observe: groups remove all three tapes at once and measure the jet distances"
+    },
+    {
+     "prompt": "For water in a can, the pressure is 500 Pa at a depth of 5 cm and 1,500 Pa at a depth of 15 cm. How many times larger is the pressure at 15 cm than at 5 cm?",
+     "choices": [
+      "1,000 times",
+      "2 times",
+      "10 times",
+      "3 times"
+     ],
+     "correctIndex": 3,
+     "rationale": "Divide the pressures: 1,500 Pa / 500 Pa = 3. The pressure at 15 cm is 3 times the pressure at 5 cm.",
+     "phase": "observe",
+     "placement": "Observe: teacher introduces the pressure values 500 Pa, 1,000 Pa and 1,500 Pa for the three depths",
+     "check": "1500/500"
+    },
+    {
+     "prompt": "Water in Masinga Dam is 30 m deep. The water pressure is 100 kPa at a depth of 10 m and 300 kPa at the base. Where does the dam wall need to be strongest?",
+     "choices": [
+      "At the base, where the pressure is largest",
+      "It needs the same strength everywhere because the water is the same",
+      "At the top, where the pressure is smallest",
+      "At a depth of 10 m only"
+     ],
+     "correctIndex": 0,
+     "rationale": "The base has the greatest pressure (300 kPa), so the wall must be thickest and strongest there.",
+     "phase": "observe",
+     "placement": "Observe: dam diagram comparing 100 kPa at 10 m with 300 kPa at the base"
+    },
+    {
+     "prompt": "Why is the water pressure greater at a deeper point in a liquid?",
+     "choices": [
+      "There is more water above a deeper point, so more weight presses down there",
+      "The holes at the bottom of a container are always bigger",
+      "Deeper water is closer to the air, which pushes harder",
+      "Deeper water is a different kind of liquid"
+     ],
+     "correctIndex": 0,
+     "rationale": "A deeper point has a taller column of water above it. This extra water has more weight, so the pressure there is larger.",
+     "phase": "explain",
+     "placement": "Explain: claim-evidence-reasoning paragraph on why pressure increases with depth"
+    },
+    {
+     "prompt": "Water in a can is pulled down by gravity, yet it squirts sideways out of a hole in the wall of the can. What does this show?",
+     "choices": [
+      "The can must have been tilted so the water could flow sideways",
+      "Liquid pressure acts only downwards, so the sideways jet is caused by the tape",
+      "Water only pushes sideways when the hole is near the top",
+      "Liquid pressure acts on the container walls and pushes outwards through any opening"
+     ],
+     "correctIndex": 3,
+     "rationale": "A liquid presses on the walls of its container. When a hole is opened, the water pushes outwards through it, so the jet leaves sideways.",
+     "phase": "explain",
+     "placement": "Explain: question (b) on why water pushes sideways out of the holes"
+    },
+    {
+     "prompt": "A group draws a model of a dam wall holding back water 30 m deep. Which drawing best shows the idea that liquid pressure increases with depth?",
+     "choices": [
+      "Arrows pointing only downwards, with a wall of the same thickness",
+      "Longer arrows near the top, with the wall thicker at the top",
+      "Arrows of the same length at every depth, with a wall of the same thickness",
+      "Longer arrows near the base, with the wall thicker at the base"
+     ],
+     "correctIndex": 3,
+     "rationale": "Pressure is larger at greater depth, so the arrows are longer near the base. The wall is built thicker at the bottom to withstand this.",
+     "phase": "model",
+     "placement": "Model Building: revised class model with the can of water and the dam wall"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Factors Affecting Pressure in Liquids: Depth, Density and Direction",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Three identical cans each have a hole 10 cm below the surface. They are filled to the same level with water, salt water and cooking oil. You want to predict which liquid pushes hardest on the side of its can at this depth. Which prediction best uses what you learned in this lesson?",
+     "choices": [
+      "Salt water pushes hardest, because it is the densest liquid",
+      "All three push the same, because the depth is the same",
+      "Cooking oil pushes hardest, because it is thick and heavy-looking",
+      "Water pushes hardest, because it is the most common liquid"
+     ],
+     "correctIndex": 0,
+     "rationale": "At the same depth, pressure increases with density. Salt water (1,030 kg/m3) is denser than water (1,000 kg/m3) and oil (920 kg/m3), so it gives the largest pressure.",
+     "phase": "predict",
+     "placement": "Predict: three identical cans with a hole at 10 cm filled with water, salt water and cooking oil"
+    },
+    {
+     "prompt": "A wide basin and a thin tall tube both hold water to the same depth of 10 cm. The basin holds far more water. A learner says, 'The basin has more water, so the pressure at its bottom is greater.' What is the best response?",
+     "choices": [
+      "Correct: more water always gives more pressure at the bottom",
+      "Wrong: the thin tube gives greater pressure because the water is squeezed into a small space",
+      "Wrong: the pressure at the bottom is the same in both, because it depends on depth and not on the amount of water",
+      "Correct: a wider container spreads the pressure and makes it larger"
+     ],
+     "correctIndex": 2,
+     "rationale": "At the same depth in the same liquid the pressure is the same, about 1,000 Pa, whatever the container shape or amount of water.",
+     "phase": "predict",
+     "placement": "Predict: wide basin and thin tall tube filled to the same depth"
+    },
+    {
+     "prompt": "Three bottles each have a hole at 10 cm depth and contain water, salt water and cooking oil. The three streams land at about the same distance. What does this tell you about using jets to compare liquids?",
+     "choices": [
+      "The three liquids must have exactly the same pressure",
+      "Density has no effect on the pressure in a liquid",
+      "The jet from the oil must be broken",
+      "Jets are not good for comparing the pressure of different liquids at the same depth, so a pressure gauge is needed"
+     ],
+     "correctIndex": 3,
+     "rationale": "In the investigation the jets landed at about the same place, so they cannot show the effect of density. A U-tube pressure gauge showed the differences.",
+     "phase": "observe",
+     "placement": "Investigation A (density): bottles with a hole at 10 cm and the U-tube pressure gauge"
+    },
+    {
+     "prompt": "A U-tube pressure gauge is lowered to 10 cm depth in water, in salt water and in cooking oil. In which order are the pressures, from largest to smallest?",
+     "choices": [
+      "Salt water, water, cooking oil",
+      "Water, cooking oil, salt water",
+      "Cooking oil, water, salt water",
+      "Water, salt water, cooking oil"
+     ],
+     "correctIndex": 0,
+     "rationale": "The pressures at 10 cm are 1,030 Pa for salt water, 1,000 Pa for water and 920 Pa for cooking oil, matching their densities.",
+     "phase": "observe",
+     "placement": "Investigation A (density): table of pressures at 10 cm"
+    },
+    {
+     "prompt": "In an experiment, learners compare water, salt water and cooking oil using a pressure gauge. They keep the gauge at the same depth of 10 cm in every liquid. Why do they keep the depth the same?",
+     "choices": [
+      "So that only the liquid changes, making it a fair test of density",
+      "Because depth has no effect on liquid pressure",
+      "So that the liquids all give the same pressure",
+      "So that less liquid is used"
+     ],
+     "correctIndex": 0,
+     "rationale": "A fair test changes one variable (the liquid) and controls the others (depth), so any difference in pressure is due to density.",
+     "phase": "observe",
+     "placement": "Investigation A: teacher asks 'Keep the depth the same. Only the liquid changes. Why do we do that?'"
+    },
+    {
+     "prompt": "A bottle of water has three holes at the same depth of 10 cm. One faces sideways, one is angled and one faces down. What is observed?",
+     "choices": [
+      "The sideways hole gives the strongest stream",
+      "The angled hole gives the weakest pressure",
+      "The streams or readings are the same size in every direction",
+      "The downward hole gives the strongest stream because gravity pulls down"
+     ],
+     "correctIndex": 2,
+     "rationale": "At the same depth, the pressure in a liquid acts equally in all directions, so the streams or readings are the same.",
+     "phase": "observe",
+     "placement": "Investigation C (direction): bottle with three holes at the same 10 cm depth"
+    },
+    {
+     "prompt": "At 10 cm depth, the pressure in water is 1,000 Pa and in cooking oil it is 920 Pa. Why is the pressure in oil smaller?",
+     "choices": [
+      "Oil has less depth than water",
+      "Oil is less dense than water (920 kg/m3 compared with 1,000 kg/m3)",
+      "Oil pushes only upwards",
+      "Oil is in a different shaped container"
+     ],
+     "correctIndex": 1,
+     "rationale": "Depth is the same, so the difference comes from density. Oil is less dense, so it gives a smaller pressure at the same depth.",
+     "phase": "explain",
+     "placement": "Explain question 1: which liquid gave the largest pressure at 10 cm and why"
+    },
+    {
+     "prompt": "A diver in Lake Victoria at Kisumu swims from 2 m depth down to 5 m depth. What happens to the water pressure on the diver?",
+     "choices": [
+      "It increases, because pressure in a liquid increases with depth",
+      "It stays the same, because the water is the same lake",
+      "It decreases, because there is more water above",
+      "It stays the same, because pressure acts equally in all directions"
+     ],
+     "correctIndex": 0,
+     "rationale": "Liquid pressure increases with depth. Equal pressure in all directions applies only at the same depth, so it does not mean pressure stays constant as depth changes.",
+     "phase": "explain",
+     "placement": "Explain: diver in Lake Victoria at Kisumu feels more pressure deeper down"
+    },
+    {
+     "prompt": "Which list names the factors that DO change the pressure at a point in a liquid, and the ones that do NOT?",
+     "choices": [
+      "Change it: direction and amount of liquid. Do not change it: depth and density",
+      "Change it: depth and density. Do not change it: container shape and amount of liquid",
+      "Change it: container shape and depth. Do not change it: density and direction",
+      "Change it: amount of liquid and density. Do not change it: depth and shape"
+     ],
+     "correctIndex": 1,
+     "rationale": "The evidence showed pressure depends on depth and density. Container shape and amount of liquid made no difference at the same depth.",
+     "phase": "model",
+     "placement": "Model building: list 'what matters' and 'what does not matter'"
+    },
+    {
+     "prompt": "In a model of a container of liquid, arrows show the pressure. Which drawing is correct?",
+     "choices": [
+      "Arrows pointing only downwards, all of equal length",
+      "Arrows longer sideways than downwards at the same depth",
+      "Arrows pointing only downwards, longer near the surface",
+      "Arrows of equal length in all directions at the same depth, and longer arrows lower down"
+     ],
+     "correctIndex": 3,
+     "rationale": "Pressure acts equally in all directions at the same depth and increases with depth, so arrows are equal at one depth and longer lower down.",
+     "phase": "model",
+     "placement": "Model building: arrows showing pressure at different depths and directions"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Applying P = ρgh: Deriving the Liquid Pressure Equation and Calculating Pressure in Lake Victoria and Dams",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A column of water 10 m high stands on a base of 1 m² and gives a pressure of 100,000 Pa at the bottom. A second column of water is also 10 m high but stands on a base of 2 m². It holds twice as much water. What is the pressure at the bottom of the second column?",
+     "choices": [
+      "200,000 Pa, because there is twice as much water",
+      "400,000 Pa, because both the weight and the area have doubled",
+      "50,000 Pa, because the force is shared between two square metres",
+      "100,000 Pa, the same, because the extra weight is spread over twice the area"
+     ],
+     "correctIndex": 3,
+     "rationale": "Weight doubles to 200,000 N but the area also doubles to 2 m², so P = 200,000 / 2 = 100,000 Pa. The area cancels.",
+     "phase": "observe",
+     "placement": "Part A: Building the water column (comparing the 1 m² and 2 m² bases)"
+    },
+    {
+     "prompt": "A column of water has a base area of 2 m² and a height of 10 m. The density of water is 1,000 kg/m³ and g = 10 N/kg. What is the weight of the water in the column?",
+     "choices": [
+      "2,000 N",
+      "20,000 N",
+      "100,000 N",
+      "200,000 N"
+     ],
+     "correctIndex": 3,
+     "rationale": "V = 2 x 10 = 20 m³, m = 1,000 x 20 = 20,000 kg, W = 20,000 x 10 = 200,000 N.",
+     "phase": "observe",
+     "placement": "Part A: Building the water column (steps V, m, W for the 2 m² base)",
+     "check": "1000*2*10*10"
+    },
+    {
+     "prompt": "In the derivation, learners reach W = ρAhg for the weight of a water column with base area A and height h. They then use P = F/A with F = W. What happens next, and what does it show?",
+     "choices": [
+      "A cancels, leaving P = ρgh, so the pressure depends only on density and depth",
+      "Nothing cancels, so P = ρA²hg and a wider column gives more pressure",
+      "h cancels, leaving P = ρg, so the pressure depends only on density",
+      "ρ cancels, leaving P = Ahg, so the pressure depends on the size of the column"
+     ],
+     "correctIndex": 0,
+     "rationale": "P = W/A = ρAhg / A = ρgh. The area A cancels, so only ρ, g and h matter.",
+     "phase": "observe",
+     "placement": "Part A: Building the water column (doing the derivation with letters)"
+    },
+    {
+     "prompt": "Using ρ = 1,000 kg/m³ and g = 10 N/kg, what is the pressure from the water alone at a depth of 40 m in Lake Victoria?",
+     "choices": [
+      "4 kPa",
+      "4,000 kPa",
+      "40 kPa",
+      "400 kPa"
+     ],
+     "correctIndex": 3,
+     "rationale": "P = ρgh = 1,000 x 10 x 40 = 400,000 Pa. Dividing by 1,000 gives 400 kPa.",
+     "phase": "observe",
+     "placement": "Part B: Using the equation (Lake Victoria at 10 m, 20 m and 40 m)",
+     "check": "1000*10*40/1000"
+    },
+    {
+     "prompt": "Lake A is 5 km wide and Lake B is 50 km wide. Both contain fresh water. At a point 20 m below the surface in each lake, how does the pressure from the water compare?",
+     "choices": [
+      "Greater in Lake B, because it holds more water",
+      "Cannot be compared unless the volume of each lake is known",
+      "The same in both lakes, because P = ρgh depends only on density and depth",
+      "Greater in Lake A, because the water is more squeezed together"
+     ],
+     "correctIndex": 2,
+     "rationale": "P = ρgh has no width or total volume in it. Both lakes have the same ρ, g and h, so the pressure is the same.",
+     "phase": "explain",
+     "placement": "Task 2: Explain why the pressure does not depend on the width of Lake Victoria"
+    },
+    {
+     "prompt": "A farmer in a Kenyan market stores cooking oil with density 920 kg/m³ in a tall tank. Using g = 10 N/kg, what is the pressure from the oil alone at a depth of 10 m?",
+     "choices": [
+      "920 kPa",
+      "9.2 kPa",
+      "92 kPa",
+      "100 kPa"
+     ],
+     "correctIndex": 2,
+     "rationale": "P = ρgh = 920 x 10 x 10 = 92,000 Pa = 92 kPa. The 100 kPa answer comes from using the density of water by mistake.",
+     "phase": "explain",
+     "placement": "Task 4: short practice (cooking oil, ρ = 920 kg/m³, at 10 m depth)",
+     "check": "920*10*10/1000"
+    },
+    {
+     "prompt": "The wall of a dam such as Masinga is built thicker at the bottom than at the top. Which explanation is correct?",
+     "choices": [
+      "The water at the bottom has a greater density than the water at the top",
+      "The water at the top pushes harder because it is closer to the air",
+      "Pressure increases with depth (P = ρgh), so the water pushes harder on the wall at the bottom",
+      "The dam holds more water sideways at the bottom, so the pressure is the same everywhere"
+     ],
+     "correctIndex": 2,
+     "rationale": "Pressure P = ρgh grows with depth h, as the column of water above is taller and heavier. A thicker base wall can withstand the larger pressure (for example 300 kPa at 30 m compared with 100 kPa at 10 m).",
+     "phase": "explain",
+     "placement": "Task 1: Explain why the wall of a dam like Masinga is built thicker at the bottom"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Atmospheric Pressure and Its Effects",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Mama Wanjiru fills a cup to the brim with water, covers it with cardboard, and turns it upside down while holding the cardboard. She then removes her hand. The water stays in the cup and the cardboard does not fall. What holds the cardboard up?",
+     "choices": [
+      "Air outside the cup pushes up on the cardboard",
+      "The cardboard is stuck to the water like glue, so nothing pushes on it",
+      "The cardboard is too light for gravity to pull it down",
+      "A vacuum inside the cup pulls the cardboard upward"
+     ],
+     "correctIndex": 0,
+     "rationale": "Air has weight and presses on all surfaces, so the air below pushes up on the cardboard with a large force. A vacuum does not pull, and gravity acts on the cardboard whatever its mass.",
+     "phase": "predict",
+     "placement": "Predict: cup of water turned upside down over cardboard"
+    },
+    {
+     "prompt": "A data card shows atmospheric pressure at four places: Mombasa 101 kPa, Kisumu 89 kPa, Nairobi 83 kPa, Mount Kenya summit (5,199 m) 54 kPa. Which statement best describes the pattern?",
+     "choices": [
+      "Atmospheric pressure is highest in Nairobi",
+      "Atmospheric pressure decreases as altitude increases",
+      "Atmospheric pressure increases as altitude increases",
+      "Atmospheric pressure is the same everywhere in Kenya"
+     ],
+     "correctIndex": 1,
+     "rationale": "Mombasa is at sea level and has the highest pressure (101 kPa). Pressure falls through Kisumu and Nairobi to 54 kPa on Mount Kenya, so pressure decreases with altitude.",
+     "phase": "observe",
+     "placement": "Data card: Mombasa, Kisumu, Nairobi, Mount Kenya altitude and pressure graph"
+    },
+    {
+     "prompt": "A little water is boiled in an empty soda can. The can is quickly turned upside down into a basin of cold water, and it collapses with a bang. Which is the best explanation?",
+     "choices": [
+      "The steam inside the can pushes the walls inwards",
+      "The steam cools and the pressure inside drops, so the air outside pushes the can in",
+      "The cold water sucks the can inwards",
+      "The cold water is heavier than the can and crushes it"
+     ],
+     "correctIndex": 1,
+     "rationale": "Steam pushed most of the air out. When it cools and condenses, the pressure inside falls, so the greater atmospheric pressure outside pushes the can inwards. Suction does not pull.",
+     "phase": "observe",
+     "placement": "Station 2: crushed can (teacher demo)"
+    },
+    {
+     "prompt": "The mouth of a glass has an area of 40 cm² (0.004 m²). Atmospheric pressure at Mombasa is 101,000 Pa. What upward force does the air exert on the mouth of the glass? (Use F = P × A.)",
+     "choices": [
+      "4,040 N",
+      "25,250,000 N",
+      "404 N",
+      "40.4 N"
+     ],
+     "correctIndex": 2,
+     "rationale": "F = P × A = 101,000 Pa × 0.004 m² = 404 N upward.",
+     "phase": "explain",
+     "placement": "Explain Step 2: calculate the force of air on the glass mouth",
+     "check": "101000*0.004"
+    },
+    {
+     "prompt": "The glass holds 250 g of water. Taking g = 10 N/kg, what is the weight of the water?",
+     "choices": [
+      "2.5 N",
+      "250 N",
+      "25 N",
+      "0.25 N"
+     ],
+     "correctIndex": 0,
+     "rationale": "250 g = 0.25 kg, so W = 0.25 × 10 = 2.5 N. This is far less than the 404 N of air force on the cardboard, so the cardboard stays in place.",
+     "phase": "explain",
+     "placement": "Explain Step 2: compare air force (404 N) with the weight of the water",
+     "check": "0.25*10"
+    },
+    {
+     "prompt": "On a bus trip from Mombasa up to Nairobi, a passenger's ears pop. Which explanation is correct?",
+     "choices": [
+      "The air pressure outside gets higher as the bus climbs and squeezes the ear until the pressures are equal",
+      "The air pressure outside gets lower as the bus climbs, so the higher pressure in the middle ear pushes out until the pressures are equal",
+      "The air stops pressing on the ear at high altitude, so the ear pops",
+      "The air gets heavier as the bus climbs, so it pushes harder on the ear"
+     ],
+     "correctIndex": 1,
+     "rationale": "Atmospheric pressure falls with altitude, so the pressure trapped in the middle ear is higher than outside. It pushes out until the pressures equalise, which causes the pop.",
+     "phase": "explain",
+     "placement": "Explain Step 3: ears popping from Mombasa to Nairobi"
+    },
+    {
+     "prompt": "A learner drinks uji through a straw. Which statement correctly explains why the liquid rises up the straw?",
+     "choices": [
+      "Sucking lowers the pressure in the straw, so atmospheric pressure on the surface of the liquid pushes it up",
+      "Sucking creates a pulling force that lifts the liquid straight up",
+      "The liquid is lighter than air, so it floats up the straw",
+      "The straw pushes the liquid upward when it is squeezed by the lips"
+     ],
+     "correctIndex": 0,
+     "rationale": "Sucking reduces the pressure inside the straw. The atmospheric pressure acting on the liquid in the cup is then greater, so it pushes the liquid up. Suction does not pull.",
+     "phase": "explain",
+     "placement": "Explain Step 3: drinking straw"
+    },
+    {
+     "prompt": "Weather reports talk about high and low pressure. If the air pressure is high in one place and low in a nearby place, what happens to the air?",
+     "choices": [
+      "It moves from the region of lower pressure to the region of higher pressure",
+      "It moves straight down to the ground in both places",
+      "It stays still, because air cannot move sideways",
+      "It moves from the region of higher pressure to the region of lower pressure, and we call this wind"
+     ],
+     "correctIndex": 3,
+     "rationale": "Differences in air pressure make air flow from higher pressure towards lower pressure. This moving air is wind, which includes the seasonal kaskazi and kusi winds used by dhows along the Kenyan coast.",
+     "phase": "dqb",
+     "placement": "Link task: weather, wind and Indian Ocean trade"
+    },
+    {
+     "prompt": "Mama Wanjiru pushes a sharp knife and a blunt knife with the same force of 40 N. Air presses on both knives equally. What explains why the sharp knife cuts better?",
+     "choices": [
+      "The sharp knife is pushed with a bigger force",
+      "The sharp knife has more air pushing on it",
+      "The sharp knife has a much smaller area at the edge, so the same force gives a greater pressure",
+      "The blunt knife has less atmospheric pressure acting on it"
+     ],
+     "correctIndex": 2,
+     "rationale": "The force is the same and air presses equally on both knives, so atmospheric pressure is not the difference. The sharp edge has a smaller area, so P = F/A is greater.",
+     "phase": "model",
+     "placement": "Model Building: add 'Fluids press on surfaces' and the annotation about the two knives"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Transmission of Pressure in Fluids: Pascal's Principle in Syringes, Hydraulic Jacks and Brakes",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Two water-filled syringes, one small and one large, are joined by a short tube with no air in it. A learner pushes the small plunger in by 4 cm and measures how far the large plunger moves out. Which result is correct?",
+     "choices": [
+      "The large plunger does not move because water cannot be pushed",
+      "The large plunger moves out more than 4 cm",
+      "The large plunger moves out 4 cm, the same distance",
+      "The large plunger moves out about 1 cm, less than the small plunger moved in"
+     ],
+     "correctIndex": 3,
+     "rationale": "The same volume of water leaves the small syringe and enters the large one. The large piston has more area, so it moves a shorter distance. The small plunger moves farther.",
+     "phase": "observe",
+     "placement": "Test 3: compare how far each plunger moves (ruler measurement with the two linked syringes)"
+    },
+    {
+     "prompt": "In a workshop hydraulic jack, a 50 N effort pushes on a small piston of area 5 cm² (0.0005 m²). What is the pressure on the small piston?",
+     "choices": [
+      "25,000 Pa",
+      "100,000 Pa (100 kPa)",
+      "250 Pa",
+      "10 Pa"
+     ],
+     "correctIndex": 1,
+     "rationale": "P = F / A = 50 N / 0.0005 m² = 100,000 Pa, which is 100 kPa.",
+     "phase": "explain",
+     "placement": "Step 1: calculate the pressure on the small piston (P = F / A)",
+     "check": "50/0.0005"
+    },
+    {
+     "prompt": "In a hydraulic jack, the water is enclosed and the pressure on the small piston is 100 kPa. The large piston has 20 times the area of the small piston. What is the pressure on the large piston?",
+     "choices": [
+      "100 kPa, the same as on the small piston",
+      "2,000 kPa, because the area is 20 times bigger",
+      "0 kPa, because the large piston is not pushed directly",
+      "5 kPa, because the area is bigger"
+     ],
+     "correctIndex": 0,
+     "rationale": "Pascal's principle: pressure applied to an enclosed fluid is transmitted equally in all directions. The pressure is the same on both pistons, but the forces are different because the areas are different.",
+     "phase": "explain",
+     "placement": "Step 2: state that the enclosed water transmits pressure equally (Pascal's principle)"
+    },
+    {
+     "prompt": "A hydraulic jack has a small piston of area 5 cm² and a large piston of area 100 cm². A 50 N effort is applied to the small piston. Using F1/A1 = F2/A2, what load force acts on the large piston?",
+     "choices": [
+      "1,000 N",
+      "50 N",
+      "10 N",
+      "2,500 N"
+     ],
+     "correctIndex": 0,
+     "rationale": "F2 = F1 × A2 / A1 = 50 N × 100 cm² / 5 cm² = 1,000 N. The pressure is 100 kPa on both pistons and the area is 20 times bigger, so the force is 20 times bigger.",
+     "phase": "explain",
+     "placement": "Steps 3-5: find the force on the large piston and show F1/A1 = F2/A2",
+     "check": "50*100/5"
+    },
+    {
+     "prompt": "In a matatu's hydraulic brakes, a driver's foot pushes the master piston (area 2 cm²) with a force of 300 N. The brake fluid transmits the pressure to a wheel piston of area 10 cm². What force acts on the wheel piston?",
+     "choices": [
+      "1,500 N",
+      "60 N",
+      "300 N",
+      "6,000 N"
+     ],
+     "correctIndex": 0,
+     "rationale": "The pressure is the same in the fluid, so F2 = F1 × A2 / A1 = 300 N × 10 cm² / 2 cm² = 1,500 N. The wheel piston has 5 times the area, so it gets 5 times the force.",
+     "phase": "explain",
+     "placement": "Step 8: hydraulic brakes (master piston and wheel piston calculation)",
+     "check": "300*10/2"
+    },
+    {
+     "prompt": "A mechanic bleeds air out of a matatu's brake lines. Why is this done?",
+     "choices": [
+      "Air can be squeezed but liquid cannot, so air in the fluid gives a soft pedal and weaker braking",
+      "Air changes the pressure in the fluid so that it is not transmitted equally in all directions at all",
+      "Air is heavier than brake fluid and makes the wheels turn slowly",
+      "Air makes the brake fluid freeze"
+     ],
+     "correctIndex": 0,
+     "rationale": "Air is compressible, so part of the pedal push goes into squeezing the air bubbles instead of transmitting pressure through the fluid. This gives a soft pedal and weaker braking.",
+     "phase": "explain",
+     "placement": "Step 8: why a mechanic bleeds air out of the brake lines"
+    },
+    {
+     "prompt": "A matatu tyre carries a load of 10,000 N and is inflated to 250 kPa (250,000 Pa). Using W = P × A, what area of the tyre touches the road?",
+     "choices": [
+      "0.4 m²",
+      "0.04 m²",
+      "4 m²",
+      "0.025 m²"
+     ],
+     "correctIndex": 1,
+     "rationale": "A = W / P = 10,000 N / 250,000 Pa = 0.04 m² (400 cm²). If the pressure is not raised for a heavier load, more rubber touches the road, so the tyre flexes and heats more and can burst.",
+     "phase": "explain",
+     "placement": "Step 9: tyre pressure and vehicle loading (W = P × A)",
+     "check": "10000/250000"
+    },
+    {
+     "prompt": "A learner compares the two situations in this unit. With the knives, the same 40 N force on different areas gave different pressures. In the hydraulic jack, which statement is correct?",
+     "choices": [
+      "The pressure and the force are the same on both pistons",
+      "The jack creates extra energy, so the load force is bigger",
+      "The same pressure acts on both pistons, but the areas differ, so the forces are different",
+      "The same force acts on both pistons, so the pressures are different"
+     ],
+     "correctIndex": 2,
+     "rationale": "In the jack the pressure (100 kPa) is the same in the enclosed fluid and the area differs, so the force differs (50 N and 1,000 N). The knives are the opposite case: the same force on different areas gives different pressures. The jack does not create energy, because the small piston moves farther.",
+     "phase": "dqb",
+     "placement": "Driving Question Board: 'How does the jack help us think about the knives? What is the same? What is different?'"
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "Applications and Consolidation: Siphon, Dams, Hydraulics and the Final Explanation of the Knife Phenomenon",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Mama Wanjiru pushes with the same 40 N force on a sharp knife and on a blunt knife. The sharp knife cuts a tomato but the blunt knife only squashes it. Which statement best explains why?",
+     "choices": [
+      "The sharp knife has a smaller edge area, so the same force gives a greater pressure.",
+      "The sharp knife carries more force because it is sharper.",
+      "The sharp knife is heavier, so it pushes down with more force.",
+      "The blunt knife has a smaller edge area, so it gives a greater pressure."
+     ],
+     "correctIndex": 0,
+     "rationale": "Both knives get the same 40 N, so force is not the difference. Pressure P = F/A, so the smaller edge area of the sharp knife gives the greater pressure.",
+     "phase": "predict",
+     "placement": "Predict Card: 'The sharp knife cuts better because...'"
+    },
+    {
+     "prompt": "At a siphon station, a tube full of water joins a higher bucket to a lower basin, and water flows from the bucket to the basin. The outlet end is then raised until it is at the same level as the water surface in the bucket. What happens, and why?",
+     "choices": [
+      "The flow gets faster because the outlet is now closer to the bucket.",
+      "The flow stops because atmospheric pressure disappears when the tube is raised.",
+      "The flow stops because there is no longer a difference in depth between the two water levels.",
+      "The flow continues because air always pushes water through a tube."
+     ],
+     "correctIndex": 2,
+     "rationale": "A siphon needs atmospheric pressure and a difference in liquid level. When both levels are equal there is no depth difference, so the flow stops. Atmospheric pressure does not disappear.",
+     "phase": "observe",
+     "placement": "Station A: Siphon"
+    },
+    {
+     "prompt": "A dam holds water 30 m deep. Take the density of water as 1,000 kg/m3 and g = 10 N/kg. What is the pressure of the water at the base of the dam wall?",
+     "choices": [
+      "30 kPa",
+      "3,000 kPa",
+      "300 kPa",
+      "100 kPa"
+     ],
+     "correctIndex": 2,
+     "rationale": "P = rho g h = 1,000 x 10 x 30 = 300,000 Pa = 300 kPa. This is 3 times the 100 kPa at 10 m depth, so the wall is thicker at the bottom.",
+     "phase": "observe",
+     "placement": "Station B: Dam diagram (100 kPa at 10 m, 300 kPa at 30 m)",
+     "check": "1000*10*30/1000"
+    },
+    {
+     "prompt": "Mzee Otieno's hydraulic jack has a small piston of area 5 cm2 and a large piston of area 100 cm2. He pushes the small piston with an effort of 50 N. Using F1/A1 = F2/A2, what load can the large piston lift?",
+     "choices": [
+      "2,500 N",
+      "1,000 N",
+      "250 N",
+      "50 N"
+     ],
+     "correctIndex": 1,
+     "rationale": "The pressure is transmitted equally, so F2 = F1 x A2/A1 = 50 x 100/5 = 1,000 N. The area ratio is 20, so the force is 20 times bigger.",
+     "phase": "observe",
+     "placement": "Station C: Hydraulic jack model (two syringes and Mzee Otieno's jack)",
+     "check": "50*100/5"
+    },
+    {
+     "prompt": "A sharp knife edge has a contact area of 5 x 10^-6 m2. Mama Wanjiru pushes it with a force of 40 N. What pressure does the edge exert on the food?",
+     "choices": [
+      "8 MPa",
+      "0.2 MPa",
+      "80 MPa",
+      "0.8 MPa"
+     ],
+     "correctIndex": 0,
+     "rationale": "P = F/A = 40 / 0.000005 = 8,000,000 Pa = 8 MPa.",
+     "phase": "explain",
+     "placement": "Part 2: Final Explanation (Claim-Evidence-Reasoning) of the knife phenomenon",
+     "check": "40/0.000005/1000000"
+    },
+    {
+     "prompt": "Tomato and meat give way (are cut) at a pressure of about 2 MPa. A sharp knife exerts 8 MPa and a blunt knife exerts 0.8 MPa, both with the same 40 N force. Which conclusion is correct?",
+     "choices": [
+      "The sharp knife cuts the food because 8 MPa is less than 2 MPa.",
+      "Both knives cut the food because both are pushed with 40 N.",
+      "The blunt knife only squashes the food because it is pushed with less force than the sharp knife.",
+      "The blunt knife only squashes the food because 0.8 MPa is less than 2 MPa."
+     ],
+     "correctIndex": 3,
+     "rationale": "Food is cut only when the pressure is above 2 MPa. The sharp knife gives 8 MPa, which is above it, and the blunt knife gives 0.8 MPa, which is below it. The force is the same on both.",
+     "phase": "model",
+     "placement": "Final class model: threshold line at 2 MPa with the sharp and blunt knife pressures"
+    },
+    {
+     "prompt": "Atmospheric pressure is about 101 kPa (101,000 Pa). Using P = rho g h with water density 1,000 kg/m3 and g = 10 N/kg, about how high can atmospheric pressure alone push water up a pipe?",
+     "choices": [
+      "1,010 m",
+      "10.1 m, which is about 10 m",
+      "101 m",
+      "1 m"
+     ],
+     "correctIndex": 1,
+     "rationale": "h = P/(rho g) = 101,000 / (1,000 x 10) = 10.1 m, so about 10 m at most. Deeper boreholes need pumps that push the water up from below.",
+     "phase": "explain",
+     "placement": "Part 1: 'Because...' chain for the water pump",
+     "check": "101000/(1000*10)"
+    },
+    {
+     "prompt": "A learner blocks the outlet of a bicycle pump with a finger and pushes the handle in. The handle gets harder to push. What is the best explanation?",
+     "choices": [
+      "The volume of air increases, so its pressure rises.",
+      "The air in the barrel is squeezed into a smaller volume, so its pressure rises.",
+      "The air in the barrel becomes lighter, so it pushes back harder.",
+      "Atmospheric pressure outside the pump suddenly becomes bigger."
+     ],
+     "correctIndex": 1,
+     "rationale": "Pushing the piston in reduces the volume of the trapped air, so its pressure rises and pushes back harder on the piston. This is also why the valve opens when the pressure is higher than the tyre pressure.",
+     "phase": "explain",
+     "placement": "Part 1: 'Because...' chain for the bicycle pump (outlet blocked with a finger)"
     }
    ]
   }

@@ -1,0 +1,1072 @@
+{
+ "quizSchemaVersion": "1.0.0",
+ "meta": {
+  "subject": "Chemistry",
+  "grade": 10,
+  "substrandId": "1.3",
+  "substrandName": "The Periodic Table",
+  "filePrefix": "Chemistry_The_Periodic_Table"
+ },
+ "lessons": [
+  {
+   "number": 1,
+   "title": "Sorting the Element Cards and Launching the DQB",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "In class, Li (A_r 7), Na (A_r 23) and K (A_r 39) were all seen reacting vigorously with water. What do these three elements show about relative atomic mass (A_r) and behaviour?",
+     "choices": [
+      "Mass alone tells us exactly how an element will behave",
+      "Only the lightest of the three reacts with water",
+      "Elements with very different masses can still behave alike",
+      "Elements only behave alike when their masses are almost equal"
+     ],
+     "correctIndex": 2,
+     "rationale": "Li, Na and K differ greatly in mass (7, 23, 39) yet all react vigorously with water. So mass alone does not decide behaviour.",
+     "phase": "observe",
+     "placement": "Part B: Li, Na and K reacting with water, and the data table with Li 7, Na 23, K 39"
+    },
+    {
+     "prompt": "Neon (A_r 20) and argon (A_r 40) were tested with water. What did the data cards show?",
+     "choices": [
+      "Neither neon nor argon reacts at all",
+      "Argon reacts because it is heavier than neon",
+      "Both react vigorously, like sodium and potassium",
+      "Neon reacts slowly but argon reacts vigorously"
+     ],
+     "correctIndex": 0,
+     "rationale": "The data cards showed that neon and argon do not react at all, even though their masses are different.",
+     "phase": "observe",
+     "placement": "Part B: data cards showing that Ne and Ar do not react at all"
+    },
+    {
+     "prompt": "Fluorine (A_r 19) and neon (A_r 20) have almost the same mass. Neon does not react at all. What does comparing them suggest?",
+     "choices": [
+      "Neon is unreactive because it is lighter than sodium",
+      "Elements with almost the same mass can behave very differently",
+      "Fluorine and neon must be in the same column of the table",
+      "Elements with almost the same mass always behave alike"
+     ],
+     "correctIndex": 1,
+     "rationale": "F and Ne are neighbours with nearly equal mass, yet they behave very differently. This is a second puzzle that mass alone does not solve.",
+     "phase": "observe",
+     "placement": "Part A: sorting the 20 Element Cards by increasing A_r and looking for elements that behave alike"
+    },
+    {
+     "prompt": "Argon has A_r 40 and atomic number Z 18. Potassium has A_r 39 and Z 19. Argon comes before potassium in the order of the elements. Why is this a puzzle for a line-up by mass alone?",
+     "choices": [
+      "Argon is lighter than potassium, so it should come first by mass",
+      "Argon and potassium have exactly the same mass",
+      "Argon reacts with water but potassium does not",
+      "Argon is heavier than potassium, so a mass-only line-up would put potassium first"
+     ],
+     "correctIndex": 3,
+     "rationale": "Ar (40) is heavier than K (39), so ordering by mass alone would place K before Ar. This does not match the accepted order, and the class holds the puzzle without resolving it yet.",
+     "phase": "observe",
+     "placement": "Part B: 'If we line up by mass alone, where should Ar and K go?'"
+    },
+    {
+     "prompt": "After the class sorted cards and watched the reactions, a learner asks: 'Why do Li, Na and K react alike when their masses are so different?' Which statement is the most honest scientific position at the end of this lesson?",
+     "choices": [
+      "They react alike because they all have exactly the same mass",
+      "They react alike because they are all unreactive gases",
+      "They react alike because they all have the same atomic number",
+      "The class has not explained this yet; it is a puzzle to investigate and test with ideas"
+     ],
+     "correctIndex": 3,
+     "rationale": "The lesson creates the need to know and does not give the explanation. The learners hold their ideas as hypotheses to test. The other choices contradict the data (the masses differ, the elements are reactive metals and not gases, and their atomic numbers differ).",
+     "phase": "explain",
+     "placement": "Explain: 'What do you think makes elements behave alike?' and the class discussion on patterns and puzzles"
+    },
+    {
+     "prompt": "Which of these is the best question to post on the Driving Question Board after today's observations?",
+     "choices": [
+      "What is the A_r of calcium?",
+      "Why do Li, Na and K react alike even though their masses are so different?",
+      "Is sodium a metal?",
+      "What is the name of the element with symbol H?"
+     ],
+     "correctIndex": 1,
+     "rationale": "A good DQB question starts with how or why and links to a puzzle seen in the evidence. The other questions have short factual or yes/no answers.",
+     "phase": "dqb",
+     "placement": "DQB: each learner writes 2 questions on sticky notes and groups sort them into categories"
+    },
+    {
+     "prompt": "A group is drawing its first 'Electron Arrangement Model'. Which item belongs with a question mark?",
+     "choices": [
+      "Li, Na and K all react vigorously with water",
+      "Argon (A_r 40) comes before potassium (A_r 39) even though it is heavier",
+      "The A_r of H is 1",
+      "Chlorine is used to disinfect drinking water in Nairobi and Mombasa"
+     ],
+     "correctIndex": 1,
+     "rationale": "Question marks mark puzzles that are not yet explained, such as the Ar and K order. Patterns that worked and facts from the data go in as evidence, not as puzzles.",
+     "phase": "model",
+     "placement": "Model: drawing the first version of the Class Model with arrows for patterns and question marks for puzzles"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "From Mendeleev's Gaps to Moseley's Atomic Number: Building Groups and Periods",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Learners are deciding how to line up the first 20 element cards. Potassium, K, has atomic number 19 and relative atomic mass 39. Argon, Ar, has atomic number 18 and relative atomic mass 40. If the cards are ordered only by increasing relative atomic mass, which card comes first?",
+     "choices": [
+      "K comes first because 39 is less than 40",
+      "Ar comes first because it has the smaller atomic number",
+      "It is not possible to decide without knowing their properties",
+      "They must sit in the same position because their masses are almost equal"
+     ],
+     "correctIndex": 0,
+     "rationale": "Ordering by increasing mass puts the smaller A_r first, so K (39) comes before Ar (40). This is the prediction that the evidence in Part B then challenges.",
+     "phase": "predict",
+     "placement": "Predict: where will K and Ar go if I order by mass? If I order by atomic number?"
+    },
+    {
+     "prompt": "On the element-card grid, which statement correctly describes groups and periods?",
+     "choices": [
+      "A group is a vertical column and a period is a horizontal row",
+      "A group and a period are both vertical columns, numbered differently",
+      "A group is a horizontal row and a period is a vertical column",
+      "A group is a set of elements with the same mass and a period is a set with the same number of neutrons"
+     ],
+     "correctIndex": 0,
+     "rationale": "Groups are vertical columns, numbered 1 to 18. Periods are horizontal rows, numbered 1 to 4 for the first 20 elements. Learners often confuse the two.",
+     "phase": "observe",
+     "placement": "Part B: arranging the Element Cards on the grid (groups as columns, periods as rows)"
+    },
+    {
+     "prompt": "Magnesium, Mg, has atomic number 12. When H to Ca are arranged by atomic number, Be, Mg and Ca sit in one column, and Na to Ar form one row. In which period and group is Mg?",
+     "choices": [
+      "Period 2, group 3",
+      "Period 3, group 2",
+      "Period 12, group 1",
+      "Period 2, group 12"
+     ],
+     "correctIndex": 1,
+     "rationale": "Mg is in the row that runs from Na to Ar, which is period 3. It is in the column with Be and Ca, which is group 2.",
+     "phase": "observe",
+     "placement": "Part B: arranging the Element Cards on the grid by atomic number"
+    },
+    {
+     "prompt": "Argon (atomic number 18, A_r 40) is placed before potassium (atomic number 19, A_r 39) in the periodic table. What is the correct reason?",
+     "choices": [
+      "Heavier atoms must always come before lighter atoms",
+      "Argon is a gas and potassium is a solid, so gases always come first",
+      "A mistake was made in the mass of potassium, so it will be corrected later",
+      "Elements are ordered by atomic number, and 18 comes before 19, even though argon is heavier"
+     ],
+     "correctIndex": 3,
+     "rationale": "The modern table is ordered by atomic number (number of protons), as shown by Moseley in 1913. Ar has Z = 18 and K has Z = 19, so Ar comes first even though its mass is slightly higher.",
+     "phase": "explain",
+     "placement": "CER paragraph: why mass ordering fails for Ar and K (also the exit ticket)"
+    },
+    {
+     "prompt": "Calcium (Z = 20) and argon (Z = 18) both have a relative atomic mass of 40, but calcium sits in group 2 and argon sits in group 18. What does this show?",
+     "choices": [
+      "Argon must be placed in group 2 because its mass is the same as calcium's",
+      "Elements with the same mass always sit in the same period",
+      "Calcium and argon have the same number of protons",
+      "Mass alone cannot tell us where an element belongs, but atomic number can separate them"
+     ],
+     "correctIndex": 3,
+     "rationale": "The same mass appears in different groups, so mass is not a reliable basis for the order. Atomic number differs (18 and 20), so it gives each element its own place.",
+     "phase": "explain",
+     "placement": "CER paragraph: evidence that Ca has the same A_r as Ar but sits in a different group"
+    },
+    {
+     "prompt": "Chlorine (Z = 17) is used to disinfect drinking water in Nairobi and Mombasa. Among the first 20 elements, which one sits in the same group as chlorine?",
+     "choices": [
+      "Argon, Z = 18, the next element after chlorine",
+      "Neon, Z = 10",
+      "Sulphur, Z = 16, in the same period as chlorine",
+      "Fluorine, Z = 9"
+     ],
+     "correctIndex": 3,
+     "rationale": "Cl is in group 17 in period 3. Fluorine (Z = 9) is directly above it in group 17 in period 2. Sulphur and argon are in the same period as Cl, not the same group, and neon is in group 18.",
+     "phase": "explain",
+     "placement": "Using the table to answer (c): which elements are in the same group as Cl?"
+    },
+    {
+     "prompt": "A learner says: 'Moseley proved that Mendeleev's work was completely wrong and replaced all of it.' Which statement is the best correction?",
+     "choices": [
+      "Mendeleev ordered by atomic number and Moseley ordered by mass",
+      "Moseley discovered the first 20 elements, so Mendeleev's table was not needed",
+      "Mendeleev's table had no gaps, but Moseley's table has gaps for undiscovered elements",
+      "Moseley showed that atomic number is the true basis of order, while Mendeleev's idea of putting similar elements in one column and leaving gaps stayed useful"
+     ],
+     "correctIndex": 3,
+     "rationale": "Mendeleev (1869) ordered by atomic mass, grouped similar elements and left gaps for undiscovered elements. Moseley (1913) showed that atomic number is the true basis, and the two ideas fit together.",
+     "phase": "model",
+     "placement": "Class Model: 'Order is by atomic number (Moseley, 1913), not mass (Mendeleev, 1869)'"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Writing Electron Arrangements: Reading Group and Period from s and p Notation",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A neutral sodium atom has 11 electrons. Which is its correct electron arrangement in s and p notation?",
+     "choices": [
+      "1s2 2s2 2p6 3s1",
+      "1s2 2s2 2p6 3p1",
+      "1s2 2s1 2p6 3s2",
+      "1s2 2s2 2p7"
+     ],
+     "correctIndex": 0,
+     "rationale": "Fill in order: 1s holds 2, 2s holds 2, 2p holds 6, which makes 10. The 11th electron goes into 3s, giving 1s2 2s2 2p6 3s1.",
+     "phase": "observe",
+     "placement": "Observe: building electron arrangements of H to Ca with counters (modelled example: sodium, Z11)"
+    },
+    {
+     "prompt": "A potassium atom has 19 electrons. Which is its correct energy-level arrangement?",
+     "choices": [
+      "2,9,8",
+      "2,8,9",
+      "2,8,1,8",
+      "2,8,8,1"
+     ],
+     "correctIndex": 3,
+     "rationale": "Level 1 holds 2 and level 2 holds 8. Level 3 is filled to 8 in this lesson, and the 19th electron goes into 4s. This gives 2,8,8,1.",
+     "phase": "observe",
+     "placement": "Observe: checking the Ne, Ar, K and Ca rows of the class data table"
+    },
+    {
+     "prompt": "Lithium (relative atomic mass 7), sodium (23) and potassium (39) are in the same group of the periodic table. What do their atoms have in common?",
+     "choices": [
+      "They have the same mass",
+      "They have the same number of occupied energy levels",
+      "They have the same number of outer electrons (1)",
+      "They have the same total number of electrons"
+     ],
+     "correctIndex": 2,
+     "rationale": "Li is 2,1, Na is 2,8,1 and K is 2,8,8,1, so each has 1 outer electron. Their masses, total electrons and number of occupied levels all differ.",
+     "phase": "explain",
+     "placement": "Explain: Task 1 and the written explanation 'Li, Na and K are in the same group because ___'"
+    },
+    {
+     "prompt": "An atom has the electron arrangement 1s2 2s2 2p6 3s2 3p4. Which row correctly gives its group and period?",
+     "choices": [
+      "Group 6, Period 3",
+      "Group 16, Period 4",
+      "Group 4, Period 6",
+      "Group 16, Period 3"
+     ],
+     "correctIndex": 3,
+     "rationale": "There are 6 outer electrons (3s2 3p4), so group = 6 + 10 = 16. Electrons occupy 3 energy levels, so it is in Period 3. The atom is sulfur.",
+     "phase": "explain",
+     "placement": "Explain: Task 4, the 'mystery atom' 2,8,6 whiteboard check"
+    },
+    {
+     "prompt": "A helium atom has 2 outer electrons (1s2), just like magnesium. Yet helium is placed in group 18, not group 2. What is the best reason?",
+     "choices": [
+      "Helium has 18 occupied energy levels",
+      "Its only energy level, 1s, is full, so it is placed with the other elements that have full outer levels, such as neon and argon",
+      "Helium has 18 electrons in total",
+      "Helium is a metal like magnesium, so it is placed far to the right"
+     ],
+     "correctIndex": 1,
+     "rationale": "Helium's 1s level holds a maximum of 2 electrons, so it is full. This is why helium is placed in group 18, the exception to the 'group = outer electrons' pattern for groups 1 and 2.",
+     "phase": "explain",
+     "placement": "Explain: Task 2, discussing why He (2 outer electrons) is in group 18"
+    },
+    {
+     "prompt": "A calcium atom has 20 electrons arranged as 2,8,8,2. In which period of the periodic table is calcium?",
+     "choices": [
+      "Period 3, because the 3rd level is the last full level",
+      "Period 4, because its electrons occupy 4 energy levels",
+      "Period 2, because it has 2 outer electrons",
+      "Period 20, because it has 20 electrons"
+     ],
+     "correctIndex": 1,
+     "rationale": "Period number equals the number of occupied energy levels. The arrangement 2,8,8,2 has electrons in 4 levels, so calcium is in Period 4. Outer electrons decide the group, not the period.",
+     "phase": "explain",
+     "placement": "Explain: Task 3, counting occupied energy levels and comparing with the period number"
+    },
+    {
+     "prompt": "Chlorine is used to disinfect drinking water in Nairobi and Mombasa. A chlorine atom has the electron arrangement 1s2 2s2 2p6 3s2 3p5. What is the group number of chlorine?",
+     "choices": [
+      "17",
+      "7",
+      "3",
+      "5"
+     ],
+     "correctIndex": 0,
+     "rationale": "The outer level (3s2 3p5) has 2 + 5 = 7 electrons. For groups 13 to 18, group = outer electrons + 10, so 7 + 10 = 17.",
+     "phase": "model",
+     "placement": "Model: adding the group and period rules to the 'Electron Arrangement Model' poster and the exit slip on chlorine",
+     "check": "7+10"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Chemical Families and Reactivity Patterns: Why Li, Na and K Behave Alike",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Lithium (A_r 7), sodium (A_r 23) and potassium (A_r 39) have very different masses, yet all three react vigorously with water. Which statement best explains why they behave alike?",
+     "choices": [
+      "They each have the same total number of electrons",
+      "They each have 1 electron in their outer energy level",
+      "They each have a full outer energy level",
+      "They have similar masses"
+     ],
+     "correctIndex": 1,
+     "rationale": "Li (2,1), Na (2,8,1) and K (2,8,8,1) each have 1 outer electron, so they belong to the same family and behave alike. Their masses and total electron numbers are different, and a full outer level would make them unreactive.",
+     "phase": "predict",
+     "placement": "Predict: Element Cards for Li, Na, K, Ne and Ar, and the question 'What do Li, Na and K have in common?'"
+    },
+    {
+     "prompt": "In a demonstration, small pieces of lithium, sodium and potassium are each placed in water. Which order lists them from slowest to fastest reaction?",
+     "choices": [
+      "Lithium, sodium, potassium",
+      "All three react at the same speed",
+      "Sodium, lithium, potassium",
+      "Potassium, sodium, lithium"
+     ],
+     "correctIndex": 0,
+     "rationale": "Li fizzes steadily, Na melts and darts about, and K burns with a lilac flame and is very vigorous. Reactivity of the alkali metals increases down the group: Li < Na < K.",
+     "phase": "observe",
+     "placement": "Part A: teacher demonstration or simulation of Li, Na and K in water"
+    },
+    {
+     "prompt": "Argon (A_r 40) and calcium (A_r 40) have the same mass. Calcium reacts with water, but argon does not react at all. What does this show?",
+     "choices": [
+      "Calcium reacts because it has a smaller mass than argon",
+      "Elements with the same mass always react in the same way",
+      "Argon is simply a slow reactor that needs more time",
+      "Mass alone does not decide how an element behaves"
+     ],
+     "correctIndex": 3,
+     "rationale": "Ar and Ca have equal masses but opposite behaviour, so mass cannot be what decides reactivity. The difference comes from the outer electrons: Ar (2,8,8) has a full outer level and Ca (2,8,8,2) does not.",
+     "phase": "observe",
+     "placement": "Part B: Data cards 1 and 2 (Mg and Ca; Ne and Ar), where the teacher points out that Ar and Ca have the same mass"
+    },
+    {
+     "prompt": "Chlorine is used to disinfect drinking water in Nairobi and Mombasa. Its electron arrangement is 2,8,7. Which family does chlorine belong to, and how many outer electrons does it have?",
+     "choices": [
+      "Halogens, with 7 outer electrons",
+      "Alkali metals, with 1 outer electron",
+      "Noble gases, with a full outer level",
+      "Alkaline earth metals, with 2 outer electrons"
+     ],
+     "correctIndex": 0,
+     "rationale": "The arrangement 2,8,7 shows 7 outer electrons, which places chlorine in group 17, the halogens, with fluorine (2,7).",
+     "phase": "observe",
+     "placement": "Part B: Data card 3 (Cl2 in water treatment and fluoride in Rift Valley groundwater; halogens)"
+    },
+    {
+     "prompt": "Sodium (2,8,1) and magnesium (2,8,2) are neighbours in period 3, yet they behave differently. What is the best reason?",
+     "choices": [
+      "Sodium has 1 outer electron and magnesium has 2 outer electrons",
+      "Magnesium has no outer electrons",
+      "Sodium and magnesium are in different periods",
+      "Sodium has a much greater mass than magnesium"
+     ],
+     "correctIndex": 0,
+     "rationale": "Neighbours across a period have different numbers of outer electrons (1 and 2), so they belong to different families. Their masses are almost the same (23 and 24) and both are in period 3.",
+     "phase": "explain",
+     "placement": "Explain: CER statement and written question (1) 'Why are Na and Mg, neighbours in period 3, so different?'"
+    },
+    {
+     "prompt": "Rubidium (Rb) lies directly below potassium in group 1. Which prediction is best supported by the evidence from Li, Na and K?",
+     "choices": [
+      "Rb is more reactive than K, because it has 1 outer electron and reactivity increases down group 1",
+      "Rb does not react with water, because it is in a lower period",
+      "Rb is as reactive as Li, because all group 1 metals react at the same speed",
+      "Rb is less reactive than K, because heavier metals react more slowly"
+     ],
+     "correctIndex": 0,
+     "rationale": "Rb has the same outer electron count as Li, Na and K, so it is an alkali metal. The trend Li < Na < K continues down the group, so Rb should be more reactive than K.",
+     "phase": "explain",
+     "placement": "Explain: written question (3) predicting the reactivity of rubidium (Rb)"
+    },
+    {
+     "prompt": "Which row correctly matches a chemical family with its group number and its number of outer electrons?",
+     "choices": [
+      "Noble gases, group 18, 7 outer electrons",
+      "Halogens, group 17, 1 outer electron",
+      "Alkali metals, group 2, 2 outer electrons",
+      "Alkaline earth metals, group 2, 2 outer electrons"
+     ],
+     "correctIndex": 3,
+     "rationale": "Alkaline earth metals such as Mg (2,8,2) and Ca (2,8,8,2) are in group 2 and have 2 outer electrons. Alkali metals are group 1 with 1, halogens are group 17 with 7, and noble gases are group 18 with a full outer level.",
+     "phase": "model",
+     "placement": "Model: revising the 'Electron Arrangement Model' poster with family names, group numbers and outer electron counts"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Stability of Atoms: Why Atoms Lose or Gain Electrons",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Four atoms have these electron arrangements: Ne 2,8; Na 2,8,1; Mg 2,8,2; Cl 2,8,7. Which atom is the most stable, meaning the least likely to react?",
+     "choices": [
+      "Na 2,8,1, because it has only one outer electron",
+      "Ne 2,8, because its outer energy level is already full",
+      "Cl 2,8,7, because it has seven outer electrons",
+      "Mg 2,8,2, because it has two outer electrons"
+     ],
+     "correctIndex": 1,
+     "rationale": "Neon has a full outer energy level (an octet), so it has no tendency to lose or gain electrons. The other atoms have outer levels that are not full.",
+     "phase": "predict",
+     "placement": "Predict: prediction slip (Ne, Na, Mg, O, Cl) asking which atom is most stable"
+    },
+    {
+     "prompt": "A magnesium atom has the electron arrangement 2,8,2. Which statement about how it reaches a full outer level is correct?",
+     "choices": [
+      "It loses 2 electrons, because that is fewer moves than gaining 6",
+      "It gains 2 electrons, because it has 2 outer electrons",
+      "It gains 6 electrons, because gaining is always easier than losing",
+      "It loses 8 electrons so that all its electrons are removed"
+     ],
+     "correctIndex": 0,
+     "rationale": "Mg can lose its 2 outer electrons and be left with the full level 2,8, like neon. Gaining 6 electrons would need far more moves.",
+     "phase": "observe",
+     "placement": "Observe: Electron Counter Card Sort, Step 2 (building Mg and completing the lose/gain table)"
+    },
+    {
+     "prompt": "An oxygen atom has the electron arrangement 2,6. How many electrons must it gain to fill its outer energy level to 8?",
+     "choices": [
+      "4",
+      "8",
+      "6",
+      "2"
+     ],
+     "correctIndex": 3,
+     "rationale": "The outer level needs 8 electrons and oxygen has 6, so it must gain 8 - 6 = 2 electrons. This gives the Ne-like arrangement 2,8.",
+     "phase": "observe",
+     "placement": "Observe: Electron Counter Card Sort, Step 2 (building O and counting electrons to gain)",
+     "check": "8-6"
+    },
+    {
+     "prompt": "A sodium atom (2,8,1) loses its one outer electron. What electron arrangement does it end up with?",
+     "choices": [
+      "2,8, the same as neon",
+      "2,8,1, it stays the same",
+      "2,7, the same as fluorine",
+      "2,8,8, the same as argon"
+     ],
+     "correctIndex": 0,
+     "rationale": "When Na loses its outer electron, the full second level becomes the new outer level, giving 2,8. This is the same arrangement as neon.",
+     "phase": "observe",
+     "placement": "Observe: Electron Counter Card Sort, Step 3 (comparing with the Ne and Ar mats)"
+    },
+    {
+     "prompt": "A chlorine atom has the electron arrangement 2,8,7. Which is the best reason why chlorine gains 1 electron instead of losing 7?",
+     "choices": [
+      "Gaining 1 electron gives a full outer level (2,8,8) with the fewest electrons moved",
+      "Chlorine atoms want electrons because they are greedy",
+      "Chlorine cannot lose electrons because it is used to disinfect water",
+      "Chlorine needs to fill all its energy levels with electrons in total"
+     ],
+     "correctIndex": 0,
+     "rationale": "Gaining 1 electron gives the stable arrangement 2,8,8 like argon. Losing 7 would take far more moves. Atoms do not literally want things; they become more stable with a full outer level.",
+     "phase": "explain",
+     "placement": "Explain: Claim-Evidence-Reasoning sticky note on why Na loses 1 and Cl gains 1"
+    },
+    {
+     "prompt": "Neon and argon do not react at all, but sodium reacts vigorously with water. Which explanation is correct?",
+     "choices": [
+      "Neon and argon have no electrons, so they cannot react",
+      "Neon and argon already have a full outer level, while sodium has one outer electron it can lose to become stable",
+      "Sodium has more electrons in total than neon and argon",
+      "Neon and argon are heavier than sodium, so they react more slowly"
+     ],
+     "correctIndex": 1,
+     "rationale": "Ne (2,8) and Ar (2,8,8) already have full outer levels, so there is no need to change. Na (2,8,1) can reach a stable arrangement by losing one electron.",
+     "phase": "explain",
+     "placement": "Explain: whole-class discussion on why Ne and Ar do not react while Na and K react vigorously"
+    },
+    {
+     "prompt": "A helium atom has only 2 electrons (1s2), yet it is a stable noble gas. Why is helium stable?",
+     "choices": [
+      "Its only energy level is full with 2 electrons (a duplet)",
+      "It has more electrons than neon",
+      "It has no outer electrons at all",
+      "It needs 8 outer electrons and gets them from other atoms"
+     ],
+     "correctIndex": 0,
+     "rationale": "The first energy level holds a maximum of 2 electrons, so helium's outer level is full. Helium is stable with a duplet, not an octet.",
+     "phase": "explain",
+     "placement": "Explain: vocabulary on the board (stable, full outer level, octet, duplet) and He as a stable atom"
+    },
+    {
+     "prompt": "Lithium, sodium and potassium have very different masses, but all react vigorously with water. What best explains why they behave alike?",
+     "choices": [
+      "They all have full outer energy levels",
+      "They all have one outer electron that they can lose to reach a stable arrangement",
+      "They all have 3 energy levels",
+      "They all have the same mass number"
+     ],
+     "correctIndex": 1,
+     "rationale": "Li, Na and K are in the same group, so each has one outer electron to lose. They reach a stable arrangement in the same way, so they behave alike despite their different masses.",
+     "phase": "model",
+     "placement": "Model: revising the Electron Arrangement Model (does the model explain why Li, Na and K react alike?)"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "Ion Formation: Predicting Cations and Anions and Drawing Dot-and-Cross Diagrams",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A sodium atom has the electron arrangement 2,8,1. To become stable like a noble gas, what does it do, and what ion does it form?",
+     "choices": [
+      "It gains 7 electrons and forms an ion with a 7- charge",
+      "It gains 1 electron and forms an ion with a 1- charge",
+      "It loses its 1 outer electron and forms an ion with a 1+ charge",
+      "It loses its 1 outer electron and forms an ion with a 1- charge"
+     ],
+     "correctIndex": 2,
+     "rationale": "Sodium has 1 outer electron, so losing it leaves the full level 2,8 like neon. It then has 11 protons and 10 electrons, so the charge is 1+.",
+     "phase": "predict",
+     "placement": "Predict Phase: predicting what a sodium atom (2,8,1) and a chlorine atom (2,8,7) will do to become like a noble gas"
+    },
+    {
+     "prompt": "A chlorine atom has 17 protons and the arrangement 2,8,7. It gains 1 electron to form a chloride ion, Cl-. How many electrons does the chloride ion have?",
+     "choices": [
+      "16",
+      "19",
+      "17",
+      "18"
+     ],
+     "correctIndex": 3,
+     "rationale": "The atom has 17 electrons, the same as its protons. Gaining 1 electron gives 17 + 1 = 18 electrons, arranged 2,8,8 like argon. The protons stay at 17, so the charge is 17 - 18 = -1.",
+     "phase": "observe",
+     "placement": "Observe Phase, Step 2: repeating the counter activity for Cl (adding one counter to make 2,8,8, with 17 protons and 18 electrons)",
+     "check": "17+1"
+    },
+    {
+     "prompt": "Which is the correct electron arrangement in s and p notation for the sodium ion, Na+? (A sodium atom is 1s2 2s2 2p6 3s1.)",
+     "choices": [
+      "1s2 2s2 2p6 3s2",
+      "1s2 2s2 2p6",
+      "1s2 2s2 2p6 3s1",
+      "1s2 2s2 2p5"
+     ],
+     "correctIndex": 1,
+     "rationale": "Na+ forms when the atom loses its 3s1 electron. Only the electrons change, so Na+ is 1s2 2s2 2p6, the same as neon.",
+     "phase": "observe",
+     "placement": "Observe Phase, Step 4: writing the s and p notation for each ion and circling the noble gas it matches"
+    },
+    {
+     "prompt": "Which group of ions all have the same electron arrangement as neon (1s2 2s2 2p6)?",
+     "choices": [
+      "F-, Cl-, Ca2+, Na+",
+      "Na+, Cl-, K+, Ca2+",
+      "Mg2+, Cl-, O2-, K+",
+      "Na+, Mg2+, O2-, F-"
+     ],
+     "correctIndex": 3,
+     "rationale": "Na+, Mg2+, O2- and F- all have 1s2 2s2 2p6, which is the neon arrangement. Cl-, K+ and Ca2+ have 1s2 2s2 2p6 3s2 3p6, which is the argon arrangement.",
+     "phase": "observe",
+     "placement": "Observe Phase, Step 4: circling which noble gas (Ne or Ar) each ion matches"
+    },
+    {
+     "prompt": "A sulfur atom has the electron arrangement 2,8,6. Using the rule for forming ions, which ion does it form?",
+     "choices": [
+      "S2+, because it loses 2 electrons",
+      "S6-, because it gains 6 electrons",
+      "S2-, because it gains 2 electrons to make 2,8,8",
+      "S6+, because it loses its 6 outer electrons"
+     ],
+     "correctIndex": 2,
+     "rationale": "Sulfur is a non-metal with 6 outer electrons. Gaining 2 electrons fills the outer level (2,8,8, like argon), giving an ion with a 2- charge. It is in group 16, which forms 2- ions.",
+     "phase": "explain",
+     "placement": "Explain Phase: using the rule to predict, without counters, the ions formed by Li, Be, N and S"
+    },
+    {
+     "prompt": "A sodium ion (Na+) has 11 protons and 10 electrons. A neon atom has 10 protons and 10 electrons. They have the same electron arrangement. Why are they different particles?",
+     "choices": [
+      "Na+ has more electrons than neon",
+      "Na+ has no nucleus but neon does",
+      "They are the same particle because their arrangements match",
+      "Na+ has 11 protons in its nucleus but neon has 10 protons"
+     ],
+     "correctIndex": 3,
+     "rationale": "The two particles have the same 10 electrons, but Na+ has 11 protons and neon has 10. Different proton numbers make them different particles, and a Na+ ion has a 1+ charge while neon is neutral.",
+     "phase": "explain",
+     "placement": "Explain Phase: challenge question 'Na+ and Ne have the same arrangement. Are they the same thing? Why not?'"
+    },
+    {
+     "prompt": "Sodium reacts vigorously with water, but neon does not react at all. Which explanation is best?",
+     "choices": [
+      "Neon has one outer electron that it cannot lose",
+      "Neon has fewer protons than sodium, so it cannot react",
+      "Sodium has a full outer level, so it is unstable",
+      "Sodium has one outer electron that is easily lost to reach a stable arrangement, but neon already has a full outer level"
+     ],
+     "correctIndex": 3,
+     "rationale": "Sodium (2,8,1) easily loses its single outer electron to reach the stable 2,8 arrangement. Neon (2,8) already has a full outer level, so it has no tendency to lose or gain electrons.",
+     "phase": "dqb",
+     "placement": "DQB Phase: moving the note 'Why does sodium react but neon does not?' to the 'Answered' section with an evidence statement"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "Valency and Oxidation Numbers: What Do Electron Arrangements Tell Us About Charge?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A sodium atom has the electron arrangement 2,8,1. What are its valency and its oxidation number when it forms an ion?",
+     "choices": [
+      "Valency 1, oxidation number -1",
+      "Valency 1, oxidation number +1",
+      "Valency +1, oxidation number 1",
+      "Valency 8, oxidation number +8"
+     ],
+     "correctIndex": 1,
+     "rationale": "Sodium loses its 1 outer electron, so its valency (a plain number) is 1. Losing a negative electron makes the ion positive, so the oxidation number is +1.",
+     "phase": "predict",
+     "placement": "Predict: writing predictions for the charges on Na, Mg, Al, Cl and O ions"
+    },
+    {
+     "prompt": "Magnesium has the electron arrangement 2,8,2. Which statement correctly gives its ion and oxidation number?",
+     "choices": [
+      "It loses 2 electrons, forming Mg2+ with oxidation number +2",
+      "It gains 2 electrons, forming Mg2- with oxidation number -2",
+      "It loses 8 electrons, forming Mg8+ with oxidation number +8",
+      "It loses 2 electrons, forming Mg2+ with oxidation number -2"
+     ],
+     "correctIndex": 0,
+     "rationale": "Magnesium has 2 outer electrons and loses them to reach the stable 2,8 arrangement. Losing 2 electrons gives a 2+ ion, so the oxidation number is +2.",
+     "phase": "observe",
+     "placement": "Part A: Data Table of Element Cards (Na, Mg, Al, O, Cl rows)"
+    },
+    {
+     "prompt": "Chlorine has the electron arrangement 2,8,7. A student writes its oxidation number as +7 because it has 7 outer electrons. What is the correct oxidation number and reason?",
+     "choices": [
+      "+7, because chlorine loses all 7 outer electrons",
+      "-7, because chlorine gains 7 electrons",
+      "+1, because chlorine loses 1 electron",
+      "-1, because chlorine gains 1 electron to get the stable arrangement 2,8,8"
+     ],
+     "correctIndex": 3,
+     "rationale": "Chlorine needs only 1 more electron to reach the noble gas arrangement 2,8,8 (argon), so it gains 1 electron and forms Cl- with oxidation number -1.",
+     "phase": "observe",
+     "placement": "Part A: Data Table of Element Cards (Cl row)"
+    },
+    {
+     "prompt": "Which statement correctly describes the difference between valency and oxidation number?",
+     "choices": [
+      "Valency and oxidation number are exactly the same thing in every case",
+      "Valency is the number of electrons lost or gained, with no sign; oxidation number is the same number with a + or - sign",
+      "Valency is the number of protons; oxidation number is the number of neutrons",
+      "Valency has a sign but oxidation number does not"
+     ],
+     "correctIndex": 1,
+     "rationale": "Valency counts the electrons lost or gained and is never negative. The oxidation number adds a sign: + for loss and - for gain.",
+     "phase": "explain",
+     "placement": "Explain: group written explanation using the words valency and oxidation number"
+    },
+    {
+     "prompt": "Oxygen has the electron arrangement 2,6. What are the valency and oxidation number of oxygen in the oxide ion?",
+     "choices": [
+      "Valency 2, oxidation number +2",
+      "Valency 2, oxidation number -2",
+      "Valency 6, oxidation number +6",
+      "Valency -2, oxidation number 2"
+     ],
+     "correctIndex": 1,
+     "rationale": "Oxygen has 6 outer electrons and needs 2 more to reach 2,8. It gains 2 electrons, so its valency is 2 and its oxidation number is -2.",
+     "phase": "explain",
+     "placement": "Explain: application task stating valency and oxidation number for K, Ca, F and N"
+    },
+    {
+     "prompt": "Nitrogen has the electron arrangement 2,5. What are its valency and oxidation number when it forms an ion?",
+     "choices": [
+      "Valency 2, oxidation number -2",
+      "Valency 3, oxidation number +3",
+      "Valency 5, oxidation number +5",
+      "Valency 3, oxidation number -3"
+     ],
+     "correctIndex": 3,
+     "rationale": "Nitrogen has 5 outer electrons and needs 3 more to reach 2,8. It gains 3 electrons, so valency is 3 and oxidation number is -3.",
+     "phase": "explain",
+     "placement": "Explain: application task stating valency and oxidation number for K, Ca, F and N"
+    },
+    {
+     "prompt": "Lithium, sodium and potassium have masses of 7, 23 and 39, yet they react in the same way with water. What is the best explanation?",
+     "choices": [
+      "Each has the same atomic mass",
+      "Each has a full outer energy level",
+      "Each gains 1 electron to form an ion with oxidation number -1",
+      "Each has 1 outer electron, so each forms an ion with oxidation number +1"
+     ],
+     "correctIndex": 3,
+     "rationale": "Li, Na and K are all in group 1 and have 1 outer electron. Each loses it to form a +1 ion, so they behave alike despite different masses.",
+     "phase": "explain",
+     "placement": "Explain: sentence linking the phenomenon (Li, Na, K and Ne, Ar) to outer electrons"
+    },
+    {
+     "prompt": "Rust on roofing sheets in Kisumu contains Fe3+ in Fe2O3, while FeCl2 contains Fe2+. What does this show about iron?",
+     "choices": [
+      "Iron has a different valency only because oxygen is present",
+      "Iron gains electrons in Fe2O3 and loses them in FeCl2",
+      "Iron is a transition element and can have more than one oxidation number (+2 and +3)",
+      "Iron has an oxidation number of +2 only, and Fe2O3 is a mistake"
+     ],
+     "correctIndex": 2,
+     "rationale": "Transition elements can lose electrons from more than one energy level, so iron forms both Fe2+ and Fe3+. The outer electron count alone does not decide which one forms.",
+     "phase": "observe",
+     "placement": "Part B: transition element card set (iron in FeCl2 and Fe2O3)"
+    },
+    {
+     "prompt": "Copper forms Cu2O and CuO. Which pair of oxidation numbers does copper show in these compounds?",
+     "choices": [
+      "-1 in Cu2O and -2 in CuO",
+      "+2 in Cu2O and +1 in CuO",
+      "+1 in Cu2O and +2 in CuO",
+      "+1 in both compounds"
+     ],
+     "correctIndex": 2,
+     "rationale": "Copper forms the Cu+ ion in Cu2O and the Cu2+ ion in CuO. Both are positive because copper is a metal that loses electrons.",
+     "phase": "model",
+     "placement": "Model: boxed note on transition elements (Fe: +2, +3; Cu: +1, +2) added to the Class Model"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "Radicals and Deriving Formulae: Predicting the Compounds Elements Form",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Aluminium forms Al3+ ions and oxygen forms O2- ions. What is the formula of aluminium oxide, and why?",
+     "choices": [
+      "Al3O2, because the charge on aluminium is 3 and the charge on oxygen is 2",
+      "AlO, because one aluminium atom joins one oxygen atom",
+      "Al2O2, because both ions must have the same number of atoms",
+      "Al2O3, because 2 x (+3) = +6 balances 3 x (-2) = -6"
+     ],
+     "correctIndex": 3,
+     "rationale": "A compound is neutral, so total positive charge must equal total negative charge. Two Al3+ give +6 and three O2- give -6, so the formula is Al2O3.",
+     "phase": "predict",
+     "placement": "Predict: formula of aluminium oxide from Al3+ and O2-"
+    },
+    {
+     "prompt": "Calcium forms Ca2+ ions and the nitrate radical is NO3-. Which is the correct formula of calcium nitrate, the compound used in some fertilizers?",
+     "choices": [
+      "Ca(NO3)2",
+      "CaNO6",
+      "CaNO3",
+      "Ca2NO3"
+     ],
+     "correctIndex": 0,
+     "rationale": "One Ca2+ (+2) needs two NO3- (-2) to balance. Brackets show that the whole radical is doubled, giving Ca(NO3)2.",
+     "phase": "observe",
+     "placement": "Station 2: building KNO3, K2SO4, Ca(NO3)2 and (NH4)2SO4 with Radical Cards"
+    },
+    {
+     "prompt": "Iron can form Fe2+ and Fe3+ ions. Iron(II) chloride contains Fe2+ and Cl- ions. What is its formula?",
+     "choices": [
+      "FeCl2",
+      "FeCl",
+      "Fe2Cl3",
+      "Fe2Cl"
+     ],
+     "correctIndex": 0,
+     "rationale": "One Fe2+ (+2) needs two Cl- (-2) to make the total charge zero, so the formula is FeCl2.",
+     "phase": "observe",
+     "placement": "Station 3: building Fe2O3, FeCl2 and CuO using oxidation numbers"
+    },
+    {
+     "prompt": "A learner uses the criss-cross method for Mg2+ and O2- and gets Mg2O2. What should the learner do next?",
+     "choices": [
+      "Leave it as Mg2O2, because the criss-cross method always gives the final formula",
+      "Simplify to MgO, because one Mg2+ already balances one O2-",
+      "Change it to Mg2O, because oxygen has the smaller number",
+      "Change it to MgO2, because oxygen is written with the larger number"
+     ],
+     "correctIndex": 1,
+     "rationale": "Mg2O2 has the ratio 2:2, which simplifies to 1:1. One Mg2+ (+2) balances one O2- (-2), so the formula is MgO.",
+     "phase": "explain",
+     "placement": "Criss-cross method practice: testing it on Mg2+ and O2-"
+    },
+    {
+     "prompt": "Calcium phosphate is made from Ca2+ ions and PO4 3- radicals. Which is its correct formula?",
+     "choices": [
+      "CaPO4",
+      "Ca2(PO4)3",
+      "Ca3PO8",
+      "Ca3(PO4)2"
+     ],
+     "correctIndex": 3,
+     "rationale": "Criss-crossing the charges gives 3 Ca2+ and 2 PO4 3-. The total charge is 3 x (+2) = +6 and 2 x (-3) = -6. The radical needs brackets, so the formula is Ca3(PO4)2.",
+     "phase": "explain",
+     "placement": "Challenge: predict the formula of calcium phosphate, then check with the criss-cross method"
+    },
+    {
+     "prompt": "Lithium, sodium and potassium have very different masses, yet they form similar compounds: LiCl, NaCl and KCl. What is the best explanation?",
+     "choices": [
+      "They all have the same number of electron energy levels",
+      "Each has 1 outer electron, so each forms a 1+ ion",
+      "They all have the same number of protons in the nucleus",
+      "They have nearly the same mass, so they behave alike"
+     ],
+     "correctIndex": 1,
+     "rationale": "Li, Na and K each have one electron in the outer energy level. Each loses it to form a 1+ ion, which combines with Cl- in a 1:1 ratio.",
+     "phase": "explain",
+     "placement": "Linking back to the phenomenon: why Li, Na and K form similar compounds"
+    },
+    {
+     "prompt": "Which chain best shows how electron arrangement helps chemists predict the formula of a compound?",
+     "choices": [
+      "Formula of the compound, then ion charge, then electron arrangement",
+      "Electron arrangement, then ion charge, then formula in which the total charges balance",
+      "Electron arrangement, then the number of atoms in the compound, then ion charge",
+      "Mass of the element, then ion charge, then formula of the compound"
+     ],
+     "correctIndex": 1,
+     "rationale": "Electron arrangement decides the charge of an ion. Because a compound is neutral, the ion charges decide the ratio of ions in the formula.",
+     "phase": "model",
+     "placement": "Class Model revision: adding the arrow 'ion charge -> neutral compound formula (charges balance)'"
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "Writing and Balancing Chemical Equations: What Happens When Sodium Meets Water?",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "A small piece of sodium is dropped into water. The gas given off burns with a pop, and red litmus paper turns blue in the remaining solution. Which pair of products fits this evidence?",
+     "choices": [
+      "Sodium hydroxide and oxygen",
+      "Sodium hydroxide and hydrogen",
+      "Sodium chloride and hydrogen",
+      "Sodium oxide and oxygen"
+     ],
+     "correctIndex": 1,
+     "rationale": "A gas that burns with a pop is hydrogen, and red litmus turning blue shows an alkaline solution, which is sodium hydroxide (NaOH). Oxygen and chloride are not supported by the evidence.",
+     "phase": "observe",
+     "placement": "Observe: teacher demonstration or video of sodium on water and the observation table (gas, new substance)"
+    },
+    {
+     "prompt": "Look at the unbalanced equation Na + H2O -> NaOH + H2. How many hydrogen atoms are on the product (right-hand) side?",
+     "choices": [
+      "3",
+      "2",
+      "4",
+      "1"
+     ],
+     "correctIndex": 0,
+     "rationale": "NaOH has 1 hydrogen atom and H2 has 2 hydrogen atoms, so 1 + 2 = 3. The left side has only 2 hydrogen atoms, so the equation is not balanced.",
+     "phase": "observe",
+     "placement": "Observe: atom-counting table for Na + H2O -> NaOH + H2",
+     "check": "1+2"
+    },
+    {
+     "prompt": "A learner tries to balance Na + H2O -> NaOH + H2 by changing NaOH to NaOH2. Why is this not allowed?",
+     "choices": [
+      "The subscript should be changed on H2O instead of NaOH",
+      "Hydrogen atoms cannot be placed in a hydroxide",
+      "Subscripts must always be even numbers",
+      "Changing a subscript makes a different substance; only the big numbers in front (coefficients) may be changed"
+     ],
+     "correctIndex": 3,
+     "rationale": "Subscripts are part of a substance's formula, so changing them creates a different substance. Balancing is done only by changing coefficients.",
+     "phase": "explain",
+     "placement": "Explain: balancing rule - change coefficients, never subscripts"
+    },
+    {
+     "prompt": "Which is the correctly balanced equation for potassium reacting with water?",
+     "choices": [
+      "2K + 2H2O -> 2KOH + H2",
+      "K + H2O -> KOH + H2",
+      "K + 2H2O -> 2KOH + H2",
+      "2K + H2O -> 2KOH + H2"
+     ],
+     "correctIndex": 0,
+     "rationale": "2K + 2H2O -> 2KOH + H2 has 2 K, 4 H and 2 O on each side. The other equations have unequal numbers of atoms on the two sides.",
+     "phase": "explain",
+     "placement": "Explain: groups copy the pattern to write the K and Li equations"
+    },
+    {
+     "prompt": "Calcium reacts with hydrochloric acid: Ca + __HCl -> CaCl2 + H2. What number must go in the blank to balance the equation?",
+     "choices": [
+      "1",
+      "3",
+      "4",
+      "2"
+     ],
+     "correctIndex": 3,
+     "rationale": "CaCl2 contains 2 chlorine atoms, so 2 HCl are needed. This also gives 2 hydrogen atoms on the left to match the H2 on the right.",
+     "phase": "explain",
+     "placement": "Explain: worksheet balancing Ca + 2HCl -> CaCl2 + H2",
+     "check": "2"
+    },
+    {
+     "prompt": "Lithium (mass 7), sodium (mass 23) and potassium (mass 39) have very different masses, but they react with water by the same equation pattern. What is the best reason?",
+     "choices": [
+      "They all have the same number of energy levels",
+      "They have nearly the same mass",
+      "They all have the same number of protons",
+      "Each has one outer electron and forms a 1+ ion"
+     ],
+     "correctIndex": 3,
+     "rationale": "Li, Na and K each have one outer electron, lose it, and form a 1+ ion that combines with OH- in a 1:1 ratio. The pattern depends on outer electrons, not on mass.",
+     "phase": "model",
+     "placement": "Model: new panel 'Equations as models of reactions' and exit prompt on why Li, Na and K have the same pattern"
+    },
+    {
+     "prompt": "In the equation 2Na(s) + 2H2O(l) -> 2NaOH(aq) + H2(g), what does the symbol (aq) after NaOH tell us?",
+     "choices": [
+      "NaOH is a pure liquid",
+      "NaOH is dissolved in water",
+      "NaOH is a solid",
+      "NaOH is a gas given off"
+     ],
+     "correctIndex": 1,
+     "rationale": "The symbol (aq) means aqueous, which means dissolved in water. The symbols (s), (l) and (g) mean solid, liquid and gas.",
+     "phase": "explain",
+     "placement": "Explain: writing state symbols on the balanced sodium equation"
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "title": "Final Model Revision and Presentation: Using Electron Arrangement to Explain the Periodic Table and Predict Strontium",
+   "model": "claude-sonnet-5-5",
+   "generatedAt": "2026-11-25T06:23:22+00:00",
+   "quiz": [
+    {
+     "prompt": "Strontium (Sr, atomic number 38) has the electron arrangement 2,8,18,8,2. In which group and period of the periodic table does it belong?",
+     "choices": [
+      "Group 38, period 2",
+      "Group 5, period 2",
+      "Group 2, period 5",
+      "Group 8, period 5"
+     ],
+     "correctIndex": 2,
+     "rationale": "The outer level has 2 electrons, so Sr is in group 2. Five energy levels are occupied (2,8,18,8,2 has five numbers), so it is in period 5.",
+     "phase": "observe",
+     "placement": "Pattern Finder task 1 and 3: Sr group and period from 2,8,18,8,2"
+    },
+    {
+     "prompt": "Calcium (2,8,8,2) and magnesium (2,8,2) both form 2+ ions. Strontium has the electron arrangement 2,8,18,8,2. Which ion will strontium form?",
+     "choices": [
+      "Sr2+, by losing its 2 outer electrons",
+      "Sr2-, by gaining 2 electrons",
+      "Sr8+, by losing all 8 electrons in its fourth level",
+      "Sr+, by losing 1 electron"
+     ],
+     "correctIndex": 0,
+     "rationale": "Sr has 2 outer electrons, like Mg and Ca. It loses these 2 electrons to reach a stable noble gas arrangement, forming Sr2+.",
+     "phase": "observe",
+     "placement": "Pattern Finder task 3: use Ca and Mg to forecast Sr's ion"
+    },
+    {
+     "prompt": "Argon has a relative atomic mass of 40 and atomic number 18. Potassium has a relative atomic mass of 39 and atomic number 19. Argon is placed before potassium in the periodic table. What decides this order?",
+     "choices": [
+      "Relative atomic mass, as used by Mendeleev in 1869",
+      "Atomic number, as shown by Moseley in 1913",
+      "The number of reactions the element takes part in",
+      "The number of energy levels only"
+     ],
+     "correctIndex": 1,
+     "rationale": "Modern elements are ordered by increasing atomic number (Moseley, 1913). Argon (18) comes before potassium (19) even though its mass is higher.",
+     "phase": "observe",
+     "placement": "Placing the Ar (A_r 40) and K (A_r 39) cards in order"
+    },
+    {
+     "prompt": "Lithium, sodium and potassium have relative atomic masses of 7, 23 and 39, yet all three react vigorously with water. What is the best explanation?",
+     "choices": [
+      "They each have 1 electron in the outer energy level",
+      "They all have the same number of occupied energy levels",
+      "They have almost the same mass",
+      "They all have the same number of protons"
+     ],
+     "correctIndex": 0,
+     "rationale": "Li (2,1), Na (2,8,1) and K (2,8,8,1) each have 1 outer electron, so they are in group 1 and react alike. Mass and the number of levels differ.",
+     "phase": "explain",
+     "placement": "Part A, Box 2: SAME COLUMN, DIFFERENT MASS (Li, Na, K)"
+    },
+    {
+     "prompt": "Neon (2,8) and argon (2,8,8) do not react with other substances. What is the reason?",
+     "choices": [
+      "They have a full outer energy level, which is a stable arrangement",
+      "They have no electrons in their outer level",
+      "They have a very high relative atomic mass",
+      "They have only one outer electron"
+     ],
+     "correctIndex": 0,
+     "rationale": "Neon and argon have full outer energy levels (8 electrons), so they have no tendency to lose or gain electrons and are unreactive.",
+     "phase": "explain",
+     "placement": "Part A, Box 3: STABILITY AND IONS (why Ne and Ar do not react)"
+    },
+    {
+     "prompt": "A chlorine atom has the electron arrangement 2,8,7. It forms the chloride ion, Cl-, used in compounds such as NaCl. What happens, and why?",
+     "choices": [
+      "It loses 1 electron to become 2,8,6, the same as sulphur",
+      "It loses 7 electrons to become 2,8, the same as neon",
+      "It gains 1 electron to become 2,8,8, the same as argon",
+      "It gains 1 electron to become 2,8,8, the same as neon"
+     ],
+     "correctIndex": 2,
+     "rationale": "Chlorine gains 1 electron, giving 2,8,8, the same arrangement as argon. Gaining one electron gives a 1- charge, so the ion is Cl-.",
+     "phase": "explain",
+     "placement": "Part A, Box 3: why chlorine gains 1 electron to form Cl-"
+    },
+    {
+     "prompt": "Strontium forms the ion Sr2+ and chlorine forms the ion Cl-. What is the formula of strontium chloride?",
+     "choices": [
+      "SrCl2",
+      "SrCl3",
+      "Sr2Cl",
+      "SrCl"
+     ],
+     "correctIndex": 0,
+     "rationale": "One Sr2+ (charge +2) needs two Cl- (charge -1 each) to balance, so the formula is SrCl2, like CaCl2.",
+     "phase": "explain",
+     "placement": "Part A, Box 4: PREDICTION (formulae SrCl2 and SrO)"
+    },
+    {
+     "prompt": "Barium (Z56) has 2 outer electrons. Using the same reasoning as for calcium and strontium, which row correctly gives its group, ion and formula with chlorine?",
+     "choices": [
+      "Group 56, Ba2+, Ba2Cl",
+      "Group 2, Ba2-, BaCl2",
+      "Group 1, Ba+, BaCl",
+      "Group 2, Ba2+, BaCl2"
+     ],
+     "correctIndex": 3,
+     "rationale": "Two outer electrons put barium in group 2. It loses 2 electrons to form Ba2+, and one Ba2+ combines with two Cl- to give BaCl2.",
+     "phase": "model",
+     "placement": "Exit ticket: predict group, ion and formula with chlorine for barium"
+    },
+    {
+     "prompt": "At the end of the periodic table unit, learners sort their Driving Question Board questions. Which question is still OPEN and will be studied in Sub-Strand 1.4 Chemical Bonding?",
+     "choices": [
+      "How do chlorine atoms stay joined together as Cl2?",
+      "Why do Li, Na and K react in a similar way?",
+      "Why does argon come before potassium in the table?",
+      "What ion does strontium form?"
+     ],
+     "correctIndex": 0,
+     "rationale": "The first three questions are answered using atomic number, outer electrons and ion formation. How atoms share electrons and stay joined is the focus of chemical bonding.",
+     "phase": "dqb",
+     "placement": "DQB review: sorting questions into ANSWERED, PARTLY ANSWERED and NEW/OPEN"
+    }
+   ]
+  }
+ ]
+}
